@@ -1,0 +1,63 @@
+name: Update Letterboxd RSS
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 */2 * * *'
+  push:
+    paths:
+      - '.github/workflows/update-letterboxd.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: letterboxd-rss
+  cancel-in-progress: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch gjbkic RSS
+        shell: bash
+        run: |
+          set -euo pipefail
+          url='https://letterboxd.com/gjbkic/rss/'
+          tmp="$(mktemp)"
+          ok=0
+          for attempt in 1 2 3; do
+            if curl --compressed -L --fail --silent --show-error \
+              --retry 2 --retry-delay 3 --connect-timeout 15 --max-time 45 \
+              -A 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Chrome/124 Safari/537.36' \
+              -H 'Accept: application/rss+xml, application/xml, text/xml, */*' \
+              -H 'Accept-Language: en-US,en;q=0.9' \
+              "$url" -o "$tmp"; then
+              if grep -Eqi '<(rss|item)([ >])' "$tmp"; then
+                ok=1
+                break
+              fi
+            fi
+            sleep $((attempt * 4))
+          done
+          if [ "$ok" -ne 1 ]; then
+            echo 'Could not fetch a valid Letterboxd RSS feed.' >&2
+            exit 1
+          fi
+          mv "$tmp" letterboxd-gjbkic.xml
+
+      - name: Commit feed if changed
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- letterboxd-gjbkic.xml; then
+            echo 'RSS unchanged.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add letterboxd-gjbkic.xml
+          git commit -m 'Update gjbkic Letterboxd RSS'
+          git push
