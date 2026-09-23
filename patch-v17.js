@@ -1,5 +1,6 @@
 (() => {
-  const EXTRA_GENRES = ["テレビ映画","ヒーロー映画"];
+  const EXTRA_GENRES = ["シリーズ劇場版","ヒーロー"];
+  const RENAMED_GENRES = {"テレビ映画":"シリーズ劇場版","ヒーロー映画":"ヒーロー"};
 
   function rawGenres(f){
     const g = state.genreOverrides?.[f.id];
@@ -9,6 +10,17 @@
     state.genreOverrides[id] = [...new Set((genres || []).filter(Boolean))];
     save();
   }
+
+  // Migrate any already-saved selections from the old labels.
+  if (state.genreOverrides && typeof state.genreOverrides === "object") {
+    for (const id of Object.keys(state.genreOverrides)) {
+      const g = state.genreOverrides[id];
+      if (!Array.isArray(g)) continue;
+      state.genreOverrides[id] = [...new Set(g.map(x => RENAMED_GENRES[x] || x))];
+    }
+    save(false);
+  }
+
   function selectedFromPicker(id){
     const el = document.getElementById(id);
     if (!el) return [];
@@ -51,7 +63,7 @@
   const openSheetV16 = openSheet;
   openSheet = function(id){ openSheetV16(id); refreshEditGenres(); };
 
-  // Add forms: derive genres from the visible chips, including the two new genres.
+  // Add forms: derive genres from the visible chips, including the two added genres.
   const addBtn = document.getElementById('addMovie');
   if (addBtn) addBtn.onclick = () => {
     const picked = selectedFromPicker('newGenrePicker');
