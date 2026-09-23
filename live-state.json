@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790197566162,
-  "sourceUpdatedIso": "2026-09-23T21:06:06.162Z",
+  "sourceUpdatedAt": 1790197575173,
+  "sourceUpdatedIso": "2026-09-23T21:06:15.173Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -11757,28 +11757,6 @@
       "exact": true
     },
     {
-      "id": "lb-447-cdWU",
-      "title": "殺せんせー 後編",
-      "originalTitle": "",
-      "englishTitle": "Assassination Classroom: Graduation",
-      "year": 2016,
-      "score": 66,
-      "star": 1.5,
-      "overallRank": 593,
-      "sameScoreRank": 5,
-      "category": "邦画",
-      "mediaType": "movie",
-      "genre": [
-        "シリーズ劇場版",
-        "ファンタジー",
-        "子供向け"
-      ],
-      "origin": "邦画",
-      "format": "live",
-      "runtime": null,
-      "exact": true
-    },
-    {
       "id": "lb-203-fyxW",
       "title": "コナン から紅の恋歌",
       "originalTitle": "",
@@ -11786,7 +11764,7 @@
       "year": 2017,
       "score": 65,
       "star": 1.5,
-      "overallRank": 594,
+      "overallRank": 593,
       "sameScoreRank": 1,
       "category": "コナン映画",
       "mediaType": "movie",
@@ -11800,6 +11778,28 @@
       "exact": true
     },
     {
+      "id": "lb-447-cdWU",
+      "title": "殺せんせー 後編",
+      "originalTitle": "",
+      "englishTitle": "Assassination Classroom: Graduation",
+      "year": 2016,
+      "score": 65,
+      "star": 1.5,
+      "overallRank": 594,
+      "sameScoreRank": 2,
+      "category": "邦画",
+      "mediaType": "movie",
+      "genre": [
+        "シリーズ劇場版",
+        "ファンタジー",
+        "子供向け"
+      ],
+      "origin": "邦画",
+      "format": "live",
+      "runtime": null,
+      "exact": true
+    },
+    {
       "id": "lb-535-3Ipk",
       "title": "おおかみこどもの雨と雪",
       "originalTitle": "",
@@ -11808,7 +11808,7 @@
       "score": 65,
       "star": 1.5,
       "overallRank": 595,
-      "sameScoreRank": 2,
+      "sameScoreRank": 3,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -11828,7 +11828,7 @@
       "score": 65,
       "star": 1.5,
       "overallRank": 596,
-      "sameScoreRank": 3,
+      "sameScoreRank": 4,
       "category": "コナン映画",
       "mediaType": "movie",
       "genre": [
@@ -11849,7 +11849,7 @@
       "score": 65,
       "star": 1.5,
       "overallRank": 597,
-      "sameScoreRank": 4,
+      "sameScoreRank": 5,
       "category": "コナン映画",
       "mediaType": "movie",
       "genre": [
@@ -12488,7 +12488,7 @@
       "lb-92-xjfE": 63,
       "lb-527-7dEc": 64,
       "lb-103-bVG": 66,
-      "lb-447-cdWU": 66,
+      "lb-447-cdWU": 65,
       "lb-505-2GDC": 65,
       "lb-496-2aXU": 67,
       "lb-446-bIPo": 67,
@@ -12979,6 +12979,7 @@
       ],
       "65": [
         "lb-203-fyxW",
+        "lb-447-cdWU",
         "lb-535-3Ipk",
         "lb-505-2GDC",
         "lb-196-14dY"
@@ -12987,8 +12988,7 @@
         "lb-198-42Mo",
         "lb-503-14es",
         "lb-497-bC8e",
-        "lb-103-bVG",
-        "lb-447-cdWU"
+        "lb-103-bVG"
       ],
       "67": [
         "lb-244-MGuM",
