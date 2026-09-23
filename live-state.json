@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790197415282,
-  "sourceUpdatedIso": "2026-09-23T21:03:35.282Z",
+  "sourceUpdatedAt": 1790197426598,
+  "sourceUpdatedIso": "2026-09-23T21:03:46.598Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -11941,7 +11941,7 @@
       "mediaType": "movie",
       "genre": [
         "ミステリー",
-        "子供向け"
+        "シリーズ劇場版"
       ],
       "origin": "邦画",
       "format": "animation",
@@ -12075,10 +12075,10 @@
       "originalTitle": "",
       "englishTitle": "The Equalizer",
       "year": 2014,
-      "score": 58,
+      "score": 59,
       "star": 1,
       "overallRank": 609,
-      "sameScoreRank": 1,
+      "sameScoreRank": 2,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -12098,7 +12098,7 @@
       "score": 58,
       "star": 1,
       "overallRank": 610,
-      "sameScoreRank": 2,
+      "sameScoreRank": 1,
       "category": "恋愛、ミュージカル",
       "mediaType": "movie",
       "genre": [
@@ -12119,7 +12119,7 @@
       "score": 58,
       "star": 1,
       "overallRank": 611,
-      "sameScoreRank": 3,
+      "sameScoreRank": 2,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -12452,7 +12452,7 @@
       "lb-507-1AyE": 60,
       "lb-316-ekeY": 61,
       "lb-194-14eC": 63,
-      "lb-329-4TUK": 58,
+      "lb-329-4TUK": 59,
       "lb-448-bERq": 58,
       "lb-274-1XZ4": 55,
       "lb-201-aeu4": 57,
@@ -12931,12 +12931,12 @@
         "lb-452-cqUW"
       ],
       "58": [
-        "lb-329-4TUK",
         "lb-538-jydK",
         "lb-448-bERq"
       ],
       "59": [
-        "lb-386-wbAi"
+        "lb-386-wbAi",
+        "lb-329-4TUK"
       ],
       "60": [
         "lb-507-1AyE"
@@ -14860,7 +14860,8 @@
       "lb-203-fyxW": "movie",
       "lb-447-cdWU": "movie",
       "lb-103-bVG": "movie",
-      "lb-201-aeu4": "movie"
+      "lb-201-aeu4": "movie",
+      "lb-194-14eC": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -15492,7 +15493,7 @@
       ],
       "lb-194-14eC": [
         "ミステリー",
-        "子供向け"
+        "シリーズ劇場版"
       ],
       "lb-195-14ei": [
         "ミステリー"
