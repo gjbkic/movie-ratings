@@ -52,7 +52,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          if git diff --quiet -- letterboxd-gjbkic.xml; then
+          if [ -z "$(git status --porcelain -- letterboxd-gjbkic.xml)" ]; then
             echo 'RSS unchanged.'
             exit 0
           fi
