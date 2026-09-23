@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790194090025,
-  "sourceUpdatedIso": "2026-09-23T20:08:10.025Z",
+  "sourceUpdatedAt": 1790194101360,
+  "sourceUpdatedIso": "2026-09-23T20:08:21.360Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -1089,7 +1089,9 @@
       "sameScoreRank": 7,
       "category": "邦画",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "ドラマ"
+      ],
       "origin": "邦画",
       "format": "live",
       "runtime": null,
@@ -14815,7 +14817,8 @@
       "lb-564-29Wm": "movie",
       "added-anchor-577": "movie",
       "lb-178-29XE": "movie",
-      "lb-262-29Du": "movie"
+      "lb-262-29Du": "movie",
+      "lb-378-26E0": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -15918,7 +15921,9 @@
         "戦争",
         "歴史"
       ],
-      "lb-378-26E0": [],
+      "lb-378-26E0": [
+        "ドラマ"
+      ],
       "lb-379-R6yo": [],
       "lb-380-KQMM": [
         "スリラー",
