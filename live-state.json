@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790197808951,
-  "sourceUpdatedIso": "2026-09-23T21:10:08.951Z",
+  "sourceUpdatedAt": 1790197819951,
+  "sourceUpdatedIso": "2026-09-23T21:10:19.951Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -11358,7 +11358,10 @@
       "sameScoreRank": 9,
       "category": "ほかアニメ",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "ファンタジー",
+        "恋愛"
+      ],
       "origin": "ハリウッド",
       "format": "animation",
       "runtime": null,
@@ -11377,7 +11380,7 @@
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
-        "子供向け"
+        "ファンタジー"
       ],
       "origin": "ハリウッド",
       "format": "animation",
@@ -14908,7 +14911,9 @@
       "lb-453-2DF6": "movie",
       "lb-167-29dc": "movie",
       "lb-534-9mfO": "movie",
-      "lb-255-xDsy": "movie"
+      "lb-255-xDsy": "movie",
+      "lb-157-aaRe": "movie",
+      "lb-501-tbEe": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -15434,7 +15439,7 @@
       "lb-155-h2Hu": [],
       "lb-156-ffTY": [],
       "lb-157-aaRe": [
-        "子供向け"
+        "ファンタジー"
       ],
       "lb-158-1oDC": [],
       "lb-159-18U8": [
@@ -16397,7 +16402,10 @@
       ],
       "lb-499-948A": [],
       "lb-500-16T8": [],
-      "lb-501-tbEe": [],
+      "lb-501-tbEe": [
+        "ファンタジー",
+        "恋愛"
+      ],
       "lb-502-oEGS": [
         "ミステリー"
       ],
