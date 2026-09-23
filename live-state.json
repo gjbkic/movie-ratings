@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790195571987,
-  "sourceUpdatedIso": "2026-09-23T20:32:51.987Z",
+  "sourceUpdatedAt": 1790195577700,
+  "sourceUpdatedIso": "2026-09-23T20:32:57.700Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -12159,7 +12159,9 @@
       "sameScoreRank": 1,
       "category": "ほかアニメ",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "シリーズ劇場版"
+      ],
       "origin": "ハリウッド",
       "format": "animation",
       "runtime": null,
@@ -14829,7 +14831,8 @@
       "lb-378-26E0": "movie",
       "lb-453-2DF6": "movie",
       "lb-241-fmjS": "movie",
-      "lb-539-kMaC": "movie"
+      "lb-539-kMaC": "movie",
+      "lb-220-Cgri": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -15518,7 +15521,9 @@
       "lb-217-3gg0": [],
       "lb-218-6jCO": [],
       "lb-219-on14": [],
-      "lb-220-Cgri": [],
+      "lb-220-Cgri": [
+        "シリーズ劇場版"
+      ],
       "lb-221-7VEK": [],
       "lb-222-hSNY": [],
       "lb-223-rkrO": [],
