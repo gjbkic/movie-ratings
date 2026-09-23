@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790197228607,
-  "sourceUpdatedIso": "2026-09-23T21:00:28.607Z",
+  "sourceUpdatedAt": 1790197234790,
+  "sourceUpdatedIso": "2026-09-23T21:00:34.790Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -11781,7 +11781,9 @@
       "sameScoreRank": 2,
       "category": "ほかアニメ",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "社会問題・生活"
+      ],
       "origin": "ハリウッド",
       "format": "animation",
       "runtime": null,
@@ -16389,7 +16391,9 @@
         "ドラマ"
       ],
       "lb-534-9mfO": [],
-      "lb-535-3Ipk": [],
+      "lb-535-3Ipk": [
+        "社会問題・生活"
+      ],
       "lb-536-JSFG": [
         "ミステリー"
       ],
