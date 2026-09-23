@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790197534452,
-  "sourceUpdatedIso": "2026-09-23T21:05:34.452Z",
+  "sourceUpdatedAt": 1790197539884,
+  "sourceUpdatedIso": "2026-09-23T21:05:39.884Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -11490,7 +11490,9 @@
       "sameScoreRank": 6,
       "category": "ほかアニメ",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "子供向け"
+      ],
       "origin": "ハリウッド",
       "format": "animation",
       "runtime": null,
@@ -14889,7 +14891,8 @@
       "lb-446-bIPo": "movie",
       "lb-244-MGuM": "movie",
       "lb-445-8MH8": "movie",
-      "lb-219-on14": "movie"
+      "lb-219-on14": "movie",
+      "lb-152-89tc": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -15405,7 +15408,9 @@
       "lb-149-AF4": [],
       "lb-150-b5EQ": [],
       "lb-151-uvFS": [],
-      "lb-152-89tc": [],
+      "lb-152-89tc": [
+        "子供向け"
+      ],
       "lb-153-1Mvi": [],
       "lb-154-1Mn4": [],
       "lb-155-h2Hu": [],
