@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790195782118,
-  "sourceUpdatedIso": "2026-09-23T20:36:22.118Z",
+  "sourceUpdatedAt": 1790196148492,
+  "sourceUpdatedIso": "2026-09-23T20:42:28.492Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -12140,7 +12140,8 @@
       "mediaType": "movie",
       "genre": [
         "アクション",
-        "SF"
+        "SF",
+        "ヒーロー"
       ],
       "origin": "ハリウッド",
       "format": "live",
@@ -14832,7 +14833,8 @@
       "lb-453-2DF6": "movie",
       "lb-241-fmjS": "movie",
       "lb-539-kMaC": "movie",
-      "lb-220-Cgri": "movie"
+      "lb-220-Cgri": "movie",
+      "lb-452-cqUW": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -16142,7 +16144,8 @@
       ],
       "lb-452-cqUW": [
         "アクション",
-        "SF"
+        "SF",
+        "ヒーロー"
       ],
       "lb-453-2DF6": [
         "ミュージカル"
