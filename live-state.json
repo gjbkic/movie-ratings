@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790196181812,
-  "sourceUpdatedIso": "2026-09-23T20:43:01.812Z",
+  "sourceUpdatedAt": 1790196188537,
+  "sourceUpdatedIso": "2026-09-23T20:43:08.537Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -12100,7 +12100,10 @@
       "sameScoreRank": 2,
       "category": "邦画",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "クライム",
+        "ミステリー"
+      ],
       "origin": "邦画",
       "format": "live",
       "runtime": null,
@@ -14834,7 +14837,8 @@
       "lb-241-fmjS": "movie",
       "lb-539-kMaC": "movie",
       "lb-220-Cgri": "movie",
-      "lb-452-cqUW": "movie"
+      "lb-452-cqUW": "movie",
+      "lb-448-bERq": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -16135,7 +16139,10 @@
       ],
       "lb-446-bIPo": [],
       "lb-447-cdWU": [],
-      "lb-448-bERq": [],
+      "lb-448-bERq": [
+        "クライム",
+        "ミステリー"
+      ],
       "lb-449-MG9E": [],
       "lb-450-6dLq": [],
       "lb-451-h10u": [
