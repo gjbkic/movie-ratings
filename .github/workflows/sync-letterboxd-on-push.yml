@@ -1,0 +1,107 @@
+name: Sync Letterboxd on trigger
+
+on:
+  push:
+    paths:
+      - 'letterboxd-sync-trigger.txt'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: letterboxd-rss-triggered
+  cancel-in-progress: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch gjbkic RSS and write verification result
+        shell: bash
+        run: |
+          set -u
+          trigger="$(tr -d '\r\n' < letterboxd-sync-trigger.txt 2>/dev/null || true)"
+          tmp="$(mktemp)"
+          ok=0
+          err=''
+          stamp="$(date +%s%N)"
+          url="https://letterboxd.com/gjbkic/rss/?movie30=${stamp}"
+
+          for attempt in 1 2 3; do
+            if curl --compressed -L --fail --silent --show-error \
+              --retry 1 --retry-delay 2 --connect-timeout 15 --max-time 45 \
+              -A 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Chrome/124 Safari/537.36' \
+              -H 'Accept: application/rss+xml, application/xml, text/xml, */*' \
+              -H 'Accept-Language: en-US,en;q=0.9' \
+              -H 'Cache-Control: no-cache, no-store, max-age=0' \
+              -H 'Pragma: no-cache' \
+              "$url" -o "$tmp"; then
+              if grep -Eqi '<(rss|item)([ >])' "$tmp"; then
+                ok=1
+                break
+              else
+                err='Response was not a valid RSS feed.'
+              fi
+            else
+              err='Letterboxd RSS request failed.'
+            fi
+            sleep $((attempt * 3))
+          done
+
+          if [ "$ok" -eq 1 ]; then
+            mv "$tmp" letterboxd-gjbkic.xml
+            python - "$trigger" <<'PY'
+          import sys, json, datetime, xml.etree.ElementTree as ET
+          trigger = sys.argv[1]
+          def local(tag): return tag.rsplit('}',1)[-1]
+          def child_text(node, name):
+              if node is None: return ''
+              for c in list(node):
+                  if local(c.tag) == name:
+                      return (c.text or '').strip()
+              return ''
+          try:
+              root = ET.parse('letterboxd-gjbkic.xml').getroot()
+              items = [x for x in root.iter() if local(x.tag) == 'item']
+              latest = items[0] if items else None
+              result = {
+                  'trigger': trigger,
+                  'fetchedAt': datetime.datetime.now(datetime.timezone.utc).isoformat(),
+                  'itemCount': len(items),
+                  'latestTitle': child_text(latest, 'filmTitle'),
+                  'latestWatchedDate': child_text(latest, 'watchedDate'),
+                  'status': 'ok'
+              }
+          except Exception as e:
+              result = {'trigger': trigger, 'fetchedAt': datetime.datetime.now(datetime.timezone.utc).isoformat(), 'itemCount': 0, 'latestTitle': '', 'latestWatchedDate': '', 'status': 'error', 'error': str(e)}
+          with open('letterboxd-sync-result.json','w',encoding='utf-8') as f:
+              json.dump(result,f,ensure_ascii=False,indent=2)
+              f.write('\n')
+          PY
+          else
+            rm -f "$tmp"
+            python - "$trigger" "$err" <<'PY'
+          import sys, json, datetime
+          result = {'trigger': sys.argv[1], 'fetchedAt': datetime.datetime.now(datetime.timezone.utc).isoformat(), 'itemCount': 0, 'latestTitle': '', 'latestWatchedDate': '', 'status': 'error', 'error': sys.argv[2] or 'Could not fetch Letterboxd RSS.'}
+          with open('letterboxd-sync-result.json','w',encoding='utf-8') as f:
+              json.dump(result,f,ensure_ascii=False,indent=2)
+              f.write('\n')
+          PY
+          fi
+
+      - name: Commit feed and verification result
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -z "$(git status --porcelain -- letterboxd-gjbkic.xml letterboxd-sync-result.json)" ]; then
+            echo 'No files changed.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add letterboxd-gjbkic.xml letterboxd-sync-result.json
+          git commit -m 'Refresh gjbkic Letterboxd RSS'
+          git pull --rebase origin main
+          git push
