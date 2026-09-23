@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790197444152,
-  "sourceUpdatedIso": "2026-09-23T21:04:04.152Z",
+  "sourceUpdatedAt": 1790197451677,
+  "sourceUpdatedIso": "2026-09-23T21:04:11.677Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -11668,7 +11668,7 @@
       "mediaType": "movie",
       "genre": [
         "ミステリー",
-        "子供向け"
+        "シリーズ劇場版"
       ],
       "origin": "邦画",
       "format": "animation",
@@ -11689,7 +11689,7 @@
       "mediaType": "movie",
       "genre": [
         "ミステリー",
-        "子供向け"
+        "シリーズ劇場版"
       ],
       "origin": "邦画",
       "format": "animation",
@@ -14865,7 +14865,9 @@
       "lb-194-14eC": "movie",
       "lb-504-3mD0": "movie",
       "lb-196-14dY": "movie",
-      "lb-505-2GDC": "movie"
+      "lb-505-2GDC": "movie",
+      "lb-503-14es": "movie",
+      "lb-198-42Mo": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -15511,7 +15513,7 @@
       ],
       "lb-198-42Mo": [
         "ミステリー",
-        "子供向け"
+        "シリーズ劇場版"
       ],
       "lb-199-6Kya": [
         "ミステリー"
@@ -16334,7 +16336,7 @@
       ],
       "lb-503-14es": [
         "ミステリー",
-        "子供向け"
+        "シリーズ劇場版"
       ],
       "lb-504-3mD0": [
         "ミステリー",
