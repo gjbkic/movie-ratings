@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790197750272,
-  "sourceUpdatedIso": "2026-09-23T21:09:10.272Z",
+  "sourceUpdatedAt": 1790197759483,
+  "sourceUpdatedIso": "2026-09-23T21:09:19.483Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -11451,7 +11451,10 @@
       "sameScoreRank": 4,
       "category": "ほかアニメ",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "コメディ",
+        "ミュージカル"
+      ],
       "origin": "ハリウッド",
       "format": "animation",
       "runtime": null,
@@ -11515,7 +11518,8 @@
       "genre": [
         "アドベンチャー",
         "ファンタジー",
-        "ミュージカル"
+        "ミュージカル",
+        "子供向け"
       ],
       "origin": "ハリウッド",
       "format": "animation",
@@ -14896,7 +14900,8 @@
       "lb-445-8MH8": "movie",
       "lb-219-on14": "movie",
       "lb-152-89tc": "movie",
-      "lb-453-2DF6": "movie"
+      "lb-453-2DF6": "movie",
+      "lb-167-29dc": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -15451,7 +15456,10 @@
         "ファンタジー",
         "アドベンチャー"
       ],
-      "lb-167-29dc": [],
+      "lb-167-29dc": [
+        "コメディ",
+        "ミュージカル"
+      ],
       "lb-168-2b7U": [
         "クライム"
       ],
@@ -15603,7 +15611,8 @@
       "lb-219-on14": [
         "アドベンチャー",
         "ファンタジー",
-        "ミュージカル"
+        "ミュージカル",
+        "子供向け"
       ],
       "lb-220-Cgri": [
         "シリーズ劇場版",
