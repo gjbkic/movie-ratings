@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790197188927,
-  "sourceUpdatedIso": "2026-09-23T20:59:48.927Z",
+  "sourceUpdatedAt": 1790197216110,
+  "sourceUpdatedIso": "2026-09-23T21:00:16.110Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -11848,27 +11848,6 @@
       "exact": true
     },
     {
-      "id": "lb-537-14e8",
-      "title": "コナン ジョリーロジャー",
-      "originalTitle": "",
-      "englishTitle": "Detective Conan: Jolly Roger in the Deep Azure",
-      "year": 2007,
-      "score": 64,
-      "star": 1.5,
-      "overallRank": 599,
-      "sameScoreRank": 2,
-      "category": "コナン映画",
-      "mediaType": "movie",
-      "genre": [
-        "ミステリー",
-        "子供向け"
-      ],
-      "origin": "邦画",
-      "format": "animation",
-      "runtime": null,
-      "exact": false
-    },
-    {
       "id": "lb-504-3mD0",
       "title": "天空の難破船",
       "originalTitle": "",
@@ -11876,8 +11855,8 @@
       "year": 2010,
       "score": 64,
       "star": 1.5,
-      "overallRank": 600,
-      "sameScoreRank": 3,
+      "overallRank": 599,
+      "sameScoreRank": 2,
       "category": "コナン映画",
       "mediaType": "movie",
       "genre": [
@@ -11897,8 +11876,8 @@
       "year": 2019,
       "score": 64,
       "star": 1.5,
-      "overallRank": 601,
-      "sameScoreRank": 4,
+      "overallRank": 600,
+      "sameScoreRank": 3,
       "category": "MCU作品",
       "mediaType": "movie",
       "genre": [
@@ -11908,6 +11887,27 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
+      "runtime": null,
+      "exact": true
+    },
+    {
+      "id": "lb-537-14e8",
+      "title": "コナン ジョリーロジャー",
+      "originalTitle": "",
+      "englishTitle": "Detective Conan: Jolly Roger in the Deep Azure",
+      "year": 2007,
+      "score": 64,
+      "star": 1.5,
+      "overallRank": 601,
+      "sameScoreRank": 4,
+      "category": "コナン映画",
+      "mediaType": "movie",
+      "genre": [
+        "ミステリー",
+        "子供向け"
+      ],
+      "origin": "邦画",
+      "format": "animation",
       "runtime": null,
       "exact": true
     },
@@ -12882,7 +12882,8 @@
       "lb-206-9vSA": 64,
       "lb-443-8ND2": 71,
       "lb-156-ffTY": 72,
-      "custom-1790185844080-jquu": 81
+      "custom-1790185844080-jquu": 81,
+      "lb-537-14e8": 64
     },
     "rankOrder": {
       "40": [
@@ -12934,9 +12935,9 @@
       ],
       "64": [
         "lb-527-7dEc",
-        "lb-537-14e8",
         "lb-504-3mD0",
-        "lb-206-9vSA"
+        "lb-206-9vSA",
+        "lb-537-14e8"
       ],
       "65": [
         "lb-203-fyxW",
@@ -14703,7 +14704,8 @@
       "lb-206-9vSA": 1.5,
       "lb-443-8ND2": 2,
       "lb-156-ffTY": 2,
-      "custom-1790185844080-jquu": 3
+      "custom-1790185844080-jquu": 3,
+      "lb-537-14e8": 1.5
     },
     "titleOverrides": {
       "added-anchor-578": {
