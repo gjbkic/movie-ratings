@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790193975692,
-  "sourceUpdatedIso": "2026-09-23T20:06:15.692Z",
+  "sourceUpdatedAt": 1790193986630,
+  "sourceUpdatedIso": "2026-09-23T20:06:26.630Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -1025,7 +1025,9 @@
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
-        "ドラマ"
+        "ドラマ",
+        "歴史",
+        "戦争"
       ],
       "origin": "その他外国語映画",
       "format": "live",
@@ -14808,7 +14810,8 @@
       "custom-1789385860198-bkq0": "other",
       "custom-1790185844116-j1vu": "other",
       "lb-116-1YYc": "movie",
-      "lb-564-29Wm": "movie"
+      "lb-564-29Wm": "movie",
+      "added-anchor-577": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -16457,7 +16460,9 @@
       "lb-575-1fK0": [],
       "lb-576-18H4": [],
       "added-anchor-577": [
-        "ドラマ"
+        "ドラマ",
+        "歴史",
+        "戦争"
       ],
       "added-anchor-578": [
         "ドラマ"
