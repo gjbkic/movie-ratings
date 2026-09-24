@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790257648752,
-  "sourceUpdatedIso": "2026-09-24T13:47:28.752Z",
+  "sourceUpdatedAt": 1790257658558,
+  "sourceUpdatedIso": "2026-09-24T13:47:38.558Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -3704,7 +3704,12 @@
       "sameScoreRank": 21,
       "category": "ピクサー・ディズニー作品",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "切ない",
+        "感動",
+        "ドラマ",
+        "精神・哲学"
+      ],
       "origin": "ハリウッド",
       "format": "animation",
       "runtime": null,
@@ -15699,7 +15704,12 @@
         "サスペンス",
         "ミステリー"
       ],
-      "lb-28-4KHC": [],
+      "lb-28-4KHC": [
+        "切ない",
+        "感動",
+        "ドラマ",
+        "精神・哲学"
+      ],
       "lb-29-2a2k": [
         "恋愛",
         "切ない",
