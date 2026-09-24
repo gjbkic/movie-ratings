@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790271603110,
-  "sourceUpdatedIso": "2026-09-24T17:40:03.110Z",
+  "sourceUpdatedAt": 1790271616244,
+  "sourceUpdatedIso": "2026-09-24T17:40:16.244Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -10622,7 +10622,11 @@
       "sameScoreRank": 1,
       "category": "ほかアニメ",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "感動",
+        "アクション",
+        "シリーズ劇場版"
+      ],
       "origin": "邦画",
       "format": "animation",
       "runtime": null,
@@ -18565,7 +18569,11 @@
       "lb-436-n87k": [
         "SF"
       ],
-      "lb-437-O1GQ": [],
+      "lb-437-O1GQ": [
+        "感動",
+        "アクション",
+        "シリーズ劇場版"
+      ],
       "lb-438-2ahu": [
         "コメディ"
       ],
