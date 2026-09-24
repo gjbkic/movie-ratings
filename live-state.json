@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790253158843,
-  "sourceUpdatedIso": "2026-09-24T12:32:38.843Z",
+  "sourceUpdatedAt": 1790253175257,
+  "sourceUpdatedIso": "2026-09-24T12:32:55.257Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -1813,7 +1813,9 @@
       "sameScoreRank": 5,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "歴史"
+      ],
       "origin": "邦画",
       "format": "animation",
       "runtime": null,
@@ -16871,7 +16873,9 @@
       "lb-525-2aVE": [
         "クライム"
       ],
-      "lb-526-4JQI": [],
+      "lb-526-4JQI": [
+        "歴史"
+      ],
       "lb-527-7dEc": [
         "アクション"
       ],
