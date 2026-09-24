@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790251109156,
-  "sourceUpdatedIso": "2026-09-24T11:58:29.156Z",
+  "sourceUpdatedAt": 1790251116939,
+  "sourceUpdatedIso": "2026-09-24T11:58:36.939Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -1470,7 +1470,9 @@
       "sameScoreRank": 3,
       "category": "ほかアニメ",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "切ない"
+      ],
       "origin": "邦画",
       "format": "animation",
       "runtime": null,
@@ -16573,7 +16575,9 @@
       ],
       "lb-469-1MKi": [],
       "lb-470-2BwG": [],
-      "lb-471-8LnQ": [],
+      "lb-471-8LnQ": [
+        "切ない"
+      ],
       "lb-472-1zYm": [],
       "lb-473-1U2o": [],
       "lb-474-29gg": [
