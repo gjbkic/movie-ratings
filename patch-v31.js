@@ -1,9 +1,10 @@
 (() => {
-  // v31: add TV/series drama as a top-level media type without disturbing movie-genre "ドラマ".
-  const DRAMA_VALUE='drama';
-  const DRAMA_LABEL='ドラマ';
+  // v31: add TV series as a top-level media type without disturbing movie-genre "ドラマ".
+  const DRAMA_VALUE='tvseries';
+  const DRAMA_LABEL='TVシリーズ';
+  // Keep the existing localStorage key so anything briefly tagged under the prior label migrates cleanly.
   const DRAMA_STORE='movie30_media_drama_ids_v1';
-  const VALID_MEDIA31=new Set(['movie','documentary','drama','other']);
+  const VALID_MEDIA31=new Set(['movie','documentary','tvseries','other']);
 
   function readDramaIds(){
     try{
@@ -17,7 +18,7 @@
   let dramaIds=readDramaIds();
 
   // v21 predates this type and normalizes unknown media values back to movie on load.
-  // Restore the separately remembered drama ids after v21 has finished.
+  // Restore separately remembered TV-series ids after v21 has finished.
   for(const id of [...dramaIds]){
     if(filmById(id)) state.mediaTypeOverrides[id]=DRAMA_VALUE;
     else dramaIds.delete(id);
@@ -28,12 +29,12 @@
     if(!f)return 'movie';
     if(dramaIds.has(f.id))return DRAMA_VALUE;
     const v=String(state.mediaTypeOverrides?.[f.id]||f.mediaType||'movie');
-    if(v==='series')return 'other';
+    if(v==='series'||v==='drama')return dramaIds.has(f.id)?DRAMA_VALUE:'other';
     return VALID_MEDIA31.has(v)?v:'movie';
   }
   function mediaLabel31(f){
     const v=rawMedia31(f);
-    return v==='documentary'?'ドキュメンタリー':v==='drama'?'ドラマ':v==='other'?'その他':'映画';
+    return v==='documentary'?'ドキュメンタリー':v==='tvseries'?'TVシリーズ':v==='other'?'その他':'映画';
   }
   function setMedia31(f,value){
     if(!f)return;
@@ -51,11 +52,10 @@
   // Hidden legacy selects are not shown, but keep their option lists coherent.
   for(const id of ['newMediaType','qMediaType','editMediaType']){
     const s=document.getElementById(id); if(!s)continue;
-    if(![...s.options].some(o=>o.value===DRAMA_VALUE)){
-      const opt=new Option(DRAMA_LABEL,DRAMA_VALUE);
-      const other=[...s.options].find(o=>o.value==='other');
-      if(other)s.insertBefore(opt,other);else s.add(opt);
-    }
+    [...s.options].filter(o=>o.value==='drama'||o.value==='tvseries').forEach(o=>o.remove());
+    const opt=new Option(DRAMA_LABEL,DRAMA_VALUE);
+    const other=[...s.options].find(o=>o.value==='other');
+    if(other)s.insertBefore(opt,other);else s.add(opt);
   }
 
   const addMediaChoice={newGenrePicker:'movie',qGenrePicker:'movie'};
@@ -63,13 +63,14 @@
   function ensureDramaButton31(wrap){
     const row=mediaRow31(wrap); if(!row)return null;
     const host=row.querySelector('.struct-options')||row;
+    host.querySelectorAll('[data-struct-value="drama"]').forEach(x=>x.remove());
     let b=host.querySelector(`[data-struct-value="${DRAMA_VALUE}"]`);
     if(!b){
       b=document.createElement('button');
       b.type='button'; b.className='struct-chip'; b.dataset.structValue=DRAMA_VALUE; b.dataset.multi='0'; b.textContent=DRAMA_LABEL;
       const other=host.querySelector('[data-struct-value="other"]');
       if(other)host.insertBefore(b,other);else host.appendChild(b);
-    }
+    }else b.textContent=DRAMA_LABEL;
     return b;
   }
   function paintMediaRow31(row,value){
@@ -156,7 +157,7 @@
         updateSheetMeta31(f);
       };
     });
-    // Older origin/format callbacks carry an old media value in their closure; if this is a drama,
+    // Older origin/format callbacks carry an old media value in their closure; if this is TV series,
     // re-assert it after those clicks so changing another field cannot silently erase the type.
     [...wrap.querySelectorAll('.struct-row')].slice(1,3).forEach(r=>r.querySelectorAll('.struct-chip').forEach(b=>{
       const old=b.onclick;
@@ -172,11 +173,10 @@
   // Add the fourth type to ranking/classification filters.
   for(const id of ['mediaFilterRank','mediaFilterClassify']){
     const s=document.getElementById(id); if(!s)continue;
-    if(![...s.options].some(o=>o.value===DRAMA_VALUE)){
-      const opt=new Option(DRAMA_LABEL,DRAMA_VALUE);
-      const other=[...s.options].find(o=>o.value==='other');
-      if(other)s.insertBefore(opt,other);else s.add(opt);
-    }
+    [...s.options].filter(o=>o.value==='drama'||o.value==='tvseries').forEach(o=>o.remove());
+    const opt=new Option(DRAMA_LABEL,DRAMA_VALUE);
+    const other=[...s.options].find(o=>o.value==='other');
+    if(other)s.insertBefore(opt,other);else s.add(opt);
   }
   function filterDrama31(root,cardSel,sectionSel,value){
     if(value!==DRAMA_VALUE)return;
@@ -185,7 +185,7 @@
       if(f&&rawMedia31(f)!==DRAMA_VALUE)card.remove();
     });
     document.querySelectorAll(`${root} ${sectionSel}`).forEach(sec=>{if(!sec.querySelector(cardSel))sec.style.display='none'});
-    if(root==='#rankRoot')document.querySelectorAll('#rankRoot .score-bin').forEach(bin=>{if(!bin.querySelector('.rank-card'))bin.style.display='none'});
+    if(root==='#rankRoot')document.querySelectorAll('#rankRoot .score-bin').forEach(bin=>{if(!bin.querySelector(cardSel))bin.style.display='none'});
   }
   const renderRankV30=renderRank;
   renderRank=function(){
@@ -216,7 +216,7 @@
 
   // Replace the old diagnostic build marker text; index/app-version remain the authority.
   const marker=document.getElementById('movie30BuildV29');
-  if(marker)marker.textContent='app build 20260924s';
+  if(marker)marker.textContent='app build 20260924t';
 
   save(false);
   render();
