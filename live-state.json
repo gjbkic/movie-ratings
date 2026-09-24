@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790256433733,
-  "sourceUpdatedIso": "2026-09-24T13:27:13.733Z",
+  "sourceUpdatedAt": 1790256443235,
+  "sourceUpdatedIso": "2026-09-24T13:27:23.235Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -4774,7 +4774,12 @@
       "sameScoreRank": 34,
       "category": "Letterboxd追加",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "どんでん返し",
+        "社会問題・生活",
+        "サスペンス",
+        "ミステリー"
+      ],
       "origin": "その他外国語映画",
       "format": "live",
       "runtime": null,
@@ -17389,7 +17394,12 @@
       "lb-544-26EE": [
         "アクション"
       ],
-      "lb-545-1vWw": [],
+      "lb-545-1vWw": [
+        "どんでん返し",
+        "社会問題・生活",
+        "サスペンス",
+        "ミステリー"
+      ],
       "lb-546-3ZqO": [
         "ドラマ",
         "世界観"
