@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790257256518,
-  "sourceUpdatedIso": "2026-09-24T13:40:56.518Z",
+  "sourceUpdatedAt": 1790257275370,
+  "sourceUpdatedIso": "2026-09-24T13:41:15.370Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -4139,7 +4139,16 @@
       "sameScoreRank": 2,
       "category": "ほかアニメ",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "子供向け",
+        "ファンタジー",
+        "世界観",
+        "アクション",
+        "ミステリー",
+        "どんでん返し",
+        "サスペンス",
+        "シリーズ劇場版"
+      ],
       "origin": "邦画",
       "format": "animation",
       "runtime": null,
@@ -16860,7 +16869,16 @@
         "恋愛",
         "ミュージカル"
       ],
-      "lb-358-6uNS": [],
+      "lb-358-6uNS": [
+        "子供向け",
+        "ファンタジー",
+        "世界観",
+        "アクション",
+        "ミステリー",
+        "どんでん返し",
+        "サスペンス",
+        "シリーズ劇場版"
+      ],
       "lb-359-gxWo": [],
       "lb-360-v2Wi": [],
       "lb-361-26vC": [
