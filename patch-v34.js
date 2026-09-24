@@ -1,6 +1,8 @@
 (() => {
   // v34: keep card media badges in sync with the v33 authoritative media taxonomy.
-  const BUILD34='20260925w';
+  // IMPORTANT: no MutationObserver here. The previous observer rescanned all 600+ cards
+  // after every text mutation and could create an update loop on iPhone.
+  const BUILD34='20260925x';
 
   function mediaLabel34(f){
     const v=String(state.mediaTypeOverrides?.[f?.id] || f?.mediaType || 'movie');
@@ -18,7 +20,8 @@
       try{id=decodeURIComponent(raw)}catch(_){}
       const f=filmById(id);
       if(!f) return;
-      pill.textContent=mediaLabel34(f);
+      const label=mediaLabel34(f);
+      if(pill.textContent!==label) pill.textContent=label;
     });
   }
 
@@ -36,18 +39,7 @@
     return out;
   };
 
-  const rankRoot=document.getElementById('rankRoot');
-  const classifyRoot=document.getElementById('classifyRoot');
-  const observer=new MutationObserver(muts=>{
-    for(const m of muts){
-      if(m.type==='childList'&&m.addedNodes.length){
-        fixBadges34(m.target.closest?.('#rankRoot,#classifyRoot')||m.target);
-      }
-    }
-  });
-  if(rankRoot)observer.observe(rankRoot,{childList:true,subtree:true});
-  if(classifyRoot)observer.observe(classifyRoot,{childList:true,subtree:true});
-
+  // One initial pass is enough; subsequent changes are handled by the render wrappers above.
   fixBadges34();
   const marker=document.getElementById('movie30BuildV29');
   if(marker)marker.textContent='app build '+BUILD34;
