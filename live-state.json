@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790271742791,
-  "sourceUpdatedIso": "2026-09-24T17:42:22.791Z",
+  "sourceUpdatedAt": 1790271752209,
+  "sourceUpdatedIso": "2026-09-24T17:42:32.209Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -10434,7 +10434,11 @@
       "category": "Letterboxd追加",
       "mediaType": "movie",
       "genre": [
-        "アクション"
+        "アクション",
+        "戦争",
+        "ファンタジー",
+        "世界観",
+        "アドベンチャー"
       ],
       "origin": "ハリウッド",
       "format": "live",
@@ -18624,7 +18628,11 @@
         "SF"
       ],
       "lb-433-5xlK": [
-        "アクション"
+        "アクション",
+        "戦争",
+        "ファンタジー",
+        "世界観",
+        "アドベンチャー"
       ],
       "lb-434-8i7u": [
         "クライム"
