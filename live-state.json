@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790255513092,
-  "sourceUpdatedIso": "2026-09-24T13:11:53.092Z",
+  "sourceUpdatedAt": 1790255522007,
+  "sourceUpdatedIso": "2026-09-24T13:12:02.007Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -2609,7 +2609,10 @@
       "sameScoreRank": 4,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "恋愛",
+        "青春・若者"
+      ],
       "origin": "邦画",
       "format": "animation",
       "runtime": null,
@@ -15914,7 +15917,10 @@
       "lb-145-1S0A": [],
       "lb-146-3GNa": [],
       "lb-147-1WYO": [],
-      "lb-148-17uy": [],
+      "lb-148-17uy": [
+        "恋愛",
+        "青春・若者"
+      ],
       "lb-149-AF4": [],
       "lb-150-b5EQ": [],
       "lb-151-uvFS": [],
