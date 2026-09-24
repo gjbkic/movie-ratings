@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790255077646,
-  "sourceUpdatedIso": "2026-09-24T13:04:37.646Z",
+  "sourceUpdatedAt": 1790255085566,
+  "sourceUpdatedIso": "2026-09-24T13:04:45.566Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -1565,31 +1565,6 @@
       "exact": true
     },
     {
-      "id": "lb-566-2b5u",
-      "title": "ロード・オブ・ザ・リング王の帰還",
-      "originalTitle": "",
-      "englishTitle": "The Lord of the Rings: The Return of the King",
-      "year": 2003,
-      "score": 90,
-      "star": 4,
-      "overallRank": 67,
-      "sameScoreRank": 7,
-      "category": "ファンタジー、アドベンチャー",
-      "mediaType": "movie",
-      "genre": [
-        "ファンタジー",
-        "アドベンチャー",
-        "アクション",
-        "戦争",
-        "感動",
-        "世界観"
-      ],
-      "origin": "邦画",
-      "format": "live",
-      "runtime": null,
-      "exact": true
-    },
-    {
       "id": "lb-73-27Vc",
       "title": "スターウォーズ 1",
       "originalTitle": "",
@@ -1597,8 +1572,8 @@
       "year": 1999,
       "score": 90,
       "star": 4,
-      "overallRank": 68,
-      "sameScoreRank": 8,
+      "overallRank": 67,
+      "sameScoreRank": 7,
       "category": "スターウォーズシリーズ",
       "mediaType": "movie",
       "genre": [
@@ -1622,8 +1597,8 @@
       "year": 2004,
       "score": 90,
       "star": 4,
-      "overallRank": 69,
-      "sameScoreRank": 9,
+      "overallRank": 68,
+      "sameScoreRank": 8,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -1644,8 +1619,8 @@
       "year": 2004,
       "score": 90,
       "star": 4,
-      "overallRank": 70,
-      "sameScoreRank": 10,
+      "overallRank": 69,
+      "sameScoreRank": 9,
       "category": "ハリーポッター シリーズ",
       "mediaType": "movie",
       "genre": [
@@ -1668,8 +1643,8 @@
       "year": 2010,
       "score": 90,
       "star": 4,
-      "overallRank": 71,
-      "sameScoreRank": 11,
+      "overallRank": 70,
+      "sameScoreRank": 10,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -1692,8 +1667,8 @@
       "year": 1985,
       "score": 90,
       "star": 4,
-      "overallRank": 72,
-      "sameScoreRank": 12,
+      "overallRank": 71,
+      "sameScoreRank": 11,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -1703,6 +1678,31 @@
       "origin": "ハリウッド",
       "format": "live",
       "runtime": 143,
+      "exact": true
+    },
+    {
+      "id": "lb-566-2b5u",
+      "title": "ロード・オブ・ザ・リング王の帰還",
+      "originalTitle": "",
+      "englishTitle": "The Lord of the Rings: The Return of the King",
+      "year": 2003,
+      "score": 90,
+      "star": 4,
+      "overallRank": 72,
+      "sameScoreRank": 12,
+      "category": "ファンタジー、アドベンチャー",
+      "mediaType": "movie",
+      "genre": [
+        "ファンタジー",
+        "アドベンチャー",
+        "アクション",
+        "戦争",
+        "感動",
+        "世界観"
+      ],
+      "origin": "邦画",
+      "format": "live",
+      "runtime": null,
       "exact": true
     },
     {
@@ -13905,12 +13905,12 @@
         "lb-301-2a2a",
         "lb-205-1UlA",
         "lb-90-71Y",
-        "lb-566-2b5u",
         "lb-73-27Vc",
         "lb-286-2bdI",
         "lb-33-29Qy",
         "lb-17-1U82",
         "custom-1790254612541-iyij",
+        "lb-566-2b5u",
         "lb-321-2aNK"
       ],
       "91": [
