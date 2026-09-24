@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790257738966,
-  "sourceUpdatedIso": "2026-09-24T13:48:58.966Z",
+  "sourceUpdatedAt": 1790257748153,
+  "sourceUpdatedIso": "2026-09-24T13:49:08.153Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -3548,7 +3548,12 @@
       "sameScoreRank": 13,
       "category": "追加映画",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "社会問題・生活",
+        "ドラマ",
+        "コメディ",
+        "ファンタジー"
+      ],
       "origin": "邦画",
       "format": "live",
       "runtime": null,
@@ -17944,7 +17949,12 @@
       "custom-1789385860920-hsho": [],
       "custom-1789385861007-nhdf": [],
       "custom-1789385861101-oomm": [],
-      "custom-1789387775661-0mdh": [],
+      "custom-1789387775661-0mdh": [
+        "社会問題・生活",
+        "ドラマ",
+        "コメディ",
+        "ファンタジー"
+      ],
       "custom-1789408864046-u4p4": [
         "スリラー",
         "ホラー"
