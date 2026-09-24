@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790271104320,
-  "sourceUpdatedIso": "2026-09-24T17:31:44.320Z",
+  "sourceUpdatedAt": 1790271116275,
+  "sourceUpdatedIso": "2026-09-24T17:31:56.275Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -11302,7 +11302,12 @@
       "sameScoreRank": 17,
       "category": "ピクサー・ディズニー作品",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "ドラマ",
+        "子供向け",
+        "社会問題・生活",
+        "ファンタジー"
+      ],
       "origin": "ハリウッド",
       "format": "animation",
       "runtime": null,
@@ -16745,7 +16750,12 @@
         "アクション",
         "どんでん返し"
       ],
-      "lb-55-2a46": [],
+      "lb-55-2a46": [
+        "ドラマ",
+        "子供向け",
+        "社会問題・生活",
+        "ファンタジー"
+      ],
       "lb-56-72i": [],
       "lb-57-15gO": [],
       "lb-58-293w": [
