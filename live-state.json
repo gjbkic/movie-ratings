@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790256471291,
-  "sourceUpdatedIso": "2026-09-24T13:27:51.291Z",
+  "sourceUpdatedAt": 1790256485047,
+  "sourceUpdatedIso": "2026-09-24T13:28:05.047Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -4717,7 +4717,10 @@
       "category": "SF",
       "mediaType": "movie",
       "genre": [
-        "SF"
+        "SF",
+        "ファンタジー",
+        "世界観",
+        "サスペンス"
       ],
       "origin": "ハリウッド",
       "format": "live",
@@ -15979,7 +15982,10 @@
         "クライム"
       ],
       "lb-124-103U": [
-        "SF"
+        "SF",
+        "ファンタジー",
+        "世界観",
+        "サスペンス"
       ],
       "lb-125-26Eu": [
         "アクション"
