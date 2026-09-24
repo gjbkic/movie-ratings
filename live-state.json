@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790269857891,
-  "sourceUpdatedIso": "2026-09-24T17:10:57.891Z",
+  "sourceUpdatedAt": 1790269867376,
+  "sourceUpdatedIso": "2026-09-24T17:11:07.376Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -4930,29 +4930,6 @@
       "exact": true
     },
     {
-      "id": "lb-499-948A",
-      "title": "お嬢さん",
-      "originalTitle": "아가씨",
-      "englishTitle": "The Handmaiden",
-      "year": 2016,
-      "score": 84,
-      "star": 3.5,
-      "overallRank": 213,
-      "sameScoreRank": 32,
-      "category": "Letterboxd追加",
-      "mediaType": "movie",
-      "genre": [
-        "どんでん返し",
-        "サスペンス",
-        "ドラマ",
-        "恋愛"
-      ],
-      "origin": "その他",
-      "format": "live",
-      "runtime": null,
-      "exact": false
-    },
-    {
       "id": "lb-266-1Iik",
       "title": "第9地区",
       "originalTitle": "",
@@ -4960,8 +4937,8 @@
       "year": 2009,
       "score": 84,
       "star": 3.5,
-      "overallRank": 214,
-      "sameScoreRank": 33,
+      "overallRank": 213,
+      "sameScoreRank": 32,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -4980,8 +4957,8 @@
       "year": 2009,
       "score": 84,
       "star": 3.5,
-      "overallRank": 215,
-      "sameScoreRank": 34,
+      "overallRank": 214,
+      "sameScoreRank": 33,
       "category": "Letterboxd追加",
       "mediaType": "movie",
       "genre": [
@@ -4990,6 +4967,29 @@
         "サスペンス",
         "ミステリー",
         "胸糞"
+      ],
+      "origin": "その他",
+      "format": "live",
+      "runtime": null,
+      "exact": true
+    },
+    {
+      "id": "lb-499-948A",
+      "title": "お嬢さん",
+      "originalTitle": "아가씨",
+      "englishTitle": "The Handmaiden",
+      "year": 2016,
+      "score": 84,
+      "star": 3.5,
+      "overallRank": 215,
+      "sameScoreRank": 34,
+      "category": "Letterboxd追加",
+      "mediaType": "movie",
+      "genre": [
+        "どんでん返し",
+        "サスペンス",
+        "ドラマ",
+        "恋愛"
       ],
       "origin": "その他",
       "format": "live",
@@ -13609,7 +13609,8 @@
       "lb-537-14e8": 64,
       "custom-1790247938551-ixfs": 86,
       "lb-132-aPvy": 88,
-      "custom-1790254612541-iyij": 90
+      "custom-1790254612541-iyij": 90,
+      "lb-545-1vWw": 84
     },
     "rankOrder": {
       "40": [
@@ -14118,9 +14119,9 @@
         "lb-379-R6yo",
         "lb-212-acjI",
         "lb-124-103U",
-        "lb-499-948A",
         "lb-266-1Iik",
         "lb-545-1vWw",
+        "lb-499-948A",
         "lb-159-18U8"
       ],
       "85": [
@@ -15471,7 +15472,8 @@
       "custom-1790247938551-ixfs": 3.5,
       "lb-132-aPvy": 4,
       "custom-1790254612541-iyij": 4,
-      "custom-1789385860026-8m1d": 3.5
+      "custom-1789385860026-8m1d": 3.5,
+      "lb-545-1vWw": 3.5
     },
     "titleOverrides": {
       "added-anchor-578": {
