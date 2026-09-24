@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790255318988,
-  "sourceUpdatedIso": "2026-09-24T13:08:38.988Z",
+  "sourceUpdatedAt": 1790255373764,
+  "sourceUpdatedIso": "2026-09-24T13:09:33.764Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -1345,7 +1345,7 @@
       "overallRank": 57,
       "sameScoreRank": 6,
       "category": "Letterboxd追加",
-      "mediaType": "movie",
+      "mediaType": "other",
       "genre": [
         "ファンタジー",
         "アドベンチャー",
@@ -15287,7 +15287,8 @@
       "lb-185-HTIi": "other",
       "lb-459-1Vgm": "other",
       "lb-464-mkbG": "drama",
-      "lb-253-SVAW": "drama"
+      "lb-253-SVAW": "drama",
+      "lb-463-4Xuw": "other"
     },
     "genreOverrides": {
       "lb-0-hTha": [
