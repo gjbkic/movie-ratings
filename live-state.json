@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790256942309,
-  "sourceUpdatedIso": "2026-09-24T13:35:42.309Z",
+  "sourceUpdatedAt": 1790257040986,
+  "sourceUpdatedIso": "2026-09-24T13:37:20.986Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -4274,8 +4274,10 @@
       "overallRank": 190,
       "sameScoreRank": 9,
       "category": "Letterboxd",
-      "mediaType": "movie",
-      "genre": [],
+      "mediaType": "other",
+      "genre": [
+        "コメディ"
+      ],
       "origin": "ハリウッド",
       "format": "live",
       "runtime": null,
@@ -15474,7 +15476,8 @@
       "lb-464-mkbG": "tvseries",
       "lb-253-SVAW": "tvseries",
       "lb-336-qH0": "tvseries",
-      "lb-228-6eCu": "tvseries"
+      "lb-228-6eCu": "tvseries",
+      "custom-1789385860026-8m1d": "other"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -17702,7 +17705,9 @@
         "SF"
       ],
       "custom-1789385859985-uylk": [],
-      "custom-1789385860026-8m1d": [],
+      "custom-1789385860026-8m1d": [
+        "コメディ"
+      ],
       "custom-1789385860057-z7ka": [],
       "custom-1789385860088-xif1": [],
       "custom-1789385860147-fi90": [],
