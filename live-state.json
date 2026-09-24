@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790253822432,
-  "sourceUpdatedIso": "2026-09-24T12:43:42.432Z",
+  "sourceUpdatedAt": 1790253830999,
+  "sourceUpdatedIso": "2026-09-24T12:43:50.999Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -2011,7 +2011,9 @@
       "sameScoreRank": 2,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "社会問題・生活"
+      ],
       "origin": "邦画",
       "format": "animation",
       "runtime": null,
@@ -16661,7 +16663,9 @@
         "アクション",
         "戦争"
       ],
-      "lb-460-20eA": [],
+      "lb-460-20eA": [
+        "社会問題・生活"
+      ],
       "lb-461-1JAY": [
         "恋愛",
         "ファンタジー",
