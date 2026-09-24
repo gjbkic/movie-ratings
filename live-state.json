@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790270798242,
-  "sourceUpdatedIso": "2026-09-24T17:26:38.242Z",
+  "sourceUpdatedAt": 1790270810116,
+  "sourceUpdatedIso": "2026-09-24T17:26:50.116Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -11765,7 +11765,10 @@
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
-        "アクション"
+        "アクション",
+        "シリーズ劇場版",
+        "ヒーロー",
+        "ファンタジー"
       ],
       "origin": "邦画",
       "format": "animation",
@@ -17014,7 +17017,10 @@
         "アクション"
       ],
       "lb-128-nyLU": [
-        "アクション"
+        "アクション",
+        "シリーズ劇場版",
+        "ヒーロー",
+        "ファンタジー"
       ],
       "lb-129-24Nu": [
         "アクション"
