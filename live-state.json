@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790270985537,
-  "sourceUpdatedIso": "2026-09-24T17:29:45.537Z",
+  "sourceUpdatedAt": 1790271003585,
+  "sourceUpdatedIso": "2026-09-24T17:30:03.585Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -11434,7 +11434,13 @@
       "sameScoreRank": 5,
       "category": "ピクサー・ディズニー作品",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "コメディ",
+        "子供向け",
+        "世界観",
+        "ファンタジー",
+        "ドラマ"
+      ],
       "origin": "ハリウッド",
       "format": "animation",
       "runtime": null,
@@ -18336,7 +18342,13 @@
         "コメディ",
         "子供向け"
       ],
-      "lb-454-edAy": [],
+      "lb-454-edAy": [
+        "コメディ",
+        "子供向け",
+        "世界観",
+        "ファンタジー",
+        "ドラマ"
+      ],
       "lb-455-Ro": [
         "SF"
       ],
