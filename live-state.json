@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790251615102,
-  "sourceUpdatedIso": "2026-09-24T12:06:55.102Z",
+  "sourceUpdatedAt": 1790251788644,
+  "sourceUpdatedIso": "2026-09-24T12:09:48.644Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -1676,7 +1676,9 @@
       "category": "SF",
       "mediaType": "movie",
       "genre": [
-        "SF"
+        "SF",
+        "アクション",
+        "精神・哲学"
       ],
       "origin": "ハリウッド",
       "format": "live",
@@ -15643,7 +15645,9 @@
         "ドラマ"
       ],
       "lb-141-2a12": [
-        "SF"
+        "SF",
+        "アクション",
+        "精神・哲学"
       ],
       "lb-142-2bde": [
         "SF"
