@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790270590797,
-  "sourceUpdatedIso": "2026-09-24T17:23:10.797Z",
+  "sourceUpdatedAt": 1790270598992,
+  "sourceUpdatedIso": "2026-09-24T17:23:18.992Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -11954,7 +11954,10 @@
       "sameScoreRank": 4,
       "category": "ピクサー・ディズニー作品",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "子供向け",
+        "ファンタジー"
+      ],
       "origin": "ハリウッド",
       "format": "animation",
       "runtime": null,
@@ -16998,7 +17001,10 @@
         "切ない",
         "青春・若者"
       ],
-      "lb-134-aPvo": [],
+      "lb-134-aPvo": [
+        "子供向け",
+        "ファンタジー"
+      ],
       "lb-135-1ZLI": [
         "ファンタジー",
         "アドベンチャー"
