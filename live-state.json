@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790270878045,
-  "sourceUpdatedIso": "2026-09-24T17:27:58.045Z",
+  "sourceUpdatedAt": 1790270891944,
+  "sourceUpdatedIso": "2026-09-24T17:28:11.944Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -11585,7 +11585,9 @@
       "category": "コナン映画",
       "mediaType": "movie",
       "genre": [
-        "ミステリー"
+        "ミステリー",
+        "子供向け",
+        "シリーズ劇場版"
       ],
       "origin": "邦画",
       "format": "animation",
@@ -11604,7 +11606,13 @@
       "sameScoreRank": 3,
       "category": "邦画",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "SF",
+        "ファンタジー",
+        "アクション",
+        "サスペンス",
+        "シリーズ劇場版"
+      ],
       "origin": "邦画",
       "format": "live",
       "runtime": null,
@@ -17296,7 +17304,9 @@
         "子供向け"
       ],
       "lb-195-14ei": [
-        "ミステリー"
+        "ミステリー",
+        "子供向け",
+        "シリーズ劇場版"
       ],
       "lb-196-14dY": [
         "ミステリー",
@@ -17443,7 +17453,13 @@
       "lb-248-1KJs": [],
       "lb-249-4r68": [],
       "lb-250-bAcS": [],
-      "lb-251-8TIi": [],
+      "lb-251-8TIi": [
+        "SF",
+        "ファンタジー",
+        "アクション",
+        "サスペンス",
+        "シリーズ劇場版"
+      ],
       "lb-252-8THk": [],
       "lb-253-SVAW": [
         "ファンタジー",
