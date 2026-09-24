@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790255124978,
-  "sourceUpdatedIso": "2026-09-24T13:05:24.978Z",
+  "sourceUpdatedAt": 1790255132526,
+  "sourceUpdatedIso": "2026-09-24T13:05:32.526Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -1624,13 +1624,14 @@
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
-        "コメディ",
         "SF",
         "世界観",
         "差別・人権",
         "社会問題・生活",
         "胸糞",
-        "アクション"
+        "アクション",
+        "コメディ",
+        "ファンタジー"
       ],
       "origin": "ハリウッド",
       "format": "live",
@@ -17388,13 +17389,14 @@
         "シリーズ劇場版"
       ],
       "custom-1790254612541-iyij": [
-        "コメディ",
         "SF",
         "世界観",
         "差別・人権",
         "社会問題・生活",
         "胸糞",
-        "アクション"
+        "アクション",
+        "コメディ",
+        "ファンタジー"
       ]
     },
     "originOverrides": {
