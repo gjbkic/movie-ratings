@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790254644598,
-  "sourceUpdatedIso": "2026-09-24T12:57:24.598Z",
+  "sourceUpdatedAt": 1790254662048,
+  "sourceUpdatedIso": "2026-09-24T12:57:42.048Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -2404,7 +2404,7 @@
       "overallRank": 103,
       "sameScoreRank": 7,
       "category": "Letterboxd追加",
-      "mediaType": "other",
+      "mediaType": "drama",
       "genre": [],
       "origin": "ハリウッド",
       "format": "live",
@@ -2425,7 +2425,8 @@
       "mediaType": "movie",
       "genre": [
         "ドラマ",
-        "スポーツ"
+        "スポーツ",
+        "切ない"
       ],
       "origin": "ハリウッド",
       "format": "live",
@@ -15256,7 +15257,7 @@
       "custom-1790112133851-szwv": "other",
       "lb-183-x1OG": "other",
       "lb-253-SVAW": "other",
-      "lb-464-mkbG": "other",
+      "lb-464-mkbG": "drama",
       "lb-467-ptEI": "other",
       "custom-1789385860198-bkq0": "other",
       "custom-1790185844116-j1vu": "other",
@@ -15704,7 +15705,8 @@
       ],
       "lb-101-ce74": [
         "ドラマ",
-        "スポーツ"
+        "スポーツ",
+        "切ない"
       ],
       "lb-102-1Y2i": [
         "SF"
