@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790272025290,
-  "sourceUpdatedIso": "2026-09-24T17:47:05.290Z",
+  "sourceUpdatedAt": 1790272053124,
+  "sourceUpdatedIso": "2026-09-24T17:47:33.124Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -10132,7 +10132,11 @@
       "sameScoreRank": 13,
       "category": "Letterboxd",
       "mediaType": "drama",
-      "genre": [],
+      "genre": [
+        "サスペンス",
+        "ミステリー",
+        "シリーズ劇場版"
+      ],
       "origin": "ハリウッド",
       "format": "live",
       "runtime": null,
@@ -19577,7 +19581,11 @@
         "サスペンス",
         "シリーズ劇場版"
       ],
-      "custom-1789385860498-gvii": [],
+      "custom-1789385860498-gvii": [
+        "サスペンス",
+        "ミステリー",
+        "シリーズ劇場版"
+      ],
       "custom-1789385860541-6lzx": [],
       "custom-1789385860580-5td5": [
         "サスペンス",
