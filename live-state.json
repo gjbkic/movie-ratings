@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790269879877,
-  "sourceUpdatedIso": "2026-09-24T17:11:19.877Z",
+  "sourceUpdatedAt": 1790269887726,
+  "sourceUpdatedIso": "2026-09-24T17:11:27.726Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -4839,30 +4839,6 @@
       "exact": true
     },
     {
-      "id": "lb-63-8MxC",
-      "title": "ガーディアンズ・オブ・ギャラクシー:リミックス",
-      "originalTitle": "",
-      "englishTitle": "Guardians of the Galaxy Vol. 2",
-      "year": 2017,
-      "score": 84,
-      "star": 3.5,
-      "overallRank": 209,
-      "sameScoreRank": 28,
-      "category": "MCU作品",
-      "mediaType": "movie",
-      "genre": [
-        "アクション",
-        "SF",
-        "ヒーロー",
-        "ファンタジー",
-        "切ない"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": null,
-      "exact": true
-    },
-    {
       "id": "lb-379-R6yo",
       "title": "国宝",
       "originalTitle": "",
@@ -4870,8 +4846,8 @@
       "year": 2025,
       "score": 84,
       "star": 3.5,
-      "overallRank": 210,
-      "sameScoreRank": 29,
+      "overallRank": 209,
+      "sameScoreRank": 28,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -4880,6 +4856,30 @@
         "恋愛"
       ],
       "origin": "邦画",
+      "format": "live",
+      "runtime": null,
+      "exact": true
+    },
+    {
+      "id": "lb-545-1vWw",
+      "title": "瞳の奥の秘密",
+      "originalTitle": "El secreto de sus ojos",
+      "englishTitle": "The Secret in Their Eyes",
+      "year": 2009,
+      "score": 84,
+      "star": 3.5,
+      "overallRank": 210,
+      "sameScoreRank": 29,
+      "category": "Letterboxd追加",
+      "mediaType": "movie",
+      "genre": [
+        "どんでん返し",
+        "社会問題・生活",
+        "サスペンス",
+        "ミステリー",
+        "胸糞"
+      ],
+      "origin": "その他",
       "format": "live",
       "runtime": null,
       "exact": true
@@ -4905,25 +4905,25 @@
       "exact": true
     },
     {
-      "id": "lb-545-1vWw",
-      "title": "瞳の奥の秘密",
-      "originalTitle": "El secreto de sus ojos",
-      "englishTitle": "The Secret in Their Eyes",
-      "year": 2009,
+      "id": "lb-63-8MxC",
+      "title": "ガーディアンズ・オブ・ギャラクシー:リミックス",
+      "originalTitle": "",
+      "englishTitle": "Guardians of the Galaxy Vol. 2",
+      "year": 2017,
       "score": 84,
       "star": 3.5,
       "overallRank": 212,
       "sameScoreRank": 31,
-      "category": "Letterboxd追加",
+      "category": "MCU作品",
       "mediaType": "movie",
       "genre": [
-        "どんでん返し",
-        "社会問題・生活",
-        "サスペンス",
-        "ミステリー",
-        "胸糞"
+        "アクション",
+        "SF",
+        "ヒーロー",
+        "ファンタジー",
+        "切ない"
       ],
-      "origin": "その他",
+      "origin": "ハリウッド",
       "format": "live",
       "runtime": null,
       "exact": true
@@ -14115,10 +14115,10 @@
         "lb-394-2b5O",
         "lb-381-1alk",
         "lb-524-7bQA",
-        "lb-63-8MxC",
         "lb-379-R6yo",
-        "lb-266-1Iik",
         "lb-545-1vWw",
+        "lb-266-1Iik",
+        "lb-63-8MxC",
         "lb-212-acjI",
         "lb-124-103U",
         "lb-499-948A",
