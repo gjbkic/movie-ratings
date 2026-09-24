@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790255067522,
-  "sourceUpdatedIso": "2026-09-24T13:04:27.522Z",
+  "sourceUpdatedAt": 1790255077646,
+  "sourceUpdatedIso": "2026-09-24T13:04:37.646Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -1615,27 +1615,6 @@
       "exact": true
     },
     {
-      "id": "lb-321-2aNK",
-      "title": "ゴッドファーザー",
-      "originalTitle": "",
-      "englishTitle": "The Godfather",
-      "year": 1972,
-      "score": 90,
-      "star": 4,
-      "overallRank": 69,
-      "sameScoreRank": 9,
-      "category": "マフィア、クライム",
-      "mediaType": "movie",
-      "genre": [
-        "クライム",
-        "ドラマ"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": null,
-      "exact": true
-    },
-    {
       "id": "lb-286-2bdI",
       "title": "ミリオンダラー・ベイビー",
       "originalTitle": "",
@@ -1643,8 +1622,8 @@
       "year": 2004,
       "score": 90,
       "star": 4,
-      "overallRank": 70,
-      "sameScoreRank": 10,
+      "overallRank": 69,
+      "sameScoreRank": 9,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -1665,8 +1644,8 @@
       "year": 2004,
       "score": 90,
       "star": 4,
-      "overallRank": 71,
-      "sameScoreRank": 11,
+      "overallRank": 70,
+      "sameScoreRank": 10,
       "category": "ハリーポッター シリーズ",
       "mediaType": "movie",
       "genre": [
@@ -1689,8 +1668,8 @@
       "year": 2010,
       "score": 90,
       "star": 4,
-      "overallRank": 72,
-      "sameScoreRank": 12,
+      "overallRank": 71,
+      "sameScoreRank": 11,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -1713,8 +1692,8 @@
       "year": 1985,
       "score": 90,
       "star": 4,
-      "overallRank": 73,
-      "sameScoreRank": 13,
+      "overallRank": 72,
+      "sameScoreRank": 12,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -1724,6 +1703,27 @@
       "origin": "ハリウッド",
       "format": "live",
       "runtime": 143,
+      "exact": true
+    },
+    {
+      "id": "lb-321-2aNK",
+      "title": "ゴッドファーザー",
+      "originalTitle": "",
+      "englishTitle": "The Godfather",
+      "year": 1972,
+      "score": 90,
+      "star": 4,
+      "overallRank": 73,
+      "sameScoreRank": 13,
+      "category": "マフィア、クライム",
+      "mediaType": "movie",
+      "genre": [
+        "クライム",
+        "ドラマ"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": null,
       "exact": true
     },
     {
@@ -13907,11 +13907,11 @@
         "lb-90-71Y",
         "lb-566-2b5u",
         "lb-73-27Vc",
-        "lb-321-2aNK",
         "lb-286-2bdI",
         "lb-33-29Qy",
         "lb-17-1U82",
-        "custom-1790254612541-iyij"
+        "custom-1790254612541-iyij",
+        "lb-321-2aNK"
       ],
       "91": [
         "added-anchor-578",
