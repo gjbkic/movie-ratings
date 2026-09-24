@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790271383319,
-  "sourceUpdatedIso": "2026-09-24T17:36:23.319Z",
+  "sourceUpdatedAt": 1790271396737,
+  "sourceUpdatedIso": "2026-09-24T17:36:36.737Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -10885,7 +10885,12 @@
       "sameScoreRank": 15,
       "category": "Letterboxd",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "子供向け",
+        "アドベンチャー",
+        "ファンタジー",
+        "アクション"
+      ],
       "origin": "邦画",
       "format": "live",
       "runtime": null,
@@ -19211,7 +19216,12 @@
         "ファンタジー",
         "子供向け"
       ],
-      "custom-1789385861101-oomm": [],
+      "custom-1789385861101-oomm": [
+        "子供向け",
+        "アドベンチャー",
+        "ファンタジー",
+        "アクション"
+      ],
       "custom-1789387775661-0mdh": [
         "社会問題・生活",
         "ドラマ",
