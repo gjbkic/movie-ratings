@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790272064296,
-  "sourceUpdatedIso": "2026-09-24T17:47:44.296Z",
+  "sourceUpdatedAt": 1790272077781,
+  "sourceUpdatedIso": "2026-09-24T17:47:57.781Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -10114,7 +10114,15 @@
       "sameScoreRank": 12,
       "category": "ほかアニメ",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "精神・哲学",
+        "ファンタジー",
+        "SF",
+        "アクション",
+        "サスペンス",
+        "ドラマ",
+        "クライム"
+      ],
       "origin": "邦画",
       "format": "animation",
       "runtime": null,
@@ -18831,7 +18839,15 @@
         "差別・人権",
         "社会問題・生活"
       ],
-      "lb-442-1SrG": [],
+      "lb-442-1SrG": [
+        "精神・哲学",
+        "ファンタジー",
+        "SF",
+        "アクション",
+        "サスペンス",
+        "ドラマ",
+        "クライム"
+      ],
       "lb-443-8ND2": [
         "サスペンス",
         "ミステリー",
