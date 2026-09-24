@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790270585618,
-  "sourceUpdatedIso": "2026-09-24T17:23:05.618Z",
+  "sourceUpdatedAt": 1790270590797,
+  "sourceUpdatedIso": "2026-09-24T17:23:10.797Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -11920,24 +11920,6 @@
       "exact": true
     },
     {
-      "id": "lb-134-aPvo",
-      "title": "アナと雪の女王 2",
-      "originalTitle": "",
-      "englishTitle": "Frozen II",
-      "year": 2019,
-      "score": 69,
-      "star": 1.5,
-      "overallRank": 570,
-      "sameScoreRank": 3,
-      "category": "ピクサー・ディズニー作品",
-      "mediaType": "movie",
-      "genre": [],
-      "origin": "ハリウッド",
-      "format": "animation",
-      "runtime": null,
-      "exact": true
-    },
-    {
       "id": "lb-450-6dLq",
       "title": "トリック劇場版2",
       "originalTitle": "",
@@ -11945,8 +11927,8 @@
       "year": 2006,
       "score": 69,
       "star": 1.5,
-      "overallRank": 571,
-      "sameScoreRank": 4,
+      "overallRank": 570,
+      "sameScoreRank": 3,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -11958,7 +11940,25 @@
       "origin": "邦画",
       "format": "live",
       "runtime": null,
-      "exact": false
+      "exact": true
+    },
+    {
+      "id": "lb-134-aPvo",
+      "title": "アナと雪の女王 2",
+      "originalTitle": "",
+      "englishTitle": "Frozen II",
+      "year": 2019,
+      "score": 69,
+      "star": 1.5,
+      "overallRank": 571,
+      "sameScoreRank": 4,
+      "category": "ピクサー・ディズニー作品",
+      "mediaType": "movie",
+      "genre": [],
+      "origin": "ハリウッド",
+      "format": "animation",
+      "runtime": null,
+      "exact": true
     },
     {
       "id": "lb-305-RKla",
@@ -13690,7 +13690,8 @@
       "lb-132-aPvy": 88,
       "custom-1790254612541-iyij": 90,
       "lb-545-1vWw": 84,
-      "custom-1790269934541-2ps3": 84
+      "custom-1790269934541-2ps3": 84,
+      "lb-450-6dLq": 69
     },
     "rankOrder": {
       "40": [
@@ -13780,8 +13781,8 @@
       "69": [
         "lb-532-xBoE",
         "lb-199-6Kya",
-        "lb-134-aPvo",
         "lb-450-6dLq",
+        "lb-134-aPvo",
         "lb-305-RKla",
         "custom-1790185844045-qhut",
         "lb-207-29yE",
@@ -15572,7 +15573,8 @@
       "custom-1790254612541-iyij": 4,
       "custom-1789385860026-8m1d": 3.5,
       "lb-545-1vWw": 3.5,
-      "custom-1790269934541-2ps3": 3.5
+      "custom-1790269934541-2ps3": 3.5,
+      "lb-450-6dLq": 1.5
     },
     "titleOverrides": {
       "added-anchor-578": {
