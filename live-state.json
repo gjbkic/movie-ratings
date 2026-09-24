@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790270693896,
-  "sourceUpdatedIso": "2026-09-24T17:24:53.896Z",
+  "sourceUpdatedAt": 1790270707634,
+  "sourceUpdatedIso": "2026-09-24T17:25:07.634Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -11799,7 +11799,9 @@
       "sameScoreRank": 4,
       "category": "Letterboxd",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "ドラマ"
+      ],
       "origin": "ハリウッド",
       "format": "live",
       "runtime": null,
@@ -18850,7 +18852,9 @@
       "custom-1789385860756-dujj": [],
       "custom-1789385860847-w7kt": [],
       "custom-1789385860920-hsho": [],
-      "custom-1789385861007-nhdf": [],
+      "custom-1789385861007-nhdf": [
+        "ドラマ"
+      ],
       "custom-1789385861101-oomm": [],
       "custom-1789387775661-0mdh": [
         "社会問題・生活",
