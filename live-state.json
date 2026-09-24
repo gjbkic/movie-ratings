@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790250805214,
-  "sourceUpdatedIso": "2026-09-24T11:53:25.214Z",
+  "sourceUpdatedAt": 1790250819730,
+  "sourceUpdatedIso": "2026-09-24T11:53:39.730Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -1062,6 +1062,28 @@
       "exact": true
     },
     {
+      "id": "lb-178-29XE",
+      "title": "ユージュアル・サスペクツ",
+      "originalTitle": "",
+      "englishTitle": "The Usual Suspects",
+      "year": 1995,
+      "score": 92,
+      "star": 4,
+      "overallRank": 46,
+      "sameScoreRank": 3,
+      "category": "サスペンス、ミステリー",
+      "mediaType": "movie",
+      "genre": [
+        "サスペンス",
+        "ミステリー",
+        "どんでん返し"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": null,
+      "exact": true
+    },
+    {
       "id": "lb-564-29Wm",
       "title": "ライフ・イズ・ビューティフル",
       "originalTitle": "La vita è bella",
@@ -1069,8 +1091,8 @@
       "year": 1997,
       "score": 92,
       "star": 4,
-      "overallRank": 46,
-      "sameScoreRank": 3,
+      "overallRank": 47,
+      "sameScoreRank": 4,
       "category": "戦争、歴史",
       "mediaType": "movie",
       "genre": [
@@ -1081,28 +1103,6 @@
         "差別・人権"
       ],
       "origin": "その他外国語映画",
-      "format": "live",
-      "runtime": null,
-      "exact": true
-    },
-    {
-      "id": "lb-178-29XE",
-      "title": "ユージュアル・サスペクツ",
-      "originalTitle": "",
-      "englishTitle": "The Usual Suspects",
-      "year": 1995,
-      "score": 92,
-      "star": 4,
-      "overallRank": 47,
-      "sameScoreRank": 4,
-      "category": "サスペンス、ミステリー",
-      "mediaType": "movie",
-      "genre": [
-        "サスペンス",
-        "ミステリー",
-        "どんでん返し"
-      ],
-      "origin": "ハリウッド",
       "format": "live",
       "runtime": null,
       "exact": true
@@ -13718,8 +13718,8 @@
       "92": [
         "lb-487-28JG",
         "lb-116-1YYc",
-        "lb-564-29Wm",
         "lb-178-29XE",
+        "lb-564-29Wm",
         "added-anchor-577",
         "lb-262-29Du",
         "lb-378-26E0",
