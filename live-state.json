@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790256138442,
-  "sourceUpdatedIso": "2026-09-24T13:22:18.442Z",
+  "sourceUpdatedAt": 1790256155963,
+  "sourceUpdatedIso": "2026-09-24T13:22:35.963Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -2807,7 +2807,9 @@
       "mediaType": "movie",
       "genre": [
         "サスペンス",
-        "ミステリー"
+        "ミステリー",
+        "どんでん返し",
+        "クライム"
       ],
       "origin": "ハリウッド",
       "format": "live",
@@ -2827,7 +2829,8 @@
       "category": "SF",
       "mediaType": "movie",
       "genre": [
-        "SF"
+        "SF",
+        "サスペンス"
       ],
       "origin": "ハリウッド",
       "format": "live",
@@ -15383,7 +15386,8 @@
         "社会問題・生活"
       ],
       "lb-1-4VZ8": [
-        "SF"
+        "SF",
+        "サスペンス"
       ],
       "lb-2-2a9q": [
         "クライム",
@@ -17445,7 +17449,9 @@
       ],
       "lb-573-28ws": [
         "サスペンス",
-        "ミステリー"
+        "ミステリー",
+        "どんでん返し",
+        "クライム"
       ],
       "lb-574-29CQ": [
         "ドラマ"
