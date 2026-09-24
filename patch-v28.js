@@ -2,7 +2,7 @@
   // v28: make all genre toggles use one persistence path, and bridge the actual v23 GitHub token key to v26.
   const ALL_EXTRA_V28 = new Set([
     '青春・若者','子供向け','差別・人権','精神・哲学','社会問題・生活',
-    'スポーツ','胸糞','感動','切ない'
+    'スポーツ','胸糞','感動','切ない','どんでん返し'
   ]);
 
   // v23 saved the PAT under this key. v26 accidentally looked under a different key.
