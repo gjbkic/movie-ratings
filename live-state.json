@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790250895869,
-  "sourceUpdatedIso": "2026-09-24T11:54:55.869Z",
+  "sourceUpdatedAt": 1790250930376,
+  "sourceUpdatedIso": "2026-09-24T11:55:30.376Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -1307,7 +1307,11 @@
       "sameScoreRank": 5,
       "category": "邦画",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "恋愛",
+        "コメディ",
+        "ドラマ"
+      ],
       "origin": "邦画",
       "format": "live",
       "runtime": null,
@@ -16833,7 +16837,11 @@
         "差別・人権"
       ],
       "lb-557-1WyQ": [],
-      "lb-558-1pDe": [],
+      "lb-558-1pDe": [
+        "恋愛",
+        "コメディ",
+        "ドラマ"
+      ],
       "lb-559-abBm": [
         "社会問題・生活",
         "青春・若者",
