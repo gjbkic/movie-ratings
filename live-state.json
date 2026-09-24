@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790271244321,
-  "sourceUpdatedIso": "2026-09-24T17:34:04.321Z",
+  "sourceUpdatedAt": 1790271257224,
+  "sourceUpdatedIso": "2026-09-24T17:34:17.224Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -11094,7 +11094,14 @@
       "sameScoreRank": 6,
       "category": "ほかアニメ",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "感動",
+        "ドラマ",
+        "子供向け",
+        "シリーズ劇場版",
+        "ファンタジー",
+        "SF"
+      ],
       "origin": "邦画",
       "format": "animation",
       "runtime": null,
@@ -17528,7 +17535,14 @@
         "ファンタジー",
         "ドラマ"
       ],
-      "lb-223-rkrO": [],
+      "lb-223-rkrO": [
+        "感動",
+        "ドラマ",
+        "子供向け",
+        "シリーズ劇場版",
+        "ファンタジー",
+        "SF"
+      ],
       "lb-224-68Wo": [],
       "lb-225-A7Am": [],
       "lb-226-g0d6": [],
