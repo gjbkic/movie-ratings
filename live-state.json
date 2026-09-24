@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790270914754,
-  "sourceUpdatedIso": "2026-09-24T17:28:34.754Z",
+  "sourceUpdatedAt": 1790270924241,
+  "sourceUpdatedIso": "2026-09-24T17:28:44.241Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -11530,7 +11530,9 @@
       "sameScoreRank": 10,
       "category": "Letterboxd追加",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "ドラマ"
+      ],
       "origin": "邦画",
       "format": "live",
       "runtime": null,
@@ -17985,7 +17987,9 @@
       "lb-370-ham": [
         "SF"
       ],
-      "lb-371-Y44U": [],
+      "lb-371-Y44U": [
+        "ドラマ"
+      ],
       "lb-372-2b7g": [
         "クライム"
       ],
