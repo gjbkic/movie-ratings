@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790250955238,
-  "sourceUpdatedIso": "2026-09-24T11:55:55.238Z",
+  "sourceUpdatedAt": 1790250963448,
+  "sourceUpdatedIso": "2026-09-24T11:56:03.448Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -1333,7 +1333,10 @@
       "sameScoreRank": 6,
       "category": "Letterboxd追加",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "ファンタジー",
+        "アドベンチャー"
+      ],
       "origin": "ハリウッド",
       "format": "live",
       "runtime": null,
@@ -16516,7 +16519,10 @@
         "感動"
       ],
       "lb-462-d1ws": [],
-      "lb-463-4Xuw": [],
+      "lb-463-4Xuw": [
+        "ファンタジー",
+        "アドベンチャー"
+      ],
       "lb-464-mkbG": [],
       "lb-465-F0vO": [],
       "lb-466-1Ub6": [
