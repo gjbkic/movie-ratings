@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790269887726,
-  "sourceUpdatedIso": "2026-09-24T17:11:27.726Z",
+  "sourceUpdatedAt": 1790269897238,
+  "sourceUpdatedIso": "2026-09-24T17:11:37.238Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -4774,28 +4774,6 @@
       "exact": true
     },
     {
-      "id": "lb-394-2b5O",
-      "title": "ロード・オブ・ザ・リング旅の仲間",
-      "originalTitle": "",
-      "englishTitle": "The Lord of the Rings: The Fellowship of the Ring",
-      "year": 2001,
-      "score": 84,
-      "star": 3.5,
-      "overallRank": 206,
-      "sameScoreRank": 25,
-      "category": "ファンタジー、アドベンチャー",
-      "mediaType": "movie",
-      "genre": [
-        "ファンタジー",
-        "アドベンチャー",
-        "世界観"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": null,
-      "exact": true
-    },
-    {
       "id": "lb-381-1alk",
       "title": "007 カジノ・ロワイヤル",
       "originalTitle": "",
@@ -4803,8 +4781,8 @@
       "year": 2006,
       "score": 84,
       "star": 3.5,
-      "overallRank": 207,
-      "sameScoreRank": 26,
+      "overallRank": 206,
+      "sameScoreRank": 25,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -4824,8 +4802,8 @@
       "year": 2014,
       "score": 84,
       "star": 3.5,
-      "overallRank": 208,
-      "sameScoreRank": 27,
+      "overallRank": 207,
+      "sameScoreRank": 26,
       "category": "恋愛、ミュージカル",
       "mediaType": "movie",
       "genre": [
@@ -4846,8 +4824,8 @@
       "year": 2025,
       "score": 84,
       "star": 3.5,
-      "overallRank": 209,
-      "sameScoreRank": 28,
+      "overallRank": 208,
+      "sameScoreRank": 27,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -4868,8 +4846,8 @@
       "year": 2009,
       "score": 84,
       "star": 3.5,
-      "overallRank": 210,
-      "sameScoreRank": 29,
+      "overallRank": 209,
+      "sameScoreRank": 28,
       "category": "Letterboxd追加",
       "mediaType": "movie",
       "genre": [
@@ -4892,12 +4870,34 @@
       "year": 2009,
       "score": 84,
       "star": 3.5,
-      "overallRank": 211,
-      "sameScoreRank": 30,
+      "overallRank": 210,
+      "sameScoreRank": 29,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
         "SF"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": null,
+      "exact": true
+    },
+    {
+      "id": "lb-394-2b5O",
+      "title": "ロード・オブ・ザ・リング旅の仲間",
+      "originalTitle": "",
+      "englishTitle": "The Lord of the Rings: The Fellowship of the Ring",
+      "year": 2001,
+      "score": 84,
+      "star": 3.5,
+      "overallRank": 211,
+      "sameScoreRank": 30,
+      "category": "ファンタジー、アドベンチャー",
+      "mediaType": "movie",
+      "genre": [
+        "ファンタジー",
+        "アドベンチャー",
+        "世界観"
       ],
       "origin": "ハリウッド",
       "format": "live",
@@ -14112,12 +14112,12 @@
         "lb-12-728",
         "lb-554-igK",
         "lb-176-2aZm",
-        "lb-394-2b5O",
         "lb-381-1alk",
         "lb-524-7bQA",
         "lb-379-R6yo",
         "lb-545-1vWw",
         "lb-266-1Iik",
+        "lb-394-2b5O",
         "lb-63-8MxC",
         "lb-212-acjI",
         "lb-124-103U",
