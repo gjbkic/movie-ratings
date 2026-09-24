@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790250222093,
-  "sourceUpdatedIso": "2026-09-24T11:43:42.093Z",
+  "sourceUpdatedAt": 1790250303625,
+  "sourceUpdatedIso": "2026-09-24T11:45:03.625Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -1079,6 +1079,27 @@
       "exact": true
     },
     {
+      "id": "lb-178-29XE",
+      "title": "ユージュアル・サスペクツ",
+      "originalTitle": "",
+      "englishTitle": "The Usual Suspects",
+      "year": 1995,
+      "score": 92,
+      "star": 4,
+      "overallRank": 47,
+      "sameScoreRank": 4,
+      "category": "サスペンス、ミステリー",
+      "mediaType": "movie",
+      "genre": [
+        "サスペンス",
+        "ミステリー"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": null,
+      "exact": true
+    },
+    {
       "id": "added-anchor-577",
       "title": "善き人のためのソナタ",
       "originalTitle": "Das Leben der Anderen",
@@ -1086,8 +1107,8 @@
       "year": 2006,
       "score": 92,
       "star": 4,
-      "overallRank": 47,
-      "sameScoreRank": 4,
+      "overallRank": 48,
+      "sameScoreRank": 5,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -1098,27 +1119,6 @@
         "社会問題・生活"
       ],
       "origin": "その他外国語映画",
-      "format": "live",
-      "runtime": null,
-      "exact": true
-    },
-    {
-      "id": "lb-178-29XE",
-      "title": "ユージュアル・サスペクツ",
-      "originalTitle": "",
-      "englishTitle": "The Usual Suspects",
-      "year": 1995,
-      "score": 92,
-      "star": 4,
-      "overallRank": 48,
-      "sameScoreRank": 5,
-      "category": "サスペンス、ミステリー",
-      "mediaType": "movie",
-      "genre": [
-        "サスペンス",
-        "ミステリー"
-      ],
-      "origin": "ハリウッド",
       "format": "live",
       "runtime": null,
       "exact": true
@@ -13710,8 +13710,8 @@
         "lb-487-28JG",
         "lb-116-1YYc",
         "lb-564-29Wm",
-        "added-anchor-577",
         "lb-178-29XE",
+        "added-anchor-577",
         "lb-262-29Du",
         "lb-378-26E0",
         "lb-486-b8wK"
