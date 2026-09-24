@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790271705344,
-  "sourceUpdatedIso": "2026-09-24T17:41:45.344Z",
+  "sourceUpdatedAt": 1790271714649,
+  "sourceUpdatedIso": "2026-09-24T17:41:54.649Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -10469,7 +10469,10 @@
       "sameScoreRank": 13,
       "category": "邦画",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "サスペンス",
+        "ミステリー"
+      ],
       "origin": "邦画",
       "format": "live",
       "runtime": null,
@@ -18292,7 +18295,10 @@
         "シリーズ劇場版"
       ],
       "lb-359-gxWo": [],
-      "lb-360-v2Wi": [],
+      "lb-360-v2Wi": [
+        "サスペンス",
+        "ミステリー"
+      ],
       "lb-361-26vC": [
         "サスペンス",
         "どんでん返し",
