@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790256202801,
-  "sourceUpdatedIso": "2026-09-24T13:23:22.801Z",
+  "sourceUpdatedAt": 1790256245934,
+  "sourceUpdatedIso": "2026-09-24T13:24:05.934Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -2701,7 +2701,11 @@
       "sameScoreRank": 8,
       "category": "邦画",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "サスペンス",
+        "クライム",
+        "アクション"
+      ],
       "origin": "邦画",
       "format": "live",
       "runtime": null,
@@ -16766,7 +16770,11 @@
       "lb-381-1alk": [
         "アクション"
       ],
-      "lb-382-20TI": [],
+      "lb-382-20TI": [
+        "サスペンス",
+        "クライム",
+        "アクション"
+      ],
       "lb-383-22mQ": [
         "クライム",
         "社会問題・生活",
