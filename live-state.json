@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790270491393,
-  "sourceUpdatedIso": "2026-09-24T17:21:31.393Z",
+  "sourceUpdatedAt": 1790270498510,
+  "sourceUpdatedIso": "2026-09-24T17:21:38.510Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -12111,7 +12111,11 @@
       "sameScoreRank": 2,
       "category": "邦画",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "クライム",
+        "サスペンス",
+        "スリラー"
+      ],
       "origin": "邦画",
       "format": "live",
       "runtime": null,
@@ -17337,7 +17341,11 @@
         "コメディ"
       ],
       "lb-254-6ZCG": [],
-      "lb-255-xDsy": [],
+      "lb-255-xDsy": [
+        "クライム",
+        "サスペンス",
+        "スリラー"
+      ],
       "lb-256-1HU8": [],
       "lb-257-2Ev2": [],
       "lb-258-16ic": [],
