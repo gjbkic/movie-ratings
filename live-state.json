@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790271403372,
-  "sourceUpdatedIso": "2026-09-24T17:36:43.372Z",
+  "sourceUpdatedAt": 1790271412224,
+  "sourceUpdatedIso": "2026-09-24T17:36:52.224Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -10867,7 +10867,11 @@
       "sameScoreRank": 14,
       "category": "Letterboxd",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "コメディ",
+        "恋愛",
+        "青春・若者"
+      ],
       "origin": "ハリウッド",
       "format": "live",
       "runtime": null,
@@ -19178,7 +19182,11 @@
       "custom-1789385860088-xif1": [],
       "custom-1789385860147-fi90": [],
       "custom-1789385860198-bkq0": [],
-      "custom-1789385860247-k5ps": [],
+      "custom-1789385860247-k5ps": [
+        "コメディ",
+        "恋愛",
+        "青春・若者"
+      ],
       "custom-1789385860341-pd09": [],
       "custom-1789385860389-93a2": [],
       "custom-1789385860426-8e86": [
