@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790250860287,
-  "sourceUpdatedIso": "2026-09-24T11:54:20.287Z",
+  "sourceUpdatedAt": 1790250869282,
+  "sourceUpdatedIso": "2026-09-24T11:54:29.282Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -1262,7 +1262,10 @@
       "sameScoreRank": 3,
       "category": "邦画",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "社会問題・生活",
+        "青春・若者"
+      ],
       "origin": "邦画",
       "format": "live",
       "runtime": null,
@@ -16820,7 +16823,10 @@
       ],
       "lb-557-1WyQ": [],
       "lb-558-1pDe": [],
-      "lb-559-abBm": [],
+      "lb-559-abBm": [
+        "社会問題・生活",
+        "青春・若者"
+      ],
       "lb-560-qeWY": [
         "クライム"
       ],
