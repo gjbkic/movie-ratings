@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790269324000,
-  "sourceUpdatedIso": "2026-09-24T17:02:04.000Z",
+  "sourceUpdatedAt": 1790269331638,
+  "sourceUpdatedIso": "2026-09-24T17:02:11.638Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -5101,26 +5101,6 @@
       "exact": true
     },
     {
-      "id": "lb-261-1IGQ",
-      "title": "月に囚われた男",
-      "originalTitle": "",
-      "englishTitle": "Moon",
-      "year": 2009,
-      "score": 83,
-      "star": 3,
-      "overallRank": 221,
-      "sameScoreRank": 5,
-      "category": "SF",
-      "mediaType": "movie",
-      "genre": [
-        "SF"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": null,
-      "exact": true
-    },
-    {
       "id": "lb-117-27A4",
       "title": "トレーニングデイ",
       "originalTitle": "",
@@ -5128,12 +5108,32 @@
       "year": 2001,
       "score": 83,
       "star": 3,
-      "overallRank": 222,
-      "sameScoreRank": 6,
+      "overallRank": 221,
+      "sameScoreRank": 5,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
         "クライム"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": null,
+      "exact": true
+    },
+    {
+      "id": "lb-261-1IGQ",
+      "title": "月に囚われた男",
+      "originalTitle": "",
+      "englishTitle": "Moon",
+      "year": 2009,
+      "score": 83,
+      "star": 3,
+      "overallRank": 222,
+      "sameScoreRank": 6,
+      "category": "SF",
+      "mediaType": "movie",
+      "genre": [
+        "SF"
       ],
       "origin": "ハリウッド",
       "format": "live",
@@ -14054,8 +14054,8 @@
         "lb-145-1S0A",
         "lb-426-pEeQ",
         "lb-430-26uk",
-        "lb-261-1IGQ",
         "lb-117-27A4",
+        "lb-261-1IGQ",
         "lb-78-2aHM",
         "lb-174-29VI",
         "lb-421-21ew",
