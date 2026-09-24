@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790254052848,
-  "sourceUpdatedIso": "2026-09-24T12:47:32.848Z",
+  "sourceUpdatedAt": 1790254069448,
+  "sourceUpdatedIso": "2026-09-24T12:47:49.448Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -2189,6 +2189,32 @@
       "exact": true
     },
     {
+      "id": "lb-132-aPvy",
+      "title": "ローグワン",
+      "originalTitle": "",
+      "englishTitle": "Rogue One: A Star Wars Story",
+      "year": 2016,
+      "score": 88,
+      "star": 4,
+      "overallRank": 94,
+      "sameScoreRank": 10,
+      "category": "スターウォーズシリーズ",
+      "mediaType": "movie",
+      "genre": [
+        "SF",
+        "ファンタジー",
+        "アドベンチャー",
+        "切ない",
+        "アクション",
+        "世界観",
+        "ドラマ"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": null,
+      "exact": true
+    },
+    {
       "id": "lb-7-h4cS",
       "title": "ジョーカー",
       "originalTitle": "",
@@ -2196,8 +2222,8 @@
       "year": 2019,
       "score": 88,
       "star": 4,
-      "overallRank": 94,
-      "sameScoreRank": 10,
+      "overallRank": 95,
+      "sameScoreRank": 11,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -2211,31 +2237,6 @@
       "format": "live",
       "runtime": null,
       "exact": true
-    },
-    {
-      "id": "lb-132-aPvy",
-      "title": "ローグワン",
-      "originalTitle": "",
-      "englishTitle": "Rogue One: A Star Wars Story",
-      "year": 2016,
-      "score": 88,
-      "star": 4,
-      "overallRank": 95,
-      "sameScoreRank": 11,
-      "category": "スターウォーズシリーズ",
-      "mediaType": "movie",
-      "genre": [
-        "SF",
-        "ファンタジー",
-        "アドベンチャー",
-        "切ない",
-        "アクション",
-        "世界観"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": null,
-      "exact": false
     },
     {
       "id": "lb-296-l7zS",
@@ -13206,7 +13207,8 @@
       "lb-156-ffTY": 72,
       "custom-1790185844080-jquu": 81,
       "lb-537-14e8": 64,
-      "custom-1790247938551-ixfs": 86
+      "custom-1790247938551-ixfs": 86,
+      "lb-132-aPvy": 88
     },
     "rankOrder": {
       "40": [
@@ -13820,8 +13822,8 @@
         "lb-85-1GjK",
         "lb-71-27Vm",
         "lb-67-1RYk",
-        "lb-7-h4cS",
         "lb-132-aPvy",
+        "lb-7-h4cS",
         "lb-296-l7zS"
       ],
       "89": [
@@ -15047,7 +15049,8 @@
       "lb-156-ffTY": 2,
       "custom-1790185844080-jquu": 3,
       "lb-537-14e8": 1.5,
-      "custom-1790247938551-ixfs": 3.5
+      "custom-1790247938551-ixfs": 3.5,
+      "lb-132-aPvy": 4
     },
     "titleOverrides": {
       "added-anchor-578": {
@@ -15744,7 +15747,8 @@
         "アドベンチャー",
         "切ない",
         "アクション",
-        "世界観"
+        "世界観",
+        "ドラマ"
       ],
       "lb-133-2a1G": [
         "SF"
