@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790271787749,
-  "sourceUpdatedIso": "2026-09-24T17:43:07.749Z",
+  "sourceUpdatedAt": 1790271808935,
+  "sourceUpdatedIso": "2026-09-24T17:43:28.935Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -10341,7 +10341,12 @@
       "sameScoreRank": 6,
       "category": "ピクサー・ディズニー作品",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "感動",
+        "ドラマ",
+        "ファンタジー",
+        "アドベンチャー"
+      ],
       "origin": "ハリウッド",
       "format": "animation",
       "runtime": null,
@@ -10359,7 +10364,13 @@
       "sameScoreRank": 7,
       "category": "ピクサー・ディズニー作品",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "ファンタジー",
+        "ドラマ",
+        "アドベンチャー",
+        "子供向け",
+        "感動"
+      ],
       "origin": "ハリウッド",
       "format": "animation",
       "runtime": null,
@@ -17037,7 +17048,13 @@
         "アクション",
         "恋愛"
       ],
-      "lb-68-201Q": [],
+      "lb-68-201Q": [
+        "ファンタジー",
+        "ドラマ",
+        "アドベンチャー",
+        "子供向け",
+        "感動"
+      ],
       "lb-69-ipeM": [],
       "lb-70-29FU": [
         "ファンタジー",
@@ -18858,7 +18875,12 @@
         "世界観"
       ],
       "lb-472-1zYm": [],
-      "lb-473-1U2o": [],
+      "lb-473-1U2o": [
+        "感動",
+        "ドラマ",
+        "ファンタジー",
+        "アドベンチャー"
+      ],
       "lb-474-29gg": [
         "ファンタジー",
         "アドベンチャー"
