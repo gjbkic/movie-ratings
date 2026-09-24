@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790254706551,
-  "sourceUpdatedIso": "2026-09-24T12:58:26.551Z",
+  "sourceUpdatedAt": 1790254718453,
+  "sourceUpdatedIso": "2026-09-24T12:58:38.453Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -2408,7 +2408,11 @@
       "sameScoreRank": 7,
       "category": "Letterboxd追加",
       "mediaType": "drama",
-      "genre": [],
+      "genre": [
+        "歴史",
+        "社会問題・生活",
+        "サスペンス"
+      ],
       "origin": "ハリウッド",
       "format": "live",
       "runtime": null,
@@ -16841,7 +16845,11 @@
         "子供向け",
         "コメディ"
       ],
-      "lb-464-mkbG": [],
+      "lb-464-mkbG": [
+        "歴史",
+        "社会問題・生活",
+        "サスペンス"
+      ],
       "lb-465-F0vO": [],
       "lb-466-1Ub6": [
         "ドラマ"
