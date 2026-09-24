@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790256168416,
-  "sourceUpdatedIso": "2026-09-24T13:22:48.416Z",
+  "sourceUpdatedAt": 1790256182204,
+  "sourceUpdatedIso": "2026-09-24T13:23:02.204Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -2849,7 +2849,7 @@
       "overallRank": 122,
       "sameScoreRank": 15,
       "category": "Letterboxd",
-      "mediaType": "movie",
+      "mediaType": "other",
       "genre": [],
       "origin": "ハリウッド",
       "format": "live",
@@ -15378,7 +15378,8 @@
       "lb-464-mkbG": "drama",
       "lb-253-SVAW": "drama",
       "lb-463-4Xuw": "other",
-      "lb-336-qH0": "drama"
+      "lb-336-qH0": "drama",
+      "custom-1789385860426-8e86": "other"
     },
     "genreOverrides": {
       "lb-0-hTha": [
