@@ -1,6 +1,6 @@
 (() => {
   const EXTRA_GENRES_V27 = [
-    "青春・若者","子供向け","差別・人権","精神・哲学","社会問題・生活",
+    "世界観","青春・若者","子供向け","差別・人権","精神・哲学","社会問題・生活",
     "スポーツ","胸糞","感動","切ない","どんでん返し"
   ];
   const EXTRA_SET_V27 = new Set(EXTRA_GENRES_V27);
@@ -18,6 +18,18 @@
     const row=rows.find(r=>(r.querySelector('.struct-label')?.textContent||'').includes('ジャンル')) || rows[rows.length-1];
     return row?.querySelector('.struct-options') || wrap;
   }
+  function placeWorldviewV27(host,b){
+    if(!host||!b)return;
+    const fantasy=host.querySelector('.struct-chip[data-struct-value="ファンタジー"]');
+    const adventure=host.querySelector('.struct-chip[data-struct-value="アドベンチャー"]');
+    if(fantasy){
+      host.insertBefore(b,fantasy.nextSibling);
+    }else if(adventure){
+      host.insertBefore(b,adventure);
+    }else if(b.parentElement!==host){
+      host.appendChild(b);
+    }
+  }
   function ensureExtraChipsV27(id, selected=[]){
     const wrap=document.getElementById(id); if(!wrap)return;
     const host=genreOptionsV27(wrap), chosen=new Set(selected);
@@ -33,6 +45,7 @@
         b.type='button'; b.className='struct-chip genre-chip'; b.dataset.genre=g; b.textContent=g;
         host?.appendChild(b);
       }
+      if(g==='世界観') placeWorldviewV27(host,b);
       b.classList.toggle('on',chosen.has(g));
       b.onclick=()=>b.classList.toggle('on');
     }
@@ -100,7 +113,17 @@
   // Filters: bypass older/base genre filtering for any extra tag, then filter the rendered cards ourselves.
   for(const id of ['genreFilterRank','genreFilterClassify']){
     const s=document.getElementById(id); if(!s)continue;
-    for(const g of EXTRA_GENRES_V27)if(![...s.options].some(o=>o.value===g))s.add(new Option(g,g));
+    for(const g of EXTRA_GENRES_V27){
+      if([...s.options].some(o=>o.value===g))continue;
+      const opt=new Option(g,g);
+      if(g==='世界観'){
+        const fantasy=[...s.options].find(o=>o.value==='ファンタジー');
+        const adventure=[...s.options].find(o=>o.value==='アドベンチャー');
+        if(fantasy) s.insertBefore(opt,fantasy.nextSibling);
+        else if(adventure) s.insertBefore(opt,adventure);
+        else s.add(opt);
+      }else s.add(opt);
+    }
   }
   function filterExtraV27(rootSelector,cardSelector,sectionSelector,value){
     if(!EXTRA_SET_V27.has(value))return;
