@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790271453459,
-  "sourceUpdatedIso": "2026-09-24T17:37:33.459Z",
+  "sourceUpdatedAt": 1790271471247,
+  "sourceUpdatedIso": "2026-09-24T17:37:51.247Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -10792,7 +10792,14 @@
       "sameScoreRank": 10,
       "category": "邦画",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "切ない",
+        "ミステリー",
+        "サスペンス",
+        "クライム",
+        "ドラマ",
+        "青春・若者"
+      ],
       "origin": "邦画",
       "format": "live",
       "runtime": null,
@@ -18025,7 +18032,14 @@
         "SF",
         "ファンタジー"
       ],
-      "lb-325-b5zc": [],
+      "lb-325-b5zc": [
+        "切ない",
+        "ミステリー",
+        "サスペンス",
+        "クライム",
+        "ドラマ",
+        "青春・若者"
+      ],
       "lb-326-4hka": [
         "ファンタジー",
         "アドベンチャー"
