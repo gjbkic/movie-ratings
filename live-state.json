@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790269299385,
-  "sourceUpdatedIso": "2026-09-24T17:01:39.385Z",
+  "sourceUpdatedAt": 1790269324000,
+  "sourceUpdatedIso": "2026-09-24T17:02:04.000Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -5000,11 +5000,11 @@
       "exact": false
     },
     {
-      "id": "lb-426-pEeQ",
-      "title": "プロジェクトヘイルメアリー",
+      "id": "lb-266-1Iik",
+      "title": "第9地区",
       "originalTitle": "",
-      "englishTitle": "Project Hail Mary",
-      "year": 2026,
+      "englishTitle": "District 9",
+      "year": 2009,
       "score": 84,
       "star": 3.5,
       "overallRank": 216,
@@ -5012,9 +5012,7 @@
       "category": "SF",
       "mediaType": "movie",
       "genre": [
-        "SF",
-        "感動",
-        "ファンタジー"
+        "SF"
       ],
       "origin": "ハリウッド",
       "format": "live",
@@ -5061,11 +5059,11 @@
       "exact": true
     },
     {
-      "id": "lb-266-1Iik",
-      "title": "第9地区",
+      "id": "lb-426-pEeQ",
+      "title": "プロジェクトヘイルメアリー",
       "originalTitle": "",
-      "englishTitle": "District 9",
-      "year": 2009,
+      "englishTitle": "Project Hail Mary",
+      "year": 2026,
       "score": 83,
       "star": 3,
       "overallRank": 219,
@@ -5073,7 +5071,9 @@
       "category": "SF",
       "mediaType": "movie",
       "genre": [
-        "SF"
+        "SF",
+        "感動",
+        "ファンタジー"
       ],
       "origin": "ハリウッド",
       "format": "live",
@@ -13330,7 +13330,7 @@
       "lb-108-29d2": 84,
       "lb-120-26EO": 84,
       "lb-427-bSVc": 84,
-      "lb-426-pEeQ": 84,
+      "lb-426-pEeQ": 83,
       "lb-299-28U0": 84,
       "lb-381-1alk": 84,
       "lb-541-27MO": 84,
@@ -13381,7 +13381,7 @@
       "lb-261-1IGQ": 83,
       "lb-263-6bJM": 83,
       "lb-490-2beQ": 83,
-      "lb-266-1Iik": 83,
+      "lb-266-1Iik": 84,
       "lb-430-26uk": 83,
       "lb-553-2416": 83,
       "lb-520-1Efm": 83,
@@ -14052,7 +14052,7 @@
       "83": [
         "lb-179-2aAG",
         "lb-145-1S0A",
-        "lb-266-1Iik",
+        "lb-426-pEeQ",
         "lb-430-26uk",
         "lb-261-1IGQ",
         "lb-117-27A4",
@@ -14121,7 +14121,7 @@
         "lb-499-948A",
         "lb-159-18U8",
         "lb-545-1vWw",
-        "lb-426-pEeQ"
+        "lb-266-1Iik"
       ],
       "85": [
         "lb-276-7UmK",
@@ -15188,7 +15188,7 @@
       "lb-108-29d2": 3.5,
       "lb-120-26EO": 3.5,
       "lb-427-bSVc": 3.5,
-      "lb-426-pEeQ": 3.5,
+      "lb-426-pEeQ": 3,
       "lb-299-28U0": 3.5,
       "lb-381-1alk": 3.5,
       "lb-541-27MO": 3.5,
@@ -15239,7 +15239,7 @@
       "lb-261-1IGQ": 3,
       "lb-263-6bJM": 3,
       "lb-490-2beQ": 3,
-      "lb-266-1Iik": 3,
+      "lb-266-1Iik": 3.5,
       "lb-430-26uk": 3,
       "custom-1789385859985-uylk": 3,
       "lb-553-2416": 3,
