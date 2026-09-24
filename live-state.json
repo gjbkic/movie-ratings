@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790255748153,
-  "sourceUpdatedIso": "2026-09-24T13:15:48.153Z",
+  "sourceUpdatedAt": 1790255774980,
+  "sourceUpdatedIso": "2026-09-24T13:16:14.980Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -3188,7 +3188,13 @@
       "sameScoreRank": 32,
       "category": "Letterboxd追加",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "切ない",
+        "精神・哲学",
+        "サスペンス",
+        "ドラマ",
+        "どんでん返し"
+      ],
       "origin": "ハリウッド",
       "format": "live",
       "runtime": null,
@@ -17273,7 +17279,13 @@
       "lb-551-28F0": [
         "アクション"
       ],
-      "lb-552-m8Ie": [],
+      "lb-552-m8Ie": [
+        "切ない",
+        "精神・哲学",
+        "サスペンス",
+        "ドラマ",
+        "どんでん返し"
+      ],
       "lb-553-2416": [
         "コメディ"
       ],
