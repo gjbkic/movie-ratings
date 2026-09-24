@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790271302106,
-  "sourceUpdatedIso": "2026-09-24T17:35:02.106Z",
+  "sourceUpdatedAt": 1790271313542,
+  "sourceUpdatedIso": "2026-09-24T17:35:13.542Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -11022,7 +11022,11 @@
       "sameScoreRank": 2,
       "category": "ほかアニメ",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "ファンタジー",
+        "ドラマ",
+        "青春・若者"
+      ],
       "origin": "邦画",
       "format": "animation",
       "runtime": null,
@@ -17292,7 +17296,11 @@
         "社会問題・生活",
         "青春・若者"
       ],
-      "lb-158-1oDC": [],
+      "lb-158-1oDC": [
+        "ファンタジー",
+        "ドラマ",
+        "青春・若者"
+      ],
       "lb-159-18U8": [
         "ドラマ",
         "どんでん返し",
