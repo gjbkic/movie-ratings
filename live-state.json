@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790257457746,
-  "sourceUpdatedIso": "2026-09-24T13:44:17.746Z",
+  "sourceUpdatedAt": 1790257481930,
+  "sourceUpdatedIso": "2026-09-24T13:44:41.930Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -3785,7 +3785,7 @@
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [],
-      "origin": "ハリウッド",
+      "origin": "邦画",
       "format": "animation",
       "runtime": null,
       "exact": true
@@ -15533,7 +15533,8 @@
       "lb-253-SVAW": "tvseries",
       "lb-336-qH0": "tvseries",
       "lb-228-6eCu": "tvseries",
-      "custom-1789385860026-8m1d": "other"
+      "custom-1789385860026-8m1d": "other",
+      "lb-472-1zYm": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -18361,7 +18362,7 @@
       "lb-469-1MKi": "ハリウッド",
       "lb-470-2BwG": "ハリウッド",
       "lb-471-8LnQ": "邦画",
-      "lb-472-1zYm": "ハリウッド",
+      "lb-472-1zYm": "邦画",
       "lb-473-1U2o": "ハリウッド",
       "lb-474-29gg": "ハリウッド",
       "lb-475-F1U6": "邦画",
