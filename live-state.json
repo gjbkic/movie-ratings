@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790271272095,
-  "sourceUpdatedIso": "2026-09-24T17:34:32.095Z",
+  "sourceUpdatedAt": 1790271280877,
+  "sourceUpdatedIso": "2026-09-24T17:34:40.877Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -11058,7 +11058,11 @@
       "sameScoreRank": 4,
       "category": "Letterboxd追加",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "ドラマ",
+        "スポーツ",
+        "青春・若者"
+      ],
       "origin": "邦画",
       "format": "live",
       "runtime": null,
@@ -18227,7 +18231,11 @@
         "スポーツ",
         "青春・若者"
       ],
-      "lb-389-hs78": [],
+      "lb-389-hs78": [
+        "ドラマ",
+        "スポーツ",
+        "青春・若者"
+      ],
       "lb-390-pUfA": [
         "アクション",
         "SF",
