@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790271666649,
-  "sourceUpdatedIso": "2026-09-24T17:41:06.649Z",
+  "sourceUpdatedAt": 1790271676500,
+  "sourceUpdatedIso": "2026-09-24T17:41:16.500Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -10544,7 +10544,10 @@
       "sameScoreRank": 17,
       "category": "邦画",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "感動",
+        "ドラマ"
+      ],
       "origin": "邦画",
       "format": "live",
       "runtime": null,
@@ -17792,7 +17795,10 @@
       ],
       "lb-256-1HU8": [],
       "lb-257-2Ev2": [],
-      "lb-258-16ic": [],
+      "lb-258-16ic": [
+        "感動",
+        "ドラマ"
+      ],
       "lb-259-N7ZC": [
         "コメディ",
         "SF",
