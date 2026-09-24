@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790269867376,
-  "sourceUpdatedIso": "2026-09-24T17:11:07.376Z",
+  "sourceUpdatedAt": 1790269879877,
+  "sourceUpdatedIso": "2026-09-24T17:11:19.877Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -4885,6 +4885,50 @@
       "exact": true
     },
     {
+      "id": "lb-266-1Iik",
+      "title": "第9地区",
+      "originalTitle": "",
+      "englishTitle": "District 9",
+      "year": 2009,
+      "score": 84,
+      "star": 3.5,
+      "overallRank": 211,
+      "sameScoreRank": 30,
+      "category": "SF",
+      "mediaType": "movie",
+      "genre": [
+        "SF"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": null,
+      "exact": true
+    },
+    {
+      "id": "lb-545-1vWw",
+      "title": "瞳の奥の秘密",
+      "originalTitle": "El secreto de sus ojos",
+      "englishTitle": "The Secret in Their Eyes",
+      "year": 2009,
+      "score": 84,
+      "star": 3.5,
+      "overallRank": 212,
+      "sameScoreRank": 31,
+      "category": "Letterboxd追加",
+      "mediaType": "movie",
+      "genre": [
+        "どんでん返し",
+        "社会問題・生活",
+        "サスペンス",
+        "ミステリー",
+        "胸糞"
+      ],
+      "origin": "その他",
+      "format": "live",
+      "runtime": null,
+      "exact": true
+    },
+    {
       "id": "lb-212-acjI",
       "title": "グレイテストショーマン",
       "originalTitle": "",
@@ -4892,8 +4936,8 @@
       "year": 2017,
       "score": 84,
       "star": 3.5,
-      "overallRank": 211,
-      "sameScoreRank": 30,
+      "overallRank": 213,
+      "sameScoreRank": 32,
       "category": "恋愛、ミュージカル",
       "mediaType": "movie",
       "genre": [
@@ -4914,8 +4958,8 @@
       "year": 2012,
       "score": 84,
       "star": 3.5,
-      "overallRank": 212,
-      "sameScoreRank": 31,
+      "overallRank": 214,
+      "sameScoreRank": 33,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -4925,50 +4969,6 @@
         "アクション"
       ],
       "origin": "ハリウッド",
-      "format": "live",
-      "runtime": null,
-      "exact": true
-    },
-    {
-      "id": "lb-266-1Iik",
-      "title": "第9地区",
-      "originalTitle": "",
-      "englishTitle": "District 9",
-      "year": 2009,
-      "score": 84,
-      "star": 3.5,
-      "overallRank": 213,
-      "sameScoreRank": 32,
-      "category": "SF",
-      "mediaType": "movie",
-      "genre": [
-        "SF"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": null,
-      "exact": true
-    },
-    {
-      "id": "lb-545-1vWw",
-      "title": "瞳の奥の秘密",
-      "originalTitle": "El secreto de sus ojos",
-      "englishTitle": "The Secret in Their Eyes",
-      "year": 2009,
-      "score": 84,
-      "star": 3.5,
-      "overallRank": 214,
-      "sameScoreRank": 33,
-      "category": "Letterboxd追加",
-      "mediaType": "movie",
-      "genre": [
-        "どんでん返し",
-        "社会問題・生活",
-        "サスペンス",
-        "ミステリー",
-        "胸糞"
-      ],
-      "origin": "その他",
       "format": "live",
       "runtime": null,
       "exact": true
@@ -14117,10 +14117,10 @@
         "lb-524-7bQA",
         "lb-63-8MxC",
         "lb-379-R6yo",
-        "lb-212-acjI",
-        "lb-124-103U",
         "lb-266-1Iik",
         "lb-545-1vWw",
+        "lb-212-acjI",
+        "lb-124-103U",
         "lb-499-948A",
         "lb-159-18U8"
       ],
