@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790258065417,
-  "sourceUpdatedIso": "2026-09-24T13:54:25.417Z",
+  "sourceUpdatedAt": 1790258086841,
+  "sourceUpdatedIso": "2026-09-24T13:54:46.841Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -3306,9 +3306,13 @@
       "category": "コメディ",
       "mediaType": "movie",
       "genre": [
-        "コメディ"
+        "コメディ",
+        "ドラマ",
+        "恋愛",
+        "アクション",
+        "クライム"
       ],
-      "origin": "ハリウッド",
+      "origin": "その他外国語映画",
       "format": "live",
       "runtime": null,
       "exact": true
@@ -15627,7 +15631,8 @@
       "lb-336-qH0": "tvseries",
       "lb-228-6eCu": "tvseries",
       "custom-1789385860026-8m1d": "other",
-      "lb-472-1zYm": "movie"
+      "lb-472-1zYm": "movie",
+      "lb-276-7UmK": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -16706,7 +16711,11 @@
         "コメディ"
       ],
       "lb-276-7UmK": [
-        "コメディ"
+        "コメディ",
+        "ドラマ",
+        "恋愛",
+        "アクション",
+        "クライム"
       ],
       "lb-277-eOCm": [
         "スリラー",
@@ -18352,7 +18361,7 @@
       "lb-273-29Ji": "ハリウッド",
       "lb-274-1XZ4": "ハリウッド",
       "lb-275-28sg": "ハリウッド",
-      "lb-276-7UmK": "ハリウッド",
+      "lb-276-7UmK": "その他外国語映画",
       "lb-277-eOCm": "ハリウッド",
       "lb-278-2aoU": "ハリウッド",
       "lb-279-215a": "ハリウッド",
