@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790270783406,
-  "sourceUpdatedIso": "2026-09-24T17:26:23.406Z",
+  "sourceUpdatedAt": 1790270798242,
+  "sourceUpdatedIso": "2026-09-24T17:26:38.242Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -11764,7 +11764,9 @@
       "sameScoreRank": 2,
       "category": "ほかアニメ",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "アクション"
+      ],
       "origin": "邦画",
       "format": "animation",
       "runtime": null,
@@ -17011,7 +17013,9 @@
       "lb-127-28zw": [
         "アクション"
       ],
-      "lb-128-nyLU": [],
+      "lb-128-nyLU": [
+        "アクション"
+      ],
       "lb-129-24Nu": [
         "アクション"
       ],
