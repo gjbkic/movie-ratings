@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790255774980,
-  "sourceUpdatedIso": "2026-09-24T13:16:14.980Z",
+  "sourceUpdatedAt": 1790255914115,
+  "sourceUpdatedIso": "2026-09-24T13:18:34.115Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -3150,7 +3150,9 @@
       "sameScoreRank": 30,
       "category": "Letterboxd追加",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "ミステリー"
+      ],
       "origin": "ハリウッド",
       "format": "live",
       "runtime": null,
@@ -3169,7 +3171,11 @@
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
-        "アクション"
+        "アクション",
+        "SF",
+        "世界観",
+        "恋愛",
+        "戦争"
       ],
       "origin": "ハリウッド",
       "format": "live",
@@ -16401,7 +16407,11 @@
         "歴史"
       ],
       "lb-302-2E2E": [
-        "アクション"
+        "アクション",
+        "SF",
+        "世界観",
+        "恋愛",
+        "戦争"
       ],
       "lb-303-2aQY": [
         "アクション"
@@ -17370,7 +17380,9 @@
         "ドラマ"
       ],
       "lb-575-1fK0": [],
-      "lb-576-18H4": [],
+      "lb-576-18H4": [
+        "ミステリー"
+      ],
       "added-anchor-577": [
         "ドラマ",
         "歴史",
