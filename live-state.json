@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790257788784,
-  "sourceUpdatedIso": "2026-09-24T13:49:48.784Z",
+  "sourceUpdatedAt": 1790257803936,
+  "sourceUpdatedIso": "2026-09-24T13:50:03.936Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -3509,7 +3509,14 @@
       "sameScoreRank": 11,
       "category": "邦画",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "切ない",
+        "感動",
+        "ドラマ",
+        "サスペンス",
+        "ミステリー",
+        "シリーズ劇場版"
+      ],
       "origin": "邦画",
       "format": "live",
       "runtime": null,
@@ -16947,7 +16954,14 @@
       "lb-341-1Qzy": [
         "ドラマ"
       ],
-      "lb-342-X8s": [],
+      "lb-342-X8s": [
+        "切ない",
+        "感動",
+        "ドラマ",
+        "サスペンス",
+        "ミステリー",
+        "シリーズ劇場版"
+      ],
       "lb-343-3zuA": [],
       "lb-344-5YPM": [
         "ファンタジー",
