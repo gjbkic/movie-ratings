@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790198349399,
-  "sourceUpdatedIso": "2026-09-23T21:19:09.399Z",
+  "sourceUpdatedAt": 1790247938773,
+  "sourceUpdatedIso": "2026-09-24T11:05:38.773Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -12036,7 +12036,7 @@
       "englishTitle": "Hereditary",
       "year": 2018,
       "score": 62,
-      "star": 1,
+      "star": 1.5,
       "overallRank": 605,
       "sameScoreRank": 2,
       "category": "スリラー、ホラー",
@@ -12363,7 +12363,30 @@
       "exact": false
     }
   ],
-  "unrated": [],
+  "unrated": [
+    {
+      "id": "custom-1790247938551-ixfs",
+      "title": "劇場版 チェンソーマン レゼ篇",
+      "originalTitle": "劇場版 チェンソーマン レゼ篇",
+      "englishTitle": "Chainsaw Man - The Movie: Reze Arc",
+      "year": 2025,
+      "score": null,
+      "star": 3.5,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "アクション",
+        "恋愛",
+        "ファンタジー"
+      ],
+      "origin": "邦画",
+      "format": "animation",
+      "runtime": 100,
+      "exact": false
+    }
+  ],
   "state": {
     "exactScores": {
       "custom-1789387775661-0mdh": 85,
@@ -14191,10 +14214,27 @@
         "added": true,
         "_seq": 1790185844116,
         "source": "letterboxd"
+      },
+      {
+        "id": "custom-1790247938551-ixfs",
+        "title": "劇場版 チェンソーマン レゼ篇",
+        "originalTitle": "劇場版 チェンソーマン レゼ篇",
+        "englishTitle": "Chainsaw Man - The Movie: Reze Arc",
+        "lbTitle": "Chainsaw Man - The Movie: Reze Arc",
+        "tmdbId": 1218925,
+        "year": 2025,
+        "uri": "https://letterboxd.com/gjbkic/film/chainsaw-man-the-movie-reze-arc/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 3.5,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1790247938551,
+        "source": "letterboxd"
       }
     ],
     "starOverrides": {
-      "added-anchor-582": 1,
+      "added-anchor-582": 1.5,
       "lb-557-1WyQ": 3,
       "custom-1789385860088-xif1": 2.5,
       "lb-350-2bcK": 4.5,
@@ -14847,7 +14887,8 @@
         "tmdbId": 515001
       },
       "custom-1789385860198-bkq0": {
-        "title": "十角館の殺人"
+        "title": "十角館の殺人",
+        "tmdbId": 242331
       },
       "custom-1789385860459-6dw6": {
         "title": "99.9-刑事専門弁護士-THE MOVIE"
@@ -14882,7 +14923,26 @@
       "custom-1790185844116-j1vu": {
         "title": "パーフェクトブルー講座",
         "originalTitle": "パーフェクトブルー講座",
-        "englishTitle": "Perfect Blue Lecture Series"
+        "englishTitle": "Perfect Blue Lecture Series",
+        "tmdbId": 132131
+      },
+      "custom-1790185843981-dk0y": {
+        "tmdbId": 215
+      },
+      "custom-1790185844045-qhut": {
+        "tmdbId": 420817
+      },
+      "custom-1790185844080-jquu": {
+        "tmdbId": 281
+      },
+      "lb-540-1W7A": {
+        "tmdbId": 10494
+      },
+      "lb-253-SVAW": {
+        "tmdbId": 45923
+      },
+      "custom-1789385860026-8m1d": {
+        "tmdbId": 206569
       }
     },
     "categoryOverrides": {},
@@ -16715,7 +16775,12 @@
         "恋愛"
       ],
       "custom-1790185843981-dk0y": [],
-      "custom-1790185844080-jquu": []
+      "custom-1790185844080-jquu": [],
+      "custom-1790247938551-ixfs": [
+        "アクション",
+        "恋愛",
+        "ファンタジー"
+      ]
     },
     "originOverrides": {
       "lb-0-hTha": "その他外国語映画",
@@ -17338,7 +17403,8 @@
       "custom-1790185844116-j1vu": "邦画",
       "custom-1790185844045-qhut": "ハリウッド",
       "custom-1790185843981-dk0y": "ハリウッド",
-      "custom-1790185844080-jquu": "ハリウッド"
+      "custom-1790185844080-jquu": "ハリウッド",
+      "custom-1790247938551-ixfs": "邦画"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -17961,8 +18027,11 @@
       "custom-1790185844116-j1vu": "live",
       "custom-1790185844045-qhut": "live",
       "custom-1790185843981-dk0y": "live",
-      "custom-1790185844080-jquu": "live"
+      "custom-1790185844080-jquu": "live",
+      "custom-1790247938551-ixfs": "animation"
     },
-    "runtimeOverrides": {}
+    "runtimeOverrides": {
+      "custom-1790247938551-ixfs": 100
+    }
   }
 }
