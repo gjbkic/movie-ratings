@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790256197077,
-  "sourceUpdatedIso": "2026-09-24T13:23:17.077Z",
+  "sourceUpdatedAt": 1790256202801,
+  "sourceUpdatedIso": "2026-09-24T13:23:22.801Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -2817,28 +2817,6 @@
       "exact": true
     },
     {
-      "id": "lb-1-4VZ8",
-      "title": "インターステラー",
-      "originalTitle": "",
-      "englishTitle": "Interstellar",
-      "year": 2014,
-      "score": 86,
-      "star": 3.5,
-      "overallRank": 121,
-      "sameScoreRank": 14,
-      "category": "SF",
-      "mediaType": "movie",
-      "genre": [
-        "SF",
-        "ドラマ",
-        "感動"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": null,
-      "exact": true
-    },
-    {
       "id": "custom-1789385860426-8e86",
       "title": "Ani*Kuri15: Good Morning",
       "originalTitle": "",
@@ -2846,14 +2824,36 @@
       "year": 2007,
       "score": 86,
       "star": 3.5,
-      "overallRank": 122,
-      "sameScoreRank": 15,
+      "overallRank": 121,
+      "sameScoreRank": 14,
       "category": "Letterboxd",
       "mediaType": "other",
       "genre": [
         "社会問題・生活",
         "ファンタジー",
         "世界観"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": null,
+      "exact": true
+    },
+    {
+      "id": "lb-1-4VZ8",
+      "title": "インターステラー",
+      "originalTitle": "",
+      "englishTitle": "Interstellar",
+      "year": 2014,
+      "score": 86,
+      "star": 3.5,
+      "overallRank": 122,
+      "sameScoreRank": 15,
+      "category": "SF",
+      "mediaType": "movie",
+      "genre": [
+        "SF",
+        "ドラマ",
+        "感動"
       ],
       "origin": "ハリウッド",
       "format": "live",
@@ -13939,8 +13939,8 @@
         "lb-123-29I0",
         "custom-1790247938551-ixfs",
         "lb-573-28ws",
-        "lb-1-4VZ8",
         "custom-1789385860426-8e86",
+        "lb-1-4VZ8",
         "lb-336-qH0",
         "lb-287-2amk",
         "lb-54-3sAw",
