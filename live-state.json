@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790256502355,
-  "sourceUpdatedIso": "2026-09-24T13:28:22.355Z",
+  "sourceUpdatedAt": 1790256517540,
+  "sourceUpdatedIso": "2026-09-24T13:28:37.540Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -2350,7 +2350,7 @@
       "overallRank": 100,
       "sameScoreRank": 3,
       "category": "Letterboxd追加",
-      "mediaType": "drama",
+      "mediaType": "tvseries",
       "genre": [
         "ファンタジー",
         "SF",
@@ -2445,7 +2445,7 @@
       "overallRank": 104,
       "sameScoreRank": 7,
       "category": "Letterboxd追加",
-      "mediaType": "drama",
+      "mediaType": "tvseries",
       "genre": [
         "歴史",
         "社会問題・生活",
@@ -2888,7 +2888,7 @@
       "overallRank": 123,
       "sameScoreRank": 16,
       "category": "Letterboxd追加",
-      "mediaType": "drama",
+      "mediaType": "tvseries",
       "genre": [
         "SF",
         "アクション",
@@ -4678,8 +4678,8 @@
       "category": "恋愛、ミュージカル",
       "mediaType": "movie",
       "genre": [
-        "恋愛",
-        "ミュージカル"
+        "ミュージカル",
+        "サスペンス"
       ],
       "origin": "ハリウッド",
       "format": "live",
@@ -15419,11 +15419,11 @@
       "custom-1790185844116-j1vu": "other",
       "lb-185-HTIi": "other",
       "lb-459-1Vgm": "other",
-      "lb-464-mkbG": "drama",
-      "lb-253-SVAW": "drama",
       "lb-463-4Xuw": "other",
-      "lb-336-qH0": "drama",
-      "custom-1789385860426-8e86": "other"
+      "custom-1789385860426-8e86": "other",
+      "lb-464-mkbG": "tvseries",
+      "lb-253-SVAW": "tvseries",
+      "lb-336-qH0": "tvseries"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -16288,8 +16288,8 @@
       "lb-210-8tfY": [],
       "lb-211-ar0c": [],
       "lb-212-acjI": [
-        "恋愛",
-        "ミュージカル"
+        "ミュージカル",
+        "サスペンス"
       ],
       "lb-213-2TTS": [],
       "lb-214-2aoA": [],
