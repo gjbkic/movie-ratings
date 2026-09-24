@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790271228202,
-  "sourceUpdatedIso": "2026-09-24T17:33:48.202Z",
+  "sourceUpdatedAt": 1790271244321,
+  "sourceUpdatedIso": "2026-09-24T17:34:04.321Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -11112,7 +11112,12 @@
       "sameScoreRank": 7,
       "category": "Letterboxd",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "サスペンス",
+        "ドラマ",
+        "恋愛",
+        "シリーズ劇場版"
+      ],
       "origin": "邦画",
       "format": "live",
       "runtime": null,
@@ -19106,7 +19111,12 @@
       "custom-1789385860580-5td5": [],
       "custom-1789385860628-ogsm": [],
       "custom-1789385860674-ow4o": [],
-      "custom-1789385860718-itqh": [],
+      "custom-1789385860718-itqh": [
+        "サスペンス",
+        "ドラマ",
+        "恋愛",
+        "シリーズ劇場版"
+      ],
       "custom-1789385860756-dujj": [],
       "custom-1789385860847-w7kt": [],
       "custom-1789385860920-hsho": [],
