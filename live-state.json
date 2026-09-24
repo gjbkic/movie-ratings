@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790256458440,
-  "sourceUpdatedIso": "2026-09-24T13:27:38.440Z",
+  "sourceUpdatedAt": 1790256467706,
+  "sourceUpdatedIso": "2026-09-24T13:27:47.706Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -4736,7 +4736,10 @@
       "sameScoreRank": 32,
       "category": "Letterboxd追加",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "どんでん返し",
+        "サスペンス"
+      ],
       "origin": "その他外国語映画",
       "format": "live",
       "runtime": null,
@@ -17236,7 +17239,10 @@
       "lb-498-25ds": [
         "ドラマ"
       ],
-      "lb-499-948A": [],
+      "lb-499-948A": [
+        "どんでん返し",
+        "サスペンス"
+      ],
       "lb-500-16T8": [],
       "lb-501-tbEe": [
         "ファンタジー",
