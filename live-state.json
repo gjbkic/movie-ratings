@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790271838516,
-  "sourceUpdatedIso": "2026-09-24T17:43:58.516Z",
+  "sourceUpdatedAt": 1790271848337,
+  "sourceUpdatedIso": "2026-09-24T17:44:08.337Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -10282,7 +10282,12 @@
       "sameScoreRank": 3,
       "category": "ほかアニメ",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "コメディ",
+        "ファンタジー",
+        "アクション",
+        "子供向け"
+      ],
       "origin": "ハリウッド",
       "format": "animation",
       "runtime": null,
@@ -17724,7 +17729,12 @@
         "ドラマ",
         "ファンタジー"
       ],
-      "lb-216-1DD8": [],
+      "lb-216-1DD8": [
+        "コメディ",
+        "ファンタジー",
+        "アクション",
+        "子供向け"
+      ],
       "lb-217-3gg0": [
         "コメディ",
         "子供向け",
