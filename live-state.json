@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790255609950,
-  "sourceUpdatedIso": "2026-09-24T13:13:29.950Z",
+  "sourceUpdatedAt": 1790255627495,
+  "sourceUpdatedIso": "2026-09-24T13:13:47.495Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -3202,7 +3202,9 @@
       "sameScoreRank": 33,
       "category": "邦画",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "クライム"
+      ],
       "origin": "邦画",
       "format": "live",
       "runtime": null,
@@ -16668,7 +16670,9 @@
         "アクション"
       ],
       "lb-382-20TI": [],
-      "lb-383-22mQ": [],
+      "lb-383-22mQ": [
+        "クライム"
+      ],
       "lb-384-1UhS": [],
       "lb-385-2axi": [],
       "lb-386-wbAi": [],
