@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790270903931,
-  "sourceUpdatedIso": "2026-09-24T17:28:23.931Z",
+  "sourceUpdatedAt": 1790270914754,
+  "sourceUpdatedIso": "2026-09-24T17:28:34.754Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -11548,7 +11548,12 @@
       "sameScoreRank": 11,
       "category": "Letterboxd追加",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "感動",
+        "社会問題・生活",
+        "ドラマ",
+        "ファンタジー"
+      ],
       "origin": "邦画",
       "format": "live",
       "runtime": null,
@@ -18813,7 +18818,12 @@
         "世界観"
       ],
       "lb-567-Uhxi": [],
-      "lb-568-S9Kk": [],
+      "lb-568-S9Kk": [
+        "感動",
+        "社会問題・生活",
+        "ドラマ",
+        "ファンタジー"
+      ],
       "lb-569-248c": [
         "スリラー",
         "ホラー"
