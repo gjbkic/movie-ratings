@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790256292788,
-  "sourceUpdatedIso": "2026-09-24T13:24:52.788Z",
+  "sourceUpdatedAt": 1790256304373,
+  "sourceUpdatedIso": "2026-09-24T13:25:04.373Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -2771,7 +2771,9 @@
       "mediaType": "movie",
       "genre": [
         "アクション",
-        "サスペンス"
+        "サスペンス",
+        "SF",
+        "ドラマ"
       ],
       "origin": "ハリウッド",
       "format": "live",
@@ -15946,7 +15948,9 @@
       "lb-122-azpu": [],
       "lb-123-29I0": [
         "アクション",
-        "サスペンス"
+        "サスペンス",
+        "SF",
+        "ドラマ"
       ],
       "lb-124-103U": [
         "SF"
