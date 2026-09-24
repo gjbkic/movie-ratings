@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790255036130,
-  "sourceUpdatedIso": "2026-09-24T13:03:56.130Z",
+  "sourceUpdatedAt": 1790255067522,
+  "sourceUpdatedIso": "2026-09-24T13:04:27.522Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -1682,6 +1682,30 @@
       "exact": true
     },
     {
+      "id": "lb-17-1U82",
+      "title": "シャッターアイランド",
+      "originalTitle": "",
+      "englishTitle": "Shutter Island",
+      "year": 2010,
+      "score": 90,
+      "star": 4,
+      "overallRank": 72,
+      "sameScoreRank": 12,
+      "category": "サスペンス、ミステリー",
+      "mediaType": "movie",
+      "genre": [
+        "サスペンス",
+        "ミステリー",
+        "差別・人権",
+        "胸糞",
+        "どんでん返し"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": null,
+      "exact": true
+    },
+    {
       "id": "custom-1790254612541-iyij",
       "title": "未来世紀ブラジル",
       "originalTitle": "Brazil",
@@ -1689,8 +1713,8 @@
       "year": 1985,
       "score": 90,
       "star": 4,
-      "overallRank": 72,
-      "sameScoreRank": 12,
+      "overallRank": 73,
+      "sameScoreRank": 13,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -1708,10 +1732,10 @@
       "originalTitle": "",
       "englishTitle": "The Matrix Revolutions",
       "year": 2003,
-      "score": 90,
+      "score": 89,
       "star": 4,
-      "overallRank": 73,
-      "sameScoreRank": 13,
+      "overallRank": 74,
+      "sameScoreRank": 1,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -1719,30 +1743,6 @@
         "アクション",
         "精神・哲学",
         "世界観"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": null,
-      "exact": true
-    },
-    {
-      "id": "lb-17-1U82",
-      "title": "シャッターアイランド",
-      "originalTitle": "",
-      "englishTitle": "Shutter Island",
-      "year": 2010,
-      "score": 89,
-      "star": 4,
-      "overallRank": 74,
-      "sameScoreRank": 1,
-      "category": "サスペンス、ミステリー",
-      "mediaType": "movie",
-      "genre": [
-        "サスペンス",
-        "ミステリー",
-        "差別・人権",
-        "胸糞",
-        "どんでん返し"
       ],
       "origin": "ハリウッド",
       "format": "live",
@@ -12752,7 +12752,7 @@
       "lb-205-1UlA": 90,
       "lb-286-2bdI": 90,
       "lb-73-27Vc": 90,
-      "lb-141-2a12": 90,
+      "lb-141-2a12": 89,
       "lb-90-71Y": 90,
       "lb-489-7T2k": 89,
       "lb-185-HTIi": 89,
@@ -12800,7 +12800,7 @@
       "lb-123-29I0": 86,
       "lb-279-215a": 86,
       "lb-573-28ws": 86,
-      "lb-17-1U82": 89,
+      "lb-17-1U82": 90,
       "lb-148-17uy": 86,
       "lb-89-5RFA": 86,
       "lb-368-2as8": 86,
@@ -13885,7 +13885,7 @@
         "lb-296-l7zS"
       ],
       "89": [
-        "lb-17-1U82",
+        "lb-141-2a12",
         "lb-100-aZes",
         "lb-29-2a2k",
         "lb-489-7T2k",
@@ -13910,8 +13910,8 @@
         "lb-321-2aNK",
         "lb-286-2bdI",
         "lb-33-29Qy",
-        "custom-1790254612541-iyij",
-        "lb-141-2a12"
+        "lb-17-1U82",
+        "custom-1790254612541-iyij"
       ],
       "91": [
         "added-anchor-578",
