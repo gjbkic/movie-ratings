@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790270198747,
-  "sourceUpdatedIso": "2026-09-24T17:16:38.747Z",
+  "sourceUpdatedAt": 1790270312086,
+  "sourceUpdatedIso": "2026-09-24T17:18:32.086Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -12774,7 +12774,11 @@
       "sameScoreRank": 1,
       "category": "邦画",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "社会問題・生活",
+        "サスペンス",
+        "ドラマ"
+      ],
       "origin": "邦画",
       "format": "live",
       "runtime": null,
@@ -18327,7 +18331,11 @@
       "lb-506-f1TK": [
         "ドラマ"
       ],
-      "lb-507-1AyE": [],
+      "lb-507-1AyE": [
+        "社会問題・生活",
+        "サスペンス",
+        "ドラマ"
+      ],
       "lb-508-5xme": [
         "SF",
         "ファンタジー",
