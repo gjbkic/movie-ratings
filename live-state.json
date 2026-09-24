@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790271682750,
-  "sourceUpdatedIso": "2026-09-24T17:41:22.750Z",
+  "sourceUpdatedAt": 1790271689108,
+  "sourceUpdatedIso": "2026-09-24T17:41:29.108Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -10526,7 +10526,11 @@
       "sameScoreRank": 16,
       "category": "邦画",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "サスペンス",
+        "ミステリー",
+        "ドラマ"
+      ],
       "origin": "邦画",
       "format": "live",
       "runtime": null,
@@ -17696,7 +17700,11 @@
         "ホラー",
         "スリラー"
       ],
-      "lb-230-43d0": [],
+      "lb-230-43d0": [
+        "サスペンス",
+        "ミステリー",
+        "ドラマ"
+      ],
       "lb-231-hd9e": [],
       "lb-232-81oI": [
         "コメディ",
