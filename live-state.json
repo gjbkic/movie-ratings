@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790253250896,
-  "sourceUpdatedIso": "2026-09-24T12:34:10.896Z",
+  "sourceUpdatedAt": 1790253267507,
+  "sourceUpdatedIso": "2026-09-24T12:34:27.507Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -1904,7 +1904,7 @@
       "overallRank": 81,
       "sameScoreRank": 9,
       "category": "Letterboxd追加",
-      "mediaType": "movie",
+      "mediaType": "other",
       "genre": [],
       "origin": "ハリウッド",
       "format": "live",
@@ -15156,7 +15156,8 @@
       "lb-464-mkbG": "other",
       "lb-467-ptEI": "other",
       "custom-1789385860198-bkq0": "other",
-      "custom-1790185844116-j1vu": "other"
+      "custom-1790185844116-j1vu": "other",
+      "lb-185-HTIi": "other"
     },
     "genreOverrides": {
       "lb-0-hTha": [
