@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790256489247,
-  "sourceUpdatedIso": "2026-09-24T13:28:09.247Z",
+  "sourceUpdatedAt": 1790256502355,
+  "sourceUpdatedIso": "2026-09-24T13:28:22.355Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -4698,7 +4698,10 @@
       "sameScoreRank": 30,
       "category": "邦画",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "ドラマ",
+        "歴史"
+      ],
       "origin": "邦画",
       "format": "live",
       "runtime": null,
@@ -16814,7 +16817,10 @@
         "切ない",
         "差別・人権"
       ],
-      "lb-379-R6yo": [],
+      "lb-379-R6yo": [
+        "ドラマ",
+        "歴史"
+      ],
       "lb-380-KQMM": [
         "スリラー",
         "ホラー"
