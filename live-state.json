@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790253267507,
-  "sourceUpdatedIso": "2026-09-24T12:34:27.507Z",
+  "sourceUpdatedAt": 1790253695613,
+  "sourceUpdatedIso": "2026-09-24T12:41:35.613Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -866,15 +866,12 @@
       "overallRank": 37,
       "sameScoreRank": 7,
       "category": "スタジオジブリ系作品",
-      "mediaType": "movie",
+      "mediaType": "other",
       "genre": [
         "SF",
         "ファンタジー",
         "アクション",
-        "戦争",
-        "精神・哲学",
-        "感動",
-        "世界観"
+        "戦争"
       ],
       "origin": "邦画",
       "format": "animation",
@@ -15157,7 +15154,8 @@
       "lb-467-ptEI": "other",
       "custom-1789385860198-bkq0": "other",
       "custom-1790185844116-j1vu": "other",
-      "lb-185-HTIi": "other"
+      "lb-185-HTIi": "other",
+      "lb-459-1Vgm": "other"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -16647,10 +16645,7 @@
         "SF",
         "ファンタジー",
         "アクション",
-        "戦争",
-        "精神・哲学",
-        "感動",
-        "世界観"
+        "戦争"
       ],
       "lb-460-20eA": [],
       "lb-461-1JAY": [
