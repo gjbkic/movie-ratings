@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790271922613,
-  "sourceUpdatedIso": "2026-09-24T17:45:22.613Z",
+  "sourceUpdatedAt": 1790271935333,
+  "sourceUpdatedIso": "2026-09-24T17:45:35.333Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -9973,7 +9973,10 @@
       "sameScoreRank": 5,
       "category": "ほかアニメ",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "シリーズ劇場版",
+        "子供向け"
+      ],
       "origin": "邦画",
       "format": "animation",
       "runtime": null,
@@ -17480,7 +17483,10 @@
       ],
       "lb-149-AF4": [],
       "lb-150-b5EQ": [],
-      "lb-151-uvFS": [],
+      "lb-151-uvFS": [
+        "シリーズ劇場版",
+        "子供向け"
+      ],
       "lb-152-89tc": [
         "ミュージカル",
         "コメディ",
