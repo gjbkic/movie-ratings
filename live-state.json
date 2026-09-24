@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790257541244,
-  "sourceUpdatedIso": "2026-09-24T13:45:41.244Z",
+  "sourceUpdatedAt": 1790257559022,
+  "sourceUpdatedIso": "2026-09-24T13:45:59.022Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -3929,7 +3929,10 @@
       "sameScoreRank": 32,
       "category": "邦画",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "戦争",
+        "歴史"
+      ],
       "origin": "邦画",
       "format": "live",
       "runtime": null,
@@ -17049,7 +17052,10 @@
         "サスペンス"
       ],
       "lb-384-1UhS": [],
-      "lb-385-2axi": [],
+      "lb-385-2axi": [
+        "戦争",
+        "歴史"
+      ],
       "lb-386-wbAi": [],
       "lb-387-em8S": [],
       "lb-388-enHO": [],
