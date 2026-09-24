@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790256035312,
-  "sourceUpdatedIso": "2026-09-24T13:20:35.312Z",
+  "sourceUpdatedAt": 1790256049875,
+  "sourceUpdatedIso": "2026-09-24T13:20:49.875Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -2986,7 +2986,12 @@
       "sameScoreRank": 22,
       "category": "ほかアニメ",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "SF",
+        "アクション",
+        "精神・哲学",
+        "世界観"
+      ],
       "origin": "邦画",
       "format": "animation",
       "runtime": null,
@@ -16763,7 +16768,12 @@
         "サスペンス",
         "ミステリー"
       ],
-      "lb-398-2b1i": [],
+      "lb-398-2b1i": [
+        "SF",
+        "アクション",
+        "精神・哲学",
+        "世界観"
+      ],
       "lb-399-29PA": [
         "SF"
       ],
