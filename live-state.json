@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790271967638,
-  "sourceUpdatedIso": "2026-09-24T17:46:07.638Z",
+  "sourceUpdatedAt": 1790271979559,
+  "sourceUpdatedIso": "2026-09-24T17:46:19.559Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -10255,7 +10255,12 @@
       "sameScoreRank": 19,
       "category": "Letterboxd",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "シリーズ劇場版",
+        "ドラマ",
+        "クライム",
+        "サスペンス"
+      ],
       "origin": "邦画",
       "format": "live",
       "runtime": null,
@@ -19571,7 +19576,12 @@
         "恋愛",
         "シリーズ劇場版"
       ],
-      "custom-1789385860756-dujj": [],
+      "custom-1789385860756-dujj": [
+        "シリーズ劇場版",
+        "ドラマ",
+        "クライム",
+        "サスペンス"
+      ],
       "custom-1789385860847-w7kt": [],
       "custom-1789385860920-hsho": [
         "子供向け",
