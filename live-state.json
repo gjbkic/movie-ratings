@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790257046535,
-  "sourceUpdatedIso": "2026-09-24T13:37:26.535Z",
+  "sourceUpdatedAt": 1790257068869,
+  "sourceUpdatedIso": "2026-09-24T13:37:48.869Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -4265,7 +4265,7 @@
     },
     {
       "id": "custom-1789385860026-8m1d",
-      "title": "Ani*Kuri15: A Gathering of Cats",
+      "title": "Ani*Kuri15: ネコの集会",
       "originalTitle": "",
       "englishTitle": "Ani*Kuri15: A Gathering of Cats",
       "year": 2007,
@@ -15459,7 +15459,10 @@
         "tmdbId": 45923
       },
       "custom-1789385860026-8m1d": {
-        "tmdbId": 206569
+        "tmdbId": 206569,
+        "title": "Ani*Kuri15: ネコの集会",
+        "originalTitle": "",
+        "englishTitle": "Ani*Kuri15: A Gathering of Cats"
       }
     },
     "categoryOverrides": {},
