@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790271587161,
-  "sourceUpdatedIso": "2026-09-24T17:39:47.161Z",
+  "sourceUpdatedAt": 1790271603110,
+  "sourceUpdatedIso": "2026-09-24T17:40:03.110Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -10640,7 +10640,13 @@
       "sameScoreRank": 2,
       "category": "ほかアニメ",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "恋愛",
+        "ファンタジー",
+        "アクション",
+        "ドラマ",
+        "青春・若者"
+      ],
       "origin": "邦画",
       "format": "animation",
       "runtime": null,
@@ -18907,7 +18913,13 @@
       "lb-510-5dz8": [
         "クライム"
       ],
-      "lb-511-yv7Y": [],
+      "lb-511-yv7Y": [
+        "恋愛",
+        "ファンタジー",
+        "アクション",
+        "ドラマ",
+        "青春・若者"
+      ],
       "lb-512-fqF4": [],
       "lb-513-y6Eo": [
         "ミステリー"
