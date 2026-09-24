@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790256667504,
-  "sourceUpdatedIso": "2026-09-24T13:31:07.504Z",
+  "sourceUpdatedAt": 1790256683086,
+  "sourceUpdatedIso": "2026-09-24T13:31:23.086Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -4517,8 +4517,13 @@
       "overallRank": 202,
       "sameScoreRank": 21,
       "category": "邦画",
-      "mediaType": "movie",
-      "genre": [],
+      "mediaType": "tvseries",
+      "genre": [
+        "ドラマ",
+        "ミステリー",
+        "サスペンス",
+        "切ない"
+      ],
       "origin": "邦画",
       "format": "live",
       "runtime": null,
@@ -15437,7 +15442,8 @@
       "custom-1789385860426-8e86": "other",
       "lb-464-mkbG": "tvseries",
       "lb-253-SVAW": "tvseries",
-      "lb-336-qH0": "tvseries"
+      "lb-336-qH0": "tvseries",
+      "lb-228-6eCu": "tvseries"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -16333,7 +16339,12 @@
       "lb-225-A7Am": [],
       "lb-226-g0d6": [],
       "lb-227-evra": [],
-      "lb-228-6eCu": [],
+      "lb-228-6eCu": [
+        "ドラマ",
+        "ミステリー",
+        "サスペンス",
+        "切ない"
+      ],
       "lb-229-26tw": [
         "ホラー",
         "スリラー"
