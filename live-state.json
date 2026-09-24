@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790271012392,
-  "sourceUpdatedIso": "2026-09-24T17:30:12.392Z",
+  "sourceUpdatedAt": 1790271034559,
+  "sourceUpdatedIso": "2026-09-24T17:30:34.559Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -11398,7 +11398,10 @@
       "sameScoreRank": 3,
       "category": "ほかアニメ",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "ドラマ",
+        "ファンタジー"
+      ],
       "origin": "邦画",
       "format": "animation",
       "runtime": null,
@@ -11416,7 +11419,9 @@
       "sameScoreRank": 4,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "ファンタジー"
+      ],
       "origin": "邦画",
       "format": "animation",
       "runtime": null,
@@ -17180,8 +17185,13 @@
         "クライム",
         "感動"
       ],
-      "lb-155-h2Hu": [],
-      "lb-156-ffTY": [],
+      "lb-155-h2Hu": [
+        "ドラマ",
+        "ファンタジー"
+      ],
+      "lb-156-ffTY": [
+        "ファンタジー"
+      ],
       "lb-157-aaRe": [
         "ファンタジー",
         "社会問題・生活",
