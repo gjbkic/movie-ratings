@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790257353499,
-  "sourceUpdatedIso": "2026-09-24T13:42:33.499Z",
+  "sourceUpdatedAt": 1790257362200,
+  "sourceUpdatedIso": "2026-09-24T13:42:42.200Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -4038,7 +4038,11 @@
       "sameScoreRank": 38,
       "category": "Letterboxd追加",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "青春・若者",
+        "ドラマ",
+        "切ない"
+      ],
       "origin": "邦画",
       "format": "live",
       "runtime": null,
@@ -17323,7 +17327,11 @@
         "サスペンス",
         "ミステリー"
       ],
-      "lb-485-2aSg": [],
+      "lb-485-2aSg": [
+        "青春・若者",
+        "ドラマ",
+        "切ない"
+      ],
       "lb-486-b8wK": [
         "SF",
         "切ない",
