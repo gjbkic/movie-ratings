@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790270519089,
-  "sourceUpdatedIso": "2026-09-24T17:21:59.089Z",
+  "sourceUpdatedAt": 1790270534194,
+  "sourceUpdatedIso": "2026-09-24T17:22:14.194Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -12031,7 +12031,12 @@
       "sameScoreRank": 8,
       "category": "邦画",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "恋愛",
+        "ドラマ",
+        "サスペンス",
+        "ミステリー"
+      ],
       "origin": "邦画",
       "format": "live",
       "runtime": null,
@@ -12051,7 +12056,9 @@
       "mediaType": "movie",
       "genre": [
         "ファンタジー",
-        "ミュージカル"
+        "ミュージカル",
+        "恋愛",
+        "青春・若者"
       ],
       "origin": "邦画",
       "format": "animation",
@@ -18131,7 +18138,12 @@
         "サスペンス",
         "感動"
       ],
-      "lb-449-MG9E": [],
+      "lb-449-MG9E": [
+        "恋愛",
+        "ドラマ",
+        "サスペンス",
+        "ミステリー"
+      ],
       "lb-450-6dLq": [],
       "lb-451-h10u": [
         "スリラー",
@@ -18358,7 +18370,9 @@
       "lb-500-16T8": [],
       "lb-501-tbEe": [
         "ファンタジー",
-        "ミュージカル"
+        "ミュージカル",
+        "恋愛",
+        "青春・若者"
       ],
       "lb-502-oEGS": [
         "ミステリー"
