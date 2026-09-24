@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790254167172,
-  "sourceUpdatedIso": "2026-09-24T12:49:27.172Z",
+  "sourceUpdatedAt": 1790254614865,
+  "sourceUpdatedIso": "2026-09-24T12:56:54.865Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -2465,7 +2465,10 @@
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
-        "アクション"
+        "アクション",
+        "感動",
+        "ドラマ",
+        "恋愛"
       ],
       "origin": "ハリウッド",
       "format": "live",
@@ -12642,7 +12645,29 @@
       "exact": false
     }
   ],
-  "unrated": [],
+  "unrated": [
+    {
+      "id": "custom-1790254612541-iyij",
+      "title": "未来世紀ブラジル",
+      "originalTitle": "Brazil",
+      "englishTitle": "Brazil",
+      "year": 1985,
+      "score": null,
+      "star": 4,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "コメディ",
+        "SF"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 143,
+      "exact": false
+    }
+  ],
   "state": {
     "exactScores": {
       "custom-1789387775661-0mdh": 85,
@@ -14490,6 +14515,23 @@
         "added": true,
         "_seq": 1790247938551,
         "source": "letterboxd"
+      },
+      {
+        "id": "custom-1790254612541-iyij",
+        "title": "未来世紀ブラジル",
+        "originalTitle": "Brazil",
+        "englishTitle": "Brazil",
+        "lbTitle": "Brazil",
+        "tmdbId": 68,
+        "year": 1985,
+        "uri": "https://letterboxd.com/gjbkic/film/brazil/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 4,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1790254612541,
+        "source": "letterboxd"
       }
     ],
     "starOverrides": {
@@ -16241,7 +16283,10 @@
         "アクション"
       ],
       "lb-298-28Uk": [
-        "アクション"
+        "アクション",
+        "感動",
+        "ドラマ",
+        "恋愛"
       ],
       "lb-299-28U0": [
         "アクション"
@@ -17300,6 +17345,10 @@
         "切ない",
         "ヒーロー",
         "シリーズ劇場版"
+      ],
+      "custom-1790254612541-iyij": [
+        "コメディ",
+        "SF"
       ]
     },
     "originOverrides": {
@@ -17924,7 +17973,8 @@
       "custom-1790185844045-qhut": "ハリウッド",
       "custom-1790185843981-dk0y": "ハリウッド",
       "custom-1790185844080-jquu": "ハリウッド",
-      "custom-1790247938551-ixfs": "邦画"
+      "custom-1790247938551-ixfs": "邦画",
+      "custom-1790254612541-iyij": "ハリウッド"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -18548,10 +18598,12 @@
       "custom-1790185844045-qhut": "live",
       "custom-1790185843981-dk0y": "live",
       "custom-1790185844080-jquu": "live",
-      "custom-1790247938551-ixfs": "animation"
+      "custom-1790247938551-ixfs": "animation",
+      "custom-1790254612541-iyij": "live"
     },
     "runtimeOverrides": {
-      "custom-1790247938551-ixfs": 100
+      "custom-1790247938551-ixfs": 100,
+      "custom-1790254612541-iyij": 143
     }
   }
 }
