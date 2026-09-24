@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790257703969,
-  "sourceUpdatedIso": "2026-09-24T13:48:23.969Z",
+  "sourceUpdatedAt": 1790257714202,
+  "sourceUpdatedIso": "2026-09-24T13:48:34.202Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -3587,7 +3587,12 @@
       "sameScoreRank": 15,
       "category": "ほかアニメ",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "精神・哲学",
+        "SF",
+        "ファンタジー",
+        "世界観"
+      ],
       "origin": "ハリウッド",
       "format": "animation",
       "runtime": null,
@@ -17152,7 +17157,12 @@
       "lb-399-29PA": [
         "SF"
       ],
-      "lb-400-23wW": [],
+      "lb-400-23wW": [
+        "精神・哲学",
+        "SF",
+        "ファンタジー",
+        "世界観"
+      ],
       "lb-401-9vE4": [
         "アクション",
         "SF"
