@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790269331638,
-  "sourceUpdatedIso": "2026-09-24T17:02:11.638Z",
+  "sourceUpdatedAt": 1790269857891,
+  "sourceUpdatedIso": "2026-09-24T17:10:57.891Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -4953,22 +4953,19 @@
       "exact": false
     },
     {
-      "id": "lb-159-18U8",
-      "title": "トゥルーマン・ショー",
+      "id": "lb-266-1Iik",
+      "title": "第9地区",
       "originalTitle": "",
-      "englishTitle": "The Truman Show",
-      "year": 1998,
+      "englishTitle": "District 9",
+      "year": 2009,
       "score": 84,
       "star": 3.5,
       "overallRank": 214,
       "sameScoreRank": 33,
-      "category": "ドラマ",
+      "category": "SF",
       "mediaType": "movie",
       "genre": [
-        "ドラマ",
-        "どんでん返し",
-        "感動",
-        "コメディ"
+        "SF"
       ],
       "origin": "ハリウッド",
       "format": "live",
@@ -5000,19 +4997,22 @@
       "exact": false
     },
     {
-      "id": "lb-266-1Iik",
-      "title": "第9地区",
+      "id": "lb-159-18U8",
+      "title": "トゥルーマン・ショー",
       "originalTitle": "",
-      "englishTitle": "District 9",
-      "year": 2009,
+      "englishTitle": "The Truman Show",
+      "year": 1998,
       "score": 84,
       "star": 3.5,
       "overallRank": 216,
       "sameScoreRank": 35,
-      "category": "SF",
+      "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
-        "SF"
+        "ドラマ",
+        "どんでん返し",
+        "感動",
+        "コメディ"
       ],
       "origin": "ハリウッド",
       "format": "live",
@@ -14119,9 +14119,9 @@
         "lb-212-acjI",
         "lb-124-103U",
         "lb-499-948A",
-        "lb-159-18U8",
+        "lb-266-1Iik",
         "lb-545-1vWw",
-        "lb-266-1Iik"
+        "lb-159-18U8"
       ],
       "85": [
         "lb-276-7UmK",
