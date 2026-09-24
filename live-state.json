@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790250872832,
-  "sourceUpdatedIso": "2026-09-24T11:54:32.832Z",
+  "sourceUpdatedAt": 1790250891939,
+  "sourceUpdatedIso": "2026-09-24T11:54:51.939Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -1284,7 +1284,11 @@
       "sameScoreRank": 4,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "恋愛",
+        "ファンタジー",
+        "青春・若者"
+      ],
       "origin": "邦画",
       "format": "animation",
       "runtime": null,
@@ -16496,7 +16500,11 @@
         "感動"
       ],
       "lb-460-20eA": [],
-      "lb-461-1JAY": [],
+      "lb-461-1JAY": [
+        "恋愛",
+        "ファンタジー",
+        "青春・若者"
+      ],
       "lb-462-d1ws": [],
       "lb-463-4Xuw": [],
       "lb-464-mkbG": [],
