@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790271206221,
-  "sourceUpdatedIso": "2026-09-24T17:33:26.221Z",
+  "sourceUpdatedAt": 1790271212840,
+  "sourceUpdatedIso": "2026-09-24T17:33:32.840Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -11151,7 +11151,11 @@
       "sameScoreRank": 9,
       "category": "Letterboxd追加",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "感動",
+        "ドラマ",
+        "スポーツ"
+      ],
       "origin": "邦画",
       "format": "live",
       "runtime": null,
@@ -18181,7 +18185,11 @@
       ],
       "lb-386-wbAi": [],
       "lb-387-em8S": [],
-      "lb-388-enHO": [],
+      "lb-388-enHO": [
+        "感動",
+        "ドラマ",
+        "スポーツ"
+      ],
       "lb-389-hs78": [],
       "lb-390-pUfA": [
         "アクション",
