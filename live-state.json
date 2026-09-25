@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790366866235,
-  "sourceUpdatedIso": "2026-09-25T20:07:46.235Z",
+  "sourceUpdatedAt": 1790367054719,
+  "sourceUpdatedIso": "2026-09-25T20:10:54.719Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -25,7 +25,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 136,
       "exact": false
     },
     {
@@ -154,7 +154,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 127,
       "exact": false
     },
     {
@@ -804,7 +804,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 143,
       "exact": true
     },
     {
@@ -1757,7 +1757,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 138,
       "exact": true
     },
     {
@@ -3792,7 +3792,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 119,
       "exact": true
     },
     {
@@ -4459,7 +4459,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 150,
       "exact": true
     },
     {
@@ -5068,7 +5068,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 142,
       "exact": true
     },
     {
@@ -6192,7 +6192,7 @@
       ],
       "origin": "ハリウッド",
       "format": "hybrid",
-      "runtime": null,
+      "runtime": 111,
       "exact": false
     },
     {
@@ -6498,7 +6498,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 114,
       "exact": true
     },
     {
@@ -6843,7 +6843,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 149,
       "exact": true
     },
     {
@@ -7199,7 +7199,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 152,
       "exact": true
     },
     {
@@ -7342,7 +7342,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 165,
       "exact": true
     },
     {
@@ -9662,7 +9662,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 113,
       "exact": true
     },
     {
@@ -18344,6 +18344,45 @@
       },
       "lb-11-29zs": {
         "tmdbId": 807
+      },
+      "lb-12-728": {
+        "tmdbId": 13
+      },
+      "lb-13-1JzG": {
+        "tmdbId": 16869
+      },
+      "lb-14-29Nu": {
+        "tmdbId": 694
+      },
+      "lb-15-6hQu": {
+        "tmdbId": 210577
+      },
+      "lb-16-70w": {
+        "tmdbId": 24
+      },
+      "lb-17-1U82": {
+        "tmdbId": 11324
+      },
+      "lb-18-2ahY": {
+        "tmdbId": 489
+      },
+      "lb-19-2cCk": {
+        "tmdbId": 68718
+      },
+      "lb-20-9vEe": {
+        "tmdbId": 299536
+      },
+      "lb-21-bhF2": {
+        "tmdbId": 339403
+      },
+      "lb-22-2a1m": {
+        "tmdbId": 603
+      },
+      "lb-23-2b8y": {
+        "tmdbId": 103
+      },
+      "lb-24-2aHi": {
+        "tmdbId": 278
       }
     },
     "categoryOverrides": {},
@@ -24031,7 +24070,20 @@
       "lb-8-6YK": 108,
       "lb-9-1skk": 148,
       "lb-10-kSz4": 140,
-      "lb-11-29zs": 126
+      "lb-11-29zs": 126,
+      "lb-12-728": 142,
+      "lb-13-1JzG": 152,
+      "lb-14-29Nu": 119,
+      "lb-15-6hQu": 149,
+      "lb-16-70w": 111,
+      "lb-17-1U82": 138,
+      "lb-18-2ahY": 127,
+      "lb-19-2cCk": 165,
+      "lb-20-9vEe": 150,
+      "lb-21-bhF2": 113,
+      "lb-22-2a1m": 136,
+      "lb-23-2b8y": 114,
+      "lb-24-2aHi": 143
     }
   }
 }
