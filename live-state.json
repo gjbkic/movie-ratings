@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790367729967,
-  "sourceUpdatedIso": "2026-09-25T20:22:09.967Z",
+  "sourceUpdatedAt": 1790367745752,
+  "sourceUpdatedIso": "2026-09-25T20:22:25.752Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -6925,7 +6925,12 @@
       "sameScoreRank": 27,
       "category": "邦画",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "どんでん返し",
+        "ミステリー",
+        "娯楽",
+        "サスペンス"
+      ],
       "origin": "邦画",
       "format": "live",
       "runtime": null,
@@ -21034,7 +21039,12 @@
         "ファンタジー",
         "社会問題・生活"
       ],
-      "lb-315-g32A": [],
+      "lb-315-g32A": [
+        "どんでん返し",
+        "ミステリー",
+        "娯楽",
+        "サスペンス"
+      ],
       "lb-316-ekeY": [
         "ドラマ",
         "差別・人権",
