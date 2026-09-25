@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790358608851,
-  "sourceUpdatedIso": "2026-09-25T17:50:08.851Z",
+  "sourceUpdatedAt": 1790358615372,
+  "sourceUpdatedIso": "2026-09-25T17:50:15.372Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -9303,27 +9303,6 @@
       "exact": true
     },
     {
-      "id": "lb-408-8MHi",
-      "title": "マイティ・ソー バトルロイヤル",
-      "originalTitle": "",
-      "englishTitle": "Thor: Ragnarok",
-      "year": 2017,
-      "score": 78,
-      "star": 2.5,
-      "overallRank": 427,
-      "sameScoreRank": 12,
-      "category": "MCU作品",
-      "mediaType": "movie",
-      "genre": [
-        "アクション",
-        "SF"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": null,
-      "exact": true
-    },
-    {
       "id": "lb-200-7BEA",
       "title": "コナン 異次元の狙撃手",
       "originalTitle": "",
@@ -9331,8 +9310,8 @@
       "year": 2014,
       "score": 78,
       "star": 2.5,
-      "overallRank": 428,
-      "sameScoreRank": 13,
+      "overallRank": 427,
+      "sameScoreRank": 12,
       "category": "コナン映画",
       "mediaType": "movie",
       "genre": [
@@ -9351,12 +9330,33 @@
       "year": 2006,
       "score": 78,
       "star": 2.5,
-      "overallRank": 429,
-      "sameScoreRank": 14,
+      "overallRank": 428,
+      "sameScoreRank": 13,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [],
       "origin": "邦画",
+      "format": "live",
+      "runtime": null,
+      "exact": true
+    },
+    {
+      "id": "lb-408-8MHi",
+      "title": "マイティ・ソー バトルロイヤル",
+      "originalTitle": "",
+      "englishTitle": "Thor: Ragnarok",
+      "year": 2017,
+      "score": 78,
+      "star": 2.5,
+      "overallRank": 429,
+      "sameScoreRank": 14,
+      "category": "MCU作品",
+      "mediaType": "movie",
+      "genre": [
+        "アクション",
+        "SF"
+      ],
+      "origin": "ハリウッド",
       "format": "live",
       "runtime": null,
       "exact": true
@@ -15220,9 +15220,9 @@
         "lb-548-294Y",
         "lb-373-1TlE",
         "custom-1790322759131-6bsn",
-        "lb-408-8MHi",
         "lb-200-7BEA",
         "lb-247-1L2a",
+        "lb-408-8MHi",
         "lb-94-5rje",
         "lb-513-y6Eo",
         "lb-248-1KJs",
