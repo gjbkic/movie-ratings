@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790329817632,
-  "sourceUpdatedIso": "2026-09-25T09:50:17.632Z",
+  "sourceUpdatedAt": 1790329829832,
+  "sourceUpdatedIso": "2026-09-25T09:50:29.832Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -7915,6 +7915,27 @@
       "exact": false
     },
     {
+      "id": "lb-410-29Qe",
+      "title": "不死鳥の騎士団",
+      "originalTitle": "",
+      "englishTitle": "Harry Potter and the Order of the Phoenix",
+      "year": 2007,
+      "score": 80,
+      "star": 2.5,
+      "overallRank": 360,
+      "sameScoreRank": 17,
+      "category": "ハリーポッター シリーズ",
+      "mediaType": "movie",
+      "genre": [
+        "ファンタジー",
+        "アドベンチャー"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": null,
+      "exact": true
+    },
+    {
       "id": "custom-1790322769206-k4pm",
       "title": "今日から俺は!!",
       "originalTitle": "今日から俺は!!",
@@ -7922,8 +7943,8 @@
       "year": 2018,
       "score": 80,
       "star": 2.5,
-      "overallRank": 360,
-      "sameScoreRank": 17,
+      "overallRank": 361,
+      "sameScoreRank": 18,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -7945,8 +7966,8 @@
       "year": 2010,
       "score": 80,
       "star": 2.5,
-      "overallRank": 361,
-      "sameScoreRank": 18,
+      "overallRank": 362,
+      "sameScoreRank": 19,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -7965,34 +7986,13 @@
       "year": 1985,
       "score": 80,
       "star": 2.5,
-      "overallRank": 362,
-      "sameScoreRank": 19,
+      "overallRank": 363,
+      "sameScoreRank": 20,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
         "サスペンス",
         "ミステリー"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": null,
-      "exact": true
-    },
-    {
-      "id": "lb-410-29Qe",
-      "title": "不死鳥の騎士団",
-      "originalTitle": "",
-      "englishTitle": "Harry Potter and the Order of the Phoenix",
-      "year": 2007,
-      "score": 80,
-      "star": 2.5,
-      "overallRank": 363,
-      "sameScoreRank": 20,
-      "category": "ハリーポッター シリーズ",
-      "mediaType": "movie",
-      "genre": [
-        "ファンタジー",
-        "アドベンチャー"
       ],
       "origin": "ハリウッド",
       "format": "live",
@@ -15181,10 +15181,10 @@
         "lb-481-1rbm",
         "lb-242-kif8",
         "lb-118-29cS",
+        "lb-410-29Qe",
         "custom-1790322769206-k4pm",
         "lb-291-dX0",
         "base-clue-1985",
-        "lb-410-29Qe",
         "lb-235-8JWk",
         "lb-347-4bW8",
         "custom-1790322758188-46qe",
