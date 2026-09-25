@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790368809597,
-  "sourceUpdatedIso": "2026-09-25T20:40:09.597Z",
+  "sourceUpdatedAt": 1790368813902,
+  "sourceUpdatedIso": "2026-09-25T20:40:13.902Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -7646,6 +7646,26 @@
       "exact": true
     },
     {
+      "id": "lb-523-6xza",
+      "title": "コヒーレンス",
+      "originalTitle": "",
+      "englishTitle": "Coherence",
+      "year": 2013,
+      "score": 81,
+      "star": 3,
+      "overallRank": 315,
+      "sameScoreRank": 10,
+      "category": "SF",
+      "mediaType": "movie",
+      "genre": [
+        "SF"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": null,
+      "exact": true
+    },
+    {
       "id": "lb-519-nwRw",
       "title": "ノー・ウェイ・ホーム",
       "originalTitle": "",
@@ -7653,8 +7673,8 @@
       "year": 2021,
       "score": 81,
       "star": 3,
-      "overallRank": 315,
-      "sameScoreRank": 10,
+      "overallRank": 316,
+      "sameScoreRank": 11,
       "category": "スパイダーマン作品",
       "mediaType": "movie",
       "genre": [
@@ -7663,26 +7683,6 @@
         "ヒーロー",
         "ファンタジー",
         "恋愛"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": null,
-      "exact": true
-    },
-    {
-      "id": "lb-523-6xza",
-      "title": "コヒーレンス",
-      "originalTitle": "",
-      "englishTitle": "Coherence",
-      "year": 2013,
-      "score": 81,
-      "star": 3,
-      "overallRank": 316,
-      "sameScoreRank": 11,
-      "category": "SF",
-      "mediaType": "movie",
-      "genre": [
-        "SF"
       ],
       "origin": "ハリウッド",
       "format": "live",
@@ -15932,8 +15932,8 @@
         "custom-1790322760608-2vle",
         "lb-475-F1U6",
         "custom-1789408864046-u4p4",
-        "lb-519-nwRw",
         "lb-523-6xza",
+        "lb-519-nwRw",
         "lb-113-5rI4",
         "lb-183-x1OG",
         "lb-246-mqyw",
