@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790363046472,
-  "sourceUpdatedIso": "2026-09-25T19:04:06.472Z",
+  "sourceUpdatedAt": 1790363064459,
+  "sourceUpdatedIso": "2026-09-25T19:04:24.459Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -5541,7 +5541,12 @@
       "sameScoreRank": 13,
       "category": "邦画",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "サスペンス",
+        "コメディ",
+        "クライム",
+        "comfort"
+      ],
       "origin": "邦画",
       "format": "live",
       "runtime": null,
@@ -19879,7 +19884,12 @@
         "子供向け"
       ],
       "lb-242-kif8": [],
-      "lb-243-orTE": [],
+      "lb-243-orTE": [
+        "サスペンス",
+        "コメディ",
+        "クライム",
+        "comfort"
+      ],
       "lb-244-MGuM": [
         "ドラマ",
         "ミステリー",
