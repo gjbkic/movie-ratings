@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790328842970,
-  "sourceUpdatedIso": "2026-09-25T09:34:02.970Z",
+  "sourceUpdatedAt": 1790328849395,
+  "sourceUpdatedIso": "2026-09-25T09:34:09.395Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -6838,27 +6838,6 @@
       "exact": true
     },
     {
-      "id": "custom-1789408864046-u4p4",
-      "title": "ジェイコブス・ラダー",
-      "originalTitle": "Jacob's Ladder",
-      "englishTitle": "Jacob's Ladder",
-      "year": 1990,
-      "score": 81,
-      "star": 3,
-      "overallRank": 307,
-      "sameScoreRank": 6,
-      "category": "スリラー、ホラー",
-      "mediaType": "movie",
-      "genre": [
-        "スリラー",
-        "ホラー"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": null,
-      "exact": true
-    },
-    {
       "id": "lb-348-71k",
       "title": "フィフス・エレメント",
       "originalTitle": "",
@@ -6866,8 +6845,8 @@
       "year": 1997,
       "score": 81,
       "star": 3,
-      "overallRank": 308,
-      "sameScoreRank": 7,
+      "overallRank": 307,
+      "sameScoreRank": 6,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -6886,8 +6865,8 @@
       "year": 2019,
       "score": 81,
       "star": 3,
-      "overallRank": 309,
-      "sameScoreRank": 8,
+      "overallRank": 308,
+      "sameScoreRank": 7,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -6897,6 +6876,27 @@
       "origin": "邦画",
       "format": "live",
       "runtime": 46,
+      "exact": true
+    },
+    {
+      "id": "custom-1789408864046-u4p4",
+      "title": "ジェイコブス・ラダー",
+      "originalTitle": "Jacob's Ladder",
+      "englishTitle": "Jacob's Ladder",
+      "year": 1990,
+      "score": 81,
+      "star": 3,
+      "overallRank": 309,
+      "sameScoreRank": 8,
+      "category": "スリラー、ホラー",
+      "mediaType": "movie",
+      "genre": [
+        "スリラー",
+        "ホラー"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": null,
       "exact": true
     },
     {
@@ -15143,9 +15143,9 @@
         "lb-186-uRS",
         "lb-429-2czU",
         "lb-277-eOCm",
-        "custom-1789408864046-u4p4",
         "lb-348-71k",
         "custom-1790322760608-2vle",
+        "custom-1789408864046-u4p4",
         "lb-475-F1U6",
         "lb-523-6xza",
         "lb-113-5rI4",
