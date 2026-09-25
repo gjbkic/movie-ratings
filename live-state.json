@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790329161224,
-  "sourceUpdatedIso": "2026-09-25T09:39:21.224Z",
+  "sourceUpdatedAt": 1790329170933,
+  "sourceUpdatedIso": "2026-09-25T09:39:30.933Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -9585,7 +9585,10 @@
       "sameScoreRank": 6,
       "category": "Letterboxd追加",
       "mediaType": "drama",
-      "genre": [],
+      "genre": [
+        "ファンタジー",
+        "ドラマ"
+      ],
       "origin": "邦画",
       "format": "live",
       "runtime": null,
@@ -19927,7 +19930,10 @@
       ],
       "lb-337-1nRe": [],
       "lb-338-a9lm": [],
-      "lb-339-lPy0": [],
+      "lb-339-lPy0": [
+        "ファンタジー",
+        "ドラマ"
+      ],
       "lb-340-3r58": [
         "アクション",
         "SF"
