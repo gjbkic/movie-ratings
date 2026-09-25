@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790368881573,
-  "sourceUpdatedIso": "2026-09-25T20:41:21.573Z",
+  "sourceUpdatedAt": 1790368887264,
+  "sourceUpdatedIso": "2026-09-25T20:41:27.264Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -7517,6 +7517,24 @@
       "exact": true
     },
     {
+      "id": "custom-1789385860628-ogsm",
+      "title": "カイジ2 人生奪回ゲーム",
+      "originalTitle": "",
+      "englishTitle": "Kaiji 2: The Ultimate Gambler",
+      "year": 2011,
+      "score": 81,
+      "star": 3,
+      "overallRank": 309,
+      "sameScoreRank": 4,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [],
+      "origin": "邦画",
+      "format": "live",
+      "runtime": null,
+      "exact": true
+    },
+    {
       "id": "lb-348-71k",
       "title": "フィフス・エレメント",
       "originalTitle": "",
@@ -7524,8 +7542,8 @@
       "year": 1997,
       "score": 81,
       "star": 3,
-      "overallRank": 309,
-      "sameScoreRank": 4,
+      "overallRank": 310,
+      "sameScoreRank": 5,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -7544,8 +7562,8 @@
       "year": 2012,
       "score": 81,
       "star": 3,
-      "overallRank": 310,
-      "sameScoreRank": 5,
+      "overallRank": 311,
+      "sameScoreRank": 6,
       "category": "MCU作品",
       "mediaType": "movie",
       "genre": [
@@ -7565,8 +7583,8 @@
       "year": 2017,
       "score": 81,
       "star": 3,
-      "overallRank": 311,
-      "sameScoreRank": 6,
+      "overallRank": 312,
+      "sameScoreRank": 7,
       "category": "スリラー、ホラー",
       "mediaType": "movie",
       "genre": [
@@ -7586,8 +7604,8 @@
       "year": 2019,
       "score": 81,
       "star": 3,
-      "overallRank": 312,
-      "sameScoreRank": 7,
+      "overallRank": 313,
+      "sameScoreRank": 8,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -7600,24 +7618,6 @@
       "origin": "邦画",
       "format": "live",
       "runtime": 46,
-      "exact": true
-    },
-    {
-      "id": "custom-1789385860628-ogsm",
-      "title": "カイジ2 人生奪回ゲーム",
-      "originalTitle": "",
-      "englishTitle": "Kaiji 2: The Ultimate Gambler",
-      "year": 2011,
-      "score": 81,
-      "star": 3,
-      "overallRank": 313,
-      "sameScoreRank": 8,
-      "category": "Letterboxd",
-      "mediaType": "movie",
-      "genre": [],
-      "origin": "邦画",
-      "format": "live",
-      "runtime": null,
       "exact": true
     },
     {
@@ -15926,11 +15926,11 @@
         "lb-521-29Qo",
         "lb-186-uRS",
         "lb-429-2czU",
+        "custom-1789385860628-ogsm",
         "lb-348-71k",
         "lb-42-1xFW",
         "lb-277-eOCm",
         "custom-1790322760608-2vle",
-        "custom-1789385860628-ogsm",
         "lb-475-F1U6",
         "custom-1789408864046-u4p4",
         "lb-523-6xza",
