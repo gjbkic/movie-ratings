@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790357140656,
-  "sourceUpdatedIso": "2026-09-25T17:25:40.656Z",
+  "sourceUpdatedAt": 1790357145709,
+  "sourceUpdatedIso": "2026-09-25T17:25:45.709Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -8697,6 +8697,27 @@
       "exact": true
     },
     {
+      "id": "lb-380-KQMM",
+      "title": "罪人たち",
+      "originalTitle": "",
+      "englishTitle": "Sinners",
+      "year": 2025,
+      "score": 79,
+      "star": 2.5,
+      "overallRank": 397,
+      "sameScoreRank": 20,
+      "category": "スリラー、ホラー",
+      "mediaType": "movie",
+      "genre": [
+        "スリラー",
+        "ホラー"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": null,
+      "exact": true
+    },
+    {
       "id": "lb-411-89Ja",
       "title": "キャプテン・アメリカ/シビル・ウォー",
       "originalTitle": "",
@@ -8704,8 +8725,8 @@
       "year": 2016,
       "score": 79,
       "star": 2.5,
-      "overallRank": 397,
-      "sameScoreRank": 20,
+      "overallRank": 398,
+      "sameScoreRank": 21,
       "category": "MCU作品",
       "mediaType": "movie",
       "genre": [
@@ -8725,33 +8746,12 @@
       "year": 2005,
       "score": 79,
       "star": 2.5,
-      "overallRank": 398,
-      "sameScoreRank": 21,
+      "overallRank": 399,
+      "sameScoreRank": 22,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
         "アクション"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": null,
-      "exact": true
-    },
-    {
-      "id": "lb-380-KQMM",
-      "title": "罪人たち",
-      "originalTitle": "",
-      "englishTitle": "Sinners",
-      "year": 2025,
-      "score": 79,
-      "star": 2.5,
-      "overallRank": 399,
-      "sameScoreRank": 22,
-      "category": "スリラー、ホラー",
-      "mediaType": "movie",
-      "genre": [
-        "スリラー",
-        "ホラー"
       ],
       "origin": "ハリウッド",
       "format": "live",
@@ -15217,9 +15217,9 @@
         "lb-455-Ro",
         "lb-153-1Mvi",
         "lb-456-27Ni",
+        "lb-380-KQMM",
         "lb-411-89Ja",
         "lb-409-2aIg",
-        "lb-380-KQMM",
         "lb-142-2bde",
         "custom-1789385860088-xif1",
         "lb-404-27q4",
