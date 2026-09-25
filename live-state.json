@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790330151670,
-  "sourceUpdatedIso": "2026-09-25T09:55:51.670Z",
+  "sourceUpdatedAt": 1790330155918,
+  "sourceUpdatedIso": "2026-09-25T09:55:55.918Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -1617,6 +1617,28 @@
       "exact": true
     },
     {
+      "id": "lb-286-2bdI",
+      "title": "ミリオンダラー・ベイビー",
+      "originalTitle": "",
+      "englishTitle": "Million Dollar Baby",
+      "year": 2004,
+      "score": 90,
+      "star": 4,
+      "overallRank": 68,
+      "sameScoreRank": 8,
+      "category": "ドラマ",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "胸糞",
+        "社会問題・生活"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": null,
+      "exact": true
+    },
+    {
       "id": "custom-1790254612541-iyij",
       "title": "未来世紀ブラジル",
       "originalTitle": "Brazil",
@@ -1624,8 +1646,8 @@
       "year": 1985,
       "score": 90,
       "star": 4,
-      "overallRank": 68,
-      "sameScoreRank": 8,
+      "overallRank": 69,
+      "sameScoreRank": 9,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -1644,28 +1666,6 @@
       "origin": "ハリウッド",
       "format": "live",
       "runtime": 143,
-      "exact": true
-    },
-    {
-      "id": "lb-286-2bdI",
-      "title": "ミリオンダラー・ベイビー",
-      "originalTitle": "",
-      "englishTitle": "Million Dollar Baby",
-      "year": 2004,
-      "score": 90,
-      "star": 4,
-      "overallRank": 69,
-      "sameScoreRank": 9,
-      "category": "ドラマ",
-      "mediaType": "movie",
-      "genre": [
-        "ドラマ",
-        "胸糞",
-        "社会問題・生活"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": null,
       "exact": true
     },
     {
@@ -15527,8 +15527,8 @@
         "lb-205-1UlA",
         "lb-90-71Y",
         "lb-73-27Vc",
-        "custom-1790254612541-iyij",
         "lb-286-2bdI",
+        "custom-1790254612541-iyij",
         "lb-33-29Qy",
         "lb-17-1U82",
         "lb-566-2b5u",
