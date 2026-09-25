@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790368802022,
-  "sourceUpdatedIso": "2026-09-25T20:40:02.022Z",
+  "sourceUpdatedAt": 1790368809597,
+  "sourceUpdatedIso": "2026-09-25T20:40:09.597Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -7537,30 +7537,6 @@
       "exact": true
     },
     {
-      "id": "lb-519-nwRw",
-      "title": "ノー・ウェイ・ホーム",
-      "originalTitle": "",
-      "englishTitle": "Spider-Man: No Way Home",
-      "year": 2021,
-      "score": 81,
-      "star": 3,
-      "overallRank": 310,
-      "sameScoreRank": 5,
-      "category": "スパイダーマン作品",
-      "mediaType": "movie",
-      "genre": [
-        "アクション",
-        "娯楽",
-        "ヒーロー",
-        "ファンタジー",
-        "恋愛"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": null,
-      "exact": true
-    },
-    {
       "id": "lb-42-1xFW",
       "title": "アベンジャーズ",
       "originalTitle": "",
@@ -7568,8 +7544,8 @@
       "year": 2012,
       "score": 81,
       "star": 3,
-      "overallRank": 311,
-      "sameScoreRank": 6,
+      "overallRank": 310,
+      "sameScoreRank": 5,
       "category": "MCU作品",
       "mediaType": "movie",
       "genre": [
@@ -7589,8 +7565,8 @@
       "year": 2017,
       "score": 81,
       "star": 3,
-      "overallRank": 312,
-      "sameScoreRank": 7,
+      "overallRank": 311,
+      "sameScoreRank": 6,
       "category": "スリラー、ホラー",
       "mediaType": "movie",
       "genre": [
@@ -7610,8 +7586,8 @@
       "year": 2019,
       "score": 81,
       "star": 3,
-      "overallRank": 313,
-      "sameScoreRank": 8,
+      "overallRank": 312,
+      "sameScoreRank": 7,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -7624,6 +7600,28 @@
       "origin": "邦画",
       "format": "live",
       "runtime": 46,
+      "exact": true
+    },
+    {
+      "id": "lb-475-F1U6",
+      "title": "そして誰もいなくなった",
+      "originalTitle": "",
+      "englishTitle": "And Then There Were None",
+      "year": 2017,
+      "score": 81,
+      "star": 3,
+      "overallRank": 313,
+      "sameScoreRank": 8,
+      "category": "邦画",
+      "mediaType": "drama",
+      "genre": [
+        "サスペンス",
+        "ミステリー",
+        "どんでん返し"
+      ],
+      "origin": "邦画",
+      "format": "live",
+      "runtime": null,
       "exact": true
     },
     {
@@ -7648,23 +7646,25 @@
       "exact": true
     },
     {
-      "id": "lb-475-F1U6",
-      "title": "そして誰もいなくなった",
+      "id": "lb-519-nwRw",
+      "title": "ノー・ウェイ・ホーム",
       "originalTitle": "",
-      "englishTitle": "And Then There Were None",
-      "year": 2017,
+      "englishTitle": "Spider-Man: No Way Home",
+      "year": 2021,
       "score": 81,
       "star": 3,
       "overallRank": 315,
       "sameScoreRank": 10,
-      "category": "邦画",
-      "mediaType": "drama",
+      "category": "スパイダーマン作品",
+      "mediaType": "movie",
       "genre": [
-        "サスペンス",
-        "ミステリー",
-        "どんでん返し"
+        "アクション",
+        "娯楽",
+        "ヒーロー",
+        "ファンタジー",
+        "恋愛"
       ],
-      "origin": "邦画",
+      "origin": "ハリウッド",
       "format": "live",
       "runtime": null,
       "exact": true
@@ -15927,12 +15927,12 @@
         "lb-186-uRS",
         "lb-429-2czU",
         "lb-348-71k",
-        "lb-519-nwRw",
         "lb-42-1xFW",
         "lb-277-eOCm",
         "custom-1790322760608-2vle",
-        "custom-1789408864046-u4p4",
         "lb-475-F1U6",
+        "custom-1789408864046-u4p4",
+        "lb-519-nwRw",
         "lb-523-6xza",
         "lb-113-5rI4",
         "lb-183-x1OG",
