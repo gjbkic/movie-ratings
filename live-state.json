@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790358578033,
-  "sourceUpdatedIso": "2026-09-25T17:49:38.033Z",
+  "sourceUpdatedAt": 1790358599194,
+  "sourceUpdatedIso": "2026-09-25T17:49:59.194Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -9344,26 +9344,6 @@
       "exact": true
     },
     {
-      "id": "lb-513-y6Eo",
-      "title": "コナン ハロウィンの花嫁",
-      "originalTitle": "",
-      "englishTitle": "Detective Conan: The Bride of Halloween",
-      "year": 2022,
-      "score": 78,
-      "star": 2.5,
-      "overallRank": 429,
-      "sameScoreRank": 14,
-      "category": "コナン映画",
-      "mediaType": "movie",
-      "genre": [
-        "ミステリー"
-      ],
-      "origin": "邦画",
-      "format": "animation",
-      "runtime": null,
-      "exact": true
-    },
-    {
       "id": "lb-94-5rje",
       "title": "ベイマックス",
       "originalTitle": "",
@@ -9371,12 +9351,32 @@
       "year": 2014,
       "score": 78,
       "star": 2.5,
-      "overallRank": 430,
-      "sameScoreRank": 15,
+      "overallRank": 429,
+      "sameScoreRank": 14,
       "category": "ピクサー・ディズニー作品",
       "mediaType": "movie",
       "genre": [],
       "origin": "ハリウッド",
+      "format": "animation",
+      "runtime": null,
+      "exact": true
+    },
+    {
+      "id": "lb-513-y6Eo",
+      "title": "コナン ハロウィンの花嫁",
+      "originalTitle": "",
+      "englishTitle": "Detective Conan: The Bride of Halloween",
+      "year": 2022,
+      "score": 78,
+      "star": 2.5,
+      "overallRank": 430,
+      "sameScoreRank": 15,
+      "category": "コナン映画",
+      "mediaType": "movie",
+      "genre": [
+        "ミステリー"
+      ],
+      "origin": "邦画",
       "format": "animation",
       "runtime": null,
       "exact": true
@@ -15222,8 +15222,8 @@
         "custom-1790322759131-6bsn",
         "lb-408-8MHi",
         "lb-200-7BEA",
-        "lb-513-y6Eo",
         "lb-94-5rje",
+        "lb-513-y6Eo",
         "lb-248-1KJs",
         "lb-187-y2b8",
         "lb-110-2aGu",
