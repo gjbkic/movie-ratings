@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790358558709,
-  "sourceUpdatedIso": "2026-09-25T17:49:18.709Z",
+  "sourceUpdatedAt": 1790358572615,
+  "sourceUpdatedIso": "2026-09-25T17:49:32.615Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -9144,28 +9144,6 @@
       "exact": true
     },
     {
-      "id": "custom-1790322759131-6bsn",
-      "title": "じゃあ、あんたが作ってみろよ",
-      "originalTitle": "じゃあ、あんたが作ってみろよ",
-      "englishTitle": "Then You Try Making It!",
-      "year": 2025,
-      "score": 78,
-      "star": 2.5,
-      "overallRank": 419,
-      "sameScoreRank": 4,
-      "category": "Letterboxd",
-      "mediaType": "drama",
-      "genre": [
-        "コメディ",
-        "ドラマ",
-        "恋愛"
-      ],
-      "origin": "邦画",
-      "format": "live",
-      "runtime": 46,
-      "exact": true
-    },
-    {
       "id": "lb-146-3GNa",
       "title": "アナと雪の女王",
       "originalTitle": "",
@@ -9173,8 +9151,8 @@
       "year": 2013,
       "score": 78,
       "star": 2.5,
-      "overallRank": 420,
-      "sameScoreRank": 5,
+      "overallRank": 419,
+      "sameScoreRank": 4,
       "category": "ピクサー・ディズニー作品",
       "mediaType": "movie",
       "genre": [],
@@ -9191,8 +9169,8 @@
       "year": 2017,
       "score": 78,
       "star": 2.5,
-      "overallRank": 421,
-      "sameScoreRank": 6,
+      "overallRank": 420,
+      "sameScoreRank": 5,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -9211,8 +9189,8 @@
       "year": 2009,
       "score": 78,
       "star": 2.5,
-      "overallRank": 422,
-      "sameScoreRank": 7,
+      "overallRank": 421,
+      "sameScoreRank": 6,
       "category": "コナン映画",
       "mediaType": "movie",
       "genre": [
@@ -9231,8 +9209,8 @@
       "year": 2013,
       "score": 78,
       "star": 2.5,
-      "overallRank": 423,
-      "sameScoreRank": 8,
+      "overallRank": 422,
+      "sameScoreRank": 7,
       "category": "Letterboxd追加",
       "mediaType": "movie",
       "genre": [],
@@ -9249,8 +9227,8 @@
       "year": 1997,
       "score": 78,
       "star": 2.5,
-      "overallRank": 424,
-      "sameScoreRank": 9,
+      "overallRank": 423,
+      "sameScoreRank": 8,
       "category": "コメディ",
       "mediaType": "movie",
       "genre": [
@@ -9259,6 +9237,28 @@
       "origin": "ハリウッド",
       "format": "live",
       "runtime": null,
+      "exact": true
+    },
+    {
+      "id": "custom-1790322759131-6bsn",
+      "title": "じゃあ、あんたが作ってみろよ",
+      "originalTitle": "じゃあ、あんたが作ってみろよ",
+      "englishTitle": "Then You Try Making It!",
+      "year": 2025,
+      "score": 78,
+      "star": 2.5,
+      "overallRank": 424,
+      "sameScoreRank": 9,
+      "category": "Letterboxd",
+      "mediaType": "drama",
+      "genre": [
+        "コメディ",
+        "ドラマ",
+        "恋愛"
+      ],
+      "origin": "邦画",
+      "format": "live",
+      "runtime": 46,
       "exact": true
     },
     {
@@ -15212,12 +15212,12 @@
         "lb-191-1D56",
         "lb-551-28F0",
         "custom-1790358520071-ybym",
-        "custom-1790322759131-6bsn",
         "lb-146-3GNa",
         "lb-21-bhF2",
         "lb-197-1oRu",
         "lb-254-6ZCG",
         "lb-275-28sg",
+        "custom-1790322759131-6bsn",
         "lb-408-8MHi",
         "lb-200-7BEA",
         "lb-548-294Y",
