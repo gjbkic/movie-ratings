@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790368829593,
-  "sourceUpdatedIso": "2026-09-25T20:40:29.593Z",
+  "sourceUpdatedAt": 1790368834028,
+  "sourceUpdatedIso": "2026-09-25T20:40:34.028Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -7957,30 +7957,6 @@
       "exact": true
     },
     {
-      "id": "lb-519-nwRw",
-      "title": "ノー・ウェイ・ホーム",
-      "originalTitle": "",
-      "englishTitle": "Spider-Man: No Way Home",
-      "year": 2021,
-      "score": 81,
-      "star": 3,
-      "overallRank": 330,
-      "sameScoreRank": 25,
-      "category": "スパイダーマン作品",
-      "mediaType": "movie",
-      "genre": [
-        "アクション",
-        "娯楽",
-        "ヒーロー",
-        "ファンタジー",
-        "恋愛"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": null,
-      "exact": true
-    },
-    {
       "id": "lb-105-2bfk",
       "title": "パイレーツ・オブ・カリビアン2",
       "originalTitle": "",
@@ -7988,8 +7964,8 @@
       "year": 2006,
       "score": 81,
       "star": 3,
-      "overallRank": 331,
-      "sameScoreRank": 26,
+      "overallRank": 330,
+      "sameScoreRank": 25,
       "category": "ファンタジー、アドベンチャー",
       "mediaType": "movie",
       "genre": [
@@ -8009,8 +7985,8 @@
       "year": 2018,
       "score": 81,
       "star": 3,
-      "overallRank": 332,
-      "sameScoreRank": 27,
+      "overallRank": 331,
+      "sameScoreRank": 26,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -8019,6 +7995,30 @@
         "クライム"
       ],
       "origin": "その他",
+      "format": "live",
+      "runtime": null,
+      "exact": true
+    },
+    {
+      "id": "lb-519-nwRw",
+      "title": "ノー・ウェイ・ホーム",
+      "originalTitle": "",
+      "englishTitle": "Spider-Man: No Way Home",
+      "year": 2021,
+      "score": 81,
+      "star": 3,
+      "overallRank": 332,
+      "sameScoreRank": 27,
+      "category": "スパイダーマン作品",
+      "mediaType": "movie",
+      "genre": [
+        "アクション",
+        "娯楽",
+        "ヒーロー",
+        "ファンタジー",
+        "恋愛"
+      ],
+      "origin": "ハリウッド",
       "format": "live",
       "runtime": null,
       "exact": true
@@ -15947,9 +15947,9 @@
         "lb-384-1UhS",
         "lb-372-2b7g",
         "lb-114-psI",
-        "lb-519-nwRw",
         "lb-105-2bfk",
         "custom-1790322757548-hd0x",
+        "lb-519-nwRw",
         "lb-401-9vE4",
         "lb-292-1S3E",
         "custom-1789385860628-ogsm",
