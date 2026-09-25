@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790329598801,
-  "sourceUpdatedIso": "2026-09-25T09:46:38.801Z",
+  "sourceUpdatedAt": 1790329605202,
+  "sourceUpdatedIso": "2026-09-25T09:46:45.202Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -7956,26 +7956,24 @@
       "exact": true
     },
     {
-      "id": "custom-1790322758188-46qe",
-      "title": "逃げるは恥だが役に立つ ガンバレ人類! 新春スペシャル!!",
-      "originalTitle": "逃げるは恥だが役に立つ ガンバレ人類! 新春スペシャル!!",
-      "englishTitle": "The Full-Time Wife Escapist: New Year's Special",
-      "year": 2021,
+      "id": "lb-410-29Qe",
+      "title": "不死鳥の騎士団",
+      "originalTitle": "",
+      "englishTitle": "Harry Potter and the Order of the Phoenix",
+      "year": 2007,
       "score": 80,
       "star": 2.5,
       "overallRank": 362,
       "sameScoreRank": 19,
-      "category": "Letterboxd",
+      "category": "ハリーポッター シリーズ",
       "mediaType": "movie",
       "genre": [
-        "ドラマ",
-        "恋愛",
-        "コメディ",
-        "社会問題・生活"
+        "ファンタジー",
+        "アドベンチャー"
       ],
-      "origin": "邦画",
+      "origin": "ハリウッド",
       "format": "live",
-      "runtime": 122,
+      "runtime": null,
       "exact": true
     },
     {
@@ -7997,24 +7995,26 @@
       "exact": true
     },
     {
-      "id": "lb-410-29Qe",
-      "title": "不死鳥の騎士団",
-      "originalTitle": "",
-      "englishTitle": "Harry Potter and the Order of the Phoenix",
-      "year": 2007,
+      "id": "custom-1790322758188-46qe",
+      "title": "逃げるは恥だが役に立つ ガンバレ人類! 新春スペシャル!!",
+      "originalTitle": "逃げるは恥だが役に立つ ガンバレ人類! 新春スペシャル!!",
+      "englishTitle": "The Full-Time Wife Escapist: New Year's Special",
+      "year": 2021,
       "score": 80,
       "star": 2.5,
       "overallRank": 364,
       "sameScoreRank": 21,
-      "category": "ハリーポッター シリーズ",
+      "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
-        "ファンタジー",
-        "アドベンチャー"
+        "ドラマ",
+        "恋愛",
+        "コメディ",
+        "社会問題・生活"
       ],
-      "origin": "ハリウッド",
+      "origin": "邦画",
       "format": "live",
-      "runtime": null,
+      "runtime": 122,
       "exact": true
     },
     {
@@ -15162,9 +15162,9 @@
         "lb-118-29cS",
         "lb-291-dX0",
         "base-clue-1985",
-        "custom-1790322758188-46qe",
-        "lb-347-4bW8",
         "lb-410-29Qe",
+        "lb-347-4bW8",
+        "custom-1790322758188-46qe",
         "lb-354-aNGk",
         "custom-1790089712252-cunv",
         "lb-517-k8dm",
