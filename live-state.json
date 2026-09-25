@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790329040141,
-  "sourceUpdatedIso": "2026-09-25T09:37:20.141Z",
+  "sourceUpdatedAt": 1790329045643,
+  "sourceUpdatedIso": "2026-09-25T09:37:25.643Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -6120,6 +6120,26 @@
       "exact": true
     },
     {
+      "id": "lb-457-IG",
+      "title": "ドライブ",
+      "originalTitle": "",
+      "englishTitle": "Drive",
+      "year": 2011,
+      "score": 82,
+      "star": 3,
+      "overallRank": 271,
+      "sameScoreRank": 17,
+      "category": "マフィア、クライム",
+      "mediaType": "movie",
+      "genre": [
+        "クライム"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": null,
+      "exact": true
+    },
+    {
       "id": "lb-498-25ds",
       "title": "17歳のカルテ",
       "originalTitle": "Girl, Interrupted",
@@ -6127,8 +6147,8 @@
       "year": 1999,
       "score": 82,
       "star": 3,
-      "overallRank": 271,
-      "sameScoreRank": 17,
+      "overallRank": 272,
+      "sameScoreRank": 18,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -6147,8 +6167,8 @@
       "year": 1993,
       "score": 82,
       "star": 3,
-      "overallRank": 272,
-      "sameScoreRank": 18,
+      "overallRank": 273,
+      "sameScoreRank": 19,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -6168,8 +6188,8 @@
       "year": 2023,
       "score": 82,
       "star": 3,
-      "overallRank": 273,
-      "sameScoreRank": 19,
+      "overallRank": 274,
+      "sameScoreRank": 20,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
       "genre": [],
@@ -6186,32 +6206,12 @@
       "year": 1998,
       "score": 82,
       "star": 3,
-      "overallRank": 274,
-      "sameScoreRank": 20,
+      "overallRank": 275,
+      "sameScoreRank": 21,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
         "SF"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": null,
-      "exact": true
-    },
-    {
-      "id": "lb-457-IG",
-      "title": "ドライブ",
-      "originalTitle": "",
-      "englishTitle": "Drive",
-      "year": 2011,
-      "score": 82,
-      "star": 3,
-      "overallRank": 275,
-      "sameScoreRank": 21,
-      "category": "マフィア、クライム",
-      "mediaType": "movie",
-      "genre": [
-        "クライム"
       ],
       "origin": "ハリウッド",
       "format": "live",
@@ -15196,11 +15196,11 @@
         "lb-478-i4gW",
         "lb-297-28zG",
         "custom-1790322762725-70dy",
+        "lb-457-IG",
         "lb-498-25ds",
         "lb-280-230G",
         "lb-69-ipeM",
         "lb-126-2b9Q",
-        "lb-457-IG",
         "lb-362-4Oh4",
         "lb-420-CFrC",
         "lb-15-6hQu",
