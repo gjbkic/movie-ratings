@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790367755421,
-  "sourceUpdatedIso": "2026-09-25T20:22:35.421Z",
+  "sourceUpdatedAt": 1790367771054,
+  "sourceUpdatedIso": "2026-09-25T20:22:51.054Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -6970,7 +6970,9 @@
       "sameScoreRank": 29,
       "category": "邦画",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "娯楽"
+      ],
       "origin": "邦画",
       "format": "live",
       "runtime": null,
@@ -20674,7 +20676,9 @@
         "ミステリー",
         "コメディ"
       ],
-      "lb-245-z4p4": [],
+      "lb-245-z4p4": [
+        "娯楽"
+      ],
       "lb-246-mqyw": [],
       "lb-247-1L2a": [],
       "lb-248-1KJs": [],
