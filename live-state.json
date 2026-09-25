@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790372106290,
-  "sourceUpdatedIso": "2026-09-25T21:35:06.290Z",
+  "sourceUpdatedAt": 1790375680313,
+  "sourceUpdatedIso": "2026-09-25T22:34:40.313Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -2406,7 +2406,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 134,
       "exact": true
     },
     {
@@ -3589,7 +3589,8 @@
         "ファンタジー",
         "ドラマ",
         "青春・若者",
-        "娯楽"
+        "娯楽",
+        "comfort"
       ],
       "origin": "ハリウッド",
       "format": "live",
@@ -4990,7 +4991,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 115,
       "exact": true
     },
     {
@@ -6320,7 +6321,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 124,
       "exact": true
     },
     {
@@ -6895,7 +6896,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 151,
       "exact": true
     },
     {
@@ -8515,7 +8516,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 114,
       "exact": true
     },
     {
@@ -10319,7 +10320,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 104,
       "exact": true
     },
     {
@@ -10397,7 +10398,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 121,
       "exact": true
     },
     {
@@ -11140,7 +11141,7 @@
       ],
       "origin": "ハリウッド",
       "format": "animation",
-      "runtime": null,
+      "runtime": 103,
       "exact": true
     },
     {
@@ -13548,7 +13549,7 @@
       ],
       "origin": "邦画",
       "format": "animation",
-      "runtime": null,
+      "runtime": 117,
       "exact": true
     },
     {
@@ -13784,7 +13785,7 @@
       ],
       "origin": "ハリウッド",
       "format": "animation",
-      "runtime": null,
+      "runtime": 103,
       "exact": true
     },
     {
@@ -14996,7 +14997,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 93,
       "exact": false
     }
   ],
@@ -19174,6 +19175,39 @@
       },
       "lb-125-26Eu": {
         "tmdbId": 2503
+      },
+      "lb-126-2b9Q": {
+        "tmdbId": 95
+      },
+      "lb-127-28zw": {
+        "tmdbId": 1573
+      },
+      "lb-128-nyLU": {
+        "tmdbId": 635302
+      },
+      "lb-129-24Nu": {
+        "tmdbId": 4108
+      },
+      "lb-130-3VH2": {
+        "tmdbId": 118340
+      },
+      "lb-131-1OEc": {
+        "tmdbId": 14160
+      },
+      "lb-132-aPvy": {
+        "tmdbId": 330459
+      },
+      "lb-133-2a1G": {
+        "tmdbId": 601
+      },
+      "lb-134-aPvo": {
+        "tmdbId": 330457
+      },
+      "lb-135-1ZLI": {
+        "tmdbId": 8844
+      },
+      "lb-136-1YVC": {
+        "tmdbId": 9340
       }
     },
     "categoryOverrides": {},
@@ -21771,7 +21805,8 @@
         "ファンタジー",
         "ドラマ",
         "青春・若者",
-        "娯楽"
+        "娯楽",
+        "comfort"
       ],
       "lb-305-RKla": [
         "ミステリー",
@@ -25465,7 +25500,18 @@
       "lb-122-azpu": 90,
       "lb-123-29I0": 138,
       "lb-124-103U": 108,
-      "lb-125-26Eu": 115
+      "lb-125-26Eu": 115,
+      "lb-126-2b9Q": 151,
+      "lb-127-28zw": 124,
+      "lb-128-nyLU": 117,
+      "lb-129-24Nu": 93,
+      "lb-130-3VH2": 121,
+      "lb-131-1OEc": 103,
+      "lb-132-aPvy": 134,
+      "lb-133-2a1G": 115,
+      "lb-134-aPvo": 103,
+      "lb-135-1ZLI": 104,
+      "lb-136-1YVC": 114
     }
   }
 }
