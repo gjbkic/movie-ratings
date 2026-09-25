@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790329267754,
-  "sourceUpdatedIso": "2026-09-25T09:41:07.754Z",
+  "sourceUpdatedAt": 1790329287730,
+  "sourceUpdatedIso": "2026-09-25T09:41:27.730Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -1899,28 +1899,6 @@
       "exact": true
     },
     {
-      "id": "lb-0-hTha",
-      "title": "パラサイト",
-      "originalTitle": "기생충",
-      "englishTitle": "Parasite",
-      "year": 2019,
-      "score": 89,
-      "star": 4,
-      "overallRank": 81,
-      "sameScoreRank": 8,
-      "category": "サスペンス、ミステリー",
-      "mediaType": "movie",
-      "genre": [
-        "サスペンス",
-        "クライム",
-        "社会問題・生活"
-      ],
-      "origin": "その他",
-      "format": "live",
-      "runtime": null,
-      "exact": false
-    },
-    {
       "id": "lb-185-HTIi",
       "title": "テイラー・スウィフト：THE ERAS TOUR",
       "originalTitle": "",
@@ -1928,8 +1906,8 @@
       "year": 2023,
       "score": 89,
       "star": 4,
-      "overallRank": 82,
-      "sameScoreRank": 9,
+      "overallRank": 81,
+      "sameScoreRank": 8,
       "category": "Letterboxd追加",
       "mediaType": "other",
       "genre": [],
@@ -1946,8 +1924,8 @@
       "year": 1994,
       "score": 89,
       "star": 4,
-      "overallRank": 83,
-      "sameScoreRank": 10,
+      "overallRank": 82,
+      "sameScoreRank": 9,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -1967,8 +1945,8 @@
       "year": 1980,
       "score": 89,
       "star": 4,
-      "overallRank": 84,
-      "sameScoreRank": 11,
+      "overallRank": 83,
+      "sameScoreRank": 10,
       "category": "スターウォーズシリーズ",
       "mediaType": "movie",
       "genre": [
@@ -1991,8 +1969,8 @@
       "year": 2018,
       "score": 89,
       "star": 4,
-      "overallRank": 85,
-      "sameScoreRank": 12,
+      "overallRank": 84,
+      "sameScoreRank": 11,
       "category": "スパイダーマン作品",
       "mediaType": "movie",
       "genre": [
@@ -2013,10 +1991,10 @@
       "originalTitle": "",
       "englishTitle": "Saving Private Ryan",
       "year": 1998,
-      "score": 88,
+      "score": 89,
       "star": 4,
-      "overallRank": 86,
-      "sameScoreRank": 1,
+      "overallRank": 85,
+      "sameScoreRank": 12,
       "category": "戦争、歴史",
       "mediaType": "movie",
       "genre": [
@@ -2026,6 +2004,28 @@
         "切ない"
       ],
       "origin": "ハリウッド",
+      "format": "live",
+      "runtime": null,
+      "exact": true
+    },
+    {
+      "id": "lb-0-hTha",
+      "title": "パラサイト",
+      "originalTitle": "기생충",
+      "englishTitle": "Parasite",
+      "year": 2019,
+      "score": 88,
+      "star": 4,
+      "overallRank": 86,
+      "sameScoreRank": 1,
+      "category": "サスペンス、ミステリー",
+      "mediaType": "movie",
+      "genre": [
+        "サスペンス",
+        "クライム",
+        "社会問題・生活"
+      ],
+      "origin": "その他",
       "format": "live",
       "runtime": null,
       "exact": true
@@ -14316,7 +14316,7 @@
       "lb-91-29Js": 88,
       "lb-71-27Vm": 88,
       "lb-67-1RYk": 88,
-      "lb-84-29ro": 88,
+      "lb-84-29ro": 89,
       "lb-296-l7zS": 88,
       "lb-77-2aNq": 88,
       "lb-7-h4cS": 88,
@@ -14815,7 +14815,8 @@
       "custom-1790322760608-2vle": 81,
       "custom-1790322759601-kg73": 84,
       "custom-1790322762725-70dy": 82,
-      "custom-1790322763195-rro9": 88
+      "custom-1790322763195-rro9": 88,
+      "lb-0-hTha": 88
     },
     "rankOrder": {
       "40": [
@@ -15425,7 +15426,7 @@
         "lb-298-28Uk"
       ],
       "88": [
-        "lb-84-29ro",
+        "lb-0-hTha",
         "lb-460-20eA",
         "lb-312-1SRY",
         "lb-91-29Js",
@@ -15447,11 +15448,11 @@
         "lb-526-4JQI",
         "lb-65-2auI",
         "lb-154-1Mn4",
-        "lb-0-hTha",
         "lb-185-HTIi",
         "lb-6-29Pq",
         "lb-48-27Vw",
-        "lb-310-azpY"
+        "lb-310-azpY",
+        "lb-84-29ro"
       ],
       "90": [
         "lb-66-2aq2",
@@ -17318,7 +17319,8 @@
       "custom-1790322768095-ya1h": 2,
       "custom-1790322768630-3s2i": 2,
       "custom-1790322769206-k4pm": 3,
-      "custom-1790322769753-zbsb": 3
+      "custom-1790322769753-zbsb": 3,
+      "lb-0-hTha": 4
     },
     "titleOverrides": {
       "added-anchor-578": {
