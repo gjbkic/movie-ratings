@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790368776622,
-  "sourceUpdatedIso": "2026-09-25T20:39:36.622Z",
+  "sourceUpdatedAt": 1790368802022,
+  "sourceUpdatedIso": "2026-09-25T20:40:02.022Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -7417,30 +7417,6 @@
       "exact": true
     },
     {
-      "id": "lb-519-nwRw",
-      "title": "ノー・ウェイ・ホーム",
-      "originalTitle": "",
-      "englishTitle": "Spider-Man: No Way Home",
-      "year": 2021,
-      "score": 82,
-      "star": 3,
-      "overallRank": 304,
-      "sameScoreRank": 48,
-      "category": "スパイダーマン作品",
-      "mediaType": "movie",
-      "genre": [
-        "アクション",
-        "娯楽",
-        "ヒーロー",
-        "ファンタジー",
-        "恋愛"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": null,
-      "exact": true
-    },
-    {
       "id": "lb-428-2aTS",
       "title": "バックトゥザ・フューチャー3",
       "originalTitle": "",
@@ -7448,8 +7424,8 @@
       "year": 1990,
       "score": 82,
       "star": 3,
-      "overallRank": 305,
-      "sameScoreRank": 49,
+      "overallRank": 304,
+      "sameScoreRank": 48,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -7468,8 +7444,8 @@
       "year": 2012,
       "score": 82,
       "star": 3,
-      "overallRank": 306,
-      "sameScoreRank": 50,
+      "overallRank": 305,
+      "sameScoreRank": 49,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -7488,7 +7464,7 @@
       "year": 2005,
       "score": 81,
       "star": 3,
-      "overallRank": 307,
+      "overallRank": 306,
       "sameScoreRank": 1,
       "category": "ハリーポッター シリーズ",
       "mediaType": "movie",
@@ -7509,7 +7485,7 @@
       "year": 2010,
       "score": 81,
       "star": 3,
-      "overallRank": 308,
+      "overallRank": 307,
       "sameScoreRank": 2,
       "category": "邦画",
       "mediaType": "movie",
@@ -7527,7 +7503,7 @@
       "year": 2012,
       "score": 81,
       "star": 3,
-      "overallRank": 309,
+      "overallRank": 308,
       "sameScoreRank": 3,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
@@ -7548,7 +7524,7 @@
       "year": 1997,
       "score": 81,
       "star": 3,
-      "overallRank": 310,
+      "overallRank": 309,
       "sameScoreRank": 4,
       "category": "SF",
       "mediaType": "movie",
@@ -7556,6 +7532,30 @@
         "SF"
       ],
       "origin": "その他",
+      "format": "live",
+      "runtime": null,
+      "exact": true
+    },
+    {
+      "id": "lb-519-nwRw",
+      "title": "ノー・ウェイ・ホーム",
+      "originalTitle": "",
+      "englishTitle": "Spider-Man: No Way Home",
+      "year": 2021,
+      "score": 81,
+      "star": 3,
+      "overallRank": 310,
+      "sameScoreRank": 5,
+      "category": "スパイダーマン作品",
+      "mediaType": "movie",
+      "genre": [
+        "アクション",
+        "娯楽",
+        "ヒーロー",
+        "ファンタジー",
+        "恋愛"
+      ],
+      "origin": "ハリウッド",
       "format": "live",
       "runtime": null,
       "exact": true
@@ -7569,7 +7569,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 311,
-      "sameScoreRank": 5,
+      "sameScoreRank": 6,
       "category": "MCU作品",
       "mediaType": "movie",
       "genre": [
@@ -7590,7 +7590,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 312,
-      "sameScoreRank": 6,
+      "sameScoreRank": 7,
       "category": "スリラー、ホラー",
       "mediaType": "movie",
       "genre": [
@@ -7611,7 +7611,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 313,
-      "sameScoreRank": 7,
+      "sameScoreRank": 8,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -7635,7 +7635,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 314,
-      "sameScoreRank": 8,
+      "sameScoreRank": 9,
       "category": "スリラー、ホラー",
       "mediaType": "movie",
       "genre": [
@@ -7656,7 +7656,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 315,
-      "sameScoreRank": 9,
+      "sameScoreRank": 10,
       "category": "邦画",
       "mediaType": "drama",
       "genre": [
@@ -7678,7 +7678,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 316,
-      "sameScoreRank": 10,
+      "sameScoreRank": 11,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -7698,7 +7698,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 317,
-      "sameScoreRank": 11,
+      "sameScoreRank": 12,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -7718,7 +7718,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 318,
-      "sameScoreRank": 12,
+      "sameScoreRank": 13,
       "category": "Letterboxd追加",
       "mediaType": "drama",
       "genre": [
@@ -7741,7 +7741,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 319,
-      "sameScoreRank": 13,
+      "sameScoreRank": 14,
       "category": "Letterboxd追加",
       "mediaType": "movie",
       "genre": [],
@@ -7759,7 +7759,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 320,
-      "sameScoreRank": 14,
+      "sameScoreRank": 15,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -7780,7 +7780,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 321,
-      "sameScoreRank": 15,
+      "sameScoreRank": 16,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -7800,7 +7800,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 322,
-      "sameScoreRank": 16,
+      "sameScoreRank": 17,
       "category": "ファンタジー、アドベンチャー",
       "mediaType": "movie",
       "genre": [
@@ -7821,7 +7821,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 323,
-      "sameScoreRank": 17,
+      "sameScoreRank": 18,
       "category": "MCU作品",
       "mediaType": "movie",
       "genre": [
@@ -7842,7 +7842,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 324,
-      "sameScoreRank": 18,
+      "sameScoreRank": 19,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -7866,7 +7866,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 325,
-      "sameScoreRank": 19,
+      "sameScoreRank": 20,
       "category": "ファンタジー、アドベンチャー",
       "mediaType": "movie",
       "genre": [
@@ -7887,7 +7887,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 326,
-      "sameScoreRank": 20,
+      "sameScoreRank": 21,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -7907,7 +7907,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 327,
-      "sameScoreRank": 21,
+      "sameScoreRank": 22,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -7931,7 +7931,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 328,
-      "sameScoreRank": 22,
+      "sameScoreRank": 23,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [],
@@ -7949,7 +7949,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 329,
-      "sameScoreRank": 23,
+      "sameScoreRank": 24,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -7969,7 +7969,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 330,
-      "sameScoreRank": 24,
+      "sameScoreRank": 25,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -7989,7 +7989,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 331,
-      "sameScoreRank": 25,
+      "sameScoreRank": 26,
       "category": "ファンタジー、アドベンチャー",
       "mediaType": "movie",
       "genre": [
@@ -8010,7 +8010,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 332,
-      "sameScoreRank": 26,
+      "sameScoreRank": 27,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -8032,7 +8032,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 333,
-      "sameScoreRank": 27,
+      "sameScoreRank": 28,
       "category": "MCU作品",
       "mediaType": "movie",
       "genre": [
@@ -8053,7 +8053,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 334,
-      "sameScoreRank": 28,
+      "sameScoreRank": 29,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -8073,7 +8073,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 335,
-      "sameScoreRank": 29,
+      "sameScoreRank": 30,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [],
@@ -8091,7 +8091,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 336,
-      "sameScoreRank": 30,
+      "sameScoreRank": 31,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [],
@@ -8109,7 +8109,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 337,
-      "sameScoreRank": 31,
+      "sameScoreRank": 32,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -8130,7 +8130,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 338,
-      "sameScoreRank": 32,
+      "sameScoreRank": 33,
       "category": "恋愛、ミュージカル",
       "mediaType": "movie",
       "genre": [
@@ -8151,7 +8151,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 339,
-      "sameScoreRank": 33,
+      "sameScoreRank": 34,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [],
@@ -8169,7 +8169,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 340,
-      "sameScoreRank": 34,
+      "sameScoreRank": 35,
       "category": "戦争、歴史",
       "mediaType": "movie",
       "genre": [
@@ -8190,7 +8190,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 341,
-      "sameScoreRank": 35,
+      "sameScoreRank": 36,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -8210,7 +8210,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 342,
-      "sameScoreRank": 36,
+      "sameScoreRank": 37,
       "category": "戦争、歴史",
       "mediaType": "movie",
       "genre": [
@@ -8231,7 +8231,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 343,
-      "sameScoreRank": 37,
+      "sameScoreRank": 38,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -8251,7 +8251,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 344,
-      "sameScoreRank": 38,
+      "sameScoreRank": 39,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -8274,7 +8274,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 345,
-      "sameScoreRank": 39,
+      "sameScoreRank": 40,
       "category": "MCU作品",
       "mediaType": "movie",
       "genre": [
@@ -8296,7 +8296,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 346,
-      "sameScoreRank": 40,
+      "sameScoreRank": 41,
       "category": "ファンタジー、アドベンチャー",
       "mediaType": "movie",
       "genre": [
@@ -8319,7 +8319,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 347,
-      "sameScoreRank": 41,
+      "sameScoreRank": 42,
       "category": "戦争、歴史",
       "mediaType": "movie",
       "genre": [
@@ -15357,7 +15357,7 @@
       "lb-362-4Oh4": 82,
       "base-simple-plan-1998": 82,
       "lb-69-ipeM": 82,
-      "lb-519-nwRw": 82,
+      "lb-519-nwRw": 81,
       "lb-277-eOCm": 81,
       "lb-375-27Po": 82,
       "lb-283-hDPg": 82,
@@ -15927,6 +15927,7 @@
         "lb-186-uRS",
         "lb-429-2czU",
         "lb-348-71k",
+        "lb-519-nwRw",
         "lb-42-1xFW",
         "lb-277-eOCm",
         "custom-1790322760608-2vle",
@@ -16013,7 +16014,6 @@
         "lb-288-2a6G",
         "lb-466-1Ub6",
         "lb-423-6ZS",
-        "lb-519-nwRw",
         "lb-428-2aTS",
         "lb-19-2cCk"
       ],
