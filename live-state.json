@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790365423322,
-  "sourceUpdatedIso": "2026-09-25T19:43:43.322Z",
+  "sourceUpdatedAt": 1790365694965,
+  "sourceUpdatedIso": "2026-09-25T19:48:14.965Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -131,7 +131,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 148,
       "exact": false
     },
     {
@@ -255,7 +255,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 108,
       "exact": true
     },
     {
@@ -405,7 +405,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 126,
       "exact": true
     },
     {
@@ -601,7 +601,7 @@
       ],
       "origin": "ハリウッド",
       "format": "animation",
-      "runtime": null,
+      "runtime": 140,
       "exact": false
     },
     {
@@ -891,7 +891,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 139,
       "exact": true
     },
     {
@@ -1455,7 +1455,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 128,
       "exact": true
     },
     {
@@ -2012,7 +2012,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 154,
       "exact": false
     },
     {
@@ -2110,7 +2110,7 @@
       ],
       "origin": "その他",
       "format": "live",
-      "runtime": null,
+      "runtime": 133,
       "exact": true
     },
     {
@@ -2386,7 +2386,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 122,
       "exact": true
     },
     {
@@ -3051,7 +3051,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 169,
       "exact": true
     },
     {
@@ -3322,7 +3322,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 140,
       "exact": true
     },
     {
@@ -7904,7 +7904,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 180,
       "exact": true
     },
     {
@@ -18169,6 +18169,42 @@
         "originalTitle": "3年A組 ―今から皆さんは、人質です―",
         "englishTitle": "Mr. Hiiragi's Homeroom",
         "tmdbId": 85529
+      },
+      "lb-0-hTha": {
+        "tmdbId": 496243
+      },
+      "lb-1-4VZ8": {
+        "tmdbId": 157336
+      },
+      "lb-2-2a9q": {
+        "tmdbId": 550
+      },
+      "lb-3-a5fa": {
+        "tmdbId": 313369
+      },
+      "lb-4-jUk4": {
+        "tmdbId": 545611
+      },
+      "lb-5-wUow": {
+        "tmdbId": 872585
+      },
+      "lb-6-29Pq": {
+        "tmdbId": 680
+      },
+      "lb-7-h4cS": {
+        "tmdbId": 475557
+      },
+      "lb-8-6YK": {
+        "tmdbId": 38
+      },
+      "lb-9-1skk": {
+        "tmdbId": 27205
+      },
+      "lb-10-kSz4": {
+        "tmdbId": 569094
+      },
+      "lb-11-29zs": {
+        "tmdbId": 807
       }
     },
     "categoryOverrides": {},
@@ -23705,7 +23741,19 @@
       "custom-1790322769206-k4pm": 55,
       "custom-1790322769753-zbsb": 45,
       "custom-1790352007604-3jj6": 100,
-      "custom-1790358520071-ybym": 70
+      "custom-1790358520071-ybym": 70,
+      "lb-0-hTha": 133,
+      "lb-1-4VZ8": 169,
+      "lb-2-2a9q": 139,
+      "lb-3-a5fa": 128,
+      "lb-4-jUk4": 140,
+      "lb-5-wUow": 180,
+      "lb-6-29Pq": 154,
+      "lb-7-h4cS": 122,
+      "lb-8-6YK": 108,
+      "lb-9-1skk": 148,
+      "lb-10-kSz4": 140,
+      "lb-11-29zs": 126
     }
   }
 }
