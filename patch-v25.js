@@ -1,5 +1,6 @@
 (() => {
-  const EXTRA_GENRES_V25 = ["差別・人権","精神・哲学","社会問題・生活"];
+  const EXTRA_GENRES_V25 = ["差別・人権","哲学・思想","心理・内面","社会問題・生活"];
+  const LEGACY_PHILOSOPHY_V25 = "精神・哲学";
 
   function rawGenresV25(f){
     const g = state.genreOverrides?.[f.id];
@@ -9,10 +10,25 @@
     state.genreOverrides[id] = [...new Set((genres || []).filter(Boolean))];
     save();
   }
+
+  // One-way migration requested by the user: every existing "精神・哲学" tag becomes "哲学・思想".
+  // "心理・内面" starts as a separate empty tag and can be assigned independently afterwards.
+  let migratedV25=false;
+  state.genreOverrides=state.genreOverrides||{};
+  for(const f of allFilms()){
+    const gs=rawGenresV25(f);
+    if(!gs.includes(LEGACY_PHILOSOPHY_V25))continue;
+    state.genreOverrides[f.id]=[...new Set(gs.map(g=>g===LEGACY_PHILOSOPHY_V25?"哲学・思想":g))];
+    migratedV25=true;
+  }
+  if(migratedV25)save(false);
+
   function appendV25Chips(id, selected=[]){
     const wrap=document.getElementById(id); if(!wrap)return;
+    // Never show the retired combined tag again.
+    wrap.querySelectorAll(`[data-genre="${LEGACY_PHILOSOPHY_V25}"]`).forEach(x=>x.remove());
     const picker=wrap.querySelector('.genre-picker')||wrap;
-    const chosen=new Set(selected);
+    const chosen=new Set(selected.map(g=>g===LEGACY_PHILOSOPHY_V25?"哲学・思想":g));
     for(const g of EXTRA_GENRES_V25){
       if(picker.querySelector(`[data-genre="${g}"]`))continue;
       const b=document.createElement('button');
@@ -46,6 +62,7 @@
 
   for(const id of ['genreFilterRank','genreFilterClassify']){
     const s=document.getElementById(id); if(!s)continue;
+    [...s.options].filter(o=>o.value===LEGACY_PHILOSOPHY_V25).forEach(o=>o.remove());
     for(const g of EXTRA_GENRES_V25) if(![...s.options].some(o=>o.value===g)) s.add(new Option(g,g));
   }
 
