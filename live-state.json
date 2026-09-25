@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790358415681,
-  "sourceUpdatedIso": "2026-09-25T17:46:55.681Z",
+  "sourceUpdatedAt": 1790358446120,
+  "sourceUpdatedIso": "2026-09-25T17:47:26.120Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -6263,7 +6263,12 @@
       "sameScoreRank": 19,
       "category": "Letterboxd",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "サスペンス",
+        "アクション",
+        "ファンタジー",
+        "切ない"
+      ],
       "origin": "その他",
       "format": "live",
       "runtime": null,
@@ -8599,7 +8604,8 @@
       "genre": [
         "ファンタジー",
         "アドベンチャー",
-        "アクション"
+        "アクション",
+        "世界観"
       ],
       "origin": "その他",
       "format": "live",
@@ -21613,11 +21619,17 @@
         "ドラマ",
         "ミステリー"
       ],
-      "custom-1790322756823-bi61": [],
+      "custom-1790322756823-bi61": [
+        "サスペンス",
+        "アクション",
+        "ファンタジー",
+        "切ない"
+      ],
       "custom-1790322757185-u25f": [
         "ファンタジー",
         "アドベンチャー",
-        "アクション"
+        "アクション",
+        "世界観"
       ],
       "custom-1790322757548-hd0x": [
         "ファンタジー",
