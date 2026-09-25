@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790362682043,
-  "sourceUpdatedIso": "2026-09-25T18:58:02.043Z",
+  "sourceUpdatedAt": 1790362697648,
+  "sourceUpdatedIso": "2026-09-25T18:58:17.648Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -1946,7 +1946,10 @@
       "sameScoreRank": 8,
       "category": "Letterboxd追加",
       "mediaType": "other",
-      "genre": [],
+      "genre": [
+        "comfort",
+        "恋愛"
+      ],
       "origin": "ハリウッド",
       "format": "live",
       "runtime": null,
@@ -19555,7 +19558,10 @@
         "サスペンス",
         "ミステリー"
       ],
-      "lb-185-HTIi": [],
+      "lb-185-HTIi": [
+        "comfort",
+        "恋愛"
+      ],
       "lb-186-uRS": [],
       "lb-187-y2b8": [],
       "lb-188-1BWM": [
