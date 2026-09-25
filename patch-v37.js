@@ -1,7 +1,7 @@
 (() => {
-  // v37: add two user-defined genre/theme tags without touching score/rank data.
-  const BUILD='20260925za';
-  const EXTRA=['comfort','大作'];
+  // v37: user-defined genre/theme tags without touching score/rank data.
+  const BUILD='20260925zc';
+  const EXTRA=['comfort','大作','娯楽'];
   const SET=new Set(EXTRA);
 
   function rawGenres(f){
@@ -94,7 +94,7 @@
     },0));
   }
 
-  // Filters.
+  // Filters. v38 turns these options into multi-select AND filtering.
   for(const id of ['genreFilterRank','genreFilterClassify']){
     const s=document.getElementById(id);if(!s)continue;
     for(const g of EXTRA)if(![...s.options].some(o=>o.value===g))s.add(new Option(g,g));
