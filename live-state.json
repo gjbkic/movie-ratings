@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790358296493,
-  "sourceUpdatedIso": "2026-09-25T17:44:56.493Z",
+  "sourceUpdatedAt": 1790358306135,
+  "sourceUpdatedIso": "2026-09-25T17:45:06.135Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -7372,7 +7372,11 @@
       "sameScoreRank": 24,
       "category": "Letterboxd",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "ファンタジー",
+        "アクション",
+        "クライム"
+      ],
       "origin": "その他",
       "format": "live",
       "runtime": null,
@@ -21598,7 +21602,11 @@
       ],
       "custom-1790322756823-bi61": [],
       "custom-1790322757185-u25f": [],
-      "custom-1790322757548-hd0x": [],
+      "custom-1790322757548-hd0x": [
+        "ファンタジー",
+        "アクション",
+        "クライム"
+      ],
       "custom-1790322757929-0kod": [],
       "custom-1790322764349-xp48": [],
       "custom-1790352007604-3jj6": [
