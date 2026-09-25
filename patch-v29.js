@@ -1,8 +1,9 @@
 (() => {
   // v29: cache self-heal + stable live-state autosync + final guard for all extra genre chips.
-  const BUILD_V29='20260924o';
-  const EXTRAS_V29=['青春・若者','子供向け','差別・人権','精神・哲学','社会問題・生活','スポーツ','胸糞','感動','切ない'];
+  const BUILD_V29='20260926a';
+  const EXTRAS_V29=['青春・若者','子供向け','差別・人権','哲学・思想','心理・内面','社会問題・生活','スポーツ','胸糞','感動','切ない'];
   const EXTRA_SET_V29=new Set(EXTRAS_V29);
+  const LEGACY_V29='精神・哲学';
 
   // --- Self-update guard for Home Screen web app ---
   async function checkAppVersionV29(){
@@ -30,7 +31,8 @@
   }
   function ensureExtrasV29(id,selected=[]){
     const wrap=document.getElementById(id); if(!wrap)return;
-    const host=genreHostV29(wrap), set=new Set(selected||[]);
+    wrap.querySelectorAll(`[data-genre="${LEGACY_V29}"]`).forEach(x=>x.remove());
+    const host=genreHostV29(wrap), set=new Set((selected||[]).map(g=>g===LEGACY_V29?'哲学・思想':g));
     for(const g of EXTRAS_V29){
       let b=wrap.querySelector(`.genre-chip[data-genre="${g}"]`);
       if(!b){
@@ -53,6 +55,13 @@
     const selected=Array.isArray(state.genreOverrides?.[f.id])?state.genreOverrides[f.id]:[];
     ensureExtrasV29('editGenrePicker',selected);
   };
+
+  // Remove the retired combined tag from genre filters and guarantee both replacement tags exist.
+  for(const id of ['genreFilterRank','genreFilterClassify']){
+    const s=document.getElementById(id);if(!s)continue;
+    [...s.options].filter(o=>o.value===LEGACY_V29).forEach(o=>o.remove());
+    for(const g of ['哲学・思想','心理・内面'])if(![...s.options].some(o=>o.value===g))s.add(new Option(g,g));
+  }
 
   // --- Stop legacy autosync from committing on every incidental save. ---
   // Preserve the user's intent in a new setting, then force the old v23 scheduler off.
