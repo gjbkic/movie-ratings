@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790368887264,
-  "sourceUpdatedIso": "2026-09-25T20:41:27.264Z",
+  "sourceUpdatedAt": 1790368894218,
+  "sourceUpdatedIso": "2026-09-25T20:41:34.218Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -7437,26 +7437,6 @@
       "exact": true
     },
     {
-      "id": "lb-19-2cCk",
-      "title": "ジャンゴ 繋がれざるもの",
-      "originalTitle": "",
-      "englishTitle": "Django Unchained",
-      "year": 2012,
-      "score": 82,
-      "star": 3,
-      "overallRank": 305,
-      "sameScoreRank": 49,
-      "category": "ドラマ",
-      "mediaType": "movie",
-      "genre": [
-        "ドラマ"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 165,
-      "exact": true
-    },
-    {
       "id": "lb-521-29Qo",
       "title": "炎のゴブレット",
       "originalTitle": "",
@@ -7464,7 +7444,7 @@
       "year": 2005,
       "score": 81,
       "star": 3,
-      "overallRank": 306,
+      "overallRank": 305,
       "sameScoreRank": 1,
       "category": "ハリーポッター シリーズ",
       "mediaType": "movie",
@@ -7485,7 +7465,7 @@
       "year": 2010,
       "score": 81,
       "star": 3,
-      "overallRank": 307,
+      "overallRank": 306,
       "sameScoreRank": 2,
       "category": "邦画",
       "mediaType": "movie",
@@ -7503,7 +7483,7 @@
       "year": 2012,
       "score": 81,
       "star": 3,
-      "overallRank": 308,
+      "overallRank": 307,
       "sameScoreRank": 3,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
@@ -7524,7 +7504,7 @@
       "year": 2011,
       "score": 81,
       "star": 3,
-      "overallRank": 309,
+      "overallRank": 308,
       "sameScoreRank": 4,
       "category": "Letterboxd",
       "mediaType": "movie",
@@ -7542,7 +7522,7 @@
       "year": 1997,
       "score": 81,
       "star": 3,
-      "overallRank": 310,
+      "overallRank": 309,
       "sameScoreRank": 5,
       "category": "SF",
       "mediaType": "movie",
@@ -7555,6 +7535,26 @@
       "exact": true
     },
     {
+      "id": "lb-19-2cCk",
+      "title": "ジャンゴ 繋がれざるもの",
+      "originalTitle": "",
+      "englishTitle": "Django Unchained",
+      "year": 2012,
+      "score": 81,
+      "star": 3,
+      "overallRank": 310,
+      "sameScoreRank": 6,
+      "category": "ドラマ",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 165,
+      "exact": true
+    },
+    {
       "id": "lb-42-1xFW",
       "title": "アベンジャーズ",
       "originalTitle": "",
@@ -7563,7 +7563,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 311,
-      "sameScoreRank": 6,
+      "sameScoreRank": 7,
       "category": "MCU作品",
       "mediaType": "movie",
       "genre": [
@@ -7584,7 +7584,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 312,
-      "sameScoreRank": 7,
+      "sameScoreRank": 8,
       "category": "スリラー、ホラー",
       "mediaType": "movie",
       "genre": [
@@ -7605,7 +7605,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 313,
-      "sameScoreRank": 8,
+      "sameScoreRank": 9,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -7629,7 +7629,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 314,
-      "sameScoreRank": 9,
+      "sameScoreRank": 10,
       "category": "邦画",
       "mediaType": "drama",
       "genre": [
@@ -7651,7 +7651,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 315,
-      "sameScoreRank": 10,
+      "sameScoreRank": 11,
       "category": "スリラー、ホラー",
       "mediaType": "movie",
       "genre": [
@@ -7672,7 +7672,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 316,
-      "sameScoreRank": 11,
+      "sameScoreRank": 12,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -7692,7 +7692,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 317,
-      "sameScoreRank": 12,
+      "sameScoreRank": 13,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -7712,7 +7712,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 318,
-      "sameScoreRank": 13,
+      "sameScoreRank": 14,
       "category": "Letterboxd追加",
       "mediaType": "drama",
       "genre": [
@@ -7735,7 +7735,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 319,
-      "sameScoreRank": 14,
+      "sameScoreRank": 15,
       "category": "Letterboxd追加",
       "mediaType": "movie",
       "genre": [],
@@ -7753,7 +7753,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 320,
-      "sameScoreRank": 15,
+      "sameScoreRank": 16,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -7774,7 +7774,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 321,
-      "sameScoreRank": 16,
+      "sameScoreRank": 17,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -7794,7 +7794,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 322,
-      "sameScoreRank": 17,
+      "sameScoreRank": 18,
       "category": "ファンタジー、アドベンチャー",
       "mediaType": "movie",
       "genre": [
@@ -7815,7 +7815,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 323,
-      "sameScoreRank": 18,
+      "sameScoreRank": 19,
       "category": "MCU作品",
       "mediaType": "movie",
       "genre": [
@@ -7836,7 +7836,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 324,
-      "sameScoreRank": 19,
+      "sameScoreRank": 20,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -7860,7 +7860,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 325,
-      "sameScoreRank": 20,
+      "sameScoreRank": 21,
       "category": "ファンタジー、アドベンチャー",
       "mediaType": "movie",
       "genre": [
@@ -7881,7 +7881,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 326,
-      "sameScoreRank": 21,
+      "sameScoreRank": 22,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -7901,7 +7901,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 327,
-      "sameScoreRank": 22,
+      "sameScoreRank": 23,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -7925,7 +7925,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 328,
-      "sameScoreRank": 23,
+      "sameScoreRank": 24,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [],
@@ -7943,7 +7943,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 329,
-      "sameScoreRank": 24,
+      "sameScoreRank": 25,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -7963,7 +7963,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 330,
-      "sameScoreRank": 25,
+      "sameScoreRank": 26,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -7983,7 +7983,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 331,
-      "sameScoreRank": 26,
+      "sameScoreRank": 27,
       "category": "ファンタジー、アドベンチャー",
       "mediaType": "movie",
       "genre": [
@@ -8004,7 +8004,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 332,
-      "sameScoreRank": 27,
+      "sameScoreRank": 28,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -8026,7 +8026,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 333,
-      "sameScoreRank": 28,
+      "sameScoreRank": 29,
       "category": "スパイダーマン作品",
       "mediaType": "movie",
       "genre": [
@@ -8050,7 +8050,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 334,
-      "sameScoreRank": 29,
+      "sameScoreRank": 30,
       "category": "MCU作品",
       "mediaType": "movie",
       "genre": [
@@ -8071,7 +8071,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 335,
-      "sameScoreRank": 30,
+      "sameScoreRank": 31,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -8091,7 +8091,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 336,
-      "sameScoreRank": 31,
+      "sameScoreRank": 32,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [],
@@ -8109,7 +8109,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 337,
-      "sameScoreRank": 32,
+      "sameScoreRank": 33,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -8130,7 +8130,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 338,
-      "sameScoreRank": 33,
+      "sameScoreRank": 34,
       "category": "恋愛、ミュージカル",
       "mediaType": "movie",
       "genre": [
@@ -8151,7 +8151,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 339,
-      "sameScoreRank": 34,
+      "sameScoreRank": 35,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [],
@@ -8169,7 +8169,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 340,
-      "sameScoreRank": 35,
+      "sameScoreRank": 36,
       "category": "戦争、歴史",
       "mediaType": "movie",
       "genre": [
@@ -8190,7 +8190,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 341,
-      "sameScoreRank": 36,
+      "sameScoreRank": 37,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -8210,7 +8210,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 342,
-      "sameScoreRank": 37,
+      "sameScoreRank": 38,
       "category": "戦争、歴史",
       "mediaType": "movie",
       "genre": [
@@ -8231,7 +8231,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 343,
-      "sameScoreRank": 38,
+      "sameScoreRank": 39,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -8251,7 +8251,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 344,
-      "sameScoreRank": 39,
+      "sameScoreRank": 40,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -8274,7 +8274,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 345,
-      "sameScoreRank": 40,
+      "sameScoreRank": 41,
       "category": "MCU作品",
       "mediaType": "movie",
       "genre": [
@@ -8296,7 +8296,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 346,
-      "sameScoreRank": 41,
+      "sameScoreRank": 42,
       "category": "ファンタジー、アドベンチャー",
       "mediaType": "movie",
       "genre": [
@@ -8319,7 +8319,7 @@
       "score": 81,
       "star": 3,
       "overallRank": 347,
-      "sameScoreRank": 42,
+      "sameScoreRank": 43,
       "category": "戦争、歴史",
       "mediaType": "movie",
       "genre": [
@@ -15364,7 +15364,7 @@
       "lb-572-2a5e": 82,
       "lb-42-1xFW": 81,
       "lb-288-2a6G": 82,
-      "lb-19-2cCk": 82,
+      "lb-19-2cCk": 81,
       "lb-466-1Ub6": 82,
       "lb-498-25ds": 82,
       "lb-522-1RYu": 82,
@@ -15928,6 +15928,7 @@
         "lb-429-2czU",
         "custom-1789385860628-ogsm",
         "lb-348-71k",
+        "lb-19-2cCk",
         "lb-42-1xFW",
         "lb-277-eOCm",
         "custom-1790322760608-2vle",
@@ -16014,8 +16015,7 @@
         "lb-288-2a6G",
         "lb-466-1Ub6",
         "lb-423-6ZS",
-        "lb-428-2aTS",
-        "lb-19-2cCk"
+        "lb-428-2aTS"
       ],
       "83": [
         "lb-179-2aAG",
