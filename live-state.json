@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790362203820,
-  "sourceUpdatedIso": "2026-09-25T18:50:03.820Z",
+  "sourceUpdatedAt": 1790362216797,
+  "sourceUpdatedIso": "2026-09-25T18:50:16.797Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -3949,7 +3949,9 @@
       "sameScoreRank": 25,
       "category": "ほかアニメ",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "comfort"
+      ],
       "origin": "邦画",
       "format": "animation",
       "runtime": null,
@@ -20851,7 +20853,9 @@
         "青春・若者",
         "世界観"
       ],
-      "lb-472-1zYm": [],
+      "lb-472-1zYm": [
+        "comfort"
+      ],
       "lb-473-1U2o": [
         "感動",
         "ドラマ",
