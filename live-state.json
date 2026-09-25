@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790330246149,
-  "sourceUpdatedIso": "2026-09-25T09:57:26.149Z",
+  "sourceUpdatedAt": 1790352007725,
+  "sourceUpdatedIso": "2026-09-25T16:00:07.725Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -7982,7 +7982,7 @@
       "englishTitle": "From Today, It's My Turn!!",
       "year": 2018,
       "score": 80,
-      "star": 2.5,
+      "star": 3,
       "overallRank": 361,
       "sameScoreRank": 18,
       "category": "Letterboxd",
@@ -14289,6 +14289,28 @@
       "format": "live",
       "runtime": 45,
       "exact": false
+    },
+    {
+      "id": "custom-1790352007604-3jj6",
+      "title": "ゲーム・ナイト",
+      "originalTitle": "Game Night",
+      "englishTitle": "Game Night",
+      "year": 2018,
+      "score": null,
+      "star": 2.5,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "ミステリー",
+        "コメディ",
+        "クライム"
+      ],
+      "origin": "その他",
+      "format": "live",
+      "runtime": 100,
+      "exact": false
     }
   ],
   "state": {
@@ -16783,6 +16805,23 @@
         "source": "letterboxd",
         "tmdbType": "tv",
         "_lbMetaFixedV36": true
+      },
+      {
+        "id": "custom-1790352007604-3jj6",
+        "title": "ゲーム・ナイト",
+        "originalTitle": "Game Night",
+        "englishTitle": "Game Night",
+        "lbTitle": "Game Night",
+        "tmdbId": 445571,
+        "year": 2018,
+        "uri": "https://letterboxd.com/gjbkic/film/game-night/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 2.5,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1790352007604,
+        "source": "letterboxd"
       }
     ],
     "starOverrides": {
@@ -17394,7 +17433,7 @@
       "custom-1790322767762-8oh7": 2.5,
       "custom-1790322768095-ya1h": 2,
       "custom-1790322768630-3s2i": 2,
-      "custom-1790322769206-k4pm": 2.5,
+      "custom-1790322769206-k4pm": 3,
       "custom-1790322769753-zbsb": 3,
       "lb-0-hTha": 4
     },
@@ -18381,7 +18420,8 @@
       "custom-1790322762266-mrn9": "movie",
       "custom-1790322763462-yaoz": "movie",
       "custom-1790322764349-xp48": "movie",
-      "custom-1790322768095-ya1h": "movie"
+      "custom-1790322768095-ya1h": "movie",
+      "custom-1790352007604-3jj6": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -21550,7 +21590,12 @@
       "custom-1790322757185-u25f": [],
       "custom-1790322757548-hd0x": [],
       "custom-1790322757929-0kod": [],
-      "custom-1790322764349-xp48": []
+      "custom-1790322764349-xp48": [],
+      "custom-1790352007604-3jj6": [
+        "ミステリー",
+        "コメディ",
+        "クライム"
+      ]
     },
     "originOverrides": {
       "lb-0-hTha": "その他",
@@ -22207,7 +22252,8 @@
       "custom-1790322768095-ya1h": "邦画",
       "custom-1790322768630-3s2i": "邦画",
       "custom-1790322769206-k4pm": "邦画",
-      "custom-1790322769753-zbsb": "邦画"
+      "custom-1790322769753-zbsb": "邦画",
+      "custom-1790352007604-3jj6": "その他"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -22864,7 +22910,8 @@
       "custom-1790322757185-u25f": "live",
       "custom-1790322757548-hd0x": "live",
       "custom-1790322757929-0kod": "live",
-      "custom-1790322764349-xp48": "live"
+      "custom-1790322764349-xp48": "live",
+      "custom-1790352007604-3jj6": "live"
     },
     "runtimeOverrides": {
       "custom-1790247938551-ixfs": 100,
@@ -22891,7 +22938,8 @@
       "custom-1790322768095-ya1h": 128,
       "custom-1790322768630-3s2i": 46,
       "custom-1790322769206-k4pm": 55,
-      "custom-1790322769753-zbsb": 45
+      "custom-1790322769753-zbsb": 45,
+      "custom-1790352007604-3jj6": 100
     }
   }
 }
