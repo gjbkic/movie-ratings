@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790368821733,
-  "sourceUpdatedIso": "2026-09-25T20:40:21.733Z",
+  "sourceUpdatedAt": 1790368825315,
+  "sourceUpdatedIso": "2026-09-25T20:40:25.315Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -7810,30 +7810,6 @@
       "exact": true
     },
     {
-      "id": "lb-519-nwRw",
-      "title": "ノー・ウェイ・ホーム",
-      "originalTitle": "",
-      "englishTitle": "Spider-Man: No Way Home",
-      "year": 2021,
-      "score": 81,
-      "star": 3,
-      "overallRank": 323,
-      "sameScoreRank": 18,
-      "category": "スパイダーマン作品",
-      "mediaType": "movie",
-      "genre": [
-        "アクション",
-        "娯楽",
-        "ヒーロー",
-        "ファンタジー",
-        "恋愛"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": null,
-      "exact": true
-    },
-    {
       "id": "custom-1790322757929-0kod",
       "title": "JoJo's Bizarre Adventure: Diamond is Unbreakable",
       "originalTitle": "",
@@ -7841,8 +7817,8 @@
       "year": 2016,
       "score": 81,
       "star": 3,
-      "overallRank": 324,
-      "sameScoreRank": 19,
+      "overallRank": 323,
+      "sameScoreRank": 18,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -7865,8 +7841,8 @@
       "year": 2014,
       "score": 81,
       "star": 3,
-      "overallRank": 325,
-      "sameScoreRank": 20,
+      "overallRank": 324,
+      "sameScoreRank": 19,
       "category": "ファンタジー、アドベンチャー",
       "mediaType": "movie",
       "genre": [
@@ -7886,12 +7862,36 @@
       "year": 2013,
       "score": 81,
       "star": 3,
-      "overallRank": 326,
-      "sameScoreRank": 21,
+      "overallRank": 325,
+      "sameScoreRank": 20,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
         "ドラマ"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": null,
+      "exact": true
+    },
+    {
+      "id": "lb-519-nwRw",
+      "title": "ノー・ウェイ・ホーム",
+      "originalTitle": "",
+      "englishTitle": "Spider-Man: No Way Home",
+      "year": 2021,
+      "score": 81,
+      "star": 3,
+      "overallRank": 326,
+      "sameScoreRank": 21,
+      "category": "スパイダーマン作品",
+      "mediaType": "movie",
+      "genre": [
+        "アクション",
+        "娯楽",
+        "ヒーロー",
+        "ファンタジー",
+        "恋愛"
       ],
       "origin": "ハリウッド",
       "format": "live",
@@ -15940,10 +15940,10 @@
         "lb-93-2au4",
         "lb-109-28wi",
         "lb-424-2cBQ",
-        "lb-519-nwRw",
         "custom-1790322757929-0kod",
         "lb-326-4hka",
         "lb-570-3C1m",
+        "lb-519-nwRw",
         "custom-1790322765489-7o9h",
         "lb-384-1UhS",
         "lb-372-2b7g",
