@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790327463638,
-  "sourceUpdatedIso": "2026-09-25T09:11:03.638Z",
+  "sourceUpdatedAt": 1790327468269,
+  "sourceUpdatedIso": "2026-09-25T09:11:08.269Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -2599,6 +2599,29 @@
       "exact": true
     },
     {
+      "id": "lb-89-5RFA",
+      "title": "バードマンあるいは無知がもたらす予期せぬ奇跡",
+      "originalTitle": "",
+      "englishTitle": "Birdman or (The Unexpected Virtue of Ignorance)",
+      "year": 2014,
+      "score": 86,
+      "star": 3.5,
+      "overallRank": 111,
+      "sameScoreRank": 4,
+      "category": "ドラマ",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "感動",
+        "社会問題・生活",
+        "ファンタジー"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": null,
+      "exact": true
+    },
+    {
       "id": "lb-148-17uy",
       "title": "耳をすませば",
       "originalTitle": "",
@@ -2606,8 +2629,8 @@
       "year": 1995,
       "score": 86,
       "star": 3.5,
-      "overallRank": 111,
-      "sameScoreRank": 4,
+      "overallRank": 112,
+      "sameScoreRank": 5,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
       "genre": [
@@ -2630,8 +2653,8 @@
       "year": 2026,
       "score": 86,
       "star": 3.5,
-      "overallRank": 112,
-      "sameScoreRank": 5,
+      "overallRank": 113,
+      "sameScoreRank": 6,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -2652,8 +2675,8 @@
       "year": 1998,
       "score": 86,
       "star": 3.5,
-      "overallRank": 113,
-      "sameScoreRank": 6,
+      "overallRank": 114,
+      "sameScoreRank": 7,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -2674,8 +2697,8 @@
       "year": 1995,
       "score": 86,
       "star": 3.5,
-      "overallRank": 114,
-      "sameScoreRank": 7,
+      "overallRank": 115,
+      "sameScoreRank": 8,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -2687,29 +2710,6 @@
         "歴史"
       ],
       "origin": "その他",
-      "format": "live",
-      "runtime": null,
-      "exact": true
-    },
-    {
-      "id": "lb-89-5RFA",
-      "title": "バードマンあるいは無知がもたらす予期せぬ奇跡",
-      "originalTitle": "",
-      "englishTitle": "Birdman or (The Unexpected Virtue of Ignorance)",
-      "year": 2014,
-      "score": 86,
-      "star": 3.5,
-      "overallRank": 115,
-      "sameScoreRank": 8,
-      "category": "ドラマ",
-      "mediaType": "movie",
-      "genre": [
-        "ドラマ",
-        "感動",
-        "社会問題・生活",
-        "ファンタジー"
-      ],
-      "origin": "ハリウッド",
       "format": "live",
       "runtime": null,
       "exact": true
@@ -15342,11 +15342,11 @@
         "lb-115-2aWi",
         "lb-390-pUfA",
         "lb-279-215a",
+        "lb-89-5RFA",
         "lb-148-17uy",
         "custom-1790322756418-p88i",
         "lb-542-2b6C",
         "lb-368-2as8",
-        "lb-89-5RFA",
         "lb-382-20TI",
         "lb-45-29VS",
         "lb-345-1USu",
