@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790367532937,
-  "sourceUpdatedIso": "2026-09-25T20:18:52.937Z",
+  "sourceUpdatedAt": 1790367550962,
+  "sourceUpdatedIso": "2026-09-25T20:19:10.962Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -6773,7 +6773,14 @@
       "sameScoreRank": 21,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "心理・内面",
+        "青春・若者",
+        "ファンタジー",
+        "ドラマ",
+        "アクション",
+        "アドベンチャー"
+      ],
       "origin": "邦画",
       "format": "animation",
       "runtime": null,
@@ -19641,7 +19648,14 @@
         "子供向け",
         "感動"
       ],
-      "lb-69-ipeM": [],
+      "lb-69-ipeM": [
+        "心理・内面",
+        "青春・若者",
+        "ファンタジー",
+        "ドラマ",
+        "アクション",
+        "アドベンチャー"
+      ],
       "lb-70-29FU": [
         "ファンタジー",
         "アドベンチャー",
