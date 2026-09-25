@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790366621548,
-  "sourceUpdatedIso": "2026-09-25T20:03:41.548Z",
+  "sourceUpdatedAt": 1790366709712,
+  "sourceUpdatedIso": "2026-09-25T20:05:09.712Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -6513,7 +6513,13 @@
       "sameScoreRank": 10,
       "category": "Letterboxd追加",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "comfort",
+        "子供向け",
+        "ファンタジー",
+        "クライム",
+        "アクション"
+      ],
       "origin": "ハリウッド",
       "format": "live",
       "runtime": null,
@@ -22132,7 +22138,13 @@
         "感動",
         "差別・人権"
       ],
-      "lb-557-1WyQ": [],
+      "lb-557-1WyQ": [
+        "comfort",
+        "子供向け",
+        "ファンタジー",
+        "クライム",
+        "アクション"
+      ],
       "lb-558-1pDe": [
         "恋愛",
         "コメディ",
