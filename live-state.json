@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790362278859,
-  "sourceUpdatedIso": "2026-09-25T18:51:18.859Z",
+  "sourceUpdatedAt": 1790362292766,
+  "sourceUpdatedIso": "2026-09-25T18:51:32.766Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -3592,29 +3592,6 @@
       "exact": true
     },
     {
-      "id": "lb-574-29CQ",
-      "title": "あの頃ペニー・レインと",
-      "originalTitle": "",
-      "englishTitle": "Almost Famous",
-      "year": 2000,
-      "score": 85,
-      "star": 3.5,
-      "overallRank": 152,
-      "sameScoreRank": 10,
-      "category": "ドラマ",
-      "mediaType": "movie",
-      "genre": [
-        "ドラマ",
-        "青春・若者",
-        "恋愛",
-        "comfort"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": null,
-      "exact": true
-    },
-    {
       "id": "lb-342-X8s",
       "title": "容疑者Xの献身",
       "originalTitle": "",
@@ -3622,8 +3599,8 @@
       "year": 2008,
       "score": 85,
       "star": 3.5,
-      "overallRank": 153,
-      "sameScoreRank": 11,
+      "overallRank": 152,
+      "sameScoreRank": 10,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -3649,8 +3626,8 @@
       "year": 1980,
       "score": 85,
       "star": 3.5,
-      "overallRank": 154,
-      "sameScoreRank": 12,
+      "overallRank": 153,
+      "sameScoreRank": 11,
       "category": "スリラー、ホラー",
       "mediaType": "movie",
       "genre": [
@@ -3672,8 +3649,8 @@
       "year": 2003,
       "score": 85,
       "star": 3.5,
-      "overallRank": 155,
-      "sameScoreRank": 13,
+      "overallRank": 154,
+      "sameScoreRank": 12,
       "category": "追加映画",
       "mediaType": "movie",
       "genre": [
@@ -3697,8 +3674,8 @@
       "year": 2013,
       "score": 85,
       "star": 3.5,
-      "overallRank": 156,
-      "sameScoreRank": 14,
+      "overallRank": 155,
+      "sameScoreRank": 13,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -3723,8 +3700,8 @@
       "year": 2006,
       "score": 85,
       "star": 3.5,
-      "overallRank": 157,
-      "sameScoreRank": 15,
+      "overallRank": 156,
+      "sameScoreRank": 14,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -3739,6 +3716,29 @@
       ],
       "origin": "邦画",
       "format": "animation",
+      "runtime": null,
+      "exact": true
+    },
+    {
+      "id": "lb-574-29CQ",
+      "title": "あの頃ペニー・レインと",
+      "originalTitle": "",
+      "englishTitle": "Almost Famous",
+      "year": 2000,
+      "score": 85,
+      "star": 3.5,
+      "overallRank": 157,
+      "sameScoreRank": 15,
+      "category": "ドラマ",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "青春・若者",
+        "恋愛",
+        "comfort"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
       "runtime": null,
       "exact": true
     },
@@ -15537,12 +15537,12 @@
         "lb-313-29eY",
         "lb-168-2b7U",
         "lb-361-26vC",
-        "lb-574-29CQ",
         "lb-342-X8s",
         "lb-14-29Nu",
         "custom-1789387775661-0mdh",
         "lb-38-4E5i",
         "lb-400-23wW",
+        "lb-574-29CQ",
         "lb-107-2a0I",
         "lb-479-2a1Q",
         "lb-184-2aH8",
