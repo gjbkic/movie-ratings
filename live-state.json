@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790367654393,
-  "sourceUpdatedIso": "2026-09-25T20:20:54.393Z",
+  "sourceUpdatedAt": 1790367678166,
+  "sourceUpdatedIso": "2026-09-25T20:21:18.166Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -6848,7 +6848,14 @@
       "sameScoreRank": 24,
       "category": "ピクサー・ディズニー作品",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "世界観",
+        "子供向け",
+        "ファンタジー",
+        "ドラマ",
+        "心理・内面",
+        "青春・若者"
+      ],
       "origin": "ハリウッド",
       "format": "animation",
       "runtime": null,
@@ -21566,7 +21573,14 @@
         "サスペンス",
         "ミステリー"
       ],
-      "lb-420-CFrC": [],
+      "lb-420-CFrC": [
+        "世界観",
+        "子供向け",
+        "ファンタジー",
+        "ドラマ",
+        "心理・内面",
+        "青春・若者"
+      ],
       "lb-421-21ew": [
         "サスペンス",
         "クライム",
