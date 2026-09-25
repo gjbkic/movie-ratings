@@ -570,7 +570,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 138,
       "exact": false
     },
     {
@@ -19208,6 +19208,9 @@
       },
       "lb-136-1YVC": {
         "tmdbId": 9340
+      },
+      "lb-137-2a1c": {
+        "tmdbId": 604
       }
     },
     "categoryOverrides": {},
@@ -25511,7 +25514,8 @@
       "lb-133-2a1G": 115,
       "lb-134-aPvo": 103,
       "lb-135-1ZLI": 104,
-      "lb-136-1YVC": 114
+      "lb-136-1YVC": 114,
+      "lb-137-2a1c": 138
     }
   }
 }
