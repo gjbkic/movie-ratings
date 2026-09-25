@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790329951539,
-  "sourceUpdatedIso": "2026-09-25T09:52:31.539Z",
+  "sourceUpdatedAt": 1790329964921,
+  "sourceUpdatedIso": "2026-09-25T09:52:44.921Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -560,7 +560,9 @@
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
-        "アクション"
+        "アクション",
+        "comfort",
+        "コメディ"
       ],
       "origin": "ハリウッド",
       "format": "live",
@@ -18878,7 +18880,9 @@
         "ヒーロー"
       ],
       "lb-97-2a7u": [
-        "アクション"
+        "アクション",
+        "comfort",
+        "コメディ"
       ],
       "lb-98-2bbs": [
         "ファンタジー",
