@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790363479240,
-  "sourceUpdatedIso": "2026-09-25T19:11:19.240Z",
+  "sourceUpdatedAt": 1790363488991,
+  "sourceUpdatedIso": "2026-09-25T19:11:28.991Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -5935,7 +5935,14 @@
       "sameScoreRank": 29,
       "category": "ほかアニメ",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "comfort",
+        "世界観",
+        "ファンタジー",
+        "SF",
+        "青春・若者",
+        "ドラマ"
+      ],
       "origin": "邦画",
       "format": "animation",
       "runtime": null,
@@ -21115,7 +21122,14 @@
         "胸糞",
         "世界観"
       ],
-      "lb-469-1MKi": [],
+      "lb-469-1MKi": [
+        "comfort",
+        "世界観",
+        "ファンタジー",
+        "SF",
+        "青春・若者",
+        "ドラマ"
+      ],
       "lb-470-2BwG": [],
       "lb-471-8LnQ": [
         "切ない",
