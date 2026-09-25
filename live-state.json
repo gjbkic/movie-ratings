@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790358681439,
-  "sourceUpdatedIso": "2026-09-25T17:51:21.439Z",
+  "sourceUpdatedAt": 1790358704159,
+  "sourceUpdatedIso": "2026-09-25T17:51:44.159Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -6893,27 +6893,6 @@
       "exact": true
     },
     {
-      "id": "lb-42-1xFW",
-      "title": "アベンジャーズ",
-      "originalTitle": "",
-      "englishTitle": "The Avengers",
-      "year": 2012,
-      "score": 81,
-      "star": 3,
-      "overallRank": 307,
-      "sameScoreRank": 1,
-      "category": "MCU作品",
-      "mediaType": "movie",
-      "genre": [
-        "アクション",
-        "SF"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": null,
-      "exact": true
-    },
-    {
       "id": "lb-521-29Qo",
       "title": "炎のゴブレット",
       "originalTitle": "",
@@ -6921,8 +6900,8 @@
       "year": 2005,
       "score": 81,
       "star": 3,
-      "overallRank": 308,
-      "sameScoreRank": 2,
+      "overallRank": 307,
+      "sameScoreRank": 1,
       "category": "ハリーポッター シリーズ",
       "mediaType": "movie",
       "genre": [
@@ -6942,8 +6921,8 @@
       "year": 2010,
       "score": 81,
       "star": 3,
-      "overallRank": 309,
-      "sameScoreRank": 3,
+      "overallRank": 308,
+      "sameScoreRank": 2,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [],
@@ -6960,34 +6939,13 @@
       "year": 2012,
       "score": 81,
       "star": 3,
-      "overallRank": 310,
-      "sameScoreRank": 4,
+      "overallRank": 309,
+      "sameScoreRank": 3,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
         "サスペンス",
         "ミステリー"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": null,
-      "exact": true
-    },
-    {
-      "id": "lb-277-eOCm",
-      "title": "ゲットアウト",
-      "originalTitle": "",
-      "englishTitle": "Get Out",
-      "year": 2017,
-      "score": 81,
-      "star": 3,
-      "overallRank": 311,
-      "sameScoreRank": 5,
-      "category": "スリラー、ホラー",
-      "mediaType": "movie",
-      "genre": [
-        "スリラー",
-        "ホラー"
       ],
       "origin": "ハリウッド",
       "format": "live",
@@ -7002,14 +6960,56 @@
       "year": 1997,
       "score": 81,
       "star": 3,
-      "overallRank": 312,
-      "sameScoreRank": 6,
+      "overallRank": 310,
+      "sameScoreRank": 4,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
         "SF"
       ],
       "origin": "その他",
+      "format": "live",
+      "runtime": null,
+      "exact": true
+    },
+    {
+      "id": "lb-42-1xFW",
+      "title": "アベンジャーズ",
+      "originalTitle": "",
+      "englishTitle": "The Avengers",
+      "year": 2012,
+      "score": 81,
+      "star": 3,
+      "overallRank": 311,
+      "sameScoreRank": 5,
+      "category": "MCU作品",
+      "mediaType": "movie",
+      "genre": [
+        "アクション",
+        "SF"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": null,
+      "exact": true
+    },
+    {
+      "id": "lb-277-eOCm",
+      "title": "ゲットアウト",
+      "originalTitle": "",
+      "englishTitle": "Get Out",
+      "year": 2017,
+      "score": 81,
+      "star": 3,
+      "overallRank": 312,
+      "sameScoreRank": 6,
+      "category": "スリラー、ホラー",
+      "mediaType": "movie",
+      "genre": [
+        "スリラー",
+        "ホラー"
+      ],
+      "origin": "ハリウッド",
       "format": "live",
       "runtime": null,
       "exact": true
@@ -15323,12 +15323,12 @@
         "lb-516-23Fk"
       ],
       "81": [
-        "lb-42-1xFW",
         "lb-521-29Qo",
         "lb-186-uRS",
         "lb-429-2czU",
-        "lb-277-eOCm",
         "lb-348-71k",
+        "lb-42-1xFW",
+        "lb-277-eOCm",
         "custom-1790322760608-2vle",
         "custom-1789408864046-u4p4",
         "lb-475-F1U6",
