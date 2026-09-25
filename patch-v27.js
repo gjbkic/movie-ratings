@@ -1,16 +1,17 @@
 (() => {
   const EXTRA_GENRES_V27 = [
-    "世界観","青春・若者","子供向け","差別・人権","精神・哲学","社会問題・生活",
+    "世界観","青春・若者","子供向け","差別・人権","哲学・思想","心理・内面","社会問題・生活",
     "スポーツ","胸糞","感動","切ない","どんでん返し"
   ];
   const EXTRA_SET_V27 = new Set(EXTRA_GENRES_V27);
+  const LEGACY_V27='精神・哲学';
 
   function rawGenresV27(f){
     const g=state.genreOverrides?.[f.id];
     return Array.isArray(g)?[...new Set(g)]:[];
   }
   function setGenresPreserveV27(id, genres){
-    state.genreOverrides[id]=[...new Set((genres||[]).filter(Boolean))];
+    state.genreOverrides[id]=[...new Set((genres||[]).filter(Boolean).map(g=>g===LEGACY_V27?'哲学・思想':g))];
   }
   function genreOptionsV27(wrap){
     if(!wrap)return null;
@@ -32,7 +33,8 @@
   }
   function ensureExtraChipsV27(id, selected=[]){
     const wrap=document.getElementById(id); if(!wrap)return;
-    const host=genreOptionsV27(wrap), chosen=new Set(selected);
+    wrap.querySelectorAll(`[data-genre="${LEGACY_V27}"]`).forEach(x=>x.remove());
+    const host=genreOptionsV27(wrap), chosen=new Set((selected||[]).map(g=>g===LEGACY_V27?'哲学・思想':g));
     // Move chips created by older patches into the actual genre row and normalize their appearance.
     for(const old of [...wrap.querySelectorAll('.genre-chip')]){
       old.classList.add('struct-chip');
@@ -52,7 +54,7 @@
   }
   function selectedExtrasV27(id){
     const wrap=document.getElementById(id); if(!wrap)return [];
-    return [...wrap.querySelectorAll('.genre-chip.on')].map(b=>b.dataset.genre||b.textContent.trim()).filter(g=>EXTRA_SET_V27.has(g));
+    return [...wrap.querySelectorAll('.genre-chip.on')].map(b=>b.dataset.genre||b.textContent.trim()).map(g=>g===LEGACY_V27?'哲学・思想':g).filter(g=>EXTRA_SET_V27.has(g));
   }
 
   ensureExtraChipsV27('newGenrePicker',[]);
@@ -84,7 +86,7 @@
     openSheetV26(id);
     const f=filmById(id); if(!f)return;
     const wrap=document.getElementById('editGenrePicker'); if(!wrap)return;
-    let extras=new Set(rawGenresV27(f).filter(g=>EXTRA_SET_V27.has(g)));
+    let extras=new Set(rawGenresV27(f).map(g=>g===LEGACY_V27?'哲学・思想':g).filter(g=>EXTRA_SET_V27.has(g)));
     ensureExtraChipsV27('editGenrePicker',[...extras]);
 
     wrap.querySelectorAll('.genre-chip').forEach(b=>{
@@ -93,7 +95,7 @@
       b.onclick=()=>{
         extras.has(g)?extras.delete(g):extras.add(g);
         b.classList.toggle('on',extras.has(g));
-        const currentBase=rawGenresV27(f).filter(x=>!EXTRA_SET_V27.has(x));
+        const currentBase=rawGenresV27(f).filter(x=>x!==LEGACY_V27&&!EXTRA_SET_V27.has(x));
         setGenresPreserveV27(f.id,[...currentBase,...extras]);
         save(); render();
       };
@@ -104,7 +106,7 @@
     wrap.addEventListener('click',e=>{
       const b=e.target.closest('.struct-chip[data-multi="1"]');
       if(!b || b.classList.contains('genre-chip'))return;
-      const currentBase=rawGenresV27(f).filter(x=>!EXTRA_SET_V27.has(x));
+      const currentBase=rawGenresV27(f).filter(x=>x!==LEGACY_V27&&!EXTRA_SET_V27.has(x));
       setGenresPreserveV27(f.id,[...currentBase,...extras]);
       save();
     });
@@ -113,6 +115,7 @@
   // Filters: bypass older/base genre filtering for any extra tag, then filter the rendered cards ourselves.
   for(const id of ['genreFilterRank','genreFilterClassify']){
     const s=document.getElementById(id); if(!s)continue;
+    [...s.options].filter(o=>o.value===LEGACY_V27).forEach(o=>o.remove());
     for(const g of EXTRA_GENRES_V27){
       if([...s.options].some(o=>o.value===g))continue;
       const opt=new Option(g,g);
