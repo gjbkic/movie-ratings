@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790358572615,
-  "sourceUpdatedIso": "2026-09-25T17:49:32.615Z",
+  "sourceUpdatedAt": 1790358578033,
+  "sourceUpdatedIso": "2026-09-25T17:49:38.033Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -9240,6 +9240,47 @@
       "exact": true
     },
     {
+      "id": "lb-548-294Y",
+      "title": "13F",
+      "originalTitle": "",
+      "englishTitle": "The Thirteenth Floor",
+      "year": 1999,
+      "score": 78,
+      "star": 2.5,
+      "overallRank": 424,
+      "sameScoreRank": 9,
+      "category": "SF",
+      "mediaType": "movie",
+      "genre": [
+        "SF"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": null,
+      "exact": true
+    },
+    {
+      "id": "lb-373-1TlE",
+      "title": "ミッドナイトクロス",
+      "originalTitle": "",
+      "englishTitle": "Blow Out",
+      "year": 1981,
+      "score": 78,
+      "star": 2.5,
+      "overallRank": 425,
+      "sameScoreRank": 10,
+      "category": "サスペンス、ミステリー",
+      "mediaType": "movie",
+      "genre": [
+        "サスペンス",
+        "ミステリー"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": null,
+      "exact": true
+    },
+    {
       "id": "custom-1790322759131-6bsn",
       "title": "じゃあ、あんたが作ってみろよ",
       "originalTitle": "じゃあ、あんたが作ってみろよ",
@@ -9247,8 +9288,8 @@
       "year": 2025,
       "score": 78,
       "star": 2.5,
-      "overallRank": 424,
-      "sameScoreRank": 9,
+      "overallRank": 426,
+      "sameScoreRank": 11,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -9269,8 +9310,8 @@
       "year": 2017,
       "score": 78,
       "star": 2.5,
-      "overallRank": 425,
-      "sameScoreRank": 10,
+      "overallRank": 427,
+      "sameScoreRank": 12,
       "category": "MCU作品",
       "mediaType": "movie",
       "genre": [
@@ -9290,8 +9331,8 @@
       "year": 2014,
       "score": 78,
       "star": 2.5,
-      "overallRank": 426,
-      "sameScoreRank": 11,
+      "overallRank": 428,
+      "sameScoreRank": 13,
       "category": "コナン映画",
       "mediaType": "movie",
       "genre": [
@@ -9299,47 +9340,6 @@
       ],
       "origin": "邦画",
       "format": "animation",
-      "runtime": null,
-      "exact": true
-    },
-    {
-      "id": "lb-548-294Y",
-      "title": "13F",
-      "originalTitle": "",
-      "englishTitle": "The Thirteenth Floor",
-      "year": 1999,
-      "score": 78,
-      "star": 2.5,
-      "overallRank": 427,
-      "sameScoreRank": 12,
-      "category": "SF",
-      "mediaType": "movie",
-      "genre": [
-        "SF"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": null,
-      "exact": true
-    },
-    {
-      "id": "lb-373-1TlE",
-      "title": "ミッドナイトクロス",
-      "originalTitle": "",
-      "englishTitle": "Blow Out",
-      "year": 1981,
-      "score": 78,
-      "star": 2.5,
-      "overallRank": 428,
-      "sameScoreRank": 13,
-      "category": "サスペンス、ミステリー",
-      "mediaType": "movie",
-      "genre": [
-        "サスペンス",
-        "ミステリー"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
       "runtime": null,
       "exact": true
     },
@@ -15217,11 +15217,11 @@
         "lb-197-1oRu",
         "lb-254-6ZCG",
         "lb-275-28sg",
+        "lb-548-294Y",
+        "lb-373-1TlE",
         "custom-1790322759131-6bsn",
         "lb-408-8MHi",
         "lb-200-7BEA",
-        "lb-548-294Y",
-        "lb-373-1TlE",
         "lb-513-y6Eo",
         "lb-94-5rje",
         "lb-248-1KJs",
