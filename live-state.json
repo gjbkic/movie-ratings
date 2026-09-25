@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790358467273,
-  "sourceUpdatedIso": "2026-09-25T17:47:47.273Z",
+  "sourceUpdatedAt": 1790358520215,
+  "sourceUpdatedIso": "2026-09-25T17:48:40.215Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -14333,6 +14333,27 @@
       "format": "live",
       "runtime": 45,
       "exact": false
+    },
+    {
+      "id": "custom-1790358520071-ybym",
+      "title": "ドロステのはてで僕ら",
+      "originalTitle": "ドロステのはてで僕ら",
+      "englishTitle": "Beyond the Infinite Two Minutes",
+      "year": 2020,
+      "score": null,
+      "star": 2.5,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "コメディ",
+        "SF"
+      ],
+      "origin": "邦画",
+      "format": "live",
+      "runtime": 70,
+      "exact": false
     }
   ],
   "state": {
@@ -16854,6 +16875,23 @@
         "added": true,
         "_seq": 1790352007604,
         "source": "letterboxd"
+      },
+      {
+        "id": "custom-1790358520071-ybym",
+        "title": "ドロステのはてで僕ら",
+        "originalTitle": "ドロステのはてで僕ら",
+        "englishTitle": "Beyond the Infinite Two Minutes",
+        "lbTitle": "Beyond the Infinite Two Minutes",
+        "tmdbId": 805627,
+        "year": 2020,
+        "uri": "https://letterboxd.com/gjbkic/film/beyond-the-infinite-two-minutes/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 2.5,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1790358520071,
+        "source": "letterboxd"
       }
     ],
     "starOverrides": {
@@ -18454,7 +18492,8 @@
       "custom-1790322763462-yaoz": "movie",
       "custom-1790322764349-xp48": "movie",
       "custom-1790322768095-ya1h": "movie",
-      "custom-1790352007604-3jj6": "movie"
+      "custom-1790352007604-3jj6": "movie",
+      "custom-1790358520071-ybym": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -21650,6 +21689,10 @@
         "恋愛",
         "サスペンス",
         "アクション"
+      ],
+      "custom-1790358520071-ybym": [
+        "コメディ",
+        "SF"
       ]
     },
     "originOverrides": {
@@ -22308,7 +22351,8 @@
       "custom-1790322768630-3s2i": "邦画",
       "custom-1790322769206-k4pm": "邦画",
       "custom-1790322769753-zbsb": "邦画",
-      "custom-1790352007604-3jj6": "その他"
+      "custom-1790352007604-3jj6": "その他",
+      "custom-1790358520071-ybym": "邦画"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -22966,7 +23010,8 @@
       "custom-1790322757548-hd0x": "live",
       "custom-1790322757929-0kod": "live",
       "custom-1790322764349-xp48": "live",
-      "custom-1790352007604-3jj6": "live"
+      "custom-1790352007604-3jj6": "live",
+      "custom-1790358520071-ybym": "live"
     },
     "runtimeOverrides": {
       "custom-1790247938551-ixfs": 100,
@@ -22994,7 +23039,8 @@
       "custom-1790322768630-3s2i": 46,
       "custom-1790322769206-k4pm": 55,
       "custom-1790322769753-zbsb": 45,
-      "custom-1790352007604-3jj6": 100
+      "custom-1790352007604-3jj6": 100,
+      "custom-1790358520071-ybym": 70
     }
   }
 }
