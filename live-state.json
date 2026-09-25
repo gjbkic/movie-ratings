@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790362311831,
-  "sourceUpdatedIso": "2026-09-25T18:51:51.831Z",
+  "sourceUpdatedAt": 1790362322165,
+  "sourceUpdatedIso": "2026-09-25T18:52:02.165Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -3547,33 +3547,6 @@
       "exact": true
     },
     {
-      "id": "lb-342-X8s",
-      "title": "容疑者Xの献身",
-      "originalTitle": "",
-      "englishTitle": "Suspect X",
-      "year": 2008,
-      "score": 85,
-      "star": 3.5,
-      "overallRank": 150,
-      "sameScoreRank": 8,
-      "category": "邦画",
-      "mediaType": "movie",
-      "genre": [
-        "切ない",
-        "感動",
-        "ドラマ",
-        "サスペンス",
-        "ミステリー",
-        "シリーズ劇場版",
-        "社会問題・生活",
-        "恋愛"
-      ],
-      "origin": "邦画",
-      "format": "live",
-      "runtime": null,
-      "exact": true
-    },
-    {
       "id": "custom-1789387775661-0mdh",
       "title": "東京ゴッドファーザーズ",
       "originalTitle": "東京ゴッドファーザーズ",
@@ -3581,8 +3554,8 @@
       "year": 2003,
       "score": 85,
       "star": 3.5,
-      "overallRank": 151,
-      "sameScoreRank": 9,
+      "overallRank": 150,
+      "sameScoreRank": 8,
       "category": "追加映画",
       "mediaType": "movie",
       "genre": [
@@ -3595,6 +3568,34 @@
       ],
       "origin": "邦画",
       "format": "animation",
+      "runtime": null,
+      "exact": true
+    },
+    {
+      "id": "lb-342-X8s",
+      "title": "容疑者Xの献身",
+      "originalTitle": "",
+      "englishTitle": "Suspect X",
+      "year": 2008,
+      "score": 85,
+      "star": 3.5,
+      "overallRank": 151,
+      "sameScoreRank": 9,
+      "category": "邦画",
+      "mediaType": "movie",
+      "genre": [
+        "切ない",
+        "感動",
+        "ドラマ",
+        "サスペンス",
+        "ミステリー",
+        "シリーズ劇場版",
+        "社会問題・生活",
+        "恋愛",
+        "comfort"
+      ],
+      "origin": "邦画",
+      "format": "live",
       "runtime": null,
       "exact": true
     },
@@ -15535,8 +15536,8 @@
         "lb-59-780m",
         "base-chinatown-1974",
         "lb-313-29eY",
-        "lb-342-X8s",
         "custom-1789387775661-0mdh",
+        "lb-342-X8s",
         "lb-168-2b7U",
         "lb-361-26vC",
         "lb-14-29Nu",
@@ -20236,7 +20237,8 @@
         "ミステリー",
         "シリーズ劇場版",
         "社会問題・生活",
-        "恋愛"
+        "恋愛",
+        "comfort"
       ],
       "lb-343-3zuA": [],
       "lb-344-5YPM": [
