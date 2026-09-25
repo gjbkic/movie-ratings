@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790357130207,
-  "sourceUpdatedIso": "2026-09-25T17:25:30.207Z",
+  "sourceUpdatedAt": 1790357136154,
+  "sourceUpdatedIso": "2026-09-25T17:25:36.154Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -8522,27 +8522,6 @@
       "exact": true
     },
     {
-      "id": "lb-380-KQMM",
-      "title": "罪人たち",
-      "originalTitle": "",
-      "englishTitle": "Sinners",
-      "year": 2025,
-      "score": 79,
-      "star": 2.5,
-      "overallRank": 388,
-      "sameScoreRank": 11,
-      "category": "スリラー、ホラー",
-      "mediaType": "movie",
-      "genre": [
-        "スリラー",
-        "ホラー"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": null,
-      "exact": true
-    },
-    {
       "id": "lb-562-3utM",
       "title": "アメイジング・スパイダーマン2",
       "originalTitle": "",
@@ -8550,8 +8529,8 @@
       "year": 2014,
       "score": 79,
       "star": 2.5,
-      "overallRank": 389,
-      "sameScoreRank": 12,
+      "overallRank": 388,
+      "sameScoreRank": 11,
       "category": "スパイダーマン作品",
       "mediaType": "movie",
       "genre": [
@@ -8571,8 +8550,8 @@
       "year": 2004,
       "score": 79,
       "star": 2.5,
-      "overallRank": 390,
-      "sameScoreRank": 13,
+      "overallRank": 389,
+      "sameScoreRank": 12,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -8591,8 +8570,8 @@
       "year": 2012,
       "score": 79,
       "star": 2.5,
-      "overallRank": 391,
-      "sameScoreRank": 14,
+      "overallRank": 390,
+      "sameScoreRank": 13,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -8611,8 +8590,8 @@
       "year": 2006,
       "score": 79,
       "star": 2.5,
-      "overallRank": 392,
-      "sameScoreRank": 15,
+      "overallRank": 391,
+      "sameScoreRank": 14,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -8631,12 +8610,33 @@
       "year": 2016,
       "score": 79,
       "star": 2.5,
-      "overallRank": 393,
-      "sameScoreRank": 16,
+      "overallRank": 392,
+      "sameScoreRank": 15,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [],
       "origin": "邦画",
+      "format": "live",
+      "runtime": null,
+      "exact": true
+    },
+    {
+      "id": "lb-380-KQMM",
+      "title": "罪人たち",
+      "originalTitle": "",
+      "englishTitle": "Sinners",
+      "year": 2025,
+      "score": 79,
+      "star": 2.5,
+      "overallRank": 393,
+      "sameScoreRank": 16,
+      "category": "スリラー、ホラー",
+      "mediaType": "movie",
+      "genre": [
+        "スリラー",
+        "ホラー"
+      ],
+      "origin": "ハリウッド",
       "format": "live",
       "runtime": null,
       "exact": true
@@ -15208,12 +15208,12 @@
         "lb-264-FPS",
         "lb-412-2b68",
         "lb-265-fdo",
-        "lb-380-KQMM",
         "lb-562-3utM",
         "lb-309-2aZ2",
         "lb-370-ham",
         "lb-417-29cI",
         "lb-338-a9lm",
+        "lb-380-KQMM",
         "custom-1789385860674-ow4o",
         "lb-455-Ro",
         "lb-153-1Mvi",
