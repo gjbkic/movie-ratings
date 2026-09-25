@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790329139354,
-  "sourceUpdatedIso": "2026-09-25T09:38:59.354Z",
+  "sourceUpdatedAt": 1790329147547,
+  "sourceUpdatedIso": "2026-09-25T09:39:07.547Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -7024,7 +7024,11 @@
       "sameScoreRank": 12,
       "category": "Letterboxd追加",
       "mediaType": "drama",
-      "genre": [],
+      "genre": [
+        "ドラマ",
+        "クライム",
+        "サスペンス"
+      ],
       "origin": "その他",
       "format": "live",
       "runtime": null,
@@ -19218,7 +19222,11 @@
         "サスペンス",
         "ミステリー"
       ],
-      "lb-183-x1OG": [],
+      "lb-183-x1OG": [
+        "ドラマ",
+        "クライム",
+        "サスペンス"
+      ],
       "lb-184-2aH8": [
         "サスペンス",
         "ミステリー"
