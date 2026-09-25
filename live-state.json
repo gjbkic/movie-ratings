@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790329287730,
-  "sourceUpdatedIso": "2026-09-25T09:41:27.730Z",
+  "sourceUpdatedAt": 1790329305737,
+  "sourceUpdatedIso": "2026-09-25T09:41:45.737Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -2056,28 +2056,6 @@
       "exact": true
     },
     {
-      "id": "lb-312-1SRY",
-      "title": "用心棒",
-      "originalTitle": "",
-      "englishTitle": "Yojimbo",
-      "year": 1961,
-      "score": 88,
-      "star": 4,
-      "overallRank": 88,
-      "sameScoreRank": 3,
-      "category": "邦画",
-      "mediaType": "movie",
-      "genre": [
-        "歴史",
-        "アクション",
-        "クライム"
-      ],
-      "origin": "邦画",
-      "format": "live",
-      "runtime": null,
-      "exact": true
-    },
-    {
       "id": "lb-91-29Js",
       "title": "シックス・センス",
       "originalTitle": "",
@@ -2085,8 +2063,8 @@
       "year": 1999,
       "score": 88,
       "star": 4,
-      "overallRank": 89,
-      "sameScoreRank": 4,
+      "overallRank": 88,
+      "sameScoreRank": 3,
       "category": "スリラー、ホラー",
       "mediaType": "movie",
       "genre": [
@@ -2110,8 +2088,8 @@
       "year": 1974,
       "score": 88,
       "star": 4,
-      "overallRank": 90,
-      "sameScoreRank": 5,
+      "overallRank": 89,
+      "sameScoreRank": 4,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -2120,6 +2098,28 @@
         "サスペンス"
       ],
       "origin": "ハリウッド",
+      "format": "live",
+      "runtime": null,
+      "exact": true
+    },
+    {
+      "id": "lb-312-1SRY",
+      "title": "用心棒",
+      "originalTitle": "",
+      "englishTitle": "Yojimbo",
+      "year": 1961,
+      "score": 88,
+      "star": 4,
+      "overallRank": 90,
+      "sameScoreRank": 5,
+      "category": "邦画",
+      "mediaType": "movie",
+      "genre": [
+        "歴史",
+        "アクション",
+        "クライム"
+      ],
+      "origin": "邦画",
       "format": "live",
       "runtime": null,
       "exact": true
@@ -15428,9 +15428,9 @@
       "88": [
         "lb-0-hTha",
         "lb-460-20eA",
-        "lb-312-1SRY",
         "lb-91-29Js",
         "lb-77-2aNq",
+        "lb-312-1SRY",
         "lb-160-2b8e",
         "custom-1790322763195-rro9",
         "lb-85-1GjK",
