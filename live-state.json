@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790428585167,
-  "sourceUpdatedIso": "2026-09-26T13:16:25.167Z",
+  "sourceUpdatedAt": 1790428598672,
+  "sourceUpdatedIso": "2026-09-26T13:16:38.672Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -11511,7 +11511,9 @@
       "sameScoreRank": 23,
       "category": "ほかアニメ",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "感動"
+      ],
       "origin": "邦画",
       "format": "animation",
       "runtime": 94,
@@ -22909,7 +22911,9 @@
         "スポーツ",
         "娯楽"
       ],
-      "lb-221-7VEK": [],
+      "lb-221-7VEK": [
+        "感動"
+      ],
       "lb-222-hSNY": [
         "子供向け",
         "アドベンチャー",
