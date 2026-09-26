@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790434088322,
-  "sourceUpdatedIso": "2026-09-26T14:48:08.322Z",
+  "sourceUpdatedAt": 1790434094275,
+  "sourceUpdatedIso": "2026-09-26T14:48:14.275Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -12974,40 +12974,15 @@
       "exact": true
     },
     {
-      "id": "lb-106-29Ik",
-      "title": "Vフォー・ヴェンデッタ",
-      "originalTitle": "",
-      "englishTitle": "V for Vendetta",
-      "year": 2005,
-      "score": 75,
-      "star": 2,
-      "overallRank": 529,
-      "sameScoreRank": 20,
-      "category": "アクション",
-      "mediaType": "movie",
-      "genre": [
-        "アクション",
-        "戦争",
-        "ヒーロー",
-        "社会問題・生活",
-        "娯楽",
-        "差別・人権"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": null,
-      "exact": true
-    },
-    {
       "id": "lb-437-O1GQ",
       "title": "鬼滅の刃 無限列車編 猗窩座再来",
       "originalTitle": "",
       "englishTitle": "Demon Slayer: Kimetsu no Yaiba Infinity Castle",
       "year": 2025,
-      "score": 74,
+      "score": 75,
       "star": 2,
-      "overallRank": 530,
-      "sameScoreRank": 1,
+      "overallRank": 529,
+      "sameScoreRank": 20,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -13023,6 +12998,31 @@
       ],
       "origin": "邦画",
       "format": "animation",
+      "runtime": null,
+      "exact": true
+    },
+    {
+      "id": "lb-106-29Ik",
+      "title": "Vフォー・ヴェンデッタ",
+      "originalTitle": "",
+      "englishTitle": "V for Vendetta",
+      "year": 2005,
+      "score": 74,
+      "star": 2,
+      "overallRank": 530,
+      "sameScoreRank": 1,
+      "category": "アクション",
+      "mediaType": "movie",
+      "genre": [
+        "アクション",
+        "戦争",
+        "ヒーロー",
+        "社会問題・生活",
+        "娯楽",
+        "差別・人権"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
       "runtime": null,
       "exact": true
     },
@@ -16467,7 +16467,7 @@
       "lb-550-28xK": 74,
       "lb-317-7FPC": 74,
       "lb-511-yv7Y": 74,
-      "lb-437-O1GQ": 74,
+      "lb-437-O1GQ": 75,
       "lb-236-iLeu": 74,
       "lb-234-2qRS": 74,
       "lb-249-4r68": 74,
@@ -16479,7 +16479,7 @@
       "lb-307-eSjI": 75,
       "lb-473-1U2o": 75,
       "lb-68-201Q": 75,
-      "lb-106-29Ik": 75,
+      "lb-106-29Ik": 74,
       "lb-433-5xlK": 75,
       "lb-215-aJ5E": 75,
       "lb-216-1DD8": 75,
@@ -17002,7 +17002,7 @@
         "lb-232-81oI"
       ],
       "74": [
-        "lb-437-O1GQ",
+        "lb-106-29Ik",
         "custom-1790322760871-t21s",
         "lb-511-yv7Y",
         "lb-236-iLeu",
@@ -17045,7 +17045,7 @@
         "lb-258-16ic",
         "lb-508-5xme",
         "lb-440-iAFu",
-        "lb-106-29Ik"
+        "lb-437-O1GQ"
       ],
       "76": [
         "lb-131-1OEc",
