@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790423793124,
-  "sourceUpdatedIso": "2026-09-26T11:56:33.124Z",
+  "sourceUpdatedAt": 1790423800729,
+  "sourceUpdatedIso": "2026-09-26T11:56:40.729Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -7898,6 +7898,53 @@
       "exact": true
     },
     {
+      "id": "lb-320-28r8",
+      "title": "ミシシッピバーニング",
+      "originalTitle": "",
+      "englishTitle": "Mississippi Burning",
+      "year": 1988,
+      "score": 81,
+      "star": 3,
+      "overallRank": 320,
+      "sameScoreRank": 16,
+      "category": "サスペンス、ミステリー",
+      "mediaType": "movie",
+      "genre": [
+        "サスペンス",
+        "ミステリー",
+        "差別・人権",
+        "歴史",
+        "ドラマ"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": null,
+      "exact": true
+    },
+    {
+      "id": "lb-93-2au4",
+      "title": "キル・ビル Vol.2",
+      "originalTitle": "",
+      "englishTitle": "Kill Bill: Vol. 2",
+      "year": 2004,
+      "score": 81,
+      "star": 3,
+      "overallRank": 321,
+      "sameScoreRank": 17,
+      "category": "アクション",
+      "mediaType": "movie",
+      "genre": [
+        "アクション",
+        "娯楽",
+        "クライム",
+        "サスペンス"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 136,
+      "exact": true
+    },
+    {
       "id": "custom-1790322760608-2vle",
       "title": "あなたの番です",
       "originalTitle": "あなたの番です",
@@ -7905,8 +7952,8 @@
       "year": 2019,
       "score": 81,
       "star": 3,
-      "overallRank": 320,
-      "sameScoreRank": 16,
+      "overallRank": 322,
+      "sameScoreRank": 18,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -7932,8 +7979,8 @@
       "year": 2019,
       "score": 81,
       "star": 3,
-      "overallRank": 321,
-      "sameScoreRank": 17,
+      "overallRank": 323,
+      "sameScoreRank": 19,
       "category": "Letterboxd追加",
       "mediaType": "movie",
       "genre": [
@@ -7947,53 +7994,6 @@
       "origin": "邦画",
       "format": "live",
       "runtime": null,
-      "exact": true
-    },
-    {
-      "id": "lb-320-28r8",
-      "title": "ミシシッピバーニング",
-      "originalTitle": "",
-      "englishTitle": "Mississippi Burning",
-      "year": 1988,
-      "score": 81,
-      "star": 3,
-      "overallRank": 322,
-      "sameScoreRank": 18,
-      "category": "サスペンス、ミステリー",
-      "mediaType": "movie",
-      "genre": [
-        "サスペンス",
-        "ミステリー",
-        "差別・人権",
-        "歴史",
-        "ドラマ"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": null,
-      "exact": true
-    },
-    {
-      "id": "lb-93-2au4",
-      "title": "キル・ビル Vol.2",
-      "originalTitle": "",
-      "englishTitle": "Kill Bill: Vol. 2",
-      "year": 2004,
-      "score": 81,
-      "star": 3,
-      "overallRank": 323,
-      "sameScoreRank": 19,
-      "category": "アクション",
-      "mediaType": "movie",
-      "genre": [
-        "アクション",
-        "娯楽",
-        "クライム",
-        "サスペンス"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 136,
       "exact": true
     },
     {
@@ -16492,10 +16492,10 @@
         "lb-523-6xza",
         "lb-113-5rI4",
         "lb-183-x1OG",
-        "custom-1790322760608-2vle",
-        "lb-246-mqyw",
         "lb-320-28r8",
         "lb-93-2au4",
+        "custom-1790322760608-2vle",
+        "lb-246-mqyw",
         "lb-109-28wi",
         "lb-424-2cBQ",
         "custom-1790322757929-0kod",
