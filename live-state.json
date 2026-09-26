@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790421991421,
-  "sourceUpdatedIso": "2026-09-26T11:26:31.421Z",
+  "sourceUpdatedAt": 1790422006808,
+  "sourceUpdatedIso": "2026-09-26T11:26:46.808Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -8515,11 +8515,35 @@
         "ミステリー",
         "サスペンス",
         "どんでん返し",
-        "娯楽"
+        "娯楽",
+        "哲学・思想"
       ],
       "origin": "邦画",
       "format": "live",
       "runtime": 44,
+      "exact": true
+    },
+    {
+      "id": "lb-50-28dA",
+      "title": "アイアンマン",
+      "originalTitle": "",
+      "englishTitle": "Iron Man",
+      "year": 2008,
+      "score": 81,
+      "star": 3,
+      "overallRank": 347,
+      "sameScoreRank": 42,
+      "category": "MCU作品",
+      "mediaType": "movie",
+      "genre": [
+        "アクション",
+        "SF",
+        "ヒーロー",
+        "娯楽"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 125,
       "exact": true
     },
     {
@@ -8530,8 +8554,8 @@
       "year": 2019,
       "score": 81,
       "star": 3,
-      "overallRank": 347,
-      "sameScoreRank": 42,
+      "overallRank": 348,
+      "sameScoreRank": 43,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -8546,29 +8570,6 @@
       "origin": "邦画",
       "format": "live",
       "runtime": 45,
-      "exact": true
-    },
-    {
-      "id": "lb-50-28dA",
-      "title": "アイアンマン",
-      "originalTitle": "",
-      "englishTitle": "Iron Man",
-      "year": 2008,
-      "score": 81,
-      "star": 3,
-      "overallRank": 348,
-      "sameScoreRank": 43,
-      "category": "MCU作品",
-      "mediaType": "movie",
-      "genre": [
-        "アクション",
-        "SF",
-        "ヒーロー",
-        "娯楽"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 125,
       "exact": true
     },
     {
@@ -16387,8 +16388,8 @@
         "lb-374-DUHM",
         "lb-27-2b2A",
         "custom-1790322761365-fzvo",
-        "custom-1790322769753-zbsb",
         "lb-50-28dA",
+        "custom-1790322769753-zbsb",
         "lb-136-1YVC",
         "lb-416-2D2e"
       ],
@@ -24165,7 +24166,8 @@
         "ミステリー",
         "サスペンス",
         "どんでん返し",
-        "娯楽"
+        "娯楽",
+        "哲学・思想"
       ],
       "custom-1790322761655-im7g": [
         "ドラマ",
