@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790424124223,
-  "sourceUpdatedIso": "2026-09-26T12:02:04.223Z",
+  "sourceUpdatedAt": 1790424133346,
+  "sourceUpdatedIso": "2026-09-26T12:02:13.346Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -1665,7 +1665,7 @@
       ],
       "origin": "その他",
       "format": "live",
-      "runtime": null,
+      "runtime": 124,
       "exact": true
     },
     {
@@ -5438,7 +5438,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 104,
       "exact": true
     },
     {
@@ -6160,7 +6160,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 174,
       "exact": true
     },
     {
@@ -6673,7 +6673,7 @@
       ],
       "origin": "ハリウッド",
       "format": "animation",
-      "runtime": null,
+      "runtime": 101,
       "exact": true
     },
     {
@@ -9417,7 +9417,7 @@
       "genre": [],
       "origin": "ハリウッド",
       "format": "animation",
-      "runtime": null,
+      "runtime": 140,
       "exact": true
     },
     {
@@ -10983,7 +10983,7 @@
       "genre": [],
       "origin": "ハリウッド",
       "format": "animation",
-      "runtime": null,
+      "runtime": 130,
       "exact": false
     },
     {
@@ -12081,7 +12081,7 @@
       ],
       "origin": "ハリウッド",
       "format": "animation",
-      "runtime": null,
+      "runtime": 86,
       "exact": true
     },
     {
@@ -13217,7 +13217,8 @@
         "シリーズ劇場版",
         "ドラマ",
         "コメディ",
-        "娯楽"
+        "娯楽",
+        "切ない"
       ],
       "origin": "邦画",
       "format": "live",
@@ -13621,7 +13622,7 @@
       ],
       "origin": "ハリウッド",
       "format": "animation",
-      "runtime": null,
+      "runtime": 107,
       "exact": true
     },
     {
@@ -14025,7 +14026,7 @@
       ],
       "origin": "ハリウッド",
       "format": "animation",
-      "runtime": null,
+      "runtime": 84,
       "exact": true
     },
     {
@@ -14189,7 +14190,7 @@
       ],
       "origin": "ハリウッド",
       "format": "animation",
-      "runtime": null,
+      "runtime": 90,
       "exact": true
     },
     {
@@ -14910,7 +14911,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 124,
       "exact": true
     },
     {
@@ -19777,6 +19778,39 @@
       },
       "lb-204-hLIM": {
         "tmdbId": 493006
+      },
+      "lb-205-1UlA": {
+        "tmdbId": 11216
+      },
+      "lb-206-9vSA": {
+        "tmdbId": 299537
+      },
+      "lb-207-29yE": {
+        "tmdbId": 812
+      },
+      "lb-208-1MLK": {
+        "tmdbId": 15121
+      },
+      "lb-209-1XhG": {
+        "tmdbId": 10020
+      },
+      "lb-210-8tfY": {
+        "tmdbId": 277834
+      },
+      "lb-211-ar0c": {
+        "tmdbId": 321612
+      },
+      "lb-212-acjI": {
+        "tmdbId": 316029
+      },
+      "lb-213-2TTS": {
+        "tmdbId": 82690
+      },
+      "lb-214-2aoA": {
+        "tmdbId": 433
+      },
+      "lb-215-aJ5E": {
+        "tmdbId": 328111
       }
     },
     "categoryOverrides": {},
@@ -21966,7 +22000,8 @@
         "シリーズ劇場版",
         "ドラマ",
         "コメディ",
-        "娯楽"
+        "娯楽",
+        "切ない"
       ],
       "lb-234-2qRS": [
         "コメディ",
@@ -26303,7 +26338,18 @@
       "custom-1790423280120-qki8": 113,
       "custom-1790423280570-6eki": 107,
       "custom-1790423280875-9b4j": 55,
-      "lb-204-hLIM": 110
+      "lb-204-hLIM": 110,
+      "lb-205-1UlA": 124,
+      "lb-206-9vSA": 124,
+      "lb-207-29yE": 90,
+      "lb-208-1MLK": 174,
+      "lb-209-1XhG": 84,
+      "lb-210-8tfY": 107,
+      "lb-211-ar0c": 130,
+      "lb-212-acjI": 104,
+      "lb-213-2TTS": 101,
+      "lb-214-2aoA": 140,
+      "lb-215-aJ5E": 86
     }
   }
 }
