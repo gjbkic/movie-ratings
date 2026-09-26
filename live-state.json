@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790433999377,
-  "sourceUpdatedIso": "2026-09-26T14:46:39.377Z",
+  "sourceUpdatedAt": 1790434014733,
+  "sourceUpdatedIso": "2026-09-26T14:46:54.733Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -1640,7 +1640,7 @@
       ],
       "origin": "その他",
       "format": "live",
-      "runtime": null,
+      "runtime": 129,
       "exact": true
     },
     {
@@ -10245,7 +10245,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 102,
       "exact": true
     },
     {
@@ -10949,29 +10949,6 @@
       "exact": true
     },
     {
-      "id": "custom-1790322759131-6bsn",
-      "title": "じゃあ、あんたが作ってみろよ",
-      "originalTitle": "じゃあ、あんたが作ってみろよ",
-      "englishTitle": "Then You Try Making It!",
-      "year": 2025,
-      "score": 78,
-      "star": 2.5,
-      "overallRank": 445,
-      "sameScoreRank": 21,
-      "category": "Letterboxd",
-      "mediaType": "drama",
-      "genre": [
-        "コメディ",
-        "ドラマ",
-        "恋愛",
-        "TV本編"
-      ],
-      "origin": "邦画",
-      "format": "live",
-      "runtime": 46,
-      "exact": true
-    },
-    {
       "id": "lb-135-1ZLI",
       "title": "ジュマンジ",
       "originalTitle": "",
@@ -10979,8 +10956,8 @@
       "year": 1995,
       "score": 78,
       "star": 2.5,
-      "overallRank": 446,
-      "sameScoreRank": 22,
+      "overallRank": 445,
+      "sameScoreRank": 21,
       "category": "ファンタジー、アドベンチャー",
       "mediaType": "movie",
       "genre": [
@@ -11001,8 +10978,8 @@
       "year": 2019,
       "score": 78,
       "star": 2.5,
-      "overallRank": 447,
-      "sameScoreRank": 23,
+      "overallRank": 446,
+      "sameScoreRank": 22,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [],
@@ -11019,8 +10996,8 @@
       "year": 2006,
       "score": 78,
       "star": 2.5,
-      "overallRank": 448,
-      "sameScoreRank": 24,
+      "overallRank": 447,
+      "sameScoreRank": 23,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -11041,8 +11018,8 @@
       "year": 2001,
       "score": 78,
       "star": 2.5,
-      "overallRank": 449,
-      "sameScoreRank": 25,
+      "overallRank": 448,
+      "sameScoreRank": 24,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -11066,8 +11043,8 @@
       "year": 2026,
       "score": 78,
       "star": 2.5,
-      "overallRank": 450,
-      "sameScoreRank": 26,
+      "overallRank": 449,
+      "sameScoreRank": 25,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -11094,8 +11071,8 @@
       "year": 2014,
       "score": 78,
       "star": 2.5,
-      "overallRank": 451,
-      "sameScoreRank": 27,
+      "overallRank": 450,
+      "sameScoreRank": 26,
       "category": "MCU作品",
       "mediaType": "movie",
       "genre": [
@@ -11119,8 +11096,8 @@
       "year": 1984,
       "score": 78,
       "star": 2.5,
-      "overallRank": 452,
-      "sameScoreRank": 28,
+      "overallRank": 451,
+      "sameScoreRank": 27,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -11143,8 +11120,8 @@
       "year": 2000,
       "score": 78,
       "star": 2.5,
-      "overallRank": 453,
-      "sameScoreRank": 29,
+      "overallRank": 452,
+      "sameScoreRank": 28,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -11166,8 +11143,8 @@
       "year": 2014,
       "score": 78,
       "star": 2.5,
-      "overallRank": 454,
-      "sameScoreRank": 30,
+      "overallRank": 453,
+      "sameScoreRank": 29,
       "category": "ファンタジー、アドベンチャー",
       "mediaType": "movie",
       "genre": [
@@ -11187,8 +11164,8 @@
       "year": 2018,
       "score": 78,
       "star": 2.5,
-      "overallRank": 455,
-      "sameScoreRank": 31,
+      "overallRank": 454,
+      "sameScoreRank": 30,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -11202,6 +11179,29 @@
       "origin": "その他",
       "format": "live",
       "runtime": 100,
+      "exact": true
+    },
+    {
+      "id": "custom-1790322759131-6bsn",
+      "title": "じゃあ、あんたが作ってみろよ",
+      "originalTitle": "じゃあ、あんたが作ってみろよ",
+      "englishTitle": "Then You Try Making It!",
+      "year": 2025,
+      "score": 78,
+      "star": 2.5,
+      "overallRank": 455,
+      "sameScoreRank": 31,
+      "category": "Letterboxd",
+      "mediaType": "drama",
+      "genre": [
+        "コメディ",
+        "ドラマ",
+        "恋愛",
+        "TV本編"
+      ],
+      "origin": "邦画",
+      "format": "live",
+      "runtime": 46,
       "exact": true
     },
     {
@@ -17113,7 +17113,6 @@
         "lb-224-68Wo",
         "lb-187-y2b8",
         "lb-110-2aGu",
-        "custom-1790322759131-6bsn",
         "lb-135-1ZLI",
         "lb-239-kidw",
         "lb-257-2Ev2",
@@ -17124,6 +17123,7 @@
         "lb-346-1Aiw",
         "lb-344-5YPM",
         "custom-1790352007604-3jj6",
+        "custom-1790322759131-6bsn",
         "lb-407-fegG",
         "lb-56-72i",
         "lb-143-15HA",
@@ -20768,6 +20768,12 @@
       },
       "lb-299-28U0": {
         "tmdbId": 1368
+      },
+      "lb-300-28Vs": {
+        "tmdbId": 1359
+      },
+      "lb-301-2a2a": {
+        "tmdbId": 598
       }
     },
     "categoryOverrides": {},
@@ -28001,7 +28007,9 @@
       "lb-295-1Z5s": 129,
       "lb-297-28zG": 128,
       "lb-298-28Uk": 119,
-      "lb-299-28U0": 94
+      "lb-299-28U0": 94,
+      "lb-300-28Vs": 102,
+      "lb-301-2a2a": 129
     }
   }
 }
