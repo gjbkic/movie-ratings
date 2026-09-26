@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790429183812,
-  "sourceUpdatedIso": "2026-09-26T13:26:23.812Z",
+  "sourceUpdatedAt": 1790429204891,
+  "sourceUpdatedIso": "2026-09-26T13:26:44.891Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -11231,7 +11231,12 @@
       "sameScoreRank": 9,
       "category": "ピクサー・ディズニー作品",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "アクション",
+        "ファンタジー",
+        "ヒーロー",
+        "娯楽"
+      ],
       "origin": "ハリウッド",
       "format": "animation",
       "runtime": 115,
@@ -21841,7 +21846,12 @@
         "ヒーロー",
         "娯楽"
       ],
-      "lb-51-1XLm": [],
+      "lb-51-1XLm": [
+        "アクション",
+        "ファンタジー",
+        "ヒーロー",
+        "娯楽"
+      ],
       "lb-52-2b5E": [
         "ファンタジー",
         "アドベンチャー",
