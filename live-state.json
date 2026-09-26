@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790423295375,
-  "sourceUpdatedIso": "2026-09-26T11:48:15.375Z",
+  "sourceUpdatedAt": 1790423313229,
+  "sourceUpdatedIso": "2026-09-26T11:48:33.229Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -5122,32 +5122,6 @@
       "exact": true
     },
     {
-      "id": "lb-228-6eCu",
-      "title": "ストロベリーナイト",
-      "originalTitle": "",
-      "englishTitle": "Strawberry Night",
-      "year": 2013,
-      "score": 84,
-      "star": 3.5,
-      "overallRank": 207,
-      "sameScoreRank": 23,
-      "category": "邦画",
-      "mediaType": "movie",
-      "genre": [
-        "ドラマ",
-        "ミステリー",
-        "サスペンス",
-        "切ない",
-        "心理・内面",
-        "恋愛",
-        "シリーズ劇場版"
-      ],
-      "origin": "邦画",
-      "format": "live",
-      "runtime": null,
-      "exact": true
-    },
-    {
       "id": "lb-12-728",
       "title": "フォレストガンプ",
       "originalTitle": "",
@@ -5155,8 +5129,8 @@
       "year": 1994,
       "score": 84,
       "star": 3.5,
-      "overallRank": 208,
-      "sameScoreRank": 24,
+      "overallRank": 207,
+      "sameScoreRank": 23,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -5179,8 +5153,8 @@
       "year": 1979,
       "score": 84,
       "star": 3.5,
-      "overallRank": 209,
-      "sameScoreRank": 25,
+      "overallRank": 208,
+      "sameScoreRank": 24,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -5202,8 +5176,8 @@
       "year": 2001,
       "score": 84,
       "star": 3.5,
-      "overallRank": 210,
-      "sameScoreRank": 26,
+      "overallRank": 209,
+      "sameScoreRank": 25,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -5224,8 +5198,8 @@
       "year": 2006,
       "score": 84,
       "star": 3.5,
-      "overallRank": 211,
-      "sameScoreRank": 27,
+      "overallRank": 210,
+      "sameScoreRank": 26,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -5234,6 +5208,32 @@
         "娯楽"
       ],
       "origin": "ハリウッド",
+      "format": "live",
+      "runtime": null,
+      "exact": true
+    },
+    {
+      "id": "lb-228-6eCu",
+      "title": "ストロベリーナイト",
+      "originalTitle": "",
+      "englishTitle": "Strawberry Night",
+      "year": 2013,
+      "score": 84,
+      "star": 3.5,
+      "overallRank": 211,
+      "sameScoreRank": 27,
+      "category": "邦画",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "ミステリー",
+        "サスペンス",
+        "切ない",
+        "心理・内面",
+        "恋愛",
+        "シリーズ劇場版"
+      ],
+      "origin": "邦画",
       "format": "live",
       "runtime": null,
       "exact": true
@@ -16629,11 +16629,11 @@
         "lb-319-2ab2",
         "lb-458-2bg8",
         "lb-547-1TSo",
-        "lb-228-6eCu",
         "lb-12-728",
         "lb-554-igK",
         "lb-176-2aZm",
         "lb-381-1alk",
+        "lb-228-6eCu",
         "lb-524-7bQA",
         "lb-379-R6yo",
         "lb-545-1vWw",
