@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790421792935,
-  "sourceUpdatedIso": "2026-09-26T11:23:12.935Z",
+  "sourceUpdatedAt": 1790421801212,
+  "sourceUpdatedIso": "2026-09-26T11:23:21.212Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -13535,13 +13535,13 @@
       "overallRank": 577,
       "sameScoreRank": 6,
       "category": "Letterboxd",
-      "mediaType": "movie",
+      "mediaType": "drama",
       "genre": [
         "ドラマ",
         "恋愛",
         "サスペンス"
       ],
-      "origin": "邦画",
+      "origin": "その他",
       "format": "live",
       "runtime": null,
       "exact": true
@@ -20101,7 +20101,7 @@
       "custom-1790322757929-0kod": "movie",
       "custom-1790322758188-46qe": "movie",
       "custom-1790322760871-t21s": "movie",
-      "custom-1790322761655-im7g": "movie",
+      "custom-1790322761655-im7g": "drama",
       "custom-1790322761955-twge": "movie",
       "custom-1790322762266-mrn9": "movie",
       "custom-1790322763462-yaoz": "movie",
@@ -24945,7 +24945,7 @@
       "custom-1790322760608-2vle": "邦画",
       "custom-1790322760871-t21s": "邦画",
       "custom-1790322761365-fzvo": "邦画",
-      "custom-1790322761655-im7g": "邦画",
+      "custom-1790322761655-im7g": "その他",
       "custom-1790322761955-twge": "邦画",
       "custom-1790322762266-mrn9": "邦画",
       "custom-1790322762725-70dy": "邦画",
