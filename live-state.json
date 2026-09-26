@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790434094275,
-  "sourceUpdatedIso": "2026-09-26T14:48:14.275Z",
+  "sourceUpdatedAt": 1790434103185,
+  "sourceUpdatedIso": "2026-09-26T14:48:23.185Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -12950,30 +12950,6 @@
       "exact": true
     },
     {
-      "id": "lb-440-iAFu",
-      "title": "カメラを止めるな",
-      "originalTitle": "",
-      "englishTitle": "One Cut of the Dead",
-      "year": 2017,
-      "score": 75,
-      "star": 2,
-      "overallRank": 528,
-      "sameScoreRank": 19,
-      "category": "邦画",
-      "mediaType": "movie",
-      "genre": [
-        "どんでん返し",
-        "コメディ",
-        "ドラマ",
-        "サスペンス",
-        "娯楽"
-      ],
-      "origin": "邦画",
-      "format": "live",
-      "runtime": null,
-      "exact": true
-    },
-    {
       "id": "lb-437-O1GQ",
       "title": "鬼滅の刃 無限列車編 猗窩座再来",
       "originalTitle": "",
@@ -12981,8 +12957,8 @@
       "year": 2025,
       "score": 75,
       "star": 2,
-      "overallRank": 529,
-      "sameScoreRank": 20,
+      "overallRank": 528,
+      "sameScoreRank": 19,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -12998,6 +12974,30 @@
       ],
       "origin": "邦画",
       "format": "animation",
+      "runtime": null,
+      "exact": true
+    },
+    {
+      "id": "lb-440-iAFu",
+      "title": "カメラを止めるな",
+      "originalTitle": "",
+      "englishTitle": "One Cut of the Dead",
+      "year": 2017,
+      "score": 75,
+      "star": 2,
+      "overallRank": 529,
+      "sameScoreRank": 20,
+      "category": "邦画",
+      "mediaType": "movie",
+      "genre": [
+        "どんでん返し",
+        "コメディ",
+        "ドラマ",
+        "サスペンス",
+        "娯楽"
+      ],
+      "origin": "邦画",
+      "format": "live",
       "runtime": null,
       "exact": true
     },
@@ -17044,8 +17044,8 @@
         "lb-230-43d0",
         "lb-258-16ic",
         "lb-508-5xme",
-        "lb-440-iAFu",
-        "lb-437-O1GQ"
+        "lb-437-O1GQ",
+        "lb-440-iAFu"
       ],
       "76": [
         "lb-131-1OEc",
