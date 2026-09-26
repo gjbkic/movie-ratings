@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790424180182,
-  "sourceUpdatedIso": "2026-09-26T12:03:00.182Z",
+  "sourceUpdatedAt": 1790424191649,
+  "sourceUpdatedIso": "2026-09-26T12:03:11.649Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -12484,7 +12484,7 @@
       "overallRank": 531,
       "sameScoreRank": 6,
       "category": "Letterboxd",
-      "mediaType": "movie",
+      "mediaType": "drama",
       "genre": [
         "ミステリー",
         "コメディ",
@@ -12492,7 +12492,10 @@
         "恋愛",
         "ファンタジー",
         "ドラマ",
-        "サスペンス"
+        "サスペンス",
+        "心理・内面",
+        "TV特番・SP",
+        "娯楽"
       ],
       "origin": "邦画",
       "format": "live",
@@ -19873,7 +19876,7 @@
       "custom-1790423279439-sn81": "drama",
       "custom-1790423279786-lguu": "drama",
       "custom-1790423280120-qki8": "drama",
-      "custom-1790423280570-6eki": "movie",
+      "custom-1790423280570-6eki": "drama",
       "custom-1790423280875-9b4j": "drama",
       "lb-0-hTha": "movie",
       "lb-1-4VZ8": "movie",
@@ -24773,7 +24776,10 @@
         "恋愛",
         "ファンタジー",
         "ドラマ",
-        "サスペンス"
+        "サスペンス",
+        "心理・内面",
+        "TV特番・SP",
+        "娯楽"
       ],
       "custom-1790423280875-9b4j": [
         "ドラマ",
