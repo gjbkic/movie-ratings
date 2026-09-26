@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790430707018,
-  "sourceUpdatedIso": "2026-09-26T13:51:47.018Z",
+  "sourceUpdatedAt": 1790430727170,
+  "sourceUpdatedIso": "2026-09-26T13:52:07.170Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -9994,7 +9994,14 @@
       "sameScoreRank": 17,
       "category": "Letterboxd",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "娯楽",
+        "感動",
+        "ドラマ",
+        "コメディ",
+        "サスペンス",
+        "クライム"
+      ],
       "origin": "邦画",
       "format": "live",
       "runtime": null,
@@ -25768,7 +25775,14 @@
         "サスペンス",
         "comfort"
       ],
-      "custom-1789385860674-ow4o": [],
+      "custom-1789385860674-ow4o": [
+        "娯楽",
+        "感動",
+        "ドラマ",
+        "コメディ",
+        "サスペンス",
+        "クライム"
+      ],
       "custom-1789385860718-itqh": [
         "サスペンス",
         "ドラマ",
