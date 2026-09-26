@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790421331591,
-  "sourceUpdatedIso": "2026-09-26T11:15:31.591Z",
+  "sourceUpdatedAt": 1790421345448,
+  "sourceUpdatedIso": "2026-09-26T11:15:45.448Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -8499,6 +8499,32 @@
       "exact": true
     },
     {
+      "id": "custom-1790322769753-zbsb",
+      "title": "3年A組 ―今から皆さんは、人質です―",
+      "originalTitle": "3年A組 ―今から皆さんは、人質です―",
+      "englishTitle": "Mr. Hiiragi's Homeroom",
+      "year": 2019,
+      "score": 81,
+      "star": 3,
+      "overallRank": 346,
+      "sameScoreRank": 41,
+      "category": "Letterboxd",
+      "mediaType": "drama",
+      "genre": [
+        "クライム",
+        "ドラマ",
+        "ミステリー",
+        "サスペンス",
+        "青春・若者",
+        "社会問題・生活",
+        "娯楽"
+      ],
+      "origin": "邦画",
+      "format": "live",
+      "runtime": 45,
+      "exact": true
+    },
+    {
       "id": "lb-50-28dA",
       "title": "アイアンマン",
       "originalTitle": "",
@@ -8506,8 +8532,8 @@
       "year": 2008,
       "score": 81,
       "star": 3,
-      "overallRank": 346,
-      "sameScoreRank": 41,
+      "overallRank": 347,
+      "sameScoreRank": 42,
       "category": "MCU作品",
       "mediaType": "movie",
       "genre": [
@@ -8529,8 +8555,8 @@
       "year": 1985,
       "score": 81,
       "star": 3,
-      "overallRank": 347,
-      "sameScoreRank": 42,
+      "overallRank": 348,
+      "sameScoreRank": 43,
       "category": "ファンタジー、アドベンチャー",
       "mediaType": "movie",
       "genre": [
@@ -8543,32 +8569,6 @@
       "origin": "ハリウッド",
       "format": "live",
       "runtime": 114,
-      "exact": true
-    },
-    {
-      "id": "custom-1790322769753-zbsb",
-      "title": "3年A組 ―今から皆さんは、人質です―",
-      "originalTitle": "3年A組 ―今から皆さんは、人質です―",
-      "englishTitle": "Mr. Hiiragi's Homeroom",
-      "year": 2019,
-      "score": 81,
-      "star": 3,
-      "overallRank": 348,
-      "sameScoreRank": 43,
-      "category": "Letterboxd",
-      "mediaType": "drama",
-      "genre": [
-        "クライム",
-        "ドラマ",
-        "ミステリー",
-        "サスペンス",
-        "青春・若者",
-        "社会問題・生活",
-        "娯楽"
-      ],
-      "origin": "邦画",
-      "format": "live",
-      "runtime": 45,
       "exact": true
     },
     {
@@ -16352,9 +16352,9 @@
         "lb-377-azew",
         "lb-374-DUHM",
         "lb-27-2b2A",
+        "custom-1790322769753-zbsb",
         "lb-50-28dA",
         "lb-136-1YVC",
-        "custom-1790322769753-zbsb",
         "lb-416-2D2e"
       ],
       "82": [
