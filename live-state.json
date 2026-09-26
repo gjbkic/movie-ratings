@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790423313229,
-  "sourceUpdatedIso": "2026-09-26T11:48:33.229Z",
+  "sourceUpdatedAt": 1790423317391,
+  "sourceUpdatedIso": "2026-09-26T11:48:37.391Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -5213,32 +5213,6 @@
       "exact": true
     },
     {
-      "id": "lb-228-6eCu",
-      "title": "ストロベリーナイト",
-      "originalTitle": "",
-      "englishTitle": "Strawberry Night",
-      "year": 2013,
-      "score": 84,
-      "star": 3.5,
-      "overallRank": 211,
-      "sameScoreRank": 27,
-      "category": "邦画",
-      "mediaType": "movie",
-      "genre": [
-        "ドラマ",
-        "ミステリー",
-        "サスペンス",
-        "切ない",
-        "心理・内面",
-        "恋愛",
-        "シリーズ劇場版"
-      ],
-      "origin": "邦画",
-      "format": "live",
-      "runtime": null,
-      "exact": true
-    },
-    {
       "id": "lb-524-7bQA",
       "title": "セッション",
       "originalTitle": "",
@@ -5246,8 +5220,8 @@
       "year": 2014,
       "score": 84,
       "star": 3.5,
-      "overallRank": 212,
-      "sameScoreRank": 28,
+      "overallRank": 211,
+      "sameScoreRank": 27,
       "category": "恋愛、ミュージカル",
       "mediaType": "movie",
       "genre": [
@@ -5270,8 +5244,8 @@
       "year": 2025,
       "score": 84,
       "star": 3.5,
-      "overallRank": 213,
-      "sameScoreRank": 29,
+      "overallRank": 212,
+      "sameScoreRank": 28,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -5283,6 +5257,32 @@
         "青春・若者",
         "娯楽",
         "心理・内面"
+      ],
+      "origin": "邦画",
+      "format": "live",
+      "runtime": null,
+      "exact": true
+    },
+    {
+      "id": "lb-228-6eCu",
+      "title": "ストロベリーナイト",
+      "originalTitle": "",
+      "englishTitle": "Strawberry Night",
+      "year": 2013,
+      "score": 84,
+      "star": 3.5,
+      "overallRank": 213,
+      "sameScoreRank": 29,
+      "category": "邦画",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "ミステリー",
+        "サスペンス",
+        "切ない",
+        "心理・内面",
+        "恋愛",
+        "シリーズ劇場版"
       ],
       "origin": "邦画",
       "format": "live",
@@ -16633,9 +16633,9 @@
         "lb-554-igK",
         "lb-176-2aZm",
         "lb-381-1alk",
-        "lb-228-6eCu",
         "lb-524-7bQA",
         "lb-379-R6yo",
+        "lb-228-6eCu",
         "lb-545-1vWw",
         "lb-266-1Iik",
         "lb-394-2b5O",
