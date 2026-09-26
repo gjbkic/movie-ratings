@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790426671881,
-  "sourceUpdatedIso": "2026-09-26T12:44:31.881Z",
+  "sourceUpdatedAt": 1790426690329,
+  "sourceUpdatedIso": "2026-09-26T12:44:50.329Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -9382,7 +9382,13 @@
       "sameScoreRank": 28,
       "category": "Letterboxd",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "サスペンス",
+        "クライム",
+        "スリラー",
+        "どんでん返し",
+        "娯楽"
+      ],
       "origin": "ハリウッド",
       "format": "live",
       "runtime": null,
@@ -24810,7 +24816,13 @@
         "恋愛",
         "娯楽"
       ],
-      "custom-1790185843981-dk0y": [],
+      "custom-1790185843981-dk0y": [
+        "サスペンス",
+        "クライム",
+        "スリラー",
+        "どんでん返し",
+        "娯楽"
+      ],
       "custom-1790185844080-jquu": [
         "アクション",
         "サスペンス",
