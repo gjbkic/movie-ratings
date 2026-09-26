@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790426092294,
-  "sourceUpdatedIso": "2026-09-26T12:34:52.294Z",
+  "sourceUpdatedAt": 1790426104383,
+  "sourceUpdatedIso": "2026-09-26T12:35:04.383Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -7104,7 +7104,7 @@
       ],
       "origin": "邦画",
       "format": "live",
-      "runtime": null,
+      "runtime": 127,
       "exact": true
     },
     {
@@ -8762,7 +8762,11 @@
       "genre": [
         "アクション",
         "大作",
-        "娯楽"
+        "娯楽",
+        "SF",
+        "ファンタジー",
+        "世界観",
+        "ドラマ"
       ],
       "origin": "ハリウッド",
       "format": "live",
@@ -14687,7 +14691,7 @@
       ],
       "origin": "邦画",
       "format": "live",
-      "runtime": null,
+      "runtime": 114,
       "exact": false
     },
     {
@@ -19949,6 +19953,12 @@
       },
       "lb-243-orTE": {
         "tmdbId": 657350
+      },
+      "lb-244-MGuM": {
+        "tmdbId": 1276849
+      },
+      "lb-245-z4p4": {
+        "tmdbId": 930432
       }
     },
     "categoryOverrides": {},
@@ -22583,7 +22593,11 @@
       "lb-306-fA7G": [
         "アクション",
         "大作",
-        "娯楽"
+        "娯楽",
+        "SF",
+        "ファンタジー",
+        "世界観",
+        "ドラマ"
       ],
       "lb-307-eSjI": [
         "ドラマ",
@@ -26555,7 +26569,9 @@
       "lb-240-ki8w": 11,
       "lb-241-fmjS": 131,
       "lb-242-kif8": 116,
-      "lb-243-orTE": 124
+      "lb-243-orTE": 124,
+      "lb-244-MGuM": 114,
+      "lb-245-z4p4": 127
     }
   }
 }
