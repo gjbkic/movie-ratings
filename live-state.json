@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790426282544,
-  "sourceUpdatedIso": "2026-09-26T12:38:02.544Z",
+  "sourceUpdatedAt": 1790426291078,
+  "sourceUpdatedIso": "2026-09-26T12:38:11.078Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -8889,7 +8889,10 @@
       "sameScoreRank": 6,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "comfort",
+        "娯楽"
+      ],
       "origin": "邦画",
       "format": "animation",
       "runtime": 75,
@@ -21644,7 +21647,10 @@
       "lb-143-15HA": [
         "ドラマ"
       ],
-      "lb-144-1Mne": [],
+      "lb-144-1Mne": [
+        "comfort",
+        "娯楽"
+      ],
       "lb-145-1S0A": [
         "comfort",
         "社会問題・生活",
