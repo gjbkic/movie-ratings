@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790424070780,
-  "sourceUpdatedIso": "2026-09-26T12:01:10.780Z",
+  "sourceUpdatedAt": 1790424083827,
+  "sourceUpdatedIso": "2026-09-26T12:01:23.827Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -5399,8 +5399,16 @@
       "overallRank": 218,
       "sameScoreRank": 34,
       "category": "Letterboxd",
-      "mediaType": "movie",
-      "genre": [],
+      "mediaType": "drama",
+      "genre": [
+        "心理・内面",
+        "サスペンス",
+        "ミステリー",
+        "スリラー",
+        "ドラマ",
+        "恋愛",
+        "娯楽"
+      ],
       "origin": "邦画",
       "format": "live",
       "runtime": 130,
@@ -20402,7 +20410,7 @@
       "custom-1790352007604-3jj6": "movie",
       "custom-1790358520071-ybym": "movie",
       "custom-1790420198451-g42l": "movie",
-      "custom-1790423279439-sn81": "movie",
+      "custom-1790423279439-sn81": "drama",
       "custom-1790423279786-lguu": "drama",
       "custom-1790423280120-qki8": "drama",
       "custom-1790423280570-6eki": "movie",
@@ -24643,7 +24651,15 @@
         "切ない",
         "社会問題・生活"
       ],
-      "custom-1790423279439-sn81": [],
+      "custom-1790423279439-sn81": [
+        "心理・内面",
+        "サスペンス",
+        "ミステリー",
+        "スリラー",
+        "ドラマ",
+        "恋愛",
+        "娯楽"
+      ],
       "custom-1790423279786-lguu": [
         "コメディ",
         "サスペンス",
