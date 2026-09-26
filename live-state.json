@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790423853794,
-  "sourceUpdatedIso": "2026-09-26T11:57:33.794Z",
+  "sourceUpdatedAt": 1790423859470,
+  "sourceUpdatedIso": "2026-09-26T11:57:39.470Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -7899,6 +7899,29 @@
       "exact": true
     },
     {
+      "id": "lb-93-2au4",
+      "title": "キル・ビル Vol.2",
+      "originalTitle": "",
+      "englishTitle": "Kill Bill: Vol. 2",
+      "year": 2004,
+      "score": 81,
+      "star": 3,
+      "overallRank": 320,
+      "sameScoreRank": 16,
+      "category": "アクション",
+      "mediaType": "movie",
+      "genre": [
+        "アクション",
+        "娯楽",
+        "クライム",
+        "サスペンス"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 136,
+      "exact": true
+    },
+    {
       "id": "lb-183-x1OG",
       "title": "イカゲーム",
       "originalTitle": "",
@@ -7906,8 +7929,8 @@
       "year": 2021,
       "score": 81,
       "star": 3,
-      "overallRank": 320,
-      "sameScoreRank": 16,
+      "overallRank": 321,
+      "sameScoreRank": 17,
       "category": "Letterboxd追加",
       "mediaType": "drama",
       "genre": [
@@ -7921,29 +7944,6 @@
       "origin": "その他",
       "format": "live",
       "runtime": 56,
-      "exact": true
-    },
-    {
-      "id": "lb-93-2au4",
-      "title": "キル・ビル Vol.2",
-      "originalTitle": "",
-      "englishTitle": "Kill Bill: Vol. 2",
-      "year": 2004,
-      "score": 81,
-      "star": 3,
-      "overallRank": 321,
-      "sameScoreRank": 17,
-      "category": "アクション",
-      "mediaType": "movie",
-      "genre": [
-        "アクション",
-        "娯楽",
-        "クライム",
-        "サスペンス"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 136,
       "exact": true
     },
     {
@@ -16494,8 +16494,8 @@
         "lb-475-F1U6",
         "lb-113-5rI4",
         "lb-320-28r8",
-        "lb-183-x1OG",
         "lb-93-2au4",
+        "lb-183-x1OG",
         "lb-109-28wi",
         "lb-570-3C1m",
         "custom-1790322760608-2vle",
