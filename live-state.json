@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790424113809,
-  "sourceUpdatedIso": "2026-09-26T12:01:53.809Z",
+  "sourceUpdatedAt": 1790424124223,
+  "sourceUpdatedIso": "2026-09-26T12:02:04.223Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -4840,13 +4840,14 @@
       "overallRank": 195,
       "sameScoreRank": 11,
       "category": "Letterboxd",
-      "mediaType": "movie",
+      "mediaType": "drama",
       "genre": [
         "ドラマ",
         "コメディ",
         "ミステリー",
         "comfort",
-        "娯楽"
+        "娯楽",
+        "TV特番・SP"
       ],
       "origin": "邦画",
       "format": "live",
@@ -5408,8 +5409,8 @@
         "ドラマ",
         "恋愛",
         "切ない",
-        "TV特番・SP",
-        "娯楽"
+        "娯楽",
+        "TV特番・SP"
       ],
       "origin": "邦画",
       "format": "live",
@@ -6849,12 +6850,13 @@
       "overallRank": 276,
       "sameScoreRank": 19,
       "category": "Letterboxd",
-      "mediaType": "movie",
+      "mediaType": "drama",
       "genre": [
         "サスペンス",
         "アクション",
         "ファンタジー",
-        "切ない"
+        "切ない",
+        "TV本編"
       ],
       "origin": "その他",
       "format": "live",
@@ -7724,10 +7726,10 @@
         "ドラマ",
         "コメディ",
         "サスペンス",
-        "TV特番・SP",
         "娯楽",
         "comfort",
-        "ミステリー"
+        "ミステリー",
+        "TV特番・SP"
       ],
       "origin": "邦画",
       "format": "live",
@@ -8058,14 +8060,15 @@
       "overallRank": 326,
       "sameScoreRank": 21,
       "category": "Letterboxd追加",
-      "mediaType": "movie",
+      "mediaType": "drama",
       "genre": [
         "サスペンス",
         "コメディ",
         "ドラマ",
         "娯楽",
         "どんでん返し",
-        "comfort"
+        "comfort",
+        "TV特番・SP"
       ],
       "origin": "邦画",
       "format": "live",
@@ -8106,13 +8109,14 @@
       "overallRank": 328,
       "sameScoreRank": 23,
       "category": "Letterboxd",
-      "mediaType": "movie",
+      "mediaType": "drama",
       "genre": [
         "ミステリー",
         "サスペンス",
         "アクション",
         "ファンタジー",
-        "世界観"
+        "世界観",
+        "TV本編"
       ],
       "origin": "その他",
       "format": "live",
@@ -8185,9 +8189,9 @@
         "サスペンス",
         "恋愛",
         "ドラマ",
-        "TV特番・SP",
         "娯楽",
-        "切ない"
+        "切ない",
+        "TV特番・SP"
       ],
       "origin": "邦画",
       "format": "live",
@@ -8319,12 +8323,13 @@
       "overallRank": 337,
       "sameScoreRank": 32,
       "category": "Letterboxd",
-      "mediaType": "movie",
+      "mediaType": "drama",
       "genre": [
         "ファンタジー",
         "アクション",
         "クライム",
-        "娯楽"
+        "娯楽",
+        "TV本編"
       ],
       "origin": "その他",
       "format": "live",
@@ -9131,7 +9136,8 @@
         "シリーズ劇場版",
         "ファンタジー",
         "恋愛",
-        "切ない"
+        "切ない",
+        "娯楽"
       ],
       "origin": "邦画",
       "format": "live",
@@ -9167,13 +9173,14 @@
       "overallRank": 376,
       "sameScoreRank": 23,
       "category": "Letterboxd",
-      "mediaType": "movie",
+      "mediaType": "drama",
       "genre": [
         "ドラマ",
         "恋愛",
         "コメディ",
         "社会問題・生活",
-        "comfort"
+        "comfort",
+        "TV特番・SP"
       ],
       "origin": "邦画",
       "format": "live",
@@ -9603,11 +9610,12 @@
       "overallRank": 398,
       "sameScoreRank": 11,
       "category": "Letterboxd",
-      "mediaType": "movie",
+      "mediaType": "drama",
       "genre": [
         "ファンタジー",
         "アドベンチャー",
-        "アクション"
+        "アクション",
+        "TV本編"
       ],
       "origin": "その他",
       "format": "live",
@@ -10300,8 +10308,8 @@
         "ミステリー",
         "ドラマ",
         "ファンタジー",
-        "TV特番・SP",
-        "娯楽"
+        "娯楽",
+        "TV特番・SP"
       ],
       "origin": "邦画",
       "format": "live",
@@ -11012,11 +11020,11 @@
         "ドラマ",
         "クライム",
         "コメディ",
-        "TV本編",
         "恋愛",
         "サスペンス",
         "アクション",
-        "娯楽"
+        "娯楽",
+        "TV本編"
       ],
       "origin": "邦画",
       "format": "live",
@@ -11195,14 +11203,15 @@
       "overallRank": 477,
       "sameScoreRank": 19,
       "category": "Letterboxd",
-      "mediaType": "movie",
+      "mediaType": "drama",
       "genre": [
         "シリーズ劇場版",
         "コメディ",
         "サスペンス",
         "ミステリー",
         "クライム",
-        "娯楽"
+        "娯楽",
+        "TV本編"
       ],
       "origin": "邦画",
       "format": "live",
@@ -11837,7 +11846,7 @@
       "overallRank": 505,
       "sameScoreRank": 19,
       "category": "Letterboxd",
-      "mediaType": "movie",
+      "mediaType": "drama",
       "genre": [
         "シリーズ劇場版",
         "ドラマ",
@@ -11845,7 +11854,8 @@
         "サスペンス",
         "社会問題・生活",
         "娯楽",
-        "コメディ"
+        "コメディ",
+        "TV本編"
       ],
       "origin": "邦画",
       "format": "live",
@@ -13005,14 +13015,15 @@
       "overallRank": 553,
       "sameScoreRank": 7,
       "category": "Letterboxd",
-      "mediaType": "movie",
+      "mediaType": "drama",
       "genre": [
         "サスペンス",
         "ドラマ",
         "恋愛",
         "シリーズ劇場版",
         "娯楽",
-        "コメディ"
+        "コメディ",
+        "TV本編"
       ],
       "origin": "邦画",
       "format": "live",
@@ -13727,7 +13738,7 @@
         "恋愛",
         "サスペンス",
         "娯楽",
-        "TV本編"
+        "TV特番・SP"
       ],
       "origin": "邦画",
       "format": "live",
@@ -14578,7 +14589,7 @@
       ],
       "origin": "邦画",
       "format": "animation",
-      "runtime": null,
+      "runtime": 110,
       "exact": true
     },
     {
@@ -15381,7 +15392,7 @@
       "overallRank": null,
       "sameScoreRank": null,
       "category": "Letterboxd",
-      "mediaType": "movie",
+      "mediaType": "drama",
       "genre": [
         "ドラマ",
         "ミステリー",
@@ -15428,8 +15439,10 @@
       "overallRank": null,
       "sameScoreRank": null,
       "category": "Letterboxd",
-      "mediaType": "movie",
-      "genre": [],
+      "mediaType": "drama",
+      "genre": [
+        "TV特番・SP"
+      ],
       "origin": "その他",
       "format": "live",
       "runtime": null,
@@ -18187,7 +18200,9 @@
         "oldScore": null,
         "added": true,
         "_seq": 1790423280570,
-        "source": "letterboxd"
+        "source": "letterboxd",
+        "tmdbType": "movie",
+        "_lbMetaFixedV36": true
       },
       {
         "id": "custom-1790423280875-9b4j",
@@ -18825,7 +18840,8 @@
       "custom-1790423280120-qki8": 3,
       "custom-1790423279786-lguu": 2.5,
       "custom-1790423280875-9b4j": 2.5,
-      "custom-1790423279439-sn81": 3.5
+      "custom-1790423279439-sn81": 3.5,
+      "custom-1790423280570-6eki": 2
     },
     "titleOverrides": {
       "added-anchor-578": {
@@ -19752,6 +19768,15 @@
       },
       "lb-203-fyxW": {
         "tmdbId": 438058
+      },
+      "custom-1790423280570-6eki": {
+        "title": "トリック新作スペシャル3",
+        "originalTitle": "TRICK 新作スペシャル3",
+        "englishTitle": "Trick Shinsaku Special 3",
+        "tmdbId": 581949
+      },
+      "lb-204-hLIM": {
+        "tmdbId": 493006
       }
     },
     "categoryOverrides": {},
@@ -19765,6 +19790,7 @@
       "custom-1789385860057-z7ka": "other",
       "custom-1789385859985-uylk": "other",
       "lb-183-x1OG": "drama",
+      "lb-246-mqyw": "drama",
       "lb-253-SVAW": "drama",
       "lb-339-lPy0": "drama",
       "lb-386-wbAi": "drama",
@@ -19772,6 +19798,14 @@
       "lb-467-ptEI": "drama",
       "lb-475-F1U6": "drama",
       "custom-1789385860198-bkq0": "drama",
+      "custom-1789385860718-itqh": "drama",
+      "custom-1789385860756-dujj": "drama",
+      "custom-1789385860847-w7kt": "drama",
+      "custom-1790322756823-bi61": "drama",
+      "custom-1790322757185-u25f": "drama",
+      "custom-1790322757548-hd0x": "drama",
+      "custom-1790322757929-0kod": "drama",
+      "custom-1790322758188-46qe": "drama",
       "custom-1790322758638-0juw": "drama",
       "custom-1790322759131-6bsn": "drama",
       "custom-1790322759601-kg73": "drama",
@@ -19779,9 +19813,13 @@
       "custom-1790322760608-2vle": "drama",
       "custom-1790322761365-fzvo": "drama",
       "custom-1790322761655-im7g": "drama",
+      "custom-1790322761955-twge": "drama",
+      "custom-1790322762266-mrn9": "drama",
       "custom-1790322762725-70dy": "drama",
       "custom-1790322763195-rro9": "drama",
+      "custom-1790322763462-yaoz": "drama",
       "custom-1790322763953-lex8": "drama",
+      "custom-1790322764349-xp48": "drama",
       "custom-1790322764890-2w6w": "drama",
       "custom-1790322765489-7o9h": "drama",
       "custom-1790322766063-ab5l": "drama",
@@ -19791,6 +19829,11 @@
       "custom-1790322768630-3s2i": "drama",
       "custom-1790322769206-k4pm": "drama",
       "custom-1790322769753-zbsb": "drama",
+      "custom-1790423279439-sn81": "drama",
+      "custom-1790423279786-lguu": "drama",
+      "custom-1790423280120-qki8": "drama",
+      "custom-1790423280570-6eki": "movie",
+      "custom-1790423280875-9b4j": "drama",
       "lb-0-hTha": "movie",
       "lb-1-4VZ8": "movie",
       "lb-2-2a9q": "movie",
@@ -20035,7 +20078,6 @@
       "lb-243-orTE": "movie",
       "lb-244-MGuM": "movie",
       "lb-245-z4p4": "movie",
-      "lb-246-mqyw": "movie",
       "lb-247-1L2a": "movie",
       "lb-248-1KJs": "movie",
       "lb-249-4r68": "movie",
@@ -20382,9 +20424,6 @@
       "custom-1789385860580-5td5": "movie",
       "custom-1789385860628-ogsm": "movie",
       "custom-1789385860674-ow4o": "movie",
-      "custom-1789385860718-itqh": "movie",
-      "custom-1789385860756-dujj": "movie",
-      "custom-1789385860847-w7kt": "movie",
       "custom-1789385860920-hsho": "movie",
       "custom-1789385861007-nhdf": "movie",
       "custom-1789385861101-oomm": "movie",
@@ -20400,25 +20439,11 @@
       "custom-1790254612541-iyij": "movie",
       "custom-1790269934541-2ps3": "movie",
       "custom-1790322756418-p88i": "movie",
-      "custom-1790322756823-bi61": "movie",
-      "custom-1790322757185-u25f": "movie",
-      "custom-1790322757548-hd0x": "movie",
-      "custom-1790322757929-0kod": "movie",
-      "custom-1790322758188-46qe": "movie",
       "custom-1790322760871-t21s": "movie",
-      "custom-1790322761955-twge": "drama",
-      "custom-1790322762266-mrn9": "movie",
-      "custom-1790322763462-yaoz": "movie",
-      "custom-1790322764349-xp48": "movie",
       "custom-1790322768095-ya1h": "movie",
       "custom-1790352007604-3jj6": "movie",
       "custom-1790358520071-ybym": "movie",
-      "custom-1790420198451-g42l": "movie",
-      "custom-1790423279439-sn81": "drama",
-      "custom-1790423279786-lguu": "drama",
-      "custom-1790423280120-qki8": "drama",
-      "custom-1790423280570-6eki": "movie",
-      "custom-1790423280875-9b4j": "drama"
+      "custom-1790420198451-g42l": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -21961,7 +21986,8 @@
         "シリーズ劇場版",
         "ファンタジー",
         "恋愛",
-        "切ない"
+        "切ない",
+        "娯楽"
       ],
       "lb-236-iLeu": [
         "胸糞",
@@ -22027,7 +22053,8 @@
         "ドラマ",
         "娯楽",
         "どんでん返し",
-        "comfort"
+        "comfort",
+        "TV特番・SP"
       ],
       "lb-247-1L2a": [],
       "lb-248-1KJs": [],
@@ -24297,7 +24324,8 @@
         "恋愛",
         "シリーズ劇場版",
         "娯楽",
-        "コメディ"
+        "コメディ",
+        "TV本編"
       ],
       "custom-1789385860756-dujj": [
         "シリーズ劇場版",
@@ -24306,7 +24334,8 @@
         "サスペンス",
         "社会問題・生活",
         "娯楽",
-        "コメディ"
+        "コメディ",
+        "TV本編"
       ],
       "custom-1789385860847-w7kt": [
         "シリーズ劇場版",
@@ -24314,7 +24343,8 @@
         "サスペンス",
         "ミステリー",
         "クライム",
-        "娯楽"
+        "娯楽",
+        "TV本編"
       ],
       "custom-1789385860920-hsho": [
         "子供向け",
@@ -24438,7 +24468,8 @@
         "恋愛",
         "コメディ",
         "社会問題・生活",
-        "comfort"
+        "comfort",
+        "TV特番・SP"
       ],
       "custom-1790322758638-0juw": [
         "ドラマ",
@@ -24499,23 +24530,24 @@
         "恋愛",
         "サスペンス",
         "娯楽",
-        "TV本編"
+        "TV特番・SP"
       ],
       "custom-1790322761955-twge": [
         "ドラマ",
         "コメディ",
         "サスペンス",
-        "TV特番・SP",
         "娯楽",
         "comfort",
-        "ミステリー"
+        "ミステリー",
+        "TV特番・SP"
       ],
       "custom-1790322762266-mrn9": [
         "ドラマ",
         "コメディ",
         "ミステリー",
         "comfort",
-        "娯楽"
+        "娯楽",
+        "TV特番・SP"
       ],
       "custom-1790322762725-70dy": [
         "クライム",
@@ -24613,27 +24645,33 @@
         "サスペンス",
         "アクション",
         "ファンタジー",
-        "切ない"
+        "切ない",
+        "TV本編"
       ],
       "custom-1790322757185-u25f": [
         "ファンタジー",
         "アドベンチャー",
-        "アクション"
+        "アクション",
+        "TV本編"
       ],
       "custom-1790322757548-hd0x": [
         "ファンタジー",
         "アクション",
         "クライム",
-        "娯楽"
+        "娯楽",
+        "TV本編"
       ],
       "custom-1790322757929-0kod": [
         "ミステリー",
         "サスペンス",
         "アクション",
         "ファンタジー",
-        "世界観"
+        "世界観",
+        "TV本編"
       ],
-      "custom-1790322764349-xp48": [],
+      "custom-1790322764349-xp48": [
+        "TV特番・SP"
+      ],
       "custom-1790352007604-3jj6": [
         "ミステリー",
         "コメディ",
@@ -24664,8 +24702,8 @@
         "ドラマ",
         "恋愛",
         "切ない",
-        "TV特番・SP",
-        "娯楽"
+        "娯楽",
+        "TV特番・SP"
       ],
       "custom-1790423279786-lguu": [
         "コメディ",
@@ -24673,8 +24711,8 @@
         "ミステリー",
         "ドラマ",
         "ファンタジー",
-        "TV特番・SP",
-        "娯楽"
+        "娯楽",
+        "TV特番・SP"
       ],
       "custom-1790423280120-qki8": [
         "コメディ",
@@ -24682,9 +24720,9 @@
         "サスペンス",
         "恋愛",
         "ドラマ",
-        "TV特番・SP",
         "娯楽",
-        "切ない"
+        "切ない",
+        "TV特番・SP"
       ],
       "custom-1790423280570-6eki": [
         "ミステリー",
@@ -24694,11 +24732,11 @@
         "ドラマ",
         "クライム",
         "コメディ",
-        "TV本編",
         "恋愛",
         "サスペンス",
         "アクション",
-        "娯楽"
+        "娯楽",
+        "TV本編"
       ]
     },
     "originOverrides": {
@@ -26264,7 +26302,8 @@
       "custom-1790423279786-lguu": 100,
       "custom-1790423280120-qki8": 113,
       "custom-1790423280570-6eki": 107,
-      "custom-1790423280875-9b4j": 55
+      "custom-1790423280875-9b4j": 55,
+      "lb-204-hLIM": 110
     }
   }
 }
