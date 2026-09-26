@@ -13,7 +13,7 @@
 <body><div class="boot"><b>映画データを読み込み中…</b><br>ランキングと採点データはそのまま保持されます。</div>
 <script>
 (async()=>{
-  const APP_BUILD='20260927d';
+  const APP_BUILD='20260927e';
   try{
     const vr=await fetch('./app-version.json?t='+Date.now(),{cache:'no-store'});
     if(vr.ok){
@@ -24,7 +24,7 @@
     }
   }catch(_){}
   try{
-    const r=await fetch('./index-v13.html?v=20260927d',{cache:'no-store'});
+    const r=await fetch('./index-v13.html?v=20260927e',{cache:'no-store'});
     if(!r.ok)throw new Error('base '+r.status);
     let html=await r.text();
 
@@ -39,7 +39,7 @@
     const robustLb=`async function fetchLbRss(username){const url=\`https://letterboxd.com/\${encodeURIComponent(username)}/rss/\`,cacheKey="movie30_lb_rss_cache_"+username,targets=[url,"https://api.allorigins.win/raw?url="+encodeURIComponent(url),"https://corsproxy.io/?url="+encodeURIComponent(url),"https://api.codetabs.com/v1/proxy?quest="+encodeURIComponent(url)];let errs=[];for(const target of targets){try{const r=await fetch(target,{cache:"no-store",headers:{Accept:"application/rss+xml,application/xml,text/xml,text/plain,*/*"}});if(!r.ok)throw new Error("HTTP "+r.status);const text=await r.text();if(!/<(?:rss|item)[\\s>]/i.test(text))throw new Error("RSS形式ではありません");try{localStorage.setItem(cacheKey,JSON.stringify({at:Date.now(),text}))}catch(_){}return text}catch(e){errs.push(e?.message||String(e))}}try{const c=JSON.parse(localStorage.getItem(cacheKey)||"null");if(c?.text)return c.text}catch(_){}throw new Error("RSSを取得できませんでした"+(errs.length?" ("+errs.join(" / ")+")":""))}`;
     html=html.replace(/async function fetchLbRss\(username\)\{[\s\S]*?\}function normKey/,robustLb+'function normKey');
 
-    html=html.replace('</body>','<script src="./patch-v14.js?v=20260927d"><\/script><script src="./patch-v15.js?v=20260927d"><\/script><script src="./patch-v16.js?v=20260927d"><\/script><script src="./patch-v17.js?v=20260927d"><\/script><script src="./patch-v18.js?v=20260927d"><\/script><script src="./patch-v19.js?v=20260927d"><\/script><script src="./patch-v20.js?v=20260927d"><\/script><script src="./patch-v21.js?v=20260927d"><\/script><script src="./patch-v22.js?v=20260927d"><\/script><script src="./patch-v23.js?v=20260927d"><\/script><script src="./patch-v24.js?v=20260927d"><\/script><script src="./patch-v25.js?v=20260927d"><\/script><script src="./patch-v26.js?v=20260927d"><\/script><script src="./patch-v27.js?v=20260927d"><\/script><script src="./patch-v28.js?v=20260927d"><\/script><script src="./patch-v29.js?v=20260927d"><\/script><script src="./patch-v30.js?v=20260927d"><\/script><script src="./patch-v31.js?v=20260927d"><\/script><script src="./patch-v33.js?v=20260927d"><\/script><script src="./patch-v34.js?v=20260927d"><\/script><script src="./patch-v36.js?v=20260927d"><\/script><script src="./patch-v35.js?v=20260927d"><\/script><script src="./patch-v37.js?v=20260927d"><\/script><script src="./patch-v38.js?v=20260927d"><\/script><script src="./patch-v39.js?v=20260927d"><\/script><script src="./patch-v40.js?v=20260927d"><\/script><script src="./patch-v41.js?v=20260927d"><\/script><script src="./patch-v43.js?v=20260927d"><\/script><script src="./patch-v44.js?v=20260927d"><\/script><script src="./patch-v45.js?v=20260927d"><\/script><script src="./patch-v46.js?v=20260927d"><\/script><script src="./patch-v47.js?v=20260927d"><\/script></body>');
+    html=html.replace('</body>','<script src="./patch-v14.js?v=20260927e"><\/script><script src="./patch-v15.js?v=20260927e"><\/script><script src="./patch-v16.js?v=20260927e"><\/script><script src="./patch-v17.js?v=20260927e"><\/script><script src="./patch-v18.js?v=20260927e"><\/script><script src="./patch-v19.js?v=20260927e"><\/script><script src="./patch-v20.js?v=20260927e"><\/script><script src="./patch-v21.js?v=20260927e"><\/script><script src="./patch-v22.js?v=20260927e"><\/script><script src="./patch-v23.js?v=20260927e"><\/script><script src="./patch-v24.js?v=20260927e"><\/script><script src="./patch-v25.js?v=20260927e"><\/script><script src="./patch-v26.js?v=20260927e"><\/script><script src="./patch-v27.js?v=20260927e"><\/script><script src="./patch-v28.js?v=20260927e"><\/script><script src="./patch-v29.js?v=20260927e"><\/script><script src="./patch-v30.js?v=20260927e"><\/script><script src="./patch-v31.js?v=20260927e"><\/script><script src="./patch-v33.js?v=20260927e"><\/script><script src="./patch-v34.js?v=20260927e"><\/script><script src="./patch-v36.js?v=20260927e"><\/script><script src="./patch-v35.js?v=20260927e"><\/script><script src="./patch-v37.js?v=20260927e"><\/script><script src="./patch-v38.js?v=20260927e"><\/script><script src="./patch-v39.js?v=20260927e"><\/script><script src="./patch-v40.js?v=20260927e"><\/script><script src="./patch-v41.js?v=20260927e"><\/script><script src="./patch-v43.js?v=20260927e"><\/script><script src="./patch-v44.js?v=20260927e"><\/script><script src="./patch-v45.js?v=20260927e"><\/script><script src="./patch-v46.js?v=20260927e"><\/script><script src="./patch-v47.js?v=20260927e"><\/script><script src="./patch-v48.js?v=20260927e"><\/script></body>');
     document.open();document.write(html);document.close();
   }catch(e){
     document.body.innerHTML='<div class="boot"><b>読み込みに失敗しました。</b><br>'+String(e.message||e)+'</div>';
