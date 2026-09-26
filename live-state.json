@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790419437851,
-  "sourceUpdatedIso": "2026-09-26T10:43:57.851Z",
+  "sourceUpdatedAt": 1790420198765,
+  "sourceUpdatedIso": "2026-09-26T10:56:38.765Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -2013,7 +2013,7 @@
       ],
       "origin": "邦画",
       "format": "animation",
-      "runtime": null,
+      "runtime": 100,
       "exact": true
     },
     {
@@ -2279,7 +2279,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 116,
       "exact": false
     },
     {
@@ -5474,7 +5474,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 103,
       "exact": true
     },
     {
@@ -5744,7 +5744,7 @@
       ],
       "origin": "その他",
       "format": "live",
-      "runtime": null,
+      "runtime": 120,
       "exact": true
     },
     {
@@ -9593,7 +9593,7 @@
       "genre": [],
       "origin": "邦画",
       "format": "animation",
-      "runtime": null,
+      "runtime": 119,
       "exact": true
     },
     {
@@ -11117,7 +11117,7 @@
       "genre": [],
       "origin": "ハリウッド",
       "format": "animation",
-      "runtime": null,
+      "runtime": 108,
       "exact": true
     },
     {
@@ -11239,7 +11239,7 @@
       ],
       "origin": "邦画",
       "format": "animation",
-      "runtime": null,
+      "runtime": 105,
       "exact": true
     },
     {
@@ -12622,7 +12622,7 @@
       ],
       "origin": "邦画",
       "format": "animation",
-      "runtime": null,
+      "runtime": 115,
       "exact": false
     },
     {
@@ -13103,7 +13103,7 @@
       ],
       "origin": "邦画",
       "format": "animation",
-      "runtime": null,
+      "runtime": 98,
       "exact": true
     },
     {
@@ -13124,7 +13124,7 @@
       ],
       "origin": "邦画",
       "format": "animation",
-      "runtime": null,
+      "runtime": 102,
       "exact": true
     },
     {
@@ -13928,7 +13928,7 @@
       ],
       "origin": "邦画",
       "format": "animation",
-      "runtime": null,
+      "runtime": 119,
       "exact": true
     },
     {
@@ -14069,7 +14069,7 @@
       ],
       "origin": "ハリウッド",
       "format": "animation",
-      "runtime": null,
+      "runtime": 92,
       "exact": true
     },
     {
@@ -15314,6 +15314,27 @@
       "origin": "邦画",
       "format": "live",
       "runtime": 45,
+      "exact": false
+    },
+    {
+      "id": "custom-1790420198451-g42l",
+      "title": "エレファント・マン",
+      "originalTitle": "The Elephant Man",
+      "englishTitle": "The Elephant Man",
+      "year": 1980,
+      "score": null,
+      "star": 4.5,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "歴史"
+      ],
+      "origin": "その他",
+      "format": "live",
+      "runtime": 124,
       "exact": false
     }
   ],
@@ -17859,6 +17880,23 @@
         "added": true,
         "_seq": 1790358520071,
         "source": "letterboxd"
+      },
+      {
+        "id": "custom-1790420198451-g42l",
+        "title": "エレファント・マン",
+        "originalTitle": "The Elephant Man",
+        "englishTitle": "The Elephant Man",
+        "lbTitle": "The Elephant Man",
+        "tmdbId": 1955,
+        "year": 1980,
+        "uri": "https://letterboxd.com/gjbkic/film/the-elephant-man/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 4.5,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1790420198451,
+        "source": "letterboxd"
       }
     ],
     "starOverrides": {
@@ -19245,6 +19283,42 @@
       },
       "lb-148-17uy": {
         "tmdbId": 37797
+      },
+      "lb-150-b5EQ": {
+        "tmdbId": 335797
+      },
+      "lb-151-uvFS": {
+        "tmdbId": 810693
+      },
+      "lb-152-89tc": {
+        "tmdbId": 270946
+      },
+      "lb-153-1Mvi": {
+        "tmdbId": 15283
+      },
+      "lb-154-1Mn4": {
+        "tmdbId": 15371
+      },
+      "lb-155-h2Hu": {
+        "tmdbId": 475215
+      },
+      "lb-156-ffTY": {
+        "tmdbId": 430447
+      },
+      "lb-157-aaRe": {
+        "tmdbId": 315465
+      },
+      "lb-158-1oDC": {
+        "tmdbId": 28874
+      },
+      "lb-159-18U8": {
+        "tmdbId": 37165
+      },
+      "lb-160-2b8e": {
+        "tmdbId": 105
+      },
+      "lb-161-2aUc": {
+        "tmdbId": 194
       }
     },
     "categoryOverrides": {},
@@ -19905,7 +19979,8 @@
       "custom-1790322764349-xp48": "movie",
       "custom-1790322768095-ya1h": "movie",
       "custom-1790352007604-3jj6": "movie",
-      "custom-1790358520071-ybym": "movie"
+      "custom-1790358520071-ybym": "movie",
+      "custom-1790420198451-g42l": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -24066,6 +24141,10 @@
         "SF",
         "恋愛",
         "サスペンス"
+      ],
+      "custom-1790420198451-g42l": [
+        "ドラマ",
+        "歴史"
       ]
     },
     "originOverrides": {
@@ -24725,7 +24804,8 @@
       "custom-1790322769206-k4pm": "邦画",
       "custom-1790322769753-zbsb": "邦画",
       "custom-1790352007604-3jj6": "その他",
-      "custom-1790358520071-ybym": "邦画"
+      "custom-1790358520071-ybym": "邦画",
+      "custom-1790420198451-g42l": "その他"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -25384,7 +25464,8 @@
       "custom-1790322757929-0kod": "live",
       "custom-1790322764349-xp48": "live",
       "custom-1790352007604-3jj6": "live",
-      "custom-1790358520071-ybym": "live"
+      "custom-1790358520071-ybym": "live",
+      "custom-1790420198451-g42l": "live"
     },
     "runtimeOverrides": {
       "custom-1790247938551-ixfs": 100,
@@ -25561,7 +25642,20 @@
       "lb-145-1S0A": 101,
       "lb-146-3GNa": 102,
       "lb-147-1WYO": 83,
-      "lb-148-17uy": 111
+      "lb-148-17uy": 111,
+      "lb-150-b5EQ": 108,
+      "lb-151-uvFS": 105,
+      "lb-152-89tc": 92,
+      "lb-153-1Mvi": 119,
+      "lb-154-1Mn4": 100,
+      "lb-155-h2Hu": 98,
+      "lb-156-ffTY": 102,
+      "lb-157-aaRe": 119,
+      "lb-158-1oDC": 115,
+      "lb-159-18U8": 103,
+      "lb-160-2b8e": 116,
+      "lb-161-2aUc": 120,
+      "custom-1790420198451-g42l": 124
     }
   }
 }
