@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790458227991,
-  "sourceUpdatedIso": "2026-09-26T21:30:27.991Z",
+  "sourceUpdatedAt": 1790458248146,
+  "sourceUpdatedIso": "2026-09-26T21:30:48.146Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -7169,29 +7169,6 @@
       "exact": true
     },
     {
-      "id": "lb-498-25ds",
-      "title": "17歳のカルテ",
-      "originalTitle": "Girl, Interrupted",
-      "englishTitle": "Girl, Interrupted",
-      "year": 1999,
-      "score": 82,
-      "star": 3,
-      "overallRank": 280,
-      "sameScoreRank": 23,
-      "category": "ドラマ",
-      "mediaType": "movie",
-      "genre": [
-        "ドラマ",
-        "心理・内面",
-        "青春・若者",
-        "社会問題・生活"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": null,
-      "exact": true
-    },
-    {
       "id": "lb-69-ipeM",
       "title": "僕たちはどう生きるか",
       "originalTitle": "",
@@ -7199,8 +7176,8 @@
       "year": 2023,
       "score": 82,
       "star": 3,
-      "overallRank": 281,
-      "sameScoreRank": 24,
+      "overallRank": 280,
+      "sameScoreRank": 23,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
       "genre": [
@@ -7216,6 +7193,29 @@
       "origin": "邦画",
       "format": "animation",
       "runtime": 124,
+      "exact": true
+    },
+    {
+      "id": "lb-498-25ds",
+      "title": "17歳のカルテ",
+      "originalTitle": "Girl, Interrupted",
+      "englishTitle": "Girl, Interrupted",
+      "year": 1999,
+      "score": 82,
+      "star": 3,
+      "overallRank": 281,
+      "sameScoreRank": 24,
+      "category": "ドラマ",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "心理・内面",
+        "青春・若者",
+        "社会問題・生活"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": null,
       "exact": true
     },
     {
@@ -7244,33 +7244,6 @@
       "exact": true
     },
     {
-      "id": "lb-465-F0vO",
-      "title": "ズートピア2",
-      "originalTitle": "",
-      "englishTitle": "Zootopia 2",
-      "year": 2025,
-      "score": 82,
-      "star": 3,
-      "overallRank": 283,
-      "sameScoreRank": 26,
-      "category": "ピクサー・ディズニー作品",
-      "mediaType": "movie",
-      "genre": [
-        "コメディ",
-        "恋愛",
-        "ファンタジー",
-        "アクション",
-        "子供向け",
-        "comfort",
-        "娯楽",
-        "世界観"
-      ],
-      "origin": "ハリウッド",
-      "format": "animation",
-      "runtime": null,
-      "exact": true
-    },
-    {
       "id": "lb-362-4Oh4",
       "title": "鑑定士と顔のない依頼人",
       "originalTitle": "",
@@ -7278,8 +7251,8 @@
       "year": 2013,
       "score": 82,
       "star": 3,
-      "overallRank": 284,
-      "sameScoreRank": 27,
+      "overallRank": 283,
+      "sameScoreRank": 26,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -7300,8 +7273,8 @@
       "year": 1974,
       "score": 82,
       "star": 3,
-      "overallRank": 285,
-      "sameScoreRank": 28,
+      "overallRank": 284,
+      "sameScoreRank": 27,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -7319,6 +7292,55 @@
       "exact": true
     },
     {
+      "id": "lb-465-F0vO",
+      "title": "ズートピア2",
+      "originalTitle": "",
+      "englishTitle": "Zootopia 2",
+      "year": 2025,
+      "score": 82,
+      "star": 3,
+      "overallRank": 285,
+      "sameScoreRank": 28,
+      "category": "ピクサー・ディズニー作品",
+      "mediaType": "movie",
+      "genre": [
+        "コメディ",
+        "恋愛",
+        "ファンタジー",
+        "アクション",
+        "子供向け",
+        "comfort",
+        "娯楽",
+        "世界観"
+      ],
+      "origin": "ハリウッド",
+      "format": "animation",
+      "runtime": null,
+      "exact": true
+    },
+    {
+      "id": "lb-483-1RSc",
+      "title": "天国と地獄",
+      "originalTitle": "",
+      "englishTitle": "High and Low",
+      "year": 1963,
+      "score": 82,
+      "star": 3,
+      "overallRank": 286,
+      "sameScoreRank": 29,
+      "category": "邦画",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "サスペンス",
+        "ミステリー"
+      ],
+      "origin": "邦画",
+      "format": "live",
+      "runtime": null,
+      "exact": true
+    },
+    {
       "id": "lb-315-g32A",
       "title": "20年目の告白私が犯人です",
       "originalTitle": "",
@@ -7326,8 +7348,8 @@
       "year": 2017,
       "score": 82,
       "star": 3,
-      "overallRank": 286,
-      "sameScoreRank": 29,
+      "overallRank": 287,
+      "sameScoreRank": 30,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -7339,28 +7361,6 @@
       "origin": "邦画",
       "format": "live",
       "runtime": 117,
-      "exact": true
-    },
-    {
-      "id": "lb-483-1RSc",
-      "title": "天国と地獄",
-      "originalTitle": "",
-      "englishTitle": "High and Low",
-      "year": 1963,
-      "score": 82,
-      "star": 3,
-      "overallRank": 287,
-      "sameScoreRank": 30,
-      "category": "邦画",
-      "mediaType": "movie",
-      "genre": [
-        "ドラマ",
-        "サスペンス",
-        "ミステリー"
-      ],
-      "origin": "邦画",
-      "format": "live",
-      "runtime": null,
       "exact": true
     },
     {
@@ -17751,14 +17751,14 @@
         "custom-1790322756823-bi61",
         "lb-280-230G",
         "lb-420-CFrC",
-        "lb-498-25ds",
         "lb-69-ipeM",
+        "lb-498-25ds",
         "lb-126-2b9Q",
-        "lb-465-F0vO",
         "lb-362-4Oh4",
         "lb-337-1nRe",
-        "lb-315-g32A",
+        "lb-465-F0vO",
         "lb-483-1RSc",
+        "lb-315-g32A",
         "lb-245-z4p4",
         "lb-74-70G",
         "lb-169-29rS",
