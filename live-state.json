@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790433891356,
-  "sourceUpdatedIso": "2026-09-26T14:44:51.356Z",
+  "sourceUpdatedAt": 1790433919736,
+  "sourceUpdatedIso": "2026-09-26T14:45:19.736Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -1737,7 +1737,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 133,
       "exact": true
     },
     {
@@ -2807,7 +2807,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 116,
       "exact": true
     },
     {
@@ -3179,7 +3179,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 135,
       "exact": true
     },
     {
@@ -3597,7 +3597,7 @@
       ],
       "origin": "その他",
       "format": "live",
-      "runtime": null,
+      "runtime": 122,
       "exact": true
     },
     {
@@ -6720,7 +6720,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 138,
       "exact": true
     },
     {
@@ -6882,7 +6882,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 131,
       "exact": true
     },
     {
@@ -7198,7 +7198,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 149,
       "exact": true
     },
     {
@@ -7348,7 +7348,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 102,
       "exact": true
     },
     {
@@ -7371,7 +7371,7 @@
       ],
       "origin": "その他",
       "format": "live",
-      "runtime": null,
+      "runtime": 163,
       "exact": true
     },
     {
@@ -7854,7 +7854,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 104,
       "exact": true
     },
     {
@@ -9566,7 +9566,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 131,
       "exact": true
     },
     {
@@ -9761,7 +9761,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 110,
       "exact": true
     },
     {
@@ -10651,7 +10651,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 86,
       "exact": true
     },
     {
@@ -13171,7 +13171,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 98,
       "exact": true
     },
     {
@@ -15976,7 +15976,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 103,
       "exact": true
     },
     {
@@ -20564,6 +20564,51 @@
       },
       "lb-271-29zW": {
         "tmdbId": 804
+      },
+      "lb-272-1Soi": {
+        "tmdbId": 12162
+      },
+      "lb-273-29Ji": {
+        "tmdbId": 746
+      },
+      "lb-274-1XZ4": {
+        "tmdbId": 9714
+      },
+      "lb-275-28sg": {
+        "tmdbId": 1624
+      },
+      "lb-276-7UmK": {
+        "tmdbId": 265195
+      },
+      "lb-277-eOCm": {
+        "tmdbId": 419430
+      },
+      "lb-279-215a": {
+        "tmdbId": 7270
+      },
+      "lb-280-230G": {
+        "tmdbId": 5503
+      },
+      "lb-281-2a3i": {
+        "tmdbId": 591
+      },
+      "lb-282-1Q9K": {
+        "tmdbId": 13448
+      },
+      "lb-283-hDPg": {
+        "tmdbId": 489999
+      },
+      "lb-284-1Vpy": {
+        "tmdbId": 10782
+      },
+      "lb-285-2aVu": {
+        "tmdbId": 186
+      },
+      "lb-286-2bdI": {
+        "tmdbId": 70
+      },
+      "lb-287-2amk": {
+        "tmdbId": 453
       }
     },
     "categoryOverrides": {},
@@ -27739,7 +27784,22 @@
       "lb-268-29Xu": 102,
       "lb-269-1dE0": 101,
       "lb-270-iF7M": 116,
-      "lb-271-29zW": 118
+      "lb-271-29zW": 118,
+      "lb-272-1Soi": 131,
+      "lb-273-29Ji": 163,
+      "lb-274-1XZ4": 103,
+      "lb-275-28sg": 86,
+      "lb-276-7UmK": 122,
+      "lb-277-eOCm": 104,
+      "lb-279-215a": 116,
+      "lb-280-230G": 131,
+      "lb-281-2a3i": 149,
+      "lb-282-1Q9K": 138,
+      "lb-283-hDPg": 102,
+      "lb-284-1Vpy": 98,
+      "lb-285-2aVu": 110,
+      "lb-286-2bdI": 133,
+      "lb-287-2amk": 135
     }
   }
 }
