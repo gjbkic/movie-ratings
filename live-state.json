@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790433919736,
-  "sourceUpdatedIso": "2026-09-26T14:45:19.736Z",
+  "sourceUpdatedAt": 1790433927539,
+  "sourceUpdatedIso": "2026-09-26T14:45:27.539Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -4282,7 +4282,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 129,
       "exact": true
     },
     {
@@ -4423,7 +4423,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 134,
       "exact": true
     },
     {
@@ -5396,7 +5396,7 @@
       "englishTitle": "Strawberry Night",
       "year": 2010,
       "score": 84,
-      "star": 3.5,
+      "star": 3,
       "overallRank": 218,
       "sameScoreRank": 34,
       "category": "Letterboxd",
@@ -6289,7 +6289,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 105,
       "exact": true
     },
     {
@@ -7490,7 +7490,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 139,
       "exact": true
     },
     {
@@ -8461,7 +8461,7 @@
       ],
       "origin": "その他",
       "format": "live",
-      "runtime": null,
+      "runtime": 120,
       "exact": true
     },
     {
@@ -9214,7 +9214,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 118,
       "exact": true
     },
     {
@@ -9690,7 +9690,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 116,
       "exact": true
     },
     {
@@ -10279,7 +10279,7 @@
       "englishTitle": "Ikebukuro West Gate Park SP",
       "year": 2003,
       "score": 79,
-      "star": 2.5,
+      "star": 3,
       "overallRank": 417,
       "sameScoreRank": 29,
       "category": "Letterboxd",
@@ -13826,7 +13826,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 129,
       "exact": true
     },
     {
@@ -16130,6 +16130,71 @@
       "mediaType": "drama",
       "genre": [
         "ドラマ"
+      ],
+      "origin": "邦画",
+      "format": "live",
+      "runtime": null,
+      "exact": false
+    },
+    {
+      "id": "custom-1790433924185-cva1",
+      "title": "パーム・スプリングス",
+      "originalTitle": "Palm Springs",
+      "englishTitle": "Palm Springs",
+      "year": 2020,
+      "score": null,
+      "star": 3,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "コメディ",
+        "恋愛",
+        "SF"
+      ],
+      "origin": "その他",
+      "format": "live",
+      "runtime": 90,
+      "exact": false
+    },
+    {
+      "id": "custom-1790433924585-k3b0",
+      "title": "九条の大罪",
+      "originalTitle": "九条の大罪",
+      "englishTitle": "Sins of Kujo",
+      "year": 2026,
+      "score": null,
+      "star": 2,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "drama",
+      "genre": [
+        "クライム",
+        "ドラマ",
+        "TV本編"
+      ],
+      "origin": "邦画",
+      "format": "live",
+      "runtime": 40,
+      "exact": false
+    },
+    {
+      "id": "custom-1790433925207-8m83",
+      "title": "ガス人間",
+      "originalTitle": "ガス人間",
+      "englishTitle": "Human Vapor",
+      "year": 2026,
+      "score": null,
+      "star": 2.5,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "drama",
+      "genre": [
+        "クライム",
+        "TV本編"
       ],
       "origin": "邦画",
       "format": "live",
@@ -18821,6 +18886,57 @@
         "added": true,
         "_seq": 1790423280875,
         "source": "letterboxd"
+      },
+      {
+        "id": "custom-1790433924185-cva1",
+        "title": "パーム・スプリングス",
+        "originalTitle": "Palm Springs",
+        "englishTitle": "Palm Springs",
+        "lbTitle": "Palm Springs",
+        "tmdbId": 587792,
+        "year": 2020,
+        "uri": "https://letterboxd.com/gjbkic/film/palm-springs-2020/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 3,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1790433924185,
+        "source": "letterboxd"
+      },
+      {
+        "id": "custom-1790433924585-k3b0",
+        "title": "九条の大罪",
+        "originalTitle": "九条の大罪",
+        "englishTitle": "Sins of Kujo",
+        "lbTitle": "Sins of Kujo",
+        "tmdbId": 303405,
+        "year": 2026,
+        "uri": "https://letterboxd.com/gjbkic/film/sins-of-kujo/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 2,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1790433924585,
+        "source": "letterboxd"
+      },
+      {
+        "id": "custom-1790433925207-8m83",
+        "title": "ガス人間",
+        "originalTitle": "ガス人間",
+        "englishTitle": "Human Vapor",
+        "lbTitle": "Human Vapor",
+        "tmdbId": 253960,
+        "year": 2026,
+        "uri": "https://letterboxd.com/gjbkic/film/human-vapor-2026/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 2.5,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1790433925207,
+        "source": "letterboxd"
       }
     ],
     "starOverrides": {
@@ -19421,7 +19537,7 @@
       "custom-1790322762266-mrn9": 3.5,
       "custom-1790322762725-70dy": 3,
       "custom-1790322763195-rro9": 4,
-      "custom-1790322763462-yaoz": 2.5,
+      "custom-1790322763462-yaoz": 3,
       "custom-1790322763953-lex8": 3,
       "custom-1790322764349-xp48": 2,
       "custom-1790322764890-2w6w": 2.5,
@@ -19441,7 +19557,7 @@
       "custom-1790423280120-qki8": 3,
       "custom-1790423279786-lguu": 2.5,
       "custom-1790423280875-9b4j": 2.5,
-      "custom-1790423279439-sn81": 3.5,
+      "custom-1790423279439-sn81": 3,
       "custom-1790423280570-6eki": 2
     },
     "titleOverrides": {
@@ -20609,6 +20725,30 @@
       },
       "lb-287-2amk": {
         "tmdbId": 453
+      },
+      "lb-288-2a6G": {
+        "tmdbId": 568
+      },
+      "lb-289-2avw": {
+        "tmdbId": 380
+      },
+      "lb-290-26VK": {
+        "tmdbId": 2323
+      },
+      "lb-291-dX0": {
+        "tmdbId": 45269
+      },
+      "lb-292-1S3E": {
+        "tmdbId": 12405
+      },
+      "lb-293-99fw": {
+        "tmdbId": 291805
+      },
+      "lb-294-2Bsu": {
+        "tmdbId": 75656
+      },
+      "lb-295-1Z5s": {
+        "tmdbId": 9277
       }
     },
     "categoryOverrides": {},
@@ -21275,7 +21415,10 @@
       "custom-1790322768095-ya1h": "movie",
       "custom-1790352007604-3jj6": "movie",
       "custom-1790358520071-ybym": "movie",
-      "custom-1790420198451-g42l": "movie"
+      "custom-1790420198451-g42l": "movie",
+      "custom-1790433924185-cva1": "movie",
+      "custom-1790433924585-k3b0": "drama",
+      "custom-1790433925207-8m83": "drama"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -26154,6 +26297,20 @@
         "アクション",
         "娯楽",
         "TV本編"
+      ],
+      "custom-1790433924185-cva1": [
+        "コメディ",
+        "恋愛",
+        "SF"
+      ],
+      "custom-1790433924585-k3b0": [
+        "クライム",
+        "ドラマ",
+        "TV本編"
+      ],
+      "custom-1790433925207-8m83": [
+        "クライム",
+        "TV本編"
       ]
     },
     "originOverrides": {
@@ -26819,7 +26976,10 @@
       "custom-1790423279786-lguu": "邦画",
       "custom-1790423280120-qki8": "邦画",
       "custom-1790423280570-6eki": "邦画",
-      "custom-1790423280875-9b4j": "邦画"
+      "custom-1790423280875-9b4j": "邦画",
+      "custom-1790433924185-cva1": "その他",
+      "custom-1790433924585-k3b0": "邦画",
+      "custom-1790433925207-8m83": "邦画"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -27484,7 +27644,10 @@
       "custom-1790423279786-lguu": "live",
       "custom-1790423280120-qki8": "live",
       "custom-1790423280570-6eki": "live",
-      "custom-1790423280875-9b4j": "live"
+      "custom-1790423280875-9b4j": "live",
+      "custom-1790433924185-cva1": "live",
+      "custom-1790433924585-k3b0": "live",
+      "custom-1790433925207-8m83": "live"
     },
     "runtimeOverrides": {
       "custom-1790247938551-ixfs": 100,
@@ -27799,7 +27962,17 @@
       "lb-284-1Vpy": 98,
       "lb-285-2aVu": 110,
       "lb-286-2bdI": 133,
-      "lb-287-2amk": 135
+      "lb-287-2amk": 135,
+      "lb-288-2a6G": 139,
+      "lb-289-2avw": 134,
+      "custom-1790433924185-cva1": 90,
+      "custom-1790433924585-k3b0": 40,
+      "lb-290-26VK": 105,
+      "lb-291-dX0": 118,
+      "lb-292-1S3E": 120,
+      "lb-293-99fw": 129,
+      "lb-294-2Bsu": 116,
+      "lb-295-1Z5s": 129
     }
   }
 }
