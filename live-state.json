@@ -2559,7 +2559,7 @@
       ],
       "origin": "邦画",
       "format": "live",
-      "runtime": null,
+      "runtime": 54,
       "exact": true
     },
     {
@@ -9449,7 +9449,7 @@
       ],
       "origin": "邦画",
       "format": "live",
-      "runtime": null,
+      "runtime": 108,
       "exact": true
     },
     {
@@ -10404,7 +10404,7 @@
       "genre": [],
       "origin": "邦画",
       "format": "live",
-      "runtime": null,
+      "runtime": 138,
       "exact": false
     },
     {
@@ -10752,7 +10752,7 @@
       "genre": [],
       "origin": "邦画",
       "format": "live",
-      "runtime": null,
+      "runtime": 134,
       "exact": true
     },
     {
@@ -11367,7 +11367,7 @@
       "genre": [],
       "origin": "邦画",
       "format": "live",
-      "runtime": null,
+      "runtime": 145,
       "exact": true
     },
     {
@@ -12728,7 +12728,7 @@
       ],
       "origin": "邦画",
       "format": "live",
-      "runtime": null,
+      "runtime": 120,
       "exact": true
     },
     {
@@ -13841,7 +13841,7 @@
       ],
       "origin": "邦画",
       "format": "live",
-      "runtime": null,
+      "runtime": 95,
       "exact": true
     },
     {
@@ -13956,7 +13956,7 @@
       ],
       "origin": "邦画",
       "format": "live",
-      "runtime": null,
+      "runtime": 92,
       "exact": true
     },
     {
@@ -14643,7 +14643,7 @@
       ],
       "origin": "邦画",
       "format": "live",
-      "runtime": null,
+      "runtime": 128,
       "exact": true
     },
     {
@@ -20655,6 +20655,30 @@
       },
       "lb-248-1KJs": {
         "tmdbId": 16140
+      },
+      "lb-249-4r68": {
+        "tmdbId": 137936
+      },
+      "lb-250-bAcS": {
+        "tmdbId": 345699
+      },
+      "lb-251-8TIi": {
+        "tmdbId": 286744
+      },
+      "lb-252-8THk": {
+        "tmdbId": 286737
+      },
+      "lb-254-6ZCG": {
+        "tmdbId": 237439
+      },
+      "lb-255-xDsy": {
+        "tmdbId": 890526
+      },
+      "lb-256-1HU8": {
+        "tmdbId": 17895
+      },
+      "lb-257-2Ev2": {
+        "tmdbId": 76759
       }
     },
     "categoryOverrides": {},
@@ -27479,7 +27503,16 @@
       "lb-244-MGuM": 114,
       "lb-245-z4p4": 127,
       "lb-247-1L2a": 126,
-      "lb-248-1KJs": 140
+      "lb-248-1KJs": 140,
+      "lb-249-4r68": 120,
+      "lb-250-bAcS": 108,
+      "lb-251-8TIi": 92,
+      "lb-252-8THk": 95,
+      "lb-253-SVAW": 54,
+      "lb-254-6ZCG": 138,
+      "lb-255-xDsy": 128,
+      "lb-256-1HU8": 145,
+      "lb-257-2Ev2": 134
     }
   }
 }
