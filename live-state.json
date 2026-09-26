@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790423776168,
-  "sourceUpdatedIso": "2026-09-26T11:56:16.168Z",
+  "sourceUpdatedAt": 1790423793124,
+  "sourceUpdatedIso": "2026-09-26T11:56:33.124Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -7780,33 +7780,6 @@
       "exact": true
     },
     {
-      "id": "custom-1790322760608-2vle",
-      "title": "あなたの番です",
-      "originalTitle": "あなたの番です",
-      "englishTitle": "Your Turn to Kill",
-      "year": 2019,
-      "score": 81,
-      "star": 3,
-      "overallRank": 315,
-      "sameScoreRank": 11,
-      "category": "Letterboxd",
-      "mediaType": "drama",
-      "genre": [
-        "ミステリー",
-        "ドラマ",
-        "クライム",
-        "サスペンス",
-        "どんでん返し",
-        "心理・内面",
-        "娯楽",
-        "TV本編"
-      ],
-      "origin": "邦画",
-      "format": "live",
-      "runtime": 46,
-      "exact": true
-    },
-    {
       "id": "lb-475-F1U6",
       "title": "そして誰もいなくなった",
       "originalTitle": "",
@@ -7814,8 +7787,8 @@
       "year": 2017,
       "score": 81,
       "star": 3,
-      "overallRank": 316,
-      "sameScoreRank": 12,
+      "overallRank": 315,
+      "sameScoreRank": 11,
       "category": "邦画",
       "mediaType": "drama",
       "genre": [
@@ -7838,8 +7811,8 @@
       "year": 1990,
       "score": 81,
       "star": 3,
-      "overallRank": 317,
-      "sameScoreRank": 13,
+      "overallRank": 316,
+      "sameScoreRank": 12,
       "category": "スリラー、ホラー",
       "mediaType": "movie",
       "genre": [
@@ -7862,8 +7835,8 @@
       "year": 2013,
       "score": 81,
       "star": 3,
-      "overallRank": 318,
-      "sameScoreRank": 14,
+      "overallRank": 317,
+      "sameScoreRank": 13,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -7884,8 +7857,8 @@
       "year": 2015,
       "score": 81,
       "star": 3,
-      "overallRank": 319,
-      "sameScoreRank": 15,
+      "overallRank": 318,
+      "sameScoreRank": 14,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -7907,8 +7880,8 @@
       "year": 2021,
       "score": 81,
       "star": 3,
-      "overallRank": 320,
-      "sameScoreRank": 16,
+      "overallRank": 319,
+      "sameScoreRank": 15,
       "category": "Letterboxd追加",
       "mediaType": "drama",
       "genre": [
@@ -7922,6 +7895,33 @@
       "origin": "その他",
       "format": "live",
       "runtime": 56,
+      "exact": true
+    },
+    {
+      "id": "custom-1790322760608-2vle",
+      "title": "あなたの番です",
+      "originalTitle": "あなたの番です",
+      "englishTitle": "Your Turn to Kill",
+      "year": 2019,
+      "score": 81,
+      "star": 3,
+      "overallRank": 320,
+      "sameScoreRank": 16,
+      "category": "Letterboxd",
+      "mediaType": "drama",
+      "genre": [
+        "ミステリー",
+        "ドラマ",
+        "クライム",
+        "サスペンス",
+        "どんでん返し",
+        "心理・内面",
+        "娯楽",
+        "TV本編"
+      ],
+      "origin": "邦画",
+      "format": "live",
+      "runtime": 46,
       "exact": true
     },
     {
@@ -16487,12 +16487,12 @@
         "lb-228-6eCu",
         "lb-42-1xFW",
         "lb-277-eOCm",
-        "custom-1790322760608-2vle",
         "lb-475-F1U6",
         "custom-1789408864046-u4p4",
         "lb-523-6xza",
         "lb-113-5rI4",
         "lb-183-x1OG",
+        "custom-1790322760608-2vle",
         "lb-246-mqyw",
         "lb-320-28r8",
         "lb-93-2au4",
