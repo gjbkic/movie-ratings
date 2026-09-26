@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790424444655,
-  "sourceUpdatedIso": "2026-09-26T12:07:24.655Z",
+  "sourceUpdatedAt": 1790424451657,
+  "sourceUpdatedIso": "2026-09-26T12:07:31.657Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -13164,30 +13164,6 @@
       "exact": true
     },
     {
-      "id": "custom-1790322768630-3s2i",
-      "title": "トドメの接吻",
-      "originalTitle": "トドメの接吻",
-      "englishTitle": "Kiss that Kills",
-      "year": 2018,
-      "score": 73,
-      "star": 2,
-      "overallRank": 559,
-      "sameScoreRank": 10,
-      "category": "Letterboxd",
-      "mediaType": "drama",
-      "genre": [
-        "ドラマ",
-        "ミステリー",
-        "サスペンス",
-        "恋愛",
-        "娯楽"
-      ],
-      "origin": "邦画",
-      "format": "live",
-      "runtime": 46,
-      "exact": true
-    },
-    {
       "id": "custom-1789385860459-6dw6",
       "title": "99.9-刑事専門弁護士-THE MOVIE",
       "originalTitle": "",
@@ -13195,8 +13171,8 @@
       "year": 2021,
       "score": 73,
       "star": 2,
-      "overallRank": 560,
-      "sameScoreRank": 11,
+      "overallRank": 559,
+      "sameScoreRank": 10,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -13205,7 +13181,8 @@
         "ミステリー",
         "サスペンス",
         "シリーズ劇場版",
-        "娯楽"
+        "娯楽",
+        "どんでん返し"
       ],
       "origin": "邦画",
       "format": "live",
@@ -13220,8 +13197,8 @@
       "year": 2023,
       "score": 73,
       "star": 2,
-      "overallRank": 561,
-      "sameScoreRank": 12,
+      "overallRank": 560,
+      "sameScoreRank": 11,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -13246,8 +13223,8 @@
       "year": 2000,
       "score": 73,
       "star": 2,
-      "overallRank": 562,
-      "sameScoreRank": 13,
+      "overallRank": 561,
+      "sameScoreRank": 12,
       "category": "スリラー、ホラー",
       "mediaType": "movie",
       "genre": [
@@ -13270,8 +13247,8 @@
       "year": 2016,
       "score": 73,
       "star": 2,
-      "overallRank": 563,
-      "sameScoreRank": 14,
+      "overallRank": 562,
+      "sameScoreRank": 13,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -13283,6 +13260,30 @@
       "origin": "ハリウッド",
       "format": "live",
       "runtime": null,
+      "exact": true
+    },
+    {
+      "id": "custom-1790322768630-3s2i",
+      "title": "トドメの接吻",
+      "originalTitle": "トドメの接吻",
+      "englishTitle": "Kiss that Kills",
+      "year": 2018,
+      "score": 73,
+      "star": 2,
+      "overallRank": 563,
+      "sameScoreRank": 14,
+      "category": "Letterboxd",
+      "mediaType": "drama",
+      "genre": [
+        "ドラマ",
+        "ミステリー",
+        "サスペンス",
+        "恋愛",
+        "娯楽"
+      ],
+      "origin": "邦画",
+      "format": "live",
+      "runtime": 46,
       "exact": true
     },
     {
@@ -16352,11 +16353,11 @@
         "custom-1789385860718-itqh",
         "lb-96-1WZM",
         "lb-388-enHO",
-        "custom-1790322768630-3s2i",
         "custom-1789385860459-6dw6",
         "custom-1790322768095-ya1h",
         "lb-435-1XV2",
         "lb-293-99fw",
+        "custom-1790322768630-3s2i",
         "lb-190-1oLc",
         "lb-233-2pii",
         "lb-514-2NXO",
@@ -24371,7 +24372,8 @@
         "ミステリー",
         "サスペンス",
         "シリーズ劇場版",
-        "娯楽"
+        "娯楽",
+        "どんでん返し"
       ],
       "custom-1789385860498-gvii": [
         "サスペンス",
