@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790429556639,
-  "sourceUpdatedIso": "2026-09-26T13:32:36.639Z",
+  "sourceUpdatedAt": 1790429568851,
+  "sourceUpdatedIso": "2026-09-26T13:32:48.851Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -11075,7 +11075,12 @@
       "sameScoreRank": 2,
       "category": "Letterboxd追加",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "どんでん返し",
+        "ミステリー",
+        "サスペンス",
+        "娯楽"
+      ],
       "origin": "その他",
       "format": "live",
       "runtime": null,
@@ -11096,7 +11101,8 @@
       "genre": [
         "スリラー",
         "クライム",
-        "サスペンス"
+        "サスペンス",
+        "娯楽"
       ],
       "origin": "ハリウッド",
       "format": "live",
@@ -24294,7 +24300,8 @@
       "lb-414-8gw8": [
         "スリラー",
         "クライム",
-        "サスペンス"
+        "サスペンス",
+        "娯楽"
       ],
       "lb-415-1Spq": [],
       "lb-416-2D2e": [
@@ -24798,7 +24805,12 @@
         "ドラマ",
         "恋愛"
       ],
-      "lb-482-euce": [],
+      "lb-482-euce": [
+        "どんでん返し",
+        "ミステリー",
+        "サスペンス",
+        "娯楽"
+      ],
       "lb-483-1RSc": [
         "ドラマ",
         "サスペンス",
