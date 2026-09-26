@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790424305508,
-  "sourceUpdatedIso": "2026-09-26T12:05:05.508Z",
+  "sourceUpdatedAt": 1790424324040,
+  "sourceUpdatedIso": "2026-09-26T12:05:24.040Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -8172,6 +8172,28 @@
       "exact": true
     },
     {
+      "id": "lb-372-2b7g",
+      "title": "スカーフェイス",
+      "originalTitle": "",
+      "englishTitle": "Scarface",
+      "year": 1983,
+      "score": 81,
+      "star": 3,
+      "overallRank": 331,
+      "sameScoreRank": 26,
+      "category": "マフィア、クライム",
+      "mediaType": "movie",
+      "genre": [
+        "クライム",
+        "サスペンス",
+        "アクション"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": null,
+      "exact": true
+    },
+    {
       "id": "custom-1790423280120-qki8",
       "title": "トリック新作スペシャル",
       "originalTitle": "トリック　新作スペシャル",
@@ -8179,8 +8201,8 @@
       "year": 2005,
       "score": 81,
       "star": 3,
-      "overallRank": 331,
-      "sameScoreRank": 26,
+      "overallRank": 332,
+      "sameScoreRank": 27,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -8206,8 +8228,8 @@
       "year": 2016,
       "score": 81,
       "star": 3,
-      "overallRank": 332,
-      "sameScoreRank": 27,
+      "overallRank": 333,
+      "sameScoreRank": 28,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -8222,28 +8244,6 @@
       "origin": "邦画",
       "format": "live",
       "runtime": 54,
-      "exact": true
-    },
-    {
-      "id": "lb-372-2b7g",
-      "title": "スカーフェイス",
-      "originalTitle": "",
-      "englishTitle": "Scarface",
-      "year": 1983,
-      "score": 81,
-      "star": 3,
-      "overallRank": 333,
-      "sameScoreRank": 28,
-      "category": "マフィア、クライム",
-      "mediaType": "movie",
-      "genre": [
-        "クライム",
-        "サスペンス",
-        "アクション"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": null,
       "exact": true
     },
     {
@@ -8356,7 +8356,6 @@
         "サスペンス",
         "アクション",
         "娯楽",
-        "心理・内面",
         "社会問題・生活",
         "青春・若者"
       ],
@@ -16581,9 +16580,9 @@
         "custom-1790322757929-0kod",
         "lb-326-4hka",
         "lb-384-1UhS",
+        "lb-372-2b7g",
         "custom-1790423280120-qki8",
         "custom-1790322765489-7o9h",
-        "lb-372-2b7g",
         "lb-114-psI",
         "lb-105-2bfk",
         "custom-1789929101832-iwdt",
@@ -24641,7 +24640,6 @@
         "サスペンス",
         "アクション",
         "娯楽",
-        "心理・内面",
         "社会問題・生活",
         "青春・若者"
       ],
