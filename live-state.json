@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790425286754,
-  "sourceUpdatedIso": "2026-09-26T12:21:26.754Z",
+  "sourceUpdatedAt": 1790426092294,
+  "sourceUpdatedIso": "2026-09-26T12:34:52.294Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -5825,7 +5825,7 @@
       ],
       "origin": "邦画",
       "format": "live",
-      "runtime": null,
+      "runtime": 124,
       "exact": true
     },
     {
@@ -6109,7 +6109,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 141,
       "exact": true
     },
     {
@@ -7805,7 +7805,7 @@
       ],
       "origin": "邦画",
       "format": "live",
-      "runtime": null,
+      "runtime": 127,
       "exact": true
     },
     {
@@ -8760,7 +8760,9 @@
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
-        "アクション"
+        "アクション",
+        "大作",
+        "娯楽"
       ],
       "origin": "ハリウッド",
       "format": "live",
@@ -8880,7 +8882,7 @@
       ],
       "origin": "邦画",
       "format": "live",
-      "runtime": null,
+      "runtime": 96,
       "exact": true
     },
     {
@@ -8898,7 +8900,7 @@
       "genre": [],
       "origin": "邦画",
       "format": "live",
-      "runtime": null,
+      "runtime": 116,
       "exact": true
     },
     {
@@ -9033,7 +9035,7 @@
       "genre": [],
       "origin": "邦画",
       "format": "live",
-      "runtime": null,
+      "runtime": 116,
       "exact": true
     },
     {
@@ -9169,7 +9171,7 @@
       ],
       "origin": "邦画",
       "format": "live",
-      "runtime": null,
+      "runtime": 112,
       "exact": true
     },
     {
@@ -10049,7 +10051,7 @@
       "genre": [],
       "origin": "邦画",
       "format": "live",
-      "runtime": null,
+      "runtime": 105,
       "exact": true
     },
     {
@@ -10511,7 +10513,7 @@
       ],
       "origin": "邦画",
       "format": "live",
-      "runtime": null,
+      "runtime": 129,
       "exact": true
     },
     {
@@ -10612,7 +10614,7 @@
       "genre": [],
       "origin": "邦画",
       "format": "live",
-      "runtime": null,
+      "runtime": 133,
       "exact": true
     },
     {
@@ -10976,7 +10978,7 @@
       ],
       "origin": "邦画",
       "format": "live",
-      "runtime": null,
+      "runtime": 11,
       "exact": true
     },
     {
@@ -11186,7 +11188,7 @@
       "genre": [],
       "origin": "邦画",
       "format": "live",
-      "runtime": null,
+      "runtime": 119,
       "exact": true
     },
     {
@@ -12234,7 +12236,7 @@
       ],
       "origin": "邦画",
       "format": "live",
-      "runtime": null,
+      "runtime": 130,
       "exact": true
     },
     {
@@ -12529,7 +12531,7 @@
       ],
       "origin": "邦画",
       "format": "live",
-      "runtime": null,
+      "runtime": 124,
       "exact": true
     },
     {
@@ -12702,7 +12704,7 @@
       ],
       "origin": "邦画",
       "format": "live",
-      "runtime": null,
+      "runtime": 119,
       "exact": true
     },
     {
@@ -12898,7 +12900,7 @@
       ],
       "origin": "邦画",
       "format": "live",
-      "runtime": null,
+      "runtime": 133,
       "exact": true
     },
     {
@@ -13111,7 +13113,7 @@
       ],
       "origin": "邦画",
       "format": "animation",
-      "runtime": null,
+      "runtime": 96,
       "exact": true
     },
     {
@@ -13333,7 +13335,7 @@
       ],
       "origin": "邦画",
       "format": "live",
-      "runtime": null,
+      "runtime": 119,
       "exact": true
     },
     {
@@ -13455,7 +13457,7 @@
       ],
       "origin": "邦画",
       "format": "live",
-      "runtime": null,
+      "runtime": 112,
       "exact": true
     },
     {
@@ -15478,7 +15480,7 @@
       ],
       "origin": "邦画",
       "format": "live",
-      "runtime": null,
+      "runtime": 131,
       "exact": false
     },
     {
@@ -19887,6 +19889,66 @@
       },
       "lb-222-hSNY": {
         "tmdbId": 495925
+      },
+      "lb-223-rkrO": {
+        "tmdbId": 728754
+      },
+      "lb-224-68Wo": {
+        "tmdbId": 204702
+      },
+      "lb-225-A7Am": {
+        "tmdbId": 956564
+      },
+      "lb-226-g0d6": {
+        "tmdbId": 449132
+      },
+      "lb-227-evra": {
+        "tmdbId": 411606
+      },
+      "lb-228-6eCu": {
+        "tmdbId": 208430
+      },
+      "lb-229-26tw": {
+        "tmdbId": 2671
+      },
+      "lb-231-hd9e": {
+        "tmdbId": 479034
+      },
+      "lb-232-81oI": {
+        "tmdbId": 268002
+      },
+      "lb-233-2pii": {
+        "tmdbId": 72092
+      },
+      "lb-234-2qRS": {
+        "tmdbId": 71485
+      },
+      "lb-235-8JWk": {
+        "tmdbId": 283017
+      },
+      "lb-236-iLeu": {
+        "tmdbId": 517373
+      },
+      "lb-237-6eCE": {
+        "tmdbId": 208429
+      },
+      "lb-238-290C": {
+        "tmdbId": 1251
+      },
+      "lb-239-kidw": {
+        "tmdbId": 554808
+      },
+      "lb-240-ki8w": {
+        "tmdbId": 756005
+      },
+      "lb-241-fmjS": {
+        "tmdbId": 432985
+      },
+      "lb-242-kif8": {
+        "tmdbId": 554801
+      },
+      "lb-243-orTE": {
+        "tmdbId": 657350
       }
     },
     "categoryOverrides": {},
@@ -22519,7 +22581,9 @@
         "娯楽"
       ],
       "lb-306-fA7G": [
-        "アクション"
+        "アクション",
+        "大作",
+        "娯楽"
       ],
       "lb-307-eSjI": [
         "ドラマ",
@@ -26471,7 +26535,27 @@
       "lb-219-on14": 100,
       "lb-220-Cgri": 85,
       "lb-221-7VEK": 94,
-      "lb-222-hSNY": 109
+      "lb-222-hSNY": 109,
+      "lb-223-rkrO": 96,
+      "lb-224-68Wo": 129,
+      "lb-225-A7Am": 130,
+      "lb-226-g0d6": 116,
+      "lb-227-evra": 105,
+      "lb-228-6eCu": 127,
+      "lb-229-26tw": 96,
+      "lb-231-hd9e": 119,
+      "lb-232-81oI": 112,
+      "lb-233-2pii": 119,
+      "lb-234-2qRS": 119,
+      "lb-235-8JWk": 112,
+      "lb-236-iLeu": 124,
+      "lb-237-6eCE": 133,
+      "lb-238-290C": 141,
+      "lb-239-kidw": 133,
+      "lb-240-ki8w": 11,
+      "lb-241-fmjS": 131,
+      "lb-242-kif8": 116,
+      "lb-243-orTE": 124
     }
   }
 }
