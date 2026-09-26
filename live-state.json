@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790423159474,
-  "sourceUpdatedIso": "2026-09-26T11:45:59.474Z",
+  "sourceUpdatedAt": 1790423280959,
+  "sourceUpdatedIso": "2026-09-26T11:48:00.959Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -14571,7 +14571,7 @@
       ],
       "origin": "邦画",
       "format": "animation",
-      "runtime": null,
+      "runtime": 112,
       "exact": true
     },
     {
@@ -15392,6 +15392,109 @@
       "origin": "邦画",
       "format": "live",
       "runtime": 46,
+      "exact": false
+    },
+    {
+      "id": "custom-1790423279439-sn81",
+      "title": "ストロベリーナイト",
+      "originalTitle": "ストロベリーナイト",
+      "englishTitle": "Strawberry Night",
+      "year": 2010,
+      "score": null,
+      "star": 3,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [],
+      "origin": "邦画",
+      "format": "live",
+      "runtime": 130,
+      "exact": false
+    },
+    {
+      "id": "custom-1790423279786-lguu",
+      "title": "トリック新作スペシャル2",
+      "originalTitle": "トリック新作スペシャル2",
+      "englishTitle": "Trick Shinsaku Special 2",
+      "year": 2010,
+      "score": null,
+      "star": 2.5,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "コメディ"
+      ],
+      "origin": "邦画",
+      "format": "live",
+      "runtime": 100,
+      "exact": false
+    },
+    {
+      "id": "custom-1790423280120-qki8",
+      "title": "トリック新作スペシャル",
+      "originalTitle": "トリック　新作スペシャル",
+      "englishTitle": "Trick Shinsaku Special",
+      "year": 2005,
+      "score": null,
+      "star": 3,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "コメディ",
+        "ミステリー"
+      ],
+      "origin": "邦画",
+      "format": "live",
+      "runtime": 113,
+      "exact": false
+    },
+    {
+      "id": "custom-1790423280570-6eki",
+      "title": "トリック新作スペシャル3",
+      "originalTitle": "TRICK 新作スペシャル3",
+      "englishTitle": "Trick Shinsaku Special 3",
+      "year": 2014,
+      "score": null,
+      "star": 2,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "ミステリー",
+        "コメディ"
+      ],
+      "origin": "邦画",
+      "format": "live",
+      "runtime": 107,
+      "exact": false
+    },
+    {
+      "id": "custom-1790423280875-9b4j",
+      "title": "踊る大捜査線",
+      "originalTitle": "踊る大捜査線",
+      "englishTitle": "Bayside Shakedown",
+      "year": 1997,
+      "score": null,
+      "star": 2.5,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "drama",
+      "genre": [
+        "ドラマ",
+        "クライム",
+        "コメディ",
+        "TV本編"
+      ],
+      "origin": "邦画",
+      "format": "live",
+      "runtime": 55,
       "exact": false
     }
   ],
@@ -17966,6 +18069,91 @@
         "added": true,
         "_seq": 1790420198451,
         "source": "letterboxd"
+      },
+      {
+        "id": "custom-1790423279439-sn81",
+        "title": "ストロベリーナイト",
+        "originalTitle": "ストロベリーナイト",
+        "englishTitle": "Strawberry Night",
+        "lbTitle": "Strawberry Night",
+        "tmdbId": 625530,
+        "year": 2010,
+        "uri": "https://letterboxd.com/gjbkic/film/strawberry-night-2010/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 3,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1790423279439,
+        "source": "letterboxd"
+      },
+      {
+        "id": "custom-1790423279786-lguu",
+        "title": "トリック新作スペシャル2",
+        "originalTitle": "トリック新作スペシャル2",
+        "englishTitle": "Trick Shinsaku Special 2",
+        "lbTitle": "Trick Shinsaku Special 2",
+        "tmdbId": 430738,
+        "year": 2010,
+        "uri": "https://letterboxd.com/gjbkic/film/trick-shinsaku-special-2/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 2.5,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1790423279786,
+        "source": "letterboxd"
+      },
+      {
+        "id": "custom-1790423280120-qki8",
+        "title": "トリック新作スペシャル",
+        "originalTitle": "トリック　新作スペシャル",
+        "englishTitle": "Trick Shinsaku Special",
+        "lbTitle": "Trick Shinsaku Special",
+        "tmdbId": 430925,
+        "year": 2005,
+        "uri": "https://letterboxd.com/gjbkic/film/trick-shinsaku-special/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 3,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1790423280120,
+        "source": "letterboxd"
+      },
+      {
+        "id": "custom-1790423280570-6eki",
+        "title": "トリック新作スペシャル3",
+        "originalTitle": "TRICK 新作スペシャル3",
+        "englishTitle": "Trick Shinsaku Special 3",
+        "lbTitle": "Trick Shinsaku Special 3",
+        "tmdbId": 581949,
+        "year": 2014,
+        "uri": "https://letterboxd.com/gjbkic/film/trick-shinsaku-special-3/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 2,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1790423280570,
+        "source": "letterboxd"
+      },
+      {
+        "id": "custom-1790423280875-9b4j",
+        "title": "踊る大捜査線",
+        "originalTitle": "踊る大捜査線",
+        "englishTitle": "Bayside Shakedown",
+        "lbTitle": "Bayside Shakedown",
+        "tmdbId": 20794,
+        "year": 1997,
+        "uri": "https://letterboxd.com/gjbkic/film/bayside-shakedown-1997/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 2.5,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1790423280875,
+        "source": "letterboxd"
       }
     ],
     "starOverrides": {
@@ -19506,6 +19694,9 @@
       },
       "lb-202-d1km": {
         "tmdbId": 374856
+      },
+      "lb-203-fyxW": {
+        "tmdbId": 438058
       }
     },
     "categoryOverrides": {},
@@ -20167,7 +20358,12 @@
       "custom-1790322768095-ya1h": "movie",
       "custom-1790352007604-3jj6": "movie",
       "custom-1790358520071-ybym": "movie",
-      "custom-1790420198451-g42l": "movie"
+      "custom-1790420198451-g42l": "movie",
+      "custom-1790423279439-sn81": "movie",
+      "custom-1790423279786-lguu": "movie",
+      "custom-1790423280120-qki8": "movie",
+      "custom-1790423280570-6eki": "movie",
+      "custom-1790423280875-9b4j": "drama"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -24389,6 +24585,24 @@
         "差別・人権",
         "切ない",
         "社会問題・生活"
+      ],
+      "custom-1790423279439-sn81": [],
+      "custom-1790423279786-lguu": [
+        "コメディ"
+      ],
+      "custom-1790423280120-qki8": [
+        "コメディ",
+        "ミステリー"
+      ],
+      "custom-1790423280570-6eki": [
+        "ミステリー",
+        "コメディ"
+      ],
+      "custom-1790423280875-9b4j": [
+        "ドラマ",
+        "クライム",
+        "コメディ",
+        "TV本編"
       ]
     },
     "originOverrides": {
@@ -25049,7 +25263,12 @@
       "custom-1790322769753-zbsb": "邦画",
       "custom-1790352007604-3jj6": "その他",
       "custom-1790358520071-ybym": "邦画",
-      "custom-1790420198451-g42l": "ハリウッド"
+      "custom-1790420198451-g42l": "ハリウッド",
+      "custom-1790423279439-sn81": "邦画",
+      "custom-1790423279786-lguu": "邦画",
+      "custom-1790423280120-qki8": "邦画",
+      "custom-1790423280570-6eki": "邦画",
+      "custom-1790423280875-9b4j": "邦画"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -25709,7 +25928,12 @@
       "custom-1790322764349-xp48": "live",
       "custom-1790352007604-3jj6": "live",
       "custom-1790358520071-ybym": "live",
-      "custom-1790420198451-g42l": "live"
+      "custom-1790420198451-g42l": "live",
+      "custom-1790423279439-sn81": "live",
+      "custom-1790423279786-lguu": "live",
+      "custom-1790423280120-qki8": "live",
+      "custom-1790423280570-6eki": "live",
+      "custom-1790423280875-9b4j": "live"
     },
     "runtimeOverrides": {
       "custom-1790247938551-ixfs": 100,
@@ -25938,7 +26162,13 @@
       "lb-198-42Mo": 110,
       "lb-199-6Kya": 110,
       "lb-200-7BEA": 110,
-      "lb-202-d1km": 112
+      "lb-202-d1km": 112,
+      "lb-203-fyxW": 112,
+      "custom-1790423279439-sn81": 130,
+      "custom-1790423279786-lguu": 100,
+      "custom-1790423280120-qki8": 113,
+      "custom-1790423280570-6eki": 107,
+      "custom-1790423280875-9b4j": 55
     }
   }
 }
