@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790433065339,
-  "sourceUpdatedIso": "2026-09-26T14:31:05.339Z",
+  "sourceUpdatedAt": 1790433891356,
+  "sourceUpdatedIso": "2026-09-26T14:44:51.356Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -9853,9 +9853,9 @@
         "ファンタジー",
         "アドベンチャー",
         "アクション",
-        "TV本編",
         "娯楽",
-        "サスペンス"
+        "サスペンス",
+        "TV本編"
       ],
       "origin": "その他",
       "format": "live",
@@ -11939,9 +11939,9 @@
       "mediaType": "drama",
       "genre": [
         "ミステリー",
-        "TV本編",
         "どんでん返し",
-        "娯楽"
+        "娯楽",
+        "TV本編"
       ],
       "origin": "邦画",
       "format": "live",
@@ -16135,306 +16135,6 @@
       "format": "live",
       "runtime": null,
       "exact": false
-    },
-    {
-      "id": "seed-tv-hanzawa-2013",
-      "title": "半沢直樹",
-      "originalTitle": "半沢直樹",
-      "englishTitle": "Hanzawa Naoki",
-      "year": 2013,
-      "score": null,
-      "star": 0,
-      "overallRank": null,
-      "sameScoreRank": null,
-      "category": "追加映画",
-      "mediaType": "drama",
-      "genre": [
-        "TV本編"
-      ],
-      "origin": "邦画",
-      "format": "live",
-      "runtime": null,
-      "exact": false
-    },
-    {
-      "id": "seed-tv-legalhigh-2012",
-      "title": "リーガル・ハイ",
-      "originalTitle": "リーガル・ハイ",
-      "englishTitle": "Legal High",
-      "year": 2012,
-      "score": null,
-      "star": 0,
-      "overallRank": null,
-      "sameScoreRank": null,
-      "category": "追加映画",
-      "mediaType": "drama",
-      "genre": [
-        "TV本編"
-      ],
-      "origin": "邦画",
-      "format": "live",
-      "runtime": null,
-      "exact": false
-    },
-    {
-      "id": "seed-tv-legalhigh2-2013",
-      "title": "リーガルハイ 第2期",
-      "originalTitle": "リーガルハイ 第2期",
-      "englishTitle": "Legal High 2",
-      "year": 2013,
-      "score": null,
-      "star": 0,
-      "overallRank": null,
-      "sameScoreRank": null,
-      "category": "追加映画",
-      "mediaType": "drama",
-      "genre": [
-        "TV本編"
-      ],
-      "origin": "邦画",
-      "format": "live",
-      "runtime": null,
-      "exact": false
-    },
-    {
-      "id": "seed-tv-trick-2000",
-      "title": "TRICK",
-      "originalTitle": "TRICK",
-      "englishTitle": "Trick",
-      "year": 2000,
-      "score": null,
-      "star": 0,
-      "overallRank": null,
-      "sameScoreRank": null,
-      "category": "追加映画",
-      "mediaType": "drama",
-      "genre": [
-        "TV本編"
-      ],
-      "origin": "邦画",
-      "format": "live",
-      "runtime": null,
-      "exact": false
-    },
-    {
-      "id": "seed-tv-trick2-2002",
-      "title": "TRICK2",
-      "originalTitle": "TRICK2",
-      "englishTitle": "Trick 2",
-      "year": 2002,
-      "score": null,
-      "star": 0,
-      "overallRank": null,
-      "sameScoreRank": null,
-      "category": "追加映画",
-      "mediaType": "drama",
-      "genre": [
-        "TV本編"
-      ],
-      "origin": "邦画",
-      "format": "live",
-      "runtime": null,
-      "exact": false
-    },
-    {
-      "id": "seed-tv-trick3-2003",
-      "title": "TRICK3",
-      "originalTitle": "TRICK3",
-      "englishTitle": "Trick 3",
-      "year": 2003,
-      "score": null,
-      "star": 0,
-      "overallRank": null,
-      "sameScoreRank": null,
-      "category": "追加映画",
-      "mediaType": "drama",
-      "genre": [
-        "TV本編"
-      ],
-      "origin": "邦画",
-      "format": "live",
-      "runtime": null,
-      "exact": false
-    },
-    {
-      "id": "seed-tv-hero-2001",
-      "title": "HERO",
-      "originalTitle": "HERO",
-      "englishTitle": "Hero",
-      "year": 2001,
-      "score": null,
-      "star": 0,
-      "overallRank": null,
-      "sameScoreRank": null,
-      "category": "追加映画",
-      "mediaType": "drama",
-      "genre": [
-        "TV本編"
-      ],
-      "origin": "邦画",
-      "format": "live",
-      "runtime": null,
-      "exact": false
-    },
-    {
-      "id": "seed-tv-hero-2014",
-      "title": "HERO 第2期",
-      "originalTitle": "HERO 第2期",
-      "englishTitle": "Hero 2",
-      "year": 2014,
-      "score": null,
-      "star": 0,
-      "overallRank": null,
-      "sameScoreRank": null,
-      "category": "追加映画",
-      "mediaType": "drama",
-      "genre": [
-        "TV本編"
-      ],
-      "origin": "邦画",
-      "format": "live",
-      "runtime": null,
-      "exact": false
-    },
-    {
-      "id": "seed-tv-999-2016",
-      "title": "99.9-刑事専門弁護士-",
-      "originalTitle": "99.9-刑事専門弁護士-",
-      "englishTitle": "99.9 Criminal Lawyer",
-      "year": 2016,
-      "score": null,
-      "star": 0,
-      "overallRank": null,
-      "sameScoreRank": null,
-      "category": "追加映画",
-      "mediaType": "drama",
-      "genre": [
-        "TV本編"
-      ],
-      "origin": "邦画",
-      "format": "live",
-      "runtime": null,
-      "exact": false
-    },
-    {
-      "id": "seed-tv-9992-2018",
-      "title": "99.9-刑事専門弁護士- SEASON II",
-      "originalTitle": "99.9-刑事専門弁護士- SEASON II",
-      "englishTitle": "99.9 Criminal Lawyer Season II",
-      "year": 2018,
-      "score": null,
-      "star": 0,
-      "overallRank": null,
-      "sameScoreRank": null,
-      "category": "追加映画",
-      "mediaType": "drama",
-      "genre": [
-        "TV本編"
-      ],
-      "origin": "邦画",
-      "format": "live",
-      "runtime": null,
-      "exact": false
-    },
-    {
-      "id": "seed-tv-strawberrynight-2012",
-      "title": "ストロベリーナイト",
-      "originalTitle": "ストロベリーナイト",
-      "englishTitle": "Strawberry Night",
-      "year": 2012,
-      "score": null,
-      "star": 0,
-      "overallRank": null,
-      "sameScoreRank": null,
-      "category": "追加映画",
-      "mediaType": "drama",
-      "genre": [
-        "TV本編"
-      ],
-      "origin": "邦画",
-      "format": "live",
-      "runtime": null,
-      "exact": false
-    },
-    {
-      "id": "seed-tv-galileo-2007",
-      "title": "ガリレオ",
-      "originalTitle": "ガリレオ",
-      "englishTitle": "Galileo",
-      "year": 2007,
-      "score": null,
-      "star": 0,
-      "overallRank": null,
-      "sameScoreRank": null,
-      "category": "追加映画",
-      "mediaType": "drama",
-      "genre": [
-        "TV本編"
-      ],
-      "origin": "邦画",
-      "format": "live",
-      "runtime": null,
-      "exact": false
-    },
-    {
-      "id": "seed-tv-liargame-2007",
-      "title": "LIAR GAME",
-      "originalTitle": "LIAR GAME",
-      "englishTitle": "Liar Game",
-      "year": 2007,
-      "score": null,
-      "star": 0,
-      "overallRank": null,
-      "sameScoreRank": null,
-      "category": "追加映画",
-      "mediaType": "drama",
-      "genre": [
-        "TV本編"
-      ],
-      "origin": "邦画",
-      "format": "live",
-      "runtime": null,
-      "exact": false
-    },
-    {
-      "id": "seed-tv-codeblue-2008",
-      "title": "コード・ブルー -ドクターヘリ緊急救命-",
-      "originalTitle": "コード・ブルー -ドクターヘリ緊急救命-",
-      "englishTitle": "Code Blue",
-      "year": 2008,
-      "score": null,
-      "star": 0,
-      "overallRank": null,
-      "sameScoreRank": null,
-      "category": "追加映画",
-      "mediaType": "drama",
-      "genre": [
-        "TV本編"
-      ],
-      "origin": "邦画",
-      "format": "live",
-      "runtime": null,
-      "exact": false
-    },
-    {
-      "id": "seed-tv-boss-2009",
-      "title": "BOSS",
-      "originalTitle": "BOSS",
-      "englishTitle": "Boss",
-      "year": 2009,
-      "score": null,
-      "star": 0,
-      "overallRank": null,
-      "sameScoreRank": null,
-      "category": "追加映画",
-      "mediaType": "drama",
-      "genre": [
-        "TV本編"
-      ],
-      "origin": "邦画",
-      "format": "live",
-      "runtime": null,
-      "exact": false
     }
   ],
   "state": {
@@ -19121,276 +18821,6 @@
         "added": true,
         "_seq": 1790423280875,
         "source": "letterboxd"
-      },
-      {
-        "id": "seed-tv-hanzawa-2013",
-        "title": "半沢直樹",
-        "originalTitle": "半沢直樹",
-        "englishTitle": "Hanzawa Naoki",
-        "lbTitle": "Hanzawa Naoki",
-        "tmdbId": null,
-        "tmdbType": "tv",
-        "year": 2013,
-        "uri": "",
-        "category": "追加映画",
-        "order": 999999,
-        "star": 0,
-        "oldScore": null,
-        "added": true,
-        "_seq": 1790426806159,
-        "source": "manual-confirmed-watched"
-      },
-      {
-        "id": "seed-tv-legalhigh-2012",
-        "title": "リーガル・ハイ",
-        "originalTitle": "リーガル・ハイ",
-        "englishTitle": "Legal High",
-        "lbTitle": "Legal High",
-        "tmdbId": null,
-        "tmdbType": "tv",
-        "year": 2012,
-        "uri": "",
-        "category": "追加映画",
-        "order": 999999,
-        "star": 0,
-        "oldScore": null,
-        "added": true,
-        "_seq": 1790426806160,
-        "source": "manual-confirmed-watched"
-      },
-      {
-        "id": "seed-tv-legalhigh2-2013",
-        "title": "リーガルハイ 第2期",
-        "originalTitle": "リーガルハイ 第2期",
-        "englishTitle": "Legal High 2",
-        "lbTitle": "Legal High 2",
-        "tmdbId": null,
-        "tmdbType": "tv",
-        "year": 2013,
-        "uri": "",
-        "category": "追加映画",
-        "order": 999999,
-        "star": 0,
-        "oldScore": null,
-        "added": true,
-        "_seq": 1790426806161,
-        "source": "manual-confirmed-watched"
-      },
-      {
-        "id": "seed-tv-trick-2000",
-        "title": "TRICK",
-        "originalTitle": "TRICK",
-        "englishTitle": "Trick",
-        "lbTitle": "Trick",
-        "tmdbId": null,
-        "tmdbType": "tv",
-        "year": 2000,
-        "uri": "",
-        "category": "追加映画",
-        "order": 999999,
-        "star": 0,
-        "oldScore": null,
-        "added": true,
-        "_seq": 1790426806162,
-        "source": "manual-confirmed-watched"
-      },
-      {
-        "id": "seed-tv-trick2-2002",
-        "title": "TRICK2",
-        "originalTitle": "TRICK2",
-        "englishTitle": "Trick 2",
-        "lbTitle": "Trick 2",
-        "tmdbId": null,
-        "tmdbType": "tv",
-        "year": 2002,
-        "uri": "",
-        "category": "追加映画",
-        "order": 999999,
-        "star": 0,
-        "oldScore": null,
-        "added": true,
-        "_seq": 1790426806163,
-        "source": "manual-confirmed-watched"
-      },
-      {
-        "id": "seed-tv-trick3-2003",
-        "title": "TRICK3",
-        "originalTitle": "TRICK3",
-        "englishTitle": "Trick 3",
-        "lbTitle": "Trick 3",
-        "tmdbId": null,
-        "tmdbType": "tv",
-        "year": 2003,
-        "uri": "",
-        "category": "追加映画",
-        "order": 999999,
-        "star": 0,
-        "oldScore": null,
-        "added": true,
-        "_seq": 1790426806166,
-        "source": "manual-confirmed-watched"
-      },
-      {
-        "id": "seed-tv-hero-2001",
-        "title": "HERO",
-        "originalTitle": "HERO",
-        "englishTitle": "Hero",
-        "lbTitle": "Hero",
-        "tmdbId": null,
-        "tmdbType": "tv",
-        "year": 2001,
-        "uri": "",
-        "category": "追加映画",
-        "order": 999999,
-        "star": 0,
-        "oldScore": null,
-        "added": true,
-        "_seq": 1790426806167,
-        "source": "manual-confirmed-watched"
-      },
-      {
-        "id": "seed-tv-hero-2014",
-        "title": "HERO 第2期",
-        "originalTitle": "HERO 第2期",
-        "englishTitle": "Hero 2",
-        "lbTitle": "Hero 2",
-        "tmdbId": null,
-        "tmdbType": "tv",
-        "year": 2014,
-        "uri": "",
-        "category": "追加映画",
-        "order": 999999,
-        "star": 0,
-        "oldScore": null,
-        "added": true,
-        "_seq": 1790426806169,
-        "source": "manual-confirmed-watched"
-      },
-      {
-        "id": "seed-tv-999-2016",
-        "title": "99.9-刑事専門弁護士-",
-        "originalTitle": "99.9-刑事専門弁護士-",
-        "englishTitle": "99.9 Criminal Lawyer",
-        "lbTitle": "99.9 Criminal Lawyer",
-        "tmdbId": null,
-        "tmdbType": "tv",
-        "year": 2016,
-        "uri": "",
-        "category": "追加映画",
-        "order": 999999,
-        "star": 0,
-        "oldScore": null,
-        "added": true,
-        "_seq": 1790426806170,
-        "source": "manual-confirmed-watched"
-      },
-      {
-        "id": "seed-tv-9992-2018",
-        "title": "99.9-刑事専門弁護士- SEASON II",
-        "originalTitle": "99.9-刑事専門弁護士- SEASON II",
-        "englishTitle": "99.9 Criminal Lawyer Season II",
-        "lbTitle": "99.9 Criminal Lawyer Season II",
-        "tmdbId": null,
-        "tmdbType": "tv",
-        "year": 2018,
-        "uri": "",
-        "category": "追加映画",
-        "order": 999999,
-        "star": 0,
-        "oldScore": null,
-        "added": true,
-        "_seq": 1790426806171,
-        "source": "manual-confirmed-watched"
-      },
-      {
-        "id": "seed-tv-strawberrynight-2012",
-        "title": "ストロベリーナイト",
-        "originalTitle": "ストロベリーナイト",
-        "englishTitle": "Strawberry Night",
-        "lbTitle": "Strawberry Night",
-        "tmdbId": null,
-        "tmdbType": "tv",
-        "year": 2012,
-        "uri": "",
-        "category": "追加映画",
-        "order": 999999,
-        "star": 0,
-        "oldScore": null,
-        "added": true,
-        "_seq": 1790426806172,
-        "source": "manual-confirmed-watched"
-      },
-      {
-        "id": "seed-tv-galileo-2007",
-        "title": "ガリレオ",
-        "originalTitle": "ガリレオ",
-        "englishTitle": "Galileo",
-        "lbTitle": "Galileo",
-        "tmdbId": null,
-        "tmdbType": "tv",
-        "year": 2007,
-        "uri": "",
-        "category": "追加映画",
-        "order": 999999,
-        "star": 0,
-        "oldScore": null,
-        "added": true,
-        "_seq": 1790426806173,
-        "source": "manual-confirmed-watched"
-      },
-      {
-        "id": "seed-tv-liargame-2007",
-        "title": "LIAR GAME",
-        "originalTitle": "LIAR GAME",
-        "englishTitle": "Liar Game",
-        "lbTitle": "Liar Game",
-        "tmdbId": null,
-        "tmdbType": "tv",
-        "year": 2007,
-        "uri": "",
-        "category": "追加映画",
-        "order": 999999,
-        "star": 0,
-        "oldScore": null,
-        "added": true,
-        "_seq": 1790426806174,
-        "source": "manual-confirmed-watched"
-      },
-      {
-        "id": "seed-tv-codeblue-2008",
-        "title": "コード・ブルー -ドクターヘリ緊急救命-",
-        "originalTitle": "コード・ブルー -ドクターヘリ緊急救命-",
-        "englishTitle": "Code Blue",
-        "lbTitle": "Code Blue",
-        "tmdbId": null,
-        "tmdbType": "tv",
-        "year": 2008,
-        "uri": "",
-        "category": "追加映画",
-        "order": 999999,
-        "star": 0,
-        "oldScore": null,
-        "added": true,
-        "_seq": 1790426806175,
-        "source": "manual-confirmed-watched"
-      },
-      {
-        "id": "seed-tv-boss-2009",
-        "title": "BOSS",
-        "originalTitle": "BOSS",
-        "englishTitle": "Boss",
-        "lbTitle": "Boss",
-        "tmdbId": null,
-        "tmdbType": "tv",
-        "year": 2009,
-        "uri": "",
-        "category": "追加映画",
-        "order": 999999,
-        "star": 0,
-        "oldScore": null,
-        "added": true,
-        "_seq": 1790426806176,
-        "source": "manual-confirmed-watched"
       }
     ],
     "starOverrides": {
@@ -21152,21 +20582,6 @@
       "custom-1790423280120-qki8": "drama",
       "custom-1790423280570-6eki": "drama",
       "custom-1790423280875-9b4j": "drama",
-      "seed-tv-hanzawa-2013": "drama",
-      "seed-tv-legalhigh-2012": "drama",
-      "seed-tv-legalhigh2-2013": "drama",
-      "seed-tv-trick-2000": "drama",
-      "seed-tv-trick2-2002": "drama",
-      "seed-tv-trick3-2003": "drama",
-      "seed-tv-hero-2001": "drama",
-      "seed-tv-hero-2014": "drama",
-      "seed-tv-999-2016": "drama",
-      "seed-tv-9992-2018": "drama",
-      "seed-tv-strawberrynight-2012": "drama",
-      "seed-tv-galileo-2007": "drama",
-      "seed-tv-liargame-2007": "drama",
-      "seed-tv-codeblue-2008": "drama",
-      "seed-tv-boss-2009": "drama",
       "lb-0-hTha": "movie",
       "lb-1-4VZ8": "movie",
       "lb-2-2a9q": "movie",
@@ -26104,9 +25519,9 @@
       ],
       "custom-1789385860198-bkq0": [
         "ミステリー",
-        "TV本編",
         "どんでん返し",
-        "娯楽"
+        "娯楽",
+        "TV本編"
       ],
       "custom-1789385860247-k5ps": [
         "コメディ",
@@ -26553,9 +25968,9 @@
         "ファンタジー",
         "アドベンチャー",
         "アクション",
-        "TV本編",
         "娯楽",
-        "サスペンス"
+        "サスペンス",
+        "TV本編"
       ],
       "custom-1790322757548-hd0x": [
         "ファンタジー",
@@ -26654,51 +26069,6 @@
         "サスペンス",
         "アクション",
         "娯楽",
-        "TV本編"
-      ],
-      "seed-tv-hanzawa-2013": [
-        "TV本編"
-      ],
-      "seed-tv-legalhigh-2012": [
-        "TV本編"
-      ],
-      "seed-tv-legalhigh2-2013": [
-        "TV本編"
-      ],
-      "seed-tv-trick-2000": [
-        "TV本編"
-      ],
-      "seed-tv-trick2-2002": [
-        "TV本編"
-      ],
-      "seed-tv-trick3-2003": [
-        "TV本編"
-      ],
-      "seed-tv-hero-2001": [
-        "TV本編"
-      ],
-      "seed-tv-hero-2014": [
-        "TV本編"
-      ],
-      "seed-tv-999-2016": [
-        "TV本編"
-      ],
-      "seed-tv-9992-2018": [
-        "TV本編"
-      ],
-      "seed-tv-strawberrynight-2012": [
-        "TV本編"
-      ],
-      "seed-tv-galileo-2007": [
-        "TV本編"
-      ],
-      "seed-tv-liargame-2007": [
-        "TV本編"
-      ],
-      "seed-tv-codeblue-2008": [
-        "TV本編"
-      ],
-      "seed-tv-boss-2009": [
         "TV本編"
       ]
     },
@@ -27365,22 +26735,7 @@
       "custom-1790423279786-lguu": "邦画",
       "custom-1790423280120-qki8": "邦画",
       "custom-1790423280570-6eki": "邦画",
-      "custom-1790423280875-9b4j": "邦画",
-      "seed-tv-hanzawa-2013": "邦画",
-      "seed-tv-legalhigh-2012": "邦画",
-      "seed-tv-legalhigh2-2013": "邦画",
-      "seed-tv-trick-2000": "邦画",
-      "seed-tv-trick2-2002": "邦画",
-      "seed-tv-trick3-2003": "邦画",
-      "seed-tv-hero-2001": "邦画",
-      "seed-tv-hero-2014": "邦画",
-      "seed-tv-999-2016": "邦画",
-      "seed-tv-9992-2018": "邦画",
-      "seed-tv-strawberrynight-2012": "邦画",
-      "seed-tv-galileo-2007": "邦画",
-      "seed-tv-liargame-2007": "邦画",
-      "seed-tv-codeblue-2008": "邦画",
-      "seed-tv-boss-2009": "邦画"
+      "custom-1790423280875-9b4j": "邦画"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -28045,22 +27400,7 @@
       "custom-1790423279786-lguu": "live",
       "custom-1790423280120-qki8": "live",
       "custom-1790423280570-6eki": "live",
-      "custom-1790423280875-9b4j": "live",
-      "seed-tv-hanzawa-2013": "live",
-      "seed-tv-legalhigh-2012": "live",
-      "seed-tv-legalhigh2-2013": "live",
-      "seed-tv-trick-2000": "live",
-      "seed-tv-trick2-2002": "live",
-      "seed-tv-trick3-2003": "live",
-      "seed-tv-hero-2001": "live",
-      "seed-tv-hero-2014": "live",
-      "seed-tv-999-2016": "live",
-      "seed-tv-9992-2018": "live",
-      "seed-tv-strawberrynight-2012": "live",
-      "seed-tv-galileo-2007": "live",
-      "seed-tv-liargame-2007": "live",
-      "seed-tv-codeblue-2008": "live",
-      "seed-tv-boss-2009": "live"
+      "custom-1790423280875-9b4j": "live"
     },
     "runtimeOverrides": {
       "custom-1790247938551-ixfs": 100,
