@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790420889653,
-  "sourceUpdatedIso": "2026-09-26T11:08:09.653Z",
+  "sourceUpdatedAt": 1790420911129,
+  "sourceUpdatedIso": "2026-09-26T11:08:31.129Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -778,6 +778,27 @@
       "exact": true
     },
     {
+      "id": "custom-1790420198451-g42l",
+      "title": "エレファント・マン",
+      "originalTitle": "The Elephant Man",
+      "englishTitle": "The Elephant Man",
+      "year": 1980,
+      "score": 94,
+      "star": 4.5,
+      "overallRank": 31,
+      "sameScoreRank": 9,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "歴史"
+      ],
+      "origin": "その他",
+      "format": "live",
+      "runtime": 124,
+      "exact": true
+    },
+    {
       "id": "lb-333-2b4m",
       "title": "千と千尋の神隠し",
       "originalTitle": "",
@@ -785,8 +806,8 @@
       "year": 2001,
       "score": 94,
       "star": 4.5,
-      "overallRank": 31,
-      "sameScoreRank": 9,
+      "overallRank": 32,
+      "sameScoreRank": 10,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
       "genre": [
@@ -805,27 +826,6 @@
       "exact": true
     },
     {
-      "id": "custom-1790420198451-g42l",
-      "title": "エレファント・マン",
-      "originalTitle": "The Elephant Man",
-      "englishTitle": "The Elephant Man",
-      "year": 1980,
-      "score": 93,
-      "star": 4.5,
-      "overallRank": 32,
-      "sameScoreRank": 1,
-      "category": "Letterboxd",
-      "mediaType": "movie",
-      "genre": [
-        "ドラマ",
-        "歴史"
-      ],
-      "origin": "その他",
-      "format": "live",
-      "runtime": 124,
-      "exact": true
-    },
-    {
       "id": "lb-24-2aHi",
       "title": "ショーシャンクの空に",
       "originalTitle": "",
@@ -834,7 +834,7 @@
       "score": 93,
       "star": 4.5,
       "overallRank": 33,
-      "sameScoreRank": 2,
+      "sameScoreRank": 1,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -857,7 +857,7 @@
       "score": 93,
       "star": 4.5,
       "overallRank": 34,
-      "sameScoreRank": 3,
+      "sameScoreRank": 2,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -878,7 +878,7 @@
       "score": 93,
       "star": 4.5,
       "overallRank": 35,
-      "sameScoreRank": 4,
+      "sameScoreRank": 3,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -904,7 +904,7 @@
       "score": 93,
       "star": 4.5,
       "overallRank": 36,
-      "sameScoreRank": 5,
+      "sameScoreRank": 4,
       "category": "Letterboxd",
       "mediaType": "other",
       "genre": [],
@@ -922,7 +922,7 @@
       "score": 93,
       "star": 4.5,
       "overallRank": 37,
-      "sameScoreRank": 6,
+      "sameScoreRank": 5,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -947,7 +947,7 @@
       "score": 93,
       "star": 4.5,
       "overallRank": 38,
-      "sameScoreRank": 7,
+      "sameScoreRank": 6,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -970,7 +970,7 @@
       "score": 93,
       "star": 4.5,
       "overallRank": 39,
-      "sameScoreRank": 8,
+      "sameScoreRank": 7,
       "category": "スタジオジブリ系作品",
       "mediaType": "other",
       "genre": [
@@ -993,7 +993,7 @@
       "score": 93,
       "star": 4.5,
       "overallRank": 40,
-      "sameScoreRank": 9,
+      "sameScoreRank": 8,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -1018,7 +1018,7 @@
       "score": 93,
       "star": 4.5,
       "overallRank": 41,
-      "sameScoreRank": 10,
+      "sameScoreRank": 9,
       "category": "ピクサー・ディズニー作品",
       "mediaType": "movie",
       "genre": [
@@ -1045,7 +1045,7 @@
       "score": 93,
       "star": 4.5,
       "overallRank": 42,
-      "sameScoreRank": 11,
+      "sameScoreRank": 10,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -1071,7 +1071,7 @@
       "score": 93,
       "star": 4.5,
       "overallRank": 43,
-      "sameScoreRank": 12,
+      "sameScoreRank": 11,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -1095,7 +1095,7 @@
       "score": 93,
       "star": 4.5,
       "overallRank": 44,
-      "sameScoreRank": 13,
+      "sameScoreRank": 12,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -15943,7 +15943,7 @@
       "custom-1790358520071-ybym": 78,
       "custom-1790322765489-7o9h": 81,
       "custom-1790322766664-63q5": 64,
-      "custom-1790420198451-g42l": 93
+      "custom-1790420198451-g42l": 94
     },
     "rankOrder": {
       "40": [
@@ -16631,7 +16631,6 @@
         "lb-486-b8wK"
       ],
       "93": [
-        "custom-1790420198451-g42l",
         "lb-24-2aHi",
         "lb-571-28qk",
         "lb-86-cUqs",
@@ -16654,6 +16653,7 @@
         "lb-349-2aGY",
         "lb-467-ptEI",
         "lb-549-iEBG",
+        "custom-1790420198451-g42l",
         "lb-333-2b4m"
       ],
       "95": [
