@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790420852474,
-  "sourceUpdatedIso": "2026-09-26T11:07:32.474Z",
+  "sourceUpdatedAt": 1790420863879,
+  "sourceUpdatedIso": "2026-09-26T11:07:43.879Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -844,29 +844,6 @@
       "exact": true
     },
     {
-      "id": "lb-332-28MA",
-      "title": "ディパーテッド",
-      "originalTitle": "",
-      "englishTitle": "The Departed",
-      "year": 2006,
-      "score": 93,
-      "star": 4.5,
-      "overallRank": 34,
-      "sameScoreRank": 4,
-      "category": "マフィア、クライム",
-      "mediaType": "movie",
-      "genre": [
-        "クライム",
-        "ドラマ",
-        "アクション",
-        "胸糞"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": null,
-      "exact": true
-    },
-    {
       "id": "lb-86-cUqs",
       "title": "君の名は。",
       "originalTitle": "",
@@ -874,8 +851,8 @@
       "year": 2016,
       "score": 93,
       "star": 4.5,
-      "overallRank": 35,
-      "sameScoreRank": 5,
+      "overallRank": 34,
+      "sameScoreRank": 4,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -900,8 +877,8 @@
       "year": 2008,
       "score": 93,
       "star": 4.5,
-      "overallRank": 36,
-      "sameScoreRank": 6,
+      "overallRank": 35,
+      "sameScoreRank": 5,
       "category": "Letterboxd",
       "mediaType": "other",
       "genre": [],
@@ -918,8 +895,8 @@
       "year": 1999,
       "score": 93,
       "star": 4.5,
-      "overallRank": 37,
-      "sameScoreRank": 7,
+      "overallRank": 36,
+      "sameScoreRank": 6,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -933,6 +910,29 @@
       "origin": "ハリウッド",
       "format": "live",
       "runtime": 139,
+      "exact": true
+    },
+    {
+      "id": "lb-332-28MA",
+      "title": "ディパーテッド",
+      "originalTitle": "",
+      "englishTitle": "The Departed",
+      "year": 2006,
+      "score": 93,
+      "star": 4.5,
+      "overallRank": 37,
+      "sameScoreRank": 7,
+      "category": "マフィア、クライム",
+      "mediaType": "movie",
+      "genre": [
+        "クライム",
+        "ドラマ",
+        "アクション",
+        "胸糞"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": null,
       "exact": true
     },
     {
@@ -16634,10 +16634,10 @@
         "custom-1790420198451-g42l",
         "lb-24-2aHi",
         "lb-571-28qk",
-        "lb-332-28MA",
         "lb-86-cUqs",
         "custom-1790185844116-j1vu",
         "lb-2-2a9q",
+        "lb-332-28MA",
         "lb-459-1Vgm",
         "lb-556-2b9m",
         "lb-323-1VEo",
