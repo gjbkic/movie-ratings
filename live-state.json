@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790458530252,
-  "sourceUpdatedIso": "2026-09-26T21:35:30.252Z",
+  "sourceUpdatedAt": 1790458557905,
+  "sourceUpdatedIso": "2026-09-26T21:35:57.905Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -1120,31 +1120,6 @@
       "exact": true
     },
     {
-      "id": "lb-58-293w",
-      "title": "プレステージ",
-      "originalTitle": "",
-      "englishTitle": "The Prestige",
-      "year": 2006,
-      "score": 93,
-      "star": 4.5,
-      "overallRank": 44,
-      "sameScoreRank": 12,
-      "category": "サスペンス、ミステリー",
-      "mediaType": "movie",
-      "genre": [
-        "サスペンス",
-        "ミステリー",
-        "ファンタジー",
-        "どんでん返し",
-        "心理・内面",
-        "特殊構造"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 130,
-      "exact": true
-    },
-    {
       "id": "lb-487-28JG",
       "title": "ヴァージン・スーサイズ",
       "originalTitle": "",
@@ -1152,7 +1127,7 @@
       "year": 1999,
       "score": 92,
       "star": 4,
-      "overallRank": 45,
+      "overallRank": 44,
       "sameScoreRank": 1,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
@@ -1179,7 +1154,7 @@
       "year": 1995,
       "score": 92,
       "star": 4,
-      "overallRank": 46,
+      "overallRank": 45,
       "sameScoreRank": 2,
       "category": "ほかアニメ",
       "mediaType": "movie",
@@ -1205,7 +1180,7 @@
       "year": 1950,
       "score": 92,
       "star": 4,
-      "overallRank": 47,
+      "overallRank": 46,
       "sameScoreRank": 3,
       "category": "Letterboxd",
       "mediaType": "movie",
@@ -1225,6 +1200,31 @@
       "exact": true
     },
     {
+      "id": "lb-58-293w",
+      "title": "プレステージ",
+      "originalTitle": "",
+      "englishTitle": "The Prestige",
+      "year": 2006,
+      "score": 92,
+      "star": 4,
+      "overallRank": 47,
+      "sameScoreRank": 4,
+      "category": "サスペンス、ミステリー",
+      "mediaType": "movie",
+      "genre": [
+        "サスペンス",
+        "ミステリー",
+        "ファンタジー",
+        "どんでん返し",
+        "心理・内面",
+        "特殊構造"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 130,
+      "exact": true
+    },
+    {
       "id": "lb-178-29XE",
       "title": "ユージュアル・サスペクツ",
       "originalTitle": "",
@@ -1233,7 +1233,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 48,
-      "sameScoreRank": 4,
+      "sameScoreRank": 5,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -1256,7 +1256,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 49,
-      "sameScoreRank": 5,
+      "sameScoreRank": 6,
       "category": "戦争、歴史",
       "mediaType": "movie",
       "genre": [
@@ -1283,7 +1283,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 50,
-      "sameScoreRank": 6,
+      "sameScoreRank": 7,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -1309,7 +1309,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 51,
-      "sameScoreRank": 7,
+      "sameScoreRank": 8,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -1339,7 +1339,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 52,
-      "sameScoreRank": 8,
+      "sameScoreRank": 9,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -1365,7 +1365,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 53,
-      "sameScoreRank": 9,
+      "sameScoreRank": 10,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -16734,7 +16734,7 @@
       "added-anchor-578": 91,
       "added-anchor-577": 92,
       "lb-564-29Wm": 92,
-      "lb-58-293w": 93,
+      "lb-58-293w": 92,
       "lb-378-26E0": 92,
       "lb-178-29XE": 92,
       "lb-262-29Du": 92,
@@ -18017,6 +18017,7 @@
         "lb-487-28JG",
         "lb-116-1YYc",
         "custom-1790458138074-p8hs",
+        "lb-58-293w",
         "lb-178-29XE",
         "lb-564-29Wm",
         "added-anchor-577",
@@ -18035,8 +18036,7 @@
         "lb-323-1VEo",
         "lb-556-2b9m",
         "lb-308-kPxE",
-        "lb-41-cjr4",
-        "lb-58-293w"
+        "lb-41-cjr4"
       ],
       "94": [
         "lb-97-2a7u",
@@ -19520,7 +19520,7 @@
       "added-anchor-578": 4,
       "added-anchor-577": 4,
       "lb-564-29Wm": 4,
-      "lb-58-293w": 4.5,
+      "lb-58-293w": 4,
       "lb-378-26E0": 4,
       "lb-178-29XE": 4,
       "lb-262-29Du": 4,
