@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790431001433,
-  "sourceUpdatedIso": "2026-09-26T13:56:41.433Z",
+  "sourceUpdatedAt": 1790431006732,
+  "sourceUpdatedIso": "2026-09-26T13:56:46.732Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -10189,7 +10189,9 @@
       "sameScoreRank": 25,
       "category": "Letterboxd",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "心理・内面"
+      ],
       "origin": "その他",
       "format": "live",
       "runtime": null,
@@ -25762,7 +25764,9 @@
         "娯楽",
         "comfort"
       ],
-      "custom-1789385860088-xif1": [],
+      "custom-1789385860088-xif1": [
+        "心理・内面"
+      ],
       "custom-1789385860147-fi90": [
         "娯楽",
         "ファンタジー",
