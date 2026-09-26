@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790432992507,
-  "sourceUpdatedIso": "2026-09-26T14:29:52.507Z",
+  "sourceUpdatedAt": 1790433010148,
+  "sourceUpdatedIso": "2026-09-26T14:30:10.148Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -10811,7 +10811,15 @@
       "sameScoreRank": 15,
       "category": "ピクサー・ディズニー作品",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "娯楽",
+        "子供向け",
+        "感動",
+        "ファンタジー",
+        "アクション",
+        "青春・若者",
+        "ヒーロー"
+      ],
       "origin": "ハリウッド",
       "format": "animation",
       "runtime": 102,
@@ -22455,7 +22463,15 @@
         "クライム",
         "サスペンス"
       ],
-      "lb-94-5rje": [],
+      "lb-94-5rje": [
+        "娯楽",
+        "子供向け",
+        "感動",
+        "ファンタジー",
+        "アクション",
+        "青春・若者",
+        "ヒーロー"
+      ],
       "lb-95-2a7Y": [
         "アクション",
         "ヒーロー",
