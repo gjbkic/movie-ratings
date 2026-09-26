@@ -20,7 +20,7 @@
     editId('lb-4-jUk4',{remove:['SF']}); // Everything Everywhere All at Once
     editId('lb-27-2b2A',{add:['ファンタジー']}); // Donnie Darko
     editId('lb-111-4pD0',{add:['ファンタジー']}); // Edge of Tomorrow
-    editId('lb-264-FPS',{remove:['ファンタジー']}); // In Time
+    editId('lb-264-FPS',{add:['ファンタジー']}); // In Time: keep fantasy
 
     try{localStorage.setItem(KEY,'1')}catch(_){}
     try{save(false)}catch(_){try{save()}catch(__){}}
