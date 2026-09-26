@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790433023517,
-  "sourceUpdatedIso": "2026-09-26T14:30:23.517Z",
+  "sourceUpdatedAt": 1790433032084,
+  "sourceUpdatedIso": "2026-09-26T14:30:32.084Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -10861,7 +10861,12 @@
       "sameScoreRank": 17,
       "category": "邦画",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "サスペンス",
+        "クライム",
+        "娯楽",
+        "ファンタジー"
+      ],
       "origin": "邦画",
       "format": "live",
       "runtime": 140,
@@ -23562,7 +23567,12 @@
         "ファンタジー",
         "クライム"
       ],
-      "lb-248-1KJs": [],
+      "lb-248-1KJs": [
+        "サスペンス",
+        "クライム",
+        "娯楽",
+        "ファンタジー"
+      ],
       "lb-249-4r68": [
         "シリーズ劇場版",
         "ファンタジー",
