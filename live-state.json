@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790429568851,
-  "sourceUpdatedIso": "2026-09-26T13:32:48.851Z",
+  "sourceUpdatedAt": 1790429635153,
+  "sourceUpdatedIso": "2026-09-26T13:33:55.153Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -11057,7 +11057,12 @@
       "sameScoreRank": 1,
       "category": "Letterboxd追加",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "SF",
+        "アクション",
+        "恋愛",
+        "娯楽"
+      ],
       "origin": "ハリウッド",
       "format": "live",
       "runtime": null,
@@ -24943,7 +24948,12 @@
         "ドラマ",
         "恋愛"
       ],
-      "lb-500-16T8": [],
+      "lb-500-16T8": [
+        "SF",
+        "アクション",
+        "恋愛",
+        "娯楽"
+      ],
       "lb-501-tbEe": [
         "ファンタジー",
         "ミュージカル",
