@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790421758907,
-  "sourceUpdatedIso": "2026-09-26T11:22:38.907Z",
+  "sourceUpdatedAt": 1790421765666,
+  "sourceUpdatedIso": "2026-09-26T11:22:45.666Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -12907,6 +12907,32 @@
       "exact": true
     },
     {
+      "id": "custom-1790322768095-ya1h",
+      "title": "ミステリと言う勿れ",
+      "originalTitle": "ミステリと言う勿れ",
+      "englishTitle": "Don't Call It Mystery: The Movie",
+      "year": 2023,
+      "score": 73,
+      "star": 2,
+      "overallRank": 551,
+      "sameScoreRank": 11,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "ミステリー",
+        "ドラマ",
+        "娯楽",
+        "シリーズ劇場版",
+        "コメディ",
+        "サスペンス",
+        "どんでん返し"
+      ],
+      "origin": "邦画",
+      "format": "live",
+      "runtime": 128,
+      "exact": true
+    },
+    {
       "id": "lb-435-1XV2",
       "title": "アンブレイカブル",
       "originalTitle": "",
@@ -12914,8 +12940,8 @@
       "year": 2000,
       "score": 73,
       "star": 2,
-      "overallRank": 551,
-      "sameScoreRank": 11,
+      "overallRank": 552,
+      "sameScoreRank": 12,
       "category": "スリラー、ホラー",
       "mediaType": "movie",
       "genre": [
@@ -12938,8 +12964,8 @@
       "year": 2016,
       "score": 73,
       "star": 2,
-      "overallRank": 552,
-      "sameScoreRank": 12,
+      "overallRank": 553,
+      "sameScoreRank": 13,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -12961,8 +12987,8 @@
       "year": 1999,
       "score": 73,
       "star": 2,
-      "overallRank": 553,
-      "sameScoreRank": 13,
+      "overallRank": 554,
+      "sameScoreRank": 14,
       "category": "コナン映画",
       "mediaType": "movie",
       "genre": [
@@ -12984,8 +13010,8 @@
       "year": 2002,
       "score": 73,
       "star": 2,
-      "overallRank": 554,
-      "sameScoreRank": 14,
+      "overallRank": 555,
+      "sameScoreRank": 15,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -12999,32 +13025,6 @@
       "origin": "邦画",
       "format": "live",
       "runtime": null,
-      "exact": true
-    },
-    {
-      "id": "custom-1790322768095-ya1h",
-      "title": "ミステリと言う勿れ",
-      "originalTitle": "ミステリと言う勿れ",
-      "englishTitle": "Don't Call It Mystery: The Movie",
-      "year": 2023,
-      "score": 73,
-      "star": 2,
-      "overallRank": 555,
-      "sameScoreRank": 15,
-      "category": "Letterboxd",
-      "mediaType": "movie",
-      "genre": [
-        "ミステリー",
-        "ドラマ",
-        "娯楽",
-        "シリーズ劇場版",
-        "コメディ",
-        "サスペンス",
-        "どんでん返し"
-      ],
-      "origin": "邦画",
-      "format": "live",
-      "runtime": 128,
       "exact": true
     },
     {
@@ -16118,11 +16118,11 @@
         "lb-96-1WZM",
         "lb-388-enHO",
         "custom-1789385860459-6dw6",
+        "custom-1790322768095-ya1h",
         "lb-435-1XV2",
         "lb-293-99fw",
         "lb-190-1oLc",
         "lb-233-2pii",
-        "custom-1790322768095-ya1h",
         "lb-514-2NXO",
         "lb-364-fpxe",
         "lb-55-2a46",
