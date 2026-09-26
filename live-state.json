@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790420885600,
-  "sourceUpdatedIso": "2026-09-26T11:08:05.600Z",
+  "sourceUpdatedAt": 1790420889653,
+  "sourceUpdatedIso": "2026-09-26T11:08:09.653Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -752,6 +752,32 @@
       "exact": true
     },
     {
+      "id": "lb-549-iEBG",
+      "title": "ジョジョ・ラビット",
+      "originalTitle": "",
+      "englishTitle": "Jojo Rabbit",
+      "year": 2019,
+      "score": 94,
+      "star": 4.5,
+      "overallRank": 30,
+      "sameScoreRank": 8,
+      "category": "戦争、歴史",
+      "mediaType": "movie",
+      "genre": [
+        "戦争",
+        "歴史",
+        "ファンタジー",
+        "差別・人権",
+        "感動",
+        "comfort",
+        "心理・内面"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": null,
+      "exact": true
+    },
+    {
       "id": "lb-333-2b4m",
       "title": "千と千尋の神隠し",
       "originalTitle": "",
@@ -759,8 +785,8 @@
       "year": 2001,
       "score": 94,
       "star": 4.5,
-      "overallRank": 30,
-      "sameScoreRank": 8,
+      "overallRank": 31,
+      "sameScoreRank": 9,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
       "genre": [
@@ -786,7 +812,7 @@
       "year": 1980,
       "score": 93,
       "star": 4.5,
-      "overallRank": 31,
+      "overallRank": 32,
       "sameScoreRank": 1,
       "category": "Letterboxd",
       "mediaType": "movie",
@@ -807,7 +833,7 @@
       "year": 1994,
       "score": 93,
       "star": 4.5,
-      "overallRank": 32,
+      "overallRank": 33,
       "sameScoreRank": 2,
       "category": "ドラマ",
       "mediaType": "movie",
@@ -830,7 +856,7 @@
       "year": 1994,
       "score": 93,
       "star": 4.5,
-      "overallRank": 33,
+      "overallRank": 34,
       "sameScoreRank": 3,
       "category": "アクション",
       "mediaType": "movie",
@@ -851,7 +877,7 @@
       "year": 2016,
       "score": 93,
       "star": 4.5,
-      "overallRank": 34,
+      "overallRank": 35,
       "sameScoreRank": 4,
       "category": "ほかアニメ",
       "mediaType": "movie",
@@ -870,32 +896,6 @@
       "exact": true
     },
     {
-      "id": "lb-549-iEBG",
-      "title": "ジョジョ・ラビット",
-      "originalTitle": "",
-      "englishTitle": "Jojo Rabbit",
-      "year": 2019,
-      "score": 93,
-      "star": 4.5,
-      "overallRank": 35,
-      "sameScoreRank": 5,
-      "category": "戦争、歴史",
-      "mediaType": "movie",
-      "genre": [
-        "戦争",
-        "歴史",
-        "ファンタジー",
-        "差別・人権",
-        "感動",
-        "comfort",
-        "心理・内面"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": null,
-      "exact": true
-    },
-    {
       "id": "custom-1790185844116-j1vu",
       "title": "パーフェクトブルー講座",
       "originalTitle": "パーフェクトブルー講座",
@@ -904,7 +904,7 @@
       "score": 93,
       "star": 4.5,
       "overallRank": 36,
-      "sameScoreRank": 6,
+      "sameScoreRank": 5,
       "category": "Letterboxd",
       "mediaType": "other",
       "genre": [],
@@ -922,7 +922,7 @@
       "score": 93,
       "star": 4.5,
       "overallRank": 37,
-      "sameScoreRank": 7,
+      "sameScoreRank": 6,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -947,7 +947,7 @@
       "score": 93,
       "star": 4.5,
       "overallRank": 38,
-      "sameScoreRank": 8,
+      "sameScoreRank": 7,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -970,7 +970,7 @@
       "score": 93,
       "star": 4.5,
       "overallRank": 39,
-      "sameScoreRank": 9,
+      "sameScoreRank": 8,
       "category": "スタジオジブリ系作品",
       "mediaType": "other",
       "genre": [
@@ -993,7 +993,7 @@
       "score": 93,
       "star": 4.5,
       "overallRank": 40,
-      "sameScoreRank": 10,
+      "sameScoreRank": 9,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -1018,7 +1018,7 @@
       "score": 93,
       "star": 4.5,
       "overallRank": 41,
-      "sameScoreRank": 11,
+      "sameScoreRank": 10,
       "category": "ピクサー・ディズニー作品",
       "mediaType": "movie",
       "genre": [
@@ -1045,7 +1045,7 @@
       "score": 93,
       "star": 4.5,
       "overallRank": 42,
-      "sameScoreRank": 12,
+      "sameScoreRank": 11,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -1071,7 +1071,7 @@
       "score": 93,
       "star": 4.5,
       "overallRank": 43,
-      "sameScoreRank": 13,
+      "sameScoreRank": 12,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -1095,7 +1095,7 @@
       "score": 93,
       "star": 4.5,
       "overallRank": 44,
-      "sameScoreRank": 14,
+      "sameScoreRank": 13,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -15381,7 +15381,7 @@
       "lb-556-2b9m": 93,
       "lb-493-28No": 91,
       "lb-486-b8wK": 92,
-      "lb-549-iEBG": 93,
+      "lb-549-iEBG": 94,
       "added-anchor-578": 91,
       "added-anchor-577": 92,
       "lb-564-29Wm": 92,
@@ -16635,7 +16635,6 @@
         "lb-24-2aHi",
         "lb-571-28qk",
         "lb-86-cUqs",
-        "lb-549-iEBG",
         "custom-1790185844116-j1vu",
         "lb-2-2a9q",
         "lb-332-28MA",
@@ -16654,6 +16653,7 @@
         "lb-488-294O",
         "lb-349-2aGY",
         "lb-467-ptEI",
+        "lb-549-iEBG",
         "lb-333-2b4m"
       ],
       "95": [
