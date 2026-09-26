@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790420848050,
-  "sourceUpdatedIso": "2026-09-26T11:07:28.050Z",
+  "sourceUpdatedAt": 1790420852474,
+  "sourceUpdatedIso": "2026-09-26T11:07:32.474Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -800,27 +800,6 @@
       "exact": true
     },
     {
-      "id": "lb-571-28qk",
-      "title": "スピード",
-      "originalTitle": "",
-      "englishTitle": "Speed",
-      "year": 1994,
-      "score": 93,
-      "star": 4.5,
-      "overallRank": 32,
-      "sameScoreRank": 2,
-      "category": "アクション",
-      "mediaType": "movie",
-      "genre": [
-        "アクション",
-        "娯楽"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": null,
-      "exact": true
-    },
-    {
       "id": "lb-24-2aHi",
       "title": "ショーシャンクの空に",
       "originalTitle": "",
@@ -828,8 +807,8 @@
       "year": 1994,
       "score": 93,
       "star": 4.5,
-      "overallRank": 33,
-      "sameScoreRank": 3,
+      "overallRank": 32,
+      "sameScoreRank": 2,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -841,6 +820,27 @@
       "origin": "ハリウッド",
       "format": "live",
       "runtime": 143,
+      "exact": true
+    },
+    {
+      "id": "lb-571-28qk",
+      "title": "スピード",
+      "originalTitle": "",
+      "englishTitle": "Speed",
+      "year": 1994,
+      "score": 93,
+      "star": 4.5,
+      "overallRank": 33,
+      "sameScoreRank": 3,
+      "category": "アクション",
+      "mediaType": "movie",
+      "genre": [
+        "アクション",
+        "娯楽"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": null,
       "exact": true
     },
     {
@@ -16632,8 +16632,8 @@
       ],
       "93": [
         "custom-1790420198451-g42l",
-        "lb-571-28qk",
         "lb-24-2aHi",
+        "lb-571-28qk",
         "lb-332-28MA",
         "lb-86-cUqs",
         "custom-1790185844116-j1vu",
