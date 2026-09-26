@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790420198765,
-  "sourceUpdatedIso": "2026-09-26T10:56:38.765Z",
+  "sourceUpdatedAt": 1790420814556,
+  "sourceUpdatedIso": "2026-09-26T11:06:54.556Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -497,7 +497,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 152,
       "exact": true
     },
     {
@@ -1159,7 +1159,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 105,
       "exact": true
     },
     {
@@ -1511,7 +1511,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 122,
       "exact": true
     },
     {
@@ -2479,7 +2479,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 89,
       "exact": false
     },
     {
@@ -2577,7 +2577,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 118,
       "exact": true
     },
     {
@@ -3796,7 +3796,7 @@
       ],
       "origin": "その他",
       "format": "live",
-      "runtime": null,
+      "runtime": 104,
       "exact": true
     },
     {
@@ -4624,7 +4624,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 108,
       "exact": true
     },
     {
@@ -5181,7 +5181,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 116,
       "exact": true
     },
     {
@@ -5671,7 +5671,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 102,
       "exact": true
     },
     {
@@ -5975,7 +5975,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 103,
       "exact": true
     },
     {
@@ -7138,7 +7138,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 102,
       "exact": true
     },
     {
@@ -8333,7 +8333,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 101,
       "exact": true
     },
     {
@@ -8732,7 +8732,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 120,
       "exact": true
     },
     {
@@ -11918,7 +11918,7 @@
       ],
       "origin": "ハリウッド",
       "format": "animation",
-      "runtime": null,
+      "runtime": 87,
       "exact": true
     },
     {
@@ -13174,7 +13174,7 @@
       ],
       "origin": "その他",
       "format": "live",
-      "runtime": null,
+      "runtime": 96,
       "exact": false
     },
     {
@@ -14021,7 +14021,7 @@
       ],
       "origin": "ハリウッド",
       "format": "animation",
-      "runtime": null,
+      "runtime": 87,
       "exact": true
     },
     {
@@ -19319,6 +19319,54 @@
       },
       "lb-161-2aUc": {
         "tmdbId": 194
+      },
+      "lb-162-2TTo": {
+        "tmdbId": 82693
+      },
+      "lb-163-2aYI": {
+        "tmdbId": 165
+      },
+      "lb-164-2b3e": {
+        "tmdbId": 137
+      },
+      "lb-165-29F6": {
+        "tmdbId": 772
+      },
+      "lb-166-3RKw": {
+        "tmdbId": 116149
+      },
+      "lb-167-29dc": {
+        "tmdbId": 953
+      },
+      "lb-168-2b7U": {
+        "tmdbId": 107
+      },
+      "lb-169-29rS": {
+        "tmdbId": 854
+      },
+      "lb-170-fz9w": {
+        "tmdbId": 438148
+      },
+      "lb-171-2b0k": {
+        "tmdbId": 155
+      },
+      "lb-172-2aHW": {
+        "tmdbId": 274
+      },
+      "lb-174-29VI": {
+        "tmdbId": 641
+      },
+      "lb-175-2aOe": {
+        "tmdbId": 235
+      },
+      "lb-176-2aZm": {
+        "tmdbId": 161
+      },
+      "lb-177-2aWW": {
+        "tmdbId": 176
+      },
+      "lb-178-29XE": {
+        "tmdbId": 629
       }
     },
     "categoryOverrides": {},
@@ -25655,7 +25703,23 @@
       "lb-159-18U8": 103,
       "lb-160-2b8e": 116,
       "lb-161-2aUc": 120,
-      "custom-1790420198451-g42l": 124
+      "custom-1790420198451-g42l": 124,
+      "lb-162-2TTo": 122,
+      "lb-163-2aYI": 108,
+      "lb-164-2b3e": 101,
+      "lb-165-29F6": 120,
+      "lb-166-3RKw": 96,
+      "lb-167-29dc": 87,
+      "lb-168-2b7U": 104,
+      "lb-169-29rS": 102,
+      "lb-170-fz9w": 87,
+      "lb-171-2b0k": 152,
+      "lb-172-2aHW": 118,
+      "lb-174-29VI": 102,
+      "lb-175-2aOe": 89,
+      "lb-176-2aZm": 116,
+      "lb-177-2aWW": 103,
+      "lb-178-29XE": 105
     }
   }
 }
