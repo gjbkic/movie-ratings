@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790426663494,
-  "sourceUpdatedIso": "2026-09-26T12:44:23.494Z",
+  "sourceUpdatedAt": 1790426671881,
+  "sourceUpdatedIso": "2026-09-26T12:44:31.881Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -9239,24 +9239,6 @@
       "exact": true
     },
     {
-      "id": "lb-347-4bW8",
-      "title": "鍵泥棒のメソッド",
-      "originalTitle": "",
-      "englishTitle": "Key of Life",
-      "year": 2012,
-      "score": 80,
-      "star": 2.5,
-      "overallRank": 376,
-      "sameScoreRank": 22,
-      "category": "邦画",
-      "mediaType": "movie",
-      "genre": [],
-      "origin": "邦画",
-      "format": "live",
-      "runtime": null,
-      "exact": true
-    },
-    {
       "id": "lb-419-14FI",
       "title": "ウィンターズ ボーン",
       "originalTitle": "",
@@ -9264,8 +9246,8 @@
       "year": 2010,
       "score": 80,
       "star": 2.5,
-      "overallRank": 377,
-      "sameScoreRank": 23,
+      "overallRank": 376,
+      "sameScoreRank": 22,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -9280,6 +9262,24 @@
         "胸糞"
       ],
       "origin": "ハリウッド",
+      "format": "live",
+      "runtime": null,
+      "exact": true
+    },
+    {
+      "id": "lb-347-4bW8",
+      "title": "鍵泥棒のメソッド",
+      "originalTitle": "",
+      "englishTitle": "Key of Life",
+      "year": 2012,
+      "score": 80,
+      "star": 2.5,
+      "overallRank": 377,
+      "sameScoreRank": 23,
+      "category": "邦画",
+      "mediaType": "movie",
+      "genre": [],
+      "origin": "邦画",
       "format": "live",
       "runtime": null,
       "exact": true
@@ -16681,8 +16681,8 @@
         "lb-291-dX0",
         "base-clue-1985",
         "lb-235-8JWk",
-        "lb-347-4bW8",
         "lb-419-14FI",
+        "lb-347-4bW8",
         "custom-1790322758188-46qe",
         "custom-1790089712252-cunv",
         "lb-354-aNGk",
