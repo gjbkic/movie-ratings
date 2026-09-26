@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790434228964,
-  "sourceUpdatedIso": "2026-09-26T14:50:28.964Z",
+  "sourceUpdatedAt": 1790436393125,
+  "sourceUpdatedIso": "2026-09-26T15:26:33.125Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -546,7 +546,7 @@
       ],
       "origin": "邦画",
       "format": "animation",
-      "runtime": 93,
+      "runtime": null,
       "exact": true
     },
     {
@@ -3158,7 +3158,7 @@
       ],
       "origin": "邦画",
       "format": "live",
-      "runtime": 101,
+      "runtime": null,
       "exact": true
     },
     {
@@ -7033,7 +7033,7 @@
       ],
       "origin": "邦画",
       "format": "live",
-      "runtime": 143,
+      "runtime": null,
       "exact": true
     },
     {
@@ -7325,7 +7325,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": 85,
+      "runtime": null,
       "exact": true
     },
     {
@@ -10004,7 +10004,7 @@
       ],
       "origin": "邦画",
       "format": "live",
-      "runtime": 119,
+      "runtime": null,
       "exact": true
     },
     {
@@ -20884,21 +20884,6 @@
       },
       "lb-333-2b4m": {
         "tmdbId": 129
-      },
-      "lb-334-1Tp2": {
-        "tmdbId": 11621
-      },
-      "lb-335-2a0y": {
-        "tmdbId": 608
-      },
-      "lb-336-qH0": {
-        "tmdbId": 55931
-      },
-      "lb-337-1nRe": {
-        "tmdbId": 29268
-      },
-      "lb-338-a9lm": {
-        "tmdbId": 315011
       }
     },
     "categoryOverrides": {},
@@ -20956,6 +20941,8 @@
       "custom-1790423280120-qki8": "drama",
       "custom-1790423280570-6eki": "drama",
       "custom-1790423280875-9b4j": "drama",
+      "custom-1790433924585-k3b0": "drama",
+      "custom-1790433925207-8m83": "drama",
       "lb-0-hTha": "movie",
       "lb-1-4VZ8": "movie",
       "lb-2-2a9q": "movie",
@@ -21566,9 +21553,7 @@
       "custom-1790352007604-3jj6": "movie",
       "custom-1790358520071-ybym": "movie",
       "custom-1790420198451-g42l": "movie",
-      "custom-1790433924185-cva1": "movie",
-      "custom-1790433924585-k3b0": "drama",
-      "custom-1790433925207-8m83": "drama"
+      "custom-1790433924185-cva1": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -28174,12 +28159,7 @@
       "lb-330-4JQS": 126,
       "lb-331-26e2": 90,
       "lb-332-28MA": 151,
-      "lb-333-2b4m": 125,
-      "lb-334-1Tp2": 93,
-      "lb-335-2a0y": 85,
-      "lb-336-qH0": 101,
-      "lb-337-1nRe": 143,
-      "lb-338-a9lm": 119
+      "lb-333-2b4m": 125
     }
   }
 }
