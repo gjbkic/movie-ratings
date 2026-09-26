@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790430982628,
-  "sourceUpdatedIso": "2026-09-26T13:56:22.628Z",
+  "sourceUpdatedAt": 1790431001433,
+  "sourceUpdatedIso": "2026-09-26T13:56:41.433Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -10167,7 +10167,10 @@
       "category": "SF",
       "mediaType": "movie",
       "genre": [
-        "SF"
+        "SF",
+        "アクション",
+        "娯楽",
+        "ファンタジー"
       ],
       "origin": "ハリウッド",
       "format": "live",
@@ -22618,7 +22621,10 @@
         "世界観"
       ],
       "lb-142-2bde": [
-        "SF"
+        "SF",
+        "アクション",
+        "娯楽",
+        "ファンタジー"
       ],
       "lb-143-15HA": [
         "ドラマ"
