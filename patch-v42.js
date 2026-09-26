@@ -1,8 +1,8 @@
 (() => {
   // v42: seed user-confirmed watched Japanese TV series that may not come through Letterboxd/IMDb.
-  // All are added as watched but UNRATED (star 0, no exact score/rank).
-  const BUILD='20260926d';
-  const SEED_KEY='movie30_confirmed_tv_seed_v42_20260926d';
+  // Newly seeded works are watched but unrated; existing ratings/ranks are never changed.
+  const BUILD='20260926e';
+  const SEED_KEY='movie30_confirmed_tv_seed_v42_20260926e';
   const MEDIA_KEY='movie30_media_v33_v1';
   const ORIGIN_KEY='movie30_origin_v33_v1';
   const LEGACY_TV_KEY='movie30_media_drama_ids_v1';
@@ -64,9 +64,6 @@
     }else matched++;
     ensureMain(f);
     mediaMap[f.id]='drama';originMap[f.id]='邦画';
-    delete state.exactScores?.[f.id];
-    delete state.assignments?.[f.id];
-    for(const k of Object.keys(state.rankOrder||{}))state.rankOrder[k]=(state.rankOrder[k]||[]).filter(id=>id!==f.id);
   }
   writeObj(MEDIA_KEY,mediaMap);writeObj(ORIGIN_KEY,originMap);
   writeSet(LEGACY_TV_KEY,new Set(Object.entries(mediaMap).filter(([,v])=>v==='drama').map(([id])=>id)));
