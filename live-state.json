@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790458581693,
-  "sourceUpdatedIso": "2026-09-26T21:36:21.693Z",
+  "sourceUpdatedAt": 1790458588384,
+  "sourceUpdatedIso": "2026-09-26T21:36:28.384Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -1022,6 +1022,33 @@
       "exact": true
     },
     {
+      "id": "custom-1790458138074-p8hs",
+      "title": "羅生門",
+      "originalTitle": "羅生門",
+      "englishTitle": "Rashomon",
+      "year": 1950,
+      "score": 93,
+      "star": 4.5,
+      "overallRank": 40,
+      "sameScoreRank": 8,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "クライム",
+        "ドラマ",
+        "ミステリー",
+        "サスペンス",
+        "心理・内面",
+        "哲学・思想",
+        "雰囲気・美学",
+        "特殊構造"
+      ],
+      "origin": "邦画",
+      "format": "live",
+      "runtime": 88,
+      "exact": true
+    },
+    {
       "id": "lb-323-1VEo",
       "title": "ウォーリー",
       "originalTitle": "",
@@ -1029,8 +1056,8 @@
       "year": 2008,
       "score": 93,
       "star": 4.5,
-      "overallRank": 40,
-      "sameScoreRank": 8,
+      "overallRank": 41,
+      "sameScoreRank": 9,
       "category": "ピクサー・ディズニー作品",
       "mediaType": "movie",
       "genre": [
@@ -1055,8 +1082,8 @@
       "year": 2000,
       "score": 93,
       "star": 4.5,
-      "overallRank": 41,
-      "sameScoreRank": 9,
+      "overallRank": 42,
+      "sameScoreRank": 10,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -1079,8 +1106,8 @@
       "year": 2019,
       "score": 93,
       "star": 4.5,
-      "overallRank": 42,
-      "sameScoreRank": 10,
+      "overallRank": 43,
+      "sameScoreRank": 11,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -1095,33 +1122,6 @@
       "origin": "邦画",
       "format": "animation",
       "runtime": 114,
-      "exact": true
-    },
-    {
-      "id": "custom-1790458138074-p8hs",
-      "title": "羅生門",
-      "originalTitle": "羅生門",
-      "englishTitle": "Rashomon",
-      "year": 1950,
-      "score": 93,
-      "star": 4.5,
-      "overallRank": 43,
-      "sameScoreRank": 11,
-      "category": "Letterboxd",
-      "mediaType": "movie",
-      "genre": [
-        "クライム",
-        "ドラマ",
-        "ミステリー",
-        "サスペンス",
-        "心理・内面",
-        "哲学・思想",
-        "雰囲気・美学",
-        "特殊構造"
-      ],
-      "origin": "邦画",
-      "format": "live",
-      "runtime": 88,
       "exact": true
     },
     {
@@ -18037,10 +18037,10 @@
         "lb-2-2a9q",
         "lb-332-28MA",
         "lb-459-1Vgm",
+        "custom-1790458138074-p8hs",
         "lb-323-1VEo",
         "lb-556-2b9m",
         "lb-308-kPxE",
-        "custom-1790458138074-p8hs",
         "lb-41-cjr4"
       ],
       "94": [
