@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790458567578,
-  "sourceUpdatedIso": "2026-09-26T21:36:07.578Z",
+  "sourceUpdatedAt": 1790458581693,
+  "sourceUpdatedIso": "2026-09-26T21:36:21.693Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -1098,6 +1098,33 @@
       "exact": true
     },
     {
+      "id": "custom-1790458138074-p8hs",
+      "title": "羅生門",
+      "originalTitle": "羅生門",
+      "englishTitle": "Rashomon",
+      "year": 1950,
+      "score": 93,
+      "star": 4.5,
+      "overallRank": 43,
+      "sameScoreRank": 11,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "クライム",
+        "ドラマ",
+        "ミステリー",
+        "サスペンス",
+        "心理・内面",
+        "哲学・思想",
+        "雰囲気・美学",
+        "特殊構造"
+      ],
+      "origin": "邦画",
+      "format": "live",
+      "runtime": 88,
+      "exact": true
+    },
+    {
       "id": "lb-41-cjr4",
       "title": "トップガン マーヴェリック",
       "originalTitle": "",
@@ -1105,8 +1132,8 @@
       "year": 2022,
       "score": 93,
       "star": 4.5,
-      "overallRank": 43,
-      "sameScoreRank": 11,
+      "overallRank": 44,
+      "sameScoreRank": 12,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -1129,7 +1156,7 @@
       "year": 1999,
       "score": 92,
       "star": 4,
-      "overallRank": 44,
+      "overallRank": 45,
       "sameScoreRank": 1,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
@@ -1156,7 +1183,7 @@
       "year": 1995,
       "score": 92,
       "star": 4,
-      "overallRank": 45,
+      "overallRank": 46,
       "sameScoreRank": 2,
       "category": "ほかアニメ",
       "mediaType": "movie",
@@ -1175,33 +1202,6 @@
       "exact": true
     },
     {
-      "id": "custom-1790458138074-p8hs",
-      "title": "羅生門",
-      "originalTitle": "羅生門",
-      "englishTitle": "Rashomon",
-      "year": 1950,
-      "score": 92,
-      "star": 4,
-      "overallRank": 46,
-      "sameScoreRank": 3,
-      "category": "Letterboxd",
-      "mediaType": "movie",
-      "genre": [
-        "クライム",
-        "ドラマ",
-        "ミステリー",
-        "サスペンス",
-        "心理・内面",
-        "哲学・思想",
-        "雰囲気・美学",
-        "特殊構造"
-      ],
-      "origin": "邦画",
-      "format": "live",
-      "runtime": 88,
-      "exact": true
-    },
-    {
       "id": "lb-58-293w",
       "title": "プレステージ",
       "originalTitle": "",
@@ -1210,7 +1210,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 47,
-      "sameScoreRank": 4,
+      "sameScoreRank": 3,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -1235,7 +1235,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 48,
-      "sameScoreRank": 5,
+      "sameScoreRank": 4,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -1258,7 +1258,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 49,
-      "sameScoreRank": 6,
+      "sameScoreRank": 5,
       "category": "戦争、歴史",
       "mediaType": "movie",
       "genre": [
@@ -1285,7 +1285,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 50,
-      "sameScoreRank": 7,
+      "sameScoreRank": 6,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -1311,7 +1311,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 51,
-      "sameScoreRank": 8,
+      "sameScoreRank": 7,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -1341,7 +1341,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 52,
-      "sameScoreRank": 9,
+      "sameScoreRank": 8,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -1367,7 +1367,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 53,
-      "sameScoreRank": 10,
+      "sameScoreRank": 9,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -5162,7 +5162,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 147,
       "exact": true
     },
     {
@@ -5800,7 +5800,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 157,
       "exact": true
     },
     {
@@ -5824,7 +5824,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 101,
       "exact": true
     },
     {
@@ -7864,7 +7864,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 119,
       "exact": true
     },
     {
@@ -7937,7 +7937,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 120,
       "exact": true
     },
     {
@@ -9900,7 +9900,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 121,
       "exact": true
     },
     {
@@ -12680,7 +12680,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 148,
       "exact": true
     },
     {
@@ -12927,7 +12927,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 121,
       "exact": true
     },
     {
@@ -13233,7 +13233,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 142,
       "exact": true
     },
     {
@@ -13581,7 +13581,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 138,
       "exact": true
     },
     {
@@ -14323,7 +14323,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 106,
       "exact": true
     },
     {
@@ -17319,7 +17319,7 @@
       "custom-1790433924185-cva1": 81,
       "custom-1790458138407-21ka": 82,
       "custom-1790458138748-ky5y": 73,
-      "custom-1790458138074-p8hs": 92
+      "custom-1790458138074-p8hs": 93
     },
     "rankOrder": {
       "40": [
@@ -18021,7 +18021,6 @@
       "92": [
         "lb-487-28JG",
         "lb-116-1YYc",
-        "custom-1790458138074-p8hs",
         "lb-58-293w",
         "lb-178-29XE",
         "lb-564-29Wm",
@@ -18041,6 +18040,7 @@
         "lb-323-1VEo",
         "lb-556-2b9m",
         "lb-308-kPxE",
+        "custom-1790458138074-p8hs",
         "lb-41-cjr4"
       ],
       "94": [
@@ -20113,7 +20113,7 @@
       "custom-1790433924185-cva1": 3,
       "custom-1790458138407-21ka": 3,
       "custom-1790458138748-ky5y": 2,
-      "custom-1790458138074-p8hs": 4
+      "custom-1790458138074-p8hs": 4.5
     },
     "titleOverrides": {
       "added-anchor-578": {
@@ -21613,6 +21613,39 @@
       },
       "lb-425-zu4c": {
         "tmdbId": 940721
+      },
+      "lb-426-pEeQ": {
+        "tmdbId": 687163
+      },
+      "lb-427-bSVc": {
+        "tmdbId": 353081
+      },
+      "lb-428-2aTS": {
+        "tmdbId": 196
+      },
+      "lb-429-2czU": {
+        "tmdbId": 68734
+      },
+      "lb-430-26uk": {
+        "tmdbId": 2666
+      },
+      "lb-431-o0Hc": {
+        "tmdbId": 646380
+      },
+      "lb-432-2a8i": {
+        "tmdbId": 557
+      },
+      "lb-433-5xlK": {
+        "tmdbId": 181812
+      },
+      "lb-434-8i7u": {
+        "tmdbId": 273481
+      },
+      "lb-435-1XV2": {
+        "tmdbId": 9741
+      },
+      "lb-436-n87k": {
+        "tmdbId": 624860
       }
     },
     "categoryOverrides": {},
@@ -29408,7 +29441,18 @@
       "lb-422-2bcU": 101,
       "lb-423-6ZS": 155,
       "lb-424-2cBQ": 133,
-      "lb-425-zu4c": 125
+      "lb-425-zu4c": 125,
+      "lb-426-pEeQ": 157,
+      "lb-427-bSVc": 147,
+      "lb-428-2aTS": 119,
+      "lb-429-2czU": 120,
+      "lb-430-26uk": 101,
+      "lb-431-o0Hc": 138,
+      "lb-432-2a8i": 121,
+      "lb-433-5xlK": 142,
+      "lb-434-8i7u": 121,
+      "lb-435-1XV2": 106,
+      "lb-436-n87k": 148
     }
   }
 }
