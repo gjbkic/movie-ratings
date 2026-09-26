@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790424528641,
-  "sourceUpdatedIso": "2026-09-26T12:08:48.641Z",
+  "sourceUpdatedAt": 1790425286754,
+  "sourceUpdatedIso": "2026-09-26T12:21:26.754Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -11349,7 +11349,7 @@
       "genre": [],
       "origin": "邦画",
       "format": "animation",
-      "runtime": null,
+      "runtime": 94,
       "exact": true
     },
     {
@@ -12015,7 +12015,7 @@
       ],
       "origin": "ハリウッド",
       "format": "animation",
-      "runtime": null,
+      "runtime": 95,
       "exact": true
     },
     {
@@ -12990,7 +12990,7 @@
       ],
       "origin": "ハリウッド",
       "format": "animation",
-      "runtime": null,
+      "runtime": 98,
       "exact": false
     },
     {
@@ -13084,7 +13084,7 @@
       ],
       "origin": "ハリウッド",
       "format": "animation",
-      "runtime": null,
+      "runtime": 91,
       "exact": true
     },
     {
@@ -14166,7 +14166,7 @@
       ],
       "origin": "邦画",
       "format": "animation",
-      "runtime": null,
+      "runtime": 109,
       "exact": true
     },
     {
@@ -14639,7 +14639,7 @@
       ],
       "origin": "邦画",
       "format": "animation",
-      "runtime": null,
+      "runtime": 100,
       "exact": true
     },
     {
@@ -15409,7 +15409,7 @@
       ],
       "origin": "邦画",
       "format": "animation",
-      "runtime": null,
+      "runtime": 85,
       "exact": true
     },
     {
@@ -19866,6 +19866,27 @@
       },
       "lb-215-aJ5E": {
         "tmdbId": 328111
+      },
+      "lb-216-1DD8": {
+        "tmdbId": 20352
+      },
+      "lb-217-3gg0": {
+        "tmdbId": 93456
+      },
+      "lb-218-6jCO": {
+        "tmdbId": 211672
+      },
+      "lb-219-on14": {
+        "tmdbId": 655437
+      },
+      "lb-220-Cgri": {
+        "tmdbId": 1012201
+      },
+      "lb-221-7VEK": {
+        "tmdbId": 265712
+      },
+      "lb-222-hSNY": {
+        "tmdbId": 495925
       }
     },
     "categoryOverrides": {},
@@ -26443,7 +26464,14 @@
       "lb-212-acjI": 104,
       "lb-213-2TTS": 101,
       "lb-214-2aoA": 140,
-      "lb-215-aJ5E": 86
+      "lb-215-aJ5E": 86,
+      "lb-216-1DD8": 95,
+      "lb-217-3gg0": 98,
+      "lb-218-6jCO": 91,
+      "lb-219-on14": 100,
+      "lb-220-Cgri": 85,
+      "lb-221-7VEK": 94,
+      "lb-222-hSNY": 109
     }
   }
 }
