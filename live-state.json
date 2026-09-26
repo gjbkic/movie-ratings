@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790421457799,
-  "sourceUpdatedIso": "2026-09-26T11:17:37.799Z",
+  "sourceUpdatedAt": 1790421493140,
+  "sourceUpdatedIso": "2026-09-26T11:18:13.140Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -11011,7 +11011,14 @@
       "sameScoreRank": 18,
       "category": "Letterboxd",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "シリーズ劇場版",
+        "コメディ",
+        "サスペンス",
+        "ミステリー",
+        "クライム",
+        "娯楽"
+      ],
       "origin": "邦画",
       "format": "live",
       "runtime": null,
@@ -23956,7 +23963,14 @@
         "社会問題・生活",
         "娯楽"
       ],
-      "custom-1789385860847-w7kt": [],
+      "custom-1789385860847-w7kt": [
+        "シリーズ劇場版",
+        "コメディ",
+        "サスペンス",
+        "ミステリー",
+        "クライム",
+        "娯楽"
+      ],
       "custom-1789385860920-hsho": [
         "子供向け",
         "ファンタジー",
