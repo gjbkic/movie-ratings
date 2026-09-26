@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790431560073,
-  "sourceUpdatedIso": "2026-09-26T14:06:00.073Z",
+  "sourceUpdatedAt": 1790431570865,
+  "sourceUpdatedIso": "2026-09-26T14:06:10.865Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -10408,7 +10408,13 @@
       "sameScoreRank": 35,
       "category": "邦画",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "大作",
+        "娯楽",
+        "ドラマ",
+        "クライム",
+        "サスペンス"
+      ],
       "origin": "邦画",
       "format": "live",
       "runtime": null,
@@ -25625,7 +25631,13 @@
         "大作",
         "心理・内面"
       ],
-      "lb-567-Uhxi": [],
+      "lb-567-Uhxi": [
+        "大作",
+        "娯楽",
+        "ドラマ",
+        "クライム",
+        "サスペンス"
+      ],
       "lb-568-S9Kk": [
         "感動",
         "社会問題・生活",
