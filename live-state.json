@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790423933523,
-  "sourceUpdatedIso": "2026-09-26T11:58:53.523Z",
+  "sourceUpdatedAt": 1790423941976,
+  "sourceUpdatedIso": "2026-09-26T11:59:01.976Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -8116,6 +8116,30 @@
       "exact": true
     },
     {
+      "id": "lb-384-1UhS",
+      "title": "shall we ダンス?",
+      "originalTitle": "",
+      "englishTitle": "Shall We Dance?",
+      "year": 1996,
+      "score": 81,
+      "star": 3,
+      "overallRank": 329,
+      "sameScoreRank": 25,
+      "category": "邦画",
+      "mediaType": "movie",
+      "genre": [
+        "comfort",
+        "ドラマ",
+        "社会問題・生活",
+        "恋愛",
+        "コメディ"
+      ],
+      "origin": "邦画",
+      "format": "live",
+      "runtime": null,
+      "exact": true
+    },
+    {
       "id": "custom-1790423280120-qki8",
       "title": "トリック新作スペシャル",
       "originalTitle": "トリック　新作スペシャル",
@@ -8123,8 +8147,8 @@
       "year": 2005,
       "score": 81,
       "star": 3,
-      "overallRank": 329,
-      "sameScoreRank": 25,
+      "overallRank": 330,
+      "sameScoreRank": 26,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -8149,8 +8173,8 @@
       "year": 2016,
       "score": 81,
       "star": 3,
-      "overallRank": 330,
-      "sameScoreRank": 26,
+      "overallRank": 331,
+      "sameScoreRank": 27,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -8165,30 +8189,6 @@
       "origin": "邦画",
       "format": "live",
       "runtime": 54,
-      "exact": true
-    },
-    {
-      "id": "lb-384-1UhS",
-      "title": "shall we ダンス?",
-      "originalTitle": "",
-      "englishTitle": "Shall We Dance?",
-      "year": 1996,
-      "score": 81,
-      "star": 3,
-      "overallRank": 331,
-      "sameScoreRank": 27,
-      "category": "邦画",
-      "mediaType": "movie",
-      "genre": [
-        "comfort",
-        "ドラマ",
-        "社会問題・生活",
-        "恋愛",
-        "コメディ"
-      ],
-      "origin": "邦画",
-      "format": "live",
-      "runtime": null,
       "exact": true
     },
     {
@@ -16509,9 +16509,9 @@
         "lb-424-2cBQ",
         "custom-1790322757929-0kod",
         "lb-326-4hka",
+        "lb-384-1UhS",
         "custom-1790423280120-qki8",
         "custom-1790322765489-7o9h",
-        "lb-384-1UhS",
         "lb-372-2b7g",
         "lb-114-psI",
         "lb-105-2bfk",
