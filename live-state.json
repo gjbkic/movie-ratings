@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790426931590,
-  "sourceUpdatedIso": "2026-09-26T12:48:51.590Z",
+  "sourceUpdatedAt": 1790426941651,
+  "sourceUpdatedIso": "2026-09-26T12:49:01.651Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -9081,7 +9081,13 @@
       "sameScoreRank": 14,
       "category": "邦画",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "恋愛",
+        "コメディ",
+        "ドラマ",
+        "どんでん返し",
+        "サスペンス"
+      ],
       "origin": "邦画",
       "format": "live",
       "runtime": 116,
@@ -22987,7 +22993,13 @@
         "子供向け",
         "娯楽"
       ],
-      "lb-242-kif8": [],
+      "lb-242-kif8": [
+        "恋愛",
+        "コメディ",
+        "ドラマ",
+        "どんでん返し",
+        "サスペンス"
+      ],
       "lb-243-orTE": [
         "サスペンス",
         "コメディ",
