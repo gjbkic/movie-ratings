@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790426248770,
-  "sourceUpdatedIso": "2026-09-26T12:37:28.770Z",
+  "sourceUpdatedAt": 1790426253685,
+  "sourceUpdatedIso": "2026-09-26T12:37:33.685Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -8858,7 +8858,9 @@
       "sameScoreRank": 5,
       "category": "Letterboxd",
       "mediaType": "drama",
-      "genre": [],
+      "genre": [
+        "TV特番・SP"
+      ],
       "origin": "邦画",
       "format": "live",
       "runtime": null,
@@ -24469,7 +24471,9 @@
         "comfort",
         "娯楽"
       ],
-      "custom-1789385860057-z7ka": [],
+      "custom-1789385860057-z7ka": [
+        "TV特番・SP"
+      ],
       "custom-1789385860088-xif1": [],
       "custom-1789385860147-fi90": [
         "娯楽",
