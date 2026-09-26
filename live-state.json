@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790423874648,
-  "sourceUpdatedIso": "2026-09-26T11:57:54.648Z",
+  "sourceUpdatedAt": 1790423879628,
+  "sourceUpdatedIso": "2026-09-26T11:57:59.628Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -8231,6 +8231,29 @@
       "exact": true
     },
     {
+      "id": "custom-1789929101832-iwdt",
+      "title": "母なる証明",
+      "originalTitle": "마더",
+      "englishTitle": "Mother",
+      "year": 2009,
+      "score": 81,
+      "star": 3,
+      "overallRank": 334,
+      "sameScoreRank": 30,
+      "category": "サスペンス、ミステリー",
+      "mediaType": "movie",
+      "genre": [
+        "サスペンス",
+        "ミステリー",
+        "クライム",
+        "心理・内面"
+      ],
+      "origin": "その他",
+      "format": "live",
+      "runtime": null,
+      "exact": true
+    },
+    {
       "id": "custom-1790322757548-hd0x",
       "title": "JoJo's Bizarre Adventure: Golden Wind",
       "originalTitle": "",
@@ -8238,8 +8261,8 @@
       "year": 2018,
       "score": 81,
       "star": 3,
-      "overallRank": 334,
-      "sameScoreRank": 30,
+      "overallRank": 335,
+      "sameScoreRank": 31,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -8261,8 +8284,8 @@
       "year": 2021,
       "score": 81,
       "star": 3,
-      "overallRank": 335,
-      "sameScoreRank": 31,
+      "overallRank": 336,
+      "sameScoreRank": 32,
       "category": "スパイダーマン作品",
       "mediaType": "movie",
       "genre": [
@@ -8285,8 +8308,8 @@
       "year": 2019,
       "score": 81,
       "star": 3,
-      "overallRank": 336,
-      "sameScoreRank": 32,
+      "overallRank": 337,
+      "sameScoreRank": 33,
       "category": "MCU作品",
       "mediaType": "movie",
       "genre": [
@@ -8310,8 +8333,8 @@
       "year": 2013,
       "score": 81,
       "star": 3,
-      "overallRank": 337,
-      "sameScoreRank": 33,
+      "overallRank": 338,
+      "sameScoreRank": 34,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -8322,29 +8345,6 @@
         "アクション",
         "SF",
         "切ない"
-      ],
-      "origin": "その他",
-      "format": "live",
-      "runtime": null,
-      "exact": true
-    },
-    {
-      "id": "custom-1789929101832-iwdt",
-      "title": "母なる証明",
-      "originalTitle": "마더",
-      "englishTitle": "Mother",
-      "year": 2009,
-      "score": 81,
-      "star": 3,
-      "overallRank": 338,
-      "sameScoreRank": 34,
-      "category": "サスペンス、ミステリー",
-      "mediaType": "movie",
-      "genre": [
-        "サスペンス",
-        "ミステリー",
-        "クライム",
-        "心理・内面"
       ],
       "origin": "その他",
       "format": "live",
@@ -16508,11 +16508,11 @@
         "lb-372-2b7g",
         "lb-114-psI",
         "lb-105-2bfk",
+        "custom-1789929101832-iwdt",
         "custom-1790322757548-hd0x",
         "lb-519-nwRw",
         "lb-401-9vE4",
         "custom-1789385860147-fi90",
-        "custom-1789929101832-iwdt",
         "lb-292-1S3E",
         "lb-164-2b3e",
         "custom-1790185844080-jquu",
