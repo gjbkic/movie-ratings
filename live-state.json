@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790426338259,
-  "sourceUpdatedIso": "2026-09-26T12:38:58.259Z",
+  "sourceUpdatedAt": 1790426344183,
+  "sourceUpdatedIso": "2026-09-26T12:39:04.183Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -8964,7 +8964,9 @@
       "sameScoreRank": 9,
       "category": "ほかアニメ",
       "mediaType": "movie",
-      "genre": [],
+      "genre": [
+        "娯楽"
+      ],
       "origin": "邦画",
       "format": "animation",
       "runtime": null,
@@ -24413,7 +24415,9 @@
         "comfort",
         "心理・内面"
       ],
-      "lb-575-1fK0": [],
+      "lb-575-1fK0": [
+        "娯楽"
+      ],
       "lb-576-18H4": [
         "ミステリー",
         "胸糞",
