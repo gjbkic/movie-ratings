@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790510079651,
-  "sourceUpdatedIso": "2026-09-27T11:54:39.651Z",
+  "sourceUpdatedAt": 1790510114377,
+  "sourceUpdatedIso": "2026-09-27T11:55:14.377Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -2110,7 +2110,7 @@
       ],
       "origin": "邦画",
       "format": "animation",
-      "runtime": null,
+      "runtime": 137,
       "exact": true
     },
     {
@@ -4767,7 +4767,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 137,
       "exact": true
     },
     {
@@ -5573,7 +5573,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 107,
       "exact": true
     },
     {
@@ -6813,7 +6813,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 146,
       "exact": true
     },
     {
@@ -8056,7 +8056,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 157,
       "exact": true
     },
     {
@@ -15904,7 +15904,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 117,
       "exact": true
     },
     {
@@ -16093,7 +16093,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 115,
       "exact": true
     },
     {
@@ -16349,7 +16349,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 101,
       "exact": true
     },
     {
@@ -22211,6 +22211,30 @@
       },
       "lb-520-1Efm": {
         "tmdbId": 19995
+      },
+      "lb-521-29Qo": {
+        "tmdbId": 674
+      },
+      "lb-522-1RYu": {
+        "tmdbId": 12444
+      },
+      "lb-524-7bQA": {
+        "tmdbId": 244786
+      },
+      "lb-525-2aVE": {
+        "tmdbId": 185
+      },
+      "lb-526-4JQI": {
+        "tmdbId": 149871
+      },
+      "lb-527-7dEc": {
+        "tmdbId": 245891
+      },
+      "lb-528-3vmW": {
+        "tmdbId": 102899
+      },
+      "lb-529-1WQU": {
+        "tmdbId": 10195
       }
     },
     "categoryOverrides": {},
@@ -30217,7 +30241,15 @@
       "lb-517-k8dm": 115,
       "lb-518-2aEy": 122,
       "lb-519-nwRw": 148,
-      "lb-520-1Efm": 162
+      "lb-520-1Efm": 162,
+      "lb-521-29Qo": 157,
+      "lb-522-1RYu": 146,
+      "lb-524-7bQA": 107,
+      "lb-525-2aVE": 137,
+      "lb-526-4JQI": 137,
+      "lb-527-7dEc": 101,
+      "lb-528-3vmW": 117,
+      "lb-529-1WQU": 115
     }
   }
 }
