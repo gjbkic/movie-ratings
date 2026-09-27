@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790509389233,
-  "sourceUpdatedIso": "2026-09-27T11:43:09.233Z",
+  "sourceUpdatedAt": 1790509432406,
+  "sourceUpdatedIso": "2026-09-27T11:43:52.406Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -1125,39 +1125,15 @@
       "exact": true
     },
     {
-      "id": "lb-41-cjr4",
-      "title": "トップガン マーヴェリック",
-      "originalTitle": "",
-      "englishTitle": "Top Gun: Maverick",
-      "year": 2022,
-      "score": 93,
-      "star": 4.5,
-      "overallRank": 44,
-      "sameScoreRank": 12,
-      "category": "アクション",
-      "mediaType": "movie",
-      "genre": [
-        "アクション",
-        "サスペンス",
-        "戦争",
-        "大作",
-        "娯楽"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 131,
-      "exact": true
-    },
-    {
       "id": "custom-1790508958519-2edt",
       "title": "怪物",
       "originalTitle": "怪物",
       "englishTitle": "Monster",
       "year": 2023,
-      "score": 92,
-      "star": 4,
-      "overallRank": 45,
-      "sameScoreRank": 1,
+      "score": 93,
+      "star": 4.5,
+      "overallRank": 44,
+      "sameScoreRank": 12,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -1176,6 +1152,30 @@
       "exact": true
     },
     {
+      "id": "lb-41-cjr4",
+      "title": "トップガン マーヴェリック",
+      "originalTitle": "",
+      "englishTitle": "Top Gun: Maverick",
+      "year": 2022,
+      "score": 93,
+      "star": 4.5,
+      "overallRank": 45,
+      "sameScoreRank": 13,
+      "category": "アクション",
+      "mediaType": "movie",
+      "genre": [
+        "アクション",
+        "サスペンス",
+        "戦争",
+        "大作",
+        "娯楽"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 131,
+      "exact": true
+    },
+    {
       "id": "lb-487-28JG",
       "title": "ヴァージン・スーサイズ",
       "originalTitle": "",
@@ -1184,7 +1184,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 46,
-      "sameScoreRank": 2,
+      "sameScoreRank": 1,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -1211,7 +1211,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 47,
-      "sameScoreRank": 3,
+      "sameScoreRank": 2,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -1237,7 +1237,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 48,
-      "sameScoreRank": 4,
+      "sameScoreRank": 3,
       "category": "戦争、歴史",
       "mediaType": "movie",
       "genre": [
@@ -1264,7 +1264,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 49,
-      "sameScoreRank": 5,
+      "sameScoreRank": 4,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -1290,7 +1290,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 50,
-      "sameScoreRank": 6,
+      "sameScoreRank": 5,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -1315,7 +1315,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 51,
-      "sameScoreRank": 7,
+      "sameScoreRank": 6,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -1338,7 +1338,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 52,
-      "sameScoreRank": 8,
+      "sameScoreRank": 7,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -1368,7 +1368,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 53,
-      "sameScoreRank": 9,
+      "sameScoreRank": 8,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -1394,7 +1394,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 54,
-      "sameScoreRank": 10,
+      "sameScoreRank": 9,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -17486,7 +17486,7 @@
       "custom-1790508959663-6kld": 87,
       "custom-1790508958909-q6d6": 87,
       "custom-1790508959270-dbu3": 87,
-      "custom-1790508958519-2edt": 92
+      "custom-1790508958519-2edt": 93
     },
     "rankOrder": {
       "40": [
@@ -18189,7 +18189,6 @@
         "lb-162-2TTo"
       ],
       "92": [
-        "custom-1790508958519-2edt",
         "lb-487-28JG",
         "lb-116-1YYc",
         "lb-564-29Wm",
@@ -18212,6 +18211,7 @@
         "lb-323-1VEo",
         "lb-556-2b9m",
         "lb-308-kPxE",
+        "custom-1790508958519-2edt",
         "lb-41-cjr4"
       ],
       "94": [
@@ -20373,7 +20373,7 @@
       "custom-1790508959663-6kld": 4,
       "custom-1790508958909-q6d6": 4,
       "custom-1790508959270-dbu3": 4,
-      "custom-1790508958519-2edt": 4
+      "custom-1790508958519-2edt": 4.5
     },
     "titleOverrides": {
       "added-anchor-578": {
