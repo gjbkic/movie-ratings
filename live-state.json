@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790509337218,
-  "sourceUpdatedIso": "2026-09-27T11:42:17.218Z",
+  "sourceUpdatedAt": 1790509373700,
+  "sourceUpdatedIso": "2026-09-27T11:42:53.700Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -1202,31 +1202,6 @@
       "exact": true
     },
     {
-      "id": "lb-58-293w",
-      "title": "プレステージ",
-      "originalTitle": "",
-      "englishTitle": "The Prestige",
-      "year": 2006,
-      "score": 92,
-      "star": 4,
-      "overallRank": 47,
-      "sameScoreRank": 3,
-      "category": "サスペンス、ミステリー",
-      "mediaType": "movie",
-      "genre": [
-        "サスペンス",
-        "ミステリー",
-        "ファンタジー",
-        "どんでん返し",
-        "心理・内面",
-        "特殊構造"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 130,
-      "exact": true
-    },
-    {
       "id": "custom-1790508958519-2edt",
       "title": "怪物",
       "originalTitle": "怪物",
@@ -1234,8 +1209,8 @@
       "year": 2023,
       "score": 92,
       "star": 4,
-      "overallRank": 48,
-      "sameScoreRank": 4,
+      "overallRank": 47,
+      "sameScoreRank": 3,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -1251,6 +1226,31 @@
       "origin": "その他",
       "format": "live",
       "runtime": 125,
+      "exact": true
+    },
+    {
+      "id": "lb-58-293w",
+      "title": "プレステージ",
+      "originalTitle": "",
+      "englishTitle": "The Prestige",
+      "year": 2006,
+      "score": 92,
+      "star": 4,
+      "overallRank": 48,
+      "sameScoreRank": 4,
+      "category": "サスペンス、ミステリー",
+      "mediaType": "movie",
+      "genre": [
+        "サスペンス",
+        "ミステリー",
+        "ファンタジー",
+        "どんでん返し",
+        "心理・内面",
+        "特殊構造"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 130,
       "exact": true
     },
     {
@@ -18191,8 +18191,8 @@
       "92": [
         "lb-487-28JG",
         "lb-116-1YYc",
-        "lb-58-293w",
         "custom-1790508958519-2edt",
+        "lb-58-293w",
         "lb-564-29Wm",
         "added-anchor-577",
         "lb-178-29XE",
