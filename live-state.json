@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790509666410,
-  "sourceUpdatedIso": "2026-09-27T11:47:46.410Z",
+  "sourceUpdatedAt": 1790509671376,
+  "sourceUpdatedIso": "2026-09-27T11:47:51.376Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -11969,6 +11969,31 @@
       "exact": true
     },
     {
+      "id": "custom-1789385860847-w7kt",
+      "title": "踊る大捜査線 THE MOVIE",
+      "originalTitle": "",
+      "englishTitle": "Bayside Shakedown",
+      "year": 1998,
+      "score": 77,
+      "star": 2.5,
+      "overallRank": 471,
+      "sameScoreRank": 2,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "シリーズ劇場版",
+        "コメディ",
+        "サスペンス",
+        "ミステリー",
+        "クライム",
+        "娯楽"
+      ],
+      "origin": "邦画",
+      "format": "live",
+      "runtime": null,
+      "exact": true
+    },
+    {
       "id": "lb-482-euce",
       "title": "インビジブル・ゲスト 悪魔の証明",
       "originalTitle": "",
@@ -11976,8 +12001,8 @@
       "year": 2016,
       "score": 77,
       "star": 2.5,
-      "overallRank": 471,
-      "sameScoreRank": 2,
+      "overallRank": 472,
+      "sameScoreRank": 3,
       "category": "Letterboxd追加",
       "mediaType": "movie",
       "genre": [
@@ -12000,8 +12025,8 @@
       "year": 2004,
       "score": 77,
       "star": 2.5,
-      "overallRank": 472,
-      "sameScoreRank": 3,
+      "overallRank": 473,
+      "sameScoreRank": 4,
       "category": "Letterboxd追加",
       "mediaType": "drama",
       "genre": [
@@ -12013,31 +12038,6 @@
         "雰囲気・美学",
         "バイオレンス",
         "特殊構造"
-      ],
-      "origin": "邦画",
-      "format": "live",
-      "runtime": null,
-      "exact": true
-    },
-    {
-      "id": "custom-1789385860847-w7kt",
-      "title": "踊る大捜査線 THE MOVIE",
-      "originalTitle": "",
-      "englishTitle": "Bayside Shakedown",
-      "year": 1998,
-      "score": 77,
-      "star": 2.5,
-      "overallRank": 473,
-      "sameScoreRank": 4,
-      "category": "Letterboxd",
-      "mediaType": "movie",
-      "genre": [
-        "シリーズ劇場版",
-        "コメディ",
-        "サスペンス",
-        "ミステリー",
-        "クライム",
-        "娯楽"
       ],
       "origin": "邦画",
       "format": "live",
@@ -17726,9 +17726,9 @@
       ],
       "77": [
         "lb-500-16T8",
+        "custom-1789385860847-w7kt",
         "lb-482-euce",
         "lb-339-lPy0",
-        "custom-1789385860847-w7kt",
         "lb-414-8gw8",
         "lb-188-1BWM",
         "lb-240-ki8w",
