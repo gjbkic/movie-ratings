@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790509432406,
-  "sourceUpdatedIso": "2026-09-27T11:43:52.406Z",
+  "sourceUpdatedAt": 1790509449771,
+  "sourceUpdatedIso": "2026-09-27T11:44:09.771Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -1152,30 +1152,6 @@
       "exact": true
     },
     {
-      "id": "lb-41-cjr4",
-      "title": "トップガン マーヴェリック",
-      "originalTitle": "",
-      "englishTitle": "Top Gun: Maverick",
-      "year": 2022,
-      "score": 93,
-      "star": 4.5,
-      "overallRank": 45,
-      "sameScoreRank": 13,
-      "category": "アクション",
-      "mediaType": "movie",
-      "genre": [
-        "アクション",
-        "サスペンス",
-        "戦争",
-        "大作",
-        "娯楽"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 131,
-      "exact": true
-    },
-    {
       "id": "lb-487-28JG",
       "title": "ヴァージン・スーサイズ",
       "originalTitle": "",
@@ -1183,7 +1159,7 @@
       "year": 1999,
       "score": 92,
       "star": 4,
-      "overallRank": 46,
+      "overallRank": 45,
       "sameScoreRank": 1,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
@@ -1210,7 +1186,7 @@
       "year": 1995,
       "score": 92,
       "star": 4,
-      "overallRank": 47,
+      "overallRank": 46,
       "sameScoreRank": 2,
       "category": "ほかアニメ",
       "mediaType": "movie",
@@ -1229,6 +1205,30 @@
       "exact": true
     },
     {
+      "id": "lb-41-cjr4",
+      "title": "トップガン マーヴェリック",
+      "originalTitle": "",
+      "englishTitle": "Top Gun: Maverick",
+      "year": 2022,
+      "score": 92,
+      "star": 4,
+      "overallRank": 47,
+      "sameScoreRank": 3,
+      "category": "アクション",
+      "mediaType": "movie",
+      "genre": [
+        "アクション",
+        "サスペンス",
+        "戦争",
+        "大作",
+        "娯楽"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 131,
+      "exact": true
+    },
+    {
       "id": "lb-564-29Wm",
       "title": "ライフ・イズ・ビューティフル",
       "originalTitle": "La vita è bella",
@@ -1237,7 +1237,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 48,
-      "sameScoreRank": 3,
+      "sameScoreRank": 4,
       "category": "戦争、歴史",
       "mediaType": "movie",
       "genre": [
@@ -1264,7 +1264,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 49,
-      "sameScoreRank": 4,
+      "sameScoreRank": 5,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -1290,7 +1290,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 50,
-      "sameScoreRank": 5,
+      "sameScoreRank": 6,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -1315,7 +1315,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 51,
-      "sameScoreRank": 6,
+      "sameScoreRank": 7,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -1338,7 +1338,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 52,
-      "sameScoreRank": 7,
+      "sameScoreRank": 8,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -1368,7 +1368,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 53,
-      "sameScoreRank": 8,
+      "sameScoreRank": 9,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -1394,7 +1394,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 54,
-      "sameScoreRank": 9,
+      "sameScoreRank": 10,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -16888,7 +16888,7 @@
       "lb-463-4Xuw": 91,
       "lb-333-2b4m": 94,
       "lb-2-2a9q": 93,
-      "lb-41-cjr4": 93,
+      "lb-41-cjr4": 92,
       "lb-24-2aHi": 93,
       "lb-323-1VEo": 93,
       "lb-332-28MA": 93,
@@ -18191,6 +18191,7 @@
       "92": [
         "lb-487-28JG",
         "lb-116-1YYc",
+        "lb-41-cjr4",
         "lb-564-29Wm",
         "added-anchor-577",
         "lb-58-293w",
@@ -18211,8 +18212,7 @@
         "lb-323-1VEo",
         "lb-556-2b9m",
         "lb-308-kPxE",
-        "custom-1790508958519-2edt",
-        "lb-41-cjr4"
+        "custom-1790508958519-2edt"
       ],
       "94": [
         "lb-97-2a7u",
@@ -19767,7 +19767,7 @@
       "lb-463-4Xuw": 4,
       "lb-333-2b4m": 4.5,
       "lb-2-2a9q": 4.5,
-      "lb-41-cjr4": 4.5,
+      "lb-41-cjr4": 4,
       "lb-24-2aHi": 4.5,
       "lb-323-1VEo": 4.5,
       "lb-332-28MA": 4.5,
