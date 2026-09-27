@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790509379988,
-  "sourceUpdatedIso": "2026-09-27T11:42:59.988Z",
+  "sourceUpdatedAt": 1790509389233,
+  "sourceUpdatedIso": "2026-09-27T11:43:09.233Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -1149,6 +1149,33 @@
       "exact": true
     },
     {
+      "id": "custom-1790508958519-2edt",
+      "title": "怪物",
+      "originalTitle": "怪物",
+      "englishTitle": "Monster",
+      "year": 2023,
+      "score": 92,
+      "star": 4,
+      "overallRank": 45,
+      "sameScoreRank": 1,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "ミステリー",
+        "ドラマ",
+        "恋愛",
+        "サスペンス",
+        "雰囲気・美学",
+        "青春・若者",
+        "差別・人権",
+        "心理・内面"
+      ],
+      "origin": "その他",
+      "format": "live",
+      "runtime": 125,
+      "exact": true
+    },
+    {
       "id": "lb-487-28JG",
       "title": "ヴァージン・スーサイズ",
       "originalTitle": "",
@@ -1156,8 +1183,8 @@
       "year": 1999,
       "score": 92,
       "star": 4,
-      "overallRank": 45,
-      "sameScoreRank": 1,
+      "overallRank": 46,
+      "sameScoreRank": 2,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -1183,8 +1210,8 @@
       "year": 1995,
       "score": 92,
       "star": 4,
-      "overallRank": 46,
-      "sameScoreRank": 2,
+      "overallRank": 47,
+      "sameScoreRank": 3,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -1199,33 +1226,6 @@
       "origin": "邦画",
       "format": "animation",
       "runtime": 85,
-      "exact": true
-    },
-    {
-      "id": "custom-1790508958519-2edt",
-      "title": "怪物",
-      "originalTitle": "怪物",
-      "englishTitle": "Monster",
-      "year": 2023,
-      "score": 92,
-      "star": 4,
-      "overallRank": 47,
-      "sameScoreRank": 3,
-      "category": "Letterboxd",
-      "mediaType": "movie",
-      "genre": [
-        "ミステリー",
-        "ドラマ",
-        "恋愛",
-        "サスペンス",
-        "雰囲気・美学",
-        "青春・若者",
-        "差別・人権",
-        "心理・内面"
-      ],
-      "origin": "その他",
-      "format": "live",
-      "runtime": 125,
       "exact": true
     },
     {
@@ -18189,9 +18189,9 @@
         "lb-162-2TTo"
       ],
       "92": [
+        "custom-1790508958519-2edt",
         "lb-487-28JG",
         "lb-116-1YYc",
-        "custom-1790508958519-2edt",
         "lb-564-29Wm",
         "added-anchor-577",
         "lb-58-293w",
