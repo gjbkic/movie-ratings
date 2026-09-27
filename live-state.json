@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790509320476,
-  "sourceUpdatedIso": "2026-09-27T11:42:00.476Z",
+  "sourceUpdatedAt": 1790509337218,
+  "sourceUpdatedIso": "2026-09-27T11:42:17.218Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -1227,26 +1227,30 @@
       "exact": true
     },
     {
-      "id": "lb-178-29XE",
-      "title": "ユージュアル・サスペクツ",
-      "originalTitle": "",
-      "englishTitle": "The Usual Suspects",
-      "year": 1995,
+      "id": "custom-1790508958519-2edt",
+      "title": "怪物",
+      "originalTitle": "怪物",
+      "englishTitle": "Monster",
+      "year": 2023,
       "score": 92,
       "star": 4,
       "overallRank": 48,
       "sameScoreRank": 4,
-      "category": "サスペンス、ミステリー",
+      "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
-        "サスペンス",
         "ミステリー",
-        "どんでん返し",
-        "クライム"
+        "ドラマ",
+        "恋愛",
+        "サスペンス",
+        "雰囲気・美学",
+        "青春・若者",
+        "差別・人権",
+        "心理・内面"
       ],
-      "origin": "ハリウッド",
+      "origin": "その他",
       "format": "live",
-      "runtime": 105,
+      "runtime": 125,
       "exact": true
     },
     {
@@ -1303,30 +1307,26 @@
       "exact": true
     },
     {
-      "id": "custom-1790508958519-2edt",
-      "title": "怪物",
-      "originalTitle": "怪物",
-      "englishTitle": "Monster",
-      "year": 2023,
+      "id": "lb-178-29XE",
+      "title": "ユージュアル・サスペクツ",
+      "originalTitle": "",
+      "englishTitle": "The Usual Suspects",
+      "year": 1995,
       "score": 92,
       "star": 4,
       "overallRank": 51,
       "sameScoreRank": 7,
-      "category": "Letterboxd",
+      "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
-        "ミステリー",
-        "ドラマ",
-        "恋愛",
         "サスペンス",
-        "雰囲気・美学",
-        "青春・若者",
-        "差別・人権",
-        "心理・内面"
+        "ミステリー",
+        "どんでん返し",
+        "クライム"
       ],
-      "origin": "その他",
+      "origin": "ハリウッド",
       "format": "live",
-      "runtime": 125,
+      "runtime": 105,
       "exact": true
     },
     {
@@ -18192,10 +18192,10 @@
         "lb-487-28JG",
         "lb-116-1YYc",
         "lb-58-293w",
-        "lb-178-29XE",
+        "custom-1790508958519-2edt",
         "lb-564-29Wm",
         "added-anchor-577",
-        "custom-1790508958519-2edt",
+        "lb-178-29XE",
         "lb-262-29Du",
         "lb-378-26E0",
         "lb-486-b8wK"
