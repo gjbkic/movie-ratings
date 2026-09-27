@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790509373700,
-  "sourceUpdatedIso": "2026-09-27T11:42:53.700Z",
+  "sourceUpdatedAt": 1790509379988,
+  "sourceUpdatedIso": "2026-09-27T11:42:59.988Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -1229,31 +1229,6 @@
       "exact": true
     },
     {
-      "id": "lb-58-293w",
-      "title": "プレステージ",
-      "originalTitle": "",
-      "englishTitle": "The Prestige",
-      "year": 2006,
-      "score": 92,
-      "star": 4,
-      "overallRank": 48,
-      "sameScoreRank": 4,
-      "category": "サスペンス、ミステリー",
-      "mediaType": "movie",
-      "genre": [
-        "サスペンス",
-        "ミステリー",
-        "ファンタジー",
-        "どんでん返し",
-        "心理・内面",
-        "特殊構造"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 130,
-      "exact": true
-    },
-    {
       "id": "lb-564-29Wm",
       "title": "ライフ・イズ・ビューティフル",
       "originalTitle": "La vita è bella",
@@ -1261,8 +1236,8 @@
       "year": 1997,
       "score": 92,
       "star": 4,
-      "overallRank": 49,
-      "sameScoreRank": 5,
+      "overallRank": 48,
+      "sameScoreRank": 4,
       "category": "戦争、歴史",
       "mediaType": "movie",
       "genre": [
@@ -1288,8 +1263,8 @@
       "year": 2006,
       "score": 92,
       "star": 4,
-      "overallRank": 50,
-      "sameScoreRank": 6,
+      "overallRank": 49,
+      "sameScoreRank": 5,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -1304,6 +1279,31 @@
       "origin": "その他",
       "format": "live",
       "runtime": null,
+      "exact": true
+    },
+    {
+      "id": "lb-58-293w",
+      "title": "プレステージ",
+      "originalTitle": "",
+      "englishTitle": "The Prestige",
+      "year": 2006,
+      "score": 92,
+      "star": 4,
+      "overallRank": 50,
+      "sameScoreRank": 6,
+      "category": "サスペンス、ミステリー",
+      "mediaType": "movie",
+      "genre": [
+        "サスペンス",
+        "ミステリー",
+        "ファンタジー",
+        "どんでん返し",
+        "心理・内面",
+        "特殊構造"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 130,
       "exact": true
     },
     {
@@ -18192,9 +18192,9 @@
         "lb-487-28JG",
         "lb-116-1YYc",
         "custom-1790508958519-2edt",
-        "lb-58-293w",
         "lb-564-29Wm",
         "added-anchor-577",
+        "lb-58-293w",
         "lb-178-29XE",
         "lb-262-29Du",
         "lb-378-26E0",
