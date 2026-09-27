@@ -12612,7 +12612,7 @@
       ],
       "origin": "邦画",
       "format": "animation",
-      "runtime": null,
+      "runtime": 98,
       "exact": true
     },
     {
@@ -12764,7 +12764,7 @@
       ],
       "origin": "邦画",
       "format": "animation",
-      "runtime": null,
+      "runtime": 100,
       "exact": true
     },
     {
@@ -12859,7 +12859,7 @@
       ],
       "origin": "邦画",
       "format": "animation",
-      "runtime": null,
+      "runtime": 89,
       "exact": true
     },
     {
@@ -13213,7 +13213,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 113,
       "exact": false
     },
     {
@@ -13459,7 +13459,7 @@
       ],
       "origin": "邦画",
       "format": "live",
-      "runtime": null,
+      "runtime": 96,
       "exact": true
     },
     {
@@ -13960,7 +13960,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 100,
       "exact": true
     },
     {
@@ -15084,7 +15084,7 @@
       ],
       "origin": "その他",
       "format": "live",
-      "runtime": null,
+      "runtime": 105,
       "exact": true
     },
     {
@@ -15781,7 +15781,7 @@
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": null,
+      "runtime": 115,
       "exact": true
     },
     {
@@ -15827,7 +15827,7 @@
       ],
       "origin": "邦画",
       "format": "live",
-      "runtime": null,
+      "runtime": 110,
       "exact": true
     },
     {
@@ -16083,7 +16083,7 @@
       ],
       "origin": "邦画",
       "format": "live",
-      "runtime": null,
+      "runtime": 117,
       "exact": true
     },
     {
@@ -16444,7 +16444,7 @@
       ],
       "origin": "邦画",
       "format": "live",
-      "runtime": null,
+      "runtime": 119,
       "exact": true
     },
     {
@@ -21654,6 +21654,39 @@
       },
       "lb-437-O1GQ": {
         "tmdbId": 1311031
+      },
+      "lb-438-2ahu": {
+        "tmdbId": 492
+      },
+      "lb-439-1OPa": {
+        "tmdbId": 14069
+      },
+      "lb-440-iAFu": {
+        "tmdbId": 513434
+      },
+      "lb-441-27EA": {
+        "tmdbId": 2005
+      },
+      "lb-442-1SrG": {
+        "tmdbId": 12140
+      },
+      "lb-443-8ND2": {
+        "tmdbId": 284427
+      },
+      "lb-444-DCs0": {
+        "tmdbId": 1047041
+      },
+      "lb-445-8MH8": {
+        "tmdbId": 284052
+      },
+      "lb-446-bIPo": {
+        "tmdbId": 349176
+      },
+      "lb-447-cdWU": {
+        "tmdbId": 359628
+      },
+      "lb-448-bERq": {
+        "tmdbId": 347483
       }
     },
     "categoryOverrides": {},
@@ -29466,7 +29499,18 @@
       "lb-434-8i7u": 121,
       "lb-435-1XV2": 106,
       "lb-436-n87k": 148,
-      "lb-437-O1GQ": 155
+      "lb-437-O1GQ": 155,
+      "lb-438-2ahu": 113,
+      "lb-439-1OPa": 98,
+      "lb-440-iAFu": 96,
+      "lb-441-27EA": 100,
+      "lb-442-1SrG": 100,
+      "lb-443-8ND2": 105,
+      "lb-444-DCs0": 89,
+      "lb-445-8MH8": 115,
+      "lb-446-bIPo": 110,
+      "lb-447-cdWU": 117,
+      "lb-448-bERq": 119
     }
   }
 }
