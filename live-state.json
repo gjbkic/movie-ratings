@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790509202279,
-  "sourceUpdatedIso": "2026-09-27T11:40:02.279Z",
+  "sourceUpdatedAt": 1790509216826,
+  "sourceUpdatedIso": "2026-09-27T11:40:16.826Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -2716,7 +2716,7 @@
       "overallRank": 105,
       "sameScoreRank": 5,
       "category": "Letterboxd",
-      "mediaType": "movie",
+      "mediaType": "drama",
       "genre": [
         "サスペンス",
         "アクション",
@@ -2727,12 +2727,13 @@
         "心理・内面",
         "社会問題・生活",
         "差別・人権",
-        "娯楽",
         "切ない",
-        "時間",
-        "大作"
+        "TV特番・SP",
+        "大作",
+        "娯楽",
+        "時間"
       ],
-      "origin": "その他",
+      "origin": "邦画",
       "format": "",
       "runtime": null,
       "exact": true
@@ -2766,7 +2767,7 @@
         "戦争",
         "アクション"
       ],
-      "origin": "その他",
+      "origin": "邦画",
       "format": "",
       "runtime": null,
       "exact": true
@@ -22633,7 +22634,7 @@
       "custom-1790458138748-ky5y": "movie",
       "custom-1790508958519-2edt": "movie",
       "custom-1790508958909-q6d6": "drama",
-      "custom-1790508959270-dbu3": "movie",
+      "custom-1790508959270-dbu3": "drama",
       "custom-1790508959663-6kld": "drama",
       "custom-1790508960074-n6fj": "drama"
     },
@@ -28045,10 +28046,11 @@
         "心理・内面",
         "社会問題・生活",
         "差別・人権",
-        "娯楽",
         "切ない",
-        "時間",
-        "大作"
+        "TV特番・SP",
+        "大作",
+        "娯楽",
+        "時間"
       ]
     },
     "originOverrides": {
@@ -28722,8 +28724,8 @@
       "custom-1790458138407-21ka": "邦画",
       "custom-1790458138748-ky5y": "邦画",
       "custom-1790508958519-2edt": "その他",
-      "custom-1790508958909-q6d6": "その他",
-      "custom-1790508959270-dbu3": "その他",
+      "custom-1790508958909-q6d6": "邦画",
+      "custom-1790508959270-dbu3": "邦画",
       "custom-1790508959663-6kld": "邦画",
       "custom-1790508960074-n6fj": "邦画"
     },
