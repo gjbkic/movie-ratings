@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 1,
-  "sourceUpdatedAt": 1790508897147,
-  "sourceUpdatedIso": "2026-09-27T11:34:57.147Z",
+  "sourceUpdatedAt": 1790508960209,
+  "sourceUpdatedIso": "2026-09-27T11:36:00.209Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -1028,7 +1028,7 @@
       "englishTitle": "Rashomon",
       "year": 1950,
       "score": 93,
-      "star": 4.5,
+      "star": 4,
       "overallRank": 40,
       "sameScoreRank": 8,
       "category": "Letterboxd",
@@ -16695,6 +16695,107 @@
       "format": "live",
       "runtime": null,
       "exact": false
+    },
+    {
+      "id": "custom-1790508958519-2edt",
+      "title": "怪物",
+      "originalTitle": "怪物",
+      "englishTitle": "Monster",
+      "year": 2023,
+      "score": null,
+      "star": 4,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "ミステリー",
+        "スリラー",
+        "ドラマ"
+      ],
+      "origin": "その他",
+      "format": "live",
+      "runtime": 125,
+      "exact": false
+    },
+    {
+      "id": "custom-1790508958909-q6d6",
+      "title": "Attack on Titan The Final Chapters: Special 1",
+      "originalTitle": "",
+      "englishTitle": "Attack on Titan The Final Chapters: Special 1",
+      "year": 2023,
+      "score": null,
+      "star": 4,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": "",
+      "origin": "その他",
+      "format": "",
+      "runtime": null,
+      "exact": false
+    },
+    {
+      "id": "custom-1790508959270-dbu3",
+      "title": "Attack on Titan The Final Chapters: Special 2",
+      "originalTitle": "",
+      "englishTitle": "Attack on Titan The Final Chapters: Special 2",
+      "year": 2023,
+      "score": null,
+      "star": 4,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": "",
+      "origin": "その他",
+      "format": "",
+      "runtime": null,
+      "exact": false
+    },
+    {
+      "id": "custom-1790508959663-6kld",
+      "title": "劇場版「進撃の巨人」完結編 THE LAST ATTACK",
+      "originalTitle": "劇場版「進撃の巨人」完結編 THE LAST ATTACK",
+      "englishTitle": "Attack on Titan: THE LAST ATTACK",
+      "year": 2024,
+      "score": null,
+      "star": 4,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "アクション",
+        "アドベンチャー",
+        "ドラマ"
+      ],
+      "origin": "邦画",
+      "format": "animation",
+      "runtime": 145,
+      "exact": false
+    },
+    {
+      "id": "custom-1790508960074-n6fj",
+      "title": "鋼の錬金術師 FULLMETAL ALCHEMIST",
+      "originalTitle": "鋼の錬金術師 FULLMETAL ALCHEMIST",
+      "englishTitle": "Fullmetal Alchemist: Brotherhood",
+      "year": 2009,
+      "score": null,
+      "star": 3,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "drama",
+      "genre": [
+        "ドラマ",
+        "TV本編"
+      ],
+      "origin": "邦画",
+      "format": "animation",
+      "runtime": null,
+      "exact": false
     }
   ],
   "state": {
@@ -19492,6 +19593,91 @@
         "added": true,
         "_seq": 1790458138748,
         "source": "letterboxd"
+      },
+      {
+        "id": "custom-1790508958519-2edt",
+        "title": "怪物",
+        "originalTitle": "怪物",
+        "englishTitle": "Monster",
+        "lbTitle": "Monster",
+        "tmdbId": 1050035,
+        "year": 2023,
+        "uri": "https://letterboxd.com/gjbkic/film/monster-2023/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 4,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1790508958519,
+        "source": "letterboxd"
+      },
+      {
+        "id": "custom-1790508958909-q6d6",
+        "title": "Attack on Titan The Final Chapters: Special 1",
+        "originalTitle": "",
+        "englishTitle": "Attack on Titan The Final Chapters: Special 1",
+        "lbTitle": "Attack on Titan The Final Chapters: Special 1",
+        "tmdbId": 1200954,
+        "year": 2023,
+        "uri": "https://letterboxd.com/gjbkic/film/attack-on-titan-the-final-chapters-special-1-2023/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 4,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1790508958909,
+        "source": "letterboxd"
+      },
+      {
+        "id": "custom-1790508959270-dbu3",
+        "title": "Attack on Titan The Final Chapters: Special 2",
+        "originalTitle": "",
+        "englishTitle": "Attack on Titan The Final Chapters: Special 2",
+        "lbTitle": "Attack on Titan The Final Chapters: Special 2",
+        "tmdbId": 1201102,
+        "year": 2023,
+        "uri": "https://letterboxd.com/gjbkic/film/attack-on-titan-the-final-chapters-special-2/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 4,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1790508959270,
+        "source": "letterboxd"
+      },
+      {
+        "id": "custom-1790508959663-6kld",
+        "title": "劇場版「進撃の巨人」完結編 THE LAST ATTACK",
+        "originalTitle": "劇場版「進撃の巨人」完結編 THE LAST ATTACK",
+        "englishTitle": "Attack on Titan: THE LAST ATTACK",
+        "lbTitle": "Attack on Titan: THE LAST ATTACK",
+        "tmdbId": 1333100,
+        "year": 2024,
+        "uri": "https://letterboxd.com/gjbkic/film/attack-on-titan-the-last-attack/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 4,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1790508959663,
+        "source": "letterboxd"
+      },
+      {
+        "id": "custom-1790508960074-n6fj",
+        "title": "鋼の錬金術師 FULLMETAL ALCHEMIST",
+        "originalTitle": "鋼の錬金術師 FULLMETAL ALCHEMIST",
+        "englishTitle": "Fullmetal Alchemist: Brotherhood",
+        "lbTitle": "Fullmetal Alchemist: Brotherhood",
+        "tmdbId": 31911,
+        "year": 2009,
+        "uri": "https://letterboxd.com/gjbkic/film/fullmetal-alchemist-brotherhood/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 3,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1790508960074,
+        "source": "letterboxd"
       }
     ],
     "starOverrides": {
@@ -20118,7 +20304,7 @@
       "custom-1790433924185-cva1": 3,
       "custom-1790458138407-21ka": 3,
       "custom-1790458138748-ky5y": 2,
-      "custom-1790458138074-p8hs": 4.5
+      "custom-1790458138074-p8hs": 4
     },
     "titleOverrides": {
       "added-anchor-578": {
@@ -22392,7 +22578,12 @@
       "custom-1790420198451-g42l": "movie",
       "custom-1790433924185-cva1": "movie",
       "custom-1790458138074-p8hs": "movie",
-      "custom-1790458138748-ky5y": "movie"
+      "custom-1790458138748-ky5y": "movie",
+      "custom-1790508958519-2edt": "movie",
+      "custom-1790508958909-q6d6": "movie",
+      "custom-1790508959270-dbu3": "movie",
+      "custom-1790508959663-6kld": "movie",
+      "custom-1790508960074-n6fj": "drama"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -27747,6 +27938,20 @@
         "恋愛",
         "コメディ",
         "サスペンス"
+      ],
+      "custom-1790508958519-2edt": [
+        "ミステリー",
+        "スリラー",
+        "ドラマ"
+      ],
+      "custom-1790508959663-6kld": [
+        "アクション",
+        "アドベンチャー",
+        "ドラマ"
+      ],
+      "custom-1790508960074-n6fj": [
+        "ドラマ",
+        "TV本編"
       ]
     },
     "originOverrides": {
@@ -28418,7 +28623,12 @@
       "lb-386-wbAi": "その他",
       "custom-1790458138074-p8hs": "邦画",
       "custom-1790458138407-21ka": "邦画",
-      "custom-1790458138748-ky5y": "邦画"
+      "custom-1790458138748-ky5y": "邦画",
+      "custom-1790508958519-2edt": "その他",
+      "custom-1790508958909-q6d6": "その他",
+      "custom-1790508959270-dbu3": "その他",
+      "custom-1790508959663-6kld": "邦画",
+      "custom-1790508960074-n6fj": "邦画"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -29089,7 +29299,10 @@
       "lb-386-wbAi": "live",
       "custom-1790458138074-p8hs": "live",
       "custom-1790458138407-21ka": "live",
-      "custom-1790458138748-ky5y": "live"
+      "custom-1790458138748-ky5y": "live",
+      "custom-1790508958519-2edt": "live",
+      "custom-1790508959663-6kld": "animation",
+      "custom-1790508960074-n6fj": "animation"
     },
     "runtimeOverrides": {
       "custom-1790247938551-ixfs": 100,
@@ -29554,7 +29767,9 @@
       "lb-456-27Ni": 97,
       "lb-457-IG": 100,
       "lb-458-2bg8": 171,
-      "lb-460-20eA": 86
+      "lb-460-20eA": 86,
+      "custom-1790508958519-2edt": 125,
+      "custom-1790508959663-6kld": 145
     }
   }
 }
