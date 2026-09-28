@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1790604586633,
-  "sourceUpdatedIso": "2026-09-28T14:09:46.633Z",
+  "sourceUpdatedAt": 1790604641022,
+  "sourceUpdatedIso": "2026-09-28T14:10:41.022Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -13361,33 +13361,28 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1790509701063-jule",
-      "title": "踊る大捜査線 THE LAST TV サラリーマン刑事と最後の難事件",
-      "originalTitle": "踊る大捜査線 THE LAST TV サラリーマン刑事と最後の難事件",
-      "englishTitle": "Bayside Shakedown the Last TV: Salaryman Cop and the Last Tough Case",
-      "year": 2012,
+      "id": "lb-500-16T8",
+      "title": "アジャストメント",
+      "originalTitle": "",
+      "englishTitle": "The Adjustment Bureau",
+      "year": 2011,
       "score": 78,
       "star": 2.5,
       "overallRank": 470,
       "sameScoreRank": 38,
-      "category": "Letterboxd",
-      "mediaType": "drama",
+      "category": "Letterboxd追加",
+      "mediaType": "movie",
       "genre": [
-        "ドラマ",
-        "クライム",
-        "コメディ",
+        "SF",
+        "アクション",
         "恋愛",
-        "サスペンス",
-        "ミステリー",
-        "comfort",
-        "娯楽",
-        "TV本編"
+        "娯楽"
       ],
-      "origin": "邦画",
+      "origin": "ハリウッド",
       "format": "live",
-      "runtime": 108,
+      "runtime": 106,
       "exact": true,
-      "letterboxdAddedDate": null,
+      "letterboxdAddedDate": "2026-08-14",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -13397,10 +13392,10 @@
       "originalTitle": "",
       "englishTitle": "Black Panther",
       "year": 2018,
-      "score": 78,
+      "score": 77,
       "star": 2.5,
       "overallRank": 471,
-      "sameScoreRank": 39,
+      "sameScoreRank": 1,
       "category": "MCU作品",
       "mediaType": "movie",
       "genre": [
@@ -13420,32 +13415,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-500-16T8",
-      "title": "アジャストメント",
-      "originalTitle": "",
-      "englishTitle": "The Adjustment Bureau",
-      "year": 2011,
-      "score": 77,
-      "star": 2.5,
-      "overallRank": 472,
-      "sameScoreRank": 1,
-      "category": "Letterboxd追加",
-      "mediaType": "movie",
-      "genre": [
-        "SF",
-        "アクション",
-        "恋愛",
-        "娯楽"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 106,
-      "exact": true,
-      "letterboxdAddedDate": "2026-08-14",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-482-euce",
       "title": "インビジブル・ゲスト 悪魔の証明",
       "originalTitle": "",
@@ -13453,7 +13422,7 @@
       "year": 2016,
       "score": 77,
       "star": 2.5,
-      "overallRank": 473,
+      "overallRank": 472,
       "sameScoreRank": 2,
       "category": "Letterboxd追加",
       "mediaType": "movie",
@@ -13480,7 +13449,7 @@
       "year": 2004,
       "score": 77,
       "star": 2.5,
-      "overallRank": 474,
+      "overallRank": 473,
       "sameScoreRank": 3,
       "category": "Letterboxd追加",
       "mediaType": "drama",
@@ -13510,7 +13479,7 @@
       "year": 2015,
       "score": 77,
       "star": 2.5,
-      "overallRank": 475,
+      "overallRank": 474,
       "sameScoreRank": 4,
       "category": "スリラー、ホラー",
       "mediaType": "movie",
@@ -13531,6 +13500,37 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "custom-1790509701063-jule",
+      "title": "踊る大捜査線 THE LAST TV サラリーマン刑事と最後の難事件",
+      "originalTitle": "踊る大捜査線 THE LAST TV サラリーマン刑事と最後の難事件",
+      "englishTitle": "Bayside Shakedown the Last TV: Salaryman Cop and the Last Tough Case",
+      "year": 2012,
+      "score": 77,
+      "star": 2.5,
+      "overallRank": 475,
+      "sameScoreRank": 5,
+      "category": "Letterboxd",
+      "mediaType": "drama",
+      "genre": [
+        "ドラマ",
+        "クライム",
+        "コメディ",
+        "恋愛",
+        "サスペンス",
+        "ミステリー",
+        "comfort",
+        "娯楽",
+        "TV本編"
+      ],
+      "origin": "邦画",
+      "format": "live",
+      "runtime": 108,
+      "exact": true,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-188-1BWM",
       "title": "時計仕掛けの摩天楼",
       "originalTitle": "",
@@ -13539,7 +13539,7 @@
       "score": 77,
       "star": 2.5,
       "overallRank": 476,
-      "sameScoreRank": 5,
+      "sameScoreRank": 6,
       "category": "コナン映画",
       "mediaType": "movie",
       "genre": [
@@ -13562,7 +13562,7 @@
       "score": 77,
       "star": 2.5,
       "overallRank": 477,
-      "sameScoreRank": 6,
+      "sameScoreRank": 7,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -13587,7 +13587,7 @@
       "score": 77,
       "star": 2.5,
       "overallRank": 478,
-      "sameScoreRank": 7,
+      "sameScoreRank": 8,
       "category": "スパイダーマン作品",
       "mediaType": "movie",
       "genre": [
@@ -13616,7 +13616,7 @@
       "score": 77,
       "star": 2.5,
       "overallRank": 479,
-      "sameScoreRank": 8,
+      "sameScoreRank": 9,
       "category": "ピクサー・ディズニー作品",
       "mediaType": "movie",
       "genre": [
@@ -13645,7 +13645,7 @@
       "score": 77,
       "star": 2.5,
       "overallRank": 480,
-      "sameScoreRank": 9,
+      "sameScoreRank": 10,
       "category": "ピクサー・ディズニー作品",
       "mediaType": "movie",
       "genre": [
@@ -13672,7 +13672,7 @@
       "score": 77,
       "star": 2.5,
       "overallRank": 481,
-      "sameScoreRank": 10,
+      "sameScoreRank": 11,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -13702,7 +13702,7 @@
       "score": 77,
       "star": 2.5,
       "overallRank": 482,
-      "sameScoreRank": 11,
+      "sameScoreRank": 12,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -13730,7 +13730,7 @@
       "score": 77,
       "star": 2.5,
       "overallRank": 483,
-      "sameScoreRank": 12,
+      "sameScoreRank": 13,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -13758,7 +13758,7 @@
       "score": 77,
       "star": 2.5,
       "overallRank": 484,
-      "sameScoreRank": 13,
+      "sameScoreRank": 14,
       "category": "コナン映画",
       "mediaType": "movie",
       "genre": [
@@ -13786,7 +13786,7 @@
       "score": 77,
       "star": 2.5,
       "overallRank": 485,
-      "sameScoreRank": 14,
+      "sameScoreRank": 15,
       "category": "MCU作品",
       "mediaType": "movie",
       "genre": [
@@ -13814,7 +13814,7 @@
       "score": 77,
       "star": 2.5,
       "overallRank": 486,
-      "sameScoreRank": 15,
+      "sameScoreRank": 16,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -13842,7 +13842,7 @@
       "score": 77,
       "star": 2.5,
       "overallRank": 487,
-      "sameScoreRank": 16,
+      "sameScoreRank": 17,
       "category": "ファンタジー、アドベンチャー",
       "mediaType": "movie",
       "genre": [
@@ -13870,7 +13870,7 @@
       "score": 77,
       "star": 2.5,
       "overallRank": 488,
-      "sameScoreRank": 17,
+      "sameScoreRank": 18,
       "category": "コナン映画",
       "mediaType": "movie",
       "genre": [
@@ -13898,7 +13898,7 @@
       "score": 77,
       "star": 2.5,
       "overallRank": 489,
-      "sameScoreRank": 18,
+      "sameScoreRank": 19,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -13924,7 +13924,7 @@
       "score": 77,
       "star": 2.5,
       "overallRank": 490,
-      "sameScoreRank": 19,
+      "sameScoreRank": 20,
       "category": "スパイダーマン作品",
       "mediaType": "movie",
       "genre": [
@@ -13952,7 +13952,7 @@
       "score": 77,
       "star": 2.5,
       "overallRank": 491,
-      "sameScoreRank": 20,
+      "sameScoreRank": 21,
       "category": "スリラー、ホラー",
       "mediaType": "movie",
       "genre": [
@@ -13981,7 +13981,7 @@
       "score": 77,
       "star": 2.5,
       "overallRank": 492,
-      "sameScoreRank": 21,
+      "sameScoreRank": 22,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -14009,7 +14009,7 @@
       "score": 77,
       "star": 2.5,
       "overallRank": 493,
-      "sameScoreRank": 22,
+      "sameScoreRank": 23,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -14038,7 +14038,7 @@
       "score": 77,
       "star": 2.5,
       "overallRank": 494,
-      "sameScoreRank": 23,
+      "sameScoreRank": 24,
       "category": "戦争、歴史",
       "mediaType": "movie",
       "genre": [
@@ -14066,7 +14066,7 @@
       "score": 77,
       "star": 2.5,
       "overallRank": 495,
-      "sameScoreRank": 24,
+      "sameScoreRank": 25,
       "category": "MCU作品",
       "mediaType": "movie",
       "genre": [
@@ -14093,7 +14093,7 @@
       "score": 77,
       "star": 2.5,
       "overallRank": 496,
-      "sameScoreRank": 25,
+      "sameScoreRank": 26,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -14119,7 +14119,7 @@
       "score": 77,
       "star": 2.5,
       "overallRank": 497,
-      "sameScoreRank": 26,
+      "sameScoreRank": 27,
       "category": "スパイダーマン作品",
       "mediaType": "movie",
       "genre": [
@@ -14147,7 +14147,7 @@
       "score": 77,
       "star": 2.5,
       "overallRank": 498,
-      "sameScoreRank": 27,
+      "sameScoreRank": 28,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -19264,7 +19264,7 @@
       "lb-192-1hUc": 79,
       "lb-40-aboM": 77,
       "lb-340-3r58": 77,
-      "lb-500-16T8": 77,
+      "lb-500-16T8": 78,
       "lb-339-lPy0": 77,
       "lb-261-1IGQ": 83,
       "lb-263-6bJM": 83,
@@ -19434,7 +19434,7 @@
       "lb-567-Uhxi": 79,
       "lb-130-3VH2": 78,
       "lb-407-fegG": 78,
-      "lb-561-8MHs": 78,
+      "lb-561-8MHs": 77,
       "lb-408-8MHi": 78,
       "lb-548-294Y": 78,
       "lb-551-28F0": 78,
@@ -19549,7 +19549,7 @@
       "custom-1790508959270-dbu3": 87,
       "custom-1790508958519-2edt": 93,
       "custom-1790508960074-n6fj": 82,
-      "custom-1790509701063-jule": 78
+      "custom-1790509701063-jule": 77
     },
     "rankOrder": {
       "40": [
@@ -19780,10 +19780,11 @@
         "custom-1789385860756-dujj"
       ],
       "77": [
-        "lb-500-16T8",
+        "lb-561-8MHs",
         "lb-482-euce",
         "lb-339-lPy0",
         "lb-414-8gw8",
+        "custom-1790509701063-jule",
         "lb-188-1BWM",
         "lb-240-ki8w",
         "lb-563-ACJE",
@@ -19846,8 +19847,7 @@
         "lb-143-15HA",
         "lb-328-DAQ",
         "lb-569-248c",
-        "custom-1790509701063-jule",
-        "lb-561-8MHs"
+        "lb-500-16T8"
       ],
       "79": [
         "lb-214-2aoA",
