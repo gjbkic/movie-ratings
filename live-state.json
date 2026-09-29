@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1790666055327,
-  "sourceUpdatedIso": "2026-09-29T07:14:15.327Z",
+  "sourceUpdatedAt": 1790666547764,
+  "sourceUpdatedIso": "2026-09-29T07:22:27.764Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -7053,7 +7053,7 @@
         "娯楽",
         "胸糞"
       ],
-      "origin": "その他",
+      "origin": "ハリウッド",
       "format": "live",
       "runtime": 136,
       "exact": true,
@@ -9474,6 +9474,34 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-570-3C1m",
+      "title": "ウルフ・オブ・ウォールストリート",
+      "originalTitle": "",
+      "englishTitle": "The Wolf of Wall Street",
+      "year": 2013,
+      "score": 81,
+      "star": 3,
+      "overallRank": 331,
+      "sameScoreRank": 18,
+      "category": "ドラマ",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "大作",
+        "クライム",
+        "バイオレンス",
+        "娯楽",
+        "コメディ"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 179,
+      "exact": true,
+      "letterboxdAddedDate": "2026-09-06",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-183-x1OG",
       "title": "イカゲーム",
       "originalTitle": "",
@@ -9481,8 +9509,8 @@
       "year": 2021,
       "score": 81,
       "star": 3,
-      "overallRank": 331,
-      "sameScoreRank": 18,
+      "overallRank": 332,
+      "sameScoreRank": 19,
       "category": "Letterboxd追加",
       "mediaType": "drama",
       "genre": [
@@ -9510,8 +9538,8 @@
       "year": 2006,
       "score": 81,
       "star": 3,
-      "overallRank": 332,
-      "sameScoreRank": 19,
+      "overallRank": 333,
+      "sameScoreRank": 20,
       "category": "ファンタジー、アドベンチャー",
       "mediaType": "movie",
       "genre": [
@@ -9526,34 +9554,6 @@
       "runtime": 108,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "lb-570-3C1m",
-      "title": "ウルフ・オブ・ウォールストリート",
-      "originalTitle": "",
-      "englishTitle": "The Wolf of Wall Street",
-      "year": 2013,
-      "score": 81,
-      "star": 3,
-      "overallRank": 333,
-      "sameScoreRank": 20,
-      "category": "ドラマ",
-      "mediaType": "movie",
-      "genre": [
-        "ドラマ",
-        "大作",
-        "クライム",
-        "バイオレンス",
-        "娯楽",
-        "コメディ"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 179,
-      "exact": true,
-      "letterboxdAddedDate": "2026-09-06",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -20003,9 +20003,9 @@
         "lb-113-5rI4",
         "lb-320-28r8",
         "lb-93-2au4",
+        "lb-570-3C1m",
         "lb-183-x1OG",
         "lb-109-28wi",
-        "lb-570-3C1m",
         "custom-1790322760608-2vle",
         "lb-246-mqyw",
         "lb-424-2cBQ",
@@ -24511,6 +24511,7 @@
       "custom-1790508959663-6kld": "drama",
       "custom-1790508960074-n6fj": "drama",
       "custom-1790509701063-jule": "drama",
+      "custom-1790665768168-uxk0": "drama",
       "lb-0-hTha": "movie",
       "lb-1-4VZ8": "movie",
       "lb-2-2a9q": "movie",
@@ -25126,8 +25127,7 @@
       "custom-1790458138074-p8hs": "movie",
       "custom-1790458138748-ky5y": "movie",
       "custom-1790508958519-2edt": "movie",
-      "custom-1790665767820-1d1q": "movie",
-      "custom-1790665768168-uxk0": "drama"
+      "custom-1790665767820-1d1q": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -31277,7 +31277,7 @@
       "custom-1790508959663-6kld": "邦画",
       "custom-1790508960074-n6fj": "邦画",
       "custom-1790509701063-jule": "邦画",
-      "custom-1790665767820-1d1q": "その他",
+      "custom-1790665767820-1d1q": "ハリウッド",
       "custom-1790665768168-uxk0": "邦画"
     },
     "formatOverrides": {
