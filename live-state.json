@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1790665950431,
-  "sourceUpdatedIso": "2026-09-29T07:12:30.431Z",
+  "sourceUpdatedAt": 1790665958351,
+  "sourceUpdatedIso": "2026-09-29T07:12:38.351Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -15947,6 +15947,31 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-30-AO8q",
+      "title": "教皇選挙",
+      "originalTitle": "",
+      "englishTitle": "Conclave",
+      "year": 2024,
+      "score": 73,
+      "star": 2,
+      "overallRank": 563,
+      "sameScoreRank": 3,
+      "category": "サスペンス、ミステリー",
+      "mediaType": "movie",
+      "genre": [
+        "サスペンス",
+        "ミステリー",
+        "ドラマ"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 120,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "custom-1789385860580-5td5",
       "title": "カイジ ファイナルゲーム",
       "originalTitle": "",
@@ -15954,8 +15979,8 @@
       "year": 2020,
       "score": 73,
       "star": 2,
-      "overallRank": 563,
-      "sameScoreRank": 3,
+      "overallRank": 564,
+      "sameScoreRank": 4,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -15970,31 +15995,6 @@
       "runtime": 128,
       "exact": true,
       "letterboxdAddedDate": "2026-09-08",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "lb-30-AO8q",
-      "title": "教皇選挙",
-      "originalTitle": "",
-      "englishTitle": "Conclave",
-      "year": 2024,
-      "score": 73,
-      "star": 2,
-      "overallRank": 564,
-      "sameScoreRank": 4,
-      "category": "サスペンス、ミステリー",
-      "mediaType": "movie",
-      "genre": [
-        "サスペンス",
-        "ミステリー",
-        "ドラマ"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 120,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -19747,8 +19747,8 @@
       "73": [
         "lb-217-3gg0",
         "lb-158-1oDC",
-        "custom-1789385860580-5td5",
         "lb-30-AO8q",
+        "custom-1789385860580-5td5",
         "lb-389-hs78",
         "lb-218-6jCO",
         "custom-1790458138748-ky5y",
