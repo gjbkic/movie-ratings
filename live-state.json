@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1790961863698,
-  "sourceUpdatedIso": "2026-10-02T17:24:23.698Z",
+  "sourceUpdatedAt": 1790963897939,
+  "sourceUpdatedIso": "2026-10-02T17:58:17.939Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -1724,39 +1724,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1790960881562-cn74",
-      "title": "Mishima: A Life in Four Chapters",
-      "originalTitle": "",
-      "englishTitle": "Mishima: A Life in Four Chapters",
-      "year": 1985,
-      "score": 91,
-      "star": 4,
-      "overallRank": 60,
-      "sameScoreRank": 6,
-      "category": "Letterboxd",
-      "mediaType": "movie",
-      "genre": [
-        "サスペンス",
-        "クライム",
-        "ドラマ",
-        "歴史",
-        "哲学・思想",
-        "心理・内面",
-        "ファンタジー",
-        "雰囲気・美学",
-        "大作",
-        "切ない",
-        "社会問題・生活"
-      ],
-      "origin": "ハリウッド",
-      "format": "",
-      "runtime": 121,
-      "exact": true,
-      "letterboxdAddedDate": null,
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-463-4Xuw",
       "title": "めいとこねこバス",
       "originalTitle": "",
@@ -1764,8 +1731,8 @@
       "year": 2002,
       "score": 91,
       "star": 4,
-      "overallRank": 61,
-      "sameScoreRank": 7,
+      "overallRank": 60,
+      "sameScoreRank": 6,
       "category": "Letterboxd追加",
       "mediaType": "movie",
       "genre": [
@@ -1792,8 +1759,8 @@
       "year": 2005,
       "score": 91,
       "star": 4,
-      "overallRank": 62,
-      "sameScoreRank": 8,
+      "overallRank": 61,
+      "sameScoreRank": 7,
       "category": "スターウォーズシリーズ",
       "mediaType": "movie",
       "genre": [
@@ -1810,6 +1777,39 @@
       "runtime": 141,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1790960881562-cn74",
+      "title": "Mishima: A Life in Four Chapters",
+      "originalTitle": "",
+      "englishTitle": "Mishima: A Life in Four Chapters",
+      "year": 1985,
+      "score": 91,
+      "star": 4,
+      "overallRank": 62,
+      "sameScoreRank": 8,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "サスペンス",
+        "クライム",
+        "ドラマ",
+        "歴史",
+        "哲学・思想",
+        "心理・内面",
+        "ファンタジー",
+        "雰囲気・美学",
+        "大作",
+        "切ない",
+        "社会問題・生活"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 121,
+      "exact": true,
+      "letterboxdAddedDate": null,
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -20387,9 +20387,9 @@
         "lb-559-abBm",
         "lb-461-1JAY",
         "lb-558-1pDe",
-        "custom-1790960881562-cn74",
         "lb-463-4Xuw",
         "lb-49-27US",
+        "custom-1790960881562-cn74",
         "lb-3-a5fa",
         "lb-162-2TTo"
       ],
@@ -32114,7 +32114,8 @@
       "custom-1790508959270-dbu3": "live",
       "custom-1790665767820-1d1q": "live",
       "custom-1790665768168-uxk0": "animation",
-      "custom-1790924446793-9ts4": "live"
+      "custom-1790924446793-9ts4": "live",
+      "custom-1790960881562-cn74": "live"
     },
     "runtimeOverrides": {
       "custom-1790247938551-ixfs": 100,
