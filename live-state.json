@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1790924460114,
-  "sourceUpdatedIso": "2026-10-02T07:01:00.114Z",
+  "sourceUpdatedAt": 1790924469965,
+  "sourceUpdatedIso": "2026-10-02T07:01:09.965Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -18992,7 +18992,14 @@
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
-        "SF"
+        "SF",
+        "アクション",
+        "サスペンス",
+        "スリラー",
+        "ホラー",
+        "ドラマ",
+        "恋愛",
+        "ファンタジー"
       ],
       "origin": "その他",
       "format": "",
@@ -30655,7 +30662,14 @@
         "娯楽"
       ],
       "custom-1790924446793-9ts4": [
-        "SF"
+        "SF",
+        "アクション",
+        "サスペンス",
+        "スリラー",
+        "ホラー",
+        "ドラマ",
+        "恋愛",
+        "ファンタジー"
       ]
     },
     "originOverrides": {
