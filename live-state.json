@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1790924446939,
-  "sourceUpdatedIso": "2026-10-02T07:00:46.939Z",
+  "sourceUpdatedAt": 1790924460114,
+  "sourceUpdatedIso": "2026-10-02T07:01:00.114Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -18991,10 +18991,12 @@
       "sameScoreRank": null,
       "category": "Letterboxd",
       "mediaType": "movie",
-      "genre": "",
+      "genre": [
+        "SF"
+      ],
       "origin": "その他",
       "format": "",
-      "runtime": null,
+      "runtime": 97,
       "exact": false,
       "letterboxdAddedDate": null,
       "letterboxdPublishedAt": null,
@@ -24490,6 +24492,9 @@
       },
       "lb-573-28ws": {
         "tmdbId": 1592
+      },
+      "custom-1790924446793-9ts4": {
+        "tmdbId": 9426
       }
     },
     "categoryOverrides": {},
@@ -30648,6 +30653,9 @@
         "子供向け",
         "TV特番・SP",
         "娯楽"
+      ],
+      "custom-1790924446793-9ts4": [
+        "SF"
       ]
     },
     "originOverrides": {
@@ -32634,7 +32642,8 @@
       "custom-1790433925207-8m83": 68,
       "custom-1790508960074-n6fj": 25,
       "custom-1790665767820-1d1q": 136,
-      "custom-1790665768168-uxk0": 93
+      "custom-1790665768168-uxk0": 93,
+      "custom-1790924446793-9ts4": 97
     },
     "letterboxdMeta": {
       "lb-0-hTha": {
