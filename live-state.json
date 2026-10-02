@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1790965879895,
-  "sourceUpdatedIso": "2026-10-02T18:31:19.895Z",
+  "sourceUpdatedAt": 1790965916821,
+  "sourceUpdatedIso": "2026-10-02T18:31:56.821Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -19049,8 +19049,8 @@
     },
     {
       "id": "custom-1790965876380-nqs0",
-      "title": "Gourmet Detective Goro Akechi",
-      "originalTitle": "",
+      "title": "美食探偵 明智五郎",
+      "originalTitle": "美食探偵 明智五郎",
       "englishTitle": "Gourmet Detective Goro Akechi",
       "year": 2020,
       "score": null,
@@ -19058,11 +19058,14 @@
       "overallRank": null,
       "sameScoreRank": null,
       "category": "Letterboxd",
-      "mediaType": "movie",
-      "genre": "",
-      "origin": "その他",
-      "format": "",
-      "runtime": null,
+      "mediaType": "drama",
+      "genre": [
+        "ドラマ",
+        "クライム"
+      ],
+      "origin": "邦画",
+      "format": "live",
+      "runtime": 54,
       "exact": false,
       "letterboxdAddedDate": "2026-10-03",
       "letterboxdPublishedAt": "Sat, 3 Oct 2026 07:13:15 +1300",
@@ -22057,11 +22060,11 @@
       },
       {
         "id": "custom-1790965876380-nqs0",
-        "title": "Gourmet Detective Goro Akechi",
-        "originalTitle": "",
+        "title": "美食探偵 明智五郎",
+        "originalTitle": "美食探偵 明智五郎",
         "englishTitle": "Gourmet Detective Goro Akechi",
         "lbTitle": "Gourmet Detective Goro Akechi",
-        "tmdbId": null,
+        "tmdbId": 102014,
         "year": 2020,
         "uri": "https://letterboxd.com/gjbkic/film/gourmet-detective-goro-akechi/",
         "category": "Letterboxd",
@@ -22070,7 +22073,9 @@
         "oldScore": null,
         "added": true,
         "_seq": 1790965876380,
-        "source": "letterboxd"
+        "source": "letterboxd",
+        "tmdbType": "tv",
+        "_lbMetaFixedV36": true
       }
     ],
     "starOverrides": {
@@ -22708,7 +22713,8 @@
       "custom-1790665768168-uxk0": 2,
       "custom-1790665767820-1d1q": 3,
       "custom-1790924446793-9ts4": 3,
-      "custom-1790960881562-cn74": 4
+      "custom-1790960881562-cn74": 4,
+      "custom-1790965876380-nqs0": 2
     },
     "titleOverrides": {
       "added-anchor-578": {
@@ -24604,6 +24610,12 @@
       },
       "custom-1790960881562-cn74": {
         "tmdbId": 27064
+      },
+      "custom-1790965876380-nqs0": {
+        "title": "美食探偵 明智五郎",
+        "originalTitle": "美食探偵 明智五郎",
+        "englishTitle": "Gourmet Detective Goro Akechi",
+        "tmdbId": 102014
       }
     },
     "categoryOverrides": {},
@@ -25287,7 +25299,7 @@
       "custom-1790665767820-1d1q": "movie",
       "custom-1790924446793-9ts4": "movie",
       "custom-1790960881562-cn74": "movie",
-      "custom-1790965876380-nqs0": "movie"
+      "custom-1790965876380-nqs0": "drama"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -30792,6 +30804,10 @@
         "大作",
         "切ない",
         "社会問題・生活"
+      ],
+      "custom-1790965876380-nqs0": [
+        "ドラマ",
+        "クライム"
       ]
     },
     "originOverrides": {
@@ -31474,7 +31490,7 @@
       "custom-1790665768168-uxk0": "邦画",
       "custom-1790924446793-9ts4": "ハリウッド",
       "custom-1790960881562-cn74": "ハリウッド",
-      "custom-1790965876380-nqs0": "その他"
+      "custom-1790965876380-nqs0": "邦画"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -32155,7 +32171,8 @@
       "custom-1790665767820-1d1q": "live",
       "custom-1790665768168-uxk0": "animation",
       "custom-1790924446793-9ts4": "live",
-      "custom-1790960881562-cn74": "live"
+      "custom-1790960881562-cn74": "live",
+      "custom-1790965876380-nqs0": "live"
     },
     "runtimeOverrides": {
       "custom-1790247938551-ixfs": 100,
@@ -32784,7 +32801,8 @@
       "custom-1790665767820-1d1q": 136,
       "custom-1790665768168-uxk0": 93,
       "custom-1790924446793-9ts4": 97,
-      "custom-1790960881562-cn74": 121
+      "custom-1790960881562-cn74": 121,
+      "custom-1790965876380-nqs0": 54
     },
     "letterboxdMeta": {
       "lb-0-hTha": {
