@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1790964193525,
-  "sourceUpdatedIso": "2026-10-02T18:03:13.525Z",
+  "sourceUpdatedAt": 1790964202622,
+  "sourceUpdatedIso": "2026-10-02T18:03:22.622Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -10508,6 +10508,36 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "custom-1790322769753-zbsb",
+      "title": "3年A組 ―今から皆さんは、人質です―",
+      "originalTitle": "3年A組 ―今から皆さんは、人質です―",
+      "englishTitle": "Mr. Hiiragi's Homeroom",
+      "year": 2019,
+      "score": 80,
+      "star": 2.5,
+      "overallRank": 367,
+      "sameScoreRank": 3,
+      "category": "Letterboxd",
+      "mediaType": "drama",
+      "genre": [
+        "クライム",
+        "ドラマ",
+        "ミステリー",
+        "サスペンス",
+        "青春・若者",
+        "社会問題・生活",
+        "娯楽",
+        "TV本編"
+      ],
+      "origin": "邦画",
+      "format": "live",
+      "runtime": 45,
+      "exact": true,
+      "letterboxdAddedDate": "2026-09-25",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-149-AF4",
       "title": "借り物ぐらしのアリエッティ",
       "originalTitle": "",
@@ -10515,8 +10545,8 @@
       "year": 2010,
       "score": 80,
       "star": 2.5,
-      "overallRank": 367,
-      "sameScoreRank": 3,
+      "overallRank": 368,
+      "sameScoreRank": 4,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
       "genre": [
@@ -10543,8 +10573,8 @@
       "year": 2014,
       "score": 80,
       "star": 2.5,
-      "overallRank": 368,
-      "sameScoreRank": 4,
+      "overallRank": 369,
+      "sameScoreRank": 5,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -10562,36 +10592,6 @@
       "runtime": 113,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "custom-1790322769753-zbsb",
-      "title": "3年A組 ―今から皆さんは、人質です―",
-      "originalTitle": "3年A組 ―今から皆さんは、人質です―",
-      "englishTitle": "Mr. Hiiragi's Homeroom",
-      "year": 2019,
-      "score": 80,
-      "star": 2.5,
-      "overallRank": 369,
-      "sameScoreRank": 5,
-      "category": "Letterboxd",
-      "mediaType": "drama",
-      "genre": [
-        "クライム",
-        "ドラマ",
-        "ミステリー",
-        "サスペンス",
-        "青春・若者",
-        "社会問題・生活",
-        "娯楽",
-        "TV本編"
-      ],
-      "origin": "邦画",
-      "format": "live",
-      "runtime": 45,
-      "exact": true,
-      "letterboxdAddedDate": "2026-09-25",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -20027,9 +20027,9 @@
       "80": [
         "lb-306-fA7G",
         "lb-403-uAKS",
+        "custom-1790322769753-zbsb",
         "lb-149-AF4",
         "lb-111-4pD0",
-        "custom-1790322769753-zbsb",
         "custom-1789385860057-z7ka",
         "lb-144-1Mne",
         "lb-229-26tw",
