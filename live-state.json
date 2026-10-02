@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1790710053971,
-  "sourceUpdatedIso": "2026-09-29T19:27:33.971Z",
+  "sourceUpdatedAt": 1790924446939,
+  "sourceUpdatedIso": "2026-10-02T07:00:46.939Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -18978,6 +18978,27 @@
       "letterboxdAddedDate": "2026-09-25",
       "letterboxdPublishedAt": "Fri, 25 Sep 2026 06:09:52 +1200",
       "letterboxdReportedWatchedDate": "2026-09-24"
+    },
+    {
+      "id": "custom-1790924446793-9ts4",
+      "title": "The Fly",
+      "originalTitle": "",
+      "englishTitle": "The Fly",
+      "year": 1986,
+      "score": null,
+      "star": 3,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": "",
+      "origin": "その他",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     }
   ],
   "state": {
@@ -21926,6 +21947,23 @@
         "oldScore": null,
         "added": true,
         "_seq": 1790665768168,
+        "source": "letterboxd"
+      },
+      {
+        "id": "custom-1790924446793-9ts4",
+        "title": "The Fly",
+        "originalTitle": "",
+        "englishTitle": "The Fly",
+        "lbTitle": "The Fly",
+        "tmdbId": null,
+        "year": 1986,
+        "uri": "https://letterboxd.com/gjbkic/film/the-fly-1986/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 3,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1790924446793,
         "source": "letterboxd"
       }
     ],
@@ -25132,7 +25170,8 @@
       "custom-1790458138074-p8hs": "movie",
       "custom-1790458138748-ky5y": "movie",
       "custom-1790508958519-2edt": "movie",
-      "custom-1790665767820-1d1q": "movie"
+      "custom-1790665767820-1d1q": "movie",
+      "custom-1790924446793-9ts4": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -31288,7 +31327,8 @@
       "custom-1790508960074-n6fj": "邦画",
       "custom-1790509701063-jule": "邦画",
       "custom-1790665767820-1d1q": "ハリウッド",
-      "custom-1790665768168-uxk0": "邦画"
+      "custom-1790665768168-uxk0": "邦画",
+      "custom-1790924446793-9ts4": "その他"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
