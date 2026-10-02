@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1790963897939,
-  "sourceUpdatedIso": "2026-10-02T17:58:17.939Z",
+  "sourceUpdatedAt": 1790963956692,
+  "sourceUpdatedIso": "2026-10-02T17:59:16.692Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -3370,34 +3370,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-298-28Uk",
-      "title": "ロッキー",
-      "originalTitle": "",
-      "englishTitle": "Rocky",
-      "year": 1976,
-      "score": 87,
-      "star": 4,
-      "overallRank": 116,
-      "sameScoreRank": 14,
-      "category": "アクション",
-      "mediaType": "movie",
-      "genre": [
-        "アクション",
-        "感動",
-        "ドラマ",
-        "恋愛",
-        "スポーツ",
-        "娯楽"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 119,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-115-2aWi",
       "title": "マイノリティ・リポート",
       "originalTitle": "",
@@ -3405,7 +3377,7 @@
       "year": 2002,
       "score": 86,
       "star": 3.5,
-      "overallRank": 117,
+      "overallRank": 116,
       "sameScoreRank": 1,
       "category": "SF",
       "mediaType": "movie",
@@ -3434,7 +3406,7 @@
       "year": 2024,
       "score": 86,
       "star": 3.5,
-      "overallRank": 118,
+      "overallRank": 117,
       "sameScoreRank": 2,
       "category": "アクション",
       "mediaType": "movie",
@@ -3466,7 +3438,7 @@
       "year": 2003,
       "score": 86,
       "star": 3.5,
-      "overallRank": 119,
+      "overallRank": 118,
       "sameScoreRank": 3,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
@@ -3495,7 +3467,7 @@
       "year": 2014,
       "score": 86,
       "star": 3.5,
-      "overallRank": 120,
+      "overallRank": 119,
       "sameScoreRank": 4,
       "category": "ドラマ",
       "mediaType": "movie",
@@ -3524,7 +3496,7 @@
       "year": 1995,
       "score": 86,
       "star": 3.5,
-      "overallRank": 121,
+      "overallRank": 120,
       "sameScoreRank": 5,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
@@ -3546,6 +3518,34 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-298-28Uk",
+      "title": "ロッキー",
+      "originalTitle": "",
+      "englishTitle": "Rocky",
+      "year": 1976,
+      "score": 86,
+      "star": 3.5,
+      "overallRank": 121,
+      "sameScoreRank": 6,
+      "category": "アクション",
+      "mediaType": "movie",
+      "genre": [
+        "アクション",
+        "感動",
+        "ドラマ",
+        "恋愛",
+        "スポーツ",
+        "娯楽"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 119,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "custom-1790322756418-p88i",
       "title": "オデュッセイア",
       "originalTitle": "The Odyssey",
@@ -3554,7 +3554,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 122,
-      "sameScoreRank": 6,
+      "sameScoreRank": 7,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -3585,7 +3585,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 123,
-      "sameScoreRank": 7,
+      "sameScoreRank": 8,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -3611,7 +3611,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 124,
-      "sameScoreRank": 8,
+      "sameScoreRank": 9,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -3641,7 +3641,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 125,
-      "sameScoreRank": 9,
+      "sameScoreRank": 10,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -3670,7 +3670,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 126,
-      "sameScoreRank": 10,
+      "sameScoreRank": 11,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -3697,7 +3697,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 127,
-      "sameScoreRank": 11,
+      "sameScoreRank": 12,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -3724,7 +3724,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 128,
-      "sameScoreRank": 12,
+      "sameScoreRank": 13,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -3752,7 +3752,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 129,
-      "sameScoreRank": 13,
+      "sameScoreRank": 14,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -3784,7 +3784,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 130,
-      "sameScoreRank": 14,
+      "sameScoreRank": 15,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -3810,7 +3810,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 131,
-      "sameScoreRank": 15,
+      "sameScoreRank": 16,
       "category": "Letterboxd",
       "mediaType": "other",
       "genre": [
@@ -3836,7 +3836,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 132,
-      "sameScoreRank": 16,
+      "sameScoreRank": 17,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -3865,7 +3865,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 133,
-      "sameScoreRank": 17,
+      "sameScoreRank": 18,
       "category": "Letterboxd追加",
       "mediaType": "movie",
       "genre": [
@@ -3896,7 +3896,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 134,
-      "sameScoreRank": 18,
+      "sameScoreRank": 19,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -3923,7 +3923,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 135,
-      "sameScoreRank": 19,
+      "sameScoreRank": 20,
       "category": "ファンタジー、アドベンチャー",
       "mediaType": "movie",
       "genre": [
@@ -3952,7 +3952,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 136,
-      "sameScoreRank": 20,
+      "sameScoreRank": 21,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -3980,7 +3980,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 137,
-      "sameScoreRank": 21,
+      "sameScoreRank": 22,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -4009,7 +4009,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 138,
-      "sameScoreRank": 22,
+      "sameScoreRank": 23,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -4036,7 +4036,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 139,
-      "sameScoreRank": 23,
+      "sameScoreRank": 24,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -4065,7 +4065,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 140,
-      "sameScoreRank": 24,
+      "sameScoreRank": 25,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -4093,7 +4093,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 141,
-      "sameScoreRank": 25,
+      "sameScoreRank": 26,
       "category": "ファンタジー、アドベンチャー",
       "mediaType": "movie",
       "genre": [
@@ -4121,7 +4121,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 142,
-      "sameScoreRank": 26,
+      "sameScoreRank": 27,
       "category": "ハリーポッター シリーズ",
       "mediaType": "movie",
       "genre": [
@@ -4150,7 +4150,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 143,
-      "sameScoreRank": 27,
+      "sameScoreRank": 28,
       "category": "コメディ",
       "mediaType": "movie",
       "genre": [
@@ -4182,7 +4182,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 144,
-      "sameScoreRank": 28,
+      "sameScoreRank": 29,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -4209,7 +4209,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 145,
-      "sameScoreRank": 29,
+      "sameScoreRank": 30,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -4234,7 +4234,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 146,
-      "sameScoreRank": 30,
+      "sameScoreRank": 31,
       "category": "スリラー、ホラー",
       "mediaType": "movie",
       "genre": [
@@ -4262,7 +4262,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 147,
-      "sameScoreRank": 31,
+      "sameScoreRank": 32,
       "category": "Letterboxd追加",
       "mediaType": "movie",
       "genre": [
@@ -4290,7 +4290,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 148,
-      "sameScoreRank": 32,
+      "sameScoreRank": 33,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -4319,7 +4319,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 149,
-      "sameScoreRank": 33,
+      "sameScoreRank": 34,
       "category": "Letterboxd追加",
       "mediaType": "movie",
       "genre": [
@@ -4348,7 +4348,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 150,
-      "sameScoreRank": 34,
+      "sameScoreRank": 35,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -19130,7 +19130,7 @@
       "lb-36-29FA": 87,
       "lb-98-2bbs": 87,
       "lb-101-ce74": 87,
-      "lb-298-28Uk": 87,
+      "lb-298-28Uk": 86,
       "lb-172-2aHW": 87,
       "lb-37-72s": 87,
       "lb-330-4JQS": 87,
@@ -20291,6 +20291,7 @@
         "lb-279-215a",
         "lb-89-5RFA",
         "lb-148-17uy",
+        "lb-298-28Uk",
         "custom-1790322756418-p88i",
         "lb-542-2b6C",
         "lb-368-2as8",
@@ -20334,8 +20335,7 @@
         "lb-358-6uNS",
         "lb-464-mkbG",
         "lb-101-ce74",
-        "lb-98-2bbs",
-        "lb-298-28Uk"
+        "lb-98-2bbs"
       ],
       "88": [
         "lb-0-hTha",
@@ -22106,7 +22106,7 @@
       "lb-36-29FA": 4,
       "lb-98-2bbs": 4,
       "lb-101-ce74": 4,
-      "lb-298-28Uk": 4,
+      "lb-298-28Uk": 3.5,
       "lb-172-2aHW": 4,
       "lb-37-72s": 4,
       "lb-330-4JQS": 4,
