@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1790965974413,
-  "sourceUpdatedIso": "2026-10-02T18:32:54.413Z",
+  "sourceUpdatedAt": 1790971113107,
+  "sourceUpdatedIso": "2026-10-02T19:58:33.107Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -19075,6 +19075,30 @@
       "letterboxdAddedDate": "2026-09-25",
       "letterboxdPublishedAt": "Fri, 25 Sep 2026 06:09:52 +1200",
       "letterboxdReportedWatchedDate": "2026-09-24"
+    },
+    {
+      "id": "custom-1790971112940-kuhf",
+      "title": "サマータイムマシン・ブルース",
+      "originalTitle": "サマータイムマシン・ブルース",
+      "englishTitle": "Summer Time Machine Blues",
+      "year": 2005,
+      "score": null,
+      "star": 3.5,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "コメディ",
+        "SF"
+      ],
+      "origin": "邦画",
+      "format": "live",
+      "runtime": 107,
+      "exact": false,
+      "letterboxdAddedDate": "2026-10-03",
+      "letterboxdPublishedAt": "Sat, 3 Oct 2026 07:24:10 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-03"
     }
   ],
   "state": {
@@ -22083,6 +22107,23 @@
         "source": "letterboxd",
         "tmdbType": "tv",
         "_lbMetaFixedV36": true
+      },
+      {
+        "id": "custom-1790971112940-kuhf",
+        "title": "サマータイムマシン・ブルース",
+        "originalTitle": "サマータイムマシン・ブルース",
+        "englishTitle": "Summer Time Machine Blues",
+        "lbTitle": "Summer Time Machine Blues",
+        "tmdbId": 26130,
+        "year": 2005,
+        "uri": "https://letterboxd.com/gjbkic/film/summer-time-machine-blues/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 3.5,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1790971112940,
+        "source": "letterboxd"
       }
     ],
     "starOverrides": {
@@ -25306,7 +25347,8 @@
       "custom-1790665767820-1d1q": "movie",
       "custom-1790924446793-9ts4": "movie",
       "custom-1790960881562-cn74": "movie",
-      "custom-1790965876380-nqs0": "drama"
+      "custom-1790965876380-nqs0": "drama",
+      "custom-1790971112940-kuhf": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -30820,6 +30862,10 @@
         "ミステリー",
         "娯楽",
         "切ない"
+      ],
+      "custom-1790971112940-kuhf": [
+        "コメディ",
+        "SF"
       ]
     },
     "originOverrides": {
@@ -31502,7 +31548,8 @@
       "custom-1790665768168-uxk0": "邦画",
       "custom-1790924446793-9ts4": "ハリウッド",
       "custom-1790960881562-cn74": "ハリウッド",
-      "custom-1790965876380-nqs0": "邦画"
+      "custom-1790965876380-nqs0": "邦画",
+      "custom-1790971112940-kuhf": "邦画"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -32184,7 +32231,8 @@
       "custom-1790665768168-uxk0": "animation",
       "custom-1790924446793-9ts4": "live",
       "custom-1790960881562-cn74": "live",
-      "custom-1790965876380-nqs0": "live"
+      "custom-1790965876380-nqs0": "live",
+      "custom-1790971112940-kuhf": "live"
     },
     "runtimeOverrides": {
       "custom-1790247938551-ixfs": 100,
@@ -32814,7 +32862,8 @@
       "custom-1790665768168-uxk0": 93,
       "custom-1790924446793-9ts4": 97,
       "custom-1790960881562-cn74": 121,
-      "custom-1790965876380-nqs0": 54
+      "custom-1790965876380-nqs0": 54,
+      "custom-1790971112940-kuhf": 107
     },
     "letterboxdMeta": {
       "lb-0-hTha": {
@@ -35620,6 +35669,12 @@
       "custom-1790924446793-9ts4": {
         "publishedAt": "Thu, 1 Oct 2026 20:44:56 +1300",
         "reportedWatchedDate": "2026-10-01"
+      },
+      "custom-1790971112940-kuhf": {
+        "publishedAt": "Sat, 3 Oct 2026 07:24:10 +1300",
+        "addedDate": "2026-10-03",
+        "addedDateSource": "rss-first-seen",
+        "reportedWatchedDate": "2026-10-03"
       }
     }
   }
