@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1790960832807,
-  "sourceUpdatedIso": "2026-10-02T17:07:12.807Z",
+  "sourceUpdatedAt": 1790960881681,
+  "sourceUpdatedIso": "2026-10-02T17:08:01.681Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -19013,6 +19013,27 @@
       "letterboxdAddedDate": "2026-09-25",
       "letterboxdPublishedAt": "Fri, 25 Sep 2026 06:09:52 +1200",
       "letterboxdReportedWatchedDate": "2026-09-24"
+    },
+    {
+      "id": "custom-1790960881562-cn74",
+      "title": "Mishima: A Life in Four Chapters",
+      "originalTitle": "",
+      "englishTitle": "Mishima: A Life in Four Chapters",
+      "year": 1985,
+      "score": null,
+      "star": 4,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": "",
+      "origin": "その他",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     }
   ],
   "state": {
@@ -21980,6 +22001,23 @@
         "oldScore": null,
         "added": true,
         "_seq": 1790924446793,
+        "source": "letterboxd"
+      },
+      {
+        "id": "custom-1790960881562-cn74",
+        "title": "Mishima: A Life in Four Chapters",
+        "originalTitle": "",
+        "englishTitle": "Mishima: A Life in Four Chapters",
+        "lbTitle": "Mishima: A Life in Four Chapters",
+        "tmdbId": null,
+        "year": 1985,
+        "uri": "https://letterboxd.com/gjbkic/film/mishima-a-life-in-four-chapters/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 4,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1790960881562,
         "source": "letterboxd"
       }
     ],
@@ -25191,7 +25229,8 @@
       "custom-1790458138748-ky5y": "movie",
       "custom-1790508958519-2edt": "movie",
       "custom-1790665767820-1d1q": "movie",
-      "custom-1790924446793-9ts4": "movie"
+      "custom-1790924446793-9ts4": "movie",
+      "custom-1790960881562-cn74": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -31363,7 +31402,8 @@
       "custom-1790509701063-jule": "邦画",
       "custom-1790665767820-1d1q": "ハリウッド",
       "custom-1790665768168-uxk0": "邦画",
-      "custom-1790924446793-9ts4": "ハリウッド"
+      "custom-1790924446793-9ts4": "ハリウッド",
+      "custom-1790960881562-cn74": "その他"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
