@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1790964202622,
-  "sourceUpdatedIso": "2026-10-02T18:03:22.622Z",
+  "sourceUpdatedAt": 1790965879895,
+  "sourceUpdatedIso": "2026-10-02T18:31:19.895Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -1810,8 +1810,8 @@
       "runtime": 121,
       "exact": true,
       "letterboxdAddedDate": null,
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
+      "letterboxdPublishedAt": "Sat, 3 Oct 2026 04:45:22 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-02"
     },
     {
       "id": "lb-3-a5fa",
@@ -7396,8 +7396,8 @@
       "runtime": 97,
       "exact": true,
       "letterboxdAddedDate": null,
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
+      "letterboxdPublishedAt": "Thu, 1 Oct 2026 20:44:56 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-01"
     },
     {
       "id": "lb-208-1MLK",
@@ -19046,6 +19046,27 @@
       "letterboxdAddedDate": "2026-09-25",
       "letterboxdPublishedAt": "Fri, 25 Sep 2026 06:09:52 +1200",
       "letterboxdReportedWatchedDate": "2026-09-24"
+    },
+    {
+      "id": "custom-1790965876380-nqs0",
+      "title": "Gourmet Detective Goro Akechi",
+      "originalTitle": "",
+      "englishTitle": "Gourmet Detective Goro Akechi",
+      "year": 2020,
+      "score": null,
+      "star": 2,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": "",
+      "origin": "その他",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": "2026-10-03",
+      "letterboxdPublishedAt": "Sat, 3 Oct 2026 07:13:15 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-02"
     }
   ],
   "state": {
@@ -22032,6 +22053,23 @@
         "oldScore": null,
         "added": true,
         "_seq": 1790960881562,
+        "source": "letterboxd"
+      },
+      {
+        "id": "custom-1790965876380-nqs0",
+        "title": "Gourmet Detective Goro Akechi",
+        "originalTitle": "",
+        "englishTitle": "Gourmet Detective Goro Akechi",
+        "lbTitle": "Gourmet Detective Goro Akechi",
+        "tmdbId": null,
+        "year": 2020,
+        "uri": "https://letterboxd.com/gjbkic/film/gourmet-detective-goro-akechi/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 2,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1790965876380,
         "source": "letterboxd"
       }
     ],
@@ -25248,7 +25286,8 @@
       "custom-1790508958519-2edt": "movie",
       "custom-1790665767820-1d1q": "movie",
       "custom-1790924446793-9ts4": "movie",
-      "custom-1790960881562-cn74": "movie"
+      "custom-1790960881562-cn74": "movie",
+      "custom-1790965876380-nqs0": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -31434,7 +31473,8 @@
       "custom-1790665767820-1d1q": "ハリウッド",
       "custom-1790665768168-uxk0": "邦画",
       "custom-1790924446793-9ts4": "ハリウッド",
-      "custom-1790960881562-cn74": "ハリウッド"
+      "custom-1790960881562-cn74": "ハリウッド",
+      "custom-1790965876380-nqs0": "その他"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -35536,6 +35576,20 @@
       "custom-1790509701063-jule": {
         "publishedAt": "Mon, 28 Sep 2026 00:46:30 +1300",
         "reportedWatchedDate": "2026-09-27"
+      },
+      "custom-1790965876380-nqs0": {
+        "publishedAt": "Sat, 3 Oct 2026 07:13:15 +1300",
+        "addedDate": "2026-10-03",
+        "addedDateSource": "rss-first-seen",
+        "reportedWatchedDate": "2026-10-02"
+      },
+      "custom-1790960881562-cn74": {
+        "publishedAt": "Sat, 3 Oct 2026 04:45:22 +1300",
+        "reportedWatchedDate": "2026-10-02"
+      },
+      "custom-1790924446793-9ts4": {
+        "publishedAt": "Thu, 1 Oct 2026 20:44:56 +1300",
+        "reportedWatchedDate": "2026-10-01"
       }
     }
   }
