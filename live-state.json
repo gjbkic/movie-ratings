@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1790924537516,
-  "sourceUpdatedIso": "2026-10-02T07:02:17.516Z",
+  "sourceUpdatedAt": 1790960832807,
+  "sourceUpdatedIso": "2026-10-02T17:07:12.807Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -7358,8 +7358,8 @@
         "バイオレンス",
         "娯楽"
       ],
-      "origin": "その他",
-      "format": "",
+      "origin": "ハリウッド",
+      "format": "live",
       "runtime": 97,
       "exact": true,
       "letterboxdAddedDate": null,
@@ -31363,7 +31363,7 @@
       "custom-1790509701063-jule": "邦画",
       "custom-1790665767820-1d1q": "ハリウッド",
       "custom-1790665768168-uxk0": "邦画",
-      "custom-1790924446793-9ts4": "その他"
+      "custom-1790924446793-9ts4": "ハリウッド"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -32042,7 +32042,8 @@
       "custom-1790508958909-q6d6": "live",
       "custom-1790508959270-dbu3": "live",
       "custom-1790665767820-1d1q": "live",
-      "custom-1790665768168-uxk0": "animation"
+      "custom-1790665768168-uxk0": "animation",
+      "custom-1790924446793-9ts4": "live"
     },
     "runtimeOverrides": {
       "custom-1790247938551-ixfs": 100,
