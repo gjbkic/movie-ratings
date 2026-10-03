@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791023529749,
-  "sourceUpdatedIso": "2026-10-03T10:32:09.749Z",
+  "sourceUpdatedAt": 1791023544576,
+  "sourceUpdatedIso": "2026-10-03T10:32:24.576Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -19190,9 +19190,11 @@
         "感動",
         "ファンタジー",
         "ヒーロー",
-        "アクション"
+        "アクション",
+        "青春・若者",
+        "子供向け"
       ],
-      "origin": "その他",
+      "origin": "ハリウッド",
       "format": "animation",
       "runtime": 86,
       "exact": false,
@@ -31068,7 +31070,9 @@
         "感動",
         "ファンタジー",
         "ヒーロー",
-        "アクション"
+        "アクション",
+        "青春・若者",
+        "子供向け"
       ]
     },
     "originOverrides": {
@@ -31755,7 +31759,7 @@
       "custom-1790971112940-kuhf": "邦画",
       "custom-1791018448490-bpdn": "邦画",
       "custom-1791018448927-b4o3": "邦画",
-      "custom-1791023391963-vdu9": "その他"
+      "custom-1791023391963-vdu9": "ハリウッド"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
