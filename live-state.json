@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791018535348,
-  "sourceUpdatedIso": "2026-10-03T09:08:55.348Z",
+  "sourceUpdatedAt": 1791018681456,
+  "sourceUpdatedIso": "2026-10-03T09:11:21.456Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -10366,6 +10366,33 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-136-1YVC",
+      "title": "グーニーズ",
+      "originalTitle": "",
+      "englishTitle": "The Goonies",
+      "year": 1985,
+      "score": 81,
+      "star": 3,
+      "overallRank": 362,
+      "sameScoreRank": 46,
+      "category": "ファンタジー、アドベンチャー",
+      "mediaType": "movie",
+      "genre": [
+        "ファンタジー",
+        "アドベンチャー",
+        "青春・若者",
+        "comfort",
+        "娯楽"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 114,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "custom-1790322761365-fzvo",
       "title": "テセウスの船",
       "originalTitle": "テセウスの船",
@@ -10373,8 +10400,8 @@
       "year": 2020,
       "score": 81,
       "star": 3,
-      "overallRank": 362,
-      "sameScoreRank": 46,
+      "overallRank": 363,
+      "sameScoreRank": 47,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -10404,8 +10431,8 @@
       "year": 2008,
       "score": 81,
       "star": 3,
-      "overallRank": 363,
-      "sameScoreRank": 47,
+      "overallRank": 364,
+      "sameScoreRank": 48,
       "category": "MCU作品",
       "mediaType": "movie",
       "genre": [
@@ -10417,33 +10444,6 @@
       "origin": "ハリウッド",
       "format": "live",
       "runtime": 125,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "lb-136-1YVC",
-      "title": "グーニーズ",
-      "originalTitle": "",
-      "englishTitle": "The Goonies",
-      "year": 1985,
-      "score": 81,
-      "star": 3,
-      "overallRank": 364,
-      "sameScoreRank": 48,
-      "category": "ファンタジー、アドベンチャー",
-      "mediaType": "movie",
-      "genre": [
-        "ファンタジー",
-        "アドベンチャー",
-        "青春・若者",
-        "comfort",
-        "娯楽"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 114,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
@@ -20225,9 +20225,9 @@
         "lb-377-azew",
         "lb-374-DUHM",
         "lb-27-2b2A",
+        "lb-136-1YVC",
         "custom-1790322761365-fzvo",
         "lb-50-28dA",
-        "lb-136-1YVC",
         "lb-416-2D2e"
       ],
       "82": [
