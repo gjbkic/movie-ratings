@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791036480386,
-  "sourceUpdatedIso": "2026-10-03T14:08:00.386Z",
+  "sourceUpdatedAt": 1791036496408,
+  "sourceUpdatedIso": "2026-10-03T14:08:16.408Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -2478,28 +2478,34 @@
       "letterboxdReportedWatchedDate": "2026-10-03"
     },
     {
-      "id": "lb-185-HTIi",
-      "title": "テイラー・スウィフト：THE ERAS TOUR",
-      "originalTitle": "",
-      "englishTitle": "Taylor Swift: The Eras Tour",
-      "year": 2023,
+      "id": "custom-1791036345616-3tph",
+      "title": "恐怖の報酬",
+      "originalTitle": "Le Salaire de la peur",
+      "englishTitle": "The Wages of Fear",
+      "year": 1953,
       "score": 89,
       "star": 4,
       "overallRank": 86,
       "sameScoreRank": 9,
-      "category": "Letterboxd追加",
-      "mediaType": "other",
+      "category": "Letterboxd",
+      "mediaType": "movie",
       "genre": [
-        "comfort",
-        "恋愛"
+        "ドラマ",
+        "スリラー",
+        "アドベンチャー",
+        "コメディ",
+        "サスペンス",
+        "娯楽",
+        "大作",
+        "心理・内面"
       ],
-      "origin": "ハリウッド",
+      "origin": "その他",
       "format": "live",
-      "runtime": 169,
+      "runtime": 154,
       "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
+      "letterboxdAddedDate": "2026-10-03",
+      "letterboxdPublishedAt": "Sun, 4 Oct 2026 02:07:33 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-03"
     },
     {
       "id": "lb-6-29Pq",
@@ -2523,7 +2529,31 @@
       "origin": "ハリウッド",
       "format": "live",
       "runtime": 154,
-      "exact": false,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "lb-185-HTIi",
+      "title": "テイラー・スウィフト：THE ERAS TOUR",
+      "originalTitle": "",
+      "englishTitle": "Taylor Swift: The Eras Tour",
+      "year": 2023,
+      "score": 89,
+      "star": 4,
+      "overallRank": 88,
+      "sameScoreRank": 11,
+      "category": "Letterboxd追加",
+      "mediaType": "other",
+      "genre": [
+        "comfort",
+        "恋愛"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 169,
+      "exact": true,
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
@@ -2536,8 +2566,8 @@
       "year": 1980,
       "score": 89,
       "star": 4,
-      "overallRank": 88,
-      "sameScoreRank": 11,
+      "overallRank": 89,
+      "sameScoreRank": 12,
       "category": "スターウォーズシリーズ",
       "mediaType": "movie",
       "genre": [
@@ -2556,36 +2586,6 @@
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "custom-1791036345616-3tph",
-      "title": "恐怖の報酬",
-      "originalTitle": "Le Salaire de la peur",
-      "englishTitle": "The Wages of Fear",
-      "year": 1953,
-      "score": 89,
-      "star": 4,
-      "overallRank": 89,
-      "sameScoreRank": 12,
-      "category": "Letterboxd",
-      "mediaType": "movie",
-      "genre": [
-        "ドラマ",
-        "スリラー",
-        "アドベンチャー",
-        "コメディ",
-        "サスペンス",
-        "娯楽",
-        "大作",
-        "心理・内面"
-      ],
-      "origin": "その他",
-      "format": "live",
-      "runtime": 154,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-03",
-      "letterboxdPublishedAt": "Sun, 4 Oct 2026 02:07:33 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-03"
     },
     {
       "id": "lb-310-azpY",
@@ -19878,7 +19878,8 @@
       "custom-1791018448490-bpdn": 80,
       "custom-1791018448927-b4o3": 82,
       "custom-1791023391963-vdu9": 89,
-      "custom-1791036345616-3tph": 89
+      "custom-1791036345616-3tph": 89,
+      "lb-6-29Pq": 89
     },
     "rankOrder": {
       "40": [
@@ -20558,10 +20559,10 @@
         "lb-65-2auI",
         "lb-154-1Mn4",
         "custom-1791023391963-vdu9",
-        "lb-185-HTIi",
-        "lb-6-29Pq",
-        "lb-48-27Vw",
         "custom-1791036345616-3tph",
+        "lb-6-29Pq",
+        "lb-185-HTIi",
+        "lb-48-27Vw",
         "lb-310-azpY",
         "lb-84-29ro"
       ],
@@ -22979,7 +22980,8 @@
       "custom-1791018448490-bpdn": 3,
       "custom-1791018448927-b4o3": 3,
       "custom-1791023391963-vdu9": 4,
-      "custom-1791036345616-3tph": 4
+      "custom-1791036345616-3tph": 4,
+      "lb-6-29Pq": 4
     },
     "titleOverrides": {
       "added-anchor-578": {
