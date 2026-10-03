@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791023621790,
-  "sourceUpdatedIso": "2026-10-03T10:33:41.790Z",
+  "sourceUpdatedAt": 1791036138621,
+  "sourceUpdatedIso": "2026-10-03T14:02:18.621Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -19169,7 +19169,8 @@
       "mediaType": "drama",
       "genre": [
         "ドラマ",
-        "クライム"
+        "クライム",
+        "TV本編"
       ],
       "origin": "邦画",
       "format": "live",
@@ -19192,7 +19193,8 @@
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
-        "ドラマ"
+        "ドラマ",
+        "TV本編"
       ],
       "origin": "邦画",
       "format": "live",
@@ -24895,6 +24897,8 @@
       "custom-1790509701063-jule": "drama",
       "custom-1790665768168-uxk0": "drama",
       "custom-1790965876380-nqs0": "drama",
+      "custom-1791018448490-bpdn": "drama",
+      "custom-1791018448927-b4o3": "drama",
       "lb-0-hTha": "movie",
       "lb-1-4VZ8": "movie",
       "lb-2-2a9q": "movie",
@@ -25514,8 +25518,6 @@
       "custom-1790924446793-9ts4": "movie",
       "custom-1790960881562-cn74": "movie",
       "custom-1790971112940-kuhf": "movie",
-      "custom-1791018448490-bpdn": "drama",
-      "custom-1791018448927-b4o3": "drama",
       "custom-1791023391963-vdu9": "movie"
     },
     "genreOverrides": {
@@ -30630,7 +30632,8 @@
       ],
       "custom-1790322764890-2w6w": [
         "ドラマ",
-        "クライム"
+        "クライム",
+        "TV本編"
       ],
       "custom-1790322765489-7o9h": [
         "コメディ",
@@ -30642,7 +30645,8 @@
         "TV本編"
       ],
       "custom-1790322766063-ab5l": [
-        "ドラマ"
+        "ドラマ",
+        "TV本編"
       ],
       "custom-1790322766664-63q5": [
         "ドラマ",
