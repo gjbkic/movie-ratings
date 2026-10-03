@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791036238372,
-  "sourceUpdatedIso": "2026-10-03T14:03:58.372Z",
+  "sourceUpdatedAt": 1791036246085,
+  "sourceUpdatedIso": "2026-10-03T14:04:06.085Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -3285,6 +3285,33 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-101-ce74",
+      "title": "フォードvsフェラーリ",
+      "originalTitle": "",
+      "englishTitle": "Ford v Ferrari",
+      "year": 2019,
+      "score": 87,
+      "star": 4,
+      "overallRank": 113,
+      "sameScoreRank": 10,
+      "category": "ドラマ",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "スポーツ",
+        "切ない",
+        "大作",
+        "娯楽"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 153,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-358-6uNS",
       "title": "ドラえもんひみつ道具博物館",
       "originalTitle": "",
@@ -3292,8 +3319,8 @@
       "year": 2013,
       "score": 87,
       "star": 4,
-      "overallRank": 113,
-      "sameScoreRank": 10,
+      "overallRank": 114,
+      "sameScoreRank": 11,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -3329,8 +3356,8 @@
       "year": 1981,
       "score": 87,
       "star": 4,
-      "overallRank": 114,
-      "sameScoreRank": 11,
+      "overallRank": 115,
+      "sameScoreRank": 12,
       "category": "ファンタジー、アドベンチャー",
       "mediaType": "movie",
       "genre": [
@@ -3342,33 +3369,6 @@
       "origin": "ハリウッド",
       "format": "live",
       "runtime": 115,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "lb-101-ce74",
-      "title": "フォードvsフェラーリ",
-      "originalTitle": "",
-      "englishTitle": "Ford v Ferrari",
-      "year": 2019,
-      "score": 87,
-      "star": 4,
-      "overallRank": 115,
-      "sameScoreRank": 12,
-      "category": "ドラマ",
-      "mediaType": "movie",
-      "genre": [
-        "ドラマ",
-        "スポーツ",
-        "切ない",
-        "大作",
-        "娯楽"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 153,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
@@ -20498,9 +20498,9 @@
         "lb-36-29FA",
         "lb-172-2aHW",
         "lb-37-72s",
+        "lb-101-ce74",
         "lb-358-6uNS",
         "lb-98-2bbs",
-        "lb-101-ce74",
         "lb-464-mkbG"
       ],
       "88": [
