@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791036138621,
-  "sourceUpdatedIso": "2026-10-03T14:02:18.621Z",
+  "sourceUpdatedAt": 1791036201960,
+  "sourceUpdatedIso": "2026-10-03T14:03:21.960Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -3861,6 +3861,33 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-287-2amk",
+      "title": "ビューティフル・マインド",
+      "originalTitle": "",
+      "englishTitle": "A Beautiful Mind",
+      "year": 2001,
+      "score": 86,
+      "star": 3.5,
+      "overallRank": 133,
+      "sameScoreRank": 17,
+      "category": "ドラマ",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "サスペンス",
+        "どんでん返し",
+        "切ない",
+        "心理・内面"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 135,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-1-4VZ8",
       "title": "インターステラー",
       "originalTitle": "",
@@ -3868,8 +3895,8 @@
       "year": 2014,
       "score": 86,
       "star": 3.5,
-      "overallRank": 133,
-      "sameScoreRank": 17,
+      "overallRank": 134,
+      "sameScoreRank": 18,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -3897,8 +3924,8 @@
       "year": 2003,
       "score": 86,
       "star": 3.5,
-      "overallRank": 134,
-      "sameScoreRank": 18,
+      "overallRank": 135,
+      "sameScoreRank": 19,
       "category": "Letterboxd追加",
       "mediaType": "movie",
       "genre": [
@@ -3917,33 +3944,6 @@
       "runtime": null,
       "exact": true,
       "letterboxdAddedDate": "2025-10-06",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "lb-287-2amk",
-      "title": "ビューティフル・マインド",
-      "originalTitle": "",
-      "englishTitle": "A Beautiful Mind",
-      "year": 2001,
-      "score": 86,
-      "star": 3.5,
-      "overallRank": 135,
-      "sameScoreRank": 19,
-      "category": "ドラマ",
-      "mediaType": "movie",
-      "genre": [
-        "ドラマ",
-        "サスペンス",
-        "どんでん返し",
-        "切ない",
-        "心理・内面"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 135,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -20468,9 +20468,9 @@
         "custom-1790247938551-ixfs",
         "lb-573-28ws",
         "custom-1789385860426-8e86",
+        "lb-287-2amk",
         "lb-1-4VZ8",
         "lb-336-qH0",
-        "lb-287-2amk",
         "lb-54-3sAw",
         "lb-366-jWEA",
         "lb-102-1Y2i",
