@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791018720280,
-  "sourceUpdatedIso": "2026-10-03T09:12:00.280Z",
+  "sourceUpdatedAt": 1791018729637,
+  "sourceUpdatedIso": "2026-10-03T09:12:09.637Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -10777,6 +10777,31 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-405-yuDE",
+      "title": "落下の解剖学",
+      "originalTitle": "",
+      "englishTitle": "Anatomy of a Fall",
+      "year": 2023,
+      "score": 80,
+      "star": 2.5,
+      "overallRank": 376,
+      "sameScoreRank": 12,
+      "category": "サスペンス、ミステリー",
+      "mediaType": "movie",
+      "genre": [
+        "サスペンス",
+        "ミステリー",
+        "社会問題・生活"
+      ],
+      "origin": "その他",
+      "format": "live",
+      "runtime": 151,
+      "exact": true,
+      "letterboxdAddedDate": "2025-10-11",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-50-28dA",
       "title": "アイアンマン",
       "originalTitle": "",
@@ -10784,8 +10809,8 @@
       "year": 2008,
       "score": 80,
       "star": 2.5,
-      "overallRank": 376,
-      "sameScoreRank": 12,
+      "overallRank": 377,
+      "sameScoreRank": 13,
       "category": "MCU作品",
       "mediaType": "movie",
       "genre": [
@@ -10810,8 +10835,8 @@
       "year": 1992,
       "score": 80,
       "star": 2.5,
-      "overallRank": 377,
-      "sameScoreRank": 13,
+      "overallRank": 378,
+      "sameScoreRank": 14,
       "category": "コメディ",
       "mediaType": "movie",
       "genre": [
@@ -10825,31 +10850,6 @@
       "runtime": 120,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "lb-405-yuDE",
-      "title": "落下の解剖学",
-      "originalTitle": "",
-      "englishTitle": "Anatomy of a Fall",
-      "year": 2023,
-      "score": 80,
-      "star": 2.5,
-      "overallRank": 378,
-      "sameScoreRank": 14,
-      "category": "サスペンス、ミステリー",
-      "mediaType": "movie",
-      "genre": [
-        "サスペンス",
-        "ミステリー",
-        "社会問題・生活"
-      ],
-      "origin": "その他",
-      "format": "live",
-      "runtime": 151,
-      "exact": true,
-      "letterboxdAddedDate": "2025-10-11",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -20153,9 +20153,9 @@
         "lb-144-1Mne",
         "lb-229-26tw",
         "lb-226-g0d6",
+        "lb-405-yuDE",
         "lb-50-28dA",
         "lb-165-29F6",
-        "lb-405-yuDE",
         "lb-518-2aEy",
         "lb-481-1rbm",
         "lb-242-kif8",
