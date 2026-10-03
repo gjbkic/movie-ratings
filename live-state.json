@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791036227898,
-  "sourceUpdatedIso": "2026-10-03T14:03:47.898Z",
+  "sourceUpdatedAt": 1791036238372,
+  "sourceUpdatedIso": "2026-10-03T14:03:58.372Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -3322,34 +3322,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-464-mkbG",
-      "title": "チェルノブイリ",
-      "originalTitle": "",
-      "englishTitle": "Chernobyl",
-      "year": 2019,
-      "score": 87,
-      "star": 4,
-      "overallRank": 114,
-      "sameScoreRank": 11,
-      "category": "Letterboxd追加",
-      "mediaType": "drama",
-      "genre": [
-        "歴史",
-        "社会問題・生活",
-        "サスペンス",
-        "心理・内面",
-        "雰囲気・美学",
-        "TV本編"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 73,
-      "exact": true,
-      "letterboxdAddedDate": "2026-04-12",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-98-2bbs",
       "title": "インディ・ジョーンズ レイダース失われたアーク",
       "originalTitle": "",
@@ -3357,8 +3329,8 @@
       "year": 1981,
       "score": 87,
       "star": 4,
-      "overallRank": 115,
-      "sameScoreRank": 12,
+      "overallRank": 114,
+      "sameScoreRank": 11,
       "category": "ファンタジー、アドベンチャー",
       "mediaType": "movie",
       "genre": [
@@ -3383,8 +3355,8 @@
       "year": 2019,
       "score": 87,
       "star": 4,
-      "overallRank": 116,
-      "sameScoreRank": 13,
+      "overallRank": 115,
+      "sameScoreRank": 12,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -3399,6 +3371,34 @@
       "runtime": 153,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "lb-464-mkbG",
+      "title": "チェルノブイリ",
+      "originalTitle": "",
+      "englishTitle": "Chernobyl",
+      "year": 2019,
+      "score": 87,
+      "star": 4,
+      "overallRank": 116,
+      "sameScoreRank": 13,
+      "category": "Letterboxd追加",
+      "mediaType": "drama",
+      "genre": [
+        "歴史",
+        "社会問題・生活",
+        "サスペンス",
+        "心理・内面",
+        "雰囲気・美学",
+        "TV本編"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 73,
+      "exact": true,
+      "letterboxdAddedDate": "2026-04-12",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -20499,9 +20499,9 @@
         "lb-172-2aHW",
         "lb-37-72s",
         "lb-358-6uNS",
-        "lb-464-mkbG",
         "lb-98-2bbs",
-        "lb-101-ce74"
+        "lb-101-ce74",
+        "lb-464-mkbG"
       ],
       "88": [
         "lb-0-hTha",
