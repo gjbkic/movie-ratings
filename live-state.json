@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1790971184932,
-  "sourceUpdatedIso": "2026-10-02T19:59:44.932Z",
+  "sourceUpdatedAt": 1791018449091,
+  "sourceUpdatedIso": "2026-10-03T09:07:29.091Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -14449,7 +14449,8 @@
         "コメディ",
         "ミステリー",
         "娯楽",
-        "切ない"
+        "切ない",
+        "TV本編"
       ],
       "origin": "邦画",
       "format": "live",
@@ -19104,6 +19105,52 @@
       "letterboxdAddedDate": "2026-09-25",
       "letterboxdPublishedAt": "Fri, 25 Sep 2026 06:09:52 +1200",
       "letterboxdReportedWatchedDate": "2026-09-24"
+    },
+    {
+      "id": "custom-1791018448490-bpdn",
+      "title": "Heidi: Girl of the Alps",
+      "originalTitle": "",
+      "englishTitle": "Heidi: Girl of the Alps",
+      "year": 1974,
+      "score": null,
+      "star": 3,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": "",
+      "origin": "その他",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": "2026-10-03",
+      "letterboxdPublishedAt": "Sat, 3 Oct 2026 22:06:52 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-02"
+    },
+    {
+      "id": "custom-1791018448927-b4o3",
+      "title": "ドラえもん誕生日スペシャル 「走れドラえもん！ 銀河グランプリ」",
+      "originalTitle": "ドラえもん誕生日スペシャル 「走れドラえもん！ 銀河グランプリ」",
+      "englishTitle": "ドラえもん誕生日スペシャル 「走れドラえもん！ 銀河グランプリ」",
+      "year": 2011,
+      "score": null,
+      "star": 3,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "アドベンチャー",
+        "SF",
+        "ファンタジー"
+      ],
+      "origin": "邦画",
+      "format": "animation",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": "2026-10-03",
+      "letterboxdPublishedAt": "Sat, 3 Oct 2026 09:28:15 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-03"
     }
   ],
   "state": {
@@ -22131,6 +22178,40 @@
         "added": true,
         "_seq": 1790971112940,
         "source": "letterboxd"
+      },
+      {
+        "id": "custom-1791018448490-bpdn",
+        "title": "Heidi: Girl of the Alps",
+        "originalTitle": "",
+        "englishTitle": "Heidi: Girl of the Alps",
+        "lbTitle": "Heidi: Girl of the Alps",
+        "tmdbId": null,
+        "year": 1974,
+        "uri": "https://letterboxd.com/gjbkic/film/heidi-girl-of-the-alps/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 3,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791018448490,
+        "source": "letterboxd"
+      },
+      {
+        "id": "custom-1791018448927-b4o3",
+        "title": "ドラえもん誕生日スペシャル 「走れドラえもん！ 銀河グランプリ」",
+        "originalTitle": "ドラえもん誕生日スペシャル 「走れドラえもん！ 銀河グランプリ」",
+        "englishTitle": "ドラえもん誕生日スペシャル 「走れドラえもん！ 銀河グランプリ」",
+        "lbTitle": "ドラえもん誕生日スペシャル 「走れドラえもん！ 銀河グランプリ」",
+        "tmdbId": 1704979,
+        "year": 2011,
+        "uri": "https://letterboxd.com/gjbkic/film/film:1566389/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 3,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791018448927,
+        "source": "letterboxd"
       }
     ],
     "starOverrides": {
@@ -24737,6 +24818,7 @@
       "custom-1790508960074-n6fj": "drama",
       "custom-1790509701063-jule": "drama",
       "custom-1790665768168-uxk0": "drama",
+      "custom-1790965876380-nqs0": "drama",
       "lb-0-hTha": "movie",
       "lb-1-4VZ8": "movie",
       "lb-2-2a9q": "movie",
@@ -25355,8 +25437,9 @@
       "custom-1790665767820-1d1q": "movie",
       "custom-1790924446793-9ts4": "movie",
       "custom-1790960881562-cn74": "movie",
-      "custom-1790965876380-nqs0": "drama",
-      "custom-1790971112940-kuhf": "movie"
+      "custom-1790971112940-kuhf": "movie",
+      "custom-1791018448490-bpdn": "movie",
+      "custom-1791018448927-b4o3": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -30869,7 +30952,8 @@
         "コメディ",
         "ミステリー",
         "娯楽",
-        "切ない"
+        "切ない",
+        "TV本編"
       ],
       "custom-1790971112940-kuhf": [
         "コメディ",
@@ -30879,6 +30963,11 @@
         "娯楽",
         "時間",
         "comfort"
+      ],
+      "custom-1791018448927-b4o3": [
+        "アドベンチャー",
+        "SF",
+        "ファンタジー"
       ]
     },
     "originOverrides": {
@@ -31562,7 +31651,9 @@
       "custom-1790924446793-9ts4": "ハリウッド",
       "custom-1790960881562-cn74": "ハリウッド",
       "custom-1790965876380-nqs0": "邦画",
-      "custom-1790971112940-kuhf": "邦画"
+      "custom-1790971112940-kuhf": "邦画",
+      "custom-1791018448490-bpdn": "その他",
+      "custom-1791018448927-b4o3": "邦画"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -32245,7 +32336,8 @@
       "custom-1790924446793-9ts4": "live",
       "custom-1790960881562-cn74": "live",
       "custom-1790965876380-nqs0": "live",
-      "custom-1790971112940-kuhf": "live"
+      "custom-1790971112940-kuhf": "live",
+      "custom-1791018448927-b4o3": "animation"
     },
     "runtimeOverrides": {
       "custom-1790247938551-ixfs": 100,
@@ -35685,6 +35777,18 @@
       },
       "custom-1790971112940-kuhf": {
         "publishedAt": "Sat, 3 Oct 2026 07:24:10 +1300",
+        "addedDate": "2026-10-03",
+        "addedDateSource": "rss-first-seen",
+        "reportedWatchedDate": "2026-10-03"
+      },
+      "custom-1791018448490-bpdn": {
+        "publishedAt": "Sat, 3 Oct 2026 22:06:52 +1300",
+        "addedDate": "2026-10-03",
+        "addedDateSource": "rss-first-seen",
+        "reportedWatchedDate": "2026-10-02"
+      },
+      "custom-1791018448927-b4o3": {
+        "publishedAt": "Sat, 3 Oct 2026 09:28:15 +1300",
         "addedDate": "2026-10-03",
         "addedDateSource": "rss-first-seen",
         "reportedWatchedDate": "2026-10-03"
