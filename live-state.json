@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791038485789,
-  "sourceUpdatedIso": "2026-10-03T14:41:25.789Z",
+  "sourceUpdatedAt": 1791038523056,
+  "sourceUpdatedIso": "2026-10-03T14:42:03.056Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -5853,33 +5853,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "base-perks-2012",
-      "title": "ウォールフラワー",
-      "originalTitle": "The Perks of Being a Wallflower",
-      "englishTitle": "The Perks of Being a Wallflower",
-      "year": 2012,
-      "score": 84,
-      "star": 3.5,
-      "overallRank": 203,
-      "sameScoreRank": 10,
-      "category": "ドラマ",
-      "mediaType": "movie",
-      "genre": [
-        "ドラマ",
-        "青春・若者",
-        "社会問題・生活",
-        "comfort",
-        "心理・内面"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 103,
-      "exact": true,
-      "letterboxdAddedDate": "2026-09-07",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "custom-1790322762266-mrn9",
       "title": "リーガル・ハイ スペシャル",
       "originalTitle": "リーガル・ハイ スペシャル",
@@ -5887,8 +5860,8 @@
       "year": 2013,
       "score": 84,
       "star": 3.5,
-      "overallRank": 204,
-      "sameScoreRank": 11,
+      "overallRank": 203,
+      "sameScoreRank": 10,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -5915,8 +5888,8 @@
       "year": 2015,
       "score": 84,
       "star": 3.5,
-      "overallRank": 205,
-      "sameScoreRank": 12,
+      "overallRank": 204,
+      "sameScoreRank": 11,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -5930,6 +5903,33 @@
       "runtime": 141,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "base-perks-2012",
+      "title": "ウォールフラワー",
+      "originalTitle": "The Perks of Being a Wallflower",
+      "englishTitle": "The Perks of Being a Wallflower",
+      "year": 2012,
+      "score": 84,
+      "star": 3.5,
+      "overallRank": 205,
+      "sameScoreRank": 12,
+      "category": "ドラマ",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "青春・若者",
+        "社会問題・生活",
+        "comfort",
+        "心理・内面"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 103,
+      "exact": true,
+      "letterboxdAddedDate": "2026-09-07",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -20410,9 +20410,9 @@
         "lb-108-29d2",
         "lb-299-28U0",
         "custom-1789385860026-8m1d",
-        "base-perks-2012",
         "custom-1790322762266-mrn9",
         "lb-82-8SeG",
+        "base-perks-2012",
         "lb-76-4vru",
         "lb-180-27oC",
         "lb-318-84xS",
