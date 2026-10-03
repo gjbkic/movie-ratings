@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791036201960,
-  "sourceUpdatedIso": "2026-10-03T14:03:21.960Z",
+  "sourceUpdatedAt": 1791036227898,
+  "sourceUpdatedIso": "2026-10-03T14:03:47.898Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -3350,6 +3350,32 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-98-2bbs",
+      "title": "インディ・ジョーンズ レイダース失われたアーク",
+      "originalTitle": "",
+      "englishTitle": "Raiders of the Lost Ark",
+      "year": 1981,
+      "score": 87,
+      "star": 4,
+      "overallRank": 115,
+      "sameScoreRank": 12,
+      "category": "ファンタジー、アドベンチャー",
+      "mediaType": "movie",
+      "genre": [
+        "ファンタジー",
+        "アドベンチャー",
+        "アクション",
+        "大作"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 115,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-101-ce74",
       "title": "フォードvsフェラーリ",
       "originalTitle": "",
@@ -3357,8 +3383,8 @@
       "year": 2019,
       "score": 87,
       "star": 4,
-      "overallRank": 115,
-      "sameScoreRank": 12,
+      "overallRank": 116,
+      "sameScoreRank": 13,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -3371,32 +3397,6 @@
       "origin": "ハリウッド",
       "format": "live",
       "runtime": 153,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "lb-98-2bbs",
-      "title": "インディ・ジョーンズ レイダース失われたアーク",
-      "originalTitle": "",
-      "englishTitle": "Raiders of the Lost Ark",
-      "year": 1981,
-      "score": 87,
-      "star": 4,
-      "overallRank": 116,
-      "sameScoreRank": 13,
-      "category": "ファンタジー、アドベンチャー",
-      "mediaType": "movie",
-      "genre": [
-        "ファンタジー",
-        "アドベンチャー",
-        "アクション",
-        "大作"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 115,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
@@ -20500,8 +20500,8 @@
         "lb-37-72s",
         "lb-358-6uNS",
         "lb-464-mkbG",
-        "lb-101-ce74",
-        "lb-98-2bbs"
+        "lb-98-2bbs",
+        "lb-101-ce74"
       ],
       "88": [
         "lb-0-hTha",
