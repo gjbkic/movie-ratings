@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791018695511,
-  "sourceUpdatedIso": "2026-10-03T09:11:35.511Z",
+  "sourceUpdatedAt": 1791018704096,
+  "sourceUpdatedIso": "2026-10-03T09:11:44.096Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -10511,32 +10511,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-50-28dA",
-      "title": "アイアンマン",
-      "originalTitle": "",
-      "englishTitle": "Iron Man",
-      "year": 2008,
-      "score": 80,
-      "star": 2.5,
-      "overallRank": 367,
-      "sameScoreRank": 3,
-      "category": "MCU作品",
-      "mediaType": "movie",
-      "genre": [
-        "アクション",
-        "SF",
-        "ヒーロー",
-        "娯楽"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 125,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "custom-1791018448490-bpdn",
       "title": "Heidi: Girl of the Alps",
       "originalTitle": "",
@@ -10544,8 +10518,8 @@
       "year": 1974,
       "score": 80,
       "star": 2.5,
-      "overallRank": 368,
-      "sameScoreRank": 4,
+      "overallRank": 367,
+      "sameScoreRank": 3,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -10573,8 +10547,8 @@
       "year": 2019,
       "score": 80,
       "star": 2.5,
-      "overallRank": 369,
-      "sameScoreRank": 5,
+      "overallRank": 368,
+      "sameScoreRank": 4,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -10592,6 +10566,32 @@
       "runtime": 45,
       "exact": true,
       "letterboxdAddedDate": "2026-09-25",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "lb-50-28dA",
+      "title": "アイアンマン",
+      "originalTitle": "",
+      "englishTitle": "Iron Man",
+      "year": 2008,
+      "score": 80,
+      "star": 2.5,
+      "overallRank": 369,
+      "sameScoreRank": 5,
+      "category": "MCU作品",
+      "mediaType": "movie",
+      "genre": [
+        "アクション",
+        "SF",
+        "ヒーロー",
+        "娯楽"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 125,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -20144,9 +20144,9 @@
       "80": [
         "lb-306-fA7G",
         "lb-403-uAKS",
-        "lb-50-28dA",
         "custom-1791018448490-bpdn",
         "custom-1790322769753-zbsb",
+        "lb-50-28dA",
         "lb-149-AF4",
         "lb-111-4pD0",
         "custom-1789385860057-z7ka",
