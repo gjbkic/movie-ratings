@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791038596922,
-  "sourceUpdatedIso": "2026-10-03T14:43:16.922Z",
+  "sourceUpdatedAt": 1791057236913,
+  "sourceUpdatedIso": "2026-10-03T19:53:56.913Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -6737,33 +6737,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-426-pEeQ",
-      "title": "プロジェクトヘイルメアリー",
-      "originalTitle": "",
-      "englishTitle": "Project Hail Mary",
-      "year": 2026,
-      "score": 83,
-      "star": 3,
-      "overallRank": 234,
-      "sameScoreRank": 3,
-      "category": "SF",
-      "mediaType": "movie",
-      "genre": [
-        "SF",
-        "感動",
-        "大作",
-        "娯楽",
-        "アドベンチャー"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 157,
-      "exact": true,
-      "letterboxdAddedDate": "2026-03-26",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-430-26uk",
       "title": "ダークシティ",
       "originalTitle": "",
@@ -6771,8 +6744,8 @@
       "year": 1998,
       "score": 83,
       "star": 3,
-      "overallRank": 235,
-      "sameScoreRank": 4,
+      "overallRank": 234,
+      "sameScoreRank": 3,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -6798,8 +6771,8 @@
       "year": 2001,
       "score": 83,
       "star": 3,
-      "overallRank": 236,
-      "sameScoreRank": 5,
+      "overallRank": 235,
+      "sameScoreRank": 4,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -6816,6 +6789,33 @@
       "runtime": 122,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "lb-426-pEeQ",
+      "title": "プロジェクトヘイルメアリー",
+      "originalTitle": "",
+      "englishTitle": "Project Hail Mary",
+      "year": 2026,
+      "score": 83,
+      "star": 3,
+      "overallRank": 236,
+      "sameScoreRank": 5,
+      "category": "SF",
+      "mediaType": "movie",
+      "genre": [
+        "SF",
+        "感動",
+        "大作",
+        "娯楽",
+        "アドベンチャー"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 157,
+      "exact": true,
+      "letterboxdAddedDate": "2026-03-26",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -19233,6 +19233,30 @@
       "letterboxdAddedDate": "2026-09-25",
       "letterboxdPublishedAt": "Fri, 25 Sep 2026 06:09:52 +1200",
       "letterboxdReportedWatchedDate": "2026-09-24"
+    },
+    {
+      "id": "custom-1791057232858-35ld",
+      "title": "サウンド・オブ・メタル ～聞こえるということ～",
+      "originalTitle": "Sound of Metal",
+      "englishTitle": "Sound of Metal",
+      "year": 2020,
+      "score": null,
+      "star": 3.5,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "ミュージカル"
+      ],
+      "origin": "その他",
+      "format": "live",
+      "runtime": 121,
+      "exact": false,
+      "letterboxdAddedDate": "2026-10-04",
+      "letterboxdPublishedAt": "Sun, 4 Oct 2026 07:37:58 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-04"
     }
   ],
   "state": {
@@ -20364,9 +20388,9 @@
       "83": [
         "lb-179-2aAG",
         "lb-145-1S0A",
-        "lb-426-pEeQ",
         "lb-430-26uk",
         "lb-117-27A4",
+        "lb-426-pEeQ",
         "lb-261-1IGQ",
         "lb-78-2aHM",
         "lb-174-29VI",
@@ -22336,6 +22360,23 @@
         "oldScore": null,
         "added": true,
         "_seq": 1791036345616,
+        "source": "letterboxd"
+      },
+      {
+        "id": "custom-1791057232858-35ld",
+        "title": "サウンド・オブ・メタル ～聞こえるということ～",
+        "originalTitle": "Sound of Metal",
+        "englishTitle": "Sound of Metal",
+        "lbTitle": "Sound of Metal",
+        "tmdbId": 502033,
+        "year": 2020,
+        "uri": "https://letterboxd.com/gjbkic/film/sound-of-metal/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 3.5,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791057232858,
         "source": "letterboxd"
       }
     ],
@@ -25574,7 +25615,8 @@
       "custom-1790960881562-cn74": "movie",
       "custom-1790971112940-kuhf": "movie",
       "custom-1791023391963-vdu9": "movie",
-      "custom-1791036345616-3tph": "movie"
+      "custom-1791036345616-3tph": "movie",
+      "custom-1791057232858-35ld": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -31146,6 +31188,10 @@
         "娯楽",
         "大作",
         "心理・内面"
+      ],
+      "custom-1791057232858-35ld": [
+        "ドラマ",
+        "ミュージカル"
       ]
     },
     "originOverrides": {
@@ -31833,7 +31879,8 @@
       "custom-1791018448490-bpdn": "邦画",
       "custom-1791018448927-b4o3": "邦画",
       "custom-1791023391963-vdu9": "ハリウッド",
-      "custom-1791036345616-3tph": "その他"
+      "custom-1791036345616-3tph": "その他",
+      "custom-1791057232858-35ld": "その他"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -32520,7 +32567,8 @@
       "custom-1791018448927-b4o3": "animation",
       "custom-1791018448490-bpdn": "animation",
       "custom-1791023391963-vdu9": "animation",
-      "custom-1791036345616-3tph": "live"
+      "custom-1791036345616-3tph": "live",
+      "custom-1791057232858-35ld": "live"
     },
     "runtimeOverrides": {
       "custom-1790247938551-ixfs": 100,
@@ -33154,7 +33202,8 @@
       "custom-1790971112940-kuhf": 107,
       "custom-1791023391963-vdu9": 86,
       "custom-1791018448490-bpdn": 25,
-      "custom-1791036345616-3tph": 154
+      "custom-1791036345616-3tph": 154,
+      "custom-1791057232858-35ld": 121
     },
     "letterboxdMeta": {
       "lb-0-hTha": {
@@ -35990,6 +36039,12 @@
         "addedDate": "2026-10-03",
         "addedDateSource": "rss-first-seen",
         "reportedWatchedDate": "2026-10-03"
+      },
+      "custom-1791057232858-35ld": {
+        "publishedAt": "Sun, 4 Oct 2026 07:37:58 +1300",
+        "addedDate": "2026-10-04",
+        "addedDateSource": "rss-first-seen",
+        "reportedWatchedDate": "2026-10-04"
       }
     }
   }
