@@ -10600,7 +10600,7 @@
       ],
       "origin": "邦画",
       "format": "animation",
-      "runtime": null,
+      "runtime": 25,
       "exact": true,
       "letterboxdAddedDate": "2026-10-03",
       "letterboxdPublishedAt": "Sat, 3 Oct 2026 22:06:52 +1300",
@@ -24831,6 +24831,9 @@
         "originalTitle": "美食探偵 明智五郎",
         "englishTitle": "Gourmet Detective Goro Akechi",
         "tmdbId": 102014
+      },
+      "custom-1791018448490-bpdn": {
+        "tmdbId": 29452
       }
     },
     "categoryOverrides": {},
@@ -33084,7 +33087,8 @@
       "custom-1790960881562-cn74": 121,
       "custom-1790965876380-nqs0": 54,
       "custom-1790971112940-kuhf": 107,
-      "custom-1791023391963-vdu9": 86
+      "custom-1791023391963-vdu9": 86,
+      "custom-1791018448490-bpdn": 25
     },
     "letterboxdMeta": {
       "lb-0-hTha": {
