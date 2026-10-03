@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791038467518,
-  "sourceUpdatedIso": "2026-10-03T14:41:07.518Z",
+  "sourceUpdatedAt": 1791038474916,
+  "sourceUpdatedIso": "2026-10-03T14:41:14.916Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -6279,6 +6279,34 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-545-1vWw",
+      "title": "瞳の奥の秘密",
+      "originalTitle": "El secreto de sus ojos",
+      "englishTitle": "The Secret in Their Eyes",
+      "year": 2009,
+      "score": 84,
+      "star": 3.5,
+      "overallRank": 218,
+      "sameScoreRank": 25,
+      "category": "Letterboxd追加",
+      "mediaType": "movie",
+      "genre": [
+        "どんでん返し",
+        "社会問題・生活",
+        "サスペンス",
+        "ミステリー",
+        "胸糞",
+        "心理・内面"
+      ],
+      "origin": "その他",
+      "format": "live",
+      "runtime": 130,
+      "exact": true,
+      "letterboxdAddedDate": "2026-08-17",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-524-7bQA",
       "title": "セッション",
       "originalTitle": "",
@@ -6286,8 +6314,8 @@
       "year": 2014,
       "score": 84,
       "star": 3.5,
-      "overallRank": 218,
-      "sameScoreRank": 25,
+      "overallRank": 219,
+      "sameScoreRank": 26,
       "category": "恋愛、ミュージカル",
       "mediaType": "movie",
       "genre": [
@@ -6312,8 +6340,8 @@
       "year": 2025,
       "score": 84,
       "star": 3.5,
-      "overallRank": 219,
-      "sameScoreRank": 26,
+      "overallRank": 220,
+      "sameScoreRank": 27,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -6332,34 +6360,6 @@
       "runtime": 174,
       "exact": true,
       "letterboxdAddedDate": "2026-03-13",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "lb-545-1vWw",
-      "title": "瞳の奥の秘密",
-      "originalTitle": "El secreto de sus ojos",
-      "englishTitle": "The Secret in Their Eyes",
-      "year": 2009,
-      "score": 84,
-      "star": 3.5,
-      "overallRank": 220,
-      "sameScoreRank": 27,
-      "category": "Letterboxd追加",
-      "mediaType": "movie",
-      "genre": [
-        "どんでん返し",
-        "社会問題・生活",
-        "サスペンス",
-        "ミステリー",
-        "胸糞",
-        "心理・内面"
-      ],
-      "origin": "その他",
-      "format": "live",
-      "runtime": 130,
-      "exact": true,
-      "letterboxdAddedDate": "2026-08-17",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -20425,9 +20425,9 @@
         "lb-12-728",
         "lb-554-igK",
         "lb-176-2aZm",
+        "lb-545-1vWw",
         "lb-524-7bQA",
         "lb-379-R6yo",
-        "lb-545-1vWw",
         "lb-266-1Iik",
         "custom-1790269934541-2ps3",
         "lb-541-27MO",
