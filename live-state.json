@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791018872437,
-  "sourceUpdatedIso": "2026-10-03T09:14:32.437Z",
+  "sourceUpdatedAt": 1791023529749,
+  "sourceUpdatedIso": "2026-10-03T10:32:09.749Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -10551,7 +10551,7 @@
       "englishTitle": "Heidi: Girl of the Alps",
       "year": 1974,
       "score": 80,
-      "star": 2.5,
+      "star": 3,
       "overallRank": 368,
       "sameScoreRank": 3,
       "category": "Letterboxd",
@@ -19168,6 +19168,37 @@
       "letterboxdAddedDate": "2026-09-25",
       "letterboxdPublishedAt": "Fri, 25 Sep 2026 06:09:52 +1200",
       "letterboxdReportedWatchedDate": "2026-09-24"
+    },
+    {
+      "id": "custom-1791023391963-vdu9",
+      "title": "アイアン・ジャイアント",
+      "originalTitle": "The Iron Giant",
+      "englishTitle": "The Iron Giant",
+      "year": 1999,
+      "score": null,
+      "star": 4,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "SF",
+        "アドベンチャー",
+        "comfort",
+        "娯楽",
+        "感動",
+        "ファンタジー",
+        "ヒーロー",
+        "アクション"
+      ],
+      "origin": "その他",
+      "format": "animation",
+      "runtime": 86,
+      "exact": false,
+      "letterboxdAddedDate": "2026-10-03",
+      "letterboxdPublishedAt": "Sat, 3 Oct 2026 22:55:24 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-03"
     }
   ],
   "state": {
@@ -22233,6 +22264,23 @@
         "added": true,
         "_seq": 1791018448927,
         "source": "letterboxd"
+      },
+      {
+        "id": "custom-1791023391963-vdu9",
+        "title": "アイアン・ジャイアント",
+        "originalTitle": "The Iron Giant",
+        "englishTitle": "The Iron Giant",
+        "lbTitle": "The Iron Giant",
+        "tmdbId": 10386,
+        "year": 1999,
+        "uri": "https://letterboxd.com/gjbkic/film/the-iron-giant/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 4,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791023391963,
+        "source": "letterboxd"
       }
     ],
     "starOverrides": {
@@ -22873,7 +22921,7 @@
       "custom-1790960881562-cn74": 4,
       "custom-1790965876380-nqs0": 2,
       "custom-1790971112940-kuhf": 3.5,
-      "custom-1791018448490-bpdn": 2.5,
+      "custom-1791018448490-bpdn": 3,
       "custom-1791018448927-b4o3": 3
     },
     "titleOverrides": {
@@ -25462,7 +25510,8 @@
       "custom-1790960881562-cn74": "movie",
       "custom-1790971112940-kuhf": "movie",
       "custom-1791018448490-bpdn": "drama",
-      "custom-1791018448927-b4o3": "drama"
+      "custom-1791018448927-b4o3": "drama",
+      "custom-1791023391963-vdu9": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -31009,6 +31058,17 @@
         "娯楽",
         "子供向け",
         "アドベンチャー"
+      ],
+      "custom-1791023391963-vdu9": [
+        "ドラマ",
+        "SF",
+        "アドベンチャー",
+        "comfort",
+        "娯楽",
+        "感動",
+        "ファンタジー",
+        "ヒーロー",
+        "アクション"
       ]
     },
     "originOverrides": {
@@ -31694,7 +31754,8 @@
       "custom-1790965876380-nqs0": "邦画",
       "custom-1790971112940-kuhf": "邦画",
       "custom-1791018448490-bpdn": "邦画",
-      "custom-1791018448927-b4o3": "邦画"
+      "custom-1791018448927-b4o3": "邦画",
+      "custom-1791023391963-vdu9": "その他"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -32379,7 +32440,8 @@
       "custom-1790965876380-nqs0": "live",
       "custom-1790971112940-kuhf": "live",
       "custom-1791018448927-b4o3": "animation",
-      "custom-1791018448490-bpdn": "animation"
+      "custom-1791018448490-bpdn": "animation",
+      "custom-1791023391963-vdu9": "animation"
     },
     "runtimeOverrides": {
       "custom-1790247938551-ixfs": 100,
@@ -33010,7 +33072,8 @@
       "custom-1790924446793-9ts4": 97,
       "custom-1790960881562-cn74": 121,
       "custom-1790965876380-nqs0": 54,
-      "custom-1790971112940-kuhf": 107
+      "custom-1790971112940-kuhf": 107,
+      "custom-1791023391963-vdu9": 86
     },
     "letterboxdMeta": {
       "lb-0-hTha": {
@@ -35831,6 +35894,12 @@
       },
       "custom-1791018448927-b4o3": {
         "publishedAt": "Sat, 3 Oct 2026 09:28:15 +1300",
+        "addedDate": "2026-10-03",
+        "addedDateSource": "rss-first-seen",
+        "reportedWatchedDate": "2026-10-03"
+      },
+      "custom-1791023391963-vdu9": {
+        "publishedAt": "Sat, 3 Oct 2026 22:55:24 +1300",
         "addedDate": "2026-10-03",
         "addedDateSource": "rss-first-seen",
         "reportedWatchedDate": "2026-10-03"
