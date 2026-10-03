@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791036246085,
-  "sourceUpdatedIso": "2026-10-03T14:04:06.085Z",
+  "sourceUpdatedAt": 1791036345773,
+  "sourceUpdatedIso": "2026-10-03T14:05:45.773Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -19203,6 +19203,31 @@
       "letterboxdAddedDate": "2026-09-25",
       "letterboxdPublishedAt": "Fri, 25 Sep 2026 06:09:52 +1200",
       "letterboxdReportedWatchedDate": "2026-09-24"
+    },
+    {
+      "id": "custom-1791036345616-3tph",
+      "title": "恐怖の報酬",
+      "originalTitle": "Le Salaire de la peur",
+      "englishTitle": "The Wages of Fear",
+      "year": 1953,
+      "score": null,
+      "star": 4,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "スリラー",
+        "アドベンチャー"
+      ],
+      "origin": "その他",
+      "format": "live",
+      "runtime": 154,
+      "exact": false,
+      "letterboxdAddedDate": "2026-10-03",
+      "letterboxdPublishedAt": "Sun, 4 Oct 2026 02:07:33 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-03"
     }
   ],
   "state": {
@@ -22286,6 +22311,23 @@
         "oldScore": null,
         "added": true,
         "_seq": 1791023391963,
+        "source": "letterboxd"
+      },
+      {
+        "id": "custom-1791036345616-3tph",
+        "title": "恐怖の報酬",
+        "originalTitle": "Le Salaire de la peur",
+        "englishTitle": "The Wages of Fear",
+        "lbTitle": "The Wages of Fear",
+        "tmdbId": 204,
+        "year": 1953,
+        "uri": "https://letterboxd.com/gjbkic/film/the-wages-of-fear/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 4,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791036345616,
         "source": "letterboxd"
       }
     ],
@@ -25521,7 +25563,8 @@
       "custom-1790924446793-9ts4": "movie",
       "custom-1790960881562-cn74": "movie",
       "custom-1790971112940-kuhf": "movie",
-      "custom-1791023391963-vdu9": "movie"
+      "custom-1791023391963-vdu9": "movie",
+      "custom-1791036345616-3tph": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -31083,6 +31126,11 @@
         "アクション",
         "青春・若者",
         "子供向け"
+      ],
+      "custom-1791036345616-3tph": [
+        "ドラマ",
+        "スリラー",
+        "アドベンチャー"
       ]
     },
     "originOverrides": {
@@ -31769,7 +31817,8 @@
       "custom-1790971112940-kuhf": "邦画",
       "custom-1791018448490-bpdn": "邦画",
       "custom-1791018448927-b4o3": "邦画",
-      "custom-1791023391963-vdu9": "ハリウッド"
+      "custom-1791023391963-vdu9": "ハリウッド",
+      "custom-1791036345616-3tph": "その他"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -32455,7 +32504,8 @@
       "custom-1790971112940-kuhf": "live",
       "custom-1791018448927-b4o3": "animation",
       "custom-1791018448490-bpdn": "animation",
-      "custom-1791023391963-vdu9": "animation"
+      "custom-1791023391963-vdu9": "animation",
+      "custom-1791036345616-3tph": "live"
     },
     "runtimeOverrides": {
       "custom-1790247938551-ixfs": 100,
@@ -33088,7 +33138,8 @@
       "custom-1790965876380-nqs0": 54,
       "custom-1790971112940-kuhf": 107,
       "custom-1791023391963-vdu9": 86,
-      "custom-1791018448490-bpdn": 25
+      "custom-1791018448490-bpdn": 25,
+      "custom-1791036345616-3tph": 154
     },
     "letterboxdMeta": {
       "lb-0-hTha": {
@@ -35915,6 +35966,12 @@
       },
       "custom-1791023391963-vdu9": {
         "publishedAt": "Sat, 3 Oct 2026 22:55:24 +1300",
+        "addedDate": "2026-10-03",
+        "addedDateSource": "rss-first-seen",
+        "reportedWatchedDate": "2026-10-03"
+      },
+      "custom-1791036345616-3tph": {
+        "publishedAt": "Sun, 4 Oct 2026 02:07:33 +1300",
         "addedDate": "2026-10-03",
         "addedDateSource": "rss-first-seen",
         "reportedWatchedDate": "2026-10-03"
