@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791038376317,
-  "sourceUpdatedIso": "2026-10-03T14:39:36.317Z",
+  "sourceUpdatedAt": 1791038416348,
+  "sourceUpdatedIso": "2026-10-03T14:40:16.348Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -6446,33 +6446,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-394-2b5O",
-      "title": "ロード・オブ・ザ・リング旅の仲間",
-      "originalTitle": "",
-      "englishTitle": "The Lord of the Rings: The Fellowship of the Ring",
-      "year": 2001,
-      "score": 84,
-      "star": 3.5,
-      "overallRank": 224,
-      "sameScoreRank": 31,
-      "category": "ファンタジー、アドベンチャー",
-      "mediaType": "movie",
-      "genre": [
-        "ファンタジー",
-        "アドベンチャー",
-        "世界観",
-        "大作",
-        "娯楽"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 178,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "custom-1790269934541-2ps3",
       "title": "ザ・レイド",
       "originalTitle": "Serbuan Maut",
@@ -6480,8 +6453,8 @@
       "year": 2012,
       "score": 84,
       "star": 3.5,
-      "overallRank": 225,
-      "sameScoreRank": 32,
+      "overallRank": 224,
+      "sameScoreRank": 31,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -6496,6 +6469,33 @@
       "runtime": 101,
       "exact": true,
       "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "lb-394-2b5O",
+      "title": "ロード・オブ・ザ・リング旅の仲間",
+      "originalTitle": "",
+      "englishTitle": "The Lord of the Rings: The Fellowship of the Ring",
+      "year": 2001,
+      "score": 84,
+      "star": 3.5,
+      "overallRank": 225,
+      "sameScoreRank": 32,
+      "category": "ファンタジー、アドベンチャー",
+      "mediaType": "movie",
+      "genre": [
+        "ファンタジー",
+        "アドベンチャー",
+        "世界観",
+        "大作",
+        "娯楽"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 178,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -20431,8 +20431,8 @@
         "lb-379-R6yo",
         "lb-545-1vWw",
         "lb-266-1Iik",
-        "lb-394-2b5O",
         "custom-1790269934541-2ps3",
+        "lb-394-2b5O",
         "lb-63-8MxC",
         "custom-1790423279439-sn81",
         "lb-212-acjI",
