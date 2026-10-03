@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791057557322,
-  "sourceUpdatedIso": "2026-10-03T19:59:17.322Z",
+  "sourceUpdatedAt": 1791057564722,
+  "sourceUpdatedIso": "2026-10-03T19:59:24.722Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -2704,6 +2704,35 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "custom-1791057232858-35ld",
+      "title": "サウンド・オブ・メタル ～聞こえるということ～",
+      "originalTitle": "Sound of Metal",
+      "englishTitle": "Sound of Metal",
+      "year": 2020,
+      "score": 88,
+      "star": 4,
+      "overallRank": 94,
+      "sameScoreRank": 3,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "ミュージカル",
+        "心理・内面",
+        "社会問題・生活",
+        "恋愛",
+        "特殊構造",
+        "哲学・思想"
+      ],
+      "origin": "その他",
+      "format": "live",
+      "runtime": 121,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-04",
+      "letterboxdPublishedAt": "Sun, 4 Oct 2026 07:37:58 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-04"
+    },
+    {
       "id": "lb-91-29Js",
       "title": "シックス・センス",
       "originalTitle": "",
@@ -2711,8 +2740,8 @@
       "year": 1999,
       "score": 88,
       "star": 4,
-      "overallRank": 94,
-      "sameScoreRank": 3,
+      "overallRank": 95,
+      "sameScoreRank": 4,
       "category": "スリラー、ホラー",
       "mediaType": "movie",
       "genre": [
@@ -2740,8 +2769,8 @@
       "year": 1974,
       "score": 88,
       "star": 4,
-      "overallRank": 95,
-      "sameScoreRank": 4,
+      "overallRank": 96,
+      "sameScoreRank": 5,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -2759,35 +2788,6 @@
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "custom-1791057232858-35ld",
-      "title": "サウンド・オブ・メタル ～聞こえるということ～",
-      "originalTitle": "Sound of Metal",
-      "englishTitle": "Sound of Metal",
-      "year": 2020,
-      "score": 88,
-      "star": 4,
-      "overallRank": 96,
-      "sameScoreRank": 5,
-      "category": "Letterboxd",
-      "mediaType": "movie",
-      "genre": [
-        "ドラマ",
-        "ミュージカル",
-        "心理・内面",
-        "社会問題・生活",
-        "恋愛",
-        "特殊構造",
-        "哲学・思想"
-      ],
-      "origin": "その他",
-      "format": "live",
-      "runtime": 121,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-04",
-      "letterboxdPublishedAt": "Sun, 4 Oct 2026 07:37:58 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-04"
     },
     {
       "id": "lb-312-1SRY",
@@ -20568,9 +20568,9 @@
       "88": [
         "lb-0-hTha",
         "lb-460-20eA",
+        "custom-1791057232858-35ld",
         "lb-91-29Js",
         "lb-77-2aNq",
-        "custom-1791057232858-35ld",
         "lb-312-1SRY",
         "lb-160-2b8e",
         "custom-1790322763195-rro9",
