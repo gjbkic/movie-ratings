@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791018473597,
-  "sourceUpdatedIso": "2026-10-03T09:07:53.597Z",
+  "sourceUpdatedAt": 1791018490332,
+  "sourceUpdatedIso": "2026-10-03T09:08:10.332Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -19118,9 +19118,11 @@
       "sameScoreRank": null,
       "category": "Letterboxd",
       "mediaType": "drama",
-      "genre": "",
-      "origin": "その他",
-      "format": "",
+      "genre": [
+        "TV本編"
+      ],
+      "origin": "邦画",
+      "format": "animation",
       "runtime": null,
       "exact": false,
       "letterboxdAddedDate": "2026-10-03",
@@ -30969,6 +30971,9 @@
         "アドベンチャー",
         "SF",
         "ファンタジー"
+      ],
+      "custom-1791018448490-bpdn": [
+        "TV本編"
       ]
     },
     "originOverrides": {
@@ -31653,7 +31658,7 @@
       "custom-1790960881562-cn74": "ハリウッド",
       "custom-1790965876380-nqs0": "邦画",
       "custom-1790971112940-kuhf": "邦画",
-      "custom-1791018448490-bpdn": "その他",
+      "custom-1791018448490-bpdn": "邦画",
       "custom-1791018448927-b4o3": "邦画"
     },
     "formatOverrides": {
@@ -32338,7 +32343,8 @@
       "custom-1790960881562-cn74": "live",
       "custom-1790965876380-nqs0": "live",
       "custom-1790971112940-kuhf": "live",
-      "custom-1791018448927-b4o3": "animation"
+      "custom-1791018448927-b4o3": "animation",
+      "custom-1791018448490-bpdn": "animation"
     },
     "runtimeOverrides": {
       "custom-1790247938551-ixfs": 100,
