@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791057545342,
-  "sourceUpdatedIso": "2026-10-03T19:59:05.342Z",
+  "sourceUpdatedAt": 1791057557322,
+  "sourceUpdatedIso": "2026-10-03T19:59:17.322Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -2761,6 +2761,35 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "custom-1791057232858-35ld",
+      "title": "サウンド・オブ・メタル ～聞こえるということ～",
+      "originalTitle": "Sound of Metal",
+      "englishTitle": "Sound of Metal",
+      "year": 2020,
+      "score": 88,
+      "star": 4,
+      "overallRank": 96,
+      "sameScoreRank": 5,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "ミュージカル",
+        "心理・内面",
+        "社会問題・生活",
+        "恋愛",
+        "特殊構造",
+        "哲学・思想"
+      ],
+      "origin": "その他",
+      "format": "live",
+      "runtime": 121,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-04",
+      "letterboxdPublishedAt": "Sun, 4 Oct 2026 07:37:58 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-04"
+    },
+    {
       "id": "lb-312-1SRY",
       "title": "用心棒",
       "originalTitle": "",
@@ -2768,8 +2797,8 @@
       "year": 1961,
       "score": 88,
       "star": 4,
-      "overallRank": 96,
-      "sameScoreRank": 5,
+      "overallRank": 97,
+      "sameScoreRank": 6,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -2795,8 +2824,8 @@
       "year": 1985,
       "score": 88,
       "star": 4,
-      "overallRank": 97,
-      "sameScoreRank": 6,
+      "overallRank": 98,
+      "sameScoreRank": 7,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -2827,8 +2856,8 @@
       "year": 2018,
       "score": 88,
       "star": 4,
-      "overallRank": 98,
-      "sameScoreRank": 7,
+      "overallRank": 99,
+      "sameScoreRank": 8,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -2854,8 +2883,8 @@
       "year": 2009,
       "score": 88,
       "star": 4,
-      "overallRank": 99,
-      "sameScoreRank": 8,
+      "overallRank": 100,
+      "sameScoreRank": 9,
       "category": "コメディ",
       "mediaType": "movie",
       "genre": [
@@ -2880,8 +2909,8 @@
       "year": 1983,
       "score": 88,
       "star": 4,
-      "overallRank": 100,
-      "sameScoreRank": 9,
+      "overallRank": 101,
+      "sameScoreRank": 10,
       "category": "スターウォーズシリーズ",
       "mediaType": "movie",
       "genre": [
@@ -2910,8 +2939,8 @@
       "year": 2011,
       "score": 88,
       "star": 4,
-      "overallRank": 101,
-      "sameScoreRank": 10,
+      "overallRank": 102,
+      "sameScoreRank": 11,
       "category": "ハリーポッター シリーズ",
       "mediaType": "movie",
       "genre": [
@@ -2931,35 +2960,6 @@
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "custom-1791057232858-35ld",
-      "title": "サウンド・オブ・メタル ～聞こえるということ～",
-      "originalTitle": "Sound of Metal",
-      "englishTitle": "Sound of Metal",
-      "year": 2020,
-      "score": 88,
-      "star": 4,
-      "overallRank": 102,
-      "sameScoreRank": 11,
-      "category": "Letterboxd",
-      "mediaType": "movie",
-      "genre": [
-        "ドラマ",
-        "ミュージカル",
-        "心理・内面",
-        "社会問題・生活",
-        "恋愛",
-        "特殊構造",
-        "哲学・思想"
-      ],
-      "origin": "その他",
-      "format": "live",
-      "runtime": 121,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-04",
-      "letterboxdPublishedAt": "Sun, 4 Oct 2026 07:37:58 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-04"
     },
     {
       "id": "lb-132-aPvy",
@@ -20570,13 +20570,13 @@
         "lb-460-20eA",
         "lb-91-29Js",
         "lb-77-2aNq",
+        "custom-1791057232858-35ld",
         "lb-312-1SRY",
         "lb-160-2b8e",
         "custom-1790322763195-rro9",
         "lb-85-1GjK",
         "lb-71-27Vm",
         "lb-67-1RYk",
-        "custom-1791057232858-35ld",
         "lb-132-aPvy",
         "lb-7-h4cS",
         "lb-296-l7zS"
