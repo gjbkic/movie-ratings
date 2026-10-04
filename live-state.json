@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791139033730,
-  "sourceUpdatedIso": "2026-10-04T18:37:13.730Z",
+  "sourceUpdatedAt": 1791139070105,
+  "sourceUpdatedIso": "2026-10-04T18:37:50.105Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -2445,35 +2445,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-100-aZes",
-      "title": "レディ・プレイヤー1",
-      "originalTitle": "",
-      "englishTitle": "Ready Player One",
-      "year": 2018,
-      "score": 89,
-      "star": 4,
-      "overallRank": 85,
-      "sameScoreRank": 8,
-      "category": "SF",
-      "mediaType": "movie",
-      "genre": [
-        "SF",
-        "アクション",
-        "ファンタジー",
-        "ヒーロー",
-        "世界観",
-        "娯楽",
-        "大作"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 140,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "custom-1791023391963-vdu9",
       "title": "アイアン・ジャイアント",
       "originalTitle": "The Iron Giant",
@@ -2481,8 +2452,8 @@
       "year": 1999,
       "score": 89,
       "star": 4,
-      "overallRank": 86,
-      "sameScoreRank": 9,
+      "overallRank": 85,
+      "sameScoreRank": 8,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -2514,8 +2485,8 @@
       "year": 1953,
       "score": 89,
       "star": 4,
-      "overallRank": 87,
-      "sameScoreRank": 10,
+      "overallRank": 86,
+      "sameScoreRank": 9,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -2535,6 +2506,35 @@
       "letterboxdAddedDate": "2026-10-03",
       "letterboxdPublishedAt": "Sun, 4 Oct 2026 02:07:33 +1300",
       "letterboxdReportedWatchedDate": "2026-10-03"
+    },
+    {
+      "id": "lb-100-aZes",
+      "title": "レディ・プレイヤー1",
+      "originalTitle": "",
+      "englishTitle": "Ready Player One",
+      "year": 2018,
+      "score": 89,
+      "star": 4,
+      "overallRank": 87,
+      "sameScoreRank": 10,
+      "category": "SF",
+      "mediaType": "movie",
+      "genre": [
+        "SF",
+        "アクション",
+        "ファンタジー",
+        "ヒーロー",
+        "世界観",
+        "娯楽",
+        "大作"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 140,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "lb-6-29Pq",
@@ -20771,9 +20771,9 @@
         "lb-65-2auI",
         "custom-1791057232858-35ld",
         "lb-154-1Mn4",
-        "lb-100-aZes",
         "custom-1791023391963-vdu9",
         "custom-1791036345616-3tph",
+        "lb-100-aZes",
         "lb-6-29Pq",
         "lb-185-HTIi",
         "lb-48-27Vw",
