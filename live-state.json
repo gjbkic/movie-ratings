@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791139640078,
-  "sourceUpdatedIso": "2026-10-04T18:47:20.078Z",
+  "sourceUpdatedAt": 1791139668746,
+  "sourceUpdatedIso": "2026-10-04T18:47:48.746Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -1345,33 +1345,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-41-cjr4",
-      "title": "トップガン マーヴェリック",
-      "originalTitle": "",
-      "englishTitle": "Top Gun: Maverick",
-      "year": 2022,
-      "score": 92,
-      "star": 4,
-      "overallRank": 47,
-      "sameScoreRank": 3,
-      "category": "アクション",
-      "mediaType": "movie",
-      "genre": [
-        "アクション",
-        "サスペンス",
-        "戦争",
-        "大作",
-        "娯楽"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 131,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-564-29Wm",
       "title": "ライフ・イズ・ビューティフル",
       "originalTitle": "La vita è bella",
@@ -1379,8 +1352,8 @@
       "year": 1997,
       "score": 92,
       "star": 4,
-      "overallRank": 48,
-      "sameScoreRank": 4,
+      "overallRank": 47,
+      "sameScoreRank": 3,
       "category": "戦争、歴史",
       "mediaType": "movie",
       "genre": [
@@ -1409,8 +1382,8 @@
       "year": 2006,
       "score": 92,
       "star": 4,
-      "overallRank": 49,
-      "sameScoreRank": 5,
+      "overallRank": 48,
+      "sameScoreRank": 4,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -1427,6 +1400,33 @@
       "runtime": 137,
       "exact": true,
       "letterboxdAddedDate": "2026-09-08",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "lb-41-cjr4",
+      "title": "トップガン マーヴェリック",
+      "originalTitle": "",
+      "englishTitle": "Top Gun: Maverick",
+      "year": 2022,
+      "score": 92,
+      "star": 4,
+      "overallRank": 49,
+      "sameScoreRank": 5,
+      "category": "アクション",
+      "mediaType": "movie",
+      "genre": [
+        "アクション",
+        "サスペンス",
+        "戦争",
+        "大作",
+        "娯楽"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 131,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -20810,9 +20810,9 @@
       "92": [
         "lb-487-28JG",
         "lb-116-1YYc",
-        "lb-41-cjr4",
         "lb-564-29Wm",
         "added-anchor-577",
+        "lb-41-cjr4",
         "lb-58-293w",
         "lb-178-29XE",
         "lb-262-29Du",
