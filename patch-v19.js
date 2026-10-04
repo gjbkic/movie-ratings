@@ -1,11 +1,12 @@
 (() => {
   const MEDIA = [["movie","映画"],["documentary","ドキュメンタリー"],["other","その他"]];
-  const ORIGINS = ["邦画","ハリウッド","その他外国語映画"];
+  const ORIGINS = ["日本","ハリウッド","その他外国語映画"];
   const FORMATS = [["live","実写"],["animation","アニメ"]];
   const GENRES19 = ["SF","アクション","サスペンス","ミステリー","スリラー","ホラー","クライム","ドラマ","コメディ","恋愛","ミュージカル","戦争","歴史","ファンタジー","アドベンチャー","シリーズ劇場版","ヒーロー"];
   const ORIGIN_SET = new Set(ORIGINS);
 
   state.originOverrides = state.originOverrides && typeof state.originOverrides === "object" ? state.originOverrides : {};
+  for(const id of Object.keys(state.originOverrides)) if(state.originOverrides[id]==="邦画") state.originOverrides[id]="日本";
   state.formatOverrides = state.formatOverrides && typeof state.formatOverrides === "object" ? state.formatOverrides : {};
   state.runtimeOverrides = state.runtimeOverrides && typeof state.runtimeOverrides === "object" ? state.runtimeOverrides : {};
 
@@ -26,12 +27,12 @@
 
   function classifyOrigin19(f){
     const x=titleInfo(f), title=displayTitle(f), orig=String(x.originalTitle||"").trim(), eng=String(x.englishTitle||f.lbTitle||"").trim(), cat=String(filmCategory(f)||"");
-    if(["邦画","スタジオジブリ系作品","コナン映画"].includes(cat)) return "邦画";
-    if(/[\u3040-\u30ff]/.test(orig)) return "邦画";
+    if(["邦画","日本","スタジオジブリ系作品","コナン映画"].includes(cat)) return "日本";
+    if(/[\u3040-\u30ff]/.test(orig)) return "日本";
     if(/[\uac00-\ud7af\u0400-\u04ff\u0600-\u06ff\u0e00-\u0e7f]/.test(orig)) return "その他外国語映画";
     if(/[\u4e00-\u9fff]/.test(orig) && !/[\u3040-\u30ff]/.test(orig)) return "その他外国語映画";
     const blob=(title+" "+orig+" "+eng).toLowerCase();
-    if(/(?:十角館|カイジ|踊る大捜査線|エヴァンゲリオン|パーフェクトブルー|東京ゴッドファーザーズ|君の名は|天気の子|すずめの戸締まり|もののけ姫|千と千尋|ナウシカ|火垂るの墓|紅の豚|トトロ|魔女の宅急便|ハウル|ラピュタ|ポニョ|akira|バトル・ロワイアル|七人の侍|羅生門|用心棒|万引き家族|ドライブ・マイ・カー|ゴジラ|リング|呪怨|告白|怪物|hero|spec|ドラえもん|名探偵コナン)/i.test(blob)) return "邦画";
+    if(/(?:十角館|カイジ|踊る大捜査線|エヴァンゲリオン|パーフェクトブルー|東京ゴッドファーザーズ|君の名は|天気の子|すずめの戸締まり|もののけ姫|千と千尋|ナウシカ|火垂るの墓|紅の豚|トトロ|魔女の宅急便|ハウル|ラピュタ|ポニョ|akira|バトル・ロワイアル|七人の侍|羅生門|用心棒|万引き家族|ドライブ・マイ・カー|ゴジラ|リング|呪怨|告白|怪物|hero|spec|ドラえもん|名探偵コナン)/i.test(blob)) return "日本";
     if(/(?:parasite|oldboy|memories of murder|handmaiden|mother|snowpiercer|decision to leave|guilty|funny games|anatomy of a fall|incendies|la haine|am[eé]lie|lives of others|cidade de deus|city of god|pan's labyrinth|contratiempo)/i.test(blob)) return "その他外国語映画";
     return "ハリウッド";
   }
@@ -157,7 +158,7 @@
       const d=await tmdbFetch("/movie/"+id,{language:"en-US"});
       const rt=document.getElementById("qRuntime"); if(rt&&d.runtime)rt.value=d.runtime;
       const countries=(d.production_countries||[]).map(x=>x.iso_3166_1), lang=String(d.original_language||"");
-      let origin=countries.includes("JP")?"邦画":((countries.includes("US")||lang==="en")?"ハリウッド":"その他外国語映画");
+      let origin=countries.includes("JP")?"日本":((countries.includes("US")||lang==="en")?"ハリウッド":"その他外国語映画");
       const animation=(d.genres||[]).some(g=>g.name==="Animation");
       const tmdbMap={"Science Fiction":"SF","Action":"アクション","Mystery":"ミステリー","Thriller":"スリラー","Horror":"ホラー","Crime":"クライム","Drama":"ドラマ","Comedy":"コメディ","Romance":"恋愛","Music":"ミュージカル","War":"戦争","History":"歴史","Fantasy":"ファンタジー","Adventure":"アドベンチャー"};
       const gs=(d.genres||[]).map(g=>tmdbMap[g.name]).filter(Boolean);
