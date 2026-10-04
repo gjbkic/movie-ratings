@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791140227999,
-  "sourceUpdatedIso": "2026-10-04T18:57:07.999Z",
+  "sourceUpdatedAt": 1791140231977,
+  "sourceUpdatedIso": "2026-10-04T18:57:11.977Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -891,36 +891,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-112-1W4G",
-      "title": "天空の城ラピュタ",
-      "originalTitle": "",
-      "englishTitle": "Castle in the Sky",
-      "year": 1986,
-      "score": 94,
-      "star": 4.5,
-      "overallRank": 31,
-      "sameScoreRank": 9,
-      "category": "スタジオジブリ系作品",
-      "mediaType": "movie",
-      "genre": [
-        "ファンタジー",
-        "アドベンチャー",
-        "アクション",
-        "子供向け",
-        "世界観",
-        "comfort",
-        "娯楽",
-        "雰囲気・美学"
-      ],
-      "origin": "邦画",
-      "format": "animation",
-      "runtime": 124,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "custom-1790508958519-2edt",
       "title": "怪物",
       "originalTitle": "怪物",
@@ -928,8 +898,8 @@
       "year": 2023,
       "score": 94,
       "star": 4.5,
-      "overallRank": 32,
-      "sameScoreRank": 10,
+      "overallRank": 31,
+      "sameScoreRank": 9,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -951,6 +921,36 @@
       "letterboxdAddedDate": "2026-09-27",
       "letterboxdPublishedAt": "Sun, 27 Sep 2026 22:28:02 +1300",
       "letterboxdReportedWatchedDate": "2026-09-27"
+    },
+    {
+      "id": "lb-112-1W4G",
+      "title": "天空の城ラピュタ",
+      "originalTitle": "",
+      "englishTitle": "Castle in the Sky",
+      "year": 1986,
+      "score": 94,
+      "star": 4.5,
+      "overallRank": 32,
+      "sameScoreRank": 10,
+      "category": "スタジオジブリ系作品",
+      "mediaType": "movie",
+      "genre": [
+        "ファンタジー",
+        "アドベンチャー",
+        "アクション",
+        "子供向け",
+        "世界観",
+        "comfort",
+        "娯楽",
+        "雰囲気・美学"
+      ],
+      "origin": "邦画",
+      "format": "animation",
+      "runtime": 124,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "lb-333-2b4m",
@@ -20908,8 +20908,8 @@
         "lb-549-iEBG",
         "custom-1790420198451-g42l",
         "lb-467-ptEI",
-        "lb-112-1W4G",
-        "custom-1790508958519-2edt"
+        "custom-1790508958519-2edt",
+        "lb-112-1W4G"
       ],
       "95": [
         "lb-322-2aeA",
