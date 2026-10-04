@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791139391342,
-  "sourceUpdatedIso": "2026-10-04T18:43:11.342Z",
+  "sourceUpdatedAt": 1791139491135,
+  "sourceUpdatedIso": "2026-10-04T18:44:51.135Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -3194,6 +3194,34 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-464-mkbG",
+      "title": "チェルノブイリ",
+      "originalTitle": "",
+      "englishTitle": "Chernobyl",
+      "year": 2019,
+      "score": 87,
+      "star": 4,
+      "overallRank": 111,
+      "sameScoreRank": 8,
+      "category": "Letterboxd追加",
+      "mediaType": "drama",
+      "genre": [
+        "歴史",
+        "社会問題・生活",
+        "サスペンス",
+        "心理・内面",
+        "雰囲気・美学",
+        "TV本編"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 73,
+      "exact": true,
+      "letterboxdAddedDate": "2026-04-12",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "custom-1790508959663-6kld",
       "title": "劇場版「進撃の巨人」完結編 THE LAST ATTACK",
       "originalTitle": "劇場版「進撃の巨人」完結編 THE LAST ATTACK",
@@ -3201,8 +3229,8 @@
       "year": 2024,
       "score": 87,
       "star": 4,
-      "overallRank": 111,
-      "sameScoreRank": 8,
+      "overallRank": 112,
+      "sameScoreRank": 9,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -3241,8 +3269,8 @@
       "year": 2023,
       "score": 87,
       "star": 4,
-      "overallRank": 112,
-      "sameScoreRank": 9,
+      "overallRank": 113,
+      "sameScoreRank": 10,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -3280,8 +3308,8 @@
       "year": 2023,
       "score": 87,
       "star": 4,
-      "overallRank": 113,
-      "sameScoreRank": 10,
+      "overallRank": 114,
+      "sameScoreRank": 11,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -3321,8 +3349,8 @@
       "year": 1977,
       "score": 87,
       "star": 4,
-      "overallRank": 114,
-      "sameScoreRank": 11,
+      "overallRank": 115,
+      "sameScoreRank": 12,
       "category": "スターウォーズシリーズ",
       "mediaType": "movie",
       "genre": [
@@ -3340,34 +3368,6 @@
       "runtime": 121,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "lb-464-mkbG",
-      "title": "チェルノブイリ",
-      "originalTitle": "",
-      "englishTitle": "Chernobyl",
-      "year": 2019,
-      "score": 87,
-      "star": 4,
-      "overallRank": 115,
-      "sameScoreRank": 12,
-      "category": "Letterboxd追加",
-      "mediaType": "drama",
-      "genre": [
-        "歴史",
-        "社会問題・生活",
-        "サスペンス",
-        "心理・内面",
-        "雰囲気・美学",
-        "TV本編"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 73,
-      "exact": true,
-      "letterboxdAddedDate": "2026-04-12",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -20742,11 +20742,11 @@
         "lb-253-SVAW",
         "lb-172-2aHW",
         "lb-36-29FA",
+        "lb-464-mkbG",
         "custom-1790508959663-6kld",
         "custom-1790508959270-dbu3",
         "custom-1790508958909-q6d6",
         "lb-37-72s",
-        "lb-464-mkbG",
         "lb-101-ce74",
         "lb-98-2bbs"
       ],
