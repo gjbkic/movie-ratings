@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791122843255,
-  "sourceUpdatedIso": "2026-10-04T14:07:23.255Z",
+  "sourceUpdatedAt": 1791122852591,
+  "sourceUpdatedIso": "2026-10-04T14:07:32.591Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -11788,7 +11788,7 @@
       ],
       "origin": "その他",
       "format": "live",
-      "runtime": null,
+      "runtime": 41,
       "exact": true,
       "letterboxdAddedDate": "2026-10-04",
       "letterboxdPublishedAt": "Sun, 4 Oct 2026 10:12:05 +1300",
@@ -19405,6 +19405,30 @@
       "letterboxdAddedDate": "2026-09-25",
       "letterboxdPublishedAt": "Fri, 25 Sep 2026 06:09:52 +1200",
       "letterboxdReportedWatchedDate": "2026-09-24"
+    },
+    {
+      "id": "custom-1791122852357-22zp",
+      "title": "秒速5センチメートル",
+      "originalTitle": "秒速5センチメートル",
+      "englishTitle": "5 Centimeters per Second",
+      "year": 2007,
+      "score": null,
+      "star": 2.5,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "恋愛",
+        "ドラマ"
+      ],
+      "origin": "邦画",
+      "format": "animation",
+      "runtime": 63,
+      "exact": false,
+      "letterboxdAddedDate": "2026-10-04",
+      "letterboxdPublishedAt": "Mon, 5 Oct 2026 01:08:27 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-04"
     }
   ],
   "state": {
@@ -22624,6 +22648,23 @@
         "added": true,
         "_seq": 1791113242437,
         "source": "letterboxd"
+      },
+      {
+        "id": "custom-1791122852357-22zp",
+        "title": "秒速5センチメートル",
+        "originalTitle": "秒速5センチメートル",
+        "englishTitle": "5 Centimeters per Second",
+        "lbTitle": "5 Centimeters per Second",
+        "tmdbId": 38142,
+        "year": 2007,
+        "uri": "https://letterboxd.com/gjbkic/film/5-centimeters-per-second/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 2.5,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791122852357,
+        "source": "letterboxd"
       }
     ],
     "starOverrides": {
@@ -25180,6 +25221,9 @@
       },
       "custom-1791018448490-bpdn": {
         "tmdbId": 29452
+      },
+      "custom-1791113241748-xivg": {
+        "tmdbId": 85937
       }
     },
     "categoryOverrides": {},
@@ -25874,7 +25918,8 @@
       "custom-1791113241266-l3xb": "movie",
       "custom-1791113241627-mf17": "movie",
       "custom-1791113242089-wnyx": "movie",
-      "custom-1791113242437-wcok": "movie"
+      "custom-1791113242437-wcok": "movie",
+      "custom-1791122852357-22zp": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -31498,6 +31543,10 @@
         "娯楽",
         "子供向け",
         "TV本編"
+      ],
+      "custom-1791122852357-22zp": [
+        "恋愛",
+        "ドラマ"
       ]
     },
     "originOverrides": {
@@ -32191,7 +32240,8 @@
       "custom-1791113241627-mf17": "邦画",
       "custom-1791113241748-xivg": "その他",
       "custom-1791113242089-wnyx": "邦画",
-      "custom-1791113242437-wcok": "邦画"
+      "custom-1791113242437-wcok": "邦画",
+      "custom-1791122852357-22zp": "邦画"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -32884,7 +32934,8 @@
       "custom-1791113241627-mf17": "animation",
       "custom-1791113242089-wnyx": "animation",
       "custom-1791113242437-wcok": "animation",
-      "custom-1791113241748-xivg": "live"
+      "custom-1791113241748-xivg": "live",
+      "custom-1791122852357-22zp": "animation"
     },
     "runtimeOverrides": {
       "custom-1790247938551-ixfs": 100,
@@ -33523,7 +33574,9 @@
       "custom-1791113241266-l3xb": 141,
       "custom-1791113241627-mf17": 100,
       "custom-1791113242089-wnyx": 85,
-      "custom-1791113242437-wcok": 100
+      "custom-1791113242437-wcok": 100,
+      "custom-1791113241748-xivg": 41,
+      "custom-1791122852357-22zp": 63
     },
     "letterboxdMeta": {
       "lb-0-hTha": {
@@ -36392,6 +36445,12 @@
       },
       "custom-1791113242437-wcok": {
         "publishedAt": "Sun, 4 Oct 2026 10:07:31 +1300",
+        "addedDate": "2026-10-04",
+        "addedDateSource": "rss-first-seen",
+        "reportedWatchedDate": "2026-10-04"
+      },
+      "custom-1791122852357-22zp": {
+        "publishedAt": "Mon, 5 Oct 2026 01:08:27 +1300",
         "addedDate": "2026-10-04",
         "addedDateSource": "rss-first-seen",
         "reportedWatchedDate": "2026-10-04"
