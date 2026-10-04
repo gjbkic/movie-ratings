@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791114117236,
-  "sourceUpdatedIso": "2026-10-04T11:41:57.236Z",
+  "sourceUpdatedAt": 1791122843255,
+  "sourceUpdatedIso": "2026-10-04T14:07:23.255Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -11783,10 +11783,11 @@
         "アクション",
         "ヒーロー",
         "娯楽",
-        "子供向け"
+        "子供向け",
+        "TV本編"
       ],
       "origin": "その他",
-      "format": "",
+      "format": "live",
       "runtime": null,
       "exact": true,
       "letterboxdAddedDate": "2026-10-04",
@@ -25247,6 +25248,7 @@
       "custom-1790965876380-nqs0": "drama",
       "custom-1791018448490-bpdn": "drama",
       "custom-1791018448927-b4o3": "drama",
+      "custom-1791113241748-xivg": "drama",
       "lb-0-hTha": "movie",
       "lb-1-4VZ8": "movie",
       "lb-2-2a9q": "movie",
@@ -25871,7 +25873,6 @@
       "custom-1791057232858-35ld": "movie",
       "custom-1791113241266-l3xb": "movie",
       "custom-1791113241627-mf17": "movie",
-      "custom-1791113241748-xivg": "drama",
       "custom-1791113242089-wnyx": "movie",
       "custom-1791113242437-wcok": "movie"
     },
@@ -31495,7 +31496,8 @@
         "アクション",
         "ヒーロー",
         "娯楽",
-        "子供向け"
+        "子供向け",
+        "TV本編"
       ]
     },
     "originOverrides": {
@@ -32881,7 +32883,8 @@
       "custom-1791113241266-l3xb": "live",
       "custom-1791113241627-mf17": "animation",
       "custom-1791113242089-wnyx": "animation",
-      "custom-1791113242437-wcok": "animation"
+      "custom-1791113242437-wcok": "animation",
+      "custom-1791113241748-xivg": "live"
     },
     "runtimeOverrides": {
       "custom-1790247938551-ixfs": 100,
