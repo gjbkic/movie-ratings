@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791113978736,
-  "sourceUpdatedIso": "2026-10-04T11:39:38.736Z",
+  "sourceUpdatedAt": 1791114083634,
+  "sourceUpdatedIso": "2026-10-04T11:41:23.634Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -17563,31 +17563,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-356-28dK",
-      "title": "ウェストサイドストーリー",
-      "originalTitle": "",
-      "englishTitle": "West Side Story",
-      "year": 1961,
-      "score": 71,
-      "star": 2,
-      "overallRank": 620,
-      "sameScoreRank": 9,
-      "category": "恋愛、ミュージカル",
-      "mediaType": "movie",
-      "genre": [
-        "恋愛",
-        "ミュージカル",
-        "娯楽"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": null,
-      "exact": true,
-      "letterboxdAddedDate": "2025-12-08",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-259-N7ZC",
       "title": "侍タイムスリッパー",
       "originalTitle": "",
@@ -17595,8 +17570,8 @@
       "year": 2023,
       "score": 71,
       "star": 2,
-      "overallRank": 621,
-      "sameScoreRank": 10,
+      "overallRank": 620,
+      "sameScoreRank": 9,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -17624,7 +17599,7 @@
       "year": 2000,
       "score": 70,
       "star": 1.5,
-      "overallRank": 622,
+      "overallRank": 621,
       "sameScoreRank": 1,
       "category": "ドラマ",
       "mediaType": "movie",
@@ -17650,7 +17625,7 @@
       "year": 2020,
       "score": 70,
       "star": 1.5,
-      "overallRank": 623,
+      "overallRank": 622,
       "sameScoreRank": 2,
       "category": "ほかアニメ",
       "mediaType": "movie",
@@ -17670,6 +17645,31 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-356-28dK",
+      "title": "ウェストサイドストーリー",
+      "originalTitle": "",
+      "englishTitle": "West Side Story",
+      "year": 1961,
+      "score": 70,
+      "star": 1.5,
+      "overallRank": 623,
+      "sameScoreRank": 3,
+      "category": "恋愛、ミュージカル",
+      "mediaType": "movie",
+      "genre": [
+        "恋愛",
+        "ミュージカル",
+        "娯楽"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": "2025-12-08",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-443-8ND2",
       "title": "ピエロがお前を嘲笑う",
       "originalTitle": "",
@@ -17678,7 +17678,7 @@
       "score": 70,
       "star": 1.5,
       "overallRank": 624,
-      "sameScoreRank": 3,
+      "sameScoreRank": 4,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -17705,7 +17705,7 @@
       "score": 70,
       "star": 1.5,
       "overallRank": 625,
-      "sameScoreRank": 4,
+      "sameScoreRank": 5,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -17730,7 +17730,7 @@
       "score": 70,
       "star": 1.5,
       "overallRank": 626,
-      "sameScoreRank": 5,
+      "sameScoreRank": 6,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -17758,7 +17758,7 @@
       "score": 70,
       "star": 1.5,
       "overallRank": 627,
-      "sameScoreRank": 6,
+      "sameScoreRank": 7,
       "category": "コナン映画",
       "mediaType": "movie",
       "genre": [
@@ -17786,7 +17786,7 @@
       "score": 70,
       "star": 1.5,
       "overallRank": 628,
-      "sameScoreRank": 7,
+      "sameScoreRank": 8,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -17813,7 +17813,7 @@
       "score": 70,
       "star": 1.5,
       "overallRank": 629,
-      "sameScoreRank": 8,
+      "sameScoreRank": 9,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -17839,7 +17839,7 @@
       "score": 70,
       "star": 1.5,
       "overallRank": 630,
-      "sameScoreRank": 9,
+      "sameScoreRank": 10,
       "category": "ピクサー・ディズニー作品",
       "mediaType": "movie",
       "genre": [
@@ -19587,7 +19587,7 @@
       "lb-210-8tfY": 71,
       "lb-251-8TIi": 71,
       "lb-147-1WYO": 71,
-      "lb-356-28dK": 71,
+      "lb-356-28dK": 70,
       "custom-1789918000606-jgbg": 82,
       "custom-1789929101832-iwdt": 81,
       "lb-64-leq4": 85,
@@ -20159,6 +20159,7 @@
       "70": [
         "lb-533-2bdy",
         "lb-128-nyLU",
+        "lb-356-28dK",
         "lb-443-8ND2",
         "lb-531-29JC",
         "custom-1789385861007-nhdf",
@@ -20176,7 +20177,6 @@
         "lb-476-738K",
         "custom-1790322761655-im7g",
         "lb-484-h8gk",
-        "lb-356-28dK",
         "lb-259-N7ZC"
       ],
       "72": [
@@ -22794,7 +22794,7 @@
       "lb-210-8tfY": 2,
       "lb-251-8TIi": 2,
       "lb-147-1WYO": 2,
-      "lb-356-28dK": 2,
+      "lb-356-28dK": 1.5,
       "custom-1789918000606-jgbg": 3,
       "lb-64-leq4": 3.5,
       "lb-43-2awY": 3.5,
