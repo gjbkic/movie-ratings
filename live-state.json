@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791139681715,
-  "sourceUpdatedIso": "2026-10-04T18:48:01.715Z",
+  "sourceUpdatedAt": 1791139697330,
+  "sourceUpdatedIso": "2026-10-04T18:48:17.330Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -1404,33 +1404,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-41-cjr4",
-      "title": "トップガン マーヴェリック",
-      "originalTitle": "",
-      "englishTitle": "Top Gun: Maverick",
-      "year": 2022,
-      "score": 92,
-      "star": 4,
-      "overallRank": 49,
-      "sameScoreRank": 5,
-      "category": "アクション",
-      "mediaType": "movie",
-      "genre": [
-        "アクション",
-        "サスペンス",
-        "戦争",
-        "大作",
-        "娯楽"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 131,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-378-26E0",
       "title": "誰も知らない",
       "originalTitle": "",
@@ -1438,8 +1411,8 @@
       "year": 2004,
       "score": 92,
       "star": 4,
-      "overallRank": 50,
-      "sameScoreRank": 6,
+      "overallRank": 49,
+      "sameScoreRank": 5,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -1467,8 +1440,8 @@
       "year": 2006,
       "score": 92,
       "star": 4,
-      "overallRank": 51,
-      "sameScoreRank": 7,
+      "overallRank": 50,
+      "sameScoreRank": 6,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -1495,8 +1468,8 @@
       "year": 1995,
       "score": 92,
       "star": 4,
-      "overallRank": 52,
-      "sameScoreRank": 8,
+      "overallRank": 51,
+      "sameScoreRank": 7,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -1508,6 +1481,33 @@
       "origin": "ハリウッド",
       "format": "live",
       "runtime": 105,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "lb-41-cjr4",
+      "title": "トップガン マーヴェリック",
+      "originalTitle": "",
+      "englishTitle": "Top Gun: Maverick",
+      "year": 2022,
+      "score": 92,
+      "star": 4,
+      "overallRank": 52,
+      "sameScoreRank": 8,
+      "category": "アクション",
+      "mediaType": "movie",
+      "genre": [
+        "アクション",
+        "サスペンス",
+        "戦争",
+        "大作",
+        "娯楽"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 131,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
@@ -20812,10 +20812,10 @@
         "lb-116-1YYc",
         "lb-564-29Wm",
         "added-anchor-577",
-        "lb-41-cjr4",
         "lb-378-26E0",
         "lb-58-293w",
         "lb-178-29XE",
+        "lb-41-cjr4",
         "lb-262-29Du",
         "lb-486-b8wK"
       ],
