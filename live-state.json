@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791057696288,
-  "sourceUpdatedIso": "2026-10-03T20:01:36.288Z",
+  "sourceUpdatedAt": 1791113242585,
+  "sourceUpdatedIso": "2026-10-04T11:27:22.585Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -19262,6 +19262,124 @@
       "letterboxdAddedDate": "2026-09-25",
       "letterboxdPublishedAt": "Fri, 25 Sep 2026 06:09:52 +1200",
       "letterboxdReportedWatchedDate": "2026-09-24"
+    },
+    {
+      "id": "custom-1791113241266-l3xb",
+      "title": "怒り",
+      "originalTitle": "怒り",
+      "englishTitle": "Rage",
+      "year": 2016,
+      "score": null,
+      "star": 3,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "ミステリー",
+        "ドラマ",
+        "スリラー"
+      ],
+      "origin": "邦画",
+      "format": "live",
+      "runtime": 141,
+      "exact": false,
+      "letterboxdAddedDate": "2026-10-04",
+      "letterboxdPublishedAt": "Sun, 4 Oct 2026 22:41:52 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-04"
+    },
+    {
+      "id": "custom-1791113241627-mf17",
+      "title": "ドラゴンボール超 ブロリー",
+      "originalTitle": "ドラゴンボール超 ブロリー",
+      "englishTitle": "Dragon Ball Super: Broly",
+      "year": 2018,
+      "score": null,
+      "star": 2.5,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "アクション",
+        "SF"
+      ],
+      "origin": "邦画",
+      "format": "animation",
+      "runtime": 100,
+      "exact": false,
+      "letterboxdAddedDate": "2026-10-04",
+      "letterboxdPublishedAt": "Sun, 4 Oct 2026 10:13:14 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-04"
+    },
+    {
+      "id": "custom-1791113241748-xivg",
+      "title": "Demon Slayer: Kimetsu no Yaiba",
+      "originalTitle": "",
+      "englishTitle": "Demon Slayer: Kimetsu no Yaiba",
+      "year": 2019,
+      "score": null,
+      "star": 2.5,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": "",
+      "origin": "その他",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": "2026-10-04",
+      "letterboxdPublishedAt": "Sun, 4 Oct 2026 10:12:05 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-03"
+    },
+    {
+      "id": "custom-1791113242089-wnyx",
+      "title": "ドラゴンボールZ 神と神",
+      "originalTitle": "ドラゴンボールZ 神と神",
+      "englishTitle": "Dragon Ball Z: Battle of Gods",
+      "year": 2013,
+      "score": null,
+      "star": 2.5,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "アクション",
+        "SF"
+      ],
+      "origin": "邦画",
+      "format": "animation",
+      "runtime": 85,
+      "exact": false,
+      "letterboxdAddedDate": "2026-10-04",
+      "letterboxdPublishedAt": "Sun, 4 Oct 2026 10:09:23 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-04"
+    },
+    {
+      "id": "custom-1791113242437-wcok",
+      "title": "ドラゴンボール超 スーパーヒーロー",
+      "originalTitle": "ドラゴンボール超 スーパーヒーロー",
+      "englishTitle": "Dragon Ball Super: Super Hero",
+      "year": 2022,
+      "score": null,
+      "star": 2.5,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "SF",
+        "アクション"
+      ],
+      "origin": "邦画",
+      "format": "animation",
+      "runtime": 100,
+      "exact": false,
+      "letterboxdAddedDate": "2026-10-04",
+      "letterboxdPublishedAt": "Sun, 4 Oct 2026 10:07:31 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-04"
     }
   ],
   "state": {
@@ -22384,6 +22502,91 @@
         "oldScore": null,
         "added": true,
         "_seq": 1791057232858,
+        "source": "letterboxd"
+      },
+      {
+        "id": "custom-1791113241266-l3xb",
+        "title": "怒り",
+        "originalTitle": "怒り",
+        "englishTitle": "Rage",
+        "lbTitle": "Rage",
+        "tmdbId": 359344,
+        "year": 2016,
+        "uri": "https://letterboxd.com/gjbkic/film/rage-2016/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 3,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791113241266,
+        "source": "letterboxd"
+      },
+      {
+        "id": "custom-1791113241627-mf17",
+        "title": "ドラゴンボール超 ブロリー",
+        "originalTitle": "ドラゴンボール超 ブロリー",
+        "englishTitle": "Dragon Ball Super: Broly",
+        "lbTitle": "Dragon Ball Super: Broly",
+        "tmdbId": 503314,
+        "year": 2018,
+        "uri": "https://letterboxd.com/gjbkic/film/dragon-ball-super-broly/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 2.5,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791113241627,
+        "source": "letterboxd"
+      },
+      {
+        "id": "custom-1791113241748-xivg",
+        "title": "Demon Slayer: Kimetsu no Yaiba",
+        "originalTitle": "",
+        "englishTitle": "Demon Slayer: Kimetsu no Yaiba",
+        "lbTitle": "Demon Slayer: Kimetsu no Yaiba",
+        "tmdbId": null,
+        "year": 2019,
+        "uri": "https://letterboxd.com/gjbkic/film/demon-slayer-kimetsu-no-yaiba/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 2.5,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791113241748,
+        "source": "letterboxd"
+      },
+      {
+        "id": "custom-1791113242089-wnyx",
+        "title": "ドラゴンボールZ 神と神",
+        "originalTitle": "ドラゴンボールZ 神と神",
+        "englishTitle": "Dragon Ball Z: Battle of Gods",
+        "lbTitle": "Dragon Ball Z: Battle of Gods",
+        "tmdbId": 126963,
+        "year": 2013,
+        "uri": "https://letterboxd.com/gjbkic/film/dragon-ball-z-battle-of-gods/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 2.5,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791113242089,
+        "source": "letterboxd"
+      },
+      {
+        "id": "custom-1791113242437-wcok",
+        "title": "ドラゴンボール超 スーパーヒーロー",
+        "originalTitle": "ドラゴンボール超 スーパーヒーロー",
+        "englishTitle": "Dragon Ball Super: Super Hero",
+        "lbTitle": "Dragon Ball Super: Super Hero",
+        "tmdbId": 610150,
+        "year": 2022,
+        "uri": "https://letterboxd.com/gjbkic/film/dragon-ball-super-super-hero/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 2.5,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791113242437,
         "source": "letterboxd"
       }
     ],
@@ -25624,7 +25827,12 @@
       "custom-1790971112940-kuhf": "movie",
       "custom-1791023391963-vdu9": "movie",
       "custom-1791036345616-3tph": "movie",
-      "custom-1791057232858-35ld": "movie"
+      "custom-1791057232858-35ld": "movie",
+      "custom-1791113241266-l3xb": "movie",
+      "custom-1791113241627-mf17": "movie",
+      "custom-1791113241748-xivg": "movie",
+      "custom-1791113242089-wnyx": "movie",
+      "custom-1791113242437-wcok": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -31205,6 +31413,23 @@
         "恋愛",
         "特殊構造",
         "哲学・思想"
+      ],
+      "custom-1791113241266-l3xb": [
+        "ミステリー",
+        "ドラマ",
+        "スリラー"
+      ],
+      "custom-1791113241627-mf17": [
+        "アクション",
+        "SF"
+      ],
+      "custom-1791113242089-wnyx": [
+        "アクション",
+        "SF"
+      ],
+      "custom-1791113242437-wcok": [
+        "SF",
+        "アクション"
       ]
     },
     "originOverrides": {
@@ -31893,7 +32118,12 @@
       "custom-1791018448927-b4o3": "邦画",
       "custom-1791023391963-vdu9": "ハリウッド",
       "custom-1791036345616-3tph": "その他",
-      "custom-1791057232858-35ld": "その他"
+      "custom-1791057232858-35ld": "その他",
+      "custom-1791113241266-l3xb": "邦画",
+      "custom-1791113241627-mf17": "邦画",
+      "custom-1791113241748-xivg": "その他",
+      "custom-1791113242089-wnyx": "邦画",
+      "custom-1791113242437-wcok": "邦画"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -32581,7 +32811,11 @@
       "custom-1791018448490-bpdn": "animation",
       "custom-1791023391963-vdu9": "animation",
       "custom-1791036345616-3tph": "live",
-      "custom-1791057232858-35ld": "live"
+      "custom-1791057232858-35ld": "live",
+      "custom-1791113241266-l3xb": "live",
+      "custom-1791113241627-mf17": "animation",
+      "custom-1791113242089-wnyx": "animation",
+      "custom-1791113242437-wcok": "animation"
     },
     "runtimeOverrides": {
       "custom-1790247938551-ixfs": 100,
@@ -33216,7 +33450,11 @@
       "custom-1791023391963-vdu9": 86,
       "custom-1791018448490-bpdn": 25,
       "custom-1791036345616-3tph": 154,
-      "custom-1791057232858-35ld": 121
+      "custom-1791057232858-35ld": 121,
+      "custom-1791113241266-l3xb": 141,
+      "custom-1791113241627-mf17": 100,
+      "custom-1791113242089-wnyx": 85,
+      "custom-1791113242437-wcok": 100
     },
     "letterboxdMeta": {
       "lb-0-hTha": {
@@ -36055,6 +36293,36 @@
       },
       "custom-1791057232858-35ld": {
         "publishedAt": "Sun, 4 Oct 2026 07:37:58 +1300",
+        "addedDate": "2026-10-04",
+        "addedDateSource": "rss-first-seen",
+        "reportedWatchedDate": "2026-10-04"
+      },
+      "custom-1791113241266-l3xb": {
+        "publishedAt": "Sun, 4 Oct 2026 22:41:52 +1300",
+        "addedDate": "2026-10-04",
+        "addedDateSource": "rss-first-seen",
+        "reportedWatchedDate": "2026-10-04"
+      },
+      "custom-1791113241627-mf17": {
+        "publishedAt": "Sun, 4 Oct 2026 10:13:14 +1300",
+        "addedDate": "2026-10-04",
+        "addedDateSource": "rss-first-seen",
+        "reportedWatchedDate": "2026-10-04"
+      },
+      "custom-1791113241748-xivg": {
+        "publishedAt": "Sun, 4 Oct 2026 10:12:05 +1300",
+        "addedDate": "2026-10-04",
+        "addedDateSource": "rss-first-seen",
+        "reportedWatchedDate": "2026-10-03"
+      },
+      "custom-1791113242089-wnyx": {
+        "publishedAt": "Sun, 4 Oct 2026 10:09:23 +1300",
+        "addedDate": "2026-10-04",
+        "addedDateSource": "rss-first-seen",
+        "reportedWatchedDate": "2026-10-04"
+      },
+      "custom-1791113242437-wcok": {
+        "publishedAt": "Sun, 4 Oct 2026 10:07:31 +1300",
         "addedDate": "2026-10-04",
         "addedDateSource": "rss-first-seen",
         "reportedWatchedDate": "2026-10-04"
