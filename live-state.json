@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791140223890,
-  "sourceUpdatedIso": "2026-10-04T18:57:03.890Z",
+  "sourceUpdatedAt": 1791140227999,
+  "sourceUpdatedIso": "2026-10-04T18:57:07.999Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -921,37 +921,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-333-2b4m",
-      "title": "千と千尋の神隠し",
-      "originalTitle": "",
-      "englishTitle": "Spirited Away",
-      "year": 2001,
-      "score": 94,
-      "star": 4.5,
-      "overallRank": 32,
-      "sameScoreRank": 10,
-      "category": "スタジオジブリ系作品",
-      "mediaType": "movie",
-      "genre": [
-        "ドラマ",
-        "ファンタジー",
-        "アドベンチャー",
-        "青春・若者",
-        "感動",
-        "世界観",
-        "comfort",
-        "娯楽",
-        "雰囲気・美学"
-      ],
-      "origin": "邦画",
-      "format": "animation",
-      "runtime": 125,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "custom-1790508958519-2edt",
       "title": "怪物",
       "originalTitle": "怪物",
@@ -959,8 +928,8 @@
       "year": 2023,
       "score": 94,
       "star": 4.5,
-      "overallRank": 33,
-      "sameScoreRank": 11,
+      "overallRank": 32,
+      "sameScoreRank": 10,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -984,6 +953,37 @@
       "letterboxdReportedWatchedDate": "2026-09-27"
     },
     {
+      "id": "lb-333-2b4m",
+      "title": "千と千尋の神隠し",
+      "originalTitle": "",
+      "englishTitle": "Spirited Away",
+      "year": 2001,
+      "score": 93,
+      "star": 4.5,
+      "overallRank": 33,
+      "sameScoreRank": 1,
+      "category": "スタジオジブリ系作品",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "ファンタジー",
+        "アドベンチャー",
+        "青春・若者",
+        "感動",
+        "世界観",
+        "comfort",
+        "娯楽",
+        "雰囲気・美学"
+      ],
+      "origin": "邦画",
+      "format": "animation",
+      "runtime": 125,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-24-2aHi",
       "title": "ショーシャンクの空に",
       "originalTitle": "",
@@ -992,7 +992,7 @@
       "score": 93,
       "star": 4.5,
       "overallRank": 34,
-      "sameScoreRank": 1,
+      "sameScoreRank": 2,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -1019,7 +1019,7 @@
       "score": 93,
       "star": 4.5,
       "overallRank": 35,
-      "sameScoreRank": 2,
+      "sameScoreRank": 3,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -1049,7 +1049,7 @@
       "score": 93,
       "star": 4.5,
       "overallRank": 36,
-      "sameScoreRank": 3,
+      "sameScoreRank": 4,
       "category": "Letterboxd",
       "mediaType": "other",
       "genre": [],
@@ -1070,7 +1070,7 @@
       "score": 93,
       "star": 4.5,
       "overallRank": 37,
-      "sameScoreRank": 4,
+      "sameScoreRank": 5,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -1100,7 +1100,7 @@
       "score": 93,
       "star": 4.5,
       "overallRank": 38,
-      "sameScoreRank": 5,
+      "sameScoreRank": 6,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -1124,7 +1124,7 @@
       "score": 93,
       "star": 4.5,
       "overallRank": 39,
-      "sameScoreRank": 6,
+      "sameScoreRank": 7,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -1150,7 +1150,7 @@
       "score": 93,
       "star": 4,
       "overallRank": 40,
-      "sameScoreRank": 7,
+      "sameScoreRank": 8,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -1180,7 +1180,7 @@
       "score": 93,
       "star": 4.5,
       "overallRank": 41,
-      "sameScoreRank": 8,
+      "sameScoreRank": 9,
       "category": "スタジオジブリ系作品",
       "mediaType": "other",
       "genre": [
@@ -1209,7 +1209,7 @@
       "score": 93,
       "star": 4.5,
       "overallRank": 42,
-      "sameScoreRank": 9,
+      "sameScoreRank": 10,
       "category": "ピクサー・ディズニー作品",
       "mediaType": "movie",
       "genre": [
@@ -1238,7 +1238,7 @@
       "score": 93,
       "star": 4.5,
       "overallRank": 43,
-      "sameScoreRank": 10,
+      "sameScoreRank": 11,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -1267,7 +1267,7 @@
       "score": 93,
       "star": 4.5,
       "overallRank": 44,
-      "sameScoreRank": 11,
+      "sameScoreRank": 12,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -19525,7 +19525,7 @@
       "lb-488-294O": 94,
       "lb-112-1W4G": 94,
       "lb-463-4Xuw": 91,
-      "lb-333-2b4m": 94,
+      "lb-333-2b4m": 93,
       "lb-2-2a9q": 93,
       "lb-41-cjr4": 92,
       "lb-24-2aHi": 93,
@@ -20886,6 +20886,7 @@
         "lb-486-b8wK"
       ],
       "93": [
+        "lb-333-2b4m",
         "lb-24-2aHi",
         "lb-86-cUqs",
         "custom-1790185844116-j1vu",
@@ -20908,7 +20909,6 @@
         "custom-1790420198451-g42l",
         "lb-467-ptEI",
         "lb-112-1W4G",
-        "lb-333-2b4m",
         "custom-1790508958519-2edt"
       ],
       "95": [
