@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791113646509,
-  "sourceUpdatedIso": "2026-10-04T11:34:06.509Z",
+  "sourceUpdatedAt": 1791113658303,
+  "sourceUpdatedIso": "2026-10-04T11:34:18.303Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -14344,33 +14344,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1791113242437-wcok",
-      "title": "ドラゴンボール超 スーパーヒーロー",
-      "originalTitle": "ドラゴンボール超 スーパーヒーロー",
-      "englishTitle": "Dragon Ball Super: Super Hero",
-      "year": 2022,
-      "score": 77,
-      "star": 2.5,
-      "overallRank": 504,
-      "sameScoreRank": 23,
-      "category": "Letterboxd",
-      "mediaType": "movie",
-      "genre": [
-        "アクション",
-        "ファンタジー",
-        "シリーズ劇場版",
-        "娯楽",
-        "子供向け"
-      ],
-      "origin": "邦画",
-      "format": "animation",
-      "runtime": 100,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-04",
-      "letterboxdPublishedAt": "Sun, 4 Oct 2026 10:07:31 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-04"
-    },
-    {
       "id": "lb-311-z1jW",
       "title": "シビル・ウォー アメリカ最後の日",
       "originalTitle": "",
@@ -14378,8 +14351,8 @@
       "year": 2024,
       "score": 77,
       "star": 2.5,
-      "overallRank": 505,
-      "sameScoreRank": 24,
+      "overallRank": 504,
+      "sameScoreRank": 23,
       "category": "戦争、歴史",
       "mediaType": "movie",
       "genre": [
@@ -14406,8 +14379,8 @@
       "year": 2014,
       "score": 77,
       "star": 2.5,
-      "overallRank": 506,
-      "sameScoreRank": 25,
+      "overallRank": 505,
+      "sameScoreRank": 24,
       "category": "MCU作品",
       "mediaType": "movie",
       "genre": [
@@ -14424,6 +14397,33 @@
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1791113242437-wcok",
+      "title": "ドラゴンボール超 スーパーヒーロー",
+      "originalTitle": "ドラゴンボール超 スーパーヒーロー",
+      "englishTitle": "Dragon Ball Super: Super Hero",
+      "year": 2022,
+      "score": 77,
+      "star": 2.5,
+      "overallRank": 506,
+      "sameScoreRank": 25,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "アクション",
+        "ファンタジー",
+        "シリーズ劇場版",
+        "娯楽",
+        "子供向け"
+      ],
+      "origin": "邦画",
+      "format": "animation",
+      "runtime": 100,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-04",
+      "letterboxdPublishedAt": "Sun, 4 Oct 2026 10:07:31 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-04"
     },
     {
       "id": "custom-1789385860198-bkq0",
@@ -20301,9 +20301,9 @@
         "lb-376-jhxe",
         "custom-1789385860541-6lzx",
         "lb-221-7VEK",
-        "custom-1791113242437-wcok",
         "lb-311-z1jW",
         "lb-340-3r58",
+        "custom-1791113242437-wcok",
         "custom-1789385860198-bkq0",
         "lb-60-2a88",
         "lb-150-b5EQ"
