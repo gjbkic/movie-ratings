@@ -1,37 +1,9 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791140054372,
-  "sourceUpdatedIso": "2026-10-04T18:54:14.372Z",
+  "sourceUpdatedAt": 1791140114707,
+  "sourceUpdatedIso": "2026-10-04T18:55:14.707Z",
   "ranked": [
-    {
-      "id": "lb-22-2a1m",
-      "title": "マトリックス",
-      "originalTitle": "",
-      "englishTitle": "The Matrix",
-      "year": 1999,
-      "score": 100,
-      "star": 5,
-      "overallRank": 1,
-      "sameScoreRank": 1,
-      "category": "SF",
-      "mediaType": "movie",
-      "genre": [
-        "SF",
-        "アクション",
-        "哲学・思想",
-        "世界観",
-        "娯楽",
-        "雰囲気・美学"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 136,
-      "exact": false,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
     {
       "id": "lb-62-2b4w",
       "title": "もののけ姫",
@@ -40,8 +12,8 @@
       "year": 1997,
       "score": 100,
       "star": 5,
-      "overallRank": 2,
-      "sameScoreRank": 2,
+      "overallRank": 1,
+      "sameScoreRank": 1,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
       "genre": [
@@ -61,6 +33,34 @@
       "origin": "邦画",
       "format": "animation",
       "runtime": 135,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "lb-22-2a1m",
+      "title": "マトリックス",
+      "originalTitle": "",
+      "englishTitle": "The Matrix",
+      "year": 1999,
+      "score": 100,
+      "star": 5,
+      "overallRank": 2,
+      "sameScoreRank": 2,
+      "category": "SF",
+      "mediaType": "movie",
+      "genre": [
+        "SF",
+        "アクション",
+        "哲学・思想",
+        "世界観",
+        "娯楽",
+        "雰囲気・美学"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 136,
       "exact": false,
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
@@ -20148,7 +20148,8 @@
       "custom-1791122852357-22zp": 79,
       "lb-175-2aOe": 88,
       "custom-1791139748091-0goj": 81,
-      "custom-1791139747386-vy04": 86
+      "custom-1791139747386-vy04": 86,
+      "lb-62-2b4w": 100
     },
     "rankOrder": {
       "40": [
@@ -20940,8 +20941,8 @@
         "lb-353-Sw0"
       ],
       "100": [
-        "lb-22-2a1m",
-        "lb-62-2b4w"
+        "lb-62-2b4w",
+        "lb-22-2a1m"
       ]
     },
     "customFilms": [
@@ -23423,7 +23424,8 @@
       "custom-1791122852357-22zp": 2.5,
       "lb-175-2aOe": 4,
       "custom-1791139748091-0goj": 3,
-      "custom-1791139747386-vy04": 3.5
+      "custom-1791139747386-vy04": 3.5,
+      "lb-62-2b4w": 5
     },
     "titleOverrides": {
       "added-anchor-578": {
