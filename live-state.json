@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791138670408,
-  "sourceUpdatedIso": "2026-10-04T18:31:10.408Z",
+  "sourceUpdatedAt": 1791138676265,
+  "sourceUpdatedIso": "2026-10-04T18:31:16.265Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -2992,33 +2992,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1790322763195-rro9",
-      "title": "コンフィデンスマンJP",
-      "originalTitle": "コンフィデンスマンJP",
-      "englishTitle": "The Confidence Man JP",
-      "year": 2018,
-      "score": 88,
-      "star": 4,
-      "overallRank": 104,
-      "sameScoreRank": 12,
-      "category": "Letterboxd",
-      "mediaType": "drama",
-      "genre": [
-        "コメディ",
-        "ドラマ",
-        "クライム",
-        "comfort",
-        "TV本編"
-      ],
-      "origin": "邦画",
-      "format": "live",
-      "runtime": 54,
-      "exact": true,
-      "letterboxdAddedDate": "2026-09-25",
-      "letterboxdPublishedAt": "Fri, 25 Sep 2026 06:23:41 +1200",
-      "letterboxdReportedWatchedDate": "2026-09-24"
-    },
-    {
       "id": "lb-330-4JQS",
       "title": "風立ちぬ",
       "originalTitle": "",
@@ -3026,7 +2999,7 @@
       "year": 2013,
       "score": 87,
       "star": 4,
-      "overallRank": 105,
+      "overallRank": 104,
       "sameScoreRank": 1,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
@@ -3049,6 +3022,33 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "custom-1790322763195-rro9",
+      "title": "コンフィデンスマンJP",
+      "originalTitle": "コンフィデンスマンJP",
+      "englishTitle": "The Confidence Man JP",
+      "year": 2018,
+      "score": 87,
+      "star": 4,
+      "overallRank": 105,
+      "sameScoreRank": 2,
+      "category": "Letterboxd",
+      "mediaType": "drama",
+      "genre": [
+        "コメディ",
+        "ドラマ",
+        "クライム",
+        "comfort",
+        "TV本編"
+      ],
+      "origin": "邦画",
+      "format": "live",
+      "runtime": 54,
+      "exact": true,
+      "letterboxdAddedDate": "2026-09-25",
+      "letterboxdPublishedAt": "Fri, 25 Sep 2026 06:23:41 +1200",
+      "letterboxdReportedWatchedDate": "2026-09-24"
+    },
+    {
       "id": "lb-67-1RYk",
       "title": "死の秘宝Part2",
       "originalTitle": "",
@@ -3057,7 +3057,7 @@
       "score": 87,
       "star": 4,
       "overallRank": 106,
-      "sameScoreRank": 2,
+      "sameScoreRank": 3,
       "category": "ハリーポッター シリーズ",
       "mediaType": "movie",
       "genre": [
@@ -3087,7 +3087,7 @@
       "score": 87,
       "star": 4,
       "overallRank": 107,
-      "sameScoreRank": 3,
+      "sameScoreRank": 4,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -3116,7 +3116,7 @@
       "score": 87,
       "star": 4,
       "overallRank": 108,
-      "sameScoreRank": 4,
+      "sameScoreRank": 5,
       "category": "Letterboxd追加",
       "mediaType": "drama",
       "genre": [
@@ -3146,7 +3146,7 @@
       "score": 87,
       "star": 4,
       "overallRank": 109,
-      "sameScoreRank": 5,
+      "sameScoreRank": 6,
       "category": "スリラー、ホラー",
       "mediaType": "movie",
       "genre": [
@@ -3175,7 +3175,7 @@
       "score": 87,
       "star": 4,
       "overallRank": 110,
-      "sameScoreRank": 6,
+      "sameScoreRank": 7,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -3202,7 +3202,7 @@
       "score": 87,
       "star": 4,
       "overallRank": 111,
-      "sameScoreRank": 7,
+      "sameScoreRank": 8,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -3242,7 +3242,7 @@
       "score": 87,
       "star": 4,
       "overallRank": 112,
-      "sameScoreRank": 8,
+      "sameScoreRank": 9,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -3281,7 +3281,7 @@
       "score": 87,
       "star": 4,
       "overallRank": 113,
-      "sameScoreRank": 9,
+      "sameScoreRank": 10,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -3322,7 +3322,7 @@
       "score": 87,
       "star": 4,
       "overallRank": 114,
-      "sameScoreRank": 10,
+      "sameScoreRank": 11,
       "category": "スターウォーズシリーズ",
       "mediaType": "movie",
       "genre": [
@@ -3352,7 +3352,7 @@
       "score": 87,
       "star": 4,
       "overallRank": 115,
-      "sameScoreRank": 11,
+      "sameScoreRank": 12,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -3379,7 +3379,7 @@
       "score": 87,
       "star": 4,
       "overallRank": 116,
-      "sameScoreRank": 12,
+      "sameScoreRank": 13,
       "category": "ファンタジー、アドベンチャー",
       "mediaType": "movie",
       "genre": [
@@ -3405,7 +3405,7 @@
       "score": 87,
       "star": 4,
       "overallRank": 117,
-      "sameScoreRank": 13,
+      "sameScoreRank": 14,
       "category": "Letterboxd追加",
       "mediaType": "drama",
       "genre": [
@@ -20021,7 +20021,7 @@
       "custom-1790322760608-2vle": 81,
       "custom-1790322759601-kg73": 84,
       "custom-1790322762725-70dy": 82,
-      "custom-1790322763195-rro9": 88,
+      "custom-1790322763195-rro9": 87,
       "lb-0-hTha": 88,
       "custom-1790322762266-mrn9": 84,
       "custom-1790322759131-6bsn": 78,
@@ -20736,6 +20736,7 @@
       ],
       "87": [
         "lb-330-4JQS",
+        "custom-1790322763195-rro9",
         "lb-67-1RYk",
         "lb-7-h4cS",
         "lb-253-SVAW",
@@ -20760,8 +20761,7 @@
         "lb-160-2b8e",
         "lb-132-aPvy",
         "lb-71-27Vm",
-        "lb-296-l7zS",
-        "custom-1790322763195-rro9"
+        "lb-296-l7zS"
       ],
       "89": [
         "lb-141-2a12",
