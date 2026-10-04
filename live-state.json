@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791139592791,
-  "sourceUpdatedIso": "2026-10-04T18:46:32.791Z",
+  "sourceUpdatedAt": 1791139640078,
+  "sourceUpdatedIso": "2026-10-04T18:47:20.078Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -979,30 +979,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-571-28qk",
-      "title": "スピード",
-      "originalTitle": "",
-      "englishTitle": "Speed",
-      "year": 1994,
-      "score": 93,
-      "star": 4.5,
-      "overallRank": 34,
-      "sameScoreRank": 2,
-      "category": "アクション",
-      "mediaType": "movie",
-      "genre": [
-        "アクション",
-        "娯楽"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 115,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-86-cUqs",
       "title": "君の名は。",
       "originalTitle": "",
@@ -1010,8 +986,8 @@
       "year": 2016,
       "score": 93,
       "star": 4.5,
-      "overallRank": 35,
-      "sameScoreRank": 3,
+      "overallRank": 34,
+      "sameScoreRank": 2,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -1040,8 +1016,8 @@
       "year": 2008,
       "score": 93,
       "star": 4.5,
-      "overallRank": 36,
-      "sameScoreRank": 4,
+      "overallRank": 35,
+      "sameScoreRank": 3,
       "category": "Letterboxd",
       "mediaType": "other",
       "genre": [],
@@ -1061,8 +1037,8 @@
       "year": 1999,
       "score": 93,
       "star": 4.5,
-      "overallRank": 37,
-      "sameScoreRank": 5,
+      "overallRank": 36,
+      "sameScoreRank": 4,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -1091,8 +1067,8 @@
       "year": 2023,
       "score": 93,
       "star": 4.5,
-      "overallRank": 38,
-      "sameScoreRank": 6,
+      "overallRank": 37,
+      "sameScoreRank": 5,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -1114,6 +1090,30 @@
       "letterboxdAddedDate": "2026-09-27",
       "letterboxdPublishedAt": "Sun, 27 Sep 2026 22:28:02 +1300",
       "letterboxdReportedWatchedDate": "2026-09-27"
+    },
+    {
+      "id": "lb-571-28qk",
+      "title": "スピード",
+      "originalTitle": "",
+      "englishTitle": "Speed",
+      "year": 1994,
+      "score": 93,
+      "star": 4.5,
+      "overallRank": 38,
+      "sameScoreRank": 6,
+      "category": "アクション",
+      "mediaType": "movie",
+      "genre": [
+        "アクション",
+        "娯楽"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 115,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "lb-332-28MA",
@@ -20821,11 +20821,11 @@
       ],
       "93": [
         "lb-24-2aHi",
-        "lb-571-28qk",
         "lb-86-cUqs",
         "custom-1790185844116-j1vu",
         "lb-2-2a9q",
         "custom-1790508958519-2edt",
+        "lb-571-28qk",
         "lb-332-28MA",
         "custom-1790458138074-p8hs",
         "lb-459-1Vgm",
