@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791139491135,
-  "sourceUpdatedIso": "2026-10-04T18:44:51.135Z",
+  "sourceUpdatedAt": 1791139571519,
+  "sourceUpdatedIso": "2026-10-04T18:46:11.519Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -1198,31 +1198,36 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-556-2b9m",
-      "title": "グラディエーター",
-      "originalTitle": "",
-      "englishTitle": "Gladiator",
-      "year": 2000,
+      "id": "custom-1790508958519-2edt",
+      "title": "怪物",
+      "originalTitle": "怪物",
+      "englishTitle": "Monster",
+      "year": 2023,
       "score": 93,
       "star": 4.5,
       "overallRank": 42,
       "sameScoreRank": 10,
-      "category": "アクション",
+      "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
-        "アクション",
-        "戦争",
-        "歴史",
-        "感動",
-        "心理・内面"
+        "ミステリー",
+        "ドラマ",
+        "恋愛",
+        "サスペンス",
+        "雰囲気・美学",
+        "青春・若者",
+        "差別・人権",
+        "心理・内面",
+        "社会問題・生活",
+        "特殊構造"
       ],
-      "origin": "ハリウッド",
+      "origin": "邦画",
       "format": "live",
-      "runtime": 155,
+      "runtime": 125,
       "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
+      "letterboxdAddedDate": "2026-09-27",
+      "letterboxdPublishedAt": "Sun, 27 Sep 2026 22:28:02 +1300",
+      "letterboxdReportedWatchedDate": "2026-09-27"
     },
     {
       "id": "lb-308-kPxE",
@@ -1254,36 +1259,31 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1790508958519-2edt",
-      "title": "怪物",
-      "originalTitle": "怪物",
-      "englishTitle": "Monster",
-      "year": 2023,
+      "id": "lb-556-2b9m",
+      "title": "グラディエーター",
+      "originalTitle": "",
+      "englishTitle": "Gladiator",
+      "year": 2000,
       "score": 93,
       "star": 4.5,
       "overallRank": 44,
       "sameScoreRank": 12,
-      "category": "Letterboxd",
+      "category": "アクション",
       "mediaType": "movie",
       "genre": [
-        "ミステリー",
-        "ドラマ",
-        "恋愛",
-        "サスペンス",
-        "雰囲気・美学",
-        "青春・若者",
-        "差別・人権",
-        "心理・内面",
-        "社会問題・生活",
-        "特殊構造"
+        "アクション",
+        "戦争",
+        "歴史",
+        "感動",
+        "心理・内面"
       ],
-      "origin": "邦画",
+      "origin": "ハリウッド",
       "format": "live",
-      "runtime": 125,
+      "runtime": 155,
       "exact": true,
-      "letterboxdAddedDate": "2026-09-27",
-      "letterboxdPublishedAt": "Sun, 27 Sep 2026 22:28:02 +1300",
-      "letterboxdReportedWatchedDate": "2026-09-27"
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "lb-487-28JG",
@@ -20829,9 +20829,9 @@
         "lb-459-1Vgm",
         "custom-1790458138074-p8hs",
         "lb-323-1VEo",
-        "lb-556-2b9m",
+        "custom-1790508958519-2edt",
         "lb-308-kPxE",
-        "custom-1790508958519-2edt"
+        "lb-556-2b9m"
       ],
       "94": [
         "lb-97-2a7u",
