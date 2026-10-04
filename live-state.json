@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791114083634,
-  "sourceUpdatedIso": "2026-10-04T11:41:23.634Z",
+  "sourceUpdatedAt": 1791114088414,
+  "sourceUpdatedIso": "2026-10-04T11:41:28.414Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -17645,31 +17645,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-356-28dK",
-      "title": "ウェストサイドストーリー",
-      "originalTitle": "",
-      "englishTitle": "West Side Story",
-      "year": 1961,
-      "score": 70,
-      "star": 1.5,
-      "overallRank": 623,
-      "sameScoreRank": 3,
-      "category": "恋愛、ミュージカル",
-      "mediaType": "movie",
-      "genre": [
-        "恋愛",
-        "ミュージカル",
-        "娯楽"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": null,
-      "exact": true,
-      "letterboxdAddedDate": "2025-12-08",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-443-8ND2",
       "title": "ピエロがお前を嘲笑う",
       "originalTitle": "",
@@ -17677,8 +17652,8 @@
       "year": 2014,
       "score": 70,
       "star": 1.5,
-      "overallRank": 624,
-      "sameScoreRank": 4,
+      "overallRank": 623,
+      "sameScoreRank": 3,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -17693,6 +17668,31 @@
       "runtime": 105,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "lb-356-28dK",
+      "title": "ウェストサイドストーリー",
+      "originalTitle": "",
+      "englishTitle": "West Side Story",
+      "year": 1961,
+      "score": 70,
+      "star": 1.5,
+      "overallRank": 624,
+      "sameScoreRank": 4,
+      "category": "恋愛、ミュージカル",
+      "mediaType": "movie",
+      "genre": [
+        "恋愛",
+        "ミュージカル",
+        "娯楽"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": "2025-12-08",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -20159,8 +20159,8 @@
       "70": [
         "lb-533-2bdy",
         "lb-128-nyLU",
-        "lb-356-28dK",
         "lb-443-8ND2",
+        "lb-356-28dK",
         "lb-531-29JC",
         "custom-1789385861007-nhdf",
         "lb-502-oEGS",
