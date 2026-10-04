@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791138676265,
-  "sourceUpdatedIso": "2026-10-04T18:31:16.265Z",
+  "sourceUpdatedAt": 1791138806365,
+  "sourceUpdatedIso": "2026-10-04T18:33:26.365Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -3344,6 +3344,34 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-464-mkbG",
+      "title": "チェルノブイリ",
+      "originalTitle": "",
+      "englishTitle": "Chernobyl",
+      "year": 2019,
+      "score": 87,
+      "star": 4,
+      "overallRank": 115,
+      "sameScoreRank": 12,
+      "category": "Letterboxd追加",
+      "mediaType": "drama",
+      "genre": [
+        "歴史",
+        "社会問題・生活",
+        "サスペンス",
+        "心理・内面",
+        "雰囲気・美学",
+        "TV本編"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 73,
+      "exact": true,
+      "letterboxdAddedDate": "2026-04-12",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-101-ce74",
       "title": "フォードvsフェラーリ",
       "originalTitle": "",
@@ -3351,8 +3379,8 @@
       "year": 2019,
       "score": 87,
       "star": 4,
-      "overallRank": 115,
-      "sameScoreRank": 12,
+      "overallRank": 116,
+      "sameScoreRank": 13,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -3378,8 +3406,8 @@
       "year": 1981,
       "score": 87,
       "star": 4,
-      "overallRank": 116,
-      "sameScoreRank": 13,
+      "overallRank": 117,
+      "sameScoreRank": 14,
       "category": "ファンタジー、アドベンチャー",
       "mediaType": "movie",
       "genre": [
@@ -3393,34 +3421,6 @@
       "runtime": 115,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "lb-464-mkbG",
-      "title": "チェルノブイリ",
-      "originalTitle": "",
-      "englishTitle": "Chernobyl",
-      "year": 2019,
-      "score": 87,
-      "star": 4,
-      "overallRank": 117,
-      "sameScoreRank": 14,
-      "category": "Letterboxd追加",
-      "mediaType": "drama",
-      "genre": [
-        "歴史",
-        "社会問題・生活",
-        "サスペンス",
-        "心理・内面",
-        "雰囲気・美学",
-        "TV本編"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 73,
-      "exact": true,
-      "letterboxdAddedDate": "2026-04-12",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -20746,9 +20746,9 @@
         "custom-1790508959270-dbu3",
         "custom-1790508958909-q6d6",
         "lb-37-72s",
+        "lb-464-mkbG",
         "lb-101-ce74",
-        "lb-98-2bbs",
-        "lb-464-mkbG"
+        "lb-98-2bbs"
       ],
       "88": [
         "lb-0-hTha",
