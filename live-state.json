@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791138329481,
-  "sourceUpdatedIso": "2026-10-04T18:25:29.481Z",
+  "sourceUpdatedAt": 1791138337809,
+  "sourceUpdatedIso": "2026-10-04T18:25:37.809Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -3610,6 +3610,32 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-542-2b6C",
+      "title": "ビッグリボウスキ",
+      "originalTitle": "",
+      "englishTitle": "The Big Lebowski",
+      "year": 1998,
+      "score": 86,
+      "star": 3.5,
+      "overallRank": 124,
+      "sameScoreRank": 7,
+      "category": "マフィア、クライム",
+      "mediaType": "movie",
+      "genre": [
+        "クライム",
+        "コメディ",
+        "ドラマ",
+        "娯楽"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 117,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-07",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-298-28Uk",
       "title": "ロッキー",
       "originalTitle": "",
@@ -3617,8 +3643,8 @@
       "year": 1976,
       "score": 86,
       "star": 3.5,
-      "overallRank": 124,
-      "sameScoreRank": 7,
+      "overallRank": 125,
+      "sameScoreRank": 8,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -3645,8 +3671,8 @@
       "year": 2026,
       "score": 86,
       "star": 3.5,
-      "overallRank": 125,
-      "sameScoreRank": 8,
+      "overallRank": 126,
+      "sameScoreRank": 9,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -3667,32 +3693,6 @@
       "letterboxdAddedDate": "2026-09-25",
       "letterboxdPublishedAt": "Fri, 25 Sep 2026 19:51:57 +1200",
       "letterboxdReportedWatchedDate": "2026-09-25"
-    },
-    {
-      "id": "lb-542-2b6C",
-      "title": "ビッグリボウスキ",
-      "originalTitle": "",
-      "englishTitle": "The Big Lebowski",
-      "year": 1998,
-      "score": 86,
-      "star": 3.5,
-      "overallRank": 126,
-      "sameScoreRank": 9,
-      "category": "マフィア、クライム",
-      "mediaType": "movie",
-      "genre": [
-        "クライム",
-        "コメディ",
-        "ドラマ",
-        "娯楽"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 117,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-07",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "lb-368-2as8",
@@ -20702,9 +20702,9 @@
         "lb-89-5RFA",
         "lb-148-17uy",
         "lb-358-6uNS",
+        "lb-542-2b6C",
         "lb-298-28Uk",
         "custom-1790322756418-p88i",
-        "lb-542-2b6C",
         "lb-368-2as8",
         "lb-382-20TI",
         "lb-45-29VS",
