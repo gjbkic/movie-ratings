@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791139804517,
-  "sourceUpdatedIso": "2026-10-04T18:50:04.517Z",
+  "sourceUpdatedAt": 1791139830436,
+  "sourceUpdatedIso": "2026-10-04T18:50:30.436Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -19469,7 +19469,12 @@
       "sameScoreRank": null,
       "category": "Letterboxd",
       "mediaType": "drama",
-      "genre": "",
+      "genre": [
+        "ヒーロー",
+        "ファンタジー",
+        "アクション",
+        "娯楽"
+      ],
       "origin": "邦画",
       "format": "",
       "runtime": null,
@@ -31643,6 +31648,12 @@
         "クライム",
         "ミステリー",
         "スリラー"
+      ],
+      "custom-1791139748091-0goj": [
+        "ヒーロー",
+        "ファンタジー",
+        "アクション",
+        "娯楽"
       ]
     },
     "originOverrides": {
