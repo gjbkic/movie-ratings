@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791138511646,
-  "sourceUpdatedIso": "2026-10-04T18:28:31.646Z",
+  "sourceUpdatedAt": 1791138517400,
+  "sourceUpdatedIso": "2026-10-04T18:28:37.400Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -2932,6 +2932,35 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-175-2aOe",
+      "title": "スタンド・バイ・ミー",
+      "originalTitle": "",
+      "englishTitle": "Stand by Me",
+      "year": 1986,
+      "score": 88,
+      "star": 4,
+      "overallRank": 102,
+      "sameScoreRank": 10,
+      "category": "ドラマ",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "青春・若者",
+        "アドベンチャー",
+        "社会問題・生活",
+        "comfort",
+        "心理・内面",
+        "雰囲気・美学"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 89,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-296-l7zS",
       "title": "ミッション:インポッシブル/デッドレコニング PART ONE",
       "originalTitle": "",
@@ -2939,8 +2968,8 @@
       "year": 2023,
       "score": 88,
       "star": 4,
-      "overallRank": 102,
-      "sameScoreRank": 10,
+      "overallRank": 103,
+      "sameScoreRank": 11,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -2958,35 +2987,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-175-2aOe",
-      "title": "スタンド・バイ・ミー",
-      "originalTitle": "",
-      "englishTitle": "Stand by Me",
-      "year": 1986,
-      "score": 87,
-      "star": 4,
-      "overallRank": 103,
-      "sameScoreRank": 1,
-      "category": "ドラマ",
-      "mediaType": "movie",
-      "genre": [
-        "ドラマ",
-        "青春・若者",
-        "アドベンチャー",
-        "社会問題・生活",
-        "comfort",
-        "心理・内面",
-        "雰囲気・美学"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 89,
-      "exact": false,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-330-4JQS",
       "title": "風立ちぬ",
       "originalTitle": "",
@@ -2995,7 +2995,7 @@
       "score": 87,
       "star": 4,
       "overallRank": 104,
-      "sameScoreRank": 2,
+      "sameScoreRank": 1,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
       "genre": [
@@ -3025,7 +3025,7 @@
       "score": 87,
       "star": 4,
       "overallRank": 105,
-      "sameScoreRank": 3,
+      "sameScoreRank": 2,
       "category": "ハリーポッター シリーズ",
       "mediaType": "movie",
       "genre": [
@@ -3055,7 +3055,7 @@
       "score": 87,
       "star": 4,
       "overallRank": 106,
-      "sameScoreRank": 4,
+      "sameScoreRank": 3,
       "category": "スターウォーズシリーズ",
       "mediaType": "movie",
       "genre": [
@@ -3087,7 +3087,7 @@
       "score": 87,
       "star": 4,
       "overallRank": 107,
-      "sameScoreRank": 5,
+      "sameScoreRank": 4,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -3116,7 +3116,7 @@
       "score": 87,
       "star": 4,
       "overallRank": 108,
-      "sameScoreRank": 6,
+      "sameScoreRank": 5,
       "category": "Letterboxd追加",
       "mediaType": "drama",
       "genre": [
@@ -3146,7 +3146,7 @@
       "score": 87,
       "star": 4,
       "overallRank": 109,
-      "sameScoreRank": 7,
+      "sameScoreRank": 6,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -3186,7 +3186,7 @@
       "score": 87,
       "star": 4,
       "overallRank": 110,
-      "sameScoreRank": 8,
+      "sameScoreRank": 7,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -3225,7 +3225,7 @@
       "score": 87,
       "star": 4,
       "overallRank": 111,
-      "sameScoreRank": 9,
+      "sameScoreRank": 8,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -3266,7 +3266,7 @@
       "score": 87,
       "star": 4,
       "overallRank": 112,
-      "sameScoreRank": 10,
+      "sameScoreRank": 9,
       "category": "スリラー、ホラー",
       "mediaType": "movie",
       "genre": [
@@ -3295,7 +3295,7 @@
       "score": 87,
       "star": 4,
       "overallRank": 113,
-      "sameScoreRank": 11,
+      "sameScoreRank": 10,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -3322,7 +3322,7 @@
       "score": 87,
       "star": 4,
       "overallRank": 114,
-      "sameScoreRank": 12,
+      "sameScoreRank": 11,
       "category": "スターウォーズシリーズ",
       "mediaType": "movie",
       "genre": [
@@ -3352,7 +3352,7 @@
       "score": 87,
       "star": 4,
       "overallRank": 115,
-      "sameScoreRank": 13,
+      "sameScoreRank": 12,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -3379,7 +3379,7 @@
       "score": 87,
       "star": 4,
       "overallRank": 116,
-      "sameScoreRank": 14,
+      "sameScoreRank": 13,
       "category": "ファンタジー、アドベンチャー",
       "mediaType": "movie",
       "genre": [
@@ -3405,7 +3405,7 @@
       "score": 87,
       "star": 4,
       "overallRank": 117,
-      "sameScoreRank": 15,
+      "sameScoreRank": 14,
       "category": "Letterboxd追加",
       "mediaType": "drama",
       "genre": [
@@ -20085,7 +20085,8 @@
       "custom-1791113242089-wnyx": 74,
       "custom-1791113241627-mf17": 77,
       "lb-259-N7ZC": 70,
-      "custom-1791122852357-22zp": 79
+      "custom-1791122852357-22zp": 79,
+      "lb-175-2aOe": 88
     },
     "rankOrder": {
       "40": [
@@ -20734,7 +20735,6 @@
         "lb-383-22mQ"
       ],
       "87": [
-        "lb-175-2aOe",
         "lb-330-4JQS",
         "lb-67-1RYk",
         "lb-132-aPvy",
@@ -20760,6 +20760,7 @@
         "custom-1790322763195-rro9",
         "lb-85-1GjK",
         "lb-71-27Vm",
+        "lb-175-2aOe",
         "lb-296-l7zS"
       ],
       "89": [
@@ -23321,7 +23322,8 @@
       "custom-1791113242089-wnyx": 2,
       "custom-1791113241627-mf17": 2.5,
       "lb-259-N7ZC": 1.5,
-      "custom-1791122852357-22zp": 2.5
+      "custom-1791122852357-22zp": 2.5,
+      "lb-175-2aOe": 4
     },
     "titleOverrides": {
       "added-anchor-578": {
