@@ -9395,7 +9395,7 @@
       ],
       "origin": "邦画",
       "format": "live",
-      "runtime": null,
+      "runtime": 24,
       "exact": true,
       "letterboxdAddedDate": "2026-10-05",
       "letterboxdPublishedAt": "Mon, 5 Oct 2026 04:38:04 +1300",
@@ -25334,6 +25334,9 @@
       },
       "custom-1791113241748-xivg": {
         "tmdbId": 85937
+      },
+      "custom-1791139748091-0goj": {
+        "tmdbId": 95479
       }
     },
     "categoryOverrides": {},
@@ -33716,7 +33719,8 @@
       "custom-1791113242437-wcok": 100,
       "custom-1791113241748-xivg": 41,
       "custom-1791122852357-22zp": 63,
-      "custom-1791139747386-vy04": 177
+      "custom-1791139747386-vy04": 177,
+      "custom-1791139748091-0goj": 24
     },
     "letterboxdMeta": {
       "lb-0-hTha": {
