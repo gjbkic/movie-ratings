@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791138337809,
-  "sourceUpdatedIso": "2026-10-04T18:25:37.809Z",
+  "sourceUpdatedAt": 1791138502873,
+  "sourceUpdatedIso": "2026-10-04T18:28:22.873Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -2962,38 +2962,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-132-aPvy",
-      "title": "ローグワン",
-      "originalTitle": "",
-      "englishTitle": "Rogue One: A Star Wars Story",
-      "year": 2016,
-      "score": 88,
-      "star": 4,
-      "overallRank": 103,
-      "sameScoreRank": 11,
-      "category": "スターウォーズシリーズ",
-      "mediaType": "movie",
-      "genre": [
-        "SF",
-        "ファンタジー",
-        "アドベンチャー",
-        "切ない",
-        "アクション",
-        "世界観",
-        "ドラマ",
-        "娯楽",
-        "大作",
-        "戦争"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 134,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-7-h4cS",
       "title": "ジョーカー",
       "originalTitle": "",
@@ -3001,8 +2969,8 @@
       "year": 2019,
       "score": 88,
       "star": 4,
-      "overallRank": 104,
-      "sameScoreRank": 12,
+      "overallRank": 103,
+      "sameScoreRank": 11,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -3030,8 +2998,8 @@
       "year": 2023,
       "score": 88,
       "star": 4,
-      "overallRank": 105,
-      "sameScoreRank": 13,
+      "overallRank": 104,
+      "sameScoreRank": 12,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -3056,7 +3024,7 @@
       "year": 1986,
       "score": 87,
       "star": 4,
-      "overallRank": 106,
+      "overallRank": 105,
       "sameScoreRank": 1,
       "category": "ドラマ",
       "mediaType": "movie",
@@ -3085,7 +3053,7 @@
       "year": 2013,
       "score": 87,
       "star": 4,
-      "overallRank": 107,
+      "overallRank": 106,
       "sameScoreRank": 2,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
@@ -3108,6 +3076,38 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-132-aPvy",
+      "title": "ローグワン",
+      "originalTitle": "",
+      "englishTitle": "Rogue One: A Star Wars Story",
+      "year": 2016,
+      "score": 87,
+      "star": 4,
+      "overallRank": 107,
+      "sameScoreRank": 3,
+      "category": "スターウォーズシリーズ",
+      "mediaType": "movie",
+      "genre": [
+        "SF",
+        "ファンタジー",
+        "アドベンチャー",
+        "切ない",
+        "アクション",
+        "世界観",
+        "ドラマ",
+        "娯楽",
+        "大作",
+        "戦争"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 134,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-253-SVAW",
       "title": "SPEC",
       "originalTitle": "",
@@ -3116,7 +3116,7 @@
       "score": 87,
       "star": 4,
       "overallRank": 108,
-      "sameScoreRank": 3,
+      "sameScoreRank": 4,
       "category": "Letterboxd追加",
       "mediaType": "drama",
       "genre": [
@@ -3146,7 +3146,7 @@
       "score": 87,
       "star": 4,
       "overallRank": 109,
-      "sameScoreRank": 4,
+      "sameScoreRank": 5,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -3186,7 +3186,7 @@
       "score": 87,
       "star": 4,
       "overallRank": 110,
-      "sameScoreRank": 5,
+      "sameScoreRank": 6,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -3225,7 +3225,7 @@
       "score": 87,
       "star": 4,
       "overallRank": 111,
-      "sameScoreRank": 6,
+      "sameScoreRank": 7,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -3266,7 +3266,7 @@
       "score": 87,
       "star": 4,
       "overallRank": 112,
-      "sameScoreRank": 7,
+      "sameScoreRank": 8,
       "category": "スリラー、ホラー",
       "mediaType": "movie",
       "genre": [
@@ -3295,7 +3295,7 @@
       "score": 87,
       "star": 4,
       "overallRank": 113,
-      "sameScoreRank": 8,
+      "sameScoreRank": 9,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -3322,7 +3322,7 @@
       "score": 87,
       "star": 4,
       "overallRank": 114,
-      "sameScoreRank": 9,
+      "sameScoreRank": 10,
       "category": "スターウォーズシリーズ",
       "mediaType": "movie",
       "genre": [
@@ -3352,7 +3352,7 @@
       "score": 87,
       "star": 4,
       "overallRank": 115,
-      "sameScoreRank": 10,
+      "sameScoreRank": 11,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -3379,7 +3379,7 @@
       "score": 87,
       "star": 4,
       "overallRank": 116,
-      "sameScoreRank": 11,
+      "sameScoreRank": 12,
       "category": "ファンタジー、アドベンチャー",
       "mediaType": "movie",
       "genre": [
@@ -3405,7 +3405,7 @@
       "score": 87,
       "star": 4,
       "overallRank": 117,
-      "sameScoreRank": 12,
+      "sameScoreRank": 13,
       "category": "Letterboxd追加",
       "mediaType": "drama",
       "genre": [
@@ -20012,7 +20012,7 @@
       "custom-1790185844080-jquu": 81,
       "lb-537-14e8": 64,
       "custom-1790247938551-ixfs": 86,
-      "lb-132-aPvy": 88,
+      "lb-132-aPvy": 87,
       "custom-1790254612541-iyij": 90,
       "lb-545-1vWw": 84,
       "custom-1790269934541-2ps3": 84,
@@ -20736,6 +20736,7 @@
       "87": [
         "lb-175-2aOe",
         "lb-330-4JQS",
+        "lb-132-aPvy",
         "lb-253-SVAW",
         "custom-1790508959663-6kld",
         "custom-1790508959270-dbu3",
@@ -20758,7 +20759,6 @@
         "lb-85-1GjK",
         "lb-71-27Vm",
         "lb-67-1RYk",
-        "lb-132-aPvy",
         "lb-7-h4cS",
         "lb-296-l7zS"
       ],
