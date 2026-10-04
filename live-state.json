@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791138939004,
-  "sourceUpdatedIso": "2026-10-04T18:35:39.004Z",
+  "sourceUpdatedAt": 1791138945070,
+  "sourceUpdatedIso": "2026-10-04T18:35:45.070Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -1896,6 +1896,39 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "custom-1790960881562-cn74",
+      "title": "Mishima: A Life in Four Chapters",
+      "originalTitle": "",
+      "englishTitle": "Mishima: A Life in Four Chapters",
+      "year": 1985,
+      "score": 90,
+      "star": 4,
+      "overallRank": 66,
+      "sameScoreRank": 3,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "サスペンス",
+        "クライム",
+        "ドラマ",
+        "歴史",
+        "哲学・思想",
+        "心理・内面",
+        "ファンタジー",
+        "雰囲気・美学",
+        "大作",
+        "切ない",
+        "社会問題・生活"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 121,
+      "exact": true,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": "Sat, 3 Oct 2026 04:45:22 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-02"
+    },
+    {
       "id": "lb-471-8LnQ",
       "title": "シン・エヴァンゲリオン劇場版:||",
       "originalTitle": "",
@@ -1903,8 +1936,8 @@
       "year": 2021,
       "score": 90,
       "star": 4,
-      "overallRank": 66,
-      "sameScoreRank": 3,
+      "overallRank": 67,
+      "sameScoreRank": 4,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -1935,8 +1968,8 @@
       "year": 2002,
       "score": 90,
       "star": 4,
-      "overallRank": 67,
-      "sameScoreRank": 4,
+      "overallRank": 68,
+      "sameScoreRank": 5,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -1954,39 +1987,6 @@
       "letterboxdAddedDate": "2025-09-03",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "custom-1790960881562-cn74",
-      "title": "Mishima: A Life in Four Chapters",
-      "originalTitle": "",
-      "englishTitle": "Mishima: A Life in Four Chapters",
-      "year": 1985,
-      "score": 90,
-      "star": 4,
-      "overallRank": 68,
-      "sameScoreRank": 5,
-      "category": "Letterboxd",
-      "mediaType": "movie",
-      "genre": [
-        "サスペンス",
-        "クライム",
-        "ドラマ",
-        "歴史",
-        "哲学・思想",
-        "心理・内面",
-        "ファンタジー",
-        "雰囲気・美学",
-        "大作",
-        "切ない",
-        "社会問題・生活"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 121,
-      "exact": true,
-      "letterboxdAddedDate": null,
-      "letterboxdPublishedAt": "Sat, 3 Oct 2026 04:45:22 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-02"
     },
     {
       "id": "lb-205-1UlA",
@@ -20783,9 +20783,9 @@
       "90": [
         "lb-66-2aq2",
         "lb-44-2bf0",
+        "custom-1790960881562-cn74",
         "lb-471-8LnQ",
         "lb-301-2a2a",
-        "custom-1790960881562-cn74",
         "lb-205-1UlA",
         "lb-90-71Y",
         "lb-73-27Vc",
