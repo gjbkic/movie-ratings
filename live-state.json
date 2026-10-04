@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791114088414,
-  "sourceUpdatedIso": "2026-10-04T11:41:28.414Z",
+  "sourceUpdatedAt": 1791114117236,
+  "sourceUpdatedIso": "2026-10-04T11:41:57.236Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -17563,35 +17563,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-259-N7ZC",
-      "title": "侍タイムスリッパー",
-      "originalTitle": "",
-      "englishTitle": "A Samurai in Time",
-      "year": 2023,
-      "score": 71,
-      "star": 2,
-      "overallRank": 620,
-      "sameScoreRank": 9,
-      "category": "邦画",
-      "mediaType": "movie",
-      "genre": [
-        "コメディ",
-        "SF",
-        "ファンタジー",
-        "ドラマ",
-        "社会問題・生活",
-        "娯楽",
-        "時間"
-      ],
-      "origin": "邦画",
-      "format": "live",
-      "runtime": null,
-      "exact": false,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-533-2bdy",
       "title": "リトルダンサー",
       "originalTitle": "",
@@ -17599,7 +17570,7 @@
       "year": 2000,
       "score": 70,
       "star": 1.5,
-      "overallRank": 621,
+      "overallRank": 620,
       "sameScoreRank": 1,
       "category": "ドラマ",
       "mediaType": "movie",
@@ -17625,7 +17596,7 @@
       "year": 2020,
       "score": 70,
       "star": 1.5,
-      "overallRank": 622,
+      "overallRank": 621,
       "sameScoreRank": 2,
       "category": "ほかアニメ",
       "mediaType": "movie",
@@ -17652,7 +17623,7 @@
       "year": 2014,
       "score": 70,
       "star": 1.5,
-      "overallRank": 623,
+      "overallRank": 622,
       "sameScoreRank": 3,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
@@ -17679,7 +17650,7 @@
       "year": 1961,
       "score": 70,
       "star": 1.5,
-      "overallRank": 624,
+      "overallRank": 623,
       "sameScoreRank": 4,
       "category": "恋愛、ミュージカル",
       "mediaType": "movie",
@@ -17697,6 +17668,35 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-259-N7ZC",
+      "title": "侍タイムスリッパー",
+      "originalTitle": "",
+      "englishTitle": "A Samurai in Time",
+      "year": 2023,
+      "score": 70,
+      "star": 1.5,
+      "overallRank": 624,
+      "sameScoreRank": 5,
+      "category": "邦画",
+      "mediaType": "movie",
+      "genre": [
+        "コメディ",
+        "SF",
+        "ファンタジー",
+        "ドラマ",
+        "社会問題・生活",
+        "娯楽",
+        "時間"
+      ],
+      "origin": "邦画",
+      "format": "live",
+      "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-531-29JC",
       "title": "トップガン",
       "originalTitle": "",
@@ -17705,7 +17705,7 @@
       "score": 70,
       "star": 1.5,
       "overallRank": 625,
-      "sameScoreRank": 5,
+      "sameScoreRank": 6,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -17730,7 +17730,7 @@
       "score": 70,
       "star": 1.5,
       "overallRank": 626,
-      "sameScoreRank": 6,
+      "sameScoreRank": 7,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -17758,7 +17758,7 @@
       "score": 70,
       "star": 1.5,
       "overallRank": 627,
-      "sameScoreRank": 7,
+      "sameScoreRank": 8,
       "category": "コナン映画",
       "mediaType": "movie",
       "genre": [
@@ -17786,7 +17786,7 @@
       "score": 70,
       "star": 1.5,
       "overallRank": 628,
-      "sameScoreRank": 8,
+      "sameScoreRank": 9,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -17813,7 +17813,7 @@
       "score": 70,
       "star": 1.5,
       "overallRank": 629,
-      "sameScoreRank": 9,
+      "sameScoreRank": 10,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -17839,7 +17839,7 @@
       "score": 70,
       "star": 1.5,
       "overallRank": 630,
-      "sameScoreRank": 10,
+      "sameScoreRank": 11,
       "category": "ピクサー・ディズニー作品",
       "mediaType": "movie",
       "genre": [
@@ -20056,7 +20056,8 @@
       "custom-1791113241748-xivg": 79,
       "custom-1791113242437-wcok": 77,
       "custom-1791113242089-wnyx": 74,
-      "custom-1791113241627-mf17": 77
+      "custom-1791113241627-mf17": 77,
+      "lb-259-N7ZC": 70
     },
     "rankOrder": {
       "40": [
@@ -20161,6 +20162,7 @@
         "lb-128-nyLU",
         "lb-443-8ND2",
         "lb-356-28dK",
+        "lb-259-N7ZC",
         "lb-531-29JC",
         "custom-1789385861007-nhdf",
         "lb-502-oEGS",
@@ -20176,8 +20178,7 @@
         "custom-1790322758638-0juw",
         "lb-476-738K",
         "custom-1790322761655-im7g",
-        "lb-484-h8gk",
-        "lb-259-N7ZC"
+        "lb-484-h8gk"
       ],
       "72": [
         "lb-232-81oI",
@@ -23272,7 +23273,8 @@
       "custom-1791113241748-xivg": 2.5,
       "custom-1791113242437-wcok": 2.5,
       "custom-1791113242089-wnyx": 2,
-      "custom-1791113241627-mf17": 2.5
+      "custom-1791113241627-mf17": 2.5,
+      "lb-259-N7ZC": 1.5
     },
     "titleOverrides": {
       "added-anchor-578": {
