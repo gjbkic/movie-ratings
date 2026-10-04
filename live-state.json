@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791140114707,
-  "sourceUpdatedIso": "2026-10-04T18:55:14.707Z",
+  "sourceUpdatedAt": 1791140146300,
+  "sourceUpdatedIso": "2026-10-04T18:55:46.300Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -3449,7 +3449,7 @@
         "ドラマ",
         "恋愛"
       ],
-      "origin": "その他",
+      "origin": "ハリウッド",
       "format": "live",
       "runtime": 177,
       "exact": true,
@@ -9390,10 +9390,11 @@
         "ファンタジー",
         "アクション",
         "娯楽",
-        "アドベンチャー"
+        "アドベンチャー",
+        "TV本編"
       ],
       "origin": "邦画",
-      "format": "",
+      "format": "live",
       "runtime": null,
       "exact": true,
       "letterboxdAddedDate": "2026-10-05",
@@ -25402,6 +25403,7 @@
       "custom-1791018448490-bpdn": "drama",
       "custom-1791018448927-b4o3": "drama",
       "custom-1791113241748-xivg": "drama",
+      "custom-1791139748091-0goj": "drama",
       "lb-0-hTha": "movie",
       "lb-1-4VZ8": "movie",
       "lb-2-2a9q": "movie",
@@ -26029,8 +26031,7 @@
       "custom-1791113242089-wnyx": "movie",
       "custom-1791113242437-wcok": "movie",
       "custom-1791122852357-22zp": "movie",
-      "custom-1791139747386-vy04": "movie",
-      "custom-1791139748091-0goj": "drama"
+      "custom-1791139747386-vy04": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -31679,7 +31680,8 @@
         "ファンタジー",
         "アクション",
         "娯楽",
-        "アドベンチャー"
+        "アドベンチャー",
+        "TV本編"
       ]
     },
     "originOverrides": {
@@ -32298,7 +32300,7 @@
       "custom-1789918000606-jgbg": "ハリウッド",
       "custom-1789929101832-iwdt": "その他",
       "custom-1790089712252-cunv": "ハリウッド",
-      "custom-1790112133851-szwv": "邦画",
+      "custom-1790112133851-szwv": "日本",
       "custom-1790185844116-j1vu": "邦画",
       "custom-1790185844045-qhut": "ハリウッド",
       "custom-1790185843981-dk0y": "ハリウッド",
@@ -32375,7 +32377,7 @@
       "custom-1791113242089-wnyx": "邦画",
       "custom-1791113242437-wcok": "邦画",
       "custom-1791122852357-22zp": "邦画",
-      "custom-1791139747386-vy04": "その他",
+      "custom-1791139747386-vy04": "ハリウッド",
       "custom-1791139748091-0goj": "邦画"
     },
     "formatOverrides": {
@@ -33071,7 +33073,8 @@
       "custom-1791113242437-wcok": "animation",
       "custom-1791113241748-xivg": "live",
       "custom-1791122852357-22zp": "animation",
-      "custom-1791139747386-vy04": "live"
+      "custom-1791139747386-vy04": "live",
+      "custom-1791139748091-0goj": "live"
     },
     "runtimeOverrides": {
       "custom-1790247938551-ixfs": 100,
