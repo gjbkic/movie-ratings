@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791122897900,
-  "sourceUpdatedIso": "2026-10-04T14:08:17.900Z",
+  "sourceUpdatedAt": 1791138315255,
+  "sourceUpdatedIso": "2026-10-04T18:25:15.255Z",
   "ranked": [
     {
       "id": "lb-22-2a1m",
@@ -3371,15 +3371,69 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-98-2bbs",
+      "title": "インディ・ジョーンズ レイダース失われたアーク",
+      "originalTitle": "",
+      "englishTitle": "Raiders of the Lost Ark",
+      "year": 1981,
+      "score": 87,
+      "star": 4,
+      "overallRank": 116,
+      "sameScoreRank": 11,
+      "category": "ファンタジー、アドベンチャー",
+      "mediaType": "movie",
+      "genre": [
+        "ファンタジー",
+        "アドベンチャー",
+        "アクション",
+        "大作"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 115,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "lb-464-mkbG",
+      "title": "チェルノブイリ",
+      "originalTitle": "",
+      "englishTitle": "Chernobyl",
+      "year": 2019,
+      "score": 87,
+      "star": 4,
+      "overallRank": 117,
+      "sameScoreRank": 12,
+      "category": "Letterboxd追加",
+      "mediaType": "drama",
+      "genre": [
+        "歴史",
+        "社会問題・生活",
+        "サスペンス",
+        "心理・内面",
+        "雰囲気・美学",
+        "TV本編"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 73,
+      "exact": true,
+      "letterboxdAddedDate": "2026-04-12",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-358-6uNS",
       "title": "ドラえもんひみつ道具博物館",
       "originalTitle": "",
       "englishTitle": "Doraemon: Nobita's Secret Gadget Museum",
       "year": 2013,
-      "score": 87,
-      "star": 4,
-      "overallRank": 116,
-      "sameScoreRank": 11,
+      "score": 86,
+      "star": 3.5,
+      "overallRank": 118,
+      "sameScoreRank": 1,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -3408,60 +3462,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-98-2bbs",
-      "title": "インディ・ジョーンズ レイダース失われたアーク",
-      "originalTitle": "",
-      "englishTitle": "Raiders of the Lost Ark",
-      "year": 1981,
-      "score": 87,
-      "star": 4,
-      "overallRank": 117,
-      "sameScoreRank": 12,
-      "category": "ファンタジー、アドベンチャー",
-      "mediaType": "movie",
-      "genre": [
-        "ファンタジー",
-        "アドベンチャー",
-        "アクション",
-        "大作"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 115,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "lb-464-mkbG",
-      "title": "チェルノブイリ",
-      "originalTitle": "",
-      "englishTitle": "Chernobyl",
-      "year": 2019,
-      "score": 87,
-      "star": 4,
-      "overallRank": 118,
-      "sameScoreRank": 13,
-      "category": "Letterboxd追加",
-      "mediaType": "drama",
-      "genre": [
-        "歴史",
-        "社会問題・生活",
-        "サスペンス",
-        "心理・内面",
-        "雰囲気・美学",
-        "TV本編"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 73,
-      "exact": true,
-      "letterboxdAddedDate": "2026-04-12",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-115-2aWi",
       "title": "マイノリティ・リポート",
       "originalTitle": "",
@@ -3470,7 +3470,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 119,
-      "sameScoreRank": 1,
+      "sameScoreRank": 2,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -3499,7 +3499,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 120,
-      "sameScoreRank": 2,
+      "sameScoreRank": 3,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -3531,7 +3531,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 121,
-      "sameScoreRank": 3,
+      "sameScoreRank": 4,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -3560,7 +3560,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 122,
-      "sameScoreRank": 4,
+      "sameScoreRank": 5,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -3589,7 +3589,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 123,
-      "sameScoreRank": 5,
+      "sameScoreRank": 6,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
       "genre": [
@@ -3618,7 +3618,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 124,
-      "sameScoreRank": 6,
+      "sameScoreRank": 7,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -3646,7 +3646,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 125,
-      "sameScoreRank": 7,
+      "sameScoreRank": 8,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -3677,7 +3677,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 126,
-      "sameScoreRank": 8,
+      "sameScoreRank": 9,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -3703,7 +3703,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 127,
-      "sameScoreRank": 9,
+      "sameScoreRank": 10,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -3733,7 +3733,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 128,
-      "sameScoreRank": 10,
+      "sameScoreRank": 11,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -3762,7 +3762,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 129,
-      "sameScoreRank": 11,
+      "sameScoreRank": 12,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -3789,7 +3789,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 130,
-      "sameScoreRank": 12,
+      "sameScoreRank": 13,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -3816,7 +3816,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 131,
-      "sameScoreRank": 13,
+      "sameScoreRank": 14,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -3844,7 +3844,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 132,
-      "sameScoreRank": 14,
+      "sameScoreRank": 15,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -3876,7 +3876,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 133,
-      "sameScoreRank": 15,
+      "sameScoreRank": 16,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -3902,7 +3902,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 134,
-      "sameScoreRank": 16,
+      "sameScoreRank": 17,
       "category": "Letterboxd",
       "mediaType": "other",
       "genre": [
@@ -3928,7 +3928,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 135,
-      "sameScoreRank": 17,
+      "sameScoreRank": 18,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -3955,7 +3955,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 136,
-      "sameScoreRank": 18,
+      "sameScoreRank": 19,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -3984,7 +3984,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 137,
-      "sameScoreRank": 19,
+      "sameScoreRank": 20,
       "category": "Letterboxd追加",
       "mediaType": "movie",
       "genre": [
@@ -4015,7 +4015,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 138,
-      "sameScoreRank": 20,
+      "sameScoreRank": 21,
       "category": "ファンタジー、アドベンチャー",
       "mediaType": "movie",
       "genre": [
@@ -4044,7 +4044,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 139,
-      "sameScoreRank": 21,
+      "sameScoreRank": 22,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -4072,7 +4072,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 140,
-      "sameScoreRank": 22,
+      "sameScoreRank": 23,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -4101,7 +4101,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 141,
-      "sameScoreRank": 23,
+      "sameScoreRank": 24,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -4128,7 +4128,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 142,
-      "sameScoreRank": 24,
+      "sameScoreRank": 25,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -4157,7 +4157,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 143,
-      "sameScoreRank": 25,
+      "sameScoreRank": 26,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -4185,7 +4185,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 144,
-      "sameScoreRank": 26,
+      "sameScoreRank": 27,
       "category": "ファンタジー、アドベンチャー",
       "mediaType": "movie",
       "genre": [
@@ -4213,7 +4213,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 145,
-      "sameScoreRank": 27,
+      "sameScoreRank": 28,
       "category": "ハリーポッター シリーズ",
       "mediaType": "movie",
       "genre": [
@@ -4242,7 +4242,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 146,
-      "sameScoreRank": 28,
+      "sameScoreRank": 29,
       "category": "コメディ",
       "mediaType": "movie",
       "genre": [
@@ -4274,7 +4274,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 147,
-      "sameScoreRank": 29,
+      "sameScoreRank": 30,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -4301,7 +4301,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 148,
-      "sameScoreRank": 30,
+      "sameScoreRank": 31,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -4326,7 +4326,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 149,
-      "sameScoreRank": 31,
+      "sameScoreRank": 32,
       "category": "スリラー、ホラー",
       "mediaType": "movie",
       "genre": [
@@ -4354,7 +4354,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 150,
-      "sameScoreRank": 32,
+      "sameScoreRank": 33,
       "category": "Letterboxd追加",
       "mediaType": "movie",
       "genre": [
@@ -4382,7 +4382,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 151,
-      "sameScoreRank": 33,
+      "sameScoreRank": 34,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -4411,7 +4411,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 152,
-      "sameScoreRank": 34,
+      "sameScoreRank": 35,
       "category": "Letterboxd追加",
       "mediaType": "movie",
       "genre": [
@@ -4440,7 +4440,7 @@
       "score": 86,
       "star": 3.5,
       "overallRank": 153,
-      "sameScoreRank": 35,
+      "sameScoreRank": 36,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -19751,7 +19751,7 @@
       "lb-12-728": 84,
       "lb-318-84xS": 84,
       "lb-394-2b5O": 84,
-      "lb-358-6uNS": 87,
+      "lb-358-6uNS": 86,
       "lb-176-2aZm": 84,
       "lb-458-2bg8": 84,
       "lb-228-6eCu": 81,
@@ -20696,6 +20696,7 @@
         "lb-99-4hk0"
       ],
       "86": [
+        "lb-358-6uNS",
         "lb-115-2aWi",
         "lb-390-pUfA",
         "lb-279-215a",
@@ -20743,7 +20744,6 @@
         "lb-36-29FA",
         "lb-37-72s",
         "lb-101-ce74",
-        "lb-358-6uNS",
         "lb-98-2bbs",
         "lb-464-mkbG"
       ],
@@ -22979,7 +22979,7 @@
       "lb-12-728": 3.5,
       "lb-318-84xS": 3.5,
       "lb-394-2b5O": 3.5,
-      "lb-358-6uNS": 4,
+      "lb-358-6uNS": 3.5,
       "lb-176-2aZm": 3.5,
       "lb-458-2bg8": 3.5,
       "lb-228-6eCu": 3,
