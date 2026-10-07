@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791140231977,
-  "sourceUpdatedIso": "2026-10-04T18:57:11.977Z",
+  "sourceUpdatedAt": 1791353626053,
+  "sourceUpdatedIso": "2026-10-07T06:13:46.053Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -19492,6 +19492,31 @@
       "letterboxdAddedDate": "2026-09-25",
       "letterboxdPublishedAt": "Fri, 25 Sep 2026 06:09:52 +1200",
       "letterboxdReportedWatchedDate": "2026-09-24"
+    },
+    {
+      "id": "custom-1791353624251-egky",
+      "title": "狼たちの午後",
+      "originalTitle": "Dog Day Afternoon",
+      "englishTitle": "Dog Day Afternoon",
+      "year": 1975,
+      "score": null,
+      "star": 4,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "クライム",
+        "ドラマ",
+        "スリラー"
+      ],
+      "origin": "その他",
+      "format": "live",
+      "runtime": 124,
+      "exact": false,
+      "letterboxdAddedDate": "2026-10-07",
+      "letterboxdPublishedAt": "Wed, 7 Oct 2026 17:56:56 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-07"
     }
   ],
   "state": {
@@ -22770,6 +22795,23 @@
         "added": true,
         "_seq": 1791139748091,
         "source": "letterboxd"
+      },
+      {
+        "id": "custom-1791353624251-egky",
+        "title": "狼たちの午後",
+        "originalTitle": "Dog Day Afternoon",
+        "englishTitle": "Dog Day Afternoon",
+        "lbTitle": "Dog Day Afternoon",
+        "tmdbId": 968,
+        "year": 1975,
+        "uri": "https://letterboxd.com/gjbkic/film/dog-day-afternoon/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 4,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791353624251,
+        "source": "letterboxd"
       }
     ],
     "starOverrides": {
@@ -26034,7 +26076,8 @@
       "custom-1791113242089-wnyx": "movie",
       "custom-1791113242437-wcok": "movie",
       "custom-1791122852357-22zp": "movie",
-      "custom-1791139747386-vy04": "movie"
+      "custom-1791139747386-vy04": "movie",
+      "custom-1791353624251-egky": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -31685,6 +31728,11 @@
         "娯楽",
         "アドベンチャー",
         "TV本編"
+      ],
+      "custom-1791353624251-egky": [
+        "クライム",
+        "ドラマ",
+        "スリラー"
       ]
     },
     "originOverrides": {
@@ -32381,7 +32429,8 @@
       "custom-1791113242437-wcok": "邦画",
       "custom-1791122852357-22zp": "邦画",
       "custom-1791139747386-vy04": "ハリウッド",
-      "custom-1791139748091-0goj": "邦画"
+      "custom-1791139748091-0goj": "邦画",
+      "custom-1791353624251-egky": "その他"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -33077,7 +33126,8 @@
       "custom-1791113241748-xivg": "live",
       "custom-1791122852357-22zp": "animation",
       "custom-1791139747386-vy04": "live",
-      "custom-1791139748091-0goj": "live"
+      "custom-1791139748091-0goj": "live",
+      "custom-1791353624251-egky": "live"
     },
     "runtimeOverrides": {
       "custom-1790247938551-ixfs": 100,
@@ -33720,7 +33770,8 @@
       "custom-1791113241748-xivg": 41,
       "custom-1791122852357-22zp": 63,
       "custom-1791139747386-vy04": 177,
-      "custom-1791139748091-0goj": 24
+      "custom-1791139748091-0goj": 24,
+      "custom-1791353624251-egky": 124
     },
     "letterboxdMeta": {
       "lb-0-hTha": {
@@ -36610,6 +36661,12 @@
         "addedDate": "2026-10-05",
         "addedDateSource": "rss-first-seen",
         "reportedWatchedDate": "2026-10-04"
+      },
+      "custom-1791353624251-egky": {
+        "publishedAt": "Wed, 7 Oct 2026 17:56:56 +1300",
+        "addedDate": "2026-10-07",
+        "addedDateSource": "rss-first-seen",
+        "reportedWatchedDate": "2026-10-07"
       }
     }
   }
