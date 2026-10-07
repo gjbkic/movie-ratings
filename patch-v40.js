@@ -116,7 +116,7 @@
         refreshPicker(id,f);
         if(changed)save();
       }else refreshPicker(id,null);
-    },0));
+    },0), true);
   }
 
   for(const id of ['newGenrePicker','qGenrePicker']){ensureTvRow(id,'main');bindPickerWatch(id);}
