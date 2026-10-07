@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791382579053,
-  "sourceUpdatedIso": "2026-10-07T14:16:19.053Z",
+  "sourceUpdatedAt": 1791382580762,
+  "sourceUpdatedIso": "2026-10-07T14:16:20.762Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -17232,43 +17232,15 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-55-2a46",
-      "title": "モンスターズインク",
-      "originalTitle": "",
-      "englishTitle": "Monsters, Inc.",
-      "year": 2001,
-      "score": 73,
-      "star": 2,
-      "overallRank": 607,
-      "sameScoreRank": 21,
-      "category": "ピクサー・ディズニー作品",
-      "mediaType": "movie",
-      "genre": [
-        "ドラマ",
-        "子供向け",
-        "ファンタジー",
-        "アクション",
-        "コメディ",
-        "娯楽"
-      ],
-      "origin": "ハリウッド",
-      "format": "animation",
-      "runtime": 92,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "custom-1791382461963-kb93",
       "title": "世にも奇妙な物語 '23秋の特別編",
       "originalTitle": "世にも奇妙な物語 '23秋の特別編",
       "englishTitle": "Tales of the Bizarre: 2023 Fall Special",
       "year": 2023,
-      "score": 72,
+      "score": 73,
       "star": 2,
-      "overallRank": 608,
-      "sameScoreRank": 1,
+      "overallRank": 607,
+      "sameScoreRank": 21,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -17291,6 +17263,34 @@
       "letterboxdReportedWatchedDate": "2026-10-07"
     },
     {
+      "id": "lb-55-2a46",
+      "title": "モンスターズインク",
+      "originalTitle": "",
+      "englishTitle": "Monsters, Inc.",
+      "year": 2001,
+      "score": 73,
+      "star": 2,
+      "overallRank": 608,
+      "sameScoreRank": 22,
+      "category": "ピクサー・ディズニー作品",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "子供向け",
+        "ファンタジー",
+        "アクション",
+        "コメディ",
+        "娯楽"
+      ],
+      "origin": "ハリウッド",
+      "format": "animation",
+      "runtime": 92,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-232-81oI",
       "title": "テルマエ・ロマエⅡ",
       "originalTitle": "",
@@ -17299,7 +17299,7 @@
       "score": 72,
       "star": 2,
       "overallRank": 609,
-      "sameScoreRank": 2,
+      "sameScoreRank": 1,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -17327,7 +17327,7 @@
       "score": 72,
       "star": 2,
       "overallRank": 610,
-      "sameScoreRank": 3,
+      "sameScoreRank": 2,
       "category": "MCU作品",
       "mediaType": "movie",
       "genre": [
@@ -17354,7 +17354,7 @@
       "score": 72,
       "star": 2,
       "overallRank": 611,
-      "sameScoreRank": 4,
+      "sameScoreRank": 3,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -17381,7 +17381,7 @@
       "score": 72,
       "star": 2,
       "overallRank": 612,
-      "sameScoreRank": 5,
+      "sameScoreRank": 4,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -17410,7 +17410,7 @@
       "score": 72,
       "star": 2,
       "overallRank": 613,
-      "sameScoreRank": 6,
+      "sameScoreRank": 5,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -17440,7 +17440,7 @@
       "score": 72,
       "star": 2,
       "overallRank": 614,
-      "sameScoreRank": 7,
+      "sameScoreRank": 6,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
       "genre": [
@@ -17464,7 +17464,7 @@
       "score": 72,
       "star": 2,
       "overallRank": 615,
-      "sameScoreRank": 8,
+      "sameScoreRank": 7,
       "category": "ピクサー・ディズニー作品",
       "mediaType": "movie",
       "genre": [
@@ -17493,7 +17493,7 @@
       "score": 72,
       "star": 2,
       "overallRank": 616,
-      "sameScoreRank": 9,
+      "sameScoreRank": 8,
       "category": "ファンタジー、アドベンチャー",
       "mediaType": "movie",
       "genre": [
@@ -17520,7 +17520,7 @@
       "score": 72,
       "star": 2,
       "overallRank": 617,
-      "sameScoreRank": 10,
+      "sameScoreRank": 9,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -17550,7 +17550,7 @@
       "score": 72,
       "star": 2,
       "overallRank": 618,
-      "sameScoreRank": 11,
+      "sameScoreRank": 10,
       "category": "Letterboxd追加",
       "mediaType": "movie",
       "genre": [
@@ -17576,7 +17576,7 @@
       "score": 72,
       "star": 2,
       "overallRank": 619,
-      "sameScoreRank": 12,
+      "sameScoreRank": 11,
       "category": "MCU作品",
       "mediaType": "movie",
       "genre": [
@@ -17602,7 +17602,7 @@
       "score": 72,
       "star": 2,
       "overallRank": 620,
-      "sameScoreRank": 13,
+      "sameScoreRank": 12,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -17632,7 +17632,7 @@
       "score": 72,
       "star": 2,
       "overallRank": 621,
-      "sameScoreRank": 14,
+      "sameScoreRank": 13,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -17660,7 +17660,7 @@
       "score": 72,
       "star": 2,
       "overallRank": 622,
-      "sameScoreRank": 15,
+      "sameScoreRank": 14,
       "category": "Letterboxd追加",
       "mediaType": "movie",
       "genre": [
@@ -17684,7 +17684,7 @@
       "score": 72,
       "star": 2,
       "overallRank": 623,
-      "sameScoreRank": 16,
+      "sameScoreRank": 15,
       "category": "Letterboxd追加",
       "mediaType": "movie",
       "genre": [
@@ -20434,7 +20434,7 @@
       "custom-1791379032352-50zf": 83,
       "custom-1791381276187-mxp2": 81,
       "custom-1791381275690-v9vr": 77,
-      "custom-1791382461963-kb93": 72,
+      "custom-1791382461963-kb93": 73,
       "lb-260-b5z2": 73
     },
     "rankOrder": {
@@ -20559,7 +20559,6 @@
         "lb-484-h8gk"
       ],
       "72": [
-        "custom-1791382461963-kb93",
         "lb-232-81oI",
         "lb-324-3qi6",
         "lb-155-h2Hu",
@@ -20597,6 +20596,7 @@
         "lb-514-2NXO",
         "lb-260-b5z2",
         "lb-364-fpxe",
+        "custom-1791382461963-kb93",
         "lb-55-2a46"
       ],
       "74": [
