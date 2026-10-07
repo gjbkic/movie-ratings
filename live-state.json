@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791377114265,
-  "sourceUpdatedIso": "2026-10-07T12:45:14.265Z",
+  "sourceUpdatedAt": 1791377211083,
+  "sourceUpdatedIso": "2026-10-07T12:46:51.083Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -19590,7 +19590,10 @@
       "mediaType": "movie",
       "genre": [
         "ファンタジー",
-        "スリラー"
+        "スリラー",
+        "ホラー",
+        "サスペンス",
+        "感動"
       ],
       "origin": "邦画",
       "format": "live",
@@ -31899,7 +31902,10 @@
       ],
       "custom-1791377114135-l3hd": [
         "ファンタジー",
-        "スリラー"
+        "スリラー",
+        "ホラー",
+        "サスペンス",
+        "感動"
       ]
     },
     "originOverrides": {
