@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791397470495,
-  "sourceUpdatedIso": "2026-10-07T18:24:30.495Z",
+  "sourceUpdatedAt": 1791398329315,
+  "sourceUpdatedIso": "2026-10-07T18:38:49.315Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -19972,6 +19972,30 @@
       "letterboxdAddedDate": "2026-10-08",
       "letterboxdPublishedAt": "Thu, 8 Oct 2026 05:32:13 +1300",
       "letterboxdReportedWatchedDate": "2026-10-08"
+    },
+    {
+      "id": "custom-1791398329125-3r8f",
+      "title": "世にも奇妙な物語 '21秋の特別編",
+      "originalTitle": "世にも奇妙な物語 '21秋の特別編",
+      "englishTitle": "Tales of the Bizarre: 2021 Fall Special",
+      "year": 2021,
+      "score": null,
+      "star": 3,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "ファンタジー"
+      ],
+      "origin": "日本",
+      "format": "live",
+      "runtime": 106,
+      "exact": false,
+      "letterboxdAddedDate": "2026-10-08",
+      "letterboxdPublishedAt": "Thu, 8 Oct 2026 07:38:09 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-08"
     }
   ],
   "state": {
@@ -23557,6 +23581,23 @@
         "added": true,
         "_seq": 1791397387325,
         "source": "letterboxd"
+      },
+      {
+        "id": "custom-1791398329125-3r8f",
+        "title": "世にも奇妙な物語 '21秋の特別編",
+        "originalTitle": "世にも奇妙な物語 '21秋の特別編",
+        "englishTitle": "Tales of the Bizarre: 2021 Fall Special",
+        "lbTitle": "Tales of the Bizarre: 2021 Fall Special",
+        "tmdbId": 901030,
+        "year": 2021,
+        "uri": "https://letterboxd.com/gjbkic/film/tales-of-the-bizarre-2021-fall-special/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 3,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791398329125,
+        "source": "letterboxd"
       }
     ],
     "starOverrides": {
@@ -26866,7 +26907,8 @@
       "custom-1791392810098-rjyg": "movie",
       "custom-1791394775097-fjc5": "movie",
       "custom-1791396105970-bm2m": "movie",
-      "custom-1791397387325-yqut": "movie"
+      "custom-1791397387325-yqut": "movie",
+      "custom-1791398329125-3r8f": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -32677,6 +32719,10 @@
         "娯楽",
         "どんでん返し",
         "社会問題・生活"
+      ],
+      "custom-1791398329125-3r8f": [
+        "ドラマ",
+        "ファンタジー"
       ]
     },
     "originOverrides": {
@@ -33389,7 +33435,8 @@
       "custom-1791393440445-arl6": "日本",
       "custom-1791394775097-fjc5": "日本",
       "custom-1791396105970-bm2m": "日本",
-      "custom-1791397387325-yqut": "日本"
+      "custom-1791397387325-yqut": "日本",
+      "custom-1791398329125-3r8f": "日本"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -34101,7 +34148,8 @@
       "custom-1791392809782-lca8": "live",
       "custom-1791394775097-fjc5": "live",
       "custom-1791396105970-bm2m": "live",
-      "custom-1791397387325-yqut": "live"
+      "custom-1791397387325-yqut": "live",
+      "custom-1791398329125-3r8f": "live"
     },
     "runtimeOverrides": {
       "custom-1790247938551-ixfs": 100,
@@ -34755,7 +34803,8 @@
       "custom-1791392809656-3sql": 106,
       "custom-1791392810098-rjyg": 90,
       "custom-1791393440445-arl6": 107,
-      "custom-1791396105970-bm2m": 107
+      "custom-1791396105970-bm2m": 107,
+      "custom-1791398329125-3r8f": 106
     },
     "letterboxdMeta": {
       "lb-0-hTha": {
@@ -37739,6 +37788,12 @@
       },
       "custom-1791397387325-yqut": {
         "publishedAt": "Thu, 8 Oct 2026 07:22:48 +1300",
+        "addedDate": "2026-10-08",
+        "addedDateSource": "rss-first-seen",
+        "reportedWatchedDate": "2026-10-08"
+      },
+      "custom-1791398329125-3r8f": {
+        "publishedAt": "Thu, 8 Oct 2026 07:38:09 +1300",
         "addedDate": "2026-10-08",
         "addedDateSource": "rss-first-seen",
         "reportedWatchedDate": "2026-10-08"
