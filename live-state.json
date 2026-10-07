@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791382568048,
-  "sourceUpdatedIso": "2026-10-07T14:16:08.048Z",
+  "sourceUpdatedAt": 1791382579053,
+  "sourceUpdatedIso": "2026-10-07T14:16:19.053Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -17177,6 +17177,34 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-260-b5z2",
+      "title": "ソロモンの偽証 前編",
+      "originalTitle": "",
+      "englishTitle": "Solomon's Perjury 1: Suspicion",
+      "year": 2015,
+      "score": 73,
+      "star": 2,
+      "overallRank": 605,
+      "sameScoreRank": 19,
+      "category": "邦画",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "社会問題・生活",
+        "ミステリー",
+        "サスペンス",
+        "青春・若者",
+        "特殊構造"
+      ],
+      "origin": "日本",
+      "format": "live",
+      "runtime": 122,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-364-fpxe",
       "title": "チアダン",
       "originalTitle": "",
@@ -17184,8 +17212,8 @@
       "year": 2017,
       "score": 73,
       "star": 2,
-      "overallRank": 605,
-      "sameScoreRank": 19,
+      "overallRank": 606,
+      "sameScoreRank": 20,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -17211,8 +17239,8 @@
       "year": 2001,
       "score": 73,
       "star": 2,
-      "overallRank": 606,
-      "sameScoreRank": 20,
+      "overallRank": 607,
+      "sameScoreRank": 21,
       "category": "ピクサー・ディズニー作品",
       "mediaType": "movie",
       "genre": [
@@ -17227,34 +17255,6 @@
       "format": "animation",
       "runtime": 92,
       "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "lb-260-b5z2",
-      "title": "ソロモンの偽証 前編",
-      "originalTitle": "",
-      "englishTitle": "Solomon's Perjury 1: Suspicion",
-      "year": 2015,
-      "score": 73,
-      "star": 2,
-      "overallRank": 607,
-      "sameScoreRank": 21,
-      "category": "邦画",
-      "mediaType": "movie",
-      "genre": [
-        "ドラマ",
-        "社会問題・生活",
-        "ミステリー",
-        "サスペンス",
-        "青春・若者",
-        "特殊構造"
-      ],
-      "origin": "日本",
-      "format": "live",
-      "runtime": 122,
-      "exact": false,
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
@@ -20434,7 +20434,8 @@
       "custom-1791379032352-50zf": 83,
       "custom-1791381276187-mxp2": 81,
       "custom-1791381275690-v9vr": 77,
-      "custom-1791382461963-kb93": 72
+      "custom-1791382461963-kb93": 72,
+      "lb-260-b5z2": 73
     },
     "rankOrder": {
       "40": [
@@ -20594,9 +20595,9 @@
         "lb-190-1oLc",
         "lb-233-2pii",
         "lb-514-2NXO",
+        "lb-260-b5z2",
         "lb-364-fpxe",
-        "lb-55-2a46",
-        "lb-260-b5z2"
+        "lb-55-2a46"
       ],
       "74": [
         "lb-106-29Ik",
@@ -23883,7 +23884,8 @@
       "custom-1791379032352-50zf": 3,
       "custom-1791381276187-mxp2": 3,
       "custom-1791381275690-v9vr": 2.5,
-      "custom-1791382461963-kb93": 2
+      "custom-1791382461963-kb93": 2,
+      "lb-260-b5z2": 2
     },
     "titleOverrides": {
       "added-anchor-578": {
