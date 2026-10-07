@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791392939200,
-  "sourceUpdatedIso": "2026-10-07T17:08:59.200Z",
+  "sourceUpdatedAt": 1791392946716,
+  "sourceUpdatedIso": "2026-10-07T17:09:06.716Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -15200,6 +15200,35 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "custom-1791392809656-3sql",
+      "title": "世にも奇妙な物語 '23夏の特別編",
+      "originalTitle": "世にも奇妙な物語 '23夏の特別編",
+      "englishTitle": "Tales of the Bizarre: 2023 Summer Special",
+      "year": 2023,
+      "score": 76,
+      "star": 2,
+      "overallRank": 534,
+      "sameScoreRank": 12,
+      "category": "Letterboxd",
+      "mediaType": "drama",
+      "genre": [
+        "ファンタジー",
+        "感動",
+        "どんでん返し",
+        "TV特番・SP",
+        "娯楽",
+        "コメディ",
+        "ドラマ"
+      ],
+      "origin": "日本",
+      "format": "live",
+      "runtime": 106,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-08",
+      "letterboxdPublishedAt": "Thu, 8 Oct 2026 06:05:24 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-08"
+    },
+    {
       "id": "lb-512-fqF4",
       "title": "3度目の殺人",
       "originalTitle": "",
@@ -15207,8 +15236,8 @@
       "year": 2017,
       "score": 76,
       "star": 2,
-      "overallRank": 534,
-      "sameScoreRank": 12,
+      "overallRank": 535,
+      "sameScoreRank": 13,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -15235,8 +15264,8 @@
       "year": 2004,
       "score": 76,
       "star": 2,
-      "overallRank": 535,
-      "sameScoreRank": 13,
+      "overallRank": 536,
+      "sameScoreRank": 14,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -15259,35 +15288,6 @@
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "custom-1791392809656-3sql",
-      "title": "世にも奇妙な物語 '23夏の特別編",
-      "originalTitle": "世にも奇妙な物語 '23夏の特別編",
-      "englishTitle": "Tales of the Bizarre: 2023 Summer Special",
-      "year": 2023,
-      "score": 76,
-      "star": 2,
-      "overallRank": 536,
-      "sameScoreRank": 14,
-      "category": "Letterboxd",
-      "mediaType": "drama",
-      "genre": [
-        "ファンタジー",
-        "感動",
-        "どんでん返し",
-        "TV特番・SP",
-        "娯楽",
-        "コメディ",
-        "ドラマ"
-      ],
-      "origin": "日本",
-      "format": "live",
-      "runtime": 106,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-08",
-      "letterboxdPublishedAt": "Thu, 8 Oct 2026 06:05:24 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-08"
     },
     {
       "id": "lb-355-8lFu",
@@ -20773,9 +20773,9 @@
         "lb-57-15gO",
         "lb-436-n87k",
         "lb-139-1Sz6",
+        "custom-1791392809656-3sql",
         "lb-512-fqF4",
         "lb-442-1SrG",
-        "custom-1791392809656-3sql",
         "lb-355-8lFu",
         "custom-1789385860498-gvii",
         "lb-506-f1TK",
