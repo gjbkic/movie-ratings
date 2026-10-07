@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791398329315,
-  "sourceUpdatedIso": "2026-10-07T18:38:49.315Z",
+  "sourceUpdatedAt": 1791398359820,
+  "sourceUpdatedIso": "2026-10-07T18:39:19.820Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -19984,10 +19984,16 @@
       "overallRank": null,
       "sameScoreRank": null,
       "category": "Letterboxd",
-      "mediaType": "movie",
+      "mediaType": "drama",
       "genre": [
         "ドラマ",
-        "ファンタジー"
+        "ファンタジー",
+        "スリラー",
+        "コメディ",
+        "感動",
+        "胸糞",
+        "TV特番・SP",
+        "娯楽"
       ],
       "origin": "日本",
       "format": "live",
@@ -26908,7 +26914,7 @@
       "custom-1791394775097-fjc5": "movie",
       "custom-1791396105970-bm2m": "movie",
       "custom-1791397387325-yqut": "movie",
-      "custom-1791398329125-3r8f": "movie"
+      "custom-1791398329125-3r8f": "drama"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -32722,7 +32728,13 @@
       ],
       "custom-1791398329125-3r8f": [
         "ドラマ",
-        "ファンタジー"
+        "ファンタジー",
+        "スリラー",
+        "コメディ",
+        "感動",
+        "胸糞",
+        "TV特番・SP",
+        "娯楽"
       ]
     },
     "originOverrides": {
