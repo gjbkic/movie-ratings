@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791382721623,
-  "sourceUpdatedIso": "2026-10-07T14:18:41.623Z",
+  "sourceUpdatedAt": 1791383006399,
+  "sourceUpdatedIso": "2026-10-07T14:23:26.399Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -19767,6 +19767,31 @@
       "letterboxdAddedDate": "2026-09-25",
       "letterboxdPublishedAt": "Fri, 25 Sep 2026 06:09:52 +1200",
       "letterboxdReportedWatchedDate": "2026-09-24"
+    },
+    {
+      "id": "custom-1791382999848-25pc",
+      "title": "容疑者 室井慎次",
+      "originalTitle": "容疑者 室井慎次",
+      "englishTitle": "The Suspect: Muroi Shinji",
+      "year": 2005,
+      "score": null,
+      "star": 2,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "コメディ",
+        "クライム",
+        "ドラマ"
+      ],
+      "origin": "その他",
+      "format": "live",
+      "runtime": 117,
+      "exact": false,
+      "letterboxdAddedDate": "2026-10-07",
+      "letterboxdPublishedAt": "Thu, 8 Oct 2026 01:37:53 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-07"
     }
   ],
   "state": {
@@ -23219,6 +23244,23 @@
         "added": true,
         "_seq": 1791382461963,
         "source": "letterboxd"
+      },
+      {
+        "id": "custom-1791382999848-25pc",
+        "title": "容疑者 室井慎次",
+        "originalTitle": "容疑者 室井慎次",
+        "englishTitle": "The Suspect: Muroi Shinji",
+        "lbTitle": "The Suspect: Muroi Shinji",
+        "tmdbId": 45070,
+        "year": 2005,
+        "uri": "https://letterboxd.com/gjbkic/film/the-suspect-muroi-shinji/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 2,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791382999848,
+        "source": "letterboxd"
       }
     ],
     "starOverrides": {
@@ -26508,7 +26550,8 @@
       "custom-1791374649583-3zqi": "movie",
       "custom-1791381275690-v9vr": "drama",
       "custom-1791381276187-mxp2": "drama",
-      "custom-1791382461963-kb93": "drama"
+      "custom-1791382461963-kb93": "drama",
+      "custom-1791382999848-25pc": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -32254,6 +32297,11 @@
         "コメディ",
         "娯楽",
         "恋愛"
+      ],
+      "custom-1791382999848-25pc": [
+        "コメディ",
+        "クライム",
+        "ドラマ"
       ]
     },
     "originOverrides": {
@@ -32959,7 +33007,8 @@
       "custom-1791379032352-50zf": "日本",
       "custom-1791381275690-v9vr": "日本",
       "custom-1791381276187-mxp2": "日本",
-      "custom-1791382461963-kb93": "日本"
+      "custom-1791382461963-kb93": "日本",
+      "custom-1791382999848-25pc": "その他"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -33664,7 +33713,8 @@
       "custom-1791379032352-50zf": "live",
       "custom-1791381275690-v9vr": "live",
       "custom-1791381276187-mxp2": "live",
-      "custom-1791382461963-kb93": "live"
+      "custom-1791382461963-kb93": "live",
+      "custom-1791382999848-25pc": "live"
     },
     "runtimeOverrides": {
       "custom-1790247938551-ixfs": 100,
@@ -34313,7 +34363,8 @@
       "custom-1791374649583-3zqi": 141,
       "custom-1791377114135-l3hd": 104,
       "custom-1791377844608-310l": 104,
-      "custom-1791382461963-kb93": 106
+      "custom-1791382461963-kb93": 106,
+      "custom-1791382999848-25pc": 117
     },
     "letterboxdMeta": {
       "lb-0-hTha": {
@@ -37255,6 +37306,12 @@
       },
       "custom-1791382461963-kb93": {
         "publishedAt": "Thu, 8 Oct 2026 03:05:17 +1300",
+        "addedDate": "2026-10-07",
+        "addedDateSource": "rss-first-seen",
+        "reportedWatchedDate": "2026-10-07"
+      },
+      "custom-1791382999848-25pc": {
+        "publishedAt": "Thu, 8 Oct 2026 01:37:53 +1300",
         "addedDate": "2026-10-07",
         "addedDateSource": "rss-first-seen",
         "reportedWatchedDate": "2026-10-07"
