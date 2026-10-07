@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791378498509,
-  "sourceUpdatedIso": "2026-10-07T13:08:18.509Z",
+  "sourceUpdatedAt": 1791379032516,
+  "sourceUpdatedIso": "2026-10-07T13:17:12.516Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -77,7 +77,7 @@
       "overallRank": 3,
       "sameScoreRank": 1,
       "category": "ほかアニメ",
-      "mediaType": "drama",
+      "mediaType": "movie",
       "genre": [
         "サスペンス",
         "ミステリー",
@@ -86,8 +86,7 @@
         "どんでん返し",
         "心理・内面",
         "雰囲気・美学",
-        "特殊構造",
-        "TV本編"
+        "特殊構造"
       ],
       "origin": "日本",
       "format": "animation",
@@ -19641,6 +19640,31 @@
       "letterboxdAddedDate": "2026-09-25",
       "letterboxdPublishedAt": "Fri, 25 Sep 2026 06:09:52 +1200",
       "letterboxdReportedWatchedDate": "2026-09-24"
+    },
+    {
+      "id": "custom-1791379032352-50zf",
+      "title": "世にも奇妙な物語35周年SP ～伝説の名作 一夜限りの復活編～",
+      "originalTitle": "世にも奇妙な物語35周年SP ～伝説の名作 一夜限りの復活編～",
+      "englishTitle": "Tales of the Bizarre: 35th Anniversary Special",
+      "year": 2025,
+      "score": null,
+      "star": 3,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "ミステリー",
+        "スリラー",
+        "ホラー"
+      ],
+      "origin": "日本",
+      "format": "live",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": "2026-10-07",
+      "letterboxdPublishedAt": "Thu, 8 Oct 2026 02:16:21 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-07"
     }
   ],
   "state": {
@@ -23014,6 +23038,23 @@
         "added": true,
         "_seq": 1791377844608,
         "source": "letterboxd"
+      },
+      {
+        "id": "custom-1791379032352-50zf",
+        "title": "世にも奇妙な物語35周年SP ～伝説の名作 一夜限りの復活編～",
+        "originalTitle": "世にも奇妙な物語35周年SP ～伝説の名作 一夜限りの復活編～",
+        "englishTitle": "Tales of the Bizarre: 35th Anniversary Special",
+        "lbTitle": "Tales of the Bizarre: 35th Anniversary Special",
+        "tmdbId": 1488771,
+        "year": 2025,
+        "uri": "https://letterboxd.com/gjbkic/film/tales-of-the-bizarre-35th-anniversary-special/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 3,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791379032352,
+        "source": "letterboxd"
       }
     ],
     "starOverrides": {
@@ -26186,7 +26227,7 @@
       "lb-537-14e8": "movie",
       "lb-538-jydK": "movie",
       "lb-539-kMaC": "movie",
-      "lb-540-1W7A": "drama",
+      "lb-540-1W7A": "movie",
       "lb-541-27MO": "movie",
       "lb-542-2b6C": "movie",
       "lb-543-2Pa": "movie",
@@ -26288,7 +26329,8 @@
       "custom-1791139747386-vy04": "movie",
       "custom-1791353624251-egky": "movie",
       "custom-1791362786595-8onp": "movie",
-      "custom-1791374649583-3zqi": "movie"
+      "custom-1791374649583-3zqi": "movie",
+      "custom-1791379032352-50zf": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -30563,8 +30605,7 @@
         "どんでん返し",
         "心理・内面",
         "雰囲気・美学",
-        "特殊構造",
-        "TV本編"
+        "特殊構造"
       ],
       "lb-541-27MO": [
         "サスペンス",
@@ -31988,6 +32029,11 @@
         "感動",
         "TV特番・SP",
         "娯楽"
+      ],
+      "custom-1791379032352-50zf": [
+        "ミステリー",
+        "スリラー",
+        "ホラー"
       ]
     },
     "originOverrides": {
@@ -32689,7 +32735,8 @@
       "custom-1791362786595-8onp": "その他",
       "custom-1791374649583-3zqi": "ハリウッド",
       "custom-1791377114135-l3hd": "日本",
-      "custom-1791377844608-310l": "日本"
+      "custom-1791377844608-310l": "日本",
+      "custom-1791379032352-50zf": "日本"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -33390,7 +33437,8 @@
       "custom-1791362786595-8onp": "live",
       "custom-1791374649583-3zqi": "live",
       "custom-1791377114135-l3hd": "live",
-      "custom-1791377844608-310l": "live"
+      "custom-1791377844608-310l": "live",
+      "custom-1791379032352-50zf": "live"
     },
     "runtimeOverrides": {
       "custom-1790247938551-ixfs": 100,
@@ -36956,6 +37004,12 @@
       },
       "custom-1791377844608-310l": {
         "publishedAt": "Thu, 8 Oct 2026 01:56:45 +1300",
+        "addedDate": "2026-10-07",
+        "addedDateSource": "rss-first-seen",
+        "reportedWatchedDate": "2026-10-07"
+      },
+      "custom-1791379032352-50zf": {
+        "publishedAt": "Thu, 8 Oct 2026 02:16:21 +1300",
         "addedDate": "2026-10-07",
         "addedDateSource": "rss-first-seen",
         "reportedWatchedDate": "2026-10-07"
