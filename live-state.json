@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791381233403,
-  "sourceUpdatedIso": "2026-10-07T13:53:53.403Z",
+  "sourceUpdatedAt": 1791381323299,
+  "sourceUpdatedIso": "2026-10-07T13:55:23.299Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -19673,6 +19673,63 @@
       "letterboxdAddedDate": "2026-09-25",
       "letterboxdPublishedAt": "Fri, 25 Sep 2026 06:09:52 +1200",
       "letterboxdReportedWatchedDate": "2026-09-24"
+    },
+    {
+      "id": "custom-1791381275690-v9vr",
+      "title": "世にも奇妙な物語 '24夏の特別編",
+      "originalTitle": "世にも奇妙な物語 '24夏の特別編",
+      "englishTitle": "Tales of the Bizarre: 2024 Summer Special",
+      "year": 2024,
+      "score": null,
+      "star": 2.5,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "drama",
+      "genre": [
+        "ファンタジー",
+        "ミステリー",
+        "ホラー",
+        "恋愛",
+        "SF",
+        "切ない",
+        "コメディ",
+        "どんでん返し",
+        "TV特番・SP",
+        "娯楽"
+      ],
+      "origin": "日本",
+      "format": "live",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": "2026-10-07",
+      "letterboxdPublishedAt": "Thu, 8 Oct 2026 02:53:21 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-07"
+    },
+    {
+      "id": "custom-1791381276187-mxp2",
+      "title": "世にも奇妙な物語 '24冬の特別編",
+      "originalTitle": "世にも奇妙な物語 '24冬の特別編",
+      "englishTitle": "Tales of the Bizarre: 2024 Winter Special",
+      "year": 2024,
+      "score": null,
+      "star": 3,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "ファンタジー",
+        "ミステリー"
+      ],
+      "origin": "日本",
+      "format": "live",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": "2026-10-07",
+      "letterboxdPublishedAt": "Thu, 8 Oct 2026 02:27:04 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-07"
     }
   ],
   "state": {
@@ -23067,6 +23124,40 @@
         "source": "letterboxd",
         "tmdbType": "movie",
         "_lbMetaFixedV36": true
+      },
+      {
+        "id": "custom-1791381275690-v9vr",
+        "title": "世にも奇妙な物語 '24夏の特別編",
+        "originalTitle": "世にも奇妙な物語 '24夏の特別編",
+        "englishTitle": "Tales of the Bizarre: 2024 Summer Special",
+        "lbTitle": "Tales of the Bizarre: 2024 Summer Special",
+        "tmdbId": 1308067,
+        "year": 2024,
+        "uri": "https://letterboxd.com/gjbkic/film/tales-of-the-bizarre-2024-summer-special/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 2.5,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791381275691,
+        "source": "letterboxd"
+      },
+      {
+        "id": "custom-1791381276187-mxp2",
+        "title": "世にも奇妙な物語 '24冬の特別編",
+        "originalTitle": "世にも奇妙な物語 '24冬の特別編",
+        "englishTitle": "Tales of the Bizarre: 2024 Winter Special",
+        "lbTitle": "Tales of the Bizarre: 2024 Winter Special",
+        "tmdbId": 1399623,
+        "year": 2024,
+        "uri": "https://letterboxd.com/gjbkic/film/tales-of-the-bizarre-2024-winter-special/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 3,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791381276187,
+        "source": "letterboxd"
       }
     ],
     "starOverrides": {
@@ -26349,7 +26440,9 @@
       "custom-1791139747386-vy04": "movie",
       "custom-1791353624251-egky": "movie",
       "custom-1791362786595-8onp": "movie",
-      "custom-1791374649583-3zqi": "movie"
+      "custom-1791374649583-3zqi": "movie",
+      "custom-1791381275690-v9vr": "drama",
+      "custom-1791381276187-mxp2": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -32061,6 +32154,23 @@
         "ファンタジー",
         "胸糞",
         "クライム"
+      ],
+      "custom-1791381275690-v9vr": [
+        "ファンタジー",
+        "ミステリー",
+        "ホラー",
+        "恋愛",
+        "SF",
+        "切ない",
+        "コメディ",
+        "どんでん返し",
+        "TV特番・SP",
+        "娯楽"
+      ],
+      "custom-1791381276187-mxp2": [
+        "ドラマ",
+        "ファンタジー",
+        "ミステリー"
       ]
     },
     "originOverrides": {
@@ -32763,7 +32873,9 @@
       "custom-1791374649583-3zqi": "ハリウッド",
       "custom-1791377114135-l3hd": "日本",
       "custom-1791377844608-310l": "日本",
-      "custom-1791379032352-50zf": "日本"
+      "custom-1791379032352-50zf": "日本",
+      "custom-1791381275690-v9vr": "日本",
+      "custom-1791381276187-mxp2": "日本"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -33465,7 +33577,9 @@
       "custom-1791374649583-3zqi": "live",
       "custom-1791377114135-l3hd": "live",
       "custom-1791377844608-310l": "live",
-      "custom-1791379032352-50zf": "live"
+      "custom-1791379032352-50zf": "live",
+      "custom-1791381275690-v9vr": "live",
+      "custom-1791381276187-mxp2": "live"
     },
     "runtimeOverrides": {
       "custom-1790247938551-ixfs": 100,
@@ -37037,6 +37151,18 @@
       },
       "custom-1791379032352-50zf": {
         "publishedAt": "Thu, 8 Oct 2026 02:16:21 +1300",
+        "addedDate": "2026-10-07",
+        "addedDateSource": "rss-first-seen",
+        "reportedWatchedDate": "2026-10-07"
+      },
+      "custom-1791381275690-v9vr": {
+        "publishedAt": "Thu, 8 Oct 2026 02:53:21 +1300",
+        "addedDate": "2026-10-07",
+        "addedDateSource": "rss-first-seen",
+        "reportedWatchedDate": "2026-10-07"
+      },
+      "custom-1791381276187-mxp2": {
+        "publishedAt": "Thu, 8 Oct 2026 02:27:04 +1300",
         "addedDate": "2026-10-07",
         "addedDateSource": "rss-first-seen",
         "reportedWatchedDate": "2026-10-07"
