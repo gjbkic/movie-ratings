@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791374651553,
-  "sourceUpdatedIso": "2026-10-07T12:04:11.553Z",
+  "sourceUpdatedAt": 1791374665828,
+  "sourceUpdatedIso": "2026-10-07T12:04:25.828Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -19560,7 +19560,11 @@
       "mediaType": "movie",
       "genre": [
         "ホラー",
-        "SF"
+        "SF",
+        "ファンタジー",
+        "サスペンス",
+        "スリラー",
+        "社会問題・生活"
       ],
       "origin": "その他",
       "format": "live",
@@ -31838,7 +31842,11 @@
       ],
       "custom-1791374649583-3zqi": [
         "ホラー",
-        "SF"
+        "SF",
+        "ファンタジー",
+        "サスペンス",
+        "スリラー",
+        "社会問題・生活"
       ]
     },
     "originOverrides": {
