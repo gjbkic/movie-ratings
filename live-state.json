@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791374726550,
-  "sourceUpdatedIso": "2026-10-07T12:05:26.550Z",
+  "sourceUpdatedAt": 1791374743690,
+  "sourceUpdatedIso": "2026-10-07T12:05:43.690Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -3816,33 +3816,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-45-29VS",
-      "title": "キャッチミーイフユーキャン",
-      "originalTitle": "",
-      "englishTitle": "Catch Me If You Can",
-      "year": 2002,
-      "score": 86,
-      "star": 3.5,
-      "overallRank": 131,
-      "sameScoreRank": 13,
-      "category": "マフィア、クライム",
-      "mediaType": "movie",
-      "genre": [
-        "クライム",
-        "コメディ",
-        "サスペンス",
-        "comfort",
-        "娯楽"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 141,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-345-1USu",
       "title": "レナードの朝",
       "originalTitle": "",
@@ -3850,8 +3823,8 @@
       "year": 1990,
       "score": 86,
       "star": 3.5,
-      "overallRank": 132,
-      "sameScoreRank": 14,
+      "overallRank": 131,
+      "sameScoreRank": 13,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -3877,8 +3850,8 @@
       "year": 1997,
       "score": 86,
       "star": 3.5,
-      "overallRank": 133,
-      "sameScoreRank": 15,
+      "overallRank": 132,
+      "sameScoreRank": 14,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -3905,8 +3878,8 @@
       "year": 2025,
       "score": 86,
       "star": 3.5,
-      "overallRank": 134,
-      "sameScoreRank": 16,
+      "overallRank": 133,
+      "sameScoreRank": 15,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -3926,6 +3899,33 @@
       "runtime": 100,
       "exact": true,
       "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "lb-45-29VS",
+      "title": "キャッチミーイフユーキャン",
+      "originalTitle": "",
+      "englishTitle": "Catch Me If You Can",
+      "year": 2002,
+      "score": 86,
+      "star": 3.5,
+      "overallRank": 134,
+      "sameScoreRank": 16,
+      "category": "マフィア、クライム",
+      "mediaType": "movie",
+      "genre": [
+        "クライム",
+        "コメディ",
+        "サスペンス",
+        "comfort",
+        "娯楽"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 141,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -20862,10 +20862,10 @@
         "custom-1790322756418-p88i",
         "lb-368-2as8",
         "lb-382-20TI",
-        "lb-45-29VS",
         "lb-345-1USu",
         "lb-123-29I0",
         "custom-1790247938551-ixfs",
+        "lb-45-29VS",
         "lb-573-28ws",
         "custom-1789385860426-8e86",
         "lb-287-2amk",
