@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791379032516,
-  "sourceUpdatedIso": "2026-10-07T13:17:12.516Z",
+  "sourceUpdatedAt": 1791379634457,
+  "sourceUpdatedIso": "2026-10-07T13:27:14.457Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -23054,7 +23054,9 @@
         "oldScore": null,
         "added": true,
         "_seq": 1791379032352,
-        "source": "letterboxd"
+        "source": "letterboxd",
+        "tmdbType": "movie",
+        "_lbMetaFixedV36": true
       }
     ],
     "starOverrides": {
@@ -23716,7 +23718,8 @@
       "custom-1791362786595-8onp": 3,
       "custom-1791374649583-3zqi": 3.5,
       "custom-1791377114135-l3hd": 2.5,
-      "custom-1791377844608-310l": 2.5
+      "custom-1791377844608-310l": 2.5,
+      "custom-1791379032352-50zf": 3
     },
     "titleOverrides": {
       "added-anchor-578": {
@@ -25627,6 +25630,12 @@
       },
       "custom-1791139748091-0goj": {
         "tmdbId": 95479
+      },
+      "custom-1791379032352-50zf": {
+        "title": "世にも奇妙な物語35周年SP ～伝説の名作 一夜限りの復活編～",
+        "originalTitle": "世にも奇妙な物語35周年SP ～伝説の名作 一夜限りの復活編～",
+        "englishTitle": "Tales of the Bizarre: 35th Anniversary Special",
+        "tmdbId": 1488771
       }
     },
     "categoryOverrides": {},
