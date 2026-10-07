@@ -34,7 +34,7 @@
       ? (d.origin_country||[]).filter(Boolean)
       : (d.production_countries||[]).map(x=>x.iso_3166_1).filter(Boolean);
     const lang=String(d.original_language||'');
-    const origin=countryCodes.includes('US')?'ハリウッド':(countryCodes.includes('JP')?'邦画':(lang==='ja'?'邦画':'その他'));
+    const origin=countryCodes.includes('US')?'ハリウッド':(countryCodes.includes('JP')?'日本':(lang==='ja'?'日本':'その他'));
     const ids=(d.genres||[]).map(g=>Number(g.id));
     const genres=[...new Set(ids.map(id=>GENRE_ID_MAP[id]).filter(Boolean))];
     const animation=ids.includes(16);
@@ -101,7 +101,7 @@
       const c=classify36(d,type);
       const localTitle=String(type==='tv'?(d.name||item.title):(d.title||item.title)).trim()||item.title;
       const original=String(type==='tv'?(d.original_name||''):(d.original_title||'')).trim();
-      const jpTitle=(c.origin==='邦画'&&localTitle)?localTitle:item.title;
+      const jpTitle=(c.origin==='日本'&&localTitle)?localTitle:item.title;
       f.title=jpTitle;
       f.originalTitle=original;
       f.englishTitle=item.title;
