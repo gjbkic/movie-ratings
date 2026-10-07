@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791392946716,
-  "sourceUpdatedIso": "2026-10-07T17:09:06.716Z",
+  "sourceUpdatedAt": 1791393440632,
+  "sourceUpdatedIso": "2026-10-07T17:17:20.632Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -19877,6 +19877,30 @@
       "letterboxdAddedDate": "2026-10-08",
       "letterboxdPublishedAt": "Thu, 8 Oct 2026 05:32:13 +1300",
       "letterboxdReportedWatchedDate": "2026-10-08"
+    },
+    {
+      "id": "custom-1791393440445-arl6",
+      "title": "世にも奇妙な物語 '22秋の特別編",
+      "originalTitle": "世にも奇妙な物語 '22秋の特別編",
+      "englishTitle": "Tales of the Bizarre: 2022 Fall Special",
+      "year": 2022,
+      "score": null,
+      "star": 2.5,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "ミステリー"
+      ],
+      "origin": "日本",
+      "format": "live",
+      "runtime": 107,
+      "exact": false,
+      "letterboxdAddedDate": "2026-10-08",
+      "letterboxdPublishedAt": "Thu, 8 Oct 2026 06:16:58 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-07"
     }
   ],
   "state": {
@@ -23403,6 +23427,23 @@
         "added": true,
         "_seq": 1791392810098,
         "source": "letterboxd"
+      },
+      {
+        "id": "custom-1791393440445-arl6",
+        "title": "世にも奇妙な物語 '22秋の特別編",
+        "originalTitle": "世にも奇妙な物語 '22秋の特別編",
+        "englishTitle": "Tales of the Bizarre: 2022 Fall Special",
+        "lbTitle": "Tales of the Bizarre: 2022 Fall Special",
+        "tmdbId": 1048225,
+        "year": 2022,
+        "uri": "https://letterboxd.com/gjbkic/film/tales-of-the-bizarre-2022-fall-special/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 2.5,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791393440445,
+        "source": "letterboxd"
       }
     ],
     "starOverrides": {
@@ -26699,7 +26740,8 @@
       "custom-1791382999848-25pc": "movie",
       "custom-1791392809656-3sql": "drama",
       "custom-1791392809782-lca8": "drama",
-      "custom-1791392810098-rjyg": "movie"
+      "custom-1791392810098-rjyg": "movie",
+      "custom-1791393440445-arl6": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -32475,6 +32517,10 @@
         "ドラマ",
         "娯楽",
         "TV本編"
+      ],
+      "custom-1791393440445-arl6": [
+        "ドラマ",
+        "ミステリー"
       ]
     },
     "originOverrides": {
@@ -33184,7 +33230,8 @@
       "custom-1791382999848-25pc": "日本",
       "custom-1791392809656-3sql": "日本",
       "custom-1791392809782-lca8": "ハリウッド",
-      "custom-1791392810098-rjyg": "その他"
+      "custom-1791392810098-rjyg": "その他",
+      "custom-1791393440445-arl6": "日本"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -33892,7 +33939,8 @@
       "custom-1791382461963-kb93": "live",
       "custom-1791382999848-25pc": "live",
       "custom-1791392809656-3sql": "live",
-      "custom-1791392810098-rjyg": "animation"
+      "custom-1791392810098-rjyg": "animation",
+      "custom-1791393440445-arl6": "live"
     },
     "runtimeOverrides": {
       "custom-1790247938551-ixfs": 100,
@@ -34544,7 +34592,8 @@
       "custom-1791382461963-kb93": 106,
       "custom-1791382999848-25pc": 117,
       "custom-1791392809656-3sql": 106,
-      "custom-1791392810098-rjyg": 90
+      "custom-1791392810098-rjyg": 90,
+      "custom-1791393440445-arl6": 107
     },
     "letterboxdMeta": {
       "lb-0-hTha": {
@@ -37513,6 +37562,12 @@
         "addedDate": "2026-10-08",
         "addedDateSource": "rss-first-seen",
         "reportedWatchedDate": "2026-10-08"
+      },
+      "custom-1791393440445-arl6": {
+        "publishedAt": "Thu, 8 Oct 2026 06:16:58 +1300",
+        "addedDate": "2026-10-08",
+        "addedDateSource": "rss-first-seen",
+        "reportedWatchedDate": "2026-10-07"
       }
     }
   }
