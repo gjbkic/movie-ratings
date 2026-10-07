@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791396409239,
-  "sourceUpdatedIso": "2026-10-07T18:06:49.239Z",
+  "sourceUpdatedAt": 1791396617008,
+  "sourceUpdatedIso": "2026-10-07T18:10:17.008Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -4562,7 +4562,7 @@
       "overallRank": 157,
       "sameScoreRank": 2,
       "category": "Letterboxd",
-      "mediaType": "drama",
+      "mediaType": "movie",
       "genre": [
         "スリラー",
         "ミステリー",
@@ -11708,7 +11708,7 @@
       "overallRank": 408,
       "sameScoreRank": 30,
       "category": "Letterboxd",
-      "mediaType": "drama",
+      "mediaType": "movie",
       "genre": [
         "ドラマ",
         "ミステリー",
@@ -11716,7 +11716,6 @@
         "恋愛",
         "感動",
         "胸糞",
-        "TV特番・SP",
         "娯楽",
         "サスペンス",
         "ファンタジー"
@@ -19936,7 +19935,7 @@
         "ファンタジー",
         "アドベンチャー"
       ],
-      "origin": "その他",
+      "origin": "ハリウッド",
       "format": "animation",
       "runtime": 90,
       "exact": false,
@@ -26815,8 +26814,8 @@
       "custom-1791374649583-3zqi": "movie",
       "custom-1791382999848-25pc": "movie",
       "custom-1791392810098-rjyg": "movie",
-      "custom-1791394775097-fjc5": "drama",
-      "custom-1791396105970-bm2m": "drama"
+      "custom-1791394775097-fjc5": "movie",
+      "custom-1791396105970-bm2m": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -32600,7 +32599,6 @@
         "恋愛",
         "感動",
         "胸糞",
-        "TV特番・SP",
         "娯楽",
         "サスペンス",
         "ファンタジー"
@@ -33326,7 +33324,7 @@
       "custom-1791382999848-25pc": "日本",
       "custom-1791392809656-3sql": "日本",
       "custom-1791392809782-lca8": "ハリウッド",
-      "custom-1791392810098-rjyg": "その他",
+      "custom-1791392810098-rjyg": "ハリウッド",
       "custom-1791393440445-arl6": "日本",
       "custom-1791394775097-fjc5": "日本",
       "custom-1791396105970-bm2m": "日本"
