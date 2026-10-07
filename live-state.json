@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791397387496,
-  "sourceUpdatedIso": "2026-10-07T18:23:07.496Z",
+  "sourceUpdatedAt": 1791397457198,
+  "sourceUpdatedIso": "2026-10-07T18:24:17.198Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -19950,7 +19950,7 @@
       "englishTitle": "Tales of the Bizarre: 2024 Summer Special",
       "year": 2024,
       "score": null,
-      "star": 2,
+      "star": 1.5,
       "overallRank": null,
       "sameScoreRank": null,
       "category": "Letterboxd",
@@ -19958,7 +19958,12 @@
       "genre": [
         "ファンタジー",
         "ミステリー",
-        "ホラー"
+        "ホラー",
+        "恋愛",
+        "コメディ",
+        "娯楽",
+        "どんでん返し",
+        "社会問題・生活"
       ],
       "origin": "日本",
       "format": "live",
@@ -24222,7 +24227,8 @@
       "custom-1791392809656-3sql": 2,
       "custom-1791393440445-arl6": 2,
       "custom-1791394775097-fjc5": 2.5,
-      "custom-1791396105970-bm2m": 3.5
+      "custom-1791396105970-bm2m": 3.5,
+      "custom-1791397387325-yqut": 1.5
     },
     "titleOverrides": {
       "added-anchor-578": {
@@ -32663,7 +32669,12 @@
       "custom-1791397387325-yqut": [
         "ファンタジー",
         "ミステリー",
-        "ホラー"
+        "ホラー",
+        "恋愛",
+        "コメディ",
+        "娯楽",
+        "どんでん返し",
+        "社会問題・生活"
       ]
     },
     "originOverrides": {
