@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791374771056,
-  "sourceUpdatedIso": "2026-10-07T12:06:11.056Z",
+  "sourceUpdatedAt": 1791377114265,
+  "sourceUpdatedIso": "2026-10-07T12:45:14.265Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -19575,6 +19575,30 @@
       "letterboxdAddedDate": "2026-09-25",
       "letterboxdPublishedAt": "Fri, 25 Sep 2026 06:09:52 +1200",
       "letterboxdReportedWatchedDate": "2026-09-24"
+    },
+    {
+      "id": "custom-1791377114135-l3hd",
+      "title": "世にも奇妙な物語 '26夏の特別編",
+      "originalTitle": "世にも奇妙な物語 '26夏の特別編",
+      "englishTitle": "Tales of the Bizarre: 2026 Summer Special",
+      "year": 2026,
+      "score": null,
+      "star": 2.5,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "ファンタジー",
+        "スリラー"
+      ],
+      "origin": "邦画",
+      "format": "live",
+      "runtime": 104,
+      "exact": false,
+      "letterboxdAddedDate": "2026-10-07",
+      "letterboxdPublishedAt": "Thu, 8 Oct 2026 01:44:49 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-07"
     }
   ],
   "state": {
@@ -22910,6 +22934,23 @@
         "added": true,
         "_seq": 1791374649583,
         "source": "letterboxd"
+      },
+      {
+        "id": "custom-1791377114135-l3hd",
+        "title": "世にも奇妙な物語 '26夏の特別編",
+        "originalTitle": "世にも奇妙な物語 '26夏の特別編",
+        "englishTitle": "Tales of the Bizarre: 2026 Summer Special",
+        "lbTitle": "Tales of the Bizarre: 2026 Summer Special",
+        "tmdbId": 1720684,
+        "year": 2026,
+        "uri": "https://letterboxd.com/gjbkic/film/tales-of-the-bizarre-2026-summer-special/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 2.5,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791377114135,
+        "source": "letterboxd"
       }
     ],
     "starOverrides": {
@@ -26180,7 +26221,8 @@
       "custom-1791139747386-vy04": "movie",
       "custom-1791353624251-egky": "movie",
       "custom-1791362786595-8onp": "movie",
-      "custom-1791374649583-3zqi": "movie"
+      "custom-1791374649583-3zqi": "movie",
+      "custom-1791377114135-l3hd": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -31854,6 +31896,10 @@
         "社会問題・生活",
         "コメディ",
         "差別・人権"
+      ],
+      "custom-1791377114135-l3hd": [
+        "ファンタジー",
+        "スリラー"
       ]
     },
     "originOverrides": {
@@ -32553,7 +32599,8 @@
       "custom-1791139748091-0goj": "邦画",
       "custom-1791353624251-egky": "ハリウッド",
       "custom-1791362786595-8onp": "その他",
-      "custom-1791374649583-3zqi": "その他"
+      "custom-1791374649583-3zqi": "その他",
+      "custom-1791377114135-l3hd": "邦画"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -33252,7 +33299,8 @@
       "custom-1791139748091-0goj": "live",
       "custom-1791353624251-egky": "live",
       "custom-1791362786595-8onp": "live",
-      "custom-1791374649583-3zqi": "live"
+      "custom-1791374649583-3zqi": "live",
+      "custom-1791377114135-l3hd": "live"
     },
     "runtimeOverrides": {
       "custom-1790247938551-ixfs": 100,
@@ -33898,7 +33946,8 @@
       "custom-1791139748091-0goj": 24,
       "custom-1791353624251-egky": 124,
       "custom-1791362786595-8onp": 133,
-      "custom-1791374649583-3zqi": 141
+      "custom-1791374649583-3zqi": 141,
+      "custom-1791377114135-l3hd": 104
     },
     "letterboxdMeta": {
       "lb-0-hTha": {
@@ -36803,6 +36852,12 @@
       },
       "custom-1791374649583-3zqi": {
         "publishedAt": "Wed, 7 Oct 2026 22:52:04 +1300",
+        "addedDate": "2026-10-07",
+        "addedDateSource": "rss-first-seen",
+        "reportedWatchedDate": "2026-10-07"
+      },
+      "custom-1791377114135-l3hd": {
+        "publishedAt": "Thu, 8 Oct 2026 01:44:49 +1300",
         "addedDate": "2026-10-07",
         "addedDateSource": "rss-first-seen",
         "reportedWatchedDate": "2026-10-07"
