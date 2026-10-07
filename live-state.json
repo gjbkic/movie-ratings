@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791396617008,
-  "sourceUpdatedIso": "2026-10-07T18:10:17.008Z",
+  "sourceUpdatedAt": 1791397387496,
+  "sourceUpdatedIso": "2026-10-07T18:23:07.496Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -19942,6 +19942,31 @@
       "letterboxdAddedDate": "2026-10-08",
       "letterboxdPublishedAt": "Thu, 8 Oct 2026 05:32:13 +1300",
       "letterboxdReportedWatchedDate": "2026-10-08"
+    },
+    {
+      "id": "custom-1791397387325-yqut",
+      "title": "世にも奇妙な物語 '24夏の特別編",
+      "originalTitle": "世にも奇妙な物語 '24夏の特別編",
+      "englishTitle": "Tales of the Bizarre: 2024 Summer Special",
+      "year": 2024,
+      "score": null,
+      "star": 2,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "ファンタジー",
+        "ミステリー",
+        "ホラー"
+      ],
+      "origin": "日本",
+      "format": "live",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": "2026-10-08",
+      "letterboxdPublishedAt": "Thu, 8 Oct 2026 07:22:48 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-08"
     }
   ],
   "state": {
@@ -23508,6 +23533,23 @@
         "added": true,
         "_seq": 1791396105970,
         "source": "letterboxd"
+      },
+      {
+        "id": "custom-1791397387325-yqut",
+        "title": "世にも奇妙な物語 '24夏の特別編",
+        "originalTitle": "世にも奇妙な物語 '24夏の特別編",
+        "englishTitle": "Tales of the Bizarre: 2024 Summer Special",
+        "lbTitle": "Tales of the Bizarre: 2024 Summer Special",
+        "tmdbId": 1308067,
+        "year": 2024,
+        "uri": "https://letterboxd.com/gjbkic/film/tales-of-the-bizarre-2024-summer-special/1/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 2,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791397387325,
+        "source": "letterboxd"
       }
     ],
     "starOverrides": {
@@ -26815,7 +26857,8 @@
       "custom-1791382999848-25pc": "movie",
       "custom-1791392810098-rjyg": "movie",
       "custom-1791394775097-fjc5": "movie",
-      "custom-1791396105970-bm2m": "movie"
+      "custom-1791396105970-bm2m": "movie",
+      "custom-1791397387325-yqut": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -32616,6 +32659,11 @@
         "クライム",
         "サスペンス",
         "アクション"
+      ],
+      "custom-1791397387325-yqut": [
+        "ファンタジー",
+        "ミステリー",
+        "ホラー"
       ]
     },
     "originOverrides": {
@@ -33327,7 +33375,8 @@
       "custom-1791392810098-rjyg": "ハリウッド",
       "custom-1791393440445-arl6": "日本",
       "custom-1791394775097-fjc5": "日本",
-      "custom-1791396105970-bm2m": "日本"
+      "custom-1791396105970-bm2m": "日本",
+      "custom-1791397387325-yqut": "日本"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -34038,7 +34087,8 @@
       "custom-1791393440445-arl6": "live",
       "custom-1791392809782-lca8": "live",
       "custom-1791394775097-fjc5": "live",
-      "custom-1791396105970-bm2m": "live"
+      "custom-1791396105970-bm2m": "live",
+      "custom-1791397387325-yqut": "live"
     },
     "runtimeOverrides": {
       "custom-1790247938551-ixfs": 100,
@@ -37670,6 +37720,12 @@
       },
       "custom-1791396105970-bm2m": {
         "publishedAt": "Thu, 8 Oct 2026 06:59:10 +1300",
+        "addedDate": "2026-10-08",
+        "addedDateSource": "rss-first-seen",
+        "reportedWatchedDate": "2026-10-08"
+      },
+      "custom-1791397387325-yqut": {
+        "publishedAt": "Thu, 8 Oct 2026 07:22:48 +1300",
         "addedDate": "2026-10-08",
         "addedDateSource": "rss-first-seen",
         "reportedWatchedDate": "2026-10-08"
