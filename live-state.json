@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791377825555,
-  "sourceUpdatedIso": "2026-10-07T12:57:05.555Z",
+  "sourceUpdatedAt": 1791377844782,
+  "sourceUpdatedIso": "2026-10-07T12:57:24.782Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -19605,6 +19605,29 @@
       "letterboxdAddedDate": "2026-09-25",
       "letterboxdPublishedAt": "Fri, 25 Sep 2026 06:09:52 +1200",
       "letterboxdReportedWatchedDate": "2026-09-24"
+    },
+    {
+      "id": "custom-1791377844608-310l",
+      "title": "世にも奇妙な物語35周年SP 秋の特別編",
+      "originalTitle": "世にも奇妙な物語35周年SP 秋の特別編",
+      "englishTitle": "Tales of the Bizarre: 35th Anniversary Special – Autumn Special",
+      "year": 2025,
+      "score": null,
+      "star": 2.5,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "ホラー"
+      ],
+      "origin": "邦画",
+      "format": "live",
+      "runtime": 104,
+      "exact": false,
+      "letterboxdAddedDate": "2026-10-07",
+      "letterboxdPublishedAt": "Thu, 8 Oct 2026 01:56:45 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-07"
     }
   ],
   "state": {
@@ -22959,6 +22982,23 @@
         "added": true,
         "_seq": 1791377114135,
         "source": "letterboxd"
+      },
+      {
+        "id": "custom-1791377844608-310l",
+        "title": "世にも奇妙な物語35周年SP 秋の特別編",
+        "originalTitle": "世にも奇妙な物語35周年SP 秋の特別編",
+        "englishTitle": "Tales of the Bizarre: 35th Anniversary Special – Autumn Special",
+        "lbTitle": "Tales of the Bizarre: 35th Anniversary Special – Autumn Special",
+        "tmdbId": 1577361,
+        "year": 2025,
+        "uri": "https://letterboxd.com/gjbkic/film/tales-of-the-bizarre-35th-anniversary-special-2025/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 2.5,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791377844608,
+        "source": "letterboxd"
       }
     ],
     "starOverrides": {
@@ -26231,7 +26271,8 @@
       "custom-1791139747386-vy04": "movie",
       "custom-1791353624251-egky": "movie",
       "custom-1791362786595-8onp": "movie",
-      "custom-1791374649583-3zqi": "movie"
+      "custom-1791374649583-3zqi": "movie",
+      "custom-1791377844608-310l": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -31915,6 +31956,9 @@
         "胸糞",
         "ドラマ",
         "TV本編"
+      ],
+      "custom-1791377844608-310l": [
+        "ホラー"
       ]
     },
     "originOverrides": {
@@ -32615,7 +32659,8 @@
       "custom-1791353624251-egky": "ハリウッド",
       "custom-1791362786595-8onp": "その他",
       "custom-1791374649583-3zqi": "ハリウッド",
-      "custom-1791377114135-l3hd": "邦画"
+      "custom-1791377114135-l3hd": "邦画",
+      "custom-1791377844608-310l": "邦画"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -33315,7 +33360,8 @@
       "custom-1791353624251-egky": "live",
       "custom-1791362786595-8onp": "live",
       "custom-1791374649583-3zqi": "live",
-      "custom-1791377114135-l3hd": "live"
+      "custom-1791377114135-l3hd": "live",
+      "custom-1791377844608-310l": "live"
     },
     "runtimeOverrides": {
       "custom-1790247938551-ixfs": 100,
@@ -33962,7 +34008,8 @@
       "custom-1791353624251-egky": 124,
       "custom-1791362786595-8onp": 133,
       "custom-1791374649583-3zqi": 141,
-      "custom-1791377114135-l3hd": 104
+      "custom-1791377114135-l3hd": 104,
+      "custom-1791377844608-310l": 104
     },
     "letterboxdMeta": {
       "lb-0-hTha": {
@@ -36877,6 +36924,12 @@
         "addedDateSource": "rss-first-seen",
         "reportedWatchedDate": "2026-10-07",
         "note": "1. 「遺体は一体……」／上川隆也\n    ベテラン刑事が殺人現場で男女2人の遺体を確認するが、戻ると女の遺体だけ消えている。しかも周囲は「最初からそんな遺体はなかった」と言い、凶器や血痕まで次々に消えていく。\n2. 「実家じまい」／趣里\n    母を亡くした女性が、古い団地の実家を片付け始める。過干渉だった母の手作り品などを捨てるが、翌日には「捨てるな！」という貼り紙とともに、捨てた物がすべて家へ戻っている。母の友人の様子もどこか不気味。\n3. 「おじさんになりたい」／永尾柚乃・松尾諭\n    8歳の女の子が、着ると本物そっくりの中年男性になれる謎の着ぐるみを持っている。父親が母親に冷たく接するのを見て、彼女は「おじさん」の姿を使って父親に近づこうとする。\n4. 「マザーズオークション」／杉野遥亮\n    実家の物を勝手にネットオークションで売るニートの青年が、サイト上で自分の母親自身が出品されているのを発見。「母親、やります！」という出品ページで、別の家庭に母親として買われようとしている。"
+      },
+      "custom-1791377844608-310l": {
+        "publishedAt": "Thu, 8 Oct 2026 01:56:45 +1300",
+        "addedDate": "2026-10-07",
+        "addedDateSource": "rss-first-seen",
+        "reportedWatchedDate": "2026-10-07"
       }
     }
   }
