@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791383006399,
-  "sourceUpdatedIso": "2026-10-07T14:23:26.399Z",
+  "sourceUpdatedAt": 1791383011413,
+  "sourceUpdatedIso": "2026-10-07T14:23:31.413Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -19783,9 +19783,11 @@
       "genre": [
         "コメディ",
         "クライム",
-        "ドラマ"
+        "ドラマ",
+        "娯楽",
+        "シリーズ劇場版"
       ],
-      "origin": "その他",
+      "origin": "日本",
       "format": "live",
       "runtime": 117,
       "exact": false,
@@ -32301,7 +32303,9 @@
       "custom-1791382999848-25pc": [
         "コメディ",
         "クライム",
-        "ドラマ"
+        "ドラマ",
+        "娯楽",
+        "シリーズ劇場版"
       ]
     },
     "originOverrides": {
@@ -33008,7 +33012,7 @@
       "custom-1791381275690-v9vr": "日本",
       "custom-1791381276187-mxp2": "日本",
       "custom-1791382461963-kb93": "日本",
-      "custom-1791382999848-25pc": "その他"
+      "custom-1791382999848-25pc": "日本"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
