@@ -1,10 +1,10 @@
 (() => {
   // v33: authoritative rebuild of media/origin taxonomy.
-  // Origin = 邦画 / ハリウッド / その他. Korea, France, UK-only, etc. => その他.
+  // Origin = 日本 / ハリウッド / その他. Korea, France, UK-only, etc. => その他.
   // Media = 映画 / TVシリーズ / その他. Short-video-like works => その他.
   const BUILD33='20260925v';
   const MEDIA=[['movie','映画'],['drama','TVシリーズ'],['other','その他']];
-  const ORIGIN=[['邦画','邦画'],['ハリウッド','ハリウッド'],['その他','その他']];
+  const ORIGIN=[['日本','日本'],['ハリウッド','ハリウッド'],['その他','その他']];
   const MEDIA_OK=new Set(MEDIA.map(x=>x[0]));
   const ORIGIN_OK=new Set(ORIGIN.map(x=>x[0]));
   const MEDIA_KEY='movie30_media_v33_v1';
@@ -21,6 +21,7 @@
   const writeSet=(k,v)=>{try{localStorage.setItem(k,JSON.stringify([...v]))}catch(_){}};
 
   let mediaMap=readObj(MEDIA_KEY), originMap=readObj(ORIGIN_KEY), manual=readSet(MANUAL_KEY);
+  for(const id of Object.keys(originMap)) if(originMap[id]==='邦画') originMap[id]='日本';
 
   function info(f){
     const x=titleInfo(f)||{};
@@ -30,7 +31,7 @@
   function norm(s){return String(s||'').normalize('NFKD').toLowerCase().replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9\u3040-\u30ff\u3400-\u9fff\uac00-\ud7af]+/g,'');}
   function japaneseHint(f){
     const x=info(f),b=blob(f),cat=x.category;
-    if(cat==='邦画'||cat.includes('スタジオジブリ')||cat.includes('コナン映画')||cat==='ほかアニメ')return true;
+    if(cat==='邦画'||cat==='日本'||cat.includes('スタジオジブリ')||cat.includes('コナン映画')||cat==='ほかアニメ')return true;
     if(/[\u3040-\u30ff]/.test(x.original))return true;
     return /(?:新世紀エヴァンゲリオン|end of evangelion|perfect blue|パーフェクトブルー|東京ゴッドファーザーズ|tokyo godfathers|千年女優|millennium actress|風の谷のナウシカ|もののけ姫|千と千尋|魔女の宅急便|となりのトトロ|紅の豚|ハウルの動く城|天空の城ラピュタ|崖の上のポニョ|かぐや姫の物語|君の名は|天気の子|すずめの戸締まり|ドラえもん|名探偵コナン|ルパン三世|カリオストロ|チェンソーマン|chainsaw man|鬼滅の刃|呪術廻戦|akira\b|アキラ|攻殻機動隊|battle royale|バトル.?ロワイアル|七人の侍|羅生門|用心棒|生きる|天国と地獄|ゴジラ|リング\b|呪怨|告白|万引き家族|drive my car|ドライブ.?マイ.?カー|誰も知らない|海街diary|ソナチネ|踊る大捜査線|十角館|ani\*?kuri|on your mark)/i.test(b);
   }
@@ -47,13 +48,13 @@
     return raw==='other'&&Number.isFinite(rt)&&rt>0&&rt<=40&&!tvHint(f);
   }
   function heuristicMedia(f){if(miscHint(f))return 'other';if(tvHint(f))return 'drama';return 'movie';}
-  function heuristicOrigin(f){if(japaneseHint(f))return '邦画';return 'その他';}
+  function heuristicOrigin(f){if(japaneseHint(f))return '日本';return 'その他';}
   function countryOrigin(countries,language=''){
     const cs=Array.isArray(countries)?countries.filter(Boolean):[];
-    if(cs.includes('JP'))return '邦画';
+    if(cs.includes('JP'))return '日本';
     if(cs.includes('US'))return 'ハリウッド';
     if(cs.length)return 'その他';
-    return language==='ja'?'邦画':'その他';
+    return language==='ja'?'日本':'その他';
   }
   function mediaOf(f){return MEDIA_OK.has(mediaMap[f?.id])?mediaMap[f.id]:'movie';}
   function originOf(f){return ORIGIN_OK.has(originMap[f?.id])?originMap[f.id]:'その他';}
@@ -74,7 +75,7 @@
 
   function row(wrap,i){return wrap?.querySelectorAll('.struct-row')?.[i]||null;}
   function fillRow(r,options,selected,onPick){if(!r)return;const host=r.querySelector('.struct-options')||r;host.innerHTML=options.map(([v,l])=>`<button type="button" class="struct-chip${v===selected?' on':''}" data-struct-value="${v}" data-multi="0">${l}</button>`).join('');host.querySelectorAll('.struct-chip').forEach(b=>b.onclick=e=>{e.preventDefault();e.stopPropagation();const v=b.dataset.structValue;host.querySelectorAll('.struct-chip').forEach(x=>x.classList.toggle('on',x===b));onPick?.(v);});}
-  function mapOldOrigin(v){if(v==='邦画')return '邦画';if(v==='ハリウッド')return 'ハリウッド';return 'その他';}
+  function mapOldOrigin(v){if(v==='邦画'||v==='日本')return '日本';if(v==='ハリウッド')return 'ハリウッド';return 'その他';}
   const addChoice={newGenrePicker:{media:'movie',origin:'その他'},qGenrePicker:{media:'movie',origin:'その他'}};
   function bindAdd(id,m='movie',o='その他'){
     const wrap=document.getElementById(id);if(!wrap)return;
@@ -128,7 +129,7 @@
     if(r.media_type==='tv')origin=countryOrigin(r.origin_country||[],r.original_language||'');
     else{
       try{const d=await tmdbFetch('/movie/'+r.id,{language:'en-US'}),countries=(d?.production_countries||[]).map(c=>c.iso_3166_1);origin=countryOrigin(countries,r.original_language||'');const rt=Number(d?.runtime);if((miscHint(f))||(Number.isFinite(rt)&&rt>0&&rt<=40&&String(f.mediaType||'')==='other'))media='other';}
-      catch(_){origin=r.original_language==='ja'?'邦画':heuristicOrigin(f);}
+      catch(_){origin=r.original_language==='ja'?'日本':heuristicOrigin(f);}
     }
     if(miscHint(f))media='other';
     return {media,origin};
