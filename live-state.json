@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791392876899,
-  "sourceUpdatedIso": "2026-10-07T17:07:56.899Z",
+  "sourceUpdatedAt": 1791392878811,
+  "sourceUpdatedIso": "2026-10-07T17:07:58.811Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -10083,32 +10083,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-424-2cBQ",
-      "title": "アイアンマン3",
-      "originalTitle": "",
-      "englishTitle": "Iron Man 3",
-      "year": 2013,
-      "score": 81,
-      "star": 3,
-      "overallRank": 351,
-      "sameScoreRank": 27,
-      "category": "MCU作品",
-      "mediaType": "movie",
-      "genre": [
-        "アクション",
-        "SF",
-        "ヒーロー",
-        "娯楽"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 133,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "custom-1791392809782-lca8",
       "title": "Zootopia+",
       "originalTitle": "",
@@ -10116,8 +10090,8 @@
       "year": 2022,
       "score": 81,
       "star": 3,
-      "overallRank": 352,
-      "sameScoreRank": 28,
+      "overallRank": 351,
+      "sameScoreRank": 27,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -10136,6 +10110,32 @@
       "letterboxdAddedDate": "2026-10-08",
       "letterboxdPublishedAt": "Thu, 8 Oct 2026 05:42:52 +1300",
       "letterboxdReportedWatchedDate": "2026-10-08"
+    },
+    {
+      "id": "lb-424-2cBQ",
+      "title": "アイアンマン3",
+      "originalTitle": "",
+      "englishTitle": "Iron Man 3",
+      "year": 2013,
+      "score": 81,
+      "star": 3,
+      "overallRank": 352,
+      "sameScoreRank": 28,
+      "category": "MCU作品",
+      "mediaType": "movie",
+      "genre": [
+        "アクション",
+        "SF",
+        "ヒーロー",
+        "娯楽"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 133,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "custom-1790322757929-0kod",
@@ -20957,8 +20957,8 @@
         "lb-109-28wi",
         "custom-1790322760608-2vle",
         "lb-246-mqyw",
-        "lb-424-2cBQ",
         "custom-1791392809782-lca8",
+        "lb-424-2cBQ",
         "custom-1790322757929-0kod",
         "lb-326-4hka",
         "lb-384-1UhS",
