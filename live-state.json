@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791362775635,
-  "sourceUpdatedIso": "2026-10-07T08:46:15.635Z",
+  "sourceUpdatedAt": 1791362786757,
+  "sourceUpdatedIso": "2026-10-07T08:46:26.757Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -19521,6 +19521,29 @@
       "letterboxdAddedDate": "2026-09-25",
       "letterboxdPublishedAt": "Fri, 25 Sep 2026 06:09:52 +1200",
       "letterboxdReportedWatchedDate": "2026-09-24"
+    },
+    {
+      "id": "custom-1791362786595-8onp",
+      "title": "マネーボール",
+      "originalTitle": "Moneyball",
+      "englishTitle": "Moneyball",
+      "year": 2011,
+      "score": null,
+      "star": 3,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ"
+      ],
+      "origin": "その他",
+      "format": "live",
+      "runtime": 133,
+      "exact": false,
+      "letterboxdAddedDate": "2026-10-07",
+      "letterboxdPublishedAt": "Wed, 7 Oct 2026 20:54:32 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-07"
     }
   ],
   "state": {
@@ -22818,6 +22841,23 @@
         "added": true,
         "_seq": 1791353624251,
         "source": "letterboxd"
+      },
+      {
+        "id": "custom-1791362786595-8onp",
+        "title": "マネーボール",
+        "originalTitle": "Moneyball",
+        "englishTitle": "Moneyball",
+        "lbTitle": "Moneyball",
+        "tmdbId": 60308,
+        "year": 2011,
+        "uri": "https://letterboxd.com/gjbkic/film/moneyball/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 3,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791362786595,
+        "source": "letterboxd"
       }
     ],
     "starOverrides": {
@@ -26084,7 +26124,8 @@
       "custom-1791113242437-wcok": "movie",
       "custom-1791122852357-22zp": "movie",
       "custom-1791139747386-vy04": "movie",
-      "custom-1791353624251-egky": "movie"
+      "custom-1791353624251-egky": "movie",
+      "custom-1791362786595-8onp": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -31744,6 +31785,9 @@
         "サスペンス",
         "社会問題・生活",
         "娯楽"
+      ],
+      "custom-1791362786595-8onp": [
+        "ドラマ"
       ]
     },
     "originOverrides": {
@@ -32441,7 +32485,8 @@
       "custom-1791122852357-22zp": "邦画",
       "custom-1791139747386-vy04": "ハリウッド",
       "custom-1791139748091-0goj": "邦画",
-      "custom-1791353624251-egky": "ハリウッド"
+      "custom-1791353624251-egky": "ハリウッド",
+      "custom-1791362786595-8onp": "その他"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -33138,7 +33183,8 @@
       "custom-1791122852357-22zp": "animation",
       "custom-1791139747386-vy04": "live",
       "custom-1791139748091-0goj": "live",
-      "custom-1791353624251-egky": "live"
+      "custom-1791353624251-egky": "live",
+      "custom-1791362786595-8onp": "live"
     },
     "runtimeOverrides": {
       "custom-1790247938551-ixfs": 100,
@@ -33782,7 +33828,8 @@
       "custom-1791122852357-22zp": 63,
       "custom-1791139747386-vy04": 177,
       "custom-1791139748091-0goj": 24,
-      "custom-1791353624251-egky": 124
+      "custom-1791353624251-egky": 124,
+      "custom-1791362786595-8onp": 133
     },
     "letterboxdMeta": {
       "lb-0-hTha": {
@@ -36675,6 +36722,12 @@
       },
       "custom-1791353624251-egky": {
         "publishedAt": "Wed, 7 Oct 2026 17:56:56 +1300",
+        "addedDate": "2026-10-07",
+        "addedDateSource": "rss-first-seen",
+        "reportedWatchedDate": "2026-10-07"
+      },
+      "custom-1791362786595-8onp": {
+        "publishedAt": "Wed, 7 Oct 2026 20:54:32 +1300",
         "addedDate": "2026-10-07",
         "addedDateSource": "rss-first-seen",
         "reportedWatchedDate": "2026-10-07"
