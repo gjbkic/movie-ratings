@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791480096497,
-  "sourceUpdatedIso": "2026-10-08T17:21:36.497Z",
+  "sourceUpdatedAt": 1791480167959,
+  "sourceUpdatedIso": "2026-10-08T17:22:47.959Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -5658,7 +5658,6 @@
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
-        "TV本編",
         "どんでん返し",
         "娯楽",
         "バイオレンス",
@@ -5669,10 +5668,11 @@
         "サスペンス",
         "ミステリー",
         "胸糞",
-        "社会問題・生活"
+        "社会問題・生活",
+        "TV本編"
       ],
       "origin": "ハリウッド",
-      "format": "",
+      "format": "live",
       "runtime": null,
       "exact": true,
       "letterboxdAddedDate": "2026-10-08",
@@ -23945,7 +23945,9 @@
         "oldScore": null,
         "added": true,
         "_seq": 1791480095339,
-        "source": "letterboxd"
+        "source": "letterboxd",
+        "tmdbType": "movie",
+        "_lbMetaFixedV36": true
       }
     ],
     "starOverrides": {
@@ -24626,7 +24628,8 @@
       "custom-1791469824035-6gcd": 3,
       "custom-1791469823654-dpbh": 2.5,
       "custom-1791476522907-cd9b": 3.5,
-      "custom-1791476522514-wpj8": 3
+      "custom-1791476522514-wpj8": 3,
+      "custom-1791480095339-p808": 3
     },
     "titleOverrides": {
       "added-anchor-578": {
@@ -26802,6 +26805,12 @@
       },
       "custom-1791469823654-dpbh": {
         "title": "ブラック・ミラー「ずっと側にいて」"
+      },
+      "custom-1791480095339-p808": {
+        "title": "世にも奇妙な物語 '20夏の特別編",
+        "originalTitle": "世にも奇妙な物語 '20夏の特別編",
+        "englishTitle": "Tales of the Bizarre: 2020 Summer Special",
+        "tmdbId": 743055
       }
     },
     "categoryOverrides": {},
@@ -26885,6 +26894,8 @@
       "custom-1791449338315-twqr": "drama",
       "custom-1791469823654-dpbh": "drama",
       "custom-1791469824035-6gcd": "drama",
+      "custom-1791476522514-wpj8": "drama",
+      "custom-1791476522907-cd9b": "drama",
       "lb-0-hTha": "movie",
       "lb-1-4VZ8": "movie",
       "lb-2-2a9q": "movie",
@@ -27521,8 +27532,6 @@
       "custom-1791394775097-fjc5": "movie",
       "custom-1791396105970-bm2m": "movie",
       "custom-1791397387325-yqut": "movie",
-      "custom-1791476522514-wpj8": "drama",
-      "custom-1791476522907-cd9b": "drama",
       "custom-1791480095339-p808": "movie"
     },
     "genreOverrides": {
@@ -33395,7 +33404,6 @@
         "サスペンス"
       ],
       "custom-1791476522907-cd9b": [
-        "TV本編",
         "どんでん返し",
         "娯楽",
         "バイオレンス",
@@ -33406,7 +33414,8 @@
         "サスペンス",
         "ミステリー",
         "胸糞",
-        "社会問題・生活"
+        "社会問題・生活",
+        "TV本編"
       ],
       "custom-1791480095339-p808": [
         "ミステリー",
@@ -34850,7 +34859,8 @@
       "custom-1791469823654-dpbh": "live",
       "custom-1791469824035-6gcd": "live",
       "custom-1791476522514-wpj8": "live",
-      "custom-1791480095339-p808": "live"
+      "custom-1791480095339-p808": "live",
+      "custom-1791476522907-cd9b": "live"
     },
     "runtimeOverrides": {
       "custom-1790247938551-ixfs": 100,
