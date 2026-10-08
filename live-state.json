@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791476645809,
-  "sourceUpdatedIso": "2026-10-08T16:24:05.809Z",
+  "sourceUpdatedAt": 1791476652722,
+  "sourceUpdatedIso": "2026-10-08T16:24:12.722Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -9343,33 +9343,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-466-1Ub6",
-      "title": "ミステリー・トレイン",
-      "originalTitle": "",
-      "englishTitle": "Mystery Train",
-      "year": 1989,
-      "score": 82,
-      "star": 3,
-      "overallRank": 324,
-      "sameScoreRank": 49,
-      "category": "ドラマ",
-      "mediaType": "movie",
-      "genre": [
-        "ドラマ",
-        "恋愛",
-        "青春・若者",
-        "特殊構造",
-        "雰囲気・美学"
-      ],
-      "origin": "日本",
-      "format": "live",
-      "runtime": 106,
-      "exact": true,
-      "letterboxdAddedDate": "2026-05-24",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-423-6ZS",
       "title": "地獄の黙示録",
       "originalTitle": "",
@@ -9377,8 +9350,8 @@
       "year": 1979,
       "score": 82,
       "star": 3,
-      "overallRank": 325,
-      "sameScoreRank": 50,
+      "overallRank": 324,
+      "sameScoreRank": 49,
       "category": "戦争、歴史",
       "mediaType": "movie",
       "genre": [
@@ -9394,6 +9367,33 @@
       "runtime": 155,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "lb-466-1Ub6",
+      "title": "ミステリー・トレイン",
+      "originalTitle": "",
+      "englishTitle": "Mystery Train",
+      "year": 1989,
+      "score": 82,
+      "star": 3,
+      "overallRank": 325,
+      "sameScoreRank": 50,
+      "category": "ドラマ",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "恋愛",
+        "青春・若者",
+        "特殊構造",
+        "雰囲気・美学"
+      ],
+      "origin": "日本",
+      "format": "live",
+      "runtime": 106,
+      "exact": true,
+      "letterboxdAddedDate": "2026-05-24",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -21370,8 +21370,8 @@
         "lb-13-1JzG",
         "base-simple-plan-1998",
         "lb-288-2a6G",
-        "lb-466-1Ub6",
         "lb-423-6ZS",
+        "lb-466-1Ub6",
         "lb-428-2aTS"
       ],
       "83": [
