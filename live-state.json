@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791447954595,
-  "sourceUpdatedIso": "2026-10-08T08:25:54.595Z",
+  "sourceUpdatedAt": 1791447970530,
+  "sourceUpdatedIso": "2026-10-08T08:26:10.530Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -20016,7 +20016,11 @@
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
-        "TV本編"
+        "TV本編",
+        "ドラマ",
+        "クライム",
+        "娯楽",
+        "感動"
       ],
       "origin": "その他",
       "format": "",
@@ -32781,7 +32785,11 @@
         "娯楽"
       ],
       "custom-1791447953969-ah3e": [
-        "TV本編"
+        "TV本編",
+        "ドラマ",
+        "クライム",
+        "娯楽",
+        "感動"
       ]
     },
     "originOverrides": {
