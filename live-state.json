@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791480523638,
-  "sourceUpdatedIso": "2026-10-08T17:28:43.638Z",
+  "sourceUpdatedAt": 1791480540436,
+  "sourceUpdatedIso": "2026-10-08T17:29:00.436Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -10921,6 +10921,33 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-136-1YVC",
+      "title": "グーニーズ",
+      "originalTitle": "",
+      "englishTitle": "The Goonies",
+      "year": 1985,
+      "score": 81,
+      "star": 3,
+      "overallRank": 380,
+      "sameScoreRank": 53,
+      "category": "ファンタジー、アドベンチャー",
+      "mediaType": "movie",
+      "genre": [
+        "ファンタジー",
+        "アドベンチャー",
+        "青春・若者",
+        "comfort",
+        "娯楽"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 114,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-27-2b2A",
       "title": "ドニー・ダーコ",
       "originalTitle": "",
@@ -10928,8 +10955,8 @@
       "year": 2001,
       "score": 81,
       "star": 3,
-      "overallRank": 380,
-      "sameScoreRank": 53,
+      "overallRank": 381,
+      "sameScoreRank": 54,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -10959,8 +10986,8 @@
       "year": 2011,
       "score": 81,
       "star": 3,
-      "overallRank": 381,
-      "sameScoreRank": 54,
+      "overallRank": 382,
+      "sameScoreRank": 55,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -10987,8 +11014,8 @@
       "year": 2025,
       "score": 81,
       "star": 3,
-      "overallRank": 382,
-      "sameScoreRank": 55,
+      "overallRank": 383,
+      "sameScoreRank": 56,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -11008,33 +11035,6 @@
       "runtime": null,
       "exact": true,
       "letterboxdAddedDate": "2026-01-19",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "lb-136-1YVC",
-      "title": "グーニーズ",
-      "originalTitle": "",
-      "englishTitle": "The Goonies",
-      "year": 1985,
-      "score": 81,
-      "star": 3,
-      "overallRank": 383,
-      "sameScoreRank": 56,
-      "category": "ファンタジー、アドベンチャー",
-      "mediaType": "movie",
-      "genre": [
-        "ファンタジー",
-        "アドベンチャー",
-        "青春・若者",
-        "comfort",
-        "娯楽"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 114,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -21348,10 +21348,10 @@
         "lb-575-1fK0",
         "lb-377-azew",
         "lb-374-DUHM",
+        "lb-136-1YVC",
         "lb-27-2b2A",
         "custom-1791469824035-6gcd",
         "lb-403-uAKS",
-        "lb-136-1YVC",
         "custom-1790322761365-fzvo",
         "lb-416-2D2e"
       ],
