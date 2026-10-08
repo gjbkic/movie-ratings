@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791449319873,
-  "sourceUpdatedIso": "2026-10-08T08:48:39.873Z",
+  "sourceUpdatedAt": 1791449340039,
+  "sourceUpdatedIso": "2026-10-08T08:49:00.039Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -20031,6 +20031,29 @@
       "letterboxdAddedDate": "2026-10-08",
       "letterboxdPublishedAt": "Thu, 8 Oct 2026 05:32:13 +1300",
       "letterboxdReportedWatchedDate": "2026-10-08"
+    },
+    {
+      "id": "custom-1791449338315-twqr",
+      "title": "Black Mirror: Fifteen Million Merits",
+      "originalTitle": "",
+      "englishTitle": "Black Mirror: Fifteen Million Merits",
+      "year": 2011,
+      "score": null,
+      "star": 3,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "drama",
+      "genre": [
+        "TV本編"
+      ],
+      "origin": "その他",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": "2026-10-08",
+      "letterboxdPublishedAt": "Thu, 8 Oct 2026 21:32:23 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-08"
     }
   ],
   "state": {
@@ -23654,6 +23677,23 @@
         "added": true,
         "_seq": 1791447953969,
         "source": "letterboxd"
+      },
+      {
+        "id": "custom-1791449338315-twqr",
+        "title": "Black Mirror: Fifteen Million Merits",
+        "originalTitle": "",
+        "englishTitle": "Black Mirror: Fifteen Million Merits",
+        "lbTitle": "Black Mirror: Fifteen Million Merits",
+        "tmdbId": 495319,
+        "year": 2011,
+        "uri": "https://letterboxd.com/gjbkic/film/black-mirror-fifteen-million-merits/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 3,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791449338315,
+        "source": "letterboxd"
       }
     ],
     "starOverrides": {
@@ -26967,7 +27007,8 @@
       "custom-1791392810098-rjyg": "movie",
       "custom-1791394775097-fjc5": "movie",
       "custom-1791396105970-bm2m": "movie",
-      "custom-1791397387325-yqut": "movie"
+      "custom-1791397387325-yqut": "movie",
+      "custom-1791449338315-twqr": "drama"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -32797,6 +32838,9 @@
         "胸糞",
         "社会問題・生活",
         "TV本編"
+      ],
+      "custom-1791449338315-twqr": [
+        "TV本編"
       ]
     },
     "originOverrides": {
@@ -33511,7 +33555,8 @@
       "custom-1791396105970-bm2m": "日本",
       "custom-1791397387325-yqut": "日本",
       "custom-1791398329125-3r8f": "日本",
-      "custom-1791447953969-ah3e": "その他"
+      "custom-1791447953969-ah3e": "その他",
+      "custom-1791449338315-twqr": "その他"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -37876,6 +37921,12 @@
       },
       "custom-1791447953969-ah3e": {
         "publishedAt": "Thu, 8 Oct 2026 18:52:25 +1300",
+        "addedDate": "2026-10-08",
+        "addedDateSource": "rss-first-seen",
+        "reportedWatchedDate": "2026-10-08"
+      },
+      "custom-1791449338315-twqr": {
+        "publishedAt": "Thu, 8 Oct 2026 21:32:23 +1300",
         "addedDate": "2026-10-08",
         "addedDateSource": "rss-first-seen",
         "reportedWatchedDate": "2026-10-08"
