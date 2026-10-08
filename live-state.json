@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791447942815,
-  "sourceUpdatedIso": "2026-10-08T08:25:42.815Z",
+  "sourceUpdatedAt": 1791447954595,
+  "sourceUpdatedIso": "2026-10-08T08:25:54.595Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -20002,6 +20002,29 @@
       "letterboxdAddedDate": "2026-10-08",
       "letterboxdPublishedAt": "Thu, 8 Oct 2026 05:32:13 +1300",
       "letterboxdReportedWatchedDate": "2026-10-08"
+    },
+    {
+      "id": "custom-1791447953969-ah3e",
+      "title": "Black Mirror: The National Anthem",
+      "originalTitle": "",
+      "englishTitle": "Black Mirror: The National Anthem",
+      "year": 2011,
+      "score": null,
+      "star": 2.5,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "drama",
+      "genre": [
+        "TV本編"
+      ],
+      "origin": "その他",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": "2026-10-08",
+      "letterboxdPublishedAt": "Thu, 8 Oct 2026 18:52:25 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-08"
     }
   ],
   "state": {
@@ -23606,6 +23629,23 @@
         "added": true,
         "_seq": 1791398329125,
         "source": "letterboxd"
+      },
+      {
+        "id": "custom-1791447953969-ah3e",
+        "title": "Black Mirror: The National Anthem",
+        "originalTitle": "",
+        "englishTitle": "Black Mirror: The National Anthem",
+        "lbTitle": "Black Mirror: The National Anthem",
+        "tmdbId": 495314,
+        "year": 2011,
+        "uri": "https://letterboxd.com/gjbkic/film/black-mirror-the-national-anthem/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 2.5,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791447953969,
+        "source": "letterboxd"
       }
     ],
     "starOverrides": {
@@ -26917,7 +26957,8 @@
       "custom-1791392810098-rjyg": "movie",
       "custom-1791394775097-fjc5": "movie",
       "custom-1791396105970-bm2m": "movie",
-      "custom-1791397387325-yqut": "movie"
+      "custom-1791397387325-yqut": "movie",
+      "custom-1791447953969-ah3e": "drama"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -32738,6 +32779,9 @@
         "胸糞",
         "TV特番・SP",
         "娯楽"
+      ],
+      "custom-1791447953969-ah3e": [
+        "TV本編"
       ]
     },
     "originOverrides": {
@@ -33451,7 +33495,8 @@
       "custom-1791394775097-fjc5": "日本",
       "custom-1791396105970-bm2m": "日本",
       "custom-1791397387325-yqut": "日本",
-      "custom-1791398329125-3r8f": "日本"
+      "custom-1791398329125-3r8f": "日本",
+      "custom-1791447953969-ah3e": "その他"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -37809,6 +37854,12 @@
       },
       "custom-1791398329125-3r8f": {
         "publishedAt": "Thu, 8 Oct 2026 07:38:09 +1300",
+        "addedDate": "2026-10-08",
+        "addedDateSource": "rss-first-seen",
+        "reportedWatchedDate": "2026-10-08"
+      },
+      "custom-1791447953969-ah3e": {
+        "publishedAt": "Thu, 8 Oct 2026 18:52:25 +1300",
         "addedDate": "2026-10-08",
         "addedDateSource": "rss-first-seen",
         "reportedWatchedDate": "2026-10-08"
