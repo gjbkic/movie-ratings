@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791470072518,
-  "sourceUpdatedIso": "2026-10-08T14:34:32.518Z",
+  "sourceUpdatedAt": 1791476523062,
+  "sourceUpdatedIso": "2026-10-08T16:22:03.062Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -10741,7 +10741,7 @@
     },
     {
       "id": "custom-1791469824035-6gcd",
-      "title": "Black Mirror: The Entire History of You",
+      "title": "ブラック・ミラー「人生の軌跡のすべて」",
       "originalTitle": "",
       "englishTitle": "Black Mirror: The Entire History of You",
       "year": 2011,
@@ -10752,15 +10752,15 @@
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
-        "TV本編",
         "恋愛",
         "ドラマ",
         "サスペンス",
         "娯楽",
-        "SF"
+        "SF",
+        "TV本編"
       ],
       "origin": "ハリウッド",
-      "format": "",
+      "format": "live",
       "runtime": null,
       "exact": true,
       "letterboxdAddedDate": "2026-10-08",
@@ -10927,8 +10927,8 @@
         "社会問題・生活",
         "娯楽",
         "恋愛",
-        "TV本編",
-        "世界観"
+        "世界観",
+        "TV本編"
       ],
       "origin": "ハリウッド",
       "format": "live",
@@ -14433,7 +14433,7 @@
     },
     {
       "id": "custom-1791469823654-dpbh",
-      "title": "Black Mirror: Be Right Back",
+      "title": "ブラック・ミラー「ずっと側にいて」",
       "originalTitle": "",
       "englishTitle": "Black Mirror: Be Right Back",
       "year": 2013,
@@ -14444,15 +14444,15 @@
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
-        "TV本編",
         "恋愛",
         "ドラマ",
         "娯楽",
         "哲学・思想",
-        "SF"
+        "SF",
+        "TV本編"
       ],
       "origin": "ハリウッド",
-      "format": "",
+      "format": "live",
       "runtime": null,
       "exact": true,
       "letterboxdAddedDate": "2026-10-08",
@@ -20120,6 +20120,55 @@
       "letterboxdAddedDate": "2026-09-25",
       "letterboxdPublishedAt": "Fri, 25 Sep 2026 06:09:52 +1200",
       "letterboxdReportedWatchedDate": "2026-09-24"
+    },
+    {
+      "id": "custom-1791476522514-wpj8",
+      "title": "世にも奇妙な物語 '20秋の特別編",
+      "originalTitle": "世にも奇妙な物語 '20秋の特別編",
+      "englishTitle": "Tales of the Bizarre: 2020 Fall Special",
+      "year": 2020,
+      "score": null,
+      "star": 3,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "ミステリー",
+        "ホラー",
+        "ドラマ",
+        "コメディ"
+      ],
+      "origin": "日本",
+      "format": "live",
+      "runtime": 105,
+      "exact": false,
+      "letterboxdAddedDate": "2026-10-09",
+      "letterboxdPublishedAt": "Fri, 9 Oct 2026 05:21:19 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-08"
+    },
+    {
+      "id": "custom-1791476522907-cd9b",
+      "title": "Black Mirror: White Bear",
+      "originalTitle": "",
+      "englishTitle": "Black Mirror: White Bear",
+      "year": 2013,
+      "score": null,
+      "star": 3.5,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "drama",
+      "genre": [
+        "TV本編"
+      ],
+      "origin": "その他",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": "2026-10-08",
+      "letterboxdPublishedAt": "Fri, 9 Oct 2026 03:32:29 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-08"
     }
   ],
   "state": {
@@ -23802,6 +23851,40 @@
         "added": true,
         "_seq": 1791469824035,
         "source": "letterboxd"
+      },
+      {
+        "id": "custom-1791476522514-wpj8",
+        "title": "世にも奇妙な物語 '20秋の特別編",
+        "originalTitle": "世にも奇妙な物語 '20秋の特別編",
+        "englishTitle": "Tales of the Bizarre: 2020 Fall Special",
+        "lbTitle": "Tales of the Bizarre: 2020 Fall Special",
+        "tmdbId": 947350,
+        "year": 2020,
+        "uri": "https://letterboxd.com/gjbkic/film/tales-of-the-bizarre-2020-fall-special/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 3,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791476522514,
+        "source": "letterboxd"
+      },
+      {
+        "id": "custom-1791476522907-cd9b",
+        "title": "Black Mirror: White Bear",
+        "originalTitle": "",
+        "englishTitle": "Black Mirror: White Bear",
+        "lbTitle": "Black Mirror: White Bear",
+        "tmdbId": 495404,
+        "year": 2013,
+        "uri": "https://letterboxd.com/gjbkic/film/black-mirror-white-bear/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 3.5,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791476522907,
+        "source": "letterboxd"
       }
     ],
     "starOverrides": {
@@ -26650,6 +26733,12 @@
       },
       "lb-536-JSFG": {
         "title": "名探偵コナン 100万ドルの五稜星（みちしるべ）"
+      },
+      "custom-1791469824035-6gcd": {
+        "title": "ブラック・ミラー「人生の軌跡のすべて」"
+      },
+      "custom-1791469823654-dpbh": {
+        "title": "ブラック・ミラー「ずっと側にいて」"
       }
     },
     "categoryOverrides": {},
@@ -26731,6 +26820,8 @@
       "custom-1791398329125-3r8f": "drama",
       "custom-1791447953969-ah3e": "drama",
       "custom-1791449338315-twqr": "drama",
+      "custom-1791469823654-dpbh": "drama",
+      "custom-1791469824035-6gcd": "drama",
       "lb-0-hTha": "movie",
       "lb-1-4VZ8": "movie",
       "lb-2-2a9q": "movie",
@@ -27367,8 +27458,8 @@
       "custom-1791394775097-fjc5": "movie",
       "custom-1791396105970-bm2m": "movie",
       "custom-1791397387325-yqut": "movie",
-      "custom-1791469823654-dpbh": "drama",
-      "custom-1791469824035-6gcd": "drama"
+      "custom-1791476522514-wpj8": "movie",
+      "custom-1791476522907-cd9b": "drama"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -33209,24 +33300,33 @@
         "社会問題・生活",
         "娯楽",
         "恋愛",
-        "TV本編",
-        "世界観"
+        "世界観",
+        "TV本編"
       ],
       "custom-1791469823654-dpbh": [
-        "TV本編",
         "恋愛",
         "ドラマ",
         "娯楽",
         "哲学・思想",
-        "SF"
+        "SF",
+        "TV本編"
       ],
       "custom-1791469824035-6gcd": [
-        "TV本編",
         "恋愛",
         "ドラマ",
         "サスペンス",
         "娯楽",
-        "SF"
+        "SF",
+        "TV本編"
+      ],
+      "custom-1791476522514-wpj8": [
+        "ミステリー",
+        "ホラー",
+        "ドラマ",
+        "コメディ"
+      ],
+      "custom-1791476522907-cd9b": [
+        "TV本編"
       ]
     },
     "originOverrides": {
@@ -33944,7 +34044,9 @@
       "custom-1791447953969-ah3e": "ハリウッド",
       "custom-1791449338315-twqr": "ハリウッド",
       "custom-1791469823654-dpbh": "ハリウッド",
-      "custom-1791469824035-6gcd": "ハリウッド"
+      "custom-1791469824035-6gcd": "ハリウッド",
+      "custom-1791476522514-wpj8": "日本",
+      "custom-1791476522907-cd9b": "その他"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -34659,7 +34761,10 @@
       "custom-1791397387325-yqut": "live",
       "custom-1791398329125-3r8f": "live",
       "custom-1791447953969-ah3e": "live",
-      "custom-1791449338315-twqr": "live"
+      "custom-1791449338315-twqr": "live",
+      "custom-1791469823654-dpbh": "live",
+      "custom-1791469824035-6gcd": "live",
+      "custom-1791476522514-wpj8": "live"
     },
     "runtimeOverrides": {
       "custom-1790247938551-ixfs": 100,
@@ -35315,7 +35420,8 @@
       "custom-1791393440445-arl6": 107,
       "custom-1791396105970-bm2m": 107,
       "custom-1791398329125-3r8f": 106,
-      "custom-1791392809782-lca8": 12
+      "custom-1791392809782-lca8": 12,
+      "custom-1791476522514-wpj8": 105
     },
     "letterboxdMeta": {
       "lb-0-hTha": {
@@ -38329,6 +38435,18 @@
       },
       "custom-1791469824035-6gcd": {
         "publishedAt": "Thu, 8 Oct 2026 22:31:53 +1300",
+        "addedDate": "2026-10-08",
+        "addedDateSource": "rss-first-seen",
+        "reportedWatchedDate": "2026-10-08"
+      },
+      "custom-1791476522514-wpj8": {
+        "publishedAt": "Fri, 9 Oct 2026 05:21:19 +1300",
+        "addedDate": "2026-10-09",
+        "addedDateSource": "rss-first-seen",
+        "reportedWatchedDate": "2026-10-08"
+      },
+      "custom-1791476522907-cd9b": {
+        "publishedAt": "Fri, 9 Oct 2026 03:32:29 +1300",
         "addedDate": "2026-10-08",
         "addedDateSource": "rss-first-seen",
         "reportedWatchedDate": "2026-10-08"
