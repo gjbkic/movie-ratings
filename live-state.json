@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791480453550,
-  "sourceUpdatedIso": "2026-10-08T17:27:33.550Z",
+  "sourceUpdatedAt": 1791480460522,
+  "sourceUpdatedIso": "2026-10-08T17:27:40.522Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -10892,6 +10892,37 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-575-1fK0",
+      "title": "千年女優",
+      "originalTitle": "",
+      "englishTitle": "Millennium Actress",
+      "year": 2001,
+      "score": 81,
+      "star": 3,
+      "overallRank": 379,
+      "sameScoreRank": 52,
+      "category": "ほかアニメ",
+      "mediaType": "movie",
+      "genre": [
+        "娯楽",
+        "恋愛",
+        "ファンタジー",
+        "ドラマ",
+        "切ない",
+        "戦争",
+        "心理・内面",
+        "特殊構造",
+        "雰囲気・美学"
+      ],
+      "origin": "日本",
+      "format": "animation",
+      "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-374-DUHM",
       "title": "ワン・バトル・アフター・アナザー",
       "originalTitle": "",
@@ -10899,8 +10930,8 @@
       "year": 2025,
       "score": 81,
       "star": 3,
-      "overallRank": 379,
-      "sameScoreRank": 52,
+      "overallRank": 380,
+      "sameScoreRank": 53,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -10925,8 +10956,8 @@
       "year": 2001,
       "score": 81,
       "star": 3,
-      "overallRank": 380,
-      "sameScoreRank": 53,
+      "overallRank": 381,
+      "sameScoreRank": 54,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -10956,8 +10987,8 @@
       "year": 1985,
       "score": 81,
       "star": 3,
-      "overallRank": 381,
-      "sameScoreRank": 54,
+      "overallRank": 382,
+      "sameScoreRank": 55,
       "category": "ファンタジー、アドベンチャー",
       "mediaType": "movie",
       "genre": [
@@ -10983,8 +11014,8 @@
       "year": 2020,
       "score": 81,
       "star": 3,
-      "overallRank": 382,
-      "sameScoreRank": 55,
+      "overallRank": 383,
+      "sameScoreRank": 56,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -11005,37 +11036,6 @@
       "letterboxdAddedDate": "2026-09-25",
       "letterboxdPublishedAt": "Fri, 25 Sep 2026 06:33:32 +1200",
       "letterboxdReportedWatchedDate": "2026-09-24"
-    },
-    {
-      "id": "lb-575-1fK0",
-      "title": "千年女優",
-      "originalTitle": "",
-      "englishTitle": "Millennium Actress",
-      "year": 2001,
-      "score": 81,
-      "star": 3,
-      "overallRank": 383,
-      "sameScoreRank": 56,
-      "category": "ほかアニメ",
-      "mediaType": "movie",
-      "genre": [
-        "娯楽",
-        "恋愛",
-        "ファンタジー",
-        "ドラマ",
-        "切ない",
-        "戦争",
-        "心理・内面",
-        "特殊構造",
-        "雰囲気・美学"
-      ],
-      "origin": "日本",
-      "format": "animation",
-      "runtime": null,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "lb-416-2D2e",
@@ -21347,11 +21347,11 @@
         "custom-1791398329125-3r8f",
         "custom-1791469824035-6gcd",
         "lb-377-azew",
+        "lb-575-1fK0",
         "lb-374-DUHM",
         "lb-27-2b2A",
         "lb-136-1YVC",
         "custom-1790322761365-fzvo",
-        "lb-575-1fK0",
         "lb-416-2D2e"
       ],
       "82": [
