@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791449412488,
-  "sourceUpdatedIso": "2026-10-08T08:50:12.488Z",
+  "sourceUpdatedAt": 1791467522218,
+  "sourceUpdatedIso": "2026-10-08T13:52:02.218Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -10894,15 +10894,15 @@
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
-        "TV本編",
         "ドラマ",
         "SF",
         "社会問題・生活",
         "娯楽",
-        "恋愛"
+        "恋愛",
+        "TV本編"
       ],
       "origin": "その他",
-      "format": "",
+      "format": "live",
       "runtime": null,
       "exact": true,
       "letterboxdAddedDate": "2026-10-08",
@@ -26380,6 +26380,7 @@
       "custom-1791393440445-arl6": "drama",
       "custom-1791398329125-3r8f": "drama",
       "custom-1791447953969-ah3e": "drama",
+      "custom-1791449338315-twqr": "drama",
       "lb-0-hTha": "movie",
       "lb-1-4VZ8": "movie",
       "lb-2-2a9q": "movie",
@@ -27015,8 +27016,7 @@
       "custom-1791392810098-rjyg": "movie",
       "custom-1791394775097-fjc5": "movie",
       "custom-1791396105970-bm2m": "movie",
-      "custom-1791397387325-yqut": "movie",
-      "custom-1791449338315-twqr": "drama"
+      "custom-1791397387325-yqut": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -32848,12 +32848,12 @@
         "TV本編"
       ],
       "custom-1791449338315-twqr": [
-        "TV本編",
         "ドラマ",
         "SF",
         "社会問題・生活",
         "娯楽",
-        "恋愛"
+        "恋愛",
+        "TV本編"
       ]
     },
     "originOverrides": {
@@ -34283,7 +34283,8 @@
       "custom-1791396105970-bm2m": "live",
       "custom-1791397387325-yqut": "live",
       "custom-1791398329125-3r8f": "live",
-      "custom-1791447953969-ah3e": "live"
+      "custom-1791447953969-ah3e": "live",
+      "custom-1791449338315-twqr": "live"
     },
     "runtimeOverrides": {
       "custom-1790247938551-ixfs": 100,
