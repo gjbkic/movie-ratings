@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791476554083,
-  "sourceUpdatedIso": "2026-10-08T16:22:34.083Z",
+  "sourceUpdatedAt": 1791476563527,
+  "sourceUpdatedIso": "2026-10-08T16:22:43.527Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -5658,7 +5658,11 @@
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
-        "TV本編"
+        "TV本編",
+        "どんでん返し",
+        "娯楽",
+        "バイオレンス",
+        "SF"
       ],
       "origin": "その他",
       "format": "",
@@ -33329,7 +33333,11 @@
         "コメディ"
       ],
       "custom-1791476522907-cd9b": [
-        "TV本編"
+        "TV本編",
+        "どんでん返し",
+        "娯楽",
+        "バイオレンス",
+        "SF"
       ]
     },
     "originOverrides": {
