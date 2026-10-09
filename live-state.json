@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791571152079,
-  "sourceUpdatedIso": "2026-10-09T18:39:12.079Z",
+  "sourceUpdatedAt": 1791571158181,
+  "sourceUpdatedIso": "2026-10-09T18:39:18.181Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -4619,32 +4619,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-399-29PA",
-      "title": "エイリアン2",
-      "originalTitle": "",
-      "englishTitle": "Aliens",
-      "year": 1986,
-      "score": 85,
-      "star": 3.5,
-      "overallRank": 159,
-      "sameScoreRank": 4,
-      "category": "SF",
-      "mediaType": "movie",
-      "genre": [
-        "SF",
-        "アクション",
-        "娯楽",
-        "大作"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 137,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-59-780m",
       "title": "ナイトクローラー",
       "originalTitle": "",
@@ -4652,8 +4626,8 @@
       "year": 2014,
       "score": 85,
       "star": 3.5,
-      "overallRank": 160,
-      "sameScoreRank": 5,
+      "overallRank": 159,
+      "sameScoreRank": 4,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -4681,8 +4655,8 @@
       "year": 1974,
       "score": 85,
       "star": 3.5,
-      "overallRank": 161,
-      "sameScoreRank": 6,
+      "overallRank": 160,
+      "sameScoreRank": 5,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -4711,8 +4685,8 @@
       "year": 1964,
       "score": 85,
       "star": 3.5,
-      "overallRank": 162,
-      "sameScoreRank": 7,
+      "overallRank": 161,
+      "sameScoreRank": 6,
       "category": "コメディ",
       "mediaType": "movie",
       "genre": [
@@ -4726,6 +4700,32 @@
       "runtime": 93,
       "exact": true,
       "letterboxdAddedDate": "2025-09-15",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "lb-399-29PA",
+      "title": "エイリアン2",
+      "originalTitle": "",
+      "englishTitle": "Aliens",
+      "year": 1986,
+      "score": 85,
+      "star": 3.5,
+      "overallRank": 162,
+      "sameScoreRank": 7,
+      "category": "SF",
+      "mediaType": "movie",
+      "genre": [
+        "SF",
+        "アクション",
+        "娯楽",
+        "大作"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 137,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -21622,10 +21622,10 @@
         "lb-276-7UmK",
         "custom-1791396105970-bm2m",
         "lb-304-27M0",
-        "lb-399-29PA",
         "lb-59-780m",
         "base-chinatown-1974",
         "lb-313-29eY",
+        "lb-399-29PA",
         "custom-1789387775661-0mdh",
         "lb-331-26e2",
         "lb-342-X8s",
