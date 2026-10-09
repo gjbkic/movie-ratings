@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791480613253,
-  "sourceUpdatedIso": "2026-10-08T17:30:13.253Z",
+  "sourceUpdatedAt": 1791553824524,
+  "sourceUpdatedIso": "2026-10-09T13:50:24.524Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -11529,7 +11529,7 @@
       "englishTitle": "Black Mirror: Fifteen Million Merits",
       "year": 2011,
       "score": 80,
-      "star": 2.5,
+      "star": 3,
       "overallRank": 401,
       "sameScoreRank": 15,
       "category": "Letterboxd",
@@ -20218,6 +20218,29 @@
       "letterboxdAddedDate": "2026-09-25",
       "letterboxdPublishedAt": "Fri, 25 Sep 2026 06:09:52 +1200",
       "letterboxdReportedWatchedDate": "2026-09-24"
+    },
+    {
+      "id": "custom-1791553824276-cl9b",
+      "title": "世にも奇妙な物語 '19秋の特別編",
+      "originalTitle": "世にも奇妙な物語 '19秋の特別編",
+      "englishTitle": "Tales of the Bizarre: 2019 Fall Special",
+      "year": 2019,
+      "score": null,
+      "star": 3,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "ホラー"
+      ],
+      "origin": "日本",
+      "format": "live",
+      "runtime": 105,
+      "exact": false,
+      "letterboxdAddedDate": "2026-10-09",
+      "letterboxdPublishedAt": "Sat, 10 Oct 2026 02:46:51 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-09"
     }
   ],
   "state": {
@@ -23959,6 +23982,23 @@
         "source": "letterboxd",
         "tmdbType": "movie",
         "_lbMetaFixedV36": true
+      },
+      {
+        "id": "custom-1791553824276-cl9b",
+        "title": "世にも奇妙な物語 '19秋の特別編",
+        "originalTitle": "世にも奇妙な物語 '19秋の特別編",
+        "englishTitle": "Tales of the Bizarre: 2019 Fall Special",
+        "lbTitle": "Tales of the Bizarre: 2019 Fall Special",
+        "tmdbId": 647616,
+        "year": 2019,
+        "uri": "https://letterboxd.com/gjbkic/film/tales-of-the-bizarre-2019-fall-special/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 3,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791553824276,
+        "source": "letterboxd"
       }
     ],
     "starOverrides": {
@@ -24635,7 +24675,7 @@
       "custom-1791397387325-yqut": 1.5,
       "custom-1791398329125-3r8f": 3,
       "custom-1791447953969-ah3e": 2.5,
-      "custom-1791449338315-twqr": 2.5,
+      "custom-1791449338315-twqr": 3,
       "custom-1791469824035-6gcd": 3,
       "custom-1791469823654-dpbh": 2.5,
       "custom-1791476522907-cd9b": 3.5,
@@ -27544,7 +27584,8 @@
       "custom-1791392810098-rjyg": "movie",
       "custom-1791394775097-fjc5": "movie",
       "custom-1791396105970-bm2m": "movie",
-      "custom-1791397387325-yqut": "movie"
+      "custom-1791397387325-yqut": "movie",
+      "custom-1791553824276-cl9b": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -33441,6 +33482,9 @@
         "ファンタジー",
         "胸糞",
         "どんでん返し"
+      ],
+      "custom-1791553824276-cl9b": [
+        "ホラー"
       ]
     },
     "originOverrides": {
@@ -34161,7 +34205,8 @@
       "custom-1791469824035-6gcd": "ハリウッド",
       "custom-1791476522514-wpj8": "日本",
       "custom-1791476522907-cd9b": "ハリウッド",
-      "custom-1791480095339-p808": "日本"
+      "custom-1791480095339-p808": "日本",
+      "custom-1791553824276-cl9b": "日本"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -34881,7 +34926,8 @@
       "custom-1791469824035-6gcd": "live",
       "custom-1791476522514-wpj8": "live",
       "custom-1791480095339-p808": "live",
-      "custom-1791476522907-cd9b": "live"
+      "custom-1791476522907-cd9b": "live",
+      "custom-1791553824276-cl9b": "live"
     },
     "runtimeOverrides": {
       "custom-1790247938551-ixfs": 100,
@@ -35538,7 +35584,8 @@
       "custom-1791396105970-bm2m": 107,
       "custom-1791398329125-3r8f": 106,
       "custom-1791392809782-lca8": 12,
-      "custom-1791476522514-wpj8": 105
+      "custom-1791476522514-wpj8": 105,
+      "custom-1791553824276-cl9b": 105
     },
     "letterboxdMeta": {
       "lb-0-hTha": {
@@ -38570,6 +38617,12 @@
       },
       "custom-1791480095339-p808": {
         "publishedAt": "Fri, 9 Oct 2026 06:20:52 +1300",
+        "addedDate": "2026-10-09",
+        "addedDateSource": "rss-first-seen",
+        "reportedWatchedDate": "2026-10-09"
+      },
+      "custom-1791553824276-cl9b": {
+        "publishedAt": "Sat, 10 Oct 2026 02:46:51 +1300",
         "addedDate": "2026-10-09",
         "addedDateSource": "rss-first-seen",
         "reportedWatchedDate": "2026-10-09"
