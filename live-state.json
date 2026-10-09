@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791571162145,
-  "sourceUpdatedIso": "2026-10-09T18:39:22.145Z",
+  "sourceUpdatedAt": 1791571170065,
+  "sourceUpdatedIso": "2026-10-09T18:39:30.065Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -4552,6 +4552,36 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "base-chinatown-1974",
+      "title": "チャイナタウン",
+      "originalTitle": "Chinatown",
+      "englishTitle": "Chinatown",
+      "year": 1974,
+      "score": 85,
+      "star": 3.5,
+      "overallRank": 157,
+      "sameScoreRank": 2,
+      "category": "サスペンス、ミステリー",
+      "mediaType": "movie",
+      "genre": [
+        "サスペンス",
+        "ミステリー",
+        "切ない",
+        "胸糞",
+        "ドラマ",
+        "心理・内面",
+        "雰囲気・美学",
+        "クライム"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 131,
+      "exact": true,
+      "letterboxdAddedDate": "2026-09-07",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "custom-1791396105970-bm2m",
       "title": "世にも奇妙な物語 '21夏の特別編",
       "originalTitle": "世にも奇妙な物語 '21夏の特別編",
@@ -4559,8 +4589,8 @@
       "year": 2021,
       "score": 85,
       "star": 3.5,
-      "overallRank": 157,
-      "sameScoreRank": 2,
+      "overallRank": 158,
+      "sameScoreRank": 3,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -4594,8 +4624,8 @@
       "year": 2004,
       "score": 85,
       "star": 3.5,
-      "overallRank": 158,
-      "sameScoreRank": 3,
+      "overallRank": 159,
+      "sameScoreRank": 4,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -4615,36 +4645,6 @@
       "runtime": 113,
       "exact": true,
       "letterboxdAddedDate": "2025-09-14",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "base-chinatown-1974",
-      "title": "チャイナタウン",
-      "originalTitle": "Chinatown",
-      "englishTitle": "Chinatown",
-      "year": 1974,
-      "score": 85,
-      "star": 3.5,
-      "overallRank": 159,
-      "sameScoreRank": 4,
-      "category": "サスペンス、ミステリー",
-      "mediaType": "movie",
-      "genre": [
-        "サスペンス",
-        "ミステリー",
-        "切ない",
-        "胸糞",
-        "ドラマ",
-        "心理・内面",
-        "雰囲気・美学",
-        "クライム"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 131,
-      "exact": true,
-      "letterboxdAddedDate": "2026-09-07",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -21620,9 +21620,9 @@
       ],
       "85": [
         "lb-276-7UmK",
+        "base-chinatown-1974",
         "custom-1791396105970-bm2m",
         "lb-304-27M0",
-        "base-chinatown-1974",
         "lb-313-29eY",
         "lb-399-29PA",
         "lb-59-780m",
