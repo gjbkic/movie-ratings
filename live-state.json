@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791575779000,
-  "sourceUpdatedIso": "2026-10-09T19:56:19.000Z",
+  "sourceUpdatedAt": 1791575798045,
+  "sourceUpdatedIso": "2026-10-09T19:56:38.045Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -3897,34 +3897,6 @@
       "letterboxdReportedWatchedDate": "2026-09-25"
     },
     {
-      "id": "lb-123-29I0",
-      "title": "フェイス/オフ",
-      "originalTitle": "",
-      "englishTitle": "Face/Off",
-      "year": 1997,
-      "score": 86,
-      "star": 3.5,
-      "overallRank": 134,
-      "sameScoreRank": 16,
-      "category": "アクション",
-      "mediaType": "movie",
-      "genre": [
-        "アクション",
-        "サスペンス",
-        "SF",
-        "ドラマ",
-        "クライム",
-        "娯楽"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 138,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "custom-1790247938551-ixfs",
       "title": "劇場版 チェンソーマン レゼ篇",
       "originalTitle": "劇場版 チェンソーマン レゼ篇",
@@ -3932,8 +3904,8 @@
       "year": 2025,
       "score": 86,
       "star": 3.5,
-      "overallRank": 135,
-      "sameScoreRank": 17,
+      "overallRank": 134,
+      "sameScoreRank": 16,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -3953,6 +3925,34 @@
       "runtime": 100,
       "exact": true,
       "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "lb-123-29I0",
+      "title": "フェイス/オフ",
+      "originalTitle": "",
+      "englishTitle": "Face/Off",
+      "year": 1997,
+      "score": 86,
+      "star": 3.5,
+      "overallRank": 135,
+      "sameScoreRank": 17,
+      "category": "アクション",
+      "mediaType": "movie",
+      "genre": [
+        "アクション",
+        "サスペンス",
+        "SF",
+        "ドラマ",
+        "クライム",
+        "娯楽"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 138,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -21681,8 +21681,8 @@
         "lb-358-6uNS",
         "lb-298-28Uk",
         "custom-1790322756418-p88i",
-        "lb-123-29I0",
         "custom-1790247938551-ixfs",
+        "lb-123-29I0",
         "lb-45-29VS",
         "lb-573-28ws",
         "lb-287-2amk",
