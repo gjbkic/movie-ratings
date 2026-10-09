@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791568069194,
-  "sourceUpdatedIso": "2026-10-09T17:47:49.194Z",
+  "sourceUpdatedAt": 1791570910269,
+  "sourceUpdatedIso": "2026-10-09T18:35:10.269Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -20313,6 +20313,29 @@
       "letterboxdAddedDate": "2026-09-25",
       "letterboxdPublishedAt": "Fri, 25 Sep 2026 06:09:52 +1200",
       "letterboxdReportedWatchedDate": "2026-09-24"
+    },
+    {
+      "id": "custom-1791570909341-auj1",
+      "title": "Black Mirror: Shut Up and Dance",
+      "originalTitle": "",
+      "englishTitle": "Black Mirror: Shut Up and Dance",
+      "year": 2016,
+      "score": null,
+      "star": 3.5,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "drama",
+      "genre": [
+        "TV本編"
+      ],
+      "origin": "その他",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": "2026-10-10",
+      "letterboxdPublishedAt": "Sat, 10 Oct 2026 06:52:34 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-10"
     }
   ],
   "state": {
@@ -24111,6 +24134,23 @@
         "added": true,
         "_seq": 1791567440043,
         "source": "letterboxd"
+      },
+      {
+        "id": "custom-1791570909341-auj1",
+        "title": "Black Mirror: Shut Up and Dance",
+        "originalTitle": "",
+        "englishTitle": "Black Mirror: Shut Up and Dance",
+        "lbTitle": "Black Mirror: Shut Up and Dance",
+        "tmdbId": 495632,
+        "year": 2016,
+        "uri": "https://letterboxd.com/gjbkic/film/black-mirror-shut-up-and-dance/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 3.5,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791570909341,
+        "source": "letterboxd"
       }
     ],
     "starOverrides": {
@@ -27702,7 +27742,8 @@
       "custom-1791362786595-8onp": "movie",
       "custom-1791374649583-3zqi": "movie",
       "custom-1791382999848-25pc": "movie",
-      "custom-1791392810098-rjyg": "movie"
+      "custom-1791392810098-rjyg": "movie",
+      "custom-1791570909341-auj1": "drama"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -33634,6 +33675,9 @@
         "ファンタジー",
         "胸糞",
         "TV本編"
+      ],
+      "custom-1791570909341-auj1": [
+        "TV本編"
       ]
     },
     "originOverrides": {
@@ -34357,7 +34401,8 @@
       "custom-1791480095339-p808": "日本",
       "custom-1791553824276-cl9b": "日本",
       "custom-1791563602274-2p5j": "その他",
-      "custom-1791567440043-bmc8": "その他"
+      "custom-1791567440043-bmc8": "その他",
+      "custom-1791570909341-auj1": "その他"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -38788,6 +38833,12 @@
       },
       "custom-1791567440043-bmc8": {
         "publishedAt": "Sat, 10 Oct 2026 05:34:06 +1300",
+        "addedDate": "2026-10-10",
+        "addedDateSource": "rss-first-seen",
+        "reportedWatchedDate": "2026-10-10"
+      },
+      "custom-1791570909341-auj1": {
+        "publishedAt": "Sat, 10 Oct 2026 06:52:34 +1300",
         "addedDate": "2026-10-10",
         "addedDateSource": "rss-first-seen",
         "reportedWatchedDate": "2026-10-10"
