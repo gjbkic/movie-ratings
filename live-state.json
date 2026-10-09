@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791553895385,
-  "sourceUpdatedIso": "2026-10-09T13:51:35.385Z",
+  "sourceUpdatedAt": 1791553902394,
+  "sourceUpdatedIso": "2026-10-09T13:51:42.394Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -8281,16 +8281,17 @@
       "overallRank": 286,
       "sameScoreRank": 11,
       "category": "Letterboxd",
-      "mediaType": "movie",
+      "mediaType": "drama",
       "genre": [
         "ホラー",
         "コメディ",
         "スリラー",
         "サスペンス",
         "ドラマ",
-        "娯楽",
         "感動",
-        "切ない"
+        "切ない",
+        "TV特番・SP",
+        "娯楽"
       ],
       "origin": "日本",
       "format": "live",
@@ -27595,7 +27596,7 @@
       "custom-1791394775097-fjc5": "movie",
       "custom-1791396105970-bm2m": "movie",
       "custom-1791397387325-yqut": "movie",
-      "custom-1791553824276-cl9b": "movie"
+      "custom-1791553824276-cl9b": "drama"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -33499,9 +33500,10 @@
         "スリラー",
         "サスペンス",
         "ドラマ",
-        "娯楽",
         "感動",
-        "切ない"
+        "切ない",
+        "TV特番・SP",
+        "娯楽"
       ]
     },
     "originOverrides": {
