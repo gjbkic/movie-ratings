@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791576227846,
-  "sourceUpdatedIso": "2026-10-09T20:03:47.846Z",
+  "sourceUpdatedAt": 1791576260055,
+  "sourceUpdatedIso": "2026-10-09T20:04:20.055Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -4501,6 +4501,32 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-313-29eY",
+      "title": "博士の異常な愛情 または私は如何にして心配するのを止めて水爆を愛するようになったか",
+      "originalTitle": "",
+      "englishTitle": "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
+      "year": 1964,
+      "score": 86,
+      "star": 3.5,
+      "overallRank": 155,
+      "sameScoreRank": 37,
+      "category": "コメディ",
+      "mediaType": "movie",
+      "genre": [
+        "コメディ",
+        "社会問題・生活",
+        "戦争",
+        "SF"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 93,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-15",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-544-26EE",
       "title": "ボーン・スプレマシー",
       "originalTitle": "",
@@ -4508,8 +4534,8 @@
       "year": 2004,
       "score": 86,
       "star": 3.5,
-      "overallRank": 155,
-      "sameScoreRank": 37,
+      "overallRank": 156,
+      "sameScoreRank": 38,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -4535,8 +4561,8 @@
       "year": 2022,
       "score": 86,
       "star": 3.5,
-      "overallRank": 156,
-      "sameScoreRank": 38,
+      "overallRank": 157,
+      "sameScoreRank": 39,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -4553,32 +4579,6 @@
       "runtime": 192,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "lb-313-29eY",
-      "title": "博士の異常な愛情 または私は如何にして心配するのを止めて水爆を愛するようになったか",
-      "originalTitle": "",
-      "englishTitle": "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
-      "year": 1964,
-      "score": 86,
-      "star": 3.5,
-      "overallRank": 157,
-      "sameScoreRank": 39,
-      "category": "コメディ",
-      "mediaType": "movie",
-      "genre": [
-        "コメディ",
-        "社会問題・生活",
-        "戦争",
-        "SF"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 93,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-15",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -21724,9 +21724,9 @@
         "lb-383-22mQ",
         "lb-52-2b5E",
         "lb-4-jUk4",
+        "lb-313-29eY",
         "lb-544-26EE",
-        "lb-302-2E2E",
-        "lb-313-29eY"
+        "lb-302-2E2E"
       ],
       "87": [
         "lb-296-l7zS",
