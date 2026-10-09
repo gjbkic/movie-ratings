@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791575881041,
-  "sourceUpdatedIso": "2026-10-09T19:58:01.041Z",
+  "sourceUpdatedAt": 1791575885552,
+  "sourceUpdatedIso": "2026-10-09T19:58:05.552Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -4181,34 +4181,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-576-18H4",
-      "title": "情婦",
-      "originalTitle": "",
-      "englishTitle": "Witness for the Prosecution",
-      "year": 1957,
-      "score": 86,
-      "star": 3.5,
-      "overallRank": 144,
-      "sameScoreRank": 26,
-      "category": "Letterboxd追加",
-      "mediaType": "movie",
-      "genre": [
-        "ミステリー",
-        "胸糞",
-        "クライム",
-        "どんでん返し",
-        "サスペンス",
-        "娯楽"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 116,
-      "exact": true,
-      "letterboxdAddedDate": "2026-09-06",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-546-3ZqO",
       "title": "グランド・ブダペスト・ホテル",
       "originalTitle": "",
@@ -4216,8 +4188,8 @@
       "year": 2014,
       "score": 86,
       "star": 3.5,
-      "overallRank": 145,
-      "sameScoreRank": 27,
+      "overallRank": 144,
+      "sameScoreRank": 26,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -4233,6 +4205,34 @@
       "runtime": 100,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "lb-576-18H4",
+      "title": "情婦",
+      "originalTitle": "",
+      "englishTitle": "Witness for the Prosecution",
+      "year": 1957,
+      "score": 86,
+      "star": 3.5,
+      "overallRank": 145,
+      "sameScoreRank": 27,
+      "category": "Letterboxd追加",
+      "mediaType": "movie",
+      "genre": [
+        "ミステリー",
+        "胸糞",
+        "クライム",
+        "どんでん返し",
+        "サスペンス",
+        "娯楽"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 116,
+      "exact": true,
+      "letterboxdAddedDate": "2026-09-06",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -21691,8 +21691,8 @@
         "lb-102-1Y2i",
         "lb-54-3sAw",
         "lb-543-2Pa",
-        "lb-576-18H4",
         "lb-546-3ZqO",
+        "lb-576-18H4",
         "lb-53-29QI",
         "lb-1-4VZ8",
         "lb-398-2b1i",
