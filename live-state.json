@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791563476271,
-  "sourceUpdatedIso": "2026-10-09T16:31:16.271Z",
+  "sourceUpdatedAt": 1791563602541,
+  "sourceUpdatedIso": "2026-10-09T16:33:22.541Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -20252,6 +20252,29 @@
       "letterboxdAddedDate": "2026-09-25",
       "letterboxdPublishedAt": "Fri, 25 Sep 2026 06:09:52 +1200",
       "letterboxdReportedWatchedDate": "2026-09-24"
+    },
+    {
+      "id": "custom-1791563602274-2p5j",
+      "title": "Black Mirror: Playtest",
+      "originalTitle": "",
+      "englishTitle": "Black Mirror: Playtest",
+      "year": 2016,
+      "score": null,
+      "star": 2.5,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "drama",
+      "genre": [
+        "TV本編"
+      ],
+      "origin": "その他",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": "2026-10-10",
+      "letterboxdPublishedAt": "Sat, 10 Oct 2026 05:30:53 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-10"
     }
   ],
   "state": {
@@ -24012,6 +24035,23 @@
         "added": true,
         "_seq": 1791553824276,
         "source": "letterboxd"
+      },
+      {
+        "id": "custom-1791563602274-2p5j",
+        "title": "Black Mirror: Playtest",
+        "originalTitle": "",
+        "englishTitle": "Black Mirror: Playtest",
+        "lbTitle": "Black Mirror: Playtest",
+        "tmdbId": 495631,
+        "year": 2016,
+        "uri": "https://letterboxd.com/gjbkic/film/black-mirror-playtest/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 2.5,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791563602274,
+        "source": "letterboxd"
       }
     ],
     "starOverrides": {
@@ -27599,7 +27639,8 @@
       "custom-1791362786595-8onp": "movie",
       "custom-1791374649583-3zqi": "movie",
       "custom-1791382999848-25pc": "movie",
-      "custom-1791392810098-rjyg": "movie"
+      "custom-1791392810098-rjyg": "movie",
+      "custom-1791563602274-2p5j": "drama"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -33510,6 +33551,9 @@
         "切ない",
         "TV特番・SP",
         "娯楽"
+      ],
+      "custom-1791563602274-2p5j": [
+        "TV本編"
       ]
     },
     "originOverrides": {
@@ -34231,7 +34275,8 @@
       "custom-1791476522514-wpj8": "日本",
       "custom-1791476522907-cd9b": "ハリウッド",
       "custom-1791480095339-p808": "日本",
-      "custom-1791553824276-cl9b": "日本"
+      "custom-1791553824276-cl9b": "日本",
+      "custom-1791563602274-2p5j": "その他"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -38651,6 +38696,12 @@
         "addedDate": "2026-10-09",
         "addedDateSource": "rss-first-seen",
         "reportedWatchedDate": "2026-10-09"
+      },
+      "custom-1791563602274-2p5j": {
+        "publishedAt": "Sat, 10 Oct 2026 05:30:53 +1300",
+        "addedDate": "2026-10-10",
+        "addedDateSource": "rss-first-seen",
+        "reportedWatchedDate": "2026-10-10"
       }
     }
   }
