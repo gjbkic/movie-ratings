@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791553824524,
-  "sourceUpdatedIso": "2026-10-09T13:50:24.524Z",
+  "sourceUpdatedAt": 1791553833602,
+  "sourceUpdatedIso": "2026-10-09T13:50:33.602Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -20232,7 +20232,12 @@
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
-        "ホラー"
+        "ホラー",
+        "コメディ",
+        "スリラー",
+        "サスペンス",
+        "ドラマ",
+        "娯楽"
       ],
       "origin": "日本",
       "format": "live",
@@ -33484,7 +33489,12 @@
         "どんでん返し"
       ],
       "custom-1791553824276-cl9b": [
-        "ホラー"
+        "ホラー",
+        "コメディ",
+        "スリラー",
+        "サスペンス",
+        "ドラマ",
+        "娯楽"
       ]
     },
     "originOverrides": {
