@@ -102,7 +102,18 @@
         if(!title||!Number.isFinite(rt)||rt<.5||rt>5)continue;
         valid++;
         const meta={title,englishTitle:title,year:year<0?'':(cells[year]||'').trim(),uri:uri<0?'':(cells[uri]||'').trim()};
-        const f=findExistingFilm(meta);
+        let f=findExistingFilm(meta);
+        // Letterboxd and the app sometimes store adjacent release years for one film.
+        if(!f){
+          const key=String(meta.title||'').normalize('NFKC').toLowerCase().replace(/[^\p{L}\p{N}]/gu,'');
+          const possible=allFilms().filter(candidate=>{
+            const a=[titleInfo(candidate).title,titleInfo(candidate).englishTitle,titleInfo(candidate).originalTitle,candidate.lbTitle];
+            const titleMatch=a.some(v=>String(v||'').normalize('NFKC').toLowerCase().replace(/[^\p{L}\p{N}]/gu,'')===key);
+            const yearOk=!meta.year||!candidate.year||Math.abs(Number(meta.year)-Number(candidate.year))<=2;
+            return titleMatch&&yearOk;
+          });
+          if(possible.length===1)f=possible[0];
+        }
         if(!f){missing.push({title,year:meta.year,rating:rt,uri:meta.uri});continue}
         seen.add(f.id);
         const sc=effectiveScore(f), fromScore=sc===null?null:scoreToStar(sc), appStar=Number(filmStar(f));
