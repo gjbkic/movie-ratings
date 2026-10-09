@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791575973839,
-  "sourceUpdatedIso": "2026-10-09T19:59:33.839Z",
+  "sourceUpdatedAt": 1791575984432,
+  "sourceUpdatedIso": "2026-10-09T19:59:44.432Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -3515,6 +3515,36 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "base-chinatown-1974",
+      "title": "チャイナタウン",
+      "originalTitle": "Chinatown",
+      "englishTitle": "Chinatown",
+      "year": 1974,
+      "score": 86,
+      "star": 3.5,
+      "overallRank": 121,
+      "sameScoreRank": 3,
+      "category": "サスペンス、ミステリー",
+      "mediaType": "movie",
+      "genre": [
+        "サスペンス",
+        "ミステリー",
+        "切ない",
+        "胸糞",
+        "ドラマ",
+        "心理・内面",
+        "雰囲気・美学",
+        "クライム"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 131,
+      "exact": true,
+      "letterboxdAddedDate": "2026-09-07",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-89-5RFA",
       "title": "バードマンあるいは無知がもたらす予期せぬ奇跡",
       "originalTitle": "",
@@ -3522,8 +3552,8 @@
       "year": 2014,
       "score": 86,
       "star": 3.5,
-      "overallRank": 121,
-      "sameScoreRank": 3,
+      "overallRank": 122,
+      "sameScoreRank": 4,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -3551,8 +3581,8 @@
       "year": 2007,
       "score": 86,
       "star": 3.5,
-      "overallRank": 122,
-      "sameScoreRank": 4,
+      "overallRank": 123,
+      "sameScoreRank": 5,
       "category": "Letterboxd",
       "mediaType": "other",
       "genre": [
@@ -3577,8 +3607,8 @@
       "year": 1995,
       "score": 86,
       "star": 3.5,
-      "overallRank": 123,
-      "sameScoreRank": 5,
+      "overallRank": 124,
+      "sameScoreRank": 6,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
       "genre": [
@@ -3606,8 +3636,8 @@
       "year": 2020,
       "score": 86,
       "star": 3.5,
-      "overallRank": 124,
-      "sameScoreRank": 6,
+      "overallRank": 125,
+      "sameScoreRank": 7,
       "category": "Letterboxd追加",
       "mediaType": "movie",
       "genre": [
@@ -3635,8 +3665,8 @@
       "year": 1998,
       "score": 86,
       "star": 3.5,
-      "overallRank": 125,
-      "sameScoreRank": 7,
+      "overallRank": 126,
+      "sameScoreRank": 8,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -3661,8 +3691,8 @@
       "year": 1995,
       "score": 86,
       "star": 3.5,
-      "overallRank": 126,
-      "sameScoreRank": 8,
+      "overallRank": 127,
+      "sameScoreRank": 9,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -3691,8 +3721,8 @@
       "year": 2003,
       "score": 86,
       "star": 3.5,
-      "overallRank": 127,
-      "sameScoreRank": 9,
+      "overallRank": 128,
+      "sameScoreRank": 10,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -3720,8 +3750,8 @@
       "year": 2022,
       "score": 86,
       "star": 3.5,
-      "overallRank": 128,
-      "sameScoreRank": 10,
+      "overallRank": 129,
+      "sameScoreRank": 11,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -3744,36 +3774,6 @@
       "letterboxdAddedDate": "2026-10-05",
       "letterboxdPublishedAt": "Mon, 5 Oct 2026 05:14:36 +1300",
       "letterboxdReportedWatchedDate": "2026-10-04"
-    },
-    {
-      "id": "base-chinatown-1974",
-      "title": "チャイナタウン",
-      "originalTitle": "Chinatown",
-      "englishTitle": "Chinatown",
-      "year": 1974,
-      "score": 86,
-      "star": 3.5,
-      "overallRank": 129,
-      "sameScoreRank": 11,
-      "category": "サスペンス、ミステリー",
-      "mediaType": "movie",
-      "genre": [
-        "サスペンス",
-        "ミステリー",
-        "切ない",
-        "胸糞",
-        "ドラマ",
-        "心理・内面",
-        "雰囲気・美学",
-        "クライム"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 131,
-      "exact": true,
-      "letterboxdAddedDate": "2026-09-07",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "lb-382-20TI",
@@ -21668,6 +21668,7 @@
       "86": [
         "lb-115-2aWi",
         "lb-390-pUfA",
+        "base-chinatown-1974",
         "lb-89-5RFA",
         "custom-1789385860426-8e86",
         "lb-148-17uy",
@@ -21676,7 +21677,6 @@
         "lb-368-2as8",
         "lb-279-215a",
         "custom-1791139747386-vy04",
-        "base-chinatown-1974",
         "lb-382-20TI",
         "added-anchor-579",
         "lb-345-1USu",
