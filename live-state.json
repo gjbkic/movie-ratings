@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791576039181,
-  "sourceUpdatedIso": "2026-10-09T20:00:39.181Z",
+  "sourceUpdatedAt": 1791576062532,
+  "sourceUpdatedIso": "2026-10-09T20:01:02.532Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -4527,40 +4527,15 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-25-17ue",
-      "title": "ソーシャル・ネットワーク",
-      "originalTitle": "",
-      "englishTitle": "The Social Network",
-      "year": 2010,
-      "score": 86,
-      "star": 3.5,
-      "overallRank": 156,
-      "sameScoreRank": 38,
-      "category": "ドラマ",
-      "mediaType": "movie",
-      "genre": [
-        "ドラマ",
-        "青春・若者",
-        "娯楽"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 121,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-276-7UmK",
       "title": "人生スイッチ",
       "originalTitle": "",
       "englishTitle": "Wild Tales",
       "year": 2014,
-      "score": 85,
+      "score": 86,
       "star": 3.5,
-      "overallRank": 157,
-      "sameScoreRank": 1,
+      "overallRank": 156,
+      "sameScoreRank": 38,
       "category": "コメディ",
       "mediaType": "movie",
       "genre": [
@@ -4576,6 +4551,31 @@
       "origin": "その他",
       "format": "live",
       "runtime": 122,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "lb-25-17ue",
+      "title": "ソーシャル・ネットワーク",
+      "originalTitle": "",
+      "englishTitle": "The Social Network",
+      "year": 2010,
+      "score": 85,
+      "star": 3.5,
+      "overallRank": 157,
+      "sameScoreRank": 1,
+      "category": "ドラマ",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "青春・若者",
+        "娯楽"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 121,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
@@ -20449,7 +20449,7 @@
       "lb-543-2Pa": 86,
       "lb-287-2amk": 86,
       "lb-546-3ZqO": 86,
-      "lb-25-17ue": 86,
+      "lb-25-17ue": 85,
       "lb-53-29QI": 86,
       "lb-52-2b5E": 86,
       "lb-54-3sAw": 86,
@@ -20529,7 +20529,7 @@
       "custom-1789929101832-iwdt": 81,
       "lb-64-leq4": 85,
       "lb-43-2awY": 85,
-      "lb-276-7UmK": 85,
+      "lb-276-7UmK": 86,
       "lb-20-9vEe": 85,
       "lb-485-2aSg": 85,
       "lb-479-2a1Q": 85,
@@ -21619,7 +21619,7 @@
         "lb-159-18U8"
       ],
       "85": [
-        "lb-276-7UmK",
+        "lb-25-17ue",
         "custom-1791396105970-bm2m",
         "lb-304-27M0",
         "lb-313-29eY",
@@ -21703,7 +21703,7 @@
         "lb-4-jUk4",
         "lb-544-26EE",
         "lb-302-2E2E",
-        "lb-25-17ue"
+        "lb-276-7UmK"
       ],
       "87": [
         "lb-296-l7zS",
