@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791553902394,
-  "sourceUpdatedIso": "2026-10-09T13:51:42.394Z",
+  "sourceUpdatedAt": 1791553916199,
+  "sourceUpdatedIso": "2026-10-09T13:51:56.199Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -4562,7 +4562,7 @@
       "overallRank": 157,
       "sameScoreRank": 2,
       "category": "Letterboxd",
-      "mediaType": "movie",
+      "mediaType": "drama",
       "genre": [
         "スリラー",
         "ミステリー",
@@ -4570,12 +4570,13 @@
         "コメディ",
         "感動",
         "切ない",
-        "娯楽",
         "ファンタジー",
         "世界観",
         "クライム",
         "サスペンス",
-        "アクション"
+        "アクション",
+        "TV特番・SP",
+        "娯楽"
       ],
       "origin": "日本",
       "format": "live",
@@ -27594,7 +27595,7 @@
       "custom-1791382999848-25pc": "movie",
       "custom-1791392810098-rjyg": "movie",
       "custom-1791394775097-fjc5": "movie",
-      "custom-1791396105970-bm2m": "movie",
+      "custom-1791396105970-bm2m": "drama",
       "custom-1791397387325-yqut": "movie",
       "custom-1791553824276-cl9b": "drama"
     },
@@ -33398,12 +33399,13 @@
         "コメディ",
         "感動",
         "切ない",
-        "娯楽",
         "ファンタジー",
         "世界観",
         "クライム",
         "サスペンス",
-        "アクション"
+        "アクション",
+        "TV特番・SP",
+        "娯楽"
       ],
       "custom-1791397387325-yqut": [
         "ファンタジー",
