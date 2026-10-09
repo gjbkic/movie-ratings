@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791579453163,
-  "sourceUpdatedIso": "2026-10-09T20:57:33.163Z",
+  "sourceUpdatedAt": 1791579491288,
+  "sourceUpdatedIso": "2026-10-09T20:58:11.288Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -5827,15 +5827,71 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "custom-1790971112940-kuhf",
+      "title": "サマータイムマシン・ブルース",
+      "originalTitle": "サマータイムマシン・ブルース",
+      "englishTitle": "Summer Time Machine Blues",
+      "year": 2005,
+      "score": 85,
+      "star": 3.5,
+      "overallRank": 201,
+      "sameScoreRank": 44,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "コメディ",
+        "SF",
+        "恋愛",
+        "青春・若者",
+        "娯楽",
+        "時間",
+        "comfort"
+      ],
+      "origin": "日本",
+      "format": "live",
+      "runtime": 107,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-03",
+      "letterboxdPublishedAt": "Sat, 3 Oct 2026 07:24:10 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-03"
+    },
+    {
+      "id": "lb-181-2aB0",
+      "title": "インソムニア",
+      "originalTitle": "",
+      "englishTitle": "Insomnia",
+      "year": 2002,
+      "score": 84,
+      "star": 3.5,
+      "overallRank": 202,
+      "sameScoreRank": 1,
+      "category": "サスペンス、ミステリー",
+      "mediaType": "movie",
+      "genre": [
+        "サスペンス",
+        "ミステリー",
+        "ドラマ",
+        "社会問題・生活",
+        "心理・内面"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 118,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "custom-1791476522907-cd9b",
       "title": "Black Mirror: White Bear",
       "originalTitle": "",
       "englishTitle": "Black Mirror: White Bear",
       "year": 2013,
-      "score": 85,
+      "score": 84,
       "star": 3.5,
-      "overallRank": 201,
-      "sameScoreRank": 44,
+      "overallRank": 203,
+      "sameScoreRank": 2,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -5866,10 +5922,10 @@
       "originalTitle": "",
       "englishTitle": "The Hunger Games: Mockingjay – Part 2",
       "year": 2015,
-      "score": 85,
+      "score": 84,
       "star": 3.5,
-      "overallRank": 202,
-      "sameScoreRank": 45,
+      "overallRank": 204,
+      "sameScoreRank": 3,
       "category": "ファンタジー、アドベンチャー",
       "mediaType": "movie",
       "genre": [
@@ -5889,62 +5945,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-181-2aB0",
-      "title": "インソムニア",
-      "originalTitle": "",
-      "englishTitle": "Insomnia",
-      "year": 2002,
-      "score": 84,
-      "star": 3.5,
-      "overallRank": 203,
-      "sameScoreRank": 1,
-      "category": "サスペンス、ミステリー",
-      "mediaType": "movie",
-      "genre": [
-        "サスペンス",
-        "ミステリー",
-        "ドラマ",
-        "社会問題・生活",
-        "心理・内面"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 118,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "custom-1790971112940-kuhf",
-      "title": "サマータイムマシン・ブルース",
-      "originalTitle": "サマータイムマシン・ブルース",
-      "englishTitle": "Summer Time Machine Blues",
-      "year": 2005,
-      "score": 84,
-      "star": 3.5,
-      "overallRank": 204,
-      "sameScoreRank": 2,
-      "category": "Letterboxd",
-      "mediaType": "movie",
-      "genre": [
-        "コメディ",
-        "SF",
-        "恋愛",
-        "青春・若者",
-        "娯楽",
-        "時間",
-        "comfort"
-      ],
-      "origin": "日本",
-      "format": "live",
-      "runtime": 107,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-03",
-      "letterboxdPublishedAt": "Sat, 3 Oct 2026 07:24:10 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-03"
-    },
-    {
       "id": "lb-163-2aYI",
       "title": "バック・トゥ・ザ・フューチャー PART2",
       "originalTitle": "",
@@ -5953,7 +5953,7 @@
       "score": 84,
       "star": 3.5,
       "overallRank": 205,
-      "sameScoreRank": 3,
+      "sameScoreRank": 4,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -5982,7 +5982,7 @@
       "score": 84,
       "star": 3.5,
       "overallRank": 206,
-      "sameScoreRank": 4,
+      "sameScoreRank": 5,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -6010,7 +6010,7 @@
       "score": 84,
       "star": 3.5,
       "overallRank": 207,
-      "sameScoreRank": 5,
+      "sameScoreRank": 6,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -6040,7 +6040,7 @@
       "score": 84,
       "star": 3.5,
       "overallRank": 208,
-      "sameScoreRank": 6,
+      "sameScoreRank": 7,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
       "genre": [
@@ -6071,7 +6071,7 @@
       "score": 84,
       "star": 3.5,
       "overallRank": 209,
-      "sameScoreRank": 7,
+      "sameScoreRank": 8,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -6102,7 +6102,7 @@
       "score": 84,
       "star": 3.5,
       "overallRank": 210,
-      "sameScoreRank": 8,
+      "sameScoreRank": 9,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -6126,7 +6126,7 @@
       "score": 84,
       "star": 3.5,
       "overallRank": 211,
-      "sameScoreRank": 9,
+      "sameScoreRank": 10,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -6153,7 +6153,7 @@
       "score": 84,
       "star": 3.5,
       "overallRank": 212,
-      "sameScoreRank": 10,
+      "sameScoreRank": 11,
       "category": "Letterboxd",
       "mediaType": "other",
       "genre": [
@@ -6179,7 +6179,7 @@
       "score": 84,
       "star": 3.5,
       "overallRank": 213,
-      "sameScoreRank": 11,
+      "sameScoreRank": 12,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -6207,7 +6207,7 @@
       "score": 84,
       "star": 3.5,
       "overallRank": 214,
-      "sameScoreRank": 12,
+      "sameScoreRank": 13,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -6233,7 +6233,7 @@
       "score": 84,
       "star": 3.5,
       "overallRank": 215,
-      "sameScoreRank": 13,
+      "sameScoreRank": 14,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -6260,7 +6260,7 @@
       "score": 84,
       "star": 3.5,
       "overallRank": 216,
-      "sameScoreRank": 14,
+      "sameScoreRank": 15,
       "category": "スターウォーズシリーズ",
       "mediaType": "movie",
       "genre": [
@@ -6290,7 +6290,7 @@
       "score": 84,
       "star": 3.5,
       "overallRank": 217,
-      "sameScoreRank": 15,
+      "sameScoreRank": 16,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -6317,7 +6317,7 @@
       "score": 84,
       "star": 3.5,
       "overallRank": 218,
-      "sameScoreRank": 16,
+      "sameScoreRank": 17,
       "category": "ピクサー・ディズニー作品",
       "mediaType": "movie",
       "genre": [
@@ -6350,7 +6350,7 @@
       "score": 84,
       "star": 3.5,
       "overallRank": 219,
-      "sameScoreRank": 17,
+      "sameScoreRank": 18,
       "category": "スリラー、ホラー",
       "mediaType": "movie",
       "genre": [
@@ -6379,7 +6379,7 @@
       "score": 84,
       "star": 3.5,
       "overallRank": 220,
-      "sameScoreRank": 18,
+      "sameScoreRank": 19,
       "category": "スリラー、ホラー",
       "mediaType": "movie",
       "genre": [
@@ -6409,7 +6409,7 @@
       "score": 84,
       "star": 3.5,
       "overallRank": 221,
-      "sameScoreRank": 19,
+      "sameScoreRank": 20,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -6440,7 +6440,7 @@
       "score": 84,
       "star": 3.5,
       "overallRank": 222,
-      "sameScoreRank": 20,
+      "sameScoreRank": 21,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -6470,7 +6470,7 @@
       "score": 84,
       "star": 3.5,
       "overallRank": 223,
-      "sameScoreRank": 21,
+      "sameScoreRank": 22,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -6497,7 +6497,7 @@
       "score": 84,
       "star": 3.5,
       "overallRank": 224,
-      "sameScoreRank": 22,
+      "sameScoreRank": 23,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -6523,7 +6523,7 @@
       "score": 84,
       "star": 3.5,
       "overallRank": 225,
-      "sameScoreRank": 23,
+      "sameScoreRank": 24,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -6548,7 +6548,7 @@
       "score": 84,
       "star": 3.5,
       "overallRank": 226,
-      "sameScoreRank": 24,
+      "sameScoreRank": 25,
       "category": "Letterboxd追加",
       "mediaType": "movie",
       "genre": [
@@ -6576,7 +6576,7 @@
       "score": 84,
       "star": 3.5,
       "overallRank": 227,
-      "sameScoreRank": 25,
+      "sameScoreRank": 26,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -6606,7 +6606,7 @@
       "score": 84,
       "star": 3.5,
       "overallRank": 228,
-      "sameScoreRank": 26,
+      "sameScoreRank": 27,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -6633,7 +6633,7 @@
       "score": 84,
       "star": 3.5,
       "overallRank": 229,
-      "sameScoreRank": 27,
+      "sameScoreRank": 28,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -6660,7 +6660,7 @@
       "score": 84,
       "star": 3.5,
       "overallRank": 230,
-      "sameScoreRank": 28,
+      "sameScoreRank": 29,
       "category": "恋愛、ミュージカル",
       "mediaType": "movie",
       "genre": [
@@ -6686,7 +6686,7 @@
       "score": 84,
       "star": 3.5,
       "overallRank": 231,
-      "sameScoreRank": 29,
+      "sameScoreRank": 30,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -6717,7 +6717,7 @@
       "score": 84,
       "star": 3.5,
       "overallRank": 232,
-      "sameScoreRank": 30,
+      "sameScoreRank": 31,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -6744,7 +6744,7 @@
       "score": 84,
       "star": 3.5,
       "overallRank": 233,
-      "sameScoreRank": 31,
+      "sameScoreRank": 32,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -6769,7 +6769,7 @@
       "score": 84,
       "star": 3.5,
       "overallRank": 234,
-      "sameScoreRank": 32,
+      "sameScoreRank": 33,
       "category": "ファンタジー、アドベンチャー",
       "mediaType": "movie",
       "genre": [
@@ -6796,7 +6796,7 @@
       "score": 84,
       "star": 3.5,
       "overallRank": 235,
-      "sameScoreRank": 33,
+      "sameScoreRank": 34,
       "category": "MCU作品",
       "mediaType": "movie",
       "genre": [
@@ -6825,7 +6825,7 @@
       "score": 84,
       "star": 3.5,
       "overallRank": 236,
-      "sameScoreRank": 34,
+      "sameScoreRank": 35,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -6858,7 +6858,7 @@
       "score": 84,
       "star": 3.5,
       "overallRank": 237,
-      "sameScoreRank": 35,
+      "sameScoreRank": 36,
       "category": "恋愛、ミュージカル",
       "mediaType": "movie",
       "genre": [
@@ -6885,7 +6885,7 @@
       "score": 84,
       "star": 3.5,
       "overallRank": 238,
-      "sameScoreRank": 36,
+      "sameScoreRank": 37,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -6914,7 +6914,7 @@
       "score": 84,
       "star": 3.5,
       "overallRank": 239,
-      "sameScoreRank": 37,
+      "sameScoreRank": 38,
       "category": "Letterboxd追加",
       "mediaType": "movie",
       "genre": [
@@ -6942,7 +6942,7 @@
       "score": 84,
       "star": 3.5,
       "overallRank": 240,
-      "sameScoreRank": 38,
+      "sameScoreRank": 39,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -20627,7 +20627,7 @@
       "lb-477-29gA": 85,
       "base-perks-2012": 84,
       "lb-70-29FU": 85,
-      "lb-99-4hk0": 85,
+      "lb-99-4hk0": 84,
       "lb-303-2aQY": 85,
       "lb-400-23wW": 85,
       "lb-28-4KHC": 85,
@@ -21060,7 +21060,7 @@
       "custom-1790924446793-9ts4": 83,
       "custom-1790960881562-cn74": 91,
       "custom-1790965876380-nqs0": 74,
-      "custom-1790971112940-kuhf": 84,
+      "custom-1790971112940-kuhf": 85,
       "custom-1791018448490-bpdn": 80,
       "custom-1791018448927-b4o3": 82,
       "custom-1791023391963-vdu9": 89,
@@ -21100,7 +21100,7 @@
       "custom-1791392810098-rjyg": 78,
       "custom-1791469824035-6gcd": 81,
       "custom-1791469823654-dpbh": 77,
-      "custom-1791476522907-cd9b": 85,
+      "custom-1791476522907-cd9b": 84,
       "custom-1791476522514-wpj8": 81,
       "custom-1791480095339-p808": 81,
       "custom-1791553824276-cl9b": 82,
@@ -21659,7 +21659,8 @@
       ],
       "84": [
         "lb-181-2aB0",
-        "custom-1790971112940-kuhf",
+        "custom-1791476522907-cd9b",
+        "lb-99-4hk0",
         "lb-163-2aYI",
         "lb-120-26EO",
         "lb-266-1Iik",
@@ -21741,8 +21742,7 @@
         "lb-485-2aSg",
         "lb-303-2aQY",
         "lb-20-9vEe",
-        "custom-1791476522907-cd9b",
-        "lb-99-4hk0"
+        "custom-1790971112940-kuhf"
       ],
       "86": [
         "lb-89-5RFA",
