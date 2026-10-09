@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791575948119,
-  "sourceUpdatedIso": "2026-10-09T19:59:08.119Z",
+  "sourceUpdatedAt": 1791575956831,
+  "sourceUpdatedIso": "2026-10-09T19:59:16.831Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -4469,31 +4469,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-25-17ue",
-      "title": "ソーシャル・ネットワーク",
-      "originalTitle": "",
-      "englishTitle": "The Social Network",
-      "year": 2010,
-      "score": 86,
-      "star": 3.5,
-      "overallRank": 154,
-      "sameScoreRank": 36,
-      "category": "ドラマ",
-      "mediaType": "movie",
-      "genre": [
-        "ドラマ",
-        "青春・若者",
-        "娯楽"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 121,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "base-chinatown-1974",
       "title": "チャイナタウン",
       "originalTitle": "Chinatown",
@@ -4501,8 +4476,8 @@
       "year": 1974,
       "score": 86,
       "star": 3.5,
-      "overallRank": 155,
-      "sameScoreRank": 37,
+      "overallRank": 154,
+      "sameScoreRank": 36,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -4520,6 +4495,31 @@
       "runtime": 131,
       "exact": true,
       "letterboxdAddedDate": "2026-09-07",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "lb-25-17ue",
+      "title": "ソーシャル・ネットワーク",
+      "originalTitle": "",
+      "englishTitle": "The Social Network",
+      "year": 2010,
+      "score": 86,
+      "star": 3.5,
+      "overallRank": 155,
+      "sameScoreRank": 37,
+      "category": "ドラマ",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "青春・若者",
+        "娯楽"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 121,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -21701,8 +21701,8 @@
         "lb-4-jUk4",
         "lb-544-26EE",
         "lb-302-2E2E",
-        "lb-25-17ue",
         "base-chinatown-1974",
+        "lb-25-17ue",
         "lb-383-22mQ"
       ],
       "87": [
