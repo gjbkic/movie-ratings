@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791576001096,
-  "sourceUpdatedIso": "2026-10-09T20:00:01.096Z",
+  "sourceUpdatedAt": 1791576017357,
+  "sourceUpdatedIso": "2026-10-09T20:00:17.357Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -3454,35 +3454,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-115-2aWi",
-      "title": "マイノリティ・リポート",
-      "originalTitle": "",
-      "englishTitle": "Minority Report",
-      "year": 2002,
-      "score": 86,
-      "star": 3.5,
-      "overallRank": 119,
-      "sameScoreRank": 1,
-      "category": "SF",
-      "mediaType": "movie",
-      "genre": [
-        "SF",
-        "社会問題・生活",
-        "サスペンス",
-        "ミステリー",
-        "アクション",
-        "娯楽",
-        "哲学・思想"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 145,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-89-5RFA",
       "title": "バードマンあるいは無知がもたらす予期せぬ奇跡",
       "originalTitle": "",
@@ -3490,8 +3461,8 @@
       "year": 2014,
       "score": 86,
       "star": 3.5,
-      "overallRank": 120,
-      "sameScoreRank": 2,
+      "overallRank": 119,
+      "sameScoreRank": 1,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -3519,8 +3490,8 @@
       "year": 1974,
       "score": 86,
       "star": 3.5,
-      "overallRank": 121,
-      "sameScoreRank": 3,
+      "overallRank": 120,
+      "sameScoreRank": 2,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -3538,6 +3509,35 @@
       "runtime": 131,
       "exact": true,
       "letterboxdAddedDate": "2026-09-07",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "lb-115-2aWi",
+      "title": "マイノリティ・リポート",
+      "originalTitle": "",
+      "englishTitle": "Minority Report",
+      "year": 2002,
+      "score": 86,
+      "star": 3.5,
+      "overallRank": 121,
+      "sameScoreRank": 3,
+      "category": "SF",
+      "mediaType": "movie",
+      "genre": [
+        "SF",
+        "社会問題・生活",
+        "サスペンス",
+        "ミステリー",
+        "アクション",
+        "娯楽",
+        "哲学・思想"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 145,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -21666,9 +21666,9 @@
         "lb-99-4hk0"
       ],
       "86": [
-        "lb-115-2aWi",
         "lb-89-5RFA",
         "base-chinatown-1974",
+        "lb-115-2aWi",
         "lb-390-pUfA",
         "custom-1789385860426-8e86",
         "lb-148-17uy",
