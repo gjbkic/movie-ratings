@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791575768182,
-  "sourceUpdatedIso": "2026-10-09T19:56:08.182Z",
+  "sourceUpdatedAt": 1791575779000,
+  "sourceUpdatedIso": "2026-10-09T19:56:19.000Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -3774,6 +3774,33 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-345-1USu",
+      "title": "レナードの朝",
+      "originalTitle": "",
+      "englishTitle": "Awakenings",
+      "year": 1990,
+      "score": 86,
+      "star": 3.5,
+      "overallRank": 130,
+      "sameScoreRank": 12,
+      "category": "ドラマ",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "感動",
+        "切ない",
+        "社会問題・生活",
+        "心理・内面"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": "2025-10-27",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-358-6uNS",
       "title": "映画ドラえもん のび太のひみつ道具博物館（ミュージアム）",
       "originalTitle": "",
@@ -3781,8 +3808,8 @@
       "year": 2013,
       "score": 86,
       "star": 3.5,
-      "overallRank": 130,
-      "sameScoreRank": 12,
+      "overallRank": 131,
+      "sameScoreRank": 13,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -3818,8 +3845,8 @@
       "year": 1976,
       "score": 86,
       "star": 3.5,
-      "overallRank": 131,
-      "sameScoreRank": 13,
+      "overallRank": 132,
+      "sameScoreRank": 14,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -3846,8 +3873,8 @@
       "year": 2026,
       "score": 86,
       "star": 3.5,
-      "overallRank": 132,
-      "sameScoreRank": 14,
+      "overallRank": 133,
+      "sameScoreRank": 15,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -3868,33 +3895,6 @@
       "letterboxdAddedDate": "2026-09-25",
       "letterboxdPublishedAt": "Fri, 25 Sep 2026 19:51:57 +1200",
       "letterboxdReportedWatchedDate": "2026-09-25"
-    },
-    {
-      "id": "lb-345-1USu",
-      "title": "レナードの朝",
-      "originalTitle": "",
-      "englishTitle": "Awakenings",
-      "year": 1990,
-      "score": 86,
-      "star": 3.5,
-      "overallRank": 133,
-      "sameScoreRank": 15,
-      "category": "ドラマ",
-      "mediaType": "movie",
-      "genre": [
-        "ドラマ",
-        "感動",
-        "切ない",
-        "社会問題・生活",
-        "心理・内面"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": null,
-      "exact": true,
-      "letterboxdAddedDate": "2025-10-27",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "lb-123-29I0",
@@ -21677,10 +21677,10 @@
         "lb-368-2as8",
         "lb-382-20TI",
         "added-anchor-579",
+        "lb-345-1USu",
         "lb-358-6uNS",
         "lb-298-28Uk",
         "custom-1790322756418-p88i",
-        "lb-345-1USu",
         "lb-123-29I0",
         "custom-1790247938551-ixfs",
         "lb-45-29VS",
