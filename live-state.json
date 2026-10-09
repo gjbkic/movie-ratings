@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791576102218,
-  "sourceUpdatedIso": "2026-10-09T20:01:42.218Z",
+  "sourceUpdatedAt": 1791576150250,
+  "sourceUpdatedIso": "2026-10-09T20:02:30.250Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -20341,6 +20341,29 @@
       "letterboxdAddedDate": "2026-09-25",
       "letterboxdPublishedAt": "Fri, 25 Sep 2026 06:09:52 +1200",
       "letterboxdReportedWatchedDate": "2026-09-24"
+    },
+    {
+      "id": "custom-1791576150006-qu8m",
+      "title": "Black Mirror: San Junipero",
+      "originalTitle": "",
+      "englishTitle": "Black Mirror: San Junipero",
+      "year": 2016,
+      "score": null,
+      "star": 3.5,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "drama",
+      "genre": [
+        "TV本編"
+      ],
+      "origin": "その他",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": "2026-10-10",
+      "letterboxdPublishedAt": "Sat, 10 Oct 2026 08:11:42 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-10"
     }
   ],
   "state": {
@@ -24158,6 +24181,23 @@
         "added": true,
         "_seq": 1791570909341,
         "source": "letterboxd"
+      },
+      {
+        "id": "custom-1791576150006-qu8m",
+        "title": "Black Mirror: San Junipero",
+        "originalTitle": "",
+        "englishTitle": "Black Mirror: San Junipero",
+        "lbTitle": "Black Mirror: San Junipero",
+        "tmdbId": null,
+        "year": 2016,
+        "uri": "https://letterboxd.com/gjbkic/film/black-mirror-san-junipero/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 3.5,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791576150006,
+        "source": "letterboxd"
       }
     ],
     "starOverrides": {
@@ -27751,7 +27791,8 @@
       "custom-1791374649583-3zqi": "movie",
       "custom-1791382999848-25pc": "movie",
       "custom-1791392810098-rjyg": "movie",
-      "custom-1791570909341-auj1": "drama"
+      "custom-1791570909341-auj1": "drama",
+      "custom-1791576150006-qu8m": "drama"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -33691,6 +33732,9 @@
         "サスペンス",
         "心理・内面",
         "娯楽"
+      ],
+      "custom-1791576150006-qu8m": [
+        "TV本編"
       ]
     },
     "originOverrides": {
@@ -34415,7 +34459,8 @@
       "custom-1791553824276-cl9b": "日本",
       "custom-1791563602274-2p5j": "その他",
       "custom-1791567440043-bmc8": "その他",
-      "custom-1791570909341-auj1": "その他"
+      "custom-1791570909341-auj1": "その他",
+      "custom-1791576150006-qu8m": "その他"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -38852,6 +38897,12 @@
       },
       "custom-1791570909341-auj1": {
         "publishedAt": "Sat, 10 Oct 2026 06:52:34 +1300",
+        "addedDate": "2026-10-10",
+        "addedDateSource": "rss-first-seen",
+        "reportedWatchedDate": "2026-10-10"
+      },
+      "custom-1791576150006-qu8m": {
+        "publishedAt": "Sat, 10 Oct 2026 08:11:42 +1300",
         "addedDate": "2026-10-10",
         "addedDateSource": "rss-first-seen",
         "reportedWatchedDate": "2026-10-10"
