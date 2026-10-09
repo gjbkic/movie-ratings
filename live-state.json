@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791579138943,
-  "sourceUpdatedIso": "2026-10-09T20:52:18.943Z",
+  "sourceUpdatedAt": 1791579453163,
+  "sourceUpdatedIso": "2026-10-09T20:57:33.163Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -5743,40 +5743,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1791476522907-cd9b",
-      "title": "Black Mirror: White Bear",
-      "originalTitle": "",
-      "englishTitle": "Black Mirror: White Bear",
-      "year": 2013,
-      "score": 85,
-      "star": 3.5,
-      "overallRank": 198,
-      "sameScoreRank": 41,
-      "category": "Letterboxd",
-      "mediaType": "drama",
-      "genre": [
-        "どんでん返し",
-        "娯楽",
-        "バイオレンス",
-        "SF",
-        "ファンタジー",
-        "クライム",
-        "ドラマ",
-        "サスペンス",
-        "ミステリー",
-        "胸糞",
-        "社会問題・生活",
-        "TV本編"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": null,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-08",
-      "letterboxdPublishedAt": "Fri, 9 Oct 2026 03:32:29 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-08"
-    },
-    {
       "id": "lb-485-2aSg",
       "title": "いまを生きる",
       "originalTitle": "",
@@ -5784,8 +5750,8 @@
       "year": 1989,
       "score": 85,
       "star": 3.5,
-      "overallRank": 199,
-      "sameScoreRank": 42,
+      "overallRank": 198,
+      "sameScoreRank": 41,
       "category": "Letterboxd追加",
       "mediaType": "movie",
       "genre": [
@@ -5812,8 +5778,8 @@
       "year": 1984,
       "score": 85,
       "star": 3.5,
-      "overallRank": 200,
-      "sameScoreRank": 43,
+      "overallRank": 199,
+      "sameScoreRank": 42,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -5840,8 +5806,8 @@
       "year": 2018,
       "score": 85,
       "star": 3.5,
-      "overallRank": 201,
-      "sameScoreRank": 44,
+      "overallRank": 200,
+      "sameScoreRank": 43,
       "category": "MCU作品",
       "mediaType": "movie",
       "genre": [
@@ -5859,6 +5825,40 @@
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1791476522907-cd9b",
+      "title": "Black Mirror: White Bear",
+      "originalTitle": "",
+      "englishTitle": "Black Mirror: White Bear",
+      "year": 2013,
+      "score": 85,
+      "star": 3.5,
+      "overallRank": 201,
+      "sameScoreRank": 44,
+      "category": "Letterboxd",
+      "mediaType": "drama",
+      "genre": [
+        "どんでん返し",
+        "娯楽",
+        "バイオレンス",
+        "SF",
+        "ファンタジー",
+        "クライム",
+        "ドラマ",
+        "サスペンス",
+        "ミステリー",
+        "胸糞",
+        "社会問題・生活",
+        "TV本編"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-08",
+      "letterboxdPublishedAt": "Fri, 9 Oct 2026 03:32:29 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-08"
     },
     {
       "id": "lb-99-4hk0",
@@ -21738,10 +21738,10 @@
         "lb-289-2avw",
         "lb-525-2aVE",
         "lb-70-29FU",
-        "custom-1791476522907-cd9b",
         "lb-485-2aSg",
         "lb-303-2aQY",
         "lb-20-9vEe",
+        "custom-1791476522907-cd9b",
         "lb-99-4hk0"
       ],
       "86": [
