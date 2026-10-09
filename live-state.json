@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791563602541,
-  "sourceUpdatedIso": "2026-10-09T16:33:22.541Z",
+  "sourceUpdatedAt": 1791563616802,
+  "sourceUpdatedIso": "2026-10-09T16:33:36.802Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -20266,7 +20266,15 @@
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
-        "TV本編"
+        "TV本編",
+        "スリラー",
+        "ホラー",
+        "サスペンス",
+        "どんでん返し",
+        "娯楽",
+        "SF",
+        "ファンタジー",
+        "心理・内面"
       ],
       "origin": "その他",
       "format": "",
@@ -33553,7 +33561,15 @@
         "娯楽"
       ],
       "custom-1791563602274-2p5j": [
-        "TV本編"
+        "TV本編",
+        "スリラー",
+        "ホラー",
+        "サスペンス",
+        "どんでん返し",
+        "娯楽",
+        "SF",
+        "ファンタジー",
+        "心理・内面"
       ]
     },
     "originOverrides": {
