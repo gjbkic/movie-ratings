@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791563730836,
-  "sourceUpdatedIso": "2026-10-09T16:35:30.836Z",
+  "sourceUpdatedAt": 1791563746511,
+  "sourceUpdatedIso": "2026-10-09T16:35:46.511Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -16328,36 +16328,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1790965876380-nqs0",
-      "title": "美食探偵 明智五郎",
-      "originalTitle": "美食探偵 明智五郎",
-      "englishTitle": "Gourmet Detective Goro Akechi",
-      "year": 2020,
-      "score": 75,
-      "star": 2,
-      "overallRank": 573,
-      "sameScoreRank": 17,
-      "category": "Letterboxd",
-      "mediaType": "drama",
-      "genre": [
-        "ドラマ",
-        "クライム",
-        "恋愛",
-        "コメディ",
-        "ミステリー",
-        "娯楽",
-        "切ない",
-        "TV本編"
-      ],
-      "origin": "日本",
-      "format": "live",
-      "runtime": 54,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-03",
-      "letterboxdPublishedAt": "Sat, 3 Oct 2026 07:13:15 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-02"
-    },
-    {
       "id": "lb-230-43d0",
       "title": "麒麟の翼 ～劇場版・新参者～",
       "originalTitle": "",
@@ -16365,8 +16335,8 @@
       "year": 2011,
       "score": 75,
       "star": 2,
-      "overallRank": 574,
-      "sameScoreRank": 18,
+      "overallRank": 573,
+      "sameScoreRank": 17,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -16391,8 +16361,8 @@
       "year": 2006,
       "score": 75,
       "star": 2,
-      "overallRank": 575,
-      "sameScoreRank": 19,
+      "overallRank": 574,
+      "sameScoreRank": 18,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -16417,8 +16387,8 @@
       "year": 2017,
       "score": 75,
       "star": 2,
-      "overallRank": 576,
-      "sameScoreRank": 20,
+      "overallRank": 575,
+      "sameScoreRank": 19,
       "category": "スターウォーズシリーズ",
       "mediaType": "movie",
       "genre": [
@@ -16447,8 +16417,8 @@
       "year": 2025,
       "score": 75,
       "star": 2,
-      "overallRank": 577,
-      "sameScoreRank": 21,
+      "overallRank": 576,
+      "sameScoreRank": 20,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -16469,6 +16439,36 @@
       "letterboxdAddedDate": "2026-03-24",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1790965876380-nqs0",
+      "title": "美食探偵 明智五郎",
+      "originalTitle": "美食探偵 明智五郎",
+      "englishTitle": "Gourmet Detective Goro Akechi",
+      "year": 2020,
+      "score": 75,
+      "star": 2,
+      "overallRank": 577,
+      "sameScoreRank": 21,
+      "category": "Letterboxd",
+      "mediaType": "drama",
+      "genre": [
+        "ドラマ",
+        "クライム",
+        "恋愛",
+        "コメディ",
+        "ミステリー",
+        "娯楽",
+        "切ない",
+        "TV本編"
+      ],
+      "origin": "日本",
+      "format": "live",
+      "runtime": 54,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-03",
+      "letterboxdPublishedAt": "Sat, 3 Oct 2026 07:13:15 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-02"
     },
     {
       "id": "lb-440-iAFu",
@@ -21176,11 +21176,11 @@
         "lb-360-v2Wi",
         "lb-170-fz9w",
         "lb-509-5LDy",
-        "custom-1790965876380-nqs0",
         "lb-230-43d0",
         "lb-258-16ic",
         "lb-508-5xme",
         "lb-437-O1GQ",
+        "custom-1790965876380-nqs0",
         "lb-440-iAFu"
       ],
       "76": [
