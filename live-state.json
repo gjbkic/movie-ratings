@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791553933106,
-  "sourceUpdatedIso": "2026-10-09T13:52:13.106Z",
+  "sourceUpdatedAt": 1791557137656,
+  "sourceUpdatedIso": "2026-10-09T14:45:37.656Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -7237,6 +7237,39 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "custom-1791379032352-50zf",
+      "title": "世にも奇妙な物語35周年SP ～伝説の名作 一夜限りの復活編～",
+      "originalTitle": "世にも奇妙な物語35周年SP ～伝説の名作 一夜限りの復活編～",
+      "englishTitle": "Tales of the Bizarre: 35th Anniversary Special",
+      "year": 2025,
+      "score": 83,
+      "star": 3,
+      "overallRank": 251,
+      "sameScoreRank": 14,
+      "category": "Letterboxd",
+      "mediaType": "drama",
+      "genre": [
+        "ミステリー",
+        "スリラー",
+        "ホラー",
+        "TV特番・SP",
+        "コメディ",
+        "恋愛",
+        "切ない",
+        "娯楽",
+        "ファンタジー",
+        "胸糞",
+        "クライム"
+      ],
+      "origin": "日本",
+      "format": "live",
+      "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-07",
+      "letterboxdPublishedAt": "Thu, 8 Oct 2026 02:16:21 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-07"
+    },
+    {
       "id": "lb-47-2aA2",
       "title": "ジュラシック・パーク",
       "originalTitle": "",
@@ -7244,8 +7277,8 @@
       "year": 1993,
       "score": 83,
       "star": 3,
-      "overallRank": 251,
-      "sameScoreRank": 14,
+      "overallRank": 252,
+      "sameScoreRank": 15,
       "category": "ファンタジー、アドベンチャー",
       "mediaType": "movie",
       "genre": [
@@ -7269,8 +7302,8 @@
       "year": 2010,
       "score": 83,
       "star": 3,
-      "overallRank": 252,
-      "sameScoreRank": 15,
+      "overallRank": 253,
+      "sameScoreRank": 16,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -7303,8 +7336,8 @@
       "year": 2015,
       "score": 83,
       "star": 3,
-      "overallRank": 253,
-      "sameScoreRank": 16,
+      "overallRank": 254,
+      "sameScoreRank": 17,
       "category": "ファンタジー、アドベンチャー",
       "mediaType": "movie",
       "genre": [
@@ -7321,39 +7354,6 @@
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "custom-1791379032352-50zf",
-      "title": "世にも奇妙な物語35周年SP ～伝説の名作 一夜限りの復活編～",
-      "originalTitle": "世にも奇妙な物語35周年SP ～伝説の名作 一夜限りの復活編～",
-      "englishTitle": "Tales of the Bizarre: 35th Anniversary Special",
-      "year": 2025,
-      "score": 83,
-      "star": 3,
-      "overallRank": 254,
-      "sameScoreRank": 17,
-      "category": "Letterboxd",
-      "mediaType": "drama",
-      "genre": [
-        "ミステリー",
-        "スリラー",
-        "ホラー",
-        "TV特番・SP",
-        "コメディ",
-        "恋愛",
-        "切ない",
-        "娯楽",
-        "ファンタジー",
-        "胸糞",
-        "クライム"
-      ],
-      "origin": "日本",
-      "format": "live",
-      "runtime": null,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-07",
-      "letterboxdPublishedAt": "Thu, 8 Oct 2026 02:16:21 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-07"
     },
     {
       "id": "lb-182-dR3i",
@@ -18714,16 +18714,17 @@
       "overallRank": 659,
       "sameScoreRank": 2,
       "category": "Letterboxd",
-      "mediaType": "movie",
+      "mediaType": "drama",
       "genre": [
         "ファンタジー",
         "ミステリー",
         "ホラー",
         "恋愛",
         "コメディ",
-        "娯楽",
         "どんでん返し",
-        "社会問題・生活"
+        "社会問題・生活",
+        "TV特番・SP",
+        "娯楽"
       ],
       "origin": "日本",
       "format": "live",
@@ -21458,10 +21459,10 @@
         "lb-367-29EW",
         "custom-1789385859985-uylk",
         "lb-243-orTE",
+        "custom-1791379032352-50zf",
         "lb-47-2aA2",
         "lb-495-Msm",
         "lb-104-4n0g",
-        "custom-1791379032352-50zf",
         "lb-182-dR3i",
         "lb-263-6bJM",
         "lb-278-2aoU",
@@ -27597,7 +27598,7 @@
       "custom-1791392810098-rjyg": "movie",
       "custom-1791394775097-fjc5": "drama",
       "custom-1791396105970-bm2m": "drama",
-      "custom-1791397387325-yqut": "movie",
+      "custom-1791397387325-yqut": "drama",
       "custom-1791553824276-cl9b": "drama"
     },
     "genreOverrides": {
@@ -33415,9 +33416,10 @@
         "ホラー",
         "恋愛",
         "コメディ",
-        "娯楽",
         "どんでん返し",
-        "社会問題・生活"
+        "社会問題・生活",
+        "TV特番・SP",
+        "娯楽"
       ],
       "custom-1791398329125-3r8f": [
         "ドラマ",
