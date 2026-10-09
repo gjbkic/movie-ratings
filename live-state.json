@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791577886057,
-  "sourceUpdatedIso": "2026-10-09T20:31:26.057Z",
+  "sourceUpdatedAt": 1791577907251,
+  "sourceUpdatedIso": "2026-10-09T20:31:47.251Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -15252,6 +15252,34 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-131-1OEc",
+      "title": "カールじいさんの空飛ぶ家",
+      "originalTitle": "",
+      "englishTitle": "Up",
+      "year": 2009,
+      "score": 76,
+      "star": 2,
+      "overallRank": 534,
+      "sameScoreRank": 1,
+      "category": "ピクサー・ディズニー作品",
+      "mediaType": "movie",
+      "genre": [
+        "感動",
+        "ファンタジー",
+        "アドベンチャー",
+        "ドラマ",
+        "子供向け",
+        "娯楽"
+      ],
+      "origin": "ハリウッド",
+      "format": "animation",
+      "runtime": 103,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-340-3r58",
       "title": "キャプテン・アメリカ/ウィンター・ソルジャー",
       "originalTitle": "",
@@ -15259,8 +15287,8 @@
       "year": 2014,
       "score": 76,
       "star": 2,
-      "overallRank": 534,
-      "sameScoreRank": 1,
+      "overallRank": 535,
+      "sameScoreRank": 2,
       "category": "MCU作品",
       "mediaType": "movie",
       "genre": [
@@ -15286,8 +15314,8 @@
       "year": 2022,
       "score": 76,
       "star": 2,
-      "overallRank": 535,
-      "sameScoreRank": 2,
+      "overallRank": 536,
+      "sameScoreRank": 3,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -15314,8 +15342,8 @@
       "year": 2024,
       "score": 76,
       "star": 2,
-      "overallRank": 536,
-      "sameScoreRank": 3,
+      "overallRank": 537,
+      "sameScoreRank": 4,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -15340,8 +15368,8 @@
       "year": 2016,
       "score": 76,
       "star": 2,
-      "overallRank": 537,
-      "sameScoreRank": 4,
+      "overallRank": 538,
+      "sameScoreRank": 5,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -15353,34 +15381,6 @@
       "origin": "ハリウッド",
       "format": "animation",
       "runtime": 108,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "lb-131-1OEc",
-      "title": "カールじいさんの空飛ぶ家",
-      "originalTitle": "",
-      "englishTitle": "Up",
-      "year": 2009,
-      "score": 76,
-      "star": 2,
-      "overallRank": 538,
-      "sameScoreRank": 5,
-      "category": "ピクサー・ディズニー作品",
-      "mediaType": "movie",
-      "genre": [
-        "感動",
-        "ファンタジー",
-        "アドベンチャー",
-        "ドラマ",
-        "子供向け",
-        "娯楽"
-      ],
-      "origin": "ハリウッド",
-      "format": "animation",
-      "runtime": 103,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
@@ -21281,11 +21281,11 @@
         "lb-440-iAFu"
       ],
       "76": [
+        "lb-131-1OEc",
         "lb-340-3r58",
         "custom-1791113242437-wcok",
         "custom-1789385860198-bkq0",
         "lb-150-b5EQ",
-        "lb-131-1OEc",
         "lb-173-oCkK",
         "lb-510-5dz8",
         "lb-365-GZY",
