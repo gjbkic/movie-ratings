@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791563760281,
-  "sourceUpdatedIso": "2026-10-09T16:36:00.281Z",
+  "sourceUpdatedAt": 1791567442350,
+  "sourceUpdatedIso": "2026-10-09T17:37:22.350Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -15442,7 +15442,6 @@
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
-        "TV本編",
         "スリラー",
         "ホラー",
         "サスペンス",
@@ -15450,10 +15449,11 @@
         "娯楽",
         "SF",
         "ファンタジー",
-        "心理・内面"
+        "心理・内面",
+        "TV本編"
       ],
       "origin": "その他",
-      "format": "",
+      "format": "live",
       "runtime": null,
       "exact": true,
       "letterboxdAddedDate": "2026-10-10",
@@ -20283,6 +20283,29 @@
       "letterboxdAddedDate": "2026-09-25",
       "letterboxdPublishedAt": "Fri, 25 Sep 2026 06:09:52 +1200",
       "letterboxdReportedWatchedDate": "2026-09-24"
+    },
+    {
+      "id": "custom-1791567440043-bmc8",
+      "title": "Black Mirror: Nosedive",
+      "originalTitle": "",
+      "englishTitle": "Black Mirror: Nosedive",
+      "year": 2016,
+      "score": null,
+      "star": 2.5,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "drama",
+      "genre": [
+        "TV本編"
+      ],
+      "origin": "その他",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": "2026-10-10",
+      "letterboxdPublishedAt": "Sat, 10 Oct 2026 05:34:06 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-10"
     }
   ],
   "state": {
@@ -24062,6 +24085,23 @@
         "added": true,
         "_seq": 1791563602274,
         "source": "letterboxd"
+      },
+      {
+        "id": "custom-1791567440043-bmc8",
+        "title": "Black Mirror: Nosedive",
+        "originalTitle": "",
+        "englishTitle": "Black Mirror: Nosedive",
+        "lbTitle": "Black Mirror: Nosedive",
+        "tmdbId": 492300,
+        "year": 2016,
+        "uri": "https://letterboxd.com/gjbkic/film/black-mirror-nosedive/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 2.5,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791567440043,
+        "source": "letterboxd"
       }
     ],
     "starOverrides": {
@@ -27018,6 +27058,7 @@
       "custom-1791476522907-cd9b": "drama",
       "custom-1791480095339-p808": "drama",
       "custom-1791553824276-cl9b": "drama",
+      "custom-1791563602274-2p5j": "drama",
       "lb-0-hTha": "movie",
       "lb-1-4VZ8": "movie",
       "lb-2-2a9q": "movie",
@@ -27651,7 +27692,7 @@
       "custom-1791374649583-3zqi": "movie",
       "custom-1791382999848-25pc": "movie",
       "custom-1791392810098-rjyg": "movie",
-      "custom-1791563602274-2p5j": "drama"
+      "custom-1791567440043-bmc8": "drama"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -33564,7 +33605,6 @@
         "娯楽"
       ],
       "custom-1791563602274-2p5j": [
-        "TV本編",
         "スリラー",
         "ホラー",
         "サスペンス",
@@ -33572,7 +33612,11 @@
         "娯楽",
         "SF",
         "ファンタジー",
-        "心理・内面"
+        "心理・内面",
+        "TV本編"
+      ],
+      "custom-1791567440043-bmc8": [
+        "TV本編"
       ]
     },
     "originOverrides": {
@@ -34295,7 +34339,8 @@
       "custom-1791476522907-cd9b": "ハリウッド",
       "custom-1791480095339-p808": "日本",
       "custom-1791553824276-cl9b": "日本",
-      "custom-1791563602274-2p5j": "その他"
+      "custom-1791563602274-2p5j": "その他",
+      "custom-1791567440043-bmc8": "その他"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -35016,7 +35061,8 @@
       "custom-1791476522514-wpj8": "live",
       "custom-1791480095339-p808": "live",
       "custom-1791476522907-cd9b": "live",
-      "custom-1791553824276-cl9b": "live"
+      "custom-1791553824276-cl9b": "live",
+      "custom-1791563602274-2p5j": "live"
     },
     "runtimeOverrides": {
       "custom-1790247938551-ixfs": 100,
@@ -38718,6 +38764,12 @@
       },
       "custom-1791563602274-2p5j": {
         "publishedAt": "Sat, 10 Oct 2026 05:30:53 +1300",
+        "addedDate": "2026-10-10",
+        "addedDateSource": "rss-first-seen",
+        "reportedWatchedDate": "2026-10-10"
+      },
+      "custom-1791567440043-bmc8": {
+        "publishedAt": "Sat, 10 Oct 2026 05:34:06 +1300",
         "addedDate": "2026-10-10",
         "addedDateSource": "rss-first-seen",
         "reportedWatchedDate": "2026-10-10"
