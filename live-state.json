@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791576017357,
-  "sourceUpdatedIso": "2026-10-09T20:00:17.357Z",
+  "sourceUpdatedAt": 1791576024000,
+  "sourceUpdatedIso": "2026-10-09T20:00:24.000Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -3574,32 +3574,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1789385860426-8e86",
-      "title": "Ani*Kuri15: Good Morning",
-      "originalTitle": "",
-      "englishTitle": "Ani*Kuri15: Good Morning",
-      "year": 2007,
-      "score": 86,
-      "star": 3.5,
-      "overallRank": 123,
-      "sameScoreRank": 5,
-      "category": "Letterboxd",
-      "mediaType": "other",
-      "genre": [
-        "社会問題・生活",
-        "ファンタジー",
-        "世界観",
-        "comfort"
-      ],
-      "origin": "日本",
-      "format": "animation",
-      "runtime": null,
-      "exact": true,
-      "letterboxdAddedDate": "2026-09-08",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-148-17uy",
       "title": "耳をすませば",
       "originalTitle": "",
@@ -3607,8 +3581,8 @@
       "year": 1995,
       "score": 86,
       "star": 3.5,
-      "overallRank": 124,
-      "sameScoreRank": 6,
+      "overallRank": 123,
+      "sameScoreRank": 5,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
       "genre": [
@@ -3636,8 +3610,8 @@
       "year": 2020,
       "score": 86,
       "star": 3.5,
-      "overallRank": 125,
-      "sameScoreRank": 7,
+      "overallRank": 124,
+      "sameScoreRank": 6,
       "category": "Letterboxd追加",
       "mediaType": "movie",
       "genre": [
@@ -3665,8 +3639,8 @@
       "year": 1998,
       "score": 86,
       "star": 3.5,
-      "overallRank": 126,
-      "sameScoreRank": 8,
+      "overallRank": 125,
+      "sameScoreRank": 7,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -3691,8 +3665,8 @@
       "year": 1995,
       "score": 86,
       "star": 3.5,
-      "overallRank": 127,
-      "sameScoreRank": 9,
+      "overallRank": 126,
+      "sameScoreRank": 8,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -3710,6 +3684,32 @@
       "runtime": 98,
       "exact": true,
       "letterboxdAddedDate": "2026-01-19",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1789385860426-8e86",
+      "title": "Ani*Kuri15: Good Morning",
+      "originalTitle": "",
+      "englishTitle": "Ani*Kuri15: Good Morning",
+      "year": 2007,
+      "score": 86,
+      "star": 3.5,
+      "overallRank": 127,
+      "sameScoreRank": 9,
+      "category": "Letterboxd",
+      "mediaType": "other",
+      "genre": [
+        "社会問題・生活",
+        "ファンタジー",
+        "世界観",
+        "comfort"
+      ],
+      "origin": "日本",
+      "format": "animation",
+      "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": "2026-09-08",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -21670,11 +21670,11 @@
         "base-chinatown-1974",
         "lb-115-2aWi",
         "lb-390-pUfA",
-        "custom-1789385860426-8e86",
         "lb-148-17uy",
         "lb-552-m8Ie",
         "lb-542-2b6C",
         "lb-368-2as8",
+        "custom-1789385860426-8e86",
         "lb-279-215a",
         "custom-1791139747386-vy04",
         "lb-382-20TI",
