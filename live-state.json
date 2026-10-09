@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791576024000,
-  "sourceUpdatedIso": "2026-10-09T20:00:24.000Z",
+  "sourceUpdatedAt": 1791576034710,
+  "sourceUpdatedIso": "2026-10-09T20:00:34.710Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -4354,6 +4354,34 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-383-22mQ",
+      "title": "HANA-BI",
+      "originalTitle": "",
+      "englishTitle": "Fireworks",
+      "year": 1997,
+      "score": 86,
+      "star": 3.5,
+      "overallRank": 150,
+      "sameScoreRank": 32,
+      "category": "邦画",
+      "mediaType": "movie",
+      "genre": [
+        "クライム",
+        "社会問題・生活",
+        "サスペンス",
+        "心理・内面",
+        "バイオレンス",
+        "雰囲気・美学"
+      ],
+      "origin": "日本",
+      "format": "live",
+      "runtime": 103,
+      "exact": true,
+      "letterboxdAddedDate": "2026-03-26",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-398-2b1i",
       "title": "AKIRA",
       "originalTitle": "",
@@ -4361,8 +4389,8 @@
       "year": 1988,
       "score": 86,
       "star": 3.5,
-      "overallRank": 150,
-      "sameScoreRank": 32,
+      "overallRank": 151,
+      "sameScoreRank": 33,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -4390,8 +4418,8 @@
       "year": 2002,
       "score": 86,
       "star": 3.5,
-      "overallRank": 151,
-      "sameScoreRank": 33,
+      "overallRank": 152,
+      "sameScoreRank": 34,
       "category": "ファンタジー、アドベンチャー",
       "mediaType": "movie",
       "genre": [
@@ -4418,8 +4446,8 @@
       "year": 2022,
       "score": 86,
       "star": 3.5,
-      "overallRank": 152,
-      "sameScoreRank": 34,
+      "overallRank": 153,
+      "sameScoreRank": 35,
       "category": "コメディ",
       "mediaType": "movie",
       "genre": [
@@ -4450,8 +4478,8 @@
       "year": 2004,
       "score": 86,
       "star": 3.5,
-      "overallRank": 153,
-      "sameScoreRank": 35,
+      "overallRank": 154,
+      "sameScoreRank": 36,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -4477,8 +4505,8 @@
       "year": 2022,
       "score": 86,
       "star": 3.5,
-      "overallRank": 154,
-      "sameScoreRank": 36,
+      "overallRank": 155,
+      "sameScoreRank": 37,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -4506,8 +4534,8 @@
       "year": 2010,
       "score": 86,
       "star": 3.5,
-      "overallRank": 155,
-      "sameScoreRank": 37,
+      "overallRank": 156,
+      "sameScoreRank": 38,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -4520,34 +4548,6 @@
       "runtime": 121,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "lb-383-22mQ",
-      "title": "HANA-BI",
-      "originalTitle": "",
-      "englishTitle": "Fireworks",
-      "year": 1997,
-      "score": 86,
-      "star": 3.5,
-      "overallRank": 156,
-      "sameScoreRank": 38,
-      "category": "邦画",
-      "mediaType": "movie",
-      "genre": [
-        "クライム",
-        "社会問題・生活",
-        "サスペンス",
-        "心理・内面",
-        "バイオレンス",
-        "雰囲気・美学"
-      ],
-      "origin": "日本",
-      "format": "live",
-      "runtime": 103,
-      "exact": true,
-      "letterboxdAddedDate": "2026-03-26",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -21697,13 +21697,13 @@
         "lb-576-18H4",
         "lb-53-29QI",
         "lb-1-4VZ8",
+        "lb-383-22mQ",
         "lb-398-2b1i",
         "lb-52-2b5E",
         "lb-4-jUk4",
         "lb-544-26EE",
         "lb-302-2E2E",
-        "lb-25-17ue",
-        "lb-383-22mQ"
+        "lb-25-17ue"
       ],
       "87": [
         "lb-296-l7zS",
