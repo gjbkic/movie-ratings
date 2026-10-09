@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791577992599,
-  "sourceUpdatedIso": "2026-10-09T20:33:12.599Z",
+  "sourceUpdatedAt": 1791578685550,
+  "sourceUpdatedIso": "2026-10-09T20:44:45.550Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -4595,7 +4595,6 @@
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
-        "TV本編",
         "どんでん返し",
         "娯楽",
         "社会問題・生活",
@@ -4607,10 +4606,11 @@
         "感動",
         "世界観",
         "特殊構造",
-        "時間"
+        "時間",
+        "TV本編"
       ],
       "origin": "その他",
-      "format": "",
+      "format": "live",
       "runtime": null,
       "exact": true,
       "letterboxdAddedDate": "2026-10-10",
@@ -5076,15 +5076,15 @@
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
-        "TV本編",
         "胸糞",
         "クライム",
         "サスペンス",
         "心理・内面",
-        "娯楽"
+        "娯楽",
+        "TV本編"
       ],
       "origin": "その他",
-      "format": "",
+      "format": "live",
       "runtime": null,
       "exact": true,
       "letterboxdAddedDate": "2026-10-10",
@@ -27096,6 +27096,7 @@
       "lb-462-d1ws": "other",
       "custom-1789385860057-z7ka": "other",
       "lb-183-x1OG": "drama",
+      "lb-228-6eCu": "drama",
       "lb-246-mqyw": "drama",
       "lb-250-bAcS": "drama",
       "lb-253-SVAW": "drama",
@@ -27174,6 +27175,8 @@
       "custom-1791553824276-cl9b": "drama",
       "custom-1791563602274-2p5j": "drama",
       "custom-1791567440043-bmc8": "drama",
+      "custom-1791570909341-auj1": "drama",
+      "custom-1791576150006-qu8m": "drama",
       "lb-0-hTha": "movie",
       "lb-1-4VZ8": "movie",
       "lb-2-2a9q": "movie",
@@ -27400,7 +27403,6 @@
       "lb-225-A7Am": "movie",
       "lb-226-g0d6": "movie",
       "lb-227-evra": "movie",
-      "lb-228-6eCu": "drama",
       "lb-229-26tw": "movie",
       "lb-230-43d0": "movie",
       "lb-231-hd9e": "movie",
@@ -27806,9 +27808,7 @@
       "custom-1791362786595-8onp": "movie",
       "custom-1791374649583-3zqi": "movie",
       "custom-1791382999848-25pc": "movie",
-      "custom-1791392810098-rjyg": "movie",
-      "custom-1791570909341-auj1": "drama",
-      "custom-1791576150006-qu8m": "drama"
+      "custom-1791392810098-rjyg": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -33743,15 +33743,14 @@
         "TV本編"
       ],
       "custom-1791570909341-auj1": [
-        "TV本編",
         "胸糞",
         "クライム",
         "サスペンス",
         "心理・内面",
-        "娯楽"
+        "娯楽",
+        "TV本編"
       ],
       "custom-1791576150006-qu8m": [
-        "TV本編",
         "どんでん返し",
         "娯楽",
         "社会問題・生活",
@@ -33763,7 +33762,8 @@
         "感動",
         "世界観",
         "特殊構造",
-        "時間"
+        "時間",
+        "TV本編"
       ]
     },
     "originOverrides": {
@@ -35212,7 +35212,9 @@
       "custom-1791476522907-cd9b": "live",
       "custom-1791553824276-cl9b": "live",
       "custom-1791563602274-2p5j": "live",
-      "custom-1791567440043-bmc8": "live"
+      "custom-1791567440043-bmc8": "live",
+      "custom-1791570909341-auj1": "live",
+      "custom-1791576150006-qu8m": "live"
     },
     "runtimeOverrides": {
       "custom-1790247938551-ixfs": 100,
