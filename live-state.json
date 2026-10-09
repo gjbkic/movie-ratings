@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791575757037,
-  "sourceUpdatedIso": "2026-10-09T19:55:57.037Z",
+  "sourceUpdatedAt": 1791575768182,
+  "sourceUpdatedIso": "2026-10-09T19:56:08.182Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -3454,39 +3454,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1791139747386-vy04",
-      "title": "THE BATMAN－ザ・バットマン－",
-      "originalTitle": "The Batman",
-      "englishTitle": "The Batman",
-      "year": 2022,
-      "score": 86,
-      "star": 3.5,
-      "overallRank": 119,
-      "sameScoreRank": 1,
-      "category": "Letterboxd",
-      "mediaType": "movie",
-      "genre": [
-        "クライム",
-        "ミステリー",
-        "スリラー",
-        "アクション",
-        "ヒーロー",
-        "ファンタジー",
-        "雰囲気・美学",
-        "娯楽",
-        "サスペンス",
-        "ドラマ",
-        "恋愛"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 177,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-05",
-      "letterboxdPublishedAt": "Mon, 5 Oct 2026 05:14:36 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-04"
-    },
-    {
       "id": "lb-115-2aWi",
       "title": "マイノリティ・リポート",
       "originalTitle": "",
@@ -3494,8 +3461,8 @@
       "year": 2002,
       "score": 86,
       "star": 3.5,
-      "overallRank": 120,
-      "sameScoreRank": 2,
+      "overallRank": 119,
+      "sameScoreRank": 1,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -3523,8 +3490,8 @@
       "year": 2024,
       "score": 86,
       "star": 3.5,
-      "overallRank": 121,
-      "sameScoreRank": 3,
+      "overallRank": 120,
+      "sameScoreRank": 2,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -3555,8 +3522,8 @@
       "year": 2014,
       "score": 86,
       "star": 3.5,
-      "overallRank": 122,
-      "sameScoreRank": 4,
+      "overallRank": 121,
+      "sameScoreRank": 3,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -3584,8 +3551,8 @@
       "year": 2007,
       "score": 86,
       "star": 3.5,
-      "overallRank": 123,
-      "sameScoreRank": 5,
+      "overallRank": 122,
+      "sameScoreRank": 4,
       "category": "Letterboxd",
       "mediaType": "other",
       "genre": [
@@ -3601,6 +3568,39 @@
       "letterboxdAddedDate": "2026-09-08",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1791139747386-vy04",
+      "title": "THE BATMAN－ザ・バットマン－",
+      "originalTitle": "The Batman",
+      "englishTitle": "The Batman",
+      "year": 2022,
+      "score": 86,
+      "star": 3.5,
+      "overallRank": 123,
+      "sameScoreRank": 5,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "クライム",
+        "ミステリー",
+        "スリラー",
+        "アクション",
+        "ヒーロー",
+        "ファンタジー",
+        "雰囲気・美学",
+        "娯楽",
+        "サスペンス",
+        "ドラマ",
+        "恋愛"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 177,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-05",
+      "letterboxdPublishedAt": "Mon, 5 Oct 2026 05:14:36 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-04"
     },
     {
       "id": "lb-279-215a",
@@ -21666,11 +21666,11 @@
         "lb-99-4hk0"
       ],
       "86": [
-        "custom-1791139747386-vy04",
         "lb-115-2aWi",
         "lb-390-pUfA",
         "lb-89-5RFA",
         "custom-1789385860426-8e86",
+        "custom-1791139747386-vy04",
         "lb-279-215a",
         "lb-148-17uy",
         "lb-542-2b6C",
