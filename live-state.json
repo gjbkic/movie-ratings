@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791567442350,
-  "sourceUpdatedIso": "2026-10-09T17:37:22.350Z",
+  "sourceUpdatedAt": 1791567454312,
+  "sourceUpdatedIso": "2026-10-09T17:37:34.312Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -20297,7 +20297,13 @@
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
-        "TV本編"
+        "TV本編",
+        "雰囲気・美学",
+        "娯楽",
+        "社会問題・生活",
+        "コメディ",
+        "ドラマ",
+        "ファンタジー"
       ],
       "origin": "その他",
       "format": "",
@@ -33616,7 +33622,13 @@
         "TV本編"
       ],
       "custom-1791567440043-bmc8": [
-        "TV本編"
+        "TV本編",
+        "雰囲気・美学",
+        "娯楽",
+        "社会問題・生活",
+        "コメディ",
+        "ドラマ",
+        "ファンタジー"
       ]
     },
     "originOverrides": {
