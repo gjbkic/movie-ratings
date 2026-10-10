@@ -2,7 +2,7 @@
 'use strict';
 // v84: source-aware TMDb director (films), show creator and episode director (TV).
 // Stored in letterboxdMeta only; score/rank and review data are untouched.
-const BUILD='20261011b';
+const BUILD='20261011c';
 const unique=names=>[...new Set((names||[]).map(v=>String(v||'').trim()).filter(Boolean))];
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const active=new Map();
@@ -40,7 +40,7 @@ async function retrieve(f,force=false){
     }
     // Metadata only. Never touch exactScores, rankOrder, starOverrides or notes.
     if(filmById(f.id)){
-      meta(f.id).crew84=people;save(false);
+      meta(f.id).crew84=people;save();
       if(selectedId===f.id)drawCrew(f.id);
       populateInWatchList();
     }
