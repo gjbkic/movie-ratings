@@ -65,7 +65,7 @@ function mergeRss(list){
     }
   }
   if(touched.size){
-    save(false);drawList();
+    save();drawList();
     if(selectedId&&touched.has(selectedId))drawEditor(selectedId);
   }
   return {added,updated,unmatched};
