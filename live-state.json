@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791657997602,
-  "sourceUpdatedIso": "2026-10-10T18:46:37.602Z",
+  "sourceUpdatedAt": 1791664056430,
+  "sourceUpdatedIso": "2026-10-10T20:27:36.430Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -11434,7 +11434,7 @@
       "englishTitle": "Black Mirror: Fifteen Million Merits",
       "year": 2011,
       "score": 80,
-      "star": 2.5,
+      "star": 3,
       "overallRank": 397,
       "sameScoreRank": 7,
       "category": "Letterboxd",
@@ -11670,7 +11670,7 @@
       "englishTitle": "Heidi: Girl of the Alps",
       "year": 1974,
       "score": 80,
-      "star": 2.5,
+      "star": 3,
       "overallRank": 405,
       "sameScoreRank": 15,
       "category": "Letterboxd",
@@ -20488,6 +20488,119 @@
       "letterboxdAddedDate": "2026-09-08",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1791664054005-kkyc",
+      "title": "HIKARU UTADA SCIENCE FICTION TOUR 2024",
+      "originalTitle": "HIKARU UTADA SCIENCE FICTION TOUR 2024",
+      "englishTitle": "HIKARU UTADA SCIENCE FICTION TOUR 2024",
+      "year": 2024,
+      "score": null,
+      "star": 4,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "ミュージカル"
+      ],
+      "origin": "その他",
+      "format": "live",
+      "runtime": 151,
+      "exact": false,
+      "letterboxdAddedDate": "2026-10-11",
+      "letterboxdPublishedAt": "Sun, 11 Oct 2026 06:36:16 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-11"
+    },
+    {
+      "id": "custom-1791664054514-pksv",
+      "title": "Luv Live",
+      "originalTitle": "Luv Live",
+      "englishTitle": "Luv Live",
+      "year": 2014,
+      "score": null,
+      "star": 4.5,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "ミュージカル"
+      ],
+      "origin": "その他",
+      "format": "live",
+      "runtime": 65,
+      "exact": false,
+      "letterboxdAddedDate": "2026-10-11",
+      "letterboxdPublishedAt": "Sun, 11 Oct 2026 06:34:06 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-11"
+    },
+    {
+      "id": "custom-1791664055006-96rv",
+      "title": "Utada Hikaru: Wild Life",
+      "originalTitle": "",
+      "englishTitle": "Utada Hikaru: Wild Life",
+      "year": 2011,
+      "score": null,
+      "star": 5,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": "",
+      "origin": "その他",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": "2026-10-11",
+      "letterboxdPublishedAt": "Sun, 11 Oct 2026 06:29:30 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-11"
+    },
+    {
+      "id": "custom-1791664055469-au2b",
+      "title": "Hikaru Utada Laughter in the Dark Tour 2018",
+      "originalTitle": "Hikaru Utada Laughter in the Dark Tour 2018",
+      "englishTitle": "Hikaru Utada Laughter in the Dark Tour 2018",
+      "year": 2018,
+      "score": null,
+      "star": 4,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "ミュージカル"
+      ],
+      "origin": "その他",
+      "format": "live",
+      "runtime": 141,
+      "exact": false,
+      "letterboxdAddedDate": "2026-10-11",
+      "letterboxdPublishedAt": "Sun, 11 Oct 2026 06:19:17 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-10"
+    },
+    {
+      "id": "custom-1791664055911-cuz4",
+      "title": "Hikaru Utada Live Sessions from AIR Studios",
+      "originalTitle": "Hikaru Utada Live Sessions from Air Studios",
+      "englishTitle": "Hikaru Utada Live Sessions from Air Studios",
+      "year": 2024,
+      "score": null,
+      "star": 4.5,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "ミュージカル"
+      ],
+      "origin": "その他",
+      "format": "live",
+      "runtime": 56,
+      "exact": false,
+      "letterboxdAddedDate": "2026-10-11",
+      "letterboxdPublishedAt": "Sun, 11 Oct 2026 06:12:28 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-11"
     }
   ],
   "state": {
@@ -23817,6 +23930,91 @@
         "added": true,
         "_seq": 1791636834270,
         "source": "letterboxd"
+      },
+      {
+        "id": "custom-1791664054005-kkyc",
+        "title": "HIKARU UTADA SCIENCE FICTION TOUR 2024",
+        "originalTitle": "HIKARU UTADA SCIENCE FICTION TOUR 2024",
+        "englishTitle": "HIKARU UTADA SCIENCE FICTION TOUR 2024",
+        "lbTitle": "HIKARU UTADA SCIENCE FICTION TOUR 2024",
+        "tmdbId": 1354550,
+        "year": 2024,
+        "uri": "https://letterboxd.com/gjbkic/film/hikaru-utada-science-fiction-tour-2024/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 4,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791664054005,
+        "source": "letterboxd"
+      },
+      {
+        "id": "custom-1791664054514-pksv",
+        "title": "Luv Live",
+        "originalTitle": "Luv Live",
+        "englishTitle": "Luv Live",
+        "lbTitle": "Luv Live",
+        "tmdbId": 925907,
+        "year": 2014,
+        "uri": "https://letterboxd.com/gjbkic/film/luv-live/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 4.5,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791664054514,
+        "source": "letterboxd"
+      },
+      {
+        "id": "custom-1791664055006-96rv",
+        "title": "Utada Hikaru: Wild Life",
+        "originalTitle": "",
+        "englishTitle": "Utada Hikaru: Wild Life",
+        "lbTitle": "Utada Hikaru: Wild Life",
+        "tmdbId": null,
+        "year": 2011,
+        "uri": "https://letterboxd.com/gjbkic/film/utada-hikaru-wild-life-2011/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 5,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791664055006,
+        "source": "letterboxd"
+      },
+      {
+        "id": "custom-1791664055469-au2b",
+        "title": "Hikaru Utada Laughter in the Dark Tour 2018",
+        "originalTitle": "Hikaru Utada Laughter in the Dark Tour 2018",
+        "englishTitle": "Hikaru Utada Laughter in the Dark Tour 2018",
+        "lbTitle": "Hikaru Utada Laughter in the Dark Tour 2018",
+        "tmdbId": 611716,
+        "year": 2018,
+        "uri": "https://letterboxd.com/gjbkic/film/hikaru-utada-laughter-in-the-dark-tour-2018/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 4,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791664055469,
+        "source": "letterboxd"
+      },
+      {
+        "id": "custom-1791664055911-cuz4",
+        "title": "Hikaru Utada Live Sessions from AIR Studios",
+        "originalTitle": "Hikaru Utada Live Sessions from Air Studios",
+        "englishTitle": "Hikaru Utada Live Sessions from Air Studios",
+        "lbTitle": "Hikaru Utada Live Sessions from Air Studios",
+        "tmdbId": 948094,
+        "year": 2024,
+        "uri": "https://letterboxd.com/gjbkic/film/hikaru-utada-live-sessions-from-air-studios/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 4.5,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791664055911,
+        "source": "letterboxd"
       }
     ],
     "starOverrides": {
@@ -24457,7 +24655,7 @@
       "custom-1790960881562-cn74": 4,
       "custom-1790965876380-nqs0": 2,
       "custom-1790971112940-kuhf": 3.5,
-      "custom-1791018448490-bpdn": 2.5,
+      "custom-1791018448490-bpdn": 3,
       "custom-1791018448927-b4o3": 3,
       "custom-1791023391963-vdu9": 4,
       "custom-1791036345616-3tph": 4,
@@ -24493,7 +24691,7 @@
       "custom-1791397387325-yqut": 1.5,
       "custom-1791398329125-3r8f": 3,
       "custom-1791447953969-ah3e": 2.5,
-      "custom-1791449338315-twqr": 2.5,
+      "custom-1791449338315-twqr": 3,
       "custom-1791469824035-6gcd": 3,
       "custom-1791469823654-dpbh": 2.5,
       "custom-1791476522907-cd9b": 3.5,
@@ -27458,7 +27656,12 @@
       "custom-1791382999848-25pc": "movie",
       "custom-1791392810098-rjyg": "movie",
       "custom-lb-unrated-bOnU": "movie",
-      "custom-lb-unrated-1Qcu": "movie"
+      "custom-lb-unrated-1Qcu": "movie",
+      "custom-1791664054005-kkyc": "movie",
+      "custom-1791664054514-pksv": "movie",
+      "custom-1791664055006-96rv": "movie",
+      "custom-1791664055469-au2b": "movie",
+      "custom-1791664055911-cuz4": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -33445,6 +33648,18 @@
         "SF",
         "ドラマ",
         "TV本編"
+      ],
+      "custom-1791664054005-kkyc": [
+        "ミュージカル"
+      ],
+      "custom-1791664054514-pksv": [
+        "ミュージカル"
+      ],
+      "custom-1791664055469-au2b": [
+        "ミュージカル"
+      ],
+      "custom-1791664055911-cuz4": [
+        "ミュージカル"
       ]
     },
     "originOverrides": {
@@ -34174,7 +34389,12 @@
       "custom-lb-unrated-bOnU": "その他",
       "custom-lb-unrated-1Qcu": "その他",
       "custom-1791627813752-lf6s": "その他",
-      "custom-1791636834270-874l": "ハリウッド"
+      "custom-1791636834270-874l": "ハリウッド",
+      "custom-1791664054005-kkyc": "その他",
+      "custom-1791664054514-pksv": "その他",
+      "custom-1791664055006-96rv": "その他",
+      "custom-1791664055469-au2b": "その他",
+      "custom-1791664055911-cuz4": "その他"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -34903,7 +35123,11 @@
       "custom-lb-unrated-bOnU": "live",
       "custom-lb-unrated-1Qcu": "live",
       "custom-1791627813752-lf6s": "live",
-      "custom-1791636834270-874l": "live"
+      "custom-1791636834270-874l": "live",
+      "custom-1791664054005-kkyc": "live",
+      "custom-1791664054514-pksv": "live",
+      "custom-1791664055469-au2b": "live",
+      "custom-1791664055911-cuz4": "live"
     },
     "runtimeOverrides": {
       "custom-1790247938551-ixfs": 100,
@@ -35563,7 +35787,11 @@
       "custom-1791476522514-wpj8": 105,
       "custom-1791553824276-cl9b": 105,
       "custom-lb-unrated-bOnU": 129,
-      "custom-lb-unrated-1Qcu": 133
+      "custom-lb-unrated-1Qcu": 133,
+      "custom-1791664054005-kkyc": 151,
+      "custom-1791664054514-pksv": 65,
+      "custom-1791664055469-au2b": 141,
+      "custom-1791664055911-cuz4": 56
     },
     "letterboxdMeta": {
       "lb-0-hTha": {
@@ -41037,6 +41265,81 @@
         "legacyMovieId": 495887,
         "letterboxdMovieId": 495887,
         "episodeTmdbId": 1226010
+      },
+      "custom-1791664054005-kkyc": {
+        "publishedAt": "Sun, 11 Oct 2026 06:36:16 +1300",
+        "addedDate": "2026-10-11",
+        "addedDateSource": "rss-first-seen",
+        "reportedWatchedDate": "2026-10-11",
+        "note": "すんごい沢山申し込んだのに全て外れた。衣装も美しい。travelingの新ミックスも前のエレクトリックな魅力から変わって少し抜けた爽やかな雰囲気でとても好き。前も好きだけど。後半、あなた、花束を君に、one last kiss、君に夢中と聞きたい曲が詰まってた。だいぶ大人としての落ち着きがあり、MCも身近で素朴で良くて本当に行きたかった。また見る",
+        "noteSource": "letterboxd-rss",
+        "noteImportedAt": "2026-10-10T20:27:36.410Z",
+        "rssReviewRecords": {
+          "letterboxd-review-1531654548": {
+            "body": "すんごい沢山申し込んだのに全て外れた。衣装も美しい。travelingの新ミックスも前のエレクトリックな魅力から変わって少し抜けた爽やかな雰囲気でとても好き。前も好きだけど。後半、あなた、花束を君に、one last kiss、君に夢中と聞きたい曲が詰まってた。だいぶ大人としての落ち着きがあり、MCも身近で素朴で良くて本当に行きたかった。また見る",
+            "block": "すんごい沢山申し込んだのに全て外れた。衣装も美しい。travelingの新ミックスも前のエレクトリックな魅力から変わって少し抜けた爽やかな雰囲気でとても好き。前も好きだけど。後半、あなた、花束を君に、one last kiss、君に夢中と聞きたい曲が詰まってた。だいぶ大人としての落ち着きがあり、MCも身近で素朴で良くて本当に行きたかった。また見る"
+          }
+        }
+      },
+      "custom-1791664054514-pksv": {
+        "publishedAt": "Sun, 11 Oct 2026 06:34:06 +1300",
+        "addedDate": "2026-10-11",
+        "addedDateSource": "rss-first-seen",
+        "reportedWatchedDate": "2026-10-11",
+        "note": "若いめちゃくちゃ若い。ライブのできる喜びで溢れている。この時期のハスキーボイスも本当に好き。甘いワナで入場する時の弾ける感じが好き。スチャダラパーとの今夜はブギーバックは普通に本家とは違う魅力で俺的には本家より好き。本家もめっちゃ好きだけど。まだ曲が少ないが、全曲いい。やっぱいいアルバム",
+        "noteSource": "letterboxd-rss",
+        "noteImportedAt": "2026-10-10T20:27:36.411Z",
+        "rssReviewRecords": {
+          "letterboxd-review-1531651964": {
+            "body": "若いめちゃくちゃ若い。ライブのできる喜びで溢れている。この時期のハスキーボイスも本当に好き。甘いワナで入場する時の弾ける感じが好き。スチャダラパーとの今夜はブギーバックは普通に本家とは違う魅力で俺的には本家より好き。本家もめっちゃ好きだけど。まだ曲が少ないが、全曲いい。やっぱいいアルバム",
+            "block": "若いめちゃくちゃ若い。ライブのできる喜びで溢れている。この時期のハスキーボイスも本当に好き。甘いワナで入場する時の弾ける感じが好き。スチャダラパーとの今夜はブギーバックは普通に本家とは違う魅力で俺的には本家より好き。本家もめっちゃ好きだけど。まだ曲が少ないが、全曲いい。やっぱいいアルバム"
+          }
+        }
+      },
+      "custom-1791664055006-96rv": {
+        "publishedAt": "Sun, 11 Oct 2026 06:29:30 +1300",
+        "addedDate": "2026-10-11",
+        "addedDateSource": "rss-first-seen",
+        "reportedWatchedDate": "2026-10-11",
+        "note": "まあじで素晴らしい。歌唱力的に全盛期だと思う。全ての歌唱が上手すぎる。人間活動前の皆が別れだとわかった上での本当に身近でなんと言えばいいか分からないが感傷に浸る。goodbye happiness がこのライブの雰囲気を1番表してると思う。sakuraドロップスのアレンジだけ元の方が好き。Can't wait til Christmas、time will tell がセトリの中で1番好き。うますぎるしいい歌すぎ。本当に完璧。ショートめのジーンズとTシャツの衣装も好きだし、序盤のフリフリの着いてる衣装も。何度観ても素晴らしい。本当に好き。",
+        "noteSource": "letterboxd-rss",
+        "noteImportedAt": "2026-10-10T20:27:36.411Z",
+        "rssReviewRecords": {
+          "letterboxd-review-1531646459": {
+            "body": "まあじで素晴らしい。歌唱力的に全盛期だと思う。全ての歌唱が上手すぎる。人間活動前の皆が別れだとわかった上での本当に身近でなんと言えばいいか分からないが感傷に浸る。goodbye happiness がこのライブの雰囲気を1番表してると思う。sakuraドロップスのアレンジだけ元の方が好き。Can't wait til Christmas、time will tell がセトリの中で1番好き。うますぎるしいい歌すぎ。本当に完璧。ショートめのジーンズとTシャツの衣装も好きだし、序盤のフリフリの着いてる衣装も。何度観ても素晴らしい。本当に好き。",
+            "block": "まあじで素晴らしい。歌唱力的に全盛期だと思う。全ての歌唱が上手すぎる。人間活動前の皆が別れだとわかった上での本当に身近でなんと言えばいいか分からないが感傷に浸る。goodbye happiness がこのライブの雰囲気を1番表してると思う。sakuraドロップスのアレンジだけ元の方が好き。Can't wait til Christmas、time will tell がセトリの中で1番好き。うますぎるしいい歌すぎ。本当に完璧。ショートめのジーンズとTシャツの衣装も好きだし、序盤のフリフリの着いてる衣装も。何度観ても素晴らしい。本当に好き。"
+          }
+        }
+      },
+      "custom-1791664055469-au2b": {
+        "publishedAt": "Sun, 11 Oct 2026 06:19:17 +1300",
+        "addedDate": "2026-10-11",
+        "addedDateSource": "rss-first-seen",
+        "reportedWatchedDate": "2026-10-10",
+        "note": "素晴らしい。道や誓いと言った曲をライブで聞けるのは本当にすごい。行けてないけど。低音域が若い時より上手くなってる。セトリも華やかながら骨太で、全体的な青いシルクの厚い布みたいな。Prisoner Of Loveの歌唱が1番いい。",
+        "noteSource": "letterboxd-rss",
+        "noteImportedAt": "2026-10-10T20:27:36.411Z",
+        "rssReviewRecords": {
+          "letterboxd-review-1531632764": {
+            "body": "素晴らしい。道や誓いと言った曲をライブで聞けるのは本当にすごい。行けてないけど。低音域が若い時より上手くなってる。セトリも華やかながら骨太で、全体的な青いシルクの厚い布みたいな。Prisoner Of Loveの歌唱が1番いい。",
+            "block": "素晴らしい。道や誓いと言った曲をライブで聞けるのは本当にすごい。行けてないけど。低音域が若い時より上手くなってる。セトリも華やかながら骨太で、全体的な青いシルクの厚い布みたいな。Prisoner Of Loveの歌唱が1番いい。"
+          }
+        }
+      },
+      "custom-1791664055911-cuz4": {
+        "publishedAt": "Sun, 11 Oct 2026 06:12:28 +1300",
+        "addedDate": "2026-10-11",
+        "addedDateSource": "rss-first-seen",
+        "reportedWatchedDate": "2026-10-11",
+        "note": "badモードは初めそこまで好きでなかったが聞き込むうちにどんどん好きになる。落ち着きつつも爽やか。find loveがこのセッションの中で一番好きかも。というかこのセッションはシングルとかでもないのに俺の好きな曲ばっか。特にbadモード、one last kiss、君に夢中、time、誰にも言わない、About Me なんかはほんとにトップティア。スタジオ内の雰囲気もよく、暖かい",
+        "noteSource": "letterboxd-rss",
+        "noteImportedAt": "2026-10-10T20:27:36.411Z",
+        "rssReviewRecords": {
+          "letterboxd-review-1531624887": {
+            "body": "badモードは初めそこまで好きでなかったが聞き込むうちにどんどん好きになる。落ち着きつつも爽やか。find loveがこのセッションの中で一番好きかも。というかこのセッションはシングルとかでもないのに俺の好きな曲ばっか。特にbadモード、one last kiss、君に夢中、time、誰にも言わない、About Me なんかはほんとにトップティア。スタジオ内の雰囲気もよく、暖かい",
+            "block": "badモードは初めそこまで好きでなかったが聞き込むうちにどんどん好きになる。落ち着きつつも爽やか。find loveがこのセッションの中で一番好きかも。というかこのセッションはシングルとかでもないのに俺の好きな曲ばっか。特にbadモード、one last kiss、君に夢中、time、誰にも言わない、About Me なんかはほんとにトップティア。スタジオ内の雰囲気もよく、暖かい"
+          }
+        }
       }
     }
   }
