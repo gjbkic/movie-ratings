@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791664450153,
-  "sourceUpdatedIso": "2026-10-10T20:34:10.153Z",
+  "sourceUpdatedAt": 1791664458437,
+  "sourceUpdatedIso": "2026-10-10T20:34:18.437Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -12416,6 +12416,33 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "custom-1789385860088-xif1",
+      "title": "THE GUILTY/ギルティ",
+      "originalTitle": "",
+      "englishTitle": "The Guilty",
+      "year": 2018,
+      "score": 79,
+      "star": 2.5,
+      "overallRank": 433,
+      "sameScoreRank": 1,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "心理・内面",
+        "ドラマ",
+        "サスペンス",
+        "ミステリー",
+        "どんでん返し"
+      ],
+      "origin": "その他",
+      "format": "live",
+      "runtime": 85,
+      "exact": true,
+      "letterboxdAddedDate": "2026-09-10",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "custom-1791113241748-xivg",
       "title": "鬼滅の刃",
       "originalTitle": "",
@@ -12423,8 +12450,8 @@
       "year": 2019,
       "score": 79,
       "star": 2.5,
-      "overallRank": 433,
-      "sameScoreRank": 1,
+      "overallRank": 434,
+      "sameScoreRank": 2,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -12452,8 +12479,8 @@
       "year": 2011,
       "score": 79,
       "star": 2.5,
-      "overallRank": 434,
-      "sameScoreRank": 2,
+      "overallRank": 435,
+      "sameScoreRank": 3,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -12480,8 +12507,8 @@
       "year": 2014,
       "score": 79,
       "star": 2.5,
-      "overallRank": 435,
-      "sameScoreRank": 3,
+      "overallRank": 436,
+      "sameScoreRank": 4,
       "category": "スパイダーマン作品",
       "mediaType": "movie",
       "genre": [
@@ -12499,33 +12526,6 @@
       "runtime": 143,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "custom-1789385860088-xif1",
-      "title": "THE GUILTY/ギルティ",
-      "originalTitle": "",
-      "englishTitle": "The Guilty",
-      "year": 2018,
-      "score": 79,
-      "star": 2.5,
-      "overallRank": 436,
-      "sameScoreRank": 4,
-      "category": "Letterboxd",
-      "mediaType": "movie",
-      "genre": [
-        "心理・内面",
-        "ドラマ",
-        "サスペンス",
-        "ミステリー",
-        "どんでん返し"
-      ],
-      "origin": "その他",
-      "format": "live",
-      "runtime": 85,
-      "exact": true,
-      "letterboxdAddedDate": "2026-09-10",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -21617,10 +21617,10 @@
         "lb-328-DAQ"
       ],
       "79": [
+        "custom-1789385860088-xif1",
         "custom-1791113241748-xivg",
         "lb-264-FPS",
         "lb-562-3utM",
-        "custom-1789385860088-xif1",
         "custom-1791122852357-22zp",
         "custom-1789385860389-93a2",
         "custom-1789385860674-ow4o",
