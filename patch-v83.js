@@ -13,6 +13,7 @@ const logged=f=>events(f).map(x=>x.recordedAt||'').filter(Boolean).sort().at(-1)
 const rewatches=f=>events(f).filter(x=>x.rewatch).length;
 let sortMode='rank';try{sortMode=localStorage.getItem('movie30_watch_sort_v83')||'rank'}catch(_){}
 if(!['rank','watched-new','watched-old','rewatch','logged-new'].includes(sortMode))sortMode='rank';
+let listLimit=80;
 
 let parsed=[];
 const priorParse=parseLbRss;
@@ -200,7 +201,7 @@ if(tools&&!document.getElementById('watchSort83')){
     +'<option value="watched-old">鑑賞日：古い順</option><option value="rewatch">再鑑賞の記録が多い順</option>'
     +'<option value="logged-new">登録日：新しい順</option>';
   sel.value=sortMode;tools.appendChild(sel);
-  sel.onchange=()=>{sortMode=sel.value;try{localStorage.setItem('movie30_watch_sort_v83',sortMode)}catch(_){}renderRank();};
+  sel.onchange=()=>{sortMode=sel.value;listLimit=80;try{localStorage.setItem('movie30_watch_sort_v83',sortMode)}catch(_){}renderRank();};
 }
 const listRoot=document.createElement('div');listRoot.id='watchList83';
 rankRoot?.insertAdjacentElement('afterend',listRoot);
@@ -271,7 +272,7 @@ function drawList(){
   listRoot.innerHTML='<p class="watch83-summary">'+entries.length+'件の鑑賞・作品記録／日付あり '+dated+'件。'
     +(sortMode==='rewatch'?'作品単位で再鑑賞数順。':'LetterboxdのDiaryと同様、再鑑賞も1回ずつ表示。')
     +' 点数・元の順位には影響しません。</p>'
-    +'<div class="watch83-grid">'+entries.map(({f,entry,count,sortDate})=>{
+    +'<div class="watch83-grid">'+entries.slice(0,listLimit).map(({f,entry,count,sortDate})=>{
       const sc=effectiveScore(f),m=state.letterboxdMeta?.[f.id]||{};
       const dateLabel=entry
         ?(entry.date?'鑑賞日 '+entry.date:'鑑賞日不明')
@@ -283,8 +284,10 @@ function drawList(){
         +'</small><small>'+(sc==null?'未採点':sc+'点')
         +(sortMode==='rewatch'?' · 再鑑賞'+rewatches(f)+'件':'')
         +' · 全'+count+'記録</small></button>';
-    }).join('')+'</div>';
+    }).join('')+'</div>'
+    +(entries.length>listLimit?'<button type="button" class="btn" id="watchMore83">さらに'+Math.min(80,entries.length-listLimit)+'件を表示</button>':'');
   listRoot.querySelectorAll('[data-film]').forEach(el=>el.onclick=()=>openSheet(decodeURIComponent(el.dataset.film)));
+  const more=listRoot.querySelector('#watchMore83');if(more)more.onclick=()=>{listLimit+=80;drawList();};
 }
 const oldRank=renderRank;
 renderRank=function(...args){
@@ -293,7 +296,7 @@ renderRank=function(...args){
 };
 for(const id of ['searchRank','categoryFilterRank','mediaFilterRank','originFilterRank']){
   const el=document.getElementById(id);if(el)el.addEventListener(id==='searchRank'?'input':'change',()=>{
-    if(sortMode!=='rank')drawList();
+    if(sortMode!=='rank'){listLimit=80;drawList();}
   });
 }
 let editor=null;
