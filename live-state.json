@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791637514311,
-  "sourceUpdatedIso": "2026-10-10T13:05:14.311Z",
+  "sourceUpdatedAt": 1791637519356,
+  "sourceUpdatedIso": "2026-10-10T13:05:19.356Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -20371,10 +20371,10 @@
       "originalTitle": "",
       "englishTitle": "The Transporter",
       "year": 2002,
-      "score": 50,
-      "star": 1,
+      "score": 40,
+      "star": 0.5,
       "overallRank": 721,
-      "sameScoreRank": 2,
+      "sameScoreRank": 1,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -21179,7 +21179,7 @@
       "custom-1791576150006-qu8m": 85,
       "custom-1791627813752-lf6s": 83,
       "custom-1791636834270-874l": 74,
-      "lb-129-24Nu": 50,
+      "lb-129-24Nu": 40,
       "lb-453-2DF6": 50
     },
     "rankOrder": {
@@ -25086,7 +25086,7 @@
       "custom-1791576150006-qu8m": 3.5,
       "custom-1791627813752-lf6s": 3,
       "custom-1791636834270-874l": 2,
-      "lb-129-24Nu": 1,
+      "lb-129-24Nu": 0.5,
       "lb-453-2DF6": 1
     },
     "titleOverrides": {
