@@ -1,0 +1,1389 @@
+
+<!-- patch-v14.js -->
+<script>
+(() => {
+  const MEDIA_LABELS = { movie: "映画", documentary: "ドキュメンタリー", other: "その他" };
+  const MEDIA_OPTIONS = Object.entries(MEDIA_LABELS).map(([v,l]) => `<option value="${v}">${l}</option>`).join("");
+  const LB_LAST_SYNC_KEY = "movie30_lb_last_success_v2";
+
+  if (!state.mediaTypeOverrides || typeof state.mediaTypeOverrides !== "object") state.mediaTypeOverrides = {};
+
+  function filmMediaType(f){ return String((state.mediaTypeOverrides || {})[f.id] || f.mediaType || "movie"); }
+  function mediaLabel(f){ return MEDIA_LABELS[filmMediaType(f)] || MEDIA_LABELS.movie; }
+  function setMediaType(id, type){
+    if (!id) return;
+    if (!type || type === "movie") delete state.mediaTypeOverrides[id];
+    else state.mediaTypeOverrides[id] = type;
+    save();
+  }
+
+  for (const f of allFilms()) {
+    const t = displayTitle(f);
+    if (!state.mediaTypeOverrides[f.id] && t === "Miss Americana") state.mediaTypeOverrides[f.id] = "documentary";
+    if (!state.mediaTypeOverrides[f.id] && t === "パーフェクトブルー講座") state.mediaTypeOverrides[f.id] = "other";
+  }
+  save(false);
+
+  const style = document.createElement("style");
+  style.textContent = `.media-pill{display:inline-block;margin-right:5px;padding:1px 5px;border:1px solid rgba(255,255,255,.16);border-radius:999px;font-size:8px;color:#aeb8c6;vertical-align:1px}.media-field-label{font-size:10px;color:var(--muted)}@media(min-width:801px){#page-data .formgrid{grid-template-columns:1fr 1fr 1fr 1fr 1fr auto}}`;
+  document.head.appendChild(style);
+
+  function makeSelect(id, value="movie"){
+    const s = document.createElement("select"); s.className = "field"; s.id = id; s.innerHTML = MEDIA_OPTIONS; s.value = value || "movie"; return s;
+  }
+
+  const newCategory = document.getElementById("newCategory");
+  if (newCategory && !document.getElementById("newMediaType")) {
+    const s = makeSelect("newMediaType"); newCategory.parentNode.insertBefore(s, newCategory);
+  }
+
+  const qCategory = document.getElementById("qCategory");
+  if (qCategory && !document.getElementById("qMediaType")) {
+    const label = document.createElement("label"); label.className = "media-field-label"; label.textContent = "種別";
+    const s = makeSelect("qMediaType"); s.style.width = "100%"; label.appendChild(s);
+    qCategory.closest("label").parentNode.insertBefore(label, qCategory.closest("label"));
+  }
+
+  const editCategory = document.getElementById("editCategory");
+  if (editCategory && !document.getElementById("editMediaType")) {
+    const label = document.createElement("label"); label.className = "media-field-label"; label.textContent = "種別";
+    const s = makeSelect("editMediaType"); s.style.width = "100%"; label.appendChild(s);
+    editCategory.closest("label").parentNode.insertBefore(label, editCategory.closest("label"));
+  }
+
+  const quickAdd = document.getElementById("quickAdd"); if (quickAdd) quickAdd.textContent = "＋ 作品";
+  document.querySelectorAll("#page-data .panel h2").forEach(h => { if (h.textContent.trim() === "映画を追加") h.textContent = "作品を追加"; });
+  const addSheetTitle = document.querySelector("#addSheetBg .sheet-title"); if (addSheetTitle) addSheetTitle.textContent = "作品を追加";
+
+  const baseAddFilm = addFilm;
+  addFilm = function(title, year, category, star, score, meta={}){
+    const f = baseAddFilm(title, year, category, star, score, meta);
+    if (f && meta && meta.mediaType && meta.mediaType !== "movie") { state.mediaTypeOverrides[f.id] = meta.mediaType; save(); render(); }
+    return f;
+  };
+
+  const addBtn = document.getElementById("addMovie");
+  if (addBtn) addBtn.onclick = () => {
+    const f = addFilm(document.getElementById("newTitle").value,document.getElementById("newYear").value,document.getElementById("newCategory").value,document.getElementById("newStar").value,document.getElementById("newScore").value,{originalTitle:document.getElementById("newOriginalTitle").value,englishTitle:document.getElementById("newEnglishTitle").value,mediaType:document.getElementById("newMediaType")?.value || "movie"});
+    if (f) { ["newTitle","newOriginalTitle","newEnglishTitle","newYear","newScore"].forEach(id => document.getElementById(id).value = ""); document.getElementById("newMediaType").value = "movie"; toast("作品を追加しました"); }
+  };
+
+  const qAddBtn = document.getElementById("qAdd");
+  if (qAddBtn) qAddBtn.onclick = () => {
+    const f = addFilm(document.getElementById("qTitle").value,document.getElementById("qYear").value,document.getElementById("qCategory").value,document.getElementById("qStar").value,document.getElementById("qScore").value,{originalTitle:document.getElementById("qOriginalTitle").value,englishTitle:document.getElementById("qEnglishTitle").value,tmdbId:selectedTmdbId,mediaType:document.getElementById("qMediaType")?.value || "movie"});
+    if (f) { ["qLookup","qTitle","qOriginalTitle","qEnglishTitle","qYear","qCategory","qScore"].forEach(id => document.getElementById(id).value = ""); if (document.getElementById("qMediaType")) document.getElementById("qMediaType").value = "movie"; selectedTmdbId = null; document.getElementById("addSheetBg").classList.remove("open"); view.page = "rank"; save(); render(); document.getElementById("searchRank").value = displayTitle(f); renderRank(); toast("追加しました。検索で表示中"); }
+  };
+
+  function refreshSheetMeta(){
+    const f = filmById(selectedId); if (!f) return; const type = filmMediaType(f);
+    document.getElementById("sheetMeta").textContent = `${f.year||""}${type!=="movie"?" · "+mediaLabel(f):""}${filmCategory(f)?" · "+filmCategory(f):""}`;
+  }
+
+  const baseOpenSheet = openSheet;
+  openSheet = function(id){ baseOpenSheet(id); const f = filmById(id); if (!f) return; const s = document.getElementById("editMediaType"); if (s) s.value = filmMediaType(f); refreshSheetMeta(); };
+  const editMediaType = document.getElementById("editMediaType"); if (editMediaType) editMediaType.onchange = e => { setMediaType(selectedId, e.target.value); refreshSheetMeta(); render(); };
+  if (editCategory) editCategory.addEventListener("change", () => setTimeout(refreshSheetMeta, 0));
+
+  function annotateTypes(){
+    document.querySelectorAll(".rank-card").forEach(card => { const id = decodeURIComponent(card.dataset.id || ""); const f = filmById(id); if (!f) return; const meta = card.querySelector(".rank-meta"); if (!meta) return; meta.querySelectorAll(".media-pill").forEach(x => x.remove()); if (filmMediaType(f) !== "movie") meta.insertAdjacentHTML("afterbegin", `<span class="media-pill">${esc(mediaLabel(f))}</span>`); });
+  }
+  const baseRenderRank = renderRank; renderRank = function(){ baseRenderRank(); annotateTypes(); };
+
+  const baseExportRows = exportRows;
+  exportRows = function(){ return baseExportRows().map((row, i) => ({...row, media_type: mediaLabel(allFilms()[i])})); };
+  const csvBtn = document.getElementById("downloadCsv");
+  if (csvBtn) csvBtn.onclick = () => { const rows = exportRows(), head = ["邦題／表示名","原題","英題","年","種別","星","星内","点数","カテゴリ","追加映画","TMDB ID"]; const csv = [head, ...rows.map(x => [x.title,x.original_title,x.english_title,x.year,x.media_type,x.star,x.tier,x.score,x.category,x.added,x.tmdb_id])].map(r => r.map(csvCell).join(",")).join("\r\n"); download("movie30_scores_v14.csv", "\ufeff"+csv, "text/csv;charset=utf-8"); };
+
+  const baseSyncLetterboxd = syncLetterboxd;
+  syncLetterboxd = async function(silent=false){
+    if (silent) { try { const last = Number(localStorage.getItem(LB_LAST_SYNC_KEY) || 0); if (last && Date.now() - last < 6*60*60*1000) return; } catch(_) {} }
+    await baseSyncLetterboxd(silent);
+    const st = document.getElementById("lbStatus");
+    if (!st || !st.classList.contains("bad")) { try { localStorage.setItem(LB_LAST_SYNC_KEY, String(Date.now())); } catch(_) {} }
+  };
+
+  render();
+})();
+
+</script>
+
+<!-- patch-v15.js -->
+<script>
+(() => {
+  const SERIES_VALUE = "series";
+  const SERIES_LABEL = "ドラマ・シリーズ";
+
+  function mediaTypeOf(f){ return String((state.mediaTypeOverrides || {})[f.id] || f.mediaType || "movie"); }
+  function mediaLabelV15(f){
+    const t = mediaTypeOf(f);
+    return t === "series" ? SERIES_LABEL : t === "documentary" ? "ドキュメンタリー" : t === "other" ? "その他" : "映画";
+  }
+
+  for (const id of ["newMediaType","qMediaType","editMediaType"]) {
+    const s = document.getElementById(id);
+    if (s && ![...s.options].some(o => o.value === SERIES_VALUE)) {
+      const o = document.createElement("option");
+      o.value = SERIES_VALUE;
+      o.textContent = SERIES_LABEL;
+      s.insertBefore(o, [...s.options].find(x => x.value === "documentary") || null);
+    }
+  }
+
+  const obviousSeries = new Set([
+    "イカゲーム",
+    "チェルノブイリ",
+    "新世紀エヴァンゲリオン",
+    "SPEC",
+    "The Decagon House Murders"
+  ]);
+  for (const f of allFilms()) {
+    if (!state.mediaTypeOverrides[f.id] && obviousSeries.has(displayTitle(f))) {
+      state.mediaTypeOverrides[f.id] = SERIES_VALUE;
+    }
+  }
+  save(false);
+
+  function fixSeriesPills(){
+    document.querySelectorAll(".rank-card").forEach(card => {
+      const id = decodeURIComponent(card.dataset.id || "");
+      const f = filmById(id);
+      if (!f || mediaTypeOf(f) !== SERIES_VALUE) return;
+      const meta = card.querySelector(".rank-meta");
+      if (!meta) return;
+      meta.querySelectorAll(".media-pill").forEach(x => x.remove());
+      meta.insertAdjacentHTML("afterbegin", `<span class="media-pill">${SERIES_LABEL}</span>`);
+    });
+  }
+
+  function fixSheetMedia(){
+    const f = filmById(selectedId);
+    if (!f) return;
+    const s = document.getElementById("editMediaType");
+    if (s) s.value = mediaTypeOf(f);
+    const meta = document.getElementById("sheetMeta");
+    if (meta) meta.textContent = `${f.year||""}${mediaTypeOf(f)!=="movie"?" · "+mediaLabelV15(f):""}${filmCategory(f)?" · "+filmCategory(f):""}`;
+  }
+
+  const renderRankV14 = renderRank;
+  renderRank = function(){ renderRankV14(); fixSeriesPills(); };
+  const openSheetV14 = openSheet;
+  openSheet = function(id){ openSheetV14(id); fixSheetMedia(); };
+  const editMedia = document.getElementById("editMediaType");
+  if (editMedia) editMedia.addEventListener("change", () => setTimeout(fixSheetMedia, 0));
+
+  function closestScoreList(x, y){
+    const hiddenGhost = dragCtx?.ghost;
+    if (hiddenGhost) hiddenGhost.style.display = "none";
+    const el = document.elementFromPoint(x, y);
+    if (hiddenGhost) hiddenGhost.style.display = "";
+    const direct = el?.closest?.(".score-list");
+    if (direct) return direct;
+    let best = null, bestD = Infinity;
+    for (const list of document.querySelectorAll(".score-list")) {
+      const r = list.getBoundingClientRect();
+      if (r.bottom < 0 || r.top > innerHeight) continue;
+      const dx = x < r.left ? r.left - x : x > r.right ? x - r.right : 0;
+      const dy = y < r.top ? r.top - y : y > r.bottom ? y - r.bottom : 0;
+      const d = dy * 3 + dx;
+      if (d < bestD) { bestD = d; best = list; }
+    }
+    return best;
+  }
+
+  function placeAtNearest(e){
+    if (!dragCtx) return null;
+    const list = closestScoreList(e.clientX, e.clientY);
+    if (!list) return null;
+    document.querySelectorAll(".drop-hot").forEach(x => x.classList.remove("drop-hot"));
+    list.classList.add("drop-hot");
+    const card = dragCtx.card;
+    const others = [...list.querySelectorAll(".rank-card")].filter(c => c !== card);
+    if (!others.length) { list.appendChild(card); return list; }
+    let nearest = others[0], best = Infinity;
+    for (const c of others) {
+      const r = c.getBoundingClientRect(), cy = r.top + r.height / 2;
+      const d = Math.abs(e.clientY - cy);
+      if (d < best) { best = d; nearest = c; }
+    }
+    const r = nearest.getBoundingClientRect();
+    if (e.clientY < r.top + r.height / 2) list.insertBefore(card, nearest);
+    else list.insertBefore(card, nearest.nextSibling);
+    return list;
+  }
+
+  moveDrag = function(e){
+    if (!dragCtx) return;
+    e.preventDefault();
+    moveGhost(e);
+    const topEdge = (document.querySelector(".top")?.getBoundingClientRect().bottom || 90) + 24;
+    if (e.clientY < topEdge) window.scrollBy(0,-12);
+    else if (e.clientY > window.innerHeight-70) window.scrollBy(0,12);
+    placeAtNearest(e);
+  };
+
+  endDrag = function(e){
+    if (!dragCtx) return;
+    try { e?.preventDefault?.(); } catch(_) {}
+    placeAtNearest(e);
+    const ctx = dragCtx;
+    dragCtx = null;
+    const list = ctx.card?.closest(".score-list");
+    const newScore = Number(list?.dataset.score ?? ctx.fromScore);
+    const f = filmById(ctx.id);
+    if (f) {
+      state.exactScores[f.id] = newScore;
+      const newStar = scoreToStar(newScore);
+      state.starOverrides[f.id] = newStar;
+      state.assignments[f.id] = nearestTier(newStar,newScore);
+    }
+    document.querySelectorAll(".score-list").forEach(l => {
+      const score = l.dataset.score;
+      state.rankOrder[score] = [...l.querySelectorAll(".rank-card")].map(c => decodeURIComponent(c.dataset.id));
+    });
+    finishDragUi(ctx);
+    save();
+    render();
+    toast(newScore===ctx.fromScore ? "同点内の順位を保存" : `${newScore}点へ移動`);
+  };
+
+  render();
+})();
+
+</script>
+
+<!-- patch-v16.js -->
+<script>
+(() => {
+  const GENRES = ["SF","アクション","サスペンス","ミステリー","スリラー","ホラー","クライム","ドラマ","コメディ","恋愛","ミュージカル","戦争","歴史","ファンタジー","アドベンチャー","アニメ"];
+
+  if (!state.genreOverrides || typeof state.genreOverrides !== "object") state.genreOverrides = {};
+
+  const titleFixes = new Map([
+    ["The Decagon House Murders", "十角館の殺人"],
+    ["99.9 Criminal Lawyer: The Movie", "99.9-刑事専門弁護士-THE MOVIE"],
+    ["Kaiji: Final Game", "カイジ ファイナルゲーム"],
+    ["Kaiji 2: The Ultimate Gambler", "カイジ2 人生奪回ゲーム"],
+    ["Kaiji: The Ultimate Gambler", "カイジ 人生逆転ゲーム"],
+    ["Bayside Shakedown 3: Set the Guys Loose", "踊る大捜査線 THE MOVIE3 ヤツらを解放せよ!"],
+    ["Bayside Shakedown 2", "踊る大捜査線 THE MOVIE 2 レインボーブリッジを封鎖せよ!"],
+    ["Bayside Shakedown", "踊る大捜査線 THE MOVIE"],
+    ["Doraemon: Nobita's Great Adventure in the World of Magic", "ドラえもん のび太の魔界大冒険"]
+  ]);
+  for (const f of allFilms()) {
+    const cur = displayTitle(f);
+    const fixed = titleFixes.get(cur);
+    if (fixed && cur !== fixed) state.titleOverrides[f.id] = { ...(state.titleOverrides[f.id] || {}), title: fixed };
+    if ((cur === "Hero" || cur === "HERO") && (String(f.year) === "2007" || String(f.year) === "2015")) state.titleOverrides[f.id] = { ...(state.titleOverrides[f.id] || {}), title: "HERO" };
+  }
+
+  function legacyGenres(f){
+    const c = String(filmCategory(f) || "").trim();
+    const map = {
+      "SF":["SF"], "アクション":["アクション"], "ドラマ":["ドラマ"], "コメディ":["コメディ"],
+      "サスペンス、ミステリー":["サスペンス","ミステリー"],
+      "スリラー、ホラー":["スリラー","ホラー"],
+      "マフィア、クライム":["クライム"],
+      "恋愛、ミュージカル":["恋愛","ミュージカル"],
+      "戦争、歴史":["戦争","歴史"],
+      "ファンタジー、アドベンチャー":["ファンタジー","アドベンチャー"],
+      "ほかアニメ":["アニメ"], "スタジオジブリ系作品":["アニメ"], "ピクサー・ディズニー作品":["アニメ"], "コナン映画":["アニメ","ミステリー"],
+      "MCU作品":["アクション","SF"], "スパイダーマン作品":["アクション","SF"],
+      "スターウォーズシリーズ":["SF","ファンタジー","アドベンチャー"], "ハリーポッター シリーズ":["ファンタジー","アドベンチャー"]
+    };
+    return map[c] ? [...map[c]] : (GENRES.includes(c) ? [c] : []);
+  }
+  function filmGenres(f){
+    const g = state.genreOverrides[f.id];
+    if (Array.isArray(g)) return g.filter(x => GENRES.includes(x));
+    return legacyGenres(f);
+  }
+  function setGenres(id, arr){
+    const clean = [...new Set((arr || []).filter(x => GENRES.includes(x)))];
+    state.genreOverrides[id] = clean;
+    save();
+  }
+  function genreText(f){ return filmGenres(f).join("・"); }
+
+  // Seed only movies that have no explicit genre override; rankOrder and scores are untouched.
+  for (const f of allFilms()) if (!Object.prototype.hasOwnProperty.call(state.genreOverrides, f.id)) state.genreOverrides[f.id] = legacyGenres(f);
+  save(false);
+
+  const style = document.createElement("style");
+  style.textContent = `
+    .genre-picker{display:flex;flex-wrap:wrap;gap:6px;margin-top:7px}
+    .genre-chip{border:1px solid var(--line);background:var(--panel);color:var(--muted);border-radius:999px;padding:6px 9px;font-size:11px}
+    .genre-chip.on{border-color:var(--accent);color:#fff;box-shadow:0 0 0 1px var(--accent) inset}
+    .genre-filter{min-width:145px}
+    .genre-line{font-size:9px;color:#aeb8c6;margin-top:3px;line-height:1.35}
+  `;
+  document.head.appendChild(style);
+
+  function pickerHtml(selected=[]){
+    const s = new Set(selected);
+    return `<div class="genre-picker">${GENRES.map(g=>`<button type="button" class="genre-chip${s.has(g)?" on":""}" data-genre="${esc(g)}">${esc(g)}</button>`).join("")}</div>`;
+  }
+  function attachPicker(container, initial=[], onChange=()=>{}){
+    container.innerHTML = pickerHtml(initial);
+    const selected = new Set(initial);
+    container.querySelectorAll("[data-genre]").forEach(b => b.onclick = () => {
+      const g = b.dataset.genre;
+      if (selected.has(g)) selected.delete(g); else selected.add(g);
+      b.classList.toggle("on", selected.has(g));
+      onChange([...selected]);
+    });
+    return selected;
+  }
+
+  function insertPickerAfter(el, id, initial=[], onChange=()=>{}){
+    if (!el || document.getElementById(id)) return null;
+    const wrap = document.createElement("div"); wrap.id = id;
+    el.insertAdjacentElement("afterend", wrap);
+    attachPicker(wrap, initial, onChange);
+    return wrap;
+  }
+
+  // Add/edit forms: keep legacy category for series/franchise metadata, but add true multi-genre selection.
+  let newGenres = [];
+  const newCat = document.getElementById("newCategory");
+  if (newCat) {
+    const lbl = document.createElement("div"); lbl.className="tip"; lbl.textContent="ジャンル（複数選択可）";
+    newCat.closest(".formgrid")?.insertAdjacentElement("afterend", lbl);
+    const wrap = document.createElement("div"); wrap.id="newGenrePicker"; lbl.insertAdjacentElement("afterend", wrap);
+    attachPicker(wrap, [], a => newGenres = a);
+  }
+  let qGenres = [];
+  const qGrid = document.querySelector("#addSheetBg .sheetgrid");
+  if (qGrid) {
+    const lbl = document.createElement("div"); lbl.className="tip"; lbl.textContent="ジャンル（複数選択可）"; qGrid.insertAdjacentElement("afterend", lbl);
+    const wrap = document.createElement("div"); wrap.id="qGenrePicker"; lbl.insertAdjacentElement("afterend", wrap);
+    attachPicker(wrap, [], a => qGenres = a);
+  }
+  const editGrid = document.querySelector("#sheetBg .sheetgrid");
+  if (editGrid) {
+    const lbl = document.createElement("div"); lbl.className="tip"; lbl.textContent="ジャンル（複数選択可）"; editGrid.insertAdjacentElement("afterend", lbl);
+    const wrap = document.createElement("div"); wrap.id="editGenrePicker"; lbl.insertAdjacentElement("afterend", wrap);
+  }
+
+  const prevOpenSheet = openSheet;
+  openSheet = function(id){
+    prevOpenSheet(id);
+    const f = filmById(id); if (!f) return;
+    const wrap = document.getElementById("editGenrePicker");
+    if (wrap) attachPicker(wrap, filmGenres(f), a => { setGenres(f.id,a); render(); });
+  };
+
+  const prevAdd = addFilm;
+  addFilm = function(title, year, category, star, score, meta={}){
+    const f = prevAdd(title, year, category, star, score, meta);
+    if (f) {
+      const gs = Array.isArray(meta.genres) ? meta.genres : [];
+      if (gs.length) state.genreOverrides[f.id] = [...new Set(gs.filter(x=>GENRES.includes(x)))];
+      save();
+    }
+    return f;
+  };
+
+  const addBtn = document.getElementById("addMovie");
+  if (addBtn) addBtn.onclick = () => {
+    const f = addFilm(document.getElementById("newTitle").value,document.getElementById("newYear").value,document.getElementById("newCategory").value,document.getElementById("newStar").value,document.getElementById("newScore").value,{originalTitle:document.getElementById("newOriginalTitle").value,englishTitle:document.getElementById("newEnglishTitle").value,mediaType:document.getElementById("newMediaType")?.value||"movie",genres:newGenres});
+    if(f){["newTitle","newOriginalTitle","newEnglishTitle","newYear","newScore"].forEach(id=>document.getElementById(id).value="");newGenres=[];const w=document.getElementById("newGenrePicker");if(w)attachPicker(w,[],a=>newGenres=a);toast("作品を追加しました")}
+  };
+  const qAdd = document.getElementById("qAdd");
+  if (qAdd) qAdd.onclick = () => {
+    const f=addFilm(document.getElementById("qTitle").value,document.getElementById("qYear").value,document.getElementById("qCategory").value,document.getElementById("qStar").value,document.getElementById("qScore").value,{originalTitle:document.getElementById("qOriginalTitle").value,englishTitle:document.getElementById("qEnglishTitle").value,tmdbId:selectedTmdbId,mediaType:document.getElementById("qMediaType")?.value||"movie",genres:qGenres});
+    if(f){["qLookup","qTitle","qOriginalTitle","qEnglishTitle","qYear","qCategory","qScore"].forEach(id=>document.getElementById(id).value="");qGenres=[];const w=document.getElementById("qGenrePicker");if(w)attachPicker(w,[],a=>qGenres=a);selectedTmdbId=null;document.getElementById("addSheetBg").classList.remove("open");view.page="rank";save();render();document.getElementById("searchRank").value=displayTitle(f);renderRank();toast("追加しました。検索で表示中")}
+  };
+
+  function replaceFilter(oldId,newId){
+    const old=document.getElementById(oldId); if(!old) return null;
+    const s=document.createElement("select"); s.id=newId; s.className="field genre-filter";
+    s.innerHTML='<option value="">すべてのジャンル</option>'+GENRES.map(g=>`<option value="${esc(g)}">${esc(g)}</option>`).join("");
+    old.replaceWith(s); return s;
+  }
+  const rankGenre = replaceFilter("categoryFilterRank","genreFilterRank");
+  const classGenre = replaceFilter("categoryFilterClassify","genreFilterClassify");
+
+  const oldMatch = match;
+  match = function(f,q){ if(oldMatch(f,q)) return true; if(!q) return true; return filmGenres(f).join(" ").toLowerCase().includes(String(q).toLowerCase()); };
+
+  function filterByGenre(f, id){ const v=document.getElementById(id)?.value||""; return !v || filmGenres(f).includes(v); }
+
+  // Re-render ranking with genre-aware filtering, preserving the original ranking/order logic.
+  const baseRenderRank = renderRank;
+  renderRank = function(){
+    const old = document.getElementById("genreFilterRank")?.value || "";
+    baseRenderRank();
+    if (old) {
+      document.querySelectorAll(".rank-card").forEach(card=>{const f=filmById(decodeURIComponent(card.dataset.id||""));if(f&&!filmGenres(f).includes(old))card.remove()});
+      document.querySelectorAll(".score-bin").forEach(bin=>{const list=bin.querySelector(".score-list");if(list&&!list.querySelector(".rank-card"))bin.style.display="none"});
+      document.querySelectorAll(".rank-star").forEach(sec=>{if(!sec.querySelector('.rank-card'))sec.style.display='none'});
+    }
+    document.querySelectorAll(".rank-card").forEach(card=>{
+      const f=filmById(decodeURIComponent(card.dataset.id||"")); if(!f) return;
+      const meta=card.querySelector(".rank-meta"); if(!meta) return;
+      const typePill=meta.querySelector(".media-pill")?.outerHTML||"";
+      meta.innerHTML=typePill+esc(f.year||"")+(filmGenres(f).length?`<div class="genre-line">${esc(genreText(f))}</div>`:"");
+    });
+  };
+
+  const baseRenderClassify = renderClassify;
+  renderClassify = function(){
+    baseRenderClassify();
+    const g=document.getElementById("genreFilterClassify")?.value||"";
+    if(g){document.querySelectorAll("#classifyRoot .card").forEach(card=>{const f=filmById(decodeURIComponent(card.dataset.id||""));if(f&&!filmGenres(f).includes(g))card.remove()});document.querySelectorAll("#classifyRoot .section").forEach(sec=>{if(!sec.querySelector('.card'))sec.style.display='none'})}
+  };
+  if(rankGenre) rankGenre.onchange=renderRank;
+  if(classGenre) classGenre.onchange=renderClassify;
+
+  // CSV now exports true multi-genres without changing ranking data.
+  const prevExportRows = exportRows;
+  exportRows = function(){ return prevExportRows().map((r,i)=>({...r,genres:filmGenres(allFilms()[i]).join("|")})); };
+  const csvBtn=document.getElementById("downloadCsv");
+  if(csvBtn) csvBtn.onclick=()=>{const rows=exportRows(),head=["邦題／表示名","原題","英題","年","種別","ジャンル","星","星内","点数","カテゴリ","追加映画","TMDB ID"];const csv=[head,...rows.map(x=>[x.title,x.original_title,x.english_title,x.year,x.media_type,x.genres,x.star,x.tier,x.score,x.category,x.added,x.tmdb_id])].map(r=>r.map(csvCell).join(",")).join("\r\n");download("movie30_scores_v16.csv","\ufeff"+csv,"text/csv;charset=utf-8")};
+
+  render();
+})();
+
+</script>
+
+<!-- patch-v17.js -->
+<script>
+(() => {
+  const EXTRA_GENRES = ["シリーズ劇場版","ヒーロー"];
+  const RENAMED_GENRES = {"テレビ映画":"シリーズ劇場版","ヒーロー映画":"ヒーロー"};
+
+  function rawGenres(f){
+    const g = state.genreOverrides?.[f.id];
+    return Array.isArray(g) ? [...new Set(g)] : [];
+  }
+  function setRawGenres(id, genres){
+    state.genreOverrides[id] = [...new Set((genres || []).filter(Boolean))];
+    save();
+  }
+
+  // Migrate any already-saved selections from the old labels.
+  if (state.genreOverrides && typeof state.genreOverrides === "object") {
+    for (const id of Object.keys(state.genreOverrides)) {
+      const g = state.genreOverrides[id];
+      if (!Array.isArray(g)) continue;
+      state.genreOverrides[id] = [...new Set(g.map(x => RENAMED_GENRES[x] || x))];
+    }
+    save(false);
+  }
+
+  function selectedFromPicker(id){
+    const el = document.getElementById(id);
+    if (!el) return [];
+    return [...el.querySelectorAll('.genre-chip.on')].map(b => b.dataset.genre || b.textContent.trim()).filter(Boolean);
+  }
+  function appendExtraChips(id, selected=[]){
+    const wrap = document.getElementById(id);
+    if (!wrap) return;
+    let picker = wrap.querySelector('.genre-picker') || wrap;
+    const chosen = new Set(selected);
+    for (const g of EXTRA_GENRES) {
+      if (picker.querySelector(`[data-genre="${g}"]`)) continue;
+      const b = document.createElement('button');
+      b.type = 'button'; b.className = 'genre-chip' + (chosen.has(g) ? ' on' : ''); b.dataset.genre = g; b.textContent = g;
+      b.onclick = () => b.classList.toggle('on');
+      picker.appendChild(b);
+    }
+  }
+
+  appendExtraChips('newGenrePicker');
+  appendExtraChips('qGenrePicker');
+
+  // Edit picker: use one unified handler so changing a normal genre never drops the two added genres.
+  function refreshEditGenres(){
+    const f = filmById(selectedId); if (!f) return;
+    const wrap = document.getElementById('editGenrePicker'); if (!wrap) return;
+    appendExtraChips('editGenrePicker', rawGenres(f));
+    const selected = new Set(rawGenres(f));
+    wrap.querySelectorAll('.genre-chip').forEach(b => {
+      const g = b.dataset.genre || b.textContent.trim();
+      b.classList.toggle('on', selected.has(g));
+      b.onclick = () => {
+        if (selected.has(g)) selected.delete(g); else selected.add(g);
+        b.classList.toggle('on', selected.has(g));
+        setRawGenres(f.id, [...selected]);
+        render();
+      };
+    });
+  }
+  const openSheetV16 = openSheet;
+  openSheet = function(id){ openSheetV16(id); refreshEditGenres(); };
+
+  // Add forms: derive genres from the visible chips, including the two added genres.
+  const addBtn = document.getElementById('addMovie');
+  if (addBtn) addBtn.onclick = () => {
+    const picked = selectedFromPicker('newGenrePicker');
+    const f = addFilm(document.getElementById('newTitle').value,document.getElementById('newYear').value,document.getElementById('newCategory').value,document.getElementById('newStar').value,document.getElementById('newScore').value,{originalTitle:document.getElementById('newOriginalTitle').value,englishTitle:document.getElementById('newEnglishTitle').value,mediaType:document.getElementById('newMediaType')?.value||'movie',genres:picked});
+    if(f){setRawGenres(f.id,picked);['newTitle','newOriginalTitle','newEnglishTitle','newYear','newScore'].forEach(id=>document.getElementById(id).value='');document.querySelectorAll('#newGenrePicker .genre-chip').forEach(b=>b.classList.remove('on'));toast('作品を追加しました');render();}
+  };
+  const qAdd = document.getElementById('qAdd');
+  if (qAdd) qAdd.onclick = () => {
+    const picked = selectedFromPicker('qGenrePicker');
+    const f=addFilm(document.getElementById('qTitle').value,document.getElementById('qYear').value,document.getElementById('qCategory').value,document.getElementById('qStar').value,document.getElementById('qScore').value,{originalTitle:document.getElementById('qOriginalTitle').value,englishTitle:document.getElementById('qEnglishTitle').value,tmdbId:selectedTmdbId,mediaType:document.getElementById('qMediaType')?.value||'movie',genres:picked});
+    if(f){setRawGenres(f.id,picked);['qLookup','qTitle','qOriginalTitle','qEnglishTitle','qYear','qCategory','qScore'].forEach(id=>document.getElementById(id).value='');document.querySelectorAll('#qGenrePicker .genre-chip').forEach(b=>b.classList.remove('on'));selectedTmdbId=null;document.getElementById('addSheetBg').classList.remove('open');view.page='rank';save();render();document.getElementById('searchRank').value=displayTitle(f);renderRank();toast('追加しました。検索で表示中');}
+  };
+
+  for (const id of ['genreFilterRank','genreFilterClassify']) {
+    const s = document.getElementById(id);
+    if (s) for (const g of EXTRA_GENRES) if (![...s.options].some(o=>o.value===g)) s.add(new Option(g,g));
+  }
+
+  const matchV16 = match;
+  match = function(f,q){
+    if (matchV16(f,q)) return true;
+    if (!q) return true;
+    return rawGenres(f).join(' ').toLowerCase().includes(String(q).toLowerCase());
+  };
+
+  function annotateRawGenres(){
+    document.querySelectorAll('.rank-card').forEach(card=>{
+      const f=filmById(decodeURIComponent(card.dataset.id||'')); if(!f) return;
+      const meta=card.querySelector('.rank-meta'); if(!meta) return;
+      const gs=rawGenres(f);
+      let line=meta.querySelector('.genre-line');
+      if(gs.length){if(!line){line=document.createElement('div');line.className='genre-line';meta.appendChild(line);}line.textContent=gs.join('・');}
+      else if(line) line.remove();
+    });
+  }
+  function applyExtraFilter(rootSelector, cardSelector, sectionSelector, value){
+    if (!EXTRA_GENRES.includes(value)) return;
+    document.querySelectorAll(`${rootSelector} ${cardSelector}`).forEach(card=>{
+      const f=filmById(decodeURIComponent(card.dataset.id||''));
+      if(f && !rawGenres(f).includes(value)) card.remove();
+    });
+    document.querySelectorAll(`${rootSelector} ${sectionSelector}`).forEach(sec=>{if(!sec.querySelector(cardSelector))sec.style.display='none'});
+  }
+
+  const renderRankV16 = renderRank;
+  renderRank = function(){
+    const s=document.getElementById('genreFilterRank'),v=s?.value||'';
+    if(s && EXTRA_GENRES.includes(v)) s.value='';
+    renderRankV16();
+    if(s) s.value=v;
+    applyExtraFilter('#rankRoot','.rank-card','.rank-star',v);
+    if(EXTRA_GENRES.includes(v)) document.querySelectorAll('#rankRoot .score-bin').forEach(bin=>{if(!bin.querySelector('.rank-card'))bin.style.display='none'});
+    annotateRawGenres();
+  };
+  const renderClassifyV16 = renderClassify;
+  renderClassify = function(){
+    const s=document.getElementById('genreFilterClassify'),v=s?.value||'';
+    if(s && EXTRA_GENRES.includes(v)) s.value='';
+    renderClassifyV16();
+    if(s) s.value=v;
+    applyExtraFilter('#classifyRoot','.card','.section',v);
+  };
+  const rankFilter=document.getElementById('genreFilterRank'); if(rankFilter) rankFilter.onchange=renderRank;
+  const classFilter=document.getElementById('genreFilterClassify'); if(classFilter) classFilter.onchange=renderClassify;
+
+  const exportRowsV16 = exportRows;
+  exportRows = function(){return exportRowsV16().map((r,i)=>({...r,genres:rawGenres(allFilms()[i]).join('|')}));};
+
+  render();
+})();
+
+</script>
+
+<!-- patch-v18.js -->
+<script>
+(() => {
+  const ORIGIN_GENRES = ["邦画","ハリウッド","その他外国語映画"];
+  const ALL_EXTRA = ["シリーズ劇場版","ヒーロー",...ORIGIN_GENRES];
+
+  function rawGenres(f){
+    const g = state.genreOverrides?.[f.id];
+    return Array.isArray(g) ? [...new Set(g)] : [];
+  }
+  function setRawGenres(id, genres){
+    state.genreOverrides[id] = [...new Set((genres || []).filter(Boolean))];
+    save();
+  }
+  function mediaTypeOf(f){ return String((state.mediaTypeOverrides || {})[f.id] || f.mediaType || "movie"); }
+  function mediaLabelOf(f){
+    const t=mediaTypeOf(f);
+    return t==="series"?"ドラマ・シリーズ":t==="documentary"?"ドキュメンタリー":t==="other"?"その他":"映画";
+  }
+
+  // Categories are now legacy-only data. Remove them from every visible editing UI.
+  function hideCategoryUi(){
+    const n=document.getElementById("newCategory"); if(n) n.style.display="none";
+    for(const id of ["qCategory","editCategory"]){
+      const el=document.getElementById(id); if(!el) continue;
+      const label=el.closest("label"); if(label) label.style.display="none"; else el.style.display="none";
+    }
+  }
+  hideCategoryUi();
+
+  const knownJapanese = /(?:十角館|カイジ|踊る大捜査線|新世紀エヴァンゲリオン|エヴァンゲリオン|パーフェクトブルー|東京ゴッドファーザーズ|君の名は|天気の子|すずめの戸締まり|もののけ姫|千と千尋|風の谷のナウシカ|火垂るの墓|紅の豚|となりのトトロ|魔女の宅急便|ハウルの動く城|天空の城ラピュタ|崖の上のポニョ|耳をすませば|AKIRA|バトル・ロワイアル|七人の侍|羅生門|用心棒|生きる|万引き家族|ドライブ・マイ・カー|ゴジラ|リング|呪怨|告白|悪人|怪物|HERO|SPEC|ドラえもん|名探偵コナン)/i;
+  const knownForeign = /(?:パラサイト|オールドボーイ|殺人の追憶|お嬢さん|母なる証明|スノーピアサー|別れる決心|The Guilty|Funny Games|Anatomy of a Fall|Incendies|La Haine|Am[eé]lie|The Lives of Others|Das Leben der Anderen|City of God|Cidade de Deus|Pan's Labyrinth|El laberinto del fauno|The Invisible Guest|Contratiempo)/i;
+  function normalized(s){return String(s||"").trim().toLowerCase().replace(/\s+/g," ");}
+  function classifyOrigin(f){
+    const x=titleInfo(f), title=displayTitle(f), orig=String(x.originalTitle||"").trim(), eng=String(x.englishTitle||f.lbTitle||"").trim(), cat=String(filmCategory(f)||"");
+    if(["邦画","スタジオジブリ系作品","コナン映画"].includes(cat) || knownJapanese.test(title+" "+orig+" "+eng)) return "邦画";
+    if(/[\u3040-\u30ff]/.test(orig)) return "邦画";
+    if(knownForeign.test(title+" "+orig+" "+eng)) return "その他外国語映画";
+    if(/[\uac00-\ud7af\u0400-\u04ff\u0600-\u06ff\u0e00-\u0e7f]/.test(orig)) return "その他外国語映画";
+    if(/[\u4e00-\u9fff]/.test(orig) && !/[\u3040-\u30ff]/.test(orig)) return "その他外国語映画";
+    if(orig && eng && normalized(orig)!==normalized(eng)){
+      if(/[^\x00-\x7f]/.test(orig) || /\b(?:le|les|la|une|un|des|du|el|los|las|una|uno|der|die|das|ein|eine|il|lo|gli|una|de|da|do|dos|das)\b/i.test(orig)) return "その他外国語映画";
+    }
+    return "ハリウッド";
+  }
+
+  if(!state.originSeeded){
+    for(const f of allFilms()){
+      const gs=rawGenres(f).filter(g=>!ORIGIN_GENRES.includes(g));
+      gs.push(classifyOrigin(f));
+      state.genreOverrides[f.id]=[...new Set(gs)];
+    }
+    state.originSeeded=true;
+    save(false);
+  }
+
+  function selectedFromPicker(id){
+    const el=document.getElementById(id); if(!el) return [];
+    return [...el.querySelectorAll('.genre-chip.on')].map(b=>b.dataset.genre||b.textContent.trim()).filter(Boolean);
+  }
+  function enforceOriginExclusive(wrap, clicked){
+    if(!ORIGIN_GENRES.includes(clicked)) return;
+    wrap.querySelectorAll('.genre-chip').forEach(b=>{
+      const g=b.dataset.genre||b.textContent.trim();
+      if(ORIGIN_GENRES.includes(g) && g!==clicked) b.classList.remove('on');
+    });
+  }
+  function appendOriginChips(id, selected=[]){
+    const wrap=document.getElementById(id); if(!wrap) return;
+    const picker=wrap.querySelector('.genre-picker')||wrap, chosen=new Set(selected);
+    for(const g of ORIGIN_GENRES){
+      if(picker.querySelector(`[data-genre="${g}"]`)) continue;
+      const b=document.createElement('button');
+      b.type='button'; b.className='genre-chip'+(chosen.has(g)?' on':''); b.dataset.genre=g; b.textContent=g;
+      b.onclick=()=>{const turningOn=!b.classList.contains('on'); if(turningOn) enforceOriginExclusive(wrap,g); b.classList.toggle('on',turningOn);};
+      picker.appendChild(b);
+    }
+  }
+  appendOriginChips('newGenrePicker');
+  appendOriginChips('qGenrePicker');
+
+  function refreshEditGenres(){
+    const f=filmById(selectedId); if(!f) return;
+    const wrap=document.getElementById('editGenrePicker'); if(!wrap) return;
+    appendOriginChips('editGenrePicker',rawGenres(f));
+    const selected=new Set(rawGenres(f));
+    wrap.querySelectorAll('.genre-chip').forEach(b=>{
+      const g=b.dataset.genre||b.textContent.trim();
+      b.classList.toggle('on',selected.has(g));
+      b.onclick=()=>{
+        if(ORIGIN_GENRES.includes(g) && !selected.has(g)){
+          for(const x of ORIGIN_GENRES) if(x!==g) selected.delete(x);
+        }
+        if(selected.has(g)) selected.delete(g); else selected.add(g);
+        wrap.querySelectorAll('.genre-chip').forEach(x=>{const k=x.dataset.genre||x.textContent.trim();x.classList.toggle('on',selected.has(k));});
+        setRawGenres(f.id,[...selected]);
+        render();
+      };
+    });
+    const meta=document.getElementById('sheetMeta');
+    if(meta) meta.textContent=`${f.year||""}${mediaTypeOf(f)!=="movie"?" · "+mediaLabelOf(f):""}`;
+  }
+  const openSheetV17=openSheet;
+  openSheet=function(id){openSheetV17(id);hideCategoryUi();refreshEditGenres();};
+
+  // Rebind add buttons so the hidden legacy category is no longer part of the workflow.
+  const addBtn=document.getElementById('addMovie');
+  if(addBtn) addBtn.onclick=()=>{
+    let picked=selectedFromPicker('newGenrePicker');
+    if(!picked.some(g=>ORIGIN_GENRES.includes(g))) picked.push('ハリウッド');
+    const f=addFilm(document.getElementById('newTitle').value,document.getElementById('newYear').value,'',document.getElementById('newStar').value,document.getElementById('newScore').value,{originalTitle:document.getElementById('newOriginalTitle').value,englishTitle:document.getElementById('newEnglishTitle').value,mediaType:document.getElementById('newMediaType')?.value||'movie',genres:picked});
+    if(f){setRawGenres(f.id,picked);['newTitle','newOriginalTitle','newEnglishTitle','newYear','newScore'].forEach(id=>document.getElementById(id).value='');document.querySelectorAll('#newGenrePicker .genre-chip').forEach(b=>b.classList.remove('on'));toast('作品を追加しました');render();}
+  };
+  const qAdd=document.getElementById('qAdd');
+  if(qAdd) qAdd.onclick=()=>{
+    let picked=selectedFromPicker('qGenrePicker');
+    if(!picked.some(g=>ORIGIN_GENRES.includes(g))) picked.push('ハリウッド');
+    const f=addFilm(document.getElementById('qTitle').value,document.getElementById('qYear').value,'',document.getElementById('qStar').value,document.getElementById('qScore').value,{originalTitle:document.getElementById('qOriginalTitle').value,englishTitle:document.getElementById('qEnglishTitle').value,tmdbId:selectedTmdbId,mediaType:document.getElementById('qMediaType')?.value||'movie',genres:picked});
+    if(f){setRawGenres(f.id,picked);['qLookup','qTitle','qOriginalTitle','qEnglishTitle','qYear','qScore'].forEach(id=>document.getElementById(id).value='');document.querySelectorAll('#qGenrePicker .genre-chip').forEach(b=>b.classList.remove('on'));selectedTmdbId=null;document.getElementById('addSheetBg').classList.remove('open');view.page='rank';save();render();document.getElementById('searchRank').value=displayTitle(f);renderRank();toast('追加しました。検索で表示中');}
+  };
+
+  for(const id of ['genreFilterRank','genreFilterClassify']){
+    const s=document.getElementById(id); if(!s) continue;
+    for(const g of ORIGIN_GENRES) if(![...s.options].some(o=>o.value===g)) s.add(new Option(g,g));
+  }
+
+  // Category is no longer part of search; titles, year and genres are.
+  match=function(f,q){
+    if(!q) return true;
+    q=String(q).toLowerCase();
+    const x=titleInfo(f);
+    return [x.title,x.originalTitle,x.englishTitle,f.lbTitle||'',f.year||'',rawGenres(f).join(' ')].join(' ').toLowerCase().includes(q);
+  };
+
+  function applyOriginFilter(rootSelector,cardSelector,sectionSelector,value){
+    if(!ORIGIN_GENRES.includes(value)) return;
+    document.querySelectorAll(`${rootSelector} ${cardSelector}`).forEach(card=>{
+      const f=filmById(decodeURIComponent(card.dataset.id||''));
+      if(f&&!rawGenres(f).includes(value)) card.remove();
+    });
+    document.querySelectorAll(`${rootSelector} ${sectionSelector}`).forEach(sec=>{if(!sec.querySelector(cardSelector))sec.style.display='none';});
+  }
+
+  const renderRankV17=renderRank;
+  renderRank=function(){
+    hideCategoryUi();
+    const s=document.getElementById('genreFilterRank'),v=s?.value||'';
+    if(s&&ORIGIN_GENRES.includes(v)) s.value='';
+    renderRankV17();
+    if(s) s.value=v;
+    applyOriginFilter('#rankRoot','.rank-card','.rank-star',v);
+    if(ORIGIN_GENRES.includes(v)) document.querySelectorAll('#rankRoot .score-bin').forEach(bin=>{if(!bin.querySelector('.rank-card'))bin.style.display='none';});
+  };
+  const renderClassifyV17=renderClassify;
+  renderClassify=function(){
+    hideCategoryUi();
+    const s=document.getElementById('genreFilterClassify'),v=s?.value||'';
+    if(s&&ORIGIN_GENRES.includes(v)) s.value='';
+    renderClassifyV17();
+    if(s) s.value=v;
+    applyOriginFilter('#classifyRoot','.card','.section',v);
+  };
+  const rf=document.getElementById('genreFilterRank'); if(rf) rf.onchange=renderRank;
+  const cf=document.getElementById('genreFilterClassify'); if(cf) cf.onchange=renderClassify;
+
+  // CSV also drops the retired category column.
+  const csvBtn=document.getElementById('downloadCsv');
+  if(csvBtn) csvBtn.onclick=()=>{
+    const rows=exportRows();
+    const head=['邦題／表示名','原題','英題','年','種別','ジャンル','星','星内','点数','追加映画','TMDB ID'];
+    const csv=[head,...rows.map((x,i)=>[x.title,x.original_title,x.english_title,x.year,x.media_type||mediaLabelOf(allFilms()[i]),rawGenres(allFilms()[i]).join('|'),x.star,x.tier,x.score,x.added,x.tmdb_id])].map(r=>r.map(csvCell).join(',')).join('\r\n');
+    download('movie30_scores_v18.csv','\ufeff'+csv,'text/csv;charset=utf-8');
+  };
+
+  render();
+})();
+</script>
+
+<!-- patch-v19.js -->
+<script>
+(() => {
+  const MEDIA = [["movie","映画"],["documentary","ドキュメンタリー"],["other","その他"]];
+  const ORIGINS = ["日本","ハリウッド","その他外国語映画"];
+  const FORMATS = [["live","実写"],["animation","アニメ"]];
+  const GENRES19 = ["SF","アクション","サスペンス","ミステリー","スリラー","ホラー","クライム","ドラマ","コメディ","恋愛","ミュージカル","戦争","歴史","ファンタジー","アドベンチャー","シリーズ劇場版","ヒーロー"];
+  const ORIGIN_SET = new Set(ORIGINS);
+
+  state.originOverrides = state.originOverrides && typeof state.originOverrides === "object" ? state.originOverrides : {};
+  for(const id of Object.keys(state.originOverrides)) if(state.originOverrides[id]==="邦画") state.originOverrides[id]="日本";
+  state.formatOverrides = state.formatOverrides && typeof state.formatOverrides === "object" ? state.formatOverrides : {};
+  state.runtimeOverrides = state.runtimeOverrides && typeof state.runtimeOverrides === "object" ? state.runtimeOverrides : {};
+
+  const rawGenres = f => Array.isArray(state.genreOverrides?.[f.id]) ? [...new Set(state.genreOverrides[f.id])] : [];
+  const setGenres19 = (id, arr) => { state.genreOverrides[id] = [...new Set((arr||[]).filter(g=>GENRES19.includes(g)))]; };
+  const mediaType19 = f => {
+    const v=String((state.mediaTypeOverrides||{})[f.id] || f.mediaType || "movie");
+    return v === "series" ? "other" : (MEDIA.some(x=>x[0]===v) ? v : "movie");
+  };
+  const mediaLabel19 = f => (MEDIA.find(x=>x[0]===mediaType19(f))||MEDIA[0])[1];
+  const origin19 = f => state.originOverrides[f.id] || "ハリウッド";
+  const format19 = f => state.formatOverrides[f.id] || "live";
+  const formatLabel19 = f => format19(f)==="animation" ? "アニメ" : "実写";
+  const runtime19 = f => {
+    const v=state.runtimeOverrides[f.id] ?? f.runtime ?? null;
+    const n=Number(v); return Number.isFinite(n)&&n>0 ? n : null;
+  };
+
+  function classifyOrigin19(f){
+    const x=titleInfo(f), title=displayTitle(f), orig=String(x.originalTitle||"").trim(), eng=String(x.englishTitle||f.lbTitle||"").trim(), cat=String(filmCategory(f)||"");
+    if(["邦画","日本","スタジオジブリ系作品","コナン映画"].includes(cat)) return "日本";
+    if(/[\u3040-\u30ff]/.test(orig)) return "日本";
+    if(/[\uac00-\ud7af\u0400-\u04ff\u0600-\u06ff\u0e00-\u0e7f]/.test(orig)) return "その他外国語映画";
+    if(/[\u4e00-\u9fff]/.test(orig) && !/[\u3040-\u30ff]/.test(orig)) return "その他外国語映画";
+    const blob=(title+" "+orig+" "+eng).toLowerCase();
+    if(/(?:十角館|カイジ|踊る大捜査線|エヴァンゲリオン|パーフェクトブルー|東京ゴッドファーザーズ|君の名は|天気の子|すずめの戸締まり|もののけ姫|千と千尋|ナウシカ|火垂るの墓|紅の豚|トトロ|魔女の宅急便|ハウル|ラピュタ|ポニョ|akira|バトル・ロワイアル|七人の侍|羅生門|用心棒|万引き家族|ドライブ・マイ・カー|ゴジラ|リング|呪怨|告白|怪物|hero|spec|ドラえもん|名探偵コナン)/i.test(blob)) return "日本";
+    if(/(?:parasite|oldboy|memories of murder|handmaiden|mother|snowpiercer|decision to leave|guilty|funny games|anatomy of a fall|incendies|la haine|am[eé]lie|lives of others|cidade de deus|city of god|pan's labyrinth|contratiempo)/i.test(blob)) return "その他外国語映画";
+    return "ハリウッド";
+  }
+
+  if(!state.structuredSeeded){
+    for(const f of allFilms()){
+      let gs=rawGenres(f);
+      const savedOrigin=gs.find(g=>ORIGIN_SET.has(g));
+      state.originOverrides[f.id]=state.originOverrides[f.id]||savedOrigin||classifyOrigin19(f);
+      state.formatOverrides[f.id]=state.formatOverrides[f.id]||(gs.includes("アニメ")?"animation":"live");
+      setGenres19(f.id,gs.filter(g=>!ORIGIN_SET.has(g)&&g!=="アニメ"));
+      if((state.mediaTypeOverrides||{})[f.id]==="series") state.mediaTypeOverrides[f.id]="other";
+    }
+    state.structuredSeeded=true;
+    save(false);
+  }
+
+  // Only three top-level media types are shown from now on.
+  for(const id of ["newMediaType","qMediaType","editMediaType"]){
+    const s=document.getElementById(id); if(!s) continue;
+    s.innerHTML=MEDIA.map(([v,l])=>`<option value="${v}">${l}</option>`).join("");
+    s.style.display="none";
+  }
+
+  // Retired category fields stay hidden as legacy data only.
+  for(const id of ["newCategory","qCategory","editCategory"]){
+    const el=document.getElementById(id); if(!el) continue;
+    const label=el.closest("label"); if(label) label.style.display="none"; else el.style.display="none";
+  }
+
+  const style=document.createElement("style");
+  style.textContent=`
+    .struct-picker{margin:10px 0 4px}.struct-row{margin:9px 0}.struct-label{font-size:10px;color:var(--muted);margin-bottom:6px;font-weight:700}.struct-options{display:flex;gap:6px;flex-wrap:wrap}.struct-chip{border:1px solid var(--line);background:var(--panel);color:var(--muted);border-radius:999px;padding:7px 10px;font-size:11px}.struct-chip.on{border-color:var(--accent);color:#fff;box-shadow:0 0 0 1px var(--accent) inset}.filter-select{min-width:116px}.filter-wrap{display:flex;gap:6px;flex-wrap:wrap;width:100%}.runtime-line{font-size:9px;color:var(--muted);margin-top:2px}.runtime-input{width:100%}
+    @media(max-width:560px){.struct-chip{padding:7px 9px}.filter-select{min-width:calc(50% - 3px);flex:1}.filter-wrap .search{min-width:100%}}
+  `;
+  document.head.appendChild(style);
+
+  function chipRow(label,values,selected,multi=false){
+    const arr=values.map(x=>Array.isArray(x)?x:[x,x]);
+    const set=new Set(Array.isArray(selected)?selected:[selected]);
+    return `<div class="struct-row"><div class="struct-label">${esc(label)}</div><div class="struct-options">${arr.map(([v,l])=>`<button type="button" class="struct-chip${set.has(v)?" on":""}" data-struct-value="${esc(v)}" data-multi="${multi?1:0}">${esc(l)}</button>`).join("")}</div></div>`;
+  }
+  function structuredHtml({media="movie",origin="ハリウッド",format="live",genres=[]}={}){
+    return `<div class="struct-picker">${chipRow("種別",MEDIA,media,false)}${chipRow("制作区分",ORIGINS,origin,false)}${chipRow("形式",FORMATS,format,false)}${chipRow("ジャンル（複数選択可）",GENRES19,genres,true)}</div>`;
+  }
+  function bindStructured(wrap,initial,onChange){
+    let cur={media:initial.media||"movie",origin:initial.origin||"ハリウッド",format:initial.format||"live",genres:[...(initial.genres||[])]};
+    wrap.innerHTML=structuredHtml(cur);
+    const rows=[...wrap.querySelectorAll('.struct-row')];
+    rows.forEach((row,idx)=>row.querySelectorAll('.struct-chip').forEach(b=>b.onclick=()=>{
+      const v=b.dataset.structValue, multi=b.dataset.multi==="1";
+      if(multi){
+        const s=new Set(cur.genres); s.has(v)?s.delete(v):s.add(v); cur.genres=[...s]; b.classList.toggle('on',s.has(v));
+      }else{
+        row.querySelectorAll('.struct-chip').forEach(x=>x.classList.remove('on')); b.classList.add('on');
+        if(idx===0)cur.media=v; else if(idx===1)cur.origin=v; else if(idx===2)cur.format=v;
+      }
+      onChange?.({...cur,genres:[...cur.genres]});
+    }));
+    return cur;
+  }
+
+  let newStruct={media:"movie",origin:"ハリウッド",format:"live",genres:[]};
+  let qStruct={media:"movie",origin:"ハリウッド",format:"live",genres:[]};
+  const newWrap=document.getElementById("newGenrePicker"); if(newWrap) newStruct=bindStructured(newWrap,newStruct,v=>newStruct=v);
+  const qWrap=document.getElementById("qGenrePicker"); if(qWrap) qStruct=bindStructured(qWrap,qStruct,v=>qStruct=v);
+
+  // Runtime fields for add/edit.
+  function addRuntimeField(anchor,id,label="上映時間（分）"){
+    if(document.getElementById(id)||!anchor)return;
+    const l=document.createElement("label"); l.className="media-field-label"; l.textContent=label;
+    const input=document.createElement("input"); input.id=id; input.className="field runtime-input"; input.type="number"; input.min="1"; input.max="999"; input.step="1"; input.placeholder="例：136";
+    l.appendChild(input); anchor.appendChild(l);
+  }
+  addRuntimeField(document.querySelector("#sheetBg .sheetgrid"),"editRuntime");
+  addRuntimeField(document.querySelector("#addSheetBg .sheetgrid"),"qRuntime");
+  if(!document.getElementById("newRuntime")){
+    const fg=document.getElementById("newYear")?.closest(".formgrid");
+    if(fg){const i=document.createElement("input");i.id="newRuntime";i.className="field";i.type="number";i.min="1";i.max="999";i.placeholder="上映時間（分）";fg.insertBefore(i,document.getElementById("newStar")||null);}
+  }
+
+  function editStructuredFor(f){return {media:mediaType19(f),origin:origin19(f),format:format19(f),genres:rawGenres(f).filter(g=>GENRES19.includes(g))};}
+  const openSheet19=openSheet;
+  openSheet=function(id){
+    openSheet19(id); const f=filmById(id); if(!f)return;
+    const wrap=document.getElementById("editGenrePicker");
+    if(wrap) bindStructured(wrap,editStructuredFor(f),v=>{
+      state.mediaTypeOverrides[f.id]=v.media;
+      state.originOverrides[f.id]=v.origin;
+      state.formatOverrides[f.id]=v.format;
+      setGenres19(f.id,v.genres);
+      save(); render();
+    });
+    const rt=document.getElementById("editRuntime"); if(rt)rt.value=runtime19(f)||"";
+    const meta=document.getElementById("sheetMeta"); if(meta)meta.textContent=`${f.year||""} · ${mediaLabel19(f)} · ${origin19(f)} · ${formatLabel19(f)}${runtime19(f)?" · "+runtime19(f)+"分":""}`;
+  };
+  const editRt=document.getElementById("editRuntime"); if(editRt)editRt.onchange=()=>{const f=filmById(selectedId);if(!f)return;const n=parseInt(editRt.value,10);if(Number.isFinite(n)&&n>0)state.runtimeOverrides[f.id]=n;else delete state.runtimeOverrides[f.id];save();render();};
+
+  function applyStructToFilm(f,s,rt){
+    if(!f)return;
+    state.mediaTypeOverrides[f.id]=s.media;
+    state.originOverrides[f.id]=s.origin;
+    state.formatOverrides[f.id]=s.format;
+    setGenres19(f.id,s.genres);
+    const n=parseInt(rt,10); if(Number.isFinite(n)&&n>0)state.runtimeOverrides[f.id]=n; else delete state.runtimeOverrides[f.id];
+    save();
+  }
+
+  const addBtn=document.getElementById("addMovie"); if(addBtn)addBtn.onclick=()=>{
+    const f=addFilm(document.getElementById("newTitle").value,document.getElementById("newYear").value,"",document.getElementById("newStar").value,document.getElementById("newScore").value,{originalTitle:document.getElementById("newOriginalTitle").value,englishTitle:document.getElementById("newEnglishTitle").value,mediaType:newStruct.media,genres:newStruct.genres});
+    if(f){applyStructToFilm(f,newStruct,document.getElementById("newRuntime")?.value);["newTitle","newOriginalTitle","newEnglishTitle","newYear","newRuntime","newScore"].forEach(id=>{const e=document.getElementById(id);if(e)e.value=""});newStruct={media:"movie",origin:"ハリウッド",format:"live",genres:[]};if(newWrap)newStruct=bindStructured(newWrap,newStruct,v=>newStruct=v);toast("作品を追加しました");render();}
+  };
+  const qAdd=document.getElementById("qAdd"); if(qAdd)qAdd.onclick=()=>{
+    const f=addFilm(document.getElementById("qTitle").value,document.getElementById("qYear").value,"",document.getElementById("qStar").value,document.getElementById("qScore").value,{originalTitle:document.getElementById("qOriginalTitle").value,englishTitle:document.getElementById("qEnglishTitle").value,tmdbId:selectedTmdbId,mediaType:qStruct.media,genres:qStruct.genres});
+    if(f){applyStructToFilm(f,qStruct,document.getElementById("qRuntime")?.value);["qLookup","qTitle","qOriginalTitle","qEnglishTitle","qYear","qRuntime","qScore"].forEach(id=>{const e=document.getElementById(id);if(e)e.value=""});qStruct={media:"movie",origin:"ハリウッド",format:"live",genres:[]};if(qWrap)qStruct=bindStructured(qWrap,qStruct,v=>qStruct=v);selectedTmdbId=null;document.getElementById("addSheetBg").classList.remove("open");view.page="rank";save();render();document.getElementById("searchRank").value=displayTitle(f);renderRank();toast("追加しました。検索で表示中");}
+  };
+
+  // TMDB selection also fills runtime, production grouping and animation/live-action.
+  const selectTmdb19=selectTmdb;
+  selectTmdb=async function(id){
+    await selectTmdb19(id);
+    try{
+      const d=await tmdbFetch("/movie/"+id,{language:"en-US"});
+      const rt=document.getElementById("qRuntime"); if(rt&&d.runtime)rt.value=d.runtime;
+      const countries=(d.production_countries||[]).map(x=>x.iso_3166_1), lang=String(d.original_language||"");
+      let origin=countries.includes("JP")?"日本":((countries.includes("US")||lang==="en")?"ハリウッド":"その他外国語映画");
+      const animation=(d.genres||[]).some(g=>g.name==="Animation");
+      const tmdbMap={"Science Fiction":"SF","Action":"アクション","Mystery":"ミステリー","Thriller":"スリラー","Horror":"ホラー","Crime":"クライム","Drama":"ドラマ","Comedy":"コメディ","Romance":"恋愛","Music":"ミュージカル","War":"戦争","History":"歴史","Fantasy":"ファンタジー","Adventure":"アドベンチャー"};
+      const gs=(d.genres||[]).map(g=>tmdbMap[g.name]).filter(Boolean);
+      qStruct={...qStruct,origin,format:animation?"animation":"live",genres:[...new Set(gs)]}; if(qWrap)qStruct=bindStructured(qWrap,qStruct,v=>qStruct=v);
+    }catch(_){ }
+  };
+
+  // Search includes structured filters + decade + runtime.
+  function decadeOptions(){
+    const ys=allFilms().map(f=>parseInt(f.year,10)).filter(Number.isFinite); if(!ys.length)return [];
+    const lo=Math.floor(Math.min(...ys)/10)*10, hi=Math.floor(Math.max(...ys)/10)*10, out=[];
+    for(let y=hi;y>=lo;y-=10)out.push(y); return out;
+  }
+  function selectHtml(id,label,options){return `<select class="field filter-select" id="${id}" aria-label="${esc(label)}"><option value="">${esc(label)}: すべて</option>${options.map(x=>Array.isArray(x)?`<option value="${esc(x[0])}">${esc(x[1])}</option>`:`<option value="${esc(x)}">${esc(x)}</option>`).join("")}</select>`;}
+  function setupFilters(searchId,genreId,suffix){
+    const search=document.getElementById(searchId), genre=document.getElementById(genreId); if(!search||!genre)return;
+    genre.innerHTML='<option value="">ジャンル: すべて</option>'+GENRES19.map(g=>`<option value="${esc(g)}">${esc(g)}</option>`).join("");
+    const tools=search.closest('.tools'); if(!tools)return; tools.classList.add('filter-wrap');
+    tools.querySelectorAll('[data-v19-filter]').forEach(x=>x.remove());
+    const box=document.createElement('span');box.setAttribute('data-v19-filter','1');box.style.display='contents';
+    box.innerHTML=selectHtml('mediaFilter'+suffix,'種別',MEDIA)+selectHtml('originFilter'+suffix,'制作区分',ORIGINS)+selectHtml('formatFilter'+suffix,'形式',FORMATS)+selectHtml('decadeFilter'+suffix,'年代',decadeOptions().map(y=>[String(y),`${y}年代`]))+selectHtml('runtimeFilter'+suffix,'上映時間',[["lt90","90分未満"],["90-119","90〜119分"],["120-149","120〜149分"],["150plus","150分以上"],["unknown","不明"]]);
+    genre.insertAdjacentElement('afterend',box);
+  }
+  setupFilters('searchRank','genreFilterRank','Rank');
+  setupFilters('searchClassify','genreFilterClassify','Classify');
+
+  function passesFilters(f,suffix){
+    const val=id=>document.getElementById(id+suffix)?.value||"";
+    const media=val('mediaFilter'),origin=val('originFilter'),format=val('formatFilter'),genre=document.getElementById('genreFilter'+suffix)?.value||"",dec=val('decadeFilter'),rtf=val('runtimeFilter');
+    if(media&&mediaType19(f)!==media)return false;
+    if(origin&&origin19(f)!==origin)return false;
+    if(format&&format19(f)!==format)return false;
+    if(genre&&!rawGenres(f).includes(genre))return false;
+    if(dec){const y=parseInt(f.year,10);if(!Number.isFinite(y)||Math.floor(y/10)*10!==Number(dec))return false;}
+    if(rtf){const r=runtime19(f);if(rtf==='unknown'){if(r!=null)return false;}else{if(r==null)return false;if(rtf==='lt90'&&!(r<90))return false;if(rtf==='90-119'&&!(r>=90&&r<=119))return false;if(rtf==='120-149'&&!(r>=120&&r<=149))return false;if(rtf==='150plus'&&!(r>=150))return false;}}
+    return true;
+  }
+  function prune(rootSel,cardSel,sectionSel,suffix){
+    document.querySelectorAll(`${rootSel} ${cardSel}`).forEach(card=>{const f=filmById(decodeURIComponent(card.dataset.id||''));if(f&&!passesFilters(f,suffix))card.remove();});
+    document.querySelectorAll(`${rootSel} ${sectionSel}`).forEach(sec=>{if(!sec.querySelector(cardSel))sec.style.display='none';});
+    if(rootSel==='#rankRoot')document.querySelectorAll('#rankRoot .score-bin').forEach(bin=>{if(!bin.querySelector('.rank-card'))bin.style.display='none';});
+  }
+  function annotateStructured(){
+    document.querySelectorAll('.rank-card').forEach(card=>{const f=filmById(decodeURIComponent(card.dataset.id||''));if(!f)return;const meta=card.querySelector('.rank-meta');if(!meta)return;const pill=meta.querySelector('.media-pill')?.outerHTML||'';meta.innerHTML=pill+esc(f.year||'')+(runtime19(f)?` · ${runtime19(f)}分`:"")+(rawGenres(f).length?`<div class="genre-line">${esc(rawGenres(f).join('・'))}</div>`:"");});
+  }
+
+  const renderRank19=renderRank; renderRank=function(){renderRank19();prune('#rankRoot','.rank-card','.rank-star','Rank');annotateStructured();};
+  const renderClassify19=renderClassify; renderClassify=function(){renderClassify19();prune('#classifyRoot','.card','.section','Classify');};
+  for(const suffix of ['Rank','Classify'])for(const p of ['mediaFilter','originFilter','formatFilter','decadeFilter','runtimeFilter']){const e=document.getElementById(p+suffix);if(e)e.onchange=suffix==='Rank'?renderRank:renderClassify;}
+  const gr=document.getElementById('genreFilterRank');if(gr)gr.onchange=renderRank;const gc=document.getElementById('genreFilterClassify');if(gc)gc.onchange=renderClassify;
+
+  match=function(f,q){if(!q)return true;q=String(q).toLowerCase();const x=titleInfo(f);return [x.title,x.originalTitle,x.englishTitle,f.lbTitle||'',f.year||'',mediaLabel19(f),origin19(f),formatLabel19(f),rawGenres(f).join(' '),runtime19(f)||''].join(' ').toLowerCase().includes(q);};
+
+  // Prefer same-origin cached RSS generated by GitHub Actions; browser proxies are only fallback now.
+  const oldFetchLbRss19=fetchLbRss;
+  fetchLbRss=async function(username){
+    if(String(username).toLowerCase()==='gjbkic'){
+      try{const r=await fetch('./letterboxd-gjbkic.xml?v='+Date.now(),{cache:'no-store'});if(r.ok){const t=await r.text();if(/<(?:rss|item)[\s>]/i.test(t))return t;}}catch(_){ }
+    }
+    return oldFetchLbRss19(username);
+  };
+  try{if(!localStorage.getItem('movie30_v19_lb_reset')){localStorage.removeItem('movie30_lb_last_success_v2');localStorage.setItem('movie30_v19_lb_reset','1');}}catch(_){ }
+
+  // CSV uses the structured fields and no retired category.
+  const csvBtn=document.getElementById('downloadCsv');if(csvBtn)csvBtn.onclick=()=>{const rows=exportRows(),head=['邦題／表示名','原題','英題','年','種別','制作区分','形式','ジャンル','上映時間(分)','星','星内','点数','追加映画','TMDB ID'];const csv=[head,...rows.map((x,i)=>{const f=allFilms()[i];return [x.title,x.original_title,x.english_title,x.year,mediaLabel19(f),origin19(f),formatLabel19(f),rawGenres(f).join('|'),runtime19(f)||'',x.star,x.tier,x.score,x.added,x.tmdb_id]})].map(r=>r.map(csvCell).join(',')).join('\r\n');download('movie30_scores_v19.csv','\ufeff'+csv,'text/csv;charset=utf-8');};
+
+  render();
+})();
+
+</script>
+
+<!-- patch-v20.js -->
+<script>
+(() => {
+  const AUTO_LINE = document.getElementById('lbAutoSync')?.closest('.checkline');
+  const autoBox = document.getElementById('lbAutoSync');
+  if (autoBox) {
+    autoBox.checked = false;
+    autoBox.disabled = true;
+  }
+  if (AUTO_LINE) AUTO_LINE.style.display = 'none';
+  try {
+    const st = getLbSettings();
+    saveLbSettings({ username: (document.getElementById('lbUsername')?.value || st.username || 'gjbkic').trim(), auto: false });
+  } catch (_) {}
+
+  function withTimeout(promise, ms = 18000) {
+    return Promise.race([
+      promise,
+      new Promise((_, reject) => setTimeout(() => reject(new Error('タイムアウト')), ms))
+    ]);
+  }
+
+  function sliceRss(text) {
+    const s = String(text || '');
+    const start = s.search(/<rss\b/i);
+    const end = s.toLowerCase().lastIndexOf('</rss>');
+    return start >= 0 && end >= 0 && end > start ? s.slice(start, end + 6) : '';
+  }
+
+  function decodeHtmlEntities(text) {
+    try {
+      const ta = document.createElement('textarea');
+      ta.innerHTML = text;
+      return ta.value;
+    } catch (_) { return text; }
+  }
+
+  function extractRss(text) {
+    let rss = sliceRss(text);
+    if (rss) return rss;
+    const decoded = decodeHtmlEntities(String(text || ''));
+    rss = sliceRss(decoded);
+    if (rss) return rss;
+    try {
+      const doc = new DOMParser().parseFromString(String(text || ''), 'text/html');
+      rss = sliceRss(doc.body?.textContent || '');
+      if (rss) return rss;
+    } catch (_) {}
+    return '';
+  }
+
+  function escXml(v) {
+    return String(v ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[c]));
+  }
+
+  function starsToRating(stars) {
+    const s = String(stars || '');
+    const whole = (s.match(/★/g) || []).length;
+    const half = s.includes('½') ? 0.5 : 0;
+    const n = whole + half;
+    return n > 0 ? n : null;
+  }
+
+  function rss2JsonToXml(data) {
+    if (!data || data.status !== 'ok' || !Array.isArray(data.items)) throw new Error('RSS変換結果が不正です');
+    const items = [];
+    for (const x of data.items) {
+      const title = String(x.title || '').trim();
+      const m = title.match(/^(.*),\s*(\d{4})\s*-\s*(★{0,5}(?:½)?|½)\s*$/u);
+      if (!m) continue;
+      const rating = starsToRating(m[3]);
+      if (!rating) continue;
+      items.push(`<item><filmTitle>${escXml(m[1].trim())}</filmTitle><filmYear>${escXml(m[2])}</filmYear><memberRating>${rating}</memberRating><link>${escXml(x.link || '')}</link></item>`);
+    }
+    if (!items.length) throw new Error('最新ログを解析できませんでした');
+    return `<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel>${items.join('')}</channel></rss>`;
+  }
+
+  async function fetchViaJina(url) {
+    const endpoint = 'https://r.jina.ai/' + url;
+    const r = await withTimeout(fetch(endpoint, {
+      cache: 'no-store',
+      headers: {
+        'Accept': 'text/plain,text/html,*/*',
+        'X-No-Cache': 'true',
+        'X-Cache-Tolerance': '0',
+        'X-Respond-With': 'html'
+      }
+    }), 20000);
+    if (!r.ok) throw new Error(`Jina HTTP ${r.status}`);
+    const text = await r.text();
+    const xml = extractRss(text);
+    if (!xml) throw new Error('JinaからRSS本文を取り出せませんでした');
+    return xml;
+  }
+
+  async function fetchViaRss2Json(url) {
+    const endpoint = 'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(url) + '&_=' + Date.now();
+    const r = await withTimeout(fetch(endpoint, {cache:'no-store', headers:{Accept:'application/json'}}), 15000);
+    if (!r.ok) throw new Error(`rss2json HTTP ${r.status}`);
+    return rss2JsonToXml(await r.json());
+  }
+
+  async function fetchCachedSnapshot(username) {
+    if (String(username).toLowerCase() !== 'gjbkic') throw new Error('保存済みRSSなし');
+    const r = await withTimeout(fetch('./letterboxd-gjbkic.xml?v=' + Date.now(), {cache:'no-store'}), 8000);
+    if (!r.ok) throw new Error(`保存済みRSS HTTP ${r.status}`);
+    const text = await r.text();
+    if (!/<(?:rss|item)[\s>]/i.test(text)) throw new Error('保存済みRSS形式エラー');
+    return text;
+  }
+
+  fetchLbRss = async function(username) {
+    const clean = String(username || 'gjbkic').trim() || 'gjbkic';
+    const url = `https://letterboxd.com/${encodeURIComponent(clean)}/rss/`;
+    const errors = [];
+    window.__movie30LbFetchSource = '';
+
+    try {
+      const xml = await fetchViaJina(url);
+      window.__movie30LbFetchSource = 'fresh-jina';
+      return xml;
+    } catch (e) { errors.push(e?.message || String(e)); }
+
+    try {
+      const xml = await fetchViaRss2Json(url);
+      window.__movie30LbFetchSource = 'fresh-rss2json';
+      return xml;
+    } catch (e) { errors.push(e?.message || String(e)); }
+
+    try {
+      const xml = await fetchCachedSnapshot(clean);
+      window.__movie30LbFetchSource = 'cached';
+      return xml;
+    } catch (e) { errors.push(e?.message || String(e)); }
+
+    throw new Error('最新RSSを取得できませんでした：' + errors.join(' / '));
+  };
+
+  const previousSync = syncLetterboxd;
+  syncLetterboxd = async function(silent = false) {
+    if (silent) return;
+    const btn = document.getElementById('syncLetterboxd');
+    const oldText = btn?.textContent || '今すぐ同期';
+    if (btn) { btn.disabled = true; btn.textContent = '最新を取得中…'; }
+    setLbStatus('Letterboxdの最新ログをその場で取得しています…');
+    try {
+      await previousSync(false);
+      const status = document.getElementById('lbStatus');
+      if (status && !status.classList.contains('bad')) {
+        const src = window.__movie30LbFetchSource;
+        if (src === 'cached') {
+          status.textContent += '（最新取得に失敗したため、最後に保存したRSSを使用）';
+          status.classList.remove('ok');
+        } else if (src) {
+          status.textContent += ' · 最新ログ取得済み';
+        }
+      }
+    } finally {
+      if (btn) { btn.disabled = false; btn.textContent = oldText; }
+    }
+  };
+
+  const syncBtn = document.getElementById('syncLetterboxd');
+  if (syncBtn) syncBtn.onclick = () => syncLetterboxd(false);
+
+  const panel = syncBtn?.closest('.panel');
+  if (panel) {
+    const tip = panel.querySelector('.tip');
+    if (tip) tip.textContent = '「今すぐ同期」を押した時だけ、Letterboxdの最新ログを取得します。定期取得はしません。Letterboxdで記録した直後に押せば、その場で取り込めます。';
+  }
+})();
+</script>
+
+<!-- patch-v21.js -->
+<script>
+(() => {
+  const VALID_MEDIA = new Set(['movie','documentary','other']);
+  const VALID_ORIGIN = new Set(['邦画','ハリウッド','その他外国語映画']);
+  const VALID_FORMAT = new Set(['live','animation','hybrid']);
+  const TMDB_GENRE_MAP = {
+    'Science Fiction':'SF','Action':'アクション','Mystery':'ミステリー','Thriller':'スリラー',
+    'Horror':'ホラー','Crime':'クライム','Drama':'ドラマ','Comedy':'コメディ','Romance':'恋愛',
+    'Music':'ミュージカル','War':'戦争','History':'歴史','Fantasy':'ファンタジー','Adventure':'アドベンチャー'
+  };
+
+  state.mediaTypeOverrides = state.mediaTypeOverrides || {};
+  state.originOverrides = state.originOverrides || {};
+  state.formatOverrides = state.formatOverrides || {};
+  state.genreOverrides = state.genreOverrides || {};
+  state.runtimeOverrides = state.runtimeOverrides || {};
+
+  function titleBlob(f){
+    const x=titleInfo(f);
+    return [displayTitle(f),x.title,x.originalTitle,x.englishTitle,f.lbTitle||''].filter(Boolean).join(' ');
+  }
+  function isHybridTitle(fOrTitle){
+    const s=typeof fOrTitle==='string'?fOrTitle:titleBlob(fOrTitle);
+    return /(?:kill\s*bill\s*(?::|-)?\s*(?:vol\.?\s*)?1\b|キル[・\s]?ビル\s*(?:vol\.?\s*)?1\b)/i.test(s);
+  }
+  function isIwoJima(f){ return /(?:硫黄島からの手紙|letters\s+from\s+iwo\s+jima)/i.test(titleBlob(f)); }
+  function formatValue(f){
+    const v=state.formatOverrides[f.id];
+    if(VALID_FORMAT.has(v)) return v;
+    return 'live';
+  }
+  function formatMatches(f,wanted){
+    const v=formatValue(f);
+    return !wanted || v===wanted || v==='hybrid';
+  }
+  function formatLabel(f){const v=formatValue(f);return v==='animation'?'アニメ':v==='hybrid'?'実写・アニメ':'実写';}
+  function mediaLabel(f){const v=state.mediaTypeOverrides[f.id]||'movie';return v==='documentary'?'ドキュメンタリー':v==='other'?'その他':'映画';}
+  function originValue(f){const v=state.originOverrides[f.id];return VALID_ORIGIN.has(v)?v:'ハリウッド';}
+  function runtimeValue(f){const n=Number(state.runtimeOverrides[f.id]??f.runtime);return Number.isFinite(n)&&n>0?n:null;}
+
+  function inferExisting(){
+    for(const f of allFilms()){
+      let mt=state.mediaTypeOverrides[f.id];
+      if(mt==='series') mt='other';
+      if(!VALID_MEDIA.has(mt)){
+        const b=titleBlob(f);
+        if(/(?:lecture\s*series|講座|making\s+of|メイキング)/i.test(b)) mt='other';
+        else if(/(?:miss\s+americana)/i.test(b)) mt='documentary';
+        else mt='movie';
+      }
+      if(mt==='movie') delete state.mediaTypeOverrides[f.id]; else state.mediaTypeOverrides[f.id]=mt;
+
+      if(isIwoJima(f)) state.originOverrides[f.id]='ハリウッド';
+      else if(!VALID_ORIGIN.has(state.originOverrides[f.id])){
+        const x=titleInfo(f),orig=String(x.originalTitle||''),cat=String(filmCategory(f)||'');
+        if(cat==='邦画'||cat.includes('ジブリ')||cat.includes('コナン')||/[\u3040-\u30ff]/.test(orig)) state.originOverrides[f.id]='邦画';
+        else if(/[\uac00-\ud7af\u0400-\u04ff\u0600-\u06ff\u0e00-\u0e7f]/.test(orig)) state.originOverrides[f.id]='その他外国語映画';
+        else state.originOverrides[f.id]='ハリウッド';
+      }
+
+      if(isHybridTitle(f)) state.formatOverrides[f.id]='hybrid';
+      else if(!VALID_FORMAT.has(state.formatOverrides[f.id])){
+        const cat=String(filmCategory(f)||''),gs=state.genreOverrides[f.id]||[];
+        state.formatOverrides[f.id]=(cat.includes('アニメ')||cat.includes('ジブリ')||cat.includes('コナン')||gs.includes('アニメ'))?'animation':'live';
+      }
+    }
+    save(false);
+  }
+  inferExisting();
+
+  function classifyTmdbDetail(d, fallbackTitle=''){
+    const countries=(d.production_countries||[]).map(x=>x.iso_3166_1);
+    const lang=String(d.original_language||'');
+    // Production takes priority over language: US production = Hollywood, including Japanese-language US films.
+    const origin=countries.includes('US')?'ハリウッド':(countries.includes('JP')?'邦画':(lang==='en'?'ハリウッド':'その他外国語映画'));
+    const names=(d.genres||[]).map(g=>g.name);
+    const documentary=names.includes('Documentary');
+    const animation=names.includes('Animation');
+    const hybrid=isHybridTitle(String(d.title||d.name||fallbackTitle));
+    const genres=[...new Set(names.map(n=>TMDB_GENRE_MAP[n]).filter(Boolean))];
+    const runtime=Number(d.runtime||(Array.isArray(d.episode_run_time)?d.episode_run_time[0]:null))||null;
+    return {origin,media:documentary?'documentary':'movie',format:hybrid?'hybrid':(animation?'animation':'live'),genres,runtime};
+  }
+
+  // TMDB quick-add: automatically select type/origin/format. Existing v19 handlers are triggered by clicking their chips.
+  function clickStruct(wrap,rowIndex,value){
+    if(!wrap)return;
+    const row=wrap.querySelectorAll('.struct-row')[rowIndex]; if(!row)return;
+    const b=[...row.querySelectorAll('.struct-chip')].find(x=>x.dataset.structValue===value);
+    if(b&&!b.classList.contains('on')) b.click();
+  }
+  const selectTmdb21=selectTmdb;
+  selectTmdb=async function(id){
+    await selectTmdb21(id);
+    try{
+      const d=await tmdbFetch('/movie/'+id,{language:'en-US'});
+      const c=classifyTmdbDetail(d,document.getElementById('qTitle')?.value||'');
+      const wrap=document.getElementById('qGenrePicker');
+      clickStruct(wrap,0,c.media);
+      clickStruct(wrap,1,c.origin);
+      clickStruct(wrap,2,c.format==='animation'?'animation':'live');
+      if(wrap)wrap.dataset.autoHybrid=c.format==='hybrid'?'1':'';
+    }catch(_){ }
+  };
+
+  // Preserve the hybrid exception after the v19 add handler has applied its normal single-format value.
+  function wrapAddButton(id,titleId,yearId){
+    const b=document.getElementById(id); if(!b||!b.onclick)return;
+    const old=b.onclick;
+    b.onclick=(e)=>{
+      const title=document.getElementById(titleId)?.value||'';
+      const year=document.getElementById(yearId)?.value||'';
+      const hybrid=isHybridTitle(title)||(id==='qAdd'&&document.getElementById('qGenrePicker')?.dataset.autoHybrid==='1');
+      old.call(b,e);
+      if(hybrid){
+        const candidates=allFilms().filter(f=>String(f.year||'')===String(year||f.year||'')&&normKey(displayTitle(f))===normKey(title));
+        const f=candidates[candidates.length-1]||state.customFilms[state.customFilms.length-1];
+        if(f){state.formatOverrides[f.id]='hybrid';save();render();}
+      }
+    };
+  }
+  wrapAddButton('qAdd','qTitle','qYear');
+  wrapAddButton('addMovie','newTitle','newYear');
+
+  // Letterboxd RSS may contain either a movieId or tvId. Use TMDB details to auto-classify newly imported items.
+  parseLbRss=function(xml){
+    const doc=new DOMParser().parseFromString(xml,'application/xml');
+    if(doc.querySelector('parsererror'))throw new Error('Letterboxd RSSを解析できませんでした');
+    return [...doc.querySelectorAll('item')].map(it=>{
+      const movieId=childTextByLocal(it,'movieId'),tvId=childTextByLocal(it,'tvId');
+      return {title:childTextByLocal(it,'filmTitle'),year:childTextByLocal(it,'filmYear'),rating:childTextByLocal(it,'memberRating'),tmdbId:movieId||tvId,tmdbType:tvId?'tv':'movie',watchedDate:childTextByLocal(it,'watchedDate'),link:childTextByLocal(it,'link')};
+    }).filter(x=>x.title&&x.year);
+  };
+
+  const enrich21=enrichFromTmdb;
+  enrichFromTmdb=async function(meta){
+    let out=await enrich21(meta);
+    if(!meta.tmdbId||!getTmdbCredential())return out;
+    try{
+      const type=meta.tmdbType==='tv'?'tv':'movie';
+      const d=await tmdbFetch('/'+type+'/'+meta.tmdbId,{language:'en-US'});
+      const c=classifyTmdbDetail(d,meta.title);
+      if(type==='tv')c.media='other';
+      out={...out,_autoClass:c,tmdbType:type};
+    }catch(_){ }
+    return out;
+  };
+  const addLb21=addLbFilm;
+  addLbFilm=function(meta){
+    const f=addLb21(meta); if(!f)return f;
+    const c=meta._autoClass;
+    if(c){
+      if(c.media==='movie')delete state.mediaTypeOverrides[f.id];else state.mediaTypeOverrides[f.id]=c.media;
+      state.originOverrides[f.id]=c.origin;
+      state.formatOverrides[f.id]=c.format;
+      state.genreOverrides[f.id]=c.genres;
+      if(c.runtime)state.runtimeOverrides[f.id]=c.runtime;
+    }
+    if(isHybridTitle(f))state.formatOverrides[f.id]='hybrid';
+    save();
+    return f;
+  };
+
+  // Edit sheet: format is normally exclusive, but hybrid works as a genuine two-value selection.
+  function bindHybridFormatEditor(f){
+    const wrap=document.getElementById('editGenrePicker'); if(!wrap)return;
+    const row=wrap.querySelectorAll('.struct-row')[2]; if(!row)return;
+    let selected=new Set(formatValue(f)==='hybrid'?['live','animation']:[formatValue(f)]);
+    function paint(){row.querySelectorAll('.struct-chip').forEach(b=>b.classList.toggle('on',selected.has(b.dataset.structValue)));}
+    paint();
+    row.querySelectorAll('.struct-chip').forEach(b=>b.onclick=()=>{
+      const v=b.dataset.structValue;
+      if(selected.has(v)){if(selected.size>1)selected.delete(v);}else selected.add(v);
+      state.formatOverrides[f.id]=selected.size>1?'hybrid':[...selected][0];
+      paint();save();render();updateSheetMeta(f);
+    });
+  }
+  function updateSheetMeta(f){
+    const el=document.getElementById('sheetMeta');if(!el)return;
+    const rt=runtimeValue(f);
+    el.textContent=`${f.year||''} · ${mediaLabel(f)} · ${originValue(f)} · ${formatLabel(f)}${rt?' · '+rt+'分':''}`;
+  }
+  const open21=openSheet;
+  openSheet=function(id){open21(id);const f=filmById(id);if(f){bindHybridFormatEditor(f);updateSheetMeta(f);}};
+
+  // v19's format filter is single-valued. Temporarily bypass it, then apply hybrid-aware matching.
+  function applyFormatFilter(root,cardSel,sectionSel,suffix){
+    const wanted=document.getElementById('formatFilter'+suffix)?.value||''; if(!wanted)return;
+    document.querySelectorAll(`${root} ${cardSel}`).forEach(card=>{
+      const f=filmById(decodeURIComponent(card.dataset.id||'')); if(f&&!formatMatches(f,wanted))card.remove();
+    });
+    document.querySelectorAll(`${root} ${sectionSel}`).forEach(sec=>{if(!sec.querySelector(cardSel))sec.style.display='none';});
+    if(suffix==='Rank')document.querySelectorAll(`${root} .score-bin`).forEach(bin=>{if(!bin.querySelector(cardSel))bin.style.display='none';});
+  }
+  const renderRank21=renderRank;
+  renderRank=function(){
+    const s=document.getElementById('formatFilterRank'),v=s?.value||''; if(s&&v)s.value='';
+    renderRank21(); if(s)s.value=v; applyFormatFilter('#rankRoot','.rank-card','.rank-star','Rank');
+  };
+  const renderClassify21=renderClassify;
+  renderClassify=function(){
+    const s=document.getElementById('formatFilterClassify'),v=s?.value||''; if(s&&v)s.value='';
+    renderClassify21(); if(s)s.value=v; applyFormatFilter('#classifyRoot','.card','.section','Classify');
+  };
+  const fr=document.getElementById('formatFilterRank');if(fr)fr.onchange=renderRank;
+  const fc=document.getElementById('formatFilterClassify');if(fc)fc.onchange=renderClassify;
+
+  const match21=match;
+  match=function(f,q){if(match21(f,q))return true;if(!q)return true;return formatLabel(f).toLowerCase().includes(String(q).toLowerCase());};
+
+  render();
+})();
+</script>
