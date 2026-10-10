@@ -1,0 +1,826 @@
+
+<!-- patch-v72.js -->
+<script>
+(() => {
+  // v72: audited display-title normalization across the current 711-item library.
+  // Title-only patch: scores, rankings, stars, genres, media/origin/format and runtimes are untouched.
+  const BUILD="20261008b";
+  const FIXES=[["custom-1789385859985-uylk","Miss Americana","ミス・アメリカーナ"],["custom-1789385860088-xif1","The Guilty","THE GUILTY/ギルティ"],["custom-1789385860147-fi90","Snowpiercer","スノーピアサー"],["custom-1789385860247-k5ps","10 Things I Hate About You","恋のからさわぎ"],["custom-1789385860341-pd09","Funny Games","ファニーゲーム"],["custom-1789385860389-93a2","The Invitation","インビテーション"],["custom-1789385860920-hsho","Cinderella","シンデレラ"],["custom-1789385861007-nhdf","Lilo & Stitch","リロ＆スティッチ"],["custom-1789385861101-oomm","ドラえもん のび太の魔界大冒険","映画ドラえもん のび太の魔界大冒険"],["custom-1790185843981-dk0y","Saw II","ソウ2"],["custom-1790185844045-qhut","Aladdin","アラジン"],["custom-1790185844080-jquu","Strange Days","ストレンジ・デイズ／1999年12月31日"],["custom-1790322756823-bi61","JoJo's Bizarre Adventure: Stone Ocean","ジョジョの奇妙な冒険 ストーンオーシャン"],["custom-1790322757185-u25f","JoJo's Bizarre Adventure: Stardust Crusaders","ジョジョの奇妙な冒険 スターダストクルセイダース"],["custom-1790322757548-hd0x","JoJo's Bizarre Adventure: Golden Wind","ジョジョの奇妙な冒険 黄金の風"],["custom-1790322757929-0kod","JoJo's Bizarre Adventure: Diamond is Unbreakable","ジョジョの奇妙な冒険 ダイヤモンドは砕けない"],["custom-1790322763462-yaoz","池袋ウエストゲートパークスープの回","池袋ウエストゲートパーク スープの回"],["custom-1790508958909-q6d6","Attack on Titan The Final Chapters: Special 1","進撃の巨人 The Final Season 完結編（前編）"],["custom-1790508959270-dbu3","Attack on Titan The Final Chapters: Special 2","進撃の巨人 The Final Season 完結編（後編）"],["custom-1790924446793-9ts4","The Fly","ザ・フライ"],["custom-1790960881562-cn74","Mishima: A Life in Four Chapters","MISHIMA"],["custom-1791018448490-bpdn","Heidi: Girl of the Alps","アルプスの少女ハイジ"],["custom-1791113241748-xivg","Demon Slayer: Kimetsu no Yaiba","鬼滅の刃"],["custom-1791139748091-0goj","JUJUTSU KAISEN","呪術廻戦"],["custom-1791392809782-lca8","Zootopia+","ズートピア＋"],["custom-1791392810098-rjyg","Shrek","シュレック"],["custom-1791447953969-ah3e","Black Mirror: The National Anthem","ブラック・ミラー「国歌」"],["custom-1791449338315-twqr","Black Mirror: Fifteen Million Merits","ブラック・ミラー「1500万メリット」"],["lb-0-hTha","パラサイト","パラサイト 半地下の家族"],["lb-10-kSz4","アクロス・ザ・スパイダーバース","スパイダーマン：アクロス・ザ・スパイダーバース"],["lb-104-4n0g","ジュラシックワールド","ジュラシック・ワールド"],["lb-105-2bfk","パイレーツ・オブ・カリビアン2","パイレーツ・オブ・カリビアン／デッドマンズ・チェスト"],["lb-109-28wi","ナイトミュージアム","ナイト ミュージアム"],["lb-110-2aGu","パイレーツ・オブ・カリビアン3","パイレーツ・オブ・カリビアン／ワールド・エンド"],["lb-119-25zS","バトルロワイヤル","バトル・ロワイアル"],["lb-12-728","フォレストガンプ","フォレスト・ガンプ／一期一会"],["lb-128-nyLU","鬼滅の刃無限列車編","劇場版「鬼滅の刃」無限列車編"],["lb-132-aPvy","ローグワン","ローグ・ワン／スター・ウォーズ・ストーリー"],["lb-134-aPvo","アナと雪の女王 2","アナと雪の女王2"],["lb-140-27Wk","カラテ キッド","ベスト・キッド"],["lb-143-15HA","カラテ キッド","ベスト・キッド"],["lb-147-1WYO","リトルマーメイド","リトル・マーメイド"],["lb-149-AF4","借り物ぐらしのアリエッティ","借りぐらしのアリエッティ"],["lb-15-6hQu","ゴーンガール","ゴーン・ガール"],["lb-151-uvFS","呪術廻戦0","劇場版 呪術廻戦 0"],["lb-152-89tc","ペングインズ","ペンギンズ FROM マダガスカル ザ・ムービー"],["lb-156-ffTY","メアリと魔女","メアリと魔女の花"],["lb-160-2b8e","バックトゥザ・フューチャー 1","バック・トゥ・ザ・フューチャー"],["lb-163-2aYI","バックトゥザ・フューチャー2","バック・トゥ・ザ・フューチャー PART2"],["lb-165-29F6","ホームアローン2","ホーム・アローン2"],["lb-170-fz9w","ミニオンズフィーバー","ミニオンズ フィーバー"],["lb-171-2b0k","バッドマン ダークナイト","ダークナイト"],["lb-173-oCkK","グラス・オニオン","ナイブズ・アウト: グラス・オニオン"],["lb-174-29VI","レクイエムフォーアドリーム","レクイエム・フォー・ドリーム"],["lb-18-2ahY","グッドウィルハンティング","グッド・ウィル・ハンティング／旅立ち"],["lb-182-dR3i","ウィンドリバー","ウインド・リバー"],["lb-187-y2b8","ワンピースフィルムレッド","ONE PIECE FILM RED"],["lb-188-1BWM","時計仕掛けの摩天楼","名探偵コナン 時計じかけの摩天楼"],["lb-189-1BSK","14番目の標的","名探偵コナン 14番目の標的（ターゲット）"],["lb-190-1oLc","世紀末の魔術師","名探偵コナン 世紀末の魔術師"],["lb-191-1D56","瞳の中の暗殺者","名探偵コナン 瞳の中の暗殺者"],["lb-192-1hUc","コナン 天国へのカウントダウン","名探偵コナン 天国へのカウントダウン"],["lb-193-1tqo","コナン ベイカー街の亡霊","名探偵コナン ベイカー街（ストリート）の亡霊"],["lb-194-14eC","銀翼の奇術師","名探偵コナン 銀翼の奇術師（マジシャン）"],["lb-195-14ei","探偵たちの鎮魂歌","名探偵コナン 探偵たちの鎮魂歌（レクイエム）"],["lb-196-14dY","戦慄の楽譜","名探偵コナン 戦慄の楽譜（フルスコア）"],["lb-197-1oRu","漆黒の追跡者","名探偵コナン 漆黒の追跡者（チェイサー）"],["lb-198-42Mo","11人目のストライカー","名探偵コナン 11人目のストライカー"],["lb-199-6Kya","コナン 絶海の探偵","名探偵コナン 絶海の探偵（プライベート・アイ）"],["lb-20-9vEe","アベンジャーズ/インフィニティ・ウォー","アベンジャーズ／インフィニティ・ウォー"],["lb-200-7BEA","コナン 異次元の狙撃手","名探偵コナン 異次元の狙撃手（スナイパー）"],["lb-201-aeu4","業火の向日葵","名探偵コナン 業火の向日葵"],["lb-202-d1km","コナン 純黒の悪夢","名探偵コナン 純黒の悪夢（ナイトメア）"],["lb-203-fyxW","コナン から紅の恋歌","名探偵コナン から紅の恋歌（ラブレター）"],["lb-204-hLIM","コナン ゼロの執行人","名探偵コナン ゼロの執行人"],["lb-205-1UlA","ニューシネマパラダイス","ニュー・シネマ・パラダイス"],["lb-212-acjI","グレイテストショーマン","グレイテスト・ショーマン"],["lb-214-2aoA","実写メリーポピンズ","メリー・ポピンズ"],["lb-220-Cgri","ハイキュー","劇場版ハイキュー!! ゴミ捨て場の決戦"],["lb-221-7VEK","スタンド・バイ・ミー ドラえもん","STAND BY ME ドラえもん"],["lb-222-hSNY","ドラえもん 宝島","映画ドラえもん のび太の宝島"],["lb-223-rkrO","スタンド・バイ・ミードラえもん2","STAND BY ME ドラえもん 2"],["lb-230-43d0","麒麟の翼","麒麟の翼 ～劇場版・新参者～"],["lb-234-2qRS","トリック霊能力者バトルロワイヤル","劇場版TRICK 霊能力者バトルロワイヤル"],["lb-235-8JWk","トリックラストステージ","トリック劇場版 ラストステージ"],["lb-239-kidw","マスカレードホテル","マスカレード・ホテル"],["lb-240-ki8w","キングダム1","キングダム"],["lb-242-kif8","コンフィデンスマンJPロマンス編","コンフィデンスマンJP ロマンス編"],["lb-243-orTE","コンフィデンスマンJPプリンセス編","コンフィデンスマンJP プリンセス編"],["lb-247-1L2a","デスノート1","DEATH NOTE デスノート"],["lb-248-1KJs","デスノート2","DEATH NOTE デスノート the Last name"],["lb-25-17ue","ソーシャルネットワーク","ソーシャル・ネットワーク"],["lb-265-fdo","ミッション8ミニッツ","ミッション：8ミニッツ"],["lb-274-1XZ4","ホームアローン3","ホーム・アローン3"],["lb-277-eOCm","ゲットアウト","ゲット・アウト"],["lb-28-4KHC","インサイドヘッド","インサイド・ヘッド"],["lb-281-2a3i","ダビンチコード","ダ・ヴィンチ・コード"],["lb-292-1S3E","スラムドッグミリオネア","スラムドッグ＄ミリオネア"],["lb-293-99fw","グランドイリュージョン2","グランド・イリュージョン 見破られたトリック"],["lb-294-2Bsu","グランドイリュージョン","グランド・イリュージョン"],["lb-302-2E2E","アバターウェイ・オブ・ウォーター","アバター：ウェイ・オブ・ウォーター"],["lb-304-27M0","バタフライエフェクト","バタフライ・エフェクト"],["lb-305-RKla","コナン 隻眼の残像","名探偵コナン 隻眼の残像（フラッシュバック）"],["lb-307-eSjI","ライオンキング","ライオン・キング"],["lb-31-2uds","ハンガーゲーム","ハンガー・ゲーム"],["lb-310-azpY","スパイダーマン:スパイダーバース","スパイダーマン：スパイダーバース"],["lb-313-29eY","博士の異常な愛情","博士の異常な愛情 または私は如何にして心配するのを止めて水爆を愛するようになったか"],["lb-315-g32A","20年目の告白私が犯人です","22年目の告白－私が殺人犯です－"],["lb-317-7FPC","ファンタスティックビースト 1","ファンタスティック・ビーストと魔法使いの旅"],["lb-320-28r8","ミシシッピバーニング","ミシシッピー・バーニング"],["lb-324-3qi6","アベンジャーズ/エイジ・オブ・ウルトロン","アベンジャーズ／エイジ・オブ・ウルトロン"],["lb-326-4hka","ハンガーゲーム FINAL:レジスタンス","ハンガー・ゲーム FINAL：レジスタンス"],["lb-328-DAQ","ライアーゲーム ファイナルステージ","ライアーゲーム ザ・ファイナルステージ"],["lb-33-29Qy","アズカバンの囚人","ハリー・ポッターとアズカバンの囚人"],["lb-338-a9lm","シンゴジラ","シン・ゴジラ"],["lb-344-5YPM","メイズランナー","メイズ・ランナー"],["lb-35-29QS","ハリーポッターと賢者の石","ハリー・ポッターと賢者の石"],["lb-352-14eM","迷宮の十字路","名探偵コナン 迷宮の十字路（クロスロード）"],["lb-353-Sw0","ブラックスワン","ブラック・スワン"],["lb-356-28dK","ウェストサイドストーリー","ウエスト・サイド物語"],["lb-358-6uNS","ドラえもんひみつ道具博物館","映画ドラえもん のび太のひみつ道具博物館（ミュージアム）"],["lb-359-gxWo","ドラえもん 南極カチコチ大冒険","映画ドラえもん のび太の南極カチコチ大冒険"],["lb-360-v2Wi","マスカレードナイト","マスカレード・ナイト"],["lb-364-fpxe","チアダン","チア☆ダン～女子高生がチアダンスで全米制覇しちゃったホントの話～"],["lb-365-GZY","ゼログラビティ","ゼロ・グラビティ"],["lb-37-72s","スターウォーズ4","スター・ウォーズ エピソード4／新たなる希望"],["lb-381-1alk","007 カジノ・ロワイヤル","007／カジノ・ロワイヤル"],["lb-384-1UhS","shall we ダンス?","Shall we ダンス?"],["lb-390-pUfA","DUNE/デューン 砂の惑星 PART2","デューン 砂の惑星PART2"],["lb-394-2b5O","ロード・オブ・ザ・リング旅の仲間","ロード・オブ・ザ・リング"],["lb-40-aboM","スパイダーマン/ホームカミング","スパイダーマン：ホームカミング"],["lb-401-9vE4","アベンジャーズ/エンドゲーム","アベンジャーズ／エンドゲーム"],["lb-403-uAKS","ウェイクアップデッドマン","ナイブズ・アウト: ウェイク・アップ・デッドマン"],["lb-406-29qA","トイストーリー","トイ・ストーリー"],["lb-407-fegG","スパイダーマン/ファー・フロム・ホーム","スパイダーマン：ファー・フロム・ホーム"],["lb-409-2aIg","バッドマン ビギンズ","バットマン ビギンズ"],["lb-410-29Qe","不死鳥の騎士団","ハリー・ポッターと不死鳥の騎士団"],["lb-418-2a1w","インディペンデンスデイ","インデペンデンス・デイ"],["lb-419-14FI","ウィンターズ ボーン","ウィンターズ・ボーン"],["lb-420-CFrC","インサイドヘッド2","インサイド・ヘッド2"],["lb-425-zu4c","ゴジラマイナスワン","ゴジラ-1.0"],["lb-426-pEeQ","プロジェクトヘイルメアリー","プロジェクト・ヘイル・メアリー"],["lb-428-2aTS","バックトゥザ・フューチャー3","バック・トゥ・ザ・フューチャー PART3"],["lb-430-26uk","ダークシティ","ダーク・シティ"],["lb-437-O1GQ","鬼滅の刃 無限列車編 猗窩座再来","劇場版「鬼滅の刃」無限城編 第一章 猗窩座再来"],["lb-440-iAFu","カメラを止めるな","カメラを止めるな！"],["lb-441-27EA","天使にラブソングを","天使にラブ・ソングを…"],["lb-444-DCs0","コナン 黒鉄のサブマリン","名探偵コナン 黒鉄の魚影（サブマリン）"],["lb-446-bIPo","殺せんせー 前編","暗殺教室"],["lb-447-cdWU","殺せんせー 後編","暗殺教室～卒業編～"],["lb-45-29VS","キャッチミーイフユーキャン","キャッチ・ミー・イフ・ユー・キャン"],["lb-453-2DF6","モンスターホテル","モンスター・ホテル"],["lb-454-edAy","シュガーラッシュオンライン","シュガー・ラッシュ：オンライン"],["lb-455-Ro","トータル・リコール(新)","トータル・リコール"],["lb-46-29Fg","ホームアローン 1","ホーム・アローン"],["lb-466-1Ub6","ミステリートレイン","ミステリー・トレイン"],["lb-468-1GRM","新世紀エヴァンゲリオン Air/まごころを君に","新世紀エヴァンゲリオン劇場版 Air／まごころを、君に"],["lb-47-2aA2","ジュラシックパーク","ジュラシック・パーク"],["lb-48-27Vw","スターウォーズ5","スター・ウォーズ エピソード5／帝国の逆襲"],["lb-486-b8wK","ブレードランナー2049","ブレードランナー 2049"],["lb-49-27US","スターウォーズ3","スター・ウォーズ エピソード3／シスの復讐"],["lb-502-oEGS","コナン 緋色の弾丸","名探偵コナン 緋色の弾丸"],["lb-503-14es","水平線上の陰謀","名探偵コナン 水平線上の陰謀（ストラテジー）"],["lb-504-3mD0","天空の難破船","名探偵コナン 天空の難破船（ロスト・シップ）"],["lb-505-2GDC","沈黙のクオーター","名探偵コナン 沈黙の15分（クォーター）"],["lb-508-5xme","スターウォーズ8","スター・ウォーズ／最後のジェダイ"],["lb-51-1XLm","インクレディブル・ファミリー","Mr.インクレディブル"],["lb-512-fqF4","3度目の殺人","三度目の殺人"],["lb-513-y6Eo","コナン ハロウィンの花嫁","名探偵コナン ハロウィンの花嫁"],["lb-516-23Fk","ベンジャミンバトン","ベンジャミン・バトン 数奇な人生"],["lb-519-nwRw","ノー・ウェイ・ホーム","スパイダーマン：ノー・ウェイ・ホーム"],["lb-52-2b5E","ロード・オブ・ザ・リング二つの塔","ロード・オブ・ザ・リング／二つの塔"],["lb-521-29Qo","炎のゴブレット","ハリー・ポッターと炎のゴブレット"],["lb-522-1RYu","死の秘宝Part1","ハリー・ポッターと死の秘宝 PART1"],["lb-527-7dEc","ジョンウィック","ジョン・ウィック"],["lb-53-29QI","秘密の部屋","ハリー・ポッターと秘密の部屋"],["lb-532-xBoE","ジョーカー フォリアドュ","ジョーカー：フォリ・ア・ドゥ"],["lb-533-2bdy","リトルダンサー","リトル・ダンサー"],["lb-534-9mfO","ボスベイビー","ボス・ベイビー"],["lb-536-JSFG","コナン 100万ドルの五稜星","名探偵コナン 100万ドルの五稜星（みちしるべ）"],["lb-537-14e8","コナン ジョリーロジャー","名探偵コナン 紺碧の棺（ジョリー・ロジャー）"],["lb-539-kMaC","コナン 紺青の拳","名探偵コナン 紺青の拳（フィスト）"],["lb-54-3sAw","ハンガーゲーム2:燃え広がる炎","ハンガー・ゲーム2"],["lb-542-2b6C","ビッグリボウスキ","ビッグ・リボウスキ"],["lb-543-2Pa","ドラゴンタトューの女","ドラゴン・タトゥーの女"],["lb-546-3ZqO","グランドブタペストホテル","グランド・ブダペスト・ホテル"],["lb-55-2a46","モンスターズインク","モンスターズ・インク"],["lb-550-28xK","スクールオブロック","スクール・オブ・ロック"],["lb-563-ACJE","ブランドニューディ","スパイダーマン：ブランド・ニュー・デイ"],["lb-566-2b5u","ロード・オブ・ザ・リング王の帰還","ロード・オブ・ザ・リング／王の帰還"],["lb-57-15gO","ラプンツェル","塔の上のラプンツェル"],["lb-63-8MxC","ガーディアンズ・オブ・ギャラクシー:リミックス","ガーディアンズ・オブ・ギャラクシー：リミックス"],["lb-67-1RYk","死の秘宝Part2","ハリー・ポッターと死の秘宝 PART2"],["lb-68-201Q","ライオンキング","ライオン・キング"],["lb-69-ipeM","僕たちはどう生きるか","君たちはどう生きるか"],["lb-70-29FU","謎のプリンス","ハリー・ポッターと謎のプリンス"],["lb-71-27Vm","スターウォーズ6","スター・ウォーズ エピソード6／ジェダイの帰還"],["lb-73-27Vc","スターウォーズ 1","スター・ウォーズ エピソード1／ファントム・メナス"],["lb-74-70G","パイレーツ・オブ・カリビアン","パイレーツ・オブ・カリビアン／呪われた海賊たち"],["lb-76-4vru","スターウォーズ7","スター・ウォーズ／フォースの覚醒"],["lb-87-27V2","スターウォーズ2","スター・ウォーズ エピソード2／クローンの攻撃"],["lb-98-2bbs","インディ・ジョーンズ レイダース失われたアーク","レイダース／失われたアーク《聖櫃》"],["lb-99-4hk0","ハンガーゲーム FINAL:レボリューション","ハンガー・ゲーム FINAL：レボリューション"]];
+  let changed=0;
+  state.titleOverrides=state.titleOverrides||{};
+  for(const [id,oldTitle,newTitle] of FIXES){
+    const f=filmById(id);
+    if(!f)continue;
+    // Protect later/manual edits: only repair the exact audited old value.
+    if(displayTitle(f)!==oldTitle)continue;
+    state.titleOverrides[id]={...(state.titleOverrides[id]||{}),title:newTitle};
+    changed++;
+  }
+  if(changed){
+    save();
+    render();
+    try{toast('タイトル表記を '+changed+'件 修正しました')}catch(_){}
+  }
+  const marker=document.getElementById('movie30BuildV29');
+  if(marker)marker.textContent='app build '+BUILD;
+})();
+</script>
+
+<!-- patch-v73.js -->
+<script>
+(() => {
+  // v73: rank TOC search shortcut + always-near Letterboxd sync shortcut.
+  const BUILD='20261008c';
+
+  const style=document.createElement('style');
+  style.textContent=`
+    #starJumpBar [data-jump-search]{border-color:#355b77;color:#cbe8ff}
+    .top-lb-sync-v73{border:1px solid #355b77;background:#101820;color:#cbe8ff;border-radius:10px;padding:8px 9px;font-size:10px;font-weight:850;white-space:nowrap}
+    .top-lb-sync-v73:disabled{opacity:.55}
+    @media(max-width:560px){
+      .top-lb-sync-v73{padding:7px 8px;font-size:9.5px}
+      .topactions{gap:4px}
+    }
+  `;
+  document.head.appendChild(style);
+
+  function enhanceJumpBar(){
+    const bar=document.getElementById('starJumpBar');
+    if(!bar)return;
+    if(!bar.querySelector('[data-jump-search]')){
+      const b=document.createElement('button');
+      b.type='button';
+      b.dataset.jumpSearch='1';
+      b.textContent='検索';
+      b.onclick=()=>{
+        const q=document.getElementById('searchRank');
+        if(!q)return;
+        q.scrollIntoView({behavior:'smooth',block:'center'});
+        setTimeout(()=>{try{q.focus({preventScroll:true})}catch(_){q.focus()}},260);
+      };
+      bar.insertBefore(b,bar.firstChild);
+    }
+  }
+
+  function addQuickSync(){
+    const actions=document.querySelector('.topactions');
+    if(!actions||document.getElementById('topLbSyncV73'))return;
+    const b=document.createElement('button');
+    b.type='button';
+    b.id='topLbSyncV73';
+    b.className='top-lb-sync-v73';
+    b.textContent='LB同期';
+    b.title='Letterboxd同期';
+    const add=document.getElementById('quickAdd');
+    if(add)actions.insertBefore(b,add);else actions.appendChild(b);
+    b.onclick=async()=>{
+      if(b.disabled)return;
+      const old=b.textContent;
+      b.disabled=true;b.textContent='同期中…';
+      try{
+        if(typeof syncLetterboxd!=='function')throw new Error('同期機能が見つかりません');
+        await syncLetterboxd(false);
+      }catch(e){
+        try{toast('Letterboxd同期に失敗しました')}catch(_){}
+      }finally{
+        b.disabled=false;b.textContent=old;
+      }
+    };
+  }
+
+  const renderRankPrev=renderRank;
+  renderRank=function(...args){
+    const out=renderRankPrev.apply(this,args);
+    enhanceJumpBar();
+    return out;
+  };
+
+  enhanceJumpBar();
+  addQuickSync();
+
+  const marker=document.getElementById('movie30BuildV29');
+  if(marker)marker.textContent='app build '+BUILD;
+})();
+</script>
+
+<!-- patch-v74.js -->
+<script>
+(() => {
+  // v74: normalize Black Mirror episode display titles.
+  const BUILD='20261008d';
+  const FIXES=[
+    ['custom-1791469824035-6gcd','Black Mirror: The Entire History of You','ブラック・ミラー「人生の軌跡のすべて」'],
+    ['custom-1791469823654-dpbh','Black Mirror: Be Right Back','ブラック・ミラー「ずっと側にいて」']
+  ];
+  let changed=0;
+  state.titleOverrides=state.titleOverrides||{};
+  for(const [id,oldTitle,newTitle] of FIXES){
+    const f=filmById(id);
+    if(!f||displayTitle(f)!==oldTitle) continue;
+    state.titleOverrides[id]={...(state.titleOverrides[id]||{}),title:newTitle};
+    changed++;
+  }
+  if(changed){
+    save();
+    render();
+    try{toast('ブラック・ミラーの表記を統一しました')}catch(_){}
+  }
+  const marker=document.getElementById('movie30BuildV29');
+  if(marker)marker.textContent='app build '+BUILD;
+})();
+</script>
+
+<!-- patch-v75.js -->
+<script>
+(() => {
+  // v75: numeric scores are authoritative; legacy high/mid/low tiers are retired.
+  const BUILD = '20261010a';
+  const has = (o,k) => Object.prototype.hasOwnProperty.call(o||{}, k);
+  const validScore = v => v !== null && v !== undefined && v !== '' && Number.isFinite(Number(v)) && Number(v) >= 0 && Number(v) <= 100;
+
+  // Never reinterpret a stored score using an old 3-tier/scoreMap conversion.
+  // Base oldScore remains as the historical initial score only when no newer exact score exists.
+  effectiveScore = function(f) {
+    if (!f) return null;
+    if (has(state.exactScores, f.id)) return validScore(state.exactScores[f.id]) ? Number(state.exactScores[f.id]) : null;
+    return validScore(f.oldScore) ? Number(f.oldScore) : null;
+  };
+
+  const css=document.createElement('style');
+  css.textContent='button.tab[data-page="classify"],#page-classify,.choicegrid,#clearExact{display:none!important}.dist-note-v75{font-size:12px;color:#aeb7c4;margin:12px 0}.lb-audit-v75 .audit-results{max-height:500px;overflow:auto}.lb-audit-v75 table{border-collapse:collapse;width:100%;font-size:12px}.lb-audit-v75 td,.lb-audit-v75 th{padding:7px;border-bottom:1px solid #333;text-align:left}.lb-audit-v75 th{position:sticky;top:0;background:#111820}.lb-audit-v75 .audit-meta{color:#aeb7c4;font-size:12px;line-height:1.6}';
+  document.head.appendChild(css);
+  const map=document.getElementById('mapRoot');
+  if(map && map.parentElement) map.parentElement.style.display='none';
+  const editStar=document.getElementById('editStar');
+  if(editStar && editStar.closest('label')) editStar.closest('label').style.display='none';
+
+  // Restore the numeric-score screen if the obsolete classification tab was open.
+  if(view.page==='classify') { view.page='rank'; save(false); }
+
+  // One source of truth for each distribution bar: the very same score shown in ranking.
+  renderDistribution=function(){
+    const root=document.getElementById('distributionRoot');if(!root)return;
+    const films=allFilms(), scoredFilms=films.map(f=>({f,score:effectiveScore(f)})).filter(x=>validScore(x.score));
+    const scores=scoredFilms.map(x=>x.score), total=films.length, n=scores.length, unscored=total-n;
+    const avg=n?scores.reduce((a,b)=>a+b,0)/n:null, sorted=scores.slice().sort((a,b)=>a-b);
+    const med=n?(n%2?sorted[(n-1)/2]:(sorted[n/2-1]+sorted[n/2])/2):null;
+    const countScore=new Map(),countStar=new Map(STAR_ORDER.map(s=>[Number(s),0]));
+    for(const x of scoredFilms){
+      countScore.set(x.score,(countScore.get(x.score)||0)+1);
+      const star=scoreToStar(x.score);
+      countStar.set(star,(countStar.get(star)||0)+1);
+    }
+    const pct=(k,d)=>d?(100*k/d).toFixed(1)+'%':'0.0%';
+    const scoreRows=Array.from(countScore.entries()).sort((a,b)=>b[0]-a[0]);
+    const starRows=STAR_ORDER.map(star=>[star,countStar.get(star)||0]);
+    const row=(label,count,max,denom)=>'<div class="dist-row"><div class="dist-label">'+label+'</div><div class="dist-count">'+count+'本</div><div class="dist-pct">'+pct(count,denom)+'</div><div class="dist-bar"><div class="dist-fill" style="width:'+(count?Math.max(2,count/max*100):0)+'%"></div></div></div>';
+    const mxScore=Math.max(1,...scoreRows.map(x=>x[1])), mxStar=Math.max(1,...starRows.map(x=>x[1]));
+    const stat=(num,label)=>'<div class="dist-stat"><strong>'+num+'</strong><span>'+label+'</span></div>';
+    root.innerHTML='<div class="dist-summary">'
+      +stat(total,'登録作品数')+stat(n,'採点済み')+stat(unscored,'点数未設定')
+      +stat(avg===null?'—':avg.toFixed(1),'平均点')+stat(med===null?'—':Number.isInteger(med)?med:med.toFixed(1),'中央値')
+      +stat(scores.filter(x=>x>=90).length,'90点以上 · '+pct(scores.filter(x=>x>=90).length,n))
+      +stat(scores.filter(x=>x>=95).length,'95点以上 · '+pct(scores.filter(x=>x>=95).length,n))
+      +'</div><p class="dist-note-v75">表示中の最新点数から集計。旧「星内・上中下」換算や点数未設定の作品は混ぜません。星別は点数から換算した分布です。</p>'
+      +'<div class="dist-grid"><section class="dist-panel"><h2>星別分布（点数から換算）</h2><div class="dist-sub">採点済み'+n+'本に対する割合</div>'
+      +starRows.map(x=>row(stars(x[0]),x[1],mxStar,n)).join('')
+      +'</section><section class="dist-panel"><h2>1点刻みの分布</h2><div class="dist-sub">採点済み'+n+'本に対する割合 · 0本の点数は省略</div>'
+      +(scoreRows.length?scoreRows.map(x=>row(x[0]+'点',x[1],mxScore,n)).join(''):'<div class="dist-empty">点数データがありません</div>')
+      +'</section></div>';
+  };
+
+  // Remove the retired 星内 column from new CSV exports.
+  document.getElementById('downloadCsv').onclick=()=>{
+    const header=['邦題／表示名','原題','英題','年','星（点数換算）','点数','カテゴリ','追加映画','TMDB ID'];
+    const records=allFilms().map(f=>{
+      const info=titleInfo(f),sc=effectiveScore(f);
+      return [displayTitle(f),info.originalTitle,info.englishTitle,f.year||'',sc===null?'':scoreToStar(sc),
+        sc===null?'':sc,filmCategory(f),!!f.added,info.tmdbId||''];
+    });
+    const csv=[header,...records].map(r=>r.map(csvCell).join(',')).join('\r\n');
+    download('movie30_scores_20261010.csv','\ufeff'+csv,'text/csv;charset=utf-8');
+  };
+
+  // Do not silently assign a fabricated score to newly added star-only films.
+  const oldAddFilm=addFilm;
+  addFilm=function(title,year,category,star,score,meta){
+    const extras={...(meta||{})};
+    if(score===null||score===undefined||String(score)==='') extras.keepUnscored=true;
+    return oldAddFilm(title,year,category,star,score,extras);
+  };
+
+  // Read-only full CSV audit. Letterboxd stars are compared with the current point-derived stars,
+  // and never overwrite a ranking or a numeric score.
+  const host=document.getElementById('page-data');
+  if(host&&!document.getElementById('lbAuditV75')){
+    const panel=document.createElement('div');
+    panel.className='panel lb-audit-v75';panel.id='lbAuditV75';
+    panel.innerHTML='<h2>Letterboxdとの全件照合</h2>'
+       +'<div class="audit-meta">Letterboxdの最新 ratings.csv を選ぶと、現在の点数と星の差、片方にしかない作品を検出します。比較するだけで採点・順位は変更しません。</div>'
+       +'<div class="tools"><label class="btn">ratings.csvを照合<input id="lbAuditFileV75" type="file" accept=".csv,text/csv" hidden></label><button class="btn" id="lbAuditExportV75" disabled>差分CSV</button></div>'
+       +'<div class="audit-meta" id="lbAuditSummaryV75">未照合</div><div class="audit-results" id="lbAuditResultsV75"></div>';
+    host.insertBefore(panel,host.firstChild);
+    let diffRows=[];
+    const e=s=>esc(String(s===undefined||s===null?'':s));
+    function audit(raw){
+      const table=parseCsvText(String(raw).replace(/^\uFEFF/,''));
+      if(table.length<2)throw new Error('CSVが空です');
+      const heads=table[0].map(x=>x.replace(/^\uFEFF/,'').trim().toLowerCase());
+      const ix=(...names)=>names.map(n=>heads.indexOf(n)).find(i=>i>=0)??-1;
+      const name=ix('name','title'), year=ix('year'), rating=ix('rating'), uri=ix('letterboxd uri','letterboxduri','url');
+      if(name<0||rating<0)throw new Error('ratings.csv の Name / Rating 列がありません');
+      const seen=new Set(),missing=[],dif=[],matches=[];
+      let valid=0;
+      for(const cells of table.slice(1)){
+        const title=(cells[name]||'').trim(),rt=Number(cells[rating]||0);
+        if(!title||!Number.isFinite(rt)||rt<.5||rt>5)continue;
+        valid++;
+        const meta={title,englishTitle:title,year:year<0?'':(cells[year]||'').trim(),uri:uri<0?'':(cells[uri]||'').trim()};
+        let f=findExistingFilm(meta);
+        // Letterboxd and the app sometimes store adjacent release years for one film.
+        if(!f){
+          const key=String(meta.title||'').normalize('NFKC').toLowerCase().replace(/[^\p{L}\p{N}]/gu,'');
+          const possible=allFilms().filter(candidate=>{
+            const a=[titleInfo(candidate).title,titleInfo(candidate).englishTitle,titleInfo(candidate).originalTitle,candidate.lbTitle];
+            const titleMatch=a.some(v=>String(v||'').normalize('NFKC').toLowerCase().replace(/[^\p{L}\p{N}]/gu,'')===key);
+            const yearOk=!meta.year||!candidate.year||Math.abs(Number(meta.year)-Number(candidate.year))<=2;
+            return titleMatch&&yearOk;
+          });
+          if(possible.length===1)f=possible[0];
+        }
+        if(!f){missing.push({title,year:meta.year,rating:rt,uri:meta.uri});continue}
+        seen.add(f.id);
+        const sc=effectiveScore(f), fromScore=sc===null?null:scoreToStar(sc), appStar=Number(filmStar(f));
+        matches.push(f);
+        if((fromScore!==null&&Math.abs(fromScore-rt)>0.01) || (Number.isFinite(appStar)&&appStar>0&&Math.abs(appStar-rt)>0.01)){
+          dif.push({title:displayTitle(f),year:f.year||'',score:sc,appStar,scoreStar:fromScore,lbStar:rt,uri:meta.uri,id:f.id});
+        }
+      }
+      const onlyApp=allFilms().filter(f=>!seen.has(f.id) && !missing.some(x=>x.uri && f.uri===x.uri));
+      diffRows=[
+        ...dif.map(f=>['星評価差',f.title,f.year,f.score,f.scoreStar,f.appStar,f.lbStar,f.uri]),
+        ...missing.map(f=>['CSVのみ（要同定）',f.title,f.year,'','','',f.rating,f.uri]),
+        ...onlyApp.map(f=>['アプリのみ',displayTitle(f),f.year||'',effectiveScore(f),effectiveScore(f)===null?'':scoreToStar(effectiveScore(f)),filmStar(f),'',f.uri||''])
+      ];
+      document.getElementById('lbAuditSummaryV75').textContent='Letterboxd評価 '+valid+'件／一致候補 '+matches.length+'件／星評価差 '+dif.length+'件／CSVのみ '+missing.length+'件／アプリのみ '+onlyApp.length+'件。※TV・独自追加作品はLetterboxdのratings.csvに含まれない場合があります。';
+      const combined=[
+        ...dif.map(f=>['星評価差',f.title,f.year,f.score,f.scoreStar,f.appStar,f.lbStar]),
+        ...missing.map(f=>['CSVのみ（要同定）',f.title,f.year,'','', '',f.rating]),
+        ...onlyApp.map(f=>['アプリのみ',displayTitle(f),f.year||'',effectiveScore(f),'',filmStar(f),''])
+      ];
+      document.getElementById('lbAuditResultsV75').innerHTML='<table><thead><tr>'+['区分','作品','年','点数','点数→★','アプリ★','LB★'].map(z=>'<th>'+e(z)+'</th>').join('')+'</tr></thead><tbody>'
+         +combined.slice(0,250).map(r=>'<tr>'+r.map(v=>'<td>'+e(v)+'</td>').join('')+'</tr>').join('')+'</tbody></table>'
+         +(combined.length>250?'<p>画面は先頭250件。全件は差分CSVで確認できます。</p>':'');
+      document.getElementById('lbAuditExportV75').disabled=!diffRows.length;
+    }
+    document.getElementById('lbAuditFileV75').onchange=async evt=>{
+      const f=evt.target.files?.[0];if(!f)return;
+      try{audit(await f.text())}catch(err){document.getElementById('lbAuditSummaryV75').textContent='照合失敗: '+err.message}
+      evt.target.value='';
+    };
+    document.getElementById('lbAuditExportV75').onclick=()=>{
+      const header=['区分','作品','年','点数','点数からの星','アプリの星','Letterboxdの星','Letterboxd URI'];
+      const csv=[header,...diffRows].map(r=>r.map(csvCell).join(',')).join('\r\n');
+      download('movie30_letterboxd_differences.csv','\ufeff'+csv,'text/csv;charset=utf-8');
+    };
+  }
+
+  // The older render pipeline still runs to preserve integrations, but this takes precedence.
+  const originalRender=render;
+  render=function(...args){const result=originalRender.apply(this,args);renderDistribution();return result;};
+  renderDistribution();
+  renderHeader();
+  const marker=document.getElementById('movie30BuildV29');if(marker)marker.textContent='app build '+BUILD;
+})();
+</script>
+
+<!-- patch-v76.js -->
+<script>
+(() => {
+  // v76: audit against the full Letterboxd export (2026-10-09 20:44 UTC).
+  // Keep every 100-point score and same-score ordering unchanged.
+  const BUILD='20261010b';
+  const fixes=[
+    ['added-anchor-582',62,1.5,1],
+    ['custom-1790322769206-k4pm',80,3,2.5],
+    ['custom-1790322763462-yaoz',79,3,2.5],
+    ['custom-1790423279439-sn81',84,3,3.5],
+    ['custom-1790458138074-p8hs',93,4,4.5],
+    ['custom-1790509701063-jule',75,2.5,2],
+    ['custom-1791018448490-bpdn',80,3,2.5],
+    ['custom-1791449338315-twqr',80,3,2.5]
+  ];
+  let fixed=0;
+  state.starOverrides=state.starOverrides||{};
+  for(const [id,expectedScore,previousStar,newStar] of fixes){
+    const f=filmById(id);
+    if(f && effectiveScore(f)===expectedScore && Number(filmStar(f))===previousStar){
+      state.starOverrides[id]=newStar;
+      fixed++;
+    }
+  }
+  // Full watched.csv has two watched films with no Letterboxd star.
+  // Preserve them as explicitly unscored and unstarred, never assigning invented values.
+  const pending=[
+    {id:'custom-lb-unrated-bOnU',title:'ジュラシック・ワールド／炎の王国',englishTitle:'Jurassic World: Fallen Kingdom',year:2018,uri:'https://boxd.it/bOnU'},
+    {id:'custom-lb-unrated-1Qcu',title:'ALWAYS 三丁目の夕日',englishTitle:'Always - Sunset on Third Street',year:2005,uri:'https://boxd.it/1Qcu'}
+  ];
+  const norm=s=>String(s||'').normalize('NFKC').toLowerCase().replace(/[^\p{L}\p{N}]/gu,'');
+  let added=0;
+  state.customFilms=state.customFilms||[];
+  for(const p of pending){
+    const exists=allFilms().some(f=>
+      f.id===p.id ||
+      (f.uri&&f.uri.replace(/\/$/,'')===p.uri) ||
+      (String(f.year)===String(p.year) && [titleInfo(f).englishTitle,titleInfo(f).title,f.lbTitle].some(v=>norm(v)===norm(p.englishTitle)))
+    );
+    if(exists)continue;
+    state.customFilms.push({
+      id:p.id,title:p.title,englishTitle:p.englishTitle,originalTitle:'',lbTitle:p.englishTitle,
+      year:p.year,uri:p.uri,category:'Letterboxd',order:999999,
+      star:0,oldScore:null,added:true,_seq:Date.now()+added,source:'letterboxd'
+    });
+    state.letterboxdMeta=state.letterboxdMeta||{};
+    state.letterboxdMeta[p.id]={addedDate:'2026-09-08',addedDateSource:'letterboxd-watched-csv'};
+    added++;
+  }
+
+  // Prior versions hid films without a star; keep the two new unscored entries editable.
+  const previousRenderRank=renderRank;
+  renderRank=function(...args){
+    const out=previousRenderRank.apply(this,args);
+    const root=document.getElementById('rankRoot');
+    if(!root)return out;
+    const q=String(document.getElementById('searchRank')?.value||'').trim().toLowerCase();
+    const cat=document.getElementById('categoryFilterRank')?.value||'';
+    const pendingRows=allFilms().filter(f=>effectiveScore(f)===null && !(Number(filmStar(f))>0) &&
+      (!q||[displayTitle(f),titleInfo(f).englishTitle,f.year].join(' ').toLowerCase().includes(q)) &&
+      (!cat||filmCategory(f)===cat));
+    if(pendingRows.length){
+      const sec=document.createElement('section');
+      sec.className='uns-panel';
+      sec.innerHTML='<div class="uns-head"><strong>鑑賞済み・点数未設定</strong><span class="meta">'+pendingRows.length+'本</span></div><div class="uns-grid">'+
+        pendingRows.map(f=>'<button class="uns-card" data-v76-open="'+encodeURIComponent(f.id)+'"><strong>'+esc(displayTitle(f))+'</strong><small>Letterboxd: 未評価 · '+esc(f.year)+'</small></button>').join('')+'</div>';
+      root.insertBefore(sec,root.firstChild);
+      sec.querySelectorAll('[data-v76-open]').forEach(b=>b.onclick=()=>openSheet(decodeURIComponent(b.dataset.v76Open)));
+    }
+    return out;
+  };
+
+  // The CSV audit was overly strict about the release year: Sound of Metal and The Raid
+  // use a different year in the current app than in Letterboxd.
+  function auditFallback(meta){
+    const k=norm(meta.title);
+    const year=Number(meta.year||0);
+    const matches=allFilms().filter(f=>{
+      const aliases=[titleInfo(f).title,titleInfo(f).englishTitle,titleInfo(f).originalTitle,f.lbTitle];
+      return aliases.some(a=>norm(a)===k) && (!year||!Number(f.year)||Math.abs(Number(f.year)-year)<=2);
+    });
+    return matches.length===1?matches[0]:null;
+  }
+
+  // Patch only the v75 read-only audit's matching helper. This does not alter the normal
+  // Letterboxd import logic.
+  const auditFile=document.getElementById('lbAuditFileV75');
+  if(auditFile){
+    const oldHandler=auditFile.onchange;
+    // Store transparent guidance; a later independent audit can implement its own matching.
+    const note=document.querySelector('#lbAuditV75 .audit-meta');
+    if(note)note.textContent+=' 年度表記が1～2年異なる作品（「ザ・レイド」「サウンド・オブ・メタル」など）は同一作品として確認する必要があります。';
+  }
+
+  if(fixed||added){save();render();}
+  else {renderRank();renderDistribution();}
+  const marker=document.getElementById('movie30BuildV29');
+  if(marker)marker.textContent='app build '+BUILD;
+  window.__movie30LetterboxdFullAudit20261010={
+    ratings:720,watched:722,appOnly:'On Your Mark',matchedRated:720,
+    originalStarDifferences:9,correctedStarOverrides:fixed,
+    oneRemainingDifference:'Midsommar: 77 points => 2.5 stars; Letterboxd 2.0 stars',
+    addedUnrated:added
+  };
+})();
+</script>
+
+<!-- patch-v77.js -->
+<script>
+(() => {
+  // v77: lossless Letterboxd review importer + compact, tap-to-expand editable notes.
+  'use strict';
+  const BUILD='20261010c';
+  const noteKey='movie30-before-review-import-v77';
+  const norm=s=>String(s||'').normalize('NFKC').toLowerCase().replace(/[^\p{L}\p{N}]/gu,'');
+  const esc77=s=>String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+  const css=document.createElement('style');
+  css.textContent=[
+    '#note66.v66-note{height:70px;min-height:70px;max-height:70px;resize:none;overflow:hidden;cursor:pointer}',
+    '.v77-notehint{font-size:10px;color:var(--muted);margin:-2px 0 8px}',
+    '.v77-backdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,.78);z-index:100100;align-items:center;justify-content:center;padding:12px}',
+    '.v77-backdrop.open{display:flex}',
+    '.v77-editor{width:min(720px,100%);height:min(84dvh,800px);display:flex;flex-direction:column;gap:12px;background:#10161f;color:#f4f7fb;border:1px solid #3a4656;border-radius:15px;padding:15px;padding-bottom:max(15px,env(safe-area-inset-bottom))}',
+    '.v77-editor h3{margin:0;font-size:17px}.v77-editor .v77-help{font-size:11px;color:#9aa7b8}',
+    '.v77-editor textarea{flex:1;min-height:120px;width:100%;resize:none;border:1px solid #384658;border-radius:10px;background:#070b11;color:#f4f7fb;font-size:16px;line-height:1.6;padding:13px;white-space:pre-wrap}',
+    '.v77-actions{display:flex;justify-content:flex-end;gap:10px}',
+    '.v77-report{white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px;line-height:1.65;color:var(--muted);margin-top:9px}',
+    '.v77-report.ok{color:#a5e5ba}.v77-report.bad{color:#ffbbbb}',
+    '.v77-panel .tip{line-height:1.6}'
+  ].join('');
+  document.head.appendChild(css);
+
+  // Extend v66's existing detail sheet without changing its layout or score controls.
+  const backdrop=document.createElement('div');
+  backdrop.className='v77-backdrop';backdrop.id='memoOverlay77';
+  backdrop.innerHTML='<div class="v77-editor" role="dialog" aria-modal="true" aria-labelledby="memoTitle77">'
+    +'<h3 id="memoTitle77">レビューを表示・編集</h3>'
+    +'<div class="v77-help">全文を表示しています。変更するときだけ「保存」を押してください。</div>'
+    +'<textarea id="memoFull77" spellcheck="false"></textarea>'
+    +'<div class="v77-actions"><button class="btn" id="memoCancel77">キャンセル</button><button class="btn active" id="memoSave77">保存</button></div>'
+    +'</div>';
+  document.body.appendChild(backdrop);
+  let editingId=null;
+  const fullText=document.getElementById('memoFull77');
+  function dismiss(){backdrop.classList.remove('open');editingId=null;fullText.blur();}
+  function launch(id){
+    const f=filmById(id);if(!f)return;
+    editingId=id;
+    document.getElementById('memoTitle77').textContent=displayTitle(f)+' — レビュー全文';
+    fullText.value=String(state.letterboxdMeta?.[id]?.note||'');
+    backdrop.classList.add('open');
+  }
+  document.getElementById('memoCancel77').onclick=dismiss;
+  backdrop.addEventListener('click',e=>{if(e.target===backdrop)dismiss()});
+  document.getElementById('memoSave77').onclick=()=>{
+    if(!editingId)return;
+    state.letterboxdMeta=state.letterboxdMeta||{};
+    const v=fullText.value;
+    const prev=state.letterboxdMeta[editingId]||{};
+    state.letterboxdMeta[editingId]={...prev,note:v,noteSource:'manual',noteEditedAt:new Date().toISOString()};
+    save();
+    const box=document.getElementById('note66');
+    if(box&&selectedId===editingId)box.value=v;
+    dismiss();toast('レビューを保存しました');
+  };
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&backdrop.classList.contains('open'))dismiss()});
+  const previousSheet=openSheet;
+  openSheet=function(id){
+    previousSheet(id);
+    const preview=document.getElementById('note66');
+    if(!preview)return;
+    preview.readOnly=true;
+    preview.setAttribute('aria-label','レビュー全文を表示・編集');
+    preview.title='タップで全文を表示・編集';
+    preview.onclick=()=>launch(id);
+    preview.onchange=null;
+    preview.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();launch(id)}});
+    const label=preview.previousElementSibling;
+    if(label&&label.classList.contains('v66-lbl'))label.textContent='レビュー・一言メモ（タップで全文表示）';
+  };
+
+  async function zipText(file, wanted){
+    const buf=await file.arrayBuffer();
+    const bytes=new Uint8Array(buf),v=new DataView(buf);
+    let eocd=-1;
+    for(let p=buf.byteLength-22;p>=Math.max(0,buf.byteLength-65557);p--){
+      if(v.getUint32(p,true)===0x06054b50){eocd=p;break;}
+    }
+    if(eocd<0)throw new Error('ZIPのファイル一覧を読み取れませんでした');
+    const total=v.getUint16(eocd+10,true);
+    let at=v.getUint32(eocd+16,true);
+    const result={};
+    const decode=new TextDecoder('utf-8');
+    for(let i=0;i<total;i++){
+      if(v.getUint32(at,true)!==0x02014b50)throw new Error('ZIPのファイル一覧が破損しています');
+      const method=v.getUint16(at+10,true),compSize=v.getUint32(at+20,true);
+      const nameLen=v.getUint16(at+28,true),extraLen=v.getUint16(at+30,true),commentLen=v.getUint16(at+32,true);
+      const localAt=v.getUint32(at+42,true);
+      const name=decode.decode(bytes.subarray(at+46,at+46+nameLen));
+      if(wanted.includes(name)){
+        if(v.getUint32(localAt,true)!==0x04034b50)throw new Error('ZIPの内部データが破損しています');
+        const start=localAt+30+v.getUint16(localAt+26,true)+v.getUint16(localAt+28,true);
+        const packed=bytes.slice(start,start+compSize);
+        let raw;
+        if(method===0)raw=packed;
+        else if(method===8){
+          try{
+            if(typeof DecompressionStream!=='function')throw new Error('このブラウザではZIP展開に未対応です');
+            const stream=new Blob([packed]).stream().pipeThrough(new DecompressionStream('deflate-raw'));
+            raw=new Uint8Array(await new Response(stream).arrayBuffer());
+          }catch(err){
+            throw new Error('ZIPの展開に失敗しました。下記のJSONファイルを利用するか、ZIP内のreviews.csvを選んでください。詳細: '+err.message);
+          }
+        }else throw new Error('ZIPの圧縮方式に未対応です: '+method);
+        result[name]=decode.decode(raw);
+      }
+      at+=46+nameLen+extraLen+commentLen;
+    }
+    if(!result['reviews.csv'])throw new Error('ZIPにreviews.csvが含まれていません');
+    return result;
+  }
+  function rowsFromCsv(raw,kind){
+    const parsed=parseCsvText(String(raw||'').replace(/^\uFEFF/,''));
+    if(!parsed||!parsed.length)return [];
+    const head=parsed[0].map(x=>String(x).toLowerCase().trim());
+    const get=(row,col)=>{const n=head.indexOf(col.toLowerCase());return n<0?'':String(row[n]||'')};
+    if(!head.includes('name')||!head.includes('year')||!head.includes(kind==='reviews'?'review':'letterboxd uri')){
+      throw new Error(kind+' のCSV列が正しくありません');
+    }
+    return parsed.slice(1).filter(r=>get(r,'Name')).map(row=>({
+      title:get(row,'Name'),year:get(row,'Year'),
+      ...(kind==='reviews'?{
+        date:get(row,'Date'),watchedDate:get(row,'Watched Date'),rewatch:get(row,'Rewatch'),
+        text:get(row,'Review'),reviewUrl:get(row,'Letterboxd URI')
+      }:{uri:get(row,'Letterboxd URI')})
+    }));
+  }
+  async function loadBundle(file){
+    if(/\.json$/i.test(file.name)){
+      const data=JSON.parse(await file.text());
+      if(data.format!=='movie30-letterboxd-reviews-v1'||!Array.isArray(data.reviews))throw new Error('対応するレビューJSONではありません');
+      return data;
+    }
+    if(/\.csv$/i.test(file.name)){
+      return {reviews:rowsFromCsv(await file.text(),'reviews'),ratings:[],source:file.name};
+    }
+    const files=await zipText(file,['reviews.csv','orphaned/reviews.csv','ratings.csv']);
+    const reviews=rowsFromCsv(files['reviews.csv'],'reviews');
+    const orphan=files['orphaned/reviews.csv']?rowsFromCsv(files['orphaned/reviews.csv'],'reviews'):[];
+    return {reviews:reviews.concat(orphan),ratings:files['ratings.csv']?rowsFromCsv(files['ratings.csv'],'ratings'):[],source:file.name};
+  }
+  function prepare(bundle){
+    const films=allFilms();
+    const alias=new Map();
+    for(const f of films){
+      const x=titleInfo(f);
+      const opts=[displayTitle(f),x.title,x.englishTitle,x.originalTitle,f.lbTitle].filter(Boolean);
+      for(const label of opts){
+        const k=norm(label);
+        if(!alias.has(k))alias.set(k,[]);
+        if(!alias.get(k).includes(f))alias.get(k).push(f);
+      }
+    }
+    const ratingByKey=new Map();
+    for(const r of bundle.ratings||[]){
+      const code=String(r.uri||'').match(/\/([0-9A-Za-z]+)\/?$/)?.[1];
+      if(code)ratingByKey.set(norm(r.title)+'|'+r.year,code);
+    }
+    function findFilm(r){
+      const title=norm(r.title),year=Number(r.year)||0;
+      const filmCode=ratingByKey.get(title+'|'+r.year);
+      if(filmCode){
+        const codeMatch=films.filter(f=>new RegExp('^lb-\\d+-'+filmCode+'$').test(f.id));
+        if(codeMatch.length===1)return codeMatch[0];
+      }
+      const possibles=alias.get(title)||[];
+      if(possibles.length===1&&(!year||Math.abs(Number(possibles[0].year)-year)<=3))return possibles[0];
+      const byYear=possibles.filter(f=>Number(f.year)===year);
+      if(byYear.length===1)return byYear[0];
+      const nearby=possibles.filter(f=>year&&Math.abs(Number(f.year)-year)<=2);
+      if(nearby.length===1)return nearby[0];
+      return null;
+    }
+    const grouped=new Map(),unmatched=[];
+    let valid=0;
+    for(const r of bundle.reviews){
+      if(!String(r.text||'').trim())continue;
+      valid++;
+      const f=findFilm(r);
+      if(!f){unmatched.push(r);continue;}
+      if(!grouped.has(f.id))grouped.set(f.id,[]);
+      grouped.get(f.id).push(r);
+    }
+    const notes=new Map();
+    for(const [id,rs] of grouped){
+      rs.sort((a,b)=>String(a.date||'').localeCompare(String(b.date||'')));
+      let text;
+      if(rs.length===1)text=rs[0].text;
+      else text=rs.map((r,i)=>{
+        const day=r.watchedDate||r.date||'日付不明';
+        return '【'+day+(r.rewatch==='Yes'?'・再鑑賞':'・記録'+(i+1))+'】\n'+r.text;
+      }).join('\n\n────────────\n\n');
+      notes.set(id,text);
+    }
+    return {notes,unmatched,valid,records:bundle.reviews.length,ratings:bundle.ratings?.length||0,multi:[...grouped.values()].filter(a=>a.length>1).length};
+  }
+
+  const dataPage=document.getElementById('page-data');
+  if(dataPage){
+    const panel=document.createElement('div');panel.className='panel v77-panel';
+    panel.innerHTML='<h2>Letterboxdレビューを一括反映</h2>'
+      +'<div class="tip">エクスポートZIP（reviews.csv＋ratings.csv）を読み込み、レビュー全文を映画ごとの一言メモへ登録します。再鑑賞の複数レビューも日付付きで全件保持。deleted内の削除済みレビューは除外します。<b>既存の一言メモは取り込みが成功した時点で置き換えます。</b> 点数・順位・ジャンルには触れません。</div>'
+      +'<div class="tools"><label class="btn active">ZIP・レビューJSONを選択<input id="lbReviewFile77" type="file" accept=".zip,.json,.csv,application/zip,application/json,text/csv" hidden></label>'
+      +'<button class="btn" id="lbReviewBackup77" type="button">置換前メモの控え</button></div>'
+      +'<div class="v77-report" id="lbReviewStatus77">未取り込み。iPhoneの「ファイル」からLetterboxdのZIPを選択できます。</div>';
+    dataPage.insertBefore(panel,dataPage.firstChild);
+    const status=document.getElementById('lbReviewStatus77');
+    function downloadOld(){
+      let backup;
+      try{backup=JSON.parse(localStorage.getItem(noteKey)||'null')}catch{}
+      if(!backup){status.textContent='まだ置換前メモの控えはありません。';return;}
+      download('movie30-before-letterboxd-reviews.json',JSON.stringify(backup,null,2),'application/json');
+    }
+    document.getElementById('lbReviewBackup77').onclick=downloadOld;
+    document.getElementById('lbReviewFile77').onchange=async e=>{
+      const file=e.target.files?.[0];e.target.value='';if(!file)return;
+      status.className='v77-report';
+      status.textContent='ZIPのレビューを読み込み、作品照合中…';
+      try{
+        const bundle=await loadBundle(file),p=prepare(bundle);
+        if(p.valid<100||p.notes.size<100)throw new Error('レビュー件数が想定より少ないため中止しました。レビュー本体のCSVかZIPを選んでください。');
+        const existing=Object.entries(state.letterboxdMeta||{}).filter(([,m])=>typeof m.note==='string'&&m.note.trim()).map(([id,m])=>({id,title:displayTitle(filmById(id)||{id,title:id}),note:m.note}));
+        const warn=p.unmatched.length?'一致しない作品 '+p.unmatched.length+'件（あとで画面に表示）\n':'';
+        const yes=confirm('Letterboxdレビュー '+p.valid+'件を読み込みました。\n作品への一致 '+p.notes.size+'本、未一致 '+p.unmatched.length+'件。\n既存メモ '+existing.length+'件をレビューで置き換えます。\n\n点数や順位は変更しません。続行しますか？');
+        if(!yes){status.textContent='確認画面でキャンセルしました。データは変更していません。';return;}
+        try{localStorage.setItem(noteKey,JSON.stringify({createdAt:new Date().toISOString(),notes:existing}))}catch(err){console.warn('memo backup unavailable',err)}
+        state.letterboxdMeta=state.letterboxdMeta||{};
+        for(const m of Object.values(state.letterboxdMeta)){if(m&&typeof m==='object')delete m.note;}
+        for(const [id,text] of p.notes){
+          const old=state.letterboxdMeta[id]||{};
+          state.letterboxdMeta[id]={...old,note:text,noteSource:'letterboxd-export',noteImportedAt:new Date().toISOString()};
+        }
+        save();
+        const selected=selectedId&&filmById(selectedId);
+        if(selected){
+          const preview=document.getElementById('note66');
+          if(preview)preview.value=state.letterboxdMeta[selected.id]?.note||'';
+        }
+        status.className='v77-report ok';
+        status.textContent='反映完了：レビュー '+p.valid+'件（'+p.notes.size+'作品、うち複数レビュー '+p.multi+'作品）。'
+          +'\n元の一言メモは '+existing.length+'件置換。控えは「置換前メモの控え」から取得可能。'
+          +'\n作品が見つからず未反映 '+p.unmatched.length+'件。'
+          +(p.unmatched.length?'\n未反映：'+p.unmatched.map(r=>r.title+' ('+r.year+')').join('、'):'')
+          +'\n※点数・同点内順位・ジャンルは維持。';
+        toast('Letterboxdレビュー '+p.notes.size+'作品を反映しました');
+      }catch(err){
+        console.error(err);
+        status.className='v77-report bad';
+        status.textContent='読み込みに失敗：'+String(err?.message||err);
+      }
+    };
+  }
+  window.__movie30ReviewImportBuild=BUILD;
+})();
+</script>
+
+<!-- patch-v78.js -->
+<script>
+(() => {
+  // v78: remove the user's explicitly approved obsolete note even if Safari
+  // still holds a local copy older than live-state.json. Match the exact legacy
+  // content so any new manual or imported review is left untouched.
+  const id='custom-1791377114135-l3hd';
+  const old=state.letterboxdMeta?.[id]?.note;
+  if(typeof old==='string' && old.length===453 && old.startsWith('1. 「遺体は一体……」／上川隆也')){
+    delete state.letterboxdMeta[id].note;
+    const preview=document.getElementById('note66');
+    if(preview && selectedId===id) preview.value='';
+    save();
+  }
+})();
+</script>
+
+<!-- patch-v79.js -->
+<script>
+(() => {
+  // v79: pull-down dismissal and stable iOS sheet scrolling.
+  // Does not mutate movie data, rankings, scores or notes.
+  const overlay=document.getElementById('sheetBg');
+  const sheet=overlay?.querySelector('.sheet');
+  if(!overlay||!sheet)return;
+  const rules=document.createElement('style');
+  rules.textContent=[
+    '#sheetBg{overscroll-behavior:contain;overflow:hidden}',
+    '#sheetBg.open{touch-action:pan-y}',
+    '#sheetBg > .sheet{position:relative;overflow-x:hidden;overflow-y:auto;overscroll-behavior-y:contain;-webkit-overflow-scrolling:touch;touch-action:pan-y;max-height:88dvh;will-change:transform}',
+    '#sheetBg .v79-pull-bar{position:sticky;top:-14px;z-index:25;margin:-14px -14px 8px;min-height:42px;padding:13px 14px 9px;display:flex;align-items:center;justify-content:center;background:#11161d;border-radius:20px 20px 0 0;touch-action:none;user-select:none;-webkit-user-select:none}',
+    '#sheetBg .v79-pull-bar .handle{margin:0;pointer-events:none}',
+    '#sheetBg .v79-close{position:absolute;right:13px;top:5px;min-width:66px;min-height:32px;border-radius:999px;border:1px solid #354356;background:#19222e;color:#e4ebf5;font-size:12px;font-weight:650;cursor:pointer;touch-action:manipulation}',
+    '#sheetBg .v79-pull-bar:active .handle{background:#99a9bc}',
+    '#sheetBg .v79-pull-bar .v79-hint{position:absolute;left:12px;font-size:9px;color:#8793a5}',
+    '@media (prefers-reduced-motion:reduce){#sheetBg > .sheet{scroll-behavior:auto!important}}'
+  ].join('');
+  document.head.appendChild(rules);
+  const bar=document.createElement('div');
+  bar.className='v79-pull-bar';
+  bar.setAttribute('aria-label','下に引っ張ると閉じます');
+  bar.innerHTML='<span class="v79-hint">↓ 引っ張って閉じる</span><button class="v79-close" type="button" aria-label="映画の詳細を閉じる">閉じる</button>';
+  const handle=sheet.querySelector(':scope > .handle');
+  if(handle)bar.insertBefore(handle,bar.firstChild);
+  else{
+    const h=document.createElement('div');h.className='handle';
+    bar.insertBefore(h,bar.firstChild);
+  }
+  sheet.insertBefore(bar,sheet.firstChild);
+
+  const previousOpen=openSheet, previousClose=closeSheet;
+  let pageLocked=false,priorOverflowHtml='',priorOverflowBody='';
+  let gesture=null,closeTimer=0;
+  function lockBehind(){
+    if(pageLocked)return;
+    pageLocked=true;
+    priorOverflowHtml=document.documentElement.style.overflow;
+    priorOverflowBody=document.body.style.overflow;
+    document.documentElement.style.overflow='hidden';
+    document.body.style.overflow='hidden';
+  }
+  function unlockBehind(){
+    if(!pageLocked)return;
+    pageLocked=false;
+    document.documentElement.style.overflow=priorOverflowHtml;
+    document.body.style.overflow=priorOverflowBody;
+  }
+  function resetSheetVisual(){
+    if(closeTimer){clearTimeout(closeTimer);closeTimer=0;}
+    sheet.style.transition='';
+    sheet.style.transform='';
+    gesture=null;
+  }
+  openSheet=function(...args){
+    resetSheetVisual();
+    const result=previousOpen.apply(this,args);
+    if(overlay.classList.contains('open')){
+      sheet.scrollTop=0;
+      lockBehind();
+    }
+    return result;
+  };
+  closeSheet=function(...args){
+    resetSheetVisual();
+    let result;
+    try{result=previousClose.apply(this,args)}
+    finally{unlockBehind();}
+    return result;
+  };
+  bar.querySelector('.v79-close').onclick=e=>{
+    e.preventDefault();e.stopPropagation();closeSheet();
+  };
+  function scrollableChild(target){
+    let node=target;
+    while(node&&node!==sheet&&node!==overlay){
+      if(node instanceof HTMLElement){
+        const style=getComputedStyle(node);
+        if(/auto|scroll/.test(style.overflowY)&&node.scrollHeight>node.clientHeight+2)return node;
+      }
+      node=node.parentElement;
+    }
+    return null;
+  }
+  sheet.addEventListener('touchstart',event=>{
+    gesture=null;
+    if(!overlay.classList.contains('open')||event.touches.length!==1)return;
+    const target=event.target;
+    if(!(target instanceof Element))return;
+    if(target.closest('button,input,select,[contenteditable="true"],[role="button"]'))return;
+    if(target.closest('textarea')&&!target.closest('#note66'))return;
+    const fromHandle=bar.contains(target);
+    const child=scrollableChild(target);
+    if(child&&child.scrollTop>1)return;
+    if(!fromHandle&&sheet.scrollTop>1)return;
+    const t=event.touches[0];
+    gesture={y:t.clientY,x:t.clientX,fromHandle,dragging:false,dy:0,started:performance.now()};
+  },{passive:true});
+  sheet.addEventListener('touchmove',event=>{
+    const g=gesture;
+    if(!g||event.touches.length!==1||!overlay.classList.contains('open'))return;
+    const t=event.touches[0],dy=t.clientY-g.y,dx=t.clientX-g.x;
+    if(!g.dragging){
+      if(dy<0||(Math.abs(dx)>11&&Math.abs(dx)>Math.abs(dy))){gesture=null;return;}
+      if(dy<7)return;
+      if(dy<Math.abs(dx)*1.1)return;
+      if(!g.fromHandle&&sheet.scrollTop>1){gesture=null;return;}
+      g.dragging=true;
+    }
+    if(event.cancelable)event.preventDefault();
+    g.dy=Math.max(0,dy);
+    sheet.style.transition='none';
+    sheet.style.transform='translate3d(0,'+Math.min(320,Math.round(g.dy*0.85))+'px,0)';
+  },{passive:false});
+  function finishTouch(cancelled){
+    const g=gesture;gesture=null;
+    if(!g||!g.dragging)return;
+    const fast=g.dy>55&&(g.dy/Math.max(1,performance.now()-g.started))>0.7;
+    if(!cancelled&&(g.dy>=105||fast)){
+      sheet.style.transition='transform 150ms ease-out';
+      sheet.style.transform='translate3d(0,100dvh,0)';
+      closeTimer=setTimeout(()=>{
+        closeTimer=0;
+        if(overlay.classList.contains('open'))closeSheet();
+        else resetSheetVisual();
+      },155);
+    }else{
+      sheet.style.transition='transform 160ms ease-out';
+      sheet.style.transform='';
+      closeTimer=setTimeout(()=>{closeTimer=0;sheet.style.transition='';},180);
+    }
+  }
+  sheet.addEventListener('touchend',()=>finishTouch(false),{passive:true});
+  sheet.addEventListener('touchcancel',()=>finishTouch(true),{passive:true});
+  overlay.addEventListener('touchmove',event=>{
+    if(event.target===overlay&&event.cancelable)event.preventDefault();
+  },{passive:false});
+  const observer=new MutationObserver(()=>{
+    if(overlay.classList.contains('open'))lockBehind();
+    else unlockBehind();
+  });
+  observer.observe(overlay,{attributes:true,attributeFilter:['class']});
+})();
+</script>
