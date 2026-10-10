@@ -97,7 +97,7 @@ window.addEventListener("beforeunload",()=>save(false));window.addEventListener(
 load();setSaveStatus(storageWorks?"自動保存利用可":"自動保存不可 · バックアップ推奨");render();
 
 setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},700);
-</script><!-- Single-document movie app bundle: build 20261010g; 64 historical patches integrated at build time -->
+</script><!-- Single-document movie app bundle: build 20261010h; 64 historical patches integrated at build time -->
 <!-- patch-v14.js -->
 <script>
 (() => {
@@ -7085,4 +7085,160 @@ renderRank();const marker=document.getElementById('movie30BuildV29');if(marker)m
 </script><script>(function(){
 const show=()=>{document.documentElement.classList.add('movie30-ready');const mask=document.getElementById('movie30-startup-mask');if(mask)mask.remove();};
 requestAnimationFrame(()=>requestAnimationFrame(show));
-})();</script></body></html>
+})();</script>
+<!-- Integrated patch v80: remove duplicate pending panel; synchronize RSS review bodies -->
+<script>
+(() => {
+  'use strict';
+  // The upper "鑑賞済み・点数未設定" card already displays these two films.
+  // Do not delete underlying films or their unscored status.
+  const css=document.createElement('style');
+  css.textContent='#lbPendingPanel68{display:none!important}';
+  document.head.appendChild(css);
+  document.getElementById('lbPendingPanel68')?.remove();
+  const earlierRenderRank=renderRank;
+  renderRank=function(...args){
+    const result=earlierRenderRank.apply(this,args);
+    document.getElementById('lbPendingPanel68')?.remove();
+    return result;
+  };
+
+  // Letterboxd <description> contains HTML, including a poster and the written review.
+  // Convert only user-authored text, preserving paragraph and line breaks.
+  function reviewText(description){
+    if(!description||!String(description).trim())return '';
+    const d=new DOMParser().parseFromString(description,'text/html');
+    d.querySelectorAll('img,script,style,iframe,svg,video,audio').forEach(e=>e.remove());
+    d.querySelectorAll('br').forEach(e=>e.replaceWith(d.createTextNode('\n')));
+    d.querySelectorAll('p,div,li,blockquote').forEach(e=>e.after(d.createTextNode('\n\n')));
+    return (d.body.textContent||'').replace(/\u00a0/g,' ').replace(/[ \t]+\n/g,'\n')
+      .replace(/\n[ \t]+/g,'\n').replace(/\n{3,}/g,'\n\n').trim();
+  }
+  const normalize=s=>String(s||'').normalize('NFKC').toLowerCase().replace(/[^\p{L}\p{N}]/gu,'');
+  const fold=s=>String(s||'').replace(/\s+/g,' ').trim();
+  const previousParse=parseLbRss;
+  let lastParsed=[];
+  parseLbRss=function(xml){
+    const items=previousParse(xml);
+    const doc=new DOMParser().parseFromString(xml,'application/xml');
+    if(doc.querySelector('parsererror'))return items;
+    const extra=[...doc.querySelectorAll('item')].filter(it=>
+      childTextByLocal(it,'filmTitle')&&childTextByLocal(it,'filmYear')
+    );
+    const withReview=items.map((raw,i)=>{
+      const item=extra[i];
+      if(!item)return raw;
+      return {...raw,
+        review:reviewText(childTextByLocal(item,'description')),
+        reviewGuid:childTextByLocal(item,'guid'),
+        reviewRewatch:childTextByLocal(item,'rewatch'),
+      };
+    });
+    lastParsed=withReview;
+    return withReview;
+  };
+  function lookupFilm(raw){
+    const options=allFilms();
+    const year=Number(raw.year)||0;
+    const url=String(raw.link||'').replace(/\/+$/,'');
+    const byUri=url?options.filter(f=>String(f.uri||'').replace(/\/+$/,'')===url):[];
+    if(byUri.length===1)return byUri[0];
+    const key=normalize(raw.title);
+    if(!key)return null;
+    const named=options.filter(f=>{
+      const n=titleInfo(f);
+      return [displayTitle(f),n.title,n.englishTitle,n.originalTitle,f.lbTitle].some(t=>normalize(t)===key);
+    });
+    const byYear=named.filter(f=>Number(f.year)===year);
+    if(byYear.length===1)return byYear[0];
+    if(named.length===1 && (!year||!Number(named[0].year)||Math.abs(Number(named[0].year)-year)<=2))return named[0];
+    const near=named.filter(f=>year&&Math.abs(Number(f.year)-year)<=2);
+    return near.length===1?near[0]:null;
+  }
+  function collectReviews(items){
+    state.letterboxdMeta=state.letterboxdMeta||{};
+    let added=0,updated=0,already=0,manual=0,unmatched=0;
+    const seen=new Set();
+    for(const raw of items){
+      const body=String(raw.review||'').trim();
+      if(!body)continue;
+      const f=lookupFilm(raw);
+      if(!f){unmatched++;continue;}
+      const guid=String(raw.reviewGuid||raw.link+'|'+raw.watchedDate+'|'+raw.title);
+      if(seen.has(guid))continue;
+      seen.add(guid);
+      const id=f.id,m=state.letterboxdMeta[id]||{};
+      if(m.noteSource==='manual'){manual++;continue;}
+      const previous=String(m.note||'');
+      const register=m.rssReviewRecords&&typeof m.rssReviewRecords==='object'
+        ?{...m.rssReviewRecords}:{};
+      const old=register[guid];
+      if(old?.body===body){already++;continue;}
+      const date=raw.watchedDate||'日付未設定';
+      const block='【'+date+(raw.reviewRewatch==='Yes'?'・再鑑賞':'・Letterboxd RSS')+'】\n'+body;
+
+      let next=previous,change='';
+      if(!previous){
+        next=body;change='added';
+        register[guid]={body,block:body};
+      }else if(old && typeof old.body==='string'){
+        // Update an identifiable previous RSS block, never overwrite text edited in-app.
+        if(old.block && previous.includes(old.block)){
+          next=previous.replace(old.block,old.block===old.body&&previous===old.block?body:block);
+          change='updated';
+          register[guid]={body,block:next===body?body:block};
+        }else{
+          manual++;continue;
+        }
+      }else if(fold(previous).includes(fold(body))){
+        // The same review was already imported from the Letterboxd ZIP.
+        register[guid]={body,block:''};already++;
+      }else{
+        // Preserve ZIP reviews (including rewatches); append distinct RSS entries once.
+        next=previous+'\n\n────────────\n\n'+block;change='added';
+        register[guid]={body,block};
+      }
+      if(next!==previous){
+        m.note=next;
+        m.noteSource=previous?(m.noteSource||'letterboxd-export'):'letterboxd-rss';
+        m.noteImportedAt=new Date().toISOString();
+        if(change==='updated')updated++;
+        else added++;
+      }
+      m.rssReviewRecords=register;
+      state.letterboxdMeta[id]=m;
+    }
+    if(added||updated||already){
+      // Registering previously imported reviews is needed to avoid repeat imports.
+      save();
+      const preview=document.getElementById('note66');
+      if(preview && selectedId)preview.value=state.letterboxdMeta[selectedId]?.note||'';
+    }
+    return {added,updated,already,manual,unmatched};
+  }
+  const previousSync=syncLetterboxd;
+  syncLetterboxd=async function(...args){
+    lastParsed=[];
+    const result=await previousSync.apply(this,args);
+    if(result===false)return result;
+    if(!lastParsed.length)return result;
+    const stat=collectReviews(lastParsed);
+    const label=document.getElementById('lbStatus');
+    if(label){
+      const parts=[];
+      if(stat.added)parts.push('レビュー追加 '+stat.added+'件');
+      if(stat.updated)parts.push('レビュー更新 '+stat.updated+'件');
+      if(stat.already)parts.push('レビュー既存 '+stat.already+'件');
+      if(stat.manual)parts.push('手編集保護 '+stat.manual+'件');
+      if(stat.unmatched)parts.push('レビュー未一致 '+stat.unmatched+'件');
+      if(parts.length)label.textContent+=' ／ '+parts.join('・');
+    }
+    return result;
+  };
+  // Some previous patches attached a direct callback. Make the button use this wrapper.
+  const button=document.getElementById('syncLetterboxd');
+  if(button)button.onclick=()=>syncLetterboxd(false);
+  window.__movie30RssReviewSync80=true;
+})();
+</script>
+</body></html>
