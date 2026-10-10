@@ -1,0 +1,637 @@
+
+<!-- patch-v64.js -->
+<script>
+(() => {
+  // v64: confirmed superhero SF/fantasy refinements.
+  // Genre metadata only; scores and ranking are untouched.
+  const BUILD='20260927u';
+  const KEY='movie30_genre_audit_v64_20260927u';
+  const uniq=a=>[...new Set((a||[]).filter(Boolean))];
+
+  function editId(id,{add=[],remove=[]}={}){
+    const f=allFilms().find(x=>x?.id===id);
+    if(!f)return;
+    state.genreOverrides=state.genreOverrides||{};
+    const current=uniq(state.genreOverrides[id]||[]);
+    const rm=new Set(remove), s=new Set(current.filter(g=>!rm.has(g)));
+    for(const g of add)s.add(g);
+    state.genreOverrides[id]=[...s];
+  }
+
+  let done=false;try{done=localStorage.getItem(KEY)==='1'}catch(_){}
+  if(!done){
+    editId('lb-445-8MH8',{remove:['SF']}); // Doctor Strange
+    editId('lb-432-2a8i',{remove:['SF']}); // Spider-Man (2002)
+    editId('lb-60-2a88',{remove:['SF']}); // Spider-Man 2
+    editId('lb-95-2a7Y',{remove:['SF']}); // Spider-Man 3
+    editId('lb-528-3vmW',{add:['ファンタジー']}); // Ant-Man
+
+    try{localStorage.setItem(KEY,'1')}catch(_){}
+    try{save(false)}catch(_){try{save()}catch(__){}}
+    try{render()}catch(_){}
+    try{toast('確認済みジャンル修正を反映しました')}catch(_){}
+  }
+
+  const marker=document.getElementById('movie30BuildV29');
+  if(marker)marker.textContent='app build '+BUILD;
+})();
+
+</script>
+
+<!-- patch-v65.js -->
+<script>
+(() => {
+  // v65: confirmed superhero/SF genre refinements.
+  // Genre metadata only; scores and ranking are untouched.
+  const BUILD='20260927v';
+  const KEY='movie30_genre_audit_v65_20260927v';
+  const uniq=a=>[...new Set((a||[]).filter(Boolean))];
+
+  function editId(id,{add=[],remove=[]}={}){
+    const f=allFilms().find(x=>x?.id===id);
+    if(!f)return;
+    state.genreOverrides=state.genreOverrides||{};
+    const current=uniq(state.genreOverrides[id]||[]);
+    const rm=new Set(remove), s=new Set(current.filter(g=>!rm.has(g)));
+    for(const g of add)s.add(g);
+    state.genreOverrides[id]=[...s];
+  }
+
+  let done=false;try{done=localStorage.getItem(KEY)==='1'}catch(_){}
+  if(!done){
+    // Thor trilogy: fantasy/superhero, but no SF.
+    for(const id of ['lb-529-1WQU','lb-351-2DqA','lb-408-8MHi']){
+      editId(id,{remove:['SF']});
+    }
+
+    // All registered Spider-Man films: keep/restore SF.
+    for(const id of [
+      'lb-432-2a8i','lb-60-2a88','lb-95-2a7Y',
+      'lb-79-27PI','lb-562-3utM',
+      'lb-40-aboM','lb-407-fegG','lb-519-nwRw','lb-563-ACJE',
+      'lb-310-azpY','lb-10-kSz4'
+    ]){
+      editId(id,{add:['SF']});
+    }
+    editId('lb-519-nwRw',{add:['ファンタジー']}); // No Way Home
+
+    // Ant-Man 1 & 2: SF yes, fantasy no.
+    editId('lb-528-3vmW',{add:['SF'],remove:['ファンタジー']});
+    editId('lb-452-cqUW',{add:['SF'],remove:['ファンタジー']});
+
+    // Arrival: explicitly keep/add SF.
+    editId('lb-354-aNGk',{add:['SF']});
+
+    try{localStorage.setItem(KEY,'1')}catch(_){}
+    try{save(false)}catch(_){try{save()}catch(__){}}
+    try{render()}catch(_){}
+    try{toast('確認済みジャンル修正を反映しました')}catch(_){}
+  }
+
+  const marker=document.getElementById('movie30BuildV29');
+  if(marker)marker.textContent='app build '+BUILD;
+})();
+
+</script>
+
+<!-- patch-v66.js -->
+<script>
+(() => {
+const BUILD='20260929a', ADV_KEY='movie30_adv_filter_v66', PRESET_KEY='movie30_filter_presets_v66', HISTORY_KEY='movie30_change_history_v66', AUDIT_KEY='movie30_genre_audit_v66';
+const clone=v=>v==null?v:JSON.parse(JSON.stringify(v)), uniq=a=>[...new Set((a||[]).filter(Boolean))];
+const read=(k,d)=>{try{return JSON.parse(localStorage.getItem(k)||'null')??d}catch(_){return d}}, write=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch(_){}};
+
+const css=document.createElement('style');css.textContent=`
+.v66-adv{display:none;background:#0d1117;border:1px solid var(--line);border-radius:12px;padding:10px;margin:-2px 0 10px}.v66-adv.open{display:block}
+.v66-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.v66-lbl{font-size:9px;color:var(--muted);font-weight:700;margin-bottom:4px}.v66-range{display:grid;grid-template-columns:1fr auto 1fr;gap:5px;align-items:center}.v66-range em{font-size:10px;color:var(--muted);font-style:normal}
+.v66-chips{display:flex;gap:5px;flex-wrap:wrap}.v66-chip{border:1px solid var(--line);background:#10151c;color:#aeb7c4;border-radius:999px;padding:5px 8px;font-size:9.5px}.v66-chip.inc{border-color:#3e8d5a;color:#c8f3d5}.v66-chip.exc{border-color:#8d4747;color:#ffc5c5}
+.v66-actions{display:flex;gap:6px;flex-wrap:wrap;margin-top:9px}.v66-actions .field{flex:1;min-width:150px}.v66-badge{display:none;font-size:9px;color:#a9e8bd;border:1px solid #315c40;border-radius:999px;padding:3px 7px}.v66-badge.on{display:inline-block}
+.rank-card.v66-focus{outline:2px solid var(--accent);box-shadow:0 0 0 4px rgba(67,209,125,.13)}.v66-pos{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr 1.35fr;gap:5px;padding-top:5px;border-top:1px solid rgba(255,255,255,.06)}.v66-pos button{border:1px solid var(--line);background:#0c1117;color:#dbe3ec;border-radius:7px;padding:6px 5px;font-size:9.5px}.v66-pos .back{color:#a9e8bd;border-color:#315c40}
+.v66-detail{background:#0b0f14;border:1px solid var(--line);border-radius:12px;padding:10px;margin:9px 0}.v66-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:5px}.v66-stat{background:#121923;border-radius:9px;padding:7px;text-align:center}.v66-stat strong{display:block;font-size:15px}.v66-stat span{font-size:8px;color:var(--muted)}.v66-nei{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:7px}.v66-nei>div{background:#111720;border:1px solid var(--line);border-radius:8px;padding:7px;font-size:9px;color:var(--muted)}.v66-nei b{display:block;color:#e3e9f0;font-size:10.5px;margin-top:2px}.v66-note{width:100%;min-height:70px;background:#0b0f14;border:1px solid var(--line);border-radius:8px;color:#e6ebf1;padding:8px}
+.v66-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.72);z-index:260;align-items:flex-end;justify-content:center}.v66-bg.open{display:flex}.v66-sheet{width:min(820px,100%);max-height:92vh;overflow:auto;background:#10151c;border:1px solid #2a323d;border-radius:20px 20px 0 0;padding:12px 10px calc(16px + env(safe-area-inset-bottom))}.v66-head{position:sticky;top:-12px;z-index:2;background:#10151c;border-bottom:1px solid var(--line);padding:6px 2px 9px}.v66-title{font-size:18px;font-weight:900}.v66-sub{font-size:9.5px;color:var(--muted);margin-top:3px}.v66-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:7px;align-items:center;background:#141b24;border:1px solid var(--line);border-radius:10px;padding:8px;margin-top:6px}.v66-row strong{font-size:10.5px}.v66-row small{display:block;font-size:8.5px;color:var(--muted);margin-top:2px}.v66-mini{border:1px solid var(--line);background:#0c1117;color:#dbe3ec;border-radius:7px;padding:5px 7px;font-size:9px}.v66-good{border-color:#315c40;color:#a9e8bd}.v66-hold{border-color:#77652f;color:#f4d978}.v66-bad{border-color:#703b3b;color:#ffbcbc}.v66-empty{font-size:10px;color:var(--muted);padding:14px;text-align:center}.v66-anom{margin-top:12px;border-top:1px solid var(--line);padding-top:9px}
+@media(max-width:650px){.v66-grid{grid-template-columns:1fr}.v66-stats{grid-template-columns:repeat(2,1fr)}.v66-pos{grid-template-columns:1fr 1fr}.v66-pos .back{grid-column:1/-1}}
+`;document.head.appendChild(css);
+
+// history
+const MAPS=['assignments','starOverrides','exactScores','rankOrder','titleOverrides','categoryOverrides','mediaTypeOverrides','genreOverrides','originOverrides','formatOverrides','runtimeOverrides','letterboxdMeta'];
+const snap=()=>{const o={};for(const k of MAPS)o[k]=clone(state[k]||{});o.customFilms=clone(state.customFilms||[]);return o};
+let shadow=snap(), applying=false, hist=read(HISTORY_KEY,[]);if(!Array.isArray(hist))hist=[];
+const same=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
+function diff(a,b){const z=[];for(const f of MAPS){const x=a[f]||{},y=b[f]||{},ks=new Set([...Object.keys(x),...Object.keys(y)]);for(const k of ks){const hx=Object.prototype.hasOwnProperty.call(x,k),hy=Object.prototype.hasOwnProperty.call(y,k);if(hx===hy&&same(x[k],y[k]))continue;z.push({f,k,hx,b:hx?clone(x[k]):null})}}if(!same(a.customFilms,b.customFilms))z.push({f:'customFilms',whole:1,b:clone(a.customFilms)});return z}
+const fl={exactScores:'点数',rankOrder:'順位',genreOverrides:'ジャンル',runtimeOverrides:'上映時間',titleOverrides:'タイトル',letterboxdMeta:'メモ',starOverrides:'星',mediaTypeOverrides:'種別',originOverrides:'制作区分',formatOverrides:'形式',customFilms:'作品追加・削除'};
+function htitle(c){const ids=uniq(c.filter(x=>x.k&&!/^\d+$/.test(x.k)).map(x=>x.k)),fs=uniq(c.map(x=>fl[x.f]||x.f));let t=ids.length===1?(()=>{try{return displayTitle(filmById(ids[0]))}catch(_){return ids[0]}})()+'：':'';return t+fs.slice(0,3).join('・')+'変更'}
+const oldSave=save;save=function(...a){const now=snap();if(!applying){const c=diff(shadow,now);if(c.length){hist.unshift({id:Date.now()+'-'+Math.random().toString(36).slice(2,6),at:Date.now(),t:htitle(c),c});hist=hist.slice(0,50);write(HISTORY_KEY,hist);renderHist()}}const r=oldSave(...a);shadow=now;return r};
+function undo(h){if(!h)return;applying=true;try{for(const c of [...h.c].reverse()){if(c.whole){state[c.f]=clone(c.b);continue}state[c.f]=state[c.f]||{};if(c.hx)state[c.f][c.k]=clone(c.b);else delete state[c.f][c.k]}oldSave(false);shadow=snap()}finally{applying=false}hist=hist.filter(x=>x.id!==h.id);write(HISTORY_KEY,hist);render();renderHist();toast('変更を元に戻しました')}
+
+// advanced filters
+const def=()=>({include:[],exclude:[],yearMin:'',yearMax:'',runtimeMin:'',runtimeMax:'',scoreMin:'',scoreMax:''});let adv={...def(),...(read(ADV_KEY,{})||{})};adv.include=uniq(adv.include);adv.exclude=uniq(adv.exclude).filter(x=>!adv.include.includes(x));let presets=read(PRESET_KEY,{});if(!presets||typeof presets!=='object'||Array.isArray(presets))presets={};
+const genres=()=>{const s=new Set();const q=document.getElementById('genreFilterRank');if(q)for(const o of q.options)if(o.value)s.add(o.value);for(const a of Object.values(state.genreOverrides||{}))for(const g of(Array.isArray(a)?a:[]))s.add(g);return [...s].sort((a,b)=>a.localeCompare(b,'ja'))};
+const fg=f=>uniq(state.genreOverrides?.[f?.id]||[]), rt=f=>{const n=Number(state.runtimeOverrides?.[f?.id]??f?.runtime);return Number.isFinite(n)&&n>0?n:null}, nb=v=>v!==''&&Number.isFinite(Number(v))?Number(v):null;
+const advOn=()=>adv.include.length||adv.exclude.length||['yearMin','yearMax','runtimeMin','runtimeMax','scoreMin','scoreMax'].some(k=>String(adv[k]??'')!=='');
+function pass(f){const g=fg(f),y=Number(f.year),r=rt(f),s=effectiveScore(f),a=nb(adv.yearMin),b=nb(adv.yearMax),c=nb(adv.runtimeMin),d=nb(adv.runtimeMax),e=nb(adv.scoreMin),h=nb(adv.scoreMax);if(adv.include.some(x=>!g.includes(x))||adv.exclude.some(x=>g.includes(x)))return false;if(a!=null&&(!Number.isFinite(y)||y<a))return false;if(b!=null&&(!Number.isFinite(y)||y>b))return false;if(c!=null&&(r==null||r<c))return false;if(d!=null&&(r==null||r>d))return false;if(e!=null&&(s==null||s<e))return false;if(h!=null&&(s==null||s>h))return false;return true}
+const filterIds=['searchRank','categoryFilterRank','genreFilterRank','mediaFilterRank','originFilterRank','formatFilterRank','decadeFilterRank','runtimeFilterRank'];
+const filtered=()=>!!advOn()||filterIds.some(id=>String(document.getElementById(id)?.value||'').trim());
+function cap(){const o={adv:clone(adv)};for(const id of filterIds)o[id]=document.getElementById(id)?.value||'';return o}
+function applyCap(o){if(!o)return;for(const id of filterIds){const e=document.getElementById(id);if(e)e.value=o[id]||''}adv={...def(),...(clone(o.adv)||{})};write(ADV_KEY,adv);drawAdv();renderRank()}
+function clearFilters(){for(const id of filterIds){const e=document.getElementById(id);if(e)e.value=''}adv=def();write(ADV_KEY,adv);drawAdv()}
+
+const tools=document.querySelector('#page-rank .tools');if(tools&&!document.getElementById('advToggle66')){const badge=document.createElement('span');badge.id='advBadge66';badge.className='v66-badge';badge.textContent='詳細絞込中';tools.appendChild(badge);for(const [id,t] of [['advToggle66','詳細絞込'],['auditOpen66','ジャンル監査'],['histOpen66','履歴'],['undo66','↶ Undo']]){const b=document.createElement('button');b.id=id;b.className='btn';b.type='button';b.textContent=t;tools.appendChild(b)}}
+let ab=document.getElementById('advBox66');if(!ab&&tools){ab=document.createElement('div');ab.id='advBox66';ab.className='v66-adv';tools.insertAdjacentElement('afterend',ab)}
+function drawAdv(){if(!ab)return;const gs=genres();ab.innerHTML=`<div class="v66-grid">
+<div><div class="v66-lbl">公開年（範囲）</div><div class="v66-range"><input class="field" id="y166" type="number" placeholder="1980" value="${esc(adv.yearMin||'')}"><em>〜</em><input class="field" id="y266" type="number" placeholder="2026" value="${esc(adv.yearMax||'')}"></div></div>
+<div><div class="v66-lbl">上映時間・分（範囲）</div><div class="v66-range"><input class="field" id="r166" type="number" placeholder="最短" value="${esc(adv.runtimeMin||'')}"><em>〜</em><input class="field" id="r266" type="number" placeholder="最長" value="${esc(adv.runtimeMax||'')}"></div></div>
+<div><div class="v66-lbl">点数（範囲）</div><div class="v66-range"><input class="field" id="s166" type="number" placeholder="最低" value="${esc(adv.scoreMin||'')}"><em>〜</em><input class="field" id="s266" type="number" placeholder="最高" value="${esc(adv.scoreMax||'')}"></div></div></div>
+<div class="v66-lbl" style="margin-top:9px">含むジャンル（複数指定はAND）</div><div class="v66-chips">${gs.map(g=>`<button type="button" class="v66-chip${adv.include.includes(g)?' inc':''}" data-inc="${encodeURIComponent(g)}">${esc(g)}</button>`).join('')}</div>
+<div class="v66-lbl" style="margin-top:9px">除外ジャンル</div><div class="v66-chips">${gs.map(g=>`<button type="button" class="v66-chip${adv.exclude.includes(g)?' exc':''}" data-exc="${encodeURIComponent(g)}">${esc(g)}</button>`).join('')}</div>
+<div class="v66-actions"><select class="field" id="preset66"><option value="">保存した条件…</option>${Object.keys(presets).sort().map(n=>`<option value="${encodeURIComponent(n)}">${esc(n)}</option>`).join('')}</select><button class="btn" id="savePreset66">条件保存</button><button class="btn" id="delPreset66">保存条件削除</button><button class="btn" id="clearAdv66">詳細条件クリア</button></div>`;
+const bi=(id,k)=>{const e=document.getElementById(id);if(e)e.oninput=()=>{adv[k]=e.value;write(ADV_KEY,adv);renderRank()}};bi('y166','yearMin');bi('y266','yearMax');bi('r166','runtimeMin');bi('r266','runtimeMax');bi('s166','scoreMin');bi('s266','scoreMax');
+ab.querySelectorAll('[data-inc]').forEach(b=>b.onclick=()=>{const g=decodeURIComponent(b.dataset.inc),s=new Set(adv.include);s.has(g)?s.delete(g):s.add(g);adv.include=[...s];adv.exclude=adv.exclude.filter(x=>x!==g);write(ADV_KEY,adv);drawAdv();renderRank()});ab.querySelectorAll('[data-exc]').forEach(b=>b.onclick=()=>{const g=decodeURIComponent(b.dataset.exc),s=new Set(adv.exclude);s.has(g)?s.delete(g):s.add(g);adv.exclude=[...s];adv.include=adv.include.filter(x=>x!==g);write(ADV_KEY,adv);drawAdv();renderRank()});
+document.getElementById('clearAdv66').onclick=()=>{adv=def();write(ADV_KEY,adv);drawAdv();renderRank()};document.getElementById('savePreset66').onclick=()=>{const n=(prompt('保存する絞り込み条件の名前')||'').trim();if(!n)return;presets[n]=cap();write(PRESET_KEY,presets);drawAdv();toast('条件を保存しました')};document.getElementById('preset66').onchange=e=>{const n=decodeURIComponent(e.target.value||'');if(n&&presets[n])applyCap(presets[n])};document.getElementById('delPreset66').onclick=()=>{const n=decodeURIComponent(document.getElementById('preset66')?.value||'');if(n&&presets[n]){delete presets[n];write(PRESET_KEY,presets);drawAdv()}};document.getElementById('advBadge66')?.classList.toggle('on',!!advOn())}
+drawAdv();document.getElementById('advToggle66')?.addEventListener('click',()=>ab?.classList.toggle('open'));
+
+let backFilters=null, focusId=null;
+function swap(id,d){const f=filmById(id),sc=f&&effectiveScore(f);if(sc==null)return;const a=rankSorted(allFilms().filter(x=>effectiveScore(x)===sc),sc),i=a.findIndex(x=>x.id===id),j=i+d;if(j<0||j>=a.length){toast('この点数内では端です。点数をまたぐ移動は≡ドラッグで');return}[a[i],a[j]]=[a[j],a[i]];state.rankOrder[String(sc)]=a.map(x=>x.id);save();renderRank();jumpFocus(id)}
+function posTools(id){const c=document.querySelector(`.rank-card[data-id="${encodeURIComponent(id)}"]`);if(!c)return;document.querySelectorAll('.v66-pos').forEach(x=>x.remove());document.querySelectorAll('.rank-card.v66-focus').forEach(x=>x.classList.remove('v66-focus'));c.classList.add('v66-focus');const d=document.createElement('div');d.className='v66-pos';d.innerHTML=`<button data-sw="-1">↑ 前と入替</button><button data-sw="1">↓ 次と入替</button>${backFilters?'<button class="back" data-back="1">← 検索・絞込結果へ戻る</button>':'<span></span>'}`;c.appendChild(d);d.querySelectorAll('[data-sw]').forEach(b=>b.onclick=e=>{e.stopPropagation();swap(id,Number(b.dataset.sw))});d.querySelector('[data-back]')?.addEventListener('click',e=>{e.stopPropagation();const s=backFilters;backFilters=null;applyCap(s);setTimeout(()=>document.querySelector(`.rank-card[data-id="${encodeURIComponent(id)}"]`)?.scrollIntoView({behavior:'smooth',block:'center'}),50)})}
+function jumpFocus(id){focusId=id;requestAnimationFrame(()=>{const c=document.querySelector(`.rank-card[data-id="${encodeURIComponent(id)}"]`);if(c){c.scrollIntoView({behavior:'auto',block:'center'});posTools(id)}focusId=null})}
+function jumpGlobal(id){if(filtered())backFilters=cap();clearFilters();renderRank();jumpFocus(id);toast('全体順位の位置へ移動しました')}
+function decorate(){const f=filtered();for(const c of document.querySelectorAll('#rankRoot .rank-card')){const id=decodeURIComponent(c.dataset.id||''),h=c.querySelector('.drag-handle');if(!h)continue;h.disabled=false;if(f){h.textContent='↕';h.title='全体順位の位置へ';h.onpointerdown=e=>{e.preventDefault();e.stopPropagation();jumpGlobal(id)}}else{h.textContent='≡';h.title='ドラッグで順位変更';h.onpointerdown=startDrag}}document.getElementById('advBadge66')?.classList.toggle('on',!!advOn());if(focusId)posTools(focusId)}
+const rr=renderRank;renderRank=function(){rr();if(advOn()){document.querySelectorAll('#rankRoot .rank-card').forEach(c=>{const f=filmById(decodeURIComponent(c.dataset.id||''));if(f&&!pass(f))c.remove()});for(const bin of document.querySelectorAll('#rankRoot .score-bin')){const n=bin.querySelectorAll('.rank-card').length,sm=bin.querySelector('.score-label small');if(sm)sm.textContent=n+'本';if(!n)bin.remove()}for(const s of document.querySelectorAll('#rankRoot .rank-star'))if(!s.querySelector('.rank-card'))s.remove()}decorate()};
+
+// richer detail in existing edit sheet
+function rankInfo(f){const scores=uniq(allFilms().map(effectiveScore).filter(x=>x!=null).map(Number)).sort((a,b)=>b-a),flat=[];for(const s of scores)flat.push(...rankSorted(allFilms().filter(x=>Number(effectiveScore(x))===s),s));const i=flat.findIndex(x=>x.id===f.id),sc=effectiveScore(f),same=sc==null?[]:rankSorted(allFilms().filter(x=>Number(effectiveScore(x))===Number(sc)),Number(sc)),j=same.findIndex(x=>x.id===f.id);return {all:i<0?null:i+1,total:flat.length,same:j<0?null:j+1,st:same.length,up:i>0?flat[i-1]:null,down:i>=0&&i<flat.length-1?flat[i+1]:null}}
+function detail(f){const meta=document.getElementById('sheetMeta');if(!meta)return;let b=document.getElementById('detail66');if(!b){b=document.createElement('div');b.id='detail66';b.className='v66-detail';meta.insertAdjacentElement('afterend',b)}const x=rankInfo(f),m=state.letterboxdMeta?.[f.id]||{},sc=effectiveScore(f),gs=fg(f);b.innerHTML=`<div class="v66-stats"><div class="v66-stat"><strong>${sc??'—'}</strong><span>点数</span></div><div class="v66-stat"><strong>${x.all?x.all+'位':'—'}</strong><span>全体 ${x.total}本</span></div><div class="v66-stat"><strong>${x.same?x.same+'位':'—'}</strong><span>${sc??'—'}点内 ${x.st}本</span></div><div class="v66-stat"><strong>${rt(f)?rt(f)+'分':'—'}</strong><span>上映時間</span></div></div><div class="v66-nei"><div>ひとつ上<b>${x.up?esc(displayTitle(x.up)):'—'}</b></div><div>ひとつ下<b>${x.down?esc(displayTitle(x.down)):'—'}</b></div></div><div class="tip">公開年：${esc(f.year||'不明')} ／ ジャンル：${gs.length?gs.map(esc).join('・'):'未設定'}${m.reportedWatchedDate?'<br>鑑賞日：'+esc(m.reportedWatchedDate):''}${m.addedDate?' ／ Letterboxd追加：'+esc(m.addedDate):''}</div><div class="v66-lbl">一言メモ</div><textarea id="note66" class="v66-note" placeholder="この点数にした理由、印象、再鑑賞メモなど">${esc(m.note||'')}</textarea><div class="v66-actions"><button class="btn" id="detailJump66">全体順位の位置へ</button></div>`;document.getElementById('note66').onchange=e=>{state.letterboxdMeta=state.letterboxdMeta||{};state.letterboxdMeta[f.id]={...(state.letterboxdMeta[f.id]||{}),note:e.target.value};save();toast('メモを保存しました')};document.getElementById('detailJump66').onclick=()=>{const id=f.id;closeSheet();jumpGlobal(id)}}
+const os=openSheet;openSheet=function(id){os(id);const f=filmById(id);if(f)detail(f)};
+
+// genre audit
+let ast=read(AUDIT_KEY,{});if(!ast||typeof ast!=='object')ast={};let ag='',only=false;
+const bg=document.createElement('div');bg.id='auditBg66';bg.className='v66-bg';bg.innerHTML=`<div class="v66-sheet"><div class="v66-head"><div style="display:flex;justify-content:space-between;gap:8px"><div><div class="v66-title">ジャンル監査</div><div class="v66-sub">残す／保留／削除で高速確認。シリーズ内のタグ差分も候補表示。</div></div><button class="btn" id="auditClose66">閉じる</button></div><div class="tools" style="margin-bottom:0"><select class="field" id="auditGenre66"></select><label class="checkline" style="margin:0"><input type="checkbox" id="auditOnly66">未確認のみ</label></div></div><div id="auditBody66"></div></div>`;document.body.appendChild(bg);
+function family(f){const x=titleInfo(f)||{},t=[displayTitle(f),x.englishTitle,x.originalTitle].filter(Boolean).join(' ').toLowerCase(),p=[['star wars',/star wars|スター.?ウォーズ/],['harry potter',/harry potter|ハリー.?ポッター/],['spider-man',/spider.?man|スパイダーマン/],['matrix',/\bmatrix\b|マトリックス/],['jurassic',/jurassic|ジュラシック/],['hunger games',/hunger games|ハンガー.?ゲーム/],['toy story',/toy story|トイ.?ストーリー/],['men in black',/men in black|メン.?イン.?ブラック/],['ant-man',/ant.?man|アントマン/],['avengers',/avengers|アベンジャーズ/],['thor',/\bthor\b|マイティ.?ソー/],['john wick',/john wick|ジョン.?ウィック/],['godfather',/godfather|ゴッドファーザー/],['back to future',/back to the future|バック.?トゥ.?ザ.?フューチャー/],['conan',/detective conan|名探偵コナン|コナン /],['doraemon',/doraemon|ドラえもん/]];for(const [k,r] of p)if(r.test(t))return k;return''}
+function drawAudit(){const sel=document.getElementById('auditGenre66'),body=document.getElementById('auditBody66');if(!sel||!body)return;const gs=genres();if(!ag||!gs.includes(ag))ag=gs[0]||'';sel.innerHTML=gs.map(g=>`<option value="${encodeURIComponent(g)}"${g===ag?' selected':''}>${esc(g)}</option>`).join('');ast[ag]=ast[ag]||{};const st=ast[ag],all=allFilms(),tag=all.filter(f=>fg(f).includes(ag)).sort((a,b)=>(effectiveScore(b)??-1)-(effectiveScore(a)??-1)),show=only?tag.filter(f=>!st[f.id]):tag,groups=new Map;for(const f of all){const k=family(f);if(k){if(!groups.has(k))groups.set(k,[]);groups.get(k).push(f)}}const an=[];for(const [k,a]of groups){if(a.length<2)continue;const y=a.filter(f=>fg(f).includes(ag)),n=a.filter(f=>!fg(f).includes(ag));if(y.length&&n.length)for(const f of n)an.push({k,f,y:y.length,t:a.length})}body.innerHTML=`<div class="tip">${tag.length}本に付与 ／ 確認済み ${tag.filter(f=>st[f.id]).length}/${tag.length} ／ シリーズ差分候補 ${an.length}</div>${show.length?show.map(f=>`<div class="v66-row"><div><strong>${esc(displayTitle(f))}</strong><small>${f.year||''}${effectiveScore(f)!=null?' · '+effectiveScore(f)+'点':''}${st[f.id]?' · '+(st[f.id]==='keep'?'残す確認済み':'保留中'):''}</small></div><div><button class="v66-mini v66-good" data-k="${encodeURIComponent(f.id)}">残す</button> <button class="v66-mini v66-hold" data-h="${encodeURIComponent(f.id)}">保留</button> <button class="v66-mini v66-bad" data-r="${encodeURIComponent(f.id)}">削除</button></div></div>`).join(''):'<div class="v66-empty">対象なし</div>'}<div class="v66-anom"><b>シリーズ内の差分候補</b>${an.length?an.slice(0,30).map(a=>`<div class="v66-row"><div><strong>${esc(displayTitle(a.f))}</strong><small>${esc(a.k)}：${a.y}/${a.t}作には ${esc(ag)} あり</small></div><button class="v66-mini v66-good" data-a="${encodeURIComponent(a.f.id)}">＋付与</button></div>`).join(''):'<div class="v66-empty">目立つ差分なし</div>'}</div>`;body.querySelectorAll('[data-k]').forEach(b=>b.onclick=()=>{st[decodeURIComponent(b.dataset.k)]='keep';write(AUDIT_KEY,ast);drawAudit()});body.querySelectorAll('[data-h]').forEach(b=>b.onclick=()=>{st[decodeURIComponent(b.dataset.h)]='hold';write(AUDIT_KEY,ast);drawAudit()});body.querySelectorAll('[data-r]').forEach(b=>b.onclick=()=>{const id=decodeURIComponent(b.dataset.r),f=filmById(id);state.genreOverrides[id]=fg(f).filter(g=>g!==ag);delete st[id];write(AUDIT_KEY,ast);save();render();drawAudit()});body.querySelectorAll('[data-a]').forEach(b=>b.onclick=()=>{const id=decodeURIComponent(b.dataset.a),f=filmById(id);state.genreOverrides[id]=uniq([...fg(f),ag]);save();render();drawAudit()});sel.onchange=e=>{ag=decodeURIComponent(e.target.value);drawAudit()};const q=document.getElementById('auditOnly66');q.checked=only;q.onchange=()=>{only=q.checked;drawAudit()}}
+document.getElementById('auditOpen66').onclick=()=>{ag=document.getElementById('genreFilterRank')?.value||ag||genres()[0]||'';drawAudit();bg.classList.add('open')};document.getElementById('auditClose66').onclick=()=>bg.classList.remove('open');bg.onclick=e=>{if(e.target===bg)bg.classList.remove('open')};
+
+// history sheet
+const hb=document.createElement('div');hb.id='histBg66';hb.className='v66-bg';hb.innerHTML=`<div class="v66-sheet"><div class="v66-head" style="display:flex;justify-content:space-between"><div><div class="v66-title">変更履歴</div><div class="v66-sub">直近50件。各変更だけ個別にUndoできます。</div></div><button class="btn" id="histClose66">閉じる</button></div><div id="histBody66"></div></div>`;document.body.appendChild(hb);
+function renderHist(){const b=document.getElementById('histBody66');if(!b)return;b.innerHTML=hist.length?hist.map(h=>`<div class="v66-row"><div><strong>${esc(h.t||'変更')}</strong><small>${new Date(h.at).toLocaleString('ja-JP')} · ${h.c.length}項目</small></div><button class="v66-mini v66-bad" data-u="${h.id}">この変更を戻す</button></div>`).join(''):'<div class="v66-empty">まだ履歴はありません。</div>';b.querySelectorAll('[data-u]').forEach(x=>x.onclick=()=>undo(hist.find(h=>h.id===x.dataset.u)));const u=document.getElementById('undo66');if(u)u.disabled=!hist.length}
+document.getElementById('histOpen66').onclick=()=>{renderHist();hb.classList.add('open')};document.getElementById('histClose66').onclick=()=>hb.classList.remove('open');hb.onclick=e=>{if(e.target===hb)hb.classList.remove('open')};document.getElementById('undo66').onclick=()=>hist[0]&&undo(hist[0]);renderHist();
+
+// preserve current filters' own handlers but make sure the new handle behavior is refreshed.
+for(const id of filterIds.filter(x=>x!=='searchRank')){const e=document.getElementById(id);if(!e)continue;const o=e.onchange;e.onchange=x=>{if(typeof o==='function')o.call(e,x);else renderRank();setTimeout(decorate,0)}}const sr=document.getElementById('searchRank');if(sr){const o=sr.oninput;sr.oninput=x=>{if(typeof o==='function')o.call(sr,x);else renderRank();setTimeout(decorate,0)}}
+renderRank();const marker=document.getElementById('movie30BuildV29');if(marker)marker.textContent='app build '+BUILD;
+})();
+</script>
+
+<!-- patch-v67.js -->
+<script>
+(() => {
+  const BUILD='20260929b';
+  const style=document.createElement('style');
+  style.textContent=`
+    .uns-card-v67{display:flex!important;flex-direction:column;gap:7px;cursor:default!important}
+    .uns-main-v67{width:100%;border:0;background:transparent;color:inherit;text-align:left;padding:0;cursor:pointer}
+    .uns-genres-v67{font-size:9px;line-height:1.35;color:#aeb7c4;margin-top:4px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+    .uns-genres-v67.empty{color:#d8b45c}
+    .uns-actions-v67{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-top:1px}
+    .uns-action-v67{border:1px solid var(--line);background:#0b0f14;color:#dbe3ec;border-radius:7px;padding:6px 5px;font-size:9.5px;font-weight:800}
+    .uns-action-v67.score{border-color:#35513f;color:#a9e8bd;background:rgba(67,209,125,.06)}
+  `;
+  document.head.appendChild(style);
+
+  const uniq=a=>[...new Set((a||[]).filter(Boolean))];
+  function decorateUnratedV67(){
+    document.querySelectorAll('#rankRoot .uns-card[data-uns]').forEach(old=>{
+      if(old.dataset.v67==='1')return;
+      const encoded=old.dataset.uns||'';
+      let id='';try{id=decodeURIComponent(encoded)}catch(_){id=encoded}
+      const f=filmById(id);if(!f)return;
+      const scoreAction=old.onclick;
+      const genres=uniq(state.genreOverrides?.[id]||[]);
+      const wrap=document.createElement('div');
+      wrap.className=old.className+' uns-card-v67';
+      wrap.dataset.uns=encoded;wrap.dataset.v67='1';
+      wrap.innerHTML=`<button type="button" class="uns-main-v67"><strong>${esc(displayTitle(f))}${f.source==='letterboxd'?'<span class="source-pill">LB</span>':''}</strong><div class="uns-genres-v67${genres.length?'':' empty'}">${genres.length?esc(genres.join(' · ')):'ジャンル未設定'}</div><small>${stars(filmStar(f))}${f.year?' · '+esc(f.year):''}</small></button><div class="uns-actions-v67"><button type="button" class="uns-action-v67" data-edit-v67="1">ジャンル編集</button><button type="button" class="uns-action-v67 score" data-score-v67="1">採点</button></div>`;
+      old.replaceWith(wrap);
+      const openEdit=()=>openSheet(id);
+      wrap.querySelector('.uns-main-v67').onclick=openEdit;
+      wrap.querySelector('[data-edit-v67]').onclick=openEdit;
+      wrap.querySelector('[data-score-v67]').onclick=()=>{
+        if(typeof scoreAction==='function')scoreAction.call(old);
+        else openEdit();
+      };
+    });
+  }
+
+  const renderRankV67=renderRank;
+  renderRank=function(...args){
+    const out=renderRankV67(...args);
+    decorateUnratedV67();
+    return out;
+  };
+  decorateUnratedV67();
+  const marker=document.getElementById('movie30BuildV29');if(marker)marker.textContent='app build '+BUILD;
+})();
+
+</script>
+
+<!-- patch-v68.js -->
+<script>
+(() => {
+  const BUILD='20261001a';
+  const BOOT_KEY='movie30_lb_pending_boot_v68_'+BUILD;
+  const DAY=86400000;
+
+  const style=document.createElement('style');
+  style.textContent=`
+    .lb-pending-panel{background:#0d1117;border:1px solid #5a4d2d;border-radius:13px;padding:10px;margin:12px 0}
+    .lb-pending-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px}
+    .lb-pending-card{background:var(--panel2);border:1px solid var(--line);border-radius:9px;padding:7px;color:var(--text)}
+    .lb-pending-card strong{display:block;font-size:11px}.lb-pending-card small{display:block;font-size:9px;color:var(--muted);margin-top:3px}
+    .lb-pending-genres{font-size:9px;line-height:1.35;color:#aeb7c4;margin-top:4px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+    .lb-pending-genres.empty{color:#d8b45c}.lb-pending-actions{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-top:7px}
+    .lb-pending-actions button{border:1px solid var(--line);background:#0b0f14;color:#dbe3ec;border-radius:7px;padding:6px 5px;font-size:9.5px;font-weight:800}
+    .lb-pending-actions .score{border-color:#35513f;color:#a9e8bd;background:rgba(67,209,125,.06)}
+    @media(max-width:560px){.lb-pending-grid{grid-template-columns:1fr}}
+  `;
+  document.head.appendChild(style);
+
+  const uniq=a=>[...new Set((a||[]).filter(Boolean))];
+  function isRecentUnrated(raw){
+    const s=String(raw?.watchedDate||'').trim();
+    if(!/^\d{4}-\d{2}-\d{2}$/.test(s))return false;
+    const t=Date.parse(s+'T00:00:00Z');
+    return Number.isFinite(t) && Math.abs(Date.now()-t)<=14*DAY;
+  }
+  function tokyoDate(v){
+    if(!v)return '';
+    const d=new Date(v);if(Number.isNaN(d.getTime()))return '';
+    try{return new Intl.DateTimeFormat('sv-SE',{timeZone:'Asia/Tokyo',year:'numeric',month:'2-digit',day:'2-digit'}).format(d)}catch(_){return d.toISOString().slice(0,10)}
+  }
+  function addPendingLetterboxd(meta){
+    const now=Date.now(),id='custom-'+now+'-'+Math.random().toString(36).slice(2,6);
+    const title=String(meta?.title||meta?.englishTitle||meta?.originalTitle||'').trim();
+    if(!title)return null;
+    const f={
+      id,title,
+      originalTitle:String(meta?.originalTitle||'').trim(),
+      englishTitle:String(meta?.englishTitle||meta?.title||'').trim(),
+      lbTitle:String(meta?.englishTitle||meta?.title||'').trim(),
+      tmdbId:meta?.tmdbId||null,
+      year:meta?.year?parseInt(meta.year,10)||meta.year:'',
+      uri:meta?.link||meta?.uri||'',
+      category:'Letterboxd',order:999999,star:0,oldScore:null,added:true,_seq:now,source:'letterboxd'
+    };
+    state.customFilms=state.customFilms||[];state.customFilms.push(f);
+    state.genreOverrides=state.genreOverrides||{};if(!state.genreOverrides[id])state.genreOverrides[id]=[];
+    state.mediaTypeOverrides=state.mediaTypeOverrides||{};state.mediaTypeOverrides[id]='movie';
+    state.formatOverrides=state.formatOverrides||{};state.formatOverrides[id]='live';
+    state.letterboxdMeta=state.letterboxdMeta||{};
+    state.letterboxdMeta[id]={
+      ...(state.letterboxdMeta[id]||{}),
+      ...(meta?.publishedAt?{publishedAt:meta.publishedAt,addedDate:tokyoDate(meta.publishedAt),addedDateSource:'rss-first-seen'}:{}),
+      ...(meta?.watchedDate?{reportedWatchedDate:meta.watchedDate}:{})
+    };
+    return f;
+  }
+
+  function pendingFilms(){
+    return allFilms().filter(f=>f?.source==='letterboxd' && effectiveScore(f)==null && !(Number(filmStar(f))>=0.5));
+  }
+  function renderPendingPanel(){
+    document.getElementById('lbPendingPanel68')?.remove();
+    const root=document.getElementById('rankRoot');if(!root)return;
+    const q=(document.getElementById('searchRank')?.value||'').trim();
+    const arr=pendingFilms().filter(f=>!q||match(f,q)).sort((a,b)=>Number(b.year||0)-Number(a.year||0)||Number(b._seq||0)-Number(a._seq||0));
+    if(!arr.length)return;
+    const panel=document.createElement('div');panel.id='lbPendingPanel68';panel.className='lb-pending-panel';
+    panel.innerHTML=`<div class="uns-head"><strong>未採点（Letterboxd ★未取得）</strong><small>${arr.length}本 · ★がRSSに出る前でも先に取り込み</small></div><div class="lb-pending-grid">${arr.map(f=>{const gs=uniq(state.genreOverrides?.[f.id]||[]);return `<div class="lb-pending-card" data-pid="${encodeURIComponent(f.id)}"><button type="button" style="width:100%;border:0;background:transparent;color:inherit;text-align:left;padding:0" data-open-pending="1"><strong>${esc(displayTitle(f))}<span class="source-pill">LB</span></strong><div class="lb-pending-genres${gs.length?'':' empty'}">${gs.length?esc(gs.join(' · ')):'ジャンル未設定'}</div><small>${esc(f.year||'')} · ★未設定</small></button><div class="lb-pending-actions"><button type="button" data-open-pending="1">ジャンル編集</button><button type="button" class="score" data-open-pending="1">★・点数設定</button></div></div>`}).join('')}</div>`;
+    root.prepend(panel);
+    panel.querySelectorAll('[data-open-pending]').forEach(b=>b.onclick=()=>{const card=b.closest('[data-pid]');if(card)openSheet(decodeURIComponent(card.dataset.pid));});
+  }
+  const renderRank68=renderRank;
+  renderRank=function(...args){const out=renderRank68(...args);renderPendingPanel();return out;};
+
+  syncLetterboxd=async function(silent=false){
+    const st=getLbSettings(),username=(document.getElementById('lbUsername')?.value||st.username||'gjbkic').trim();
+    if(!username)return false;
+    saveLbSettings({username,auto:document.getElementById('lbAutoSync')?.checked??st.auto});
+    if(!silent)setLbStatus('Letterboxdを確認中…');
+    try{
+      const xml=await fetchLbRss(username),items=parseLbRss(xml);
+      let added=0,updated=0,pending=0,skipped=0;const seen=new Set();
+      for(const raw of items){
+        const sig=(raw.tmdbId||normKey(raw.title)+raw.year);if(seen.has(sig))continue;seen.add(sig);
+        const rating=parseFloat(raw.rating),hasRating=Number.isFinite(rating)&&rating>=0.5;
+        let existing=findExistingFilm(raw);
+        if(existing){
+          if(hasRating&&filmStar(existing)!==rating){state.starOverrides[existing.id]=rating;updated++;}
+          if(raw.tmdbId&&!titleInfo(existing).tmdbId)state.titleOverrides[existing.id]={...(state.titleOverrides[existing.id]||{}),tmdbId:Number(raw.tmdbId)};
+          continue;
+        }
+        let meta=await enrichFromTmdb({...raw,tmdbId:raw.tmdbId?Number(raw.tmdbId):null,englishTitle:raw.title});
+        if(hasRating){meta.rating=rating;addLbFilm(meta);added++;continue;}
+        if(isRecentUnrated(raw)){addPendingLetterboxd(meta);pending++;}
+        else skipped++;
+      }
+      save();render();
+      const bits=[`新規 ${added}本`];if(pending)bits.push(`★未取得 ${pending}本を未採点へ`);if(updated)bits.push(`★更新 ${updated}本`);if(skipped)bits.push(`古い未評価 ${skipped}件は保留`);
+      setLbStatus('同期完了：'+bits.join('／'),'ok');
+      return true;
+    }catch(e){setLbStatus('自動同期できませんでした：'+e.message+'。ratings.csvの読み込みは利用できます。','bad');return false;}
+  };
+
+  // Make the currently cached RSS take effect once after this fix, so The Fly appears without another manual cycle.
+  setTimeout(async()=>{
+    let done=false;try{done=localStorage.getItem(BOOT_KEY)==='1'}catch(_){}
+    if(done)return;
+    const ok=await syncLetterboxd(true);
+    if(ok)try{localStorage.setItem(BOOT_KEY,'1')}catch(_){}
+  },450);
+
+  renderRank();
+  const marker=document.getElementById('movie30BuildV29');if(marker)marker.textContent='app build '+BUILD;
+})();
+
+</script>
+
+<!-- patch-v69.js -->
+<script>
+(() => {
+  // v69: restore verified/manual Letterboxd refresh after v68 accidentally bypassed it.
+  // Keep v68 behavior that imports recent RSS items without stars as pending/unrated.
+  const BUILD='20261003a';
+  const GH_OWNER='gjbkic', GH_REPO='movie-ratings', GH_BRANCH='main';
+  const GH_TOKEN_KEY='movie30_gpt_sync_token_v1';
+  const TRIGGER_PATH='letterboxd-sync-trigger.txt';
+  const RESULT_PATH='letterboxd-sync-result.json';
+  const RSS_PATH='letterboxd-gjbkic.xml';
+  const DAY=86400000;
+  const cachedSyncV68=syncLetterboxd;
+  const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+
+  function ghToken(){try{return localStorage.getItem(GH_TOKEN_KEY)||''}catch(_){return ''}}
+  function decodeB64Utf8(b64){
+    const bin=atob(String(b64||'').replace(/\s/g,'')),bytes=new Uint8Array(bin.length);
+    for(let i=0;i<bin.length;i++)bytes[i]=bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  function encodeB64Utf8(text){
+    const bytes=new TextEncoder().encode(String(text||''));let bin='';
+    for(let i=0;i<bytes.length;i+=0x8000)bin+=String.fromCharCode(...bytes.subarray(i,i+0x8000));
+    return btoa(bin);
+  }
+  async function gh(path,opt={}){
+    const token=ghToken();if(!token)throw new Error('GitHub同期トークンがありません');
+    const r=await fetch(`https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${path}?t=${Date.now()}`,{
+      ...opt,cache:'no-store',headers:{
+        Accept:'application/vnd.github+json',Authorization:`Bearer ${token}`,'X-GitHub-Api-Version':'2022-11-28',...(opt.headers||{})
+      }
+    });
+    if(!r.ok){let msg=`GitHub HTTP ${r.status}`;try{const j=await r.json();if(j?.message)msg+=': '+j.message}catch(_){}throw new Error(msg)}
+    return await r.json();
+  }
+  async function ghText(path){const j=await gh(path);return {text:decodeB64Utf8(j.content||''),sha:j.sha||''}}
+  async function putTrigger(value){
+    let cur=await ghText(TRIGGER_PATH);
+    const url=`https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${TRIGGER_PATH}`;
+    let body={message:'Trigger Letterboxd RSS refresh',content:encodeB64Utf8(value+'\n'),branch:GH_BRANCH,sha:cur.sha};
+    const send=async()=>{
+      const r=await fetch(url,{method:'PUT',cache:'no-store',headers:{Accept:'application/vnd.github+json',Authorization:`Bearer ${ghToken()}`,'X-GitHub-Api-Version':'2022-11-28','Content-Type':'application/json'},body:JSON.stringify(body)});
+      if(!r.ok){let msg=`GitHub HTTP ${r.status}`;try{const j=await r.json();if(j?.message)msg+=': '+j.message}catch(_){}throw new Error(msg)}
+    };
+    try{await send()}catch(_){cur=await ghText(TRIGGER_PATH);body.sha=cur.sha;await send()}
+  }
+  async function serverFetchRss(){
+    const trigger=`movie30-${Date.now()}-${Math.random().toString(36).slice(2,8)}`;
+    await putTrigger(trigger);
+    const started=Date.now();let result=null;
+    while(Date.now()-started<70000){
+      await sleep(2200);
+      try{const r=JSON.parse((await ghText(RESULT_PATH)).text);if(r?.trigger===trigger){result=r;break}}catch(_){}
+    }
+    if(!result)throw new Error('サーバー側のLetterboxd確認が70秒以内に完了しませんでした');
+    if(result.status!=='ok')throw new Error(result.error||'サーバー側でLetterboxd RSSを取得できませんでした');
+    const xml=(await ghText(RSS_PATH)).text;
+    if(!/<(?:rss|item)[\s>]/i.test(xml))throw new Error('取得したRSSが不正です');
+    return {xml,result};
+  }
+  async function browserFetchFresh(username){
+    const url=`https://letterboxd.com/${encodeURIComponent(username)}/rss/?movie30=${Date.now()}`;
+    const targets=[url,'https://api.allorigins.win/raw?url='+encodeURIComponent(url),'https://corsproxy.io/?url='+encodeURIComponent(url),'https://api.codetabs.com/v1/proxy?quest='+encodeURIComponent(url)];
+    let errs=[];
+    for(const target of targets){
+      try{const r=await fetch(target,{cache:'no-store',headers:{Accept:'application/rss+xml,application/xml,text/xml,text/plain,*/*'}});if(!r.ok)throw new Error('HTTP '+r.status);const t=await r.text();if(!/<(?:rss|item)[\s>]/i.test(t))throw new Error('RSS形式ではありません');return t}catch(e){errs.push(e?.message||String(e))}
+    }
+    if(String(username).toLowerCase()==='gjbkic'){
+      const r=await fetch('./letterboxd-gjbkic.xml?v='+Date.now(),{cache:'no-store'});if(r.ok){const t=await r.text();if(/<(?:rss|item)[\s>]/i.test(t))return t}
+    }
+    throw new Error('Letterboxd RSSを取得できませんでした'+(errs.length?' ('+errs.join(' / ')+')':''));
+  }
+  function isRecentUnrated(raw){
+    const s=String(raw?.watchedDate||'').trim();if(!/^\d{4}-\d{2}-\d{2}$/.test(s))return false;
+    const t=Date.parse(s+'T00:00:00Z');return Number.isFinite(t)&&Math.abs(Date.now()-t)<=14*DAY;
+  }
+  function tokyoDate(v){
+    if(!v)return '';const d=new Date(v);if(Number.isNaN(d.getTime()))return '';
+    try{return new Intl.DateTimeFormat('sv-SE',{timeZone:'Asia/Tokyo',year:'numeric',month:'2-digit',day:'2-digit'}).format(d)}catch(_){return d.toISOString().slice(0,10)}
+  }
+  function addPending(meta){
+    const now=Date.now(),id='custom-'+now+'-'+Math.random().toString(36).slice(2,6),title=String(meta?.title||meta?.englishTitle||meta?.originalTitle||'').trim();if(!title)return null;
+    const f={id,title,originalTitle:String(meta?.originalTitle||'').trim(),englishTitle:String(meta?.englishTitle||meta?.title||'').trim(),lbTitle:String(meta?.englishTitle||meta?.title||'').trim(),tmdbId:meta?.tmdbId||null,year:meta?.year?parseInt(meta.year,10)||meta.year:'',uri:meta?.link||meta?.uri||'',category:'Letterboxd',order:999999,star:0,oldScore:null,added:true,_seq:now,source:'letterboxd'};
+    state.customFilms=state.customFilms||[];state.customFilms.push(f);
+    state.genreOverrides=state.genreOverrides||{};state.genreOverrides[id]=state.genreOverrides[id]||[];
+    state.mediaTypeOverrides=state.mediaTypeOverrides||{};state.mediaTypeOverrides[id]='movie';
+    state.formatOverrides=state.formatOverrides||{};state.formatOverrides[id]='live';
+    state.letterboxdMeta=state.letterboxdMeta||{};state.letterboxdMeta[id]={...(state.letterboxdMeta[id]||{}),...(meta?.publishedAt?{publishedAt:meta.publishedAt,addedDate:tokyoDate(meta.publishedAt),addedDateSource:'rss-first-seen'}:{}),...(meta?.watchedDate?{reportedWatchedDate:meta.watchedDate}:{})};
+    return f;
+  }
+  async function applyFreshRss(xml){
+    const items=parseLbRss(xml);let ratedAdded=0,pendingAdded=0,updated=0,skipped=0;const seen=new Set();
+    for(const raw of items){
+      const sig=(raw.tmdbId||normKey(raw.title)+raw.year);if(seen.has(sig))continue;seen.add(sig);
+      const rating=parseFloat(raw.rating),hasRating=Number.isFinite(rating)&&rating>=0.5;
+      let existing=findExistingFilm(raw);
+      if(existing){
+        if(hasRating&&filmStar(existing)!==rating){state.starOverrides[existing.id]=rating;updated++}
+        if(raw.tmdbId&&!titleInfo(existing).tmdbId)state.titleOverrides[existing.id]={...(state.titleOverrides[existing.id]||{}),tmdbId:Number(raw.tmdbId)};
+        continue;
+      }
+      const meta=await enrichFromTmdb({...raw,tmdbId:raw.tmdbId?Number(raw.tmdbId):null,englishTitle:raw.title});
+      if(hasRating){meta.rating=rating;if(addLbFilm(meta))ratedAdded++;continue}
+      if(isRecentUnrated(raw)){if(addPending(meta))pendingAdded++}else skipped++;
+    }
+    save();render();
+    return {items,ratedAdded,pendingAdded,totalAdded:ratedAdded+pendingAdded,updated,skipped};
+  }
+
+  syncLetterboxd=async function(silent=false){
+    if(silent)return cachedSyncV68(true);
+    const st=getLbSettings(),username=(document.getElementById('lbUsername')?.value||st.username||'gjbkic').trim();if(!username)return false;
+    saveLbSettings({username,auto:document.getElementById('lbAutoSync')?.checked??st.auto});
+    const btn=document.getElementById('syncLetterboxd'),old=btn?.textContent||'今すぐ同期';if(btn){btn.disabled=true;btn.textContent='実取得中…'}
+    try{
+      let xml='',verified=null,source='';
+      if(username.toLowerCase()==='gjbkic'&&ghToken()){
+        setLbStatus('GitHubサーバーからLetterboxdを実取得しています…（通常10〜30秒）');
+        try{const z=await serverFetchRss();xml=z.xml;verified=z.result;source='GitHub実取得'}catch(serverErr){
+          setLbStatus('サーバー確認に失敗したためLetterboxdへ直接確認中…');xml=await browserFetchFresh(username);source='直接確認';window.__movie30LbServerErrorV69=serverErr?.message||String(serverErr);
+        }
+      }else{
+        setLbStatus('Letterboxd RSSを直接確認中…');xml=await browserFetchFresh(username);source='直接確認';
+      }
+      const z=await applyFreshRss(xml),latest=z.items[0]||{},count=verified?.itemCount??z.items.length,latestTitle=verified?.latestTitle||latest.title||'',latestDate=verified?.latestWatchedDate||latest.watchedDate||'';
+      let msg=`同期完了：新規 ${z.totalAdded}本`;
+      if(z.totalAdded)msg+=`（採点済み ${z.ratedAdded}／未採点 ${z.pendingAdded}）`;
+      if(z.updated)msg+=`／★更新 ${z.updated}本`;
+      if(z.skipped)msg+=`／古い未評価 ${z.skipped}件は保留`;
+      msg+=` · ${source}でRSS ${count}件を確認`;
+      if(latestTitle)msg+=` · 最新「${latestTitle}」${latestDate?` (${latestDate})`:''}`;
+      if(source==='直接確認'&&window.__movie30LbServerErrorV69)msg+=` · GitHub確認失敗: ${window.__movie30LbServerErrorV69}`;
+      setLbStatus(msg,source==='GitHub実取得'?'ok':'');return true;
+    }catch(e){setLbStatus('同期できませんでした：'+(e?.message||String(e)),'bad');return false}
+    finally{if(btn){btn.disabled=false;btn.textContent=old}}
+  };
+  const btn=document.getElementById('syncLetterboxd');if(btn)btn.onclick=()=>syncLetterboxd(false);
+  const marker=document.getElementById('movie30BuildV29');if(marker)marker.textContent='app build '+BUILD;
+})();
+</script>
+
+<!-- patch-v70.js -->
+<script>
+(() => {
+  // v70: Letterboxd sync is starred-items only again.
+  // Manual sync still performs a fresh server-side RSS fetch via v69.
+  const BUILD='20261003b';
+  const parseLbRssV69=parseLbRss;
+  parseLbRss=function(xml){
+    return parseLbRssV69(xml).filter(x=>{
+      const r=parseFloat(x?.rating);
+      return Number.isFinite(r)&&r>=0.5;
+    });
+  };
+
+  // Clarify the restored rule in the UI.
+  const btn=document.getElementById('syncLetterboxd');
+  const panel=btn?.closest('.panel');
+  if(panel){
+    const tip=panel.querySelector('.tip');
+    if(tip)tip.textContent='「今すぐ同期」でLetterboxdを実際に確認します。★を付けた作品だけ同期し、★なし作品は取り込みません。GitHub同期トークン設定済みならサーバー側でRSSを取り直します。';
+  }
+
+  const marker=document.getElementById('movie30BuildV29');
+  if(marker)marker.textContent='app build '+BUILD;
+})();
+</script>
+
+<!-- patch-v71.js -->
+<script>
+(() => {
+  // v71: one-time repair for the Tales of the Bizarre logging shift caused by
+  // the skipped-special sequence in October 2026.
+  const BUILD='20261008a';
+  const tmdbOf=f=>String((state.titleOverrides?.[f?.id]?.tmdbId ?? f?.tmdbId ?? ''));
+  const byTmdb=id=>allFilms().find(f=>tmdbOf(f)===String(id));
+
+  const a=byTmdb(1308067); // 2024 Summer (stale mislogged entry)
+  const b=byTmdb(1203652); // 2023 Fall
+  const c=byTmdb(1142085); // 2023 Summer
+  const d=byTmdb(1048225); // 2022 Fall
+  const e=byTmdb(989763);  // 2022 Summer
+  const f=byTmdb(845788);  // 2021 Summer
+
+  const marker=document.getElementById('movie30BuildV29');
+  if(marker)marker.textContent='app build '+BUILD;
+  if(!a||!b||!c||!d||!e||!f)return;
+
+  const score=id=>Object.prototype.hasOwnProperty.call(state.exactScores||{},id)
+    ? Number(state.exactScores[id]) : null;
+
+  // Only migrate the exact known broken state. This makes the patch idempotent
+  // and prevents touching later manual edits.
+  const broken =
+    score(a.id)===77 &&
+    score(b.id)===73 &&
+    score(c.id)===76 &&
+    score(d.id)===80 &&
+    score(e.id)===85 &&
+    score(f.id)==null;
+  if(!broken)return;
+
+  const clone=v=>JSON.parse(JSON.stringify(v));
+  const genres={
+    a:clone(state.genreOverrides?.[a.id]||[]),
+    b:clone(state.genreOverrides?.[b.id]||[]),
+    c:clone(state.genreOverrides?.[c.id]||[]),
+    d:clone(state.genreOverrides?.[d.id]||[]),
+    e:clone(state.genreOverrides?.[e.id]||[])
+  };
+  const mapping={
+    [a.id]:b.id,
+    [b.id]:c.id,
+    [c.id]:d.id,
+    [d.id]:e.id,
+    [e.id]:f.id
+  };
+
+  // Move saved same-score positions together with the score.
+  const nextRank={};
+  for(const [k,list] of Object.entries(state.rankOrder||{})){
+    const seen=new Set();
+    nextRank[k]=(list||[]).map(id=>mapping[id]||id).filter(id=>{
+      if(id===a.id||seen.has(id))return false;
+      seen.add(id);return true;
+    });
+  }
+  state.rankOrder=nextRank;
+
+  for(const id of [a.id,b.id,c.id,d.id,e.id,f.id]){
+    delete state.exactScores?.[id];
+    delete state.starOverrides?.[id];
+    delete state.assignments?.[id];
+  }
+
+  const setScore=(film,sc,star)=>{
+    state.exactScores=state.exactScores||{};
+    state.starOverrides=state.starOverrides||{};
+    state.exactScores[film.id]=sc;
+    state.starOverrides[film.id]=star;
+    film.star=star;
+  };
+  setScore(b,77,2.5);
+  setScore(c,73,2);
+  setScore(d,76,2);
+  setScore(e,80,2.5);
+  setScore(f,85,3.5);
+
+  state.genreOverrides=state.genreOverrides||{};
+  state.genreOverrides[b.id]=genres.a;
+  state.genreOverrides[c.id]=genres.b;
+  state.genreOverrides[d.id]=genres.c;
+  state.genreOverrides[e.id]=genres.d;
+  state.genreOverrides[f.id]=genres.e;
+  delete state.genreOverrides[a.id];
+
+  state.mediaTypeOverrides=state.mediaTypeOverrides||{};
+  state.formatOverrides=state.formatOverrides||{};
+  for(const x of [b,c,d,e,f]){
+    state.mediaTypeOverrides[x.id]='drama';
+    state.formatOverrides[x.id]='live';
+  }
+
+  // 2024 Summer was the stale Letterboxd item that has now been deleted/
+  // corrected on Letterboxd. Remove that stale app entry entirely.
+  state.customFilms=(state.customFilms||[]).filter(x=>x.id!==a.id);
+  for(const key of [
+    'assignments','starOverrides','exactScores','titleOverrides','categoryOverrides',
+    'mediaTypeOverrides','genreOverrides','originOverrides','formatOverrides',
+    'runtimeOverrides','letterboxdMeta'
+  ]){
+    if(state[key])delete state[key][a.id];
+  }
+  for(const k of Object.keys(state.rankOrder||{})){
+    state.rankOrder[k]=(state.rankOrder[k]||[]).filter(id=>id!==a.id);
+  }
+
+  save();
+  render();
+  try{toast('世にも奇妙な物語のズレを修正しました')}catch(_){}
+})();
+</script>
