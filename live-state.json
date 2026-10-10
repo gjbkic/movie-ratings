@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791637301487,
-  "sourceUpdatedIso": "2026-10-10T13:01:41.487Z",
+  "sourceUpdatedAt": 1791637340581,
+  "sourceUpdatedIso": "2026-10-10T13:02:20.581Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -17191,32 +17191,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-317-7FPC",
-      "title": "ファンタスティック・ビーストと魔法使いの旅",
-      "originalTitle": "",
-      "englishTitle": "Fantastic Beasts and Where to Find Them",
-      "year": 2016,
-      "score": 74,
-      "star": 2,
-      "overallRank": 603,
-      "sameScoreRank": 22,
-      "category": "ハリーポッター シリーズ",
-      "mediaType": "movie",
-      "genre": [
-        "ファンタジー",
-        "アドベンチャー",
-        "アクション",
-        "娯楽"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 133,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-237-6eCE",
       "title": "プラチナデータ",
       "originalTitle": "",
@@ -17224,8 +17198,8 @@
       "year": 2013,
       "score": 74,
       "star": 2,
-      "overallRank": 604,
-      "sameScoreRank": 23,
+      "overallRank": 603,
+      "sameScoreRank": 22,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -17238,6 +17212,32 @@
         "心理・内面"
       ],
       "origin": "日本",
+      "format": "live",
+      "runtime": 133,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "lb-317-7FPC",
+      "title": "ファンタスティック・ビーストと魔法使いの旅",
+      "originalTitle": "",
+      "englishTitle": "Fantastic Beasts and Where to Find Them",
+      "year": 2016,
+      "score": 74,
+      "star": 2,
+      "overallRank": 604,
+      "sameScoreRank": 23,
+      "category": "ハリーポッター シリーズ",
+      "mediaType": "movie",
+      "genre": [
+        "ファンタジー",
+        "アドベンチャー",
+        "アクション",
+        "娯楽"
+      ],
+      "origin": "ハリウッド",
       "format": "live",
       "runtime": 133,
       "exact": true,
@@ -20430,7 +20430,8 @@
       "mediaType": "drama",
       "genre": [
         "ドラマ",
-        "TV本編"
+        "TV本編",
+        "恋愛"
       ],
       "origin": "日本",
       "format": "live",
@@ -21358,8 +21359,8 @@
         "custom-1791636834270-874l",
         "custom-1789385860247-k5ps",
         "custom-1789385861101-oomm",
-        "lb-317-7FPC",
         "lb-237-6eCE",
+        "lb-317-7FPC",
         "lb-441-27EA",
         "lb-550-28xK",
         "lb-270-iF7M"
@@ -33125,7 +33126,8 @@
       ],
       "custom-1790322766063-ab5l": [
         "ドラマ",
-        "TV本編"
+        "TV本編",
+        "恋愛"
       ],
       "custom-1790322766664-63q5": [
         "ドラマ",
