@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791628649473,
-  "sourceUpdatedIso": "2026-10-10T10:37:29.473Z",
+  "sourceUpdatedAt": 1791628831595,
+  "sourceUpdatedIso": "2026-10-10T10:40:31.595Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -20424,7 +20424,7 @@
       "genre": [],
       "origin": "その他",
       "format": "live",
-      "runtime": null,
+      "runtime": 129,
       "exact": false,
       "letterboxdAddedDate": "2026-09-08",
       "letterboxdPublishedAt": null,
@@ -20445,7 +20445,7 @@
       "genre": [],
       "origin": "その他",
       "format": "live",
-      "runtime": null,
+      "runtime": 133,
       "exact": false,
       "letterboxdAddedDate": "2026-09-08",
       "letterboxdPublishedAt": null,
@@ -27207,6 +27207,12 @@
         "originalTitle": "世にも奇妙な物語 '20夏の特別編",
         "englishTitle": "Tales of the Bizarre: 2020 Summer Special",
         "tmdbId": 743055
+      },
+      "custom-lb-unrated-bOnU": {
+        "tmdbId": 351286
+      },
+      "custom-lb-unrated-1Qcu": {
+        "tmdbId": 13430
       }
     },
     "categoryOverrides": {},
@@ -36019,7 +36025,9 @@
       "custom-1791398329125-3r8f": 106,
       "custom-1791392809782-lca8": 12,
       "custom-1791476522514-wpj8": 105,
-      "custom-1791553824276-cl9b": 105
+      "custom-1791553824276-cl9b": 105,
+      "custom-lb-unrated-bOnU": 129,
+      "custom-lb-unrated-1Qcu": 133
     },
     "letterboxdMeta": {
       "lb-0-hTha": {
@@ -38932,7 +38940,8 @@
         "publishedAt": "Thu, 8 Oct 2026 01:44:49 +1300",
         "addedDate": "2026-10-07",
         "addedDateSource": "rss-first-seen",
-        "reportedWatchedDate": "2026-10-07"
+        "reportedWatchedDate": "2026-10-07",
+        "note": "1. 「遺体は一体……」／上川隆也\n    ベテラン刑事が殺人現場で男女2人の遺体を確認するが、戻ると女の遺体だけ消えている。しかも周囲は「最初からそんな遺体はなかった」と言い、凶器や血痕まで次々に消えていく。\n2. 「実家じまい」／趣里\n    母を亡くした女性が、古い団地の実家を片付け始める。過干渉だった母の手作り品などを捨てるが、翌日には「捨てるな！」という貼り紙とともに、捨てた物がすべて家へ戻っている。母の友人の様子もどこか不気味。\n3. 「おじさんになりたい」／永尾柚乃・松尾諭\n    8歳の女の子が、着ると本物そっくりの中年男性になれる謎の着ぐるみを持っている。父親が母親に冷たく接するのを見て、彼女は「おじさん」の姿を使って父親に近づこうとする。\n4. 「マザーズオークション」／杉野遥亮\n    実家の物を勝手にネットオークションで売るニートの青年が、サイト上で自分の母親自身が出品されているのを発見。「母親、やります！」という出品ページで、別の家庭に母親として買われようとしている。"
       },
       "custom-1791377844608-310l": {
         "publishedAt": "Thu, 8 Oct 2026 01:56:45 +1300",
