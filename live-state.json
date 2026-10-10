@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791627791049,
-  "sourceUpdatedIso": "2026-10-10T10:23:11.049Z",
+  "sourceUpdatedAt": 1791627813929,
+  "sourceUpdatedIso": "2026-10-10T10:23:33.929Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -11256,7 +11256,7 @@
       "englishTitle": "Heidi: Girl of the Alps",
       "year": 1974,
       "score": 80,
-      "star": 2.5,
+      "star": 3,
       "overallRank": 391,
       "sameScoreRank": 2,
       "category": "Letterboxd",
@@ -11625,7 +11625,7 @@
       "englishTitle": "Black Mirror: Fifteen Million Merits",
       "year": 2011,
       "score": 80,
-      "star": 2.5,
+      "star": 3,
       "overallRank": 404,
       "sameScoreRank": 15,
       "category": "Letterboxd",
@@ -15313,7 +15313,7 @@
       "englishTitle": "Dragon Ball Super: Super Hero",
       "year": 2022,
       "score": 76,
-      "star": 2,
+      "star": 2.5,
       "overallRank": 536,
       "sameScoreRank": 4,
       "category": "Letterboxd",
@@ -18806,7 +18806,7 @@
       "englishTitle": "Detective Conan: The Counterfeit Case of Ultra 30",
       "year": 2026,
       "score": 69,
-      "star": 1.5,
+      "star": 2,
       "overallRank": 662,
       "sameScoreRank": 2,
       "category": "Letterboxd",
@@ -20419,6 +20419,29 @@
       "letterboxdAddedDate": "2026-09-08",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1791627813752-lf6s",
+      "title": "Black Mirror: Hated in the Nation",
+      "originalTitle": "",
+      "englishTitle": "Black Mirror: Hated in the Nation",
+      "year": 2016,
+      "score": null,
+      "star": 3,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "drama",
+      "genre": [
+        "TV本編"
+      ],
+      "origin": "その他",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": "2026-10-10",
+      "letterboxdPublishedAt": "Sat, 10 Oct 2026 21:54:20 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-10"
     }
   ],
   "state": {
@@ -24287,6 +24310,23 @@
         "added": true,
         "_seq": 1791579117019,
         "source": "letterboxd"
+      },
+      {
+        "id": "custom-1791627813752-lf6s",
+        "title": "Black Mirror: Hated in the Nation",
+        "originalTitle": "",
+        "englishTitle": "Black Mirror: Hated in the Nation",
+        "lbTitle": "Black Mirror: Hated in the Nation",
+        "tmdbId": 495881,
+        "year": 2016,
+        "uri": "https://letterboxd.com/gjbkic/film/black-mirror-hated-in-the-nation/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 3,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791627813752,
+        "source": "letterboxd"
       }
     ],
     "starOverrides": {
@@ -24921,13 +24961,13 @@
       "custom-1790508960074-n6fj": 3,
       "custom-1790509701063-jule": 2,
       "custom-1789385860756-dujj": 2,
-      "custom-1790665768168-uxk0": 1.5,
+      "custom-1790665768168-uxk0": 2,
       "custom-1790665767820-1d1q": 3,
       "custom-1790924446793-9ts4": 3,
       "custom-1790960881562-cn74": 4,
       "custom-1790965876380-nqs0": 2,
       "custom-1790971112940-kuhf": 3.5,
-      "custom-1791018448490-bpdn": 2.5,
+      "custom-1791018448490-bpdn": 3,
       "custom-1791018448927-b4o3": 3,
       "custom-1791023391963-vdu9": 4,
       "custom-1791036345616-3tph": 4,
@@ -24935,7 +24975,7 @@
       "custom-1791057232858-35ld": 4,
       "custom-1791113241266-l3xb": 3,
       "custom-1791113241748-xivg": 2.5,
-      "custom-1791113242437-wcok": 2,
+      "custom-1791113242437-wcok": 2.5,
       "custom-1791113242089-wnyx": 2,
       "custom-1791113241627-mf17": 2.5,
       "lb-259-N7ZC": 1.5,
@@ -24963,7 +25003,7 @@
       "custom-1791397387325-yqut": 1.5,
       "custom-1791398329125-3r8f": 3,
       "custom-1791447953969-ah3e": 2.5,
-      "custom-1791449338315-twqr": 2.5,
+      "custom-1791449338315-twqr": 3,
       "custom-1791469824035-6gcd": 3,
       "custom-1791469823654-dpbh": 2.5,
       "custom-1791476522907-cd9b": 3.5,
@@ -27884,7 +27924,8 @@
       "custom-1791382999848-25pc": "movie",
       "custom-1791392810098-rjyg": "movie",
       "custom-lb-unrated-bOnU": "movie",
-      "custom-lb-unrated-1Qcu": "movie"
+      "custom-lb-unrated-1Qcu": "movie",
+      "custom-1791627813752-lf6s": "drama"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -33842,7 +33883,10 @@
         "TV本編"
       ],
       "custom-lb-unrated-bOnU": [],
-      "custom-lb-unrated-1Qcu": []
+      "custom-lb-unrated-1Qcu": [],
+      "custom-1791627813752-lf6s": [
+        "TV本編"
+      ]
     },
     "originOverrides": {
       "lb-0-hTha": "その他",
@@ -34569,7 +34613,8 @@
       "custom-1791570909341-auj1": "その他",
       "custom-1791576150006-qu8m": "その他",
       "custom-lb-unrated-bOnU": "その他",
-      "custom-lb-unrated-1Qcu": "その他"
+      "custom-lb-unrated-1Qcu": "その他",
+      "custom-1791627813752-lf6s": "その他"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -39027,6 +39072,12 @@
       "custom-lb-unrated-1Qcu": {
         "addedDate": "2026-09-08",
         "addedDateSource": "letterboxd-watched-csv"
+      },
+      "custom-1791627813752-lf6s": {
+        "publishedAt": "Sat, 10 Oct 2026 21:54:20 +1300",
+        "addedDate": "2026-10-10",
+        "addedDateSource": "rss-first-seen",
+        "reportedWatchedDate": "2026-10-10"
       }
     }
   }
