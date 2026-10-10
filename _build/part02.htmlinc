@@ -1,0 +1,1328 @@
+
+<!-- patch-v22.js -->
+<script>
+(() => {
+  // v22: exact-score comparison workflow, faster rank navigation and continuous drag auto-scroll.
+  const style = document.createElement('style');
+  style.textContent = `
+    .tabs{grid-template-columns:repeat(3,1fr)!important}
+    .star-jump{position:sticky;z-index:24;display:flex;gap:5px;overflow-x:auto;-webkit-overflow-scrolling:touch;padding:7px 3px;margin:5px 0 8px;background:rgba(7,9,12,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06);scrollbar-width:none}
+    .star-jump::-webkit-scrollbar{display:none}.star-jump button{flex:0 0 auto;border:1px solid var(--line);background:#10151c;color:#d4dbe4;border-radius:999px;padding:6px 9px;font-size:10px;font-weight:800}.star-jump button.unrated{border-color:#8d7130;color:#ffe08a}.star-jump button:disabled{opacity:.3}
+    .rank-star,.uns-panel{scroll-margin-top:150px}
+    .compare-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.72);z-index:200;align-items:flex-end;justify-content:center}.compare-bg.open{display:flex}.compare-sheet{width:min(760px,100%);max-height:94vh;overflow:auto;background:#10151c;border:1px solid #2a323d;border-radius:20px 20px 0 0;padding:12px 10px calc(16px + env(safe-area-inset-bottom))}.compare-head{position:sticky;top:-12px;z-index:2;background:#10151c;padding:6px 2px 10px;border-bottom:1px solid var(--line)}.compare-title{font-size:18px;font-weight:900}.compare-sub{font-size:10px;color:var(--muted);line-height:1.45;margin-top:4px}.compare-nav{display:flex;gap:6px;margin-top:8px}.compare-nav .btn{flex:1}.compare-score{margin-top:10px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#0b0f14}.compare-score-head{display:flex;justify-content:space-between;align-items:center;padding:8px 10px;background:#121923;border-bottom:1px solid var(--line)}.compare-score-head strong{font-size:18px}.compare-score-head small{font-size:9px;color:var(--muted)}.compare-film{padding:8px 10px;border-top:1px solid rgba(255,255,255,.055)}.compare-film:first-of-type{border-top:0}.compare-film strong{font-size:11.5px}.compare-film small{display:block;font-size:9px;color:var(--muted);margin-top:2px}.compare-slot{width:100%;border:0;border-top:1px dashed #35513f;border-bottom:1px dashed #35513f;background:rgba(67,209,125,.06);color:#a9e8bd;padding:7px 8px;font-size:10px;font-weight:800}.compare-slot:active{background:rgba(67,209,125,.16)}.compare-empty{font-size:10px;color:var(--muted);padding:9px 10px}.compare-close{width:100%;margin-top:12px}.just-placed{animation:placedFlash 2.4s ease-out}@keyframes placedFlash{0%,30%{outline:3px solid var(--accent);box-shadow:0 0 0 5px rgba(67,209,125,.18)}100%{outline:0 solid transparent;box-shadow:none}}
+    .uns-card{cursor:pointer}.uns-head small{color:#d8b45c!important}
+    @media(max-width:560px){.star-jump button{padding:6px 8px}.compare-sheet{padding-left:7px;padding-right:7px}.compare-title{font-size:17px}}
+  `;
+  document.head.appendChild(style);
+
+  // Retire the old high/mid/low workflow visually; keep legacy state for backward compatibility.
+  const classifyTab = document.querySelector('.tab[data-page="classify"]');
+  if (classifyTab) classifyTab.style.display = 'none';
+  const classifyPage = document.getElementById('page-classify');
+  if (classifyPage) classifyPage.style.display = 'none';
+  if (view.page === 'classify') view.page = 'rank';
+  const choiceGrid = document.querySelector('#sheetBg .choicegrid');
+  if (choiceGrid) choiceGrid.style.display = 'none';
+  document.querySelectorAll('#page-data .panel h2').forEach(h => {
+    if (h.textContent.includes('星内の上・中・下')) h.closest('.panel')?.classList.add('hidden');
+  });
+
+  // A blank exact score means "unrated / pending comparison" from now on.
+  const addFilmV21 = addFilm;
+  addFilm = function(title, year, category, star, score, meta = {}) {
+    const blank = score === '' || score == null;
+    return addFilmV21(title, year, category, star, score, blank ? {...meta, keepUnscored:true} : meta);
+  };
+
+  // Comparison overlay.
+  const compareBg = document.createElement('div');
+  compareBg.id = 'compareBg';
+  compareBg.className = 'compare-bg';
+  compareBg.innerHTML = `<div class="compare-sheet"><div class="compare-head"><div class="compare-title" id="compareTitle"></div><div class="compare-sub" id="compareSub"></div><div class="compare-nav"><button class="btn" id="compareUp">もっと上を見る</button><button class="btn" id="compareDown">もっと下を見る</button></div></div><div id="compareBody"></div><button class="btn compare-close" id="compareClose">閉じる</button></div>`;
+  document.body.appendChild(compareBg);
+  let compareCtx = null;
+
+  function starBounds(star) {
+    const s = Number(star);
+    const r = STAR_RANGES[sk(s)];
+    if (r && Number.isFinite(r[0]) && Number.isFinite(r[1])) return [Number(r[0]), Number(r[1])];
+    const map = state.scoreMap?.[sk(s)] || DEFAULT_MAP?.[sk(s)] || {low:0,mid:50,high:100};
+    return [Number(map.low ?? 0), Number(map.high ?? 100)];
+  }
+  function suggestedScore(f) {
+    const existing = effectiveScore(f);
+    if (existing != null && Number.isFinite(Number(existing))) return Number(existing);
+    const [lo, hi] = starBounds(filmStar(f));
+    return Math.max(0, Math.min(100, Math.round((lo + hi) / 2)));
+  }
+  function orderedAtScore(score, exceptId) {
+    const arr = allFilms().filter(f => f.id !== exceptId && Number(effectiveScore(f)) === Number(score));
+    return rankSorted(arr, Number(score));
+  }
+  function scoreBlock(score, candidateId) {
+    const films = orderedAtScore(score, candidateId);
+    const rows = [];
+    for (let i = 0; i <= films.length; i++) {
+      let label = films.length ? (i === 0 ? 'ここに入れる（この点数の先頭）' : i === films.length ? 'ここに入れる（この点数の末尾）' : 'ここに入れる') : 'この点数に入れる';
+      rows.push(`<button class="compare-slot" type="button" data-score="${score}" data-index="${i}">${label}</button>`);
+      if (i < films.length) {
+        const x = films[i];
+        rows.push(`<div class="compare-film"><strong>${esc(displayTitle(x))}</strong><small>${esc(x.year||'')} · ${Number(score)}点</small></div>`);
+      }
+    }
+    return `<section class="compare-score"><div class="compare-score-head"><strong>${score}点</strong><small>${films.length}本</small></div>${rows.join('')}</section>`;
+  }
+  function renderCompare() {
+    if (!compareCtx) return;
+    const f = filmById(compareCtx.id); if (!f) return;
+    const hi = Math.min(100, compareCtx.center + 3), lo = Math.max(0, compareCtx.center - 3);
+    document.getElementById('compareTitle').textContent = displayTitle(f);
+    document.getElementById('compareSub').textContent = `★${filmStar(f)}を目安に${lo}〜${hi}点を表示中。既存作品と比べて、入れたい位置の「ここに入れる」を押すと点数と同点内順位を同時に確定します。`;
+    const blocks = [];
+    for (let s = hi; s >= lo; s--) blocks.push(scoreBlock(s, f.id));
+    const body = document.getElementById('compareBody');
+    body.innerHTML = blocks.join('');
+    body.querySelectorAll('.compare-slot').forEach(b => b.onclick = () => placeCompared(f.id, Number(b.dataset.score), Number(b.dataset.index)));
+    document.getElementById('compareUp').disabled = hi >= 100;
+    document.getElementById('compareDown').disabled = lo <= 0;
+  }
+  function openCompare(id) {
+    const f = filmById(id); if (!f) return;
+    compareCtx = {id, center:suggestedScore(f)};
+    renderCompare();
+    compareBg.classList.add('open');
+    compareBg.querySelector('.compare-sheet').scrollTop = 0;
+  }
+  function closeCompare() { compareBg.classList.remove('open'); compareCtx = null; }
+  function placeCompared(id, score, index) {
+    const f = filmById(id); if (!f) return;
+    for (const k of Object.keys(state.rankOrder || {})) state.rankOrder[k] = (state.rankOrder[k] || []).filter(x => x !== id);
+    state.exactScores[id] = score;
+    const st = scoreToStar(score);
+    state.starOverrides[id] = st;
+    state.assignments[id] = nearestTier(st, score); // legacy-only compatibility
+    const ids = orderedAtScore(score, id).map(x => x.id);
+    ids.splice(Math.max(0, Math.min(ids.length, index)), 0, id);
+    state.rankOrder[String(score)] = ids;
+    save();
+    closeCompare();
+    view.page = 'rank';
+    save();
+    render();
+    setTimeout(() => focusRankCard(id), 80);
+    toast(`${score}点に確定しました`);
+  }
+  function focusRankCard(id) {
+    let card = document.querySelector(`.rank-card[data-id="${encodeURIComponent(id)}"]`);
+    if (!card) {
+      // Filters can hide the just-rated film. Clear only ranking filters so it can be found.
+      const search = document.getElementById('searchRank'); if (search) search.value = '';
+      for (const p of ['genreFilterRank','mediaFilterRank','originFilterRank','formatFilterRank','decadeFilterRank','runtimeFilterRank']) { const e=document.getElementById(p); if(e)e.value=''; }
+      renderRank();
+      card = document.querySelector(`.rank-card[data-id="${encodeURIComponent(id)}"]`);
+    }
+    if (!card) return;
+    card.scrollIntoView({behavior:'smooth', block:'center'});
+    card.classList.add('just-placed');
+    setTimeout(() => card?.classList.remove('just-placed'), 2600);
+  }
+  document.getElementById('compareClose').onclick = closeCompare;
+  compareBg.onclick = e => { if (e.target === compareBg) closeCompare(); };
+  document.getElementById('compareUp').onclick = () => { if(compareCtx){ compareCtx.center=Math.min(100,compareCtx.center+6); renderCompare(); } };
+  document.getElementById('compareDown').onclick = () => { if(compareCtx){ compareCtx.center=Math.max(0,compareCtx.center-6); renderCompare(); } };
+
+  // Editing an already-scored film can also jump straight into comparison mode.
+  const sheetTools = document.querySelector('#sheetBg .tools');
+  if (sheetTools && !document.getElementById('compareCurrent')) {
+    const b = document.createElement('button'); b.id='compareCurrent'; b.className='btn'; b.type='button'; b.textContent='他作品と比較して位置調整';
+    sheetTools.insertBefore(b, sheetTools.firstChild);
+    b.onclick = () => { const id=selectedId; closeSheet(); if(id)openCompare(id); };
+  }
+
+  // Star table-of-contents for quick jumps.
+  const rankRoot = document.getElementById('rankRoot');
+  let jumpBar = document.getElementById('starJumpBar');
+  if (!jumpBar && rankRoot) {
+    jumpBar = document.createElement('nav'); jumpBar.id='starJumpBar'; jumpBar.className='star-jump'; rankRoot.insertAdjacentElement('beforebegin', jumpBar);
+  }
+  function compactStar(s) { return s === .5 ? '½' : (Number.isInteger(s) ? `${s}★` : `${Math.floor(s)}½★`); }
+  function findStarSection(star) {
+    const label = stars(star);
+    return [...document.querySelectorAll('#rankRoot .rank-star')].find(sec => sec.querySelector('.rank-star-head strong')?.textContent?.trim() === label) || null;
+  }
+  function renderJumpBar() {
+    if (!jumpBar) return;
+    const uns = document.querySelector('#rankRoot .uns-panel');
+    jumpBar.innerHTML = `${uns?'<button type="button" class="unrated" data-jump-uns="1">未確定</button>':''}` + STAR_ORDER.map(s => `<button type="button" data-jump-star="${s}">${compactStar(s)}</button>`).join('');
+    jumpBar.querySelectorAll('[data-jump-star]').forEach(b => {
+      const star=Number(b.dataset.jumpStar), target=findStarSection(star); b.disabled=!target;
+      b.onclick=()=>{const t=findStarSection(star);if(t)t.scrollIntoView({behavior:'smooth',block:'start'});};
+    });
+    const ub=jumpBar.querySelector('[data-jump-uns]'); if(ub)ub.onclick=()=>document.querySelector('#rankRoot .uns-panel')?.scrollIntoView({behavior:'smooth',block:'start'});
+    const h=document.querySelector('.top')?.getBoundingClientRect().height||96; jumpBar.style.top=`${Math.round(h)}px`;
+  }
+  window.addEventListener('resize',()=>{if(jumpBar){const h=document.querySelector('.top')?.getBoundingClientRect().height||96;jumpBar.style.top=`${Math.round(h)}px`;}});
+
+  // Continuous drag auto-scroll. Holding near the top/bottom keeps moving the page even without more pointer events.
+  let dragPoint = null, dragRaf = 0;
+  function nearestScoreList(x,y) {
+    if (dragCtx?.ghost) dragCtx.ghost.style.display='none';
+    const el=document.elementFromPoint(x,y);
+    if (dragCtx?.ghost) dragCtx.ghost.style.display='';
+    const direct=el?.closest?.('.score-list'); if(direct&&direct.offsetParent!==null)return direct;
+    let best=null,bestD=Infinity;
+    for(const list of document.querySelectorAll('#rankRoot .score-list')){
+      if(list.offsetParent===null)continue;
+      const r=list.getBoundingClientRect(); if(r.bottom<0||r.top>innerHeight)continue;
+      const dx=x<r.left?r.left-x:x>r.right?x-r.right:0;
+      const dy=y<r.top?r.top-y:y>r.bottom?y-r.bottom:0;
+      const d=dy*4+dx; if(d<bestD){bestD=d;best=list;}
+    }
+    return best;
+  }
+  function placeDragNearest(x,y){
+    if(!dragCtx)return;
+    const list=nearestScoreList(x,y); if(!list)return;
+    document.querySelectorAll('.drop-hot').forEach(e=>e.classList.remove('drop-hot')); list.classList.add('drop-hot');
+    const card=dragCtx.card, others=[...list.querySelectorAll('.rank-card')].filter(c=>c!==card);
+    if(!others.length){list.appendChild(card);return;}
+    let nearest=others[0],best=Infinity;
+    for(const c of others){const r=c.getBoundingClientRect(),cy=r.top+r.height/2,d=Math.abs(y-cy);if(d<best){best=d;nearest=c;}}
+    const r=nearest.getBoundingClientRect(); list.insertBefore(card,y<r.top+r.height/2?nearest:nearest.nextSibling);
+  }
+  function stopDragAuto(){if(dragRaf)cancelAnimationFrame(dragRaf);dragRaf=0;dragPoint=null;}
+  function dragAutoFrame(){
+    dragRaf=0; if(!dragCtx||!dragPoint)return;
+    const y=dragPoint.y, top=(document.querySelector('.top')?.getBoundingClientRect().bottom||90), upper=Math.min(innerHeight*.38,top+150), lower=Math.max(innerHeight*.62,innerHeight-145);
+    let dy=0;
+    if(y<upper){const p=Math.max(0,Math.min(1,(upper-y)/Math.max(70,upper-top+70)));dy=-(5+36*p*p);}
+    else if(y>lower){const p=Math.max(0,Math.min(1,(y-lower)/Math.max(70,innerHeight-lower)));dy=5+36*p*p;}
+    if(dy){window.scrollBy(0,dy);placeDragNearest(dragPoint.x,dragPoint.y);}
+    dragRaf=requestAnimationFrame(dragAutoFrame);
+  }
+  function ensureDragAuto(){if(!dragRaf)dragRaf=requestAnimationFrame(dragAutoFrame);}
+  const startDragV21=startDrag, endDragV21=endDrag, cancelDragV21=cancelDrag;
+  startDrag=function(e){startDragV21(e);if(dragCtx){dragPoint={x:e.clientX,y:e.clientY};ensureDragAuto();}};
+  moveDrag=function(e){if(!dragCtx)return;e.preventDefault();dragPoint={x:e.clientX,y:e.clientY};moveGhost(e);placeDragNearest(e.clientX,e.clientY);ensureDragAuto();};
+  endDrag=function(e){stopDragAuto();endDragV21(e);};
+  cancelDrag=function(){stopDragAuto();cancelDragV21();};
+
+  const renderRankV21 = renderRank;
+  renderRank = function(){
+    renderRankV21();
+    const uns = document.querySelector('#rankRoot .uns-panel');
+    if (uns) {
+      const head=uns.querySelector('.uns-head');
+      if(head){const strong=head.querySelector('strong');if(strong)strong.textContent='未確定';const small=head.querySelector('small');if(small)small.textContent='比較して点数を決める';}
+      uns.querySelectorAll('[data-uns]').forEach(b=>{b.onclick=()=>openCompare(decodeURIComponent(b.dataset.uns));});
+    }
+    renderJumpBar();
+  };
+
+  save(false);
+  render();
+})();
+</script>
+
+<!-- patch-v23.js -->
+<script>
+(() => {
+  // v23: two-stage exact-score placement + optional GitHub live-state sync for GPT.
+  const style = document.createElement('style');
+  style.textContent = `
+    .compare-stage-score{width:100%;text-align:left;border:1px solid var(--line);background:#0b0f14;color:#f5f7fa;border-radius:12px;padding:0;margin:9px 0;overflow:hidden}
+    .compare-stage-score:active{background:#111923}.compare-stage-score-head{display:flex;align-items:center;justify-content:space-between;padding:9px 10px;background:#121923;border-bottom:1px solid var(--line)}
+    .compare-stage-score-head strong{font-size:18px}.compare-stage-score-head small{font-size:9px;color:var(--muted)}
+    .compare-edge{padding:8px 10px;border-top:1px solid rgba(255,255,255,.05)}.compare-edge:first-of-type{border-top:0}.compare-edge span{display:block;font-size:9px;color:var(--muted);margin-bottom:2px}.compare-edge b{font-size:11px}
+    .compare-stage-empty{padding:10px;font-size:10px;color:var(--muted)}.compare-stage-cta{padding:7px 10px;text-align:center;font-size:10px;font-weight:900;color:#a9e8bd;border-top:1px dashed #35513f;background:rgba(67,209,125,.055)}
+    .gpt-sync-grid{display:grid;gap:8px}.gpt-sync-line{display:flex;gap:7px;align-items:center}.gpt-sync-line .field{flex:1;min-width:0}.gpt-sync-note{font-size:10px;line-height:1.55;color:var(--muted)}
+    .gpt-sync-status{font-size:10px;line-height:1.45;color:var(--muted);padding:7px 9px;border:1px solid var(--line);border-radius:9px;background:#0b0f14}.gpt-sync-status.ok{color:#a9e8bd;border-color:#31553d}.gpt-sync-status.bad{color:#ffb5b5;border-color:#613636}
+    .gpt-sync-toggle{display:flex;gap:7px;align-items:center;font-size:11px}
+  `;
+  document.head.appendChild(style);
+
+  const compareBg = document.getElementById('compareBg');
+  const compareBody = document.getElementById('compareBody');
+  const compareTitle = document.getElementById('compareTitle');
+  const compareSub = document.getElementById('compareSub');
+  const compareUp = document.getElementById('compareUp');
+  const compareDown = document.getElementById('compareDown');
+  const compareClose = document.getElementById('compareClose');
+
+  let pendingCompareId = null;
+  let stageCtx = null;
+
+  function orderedAt(score, exceptId) {
+    const arr = allFilms().filter(f => f.id !== exceptId && Number(effectiveScore(f)) === Number(score));
+    return rankSorted(arr, Number(score));
+  }
+  function initialScoreBounds(f) {
+    const star = Number(filmStar(f));
+    const r = STAR_RANGES?.[sk(star)];
+    let lo, hi;
+    if (r && Number.isFinite(Number(r[0])) && Number.isFinite(Number(r[1]))) {
+      lo = Number(r[0]); hi = Number(r[1]);
+    } else {
+      const m = state.scoreMap?.[sk(star)] || DEFAULT_MAP?.[sk(star)] || {low:0, high:100};
+      lo = Number(m.low ?? 0); hi = Number(m.high ?? 100);
+    }
+    const cur = effectiveScore(f);
+    if (cur != null && Number.isFinite(Number(cur))) {
+      lo = Math.min(lo, Number(cur)); hi = Math.max(hi, Number(cur));
+    }
+    return [Math.max(0, lo), Math.min(100, hi)];
+  }
+  function edgeHtml(f, label, score) {
+    if (!f) return '';
+    return `<div class="compare-edge"><span>${label}</span><b>${esc(displayTitle(f))}</b><span>${esc(f.year||'')} · ${score}点</span></div>`;
+  }
+  function scoreChoiceHtml(score, id) {
+    const arr = orderedAt(score, id);
+    let inside = '';
+    if (!arr.length) {
+      inside = `<div class="compare-stage-empty">この点数の作品はまだありません</div>`;
+    } else if (arr.length === 1) {
+      inside = edgeHtml(arr[0], 'この点数の作品', score);
+    } else {
+      inside = edgeHtml(arr[0], 'いちばん上', score) + edgeHtml(arr[arr.length-1], 'いちばん下', score);
+    }
+    return `<button type="button" class="compare-stage-score" data-stage-score="${score}">
+      <div class="compare-stage-score-head"><strong>${score}点</strong><small>${arr.length}本</small></div>
+      ${inside}<div class="compare-stage-cta">${score}点を選ぶ</div>
+    </button>`;
+  }
+  function renderStageOne() {
+    if (!stageCtx) return;
+    const f = filmById(stageCtx.id); if (!f) return;
+    stageCtx.stage = 'score';
+    compareTitle.textContent = `${displayTitle(f)} — 点数を選ぶ`;
+    compareSub.textContent = 'まず各点の「いちばん上」と「いちばん下」だけ表示しています。近い点数を選ぶと、次にその点数の中だけで正確な位置を決めます。';
+    const blocks = [];
+    for (let s = stageCtx.hi; s >= stageCtx.lo; s--) blocks.push(scoreChoiceHtml(s, f.id));
+    compareBody.innerHTML = blocks.join('');
+    compareBody.querySelectorAll('[data-stage-score]').forEach(b => {
+      b.onclick = () => renderStageTwo(Number(b.dataset.stageScore));
+    });
+    compareUp.style.display = '';
+    compareDown.style.display = '';
+    compareUp.textContent = 'さらに上の点数';
+    compareDown.textContent = 'さらに下の点数';
+    compareUp.disabled = stageCtx.hi >= 100;
+    compareDown.disabled = stageCtx.lo <= 0;
+  }
+  function stageTwoRows(score, id) {
+    const arr = orderedAt(score, id), out = [];
+    for (let i = 0; i <= arr.length; i++) {
+      const label = !arr.length ? 'この点数に入れる' :
+        i === 0 ? 'ここに入れる（先頭）' :
+        i === arr.length ? 'ここに入れる（末尾）' : 'ここに入れる';
+      out.push(`<button class="compare-slot" type="button" data-final-score="${score}" data-final-index="${i}">${label}</button>`);
+      if (i < arr.length) {
+        const x = arr[i];
+        out.push(`<div class="compare-film"><strong>${esc(displayTitle(x))}</strong><small>${esc(x.year||'')} · ${score}点</small></div>`);
+      }
+    }
+    return out.join('');
+  }
+  function renderStageTwo(score) {
+    if (!stageCtx) return;
+    const f = filmById(stageCtx.id); if (!f) return;
+    stageCtx.stage = 'position'; stageCtx.score = score;
+    compareTitle.textContent = `${displayTitle(f)} — ${score}点のどこに入れる？`;
+    compareSub.textContent = '次はこの点数の作品だけを全部表示しています。入れたい境目を選ぶと、点数と同点内順位が確定します。';
+    compareBody.innerHTML = `<section class="compare-score"><div class="compare-score-head"><strong>${score}点</strong><small>${orderedAt(score, f.id).length}本</small></div>${stageTwoRows(score, f.id)}</section>`;
+    compareBody.querySelectorAll('[data-final-score]').forEach(b => {
+      b.onclick = () => placeFinal(f.id, Number(b.dataset.finalScore), Number(b.dataset.finalIndex));
+    });
+    compareUp.style.display = '';
+    compareDown.style.display = 'none';
+    compareUp.textContent = '← 点数選択に戻る';
+    compareUp.disabled = false;
+  }
+  function focusPlaced(id) {
+    let card = document.querySelector(`.rank-card[data-id="${encodeURIComponent(id)}"]`);
+    if (!card) {
+      const search = document.getElementById('searchRank'); if (search) search.value = '';
+      for (const p of ['genreFilterRank','mediaFilterRank','originFilterRank','formatFilterRank','decadeFilterRank','runtimeFilterRank']) {
+        const e = document.getElementById(p); if (e) e.value = '';
+      }
+      renderRank();
+      card = document.querySelector(`.rank-card[data-id="${encodeURIComponent(id)}"]`);
+    }
+    if (!card) return;
+    card.scrollIntoView({behavior:'smooth', block:'center'});
+    card.classList.add('just-placed');
+    setTimeout(() => card?.classList.remove('just-placed'), 2600);
+  }
+  function placeFinal(id, score, index) {
+    const f = filmById(id); if (!f) return;
+    for (const k of Object.keys(state.rankOrder || {})) state.rankOrder[k] = (state.rankOrder[k] || []).filter(x => x !== id);
+    state.exactScores[id] = score;
+    const st = scoreToStar(score);
+    state.starOverrides[id] = st;
+    state.assignments[id] = nearestTier(st, score);
+    const ids = orderedAt(score, id).map(x => x.id);
+    ids.splice(Math.max(0, Math.min(ids.length, index)), 0, id);
+    state.rankOrder[String(score)] = ids;
+    save();
+    compareClose?.click();
+    view.page = 'rank';
+    save();
+    render();
+    setTimeout(() => focusPlaced(id), 80);
+    toast(`${score}点に確定しました`);
+  }
+  function startTwoStage(id) {
+    const f = filmById(id); if (!f) return;
+    const [lo, hi] = initialScoreBounds(f);
+    stageCtx = {id, lo, hi, stage:'score', score:null};
+    renderStageOne();
+    compareBg?.querySelector('.compare-sheet')?.scrollTo({top:0});
+  }
+
+  document.addEventListener('click', e => {
+    const uns = e.target.closest?.('[data-uns]');
+    if (uns) pendingCompareId = decodeURIComponent(uns.dataset.uns);
+    if (e.target.closest?.('#compareCurrent')) pendingCompareId = selectedId;
+  }, true);
+
+  if (compareBg) {
+    new MutationObserver(() => {
+      if (compareBg.classList.contains('open')) {
+        if (pendingCompareId) {
+          const id = pendingCompareId; pendingCompareId = null;
+          setTimeout(() => startTwoStage(id), 0);
+        }
+      } else {
+        stageCtx = null;
+      }
+    }).observe(compareBg, {attributes:true, attributeFilter:['class']});
+  }
+  if (compareUp) compareUp.onclick = () => {
+    if (!stageCtx) return;
+    if (stageCtx.stage === 'position') {
+      renderStageOne();
+      compareBg?.querySelector('.compare-sheet')?.scrollTo({top:0, behavior:'smooth'});
+    } else {
+      stageCtx.hi = Math.min(100, stageCtx.hi + 5);
+      renderStageOne();
+    }
+  };
+  if (compareDown) compareDown.onclick = () => {
+    if (!stageCtx || stageCtx.stage !== 'score') return;
+    stageCtx.lo = Math.max(0, stageCtx.lo - 5);
+    renderStageOne();
+  };
+
+  const REPO = 'gjbkic/movie-ratings';
+  const LIVE_PATH = 'live-state.json';
+  const TOKEN_KEY = 'movie30_github_sync_token_v1';
+  const SETTINGS_KEY = 'movie30_github_sync_settings_v1';
+  const LAST_KEY = 'movie30_github_sync_last_v1';
+  let syncTimer = 0, syncBusy = false;
+
+  function getToken(){ try{return localStorage.getItem(TOKEN_KEY)||''}catch(_){return ''} }
+  function getSyncSettings(){ try{return {auto:true,...(JSON.parse(localStorage.getItem(SETTINGS_KEY)||'null')||{})}}catch(_){return {auto:true}} }
+  function setSyncSettings(v){ try{localStorage.setItem(SETTINGS_KEY,JSON.stringify(v))}catch(_){} }
+  function getLastSync(){ try{return JSON.parse(localStorage.getItem(LAST_KEY)||'null')||{}}catch(_){return {}} }
+  function setLastSync(v){ try{localStorage.setItem(LAST_KEY,JSON.stringify(v))}catch(_){} }
+  function syncHeaders(token){ return {Accept:'application/vnd.github+json',Authorization:`Bearer ${token}`,'X-GitHub-Api-Version':'2022-11-28'}; }
+  function utf8Base64(text){
+    const bytes = new TextEncoder().encode(text);
+    let bin = '';
+    for(let i=0;i<bytes.length;i+=0x8000) bin += String.fromCharCode(...bytes.subarray(i, i+0x8000));
+    return btoa(bin);
+  }
+  function liveFilmRow(f, score, overallRank, sameScoreRank){
+    const x = titleInfo(f);
+    return {
+      id:f.id,
+      title:displayTitle(f),
+      originalTitle:x.originalTitle||'',
+      englishTitle:x.englishTitle||'',
+      year:f.year||'',
+      score:score==null?null:Number(score),
+      star:Number(filmStar(f)),
+      overallRank:overallRank||null,
+      sameScoreRank:sameScoreRank||null,
+      category:filmCategory(f)||'',
+      mediaType:state.mediaTypeOverrides?.[f.id]||f.mediaType||'movie',
+      genre:state.genreOverrides?.[f.id]||'',
+      origin:state.originOverrides?.[f.id]||'',
+      format:state.formatOverrides?.[f.id]||'',
+      runtime:state.runtimeOverrides?.[f.id]||null,
+      exact:Object.prototype.hasOwnProperty.call(state.exactScores||{},f.id)
+    };
+  }
+  function makeLivePayload(){
+    const films = allFilms();
+    const scored = new Map(), unrated = [];
+    for(const f of films){
+      const sc = effectiveScore(f);
+      if(sc==null || !Number.isFinite(Number(sc))) unrated.push(f);
+      else {
+        const k=String(Number(sc));
+        if(!scored.has(k))scored.set(k,[]);
+        scored.get(k).push(f);
+      }
+    }
+    const ranked=[]; let overall=0;
+    const scores=[...scored.keys()].map(Number).sort((a,b)=>b-a);
+    for(const score of scores){
+      const arr=rankSorted(scored.get(String(score))||[],score);
+      arr.forEach((f,i)=>ranked.push(liveFilmRow(f,score,++overall,i+1)));
+    }
+    return {
+      app:'movie30-live',
+      schema:1,
+      sourceUpdatedAt:Number(state.updatedAt||0),
+      sourceUpdatedIso:state.updatedAt?new Date(Number(state.updatedAt)).toISOString():null,
+      ranked,
+      unrated:unrated.map(f=>liveFilmRow(f,null,null,null)),
+      state:{
+        exactScores:state.exactScores||{},
+        rankOrder:state.rankOrder||{},
+        customFilms:state.customFilms||[],
+        starOverrides:state.starOverrides||{},
+        titleOverrides:state.titleOverrides||{},
+        categoryOverrides:state.categoryOverrides||{},
+        mediaTypeOverrides:state.mediaTypeOverrides||{},
+        genreOverrides:state.genreOverrides||{},
+        originOverrides:state.originOverrides||{},
+        formatOverrides:state.formatOverrides||{},
+        runtimeOverrides:state.runtimeOverrides||{}
+      }
+    };
+  }
+
+  const dataPage = document.getElementById('page-data');
+  let syncStatus = null, tokenInput = null, autoInput = null;
+  if (dataPage && !document.getElementById('gptSyncPanel')) {
+    const panel=document.createElement('div');
+    panel.id='gptSyncPanel'; panel.className='panel';
+    panel.innerHTML=`<h2>GPT用 最新ランキング同期</h2>
+      <div class="gpt-sync-grid">
+        <div class="gpt-sync-note">一度設定すると、採点や順位変更のあとに <b>live-state.json</b> を自動更新します。以後このチャットで「次なに見る？」のように言えば、GPT側からGitHubの最新データを取得できます。</div>
+        <div class="gpt-sync-note">GitHubの <b>fine-grained personal access token</b> をこのリポジトリだけに限定し、Contents: Read and write を付けて使います。トークンはこの端末のブラウザ内だけに保存され、バックアップやGitHubには書き出しません。</div>
+        <div class="gpt-sync-note" style="color:#ffd58a">※ このリポジトリ自体が公開なので、同期した採点・順位データも公開されます。</div>
+        <div class="gpt-sync-line"><input class="field" id="gptSyncToken" type="password" autocomplete="off" placeholder="github_pat_…"><button class="btn" id="gptSyncSave">設定</button></div>
+        <label class="gpt-sync-toggle"><input id="gptSyncAuto" type="checkbox"> 変更後に自動同期</label>
+        <div class="tools"><button class="btn" id="gptSyncNow">今すぐ同期</button><button class="btn" id="gptSyncClear">トークン削除</button></div>
+        <div class="gpt-sync-status" id="gptSyncStatus"></div>
+      </div>`;
+    const backup=[...dataPage.querySelectorAll('.panel')].find(p=>p.textContent.includes('バックアップ・書き出し'));
+    if(backup)dataPage.insertBefore(panel,backup); else dataPage.appendChild(panel);
+    syncStatus=panel.querySelector('#gptSyncStatus');
+    tokenInput=panel.querySelector('#gptSyncToken');
+    autoInput=panel.querySelector('#gptSyncAuto');
+    const settings=getSyncSettings();
+    autoInput.checked=settings.auto!==false;
+    tokenInput.value=getToken();
+    panel.querySelector('#gptSyncSave').onclick=async()=>{
+      const v=tokenInput.value.trim();
+      if(!v){ setSyncUi('トークンを入力してください。','bad'); return; }
+      try{localStorage.setItem(TOKEN_KEY,v)}catch(_){}
+      setSyncSettings({auto:autoInput.checked});
+      setSyncUi('設定しました。最初の同期を実行します…');
+      await syncToGithub(true);
+    };
+    autoInput.onchange=()=>{setSyncSettings({auto:autoInput.checked}); if(autoInput.checked)scheduleSync(200);};
+    panel.querySelector('#gptSyncNow').onclick=()=>syncToGithub(true);
+    panel.querySelector('#gptSyncClear').onclick=()=>{
+      try{localStorage.removeItem(TOKEN_KEY);localStorage.removeItem(LAST_KEY)}catch(_){}
+      tokenInput.value=''; setSyncUi('トークンを削除しました。');
+    };
+  }
+  function setSyncUi(msg,kind=''){
+    if(!syncStatus)return;
+    syncStatus.className='gpt-sync-status'+(kind?' '+kind:'');
+    syncStatus.textContent=msg;
+  }
+  function refreshSyncUi(){
+    const token=getToken(), last=getLastSync();
+    if(!token){setSyncUi('未設定。同期を使う場合だけトークンを設定してください。');return;}
+    if(last.at){
+      const d=new Date(last.at);
+      setSyncUi(`設定済み · 最終同期 ${d.toLocaleString('ja-JP')}`,'ok');
+    }else setSyncUi('トークン設定済み。まだ同期していません。');
+  }
+  async function remoteSha(token){
+    const url=`https://api.github.com/repos/${REPO}/contents/${LIVE_PATH}`;
+    const r=await fetch(url,{headers:syncHeaders(token),cache:'no-store'});
+    if(r.status===404)return null;
+    if(!r.ok)throw new Error(`GitHub確認に失敗 (${r.status})`);
+    return (await r.json()).sha||null;
+  }
+  async function syncToGithub(manual=false){
+    if(syncBusy)return;
+    const token=getToken().trim();
+    if(!token){if(manual)setSyncUi('トークンが未設定です。','bad');return;}
+    const last=getLastSync();
+    const sourceUpdatedAt=Number(state.updatedAt||0);
+    if(!manual && Number(last.sourceUpdatedAt||0)===sourceUpdatedAt)return;
+    syncBusy=true; if(syncTimer){clearTimeout(syncTimer);syncTimer=0;}
+    setSyncUi('GitHubへ同期中…');
+    try{
+      const payload=makeLivePayload(), text=JSON.stringify(payload,null,2), content=utf8Base64(text);
+      let sha=await remoteSha(token);
+      const body={message:`Sync live movie ratings (${sourceUpdatedAt||Date.now()})`,content};
+      if(sha)body.sha=sha;
+      const url=`https://api.github.com/repos/${REPO}/contents/${LIVE_PATH}`;
+      let r=await fetch(url,{method:'PUT',headers:{...syncHeaders(token),'Content-Type':'application/json'},body:JSON.stringify(body)});
+      if(r.status===409){
+        sha=await remoteSha(token);
+        if(sha)body.sha=sha; else delete body.sha;
+        r=await fetch(url,{method:'PUT',headers:{...syncHeaders(token),'Content-Type':'application/json'},body:JSON.stringify(body)});
+      }
+      if(!r.ok){
+        let detail=''; try{detail=(await r.json())?.message||''}catch(_){}
+        throw new Error(`同期失敗 (${r.status})${detail?': '+detail:''}`);
+      }
+      setLastSync({at:Date.now(),sourceUpdatedAt});
+      refreshSyncUi();
+    }catch(e){
+      setSyncUi(e?.message||String(e),'bad');
+    }finally{syncBusy=false;}
+  }
+  function scheduleSync(delay=2200){
+    const settings=getSyncSettings();
+    if(!settings.auto||!getToken())return;
+    if(syncTimer)clearTimeout(syncTimer);
+    syncTimer=setTimeout(()=>{syncTimer=0;syncToGithub(false);},delay);
+  }
+  const saveV22=save;
+  save=function(...args){
+    const out=saveV22(...args);
+    scheduleSync();
+    return out;
+  };
+
+  refreshSyncUi();
+  scheduleSync(1000);
+})();
+</script>
+
+<!-- patch-v24.js -->
+<script>
+(() => {
+  const EXTRA_GENRES_V24 = ["青春・若者","子供向け"];
+
+  function rawGenresV24(f){
+    const g = state.genreOverrides?.[f.id];
+    return Array.isArray(g) ? [...new Set(g)] : [];
+  }
+  function setRawGenresV24(id, genres){
+    state.genreOverrides[id] = [...new Set((genres || []).filter(Boolean))];
+    save();
+  }
+  function appendV24Chips(id, selected=[]){
+    const wrap=document.getElementById(id); if(!wrap)return;
+    const picker=wrap.querySelector('.genre-picker')||wrap;
+    const chosen=new Set(selected);
+    for(const g of EXTRA_GENRES_V24){
+      if(picker.querySelector(`[data-genre="${g}"]`))continue;
+      const b=document.createElement('button');
+      b.type='button'; b.className='genre-chip'+(chosen.has(g)?' on':''); b.dataset.genre=g; b.textContent=g;
+      b.onclick=()=>b.classList.toggle('on');
+      picker.appendChild(b);
+    }
+  }
+
+  appendV24Chips('newGenrePicker');
+  appendV24Chips('qGenrePicker');
+
+  const openSheetV23=openSheet;
+  openSheet=function(id){
+    openSheetV23(id);
+    const f=filmById(id); if(!f)return;
+    const wrap=document.getElementById('editGenrePicker'); if(!wrap)return;
+    appendV24Chips('editGenrePicker', rawGenresV24(f));
+    const selected=new Set(rawGenresV24(f));
+    wrap.querySelectorAll('.genre-chip').forEach(b=>{
+      const g=b.dataset.genre||b.textContent.trim();
+      b.classList.toggle('on',selected.has(g));
+      b.onclick=()=>{
+        if(selected.has(g))selected.delete(g); else selected.add(g);
+        b.classList.toggle('on',selected.has(g));
+        setRawGenresV24(f.id,[...selected]);
+        render();
+      };
+    });
+  };
+
+  for(const id of ['genreFilterRank','genreFilterClassify']){
+    const s=document.getElementById(id); if(!s)continue;
+    for(const g of EXTRA_GENRES_V24) if(![...s.options].some(o=>o.value===g)) s.add(new Option(g,g));
+  }
+
+  function filterExtra(rootSelector,cardSelector,sectionSelector,value){
+    if(!EXTRA_GENRES_V24.includes(value))return;
+    document.querySelectorAll(`${rootSelector} ${cardSelector}`).forEach(card=>{
+      const f=filmById(decodeURIComponent(card.dataset.id||''));
+      if(f&&!rawGenresV24(f).includes(value))card.remove();
+    });
+    document.querySelectorAll(`${rootSelector} ${sectionSelector}`).forEach(sec=>{if(!sec.querySelector(cardSelector))sec.style.display='none'});
+  }
+
+  const renderRankV23=renderRank;
+  renderRank=function(){
+    const s=document.getElementById('genreFilterRank'),v=s?.value||'';
+    if(s&&EXTRA_GENRES_V24.includes(v))s.value='';
+    renderRankV23();
+    if(s)s.value=v;
+    filterExtra('#rankRoot','.rank-card','.rank-star',v);
+    if(EXTRA_GENRES_V24.includes(v))document.querySelectorAll('#rankRoot .score-bin').forEach(bin=>{if(!bin.querySelector('.rank-card'))bin.style.display='none'});
+  };
+  const renderClassifyV23=renderClassify;
+  renderClassify=function(){
+    const s=document.getElementById('genreFilterClassify'),v=s?.value||'';
+    if(s&&EXTRA_GENRES_V24.includes(v))s.value='';
+    renderClassifyV23();
+    if(s)s.value=v;
+    filterExtra('#classifyRoot','.card','.section',v);
+  };
+  const rf=document.getElementById('genreFilterRank'); if(rf)rf.onchange=renderRank;
+  const cf=document.getElementById('genreFilterClassify'); if(cf)cf.onchange=renderClassify;
+
+  render();
+})();
+
+</script>
+
+<!-- patch-v25.js -->
+<script>
+(() => {
+  const EXTRA_GENRES_V25 = ["差別・人権","哲学・思想","心理・内面","社会問題・生活"];
+  const LEGACY_PHILOSOPHY_V25 = "精神・哲学";
+
+  function rawGenresV25(f){
+    const g = state.genreOverrides?.[f.id];
+    return Array.isArray(g) ? [...new Set(g)] : [];
+  }
+  function setRawGenresV25(id, genres){
+    state.genreOverrides[id] = [...new Set((genres || []).filter(Boolean))];
+    save();
+  }
+
+  // One-way migration requested by the user: every existing "精神・哲学" tag becomes "哲学・思想".
+  // "心理・内面" starts as a separate empty tag and can be assigned independently afterwards.
+  let migratedV25=false;
+  state.genreOverrides=state.genreOverrides||{};
+  for(const f of allFilms()){
+    const gs=rawGenresV25(f);
+    if(!gs.includes(LEGACY_PHILOSOPHY_V25))continue;
+    state.genreOverrides[f.id]=[...new Set(gs.map(g=>g===LEGACY_PHILOSOPHY_V25?"哲学・思想":g))];
+    migratedV25=true;
+  }
+  if(migratedV25)save(false);
+
+  function appendV25Chips(id, selected=[]){
+    const wrap=document.getElementById(id); if(!wrap)return;
+    // Never show the retired combined tag again.
+    wrap.querySelectorAll(`[data-genre="${LEGACY_PHILOSOPHY_V25}"]`).forEach(x=>x.remove());
+    const picker=wrap.querySelector('.genre-picker')||wrap;
+    const chosen=new Set(selected.map(g=>g===LEGACY_PHILOSOPHY_V25?"哲学・思想":g));
+    for(const g of EXTRA_GENRES_V25){
+      if(picker.querySelector(`[data-genre="${g}"]`))continue;
+      const b=document.createElement('button');
+      b.type='button'; b.className='genre-chip'+(chosen.has(g)?' on':''); b.dataset.genre=g; b.textContent=g;
+      b.onclick=()=>b.classList.toggle('on');
+      picker.appendChild(b);
+    }
+  }
+
+  appendV25Chips('newGenrePicker');
+  appendV25Chips('qGenrePicker');
+
+  const openSheetV24=openSheet;
+  openSheet=function(id){
+    openSheetV24(id);
+    const f=filmById(id); if(!f)return;
+    const wrap=document.getElementById('editGenrePicker'); if(!wrap)return;
+    appendV25Chips('editGenrePicker', rawGenresV25(f));
+    const selected=new Set(rawGenresV25(f));
+    wrap.querySelectorAll('.genre-chip').forEach(b=>{
+      const g=b.dataset.genre||b.textContent.trim();
+      b.classList.toggle('on',selected.has(g));
+      b.onclick=()=>{
+        if(selected.has(g))selected.delete(g); else selected.add(g);
+        b.classList.toggle('on',selected.has(g));
+        setRawGenresV25(f.id,[...selected]);
+        render();
+      };
+    });
+  };
+
+  for(const id of ['genreFilterRank','genreFilterClassify']){
+    const s=document.getElementById(id); if(!s)continue;
+    [...s.options].filter(o=>o.value===LEGACY_PHILOSOPHY_V25).forEach(o=>o.remove());
+    for(const g of EXTRA_GENRES_V25) if(![...s.options].some(o=>o.value===g)) s.add(new Option(g,g));
+  }
+
+  function filterExtraV25(rootSelector,cardSelector,sectionSelector,value){
+    if(!EXTRA_GENRES_V25.includes(value))return;
+    document.querySelectorAll(`${rootSelector} ${cardSelector}`).forEach(card=>{
+      const f=filmById(decodeURIComponent(card.dataset.id||''));
+      if(f&&!rawGenresV25(f).includes(value))card.remove();
+    });
+    document.querySelectorAll(`${rootSelector} ${sectionSelector}`).forEach(sec=>{if(!sec.querySelector(cardSelector))sec.style.display='none'});
+  }
+
+  const renderRankV24=renderRank;
+  renderRank=function(){
+    const s=document.getElementById('genreFilterRank'),v=s?.value||'';
+    if(s&&EXTRA_GENRES_V25.includes(v))s.value='';
+    renderRankV24();
+    if(s)s.value=v;
+    filterExtraV25('#rankRoot','.rank-card','.rank-star',v);
+    if(EXTRA_GENRES_V25.includes(v))document.querySelectorAll('#rankRoot .score-bin').forEach(bin=>{if(!bin.querySelector('.rank-card'))bin.style.display='none'});
+  };
+  const renderClassifyV24=renderClassify;
+  renderClassify=function(){
+    const s=document.getElementById('genreFilterClassify'),v=s?.value||'';
+    if(s&&EXTRA_GENRES_V25.includes(v))s.value='';
+    renderClassifyV24();
+    if(s)s.value=v;
+    filterExtraV25('#classifyRoot','.card','.section',v);
+  };
+  const rf=document.getElementById('genreFilterRank'); if(rf)rf.onchange=renderRank;
+  const cf=document.getElementById('genreFilterClassify'); if(cf)cf.onchange=renderClassify;
+
+  render();
+})();
+
+</script>
+
+<!-- patch-v26.js -->
+<script>
+(() => {
+  // v26: manual Letterboxd sync is server-verified through GitHub Actions when the saved PAT is available.
+  const GH_OWNER='gjbkic', GH_REPO='movie-ratings', GH_BRANCH='main';
+  const GH_TOKEN_KEY='movie30_gpt_sync_token_v1';
+  const TRIGGER_PATH='letterboxd-sync-trigger.txt';
+  const RESULT_PATH='letterboxd-sync-result.json';
+  const RSS_PATH='letterboxd-gjbkic.xml';
+
+  const sleep = ms => new Promise(r => setTimeout(r, ms));
+  function ghToken(){ try{return localStorage.getItem(GH_TOKEN_KEY)||''}catch(_){return ''} }
+  function decodeB64Utf8(b64){
+    const bin=atob(String(b64||'').replace(/\s/g,''));
+    const bytes=new Uint8Array(bin.length);
+    for(let i=0;i<bin.length;i++)bytes[i]=bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  function encodeB64Utf8(text){
+    const bytes=new TextEncoder().encode(String(text||''));
+    let bin='';
+    for(let i=0;i<bytes.length;i+=0x8000)bin+=String.fromCharCode(...bytes.subarray(i,i+0x8000));
+    return btoa(bin);
+  }
+  async function gh(path,opt={}){
+    const token=ghToken();
+    if(!token)throw new Error('GitHub同期トークンがありません');
+    const r=await fetch(`https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${path}`,{
+      ...opt,
+      cache:'no-store',
+      headers:{
+        'Accept':'application/vnd.github+json',
+        'Authorization':`Bearer ${token}`,
+        'X-GitHub-Api-Version':'2022-11-28',
+        ...(opt.headers||{})
+      }
+    });
+    if(!r.ok){let msg=`GitHub HTTP ${r.status}`;try{const j=await r.json();if(j?.message)msg+=': '+j.message}catch(_){}throw new Error(msg)}
+    return await r.json();
+  }
+  async function ghText(path){
+    const j=await gh(path);
+    return {text:decodeB64Utf8(j.content||''),sha:j.sha||''};
+  }
+  async function putTrigger(value){
+    let cur=await ghText(TRIGGER_PATH);
+    const body={message:'Trigger Letterboxd RSS refresh',content:encodeB64Utf8(value+'\n'),branch:GH_BRANCH,sha:cur.sha};
+    try{
+      return await gh(TRIGGER_PATH,{method:'PUT',body:JSON.stringify(body),headers:{'Content-Type':'application/json'}});
+    }catch(e){
+      // One retry protects against a simultaneous live-state commit / stale blob SHA.
+      cur=await ghText(TRIGGER_PATH);
+      body.sha=cur.sha;
+      return await gh(TRIGGER_PATH,{method:'PUT',body:JSON.stringify(body),headers:{'Content-Type':'application/json'}});
+    }
+  }
+  async function serverFetchRss(){
+    const trigger=`movie30-${Date.now()}-${Math.random().toString(36).slice(2,8)}`;
+    await putTrigger(trigger);
+    const started=Date.now();
+    let result=null;
+    while(Date.now()-started<70000){
+      await sleep(2200);
+      try{
+        const r=JSON.parse((await ghText(RESULT_PATH)).text);
+        if(r?.trigger===trigger){ result=r; break; }
+      }catch(_){}
+    }
+    if(!result)throw new Error('サーバー側のLetterboxd確認が70秒以内に完了しませんでした');
+    if(result.status!=='ok')throw new Error(result.error||'サーバー側でLetterboxd RSSを取得できませんでした');
+    const xml=(await ghText(RSS_PATH)).text;
+    if(!/<(?:rss|item)[\s>]/i.test(xml))throw new Error('取得したRSSが不正です');
+    return {xml,result};
+  }
+
+  async function applyRss(xml){
+    const items=parseLbRss(xml);
+    let added=0,updated=0,skipped=0;
+    const seen=new Set();
+    for(const raw of items){
+      const sig=(raw.tmdbId||normKey(raw.title)+raw.year);
+      if(seen.has(sig))continue;
+      seen.add(sig);
+      const rating=Number(raw.rating);
+      if(!Number.isFinite(rating)||rating<.5){skipped++;continue}
+      const existing=findExistingFilm(raw);
+      if(existing){
+        if(filmStar(existing)!==rating){state.starOverrides[existing.id]=rating;updated++}
+        if(raw.tmdbId&&!titleInfo(existing).tmdbId)state.titleOverrides[existing.id]={...(state.titleOverrides[existing.id]||{}),tmdbId:Number(raw.tmdbId)};
+        continue;
+      }
+      const meta=await enrichFromTmdb({...raw,tmdbId:raw.tmdbId?Number(raw.tmdbId):null,englishTitle:raw.title});
+      if(addLbFilm(meta))added++;
+    }
+    save();render();
+    return {items,added,updated,skipped};
+  }
+
+  const proxyFetchV20=fetchLbRss;
+  syncLetterboxd=async function(silent=false){
+    if(silent)return;
+    const st=getLbSettings(),username=(document.getElementById('lbUsername')?.value||st.username||'gjbkic').trim();
+    if(!username)return;
+    saveLbSettings({username,auto:false});
+    const btn=document.getElementById('syncLetterboxd');
+    const old=btn?.textContent||'今すぐ同期';
+    if(btn){btn.disabled=true;btn.textContent='確認中…'}
+    let verified=null,source='';
+    try{
+      let xml='';
+      if(username.toLowerCase()==='gjbkic'&&ghToken()){
+        setLbStatus('GitHubサーバーからLetterboxdを実取得しています…（通常10〜30秒）');
+        try{
+          const z=await serverFetchRss(); xml=z.xml; verified=z.result; source='GitHub実取得';
+        }catch(serverErr){
+          setLbStatus('サーバー確認に失敗したため予備経路を確認中…');
+          xml=await proxyFetchV20(username); source='予備経路';
+          window.__movie30LbServerError=serverErr?.message||String(serverErr);
+        }
+      }else{
+        setLbStatus('Letterboxd RSSを確認中…');
+        xml=await proxyFetchV20(username); source='予備経路';
+      }
+      const z=await applyRss(xml);
+      const parsedLatest=z.items[0]||{};
+      const count=verified?.itemCount??z.items.length;
+      const latestTitle=verified?.latestTitle||parsedLatest.title||'';
+      const latestDate=verified?.latestWatchedDate||parsedLatest.watchedDate||'';
+      let msg=`同期完了：新規 ${z.added}本${z.updated?`／★更新 ${z.updated}本`:''}${z.skipped?`／未評価 ${z.skipped}件`:''}`;
+      msg+=` · ${source}でRSS ${count}件を確認`;
+      if(latestTitle)msg+=` · 最新「${latestTitle}」${latestDate?` (${latestDate})`:''}`;
+      if(source==='予備経路'&&window.__movie30LbServerError)msg+=` · サーバー確認失敗: ${window.__movie30LbServerError}`;
+      setLbStatus(msg,source==='GitHub実取得'?'ok':'');
+    }catch(e){
+      setLbStatus('同期できませんでした：'+(e?.message||String(e)),'bad');
+    }finally{
+      if(btn){btn.disabled=false;btn.textContent=old}
+    }
+  };
+
+  const btn=document.getElementById('syncLetterboxd');
+  if(btn)btn.onclick=()=>syncLetterboxd(false);
+  const panel=btn?.closest('.panel');
+  if(panel){
+    const tips=panel.querySelectorAll('.tip');
+    if(tips[0])tips[0].textContent='「今すぐ同期」でLetterboxdを実際に確認します。GitHub同期トークン設定済みならサーバー側でRSSを取り直し、取得件数・最新作品まで表示して確認します。';
+  }
+})();
+
+</script>
+
+<!-- patch-v27.js -->
+<script>
+(() => {
+  const EXTRA_GENRES_V27 = [
+    "世界観","青春・若者","子供向け","差別・人権","哲学・思想","心理・内面","社会問題・生活",
+    "スポーツ","胸糞","感動","切ない","どんでん返し"
+  ];
+  const EXTRA_SET_V27 = new Set(EXTRA_GENRES_V27);
+  const LEGACY_V27='精神・哲学';
+
+  function rawGenresV27(f){
+    const g=state.genreOverrides?.[f.id];
+    return Array.isArray(g)?[...new Set(g)]:[];
+  }
+  function setGenresPreserveV27(id, genres){
+    state.genreOverrides[id]=[...new Set((genres||[]).filter(Boolean).map(g=>g===LEGACY_V27?'哲学・思想':g))];
+  }
+  function genreOptionsV27(wrap){
+    if(!wrap)return null;
+    const rows=[...wrap.querySelectorAll('.struct-row')];
+    const row=rows.find(r=>(r.querySelector('.struct-label')?.textContent||'').includes('ジャンル')) || rows[rows.length-1];
+    return row?.querySelector('.struct-options') || wrap;
+  }
+  function placeWorldviewV27(host,b){
+    if(!host||!b)return;
+    const fantasy=host.querySelector('.struct-chip[data-struct-value="ファンタジー"]');
+    const adventure=host.querySelector('.struct-chip[data-struct-value="アドベンチャー"]');
+    if(fantasy){
+      host.insertBefore(b,fantasy.nextSibling);
+    }else if(adventure){
+      host.insertBefore(b,adventure);
+    }else if(b.parentElement!==host){
+      host.appendChild(b);
+    }
+  }
+  function ensureExtraChipsV27(id, selected=[]){
+    const wrap=document.getElementById(id); if(!wrap)return;
+    wrap.querySelectorAll(`[data-genre="${LEGACY_V27}"]`).forEach(x=>x.remove());
+    const host=genreOptionsV27(wrap), chosen=new Set((selected||[]).map(g=>g===LEGACY_V27?'哲学・思想':g));
+    // Move chips created by older patches into the actual genre row and normalize their appearance.
+    for(const old of [...wrap.querySelectorAll('.genre-chip')]){
+      old.classList.add('struct-chip');
+      if(host && old.parentElement!==host)host.appendChild(old);
+    }
+    for(const g of EXTRA_GENRES_V27){
+      let b=wrap.querySelector(`.genre-chip[data-genre="${g}"]`);
+      if(!b){
+        b=document.createElement('button');
+        b.type='button'; b.className='struct-chip genre-chip'; b.dataset.genre=g; b.textContent=g;
+        host?.appendChild(b);
+      }
+      if(g==='世界観') placeWorldviewV27(host,b);
+      b.classList.toggle('on',chosen.has(g));
+      b.onclick=()=>b.classList.toggle('on');
+    }
+  }
+  function selectedExtrasV27(id){
+    const wrap=document.getElementById(id); if(!wrap)return [];
+    return [...wrap.querySelectorAll('.genre-chip.on')].map(b=>b.dataset.genre||b.textContent.trim()).map(g=>g===LEGACY_V27?'哲学・思想':g).filter(g=>EXTRA_SET_V27.has(g));
+  }
+
+  ensureExtraChipsV27('newGenrePicker',[]);
+  ensureExtraChipsV27('qGenrePicker',[]);
+
+  // New/manual additions: v19 only knows the original genre list, so merge extra tags after it creates the film.
+  for(const [buttonId,pickerId] of [['addMovie','newGenrePicker'],['qAdd','qGenrePicker']]){
+    const btn=document.getElementById(buttonId); if(!btn)continue;
+    const previous=btn.onclick;
+    btn.onclick=async function(ev){
+      const extras=selectedExtrasV27(pickerId);
+      const before=new Set((state.customFilms||[]).map(f=>f.id));
+      const out=previous?.call(this,ev);
+      if(out&&typeof out.then==='function')await out;
+      const created=(state.customFilms||[]).find(f=>!before.has(f.id));
+      if(created&&extras.length){
+        setGenresPreserveV27(created.id,[...rawGenresV27(created),...extras]);
+        save(); render();
+      }
+      // v19 rebuilds the picker after a successful add, so put the extra chips back.
+      ensureExtraChipsV27(pickerId,[]);
+      return out;
+    };
+  }
+
+  // Editing: unify all extra tags and keep them when an original/base genre is toggled.
+  const openSheetV26=openSheet;
+  openSheet=function(id){
+    openSheetV26(id);
+    const f=filmById(id); if(!f)return;
+    const wrap=document.getElementById('editGenrePicker'); if(!wrap)return;
+    let extras=new Set(rawGenresV27(f).map(g=>g===LEGACY_V27?'哲学・思想':g).filter(g=>EXTRA_SET_V27.has(g)));
+    ensureExtraChipsV27('editGenrePicker',[...extras]);
+
+    wrap.querySelectorAll('.genre-chip').forEach(b=>{
+      const g=b.dataset.genre||b.textContent.trim();
+      b.classList.toggle('on',extras.has(g));
+      b.onclick=()=>{
+        extras.has(g)?extras.delete(g):extras.add(g);
+        b.classList.toggle('on',extras.has(g));
+        const currentBase=rawGenresV27(f).filter(x=>x!==LEGACY_V27&&!EXTRA_SET_V27.has(x));
+        setGenresPreserveV27(f.id,[...currentBase,...extras]);
+        save(); render();
+      };
+    });
+
+    // v19's base-genre handler rewrites genreOverrides using only its original list.
+    // Restore currently selected extra tags immediately after a base genre click.
+    wrap.addEventListener('click',e=>{
+      const b=e.target.closest('.struct-chip[data-multi="1"]');
+      if(!b || b.classList.contains('genre-chip'))return;
+      const currentBase=rawGenresV27(f).filter(x=>x!==LEGACY_V27&&!EXTRA_SET_V27.has(x));
+      setGenresPreserveV27(f.id,[...currentBase,...extras]);
+      save();
+    });
+  };
+
+  // Filters: bypass older/base genre filtering for any extra tag, then filter the rendered cards ourselves.
+  for(const id of ['genreFilterRank','genreFilterClassify']){
+    const s=document.getElementById(id); if(!s)continue;
+    [...s.options].filter(o=>o.value===LEGACY_V27).forEach(o=>o.remove());
+    for(const g of EXTRA_GENRES_V27){
+      if([...s.options].some(o=>o.value===g))continue;
+      const opt=new Option(g,g);
+      if(g==='世界観'){
+        const fantasy=[...s.options].find(o=>o.value==='ファンタジー');
+        const adventure=[...s.options].find(o=>o.value==='アドベンチャー');
+        if(fantasy) s.insertBefore(opt,fantasy.nextSibling);
+        else if(adventure) s.insertBefore(opt,adventure);
+        else s.add(opt);
+      }else s.add(opt);
+    }
+  }
+  function filterExtraV27(rootSelector,cardSelector,sectionSelector,value){
+    if(!EXTRA_SET_V27.has(value))return;
+    document.querySelectorAll(`${rootSelector} ${cardSelector}`).forEach(card=>{
+      const f=filmById(decodeURIComponent(card.dataset.id||''));
+      if(f&&!rawGenresV27(f).includes(value))card.remove();
+    });
+    document.querySelectorAll(`${rootSelector} ${sectionSelector}`).forEach(sec=>{
+      if(!sec.querySelector(cardSelector))sec.style.display='none';
+    });
+  }
+  const renderRankV26=renderRank;
+  renderRank=function(){
+    const s=document.getElementById('genreFilterRank'),v=s?.value||'';
+    if(s&&EXTRA_SET_V27.has(v))s.value='';
+    renderRankV26();
+    if(s)s.value=v;
+    filterExtraV27('#rankRoot','.rank-card','.rank-star',v);
+    if(EXTRA_SET_V27.has(v))document.querySelectorAll('#rankRoot .score-bin').forEach(bin=>{if(!bin.querySelector('.rank-card'))bin.style.display='none'});
+  };
+  const renderClassifyV26=renderClassify;
+  renderClassify=function(){
+    const s=document.getElementById('genreFilterClassify'),v=s?.value||'';
+    if(s&&EXTRA_SET_V27.has(v))s.value='';
+    renderClassifyV26();
+    if(s)s.value=v;
+    filterExtraV27('#classifyRoot','.card','.section',v);
+  };
+  const rf=document.getElementById('genreFilterRank'); if(rf)rf.onchange=renderRank;
+  const cf=document.getElementById('genreFilterClassify'); if(cf)cf.onchange=renderClassify;
+
+  render();
+})();
+
+</script>
+
+<!-- patch-v28.js -->
+<script>
+(() => {
+  // v28: make all genre toggles use one persistence path, and bridge the actual v23 GitHub token key to v26.
+  const ALL_EXTRA_V28 = new Set([
+    '世界観','青春・若者','子供向け','差別・人権','精神・哲学','社会問題・生活',
+    'スポーツ','胸糞','感動','切ない','どんでん返し'
+  ]);
+
+  // v23 saved the PAT under this key. v26 accidentally looked under a different key.
+  // Mirror it locally so v26's server-verified Letterboxd path is actually used.
+  try {
+    const real = localStorage.getItem('movie30_github_sync_token_v1') || '';
+    const mistaken = localStorage.getItem('movie30_gpt_sync_token_v1') || '';
+    if (real && !mistaken) localStorage.setItem('movie30_gpt_sync_token_v1', real);
+  } catch (_) {}
+
+  function rawGenresV28(f){
+    const g = state.genreOverrides?.[f.id];
+    return Array.isArray(g) ? [...new Set(g.filter(Boolean))] : [];
+  }
+  function genreNameV28(b){
+    return b?.dataset?.genre || b?.dataset?.structValue || (b?.textContent||'').trim();
+  }
+  function isGenreButtonV28(b){
+    if (!b) return false;
+    if (b.classList.contains('genre-chip')) return true;
+    return b.classList.contains('struct-chip') && b.dataset.multi === '1';
+  }
+  function normalizeEditGenreHandlersV28(f){
+    const wrap = document.getElementById('editGenrePicker');
+    if (!wrap || !f) return;
+    const selected = new Set(rawGenresV28(f));
+    const buttons = [...wrap.querySelectorAll('.genre-chip, .struct-chip[data-multi="1"]')]
+      .filter(isGenreButtonV28);
+    for (const b of buttons){
+      const g = genreNameV28(b);
+      if (!g) continue;
+      b.classList.toggle('on', selected.has(g));
+      b.onclick = (ev) => {
+        ev.preventDefault();
+        ev.stopPropagation();
+        const now = new Set(rawGenresV28(f));
+        if (now.has(g)) now.delete(g); else now.add(g);
+        state.genreOverrides[f.id] = [...now];
+        b.classList.toggle('on', now.has(g));
+        save();
+      };
+    }
+  }
+
+  const openSheetV27 = openSheet;
+  openSheet = function(id){
+    openSheetV27(id);
+    const f = filmById(id);
+    if (!f) return;
+    // Run after every older openSheet wrapper has finished rebinding its buttons.
+    normalizeEditGenreHandlersV28(f);
+  };
+
+  // Guard against an older handler rewriting only the original genre whitelist.
+  // If the picker is rebuilt while the sheet is open, rebind the unified handlers again.
+  const editWrap = document.getElementById('editGenrePicker');
+  if (editWrap) {
+    new MutationObserver(() => {
+      const f = filmById(selectedId);
+      if (f) normalizeEditGenreHandlersV28(f);
+    }).observe(editWrap, {childList:true, subtree:true});
+  }
+
+  // Make the sync status explicit if the correct GitHub token is present.
+  const syncBtn = document.getElementById('syncLetterboxd');
+  const panel = syncBtn?.closest('.panel');
+  if (panel) {
+    const tip = panel.querySelector('.tip');
+    try {
+      if (tip && localStorage.getItem('movie30_github_sync_token_v1')) {
+        tip.textContent = '「今すぐ同期」でGitHubサーバーからLetterboxd RSSを実取得します。完了まで通常10〜60秒ほどかかり、取得件数と最新作品を表示します。';
+      }
+    } catch (_) {}
+  }
+})();
+
+</script>
+
+<!-- patch-v29.js -->
+<script>
+(() => {
+  // v29: cache self-heal + stable live-state autosync + final guard for all extra genre chips.
+  const BUILD_V29='20260926a';
+  const EXTRAS_V29=['青春・若者','子供向け','差別・人権','哲学・思想','心理・内面','社会問題・生活','スポーツ','胸糞','感動','切ない'];
+  const EXTRA_SET_V29=new Set(EXTRAS_V29);
+  const LEGACY_V29='精神・哲学';
+
+  // The app shell handles cache freshness; never self-redirect during startup.
+  // Previous timer caused a second page load on every launch for old Home Screen shortcuts.
+
+  // --- Ensure every extra genre is visibly present in all pickers ---
+  function genreHostV29(wrap){
+    if(!wrap)return null;
+    const rows=[...wrap.querySelectorAll('.struct-row')];
+    const row=rows.find(r=>(r.querySelector('.struct-label')?.textContent||'').includes('ジャンル'))||rows[rows.length-1];
+    return row?.querySelector('.struct-options')||wrap;
+  }
+  function ensureExtrasV29(id,selected=[]){
+    const wrap=document.getElementById(id); if(!wrap)return;
+    wrap.querySelectorAll(`[data-genre="${LEGACY_V29}"]`).forEach(x=>x.remove());
+    const host=genreHostV29(wrap), set=new Set((selected||[]).map(g=>g===LEGACY_V29?'哲学・思想':g));
+    for(const g of EXTRAS_V29){
+      let b=wrap.querySelector(`.genre-chip[data-genre="${g}"]`);
+      if(!b){
+        b=document.createElement('button');
+        b.type='button'; b.className='struct-chip genre-chip'; b.dataset.genre=g; b.textContent=g;
+        host?.appendChild(b);
+      }
+      b.classList.add('struct-chip','genre-chip');
+      b.classList.toggle('on',set.has(g));
+      if(host&&b.parentElement!==host)host.appendChild(b);
+    }
+  }
+  ensureExtrasV29('newGenrePicker',[]);
+  ensureExtrasV29('qGenrePicker',[]);
+
+  const openSheetV29=openSheet;
+  openSheet=function(id){
+    openSheetV29(id);
+    const f=filmById(id); if(!f)return;
+    const selected=Array.isArray(state.genreOverrides?.[f.id])?state.genreOverrides[f.id]:[];
+    ensureExtrasV29('editGenrePicker',selected);
+  };
+
+  // Remove the retired combined tag from genre filters and guarantee both replacement tags exist.
+  for(const id of ['genreFilterRank','genreFilterClassify']){
+    const s=document.getElementById(id);if(!s)continue;
+    [...s.options].filter(o=>o.value===LEGACY_V29).forEach(o=>o.remove());
+    for(const g of ['哲学・思想','心理・内面'])if(![...s.options].some(o=>o.value===g))s.add(new Option(g,g));
+  }
+
+  // --- Stop legacy autosync from committing on every incidental save. ---
+  // Preserve the user's intent in a new setting, then force the old v23 scheduler off.
+  const LEGACY_SETTINGS='movie30_github_sync_settings_v1';
+  const STABLE_AUTO='movie30_github_stable_auto_v1';
+  const TOKEN_KEY='movie30_github_sync_token_v1';
+  const FP_KEY='movie30_github_synced_fingerprint_v1';
+  let wantedAuto=true;
+  try{
+    const legacy=JSON.parse(localStorage.getItem(LEGACY_SETTINGS)||'null')||{};
+    const saved=localStorage.getItem(STABLE_AUTO);
+    wantedAuto=saved==null ? legacy.auto!==false : saved==='1';
+    localStorage.setItem(STABLE_AUTO,wantedAuto?'1':'0');
+    localStorage.setItem(LEGACY_SETTINGS,JSON.stringify({...legacy,auto:false}));
+  }catch(_){}
+
+  const autoBox=document.getElementById('gptSyncAuto');
+  if(autoBox){
+    autoBox.checked=wantedAuto;
+    autoBox.onchange=()=>{
+      wantedAuto=!!autoBox.checked;
+      try{
+        localStorage.setItem(STABLE_AUTO,wantedAuto?'1':'0');
+        const legacy=JSON.parse(localStorage.getItem(LEGACY_SETTINGS)||'null')||{};
+        localStorage.setItem(LEGACY_SETTINGS,JSON.stringify({...legacy,auto:false}));
+      }catch(_){}
+    };
+  }
+
+  function fpV29(){
+    const s={
+      exactScores:state.exactScores||{},rankOrder:state.rankOrder||{},customFilms:state.customFilms||[],
+      starOverrides:state.starOverrides||{},titleOverrides:state.titleOverrides||{},categoryOverrides:state.categoryOverrides||{},
+      mediaTypeOverrides:state.mediaTypeOverrides||{},genreOverrides:state.genreOverrides||{},originOverrides:state.originOverrides||{},
+      formatOverrides:state.formatOverrides||{},runtimeOverrides:state.runtimeOverrides||{}
+    };
+    const str=JSON.stringify(s);
+    let h=2166136261;
+    for(let i=0;i<str.length;i++){h^=str.charCodeAt(i);h=Math.imul(h,16777619)}
+    return String(h>>>0)+':'+str.length;
+  }
+  try{if(!localStorage.getItem(FP_KEY))localStorage.setItem(FP_KEY,fpV29())}catch(_){}
+
+  let stableTimer=0;
+  function scheduleStableSyncV29(){
+    if(!wantedAuto)return;
+    let token=''; try{token=localStorage.getItem(TOKEN_KEY)||''}catch(_){}
+    if(!token)return;
+    const cur=fpV29(); let last=''; try{last=localStorage.getItem(FP_KEY)||''}catch(_){}
+    if(cur===last)return;
+    clearTimeout(stableTimer);
+    stableTimer=setTimeout(()=>{
+      const now=fpV29(); let prev=''; try{prev=localStorage.getItem(FP_KEY)||''}catch(_){}
+      if(now===prev)return;
+      try{localStorage.setItem(FP_KEY,now)}catch(_){}
+      document.getElementById('gptSyncNow')?.click();
+    },3500);
+  }
+  const saveBeforeV29=save;
+  save=function(...args){
+    const out=saveBeforeV29(...args);
+    scheduleStableSyncV29();
+    return out;
+  };
+
+  // A small build marker in Data page makes stale-cache diagnosis easy next time.
+  const data=document.getElementById('page-data');
+  if(data&&!document.getElementById('movie30BuildV29')){
+    const d=document.createElement('div'); d.id='movie30BuildV29';
+    d.style.cssText='font-size:9px;color:var(--muted);text-align:center;padding:8px 0 2px';
+    d.textContent='app build '+BUILD_V29;
+    data.appendChild(d);
+  }
+
+  render();
+})();
+
+</script>
