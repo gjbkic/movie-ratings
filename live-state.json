@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791648657471,
-  "sourceUpdatedIso": "2026-10-10T16:10:57.471Z",
+  "sourceUpdatedAt": 1791648667685,
+  "sourceUpdatedIso": "2026-10-10T16:11:07.685Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -7254,6 +7254,30 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "custom-1789385859985-uylk",
+      "title": "ミス・アメリカーナ",
+      "originalTitle": "",
+      "englishTitle": "Miss Americana",
+      "year": 2020,
+      "score": 83,
+      "star": 3,
+      "overallRank": 251,
+      "sameScoreRank": 11,
+      "category": "Letterboxd",
+      "mediaType": "other",
+      "genre": [
+        "社会問題・生活",
+        "心理・内面"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 85,
+      "exact": true,
+      "letterboxdAddedDate": "2026-09-11",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-426-pEeQ",
       "title": "プロジェクト・ヘイル・メアリー",
       "originalTitle": "",
@@ -7261,8 +7285,8 @@
       "year": 2026,
       "score": 83,
       "star": 3,
-      "overallRank": 251,
-      "sameScoreRank": 11,
+      "overallRank": 252,
+      "sameScoreRank": 12,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -7288,8 +7312,8 @@
       "year": 1993,
       "score": 83,
       "star": 3,
-      "overallRank": 252,
-      "sameScoreRank": 12,
+      "overallRank": 253,
+      "sameScoreRank": 13,
       "category": "ファンタジー、アドベンチャー",
       "mediaType": "movie",
       "genre": [
@@ -7313,8 +7337,8 @@
       "year": 2010,
       "score": 83,
       "star": 3,
-      "overallRank": 253,
-      "sameScoreRank": 13,
+      "overallRank": 254,
+      "sameScoreRank": 14,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -7347,8 +7371,8 @@
       "year": 2020,
       "score": 83,
       "star": 3,
-      "overallRank": 254,
-      "sameScoreRank": 14,
+      "overallRank": 255,
+      "sameScoreRank": 15,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -7375,8 +7399,8 @@
       "year": 2015,
       "score": 83,
       "star": 3,
-      "overallRank": 255,
-      "sameScoreRank": 15,
+      "overallRank": 256,
+      "sameScoreRank": 16,
       "category": "ファンタジー、アドベンチャー",
       "mediaType": "movie",
       "genre": [
@@ -7391,30 +7415,6 @@
       "runtime": 125,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "custom-1789385859985-uylk",
-      "title": "ミス・アメリカーナ",
-      "originalTitle": "",
-      "englishTitle": "Miss Americana",
-      "year": 2020,
-      "score": 83,
-      "star": 3,
-      "overallRank": 256,
-      "sameScoreRank": 16,
-      "category": "Letterboxd",
-      "mediaType": "other",
-      "genre": [
-        "社会問題・生活",
-        "心理・内面"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 85,
-      "exact": true,
-      "letterboxdAddedDate": "2026-09-11",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -21702,12 +21702,12 @@
         "lb-161-2aUc",
         "lb-117-27A4",
         "lb-367-29EW",
+        "custom-1789385859985-uylk",
         "lb-426-pEeQ",
         "lb-47-2aA2",
         "lb-495-Msm",
         "lb-243-orTE",
         "lb-104-4n0g",
-        "custom-1789385859985-uylk",
         "lb-182-dR3i",
         "lb-263-6bJM",
         "lb-278-2aoU",
