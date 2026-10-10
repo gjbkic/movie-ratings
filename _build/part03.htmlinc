@@ -1,0 +1,1092 @@
+
+<!-- patch-v30.js -->
+<script>
+(() => {
+  // v30: one-step undo for accidental ranking drags.
+  const style=document.createElement('style');
+  style.textContent=`
+    #undoLastDrag{white-space:nowrap;padding:8px 9px}
+    #undoLastDrag:disabled{opacity:.32;cursor:default}
+    @media(max-width:560px){#undoLastDrag{font-size:10px;padding:8px 7px}}
+  `;
+  document.head.appendChild(style);
+
+  const topActions=document.querySelector('.topactions');
+  let undoBtn=document.getElementById('undoLastDrag');
+  if(!undoBtn&&topActions){
+    undoBtn=document.createElement('button');
+    undoBtn.id='undoLastDrag';
+    undoBtn.type='button';
+    undoBtn.className='btn';
+    undoBtn.textContent='↩ 戻す';
+    undoBtn.title='直前のドラッグ移動を元に戻す';
+    undoBtn.disabled=true;
+    topActions.insertBefore(undoBtn,topActions.firstChild);
+  }
+
+  const clone=v=>JSON.parse(JSON.stringify(v||{}));
+  const rankSnapshot=()=>({
+    exactScores:clone(state.exactScores),
+    rankOrder:clone(state.rankOrder),
+    starOverrides:clone(state.starOverrides),
+    assignments:clone(state.assignments)
+  });
+  const sig=s=>JSON.stringify(s);
+
+  let pendingBefore=null;
+  let undoState=null;
+
+  function setUndoAvailable(on){
+    if(undoBtn)undoBtn.disabled=!on;
+  }
+  function clearUndo(){
+    undoState=null;
+    setUndoAvailable(false);
+  }
+
+  const startDragV29=startDrag;
+  startDrag=function(e){
+    const card=e?.currentTarget?.closest?.('.rank-card');
+    const list=card?.closest?.('.score-list');
+    pendingBefore=(card&&list)?{
+      id:decodeURIComponent(card.dataset.id||''),
+      snapshot:rankSnapshot(),
+      signature:sig(rankSnapshot())
+    }:null;
+    return startDragV29(e);
+  };
+
+  const endDragV29=endDrag;
+  endDrag=function(e){
+    const before=pendingBefore;
+    pendingBefore=null;
+    const out=endDragV29(e);
+    if(before){
+      const after=rankSnapshot();
+      if(before.signature!==sig(after)){
+        undoState={id:before.id,snapshot:before.snapshot,afterUpdatedAt:Number(state.updatedAt||0)};
+        setUndoAvailable(true);
+      }
+    }
+    return out;
+  };
+
+  const cancelDragV29=cancelDrag;
+  cancelDrag=function(){
+    pendingBefore=null;
+    return cancelDragV29();
+  };
+
+  if(undoBtn)undoBtn.onclick=()=>{
+    if(!undoState)return;
+    // Do not roll back a later ranking/edit action by accident.
+    if(Number(state.updatedAt||0)!==Number(undoState.afterUpdatedAt||0)){
+      clearUndo();
+      toast('ドラッグ後に別の変更があるため戻せません');
+      return;
+    }
+    const u=undoState;
+    state.exactScores=clone(u.snapshot.exactScores);
+    state.rankOrder=clone(u.snapshot.rankOrder);
+    state.starOverrides=clone(u.snapshot.starOverrides);
+    state.assignments=clone(u.snapshot.assignments);
+    clearUndo();
+    save();
+    render();
+    const card=document.querySelector(`.rank-card[data-id="${encodeURIComponent(u.id)}"]`);
+    if(card){
+      card.scrollIntoView({behavior:'smooth',block:'center'});
+      card.classList.add('just-placed');
+      setTimeout(()=>card?.classList.remove('just-placed'),1800);
+    }
+    toast('直前のドラッグを戻しました');
+  };
+})();
+
+</script>
+
+<!-- patch-v31.js -->
+<script>
+(() => {
+  // v31: add TV series as a top-level media type without disturbing movie-genre "ドラマ".
+  const DRAMA_VALUE='tvseries';
+  const DRAMA_LABEL='TVシリーズ';
+  // Keep the existing localStorage key so anything briefly tagged under the prior label migrates cleanly.
+  const DRAMA_STORE='movie30_media_drama_ids_v1';
+  const VALID_MEDIA31=new Set(['movie','documentary','tvseries','other']);
+
+  function readDramaIds(){
+    try{
+      const a=JSON.parse(localStorage.getItem(DRAMA_STORE)||'[]');
+      return new Set(Array.isArray(a)?a:[]);
+    }catch(_){return new Set();}
+  }
+  function writeDramaIds(set){
+    try{localStorage.setItem(DRAMA_STORE,JSON.stringify([...set]))}catch(_){}
+  }
+  let dramaIds=readDramaIds();
+
+  // v21 predates this type and normalizes unknown media values back to movie on load.
+  // Restore separately remembered TV-series ids after v21 has finished.
+  for(const id of [...dramaIds]){
+    if(filmById(id)) state.mediaTypeOverrides[id]=DRAMA_VALUE;
+    else dramaIds.delete(id);
+  }
+  writeDramaIds(dramaIds);
+
+  function rawMedia31(f){
+    if(!f)return 'movie';
+    if(dramaIds.has(f.id))return DRAMA_VALUE;
+    const v=String(state.mediaTypeOverrides?.[f.id]||f.mediaType||'movie');
+    if(v==='series'||v==='drama')return dramaIds.has(f.id)?DRAMA_VALUE:'other';
+    return VALID_MEDIA31.has(v)?v:'movie';
+  }
+  function mediaLabel31(f){
+    const v=rawMedia31(f);
+    return v==='documentary'?'ドキュメンタリー':v==='tvseries'?'TVシリーズ':v==='other'?'その他':'映画';
+  }
+  function setMedia31(f,value){
+    if(!f)return;
+    if(value===DRAMA_VALUE){
+      dramaIds.add(f.id);
+      state.mediaTypeOverrides[f.id]=DRAMA_VALUE;
+    }else{
+      dramaIds.delete(f.id);
+      if(value==='movie')delete state.mediaTypeOverrides[f.id];
+      else state.mediaTypeOverrides[f.id]=value;
+    }
+    writeDramaIds(dramaIds);
+  }
+
+  // Hidden legacy selects are not shown, but keep their option lists coherent.
+  for(const id of ['newMediaType','qMediaType','editMediaType']){
+    const s=document.getElementById(id); if(!s)continue;
+    [...s.options].filter(o=>o.value==='drama'||o.value==='tvseries').forEach(o=>o.remove());
+    const opt=new Option(DRAMA_LABEL,DRAMA_VALUE);
+    const other=[...s.options].find(o=>o.value==='other');
+    if(other)s.insertBefore(opt,other);else s.add(opt);
+  }
+
+  const addMediaChoice={newGenrePicker:'movie',qGenrePicker:'movie'};
+  function mediaRow31(wrap){return wrap?.querySelectorAll('.struct-row')?.[0]||null;}
+  function ensureDramaButton31(wrap){
+    const row=mediaRow31(wrap); if(!row)return null;
+    const host=row.querySelector('.struct-options')||row;
+    host.querySelectorAll('[data-struct-value="drama"]').forEach(x=>x.remove());
+    let b=host.querySelector(`[data-struct-value="${DRAMA_VALUE}"]`);
+    if(!b){
+      b=document.createElement('button');
+      b.type='button'; b.className='struct-chip'; b.dataset.structValue=DRAMA_VALUE; b.dataset.multi='0'; b.textContent=DRAMA_LABEL;
+      const other=host.querySelector('[data-struct-value="other"]');
+      if(other)host.insertBefore(b,other);else host.appendChild(b);
+    }else b.textContent=DRAMA_LABEL;
+    return b;
+  }
+  function paintMediaRow31(row,value){
+    row?.querySelectorAll('.struct-chip').forEach(b=>b.classList.toggle('on',b.dataset.structValue===value));
+  }
+  function bindAddMedia31(id,value){
+    const wrap=document.getElementById(id); if(!wrap)return;
+    ensureDramaButton31(wrap);
+    const row=mediaRow31(wrap); if(!row)return;
+    const selected=VALID_MEDIA31.has(value)?value:'movie';
+    addMediaChoice[id]=selected;
+    paintMediaRow31(row,selected);
+    row.querySelectorAll('.struct-chip').forEach(b=>{
+      const v=b.dataset.structValue;
+      if(!VALID_MEDIA31.has(v))return;
+      b.onclick=(ev)=>{
+        ev.preventDefault(); ev.stopPropagation();
+        addMediaChoice[id]=v;
+        paintMediaRow31(row,v);
+      };
+    });
+  }
+  bindAddMedia31('newGenrePicker','movie');
+  bindAddMedia31('qGenrePicker','movie');
+
+  // TMDB selection can rebuild the quick-add picker; rebind our fourth media choice afterwards.
+  const selectTmdbV30=selectTmdb;
+  selectTmdb=async function(id){
+    const out=await selectTmdbV30(id);
+    const wrap=document.getElementById('qGenrePicker'),row=mediaRow31(wrap);
+    const active=[...row?.querySelectorAll('.struct-chip.on')||[]].find(b=>VALID_MEDIA31.has(b.dataset.structValue));
+    bindAddMedia31('qGenrePicker',active?.dataset.structValue||'movie');
+    return out;
+  };
+
+  // v19 owns creation; overwrite only the chosen top-level media type after a successful add.
+  function wrapAdd31(buttonId,pickerId){
+    const btn=document.getElementById(buttonId); if(!btn||!btn.onclick)return;
+    const previous=btn.onclick;
+    btn.onclick=async function(ev){
+      const chosen=addMediaChoice[pickerId]||'movie';
+      const before=new Set((state.customFilms||[]).map(f=>f.id));
+      const out=previous.call(this,ev);
+      if(out&&typeof out.then==='function')await out;
+      const created=(state.customFilms||[]).find(f=>!before.has(f.id));
+      if(created){
+        setMedia31(created,chosen);
+        save(); render();
+      }
+      bindAddMedia31(pickerId,'movie');
+      return out;
+    };
+  }
+  wrapAdd31('addMovie','newGenrePicker');
+  wrapAdd31('qAdd','qGenrePicker');
+
+  function updateSheetMeta31(f){
+    const el=document.getElementById('sheetMeta'); if(!el||!f)return;
+    const origin=state.originOverrides?.[f.id]||'ハリウッド';
+    const fv=state.formatOverrides?.[f.id]||'live';
+    const format=fv==='animation'?'アニメ':fv==='hybrid'?'実写・アニメ':'実写';
+    const rt=Number(state.runtimeOverrides?.[f.id]??f.runtime);
+    el.textContent=`${f.year||''} · ${mediaLabel31(f)} · ${origin} · ${format}${Number.isFinite(rt)&&rt>0?' · '+rt+'分':''}`;
+  }
+
+  const openSheetV30=openSheet;
+  openSheet=function(id){
+    openSheetV30(id);
+    const f=filmById(id); if(!f)return;
+    const wrap=document.getElementById('editGenrePicker'); if(!wrap)return;
+    ensureDramaButton31(wrap);
+    const row=mediaRow31(wrap); if(!row)return;
+    let current=rawMedia31(f);
+    paintMediaRow31(row,current);
+    row.querySelectorAll('.struct-chip').forEach(b=>{
+      const v=b.dataset.structValue;
+      if(!VALID_MEDIA31.has(v))return;
+      b.onclick=(ev)=>{
+        ev.preventDefault(); ev.stopPropagation();
+        current=v;
+        setMedia31(f,v);
+        paintMediaRow31(row,current);
+        save();
+        updateSheetMeta31(f);
+      };
+    });
+    // Older origin/format callbacks carry an old media value in their closure; if this is TV series,
+    // re-assert it after those clicks so changing another field cannot silently erase the type.
+    [...wrap.querySelectorAll('.struct-row')].slice(1,3).forEach(r=>r.querySelectorAll('.struct-chip').forEach(b=>{
+      const old=b.onclick;
+      b.onclick=function(ev){
+        const out=old?.call(this,ev);
+        if(current===DRAMA_VALUE){setMedia31(f,DRAMA_VALUE);save();updateSheetMeta31(f);}
+        return out;
+      };
+    }));
+    updateSheetMeta31(f);
+  };
+
+  // Add the fourth type to ranking/classification filters.
+  for(const id of ['mediaFilterRank','mediaFilterClassify']){
+    const s=document.getElementById(id); if(!s)continue;
+    [...s.options].filter(o=>o.value==='drama'||o.value==='tvseries').forEach(o=>o.remove());
+    const opt=new Option(DRAMA_LABEL,DRAMA_VALUE);
+    const other=[...s.options].find(o=>o.value==='other');
+    if(other)s.insertBefore(opt,other);else s.add(opt);
+  }
+  function filterDrama31(root,cardSel,sectionSel,value){
+    if(value!==DRAMA_VALUE)return;
+    document.querySelectorAll(`${root} ${cardSel}`).forEach(card=>{
+      const f=filmById(decodeURIComponent(card.dataset.id||''));
+      if(f&&rawMedia31(f)!==DRAMA_VALUE)card.remove();
+    });
+    document.querySelectorAll(`${root} ${sectionSel}`).forEach(sec=>{if(!sec.querySelector(cardSel))sec.style.display='none'});
+    if(root==='#rankRoot')document.querySelectorAll('#rankRoot .score-bin').forEach(bin=>{if(!bin.querySelector(cardSel))bin.style.display='none'});
+  }
+  const renderRankV30=renderRank;
+  renderRank=function(){
+    const s=document.getElementById('mediaFilterRank'),v=s?.value||'';
+    if(s&&v===DRAMA_VALUE)s.value='';
+    renderRankV30();
+    if(s)s.value=v;
+    filterDrama31('#rankRoot','.rank-card','.rank-star',v);
+  };
+  const renderClassifyV30=renderClassify;
+  renderClassify=function(){
+    const s=document.getElementById('mediaFilterClassify'),v=s?.value||'';
+    if(s&&v===DRAMA_VALUE)s.value='';
+    renderClassifyV30();
+    if(s)s.value=v;
+    filterDrama31('#classifyRoot','.card','.section',v);
+  };
+  const mr=document.getElementById('mediaFilterRank');if(mr)mr.onchange=renderRank;
+  const mc=document.getElementById('mediaFilterClassify');if(mc)mc.onchange=renderClassify;
+
+  // Search can also match the new top-level type label.
+  const matchV30=match;
+  match=function(f,q){
+    if(matchV30(f,q))return true;
+    if(!q)return true;
+    return mediaLabel31(f).toLowerCase().includes(String(q).toLowerCase());
+  };
+
+  // Replace the old diagnostic build marker text; index/app-version remain the authority.
+  const marker=document.getElementById('movie30BuildV29');
+  if(marker)marker.textContent='app build 20260924t';
+
+  save(false);
+  render();
+})();
+
+</script>
+
+<!-- patch-v33.js -->
+<script>
+(() => {
+  // v33: authoritative rebuild of media/origin taxonomy.
+  // Origin = 日本 / ハリウッド / その他. Korea, France, UK-only, etc. => その他.
+  // Media = 映画 / TVシリーズ / その他. Short-video-like works => その他.
+  const BUILD33='20260925v';
+  const MEDIA=[['movie','映画'],['drama','TVシリーズ'],['other','その他']];
+  const ORIGIN=[['日本','日本'],['ハリウッド','ハリウッド'],['その他','その他']];
+  const MEDIA_OK=new Set(MEDIA.map(x=>x[0]));
+  const ORIGIN_OK=new Set(ORIGIN.map(x=>x[0]));
+  const MEDIA_KEY='movie30_media_v33_v1';
+  const ORIGIN_KEY='movie30_origin_v33_v1';
+  const MANUAL_KEY='movie30_reclass_v33_manual_v1';
+  const PROGRESS_KEY='movie30_reclass_v33_progress_v1';
+  const RESET_KEY='movie30_reclass_v33_reset_v1';
+  const RESET_VERSION='20260925-hollywood-1';
+  const LEGACY_TV_KEY='movie30_media_drama_ids_v1';
+
+  const readObj=k=>{try{const v=JSON.parse(localStorage.getItem(k)||'{}');return v&&typeof v==='object'&&!Array.isArray(v)?v:{}}catch(_){return {}}};
+  const writeObj=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch(_){}};
+  const readSet=k=>{try{const v=JSON.parse(localStorage.getItem(k)||'[]');return new Set(Array.isArray(v)?v:[])}catch(_){return new Set()}};
+  const writeSet=(k,v)=>{try{localStorage.setItem(k,JSON.stringify([...v]))}catch(_){}};
+
+  let mediaMap=readObj(MEDIA_KEY), originMap=readObj(ORIGIN_KEY), manual=readSet(MANUAL_KEY);
+  for(const id of Object.keys(originMap)) if(originMap[id]==='邦画') originMap[id]='日本';
+
+  function info(f){
+    const x=titleInfo(f)||{};
+    return {title:String(displayTitle(f)||''),original:String(x.originalTitle||''),english:String(x.englishTitle||f.lbTitle||''),category:String(filmCategory(f)||''),year:Number(f.year)||0};
+  }
+  function blob(f){const x=info(f);return `${x.title} ${x.original} ${x.english} ${x.category}`.toLowerCase();}
+  function norm(s){return String(s||'').normalize('NFKD').toLowerCase().replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9\u3040-\u30ff\u3400-\u9fff\uac00-\ud7af]+/g,'');}
+  function japaneseHint(f){
+    const x=info(f),b=blob(f),cat=x.category;
+    if(cat==='邦画'||cat==='日本'||cat.includes('スタジオジブリ')||cat.includes('コナン映画')||cat==='ほかアニメ')return true;
+    if(/[\u3040-\u30ff]/.test(x.original))return true;
+    return /(?:新世紀エヴァンゲリオン|end of evangelion|perfect blue|パーフェクトブルー|東京ゴッドファーザーズ|tokyo godfathers|千年女優|millennium actress|風の谷のナウシカ|もののけ姫|千と千尋|魔女の宅急便|となりのトトロ|紅の豚|ハウルの動く城|天空の城ラピュタ|崖の上のポニョ|かぐや姫の物語|君の名は|天気の子|すずめの戸締まり|ドラえもん|名探偵コナン|ルパン三世|カリオストロ|チェンソーマン|chainsaw man|鬼滅の刃|呪術廻戦|akira\b|アキラ|攻殻機動隊|battle royale|バトル.?ロワイアル|七人の侍|羅生門|用心棒|生きる|天国と地獄|ゴジラ|リング\b|呪怨|告白|万引き家族|drive my car|ドライブ.?マイ.?カー|誰も知らない|海街diary|ソナチネ|踊る大捜査線|十角館|ani\*?kuri|on your mark)/i.test(b);
+  }
+  function tvHint(f){
+    const x=info(f),b=blob(f),raw=String(f.mediaType||'');
+    if(f.tmdbType==='tv'||raw==='series'||raw==='drama')return true;
+    if(/(?:squid game|イカゲーム|chernobyl|チェルノブイリ|十角館の殺人|the decagon house murders|breaking bad|better call saul|true detective|black mirror|mindhunter|band of brothers|the wire)/i.test(b))return true;
+    if((/^(?:spec|spec ~ first blood)$/i.test(x.title.trim())||/^(?:spec|spec ~ first blood)$/i.test(x.english.trim()))&&x.year===2010)return true;
+    return (x.title==='新世紀エヴァンゲリオン'||/^neon genesis evangelion$/i.test(x.english.trim()))&&x.year===1995;
+  }
+  function miscHint(f){
+    const b=blob(f),rt=Number(state.runtimeOverrides?.[f.id]??f.runtime),raw=String(f.mediaType||'');
+    if(/(?:lecture|講座|making[ -]?of|メイキング|music video|ミュージック.?ビデオ|\bmv\b|\bpv\b|ani\*?kuri|on your mark|concert|コンサート|the eras tour|ライブ映像|live at|short video|ショートビデオ)/i.test(b))return true;
+    return raw==='other'&&Number.isFinite(rt)&&rt>0&&rt<=40&&!tvHint(f);
+  }
+  function heuristicMedia(f){if(miscHint(f))return 'other';if(tvHint(f))return 'drama';return 'movie';}
+  function heuristicOrigin(f){if(japaneseHint(f))return '日本';return 'その他';}
+  function countryOrigin(countries,language=''){
+    const cs=Array.isArray(countries)?countries.filter(Boolean):[];
+    if(cs.includes('JP'))return '日本';
+    if(cs.includes('US'))return 'ハリウッド';
+    if(cs.length)return 'その他';
+    return language==='ja'?'日本':'その他';
+  }
+  function mediaOf(f){return MEDIA_OK.has(mediaMap[f?.id])?mediaMap[f.id]:'movie';}
+  function originOf(f){return ORIGIN_OK.has(originMap[f?.id])?originMap[f.id]:'その他';}
+  function mediaLabel(f){return (MEDIA.find(x=>x[0]===mediaOf(f))||MEDIA[0])[1];}
+  function persist(){writeObj(MEDIA_KEY,mediaMap);writeObj(ORIGIN_KEY,originMap);const tv=new Set(Object.entries(mediaMap).filter(([,v])=>v==='drama').map(([id])=>id));writeSet(LEGACY_TV_KEY,tv);}
+  function apply(){for(const f of allFilms()){const m=MEDIA_OK.has(mediaMap[f.id])?mediaMap[f.id]:heuristicMedia(f);const o=ORIGIN_OK.has(originMap[f.id])?originMap[f.id]:heuristicOrigin(f);mediaMap[f.id]=m;originMap[f.id]=o;state.mediaTypeOverrides[f.id]=m;state.originOverrides[f.id]=o;}persist();}
+  function setMedia(f,v,manualPick=false){if(!f||!MEDIA_OK.has(v))return;mediaMap[f.id]=v;state.mediaTypeOverrides[f.id]=v;if(manualPick){manual.add(f.id);writeSet(MANUAL_KEY,manual)}persist();}
+  function setOrigin(f,v,manualPick=false){if(!f||!ORIGIN_OK.has(v))return;originMap[f.id]=v;state.originOverrides[f.id]=v;if(manualPick){manual.add(f.id);writeSet(MANUAL_KEY,manual)}persist();}
+
+  let reset=false;try{reset=localStorage.getItem(RESET_KEY)===RESET_VERSION}catch(_){}
+  if(!reset){
+    mediaMap={};originMap={};manual=new Set();
+    for(const f of allFilms()){mediaMap[f.id]=heuristicMedia(f);originMap[f.id]=heuristicOrigin(f);}
+    writeSet(MANUAL_KEY,manual);writeSet(PROGRESS_KEY,new Set());
+    try{localStorage.setItem(RESET_KEY,RESET_VERSION)}catch(_){}
+  }
+  apply();save(false);
+
+  function row(wrap,i){return wrap?.querySelectorAll('.struct-row')?.[i]||null;}
+  function fillRow(r,options,selected,onPick){if(!r)return;const host=r.querySelector('.struct-options')||r;host.innerHTML=options.map(([v,l])=>`<button type="button" class="struct-chip${v===selected?' on':''}" data-struct-value="${v}" data-multi="0">${l}</button>`).join('');host.querySelectorAll('.struct-chip').forEach(b=>b.onclick=e=>{e.preventDefault();e.stopPropagation();const v=b.dataset.structValue;host.querySelectorAll('.struct-chip').forEach(x=>x.classList.toggle('on',x===b));onPick?.(v);});}
+  function mapOldOrigin(v){if(v==='邦画'||v==='日本')return '日本';if(v==='ハリウッド')return 'ハリウッド';return 'その他';}
+  const addChoice={newGenrePicker:{media:'movie',origin:'その他'},qGenrePicker:{media:'movie',origin:'その他'}};
+  function bindAdd(id,m='movie',o='その他'){
+    const wrap=document.getElementById(id);if(!wrap)return;
+    m=MEDIA_OK.has(m)?m:'movie';o=ORIGIN_OK.has(o)?o:mapOldOrigin(o);addChoice[id]={media:m,origin:o};
+    fillRow(row(wrap,0),MEDIA,m,v=>addChoice[id].media=v);fillRow(row(wrap,1),ORIGIN,o,v=>addChoice[id].origin=v);
+  }
+  bindAdd('newGenrePicker');bindAdd('qGenrePicker');
+
+  const selectTmdbBase=selectTmdb;
+  selectTmdb=async function(id){
+    const out=await selectTmdbBase(id),wrap=document.getElementById('qGenrePicker');
+    const oldM=[...row(wrap,0)?.querySelectorAll('.struct-chip.on')||[]][0]?.dataset.structValue||'movie';
+    const oldO=[...row(wrap,1)?.querySelectorAll('.struct-chip.on')||[]][0]?.dataset.structValue||'その他';
+    bindAdd('qGenrePicker',oldM==='drama'?'drama':oldM==='other'?'other':'movie',mapOldOrigin(oldO));return out;
+  };
+  function wrapAdd(buttonId,pickerId){
+    const btn=document.getElementById(buttonId);if(!btn||!btn.onclick)return;const prev=btn.onclick;
+    btn.onclick=async function(ev){const chosen={...(addChoice[pickerId]||{media:'movie',origin:'その他'})},before=new Set((state.customFilms||[]).map(f=>f.id));const out=prev.call(this,ev);if(out&&typeof out.then==='function')await out;const f=(state.customFilms||[]).find(x=>!before.has(x.id));if(f){setMedia(f,chosen.media,true);setOrigin(f,chosen.origin,true);save();render();}bindAdd(pickerId);return out;};
+  }
+  wrapAdd('addMovie','newGenrePicker');wrapAdd('qAdd','qGenrePicker');
+
+  function updateMeta(f){const el=document.getElementById('sheetMeta');if(!el||!f)return;const fv=state.formatOverrides?.[f.id]||'live',fl=fv==='animation'?'アニメ':fv==='hybrid'?'実写・アニメ':'実写',rt=Number(state.runtimeOverrides?.[f.id]??f.runtime);el.textContent=`${f.year||''} · ${mediaLabel(f)} · ${originOf(f)} · ${fl}${Number.isFinite(rt)&&rt>0?' · '+rt+'分':''}`;}
+  const openSheetBase=openSheet;
+  openSheet=function(id){openSheetBase(id);const f=filmById(id),wrap=document.getElementById('editGenrePicker');if(!f||!wrap)return;fillRow(row(wrap,0),MEDIA,mediaOf(f),v=>{setMedia(f,v,true);save();updateMeta(f)});fillRow(row(wrap,1),ORIGIN,originOf(f),v=>{setOrigin(f,v,true);save();updateMeta(f)});updateMeta(f);};
+
+  function setFilter(id,label,options){const s=document.getElementById(id);if(!s)return;const old=s.value;s.innerHTML=`<option value="">${label}: すべて</option>`+options.map(([v,l])=>`<option value="${v}">${l}</option>`).join('');if([...s.options].some(o=>o.value===old))s.value=old;}
+  function normalizeFilters(){for(const suffix of ['Rank','Classify']){setFilter('mediaFilter'+suffix,'種別',MEDIA);setFilter('originFilter'+suffix,'制作区分',ORIGIN);}}
+  function postFilter(root,cardSel,sectionSel,m,o){document.querySelectorAll(`${root} ${cardSel}`).forEach(card=>{const f=filmById(decodeURIComponent(card.dataset.id||''));if(f&&((m&&mediaOf(f)!==m)||(o&&originOf(f)!==o)))card.remove();});document.querySelectorAll(`${root} ${sectionSel}`).forEach(sec=>{if(!sec.querySelector(cardSel))sec.style.display='none'});if(root==='#rankRoot')document.querySelectorAll('#rankRoot .score-bin').forEach(bin=>{if(!bin.querySelector(cardSel))bin.style.display='none'});}
+  const renderRankBase=renderRank;
+  renderRank=function(){normalizeFilters();const ms=document.getElementById('mediaFilterRank'),os=document.getElementById('originFilterRank'),m=ms?.value||'',o=os?.value||'';if(ms)ms.value='';if(os)os.value='';renderRankBase();normalizeFilters();if(ms&&[...ms.options].some(x=>x.value===m))ms.value=m;if(os&&[...os.options].some(x=>x.value===o))os.value=o;postFilter('#rankRoot','.rank-card','.rank-star',m,o);};
+  const renderClassBase=renderClassify;
+  renderClassify=function(){normalizeFilters();const ms=document.getElementById('mediaFilterClassify'),os=document.getElementById('originFilterClassify'),m=ms?.value||'',o=os?.value||'';if(ms)ms.value='';if(os)os.value='';renderClassBase();normalizeFilters();if(ms&&[...ms.options].some(x=>x.value===m))ms.value=m;if(os&&[...os.options].some(x=>x.value===o))os.value=o;postFilter('#classifyRoot','.card','.section',m,o);};
+  normalizeFilters();
+  for(const [id,fn] of [['mediaFilterRank',renderRank],['originFilterRank',renderRank],['mediaFilterClassify',renderClassify],['originFilterClassify',renderClassify]]){const e=document.getElementById(id);if(e)e.onchange=fn;}
+  const matchBase=match;match=function(f,q){if(matchBase(f,q))return true;if(!q)return true;return `${mediaLabel(f)} ${originOf(f)}`.toLowerCase().includes(String(q).toLowerCase());};
+
+  const addLbBase=addLbFilm;
+  addLbFilm=function(meta){const f=addLbBase(meta);if(!f)return f;mediaMap[f.id]=meta?.tmdbType==='tv'?'drama':heuristicMedia(f);originMap[f.id]=heuristicOrigin(f);apply();save();return f;};
+
+  const data=document.getElementById('page-data');let panel=document.getElementById('reclassStatus33');
+  if(data&&!panel){panel=document.createElement('div');panel.id='reclassStatus33';panel.className='panel';panel.innerHTML='<h2>作品分類の再確認</h2><div class="api-status" id="reclassText33">準備中…</div>';const marker=document.getElementById('movie30BuildV29');if(marker)data.insertBefore(panel,marker);else data.appendChild(panel);}
+  const status=(t,cls='')=>{const e=document.getElementById('reclassText33');if(e){e.textContent=t;e.className='api-status '+cls;}};
+
+  function scoreCandidate(f,r){const x=info(f),yr=Number(String(r.release_date||r.first_air_date||'').slice(0,4))||0,a=[x.title,x.original,x.english].map(norm).filter(Boolean),b=[r.title,r.original_title,r.name,r.original_name].map(norm).filter(Boolean);let s=0;if(x.year&&yr&&x.year===yr)s+=8;if(a.some(u=>b.includes(u)))s+=9;else if(a.some(u=>b.some(v=>u&&v&&(u.includes(v)||v.includes(u)))))s+=4;if(r.media_type===(heuristicMedia(f)==='drama'?'tv':'movie'))s+=2;return s;}
+  async function resolveTmdb(f){
+    if(typeof tmdbFetch!=='function'||typeof getTmdbCredential!=='function'||!getTmdbCredential())return null;
+    const x=info(f),q=x.english||x.original||x.title;if(!q)return null;
+    const res=await tmdbFetch('/search/multi',{query:q,language:'en-US',include_adult:'false'}),arr=(res?.results||[]).filter(r=>r.media_type==='movie'||r.media_type==='tv');if(!arr.length)return null;
+    arr.sort((a,b)=>scoreCandidate(f,b)-scoreCandidate(f,a));const r=arr[0];if(scoreCandidate(f,r)<8)return null;
+    let media=r.media_type==='tv'?'drama':'movie',origin='その他';
+    if(r.media_type==='tv')origin=countryOrigin(r.origin_country||[],r.original_language||'');
+    else{
+      try{const d=await tmdbFetch('/movie/'+r.id,{language:'en-US'}),countries=(d?.production_countries||[]).map(c=>c.iso_3166_1);origin=countryOrigin(countries,r.original_language||'');const rt=Number(d?.runtime);if((miscHint(f))||(Number.isFinite(rt)&&rt>0&&rt<=40&&String(f.mediaType||'')==='other'))media='other';}
+      catch(_){origin=r.original_language==='ja'?'日本':heuristicOrigin(f);}
+    }
+    if(miscHint(f))media='other';
+    return {media,origin};
+  }
+  let running=false;
+  async function deepReclass(){
+    if(running)return;running=true;let credential='';try{credential=getTmdbCredential?.()||''}catch(_){}
+    if(!credential){status('一次分類は完了。TMDB設定があると全作品をさらに照合できます。');running=false;return;}
+    const films=allFilms(),done=readSet(PROGRESS_KEY),queue=films.filter(f=>!done.has(f.id));if(!queue.length){status(`再分類完了 · ${films.length}作品を確認済み`,'ok');running=false;return;}
+    let completed=done.size,index=0,dirty=0;status(`再分類中… ${completed}/${films.length}`);
+    async function worker(){while(true){const i=index++;if(i>=queue.length)return;const f=queue[i];try{const c=await resolveTmdb(f);if(c&&!manual.has(f.id)){mediaMap[f.id]=c.media;originMap[f.id]=c.origin;state.mediaTypeOverrides[f.id]=c.media;state.originOverrides[f.id]=c.origin;dirty++;}}catch(_){}done.add(f.id);completed++;if(completed%10===0||completed===films.length){writeSet(PROGRESS_KEY,done);persist();if(dirty){save(false);dirty=0;}status(`再分類中… ${Math.min(completed,films.length)}/${films.length}`);}await new Promise(r=>setTimeout(r,80));}}
+    await Promise.all([worker(),worker(),worker()]);writeSet(PROGRESS_KEY,done);apply();save();render();status(`再分類完了 · ${films.length}作品を確認済み`,'ok');running=false;
+  }
+  setTimeout(deepReclass,1000);
+  const marker=document.getElementById('movie30BuildV29');if(marker)marker.textContent='app build '+BUILD33;
+  render();
+})();
+
+</script>
+
+<!-- patch-v34.js -->
+<script>
+(() => {
+  // v34: keep card media badges in sync with the v33 authoritative media taxonomy.
+  // IMPORTANT: no MutationObserver here. The previous observer rescanned all 600+ cards
+  // after every text mutation and could create an update loop on iPhone.
+  const BUILD34='20260925x';
+
+  function mediaLabel34(f){
+    const v=String(state.mediaTypeOverrides?.[f?.id] || f?.mediaType || 'movie');
+    if(v==='drama'||v==='series') return 'TVシリーズ';
+    if(v==='other') return 'その他';
+    return '映画';
+  }
+
+  function fixBadges34(root=document){
+    root.querySelectorAll?.('[data-id]').forEach(card=>{
+      const pill=card.querySelector?.('.media-pill');
+      if(!pill) return;
+      const raw=card.dataset.id||'';
+      let id=raw;
+      try{id=decodeURIComponent(raw)}catch(_){}
+      const f=filmById(id);
+      if(!f) return;
+      const label=mediaLabel34(f);
+      if(pill.textContent!==label) pill.textContent=label;
+    });
+  }
+
+  const renderRankPrev=renderRank;
+  renderRank=function(){
+    const out=renderRankPrev();
+    fixBadges34(document.getElementById('rankRoot')||document);
+    return out;
+  };
+
+  const renderClassifyPrev=renderClassify;
+  renderClassify=function(){
+    const out=renderClassifyPrev();
+    fixBadges34(document.getElementById('classifyRoot')||document);
+    return out;
+  };
+
+  // One initial pass is enough; subsequent changes are handled by the render wrappers above.
+  fixBadges34();
+  const marker=document.getElementById('movie30BuildV29');
+  if(marker)marker.textContent='app build '+BUILD34;
+})();
+
+</script>
+
+<!-- patch-v36.js -->
+<script>
+(() => {
+  // v36: Letterboxd TV ids must use /tv/{id}, not /movie/{id}.
+  // Also repair the current unscored Letterboxd batch from the verified RSS and prefer ja-JP titles.
+  const BUILD36='20260925z';
+  const BAD_CLEANUP_KEY='movie30_lb_bad_batch_cleanup_v35';
+  try{localStorage.setItem(BAD_CLEANUP_KEY,'1')}catch(_){}
+
+  const GENRE_ID_MAP={
+    878:'SF',28:'アクション',9648:'ミステリー',53:'スリラー',27:'ホラー',80:'クライム',18:'ドラマ',
+    35:'コメディ',10749:'恋愛',10402:'ミュージカル',10752:'戦争',36:'歴史',14:'ファンタジー',12:'アドベンチャー'
+  };
+
+  function localText(el,name){
+    for(const c of el?.children||[])if(c.localName===name)return (c.textContent||'').trim();
+    return '';
+  }
+  function normalizeUri(v){return String(v||'').trim().replace(/\/$/,'');}
+  function parseLb36(xml){
+    const doc=new DOMParser().parseFromString(String(xml||''),'application/xml');
+    if(doc.querySelector('parsererror'))throw new Error('Letterboxd RSSを解析できませんでした');
+    return [...doc.querySelectorAll('item')].map(it=>{
+      const movieId=localText(it,'movieId'),tvId=localText(it,'tvId'),link=localText(it,'link');
+      return {
+        title:localText(it,'filmTitle'),year:localText(it,'filmYear'),rating:localText(it,'memberRating'),
+        tmdbId:tvId||movieId,tmdbType:tvId?'tv':'movie',watchedDate:localText(it,'watchedDate'),
+        link,uri:link
+      };
+    }).filter(x=>x.title&&x.year);
+  }
+  parseLbRss=parseLb36;
+
+  function classify36(d,type){
+    const countryCodes=type==='tv'
+      ? (d.origin_country||[]).filter(Boolean)
+      : (d.production_countries||[]).map(x=>x.iso_3166_1).filter(Boolean);
+    const lang=String(d.original_language||'');
+    const origin=countryCodes.includes('US')?'ハリウッド':(countryCodes.includes('JP')?'日本':(lang==='ja'?'日本':'その他'));
+    const ids=(d.genres||[]).map(g=>Number(g.id));
+    const genres=[...new Set(ids.map(id=>GENRE_ID_MAP[id]).filter(Boolean))];
+    const animation=ids.includes(16);
+    const documentary=ids.includes(99);
+    const runtime=Number(type==='tv'?(Array.isArray(d.episode_run_time)?d.episode_run_time[0]:null):d.runtime)||null;
+    return {origin,media:type==='tv'?'other':(documentary?'documentary':'movie'),format:animation?'animation':'live',genres,runtime};
+  }
+
+  // Replace v21's wrapper: it called the old movie-only enrichment first, which is exactly what caused
+  // tvId 88570 (Your Turn to Kill) to become movieId 88570 (Cat Food).
+  enrichFromTmdb=async function(meta){
+    const type=meta?.tmdbType==='tv'?'tv':'movie';
+    const id=meta?.tmdbId;
+    const fallback={...meta,englishTitle:meta?.englishTitle||meta?.title||'',tmdbType:type};
+    if(!id||!getTmdbCredential())return fallback;
+    try{
+      const d=await tmdbFetch(`/${type}/${id}`,{language:'ja-JP'});
+      const title=String(type==='tv'?(d.name||meta.title||''):(d.title||meta.title||'')).trim();
+      const original=String(type==='tv'?(d.original_name||''):(d.original_title||'')).trim();
+      return {
+        ...meta,
+        title:title||meta.title,
+        originalTitle:original,
+        englishTitle:meta.title||meta.englishTitle||title,
+        year:String(type==='tv'?(d.first_air_date||meta.year||''):(d.release_date||meta.year||'')).slice(0,4)||meta.year,
+        tmdbId:Number(id),tmdbType:type,_autoClass:classify36(d,type)
+      };
+    }catch(_){
+      return fallback;
+    }
+  };
+
+  function readObj(key){try{const v=JSON.parse(localStorage.getItem(key)||'{}');return v&&typeof v==='object'&&!Array.isArray(v)?v:{}}catch(_){return {}}}
+  function writeObj(key,v){try{localStorage.setItem(key,JSON.stringify(v))}catch(_){}}
+  function readArr(key){try{const v=JSON.parse(localStorage.getItem(key)||'[]');return Array.isArray(v)?v:[]}catch(_){return []}}
+  function persistMediaOrigin36(id,media,origin){
+    if(media){const m=readObj('movie30_media_v33_v1');m[id]=media;writeObj('movie30_media_v33_v1',m);state.mediaTypeOverrides[id]=media;}
+    if(origin){const o=readObj('movie30_origin_v33_v1');o[id]=origin;writeObj('movie30_origin_v33_v1',o);state.originOverrides[id]=origin;}
+    const tv=new Set(readArr('movie30_media_drama_ids_v1'));
+    if(media==='drama')tv.add(id);else tv.delete(id);
+    try{localStorage.setItem('movie30_media_drama_ids_v1',JSON.stringify([...tv]))}catch(_){}
+  }
+
+  function applyBaseline36(f,item){
+    const rating=Number(item.rating);
+    f.title=item.title;
+    f.originalTitle='';
+    f.englishTitle=item.title;
+    f.lbTitle=item.title;
+    f.year=item.year?Number(item.year)||item.year:f.year;
+    f.uri=item.link||f.uri;
+    f.tmdbId=item.tmdbId?Number(item.tmdbId):null;
+    f.tmdbType=item.tmdbType;
+    if(Number.isFinite(rating)&&rating>=.5){f.star=rating;state.starOverrides[f.id]=rating;}
+    state.titleOverrides[f.id]={...(state.titleOverrides[f.id]||{}),title:item.title,originalTitle:'',englishTitle:item.title,tmdbId:f.tmdbId};
+    if(item.tmdbType==='tv')persistMediaOrigin36(f.id,'drama',null);
+  }
+
+  async function enrichExisting36(f,item){
+    if(!item.tmdbId||!getTmdbCredential())return false;
+    try{
+      const type=item.tmdbType==='tv'?'tv':'movie';
+      const d=await tmdbFetch(`/${type}/${item.tmdbId}`,{language:'ja-JP'});
+      const c=classify36(d,type);
+      const localTitle=String(type==='tv'?(d.name||item.title):(d.title||item.title)).trim()||item.title;
+      const original=String(type==='tv'?(d.original_name||''):(d.original_title||'')).trim();
+      const jpTitle=(c.origin==='日本'&&localTitle)?localTitle:item.title;
+      f.title=jpTitle;
+      f.originalTitle=original;
+      f.englishTitle=item.title;
+      f.lbTitle=item.title;
+      f.tmdbId=Number(item.tmdbId);
+      f.tmdbType=type;
+      const y=String(type==='tv'?(d.first_air_date||item.year||''):(d.release_date||item.year||'')).slice(0,4);
+      if(y)f.year=Number(y)||y;
+      state.titleOverrides[f.id]={...(state.titleOverrides[f.id]||{}),title:jpTitle,originalTitle:original,englishTitle:item.title,tmdbId:Number(item.tmdbId)};
+      persistMediaOrigin36(f.id,type==='tv'?'drama':(c.media==='documentary'?'other':'movie'),c.origin);
+      state.formatOverrides[f.id]=c.format;
+      if(c.genres.length)state.genreOverrides[f.id]=c.genres;
+      if(c.runtime)state.runtimeOverrides[f.id]=c.runtime;
+      f._lbMetaFixedV36=true;
+      return true;
+    }catch(_){return false;}
+  }
+
+  async function mapLimit36(items,limit,fn){
+    let i=0;
+    async function worker(){while(i<items.length){const n=i++;await fn(items[n],n)}}
+    await Promise.all(Array.from({length:Math.min(limit,items.length)},worker));
+  }
+
+  async function repairCurrentBatch36(){
+    try{
+      const r=await fetch('./letterboxd-gjbkic.xml?v='+Date.now(),{cache:'no-store'});
+      if(!r.ok)return;
+      const xml=await r.text();
+      const doc=new DOMParser().parseFromString(xml,'application/xml');
+      const channel=(doc.querySelector('channel > title')?.textContent||'').toLowerCase();
+      if(!channel.includes('letterboxd - gjbkic'))return;
+      const items=parseLb36(xml),byUri=new Map(items.map(x=>[normalizeUri(x.link),x]));
+      const targets=(state.customFilms||[]).filter(f=>{
+        if(f.source!=='letterboxd')return false;
+        if(Object.prototype.hasOwnProperty.call(state.exactScores||{},f.id))return false;
+        return byUri.has(normalizeUri(f.uri));
+      });
+      if(!targets.length)return;
+
+      let baseline=0;
+      for(const f of targets){
+        const item=byUri.get(normalizeUri(f.uri));
+        if(!item)continue;
+        applyBaseline36(f,item);baseline++;
+      }
+      if(baseline){save(false);render();}
+
+      let enriched=0;
+      await mapLimit36(targets,4,async f=>{
+        const item=byUri.get(normalizeUri(f.uri));
+        if(item&&await enrichExisting36(f,item))enriched++;
+      });
+      if(baseline||enriched){
+        save();render();
+        toast(`Letterboxdの作品情報を${baseline}本修正しました`);
+      }
+    }catch(_){}
+  }
+
+  // Run after the rest of the current synchronous patch stack has settled.
+  setTimeout(repairCurrentBatch36,350);
+  const marker=document.getElementById('movie30BuildV29');if(marker)marker.textContent='app build '+BUILD36;
+})();
+
+</script>
+
+<!-- patch-v35.js -->
+<script>
+(() => {
+  // v35: remove the accidental 30-item Letterboxd bulk import and never trust proxy RSS for gjbkic.
+  const BUILD='20260925y';
+  const BASE_TOTAL=623;
+  const CLEANUP_KEY='movie30_lb_bad_batch_cleanup_v35';
+  const GH_OWNER='gjbkic', GH_REPO='movie-ratings', GH_BRANCH='main';
+  const TOKEN_KEY='movie30_github_sync_token_v1';
+  const TRIGGER_PATH='letterboxd-sync-trigger.txt';
+  const RESULT_PATH='letterboxd-sync-result.json';
+  const RSS_PATH='letterboxd-gjbkic.xml';
+
+  const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+  const token=()=>{try{return localStorage.getItem(TOKEN_KEY)||''}catch(_){return ''}};
+  function b64decode(s){const bin=atob(String(s||'').replace(/\s/g,'')),a=new Uint8Array(bin.length);for(let i=0;i<bin.length;i++)a[i]=bin.charCodeAt(i);return new TextDecoder().decode(a)}
+  function b64encode(s){const a=new TextEncoder().encode(String(s||''));let bin='';for(let i=0;i<a.length;i+=0x8000)bin+=String.fromCharCode(...a.subarray(i,i+0x8000));return btoa(bin)}
+  async function gh(path,opt={}){
+    const t=token(); if(!t)throw new Error('GitHub同期トークンがありません');
+    const r=await fetch(`https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${path}`,{...opt,cache:'no-store',headers:{Accept:'application/vnd.github+json',Authorization:`Bearer ${t}`,'X-GitHub-Api-Version':'2022-11-28',...(opt.headers||{})}});
+    if(!r.ok){let m=`GitHub HTTP ${r.status}`;try{const j=await r.json();if(j?.message)m+=': '+j.message}catch(_){}throw new Error(m)}
+    return await r.json();
+  }
+  async function ghText(path){const j=await gh(path);return {text:b64decode(j.content||''),sha:j.sha||''}}
+  async function putTrigger(v){
+    let cur=await ghText(TRIGGER_PATH);
+    let body={message:'Trigger Letterboxd RSS refresh',content:b64encode(v+'\n'),branch:GH_BRANCH,sha:cur.sha};
+    try{return await gh(TRIGGER_PATH,{method:'PUT',body:JSON.stringify(body),headers:{'Content-Type':'application/json'}})}catch(_){cur=await ghText(TRIGGER_PATH);body.sha=cur.sha;return await gh(TRIGGER_PATH,{method:'PUT',body:JSON.stringify(body),headers:{'Content-Type':'application/json'}})}
+  }
+  function validateOwnRss(xml){
+    const doc=new DOMParser().parseFromString(String(xml||''),'application/xml');
+    if(doc.querySelector('parsererror'))throw new Error('RSS形式が不正です');
+    const channelTitle=(doc.querySelector('channel > title')?.textContent||'').trim().toLowerCase();
+    const creators=[...doc.querySelectorAll('item')].slice(0,10).map(it=>[...it.children].find(c=>c.localName==='creator')?.textContent?.trim().toLowerCase()||'').filter(Boolean);
+    if(!channelTitle.includes('letterboxd - gjbkic'))throw new Error('gjbkic本人のRSSと確認できませんでした');
+    if(creators.length&&creators.some(x=>x!=='gjbkic'))throw new Error('RSS作成者がgjbkicと一致しません');
+    return true;
+  }
+  async function serverRss(){
+    const trigger=`movie30-safe-${Date.now()}-${Math.random().toString(36).slice(2,8)}`;
+    await putTrigger(trigger);
+    const started=Date.now();let result=null;
+    while(Date.now()-started<70000){await sleep(2200);try{const r=JSON.parse((await ghText(RESULT_PATH)).text);if(r?.trigger===trigger){result=r;break}}catch(_){}}
+    if(!result)throw new Error('サーバー側の確認が70秒以内に完了しませんでした');
+    if(result.status!=='ok')throw new Error(result.error||'Letterboxd RSS取得失敗');
+    const xml=(await ghText(RSS_PATH)).text;validateOwnRss(xml);return {xml,result};
+  }
+  async function verifiedSnapshot(){
+    const r=await fetch('./letterboxd-gjbkic.xml?v='+Date.now(),{cache:'no-store'});
+    if(!r.ok)throw new Error('保存済み本人RSSを取得できませんでした');
+    const xml=await r.text();validateOwnRss(xml);return xml;
+  }
+
+  function removeFilmCompletely(id){
+    state.customFilms=(state.customFilms||[]).filter(f=>f.id!==id);
+    for(const k of ['assignments','starOverrides','exactScores','titleOverrides','categoryOverrides','mediaTypeOverrides','genreOverrides','originOverrides','formatOverrides','runtimeOverrides']){
+      if(state[k]&&typeof state[k]==='object')delete state[k][id];
+    }
+    for(const k of Object.keys(state.rankOrder||{}))state.rankOrder[k]=(state.rankOrder[k]||[]).filter(x=>x!==id);
+  }
+  function cleanupBadBatch(){
+    try{if(localStorage.getItem(CLEANUP_KEY)==='1')return 0}catch(_){}
+    const excess=Math.max(0,allFilms().length-BASE_TOTAL);
+    if(!excess){try{localStorage.setItem(CLEANUP_KEY,'1')}catch(_){}return 0}
+    const candidates=(state.customFilms||[]).filter(f=>f.source==='letterboxd'&&!Object.prototype.hasOwnProperty.call(state.exactScores||{},f.id)).sort((a,b)=>Number(b._seq||0)-Number(a._seq||0));
+    const doomed=candidates.slice(0,excess);
+    for(const f of doomed)removeFilmCompletely(f.id);
+    if(doomed.length){save(false);render()}
+    // Mark complete only if the app is back at the known-good total; otherwise leave it retryable and do not delete unrelated entries.
+    if(allFilms().length<=BASE_TOTAL){try{localStorage.setItem(CLEANUP_KEY,'1')}catch(_){}}
+    return doomed.length;
+  }
+
+  async function applyVerified(xml){
+    validateOwnRss(xml);
+    const items=parseLbRss(xml),seen=new Set();let added=0,updated=0,skipped=0;
+    for(const raw of items){
+      const sig=raw.tmdbId||normKey(raw.title)+raw.year;if(seen.has(sig))continue;seen.add(sig);
+      const rating=Number(raw.rating);if(!Number.isFinite(rating)||rating<.5){skipped++;continue}
+      const existing=findExistingFilm(raw);
+      if(existing){
+        if(filmStar(existing)!==rating){state.starOverrides[existing.id]=rating;updated++}
+        if(raw.tmdbId&&!titleInfo(existing).tmdbId)state.titleOverrides[existing.id]={...(state.titleOverrides[existing.id]||{}),tmdbId:Number(raw.tmdbId)};
+        continue;
+      }
+      const meta=await enrichFromTmdb({...raw,tmdbId:raw.tmdbId?Number(raw.tmdbId):null,englishTitle:raw.title});
+      if(addLbFilm(meta))added++;
+    }
+    save();render();return {items,added,updated,skipped};
+  }
+
+  const removed=cleanupBadBatch();
+  if(removed)toast(`誤同期の${removed}本を取り消しました`);
+
+  syncLetterboxd=async function(silent=false){
+    if(silent)return;
+    const st=getLbSettings(),username=(document.getElementById('lbUsername')?.value||st.username||'gjbkic').trim();
+    if(!username)return;
+    saveLbSettings({username,auto:false});
+    const btn=document.getElementById('syncLetterboxd'),old=btn?.textContent||'今すぐ同期';
+    if(btn){btn.disabled=true;btn.textContent='本人RSS確認中…'}
+    try{
+      let xml,result=null,source='';
+      if(username.toLowerCase()==='gjbkic'){
+        if(token()){
+          setLbStatus('GitHubサーバーでgjbkic本人のLetterboxd RSSを確認しています…');
+          const z=await serverRss();xml=z.xml;result=z.result;source='GitHub本人確認済み';
+        }else{
+          setLbStatus('GitHub同期トークンがないため、最後にサーバー確認済みのRSSだけを使用します…');
+          xml=await verifiedSnapshot();source='保存済み本人RSS';
+        }
+      }else{
+        throw new Error('安全のため自動同期はgjbkicアカウントだけに限定しました');
+      }
+      const z=await applyVerified(xml),latest=z.items[0]||{},count=result?.itemCount??z.items.length;
+      let msg=`同期完了：新規 ${z.added}本${z.updated?`／★更新 ${z.updated}本`:''}${z.skipped?`／未評価 ${z.skipped}件`:''} · ${source}でRSS ${count}件を確認`;
+      if(latest.title)msg+=` · 最新「${latest.title}」${latest.watchedDate?` (${latest.watchedDate})`:''}`;
+      setLbStatus(msg,'ok');
+    }catch(e){setLbStatus('同期を中止しました：'+(e?.message||String(e)),'bad')}
+    finally{if(btn){btn.disabled=false;btn.textContent=old}}
+  };
+  const btn=document.getElementById('syncLetterboxd');if(btn)btn.onclick=()=>syncLetterboxd(false);
+  const panel=btn?.closest('.panel');if(panel){const tip=panel.querySelector('.tip');if(tip)tip.textContent='誤取り込み防止のため、gjbkic本人と確認できたRSSだけを反映します。プロキシ取得に失敗しても別経路の内容を自動登録しません。';}
+
+  const marker=document.getElementById('movie30BuildV29');if(marker)marker.textContent='app build '+BUILD;
+})();
+
+</script>
+
+<!-- patch-v37.js -->
+<script>
+(() => {
+  // v37: user-defined genre/theme tags without touching score/rank data.
+  const BUILD='20260925zc';
+  const EXTRA=['comfort','大作','娯楽'];
+  const SET=new Set(EXTRA);
+
+  function rawGenres(f){
+    const g=state.genreOverrides?.[f?.id];
+    return Array.isArray(g)?[...new Set(g)]:[];
+  }
+  function setGenres(id,genres){
+    state.genreOverrides=state.genreOverrides||{};
+    state.genreOverrides[id]=[...new Set((genres||[]).filter(Boolean))];
+  }
+  function genreHost(wrap){
+    if(!wrap)return null;
+    const rows=[...wrap.querySelectorAll('.struct-row')];
+    const row=rows.find(r=>(r.querySelector('.struct-label')?.textContent||'').includes('ジャンル'))||rows[rows.length-1];
+    return row?.querySelector('.struct-options')||wrap;
+  }
+  function ensure(id,selected=[]){
+    const wrap=document.getElementById(id);if(!wrap)return;
+    const host=genreHost(wrap),chosen=new Set(selected||[]);
+    for(const g of EXTRA){
+      let b=wrap.querySelector(`.genre-chip[data-genre="${g}"]`);
+      if(!b){
+        b=document.createElement('button');
+        b.type='button';b.className='struct-chip genre-chip';b.dataset.genre=g;b.textContent=g;
+        host?.appendChild(b);
+      }
+      b.classList.add('struct-chip','genre-chip');
+      if(host&&b.parentElement!==host)host.appendChild(b);
+      b.classList.toggle('on',chosen.has(g));
+      b.onclick=()=>b.classList.toggle('on');
+    }
+  }
+  function selected(id){
+    const wrap=document.getElementById(id);if(!wrap)return [];
+    return [...wrap.querySelectorAll('.genre-chip.on')]
+      .map(b=>b.dataset.genre||b.textContent.trim())
+      .filter(g=>SET.has(g));
+  }
+
+  ensure('newGenrePicker',[]);
+  ensure('qGenrePicker',[]);
+
+  // Preserve these tags on new/manual additions even though legacy genre code does not know them.
+  for(const [buttonId,pickerId] of [['addMovie','newGenrePicker'],['qAdd','qGenrePicker']]){
+    const btn=document.getElementById(buttonId);if(!btn||!btn.onclick)continue;
+    const prev=btn.onclick;
+    btn.onclick=async function(ev){
+      const extras=selected(pickerId);
+      const before=new Set((state.customFilms||[]).map(f=>f.id));
+      const out=prev.call(this,ev);if(out&&typeof out.then==='function')await out;
+      const created=(state.customFilms||[]).find(f=>!before.has(f.id));
+      if(created&&extras.length){
+        setGenres(created.id,[...rawGenres(created),...extras]);
+        save();render();
+      }
+      ensure(pickerId,[]);
+      return out;
+    };
+  }
+
+  // Editing.
+  const openPrev=openSheet;
+  openSheet=function(id){
+    openPrev(id);
+    const f=filmById(id);if(!f)return;
+    const chosen=new Set(rawGenres(f).filter(g=>SET.has(g)));
+    ensure('editGenrePicker',[...chosen]);
+    const wrap=document.getElementById('editGenrePicker');
+    wrap?.querySelectorAll('.genre-chip').forEach(b=>{
+      const g=b.dataset.genre||b.textContent.trim();if(!SET.has(g))return;
+      b.classList.toggle('on',chosen.has(g));
+      b.onclick=()=>{
+        chosen.has(g)?chosen.delete(g):chosen.add(g);
+        b.classList.toggle('on',chosen.has(g));
+        const base=rawGenres(f).filter(x=>!SET.has(x));
+        setGenres(f.id,[...base,...chosen]);save();render();
+      };
+    });
+  };
+
+  const editWrap=document.getElementById('editGenrePicker');
+  if(editWrap&&!editWrap.dataset.v37Guard){
+    editWrap.dataset.v37Guard='1';
+    editWrap.addEventListener('click',()=>setTimeout(()=>{
+      const f=filmById(selectedId);if(!f)return;
+      const chosen=[...editWrap.querySelectorAll('.genre-chip.on')]
+        .map(b=>b.dataset.genre||b.textContent.trim()).filter(g=>SET.has(g));
+      const base=rawGenres(f).filter(x=>!SET.has(x));
+      setGenres(f.id,[...base,...chosen]);save(false);
+    },0));
+  }
+
+  // Filters. v38 turns these options into multi-select AND filtering.
+  for(const id of ['genreFilterRank','genreFilterClassify']){
+    const s=document.getElementById(id);if(!s)continue;
+    for(const g of EXTRA)if(![...s.options].some(o=>o.value===g))s.add(new Option(g,g));
+  }
+  function postFilter(root,cardSel,sectionSel,value){
+    if(!SET.has(value))return;
+    document.querySelectorAll(`${root} ${cardSel}`).forEach(card=>{
+      let id=card.dataset.id||'';try{id=decodeURIComponent(id)}catch(_){}
+      const f=filmById(id);if(f&&!rawGenres(f).includes(value))card.remove();
+    });
+    document.querySelectorAll(`${root} ${sectionSel}`).forEach(sec=>{if(!sec.querySelector(cardSel))sec.style.display='none'});
+    if(root==='#rankRoot')document.querySelectorAll('#rankRoot .score-bin').forEach(bin=>{if(!bin.querySelector(cardSel))bin.style.display='none'});
+  }
+  const renderRankPrev=renderRank;
+  renderRank=function(){
+    const s=document.getElementById('genreFilterRank'),v=s?.value||'';
+    if(s&&SET.has(v))s.value='';
+    const out=renderRankPrev();
+    if(s)s.value=v;
+    postFilter('#rankRoot','.rank-card','.rank-star',v);
+    return out;
+  };
+  const renderClassPrev=renderClassify;
+  renderClassify=function(){
+    const s=document.getElementById('genreFilterClassify'),v=s?.value||'';
+    if(s&&SET.has(v))s.value='';
+    const out=renderClassPrev();
+    if(s)s.value=v;
+    postFilter('#classifyRoot','.card','.section',v);
+    return out;
+  };
+  const rf=document.getElementById('genreFilterRank');if(rf)rf.onchange=renderRank;
+  const cf=document.getElementById('genreFilterClassify');if(cf)cf.onchange=renderClassify;
+
+  const marker=document.getElementById('movie30BuildV29');if(marker)marker.textContent='app build '+BUILD;
+  render();
+})();
+
+</script>
+
+<!-- patch-v38.js -->
+<script>
+(() => {
+  // v38: multi-genre combination search. Selected genres are ANDed together.
+  const BUILD='20260925zb';
+  const style=document.createElement('style');
+  style.textContent=`
+    .genre-combo{flex:1 0 100%;display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-top:1px;min-height:0}
+    .genre-combo:empty{display:none}
+    .genre-combo-chip{border:1px solid var(--accent);background:rgba(67,209,125,.09);color:#eafff1;border-radius:999px;padding:6px 9px;font-size:10px;font-weight:750}
+    .genre-combo-chip span{opacity:.72;margin-left:4px}
+    .genre-combo-clear{border:1px solid var(--line);background:var(--panel);color:var(--muted);border-radius:999px;padding:6px 9px;font-size:10px}
+  `;
+  document.head.appendChild(style);
+
+  const chosen={Rank:new Set(),Classify:new Set()};
+
+  function filmGenres38(f){
+    const g=state.genreOverrides?.[f?.id];
+    return Array.isArray(g)?g:[];
+  }
+  function cleanSections(root,cardSel,sectionSel){
+    document.querySelectorAll(`${root} ${sectionSel}`).forEach(sec=>{if(!sec.querySelector(cardSel))sec.style.display='none';});
+    if(root==='#rankRoot')document.querySelectorAll('#rankRoot .score-bin').forEach(bin=>{if(!bin.querySelector(cardSel))bin.style.display='none';});
+  }
+  function applyCombo(root,cardSel,sectionSel,set){
+    if(!set.size)return;
+    const wanted=[...set];
+    document.querySelectorAll(`${root} ${cardSel}`).forEach(card=>{
+      let id=card.dataset.id||'';try{id=decodeURIComponent(id)}catch(_){}
+      const f=filmById(id);if(!f)return;
+      const gs=filmGenres38(f);
+      if(!wanted.every(g=>gs.includes(g)))card.remove();
+    });
+    cleanSections(root,cardSel,sectionSel);
+  }
+
+  function comboHost(suffix){
+    const select=document.getElementById('genreFilter'+suffix);if(!select)return null;
+    let host=document.getElementById('genreCombo'+suffix);
+    if(!host){
+      host=document.createElement('div');host.id='genreCombo'+suffix;host.className='genre-combo';
+      select.insertAdjacentElement('afterend',host);
+    }
+    return host;
+  }
+  function paintCombo(suffix){
+    const host=comboHost(suffix),set=chosen[suffix];if(!host)return;
+    host.innerHTML='';
+    for(const g of set){
+      const b=document.createElement('button');b.type='button';b.className='genre-combo-chip';
+      b.innerHTML=`${esc(g)}<span>×</span>`;
+      b.onclick=()=>{set.delete(g);paintCombo(suffix);suffix==='Rank'?renderRank():renderClassify();};
+      host.appendChild(b);
+    }
+    if(set.size){
+      const c=document.createElement('button');c.type='button';c.className='genre-combo-clear';c.textContent='ジャンル解除';
+      c.onclick=()=>{set.clear();paintCombo(suffix);suffix==='Rank'?renderRank():renderClassify();};
+      host.appendChild(c);
+    }
+  }
+  function prepareSelect(suffix){
+    const s=document.getElementById('genreFilter'+suffix);if(!s)return;
+    const first=s.options?.[0];if(first&&first.value==='')first.textContent='ジャンル追加…';
+    s.value='';
+    s.onchange=()=>{
+      const v=s.value;
+      if(v)chosen[suffix].add(v);
+      s.value='';paintCombo(suffix);
+      suffix==='Rank'?renderRank():renderClassify();
+    };
+    comboHost(suffix);paintCombo(suffix);
+  }
+
+  const rankPrev=renderRank;
+  renderRank=function(){
+    const s=document.getElementById('genreFilterRank');
+    if(s)s.value=''; // bypass all legacy single-genre filters
+    const out=rankPrev();
+    if(s){s.value='';const first=s.options?.[0];if(first&&first.value==='')first.textContent='ジャンル追加…';}
+    applyCombo('#rankRoot','.rank-card','.rank-star',chosen.Rank);
+    paintCombo('Rank');
+    return out;
+  };
+  const classPrev=renderClassify;
+  renderClassify=function(){
+    const s=document.getElementById('genreFilterClassify');
+    if(s)s.value='';
+    const out=classPrev();
+    if(s){s.value='';const first=s.options?.[0];if(first&&first.value==='')first.textContent='ジャンル追加…';}
+    applyCombo('#classifyRoot','.card','.section',chosen.Classify);
+    paintCombo('Classify');
+    return out;
+  };
+
+  prepareSelect('Rank');prepareSelect('Classify');
+
+  // Several older patches attached concrete render function objects to controls.
+  // Rebind them so combination filtering is always re-applied after any other filter/search changes.
+  const sr=document.getElementById('searchRank');if(sr)sr.oninput=renderRank;
+  const sc=document.getElementById('searchClassify');if(sc)sc.oninput=renderClassify;
+  for(const id of ['mediaFilterRank','originFilterRank','formatFilterRank','decadeFilterRank','runtimeFilterRank']){const e=document.getElementById(id);if(e)e.onchange=renderRank;}
+  for(const id of ['mediaFilterClassify','originFilterClassify','formatFilterClassify','decadeFilterClassify','runtimeFilterClassify']){const e=document.getElementById(id);if(e)e.onchange=renderClassify;}
+  const gr=document.getElementById('genreFilterRank');if(gr)gr.onchange=()=>{const v=gr.value;if(v)chosen.Rank.add(v);gr.value='';paintCombo('Rank');renderRank();};
+  const gc=document.getElementById('genreFilterClassify');if(gc)gc.onchange=()=>{const v=gc.value;if(v)chosen.Classify.add(v);gc.value='';paintCombo('Classify');renderClassify();};
+
+  const marker=document.getElementById('movie30BuildV29');if(marker)marker.textContent='app build '+BUILD;
+  render();
+})();
+
+</script>
