@@ -1,0 +1,830 @@
+
+<!-- patch-v39.js -->
+<script>
+(() => {
+  // v39: safely backfill missing runtimes from TMDB without touching scores or ranking.
+  const BUILD='20260925zd';
+  const CHECKED_KEY='movie30_runtime_checked_v39';
+  const BATCH=12;
+  const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+  const readChecked=()=>{try{return new Set(JSON.parse(localStorage.getItem(CHECKED_KEY)||'[]'))}catch(_){return new Set()}};
+  const writeChecked=s=>{try{localStorage.setItem(CHECKED_KEY,JSON.stringify([...s]))}catch(_){}};
+  const norm=s=>String(s||'').normalize('NFKD').toLowerCase().replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9\u3040-\u30ff\u3400-\u9fff\uac00-\ud7af]+/g,'');
+  const yearOf=d=>Number(String(d?.release_date||d?.first_air_date||'').slice(0,4))||0;
+  const runtimeOf=(d,type)=>{
+    if(type==='tv'){
+      const xs=[];
+      if(Array.isArray(d?.episode_run_time))xs.push(...d.episode_run_time);
+      xs.push(d?.last_episode_to_air?.runtime,d?.next_episode_to_air?.runtime);
+      const n=xs.map(Number).find(x=>Number.isFinite(x)&&x>0);
+      return n||null;
+    }
+    const n=Number(d?.runtime);return Number.isFinite(n)&&n>0?n:null;
+  };
+  function currentRuntime(f){const n=Number(state.runtimeOverrides?.[f.id]??f.runtime);return Number.isFinite(n)&&n>0?n:null;}
+  function info(f){const x=titleInfo(f)||{};return {x,titles:[displayTitle(f),x.title,x.originalTitle,x.englishTitle,f.lbTitle].filter(Boolean),year:Number(f.year)||0};}
+  function mediaType(f){return (f?.tmdbType==='tv'||String(state.mediaTypeOverrides?.[f.id]||f?.mediaType||'')==='drama')?'tv':'movie';}
+  function knownTmdbId(f){const x=titleInfo(f)||{};return Number(f?.tmdbId||x.tmdbId||state.titleOverrides?.[f.id]?.tmdbId||0)||null;}
+  async function resolveTmdb(f){
+    const type=mediaType(f),known=knownTmdbId(f);
+    if(known)return {type,id:known};
+    const z=info(f),queries=[...new Set(z.titles.map(String).filter(Boolean))];
+    for(const q of queries){
+      const params={query:q,language:'en-US'};
+      if(z.year){if(type==='tv')params.first_air_date_year=z.year;else params.year=z.year;}
+      let s;try{s=await tmdbFetch('/search/'+type,params)}catch(_){continue}
+      const wanted=new Set(queries.map(norm));
+      const candidates=(s?.results||[]).filter(r=>{
+        const ry=yearOf(r); if(z.year&&ry&&ry!==z.year)return false;
+        return wanted.has(norm(r.title||r.name||''))||wanted.has(norm(r.original_title||r.original_name||''));
+      });
+      if(candidates.length===1)return {type,id:Number(candidates[0].id)};
+      if(candidates.length>1){const exactYear=candidates.find(r=>yearOf(r)===z.year);if(exactYear)return {type,id:Number(exactYear.id)};}
+    }
+    return null;
+  }
+  async function fetchOne(f){
+    const ref=await resolveTmdb(f);if(!ref)return {ok:false,reason:'nomatch'};
+    let d;try{d=await tmdbFetch('/'+ref.type+'/'+ref.id,{language:'ja-JP'})}catch(_){d=await tmdbFetch('/'+ref.type+'/'+ref.id,{language:'en-US'})}
+    const rt=runtimeOf(d,ref.type);if(!rt)return {ok:false,reason:'noruntime'};
+    state.runtimeOverrides=state.runtimeOverrides||{};state.runtimeOverrides[f.id]=rt;
+    if(!knownTmdbId(f)){
+      state.titleOverrides=state.titleOverrides||{};
+      state.titleOverrides[f.id]={...(state.titleOverrides[f.id]||{}),tmdbId:ref.id};
+    }
+    return {ok:true,runtime:rt};
+  }
+
+  const data=document.getElementById('page-data');let panel=document.getElementById('runtimeBackfill39'),statusEl=null,btn=null;
+  if(data&&!panel){
+    panel=document.createElement('div');panel.id='runtimeBackfill39';panel.className='panel';
+    panel.innerHTML='<h2>上映時間の取得</h2><div class="api-status" id="runtimeStatus39">未取得作品を確認中…</div><div style="margin-top:8px"><button type="button" class="btn" id="runtimeFetch39">未取得を追加取得</button></div><div class="tip">TMDBで作品を照合できたものだけ取得します。映画は上映時間、TVシリーズは1話あたりの標準時間です。点数・順位は変更しません。</div>';
+    const marker=document.getElementById('movie30BuildV29');if(marker)data.insertBefore(panel,marker);else data.appendChild(panel);
+  }
+  statusEl=document.getElementById('runtimeStatus39');btn=document.getElementById('runtimeFetch39');
+  const missing=()=>allFilms().filter(f=>!currentRuntime(f));
+  const paint=(extra='')=>{if(statusEl)statusEl.textContent=`上映時間あり ${allFilms().length-missing().length}本 / ${allFilms().length}本${extra?' · '+extra:''}`;};
+  let busy=false;
+  async function run(limit=BATCH,automatic=false){
+    if(busy)return;
+    if(typeof tmdbFetch!=='function'||typeof getTmdbCredential!=='function'||!getTmdbCredential()){paint('TMDB設定が必要です');return;}
+    busy=true;if(btn)btn.disabled=true;
+    const checked=readChecked();
+    const todo=missing().filter(f=>!checked.has(f.id)).slice(0,limit);
+    let added=0,done=0;
+    for(const f of todo){
+      if(statusEl)statusEl.textContent=`上映時間取得中… ${done+1}/${todo.length} · ${displayTitle(f)}`;
+      try{const r=await fetchOne(f);if(r.ok)added++;checked.add(f.id)}catch(_){}
+      done++;writeChecked(checked);await sleep(180);
+    }
+    if(added){save(false);render();}
+    const left=missing().filter(f=>!checked.has(f.id)).length;
+    paint(`今回 ${added}本取得${left?` · 未確認 ${left}本`:''}`);
+    busy=false;if(btn)btn.disabled=false;
+    if(!automatic&&todo.length===0)toast('取得できる未確認作品はありません');
+  }
+  if(btn)btn.onclick=()=>run(30,false);
+  paint();
+  // Light background fill only: enough to improve data over time without making iPhone startup heavy.
+  setTimeout(()=>run(BATCH,true),4500);
+  const marker=document.getElementById('movie30BuildV29');if(marker)marker.textContent='app build '+BUILD;
+})();
+
+</script>
+
+<!-- patch-v40.js -->
+<script>
+(() => {
+  // v40: TV-series-only subtype (main series / special) stored as internal genre tags.
+  // This avoids any score/rank changes and keeps the value in existing live-state sync.
+  const BUILD='20260926b';
+  const TAG_MAIN='TV本編';
+  const TAG_SP='TV特番・SP';
+  const TV_TAGS=new Set([TAG_MAIN,TAG_SP]);
+
+  const style=document.createElement('style');
+  style.textContent=`
+    .tv-subtype-row-v40{margin-top:7px}
+    .tv-subtype-filter-v40[hidden]{display:none!important}
+  `;
+  document.head.appendChild(style);
+
+  function rawGenres(f){
+    const g=state.genreOverrides?.[f?.id];
+    return Array.isArray(g)?[...new Set(g)]:[];
+  }
+  function setGenres(f,arr){
+    if(!f)return false;
+    state.genreOverrides=state.genreOverrides||{};
+    const next=[...new Set((arr||[]).filter(Boolean))];
+    const prev=rawGenres(f);
+    if(prev.length===next.length&&prev.every((x,i)=>x===next[i]))return false;
+    state.genreOverrides[f.id]=next;
+    return true;
+  }
+  function mediaOf(f){
+    const v=String(state.mediaTypeOverrides?.[f?.id]||f?.mediaType||'movie');
+    return (v==='drama'||v==='series'||f?.tmdbType==='tv')?'drama':v;
+  }
+  function subtypeOf(f){
+    if(mediaOf(f)!=='drama')return '';
+    const gs=rawGenres(f);
+    return gs.includes(TAG_SP)?'sp':'main';
+  }
+  function setSubtype(f,subtype){
+    if(!f)return false;
+    const base=rawGenres(f).filter(g=>!TV_TAGS.has(g));
+    if(mediaOf(f)==='drama')base.push(subtype==='sp'?TAG_SP:TAG_MAIN);
+    return setGenres(f,base);
+  }
+  function clearSubtype(f){
+    if(!f)return false;
+    return setGenres(f,rawGenres(f).filter(g=>!TV_TAGS.has(g)));
+  }
+
+  // Existing TV works default to 本編. No scores/ranks/ordinary genres are touched.
+  let seeded=false;
+  for(const f of allFilms()){
+    if(mediaOf(f)==='drama'){
+      const gs=rawGenres(f);
+      if(!gs.some(g=>TV_TAGS.has(g))){setGenres(f,[...gs,TAG_MAIN]);seeded=true;}
+    }else if(rawGenres(f).some(g=>TV_TAGS.has(g))){clearSubtype(f);seeded=true;}
+  }
+  if(seeded)save(false);
+
+  function pickerMedia(wrap){
+    if(!wrap)return 'movie';
+    const rows=[...wrap.querySelectorAll('.struct-row')];
+    const mediaRow=rows.find(r=>(r.querySelector('.struct-label')?.textContent||'').includes('種別'))||rows[0];
+    return mediaRow?.querySelector('.struct-chip.on')?.dataset.structValue||'movie';
+  }
+  function selectedSubtype(wrap){
+    return wrap?.querySelector('.tv-subtype-row-v40 .struct-chip.on')?.dataset.tvSubtype||'main';
+  }
+  function ensureTvRow(id,selected='main'){
+    const wrap=document.getElementById(id);if(!wrap)return null;
+    let row=wrap.querySelector('.tv-subtype-row-v40');
+    if(!row){
+      row=document.createElement('div');
+      row.className='struct-row tv-subtype-row-v40';
+      row.innerHTML='<div class="struct-label">TV区分</div><div class="struct-options"><button type="button" class="struct-chip" data-tv-subtype="main">本編</button><button type="button" class="struct-chip" data-tv-subtype="sp">特番・SP</button></div>';
+      const rows=[...wrap.querySelectorAll('.struct-row')];
+      const mediaRow=rows.find(r=>(r.querySelector('.struct-label')?.textContent||'').includes('種別'))||rows[0];
+      if(mediaRow)mediaRow.insertAdjacentElement('afterend',row);else wrap.appendChild(row);
+    }
+    const media=pickerMedia(wrap);
+    row.style.display=media==='drama'?'':'none';
+    const cur=selected==='sp'?'sp':'main';
+    row.querySelectorAll('[data-tv-subtype]').forEach(b=>{
+      b.classList.toggle('on',b.dataset.tvSubtype===cur);
+      b.onclick=e=>{
+        e.preventDefault();
+        row.querySelectorAll('[data-tv-subtype]').forEach(x=>x.classList.toggle('on',x===b));
+        wrap.dataset.tvSubtypeV40=b.dataset.tvSubtype;
+        if(id==='editGenrePicker'){
+          const f=filmById(selectedId);if(!f)return;
+          if(mediaOf(f)==='drama'&&setSubtype(f,b.dataset.tvSubtype)){save();render();}
+        }
+      };
+    });
+    wrap.dataset.tvSubtypeV40=cur;
+    return row;
+  }
+  function refreshPicker(id,f=null){
+    const wrap=document.getElementById(id);if(!wrap)return;
+    const media=pickerMedia(wrap);
+    let sub=f?subtypeOf(f):(wrap.dataset.tvSubtypeV40||'main');
+    ensureTvRow(id,sub||'main');
+    const row=wrap.querySelector('.tv-subtype-row-v40');if(row)row.style.display=media==='drama'?'':'none';
+  }
+  function bindPickerWatch(id){
+    const wrap=document.getElementById(id);if(!wrap||wrap.dataset.tvWatchV40)return;
+    wrap.dataset.tvWatchV40='1';
+    wrap.addEventListener('click',()=>setTimeout(()=>{
+      const media=pickerMedia(wrap);
+      if(id==='editGenrePicker'){
+        const f=filmById(selectedId);if(!f)return;
+        let changed=false;
+        if(media==='drama'){
+          // v33 has already written the media override by this point.
+          if(!rawGenres(f).some(g=>TV_TAGS.has(g)))changed=setSubtype(f,wrap.dataset.tvSubtypeV40||'main')||changed;
+        }else if(rawGenres(f).some(g=>TV_TAGS.has(g)))changed=clearSubtype(f)||changed;
+        refreshPicker(id,f);
+        if(changed)save();
+      }else refreshPicker(id,null);
+    },0), true);
+  }
+
+  for(const id of ['newGenrePicker','qGenrePicker']){ensureTvRow(id,'main');bindPickerWatch(id);}
+
+  // Quick TMDB selection can rebuild the picker, so restore the dependent row afterward.
+  if(typeof selectTmdb==='function'){
+    const selectTmdbPrev=selectTmdb;
+    selectTmdb=async function(...args){const out=await selectTmdbPrev.apply(this,args);refreshPicker('qGenrePicker');return out;};
+  }
+
+  // Preserve TV subtype when adding a work, even though older genre handlers only know ordinary genres.
+  for(const [buttonId,pickerId] of [['addMovie','newGenrePicker'],['qAdd','qGenrePicker']]){
+    const btn=document.getElementById(buttonId);if(!btn||!btn.onclick)continue;
+    const prev=btn.onclick;
+    btn.onclick=async function(ev){
+      const wrap=document.getElementById(pickerId);
+      const media=pickerMedia(wrap),sub=selectedSubtype(wrap);
+      const before=new Set((state.customFilms||[]).map(f=>f.id));
+      const out=prev.call(this,ev);if(out&&typeof out.then==='function')await out;
+      const created=(state.customFilms||[]).find(f=>!before.has(f.id));
+      if(created){
+        let changed=false;
+        if(media==='drama')changed=setSubtype(created,sub)||changed;
+        else changed=clearSubtype(created)||changed;
+        if(changed){save();render();}
+      }
+      refreshPicker(pickerId);
+      return out;
+    };
+  }
+
+  // Letterboxd TV imports default to 本編 unless the user later changes them.
+  if(typeof addLbFilm==='function'){
+    const addLbPrev=addLbFilm;
+    addLbFilm=function(meta){
+      const f=addLbPrev(meta);if(!f)return f;
+      if(meta?.tmdbType==='tv'||mediaOf(f)==='drama')setSubtype(f,'main');
+      return f;
+    };
+  }
+
+  const openPrev=openSheet;
+  openSheet=function(id){
+    openPrev(id);
+    const f=filmById(id);if(!f)return;
+    refreshPicker('editGenrePicker',f);bindPickerWatch('editGenrePicker');
+    const meta=document.getElementById('sheetMeta');
+    if(meta&&mediaOf(f)==='drama'&&!/\b(?:本編|特番・SP)$/.test(meta.textContent||''))meta.textContent+=` · ${subtypeOf(f)==='sp'?'特番・SP':'本編'}`;
+  };
+
+  function makeTvFilter(suffix){
+    const media=document.getElementById('mediaFilter'+suffix);if(!media)return null;
+    const id='tvSubtypeFilter'+suffix;
+    let s=document.getElementById(id);
+    if(!s){
+      s=document.createElement('select');s.id=id;s.className=(media.className||'filter-select')+' tv-subtype-filter-v40';
+      s.innerHTML='<option value="">TV区分: すべて</option><option value="main">本編</option><option value="sp">特番・SP</option>';
+      media.insertAdjacentElement('afterend',s);
+    }
+    const refresh=()=>{
+      const show=media.value==='drama';
+      s.hidden=!show;
+      if(!show)s.value='';
+    };
+    refresh();
+    s.onchange=()=>suffix==='Rank'?renderRank():renderClassify();
+    return {media,s,refresh};
+  }
+  const tvFilters={Rank:makeTvFilter('Rank'),Classify:makeTvFilter('Classify')};
+
+  function applyTvFilter(root,cardSel,sectionSel,suffix){
+    const x=tvFilters[suffix];if(!x)return;
+    x.refresh();
+    const wanted=x.s.value;if(!wanted||x.media.value!=='drama')return;
+    document.querySelectorAll(`${root} ${cardSel}`).forEach(card=>{
+      let id=card.dataset.id||'';try{id=decodeURIComponent(id)}catch(_){}
+      const f=filmById(id);if(f&&subtypeOf(f)!==wanted)card.remove();
+    });
+    document.querySelectorAll(`${root} ${sectionSel}`).forEach(sec=>{if(!sec.querySelector(cardSel))sec.style.display='none';});
+    if(root==='#rankRoot')document.querySelectorAll('#rankRoot .score-bin').forEach(bin=>{if(!bin.querySelector(cardSel))bin.style.display='none';});
+  }
+
+  const renderRankPrev=renderRank;
+  renderRank=function(){const out=renderRankPrev();applyTvFilter('#rankRoot','.rank-card','.rank-star','Rank');return out;};
+  const renderClassPrev=renderClassify;
+  renderClassify=function(){const out=renderClassPrev();applyTvFilter('#classifyRoot','.card','.section','Classify');return out;};
+
+  // Older patches captured previous render functions in controls; point them at the final wrappers.
+  const sr=document.getElementById('searchRank');if(sr)sr.oninput=renderRank;
+  const sc=document.getElementById('searchClassify');if(sc)sc.oninput=renderClassify;
+  for(const id of ['mediaFilterRank','originFilterRank','formatFilterRank','decadeFilterRank','runtimeFilterRank']){const e=document.getElementById(id);if(e)e.onchange=()=>{tvFilters.Rank?.refresh();renderRank();};}
+  for(const id of ['mediaFilterClassify','originFilterClassify','formatFilterClassify','decadeFilterClassify','runtimeFilterClassify']){const e=document.getElementById(id);if(e)e.onchange=()=>{tvFilters.Classify?.refresh();renderClassify();};}
+
+  const marker=document.getElementById('movie30BuildV29');if(marker)marker.textContent='app build '+BUILD;
+  render();
+})();
+
+</script>
+
+<!-- patch-v41.js -->
+<script>
+(() => {
+  // v41: review-based TV classification. Corrects Letterboxd/TMDB entries that are
+  // semantically TV series/specials even when their source entity is typed as a movie.
+  const BUILD='20260926c';
+  const MEDIA_KEY='movie30_media_v33_v1';
+  const LEGACY_TV_KEY='movie30_media_drama_ids_v1';
+  const TAG_MAIN='TV本編', TAG_SP='TV特番・SP';
+  const TV_TAGS=new Set([TAG_MAIN,TAG_SP]);
+
+  const CURRENT_SPECIAL_IDS=new Set([
+    'custom-1790322758188-46qe', // 逃げ恥 新春SP
+    'custom-1790322761655-im7g', // 半沢直樹 エピソードゼロ
+    'custom-1790322761955-twge', // リーガル・ハイ SP2
+    'custom-1790322762266-mrn9', // リーガル・ハイ SP
+    'custom-1790322763462-yaoz', // IWGP スープの回
+    'custom-1790322764349-xp48', // Stranger Things 5: The Finale
+    'custom-1790423279439-sn81', // ストロベリーナイト 2010 TV special
+    'custom-1790423279786-lguu', // TRICK 新作SP2
+    'custom-1790423280120-qki8', // TRICK 新作SP
+    'custom-1790423280570-6eki'  // TRICK 新作SP3
+  ]);
+
+  const CURRENT_MAIN_IDS=new Set([
+    'custom-1790322756823-bi61', // JoJo Stone Ocean
+    'custom-1790322757185-u25f', // JoJo Stardust Crusaders
+    'custom-1790322757548-hd0x', // JoJo Golden Wind
+    'custom-1790322757929-0kod', // JoJo Diamond is Unbreakable
+    'custom-1790423280875-9b4j'  // 踊る大捜査線 TV series
+  ]);
+
+  const readObj=k=>{try{const v=JSON.parse(localStorage.getItem(k)||'{}');return v&&typeof v==='object'&&!Array.isArray(v)?v:{}}catch(_){return {}}};
+  const writeObj=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch(_){}};
+  const writeSet=(k,s)=>{try{localStorage.setItem(k,JSON.stringify([...s]))}catch(_){}};
+  function rawGenres(f){const g=state.genreOverrides?.[f?.id];return Array.isArray(g)?[...new Set(g)]:[];}
+  function textOf(f){const x=titleInfo(f)||{};return [displayTitle(f),x.title,x.originalTitle,x.englishTitle,f?.lbTitle].filter(Boolean).join(' ');}
+  function norm(s){return String(s||'').normalize('NFKC').toLowerCase().replace(/\s+/g,' ').trim();}
+
+  function titleSpecial(f){
+    const t=norm(textOf(f)),y=Number(f?.year)||0;
+    if(CURRENT_SPECIAL_IDS.has(f?.id))return true;
+    if(y===2010&&/(?:^| )ストロベリーナイト(?: |$)|strawberry night/.test(t))return true;
+    return /(?:逃げるは恥だが役に立つ.*(?:新春|スペシャル)|full-time wife escapist.*new year.*special|半沢直樹.*エピソードゼロ|hanzawa naoki.*spin.?off|リーガル.?ハイ.*スペシャル|legal high.*\bsp\b|池袋ウエストゲートパーク.*スープ|ikebukuro west gate park.*\bsp\b|stranger things 5.*finale|トリック.*新作スペシャル|trick shinsaku special|今日から俺は.*スペシャル|義母と娘のブルース.*スペシャル|コンフィデンスマンjp.*(?:運勢編|スペシャル)|踊る大捜査線.*スペシャル)/i.test(t);
+  }
+  function titleMain(f){
+    if(CURRENT_MAIN_IDS.has(f?.id))return true;
+    const t=norm(textOf(f)),y=Number(f?.year)||0;
+    if(y===1995&&/(?:新世紀エヴァンゲリオン|neon genesis evangelion)/i.test(t))return true;
+    if(y===2010&&/(?:^| )spec(?: ~ first blood)?(?: |$)/i.test(t))return true;
+    return /(?:jojo's bizarre adventure: (?:stone ocean|stardust crusaders|golden wind|diamond is unbreakable)|踊る大捜査線|bayside shakedown|十角館の殺人|the decagon house murders|squid game|イカゲーム|chernobyl|チェルノブイリ|breaking bad|better call saul|true detective|black mirror|mindhunter|band of brothers|the wire)/i.test(t);
+  }
+
+  function currentMedia(f,map){return String(state.mediaTypeOverrides?.[f?.id]||map[f?.id]||f?.mediaType||'movie');}
+  function shouldBeTV(f,map){return titleSpecial(f)||titleMain(f)||f?.tmdbType==='tv'||['drama','series'].includes(currentMedia(f,map));}
+  function setSubtype(f,sp){
+    state.genreOverrides=state.genreOverrides||{};
+    const base=rawGenres(f).filter(g=>!TV_TAGS.has(g));
+    base.push(sp?TAG_SP:TAG_MAIN);
+    const prev=rawGenres(f),next=[...new Set(base)];
+    if(prev.length===next.length&&prev.every((x,i)=>x===next[i]))return false;
+    state.genreOverrides[f.id]=next;return true;
+  }
+
+  const map=readObj(MEDIA_KEY);
+  let mediaChanged=false,stateChanged=false;
+  const films=allFilms();
+  for(const f of films){
+    if(!shouldBeTV(f,map))continue;
+    if(map[f.id]!=='drama'){map[f.id]='drama';mediaChanged=true;}
+    state.mediaTypeOverrides=state.mediaTypeOverrides||{};
+    if(state.mediaTypeOverrides[f.id]!=='drama'){state.mediaTypeOverrides[f.id]='drama';stateChanged=true;}
+    const sp=titleSpecial(f);
+    if(sp||titleMain(f)||!rawGenres(f).some(g=>TV_TAGS.has(g)))stateChanged=setSubtype(f,sp)||stateChanged;
+  }
+  if(mediaChanged){
+    writeObj(MEDIA_KEY,map);
+    writeSet(LEGACY_TV_KEY,new Set(Object.entries(map).filter(([,v])=>v==='drama').map(([id])=>id)));
+  }
+  if(stateChanged)save(false);
+
+  // v33 keeps its media map in a closure. If this pass corrected a movie->TV item,
+  // reload once so all existing filters/edit controls read the corrected map too.
+  if(mediaChanged){
+    let reloaded=false;try{reloaded=sessionStorage.getItem('movie30_tvclass_reload_v41')===BUILD}catch(_){}
+    if(!reloaded){try{sessionStorage.setItem('movie30_tvclass_reload_v41',BUILD)}catch(_){};setTimeout(()=>location.reload(),120);return;}
+  }
+
+  const marker=document.getElementById('movie30BuildV29');if(marker)marker.textContent='app build '+BUILD;
+  render();
+})();
+
+</script>
+
+<!-- patch-v43.js -->
+<script>
+(() => {
+  // v43: undo the assistant-added watched-TV seed from v42 only.
+  // Existing user data / Letterboxd entries are not removed.
+  const BUILD='20260926f';
+  const IDS=new Set([
+    'seed-tv-hanzawa-2013','seed-tv-legalhigh-2012','seed-tv-legalhigh2-2013',
+    'seed-tv-trick-2000','seed-tv-trick2-2002','seed-tv-trick3-2003',
+    'seed-tv-hero-2001','seed-tv-hero-2014','seed-tv-999-2016','seed-tv-9992-2018',
+    'seed-tv-spec-2010','seed-tv-strawberrynight-2012','seed-tv-galileo-2007',
+    'seed-tv-liargame-2007','seed-tv-codeblue-2008','seed-tv-boss-2009'
+  ]);
+  const CLEAN_KEY='movie30_undo_tv_seed_v43_20260926f';
+  let done=false;try{done=localStorage.getItem(CLEAN_KEY)==='1'}catch(_){}
+  if(!done){
+    const before=(state.customFilms||[]).length;
+    state.customFilms=(state.customFilms||[]).filter(f=>!IDS.has(f.id));
+    for(const key of ['assignments','starOverrides','exactScores','titleOverrides','categoryOverrides','mediaTypeOverrides','genreOverrides','originOverrides','formatOverrides','runtimeOverrides']){
+      if(!state[key])continue;
+      for(const id of IDS)delete state[key][id];
+    }
+    for(const k of Object.keys(state.rankOrder||{}))state.rankOrder[k]=(state.rankOrder[k]||[]).filter(id=>!IDS.has(id));
+    const cleanObjKey=k=>{try{const o=JSON.parse(localStorage.getItem(k)||'{}');if(o&&typeof o==='object'&&!Array.isArray(o)){for(const id of IDS)delete o[id];localStorage.setItem(k,JSON.stringify(o));}}catch(_){}};
+    cleanObjKey('movie30_media_v33_v1');
+    cleanObjKey('movie30_origin_v33_v1');
+    try{
+      const arr=JSON.parse(localStorage.getItem('movie30_media_drama_ids_v1')||'[]');
+      if(Array.isArray(arr))localStorage.setItem('movie30_media_drama_ids_v1',JSON.stringify(arr.filter(id=>!IDS.has(id))));
+      localStorage.setItem(CLEAN_KEY,'1');
+    }catch(_){}
+    if((state.customFilms||[]).length!==before){save();render();toast('今回追加したTV作品を取り消しました');}
+  }
+  const marker=document.getElementById('movie30BuildV29');if(marker)marker.textContent='app build '+BUILD;
+})();
+
+</script>
+
+<!-- patch-v44.js -->
+<script>
+(() => {
+  // v44: four cross-genre descriptive tags. No automatic assignment and no score/rank changes.
+  const BUILD='20260927a';
+  const EXTRA=['雰囲気・美学','時間','特殊構造','バイオレンス'];
+  const SET=new Set(EXTRA);
+
+  function rawGenres(f){
+    const g=state.genreOverrides?.[f?.id];
+    return Array.isArray(g)?[...new Set(g)]:[];
+  }
+  function setGenres(f,genres,touch=true){
+    if(!f)return false;
+    state.genreOverrides=state.genreOverrides||{};
+    const next=[...new Set((genres||[]).filter(Boolean))];
+    const prev=rawGenres(f);
+    if(prev.length===next.length&&prev.every((x,i)=>x===next[i]))return false;
+    state.genreOverrides[f.id]=next;
+    save(touch);return true;
+  }
+  function genreHost(wrap){
+    if(!wrap)return null;
+    const rows=[...wrap.querySelectorAll('.struct-row')];
+    const row=rows.find(r=>(r.querySelector('.struct-label')?.textContent||'').includes('ジャンル'))||rows[rows.length-1];
+    return row?.querySelector('.struct-options')||wrap;
+  }
+  function removeEditChips(){
+    const wrap=document.getElementById('editGenrePicker');
+    if(!wrap)return;
+    wrap.querySelectorAll('.genre-chip[data-v44="1"]').forEach(b=>b.remove());
+  }
+  function ensure(id,selected=[]){
+    const wrap=document.getElementById(id);if(!wrap)return;
+    const host=genreHost(wrap),chosen=new Set(selected||[]);
+    for(const g of EXTRA){
+      let b=wrap.querySelector(`.genre-chip[data-v44="1"][data-genre="${g}"]`);
+      if(!b){
+        b=document.createElement('button');
+        b.type='button';b.className='struct-chip genre-chip';b.dataset.genre=g;b.dataset.v44='1';b.textContent=g;
+        host?.appendChild(b);
+      }
+      if(host&&b.parentElement!==host)host.appendChild(b);
+      b.classList.toggle('on',chosen.has(g));
+      b.onclick=e=>{e.preventDefault();b.classList.toggle('on');};
+    }
+  }
+  function selected(id){
+    const wrap=document.getElementById(id);if(!wrap)return [];
+    return [...wrap.querySelectorAll('.genre-chip[data-v44="1"].on')]
+      .map(b=>b.dataset.genre).filter(g=>SET.has(g));
+  }
+
+  ensure('newGenrePicker',[]);ensure('qGenrePicker',[]);
+
+  // New/manual additions: capture these tags before older handlers rebuild the picker.
+  for(const [buttonId,pickerId] of [['addMovie','newGenrePicker'],['qAdd','qGenrePicker']]){
+    const btn=document.getElementById(buttonId);if(!btn||!btn.onclick)continue;
+    const prev=btn.onclick;
+    btn.onclick=async function(ev){
+      const extras=selected(pickerId);
+      const before=new Set((state.customFilms||[]).map(f=>f.id));
+      const out=prev.call(this,ev);if(out&&typeof out.then==='function')await out;
+      const created=(state.customFilms||[]).find(f=>!before.has(f.id));
+      if(created&&extras.length){
+        const base=rawGenres(created).filter(g=>!SET.has(g));
+        setGenres(created,[...base,...extras]);render();
+      }
+      ensure(pickerId,[]);
+      return out;
+    };
+  }
+
+  // TMDB selection can rebuild the quick-add picker.
+  if(typeof selectTmdb==='function'){
+    const prevSelect=selectTmdb;
+    selectTmdb=async function(...args){
+      const keep=selected('qGenrePicker');
+      const out=await prevSelect.apply(this,args);
+      ensure('qGenrePicker',keep);return out;
+    };
+  }
+
+  // Editing. Remove our prior buttons before older wrappers run so legacy extra-tag code never captures them.
+  const openPrev=openSheet;
+  openSheet=function(id){
+    removeEditChips();
+    openPrev(id);
+    const f=filmById(id);if(!f)return;
+    ensure('editGenrePicker',rawGenres(f).filter(g=>SET.has(g)));
+    const wrap=document.getElementById('editGenrePicker');
+    wrap?.querySelectorAll('.genre-chip[data-v44="1"]').forEach(b=>{
+      b.onclick=e=>{
+        e.preventDefault();
+        b.classList.toggle('on');
+        const chosen=selected('editGenrePicker');
+        const base=rawGenres(f).filter(g=>!SET.has(g));
+        if(setGenres(f,[...base,...chosen]))render();
+      };
+    });
+  };
+
+  // Base/older tag handlers may rewrite genreOverrides. Restore the four v44 selections after their click handlers finish.
+  const editWrap=document.getElementById('editGenrePicker');
+  if(editWrap&&!editWrap.dataset.v44Guard){
+    editWrap.dataset.v44Guard='1';
+    editWrap.addEventListener('click',()=>setTimeout(()=>{
+      const f=filmById(selectedId);if(!f)return;
+      const chosen=selected('editGenrePicker');
+      const base=rawGenres(f).filter(g=>!SET.has(g));
+      setGenres(f,[...base,...chosen],false);
+    },0));
+  }
+
+  // v38 already provides the multi-genre AND filter; it only needs these options to exist.
+  for(const id of ['genreFilterRank','genreFilterClassify']){
+    const s=document.getElementById(id);if(!s)continue;
+    for(const g of EXTRA)if(![...s.options].some(o=>o.value===g))s.add(new Option(g,g));
+    const first=s.options?.[0];if(first&&first.value==='')first.textContent='ジャンル追加…';
+  }
+
+  const marker=document.getElementById('movie30BuildV29');if(marker)marker.textContent='app build '+BUILD;
+  render();
+})();
+
+</script>
+
+<!-- patch-v45.js -->
+<script>
+(() => {
+  // v45: apply the user's first-pass audit corrections only.
+  // Genre/media metadata only; scores and ranking are untouched.
+  const BUILD='20260927b';
+  const KEY='movie30_genre_audit_v45_20260927b';
+
+  function genres(id){
+    const g=state.genreOverrides?.[id];
+    return Array.isArray(g)?[...new Set(g.filter(Boolean))]:[];
+  }
+  function setGenres(id,next){
+    state.genreOverrides=state.genreOverrides||{};
+    state.genreOverrides[id]=[...new Set((next||[]).filter(Boolean))];
+  }
+  function add(id,...tags){
+    const cur=genres(id), s=new Set(cur);
+    for(const t of tags)if(t)s.add(t);
+    setGenres(id,[...s]);
+  }
+  function remove(id,...tags){
+    const rm=new Set(tags);
+    setGenres(id,genres(id).filter(g=>!rm.has(g)));
+  }
+
+  let done=false;
+  try{done=localStorage.getItem(KEY)==='1'}catch(_){}
+  if(!done){
+    // 時間・特殊構造
+    add('lb-64-leq4','時間','特殊構造');                       // TENET
+    add('lb-160-2b8e','時間');                                  // BTTF 1
+    add('lb-163-2aYI','時間');                                  // BTTF 2
+    add('lb-428-2aTS','時間');                                  // BTTF 3
+    add('lb-303-2aQY','SF','時間');                              // Terminator
+    add('lb-349-2aGY','時間');                                  // Terminator 2
+    add('lb-111-4pD0','時間');                                  // Edge of Tomorrow
+    add('lb-164-2b3e','時間');                                  // Groundhog Day
+    add('lb-265-fdo','時間','特殊構造');                         // Source Code
+    add('lb-439-1OPa','時間');                                  // The Girl Who Leapt Through Time
+    add('lb-86-cUqs','時間');                                   // Your Name.
+    add('lb-401-9vE4','時間');                                  // Avengers: Endgame
+    add('lb-124-103U','時間');                                  // Men in Black 3
+    add('lb-259-N7ZC','時間');                                  // A Samurai in Time
+    add('custom-1790322768630-3s2i','時間');                    // Kiss that Kills
+
+    // バイオレンス・特殊構造・思想/心理
+    add('lb-457-IG','バイオレンス');                            // Drive
+    add('lb-61-297o','特殊構造');                               // Mulholland Drive
+    add('lb-8-6YK','特殊構造');                                 // Eternal Sunshine
+    add('lb-58-293w','特殊構造');                               // The Prestige
+    add('lb-438-2ahu','哲学・思想','心理・内面','特殊構造');      // Being John Malkovich
+    remove('lb-269-1dE0','時間');                               // The NeverEnding Story
+
+    // スポーツ: Forrest Gump only removed. User explicitly keeps Animatrix and Whiplash.
+    remove('lb-12-728','スポーツ');                             // Forrest Gump
+    add('lb-336-qH0','スポーツ');                               // The Animatrix
+    add('lb-524-7bQA','スポーツ');                              // Whiplash
+
+    // Clear classification omissions from the highlighted audit block.
+    add('lb-239-kidw','ミステリー','サスペンス','ドラマ','娯楽'); // Masquerade Hotel
+    add('lb-386-wbAi','ドラマ','スポーツ','青春・若者');           // We Are Rockets! TV
+    add('custom-1790322764890-2w6w','TV本編','サスペンス','アクション','娯楽'); // VIVANT
+    add('custom-1790322766063-ab5l','TV本編','恋愛');             // First Love
+
+    try{localStorage.setItem(KEY,'1')}catch(_){}
+    try{save(false)}catch(_){try{save()}catch(__){}}
+    try{render()}catch(_){}
+    try{toast('分類の監査修正を反映しました')}catch(_){}
+  }
+
+  const marker=document.getElementById('movie30BuildV29');
+  if(marker)marker.textContent='app build '+BUILD;
+})();
+
+</script>
+
+<!-- patch-v46.js -->
+<script>
+(() => {
+  // v46: remove the unwatched 2018 TV series "チア☆ダン / We Are Rockets!" only.
+  // Keep the 2017 theatrical film. Prevent the TV entry from being re-imported from Letterboxd.
+  const BUILD='20260927c';
+  const ID='lb-386-wbAi';
+  const KEY='movie30_remove_we_are_rockets_tv_v46_20260927c';
+
+  function isTvChiad(meta){
+    const y=String(meta?.year||'');
+    const t=String(meta?.title||meta?.lbTitle||meta?.englishTitle||'');
+    return y==='2018' && /(?:チア\s*[☆★・]?\s*ダン|we\s+are\s+rockets!?)/i.test(t);
+  }
+
+  // Hide the base entry everywhere in the app.
+  if(typeof allFilms==='function'){
+    const prevAllFilms=allFilms;
+    allFilms=function(){return prevAllFilms().filter(f=>f?.id!==ID);};
+  }
+
+  // Do not let a later Letterboxd sync add the same 2018 TV series back.
+  if(typeof parseLbRss==='function'){
+    const prevParse=parseLbRss;
+    parseLbRss=function(xml){return prevParse(xml).filter(x=>!isTvChiad(x));};
+  }
+  if(typeof addLbFilm==='function'){
+    const prevAdd=addLbFilm;
+    addLbFilm=function(meta){if(isTvChiad(meta))return null;return prevAdd(meta);};
+  }
+
+  let done=false;try{done=localStorage.getItem(KEY)==='1'}catch(_){}
+  if(!done){
+    // Remove only this title's watch/rating/metadata state.
+    for(const k of ['assignments','starOverrides','exactScores','titleOverrides','categoryOverrides','mediaTypeOverrides','genreOverrides','originOverrides','formatOverrides','runtimeOverrides']){
+      if(state[k])delete state[k][ID];
+    }
+    state.customFilms=(state.customFilms||[]).filter(f=>f?.id!==ID&&!isTvChiad(f));
+    for(const score of Object.keys(state.rankOrder||{})){
+      state.rankOrder[score]=(state.rankOrder[score]||[]).filter(id=>id!==ID);
+    }
+
+    // Clean structural caches used by later patches.
+    for(const storageKey of ['movie30_media_v33_v1','movie30_origin_v33_v1']){
+      try{
+        const o=JSON.parse(localStorage.getItem(storageKey)||'{}');
+        if(o&&typeof o==='object'&&!Array.isArray(o)){delete o[ID];localStorage.setItem(storageKey,JSON.stringify(o));}
+      }catch(_){}
+    }
+    try{
+      const a=JSON.parse(localStorage.getItem('movie30_media_drama_ids_v1')||'[]');
+      if(Array.isArray(a))localStorage.setItem('movie30_media_drama_ids_v1',JSON.stringify(a.filter(id=>id!==ID)));
+    }catch(_){}
+
+    try{localStorage.setItem(KEY,'1')}catch(_){}
+    try{save(false)}catch(_){try{save()}catch(__){}}
+    try{render()}catch(_){}
+    try{toast('チア☆ダン（2018）TV版を削除しました')}catch(_){}
+  }
+
+  const marker=document.getElementById('movie30BuildV29');
+  if(marker)marker.textContent='app build '+BUILD;
+})();
+
+</script>
+
+<!-- patch-v47.js -->
+<script>
+(() => {
+  // v47: correct known media-type and live/animation classification mistakes.
+  // Scores/ranks are never changed.
+  const BUILD='20260927d';
+  const MEDIA_KEY='movie30_media_v33_v1';
+  const LEGACY_TV_KEY='movie30_media_drama_ids_v1';
+  const TV_MAIN='TV本編', TV_SP='TV特番・SP';
+  const TV_TAGS=new Set([TV_MAIN,TV_SP]);
+
+  const readObj=k=>{try{const v=JSON.parse(localStorage.getItem(k)||'{}');return v&&typeof v==='object'&&!Array.isArray(v)?v:{}}catch(_){return {}}};
+  const writeObj=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch(_){}};
+  const writeSet=(k,s)=>{try{localStorage.setItem(k,JSON.stringify([...s]))}catch(_){}};
+  const uniq=a=>[...new Set((a||[]).filter(Boolean))];
+  const rawGenres=f=>uniq(state.genreOverrides?.[f?.id]||[]);
+  const textOf=f=>{const x=titleInfo(f)||{};return [displayTitle(f),x.title,x.originalTitle,x.englishTitle,f?.lbTitle].filter(Boolean).join(' ')};
+  const norm=s=>String(s||'').normalize('NFKC').toLowerCase().replace(/\s+/g,' ').trim();
+
+  const mediaMap=readObj(MEDIA_KEY);
+  let mediaChanged=false,stateChanged=false,formatChanged=false;
+
+  function setMedia(f,v){
+    if(!f)return;
+    state.mediaTypeOverrides=state.mediaTypeOverrides||{};
+    if(state.mediaTypeOverrides[f.id]!==v){state.mediaTypeOverrides[f.id]=v;stateChanged=true;}
+    if(mediaMap[f.id]!==v){mediaMap[f.id]=v;mediaChanged=true;}
+  }
+  function setGenres(f,next){
+    if(!f)return;
+    state.genreOverrides=state.genreOverrides||{};
+    const prev=rawGenres(f),n=uniq(next);
+    if(prev.length!==n.length||prev.some((x,i)=>x!==n[i])){state.genreOverrides[f.id]=n;stateChanged=true;}
+  }
+  function setTvSubtype(f,sp,{removeSeriesMovie=false}={}){
+    let g=rawGenres(f).filter(x=>!TV_TAGS.has(x));
+    if(removeSeriesMovie)g=g.filter(x=>x!=='シリーズ劇場版');
+    g.push(sp?TV_SP:TV_MAIN);setGenres(f,g);
+  }
+  function removeTvSubtype(f){setGenres(f,rawGenres(f).filter(x=>!TV_TAGS.has(x)));}
+  function setFormat(f,v){
+    if(!f)return;
+    state.formatOverrides=state.formatOverrides||{};
+    if(state.formatOverrides[f.id]!==v){state.formatOverrides[f.id]=v;formatChanged=true;}
+  }
+
+  const films=allFilms();
+  const byId=new Map(films.map(f=>[f.id,f]));
+
+  // TV specials that were stored as films/main-series.
+  for(const id of ['lb-250-bAcS','lb-254-6ZCG']){
+    const f=byId.get(id);if(f){setMedia(f,'drama');setTvSubtype(f,true,{removeSeriesMovie:true});}
+  }
+  {
+    const f=byId.get('lb-475-F1U6'); // そして誰もいなくなった (2017), two-night TV special
+    if(f){setMedia(f,'drama');setTvSubtype(f,true);}
+  }
+
+  // The theatrical Bayside Shakedown entries are films, not TV-main entries.
+  for(const id of ['custom-1789385860847-w7kt','custom-1789385860756-dujj','custom-1789385860718-itqh']){
+    const f=byId.get(id);if(f){setMedia(f,'movie');removeTvSubtype(f);}
+  }
+
+  // Ani*Kuri15 is a collection of animated shorts: keep it out of the TV-drama bucket.
+  for(const f of films){
+    const t=norm(textOf(f)),y=Number(f.year)||0;
+    if(y===2007&&/(?:ani\*?kuri\s*15|アニ.?クリ\s*15|ネコの集会|\bgood morning\b)/i.test(t)){
+      setMedia(f,'other');removeTvSubtype(f);setFormat(f,'animation');
+    }
+  }
+
+  // Definite animation items that had been marked live action.
+  for(const f of films){
+    const t=norm(textOf(f)),y=Number(f.year)||0;
+    if(
+      /(?:spider.?man.*(?:into|across).*spider.?verse|スパイダーマン.*スパイダーバース)/i.test(t) ||
+      /(?:the animatrix|アニマトリックス)/i.test(t) ||
+      /(?:fantastic mr\.? fox|ファンタスティック mr\.?fox)/i.test(t) ||
+      /jojo's bizarre adventure: (?:stone ocean|stardust crusaders|golden wind|diamond is unbreakable)/i.test(t) ||
+      (y===2002&&/(?:lilo\s*&\s*stitch|リロ(?:・|＆|&)?スティッチ)/i.test(t)) ||
+      (y===1950&&/(?:^| )cinderella(?: |$)|シンデレラ/i.test(t)) ||
+      (y===1984&&/(?:ドラえもん.*のび太の魔界大冒険|doraemon: nobita's great adventure in the world of magic)/i.test(t)) ||
+      (y===1972&&/(?:ユキの太陽|yuki's sun)/i.test(t))
+    ) setFormat(f,'animation');
+  }
+
+  // Definite live/hybrid items that had been marked animation.
+  for(const f of films){
+    const t=norm(textOf(f)),y=Number(f.year)||0;
+    if(y===2017&&/(?:beauty and the beast|美女と野獣)/i.test(t))setFormat(f,'live');
+    if(y===2010&&/(?:alice in wonderland|不思議の国のアリス)/i.test(t))setFormat(f,'live');
+    if(y===1964&&/(?:mary poppins|メリー.?ポピンズ)/i.test(t))setFormat(f,'hybrid');
+  }
+
+  if(mediaChanged){
+    writeObj(MEDIA_KEY,mediaMap);
+    writeSet(LEGACY_TV_KEY,new Set(Object.entries(mediaMap).filter(([,v])=>v==='drama').map(([id])=>id)));
+  }
+  if(stateChanged||formatChanged){try{save(false)}catch(_){try{save()}catch(__){}}}
+
+  // v33 keeps mediaMap in a closure, so one reload is needed after the first correction pass.
+  if(mediaChanged){
+    let reloaded=false;try{reloaded=sessionStorage.getItem('movie30_mediafix_reload_v47')===BUILD}catch(_){}
+    if(!reloaded){
+      try{sessionStorage.setItem('movie30_mediafix_reload_v47',BUILD)}catch(_){}
+      setTimeout(()=>location.reload(),120);return;
+    }
+  }
+
+  try{render()}catch(_){}
+  const marker=document.getElementById('movie30BuildV29');if(marker)marker.textContent='app build '+BUILD;
+})();
+
+</script>
