@@ -105,7 +105,7 @@
       const id=titleInfo(f).tmdbId||f.tmdbId;
       return id&&String(id)===String(raw.tmdbId)&&(!year||!Number(f.year)||Math.abs(year-Number(f.year))<=1);
     });
-    return matches.length===1?matches[0]:null;
+    return !title&&matches.length===1?matches[0]:null;
   };
 
   const readCache=()=>{try{return JSON.parse(localStorage.getItem(TV_CACHE)||'{}')||{}}catch(_){return {}}};
@@ -178,7 +178,7 @@
       const details=await tvInfo(sid);
       const localized=details?.jaName&&norm(details.jaName)!==norm(details.enName)?details.jaName:meta.title;
       return {...meta,title:localized,englishTitle:details?.enName||meta.title,
-        tmdbId:null,tmdbType:'tv_series',tmdbSeriesId:sid,_autoClass:{media:'drama'}};
+        tmdbId:null,tmdbType:'tv_series',tmdbSeriesId:sid};
     }
     if(k==='tv_episode'||k==='candidate_episode'){
       const parts=episodeParts(meta.title);
@@ -196,8 +196,7 @@
         const enriched={...meta,title,englishTitle:meta.title,originalTitle:meta.title,
           tmdbId:null,tmdbType:'tv_episode',tmdbSeriesId:sid||42009,
           seasonNumber:hit?.s??known?.s??null,episodeNumber:hit?.e??known?.e??null,
-          episodeTmdbId:hit?.id||null,
-          _autoClass:{media:'drama',runtime:hit?.runtime||null}};
+          episodeTmdbId:hit?.id||null};
         if(meta.link||meta.uri)episodeMetaByUri.set(canonicalUri(meta.link||meta.uri),enriched);
         return enriched;
       }
@@ -256,7 +255,8 @@
       const m={...old,contentType:'tv_episode',tmdbSeriesId:42009,
         seasonNumber:known?.s??old.seasonNumber??null,episodeNumber:known?.e??old.episodeNumber??null};
       state.letterboxdMeta=state.letterboxdMeta||{};
-      if(JSON.stringify(old)!==JSON.stringify(m)){state.letterboxdMeta[f.id]=m;n++;}
+      if(JSON.stringify(old)!==JSON.stringify(m))n++;
+      state.letterboxdMeta[f.id]=m;
       if(state.mediaTypeOverrides[f.id]!=='drama'){state.mediaTypeOverrides[f.id]='drama';n++;}
       const wanted=known?'ブラック・ミラー「'+known.ja+'」':'';
       if(wanted&&displayTitle(f)!==wanted){
@@ -269,7 +269,8 @@
         n++;
       }
       if(f.source==='letterboxd'&&f.tmdbId){
-        m.legacyMovieId=m.legacyMovieId||f.tmdbId;f.tmdbId=null;n++;
+        m.legacyMovieId=m.legacyMovieId||f.tmdbId;
+        m.letterboxdMovieId=m.letterboxdMovieId||f.tmdbId;f.tmdbId=null;n++;
       }
     }
     if(n)save(false);
