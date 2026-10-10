@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791664101649,
-  "sourceUpdatedIso": "2026-10-10T20:28:21.649Z",
+  "sourceUpdatedAt": 1791664112241,
+  "sourceUpdatedIso": "2026-10-10T20:28:32.241Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -20523,11 +20523,11 @@
       "overallRank": null,
       "sameScoreRank": null,
       "category": "Letterboxd",
-      "mediaType": "movie",
+      "mediaType": "other",
       "genre": [
         "ミュージカル"
       ],
-      "origin": "その他",
+      "origin": "日本",
       "format": "live",
       "runtime": 65,
       "exact": false,
@@ -20546,9 +20546,9 @@
       "overallRank": null,
       "sameScoreRank": null,
       "category": "Letterboxd",
-      "mediaType": "movie",
+      "mediaType": "other",
       "genre": "",
-      "origin": "その他",
+      "origin": "日本",
       "format": "",
       "runtime": null,
       "exact": false,
@@ -27658,8 +27658,8 @@
       "custom-lb-unrated-bOnU": "movie",
       "custom-lb-unrated-1Qcu": "movie",
       "custom-1791664054005-kkyc": "other",
-      "custom-1791664054514-pksv": "movie",
-      "custom-1791664055006-96rv": "movie",
+      "custom-1791664054514-pksv": "other",
+      "custom-1791664055006-96rv": "other",
       "custom-1791664055469-au2b": "other",
       "custom-1791664055911-cuz4": "other"
     },
@@ -34391,8 +34391,8 @@
       "custom-1791627813752-lf6s": "その他",
       "custom-1791636834270-874l": "ハリウッド",
       "custom-1791664054005-kkyc": "日本",
-      "custom-1791664054514-pksv": "その他",
-      "custom-1791664055006-96rv": "その他",
+      "custom-1791664054514-pksv": "日本",
+      "custom-1791664055006-96rv": "日本",
       "custom-1791664055469-au2b": "日本",
       "custom-1791664055911-cuz4": "日本"
     },
