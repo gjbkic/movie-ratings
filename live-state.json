@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791648728929,
-  "sourceUpdatedIso": "2026-10-10T16:12:08.929Z",
+  "sourceUpdatedAt": 1791648756109,
+  "sourceUpdatedIso": "2026-10-10T16:12:36.109Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -7423,33 +7423,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-426-pEeQ",
-      "title": "プロジェクト・ヘイル・メアリー",
-      "originalTitle": "",
-      "englishTitle": "Project Hail Mary",
-      "year": 2026,
-      "score": 83,
-      "star": 3,
-      "overallRank": 257,
-      "sameScoreRank": 17,
-      "category": "SF",
-      "mediaType": "movie",
-      "genre": [
-        "SF",
-        "感動",
-        "大作",
-        "娯楽",
-        "アドベンチャー"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 157,
-      "exact": true,
-      "letterboxdAddedDate": "2026-03-26",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-263-6bJM",
       "title": "プレデスティネーション",
       "originalTitle": "",
@@ -7457,8 +7430,8 @@
       "year": 2014,
       "score": 83,
       "star": 3,
-      "overallRank": 258,
-      "sameScoreRank": 18,
+      "overallRank": 257,
+      "sameScoreRank": 17,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -7489,8 +7462,8 @@
       "year": 1997,
       "score": 83,
       "star": 3,
-      "overallRank": 259,
-      "sameScoreRank": 19,
+      "overallRank": 258,
+      "sameScoreRank": 18,
       "category": "スリラー、ホラー",
       "mediaType": "movie",
       "genre": [
@@ -7517,8 +7490,8 @@
       "year": 2004,
       "score": 83,
       "star": 3,
-      "overallRank": 260,
-      "sameScoreRank": 20,
+      "overallRank": 259,
+      "sameScoreRank": 19,
       "category": "スリラー、ホラー",
       "mediaType": "movie",
       "genre": [
@@ -7550,8 +7523,8 @@
       "year": 2019,
       "score": 83,
       "star": 3,
-      "overallRank": 261,
-      "sameScoreRank": 21,
+      "overallRank": 260,
+      "sameScoreRank": 20,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -7571,6 +7544,33 @@
       "letterboxdAddedDate": "2026-09-29",
       "letterboxdPublishedAt": "Tue, 29 Sep 2026 19:16:58 +1300",
       "letterboxdReportedWatchedDate": "2026-09-29"
+    },
+    {
+      "id": "lb-426-pEeQ",
+      "title": "プロジェクト・ヘイル・メアリー",
+      "originalTitle": "",
+      "englishTitle": "Project Hail Mary",
+      "year": 2026,
+      "score": 83,
+      "star": 3,
+      "overallRank": 261,
+      "sameScoreRank": 21,
+      "category": "SF",
+      "mediaType": "movie",
+      "genre": [
+        "SF",
+        "感動",
+        "大作",
+        "娯楽",
+        "アドベンチャー"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 157,
+      "exact": true,
+      "letterboxdAddedDate": "2026-03-26",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "lb-520-1Efm",
@@ -21708,11 +21708,11 @@
         "lb-104-4n0g",
         "lb-182-dR3i",
         "custom-1789385859985-uylk",
-        "lb-426-pEeQ",
         "lb-263-6bJM",
         "lb-278-2aoU",
         "lb-177-2aWW",
         "custom-1790665767820-1d1q",
+        "lb-426-pEeQ",
         "lb-520-1Efm",
         "lb-341-1Qzy",
         "lb-490-2beQ",
