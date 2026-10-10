@@ -5,22 +5,8 @@
   const EXTRA_SET_V29=new Set(EXTRAS_V29);
   const LEGACY_V29='精神・哲学';
 
-  // --- Self-update guard for Home Screen web app ---
-  async function checkAppVersionV29(){
-    try{
-      const r=await fetch('./app-version.json?t='+Date.now(),{cache:'no-store'});
-      if(!r.ok)return;
-      const j=await r.json();
-      const latest=String(j?.version||'').trim();
-      if(!latest||latest===BUILD_V29)return;
-      const u=new URL(location.href);
-      if(u.searchParams.get('appv')===latest)return;
-      u.searchParams.set('appv',latest);
-      location.replace(u.toString());
-    }catch(_){}
-  }
-  setTimeout(checkAppVersionV29,1200);
-  setInterval(checkAppVersionV29,60000);
+  // The app shell handles cache freshness; never self-redirect during startup.
+  // Previous timer caused a second page load on every launch for old Home Screen shortcuts.
 
   // --- Ensure every extra genre is visibly present in all pickers ---
   function genreHostV29(wrap){
