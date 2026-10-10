@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791664340845,
-  "sourceUpdatedIso": "2026-10-10T20:32:20.845Z",
+  "sourceUpdatedAt": 1791664347919,
+  "sourceUpdatedIso": "2026-10-10T20:32:27.919Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -976,6 +976,36 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "custom-1790458138074-p8hs",
+      "title": "羅生門",
+      "originalTitle": "羅生門",
+      "englishTitle": "Rashomon",
+      "year": 1950,
+      "score": 93,
+      "star": 4.5,
+      "overallRank": 34,
+      "sameScoreRank": 1,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "クライム",
+        "ドラマ",
+        "ミステリー",
+        "サスペンス",
+        "心理・内面",
+        "哲学・思想",
+        "雰囲気・美学",
+        "特殊構造"
+      ],
+      "origin": "日本",
+      "format": "live",
+      "runtime": 88,
+      "exact": true,
+      "letterboxdAddedDate": "2026-09-27",
+      "letterboxdPublishedAt": "Sun, 27 Sep 2026 09:44:56 +1300",
+      "letterboxdReportedWatchedDate": "2026-09-27"
+    },
+    {
       "id": "lb-86-cUqs",
       "title": "君の名は。",
       "originalTitle": "",
@@ -983,8 +1013,8 @@
       "year": 2016,
       "score": 93,
       "star": 4.5,
-      "overallRank": 34,
-      "sameScoreRank": 1,
+      "overallRank": 35,
+      "sameScoreRank": 2,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -1013,8 +1043,8 @@
       "year": 2008,
       "score": 93,
       "star": 4.5,
-      "overallRank": 35,
-      "sameScoreRank": 2,
+      "overallRank": 36,
+      "sameScoreRank": 3,
       "category": "ピクサー・ディズニー作品",
       "mediaType": "movie",
       "genre": [
@@ -1042,8 +1072,8 @@
       "year": 2024,
       "score": 93,
       "star": 4.5,
-      "overallRank": 36,
-      "sameScoreRank": 3,
+      "overallRank": 37,
+      "sameScoreRank": 4,
       "category": "Letterboxd",
       "mediaType": "other",
       "genre": [
@@ -1065,8 +1095,8 @@
       "year": 2019,
       "score": 93,
       "star": 4.5,
-      "overallRank": 37,
-      "sameScoreRank": 4,
+      "overallRank": 38,
+      "sameScoreRank": 5,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -1094,8 +1124,8 @@
       "year": 2008,
       "score": 93,
       "star": 4.5,
-      "overallRank": 38,
-      "sameScoreRank": 5,
+      "overallRank": 39,
+      "sameScoreRank": 6,
       "category": "Letterboxd",
       "mediaType": "other",
       "genre": [],
@@ -1106,36 +1136,6 @@
       "letterboxdAddedDate": "2026-09-23",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "custom-1790458138074-p8hs",
-      "title": "羅生門",
-      "originalTitle": "羅生門",
-      "englishTitle": "Rashomon",
-      "year": 1950,
-      "score": 93,
-      "star": 4.5,
-      "overallRank": 39,
-      "sameScoreRank": 6,
-      "category": "Letterboxd",
-      "mediaType": "movie",
-      "genre": [
-        "クライム",
-        "ドラマ",
-        "ミステリー",
-        "サスペンス",
-        "心理・内面",
-        "哲学・思想",
-        "雰囲気・美学",
-        "特殊構造"
-      ],
-      "origin": "日本",
-      "format": "live",
-      "runtime": 88,
-      "exact": true,
-      "letterboxdAddedDate": "2026-09-27",
-      "letterboxdPublishedAt": "Sun, 27 Sep 2026 09:44:56 +1300",
-      "letterboxdReportedWatchedDate": "2026-09-27"
     },
     {
       "id": "custom-1791664054514-pksv",
@@ -22069,12 +22069,12 @@
         "lb-378-26E0"
       ],
       "93": [
+        "custom-1790458138074-p8hs",
         "lb-86-cUqs",
         "lb-323-1VEo",
         "custom-1791664055911-cuz4",
         "lb-308-kPxE",
         "custom-1790185844116-j1vu",
-        "custom-1790458138074-p8hs",
         "custom-1791664054514-pksv",
         "lb-2-2a9q",
         "lb-556-2b9m",
