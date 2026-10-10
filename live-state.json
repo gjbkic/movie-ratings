@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791627668840,
-  "sourceUpdatedIso": "2026-10-10T10:21:08.840Z",
+  "sourceUpdatedAt": 1791627672955,
+  "sourceUpdatedIso": "2026-10-10T10:21:12.955Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -6165,6 +6165,32 @@
       "letterboxdReportedWatchedDate": "2026-09-25"
     },
     {
+      "id": "lb-82-8SeG",
+      "title": "オデッセイ",
+      "originalTitle": "",
+      "englishTitle": "The Martian",
+      "year": 2015,
+      "score": 84,
+      "star": 3.5,
+      "overallRank": 213,
+      "sameScoreRank": 12,
+      "category": "SF",
+      "mediaType": "movie",
+      "genre": [
+        "SF",
+        "ドラマ",
+        "感動",
+        "娯楽"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 141,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "custom-1791476522907-cd9b",
       "title": "Black Mirror: White Bear",
       "originalTitle": "",
@@ -6172,8 +6198,8 @@
       "year": 2013,
       "score": 84,
       "star": 3.5,
-      "overallRank": 213,
-      "sameScoreRank": 12,
+      "overallRank": 214,
+      "sameScoreRank": 13,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -6197,32 +6223,6 @@
       "letterboxdAddedDate": "2026-10-08",
       "letterboxdPublishedAt": "Fri, 9 Oct 2026 03:32:29 +1300",
       "letterboxdReportedWatchedDate": "2026-10-08"
-    },
-    {
-      "id": "lb-82-8SeG",
-      "title": "オデッセイ",
-      "originalTitle": "",
-      "englishTitle": "The Martian",
-      "year": 2015,
-      "score": 84,
-      "star": 3.5,
-      "overallRank": 214,
-      "sameScoreRank": 13,
-      "category": "SF",
-      "mediaType": "movie",
-      "genre": [
-        "SF",
-        "ドラマ",
-        "感動",
-        "娯楽"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 141,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "base-perks-2012",
@@ -21669,8 +21669,8 @@
         "lb-299-28U0",
         "custom-1789385860026-8m1d",
         "custom-1790322762266-mrn9",
-        "custom-1791476522907-cd9b",
         "lb-82-8SeG",
+        "custom-1791476522907-cd9b",
         "base-perks-2012",
         "lb-76-4vru",
         "lb-180-27oC",
