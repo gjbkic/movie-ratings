@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791648667685,
-  "sourceUpdatedIso": "2026-10-10T16:11:07.685Z",
+  "sourceUpdatedAt": 1791648674033,
+  "sourceUpdatedIso": "2026-10-10T16:11:14.033Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -7278,33 +7278,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-426-pEeQ",
-      "title": "プロジェクト・ヘイル・メアリー",
-      "originalTitle": "",
-      "englishTitle": "Project Hail Mary",
-      "year": 2026,
-      "score": 83,
-      "star": 3,
-      "overallRank": 252,
-      "sameScoreRank": 12,
-      "category": "SF",
-      "mediaType": "movie",
-      "genre": [
-        "SF",
-        "感動",
-        "大作",
-        "娯楽",
-        "アドベンチャー"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 157,
-      "exact": true,
-      "letterboxdAddedDate": "2026-03-26",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-47-2aA2",
       "title": "ジュラシック・パーク",
       "originalTitle": "",
@@ -7312,8 +7285,8 @@
       "year": 1993,
       "score": 83,
       "star": 3,
-      "overallRank": 253,
-      "sameScoreRank": 13,
+      "overallRank": 252,
+      "sameScoreRank": 12,
       "category": "ファンタジー、アドベンチャー",
       "mediaType": "movie",
       "genre": [
@@ -7337,8 +7310,8 @@
       "year": 2010,
       "score": 83,
       "star": 3,
-      "overallRank": 254,
-      "sameScoreRank": 14,
+      "overallRank": 253,
+      "sameScoreRank": 13,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -7371,8 +7344,8 @@
       "year": 2020,
       "score": 83,
       "star": 3,
-      "overallRank": 255,
-      "sameScoreRank": 15,
+      "overallRank": 254,
+      "sameScoreRank": 14,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -7388,6 +7361,33 @@
       "runtime": 124,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "lb-426-pEeQ",
+      "title": "プロジェクト・ヘイル・メアリー",
+      "originalTitle": "",
+      "englishTitle": "Project Hail Mary",
+      "year": 2026,
+      "score": 83,
+      "star": 3,
+      "overallRank": 255,
+      "sameScoreRank": 15,
+      "category": "SF",
+      "mediaType": "movie",
+      "genre": [
+        "SF",
+        "感動",
+        "大作",
+        "娯楽",
+        "アドベンチャー"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 157,
+      "exact": true,
+      "letterboxdAddedDate": "2026-03-26",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -21703,10 +21703,10 @@
         "lb-117-27A4",
         "lb-367-29EW",
         "custom-1789385859985-uylk",
-        "lb-426-pEeQ",
         "lb-47-2aA2",
         "lb-495-Msm",
         "lb-243-orTE",
+        "lb-426-pEeQ",
         "lb-104-4n0g",
         "lb-182-dR3i",
         "lb-263-6bJM",
