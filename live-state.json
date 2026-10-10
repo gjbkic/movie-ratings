@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791637519356,
-  "sourceUpdatedIso": "2026-10-10T13:05:19.356Z",
+  "sourceUpdatedAt": 1791637530271,
+  "sourceUpdatedIso": "2026-10-10T13:05:30.271Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -11287,7 +11287,7 @@
       "englishTitle": "Heidi: Girl of the Alps",
       "year": 1974,
       "score": 80,
-      "star": 3,
+      "star": 2.5,
       "overallRank": 392,
       "sameScoreRank": 2,
       "category": "Letterboxd",
@@ -11656,7 +11656,7 @@
       "englishTitle": "Black Mirror: Fifteen Million Merits",
       "year": 2011,
       "score": 80,
-      "star": 3,
+      "star": 2.5,
       "overallRank": 405,
       "sameScoreRank": 15,
       "category": "Letterboxd",
@@ -17118,7 +17118,6 @@
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
-        "TV本編",
         "戦争",
         "社会問題・生活",
         "娯楽",
@@ -17126,10 +17125,11 @@
         "胸糞",
         "ファンタジー",
         "SF",
-        "ドラマ"
+        "ドラマ",
+        "TV本編"
       ],
       "origin": "ハリウッド",
-      "format": "",
+      "format": "live",
       "runtime": null,
       "exact": true,
       "letterboxdAddedDate": "2026-10-10",
@@ -25036,7 +25036,7 @@
       "custom-1790960881562-cn74": 4,
       "custom-1790965876380-nqs0": 2,
       "custom-1790971112940-kuhf": 3.5,
-      "custom-1791018448490-bpdn": 3,
+      "custom-1791018448490-bpdn": 2.5,
       "custom-1791018448927-b4o3": 3,
       "custom-1791023391963-vdu9": 4,
       "custom-1791036345616-3tph": 4,
@@ -25072,7 +25072,7 @@
       "custom-1791397387325-yqut": 1.5,
       "custom-1791398329125-3r8f": 3,
       "custom-1791447953969-ah3e": 2.5,
-      "custom-1791449338315-twqr": 3,
+      "custom-1791449338315-twqr": 2.5,
       "custom-1791469824035-6gcd": 3,
       "custom-1791469823654-dpbh": 2.5,
       "custom-1791476522907-cd9b": 3.5,
@@ -27371,6 +27371,7 @@
       "custom-1791570909341-auj1": "drama",
       "custom-1791576150006-qu8m": "drama",
       "custom-1791627813752-lf6s": "drama",
+      "custom-1791636834270-874l": "drama",
       "lb-0-hTha": "movie",
       "lb-1-4VZ8": "movie",
       "lb-2-2a9q": "movie",
@@ -28004,8 +28005,7 @@
       "custom-1791382999848-25pc": "movie",
       "custom-1791392810098-rjyg": "movie",
       "custom-lb-unrated-bOnU": "movie",
-      "custom-lb-unrated-1Qcu": "movie",
-      "custom-1791636834270-874l": "drama"
+      "custom-lb-unrated-1Qcu": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -33983,7 +33983,6 @@
         "TV本編"
       ],
       "custom-1791636834270-874l": [
-        "TV本編",
         "戦争",
         "社会問題・生活",
         "娯楽",
@@ -33991,7 +33990,8 @@
         "胸糞",
         "ファンタジー",
         "SF",
-        "ドラマ"
+        "ドラマ",
+        "TV本編"
       ]
     },
     "originOverrides": {
@@ -35449,7 +35449,8 @@
       "custom-1791576150006-qu8m": "live",
       "custom-lb-unrated-bOnU": "live",
       "custom-lb-unrated-1Qcu": "live",
-      "custom-1791627813752-lf6s": "live"
+      "custom-1791627813752-lf6s": "live",
+      "custom-1791636834270-874l": "live"
     },
     "runtimeOverrides": {
       "custom-1790247938551-ixfs": 100,
