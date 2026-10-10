@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791579491288,
-  "sourceUpdatedIso": "2026-10-09T20:58:11.288Z",
+  "sourceUpdatedAt": 1791627577420,
+  "sourceUpdatedIso": "2026-10-10T10:19:37.420Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -20390,9 +20390,9 @@
       "sameScoreRank": null,
       "category": "Letterboxd",
       "mediaType": "movie",
-      "genre": "",
-      "origin": "",
-      "format": "",
+      "genre": [],
+      "origin": "その他",
+      "format": "live",
       "runtime": null,
       "exact": false,
       "letterboxdAddedDate": "2026-09-08",
@@ -20411,9 +20411,9 @@
       "sameScoreRank": null,
       "category": "Letterboxd",
       "mediaType": "movie",
-      "genre": "",
-      "origin": "",
-      "format": "",
+      "genre": [],
+      "origin": "その他",
+      "format": "live",
       "runtime": null,
       "exact": false,
       "letterboxdAddedDate": "2026-09-08",
@@ -27882,7 +27882,9 @@
       "custom-1791362786595-8onp": "movie",
       "custom-1791374649583-3zqi": "movie",
       "custom-1791382999848-25pc": "movie",
-      "custom-1791392810098-rjyg": "movie"
+      "custom-1791392810098-rjyg": "movie",
+      "custom-lb-unrated-bOnU": "movie",
+      "custom-lb-unrated-1Qcu": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -33838,7 +33840,9 @@
         "特殊構造",
         "時間",
         "TV本編"
-      ]
+      ],
+      "custom-lb-unrated-bOnU": [],
+      "custom-lb-unrated-1Qcu": []
     },
     "originOverrides": {
       "lb-0-hTha": "その他",
@@ -34563,7 +34567,9 @@
       "custom-1791563602274-2p5j": "その他",
       "custom-1791567440043-bmc8": "その他",
       "custom-1791570909341-auj1": "その他",
-      "custom-1791576150006-qu8m": "その他"
+      "custom-1791576150006-qu8m": "その他",
+      "custom-lb-unrated-bOnU": "その他",
+      "custom-lb-unrated-1Qcu": "その他"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -35288,7 +35294,9 @@
       "custom-1791563602274-2p5j": "live",
       "custom-1791567440043-bmc8": "live",
       "custom-1791570909341-auj1": "live",
-      "custom-1791576150006-qu8m": "live"
+      "custom-1791576150006-qu8m": "live",
+      "custom-lb-unrated-bOnU": "live",
+      "custom-lb-unrated-1Qcu": "live"
     },
     "runtimeOverrides": {
       "custom-1790247938551-ixfs": 100,
