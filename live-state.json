@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791664083948,
-  "sourceUpdatedIso": "2026-10-10T20:28:03.948Z",
+  "sourceUpdatedAt": 1791664096533,
+  "sourceUpdatedIso": "2026-10-10T20:28:16.533Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -20590,11 +20590,11 @@
       "overallRank": null,
       "sameScoreRank": null,
       "category": "Letterboxd",
-      "mediaType": "movie",
+      "mediaType": "other",
       "genre": [
         "ミュージカル"
       ],
-      "origin": "その他",
+      "origin": "日本",
       "format": "live",
       "runtime": 56,
       "exact": false,
@@ -27661,7 +27661,7 @@
       "custom-1791664054514-pksv": "movie",
       "custom-1791664055006-96rv": "movie",
       "custom-1791664055469-au2b": "other",
-      "custom-1791664055911-cuz4": "movie"
+      "custom-1791664055911-cuz4": "other"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -34394,7 +34394,7 @@
       "custom-1791664054514-pksv": "その他",
       "custom-1791664055006-96rv": "その他",
       "custom-1791664055469-au2b": "日本",
-      "custom-1791664055911-cuz4": "その他"
+      "custom-1791664055911-cuz4": "日本"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
