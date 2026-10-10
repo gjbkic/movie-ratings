@@ -132,11 +132,18 @@ function importDiaryCsv83(diaryText,watchedText,source){
   const diary=csv83(diaryText),watched=csv83(watchedText);
   if(!diary.length&&!watched.length)throw Error('鑑賞記録を読み取れませんでした');
   const consumed=new Set(),countPerKey=new Map();
+  const archive=state.letterboxdMeta=state.letterboxdMeta||{};
+  const unresolved=archive.__unmatchedHistory83=archive.__unmatchedHistory83||{diary:{},watched:{}};
+  function trackUnmatched(kind,raw){
+    const id=[kind,u(raw.uri),norm(raw.title),raw.year,raw.watchedDate,raw.recordDate].join('|');
+    unresolved[kind][id]={title:raw.title,year:raw.year,uri:raw.uri,
+      watchedDate:raw.watchedDate,recordDate:raw.recordDate,rewatch:raw.rewatch};
+  }
   let entries=0,marked=0,unmatched=0,duplicates=0;
   for(const raw of diary){
     const date=validDate(raw.watchedDate);
     const f=findByRss({title:raw.title,year:raw.year,link:raw.uri});
-    if(!f){unmatched++;continue;}
+    if(!f){unmatched++;trackUnmatched('diary',raw);continue;}
     const m=meta(f.id),arr=m.watchHistory=m.watchHistory||[];
     const dateKey=f.id+'|'+date;
     const nth=(countPerKey.get(dateKey)||0)+1;countPerKey.set(dateKey,nth);
@@ -154,7 +161,7 @@ function importDiaryCsv83(diaryText,watchedText,source){
   }
   for(const raw of watched){
     const f=findByRss({title:raw.title,year:raw.year,link:raw.uri});
-    if(!f){unmatched++;continue;}
+    if(!f){unmatched++;trackUnmatched('watched',raw);continue;}
     const m=meta(f.id),date=validDate(raw.recordDate);
     if(!m.watchedFlag){m.watchedFlag=true;marked++;}
     // "Date" in watched.csv is when marked watched, NOT when actually viewed.
@@ -281,6 +288,7 @@ function drawList(){
         +esc(displayTitle(f))+'</strong><small>'+esc(dateLabel)
         +(entry?.rewatch?' · 再鑑賞':'')
         +(entry?.retroactive?' · 過去の鑑賞を後日登録':'')
+        +(!entry&&m.historicalWatched?' · 以前から鑑賞済み':'')
         +'</small><small>'+(sc==null?'未採点':sc+'点')
         +(sortMode==='rewatch'?' · 再鑑賞'+rewatches(f)+'件':'')
         +' · 全'+count+'記録</small></button>';
@@ -311,9 +319,11 @@ function commit(f){
 function drawEditor(id){
   if(!editor)return;
   const f=filmById(id);if(!f){editor.innerHTML='';return;}
+  const m=meta(f.id);
   const rows=[...events(f)].sort((a,b)=>(b.date||b.recordedAt||'').localeCompare(a.date||a.recordedAt||''));
   editor.innerHTML='<h3>鑑賞日・再鑑賞履歴</h3>'
     +'<p>登録されている鑑賞記録 '+rows.length+'件。昔見たものを後日登録した場合はチェックを付けてください。鑑賞日が不明なら空欄で保存できます。</p>'
+    +'<label style="display:flex;margin:8px 0"><input type="checkbox" id="watchPast83" '+(m.historicalWatched?'checked':'')+'>以前から見ていた作品（鑑賞日不明）</label>'
     +'<button type="button" id="watchAdd83">＋ 鑑賞記録を追加</button>'
     +rows.map(x=>'<div class="watch83-record" data-id="'+encodeURIComponent(x.id)+'"><div>'
       +'<input aria-label="鑑賞日" type="date" data-date value="'+esc(x.date||'')+'">'
@@ -322,6 +332,7 @@ function drawEditor(id){
       +'<button type="button" data-delete>削除</button></div><small>'
       +(x.source==='letterboxd-rss'?'Letterboxdから取得':'手入力')+' ／ 記録日：'
       +(x.recordedAt?esc(x.recordedAt.slice(0,10)):'不明')+'</small></div>').join('');
+  editor.querySelector('#watchPast83').onchange=e=>{m.historicalWatched=e.target.checked;save();drawList();};
   editor.querySelector('#watchAdd83').onclick=()=>{
     const m=meta(f.id);m.watchHistory=m.watchHistory||[];
     m.watchHistory.push({id:'manual:'+Date.now()+'-'+Math.random().toString(36).slice(2,6),
