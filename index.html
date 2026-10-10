@@ -76,14 +76,14 @@ function sk(s){return String(Number(s))}function stars(s){return "★".repeat(Ma
 function normalizeState(s){return {version:23,updatedAt:Number(s?.updatedAt||0),assignments:s?.assignments||{},starOverrides:s?.starOverrides||{},exactScores:s?.exactScores||{},customFilms:s?.customFilms||[],scoreMap:{...deepCopy(DEFAULT_MAP),...(s?.scoreMap||{})},rankOrder:s?.rankOrder||{},titleOverrides:s?.titleOverrides||{},categoryOverrides:s?.categoryOverrides||{},mediaTypeOverrides:s?.mediaTypeOverrides||{},genreOverrides:s?.genreOverrides||{},originSeeded:!!s?.originSeeded,originOverrides:s?.originOverrides||{},formatOverrides:s?.formatOverrides||{},runtimeOverrides:s?.runtimeOverrides||{},structuredSeeded:!!s?.structuredSeeded,letterboxdMeta:s?.letterboxdMeta||{}}}
 function testStorage(){try{localStorage.setItem("__movie30_test","1");localStorage.removeItem("__movie30_test");storageWorks=true}catch(e){storageWorks=false}}
 function load(){testStorage();let candidates=[];if(storageWorks){for(const k of [STORAGE_KEY,...BACKUP_KEYS,...LEGACY_KEYS]){try{const x=JSON.parse(localStorage.getItem(k)||"null");if(x)candidates.push(x)}catch(e){}}try{const v=JSON.parse(localStorage.getItem(VIEW_KEY)||localStorage.getItem("movie30_complete_v10_view")||"null");if(v)view={...view,...v}}catch(e){}}if(EMBEDDED_STATE)candidates.push(EMBEDDED_STATE);if(candidates.length)state=normalizeState(candidates.sort((a,b)=>Number(b.updatedAt||0)-Number(a.updatedAt||0))[0]);save(false)}
-function save(touch=true){if(touch)state.updatedAt=Date.now();if(storageWorks){try{const next=JSON.stringify(state),prev=localStorage.getItem(STORAGE_KEY);if(touch&&prev&&prev!==next){localStorage.setItem(BACKUP_KEYS[2],localStorage.getItem(BACKUP_KEYS[1])||"");localStorage.setItem(BACKUP_KEYS[1],localStorage.getItem(BACKUP_KEYS[0])||"");localStorage.setItem(BACKUP_KEYS[0],prev)}localStorage.setItem(STORAGE_KEY,next);localStorage.setItem(VIEW_KEY,JSON.stringify(view));setSaveStatus("自動保存済み · "+new Date().toLocaleTimeString("ja-JP",{hour:"2-digit",minute:"2-digit"}));return}catch(e){}}setSaveStatus("自動保存不可 · バックアップ推奨")}
+function save(touch=true){if(window.__movie30BulkBoot)return;if(touch)state.updatedAt=Date.now();if(storageWorks){try{const next=JSON.stringify(state),prev=localStorage.getItem(STORAGE_KEY);if(touch&&prev&&prev!==next){localStorage.setItem(BACKUP_KEYS[2],localStorage.getItem(BACKUP_KEYS[1])||"");localStorage.setItem(BACKUP_KEYS[1],localStorage.getItem(BACKUP_KEYS[0])||"");localStorage.setItem(BACKUP_KEYS[0],prev)}localStorage.setItem(STORAGE_KEY,next);localStorage.setItem(VIEW_KEY,JSON.stringify(view));setSaveStatus("自動保存済み · "+new Date().toLocaleTimeString("ja-JP",{hour:"2-digit",minute:"2-digit"}));return}catch(e){}}setSaveStatus("自動保存不可 · バックアップ推奨")}
 function setSaveStatus(t){const el=document.getElementById("saveState");if(el)el.textContent=t}function allFilms(){return BASE_FILMS.concat(state.customFilms||[])}function filmById(id){return allFilms().find(f=>f.id===id)}function titleInfo(f){const o=state.titleOverrides[f.id]||{};return {title:String(o.title??f.title??"").trim(),originalTitle:String(o.originalTitle??f.originalTitle??"").trim(),englishTitle:String(o.englishTitle??f.englishTitle??f.lbTitle??"").trim(),tmdbId:o.tmdbId??f.tmdbId??null}}function displayTitle(f){const x=titleInfo(f);return x.title||x.englishTitle||x.originalTitle||"（無題）"}function secondaryTitle(f){const x=titleInfo(f),main=displayTitle(f);if(x.originalTitle&&x.originalTitle!==main)return x.originalTitle;if(x.englishTitle&&x.englishTitle!==main)return x.englishTitle;return ""}function filmCategory(f){return String((state.categoryOverrides||{})[f.id]??f.category??"").trim()}function categoryOptions(){const extra=["SF","アクション","サスペンス、ミステリー","スリラー、ホラー","マフィア、クライム","ドラマ","コメディ","恋愛、ミュージカル","戦争、歴史","ファンタジー、アドベンチャー","ほかアニメ","邦画","スタジオジブリ系作品","ピクサー・ディズニー作品","MCU作品","スパイダーマン作品","スターウォーズシリーズ","ハリーポッター シリーズ","コナン映画","Letterboxd追加","追加映画"];const vals=allFilms().map(f=>filmCategory(f)).filter(Boolean).concat(extra);return Array.from(new Set(vals)).sort((a,b)=>a.localeCompare(b,"ja"))}function fillCategorySelect(id,{filter=false,value=null}={}){const el=document.getElementById(id);if(!el)return;const old=value??el.value;el.innerHTML=(filter?`<option value="">すべてのカテゴリ</option>`:`<option value="">カテゴリ未設定</option>`)+categoryOptions().map(c=>`<option value="${esc(c)}">${esc(c)}</option>`).join("");if([...el.options].some(o=>o.value===old))el.value=old}function refreshCategoryControls(){fillCategorySelect("newCategory");fillCategorySelect("qCategory");fillCategorySelect("categoryFilterRank",{filter:true});fillCategorySelect("categoryFilterClassify",{filter:true})}function filmStar(f){return Object.prototype.hasOwnProperty.call(state.starOverrides,f.id)?Number(state.starOverrides[f.id]):Number(f.star)}function tier(f){return state.assignments[f.id]||null}function mappedScore(f){const t=tier(f),s=filmStar(f);if(!t||s==null)return null;return state.scoreMap[sk(s)]?.[t]??null}function effectiveScore(f){if(Object.prototype.hasOwnProperty.call(state.exactScores,f.id))return Number(state.exactScores[f.id]);const m=mappedScore(f);return m!=null?Number(m):(f.oldScore!=null?Number(f.oldScore):null)}
 function scoreToStar(score){score=Number(score);if(score>=98)return 5;if(score>=93)return 4.5;if(score>=87)return 4;if(score>=84)return 3.5;if(score>=81)return 3;if(score>=77)return 2.5;if(score>=71)return 2;if(score>=63)return 1.5;if(score>=50)return 1;return .5}function nearestTier(star,score){const m=state.scoreMap[sk(star)]||DEFAULT_MAP[sk(star)];return ["low","mid","high"].sort((a,b)=>Math.abs(m[a]-score)-Math.abs(m[b]-score))[0]}
 function originalSort(a,b){if(filmCategory(a)!==filmCategory(b))return filmCategory(a).localeCompare(filmCategory(b),"ja");return (a.order??999999)-(b.order??999999)||((a._seq??999999)-(b._seq??999999))}function classSort(a,b){const d=SORT_RANK[tier(a)||"none"]-SORT_RANK[tier(b)||"none"];return d||((effectiveScore(b)??-1)-(effectiveScore(a)??-1))||originalSort(a,b)}function match(f,q){if(!q)return true;q=q.toLowerCase();const x=titleInfo(f);return ([x.title,x.originalTitle,x.englishTitle,f.lbTitle||"",filmCategory(f),f.year||""] .join(" ")).toLowerCase().includes(q)}function totalRated(){return allFilms().filter(f=>effectiveScore(f)!=null||filmStar(f)!=null).length}function toast(msg){const t=document.getElementById("toast");t.textContent=msg;t.classList.add("show");clearTimeout(toast._t);toast._t=setTimeout(()=>t.classList.remove("show"),1400)}
 function renderHeader(){const t=allFilms().length,sc=allFilms().filter(f=>effectiveScore(f)!=null).length;document.getElementById("summary").textContent=`${t}本 · 点数あり ${sc}本`;document.getElementById("progressBar").style.width=(t?Math.round(sc/t*100):0)+"%";document.querySelectorAll(".tab").forEach(b=>b.classList.toggle("active",b.dataset.page===view.page));document.querySelectorAll(".page").forEach(p=>p.classList.toggle("active",p.id==="page-"+view.page))}
 function rankSorted(arr,score){const saved=state.rankOrder[String(score)]||[],pos=new Map(saved.map((id,i)=>[id,i]));return arr.sort((a,b)=>{const pa=pos.has(a.id)?pos.get(a.id):1e9,pb=pos.has(b.id)?pos.get(b.id):1e9;return pa-pb||originalSort(a,b)})}
 function scoreListForStar(star){const [lo,hi]=STAR_RANGES[sk(star)];let scores=[];for(let x=hi;x>=lo;x--)scores.push(x);if(star===.5&&!view.showEmpty){const used=new Set(allFilms().map(effectiveScore).filter(v=>v!=null&&v<50));scores=scores.filter(x=>used.has(x));if(!scores.length)scores=[40]}return scores}
-function renderRank(){if(!dragCtx){document.querySelectorAll(".drag-ghost").forEach(x=>x.remove());document.body.classList.remove("drag-active")}const root=document.getElementById("rankRoot"),q=(document.getElementById("searchRank").value||"").trim(),cat=document.getElementById("categoryFilterRank")?.value||"";root.innerHTML="";const searching=!!q||!!cat;const ok=f=>match(f,q)&&(!cat||filmCategory(f)===cat);const uns=allFilms().filter(f=>effectiveScore(f)==null&&filmStar(f)>0&&ok(f));if(uns.length){uns.sort((a,b)=>filmStar(b)-filmStar(a)||Number(b.year||0)-Number(a.year||0));const p=document.createElement("div");p.className="uns-panel";p.innerHTML=`<div class="uns-head"><strong>1点刻み未採点</strong><span class="meta">${uns.length}本 · タップして点数を決める</span></div><div class="uns-grid">${uns.map(f=>`<button class="uns-card" data-uns="${encodeURIComponent(f.id)}"><strong>${esc(displayTitle(f))}${f.source==="letterboxd"?'<span class="source-pill">LB</span>':''}</strong><small>${stars(filmStar(f))}${f.year?' · '+f.year:''}</small></button>`).join("")}</div>`;root.appendChild(p);p.querySelectorAll("[data-uns]").forEach(b=>b.onclick=()=>openSheet(decodeURIComponent(b.dataset.uns)))}for(const star of STAR_ORDER){let scores=scoreListForStar(star),starCount=0,parts=[];for(const score of scores){let arr=allFilms().filter(f=>effectiveScore(f)===score&&ok(f));rankSorted(arr,score);starCount+=arr.length;if(!view.showEmpty&&!arr.length)continue;parts.push(`<div class="score-bin"><div class="score-label">${score}<small>${arr.length}本</small></div><div class="score-list${arr.length?"":" empty"}" data-score="${score}">${arr.length?arr.map(f=>`<div class="rank-card" data-id="${encodeURIComponent(f.id)}"><button class="drag-handle" aria-label="ドラッグ" ${searching?"disabled":""}>≡</button><button class="rank-edit" style="text-align:left;border:0;background:transparent;padding:0" data-open="1"><div class="rank-title">${esc(displayTitle(f))}</div>${secondaryTitle(f)?`<div class="alt-title">${esc(secondaryTitle(f))}</div>`:""}<div class="rank-meta">${f.year||""}${filmCategory(f)?" · "+esc(filmCategory(f)):""}</div></button><button class="rank-edit" data-open="1">編集</button></div>`).join(""):`<div class="empty-note">${searching?"該当なし":"ここへドラッグ"}</div>`}</div></div>`);}if(parts.length){const sec=document.createElement("section");sec.className="rank-star";sec.innerHTML=`<div class="rank-star-head"><strong>${stars(star)}</strong><span class="meta">${starCount}本</span></div>${parts.join("")}`;root.appendChild(sec)}}root.querySelectorAll('[data-open="1"]').forEach(b=>b.onclick=e=>{e.stopPropagation();openSheet(decodeURIComponent(b.closest(".rank-card").dataset.id))});root.querySelectorAll(".drag-handle").forEach(h=>{if(!h.disabled)h.onpointerdown=startDrag});document.getElementById("toggleEmpty").textContent="空の点数枠: "+(view.showEmpty?"表示":"非表示");document.getElementById("toggleEmpty").classList.toggle("active",view.showEmpty)}
+function renderRank(){if(window.__movie30BulkBoot)return;if(!dragCtx){document.querySelectorAll(".drag-ghost").forEach(x=>x.remove());document.body.classList.remove("drag-active")}const root=document.getElementById("rankRoot"),q=(document.getElementById("searchRank").value||"").trim(),cat=document.getElementById("categoryFilterRank")?.value||"";root.innerHTML="";const searching=!!q||!!cat;const ok=f=>match(f,q)&&(!cat||filmCategory(f)===cat);const uns=allFilms().filter(f=>effectiveScore(f)==null&&filmStar(f)>0&&ok(f));if(uns.length){uns.sort((a,b)=>filmStar(b)-filmStar(a)||Number(b.year||0)-Number(a.year||0));const p=document.createElement("div");p.className="uns-panel";p.innerHTML=`<div class="uns-head"><strong>1点刻み未採点</strong><span class="meta">${uns.length}本 · タップして点数を決める</span></div><div class="uns-grid">${uns.map(f=>`<button class="uns-card" data-uns="${encodeURIComponent(f.id)}"><strong>${esc(displayTitle(f))}${f.source==="letterboxd"?'<span class="source-pill">LB</span>':''}</strong><small>${stars(filmStar(f))}${f.year?' · '+f.year:''}</small></button>`).join("")}</div>`;root.appendChild(p);p.querySelectorAll("[data-uns]").forEach(b=>b.onclick=()=>openSheet(decodeURIComponent(b.dataset.uns)))}for(const star of STAR_ORDER){let scores=scoreListForStar(star),starCount=0,parts=[];for(const score of scores){let arr=allFilms().filter(f=>effectiveScore(f)===score&&ok(f));rankSorted(arr,score);starCount+=arr.length;if(!view.showEmpty&&!arr.length)continue;parts.push(`<div class="score-bin"><div class="score-label">${score}<small>${arr.length}本</small></div><div class="score-list${arr.length?"":" empty"}" data-score="${score}">${arr.length?arr.map(f=>`<div class="rank-card" data-id="${encodeURIComponent(f.id)}"><button class="drag-handle" aria-label="ドラッグ" ${searching?"disabled":""}>≡</button><button class="rank-edit" style="text-align:left;border:0;background:transparent;padding:0" data-open="1"><div class="rank-title">${esc(displayTitle(f))}</div>${secondaryTitle(f)?`<div class="alt-title">${esc(secondaryTitle(f))}</div>`:""}<div class="rank-meta">${f.year||""}${filmCategory(f)?" · "+esc(filmCategory(f)):""}</div></button><button class="rank-edit" data-open="1">編集</button></div>`).join(""):`<div class="empty-note">${searching?"該当なし":"ここへドラッグ"}</div>`}</div></div>`);}if(parts.length){const sec=document.createElement("section");sec.className="rank-star";sec.innerHTML=`<div class="rank-star-head"><strong>${stars(star)}</strong><span class="meta">${starCount}本</span></div>${parts.join("")}`;root.appendChild(sec)}}root.querySelectorAll('[data-open="1"]').forEach(b=>b.onclick=e=>{e.stopPropagation();openSheet(decodeURIComponent(b.closest(".rank-card").dataset.id))});root.querySelectorAll(".drag-handle").forEach(h=>{if(!h.disabled)h.onpointerdown=startDrag});document.getElementById("toggleEmpty").textContent="空の点数枠: "+(view.showEmpty?"表示":"非表示");document.getElementById("toggleEmpty").classList.toggle("active",view.showEmpty)}
 function clearDragListeners(){window.removeEventListener("pointermove",moveDrag);window.removeEventListener("pointerup",endDrag);window.removeEventListener("pointercancel",cancelDrag);window.removeEventListener("blur",cancelDrag)}
 function startDrag(e){if(e.button!=null&&e.button!==0)return;e.preventDefault();if(dragCtx)cancelDrag();const card=e.currentTarget.closest(".rank-card"),list=card?.closest(".score-list");if(!card||!list)return;dragCtx={id:decodeURIComponent(card.dataset.id),card,handle:e.currentTarget,fromScore:Number(list.dataset.score),ghost:card.cloneNode(true),pointerId:e.pointerId};dragCtx.ghost.classList.add("drag-ghost");dragCtx.ghost.style.width=Math.min(card.getBoundingClientRect().width,520)+"px";document.body.appendChild(dragCtx.ghost);card.classList.add("dragging");document.body.classList.add("drag-active");try{e.currentTarget.setPointerCapture(e.pointerId)}catch(_){}moveGhost(e);window.addEventListener("pointermove",moveDrag,{passive:false});window.addEventListener("pointerup",endDrag,{passive:false});window.addEventListener("pointercancel",cancelDrag,{passive:false});window.addEventListener("blur",cancelDrag)}
 function moveGhost(e){if(!dragCtx||!dragCtx.ghost?.isConnected)return;const w=dragCtx.ghost.getBoundingClientRect().width||0,h=dragCtx.ghost.getBoundingClientRect().height||0;dragCtx.ghost.style.left=Math.min(window.innerWidth-w-6,Math.max(6,e.clientX+12))+"px";dragCtx.ghost.style.top=Math.min(window.innerHeight-h-6,Math.max(6,e.clientY+12))+"px"}
@@ -93,10 +93,10 @@ function cancelDrag(){if(!dragCtx){document.querySelectorAll(".drag-ghost").forE
 function endDrag(e){if(!dragCtx)return;try{e?.preventDefault?.()}catch(_){}const ctx=dragCtx;dragCtx=null;const list=ctx.card?.closest(".score-list"),newScore=Number(list?.dataset.score??ctx.fromScore),f=filmById(ctx.id);if(f){state.exactScores[f.id]=newScore;const newStar=scoreToStar(newScore);state.starOverrides[f.id]=newStar;state.assignments[f.id]=nearestTier(newStar,newScore)}document.querySelectorAll(".score-list").forEach(l=>{const score=l.dataset.score;state.rankOrder[score]=[...l.querySelectorAll(".rank-card")].map(c=>decodeURIComponent(c.dataset.id))});finishDragUi(ctx);save();render();toast(newScore===ctx.fromScore?"同点内の順位を保存":""+newScore+"点へ移動")}
 document.addEventListener("visibilitychange",()=>{if(document.hidden&&dragCtx)cancelDrag()});
 function cardHtml(f){const tt=tier(f)||"none",sc=effectiveScore(f);return `<button class="card ${tt}" data-id="${encodeURIComponent(f.id)}"><div class="card-title">${esc(displayTitle(f))}</div><div class="badge">${tt==="none"?"未分類":LABEL[tt]}${view.showOld&&sc!=null?" · "+sc+"点":""}</div></button>`}
-function renderClassify(){const root=document.getElementById("classifyRoot"),q=(document.getElementById("searchClassify").value||"").trim(),cat=document.getElementById("categoryFilterClassify")?.value||"";root.innerHTML="";STAR_ORDER.forEach(s=>{let arr=allFilms().filter(f=>filmStar(f)===s&&match(f,q)&&(!cat||filmCategory(f)===cat));if(!arr.length)return;arr.sort(view.sortMode==="tier"?classSort:originalSort);const c={high:0,mid:0,low:0,none:0};arr.forEach(f=>c[tier(f)||"none"]++);const sec=document.createElement("section");sec.className="section";sec.innerHTML=`<div class="section-head"><strong>${stars(s)}</strong><small>上${c.high} · 中${c.mid} · 下${c.low} · 未${c.none}</small></div><div class="grid">${arr.map(cardHtml).join("")}</div>`;root.appendChild(sec)});root.querySelectorAll(".card").forEach(b=>b.onclick=()=>openSheet(decodeURIComponent(b.dataset.id)));document.getElementById("sortBtn").textContent=view.sortMode==="tier"?"分類順":"元の順";document.getElementById("sortBtn").classList.toggle("active",view.sortMode==="tier");document.getElementById("oldBtn").textContent="点数: "+(view.showOld?"表示":"非表示")}
-function renderDistribution(){const root=document.getElementById("distributionRoot");if(!root)return;const films=allFilms(),scores=films.map(f=>effectiveScore(f)).filter(v=>v!=null&&Number.isFinite(Number(v))).map(Number),total=films.length,scored=scores.length,avg=scored?scores.reduce((a,b)=>a+b,0)/scored:0,sorted=[...scores].sort((a,b)=>a-b),median=!scored?0:(scored%2?sorted[(scored-1)/2]:(sorted[scored/2-1]+sorted[scored/2])/2),n90=scores.filter(x=>x>=90).length,n95=scores.filter(x=>x>=95).length;const pct=(n,d)=>d?((n/d)*100).toFixed(1)+"%":"0.0%";const scoreCounts={};scores.forEach(s=>scoreCounts[s]=(scoreCounts[s]||0)+1);const scoreRows=Object.keys(scoreCounts).map(Number).sort((a,b)=>b-a),scoreMax=Math.max(1,...Object.values(scoreCounts));const starCounts={};STAR_ORDER.forEach(s=>starCounts[sk(s)]=0);films.forEach(f=>{const s=sk(filmStar(f));starCounts[s]=(starCounts[s]||0)+1});const starMax=Math.max(1,...Object.values(starCounts));const rows=(items,max,denom)=>items.map(({label,count})=>`<div class="dist-row"><div class="dist-label">${label}</div><div class="dist-count">${count}本</div><div class="dist-pct">${pct(count,denom)}</div><div class="dist-bar"><div class="dist-fill" style="width:${count?Math.max(2,count/max*100):0}%"></div></div></div>`).join("");const starItems=STAR_ORDER.map(s=>({label:stars(s),count:starCounts[sk(s)]||0}));const scoreItems=scoreRows.map(s=>({label:s+"点",count:scoreCounts[s]}));root.innerHTML=`<div class="dist-summary"><div class="dist-stat"><strong>${total}</strong><span>総本数</span></div><div class="dist-stat"><strong>${scored?avg.toFixed(1):"—"}</strong><span>平均点</span></div><div class="dist-stat"><strong>${scored?(Number.isInteger(median)?median:median.toFixed(1)):"—"}</strong><span>中央値</span></div><div class="dist-stat"><strong>${n90}</strong><span>90点以上 · ${pct(n90,scored)}</span></div><div class="dist-stat"><strong>${n95}</strong><span>95点以上 · ${pct(n95,scored)}</span></div></div><div class="dist-grid"><section class="dist-panel"><h2>星別分布</h2><div class="dist-sub">全${total}本に対する割合</div>${rows(starItems,starMax,total)}</section><section class="dist-panel"><h2>1点刻みの分布</h2><div class="dist-sub">点数がある${scored}本に対する割合 · 0本の点数は省略</div>${scoreItems.length?rows(scoreItems,scoreMax,scored):'<div class="dist-empty">点数データがありません</div>'}<div class="dist-note">横棒は、その表の中で最も本数が多い評価を100%として相対表示しています。</div></section></div>`}
-function renderMap(){const root=document.getElementById("mapRoot");root.innerHTML="";[...STAR_ORDER].reverse().forEach(s=>{const k=sk(s),m=state.scoreMap[k]||DEFAULT_MAP[k],box=document.createElement("div");box.className="mapcard";box.innerHTML=`<div class="mapstar">${stars(s)}</div>${["low","mid","high"].map(t=>`<label class="maprow"><span>${LABEL[t]}</span><input type="number" min="0" max="100" value="${m[t]}" data-star="${k}" data-tier="${t}"></label>`).join("")}`;root.appendChild(box)});root.querySelectorAll("input").forEach(i=>i.onchange=()=>{state.scoreMap[i.dataset.star][i.dataset.tier]=Math.max(0,Math.min(100,parseInt(i.value||0,10)));save();render()})}
-function render(){if(!document.getElementById("newCategory")?.options.length)refreshCategoryControls();renderHeader();renderRank();renderClassify();renderDistribution();renderMap()}
+function renderClassify(){if(window.__movie30BulkBoot)return;const root=document.getElementById("classifyRoot"),q=(document.getElementById("searchClassify").value||"").trim(),cat=document.getElementById("categoryFilterClassify")?.value||"";root.innerHTML="";STAR_ORDER.forEach(s=>{let arr=allFilms().filter(f=>filmStar(f)===s&&match(f,q)&&(!cat||filmCategory(f)===cat));if(!arr.length)return;arr.sort(view.sortMode==="tier"?classSort:originalSort);const c={high:0,mid:0,low:0,none:0};arr.forEach(f=>c[tier(f)||"none"]++);const sec=document.createElement("section");sec.className="section";sec.innerHTML=`<div class="section-head"><strong>${stars(s)}</strong><small>上${c.high} · 中${c.mid} · 下${c.low} · 未${c.none}</small></div><div class="grid">${arr.map(cardHtml).join("")}</div>`;root.appendChild(sec)});root.querySelectorAll(".card").forEach(b=>b.onclick=()=>openSheet(decodeURIComponent(b.dataset.id)));document.getElementById("sortBtn").textContent=view.sortMode==="tier"?"分類順":"元の順";document.getElementById("sortBtn").classList.toggle("active",view.sortMode==="tier");document.getElementById("oldBtn").textContent="点数: "+(view.showOld?"表示":"非表示")}
+function renderDistribution(){if(window.__movie30BulkBoot)return;const root=document.getElementById("distributionRoot");if(!root)return;const films=allFilms(),scores=films.map(f=>effectiveScore(f)).filter(v=>v!=null&&Number.isFinite(Number(v))).map(Number),total=films.length,scored=scores.length,avg=scored?scores.reduce((a,b)=>a+b,0)/scored:0,sorted=[...scores].sort((a,b)=>a-b),median=!scored?0:(scored%2?sorted[(scored-1)/2]:(sorted[scored/2-1]+sorted[scored/2])/2),n90=scores.filter(x=>x>=90).length,n95=scores.filter(x=>x>=95).length;const pct=(n,d)=>d?((n/d)*100).toFixed(1)+"%":"0.0%";const scoreCounts={};scores.forEach(s=>scoreCounts[s]=(scoreCounts[s]||0)+1);const scoreRows=Object.keys(scoreCounts).map(Number).sort((a,b)=>b-a),scoreMax=Math.max(1,...Object.values(scoreCounts));const starCounts={};STAR_ORDER.forEach(s=>starCounts[sk(s)]=0);films.forEach(f=>{const s=sk(filmStar(f));starCounts[s]=(starCounts[s]||0)+1});const starMax=Math.max(1,...Object.values(starCounts));const rows=(items,max,denom)=>items.map(({label,count})=>`<div class="dist-row"><div class="dist-label">${label}</div><div class="dist-count">${count}本</div><div class="dist-pct">${pct(count,denom)}</div><div class="dist-bar"><div class="dist-fill" style="width:${count?Math.max(2,count/max*100):0}%"></div></div></div>`).join("");const starItems=STAR_ORDER.map(s=>({label:stars(s),count:starCounts[sk(s)]||0}));const scoreItems=scoreRows.map(s=>({label:s+"点",count:scoreCounts[s]}));root.innerHTML=`<div class="dist-summary"><div class="dist-stat"><strong>${total}</strong><span>総本数</span></div><div class="dist-stat"><strong>${scored?avg.toFixed(1):"—"}</strong><span>平均点</span></div><div class="dist-stat"><strong>${scored?(Number.isInteger(median)?median:median.toFixed(1)):"—"}</strong><span>中央値</span></div><div class="dist-stat"><strong>${n90}</strong><span>90点以上 · ${pct(n90,scored)}</span></div><div class="dist-stat"><strong>${n95}</strong><span>95点以上 · ${pct(n95,scored)}</span></div></div><div class="dist-grid"><section class="dist-panel"><h2>星別分布</h2><div class="dist-sub">全${total}本に対する割合</div>${rows(starItems,starMax,total)}</section><section class="dist-panel"><h2>1点刻みの分布</h2><div class="dist-sub">点数がある${scored}本に対する割合 · 0本の点数は省略</div>${scoreItems.length?rows(scoreItems,scoreMax,scored):'<div class="dist-empty">点数データがありません</div>'}<div class="dist-note">横棒は、その表の中で最も本数が多い評価を100%として相対表示しています。</div></section></div>`}
+function renderMap(){if(window.__movie30BulkBoot)return;const root=document.getElementById("mapRoot");root.innerHTML="";[...STAR_ORDER].reverse().forEach(s=>{const k=sk(s),m=state.scoreMap[k]||DEFAULT_MAP[k],box=document.createElement("div");box.className="mapcard";box.innerHTML=`<div class="mapstar">${stars(s)}</div>${["low","mid","high"].map(t=>`<label class="maprow"><span>${LABEL[t]}</span><input type="number" min="0" max="100" value="${m[t]}" data-star="${k}" data-tier="${t}"></label>`).join("")}`;root.appendChild(box)});root.querySelectorAll("input").forEach(i=>i.onchange=()=>{state.scoreMap[i.dataset.star][i.dataset.tier]=Math.max(0,Math.min(100,parseInt(i.value||0,10)));save();render()})}
+function render(){if(window.__movie30BulkBoot)return;if(!document.getElementById("newCategory")?.options.length)refreshCategoryControls();renderHeader();renderRank();renderClassify();renderDistribution();renderMap()}
 function openSheet(id){const f=filmById(id);if(!f)return;selectedId=id;const x=titleInfo(f);document.getElementById("sheetTitle").textContent=displayTitle(f);document.getElementById("sheetMeta").textContent=`${f.year||""}${filmCategory(f)?" · "+filmCategory(f):""}`;document.getElementById("editTitle").value=x.title;document.getElementById("editOriginalTitle").value=x.originalTitle;document.getElementById("editEnglishTitle").value=x.englishTitle;fillCategorySelect("editCategory",{value:filmCategory(f)});document.getElementById("editStar").value=filmStar(f);document.getElementById("editScore").value=effectiveScore(f)??"";document.querySelectorAll(".choice").forEach(b=>b.classList.toggle("sel",(b.dataset.tier==="none"?null:b.dataset.tier)===tier(f)));document.getElementById("deleteCustom").classList.toggle("hidden",!f.added);document.getElementById("sheetBg").classList.add("open")}function closeSheet(){document.getElementById("sheetBg").classList.remove("open");selectedId=null}
 function setTier(t){const f=filmById(selectedId);if(!f)return;if(t==="none")delete state.assignments[f.id];else state.assignments[f.id]=t;if(t!=="none"&&!Object.prototype.hasOwnProperty.call(state.exactScores,f.id))state.exactScores[f.id]=mappedScore(f);save();closeSheet();render();toast(t==="none"?"未分類に戻しました":LABEL[t]+"に分類")}
 function addFilm(title,year,category,star,score,meta={}){title=String(title||"").trim();const originalTitle=String(meta.originalTitle||"").trim(),englishTitle=String(meta.englishTitle||"").trim();if(!title)title=englishTitle||originalTitle;if(!title){alert("タイトルを入力してください");return null};score=score===""||score==null?null:Math.max(0,Math.min(100,parseInt(score,10)));star=score!=null?scoreToStar(score):Number(star||3);const id="custom-"+Date.now()+"-"+Math.random().toString(36).slice(2,6);const f={id,title,originalTitle,englishTitle,lbTitle:englishTitle||originalTitle||title,tmdbId:meta.tmdbId||null,year:year?parseInt(year,10)||year:"",uri:"",category:String(category||"").trim()||"追加映画",order:999999,star,oldScore:null,added:true,_seq:Date.now()};state.customFilms.push(f);if(score==null&&!meta.keepUnscored)score=state.scoreMap[sk(star)]?.mid??null;if(score!=null){state.exactScores[id]=score;state.assignments[id]=nearestTier(star,score);state.rankOrder[String(score)]=state.rankOrder[String(score)]||[];state.rankOrder[String(score)].push(id)}else delete state.assignments[id];if(meta.uri)f.uri=meta.uri;if(meta.source)f.source=meta.source;save();render();return f}
@@ -112,9 +112,10 @@ window.addEventListener("beforeunload",()=>save(false));window.addEventListener(
 load();setSaveStatus(storageWorks?"自動保存利用可":"自動保存不可 · バックアップ推奨");render();
 
 setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},700);
-</script><!-- Single-document movie app bundle: build 20261011c; 64 historical patches integrated at build time -->
-<!-- patch-v14.js -->
-<script>
+
+// Initialize optional modules in one application bootstrap, not as later script blocks.
+window.__movie30BulkBoot=true;
+// Feature module 1
 (() => {
   const MEDIA_LABELS = { movie: "映画", documentary: "ドキュメンタリー", other: "その他" };
   const MEDIA_OPTIONS = Object.entries(MEDIA_LABELS).map(([v,l]) => `<option value="${v}">${l}</option>`).join("");
@@ -218,11 +219,8 @@ setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},
 
   render();
 })();
-
-</script>
-
-<!-- patch-v15.js -->
-<script>
+;
+// Feature module 2
 (() => {
   const SERIES_VALUE = "series";
   const SERIES_LABEL = "ドラマ・シリーズ";
@@ -362,11 +360,8 @@ setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},
 
   render();
 })();
-
-</script>
-
-<!-- patch-v16.js -->
-<script>
+;
+// Feature module 3
 (() => {
   const GENRES = ["SF","アクション","サスペンス","ミステリー","スリラー","ホラー","クライム","ドラマ","コメディ","恋愛","ミュージカル","戦争","歴史","ファンタジー","アドベンチャー","アニメ"];
 
@@ -557,11 +552,8 @@ setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},
 
   render();
 })();
-
-</script>
-
-<!-- patch-v17.js -->
-<script>
+;
+// Feature module 4
 (() => {
   const EXTRA_GENRES = ["シリーズ劇場版","ヒーロー"];
   const RENAMED_GENRES = {"テレビ映画":"シリーズ劇場版","ヒーロー映画":"ヒーロー"};
@@ -698,11 +690,8 @@ setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},
 
   render();
 })();
-
-</script>
-
-<!-- patch-v18.js -->
-<script>
+;
+// Feature module 5
 (() => {
   const ORIGIN_GENRES = ["邦画","ハリウッド","その他外国語映画"];
   const ALL_EXTRA = ["シリーズ劇場版","ヒーロー",...ORIGIN_GENRES];
@@ -877,10 +866,8 @@ setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},
 
   render();
 })();
-</script>
-
-<!-- patch-v19.js -->
-<script>
+;
+// Feature module 6
 (() => {
   const MEDIA = [["movie","映画"],["documentary","ドキュメンタリー"],["other","その他"]];
   const ORIGINS = ["日本","ハリウッド","その他外国語映画"];
@@ -1110,11 +1097,8 @@ setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},
 
   render();
 })();
-
-</script>
-
-<!-- patch-v20.js -->
-<script>
+;
+// Feature module 7
 (() => {
   const AUTO_LINE = document.getElementById('lbAutoSync')?.closest('.checkline');
   const autoBox = document.getElementById('lbAutoSync');
@@ -1285,10 +1269,8 @@ setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},
     if (tip) tip.textContent = '「今すぐ同期」を押した時だけ、Letterboxdの最新ログを取得します。定期取得はしません。Letterboxdで記録した直後に押せば、その場で取り込めます。';
   }
 })();
-</script>
-
-<!-- patch-v21.js -->
-<script>
+;
+// Feature module 8
 (() => {
   const VALID_MEDIA = new Set(['movie','documentary','other']);
   const VALID_ORIGIN = new Set(['邦画','ハリウッド','その他外国語映画']);
@@ -1500,10 +1482,8 @@ setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},
 
   render();
 })();
-</script>
-
-<!-- patch-v22.js -->
-<script>
+;
+// Feature module 9
 (() => {
   // v22: exact-score comparison workflow, faster rank navigation and continuous drag auto-scroll.
   const style = document.createElement('style');
@@ -1725,10 +1705,8 @@ setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},
   save(false);
   render();
 })();
-</script>
-
-<!-- patch-v23.js -->
-<script>
+;
+// Feature module 10
 (() => {
   // v23: two-stage exact-score placement + optional GitHub live-state sync for GPT.
   const style = document.createElement('style');
@@ -2103,10 +2081,8 @@ setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},
   refreshSyncUi();
   scheduleSync(1000);
 })();
-</script>
-
-<!-- patch-v24.js -->
-<script>
+;
+// Feature module 11
 (() => {
   const EXTRA_GENRES_V24 = ["青春・若者","子供向け"];
 
@@ -2189,11 +2165,8 @@ setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},
 
   render();
 })();
-
-</script>
-
-<!-- patch-v25.js -->
-<script>
+;
+// Feature module 12
 (() => {
   const EXTRA_GENRES_V25 = ["差別・人権","哲学・思想","心理・内面","社会問題・生活"];
   const LEGACY_PHILOSOPHY_V25 = "精神・哲学";
@@ -2293,11 +2266,8 @@ setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},
 
   render();
 })();
-
-</script>
-
-<!-- patch-v26.js -->
-<script>
+;
+// Feature module 13
 (() => {
   // v26: manual Letterboxd sync is server-verified through GitHub Actions when the saved PAT is available.
   const GH_OWNER='gjbkic', GH_REPO='movie-ratings', GH_BRANCH='main';
@@ -2444,11 +2414,8 @@ setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},
     if(tips[0])tips[0].textContent='「今すぐ同期」でLetterboxdを実際に確認します。GitHub同期トークン設定済みならサーバー側でRSSを取り直し、取得件数・最新作品まで表示して確認します。';
   }
 })();
-
-</script>
-
-<!-- patch-v27.js -->
-<script>
+;
+// Feature module 14
 (() => {
   const EXTRA_GENRES_V27 = [
     "世界観","青春・若者","子供向け","差別・人権","哲学・思想","心理・内面","社会問題・生活",
@@ -2611,11 +2578,8 @@ setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},
 
   render();
 })();
-
-</script>
-
-<!-- patch-v28.js -->
-<script>
+;
+// Feature module 15
 (() => {
   // v28: make all genre toggles use one persistence path, and bridge the actual v23 GitHub token key to v26.
   const ALL_EXTRA_V28 = new Set([
@@ -2696,11 +2660,8 @@ setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},
     } catch (_) {}
   }
 })();
-
-</script>
-
-<!-- patch-v29.js -->
-<script>
+;
+// Feature module 16
 (() => {
   // v29: cache self-heal + stable live-state autosync + final guard for all extra genre chips.
   const BUILD_V29='20260926a';
@@ -2827,11 +2788,8 @@ setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},
 
   render();
 })();
-
-</script>
-
-<!-- patch-v30.js -->
-<script>
+;
+// Feature module 17
 (() => {
   // v30: one-step undo for accidental ranking drags.
   const style=document.createElement('style');
@@ -2933,11 +2891,8 @@ setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},
     toast('直前のドラッグを戻しました');
   };
 })();
-
-</script>
-
-<!-- patch-v31.js -->
-<script>
+;
+// Feature module 18
 (() => {
   // v31: add TV series as a top-level media type without disturbing movie-genre "ドラマ".
   const DRAMA_VALUE='tvseries';
@@ -3161,11 +3116,8 @@ setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},
   save(false);
   render();
 })();
-
-</script>
-
-<!-- patch-v33.js -->
-<script>
+;
+// Feature module 19
 (() => {
   // v33: authoritative rebuild of media/origin taxonomy.
   // Origin = 日本 / ハリウッド / その他. Korea, France, UK-only, etc. => その他.
@@ -3315,11 +3267,8 @@ setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},
   const marker=document.getElementById('movie30BuildV29');if(marker)marker.textContent='app build '+BUILD33;
   render();
 })();
-
-</script>
-
-<!-- patch-v34.js -->
-<script>
+;
+// Feature module 20
 (() => {
   // v34: keep card media badges in sync with the v33 authoritative media taxonomy.
   // IMPORTANT: no MutationObserver here. The previous observer rescanned all 600+ cards
@@ -3366,11 +3315,8 @@ setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},
   const marker=document.getElementById('movie30BuildV29');
   if(marker)marker.textContent='app build '+BUILD34;
 })();
-
-</script>
-
-<!-- patch-v36.js -->
-<script>
+;
+// Feature module 21
 (() => {
   // v36: Letterboxd TV ids must use /tv/{id}, not /movie/{id}.
   // Also repair the current unscored Letterboxd batch from the verified RSS and prefer ja-JP titles.
@@ -3539,11 +3485,8 @@ setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},
   setTimeout(repairCurrentBatch36,350);
   const marker=document.getElementById('movie30BuildV29');if(marker)marker.textContent='app build '+BUILD36;
 })();
-
-</script>
-
-<!-- patch-v35.js -->
-<script>
+;
+// Feature module 22
 (() => {
   // v35: remove the accidental 30-item Letterboxd bulk import and never trust proxy RSS for gjbkic.
   const BUILD='20260925y';
@@ -3668,11 +3611,8 @@ setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},
 
   const marker=document.getElementById('movie30BuildV29');if(marker)marker.textContent='app build '+BUILD;
 })();
-
-</script>
-
-<!-- patch-v37.js -->
-<script>
+;
+// Feature module 23
 (() => {
   // v37: user-defined genre/theme tags without touching score/rank data.
   const BUILD='20260925zc';
@@ -3807,11 +3747,8 @@ setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},
   const marker=document.getElementById('movie30BuildV29');if(marker)marker.textContent='app build '+BUILD;
   render();
 })();
-
-</script>
-
-<!-- patch-v38.js -->
-<script>
+;
+// Feature module 24
 (() => {
   // v38: multi-genre combination search. Selected genres are ANDed together.
   const BUILD='20260925zb';
@@ -3919,11 +3856,8 @@ setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},
   const marker=document.getElementById('movie30BuildV29');if(marker)marker.textContent='app build '+BUILD;
   render();
 })();
-
-</script>
-
-<!-- patch-v39.js -->
-<script>
+;
+// Feature module 25
 (() => {
   // v39: safely backfill missing runtimes from TMDB without touching scores or ranking.
   const BUILD='20260925zd';
@@ -4012,11 +3946,8 @@ setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},
   setTimeout(()=>run(BATCH,true),4500);
   const marker=document.getElementById('movie30BuildV29');if(marker)marker.textContent='app build '+BUILD;
 })();
-
-</script>
-
-<!-- patch-v40.js -->
-<script>
+;
+// Feature module 26
 (() => {
   // v40: TV-series-only subtype (main series / special) stored as internal genre tags.
   // This avoids any score/rank changes and keeps the value in existing live-state sync.
@@ -4232,11 +4163,8 @@ setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},
   const marker=document.getElementById('movie30BuildV29');if(marker)marker.textContent='app build '+BUILD;
   render();
 })();
-
-</script>
-
-<!-- patch-v41.js -->
-<script>
+;
+// Feature module 27
 (() => {
   // v41: review-based TV classification. Corrects Letterboxd/TMDB entries that are
   // semantically TV series/specials even when their source entity is typed as a movie.
@@ -4326,11 +4254,8 @@ setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},
   const marker=document.getElementById('movie30BuildV29');if(marker)marker.textContent='app build '+BUILD;
   render();
 })();
-
-</script>
-
-<!-- patch-v43.js -->
-<script>
+;
+// Feature module 28
 (() => {
   // v43: undo the assistant-added watched-TV seed from v42 only.
   // Existing user data / Letterboxd entries are not removed.
@@ -4364,11 +4289,8 @@ setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},
   }
   const marker=document.getElementById('movie30BuildV29');if(marker)marker.textContent='app build '+BUILD;
 })();
-
-</script>
-
-<!-- patch-v44.js -->
-<script>
+;
+// Feature module 29
 (() => {
   // v44: four cross-genre descriptive tags. No automatic assignment and no score/rank changes.
   const BUILD='20260927a';
@@ -4491,11 +4413,8 @@ setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},
   const marker=document.getElementById('movie30BuildV29');if(marker)marker.textContent='app build '+BUILD;
   render();
 })();
-
-</script>
-
-<!-- patch-v45.js -->
-<script>
+;
+// Feature module 30
 (() => {
   // v45: apply the user's first-pass audit corrections only.
   // Genre/media metadata only; scores and ranking are untouched.
@@ -4568,11 +4487,8 @@ setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},
   const marker=document.getElementById('movie30BuildV29');
   if(marker)marker.textContent='app build '+BUILD;
 })();
-
-</script>
-
-<!-- patch-v46.js -->
-<script>
+;
+// Feature module 31
 (() => {
   // v46: remove the unwatched 2018 TV series "チア☆ダン / We Are Rockets!" only.
   // Keep the 2017 theatrical film. Prevent the TV entry from being re-imported from Letterboxd.
@@ -4634,11 +4550,8 @@ setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},
   const marker=document.getElementById('movie30BuildV29');
   if(marker)marker.textContent='app build '+BUILD;
 })();
-
-</script>
-
-<!-- patch-v47.js -->
-<script>
+;
+// Feature module 32
 (() => {
   // v47: correct known media-type and live/animation classification mistakes.
   // Scores/ranks are never changed.
@@ -4749,11 +4662,8 @@ setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},
   try{render()}catch(_){}
   const marker=document.getElementById('movie30BuildV29');if(marker)marker.textContent='app build '+BUILD;
 })();
-
-</script>
-
-<!-- patch-v48.js -->
-<script>
+;
+// Feature module 33
 (() => {
   // v48: user-approved genre corrections from the full-library audit.
   // Genre metadata only; scores and ranking are untouched.
@@ -4842,11 +4752,8 @@ setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},
   const marker=document.getElementById('movie30BuildV29');
   if(marker)marker.textContent='app build '+BUILD;
 })();
-
-</script>
-
-<!-- patch-v49.js -->
-<script>
+;
+// Feature module 34
 (() => {
   // v49: second user-approved genre audit batch.
   // Genre metadata only; scores and ranking are untouched.
@@ -4984,11 +4891,8 @@ setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},
   const marker=document.getElementById('movie30BuildV29');
   if(marker)marker.textContent='app build '+BUILD;
 })();
-
-</script>
-
-<!-- patch-v50.js -->
-<script>
+;
+// Feature module 35
 (() => {
   // v50: confirmed genre refinements after criteria calibration.
   // Genre metadata only; scores and ranking are untouched.
@@ -5023,11 +4927,8 @@ setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},
   const marker=document.getElementById('movie30BuildV29');
   if(marker)marker.textContent='app build '+BUILD;
 })();
-
-</script>
-
-<!-- patch-v51.js -->
-<script>
+;
+// Feature module 36
 (() => {
   // v51: confirmed genre refinements after user review.
   // Genre metadata only; scores and ranking are untouched.
@@ -5059,11 +4960,8 @@ setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},
   const marker=document.getElementById('movie30BuildV29');
   if(marker)marker.textContent='app build '+BUILD;
 })();
-
-</script>
-
-<!-- patch-v52.js -->
-<script>
+;
+// Feature module 37
 (() => {
   // v52: confirmed genre refinement after criteria calibration.
   // Genre metadata only; scores and ranking are untouched.
@@ -5094,11 +4992,8 @@ setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},
   const marker=document.getElementById('movie30BuildV29');
   if(marker)marker.textContent='app build '+BUILD;
 })();
-
-</script>
-
-<!-- patch-v53.js -->
-<script>
+;
+// Feature module 38
 (() => {
   // v53: confirmed genre refinements after criteria calibration.
   // Genre metadata only; scores and ranking are untouched.
@@ -5130,11 +5025,8 @@ setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},
   const marker=document.getElementById('movie30BuildV29');
   if(marker)marker.textContent='app build '+BUILD;
 })();
-
-</script>
-
-<!-- patch-v54.js -->
-<script>
+;
+// Feature module 39
 (() => {
   // v54: confirmed youth/growth genre refinement.
   // Genre metadata only; scores and ranking are untouched.
@@ -5165,11 +5057,8 @@ setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},
   const marker=document.getElementById('movie30BuildV29');
   if(marker)marker.textContent='app build '+BUILD;
 })();
-
-</script>
-
-<!-- patch-v55.js -->
-<script>
+;
+// Feature module 40
 (() => {
   // v55: confirmed genre refinements after criteria calibration.
   // Genre metadata only; scores and ranking are untouched.
@@ -5201,11 +5090,8 @@ setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},
   const marker=document.getElementById('movie30BuildV29');
   if(marker)marker.textContent='app build '+BUILD;
 })();
-
-</script>
-
-<!-- patch-v56.js -->
-<script>
+;
+// Feature module 41
 (() => {
   // v56: confirmed genre refinement after criteria calibration.
   // Genre metadata only; scores and ranking are untouched.
@@ -5236,11 +5122,8 @@ setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},
   const marker=document.getElementById('movie30BuildV29');
   if(marker)marker.textContent='app build '+BUILD;
 })();
-
-</script>
-
-<!-- patch-v57.js -->
-<script>
+;
+// Feature module 42
 (() => {
   // v57: confirmed genre refinements after criteria calibration.
   // Genre metadata only; scores and ranking are untouched.
@@ -5273,11 +5156,8 @@ setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},
   const marker=document.getElementById('movie30BuildV29');
   if(marker)marker.textContent='app build '+BUILD;
 })();
-
-</script>
-
-<!-- patch-v58.js -->
-<script>
+;
+// Feature module 43
 (() => {
   // v58: confirmed genre refinements after criteria calibration.
   // Genre metadata only; scores and ranking are untouched.
@@ -5326,11 +5206,8 @@ setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},
   const marker=document.getElementById('movie30BuildV29');
   if(marker)marker.textContent='app build '+BUILD;
 })();
-
-</script>
-
-<!-- patch-v59.js -->
-<script>
+;
+// Feature module 44
 (() => {
   // v59: confirmed genre refinements after criteria calibration.
   // Genre metadata only; scores and ranking are untouched.
@@ -5364,11 +5241,8 @@ setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},
   const marker=document.getElementById('movie30BuildV29');
   if(marker)marker.textContent='app build '+BUILD;
 })();
-
-</script>
-
-<!-- patch-v60.js -->
-<script>
+;
+// Feature module 45
 (() => {
   // v60: confirmed genre refinements near the end of the audit.
   // Genre metadata only; scores and ranking are untouched.
@@ -5403,11 +5277,8 @@ setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},
   const marker=document.getElementById('movie30BuildV29');
   if(marker)marker.textContent='app build '+BUILD;
 })();
-
-</script>
-
-<!-- patch-v61.js -->
-<script>
+;
+// Feature module 46
 (() => {
   // v61: confirmed genre refinements after criteria calibration.
   // Genre metadata only; scores and ranking are untouched.
@@ -5442,11 +5313,8 @@ setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},
   const marker=document.getElementById('movie30BuildV29');
   if(marker)marker.textContent='app build '+BUILD;
 })();
-
-</script>
-
-<!-- patch-v62.js -->
-<script>
+;
+// Feature module 47
 (() => {
   // v62: final SF/fantasy boundary refinements after calibration.
   // Genre metadata only; scores and ranking are untouched.
@@ -5480,11 +5348,8 @@ setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},
   const marker=document.getElementById('movie30BuildV29');
   if(marker)marker.textContent='app build '+BUILD;
 })();
-
-</script>
-
-<!-- patch-v63.js -->
-<script>
+;
+// Feature module 48
 (() => {
   // v63: persist Letterboxd registration metadata separately from actual viewing history.
   const BUILD='20260927t';
@@ -5633,11 +5498,8 @@ setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},
 
   const marker=document.getElementById('movie30BuildV29');if(marker)marker.textContent='app build '+BUILD;
 })();
-
-</script>
-
-<!-- patch-v64.js -->
-<script>
+;
+// Feature module 49
 (() => {
   // v64: confirmed superhero SF/fantasy refinements.
   // Genre metadata only; scores and ranking are untouched.
@@ -5672,11 +5534,8 @@ setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},
   const marker=document.getElementById('movie30BuildV29');
   if(marker)marker.textContent='app build '+BUILD;
 })();
-
-</script>
-
-<!-- patch-v65.js -->
-<script>
+;
+// Feature module 50
 (() => {
   // v65: confirmed superhero/SF genre refinements.
   // Genre metadata only; scores and ranking are untouched.
@@ -5728,11 +5587,8 @@ setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},
   const marker=document.getElementById('movie30BuildV29');
   if(marker)marker.textContent='app build '+BUILD;
 })();
-
-</script>
-
-<!-- patch-v66.js -->
-<script>
+;
+// Feature module 51
 (() => {
 const BUILD='20260929a', ADV_KEY='movie30_adv_filter_v66', PRESET_KEY='movie30_filter_presets_v66', HISTORY_KEY='movie30_change_history_v66', AUDIT_KEY='movie30_genre_audit_v66';
 const clone=v=>v==null?v:JSON.parse(JSON.stringify(v)), uniq=a=>[...new Set((a||[]).filter(Boolean))];
@@ -5815,10 +5671,8 @@ document.getElementById('histOpen66').onclick=()=>{renderHist();hb.classList.add
 for(const id of filterIds.filter(x=>x!=='searchRank')){const e=document.getElementById(id);if(!e)continue;const o=e.onchange;e.onchange=x=>{if(typeof o==='function')o.call(e,x);else renderRank();setTimeout(decorate,0)}}const sr=document.getElementById('searchRank');if(sr){const o=sr.oninput;sr.oninput=x=>{if(typeof o==='function')o.call(sr,x);else renderRank();setTimeout(decorate,0)}}
 renderRank();const marker=document.getElementById('movie30BuildV29');if(marker)marker.textContent='app build '+BUILD;
 })();
-</script>
-
-<!-- patch-v67.js -->
-<script>
+;
+// Feature module 52
 (() => {
   const BUILD='20260929b';
   const style=document.createElement('style');
@@ -5866,11 +5720,8 @@ renderRank();const marker=document.getElementById('movie30BuildV29');if(marker)m
   decorateUnratedV67();
   const marker=document.getElementById('movie30BuildV29');if(marker)marker.textContent='app build '+BUILD;
 })();
-
-</script>
-
-<!-- patch-v68.js -->
-<script>
+;
+// Feature module 53
 (() => {
   const BUILD='20261001a';
   const BOOT_KEY='movie30_lb_pending_boot_v68_'+BUILD;
@@ -5986,11 +5837,8 @@ renderRank();const marker=document.getElementById('movie30BuildV29');if(marker)m
   renderRank();
   const marker=document.getElementById('movie30BuildV29');if(marker)marker.textContent='app build '+BUILD;
 })();
-
-</script>
-
-<!-- patch-v69.js -->
-<script>
+;
+// Feature module 54
 (() => {
   // v69: restore verified/manual Letterboxd refresh after v68 accidentally bypassed it.
   // Keep v68 behavior that imports recent RSS items without stars as pending/unrated.
@@ -6129,10 +5977,8 @@ renderRank();const marker=document.getElementById('movie30BuildV29');if(marker)m
   const btn=document.getElementById('syncLetterboxd');if(btn)btn.onclick=()=>syncLetterboxd(false);
   const marker=document.getElementById('movie30BuildV29');if(marker)marker.textContent='app build '+BUILD;
 })();
-</script>
-
-<!-- patch-v70.js -->
-<script>
+;
+// Feature module 55
 (() => {
   // v70: Letterboxd sync is starred-items only again.
   // Manual sync still performs a fresh server-side RSS fetch via v69.
@@ -6156,10 +6002,8 @@ renderRank();const marker=document.getElementById('movie30BuildV29');if(marker)m
   const marker=document.getElementById('movie30BuildV29');
   if(marker)marker.textContent='app build '+BUILD;
 })();
-</script>
-
-<!-- patch-v71.js -->
-<script>
+;
+// Feature module 56
 (() => {
   // v71: one-time repair for the Tales of the Bizarre logging shift caused by
   // the skipped-special sequence in October 2026.
@@ -6271,10 +6115,8 @@ renderRank();const marker=document.getElementById('movie30BuildV29');if(marker)m
   render();
   try{toast('世にも奇妙な物語のズレを修正しました')}catch(_){}
 })();
-</script>
-
-<!-- patch-v72.js -->
-<script>
+;
+// Feature module 57
 (() => {
   // v72: audited display-title normalization across the current 711-item library.
   // Title-only patch: scores, rankings, stars, genres, media/origin/format and runtimes are untouched.
@@ -6298,10 +6140,8 @@ renderRank();const marker=document.getElementById('movie30BuildV29');if(marker)m
   const marker=document.getElementById('movie30BuildV29');
   if(marker)marker.textContent='app build '+BUILD;
 })();
-</script>
-
-<!-- patch-v73.js -->
-<script>
+;
+// Feature module 58
 (() => {
   // v73: rank TOC search shortcut + always-near Letterboxd sync shortcut.
   const BUILD='20261008c';
@@ -6375,10 +6215,8 @@ renderRank();const marker=document.getElementById('movie30BuildV29');if(marker)m
   const marker=document.getElementById('movie30BuildV29');
   if(marker)marker.textContent='app build '+BUILD;
 })();
-</script>
-
-<!-- patch-v74.js -->
-<script>
+;
+// Feature module 59
 (() => {
   // v74: normalize Black Mirror episode display titles.
   const BUILD='20261008d';
@@ -6399,10 +6237,8 @@ renderRank();const marker=document.getElementById('movie30BuildV29');if(marker)m
   const marker=document.getElementById('movie30BuildV29');
   if(marker)marker.textContent='app build '+BUILD;
 })();
-</script>
-
-<!-- patch-v75.js -->
-<script>
+;
+// Feature module 60
 (() => {
   // v75: numeric scores are authoritative; legacy high/mid/low tiers are retired.
   const BUILD = '20261010a';
@@ -6563,10 +6399,8 @@ renderRank();const marker=document.getElementById('movie30BuildV29');if(marker)m
   renderHeader();
   const marker=document.getElementById('movie30BuildV29');if(marker)marker.textContent='app build '+BUILD;
 })();
-</script>
-
-<!-- patch-v76.js -->
-<script>
+;
+// Feature module 61
 (() => {
   // v76: audit against the full Letterboxd export (2026-10-09 20:44 UTC).
   // Keep every 100-point score and same-score ordering unchanged.
@@ -6671,10 +6505,8 @@ renderRank();const marker=document.getElementById('movie30BuildV29');if(marker)m
     addedUnrated:added
   };
 })();
-</script>
-
-<!-- patch-v77.js -->
-<script>
+;
+// Feature module 62
 (() => {
   // v77: lossless Letterboxd review importer + compact, tap-to-expand editable notes.
   'use strict';
@@ -6930,10 +6762,8 @@ renderRank();const marker=document.getElementById('movie30BuildV29');if(marker)m
   }
   window.__movie30ReviewImportBuild=BUILD;
 })();
-</script>
-
-<!-- patch-v78.js -->
-<script>
+;
+// Feature module 63
 (() => {
   // v78: remove the user's explicitly approved obsolete note even if Safari
   // still holds a local copy older than live-state.json. Match the exact legacy
@@ -6947,10 +6777,8 @@ renderRank();const marker=document.getElementById('movie30BuildV29');if(marker)m
     save();
   }
 })();
-</script>
-
-<!-- patch-v79.js -->
-<script>
+;
+// Feature module 64
 (() => {
   // v79: pull-down dismissal and stable iOS sheet scrolling.
   // Does not mutate movie data, rankings, scores or notes.
@@ -7094,12 +6922,14 @@ renderRank();const marker=document.getElementById('movie30BuildV29');if(marker)m
   });
   observer.observe(overlay,{attributes:true,attributeFilter:['class']});
 })();
-</script><script>(function(){
+;
+// Feature module 65
+(function(){
 const show=()=>{document.documentElement.classList.add('movie30-ready');const mask=document.getElementById('movie30-startup-mask');if(mask)mask.remove();};
 requestAnimationFrame(()=>requestAnimationFrame(show));
-})();</script>
-<!-- Integrated patch v80: remove duplicate pending panel; synchronize RSS review bodies -->
-<script>
+})();
+;
+// Feature module 66
 (() => {
   'use strict';
   // The upper "鑑賞済み・点数未設定" card already displays these two films.
@@ -7252,15 +7082,11 @@ requestAnimationFrame(()=>requestAnimationFrame(show));
   if(button)button.onclick=()=>syncLetterboxd(false);
   window.__movie30RssReviewSync80=true;
 })();
-</script>
-
-<!-- patch-v81.js: Black Mirror original English titles -->
-<script>
+;
+// Feature module 67
 // v81 retired: the TV-aware Japanese title policy is implemented in v82.
-</script>
-
-<!-- patch-v82.js: safe TV episode import and localization -->
-<script>
+;
+// Feature module 68
 (() => {
   'use strict';
   // v82: type-aware Letterboxd identity, TV season/episode localization, and safe backfill.
@@ -7631,10 +7457,8 @@ requestAnimationFrame(()=>requestAnimationFrame(show));
   const marker=document.getElementById('movie30BuildV29');
   if(marker)marker.textContent='app build '+BUILD;
 })();
-</script>
-
-<!-- patch-v83.js: viewing date diary -->
-<script>
+;
+// Feature module 69
 (() => {
 'use strict';
 // v83: viewing diary is separate from numeric scores, film ranks and reviews.
@@ -7716,6 +7540,103 @@ async function importSavedRss(){
     if(status)status.textContent='RSS '+list.length+'件を確認：新規鑑賞記録 '+r.added+'件、更新 '+r.updated+'件、未一致 '+r.unmatched+'件';
   }catch(e){if(status)status.textContent='取得失敗：'+(e?.message||e);}
 }
+
+// Import the complete Letterboxd export without changing scores, stars or ranks.
+function csv83(raw){
+  const rows=parseCsvText(String(raw||'').replace(/^\uFEFF/,''));
+  if(!rows.length)return [];
+  const keys=rows[0].map(x=>String(x||'').trim().toLowerCase().replace(/\s+/g,' '));
+  return rows.slice(1).map(row=>{
+    const get=(...names)=>{for(const n of names){const i=keys.indexOf(n.toLowerCase());if(i>=0)return String(row[i]||'').trim();}return '';};
+    return {title:get('name','title'),year:get('year'),uri:get('letterboxd uri','url','letterboxduri'),
+      watchedDate:get('watched date','watcheddate'),recordDate:get('date'),rewatch:get('rewatch'),
+      row};
+  }).filter(x=>x.title);
+}
+async function zipCsv83(file){
+  const buf=await file.arrayBuffer(),view=new DataView(buf),bytes=new Uint8Array(buf);
+  let end=-1;
+  for(let p=buf.byteLength-22;p>=Math.max(0,buf.byteLength-65557);p--){
+    if(view.getUint32(p,true)===0x06054b50){end=p;break;}
+  }
+  if(end<0)throw Error('ZIP形式が正しくありません');
+  const count=view.getUint16(end+10,true);let at=view.getUint32(end+16,true);
+  const names=new TextDecoder('utf-8'),out={};
+  for(let n=0;n<count;n++){
+    if(at+46>buf.byteLength||view.getUint32(at,true)!==0x02014b50)throw Error('ZIP一覧が破損しています');
+    const method=view.getUint16(at+10,true),packedSize=view.getUint32(at+20,true),size=view.getUint32(at+24,true);
+    const nameLen=view.getUint16(at+28,true),extraLen=view.getUint16(at+30,true),commentLen=view.getUint16(at+32,true);
+    const local=view.getUint32(at+42,true);
+    const name=names.decode(bytes.subarray(at+46,at+46+nameLen)),basename=name.split('/').at(-1).toLowerCase();
+    if(['diary.csv','watched.csv'].includes(basename)){
+      if(size>12*1024*1024||packedSize>12*1024*1024)throw Error('CSVのサイズが大きすぎます');
+      if(local+30>buf.byteLength||view.getUint32(local,true)!==0x04034b50)throw Error('ZIP内部が破損しています');
+      const begin=local+30+view.getUint16(local+26,true)+view.getUint16(local+28,true);
+      if(begin+packedSize>buf.byteLength)throw Error('ZIPデータが不足しています');
+      const packed=bytes.slice(begin,begin+packedSize);
+      let result=packed;
+      if(method===8){
+        if(typeof DecompressionStream!=='function')throw Error('このブラウザはZIP展開に対応していません。diary.csv／watched.csvを読み込んでください');
+        try{
+          const stream=new Blob([packed]).stream().pipeThrough(new DecompressionStream('deflate-raw'));
+          result=new Uint8Array(await new Response(stream).arrayBuffer());
+        }catch(_){throw Error('ZIPを解凍できません。ZIP内のdiary.csvとwatched.csvを直接選択してください');}
+      }else if(method!==0)throw Error('未対応のZIP圧縮方式です');
+      out[basename]=names.decode(result);
+    }
+    at+=46+nameLen+extraLen+commentLen;
+  }
+  return out;
+}
+function importDiaryCsv83(diaryText,watchedText,source){
+  const diary=csv83(diaryText),watched=csv83(watchedText);
+  if(!diary.length&&!watched.length)throw Error('鑑賞記録を読み取れませんでした');
+  const consumed=new Set(),countPerKey=new Map();
+  let entries=0,marked=0,unmatched=0,duplicates=0;
+  for(const raw of diary){
+    const date=validDate(raw.watchedDate);
+    const f=findByRss({title:raw.title,year:raw.year,link:raw.uri});
+    if(!f){unmatched++;continue;}
+    const m=meta(f.id),arr=m.watchHistory=m.watchHistory||[];
+    const dateKey=f.id+'|'+date;
+    const nth=(countPerKey.get(dateKey)||0)+1;countPerKey.set(dateKey,nth);
+    const itemKey='csv:diary:'+dateKey+':'+nth;
+    if((m.watchHistoryDeleted||[]).includes(itemKey))continue;
+    if(arr.some(x=>x.id===itemKey)){duplicates++;continue;}
+    // RSS may already contain the same diary event. Avoid duplicating viewings.
+    const existing=arr.find(x=>x.id.startsWith('rss:')&&x.date===date&&!consumed.has(x.id));
+    if(existing){consumed.add(existing.id);duplicates++;continue;}
+    const reg=validDate(raw.recordDate);
+    arr.push({id:itemKey,date,recordedAt:reg?reg+'T12:00:00Z':'',
+      rewatch:/^(yes|true|1)$/i.test(raw.rewatch),retroactive:false,
+      source:'letterboxd-export',manualEdited:false});
+    entries++;
+  }
+  for(const raw of watched){
+    const f=findByRss({title:raw.title,year:raw.year,link:raw.uri});
+    if(!f){unmatched++;continue;}
+    const m=meta(f.id),date=validDate(raw.recordDate);
+    if(!m.watchedFlag){m.watchedFlag=true;marked++;}
+    // "Date" in watched.csv is when marked watched, NOT when actually viewed.
+    if(date&&(!m.watchedAddedDate||date<m.watchedAddedDate))m.watchedAddedDate=date;
+  }
+  save();drawList();
+  if(selectedId)drawEditor(selectedId);
+  return {diary:diary.length,watched:watched.length,entries,marked,unmatched,duplicates,source};
+}
+async function readExport83(file){
+  const name=String(file.name||'').toLowerCase();
+  let diary='',watched='';
+  if(name.endsWith('.zip')){
+    const entries=await zipCsv83(file);
+    diary=entries['diary.csv']||'';watched=entries['watched.csv']||'';
+  }else if(name.endsWith('diary.csv'))diary=await file.text();
+  else if(name.endsWith('watched.csv'))watched=await file.text();
+  else throw Error('LetterboxdのZIP、diary.csv、watched.csvを指定してください');
+  if(!diary&&!watched)throw Error('ZIP内にdiary.csvもwatched.csvもありません');
+  return importDiaryCsv83(diary,watched,file.name);
+}
+
 const oldSync=syncLetterboxd;
 syncLetterboxd=async function(...args){
   parsed=[];
@@ -7777,22 +7698,52 @@ function drawList(){
     (!q||match(f,q))&&(!cat||filmCategory(f)===cat)&&
     (!media||(state.mediaTypeOverrides?.[f.id]||'movie')===media)&&
     (!origin||state.originOverrides?.[f.id]===origin));
-  films.sort((a,b)=>{
-    let n=0;
-    if(sortMode==='watched-new')n=cmp(a,b,latest);
-    if(sortMode==='watched-old')n=cmp(a,b,latest,true);
-    if(sortMode==='logged-new')n=cmp(a,b,logged);
-    if(sortMode==='rewatch')n=rewatches(b)-rewatches(a)||events(b).length-events(a).length;
-    return n||displayTitle(a).localeCompare(displayTitle(b),'ja');
+  let entries=[];
+  for(const f of films){
+    const rows=events(f);
+    if(sortMode==='rewatch'){
+      entries.push({f,entry:null,sortDate:latest(f),count:rows.length});continue;
+    }
+    // Each Letterboxd diary entry appears independently, including rewatches.
+    if(rows.length){
+      for(const entry of rows){
+        const value=sortMode==='logged-new'?(entry.recordedAt||'').slice(0,10):validDate(entry.date);
+        entries.push({f,entry,sortDate:value,count:rows.length});
+      }
+    }else{
+      // watched.csv registration date is not an actual viewing date.
+      const known=sortMode==='logged-new'
+        ?(state.letterboxdMeta?.[f.id]?.watchedAddedDate||''):'';
+      entries.push({f,entry:null,sortDate:known,count:0});
+    }
+  }
+  entries.sort((a,b)=>{
+    if(sortMode==='rewatch'){
+      const n=rewatches(b.f)-rewatches(a.f)||b.count-a.count;
+      return n||displayTitle(a.f).localeCompare(displayTitle(b.f),'ja');
+    }
+    if(!a.sortDate&&!b.sortDate)return displayTitle(a.f).localeCompare(displayTitle(b.f),'ja');
+    if(!a.sortDate)return 1;if(!b.sortDate)return -1;
+    const n=sortMode==='watched-old'
+      ?a.sortDate.localeCompare(b.sortDate):b.sortDate.localeCompare(a.sortDate);
+    return n||displayTitle(a.f).localeCompare(displayTitle(b.f),'ja');
   });
-  const dated=films.filter(f=>latest(f)).length;
-  listRoot.innerHTML='<p class="watch83-summary">'+films.length+'作品／鑑賞日の記録あり '+dated+'作品。未記録は末尾。点数と同点内順位は変更しません。</p>'
-    +'<div class="watch83-grid">'+films.map(f=>{
-      const d=latest(f),h=events(f),sc=effectiveScore(f);
-      return '<button type="button" class="watch83-item" data-film="'+encodeURIComponent(f.id)+'"><strong>'+esc(displayTitle(f))+'</strong>'
-        +'<small>最新鑑賞日：'+(d||'未記録')+' ／ 記録 '+h.length+'回</small>'
-        +'<small>再鑑賞記録：'+rewatches(f)+'件'+(h.some(x=>x.retroactive)?' ／ 過去鑑賞を後日登録':'')+'</small>'
-        +'<small>'+(sc==null?'未採点':sc+'点')+'</small></button>';
+  const dated=entries.filter(e=>e.sortDate).length;
+  listRoot.innerHTML='<p class="watch83-summary">'+entries.length+'件の鑑賞・作品記録／日付あり '+dated+'件。'
+    +(sortMode==='rewatch'?'作品単位で再鑑賞数順。':'LetterboxdのDiaryと同様、再鑑賞も1回ずつ表示。')
+    +' 点数・元の順位には影響しません。</p>'
+    +'<div class="watch83-grid">'+entries.map(({f,entry,count,sortDate})=>{
+      const sc=effectiveScore(f),m=state.letterboxdMeta?.[f.id]||{};
+      const dateLabel=entry
+        ?(entry.date?'鑑賞日 '+entry.date:'鑑賞日不明')
+        :(sortMode==='logged-new'&&m.watchedAddedDate?'鑑賞済みに登録 '+m.watchedAddedDate:'鑑賞日未登録');
+      return '<button type="button" class="watch83-item" data-film="'+encodeURIComponent(f.id)+'"><strong>'
+        +esc(displayTitle(f))+'</strong><small>'+esc(dateLabel)
+        +(entry?.rewatch?' · 再鑑賞':'')
+        +(entry?.retroactive?' · 過去の鑑賞を後日登録':'')
+        +'</small><small>'+(sc==null?'未採点':sc+'点')
+        +(sortMode==='rewatch'?' · 再鑑賞'+rewatches(f)+'件':'')
+        +' · 全'+count+'記録</small></button>';
     }).join('')+'</div>';
   listRoot.querySelectorAll('[data-film]').forEach(el=>el.onclick=()=>openSheet(decodeURIComponent(el.dataset.film)));
 }
@@ -7861,21 +7812,32 @@ openSheet=function(...args){
 const page=document.getElementById('page-data');
 if(page&&!document.getElementById('watchImport83')){
   const panel=document.createElement('div');panel.className='panel';panel.id='watchImport83';
-  panel.innerHTML='<h2>鑑賞履歴</h2><p class="tip">RSSの鑑賞日と登録日を区別して保存。再鑑賞も1回ずつ管理し、昔見た作品は詳細画面でチェックできます。</p>'
-    +'<div class="tools"><button type="button" class="btn" id="watchSync83">保存済みRSSから鑑賞履歴を取得</button></div>'
+  panel.innerHTML='<h2>Letterboxd全履歴を読み込み</h2><p class="tip">LetterboxdのエクスポートZIPにあるdiary.csv（実際の鑑賞日・再鑑賞）とwatched.csv（鑑賞済み登録日）を区別して読み込みます。点数と順位、レビューは変更しません。過去鑑賞のチェックは後から編集できます。</p>'
+    +'<div class="tools"><label class="btn active">Letterboxd ZIPを選択<input type="file" id="watchZip83" accept=".zip,.csv,application/zip,text/csv" hidden></label>'
+    +'<button type="button" class="btn" id="watchSync83">保存済みRSSから追加同期</button></div>'
     +'<div class="sync-status" id="watchImportStatus83"></div>';
   page.insertBefore(panel,page.firstChild);
   panel.querySelector('#watchSync83').onclick=importSavedRss;
+  panel.querySelector('#watchZip83').onchange=async e=>{
+    const status=panel.querySelector('#watchImportStatus83'),file=e.target.files?.[0];
+    if(!file)return;
+    status.textContent='ZIPの鑑賞履歴を解析中…';
+    try{
+      const r=await readExport83(file);
+      status.textContent='取得：Diary '+r.diary+'件、Watched '+r.watched
+        +'件／新しい鑑賞記録 '+r.entries+'件／既存重複 '+r.duplicates
+        +'件／照合できなかった記録 '+r.unmatched+'件。';
+    }catch(err){status.textContent='読み込みできません：'+(err?.message||err);}
+    e.target.value='';
+  };
 }
 drawList();
 setTimeout(importSavedRss,700);
 window.__movie30WatchDiaryV83={build:BUILD};
 const marker=document.getElementById('movie30BuildV29');if(marker)marker.textContent='app build '+BUILD;
 })();
-</script>
-
-<!-- patch-v84.js: TMDb directors & creators -->
-<script>
+;
+// Feature module 70
 (() => {
 'use strict';
 // v84: source-aware TMDb director (films), show creator and episode director (TV).
@@ -8045,5 +8007,12 @@ populateInWatchList();
 window.__movie30TmdbCreditsV84={build:BUILD};
 const marker=document.getElementById('movie30BuildV29');if(marker)marker.textContent='app build '+BUILD;
 })();
+;
+window.__movie30BulkBoot=false;
+save();
+render();
+document.documentElement.classList.add('movie30-ready');
+
 </script>
+
 </body></html>
