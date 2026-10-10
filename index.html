@@ -112,7 +112,7 @@ window.addEventListener("beforeunload",()=>save(false));window.addEventListener(
 load();setSaveStatus(storageWorks?"自動保存利用可":"自動保存不可 · バックアップ推奨");render();
 
 setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},700);
-</script><!-- Single-document movie app bundle: build 20261011b; 64 historical patches integrated at build time -->
+</script><!-- Single-document movie app bundle: build 20261011c; 64 historical patches integrated at build time -->
 <!-- patch-v14.js -->
 <script>
 (() => {
@@ -7702,7 +7702,7 @@ function mergeRss(list){
     }
   }
   if(touched.size){
-    save(false);drawList();
+    save();drawList();
     if(selectedId&&touched.has(selectedId))drawEditor(selectedId);
   }
   return {added,updated,unmatched};
@@ -7880,7 +7880,7 @@ const marker=document.getElementById('movie30BuildV29');if(marker)marker.textCon
 'use strict';
 // v84: source-aware TMDb director (films), show creator and episode director (TV).
 // Stored in letterboxdMeta only; score/rank and review data are untouched.
-const BUILD='20261011b';
+const BUILD='20261011c';
 const unique=names=>[...new Set((names||[]).map(v=>String(v||'').trim()).filter(Boolean))];
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const active=new Map();
@@ -7918,7 +7918,7 @@ async function retrieve(f,force=false){
     }
     // Metadata only. Never touch exactScores, rankOrder, starOverrides or notes.
     if(filmById(f.id)){
-      meta(f.id).crew84=people;save(false);
+      meta(f.id).crew84=people;save();
       if(selectedId===f.id)drawCrew(f.id);
       populateInWatchList();
     }
