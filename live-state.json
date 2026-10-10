@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791664347919,
-  "sourceUpdatedIso": "2026-10-10T20:32:27.919Z",
+  "sourceUpdatedAt": 1791664360690,
+  "sourceUpdatedIso": "2026-10-10T20:32:40.690Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -1006,6 +1006,35 @@
       "letterboxdReportedWatchedDate": "2026-09-27"
     },
     {
+      "id": "lb-323-1VEo",
+      "title": "ウォーリー",
+      "originalTitle": "",
+      "englishTitle": "WALL·E",
+      "year": 2008,
+      "score": 93,
+      "star": 4.5,
+      "overallRank": 35,
+      "sameScoreRank": 2,
+      "category": "ピクサー・ディズニー作品",
+      "mediaType": "movie",
+      "genre": [
+        "恋愛",
+        "SF",
+        "子供向け",
+        "世界観",
+        "comfort",
+        "感動",
+        "アクション"
+      ],
+      "origin": "ハリウッド",
+      "format": "animation",
+      "runtime": 103,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-86-cUqs",
       "title": "君の名は。",
       "originalTitle": "",
@@ -1013,8 +1042,8 @@
       "year": 2016,
       "score": 93,
       "star": 4.5,
-      "overallRank": 35,
-      "sameScoreRank": 2,
+      "overallRank": 36,
+      "sameScoreRank": 3,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -1030,35 +1059,6 @@
       "origin": "日本",
       "format": "animation",
       "runtime": 107,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "lb-323-1VEo",
-      "title": "ウォーリー",
-      "originalTitle": "",
-      "englishTitle": "WALL·E",
-      "year": 2008,
-      "score": 93,
-      "star": 4.5,
-      "overallRank": 36,
-      "sameScoreRank": 3,
-      "category": "ピクサー・ディズニー作品",
-      "mediaType": "movie",
-      "genre": [
-        "恋愛",
-        "SF",
-        "子供向け",
-        "世界観",
-        "comfort",
-        "感動",
-        "アクション"
-      ],
-      "origin": "ハリウッド",
-      "format": "animation",
-      "runtime": 103,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
@@ -22070,8 +22070,8 @@
       ],
       "93": [
         "custom-1790458138074-p8hs",
-        "lb-86-cUqs",
         "lb-323-1VEo",
+        "lb-86-cUqs",
         "custom-1791664055911-cuz4",
         "lb-308-kPxE",
         "custom-1790185844116-j1vu",
