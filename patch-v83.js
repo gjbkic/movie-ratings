@@ -79,6 +79,103 @@ async function importSavedRss(){
     if(status)status.textContent='RSS '+list.length+'件を確認：新規鑑賞記録 '+r.added+'件、更新 '+r.updated+'件、未一致 '+r.unmatched+'件';
   }catch(e){if(status)status.textContent='取得失敗：'+(e?.message||e);}
 }
+
+// Import the complete Letterboxd export without changing scores, stars or ranks.
+function csv83(raw){
+  const rows=parseCsvText(String(raw||'').replace(/^\uFEFF/,''));
+  if(!rows.length)return [];
+  const keys=rows[0].map(x=>String(x||'').trim().toLowerCase().replace(/\s+/g,' '));
+  return rows.slice(1).map(row=>{
+    const get=(...names)=>{for(const n of names){const i=keys.indexOf(n.toLowerCase());if(i>=0)return String(row[i]||'').trim();}return '';};
+    return {title:get('name','title'),year:get('year'),uri:get('letterboxd uri','url','letterboxduri'),
+      watchedDate:get('watched date','watcheddate'),recordDate:get('date'),rewatch:get('rewatch'),
+      row};
+  }).filter(x=>x.title);
+}
+async function zipCsv83(file){
+  const buf=await file.arrayBuffer(),view=new DataView(buf),bytes=new Uint8Array(buf);
+  let end=-1;
+  for(let p=buf.byteLength-22;p>=Math.max(0,buf.byteLength-65557);p--){
+    if(view.getUint32(p,true)===0x06054b50){end=p;break;}
+  }
+  if(end<0)throw Error('ZIP形式が正しくありません');
+  const count=view.getUint16(end+10,true);let at=view.getUint32(end+16,true);
+  const names=new TextDecoder('utf-8'),out={};
+  for(let n=0;n<count;n++){
+    if(at+46>buf.byteLength||view.getUint32(at,true)!==0x02014b50)throw Error('ZIP一覧が破損しています');
+    const method=view.getUint16(at+10,true),packedSize=view.getUint32(at+20,true),size=view.getUint32(at+24,true);
+    const nameLen=view.getUint16(at+28,true),extraLen=view.getUint16(at+30,true),commentLen=view.getUint16(at+32,true);
+    const local=view.getUint32(at+42,true);
+    const name=names.decode(bytes.subarray(at+46,at+46+nameLen)),basename=name.split('/').at(-1).toLowerCase();
+    if(['diary.csv','watched.csv'].includes(basename)){
+      if(size>12*1024*1024||packedSize>12*1024*1024)throw Error('CSVのサイズが大きすぎます');
+      if(local+30>buf.byteLength||view.getUint32(local,true)!==0x04034b50)throw Error('ZIP内部が破損しています');
+      const begin=local+30+view.getUint16(local+26,true)+view.getUint16(local+28,true);
+      if(begin+packedSize>buf.byteLength)throw Error('ZIPデータが不足しています');
+      const packed=bytes.slice(begin,begin+packedSize);
+      let result=packed;
+      if(method===8){
+        if(typeof DecompressionStream!=='function')throw Error('このブラウザはZIP展開に対応していません。diary.csv／watched.csvを読み込んでください');
+        try{
+          const stream=new Blob([packed]).stream().pipeThrough(new DecompressionStream('deflate-raw'));
+          result=new Uint8Array(await new Response(stream).arrayBuffer());
+        }catch(_){throw Error('ZIPを解凍できません。ZIP内のdiary.csvとwatched.csvを直接選択してください');}
+      }else if(method!==0)throw Error('未対応のZIP圧縮方式です');
+      out[basename]=names.decode(result);
+    }
+    at+=46+nameLen+extraLen+commentLen;
+  }
+  return out;
+}
+function importDiaryCsv83(diaryText,watchedText,source){
+  const diary=csv83(diaryText),watched=csv83(watchedText);
+  if(!diary.length&&!watched.length)throw Error('鑑賞記録を読み取れませんでした');
+  const consumed=new Set(),countPerKey=new Map();
+  let entries=0,marked=0,unmatched=0,duplicates=0;
+  for(const raw of diary){
+    const date=validDate(raw.watchedDate);
+    const f=findByRss({title:raw.title,year:raw.year,link:raw.uri});
+    if(!f){unmatched++;continue;}
+    const m=meta(f.id),arr=m.watchHistory=m.watchHistory||[];
+    const dateKey=f.id+'|'+date;
+    const nth=(countPerKey.get(dateKey)||0)+1;countPerKey.set(dateKey,nth);
+    const itemKey='csv:diary:'+dateKey+':'+nth;
+    if((m.watchHistoryDeleted||[]).includes(itemKey))continue;
+    if(arr.some(x=>x.id===itemKey)){duplicates++;continue;}
+    // RSS may already contain the same diary event. Avoid duplicating viewings.
+    const existing=arr.find(x=>x.id.startsWith('rss:')&&x.date===date&&!consumed.has(x.id));
+    if(existing){consumed.add(existing.id);duplicates++;continue;}
+    const reg=validDate(raw.recordDate);
+    arr.push({id:itemKey,date,recordedAt:reg?reg+'T12:00:00Z':'',
+      rewatch:/^(yes|true|1)$/i.test(raw.rewatch),retroactive:false,
+      source:'letterboxd-export',manualEdited:false});
+    entries++;
+  }
+  for(const raw of watched){
+    const f=findByRss({title:raw.title,year:raw.year,link:raw.uri});
+    if(!f){unmatched++;continue;}
+    const m=meta(f.id),date=validDate(raw.recordDate);
+    if(!m.watchedFlag){m.watchedFlag=true;marked++;}
+    // "Date" in watched.csv is when marked watched, NOT when actually viewed.
+    if(date&&(!m.watchedAddedDate||date<m.watchedAddedDate))m.watchedAddedDate=date;
+  }
+  save();drawList();
+  if(selectedId)drawEditor(selectedId);
+  return {diary:diary.length,watched:watched.length,entries,marked,unmatched,duplicates,source};
+}
+async function readExport83(file){
+  const name=String(file.name||'').toLowerCase();
+  let diary='',watched='';
+  if(name.endsWith('.zip')){
+    const entries=await zipCsv83(file);
+    diary=entries['diary.csv']||'';watched=entries['watched.csv']||'';
+  }else if(name.endsWith('diary.csv'))diary=await file.text();
+  else if(name.endsWith('watched.csv'))watched=await file.text();
+  else throw Error('LetterboxdのZIP、diary.csv、watched.csvを指定してください');
+  if(!diary&&!watched)throw Error('ZIP内にdiary.csvもwatched.csvもありません');
+  return importDiaryCsv83(diary,watched,file.name);
+}
+
 const oldSync=syncLetterboxd;
 syncLetterboxd=async function(...args){
   parsed=[];
@@ -140,22 +237,52 @@ function drawList(){
     (!q||match(f,q))&&(!cat||filmCategory(f)===cat)&&
     (!media||(state.mediaTypeOverrides?.[f.id]||'movie')===media)&&
     (!origin||state.originOverrides?.[f.id]===origin));
-  films.sort((a,b)=>{
-    let n=0;
-    if(sortMode==='watched-new')n=cmp(a,b,latest);
-    if(sortMode==='watched-old')n=cmp(a,b,latest,true);
-    if(sortMode==='logged-new')n=cmp(a,b,logged);
-    if(sortMode==='rewatch')n=rewatches(b)-rewatches(a)||events(b).length-events(a).length;
-    return n||displayTitle(a).localeCompare(displayTitle(b),'ja');
+  let entries=[];
+  for(const f of films){
+    const rows=events(f);
+    if(sortMode==='rewatch'){
+      entries.push({f,entry:null,sortDate:latest(f),count:rows.length});continue;
+    }
+    // Each Letterboxd diary entry appears independently, including rewatches.
+    if(rows.length){
+      for(const entry of rows){
+        const value=sortMode==='logged-new'?(entry.recordedAt||'').slice(0,10):validDate(entry.date);
+        entries.push({f,entry,sortDate:value,count:rows.length});
+      }
+    }else{
+      // watched.csv registration date is not an actual viewing date.
+      const known=sortMode==='logged-new'
+        ?(state.letterboxdMeta?.[f.id]?.watchedAddedDate||''):'';
+      entries.push({f,entry:null,sortDate:known,count:0});
+    }
+  }
+  entries.sort((a,b)=>{
+    if(sortMode==='rewatch'){
+      const n=rewatches(b.f)-rewatches(a.f)||b.count-a.count;
+      return n||displayTitle(a.f).localeCompare(displayTitle(b.f),'ja');
+    }
+    if(!a.sortDate&&!b.sortDate)return displayTitle(a.f).localeCompare(displayTitle(b.f),'ja');
+    if(!a.sortDate)return 1;if(!b.sortDate)return -1;
+    const n=sortMode==='watched-old'
+      ?a.sortDate.localeCompare(b.sortDate):b.sortDate.localeCompare(a.sortDate);
+    return n||displayTitle(a.f).localeCompare(displayTitle(b.f),'ja');
   });
-  const dated=films.filter(f=>latest(f)).length;
-  listRoot.innerHTML='<p class="watch83-summary">'+films.length+'作品／鑑賞日の記録あり '+dated+'作品。未記録は末尾。点数と同点内順位は変更しません。</p>'
-    +'<div class="watch83-grid">'+films.map(f=>{
-      const d=latest(f),h=events(f),sc=effectiveScore(f);
-      return '<button type="button" class="watch83-item" data-film="'+encodeURIComponent(f.id)+'"><strong>'+esc(displayTitle(f))+'</strong>'
-        +'<small>最新鑑賞日：'+(d||'未記録')+' ／ 記録 '+h.length+'回</small>'
-        +'<small>再鑑賞記録：'+rewatches(f)+'件'+(h.some(x=>x.retroactive)?' ／ 過去鑑賞を後日登録':'')+'</small>'
-        +'<small>'+(sc==null?'未採点':sc+'点')+'</small></button>';
+  const dated=entries.filter(e=>e.sortDate).length;
+  listRoot.innerHTML='<p class="watch83-summary">'+entries.length+'件の鑑賞・作品記録／日付あり '+dated+'件。'
+    +(sortMode==='rewatch'?'作品単位で再鑑賞数順。':'LetterboxdのDiaryと同様、再鑑賞も1回ずつ表示。')
+    +' 点数・元の順位には影響しません。</p>'
+    +'<div class="watch83-grid">'+entries.map(({f,entry,count,sortDate})=>{
+      const sc=effectiveScore(f),m=state.letterboxdMeta?.[f.id]||{};
+      const dateLabel=entry
+        ?(entry.date?'鑑賞日 '+entry.date:'鑑賞日不明')
+        :(sortMode==='logged-new'&&m.watchedAddedDate?'鑑賞済みに登録 '+m.watchedAddedDate:'鑑賞日未登録');
+      return '<button type="button" class="watch83-item" data-film="'+encodeURIComponent(f.id)+'"><strong>'
+        +esc(displayTitle(f))+'</strong><small>'+esc(dateLabel)
+        +(entry?.rewatch?' · 再鑑賞':'')
+        +(entry?.retroactive?' · 過去の鑑賞を後日登録':'')
+        +'</small><small>'+(sc==null?'未採点':sc+'点')
+        +(sortMode==='rewatch'?' · 再鑑賞'+rewatches(f)+'件':'')
+        +' · 全'+count+'記録</small></button>';
     }).join('')+'</div>';
   listRoot.querySelectorAll('[data-film]').forEach(el=>el.onclick=()=>openSheet(decodeURIComponent(el.dataset.film)));
 }
@@ -224,11 +351,24 @@ openSheet=function(...args){
 const page=document.getElementById('page-data');
 if(page&&!document.getElementById('watchImport83')){
   const panel=document.createElement('div');panel.className='panel';panel.id='watchImport83';
-  panel.innerHTML='<h2>鑑賞履歴</h2><p class="tip">RSSの鑑賞日と登録日を区別して保存。再鑑賞も1回ずつ管理し、昔見た作品は詳細画面でチェックできます。</p>'
-    +'<div class="tools"><button type="button" class="btn" id="watchSync83">保存済みRSSから鑑賞履歴を取得</button></div>'
+  panel.innerHTML='<h2>Letterboxd全履歴を読み込み</h2><p class="tip">LetterboxdのエクスポートZIPにあるdiary.csv（実際の鑑賞日・再鑑賞）とwatched.csv（鑑賞済み登録日）を区別して読み込みます。点数と順位、レビューは変更しません。過去鑑賞のチェックは後から編集できます。</p>'
+    +'<div class="tools"><label class="btn active">Letterboxd ZIPを選択<input type="file" id="watchZip83" accept=".zip,.csv,application/zip,text/csv" hidden></label>'
+    +'<button type="button" class="btn" id="watchSync83">保存済みRSSから追加同期</button></div>'
     +'<div class="sync-status" id="watchImportStatus83"></div>';
   page.insertBefore(panel,page.firstChild);
   panel.querySelector('#watchSync83').onclick=importSavedRss;
+  panel.querySelector('#watchZip83').onchange=async e=>{
+    const status=panel.querySelector('#watchImportStatus83'),file=e.target.files?.[0];
+    if(!file)return;
+    status.textContent='ZIPの鑑賞履歴を解析中…';
+    try{
+      const r=await readExport83(file);
+      status.textContent='取得：Diary '+r.diary+'件、Watched '+r.watched
+        +'件／新しい鑑賞記録 '+r.entries+'件／既存重複 '+r.duplicates
+        +'件／照合できなかった記録 '+r.unmatched+'件。';
+    }catch(err){status.textContent='読み込みできません：'+(err?.message||err);}
+    e.target.value='';
+  };
 }
 drawList();
 setTimeout(importSavedRss,700);
