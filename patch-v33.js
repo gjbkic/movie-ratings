@@ -56,7 +56,7 @@
     if(cs.length)return 'その他';
     return language==='ja'?'日本':'その他';
   }
-  function mediaOf(f){return MEDIA_OK.has(mediaMap[f?.id])?mediaMap[f.id]:'movie';}
+  function mediaOf(f){const type=state.letterboxdMeta?.[f?.id]?.contentType;if(type==='tv_episode'||type==='tv_series')return 'drama';return MEDIA_OK.has(mediaMap[f?.id])?mediaMap[f.id]:'movie';}
   function originOf(f){return ORIGIN_OK.has(originMap[f?.id])?originMap[f.id]:'その他';}
   function mediaLabel(f){return (MEDIA.find(x=>x[0]===mediaOf(f))||MEDIA[0])[1];}
   function persist(){writeObj(MEDIA_KEY,mediaMap);writeObj(ORIGIN_KEY,originMap);const tv=new Set(Object.entries(mediaMap).filter(([,v])=>v==='drama').map(([id])=>id));writeSet(LEGACY_TV_KEY,tv);}
