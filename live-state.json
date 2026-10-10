@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791627982263,
-  "sourceUpdatedIso": "2026-10-10T10:26:22.263Z",
+  "sourceUpdatedAt": 1791627996107,
+  "sourceUpdatedIso": "2026-10-10T10:26:36.107Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -6310,33 +6310,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "base-perks-2012",
-      "title": "ウォールフラワー",
-      "originalTitle": "The Perks of Being a Wallflower",
-      "englishTitle": "The Perks of Being a Wallflower",
-      "year": 2012,
-      "score": 84,
-      "star": 3.5,
-      "overallRank": 218,
-      "sameScoreRank": 17,
-      "category": "ドラマ",
-      "mediaType": "movie",
-      "genre": [
-        "ドラマ",
-        "青春・若者",
-        "社会問題・生活",
-        "comfort",
-        "心理・内面"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 103,
-      "exact": true,
-      "letterboxdAddedDate": "2026-09-07",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-319-2ab2",
       "title": "サイコ",
       "originalTitle": "",
@@ -6344,8 +6317,8 @@
       "year": 1960,
       "score": 84,
       "star": 3.5,
-      "overallRank": 219,
-      "sameScoreRank": 18,
+      "overallRank": 218,
+      "sameScoreRank": 17,
       "category": "スリラー、ホラー",
       "mediaType": "movie",
       "genre": [
@@ -6374,8 +6347,8 @@
       "year": 1982,
       "score": 84,
       "star": 3.5,
-      "overallRank": 220,
-      "sameScoreRank": 19,
+      "overallRank": 219,
+      "sameScoreRank": 18,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -6405,8 +6378,8 @@
       "year": 1995,
       "score": 84,
       "star": 3.5,
-      "overallRank": 221,
-      "sameScoreRank": 20,
+      "overallRank": 220,
+      "sameScoreRank": 19,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -6435,8 +6408,8 @@
       "year": 1979,
       "score": 84,
       "star": 3.5,
-      "overallRank": 222,
-      "sameScoreRank": 21,
+      "overallRank": 221,
+      "sameScoreRank": 20,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -6462,8 +6435,8 @@
       "year": 2009,
       "score": 84,
       "star": 3.5,
-      "overallRank": 223,
-      "sameScoreRank": 22,
+      "overallRank": 222,
+      "sameScoreRank": 21,
       "category": "Letterboxd追加",
       "mediaType": "movie",
       "genre": [
@@ -6490,8 +6463,8 @@
       "year": 2003,
       "score": 84,
       "star": 3.5,
-      "overallRank": 224,
-      "sameScoreRank": 23,
+      "overallRank": 223,
+      "sameScoreRank": 22,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -6520,8 +6493,8 @@
       "year": 2013,
       "score": 84,
       "star": 3.5,
-      "overallRank": 225,
-      "sameScoreRank": 24,
+      "overallRank": 224,
+      "sameScoreRank": 23,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -6545,6 +6518,33 @@
       "letterboxdAddedDate": "2026-10-08",
       "letterboxdPublishedAt": "Fri, 9 Oct 2026 03:32:29 +1300",
       "letterboxdReportedWatchedDate": "2026-10-08"
+    },
+    {
+      "id": "base-perks-2012",
+      "title": "ウォールフラワー",
+      "originalTitle": "The Perks of Being a Wallflower",
+      "englishTitle": "The Perks of Being a Wallflower",
+      "year": 2012,
+      "score": 84,
+      "star": 3.5,
+      "overallRank": 225,
+      "sameScoreRank": 24,
+      "category": "ドラマ",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "青春・若者",
+        "社会問題・生活",
+        "comfort",
+        "心理・内面"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 103,
+      "exact": true,
+      "letterboxdAddedDate": "2026-09-07",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "lb-12-728",
@@ -21707,7 +21707,6 @@
         "lb-180-27oC",
         "lb-318-84xS",
         "added-anchor-580",
-        "base-perks-2012",
         "lb-319-2ab2",
         "lb-133-2a1G",
         "lb-458-2bg8",
@@ -21715,6 +21714,7 @@
         "lb-545-1vWw",
         "lb-547-1TSo",
         "custom-1791476522907-cd9b",
+        "base-perks-2012",
         "lb-12-728",
         "lb-176-2aZm",
         "custom-1790269934541-2ps3",
