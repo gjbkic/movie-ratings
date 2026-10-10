@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791664270618,
-  "sourceUpdatedIso": "2026-10-10T20:31:10.618Z",
+  "sourceUpdatedAt": 1791664290771,
+  "sourceUpdatedIso": "2026-10-10T20:31:30.771Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -1195,30 +1195,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-571-28qk",
-      "title": "スピード",
-      "originalTitle": "",
-      "englishTitle": "Speed",
-      "year": 1994,
-      "score": 93,
-      "star": 4.5,
-      "overallRank": 42,
-      "sameScoreRank": 9,
-      "category": "アクション",
-      "mediaType": "movie",
-      "genre": [
-        "アクション",
-        "娯楽"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 115,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-333-2b4m",
       "title": "千と千尋の神隠し",
       "originalTitle": "",
@@ -1226,8 +1202,8 @@
       "year": 2001,
       "score": 93,
       "star": 4.5,
-      "overallRank": 43,
-      "sameScoreRank": 10,
+      "overallRank": 42,
+      "sameScoreRank": 9,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
       "genre": [
@@ -1257,8 +1233,8 @@
       "year": 1995,
       "score": 93,
       "star": 4.5,
-      "overallRank": 44,
-      "sameScoreRank": 11,
+      "overallRank": 43,
+      "sameScoreRank": 10,
       "category": "スタジオジブリ系作品",
       "mediaType": "other",
       "genre": [
@@ -1286,8 +1262,8 @@
       "year": 1994,
       "score": 93,
       "star": 4.5,
-      "overallRank": 45,
-      "sameScoreRank": 12,
+      "overallRank": 44,
+      "sameScoreRank": 11,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -1300,6 +1276,30 @@
       "origin": "ハリウッド",
       "format": "live",
       "runtime": 143,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "lb-571-28qk",
+      "title": "スピード",
+      "originalTitle": "",
+      "englishTitle": "Speed",
+      "year": 1994,
+      "score": 93,
+      "star": 4.5,
+      "overallRank": 45,
+      "sameScoreRank": 12,
+      "category": "アクション",
+      "mediaType": "movie",
+      "genre": [
+        "アクション",
+        "娯楽"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 115,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
@@ -22076,10 +22076,10 @@
         "custom-1791664054514-pksv",
         "lb-2-2a9q",
         "lb-556-2b9m",
-        "lb-571-28qk",
         "lb-333-2b4m",
         "lb-459-1Vgm",
         "lb-24-2aHi",
+        "lb-571-28qk",
         "lb-332-28MA"
       ],
       "94": [
