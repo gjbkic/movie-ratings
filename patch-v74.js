@@ -1,10 +1,7 @@
 (() => {
   // v74: normalize Black Mirror episode display titles.
   const BUILD='20261008d';
-  const FIXES=[
-    ['custom-1791469824035-6gcd','Black Mirror: The Entire History of You','ブラック・ミラー「人生の軌跡のすべて」'],
-    ['custom-1791469823654-dpbh','Black Mirror: Be Right Back','ブラック・ミラー「ずっと側にいて」']
-  ];
+  const FIXES=[]; // Retired; original English titles are handled by v81.
   let changed=0;
   state.titleOverrides=state.titleOverrides||{};
   for(const [id,oldTitle,newTitle] of FIXES){
