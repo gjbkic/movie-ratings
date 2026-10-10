@@ -112,7 +112,7 @@ window.addEventListener("beforeunload",()=>save(false));window.addEventListener(
 load();setSaveStatus(storageWorks?"自動保存利用可":"自動保存不可 · バックアップ推奨");render();
 
 setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},700);
-</script><!-- Single-document movie app bundle: build 20261010k; 64 historical patches integrated at build time -->
+</script><!-- Single-document movie app bundle: build 20261010l; 64 historical patches integrated at build time -->
 <!-- patch-v14.js -->
 <script>
 (() => {
@@ -3224,7 +3224,7 @@ setTimeout(()=>{const x=getLbSettings();if(x.auto!==false)syncLetterboxd(true)},
     if(cs.length)return 'その他';
     return language==='ja'?'日本':'その他';
   }
-  function mediaOf(f){return MEDIA_OK.has(mediaMap[f?.id])?mediaMap[f.id]:'movie';}
+  function mediaOf(f){const type=state.letterboxdMeta?.[f?.id]?.contentType;if(type==='tv_episode'||type==='tv_series')return 'drama';return MEDIA_OK.has(mediaMap[f?.id])?mediaMap[f.id]:'movie';}
   function originOf(f){return ORIGIN_OK.has(originMap[f?.id])?originMap[f.id]:'その他';}
   function mediaLabel(f){return (MEDIA.find(x=>x[0]===mediaOf(f))||MEDIA[0])[1];}
   function persist(){writeObj(MEDIA_KEY,mediaMap);writeObj(ORIGIN_KEY,originMap);const tv=new Set(Object.entries(mediaMap).filter(([,v])=>v==='drama').map(([id])=>id));writeSet(LEGACY_TV_KEY,tv);}
@@ -7265,7 +7265,7 @@ requestAnimationFrame(()=>requestAnimationFrame(show));
   'use strict';
   // v82: type-aware Letterboxd identity, TV season/episode localization, and safe backfill.
   // Never change exactScores, rankOrder, assignments, starOverrides or review text here.
-  const BUILD='20261010k', TV_CACHE='movie30_tv_catalog_v82';
+  const BUILD='20261010l', TV_CACHE='movie30_tv_catalog_v82';
   const norm=v=>String(v||'').normalize('NFKC').toLowerCase().replace(/[^\p{L}\p{N}]/gu,'');
   const canonicalUri=v=>String(v||'').replace(/[?#].*$/,'').replace(/\/+$/,'').toLowerCase();
   const BM_PREFIX=/^Black\s+Mirror\s*[:：]\s*(.+)$/i;
@@ -7470,7 +7470,15 @@ requestAnimationFrame(()=>requestAnimationFrame(show));
       tmdbType:meta.tmdbType==='tv_series'?'tv':'movie'});
   };
   function setMedia(f,k){
-    if(k==='tv_episode'||k==='tv_series')state.mediaTypeOverrides[f.id]='drama';
+    if(k!=='tv_episode'&&k!=='tv_series')return;
+    state.mediaTypeOverrides[f.id]='drama';
+    // Keep the older v33 media-filter store in sync for subsequent reloads.
+    try{
+      const key='movie30_media_v33_v1',data=JSON.parse(localStorage.getItem(key)||'{}')||{};
+      if(data[f.id]!=='drama'){data[f.id]='drama';localStorage.setItem(key,JSON.stringify(data));}
+      const tvKey='movie30_media_drama_ids_v1',list=JSON.parse(localStorage.getItem(tvKey)||'[]')||[];
+      if(!list.includes(f.id)){list.push(f.id);localStorage.setItem(tvKey,JSON.stringify(list));}
+    }catch(_){}
   }
   function storeTv(f,meta){
     if(!f||!meta||!['tv_episode','tv_series'].includes(meta.tmdbType))return false;
@@ -7520,7 +7528,8 @@ requestAnimationFrame(()=>requestAnimationFrame(show));
       state.letterboxdMeta=state.letterboxdMeta||{};
       if(JSON.stringify(old)!==JSON.stringify(m))n++;
       state.letterboxdMeta[f.id]=m;
-      if(state.mediaTypeOverrides[f.id]!=='drama'){state.mediaTypeOverrides[f.id]='drama';n++;}
+      if(state.mediaTypeOverrides[f.id]!=='drama')n++;
+      setMedia(f,'tv_episode');
       const wanted=known?'ブラック・ミラー「'+known.ja+'」':'';
       if(wanted&&displayTitle(f)!==wanted){
         state.titleOverrides[f.id]={...(state.titleOverrides[f.id]||{}),title:wanted,englishTitle:en};
