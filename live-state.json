@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791627974878,
-  "sourceUpdatedIso": "2026-10-10T10:26:14.878Z",
+  "sourceUpdatedAt": 1791627982263,
+  "sourceUpdatedIso": "2026-10-10T10:26:22.263Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -6455,32 +6455,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-12-728",
-      "title": "フォレスト・ガンプ／一期一会",
-      "originalTitle": "",
-      "englishTitle": "Forrest Gump",
-      "year": 1994,
-      "score": 84,
-      "star": 3.5,
-      "overallRank": 223,
-      "sameScoreRank": 22,
-      "category": "ドラマ",
-      "mediaType": "movie",
-      "genre": [
-        "ドラマ",
-        "感動",
-        "恋愛",
-        "娯楽"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 142,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-545-1vWw",
       "title": "瞳の奥の秘密",
       "originalTitle": "El secreto de sus ojos",
@@ -6488,8 +6462,8 @@
       "year": 2009,
       "score": 84,
       "star": 3.5,
-      "overallRank": 224,
-      "sameScoreRank": 23,
+      "overallRank": 223,
+      "sameScoreRank": 22,
       "category": "Letterboxd追加",
       "mediaType": "movie",
       "genre": [
@@ -6516,8 +6490,8 @@
       "year": 2003,
       "score": 84,
       "star": 3.5,
-      "overallRank": 225,
-      "sameScoreRank": 24,
+      "overallRank": 224,
+      "sameScoreRank": 23,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -6546,8 +6520,8 @@
       "year": 2013,
       "score": 84,
       "star": 3.5,
-      "overallRank": 226,
-      "sameScoreRank": 25,
+      "overallRank": 225,
+      "sameScoreRank": 24,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -6571,6 +6545,32 @@
       "letterboxdAddedDate": "2026-10-08",
       "letterboxdPublishedAt": "Fri, 9 Oct 2026 03:32:29 +1300",
       "letterboxdReportedWatchedDate": "2026-10-08"
+    },
+    {
+      "id": "lb-12-728",
+      "title": "フォレスト・ガンプ／一期一会",
+      "originalTitle": "",
+      "englishTitle": "Forrest Gump",
+      "year": 1994,
+      "score": 84,
+      "star": 3.5,
+      "overallRank": 226,
+      "sameScoreRank": 25,
+      "category": "ドラマ",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "感動",
+        "恋愛",
+        "娯楽"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 142,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "lb-176-2aZm",
@@ -21712,10 +21712,10 @@
         "lb-133-2a1G",
         "lb-458-2bg8",
         "lb-554-igK",
-        "lb-12-728",
         "lb-545-1vWw",
         "lb-547-1TSo",
         "custom-1791476522907-cd9b",
+        "lb-12-728",
         "lb-176-2aZm",
         "custom-1790269934541-2ps3",
         "lb-427-bSVc",
