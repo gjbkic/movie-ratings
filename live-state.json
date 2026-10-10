@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791628010569,
-  "sourceUpdatedIso": "2026-10-10T10:26:50.569Z",
+  "sourceUpdatedAt": 1791628017526,
+  "sourceUpdatedIso": "2026-10-10T10:26:57.526Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -6428,6 +6428,34 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-545-1vWw",
+      "title": "瞳の奥の秘密",
+      "originalTitle": "El secreto de sus ojos",
+      "englishTitle": "The Secret in Their Eyes",
+      "year": 2009,
+      "score": 84,
+      "star": 3.5,
+      "overallRank": 222,
+      "sameScoreRank": 21,
+      "category": "Letterboxd追加",
+      "mediaType": "movie",
+      "genre": [
+        "どんでん返し",
+        "社会問題・生活",
+        "サスペンス",
+        "ミステリー",
+        "胸糞",
+        "心理・内面"
+      ],
+      "origin": "その他",
+      "format": "live",
+      "runtime": 130,
+      "exact": true,
+      "letterboxdAddedDate": "2026-08-17",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "custom-1791476522907-cd9b",
       "title": "Black Mirror: White Bear",
       "originalTitle": "",
@@ -6435,8 +6463,8 @@
       "year": 2013,
       "score": 84,
       "star": 3.5,
-      "overallRank": 222,
-      "sameScoreRank": 21,
+      "overallRank": 223,
+      "sameScoreRank": 22,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -6460,34 +6488,6 @@
       "letterboxdAddedDate": "2026-10-08",
       "letterboxdPublishedAt": "Fri, 9 Oct 2026 03:32:29 +1300",
       "letterboxdReportedWatchedDate": "2026-10-08"
-    },
-    {
-      "id": "lb-545-1vWw",
-      "title": "瞳の奥の秘密",
-      "originalTitle": "El secreto de sus ojos",
-      "englishTitle": "The Secret in Their Eyes",
-      "year": 2009,
-      "score": 84,
-      "star": 3.5,
-      "overallRank": 223,
-      "sameScoreRank": 22,
-      "category": "Letterboxd追加",
-      "mediaType": "movie",
-      "genre": [
-        "どんでん返し",
-        "社会問題・生活",
-        "サスペンス",
-        "ミステリー",
-        "胸糞",
-        "心理・内面"
-      ],
-      "origin": "その他",
-      "format": "live",
-      "runtime": 130,
-      "exact": true,
-      "letterboxdAddedDate": "2026-08-17",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "lb-547-1TSo",
@@ -21711,8 +21711,8 @@
         "lb-133-2a1G",
         "lb-458-2bg8",
         "lb-554-igK",
-        "custom-1791476522907-cd9b",
         "lb-545-1vWw",
+        "custom-1791476522907-cd9b",
         "lb-547-1TSo",
         "base-perks-2012",
         "lb-12-728",
