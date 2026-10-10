@@ -2,7 +2,7 @@
   'use strict';
   // v82: type-aware Letterboxd identity, TV season/episode localization, and safe backfill.
   // Never change exactScores, rankOrder, assignments, starOverrides or review text here.
-  const BUILD='20261010k', TV_CACHE='movie30_tv_catalog_v82';
+  const BUILD='20261010l', TV_CACHE='movie30_tv_catalog_v82';
   const norm=v=>String(v||'').normalize('NFKC').toLowerCase().replace(/[^\p{L}\p{N}]/gu,'');
   const canonicalUri=v=>String(v||'').replace(/[?#].*$/,'').replace(/\/+$/,'').toLowerCase();
   const BM_PREFIX=/^Black\s+Mirror\s*[:：]\s*(.+)$/i;
@@ -207,7 +207,15 @@
       tmdbType:meta.tmdbType==='tv_series'?'tv':'movie'});
   };
   function setMedia(f,k){
-    if(k==='tv_episode'||k==='tv_series')state.mediaTypeOverrides[f.id]='drama';
+    if(k!=='tv_episode'&&k!=='tv_series')return;
+    state.mediaTypeOverrides[f.id]='drama';
+    // Keep the older v33 media-filter store in sync for subsequent reloads.
+    try{
+      const key='movie30_media_v33_v1',data=JSON.parse(localStorage.getItem(key)||'{}')||{};
+      if(data[f.id]!=='drama'){data[f.id]='drama';localStorage.setItem(key,JSON.stringify(data));}
+      const tvKey='movie30_media_drama_ids_v1',list=JSON.parse(localStorage.getItem(tvKey)||'[]')||[];
+      if(!list.includes(f.id)){list.push(f.id);localStorage.setItem(tvKey,JSON.stringify(list));}
+    }catch(_){}
   }
   function storeTv(f,meta){
     if(!f||!meta||!['tv_episode','tv_series'].includes(meta.tmdbType))return false;
@@ -257,7 +265,8 @@
       state.letterboxdMeta=state.letterboxdMeta||{};
       if(JSON.stringify(old)!==JSON.stringify(m))n++;
       state.letterboxdMeta[f.id]=m;
-      if(state.mediaTypeOverrides[f.id]!=='drama'){state.mediaTypeOverrides[f.id]='drama';n++;}
+      if(state.mediaTypeOverrides[f.id]!=='drama')n++;
+      setMedia(f,'tv_episode');
       const wanted=known?'ブラック・ミラー「'+known.ja+'」':'';
       if(wanted&&displayTitle(f)!==wanted){
         state.titleOverrides[f.id]={...(state.titleOverrides[f.id]||{}),title:wanted,englishTitle:en};
