@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791664468065,
-  "sourceUpdatedIso": "2026-10-10T20:34:28.065Z",
+  "sourceUpdatedAt": 1791664473571,
+  "sourceUpdatedIso": "2026-10-10T20:34:33.571Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -12699,32 +12699,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1791122852357-22zp",
-      "title": "秒速5センチメートル",
-      "originalTitle": "秒速5センチメートル",
-      "englishTitle": "5 Centimeters per Second",
-      "year": 2007,
-      "score": 79,
-      "star": 2.5,
-      "overallRank": 443,
-      "sameScoreRank": 11,
-      "category": "Letterboxd",
-      "mediaType": "movie",
-      "genre": [
-        "恋愛",
-        "ドラマ",
-        "青春・若者",
-        "切ない"
-      ],
-      "origin": "日本",
-      "format": "animation",
-      "runtime": 63,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-04",
-      "letterboxdPublishedAt": "Mon, 5 Oct 2026 01:08:27 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-04"
-    },
-    {
       "id": "lb-565-6YA",
       "title": "プライマー",
       "originalTitle": "",
@@ -12732,8 +12706,8 @@
       "year": 2004,
       "score": 79,
       "star": 2.5,
-      "overallRank": 444,
-      "sameScoreRank": 12,
+      "overallRank": 443,
+      "sameScoreRank": 11,
       "category": "Letterboxd追加",
       "mediaType": "movie",
       "genre": [
@@ -12761,8 +12735,8 @@
       "year": 2016,
       "score": 79,
       "star": 2.5,
-      "overallRank": 445,
-      "sameScoreRank": 13,
+      "overallRank": 444,
+      "sameScoreRank": 12,
       "category": "MCU作品",
       "mediaType": "movie",
       "genre": [
@@ -12788,8 +12762,8 @@
       "year": 2012,
       "score": 79,
       "star": 2.5,
-      "overallRank": 446,
-      "sameScoreRank": 14,
+      "overallRank": 445,
+      "sameScoreRank": 13,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -12808,6 +12782,32 @@
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1791122852357-22zp",
+      "title": "秒速5センチメートル",
+      "originalTitle": "秒速5センチメートル",
+      "englishTitle": "5 Centimeters per Second",
+      "year": 2007,
+      "score": 79,
+      "star": 2.5,
+      "overallRank": 446,
+      "sameScoreRank": 14,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "恋愛",
+        "ドラマ",
+        "青春・若者",
+        "切ない"
+      ],
+      "origin": "日本",
+      "format": "animation",
+      "runtime": 63,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-04",
+      "letterboxdPublishedAt": "Mon, 5 Oct 2026 01:08:27 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-04"
     },
     {
       "id": "lb-142-2bde",
@@ -21627,10 +21627,10 @@
         "custom-1790322763462-yaoz",
         "custom-1791447953969-ah3e",
         "lb-462-d1ws",
-        "custom-1791122852357-22zp",
         "lb-565-6YA",
         "lb-411-89Ja",
         "lb-370-ham",
+        "custom-1791122852357-22zp",
         "lb-142-2bde",
         "lb-265-fdo",
         "lb-455-Ro",
