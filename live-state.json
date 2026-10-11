@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791724053873,
-  "sourceUpdatedIso": "2026-10-11T13:07:33.873Z",
+  "sourceUpdatedAt": 1791724071326,
+  "sourceUpdatedIso": "2026-10-11T13:07:51.326Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -36655,7 +36655,13 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "path": "/vC4Dsk9xPcxeBMkvTme709THvMl.jpg",
+          "tmdbId": 38,
+          "checkedAt": "2026-10-11T13:07:52.864Z",
+          "provider": "tmdb"
+        }
       },
       "lb-9-1skk": {
         "addedDate": "2025-09-01",
@@ -36684,7 +36690,13 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "path": "/qzb0slJerd5bQgJxteJ5oAmfp09.jpg",
+          "tmdbId": 27205,
+          "checkedAt": "2026-10-11T13:07:52.411Z",
+          "provider": "tmdb"
+        }
       },
       "lb-10-kSz4": {
         "addedDate": "2025-09-01",
@@ -36947,7 +36959,13 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "path": "/vZ2KGsE9kDSZSuBqooh5wBK7EAK.jpg",
+          "tmdbId": 489,
+          "checkedAt": "2026-10-11T13:07:52.511Z",
+          "provider": "tmdb"
+        }
       },
       "lb-19-2cCk": {
         "addedDate": "2025-09-01",
@@ -37069,7 +37087,7 @@
         "poster84": {
           "path": "/tlSn7UnfH2LxrBRwfTLs3JSYOTO.jpg",
           "tmdbId": 603,
-          "checkedAt": "2026-10-11T13:07:33.968Z",
+          "checkedAt": "2026-10-11T13:07:51.401Z",
           "provider": "tmdb"
         }
       },
@@ -38227,7 +38245,7 @@
         "poster84": {
           "path": "/mVdz3vlmioKWZaHTGfu99zIuayZ.jpg",
           "tmdbId": 128,
-          "checkedAt": "2026-10-11T13:07:33.967Z",
+          "checkedAt": "2026-10-11T13:07:51.401Z",
           "provider": "tmdb"
         }
       },
@@ -46309,7 +46327,13 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "path": "/viWheBd44bouiLCHgNMvahLThqx.jpg",
+          "tmdbId": 44214,
+          "checkedAt": "2026-10-11T13:07:52.341Z",
+          "provider": "tmdb"
+        }
       },
       "lb-354-aNGk": {
         "addedDate": "2025-09-01",
@@ -50217,7 +50241,13 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "path": "/42H4UqYSkNxKAFYO1hkm8cvTyfd.jpg",
+          "tmdbId": 78,
+          "checkedAt": "2026-10-11T13:07:52.599Z",
+          "provider": "tmdb"
+        }
       },
       "lb-493-28No": {
         "addedDate": "2026-08-13",
@@ -51580,7 +51610,13 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "path": "/79vujbsWEbX4dzffBV541QXN6sf.jpg",
+          "tmdbId": 10494,
+          "checkedAt": "2026-10-11T13:07:52.375Z",
+          "provider": "tmdb"
+        }
       },
       "lb-541-27MO": {
         "addedDate": "2025-09-01",
@@ -56456,7 +56492,13 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-11"
+        "watchedAddedDate": "2026-10-11",
+        "poster84": {
+          "path": null,
+          "tmdbId": null,
+          "checkedAt": "2026-10-11T13:07:52.461Z",
+          "provider": "tmdb"
+        }
       },
       "custom-1791664055469-au2b": {
         "publishedAt": "Sun, 11 Oct 2026 06:19:17 +1300",
