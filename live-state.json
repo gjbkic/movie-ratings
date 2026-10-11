@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791718937391,
-  "sourceUpdatedIso": "2026-10-11T11:42:17.391Z",
+  "sourceUpdatedAt": 1791719043890,
+  "sourceUpdatedIso": "2026-10-11T11:44:03.890Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -56966,6 +56966,14 @@
           "tmdbId": 925907,
           "checkedAt": "2026-10-11T11:41:58.621Z",
           "provider": "tmdb"
+        },
+        "crew84": {
+          "directors": [
+            "Kiyoshi Iwasawa"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T11:44:01.408Z"
         }
       },
       "custom-1791664055006-96rv": {
