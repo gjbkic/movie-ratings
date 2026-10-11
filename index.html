@@ -7475,6 +7475,8 @@ const rewatches=f=>events(f).filter(x=>x.rewatch).length;
 let sortMode='rank';try{sortMode=localStorage.getItem('movie30_watch_sort_v83')||'rank'}catch(_){}
 if(!['rank','watched-new','watched-old','rewatch','logged-new'].includes(sortMode))sortMode='rank';
 let listLimit=80;
+let posterGrid83=false;
+try{posterGrid83=localStorage.getItem('movie30_poster_grid_v83')==='true'}catch(_){}
 let tocYear='all',tocMonth='all';
 
 let parsed=[];
@@ -7670,6 +7672,9 @@ if(tools&&!document.getElementById('watchSort83')){
     +'<option value="watched-old">鑑賞日：古い順</option><option value="rewatch">再鑑賞の記録が多い順</option>'
     +'<option value="logged-new">登録日：新しい順</option>';
   sel.value=sortMode;tools.appendChild(sel);
+  const posterToggle=document.createElement('button');posterToggle.type='button';posterToggle.id='posterMode83';posterToggle.className='btn';
+  posterToggle.onclick=()=>{posterGrid83=!posterGrid83;try{localStorage.setItem('movie30_poster_grid_v83',String(posterGrid83))}catch(_){}drawList();};
+  tools.appendChild(posterToggle);
   sel.onchange=()=>{sortMode=sel.value;listLimit=80;tocYear='all';tocMonth='all';try{localStorage.setItem('movie30_watch_sort_v83',sortMode)}catch(_){}renderRank();};
 }
 const listRoot=document.createElement('div');listRoot.id='watchList83';
@@ -7687,7 +7692,7 @@ style.textContent='.watch83-grid{display:grid;grid-template-columns:repeat(auto-
   +'.watch83-editor input[type=checkbox]{width:17px;height:17px;accent-color:#91baff}'
   +'.watch83-editor small{display:block;font-size:10px;color:#96a4b5;margin-top:5px}'
   +'.watch83-editor button{background:#192433;color:#e4efff;border:1px solid #46576e;border-radius:7px;padding:7px 9px;font-size:12px}'
-  +'.watch83-editor p{font-size:11px;color:#aeb9c5;line-height:1.5}'+'.watch83-toc{position:sticky;top:54px;z-index:15;background:#0d1520;border:1px solid #354658;border-radius:11px;padding:9px;margin:10px 0 12px;box-shadow:0 5px 12px #0005}'+'.watch83-toc-head{font-size:11px;color:#c5d5e9;margin:0 0 6px;font-weight:700}'+'.watch83-toc-row{display:flex;gap:5px;overflow-x:auto;scrollbar-width:thin;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;padding:1px 1px 4px}'+'.watch83-toc-row+ .watch83-toc-row{margin-top:6px;padding-top:7px;border-top:1px solid #2c3949}'+'.watch83-toc-chip{flex:0 0 auto;border:1px solid #435267;background:#172334;color:#d0dced;border-radius:7px;min-height:34px;padding:6px 9px;font-size:11px;white-space:nowrap}'+'.watch83-toc-chip[aria-pressed="true"]{border-color:#91baff;background:#243e62;color:#fff;font-weight:700}'+'.watch83-toc-chip small{margin-left:5px;color:#a9bad0;font-size:10px}'+'.watch83-divider{grid-column:1/-1;font-size:14px;font-weight:750;border-bottom:1px solid #364556;color:#e0eafd;padding:12px 3px 7px;margin-top:6px;scroll-margin-top:150px}'+'.watch83-toc-empty{font-size:11px;color:#9eacbd;padding:4px}';
+  +'.watch83-editor p{font-size:11px;color:#aeb9c5;line-height:1.5}'+'.watch83-grid.poster-gallery84{grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:11px}'+'.watch83-grid.poster-gallery84 .watch83-item.movie30-watch-poster84{padding:8px;min-height:0;display:flex;flex-direction:column;gap:1px}'+'.watch83-grid.poster-gallery84 .watch83-item.movie30-watch-poster84 .movie30-poster84{order:-1;position:static;transform:none;width:100%;height:auto;aspect-ratio:2/3;margin:0 0 7px}'+'.watch83-grid.poster-gallery84 .watch83-item strong{font-size:11.5px;line-height:1.4}'+'.watch83-grid.poster-gallery84 .watch83-item small{font-size:10px}'+'.watch83-toc{position:sticky;top:54px;z-index:15;background:#0d1520;border:1px solid #354658;border-radius:11px;padding:9px;margin:10px 0 12px;box-shadow:0 5px 12px #0005}'+'.watch83-toc-head{font-size:11px;color:#c5d5e9;margin:0 0 6px;font-weight:700}'+'.watch83-toc-row{display:flex;gap:5px;overflow-x:auto;scrollbar-width:thin;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;padding:1px 1px 4px}'+'.watch83-toc-row+ .watch83-toc-row{margin-top:6px;padding-top:7px;border-top:1px solid #2c3949}'+'.watch83-toc-chip{flex:0 0 auto;border:1px solid #435267;background:#172334;color:#d0dced;border-radius:7px;min-height:34px;padding:6px 9px;font-size:11px;white-space:nowrap}'+'.watch83-toc-chip[aria-pressed="true"]{border-color:#91baff;background:#243e62;color:#fff;font-weight:700}'+'.watch83-toc-chip small{margin-left:5px;color:#a9bad0;font-size:10px}'+'.watch83-divider{grid-column:1/-1;font-size:14px;font-weight:750;border-bottom:1px solid #364556;color:#e0eafd;padding:12px 3px 7px;margin-top:6px;scroll-margin-top:150px}'+'.watch83-toc-empty{font-size:11px;color:#9eacbd;padding:4px}';
 document.head.appendChild(style);
 function cmp(a,b,fn,asc=false){
   const x=fn(a),y=fn(b);
@@ -7696,6 +7701,8 @@ function cmp(a,b,fn,asc=false){
 }
 function drawList(){
   if(!rankRoot)return;
+  const posterToggle=document.getElementById('posterMode83');
+  if(posterToggle){posterToggle.style.display=sortMode==='rank'?'none':'';posterToggle.textContent=posterGrid83?'一覧表示':'ポスター表示';}
   rankRoot.style.display=sortMode==='rank'?'':'none';
   listRoot.style.display=sortMode==='rank'?'none':'';
   if(sortMode==='rank')return;
@@ -7808,7 +7815,7 @@ function drawList(){
     +(sortMode==='rewatch'?'作品単位で再鑑賞数順。':'再鑑賞もそれぞれ別の記録として表示。')
     +' 点数・元の順位には影響しません。</p>'
     +toc
-    +(visibleRows.length?'<div class="watch83-grid">'+cards+'</div>':'<p class="watch83-toc-empty">この期間に該当する鑑賞記録はありません。</p>')
+    +(visibleRows.length?'<div class="watch83-grid'+(posterGrid83?' poster-gallery84':'')+'">'+cards+'</div>':'<p class="watch83-toc-empty">この期間に該当する鑑賞記録はありません。</p>')
     +(visibleRows.length>listLimit?'<button type="button" class="btn" id="watchMore83">さらに'+Math.min(80,visibleRows.length-listLimit)+'件を表示</button>':'');
   listRoot.querySelectorAll('[data-film]').forEach(el=>el.onclick=()=>openSheet(decodeURIComponent(el.dataset.film)));
   const more=listRoot.querySelector('#watchMore83');if(more)more.onclick=()=>{listLimit+=80;drawList();};
@@ -8277,7 +8284,7 @@ save();
 render();
 document.documentElement.classList.add('movie30-ready');
 const movie30BuildLabel=document.getElementById('movie30BuildV29');
-if(movie30BuildLabel)movie30BuildLabel.textContent='app build 20261011f';
+if(movie30BuildLabel)movie30BuildLabel.textContent='app build 20261011g';
 
 </script>
 
