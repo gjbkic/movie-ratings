@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791725702519,
-  "sourceUpdatedIso": "2026-10-11T13:35:02.519Z",
+  "sourceUpdatedAt": 1791725707582,
+  "sourceUpdatedIso": "2026-10-11T13:35:07.582Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -56368,9 +56368,9 @@
             "date": "2026-10-07",
             "recordedAt": "2026-10-07T13:16:21.000Z",
             "rewatch": false,
-            "retroactive": false,
+            "retroactive": true,
             "source": "letterboxd-rss",
-            "manualEdited": false
+            "manualEdited": true
           },
           {
             "id": "csv:watched:custom-1791379032352-50zf|2026-10-08",
