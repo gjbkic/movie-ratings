@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791725707582,
-  "sourceUpdatedIso": "2026-10-11T13:35:07.582Z",
+  "sourceUpdatedAt": 1791728731301,
+  "sourceUpdatedIso": "2026-10-11T14:25:31.301Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -19161,7 +19161,8 @@
         "感動",
         "娯楽",
         "社会問題・生活",
-        "TV本編"
+        "TV本編",
+        "スポーツ"
       ],
       "origin": "日本",
       "format": "live",
@@ -33410,7 +33411,8 @@
         "感動",
         "娯楽",
         "社会問題・生活",
-        "TV本編"
+        "TV本編",
+        "スポーツ"
       ],
       "custom-1790322767762-8oh7": [
         "ドラマ",
@@ -54973,7 +54975,13 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "path": "/omAuY0nW45LeNgktY7wwsK77kpi.jpg",
+          "tmdbId": 74706,
+          "checkedAt": "2026-10-11T14:25:27.262Z",
+          "provider": "tmdb"
+        }
       },
       "custom-1790322767762-8oh7": {
         "addedDate": "2026-09-25",
