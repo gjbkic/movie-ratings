@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791722675339,
-  "sourceUpdatedIso": "2026-10-11T12:44:35.339Z",
+  "sourceUpdatedAt": 1791722686565,
+  "sourceUpdatedIso": "2026-10-11T12:44:46.565Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -36659,7 +36659,7 @@
         "poster84": {
           "path": "/vC4Dsk9xPcxeBMkvTme709THvMl.jpg",
           "tmdbId": 38,
-          "checkedAt": "2026-10-11T12:44:33.504Z",
+          "checkedAt": "2026-10-11T12:44:47.910Z",
           "provider": "tmdb"
         }
       },
@@ -36694,7 +36694,7 @@
         "poster84": {
           "path": "/qzb0slJerd5bQgJxteJ5oAmfp09.jpg",
           "tmdbId": 27205,
-          "checkedAt": "2026-10-11T12:44:33.065Z",
+          "checkedAt": "2026-10-11T12:44:47.535Z",
           "provider": "tmdb"
         }
       },
@@ -36963,7 +36963,7 @@
         "poster84": {
           "path": "/vZ2KGsE9kDSZSuBqooh5wBK7EAK.jpg",
           "tmdbId": 489,
-          "checkedAt": "2026-10-11T12:44:33.186Z",
+          "checkedAt": "2026-10-11T12:44:47.643Z",
           "provider": "tmdb"
         }
       },
@@ -37087,7 +37087,7 @@
         "poster84": {
           "path": "/tlSn7UnfH2LxrBRwfTLs3JSYOTO.jpg",
           "tmdbId": 603,
-          "checkedAt": "2026-10-11T12:44:31.871Z",
+          "checkedAt": "2026-10-11T12:44:46.650Z",
           "provider": "tmdb"
         }
       },
@@ -38245,7 +38245,7 @@
         "poster84": {
           "path": "/mVdz3vlmioKWZaHTGfu99zIuayZ.jpg",
           "tmdbId": 128,
-          "checkedAt": "2026-10-11T12:44:31.871Z",
+          "checkedAt": "2026-10-11T12:44:46.650Z",
           "provider": "tmdb"
         }
       },
@@ -39522,7 +39522,7 @@
           ],
           "creators": [],
           "source": "tmdb",
-          "fetchedAt": "2026-10-11T12:44:34.884Z"
+          "fetchedAt": "2026-10-11T12:44:49.409Z"
         }
       },
       "lb-107-2a0I": {
@@ -40437,13 +40437,7 @@
             "inferred": true,
             "manualEdited": false
           }
-        ],
-        "poster84": {
-          "path": "/r74DvbQuz8zjxWvLwkX0iTIGs8C.jpg",
-          "tmdbId": 81,
-          "checkedAt": "2026-10-11T12:44:33.882Z",
-          "provider": "tmdb"
-        }
+        ]
       },
       "lb-139-1Sz6": {
         "addedDate": "2025-09-01",
@@ -40766,7 +40760,7 @@
           ],
           "creators": [],
           "source": "tmdb",
-          "fetchedAt": "2026-10-11T12:44:34.885Z"
+          "fetchedAt": "2026-10-11T12:44:49.410Z"
         }
       },
       "lb-150-b5EQ": {
@@ -41454,11 +41448,7 @@
             "inferred": true,
             "manualEdited": false
           }
-        ],
-        "crew85Failure": {
-          "at": 1791722675380,
-          "reason": "TMDb映画を照合できません"
-        }
+        ]
       },
       "lb-174-29VI": {
         "addedDate": "2025-09-01",
@@ -41748,7 +41738,7 @@
             "Hwang Dong-hyuk"
           ],
           "source": "tmdb",
-          "fetchedAt": "2026-10-11T12:44:35.029Z"
+          "fetchedAt": "2026-10-11T12:44:49.558Z"
         }
       },
       "lb-184-2aH8": {
@@ -42221,7 +42211,7 @@
           ],
           "creators": [],
           "source": "tmdb",
-          "fetchedAt": "2026-10-11T12:44:35.030Z"
+          "fetchedAt": "2026-10-11T12:44:49.559Z"
         }
       },
       "lb-201-aeu4": {
@@ -42243,18 +42233,7 @@
             "inferred": true,
             "manualEdited": false
           }
-        ],
-        "poster84": {
-          "tmdbId": 316873
-        },
-        "crew84": {
-          "directors": [
-            "Kobun Shizuno"
-          ],
-          "creators": [],
-          "source": "tmdb",
-          "fetchedAt": "2026-10-11T12:44:35.173Z"
-        }
+        ]
       },
       "lb-202-d1km": {
         "addedDate": "2025-09-01",
@@ -43038,16 +43017,7 @@
             "inferred": true,
             "manualEdited": false
           }
-        ],
-        "tmdbSeriesId": 65501,
-        "crew84": {
-          "directors": [],
-          "creators": [
-            "Tetsuya Honda"
-          ],
-          "source": "tmdb",
-          "fetchedAt": "2026-10-11T12:44:35.174Z"
-        }
+        ]
       },
       "lb-229-26tw": {
         "addedDate": "2025-09-01",
@@ -43094,18 +43064,7 @@
             "inferred": true,
             "manualEdited": false
           }
-        ],
-        "poster84": {
-          "tmdbId": 122734
-        },
-        "crew84": {
-          "directors": [
-            "Nobuhiro Doi"
-          ],
-          "creators": [],
-          "source": "tmdb",
-          "fetchedAt": "2026-10-11T12:44:35.317Z"
-        }
+        ]
       },
       "lb-231-hd9e": {
         "addedDate": "2025-09-01",
@@ -43552,16 +43511,7 @@
             "inferred": true,
             "manualEdited": false
           }
-        ],
-        "tmdbSeriesId": 78685,
-        "crew84": {
-          "directors": [],
-          "creators": [
-            "Ryota Kosawa"
-          ],
-          "source": "tmdb",
-          "fetchedAt": "2026-10-11T12:44:35.318Z"
-        }
+        ]
       },
       "lb-247-1L2a": {
         "addedDate": "2025-09-01",
@@ -46356,13 +46306,7 @@
             "inferred": true,
             "manualEdited": false
           }
-        ],
-        "poster84": {
-          "path": "/nzlv62aC0octS5AklAiWpXLX9Z0.jpg",
-          "tmdbId": 77,
-          "checkedAt": "2026-10-11T12:44:33.715Z",
-          "provider": "tmdb"
-        }
+        ]
       },
       "lb-351-2DqA": {
         "addedDate": "2025-09-01",
@@ -46429,7 +46373,7 @@
         "poster84": {
           "path": "/viWheBd44bouiLCHgNMvahLThqx.jpg",
           "tmdbId": 44214,
-          "checkedAt": "2026-10-11T12:44:32.973Z",
+          "checkedAt": "2026-10-11T12:44:47.447Z",
           "provider": "tmdb"
         }
       },
@@ -49655,13 +49599,7 @@
             "inferred": true,
             "manualEdited": false
           }
-        ],
-        "poster84": {
-          "path": "/yBanOpNIccxjZlH4QH7ag4ojWOI.jpg",
-          "tmdbId": 18491,
-          "checkedAt": "2026-10-11T12:44:33.599Z",
-          "provider": "tmdb"
-        }
+        ]
       },
       "lb-469-1MKi": {
         "addedDate": "2025-10-09",
@@ -50349,7 +50287,7 @@
         "poster84": {
           "path": "/42H4UqYSkNxKAFYO1hkm8cvTyfd.jpg",
           "tmdbId": 78,
-          "checkedAt": "2026-10-11T12:44:33.320Z",
+          "checkedAt": "2026-10-11T12:44:47.760Z",
           "provider": "tmdb"
         }
       },
@@ -51718,7 +51656,7 @@
         "poster84": {
           "path": "/79vujbsWEbX4dzffBV541QXN6sf.jpg",
           "tmdbId": 10494,
-          "checkedAt": "2026-10-11T12:44:33.005Z",
+          "checkedAt": "2026-10-11T12:44:47.477Z",
           "provider": "tmdb"
         }
       },
@@ -56600,7 +56538,7 @@
         "poster84": {
           "path": null,
           "tmdbId": null,
-          "checkedAt": "2026-10-11T12:44:33.119Z",
+          "checkedAt": "2026-10-11T12:44:47.585Z",
           "provider": "tmdb"
         }
       },
