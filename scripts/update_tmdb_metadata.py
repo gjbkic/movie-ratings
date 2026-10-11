@@ -103,6 +103,17 @@ def search_id(f, ignore_explicit=False):
     titles=distinct([f.get("englishTitle"),f.get("lbTitle"),f.get("originalTitle"),f.get("title")])
     kind=str(f.get("mediaType") or "").lower()
     tv=kind in ("tv_series","tv_episode","drama","tv")
+    # TMDb's official titles are longer than the original Letterboxd entries.
+    # These film IDs have been cross-checked with the TMDb movie pages.
+    known_movie_ids={
+        ("glassonion",2022):661374,
+        ("missionimpossibledeadreckoning",2023):575264,
+    }
+    if not tv:
+        for alias in titles:
+            fixed=known_movie_ids.get((normalized(alias),year))
+            if fixed:
+                return "movie",fixed
     if year==2018 and "wildlife" in {normalized(v) for v in titles} and not tv:
         return "movie",417812
     explicit=f.get("tmdbId")
@@ -149,6 +160,13 @@ def compatible(f, details, kind):
         if year and released.isdigit() and abs(year-int(released))>3:
             return False
     known={normalized(x) for x in aliases}
+    if kind=="movie":
+        verified={("glassonion",2022):661374,
+                  ("missionimpossibledeadreckoning",2023):575264}
+        actual_id=int(details.get("id") or 0)
+        film_year=int(f.get("year") or 0)
+        if any(verified.get((normalized(a),film_year))==actual_id for a in aliases):
+            return True
     for name in actual:
         key=normalized(name)
         if key in known:
