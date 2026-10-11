@@ -150,9 +150,15 @@ async function allCredits85(retryFailures=true){
     if(!retryFailures&&m.crew85Failure)return false;
     return true;
   });
-  let next=0,ok=0,ng=0;
+  try { await tmdbFetch('/configuration'); }
+  catch(err) {
+    if(status)status.textContent='開始できません：'+String(err?.message||err)+'。残りの作品は失敗扱いにしていません。';
+    running85=false;if(b)b.disabled=false;if(r)r.disabled=false;return;
+  }
+  let next=0,ok=0,ng=0,done=0;
+  const reasons=new Map();
   const paint=()=>{
-    if(status)status.textContent='監督・製作者：'+Math.min(next,films.length)+'/'+films.length+
+    if(status)status.textContent='監督・製作者：'+done+'/'+films.length+
       '件確認、取得 '+ok+'、照合不可 '+ng+'。失敗作で止まらず最後まで進みます。';
   };
   paint();
@@ -163,19 +169,30 @@ async function allCredits85(retryFailures=true){
       try{await retrieve85(f);ok++;}
       catch(e){
         ng++;
+        const reason=String(e?.message||e).slice(0,180);
+        reasons.set(reason,(reasons.get(reason)||0)+1);
         const m=state.letterboxdMeta[f.id]=state.letterboxdMeta[f.id]||{};
         m.crew85Failure={at:Date.now(),reason:String(e?.message||e).slice(0,180)};
       }
-      if((i+1)%8===0){save();paint();}
+      done++;
+      if(done%8===0){save();paint();}
+      if(done>=12&&ok===0){
+        const top=[...reasons.entries()].sort((a,b)=>b[1]-a[1])[0]?.[0]||'不明なエラー';
+        if(/HTTP|認証|fetch|network|429|403|401|TMDB検索に失敗/i.test(top))
+          throw Error('連続失敗のため停止：'+top+'。未処理作は失敗登録しません。');
+      }
       await new Promise(res=>setTimeout(res,140));
     }
   };
   try{
-    await Promise.all([worker(),worker(),worker()]);
+    await worker();
     if(films.length)save();
     paint();
-    if(status)status.textContent+=' 完了。未取得は照合不可の作品だけです。';
+    if(status)status.textContent+=' 完了。'+(ng?('失敗理由：'+[...reasons.entries()].sort((a,b)=>b[1]-a[1]).slice(0,3).map(([reason,n])=>reason+' '+n+'件').join('／')):'');
     try{renderRank();}catch(_){}
+  }catch(err){
+    save();
+    if(status)status.textContent='一括取得を中断：'+String(err?.message||err)+'。取得 '+ok+'件／失敗 '+ng+'件。';
   }finally{
     running85=false;if(b)b.disabled=false;if(r)r.disabled=false;
   }
@@ -185,7 +202,7 @@ const retry85=document.getElementById('retryDirector84');
 if(batch85){batch85.textContent='未取得の監督・製作者を全件取得';batch85.onclick=()=>allCredits85(false);}
 if(retry85){retry85.textContent='照合不可も含め全件再確認';retry85.onclick=()=>allCredits85(true);}
 // One automatic full pass in the browser that already has the user's TMDb credential.
-if(getTmdbCredential())setTimeout(()=>allCredits85(false).catch(()=>{}),3500);
+// Automatic v85 fetching disabled to avoid competing with v84 job and masking failures.
 
 window.__movie30V85={build:BUILD,backfillWatched:backfillWatched85,fetchAllCredits:allCredits85};
 const marker=document.getElementById('movie30BuildV29');if(marker)marker.textContent='app build '+BUILD;
