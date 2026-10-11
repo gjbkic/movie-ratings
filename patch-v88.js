@@ -74,6 +74,14 @@ function applyCatalog(data){
     source:'tmdb-github',fetchedAt:data.updatedAt||new Date().toISOString()};
    delete m.crew84Failure;delete m.crew85Failure;delete m.crew87Failure;
   }
+  // Remove previously cached covers that belonged to incorrectly matched TMDb entries.
+  if(r.source==='corrected-credits-recheck-required'&&!validPath(r.posterPath)){
+   if(m.poster84){
+    delete m.poster84.path;
+    delete m.poster84.checkedAt;
+    m.poster84.tmdbId=r.tmdbId||null;
+   }
+  }
   if(validPath(r.posterPath)){
    posters++;
    m.poster84=m.poster84||{};
