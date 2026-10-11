@@ -1,10 +1,10 @@
 {
   "schema": 1,
-  "updatedAt": "2026-10-11T13:53:43.060Z",
+  "updatedAt": "2026-10-11T13:55:57.875677+00:00",
   "catalogSize": 731,
   "matchedCount": 709,
-  "newCount": 682,
-  "unmatchedCount": 41,
+  "newCount": 2,
+  "unmatchedCount": 43,
   "films": {
     "lb-62-2b4w": {
       "tmdbId": 128,
@@ -119,14 +119,14 @@
     "lb-138-2bc6": {
       "tmdbId": 81,
       "type": "movie",
-      "title": "Nausicaä of the Valley of the Wind",
+      "title": "Warriors of the Wind",
       "year": "1984",
       "directors": [
         "Hayao Miyazaki"
       ],
       "creators": [],
-      "posterPath": "",
-      "source": "corrected-credits-recheck-required"
+      "posterPath": "/tcrkfB8SRPQCgwI88hQScua6nxh.jpg",
+      "source": "tmdb"
     },
     "lb-88-1RUM": {
       "tmdbId": 12477,
@@ -8625,16 +8625,16 @@
       "source": "tmdb"
     },
     "lb-228-6eCu": {
-      "tmdbId": null,
+      "tmdbId": 208430,
       "type": "movie",
       "title": "Strawberry Night",
       "year": "2013",
       "directors": [
-        "Yuichi Sato"
+        "Yuichi Satoh"
       ],
       "creators": [],
-      "posterPath": "",
-      "source": "corrected-credits-recheck-required"
+      "posterPath": "/JXz3c5cCKn4BxQdTMy0XkwAwJY.jpg",
+      "source": "tmdb"
     },
     "lb-246-mqyw": {
       "tmdbId": 78685,
@@ -9056,27 +9056,12 @@
     }
   },
   "unmatched": {
-    "lb-250-bAcS": "TMDb title/ID not found: HTTP 404",
     "lb-386-wbAi": "No exact matching TMDb title/year",
-    "custom-1789385860026-8m1d": "TMDb title/ID not found: HTTP 404",
-    "custom-1789385860426-8e86": "TMDb title/ID not found: HTTP 404",
-    "custom-1790322756823-bi61": "TMDb title/ID not found: HTTP 404",
+    "custom-1790185844116-j1vu": "No exact matching TMDb title/year",
     "custom-1790322757185-u25f": "TMDb title/ID not found: HTTP 404",
-    "custom-1790322757548-hd0x": "TMDb title/ID not found: HTTP 404",
     "custom-1790322757929-0kod": "TMDb title/ID not found: HTTP 404",
-    "custom-1790322758188-46qe": "TMDb title/ID not found: HTTP 404",
     "custom-1790322761655-im7g": "TMDb title/ID not found: HTTP 404",
-    "custom-1790322761955-twge": "TMDb title/ID not found: HTTP 404",
-    "custom-1790322762266-mrn9": "TMDb title/ID not found: HTTP 404",
-    "custom-1790322763462-yaoz": "TMDb title/ID not found: HTTP 404",
-    "custom-1790322764349-xp48": "TMDb title/ID not found: HTTP 404",
     "custom-1790423279439-sn81": "TMDb title/ID not found: HTTP 404",
-    "custom-1790423279786-lguu": "TMDb title/ID not found: HTTP 404",
-    "custom-1790423280120-qki8": "TMDb title/ID not found: HTTP 404",
-    "custom-1790423280570-6eki": "TMDb title/ID not found: HTTP 404",
-    "custom-1790508958909-q6d6": "TMDb title/ID not found: HTTP 404",
-    "custom-1790508959270-dbu3": "TMDb title/ID not found: HTTP 404",
-    "custom-1790508959663-6kld": "TMDb title/ID not found: HTTP 404",
     "custom-1790509701063-jule": "TMDb title/ID not found: HTTP 404",
     "custom-1790665768168-uxk0": "TMDb title/ID not found: HTTP 404",
     "custom-1791018448927-b4o3": "TMDb title/ID not found: HTTP 404",
@@ -9096,7 +9081,23 @@
     "custom-1791553824276-cl9b": "TMDb title/ID not found: HTTP 404",
     "custom-1791664055006-96rv": "No exact matching TMDb title/year",
     "lb-173-oCkK": "No exact matching TMDb title/year",
-    "lb-296-l7zS": "No exact matching TMDb title/year"
-  },
-  "seededDirectorCount": 707
+    "lb-250-bAcS": "TMDb title/ID not found: HTTP 404",
+    "lb-254-6ZCG": "No exact matching TMDb title/year",
+    "lb-296-l7zS": "No exact matching TMDb title/year",
+    "custom-1789385860026-8m1d": "TMDb title/ID not found: HTTP 404",
+    "custom-1789385860426-8e86": "TMDb title/ID not found: HTTP 404",
+    "custom-1790322756823-bi61": "TMDb title/ID not found: HTTP 404",
+    "custom-1790322757548-hd0x": "TMDb title/ID not found: HTTP 404",
+    "custom-1790322758188-46qe": "TMDb title/ID not found: HTTP 404",
+    "custom-1790322761955-twge": "TMDb title/ID not found: HTTP 404",
+    "custom-1790322762266-mrn9": "TMDb title/ID not found: HTTP 404",
+    "custom-1790322763462-yaoz": "TMDb title/ID not found: HTTP 404",
+    "custom-1790322764349-xp48": "TMDb title/ID not found: HTTP 404",
+    "custom-1790423279786-lguu": "TMDb title/ID not found: HTTP 404",
+    "custom-1790423280120-qki8": "TMDb title/ID not found: HTTP 404",
+    "custom-1790423280570-6eki": "TMDb title/ID not found: HTTP 404",
+    "custom-1790508958909-q6d6": "TMDb title/ID not found: HTTP 404",
+    "custom-1790508959270-dbu3": "TMDb title/ID not found: HTTP 404",
+    "custom-1790508959663-6kld": "TMDb title/ID not found: HTTP 404"
+  }
 }
