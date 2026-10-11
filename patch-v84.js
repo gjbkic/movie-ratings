@@ -2,7 +2,7 @@
 'use strict';
 // v84: source-aware TMDb director (films), show creator and episode director (TV).
 // Stored in letterboxdMeta only; score/rank and review data are untouched.
-const BUILD='20261011i';
+const BUILD='20261011j';
 const unique=names=>[...new Set((names||[]).map(v=>String(v||'').trim()).filter(Boolean))];
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const active=new Map();
@@ -362,7 +362,8 @@ posterStyles84.textContent=
  +'.movie30-poster-detail84 small{display:block;color:#aabbd0;line-height:1.5;margin:7px 0}';
 
 posterStyles84.textContent +=
- '.rank-card.movie30-rank-poster84{padding-left:77px;min-height:102px;overflow:hidden}'
+ '.rank-card.movie30-rank-poster84{padding-left:77px;min-height:53px;overflow:hidden}'
+ +'.rank-card.movie30-rank-poster84 .rank-meta{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}'
  +'.movie30-rank-poster84>.movie30-poster84{position:absolute;left:6px;top:6px;transform:none;width:62px;height:calc(100% - 12px);max-height:none;object-fit:cover;pointer-events:none;border-radius:7px}'
  +'#rankRoot.movie30-rank-grid-only84 .score-list{display:grid!important;grid-template-columns:repeat(auto-fill,minmax(102px,1fr));gap:10px;padding:7px;align-items:start}'
  +'#rankRoot.movie30-rank-grid-only84 .rank-card.movie30-rank-poster84{display:block!important;position:relative;padding:0!important;min-width:0;min-height:0;height:auto;aspect-ratio:2/3;overflow:hidden;border-radius:8px;cursor:pointer}'
