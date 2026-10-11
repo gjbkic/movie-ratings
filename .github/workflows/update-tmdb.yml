@@ -1,0 +1,50 @@
+name: Refresh TMDb movie metadata
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/update-tmdb.yml
+  schedule:
+    - cron: '13 19 * * 0'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-tmdb-main
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+      - name: Fetch film directors and posters from TMDb
+        env:
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+          TMDB_READ_ACCESS_TOKEN: ${{ secrets.TMDB_READ_ACCESS_TOKEN }}
+        run: python3 scripts/update_tmdb_metadata.py
+      - name: Publish metadata only (never modify ratings, ranks or reviews)
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ ! -f tmdb-metadata.json ]]; then
+            echo 'Metadata output is missing'
+            exit 1
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- tmdb-metadata.json
+          if git diff --cached --quiet; then
+            echo 'Metadata unchanged'
+            exit 0
+          fi
+          git commit -m 'Auto-refresh TMDb credits and poster metadata'
+          git pull --rebase origin main
+          git push origin HEAD:main
