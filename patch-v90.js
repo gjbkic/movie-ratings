@@ -1,7 +1,7 @@
 (() => {
 'use strict';
 // v90: Search results reuse posters in every view; details open a full-screen cover viewer.
-const VERSION='20261011u';
+const VERSION='20261011v';
 const WILD='custom-1791664055006-96rv';
 const WILD_COVER='https://www.sonymusic.co.jp/Music/Info/utadahikaru/en/music/img/dvd/img_music_dvd_14.jpg';
 const css=document.createElement('style');css.id='movie30-search-posters-lightbox90';
