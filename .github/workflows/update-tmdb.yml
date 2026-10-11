@@ -25,26 +25,50 @@ jobs:
         with:
           ref: main
           persist-credentials: true
-      - name: Fetch film directors and posters from TMDb
+      - name: Fetch film directors and posters
         env:
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
           TMDB_READ_ACCESS_TOKEN: ${{ secrets.TMDB_READ_ACCESS_TOKEN }}
         run: python3 scripts/update_tmdb_metadata.py
-      - name: Publish metadata only (never modify ratings, ranks or reviews)
+      - name: Commit fetched metadata, merging concurrent app updates safely
         shell: bash
         run: |
           set -euo pipefail
-          if [[ ! -f tmdb-metadata.json ]]; then
-            echo 'Metadata output is missing'
-            exit 1
-          fi
+          cp tmdb-metadata.json "$RUNNER_TEMP/tmdb-generated.json"
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -- tmdb-metadata.json
-          if git diff --cached --quiet; then
-            echo 'Metadata unchanged'
-            exit 0
-          fi
-          git commit -m 'Auto-refresh TMDb credits and poster metadata'
-          git pull --rebase origin main
-          git push origin HEAD:main
+          for attempt in 1 2 3 4; do
+            git fetch origin main
+            git reset --hard origin/main
+            python3 - <<'PY'
+          import json, os, pathlib
+          target=pathlib.Path('tmdb-metadata.json')
+          generated=json.loads((pathlib.Path(os.environ['RUNNER_TEMP'])/'tmdb-generated.json').read_text())
+          current=json.loads(target.read_text()) if target.exists() else {}
+          merged=dict(current.get('films') or {})
+          for id,rec in (generated.get('films') or {}).items():
+              original=merged.get(id) or {}
+              next_rec={**original,**rec}
+              for field in ('directors','creators','posterPath','posterUrl'):
+                  if not next_rec.get(field) and original.get(field):
+                      next_rec[field]=original[field]
+              merged[id]=next_rec
+          generated['films']=merged
+          generated['matchedCount']=len(merged)
+          target.write_text(json.dumps(generated,ensure_ascii=False,indent=2)+'\n')
+          PY
+            git add -- tmdb-metadata.json
+            if git diff --cached --quiet; then
+              echo "Metadata unchanged"
+              exit 0
+            fi
+            git commit -m "Auto-refresh TMDb credits and poster metadata"
+            if git push origin HEAD:main; then
+              echo "Published TMDb data"
+              exit 0
+            fi
+            echo "Concurrent commit detected; retry $attempt"
+            sleep 3
+          done
+          echo "Could not push after retry" >&2
+          exit 1
