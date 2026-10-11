@@ -8226,6 +8226,7 @@ function setPosterSources84(id,path){
     const url=posterUrl84(path,img.dataset.posterSize||'w185');
     if(url&&img.getAttribute('src')!==url)img.src=url;
     img.classList.add('movie30-poster-loaded84');
+    img.parentElement?.classList.add('movie30-has-poster84');
   });
 }
 function queuePoster84(f,force=false){
@@ -8278,8 +8279,10 @@ function putPoster84(el,id,mode){
   const f=filmById(id);if(!f)return;
   const img=document.createElement('img');img.className='movie30-poster84';img.dataset.posterId=id;
   img.dataset.posterSize=mode==='detail'?'w342':'w185';
-  img.alt='';img.loading='lazy';img.decoding='async';img.referrerPolicy='no-referrer';
+  img.alt=displayTitle(f)+' のポスター';img.loading='lazy';img.decoding='async';img.referrerPolicy='no-referrer';
   el.classList.add(mode==='rank'?'movie30-rank-poster84':'movie30-watch-poster84');
+  if(posterValid84(posterMeta84(f)?.path))el.classList.add('movie30-has-poster84');
+  if(mode==='rank')el.dataset.title84=displayTitle(f);
   el.appendChild(img);
   observePoster84(img,f);
 }
@@ -8294,6 +8297,58 @@ function decoratePosters84(){
       putPoster84(el,decodeURIComponent(el.dataset.film),'watch'));
   }
 }
+
+const RANK_POSTER_VIEW84='movie30_rank_poster_only_v84';
+let rankPosterOnly84=false;
+try{rankPosterOnly84=localStorage.getItem(RANK_POSTER_VIEW84)==='true'}catch(_){}
+const rankPosterToolbar84=document.querySelector('#page-rank .tools');
+let rankPosterButton84=document.getElementById('rankPosterOnly84');
+if(rankPosterToolbar84&&!rankPosterButton84){
+  rankPosterButton84=document.createElement('button');
+  rankPosterButton84.id='rankPosterOnly84';
+  rankPosterButton84.type='button';
+  rankPosterButton84.className='btn';
+  rankPosterButton84.setAttribute('aria-label','点数・順位の表示を切り替える');
+  rankPosterToolbar84.appendChild(rankPosterButton84);
+}
+function updateRankPosterMode84(){
+  const rank=document.getElementById('rankRoot');
+  const viewingRank=rank?.style.display!=='none';
+  if(rank)rank.classList.toggle('movie30-rank-grid-only84',rankPosterOnly84&&viewingRank);
+  if(rankPosterButton84){
+    rankPosterButton84.textContent=rankPosterOnly84?'通常一覧':'ポスターだけ';
+    rankPosterButton84.classList.toggle('active',rankPosterOnly84);
+    rankPosterButton84.style.display=viewingRank?'':'none';
+    rankPosterButton84.setAttribute('aria-pressed',String(rankPosterOnly84));
+  }
+  if(!rank)return;
+  for(const card of rank.querySelectorAll('.rank-card[data-id]')){
+    if(!card.dataset.posterModeHandler84){
+      card.dataset.posterModeHandler84='1';
+      card.addEventListener('click',e=>{
+        if(!rankPosterOnly84||rank.style.display==='none')return;
+        if(e.target.closest('.drag-handle'))return;
+        e.preventDefault();
+        const id=decodeURIComponent(card.dataset.id||'');
+        if(filmById(id))openSheet(id);
+      });
+      card.addEventListener('keydown',e=>{
+        if(rankPosterOnly84&&(e.key==='Enter'||e.key===' ')){
+          e.preventDefault();openSheet(decodeURIComponent(card.dataset.id||''));
+        }
+      });
+    }
+    card.tabIndex=rankPosterOnly84?0:-1;
+    card.setAttribute('role',rankPosterOnly84?'button':'group');
+  }
+}
+if(rankPosterButton84)rankPosterButton84.onclick=()=>{
+  rankPosterOnly84=!rankPosterOnly84;
+  try{localStorage.setItem(RANK_POSTER_VIEW84,String(rankPosterOnly84))}catch(_){}
+  updateRankPosterMode84();
+  decoratePosters84();
+};
+
 window.__movie30PosterDecorate84=decoratePosters84;
 const posterStyles84=document.createElement('style');
 posterStyles84.textContent=
@@ -8306,6 +8361,18 @@ posterStyles84.textContent=
  +'.movie30-poster-detail84 img{width:88px;height:132px;object-fit:cover;background:#21334b;border-radius:7px;border:1px solid #465569}'
  +'.movie30-poster-detail84 button{font-size:12px;border:1px solid #475569;border-radius:7px;background:#192b40;color:#eef4ff;padding:8px}'
  +'.movie30-poster-detail84 small{display:block;color:#aabbd0;line-height:1.5;margin:7px 0}';
+
+posterStyles84.textContent +=
+ '.rank-card.movie30-rank-poster84{padding-left:77px;min-height:102px;overflow:hidden}'
+ +'.movie30-rank-poster84>.movie30-poster84{position:absolute;left:6px;top:6px;transform:none;width:62px;height:calc(100% - 12px);max-height:none;object-fit:cover;pointer-events:none;border-radius:7px}'
+ +'#rankRoot.movie30-rank-grid-only84 .score-list{display:grid!important;grid-template-columns:repeat(auto-fill,minmax(102px,1fr));gap:10px;padding:7px;align-items:start}'
+ +'#rankRoot.movie30-rank-grid-only84 .rank-card.movie30-rank-poster84{display:block!important;position:relative;padding:0!important;min-width:0;min-height:0;height:auto;aspect-ratio:2/3;overflow:hidden;border-radius:8px;cursor:pointer}'
+ +'#rankRoot.movie30-rank-grid-only84 .rank-card .drag-handle,#rankRoot.movie30-rank-grid-only84 .rank-card>.rank-edit{display:none!important}'
+ +'#rankRoot.movie30-rank-grid-only84 .rank-card.movie30-rank-poster84>.movie30-poster84{left:0;top:0;transform:none;width:100%;height:100%;max-height:none;border:0;border-radius:6px;object-fit:cover;pointer-events:none}'
+ +'#rankRoot.movie30-rank-grid-only84 .rank-card:not(.movie30-has-poster84)::after{content:attr(data-title84);position:absolute;inset:auto 5px 9px;color:#e7edf6;font-size:11px;line-height:1.35;text-align:center;overflow:hidden;max-height:5.4em;text-shadow:0 1px 2px #000}'
+ +'#rankRoot.movie30-rank-grid-only84 .rank-card:focus-visible{outline:3px solid #a1c9ff;outline-offset:2px}'
+ +'#rankRoot.movie30-rank-grid-only84 .score-label{position:sticky;top:55px;align-self:start}'
+ +'@media(max-width:420px){#rankRoot.movie30-rank-grid-only84 .score-list{grid-template-columns:repeat(auto-fill,minmax(92px,1fr));gap:7px}}';
 document.head.appendChild(posterStyles84);
 let posterDetail84=null;
 const posterSheet84=document.querySelector('#sheetBg .sheet');
@@ -8346,6 +8413,7 @@ renderRank=function(...args){
   const result=renderRankBefore.apply(this,args);
   populateInWatchList();
   decoratePosters84();
+  updateRankPosterMode84();
   return result;
 };
 // Credit lookup for freshly imported films and manually added TMDb films.
@@ -8435,6 +8503,7 @@ if(data&&!document.getElementById('directorTool84')){
 }
 populateInWatchList();
 decoratePosters84();
+updateRankPosterMode84();
 window.__movie30TmdbCreditsV84={build:BUILD};
 const marker=document.getElementById('movie30BuildV29');if(marker)marker.textContent='app build '+BUILD;
 })();
