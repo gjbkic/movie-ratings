@@ -199,7 +199,7 @@ async function allCredits85(retryFailures=true){
 }
 const batch85=document.getElementById('batchDirector84');
 const retry85=document.getElementById('retryDirector84');
-if(batch85){batch85.textContent='未取得の監督・製作者を全件取得';batch85.onclick=()=>allCredits85(false);}
+if(batch85){batch85.textContent='未取得の監督・製作者を全件取得';batch85.onclick=()=>allCredits85(true);}
 if(retry85){retry85.textContent='照合不可も含め全件再確認';retry85.onclick=()=>allCredits85(true);}
 // One automatic full pass in the browser that already has the user's TMDb credential.
 // Automatic v85 fetching disabled to avoid competing with v84 job and masking failures.
