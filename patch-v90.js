@@ -164,6 +164,29 @@ document.addEventListener('keydown',e=>{
  const img=e.target.closest?.('#movie30PosterDetail84 img.movie30-poster84');
  if(!img)return;e.preventDefault();openViewer(decodeURIComponent(img.dataset.posterId||selectedId||''),img);
 });
+const openDetailBefore90=openSheet;
+openSheet=function(...args){
+ const result=openDetailBefore90.apply(this,args);
+ const id=args[0];
+ if(id==='custom-1790185844116-j1vu'){
+  const panel=document.getElementById('directorPanel84');
+  const line=panel?.querySelector('p');
+  if(line){
+   line.textContent='';
+   line.append('講師・解説：');
+   const name=document.createElement('strong');name.textContent='今敏';
+   line.appendChild(name);
+  }
+  if(panel&&!panel.querySelector('.movie90-role-note')){
+   const note=document.createElement('small');
+   note.className='movie90-role-note';
+   note.style.cssText='display:block;color:#a4b6ca;margin:6px 0';
+   note.textContent='本映像に監督名の独立した記載はないため、作品の講師・解説者を表示しています。';
+   panel.appendChild(note);
+  }
+ }
+ return result;
+};
 window.__movie30SearchPosters90={refresh:scheduleRefresh,openViewer,closeViewer};
 scheduleRefresh();
 const build=document.getElementById('movie30BuildV29');if(build)build.textContent='app build '+VERSION;
