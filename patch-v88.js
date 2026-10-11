@@ -27,7 +27,26 @@ match=function(f,q){
  if(oldMatch(f,q))return true;
  if(!q)return true;
  const r=catalog[f.id];
- return !!r&&allNames(r).join(' ').normalize('NFKC').toLowerCase().includes(norm(q.trim()));
+ const fold=v=>String(v||'').normalize('NFKC').toLowerCase().replace(/[^\p{L}\p{N}]/gu,'');
+ const needle=fold(q.trim());
+ const aliases={
+  christophernolan:['クリストファーノーラン','ノーラン'],
+  bongjoonho:['ポンジュノ'],
+  hayaomiyazaki:['宮崎駿'],
+  satoshikon:['今敏'],
+  davidfincher:['デヴィッドフィンチャー','デビッドフィンチャー'],
+  stanleykubrick:['スタンリーキューブリック'],
+  akirakurosawa:['黒澤明','黒沢明'],
+  hirokazukoreeda:['是枝裕和'],
+  wesanderson:['ウェスアンダーソン'],
+  davidlynch:['デヴィッドリンチ'],
+  martinscorsese:['マーティンスコセッシ'],
+  stevenspielberg:['スティーヴンスピルバーグ','スティーブンスピルバーグ']
+ };
+ return !!r&&allNames(r).some(name=>{
+  const key=fold(name);
+  return key.includes(needle)||(aliases[key]||[]).some(alias=>fold(alias).includes(needle));
+ });
 };
 const target=document.getElementById('directorTool84')||document.getElementById('page-data');
 const panel=document.createElement('div');
