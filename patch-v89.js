@@ -25,5 +25,11 @@ for(const id of ['rankRoot','watchList83','movie30PosterDetail84']){
  new MutationObserver(queue).observe(el,{childList:true,subtree:true});
 }
 queue();
+const legacyHelp=document.querySelector('#directorTool84 .tip');
+if(legacyHelp)legacyHelp.textContent='監督・ポスター情報はGitHub Actionsで取得し、アプリに配信します。スマホにTMDbキーを設定する必要はありません。';
+const btn=document.getElementById('batchDirector84');
+if(btn){btn.textContent='GitHubの監督データを読み込む';btn.onclick=()=>window.__movie30CloudCredits88?.reload();}
+const retry=document.getElementById('retryDirector84');
+if(retry){retry.textContent='残りを取得する（GitHub Actions）';retry.onclick=()=>window.open('https://github.com/gjbkic/movie-ratings/actions/workflows/update-tmdb.yml','_blank','noopener');}
 window.__movie30WildLife89={refresh,source:'official-artist-cover'};
 })();
