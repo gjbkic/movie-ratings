@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791722600366,
-  "sourceUpdatedIso": "2026-10-11T12:43:20.366Z",
+  "sourceUpdatedAt": 1791722613065,
+  "sourceUpdatedIso": "2026-10-11T12:43:33.065Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -43075,7 +43075,13 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "path": "/nsieMY2YO258aCxuOcv0tIU8Ag9.jpg",
+          "tmdbId": 20677,
+          "checkedAt": "2026-10-11T12:43:28.750Z",
+          "provider": "tmdb"
+        }
       },
       "lb-192-1hUc": {
         "addedDate": "2025-09-01",
@@ -61155,7 +61161,10 @@
         "watchedFlag": true,
         "watchedAddedDate": "2026-10-08",
         "poster84": {
-          "tmdbId": 808
+          "path": "/lw3t91kiFVgE2qgFdgXCwGpGIH6.jpg",
+          "tmdbId": 808,
+          "checkedAt": "2026-10-11T12:43:28.751Z",
+          "provider": "tmdb"
         },
         "crew84": {
           "directors": [
