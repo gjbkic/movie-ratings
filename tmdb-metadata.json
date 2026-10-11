@@ -1,10 +1,10 @@
 {
   "schema": 1,
-  "updatedAt": "2026-10-11T14:06:35.683072+00:00",
+  "updatedAt": "2026-10-11T14:36:14.936981+00:00",
   "catalogSize": 731,
   "matchedCount": 730,
-  "newCount": 0,
-  "unmatchedCount": 43,
+  "newCount": 2,
+  "unmatchedCount": 41,
   "films": {
     "lb-62-2b4w": {
       "tmdbId": 128,
@@ -9356,10 +9356,8 @@
   },
   "unmatched": {
     "lb-386-wbAi": "No exact matching TMDb title/year",
-    "lb-173-oCkK": "No exact matching TMDb title/year",
     "lb-250-bAcS": "TMDb title/ID not found: HTTP 404",
     "lb-254-6ZCG": "No exact matching TMDb title/year",
-    "lb-296-l7zS": "No exact matching TMDb title/year",
     "custom-1789385860026-8m1d": "TMDb title/ID not found: HTTP 404",
     "custom-1789385860426-8e86": "TMDb title/ID not found: HTTP 404",
     "custom-1790185844116-j1vu": "No exact matching TMDb title/year",
