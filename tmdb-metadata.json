@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updatedAt": "2026-10-11T13:51:45.448Z",
+  "updatedAt": "2026-10-11T13:53:43.060Z",
   "catalogSize": 731,
   "matchedCount": 709,
   "newCount": 682,
@@ -119,14 +119,14 @@
     "lb-138-2bc6": {
       "tmdbId": 81,
       "type": "movie",
-      "title": "Warriors of the Wind",
+      "title": "Nausicaä of the Valley of the Wind",
       "year": "1984",
       "directors": [
         "Hayao Miyazaki"
       ],
       "creators": [],
-      "posterPath": "/tcrkfB8SRPQCgwI88hQScua6nxh.jpg",
-      "source": "tmdb"
+      "posterPath": "",
+      "source": "corrected-credits-recheck-required"
     },
     "lb-88-1RUM": {
       "tmdbId": 12477,
@@ -8325,16 +8325,16 @@
       "source": "curated-film-and-series-credits"
     },
     "lb-254-6ZCG": {
-      "tmdbId": 237439,
-      "title": "大长风歌",
+      "tmdbId": null,
+      "title": "SPEC: Zero",
       "year": "2013",
       "type": "tv",
       "directors": [
         "Yukihiko Tsutsumi"
       ],
       "creators": [],
-      "posterPath": "/1VhlhQhAm8xbmk4NXhyAP5yyzY0.jpg",
-      "source": "tmdb"
+      "posterPath": "",
+      "source": "corrected-credits-recheck-required"
     },
     "custom-1790508960074-n6fj": {
       "tmdbId": 31911,
@@ -8625,14 +8625,16 @@
       "source": "tmdb"
     },
     "lb-228-6eCu": {
-      "tmdbId": 208430,
-      "type": "tv",
-      "title": "Het Jachtseizoen",
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Strawberry Night",
       "year": "2013",
-      "directors": [],
+      "directors": [
+        "Yuichi Sato"
+      ],
       "creators": [],
-      "posterPath": "/55KQN34iT8PjeJCr93L2gwklMnl.jpg",
-      "source": "tmdb"
+      "posterPath": "",
+      "source": "corrected-credits-recheck-required"
     },
     "lb-246-mqyw": {
       "tmdbId": 78685,
@@ -8720,16 +8722,14 @@
       "source": "tmdb"
     },
     "custom-1790185844116-j1vu": {
-      "tmdbId": 132131,
+      "tmdbId": null,
       "type": "movie",
-      "title": "Joy Road",
+      "title": "Perfect Blue Lecture Series",
       "year": "2008",
-      "directors": [
-        "Harry A. Davis"
-      ],
+      "directors": [],
       "creators": [],
-      "posterPath": "/4RXlOwnx87Mfbx52qjUGlquZkZi.jpg",
-      "source": "tmdb"
+      "posterPath": "",
+      "source": "corrected-credits-recheck-required"
     },
     "custom-1790322759131-6bsn": {
       "tmdbId": 296719,
