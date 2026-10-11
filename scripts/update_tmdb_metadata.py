@@ -98,7 +98,7 @@ def collect():
         if id in movies and kind:movies[id]["mediaType"]=kind
     return movies
 
-def search_id(f):
+def search_id(f, ignore_explicit=False):
     year=int(f.get("year") or 0)
     titles=distinct([f.get("englishTitle"),f.get("lbTitle"),f.get("originalTitle"),f.get("title")])
     kind=str(f.get("mediaType") or "").lower()
@@ -106,7 +106,7 @@ def search_id(f):
     if year==2018 and "wildlife" in {normalized(v) for v in titles} and not tv:
         return "movie",417812
     explicit=f.get("tmdbId")
-    if explicit and str(explicit).isdigit():
+    if not ignore_explicit and explicit and str(explicit).isdigit():
         return ("tv" if tv else "movie"),int(explicit)
     all_keys={normalized(v) for v in titles}
     if tv:
@@ -136,15 +136,48 @@ def search_id(f):
     candidates.sort(reverse=True)
     return ("tv" if tv else "movie"),int(candidates[0][1])
 
+def compatible(f, details, kind):
+    """Reject saved TMDb IDs when the retrieved film is unrelated."""
+    aliases=distinct([f.get("englishTitle"),f.get("lbTitle"),f.get("originalTitle"),f.get("title")])
+    if kind=="tv":
+        aliases=distinct(aliases+[n.split(":")[0].split("：")[0].strip() for n in aliases])
+        actual=distinct([details.get("name"),details.get("original_name")])
+    else:
+        actual=distinct([details.get("title"),details.get("original_title")])
+        year=int(f.get("year") or 0)
+        released=str(details.get("release_date") or "")[:4]
+        if year and released.isdigit() and abs(year-int(released))>3:
+            return False
+    known={normalized(x) for x in aliases}
+    for name in actual:
+        key=normalized(name)
+        if key in known:
+            return True
+        if kind=="tv" and any(len(n)>8 and (n.startswith(key) or key.startswith(n)) for n in known):
+            return True
+    return False
+
 def enrich(f,existing):
-    typ,id=search_id(f)
+    if existing.get("source")=="corrected-credits-recheck-required" and existing.get("tmdbId"):
+        typ=existing.get("type") or "movie"
+        id=int(existing["tmdbId"])
+    else:
+        typ,id=search_id(f)
+    def details(kind,tmdb_id):
+        uri=("/movie/" if kind=="movie" else "/tv/")+str(tmdb_id)
+        extra="credits" if kind=="movie" else "aggregate_credits"
+        return get(uri,{"append_to_response":extra,"language":"en-US"})
+    x=details(typ,id)
+    if not compatible(f,x,typ):
+        typ,id=search_id(f,ignore_explicit=True)
+        x=details(typ,id)
+        if not compatible(f,x,typ):
+            raise ValueError("TMDb result title or year differs from the requested film")
     if typ=="movie":
-        x=get("/movie/"+str(id),{"append_to_response":"credits","language":"en-US"})
         crew=(x.get("credits") or {}).get("crew") or []
         directors=distinct(c.get("name") for c in crew if c.get("job")=="Director")
         creators=[]
     else:
-        x=get("/tv/"+str(id),{"language":"en-US","append_to_response":"aggregate_credits"})
         aggregates=(x.get("aggregate_credits") or {}).get("crew") or []
         directors=distinct(c.get("name") for c in aggregates
                            if any(j.get("job")=="Director" for j in c.get("jobs") or []))
@@ -172,7 +205,10 @@ def main():
         if (old_row.get("directors") or old_row.get("creators")) and old_row.get("posterPath"):
             continue
         try:
-            result=enrich(f,old_row)
+            request={**f}
+            if old_row.get("type")=="movie" and f.get("mediaType")=="drama":
+                request["mediaType"]="movie"
+            result=enrich(request,old_row)
             # An earlier manual or verified creator entry is never discarded.
             if old_row.get("directors") and not result.get("directors"):
                 result["directors"]=old_row["directors"]
