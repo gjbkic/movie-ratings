@@ -54,12 +54,12 @@ jobs:
                   if not next_rec.get(field) and original.get(field):
                       next_rec[field]=original[field]
               # Manually verified credits take precedence over automatic TMDb recrawls.
-          verified=original.get('source','') not in ('','tmdb','tmdb-synced','corrected-credits-recheck-required')
-          if verified:
-              for field in ('directors','creators','source','sourceUrl','creditRole','type'):
-                  if field in original:
-                      next_rec[field]=original[field]
-          merged[id]=next_rec
+              verified=original.get('source','') not in ('','tmdb','tmdb-synced','corrected-credits-recheck-required')
+              if verified:
+                  for field in ('directors','creators','source','sourceUrl','creditRole','type'):
+                      if field in original:
+                          next_rec[field]=original[field]
+              merged[id]=next_rec
           generated['films']=merged
           generated['matchedCount']=len(merged)
           target.write_text(json.dumps(generated,ensure_ascii=False,indent=2)+'\n')
