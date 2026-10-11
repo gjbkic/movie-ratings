@@ -499,7 +499,7 @@ if(data&&!document.getElementById('directorTool84')){
   retry.onclick=()=>bulkCrew84(true);
   // Continue small unattended batches only in the browser already holding the key.
   // Keep the initial render fast; work happens after the application is visible.
-  if(getTmdbCredential())setTimeout(()=>bulkCrew84(false).catch(()=>{}),9000);
+  // Disabled legacy auto-batch: v85 controls failure reporting.
 }
 populateInWatchList();
 decoratePosters84();
