@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "updatedAt": "2026-10-11T14:02:41.009Z",
+  "updatedAt": "2026-10-11T14:04:15.844Z",
   "catalogSize": 731,
-  "matchedCount": 726,
+  "matchedCount": 730,
   "newCount": 2,
   "unmatchedCount": 43,
   "films": {
@@ -6384,11 +6384,14 @@
       "type": "concert",
       "title": "Utada Hikaru: Wild Life",
       "year": "2011",
-      "directors": [],
+      "directors": [
+        "Wataru Takeishi"
+      ],
       "creators": [],
       "posterPath": "",
       "posterUrl": "https://www.sonymusic.co.jp/Music/Info/utadahikaru/en/music/img/dvd/img_music_dvd_14.jpg",
-      "source": "official-artist-site"
+      "source": "prime-video-release-director",
+      "sourceUrl": "https://www.primevideo.com/detail/0SWFX5HJBD2P6DNUH6V3M670YM"
     },
     "lb-350-2bcK": {
       "tmdbId": 77,
@@ -8727,9 +8730,13 @@
       "title": "Perfect Blue Lecture Series",
       "year": "2008",
       "directors": [],
-      "creators": [],
+      "creators": [
+        "今敏"
+      ],
       "posterPath": "",
-      "source": "corrected-credits-recheck-required"
+      "source": "official-vap-lecture-presenter",
+      "sourceUrl": "https://store.vap.co.jp/syousai.asp?item=VPXV-75206",
+      "creditRole": "講師・解説（監督とは別）"
     },
     "custom-1790322759131-6bsn": {
       "tmdbId": 296719,
@@ -9293,6 +9300,58 @@
       "posterPath": "",
       "source": "official-fuji-episode-directors",
       "sourceUrl": "https://www.fujitv.co.jp/kimyo/202606.html"
+    },
+    "custom-1791379032352-50zf": {
+      "title": "Tales of the Bizarre: 35th Anniversary Special",
+      "year": "2025",
+      "type": "drama",
+      "directors": [
+        "石井克人",
+        "鈴木雅之",
+        "瀧川治水",
+        "筧昌也",
+        "岩田和行"
+      ],
+      "creators": [],
+      "source": "official-fuji-retrospective-episode-directors",
+      "sourceUrl": "https://www.fujitv.co.jp/kimyo/topics97.html",
+      "posterPath": ""
+    },
+    "custom-1791018448927-b4o3": {
+      "title": "ドラえもん誕生日スペシャル 「走れドラえもん！ 銀河グランプリ」",
+      "year": "2011",
+      "type": "drama",
+      "directors": [
+        "高橋渉"
+      ],
+      "creators": [],
+      "source": "episode-storyboard-and-direction-credits",
+      "sourceUrl": "https://hanaballoon.com/dorachan/data/anime/mizuta/list/data/201107.html",
+      "posterPath": ""
+    },
+    "custom-1790322761655-im7g": {
+      "title": "Hanzawa Naoki: Spin-off",
+      "year": "2020",
+      "type": "drama",
+      "directors": [
+        "松木彩"
+      ],
+      "creators": [],
+      "source": "official-tbs-special-direction",
+      "sourceUrl": "https://www.tbs.co.jp/hanzawa_naoki/sp2020/staff/",
+      "posterPath": ""
+    },
+    "custom-1790665768168-uxk0": {
+      "title": "Detective Conan: The Counterfeit Case of Ultra 30",
+      "year": "2026",
+      "type": "drama",
+      "directors": [
+        "鎌仲史陽"
+      ],
+      "creators": [],
+      "source": "official-yomiuri-tv-episode-director",
+      "sourceUrl": "https://www.ytv.co.jp/conan/30go/news/",
+      "posterPath": ""
     }
   },
   "unmatched": {
