@@ -14,6 +14,7 @@ const rewatches=f=>events(f).filter(x=>x.rewatch).length;
 let sortMode='rank';try{sortMode=localStorage.getItem('movie30_watch_sort_v83')||'rank'}catch(_){}
 if(!['rank','watched-new','watched-old','rewatch','logged-new'].includes(sortMode))sortMode='rank';
 let listLimit=80;
+let tocYear='all',tocMonth='all';
 
 let parsed=[];
 const priorParse=parseLbRss;
@@ -208,7 +209,7 @@ if(tools&&!document.getElementById('watchSort83')){
     +'<option value="watched-old">鑑賞日：古い順</option><option value="rewatch">再鑑賞の記録が多い順</option>'
     +'<option value="logged-new">登録日：新しい順</option>';
   sel.value=sortMode;tools.appendChild(sel);
-  sel.onchange=()=>{sortMode=sel.value;listLimit=80;try{localStorage.setItem('movie30_watch_sort_v83',sortMode)}catch(_){}renderRank();};
+  sel.onchange=()=>{sortMode=sel.value;listLimit=80;tocYear='all';tocMonth='all';try{localStorage.setItem('movie30_watch_sort_v83',sortMode)}catch(_){}renderRank();};
 }
 const listRoot=document.createElement('div');listRoot.id='watchList83';
 rankRoot?.insertAdjacentElement('afterend',listRoot);
@@ -225,7 +226,7 @@ style.textContent='.watch83-grid{display:grid;grid-template-columns:repeat(auto-
   +'.watch83-editor input[type=checkbox]{width:17px;height:17px;accent-color:#91baff}'
   +'.watch83-editor small{display:block;font-size:10px;color:#96a4b5;margin-top:5px}'
   +'.watch83-editor button{background:#192433;color:#e4efff;border:1px solid #46576e;border-radius:7px;padding:7px 9px;font-size:12px}'
-  +'.watch83-editor p{font-size:11px;color:#aeb9c5;line-height:1.5}';
+  +'.watch83-editor p{font-size:11px;color:#aeb9c5;line-height:1.5}'+'.watch83-toc{position:sticky;top:54px;z-index:15;background:#0d1520;border:1px solid #354658;border-radius:11px;padding:9px;margin:10px 0 12px;box-shadow:0 5px 12px #0005}'+'.watch83-toc-head{font-size:11px;color:#c5d5e9;margin:0 0 6px;font-weight:700}'+'.watch83-toc-row{display:flex;gap:5px;overflow-x:auto;scrollbar-width:thin;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;padding:1px 1px 4px}'+'.watch83-toc-row+ .watch83-toc-row{margin-top:6px;padding-top:7px;border-top:1px solid #2c3949}'+'.watch83-toc-chip{flex:0 0 auto;border:1px solid #435267;background:#172334;color:#d0dced;border-radius:7px;min-height:34px;padding:6px 9px;font-size:11px;white-space:nowrap}'+'.watch83-toc-chip[aria-pressed="true"]{border-color:#91baff;background:#243e62;color:#fff;font-weight:700}'+'.watch83-toc-chip small{margin-left:5px;color:#a9bad0;font-size:10px}'+'.watch83-divider{grid-column:1/-1;font-size:14px;font-weight:750;border-bottom:1px solid #364556;color:#e0eafd;padding:12px 3px 7px;margin-top:6px;scroll-margin-top:150px}'+'.watch83-toc-empty{font-size:11px;color:#9eacbd;padding:4px}';
 document.head.appendChild(style);
 function cmp(a,b,fn,asc=false){
   const x=fn(a),y=fn(b);
@@ -275,27 +276,92 @@ function drawList(){
       ?a.sortDate.localeCompare(b.sortDate):b.sortDate.localeCompare(a.sortDate);
     return n||displayTitle(a.f).localeCompare(displayTitle(b.f),'ja');
   });
+
+  // The Letterboxd-style table of contents works from individual viewing dates,
+  // not the film release year or the "marked watched" date.
+  const showToc=['watched-new','watched-old','logged-new'].includes(sortMode);
+  const counts=new Map();
+  const validItems=entries.filter(e=>e.sortDate&&/^\d{4}-\d\d-\d\d/.test(e.sortDate));
+  for(const item of validItems){
+    const year=item.sortDate.slice(0,4);
+    counts.set(year,(counts.get(year)||0)+1);
+  }
+  const undatedCount=entries.length-validItems.length;
+  const years=[...counts.keys()].sort((a,b)=>sortMode==='watched-old'?a.localeCompare(b):b.localeCompare(a));
+  if(tocYear!=='all'&&tocYear!=='unknown'&&!counts.has(tocYear)){tocYear='all';tocMonth='all';}
+  if(tocYear==='unknown'&&!undatedCount){tocYear='all';tocMonth='all';}
+  const yearRows=tocYear==='all'?entries:entries.filter(e=>
+    tocYear==='unknown'?!e.sortDate:e.sortDate.startsWith(tocYear+'-'));
+  const monthCounts=new Map();
+  if(tocYear!=='all'&&tocYear!=='unknown'){
+    for(const item of yearRows){
+      const month=item.sortDate.slice(5,7);
+      if(/^\d\d$/.test(month))monthCounts.set(month,(monthCounts.get(month)||0)+1);
+    }
+  }
+  if(tocMonth!=='all'&&!monthCounts.has(tocMonth))tocMonth='all';
+  const visibleRows=tocMonth==='all'?yearRows:yearRows.filter(e=>e.sortDate.slice(5,7)===tocMonth);
+  const active=(a,b)=>a===b?'true':'false';
+  const button=(key,value,label,count,pressed)=>
+    '<button type="button" class="watch83-toc-chip" data-'+key+'="'+esc(value)+'" aria-pressed="'+pressed+'">'
+    +esc(label)+(count!=null?'<small>'+count+'</small>':'')+'</button>';
+  let toc='';
+  if(showToc){
+    toc='<nav class="watch83-toc" id="watchTOC83" aria-label="鑑賞年・月の目次">'
+      +'<div class="watch83-toc-head">'+(sortMode==='logged-new'?'登録日':'鑑賞日')+'で移動　— 年を選択すると月も選べます</div>'
+      +'<div class="watch83-toc-row" aria-label="年を選択">'
+      +button('year83','all','すべて',entries.length,active(tocYear,'all'))
+      +years.map(year=>button('year83',year,year+'年',counts.get(year),active(tocYear,year))).join('')
+      +(undatedCount?button('year83','unknown','日付不明',undatedCount,active(tocYear,'unknown')):'')
+      +'</div>';
+    if(tocYear!=='all'&&tocYear!=='unknown'){
+      const months=[...monthCounts.keys()].sort((a,b)=>sortMode==='watched-old'?a.localeCompare(b):b.localeCompare(a));
+      toc+='<div class="watch83-toc-row" aria-label="月を選択">'
+        +button('month83','all','全月',yearRows.length,active(tocMonth,'all'))
+        +months.map(month=>button('month83',month,Number(month)+'月',monthCounts.get(month),active(tocMonth,month))).join('')
+        +'</div>';
+    }
+    toc+='</nav>';
+  }
   const dated=entries.filter(e=>e.sortDate).length;
+  let previousMonth=null;
+  const cards=visibleRows.slice(0,listLimit).map(({f,entry,count,sortDate})=>{
+    const sc=effectiveScore(f),m=state.letterboxdMeta?.[f.id]||{};
+    const dateLabel=entry
+      ?(entry.date?'鑑賞日 '+entry.date:'鑑賞日不明')
+      :(sortMode==='logged-new'&&m.watchedAddedDate?'鑑賞済みに登録 '+m.watchedAddedDate:'鑑賞日未登録');
+    const group=sortDate?sortDate.slice(0,7):'unknown';
+    const section=showToc&&group!==previousMonth
+      ?'<div class="watch83-divider">'+(group==='unknown'?'日付不明':group.slice(0,4)+'年'+Number(group.slice(5))+'月')+'</div>':'';
+    previousMonth=group;
+    return section+'<button type="button" class="watch83-item" data-film="'+encodeURIComponent(f.id)+'"><strong>'
+      +esc(displayTitle(f))+'</strong><small>'+esc(dateLabel)
+      +(entry?.rewatch?' · 再鑑賞':'')
+      +(entry?.retroactive?' · 過去の鑑賞を後日登録':'')
+      +(!entry&&m.historicalWatched?' · 以前から鑑賞済み':'')
+      +'</small><small>'+(sc==null?'未採点':sc+'点')
+      +(sortMode==='rewatch'?' · 再鑑賞'+rewatches(f)+'件':'')
+      +' · 全'+count+'記録</small></button>';
+  }).join('');
   listRoot.innerHTML='<p class="watch83-summary">'+entries.length+'件の鑑賞・作品記録／日付あり '+dated+'件。'
-    +(sortMode==='rewatch'?'作品単位で再鑑賞数順。':'LetterboxdのDiaryと同様、再鑑賞も1回ずつ表示。')
+    +(sortMode==='rewatch'?'作品単位で再鑑賞数順。':'再鑑賞もそれぞれ別の記録として表示。')
     +' 点数・元の順位には影響しません。</p>'
-    +'<div class="watch83-grid">'+entries.slice(0,listLimit).map(({f,entry,count,sortDate})=>{
-      const sc=effectiveScore(f),m=state.letterboxdMeta?.[f.id]||{};
-      const dateLabel=entry
-        ?(entry.date?'鑑賞日 '+entry.date:'鑑賞日不明')
-        :(sortMode==='logged-new'&&m.watchedAddedDate?'鑑賞済みに登録 '+m.watchedAddedDate:'鑑賞日未登録');
-      return '<button type="button" class="watch83-item" data-film="'+encodeURIComponent(f.id)+'"><strong>'
-        +esc(displayTitle(f))+'</strong><small>'+esc(dateLabel)
-        +(entry?.rewatch?' · 再鑑賞':'')
-        +(entry?.retroactive?' · 過去の鑑賞を後日登録':'')
-        +(!entry&&m.historicalWatched?' · 以前から鑑賞済み':'')
-        +'</small><small>'+(sc==null?'未採点':sc+'点')
-        +(sortMode==='rewatch'?' · 再鑑賞'+rewatches(f)+'件':'')
-        +' · 全'+count+'記録</small></button>';
-    }).join('')+'</div>'
-    +(entries.length>listLimit?'<button type="button" class="btn" id="watchMore83">さらに'+Math.min(80,entries.length-listLimit)+'件を表示</button>':'');
+    +toc
+    +(visibleRows.length?'<div class="watch83-grid">'+cards+'</div>':'<p class="watch83-toc-empty">この期間に該当する鑑賞記録はありません。</p>')
+    +(visibleRows.length>listLimit?'<button type="button" class="btn" id="watchMore83">さらに'+Math.min(80,visibleRows.length-listLimit)+'件を表示</button>':'');
   listRoot.querySelectorAll('[data-film]').forEach(el=>el.onclick=()=>openSheet(decodeURIComponent(el.dataset.film)));
   const more=listRoot.querySelector('#watchMore83');if(more)more.onclick=()=>{listLimit+=80;drawList();};
+  const scrollToToc=()=>{
+    // Keep the year/month navigation visible when changing periods on mobile.
+    const target=document.getElementById('watchTOC83');
+    if(target&&typeof target.scrollIntoView==='function')target.scrollIntoView({behavior:'smooth',block:'start'});
+  };
+  listRoot.querySelectorAll('[data-year83]').forEach(btn=>btn.onclick=()=>{
+    tocYear=btn.dataset.year83;tocMonth='all';listLimit=80;drawList();scrollToToc();
+  });
+  listRoot.querySelectorAll('[data-month83]').forEach(btn=>btn.onclick=()=>{
+    tocMonth=btn.dataset.month83;listLimit=80;drawList();scrollToToc();
+  });
 }
 const oldRank=renderRank;
 renderRank=function(...args){
@@ -304,7 +370,7 @@ renderRank=function(...args){
 };
 for(const id of ['searchRank','categoryFilterRank','mediaFilterRank','originFilterRank']){
   const el=document.getElementById(id);if(el)el.addEventListener(id==='searchRank'?'input':'change',()=>{
-    if(sortMode!=='rank'){listLimit=80;drawList();}
+    if(sortMode!=='rank'){listLimit=80;tocYear='all';tocMonth='all';drawList();}
   });
 }
 let editor=null;
