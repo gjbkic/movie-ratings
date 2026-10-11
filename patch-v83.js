@@ -362,6 +362,7 @@ function drawList(){
   listRoot.querySelectorAll('[data-month83]').forEach(btn=>btn.onclick=()=>{
     tocMonth=btn.dataset.month83;listLimit=80;drawList();scrollToToc();
   });
+  if(typeof window.__movie30PosterDecorate84==='function')window.__movie30PosterDecorate84();
 }
 const oldRank=renderRank;
 renderRank=function(...args){
