@@ -142,8 +142,10 @@ def enrich(f,existing):
         directors=distinct(c.get("name") for c in crew if c.get("job")=="Director")
         creators=[]
     else:
-        x=get("/tv/"+str(id),{"language":"en-US"})
-        directors=[]
+        x=get("/tv/"+str(id),{"language":"en-US","append_to_response":"aggregate_credits"})
+        aggregates=(x.get("aggregate_credits") or {}).get("crew") or []
+        directors=distinct(c.get("name") for c in aggregates
+                           if any(j.get("job")=="Director" for j in c.get("jobs") or []))
         creators=distinct(c.get("name") for c in x.get("created_by") or [])
     if not (directors or creators or x.get("poster_path")):
         raise ValueError("No credits or poster on TMDb")
@@ -158,13 +160,25 @@ def main():
     records=dict(old.get("films") or {})
     failures={}
     completed=0
-    for i,(id,f) in enumerate(films.items(),1):
+    # First fill the 205 completely missing credits; fetch remaining posters afterwards.
+    priority=lambda pair: (bool((records.get(pair[0]) or {}).get("directors") or
+                                (records.get(pair[0]) or {}).get("creators")),
+                           bool((records.get(pair[0]) or {}).get("posterPath")))
+    ordered=sorted(films.items(),key=priority)
+    for i,(id,f) in enumerate(ordered,1):
         old_row=records.get(id) or {}
-        if old_row.get("tmdbId") and (old_row.get("directors") or old_row.get("creators") or old_row.get("posterPath")):
+        if (old_row.get("directors") or old_row.get("creators")) and old_row.get("posterPath"):
             continue
         try:
             result=enrich(f,old_row)
-            records[id]=result
+            # An earlier manual or verified creator entry is never discarded.
+            if old_row.get("directors") and not result.get("directors"):
+                result["directors"]=old_row["directors"]
+            if old_row.get("creators") and not result.get("creators"):
+                result["creators"]=old_row["creators"]
+            if old_row.get("posterUrl") and not result.get("posterUrl"):
+                result["posterUrl"]=old_row["posterUrl"]
+            records[id]={**old_row,**result}
             completed+=1
         except ValueError as e:
             failures[id]=str(e)
