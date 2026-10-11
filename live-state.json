@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791722462174,
-  "sourceUpdatedIso": "2026-10-11T12:41:02.174Z",
+  "sourceUpdatedAt": 1791722481989,
+  "sourceUpdatedIso": "2026-10-11T12:41:21.989Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -40912,7 +40912,13 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "path": "/4wWfdDAkQhlZottRfmrtsJ801Oz.jpg",
+          "tmdbId": 4108,
+          "checkedAt": "2026-10-11T12:41:16.777Z",
+          "provider": "tmdb"
+        }
       },
       "lb-130-3VH2": {
         "addedDate": "2025-09-01",
@@ -44065,7 +44071,13 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "path": "/chRu7CzagKO9AtGcltDSvCiKOfw.jpg",
+          "tmdbId": 1012201,
+          "checkedAt": "2026-10-11T12:40:58.130Z",
+          "provider": "tmdb"
+        }
       },
       "lb-221-7VEK": {
         "addedDate": "2025-09-01",
@@ -44479,7 +44491,13 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "path": "/wFVoelAIzg2MNcAlcqIJsIOq6nE.jpg",
+          "tmdbId": 268002,
+          "checkedAt": "2026-10-11T12:41:17.569Z",
+          "provider": "tmdb"
+        }
       },
       "lb-233-2pii": {
         "addedDate": "2025-09-01",
@@ -44779,7 +44797,13 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "path": "/zUoJjrCW3OfKMHndhYHuXQgMssa.jpg",
+          "tmdbId": 432985,
+          "checkedAt": "2026-10-11T12:41:10.687Z",
+          "provider": "tmdb"
+        }
       },
       "lb-242-kif8": {
         "addedDate": "2025-09-01",
@@ -45417,7 +45441,13 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "path": "/oETeJoSFFxgx9ZiVewKdBbssAzR.jpg",
+          "tmdbId": 335715,
+          "checkedAt": "2026-10-11T12:41:17.549Z",
+          "provider": "tmdb"
+        }
       },
       "lb-261-1IGQ": {
         "addedDate": "2025-09-01",
@@ -45899,7 +45929,13 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "path": "/vucWFJFwkue5K1FfbIxkgULnRo0.jpg",
+          "tmdbId": 9714,
+          "checkedAt": "2026-10-11T12:40:58.130Z",
+          "provider": "tmdb"
+        }
       },
       "lb-275-28sg": {
         "addedDate": "2025-09-01",
@@ -52031,7 +52067,13 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "path": "/wmBIODg8Sy3RWfed6ZDyA2iHWKx.jpg",
+          "tmdbId": 474350,
+          "checkedAt": "2026-10-11T12:41:16.707Z",
+          "provider": "tmdb"
+        }
       },
       "lb-452-cqUW": {
         "addedDate": "2025-09-01",
@@ -52095,7 +52137,13 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "path": "/8GjJVJ7WcxY0cMJLUAOLaHhHPCs.jpg",
+          "tmdbId": 76492,
+          "checkedAt": "2026-10-11T12:41:16.736Z",
+          "provider": "tmdb"
+        }
       },
       "lb-454-edAy": {
         "addedDate": "2025-09-01",
@@ -55094,7 +55142,13 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "path": "/zIzwrXTtuPeqfWg1C6Kql4ZTeQC.jpg",
+          "tmdbId": 566555,
+          "checkedAt": "2026-10-11T12:41:10.681Z",
+          "provider": "tmdb"
+        }
       },
       "lb-540-1W7A": {
         "addedDate": "2025-09-01",
@@ -58910,6 +58964,12 @@
           ],
           "source": "tmdb",
           "fetchedAt": "2026-10-11T12:37:51.652Z"
+        },
+        "poster84": {
+          "path": "/bxzCZg22QO4CcqhRqMhMAyyQasI.jpg",
+          "tmdbId": 75058,
+          "checkedAt": "2026-10-11T12:41:17.569Z",
+          "provider": "tmdb"
         }
       },
       "custom-1790322769206-k4pm": {
