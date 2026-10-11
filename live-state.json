@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791692071023,
-  "sourceUpdatedIso": "2026-10-11T04:14:31.023Z",
+  "sourceUpdatedAt": 1791692151852,
+  "sourceUpdatedIso": "2026-10-11T04:15:51.852Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -39693,7 +39693,16 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Yasuichiro Yamamoto",
+            "Kobun Shizuno"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:14:56.551Z"
+        }
       },
       "lb-199-6Kya": {
         "addedDate": "2025-09-01",
@@ -39702,7 +39711,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Kobun Shizuno"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:14:56.833Z"
+        }
       },
       "lb-200-7BEA": {
         "addedDate": "2025-09-01",
@@ -39729,7 +39746,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Kobun Shizuno"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:14:57.115Z"
+        }
       },
       "lb-203-fyxW": {
         "addedDate": "2025-09-01",
@@ -39738,7 +39763,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Kobun Shizuno"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:14:57.380Z"
+        }
       },
       "lb-204-hLIM": {
         "addedDate": "2025-09-01",
@@ -39747,7 +39780,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.531Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Yuzuru Tachikawa"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:14:57.668Z"
+        }
       },
       "lb-205-1UlA": {
         "addedDate": "2025-09-01",
@@ -39756,7 +39797,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Giuseppe Tornatore"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:14:57.933Z"
+        }
       },
       "lb-206-9vSA": {
         "addedDate": "2025-09-01",
@@ -39765,7 +39814,16 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.531Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Ryan Fleck",
+            "Anna Boden"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:14:58.239Z"
+        }
       },
       "lb-207-29yE": {
         "addedDate": "2025-09-01",
@@ -39774,7 +39832,16 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "John Musker",
+            "Ron Clements"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:14:58.549Z"
+        }
       },
       "lb-208-1MLK": {
         "addedDate": "2025-09-01",
@@ -39783,7 +39850,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Robert Wise"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:14:58.812Z"
+        }
       },
       "lb-209-1XhG": {
         "addedDate": "2025-09-01",
@@ -39792,7 +39867,16 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Gary Trousdale",
+            "Kirk Wise"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:14:59.068Z"
+        }
       },
       "lb-210-8tfY": {
         "addedDate": "2025-09-01",
@@ -39801,7 +39885,16 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Ron Clements",
+            "John Musker"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:14:59.332Z"
+        }
       },
       "lb-211-ar0c": {
         "addedDate": "2025-09-01",
@@ -39810,7 +39903,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Bill Condon"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:14:59.605Z"
+        }
       },
       "lb-212-acjI": {
         "addedDate": "2025-09-01",
@@ -39819,7 +39920,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.531Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Michael Gracey"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:14:59.879Z"
+        }
       },
       "lb-213-2TTS": {
         "addedDate": "2025-09-01",
@@ -39828,7 +39937,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Rich Moore"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:00.176Z"
+        }
       },
       "lb-214-2aoA": {
         "addedDate": "2025-09-01",
@@ -39837,7 +39954,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Robert Stevenson"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:01.818Z"
+        }
       },
       "lb-215-aJ5E": {
         "addedDate": "2025-09-01",
@@ -39846,7 +39971,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Chris Renaud"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:02.073Z"
+        }
       },
       "lb-216-1DD8": {
         "addedDate": "2025-09-01",
@@ -39855,7 +39988,16 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Chris Renaud",
+            "Pierre Coffin"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:02.359Z"
+        }
       },
       "lb-217-3gg0": {
         "addedDate": "2025-09-01",
@@ -39864,7 +40006,16 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Pierre Coffin",
+            "Chris Renaud"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:02.632Z"
+        }
       },
       "lb-218-6jCO": {
         "addedDate": "2025-09-01",
@@ -39873,7 +40024,16 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Kyle Balda",
+            "Pierre Coffin"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:02.938Z"
+        }
       },
       "lb-219-on14": {
         "addedDate": "2025-09-01",
@@ -39882,7 +40042,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.531Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Yusuke Hirota"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:03.191Z"
+        }
       },
       "lb-220-Cgri": {
         "addedDate": "2025-09-01",
@@ -39891,7 +40059,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.531Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Susumu Mitsunaka"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:03.444Z"
+        }
       },
       "lb-221-7VEK": {
         "addedDate": "2025-09-01",
@@ -39900,7 +40076,16 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Takashi Yamazaki",
+            "Ryuichi Yagi"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:03.746Z"
+        }
       },
       "lb-222-hSNY": {
         "addedDate": "2025-09-01",
@@ -39909,7 +40094,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.531Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Kazuaki Imai"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:03.996Z"
+        }
       },
       "lb-223-rkrO": {
         "addedDate": "2025-09-01",
@@ -39918,7 +40111,16 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.531Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Ryuichi Yagi",
+            "Takashi Yamazaki"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:04.264Z"
+        }
       },
       "lb-224-68Wo": {
         "addedDate": "2025-09-01",
@@ -39927,7 +40129,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Hiroshi Nishitani"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:04.519Z"
+        }
       },
       "lb-225-A7Am": {
         "addedDate": "2025-09-01",
@@ -39936,7 +40146,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.531Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Hiroshi Nishitani"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:04.772Z"
+        }
       },
       "lb-226-g0d6": {
         "addedDate": "2025-09-01",
@@ -39945,7 +40163,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.531Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Sho Tsukikawa"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:05.030Z"
+        }
       },
       "lb-227-evra": {
         "addedDate": "2025-09-01",
@@ -39954,7 +40180,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Ryôichi Kimizuka"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:05.284Z"
+        }
       },
       "lb-228-6eCu": {
         "addedDate": "2025-09-01",
@@ -39972,7 +40206,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Hideo Nakata"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:06.469Z"
+        }
       },
       "lb-230-43d0": {
         "addedDate": "2025-09-01",
@@ -39987,7 +40229,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.531Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Katsuo Fukuzawa"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:06.728Z"
+        }
       },
       "lb-232-81oI": {
         "addedDate": "2025-09-01",
@@ -39996,19 +40246,43 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Hideki Takeuchi"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:06.994Z"
+        }
       },
       "lb-233-2pii": {
         "addedDate": "2025-09-01",
         "addedDateSource": "letterboxd-export-2026-09-27",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Yukihiko Tsutsumi"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:07.259Z"
+        }
       },
       "lb-234-2qRS": {
         "addedDate": "2025-09-01",
         "addedDateSource": "letterboxd-export-2026-09-27",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Yukihiko Tsutsumi"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:07.515Z"
+        }
       },
       "lb-235-8JWk": {
         "addedDate": "2025-09-01",
@@ -40017,7 +40291,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Yukihiko Tsutsumi"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:07.773Z"
+        }
       },
       "lb-236-iLeu": {
         "addedDate": "2025-09-01",
@@ -40026,13 +40308,29 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.531Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Masato Harada"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:08.040Z"
+        }
       },
       "lb-237-6eCE": {
         "addedDate": "2025-09-01",
         "addedDateSource": "letterboxd-export-2026-09-27",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Keishi Otomo"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:08.287Z"
+        }
       },
       "lb-238-290C": {
         "addedDate": "2025-09-01",
@@ -40041,7 +40339,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Clint Eastwood"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:08.558Z"
+        }
       },
       "lb-239-kidw": {
         "addedDate": "2025-09-01",
@@ -40050,7 +40356,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.531Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Masayuki Suzuki"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:08.823Z"
+        }
       },
       "lb-240-ki8w": {
         "addedDate": "2025-09-01",
@@ -40059,7 +40373,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.531Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Bettina Oberli"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:09.086Z"
+        }
       },
       "lb-241-fmjS": {
         "addedDate": "2025-09-01",
@@ -40068,7 +40390,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.531Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Yuichi Fukuda"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:09.351Z"
+        }
       },
       "lb-242-kif8": {
         "addedDate": "2025-09-01",
@@ -40077,7 +40407,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.531Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Akira Tanaka"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:09.615Z"
+        }
       },
       "lb-243-orTE": {
         "addedDate": "2025-09-01",
@@ -40086,7 +40424,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.531Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Akira Tanaka"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:10.435Z"
+        }
       },
       "lb-244-MGuM": {
         "addedDate": "2025-09-01",
@@ -40095,7 +40441,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.531Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Koki Mitani"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:10.694Z"
+        }
       },
       "lb-245-z4p4": {
         "addedDate": "2025-09-01",
@@ -40104,7 +40458,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.531Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Akira Tanaka"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:10.959Z"
+        }
       },
       "lb-246-mqyw": {
         "addedDate": "2025-09-01",
@@ -40122,7 +40484,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Shusuke Kaneko"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:11.232Z"
+        }
       },
       "lb-248-1KJs": {
         "addedDate": "2025-09-01",
@@ -40131,13 +40501,29 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Shusuke Kaneko"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:11.493Z"
+        }
       },
       "lb-249-4r68": {
         "addedDate": "2025-09-01",
         "addedDateSource": "letterboxd-export-2026-09-27",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Yukihiko Tsutsumi"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:11.755Z"
+        }
       },
       "lb-250-bAcS": {
         "addedDate": "2025-09-01",
@@ -40149,13 +40535,29 @@
         "addedDate": "2025-09-01",
         "addedDateSource": "letterboxd-export-2026-09-27",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Yukihiko Tsutsumi"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:12.014Z"
+        }
       },
       "lb-252-8THk": {
         "addedDate": "2025-09-01",
         "addedDateSource": "letterboxd-export-2026-09-27",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Yukihiko Tsutsumi"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:12.278Z"
+        }
       },
       "lb-253-SVAW": {
         "addedDate": "2025-09-01",
@@ -40179,7 +40581,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.531Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Kazuya Shiraishi"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:12.533Z"
+        }
       },
       "lb-256-1HU8": {
         "addedDate": "2025-09-01",
@@ -40188,7 +40598,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Koreyoshi Kurahara"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:12.791Z"
+        }
       },
       "lb-257-2Ev2": {
         "addedDate": "2025-09-01",
@@ -40197,7 +40615,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Kon Ichikawa"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:13.835Z"
+        }
       },
       "lb-258-16ic": {
         "addedDate": "2025-09-01",
@@ -40206,7 +40632,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Sang-il Lee"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:14.113Z"
+        }
       },
       "lb-259-N7ZC": {
         "addedDate": "2025-09-01",
@@ -40224,7 +40658,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Izuru Narushima"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:14.377Z"
+        }
       },
       "lb-261-1IGQ": {
         "addedDate": "2025-09-01",
@@ -40233,7 +40675,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Duncan Jones"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:14.642Z"
+        }
       },
       "lb-262-29Du": {
         "addedDate": "2025-09-01",
@@ -40242,7 +40692,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Andrew Niccol"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:14.907Z"
+        }
       },
       "lb-263-6bJM": {
         "addedDate": "2025-09-01",
@@ -40251,7 +40709,16 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Michael Spierig",
+            "Peter Spierig"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:15.208Z"
+        }
       },
       "lb-264-FPS": {
         "addedDate": "2025-09-01",
@@ -40260,7 +40727,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Andrew Niccol"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:15.472Z"
+        }
       },
       "lb-265-fdo": {
         "addedDate": "2025-09-01",
@@ -40269,7 +40744,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Duncan Jones"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:15.739Z"
+        }
       },
       "lb-266-1Iik": {
         "addedDate": "2025-09-01",
@@ -40278,7 +40761,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Neill Blomkamp"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:16.001Z"
+        }
       },
       "lb-267-29u8": {
         "addedDate": "2025-09-01",
@@ -40287,7 +40778,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Steven Spielberg"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:16.287Z"
+        }
       },
       "lb-268-29Xu": {
         "addedDate": "2025-09-01",
@@ -40296,13 +40795,29 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Victor Fleming"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:17.388Z"
+        }
       },
       "lb-269-1dE0": {
         "addedDate": "2025-09-01",
         "addedDateSource": "letterboxd-export-2026-09-27",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Wolfgang Petersen"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:17.665Z"
+        }
       },
       "lb-270-iF7M": {
         "addedDate": "2025-09-01",
@@ -40311,7 +40826,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.531Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Danny Boyle"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:17.918Z"
+        }
       },
       "lb-271-29zW": {
         "addedDate": "2025-09-01",
@@ -40320,7 +40843,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "William Wyler"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:18.188Z"
+        }
       },
       "lb-272-1Soi": {
         "addedDate": "2025-09-01",
@@ -40329,7 +40860,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Kathryn Bigelow"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:18.654Z"
+        }
       },
       "lb-273-29Ji": {
         "addedDate": "2025-09-01",
@@ -40338,7 +40877,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Bernardo Bertolucci"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:18.917Z"
+        }
       },
       "lb-274-1XZ4": {
         "addedDate": "2025-09-01",
@@ -40347,13 +40894,29 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Raja Gosnell"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:19.189Z"
+        }
       },
       "lb-275-28sg": {
         "addedDate": "2025-09-01",
         "addedDateSource": "letterboxd-export-2026-09-27",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Tom Shadyac"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:19.446Z"
+        }
       },
       "lb-276-7UmK": {
         "addedDate": "2025-09-01",
@@ -40362,7 +40925,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Damián Szifron"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:19.723Z"
+        }
       },
       "lb-277-eOCm": {
         "addedDate": "2025-09-01",
@@ -40371,7 +40942,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Jordan Peele"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:19.996Z"
+        }
       },
       "lb-278-2aoU": {
         "addedDate": "2025-09-01",
@@ -40389,13 +40968,29 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Ridley Scott"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:20.804Z"
+        }
       },
       "lb-280-230G": {
         "addedDate": "2025-09-01",
         "addedDateSource": "letterboxd-export-2026-09-27",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Andrew Davis"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:21.088Z"
+        }
       },
       "lb-281-2a3i": {
         "addedDate": "2025-09-01",
@@ -40404,7 +40999,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Ron Howard"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:21.355Z"
+        }
       },
       "lb-282-1Q9K": {
         "addedDate": "2025-09-01",
@@ -40413,7 +41016,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Ron Howard"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:21.640Z"
+        }
       },
       "lb-283-hDPg": {
         "addedDate": "2025-09-01",
@@ -40422,7 +41033,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.531Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Aneesh Chaganty"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:21.982Z"
+        }
       },
       "lb-284-1Vpy": {
         "addedDate": "2025-09-01",
@@ -40431,7 +41050,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "John McTiernan"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:22.240Z"
+        }
       },
       "lb-285-2aVu": {
         "addedDate": "2025-09-01",
@@ -40440,7 +41067,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Paul McGuigan"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:22.503Z"
+        }
       },
       "lb-286-2bdI": {
         "addedDate": "2025-09-01",
@@ -40449,7 +41084,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.531Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Clint Eastwood"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:22.773Z"
+        }
       },
       "lb-287-2amk": {
         "addedDate": "2025-09-01",
@@ -40458,13 +41101,29 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Ron Howard"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:23.047Z"
+        }
       },
       "lb-288-2a6G": {
         "addedDate": "2025-09-01",
         "addedDateSource": "letterboxd-export-2026-09-27",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Ron Howard"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:23.331Z"
+        }
       },
       "lb-289-2avw": {
         "addedDate": "2025-09-01",
@@ -40473,13 +41132,29 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Barry Levinson"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:23.971Z"
+        }
       },
       "lb-290-26VK": {
         "addedDate": "2025-09-01",
         "addedDateSource": "letterboxd-export-2026-09-27",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Phil Alden Robinson"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:24.239Z"
+        }
       },
       "lb-291-dX0": {
         "addedDate": "2025-09-01",
@@ -40488,7 +41163,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Tom Hooper"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:24.498Z"
+        }
       },
       "lb-292-1S3E": {
         "addedDate": "2025-09-01",
@@ -40497,7 +41180,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Danny Boyle"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:24.773Z"
+        }
       },
       "lb-293-99fw": {
         "addedDate": "2025-09-01",
@@ -40506,7 +41197,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Jon M. Chu"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:25.037Z"
+        }
       },
       "lb-294-2Bsu": {
         "addedDate": "2025-09-01",
@@ -40515,7 +41214,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Louis Leterrier"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:25.309Z"
+        }
       },
       "lb-295-1Z5s": {
         "addedDate": "2025-09-01",
@@ -40524,7 +41231,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "George Roy Hill"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:25.588Z"
+        }
       },
       "lb-296-l7zS": {
         "addedDate": "2025-09-01",
@@ -40539,7 +41254,15 @@
         "addedDate": "2025-09-01",
         "addedDateSource": "letterboxd-export-2026-09-27",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "John McTiernan"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:25.847Z"
+        }
       },
       "lb-298-28Uk": {
         "addedDate": "2025-09-01",
@@ -40548,7 +41271,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "John G. Avildsen"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:26.123Z"
+        }
       },
       "lb-299-28U0": {
         "addedDate": "2025-09-01",
@@ -40557,7 +41288,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Ted Kotcheff"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:26.373Z"
+        }
       },
       "lb-300-28Vs": {
         "addedDate": "2025-09-02",
@@ -40566,7 +41305,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-02"
+        "watchedAddedDate": "2025-09-02",
+        "crew84": {
+          "directors": [
+            "Mary Harron"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:26.987Z"
+        }
       },
       "lb-301-2a2a": {
         "addedDate": "2025-09-03",
@@ -40575,7 +41322,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-03"
+        "watchedAddedDate": "2025-09-03",
+        "crew84": {
+          "directors": [
+            "Fernando Meirelles"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:27.309Z"
+        }
       },
       "lb-302-2E2E": {
         "addedDate": "2025-09-01",
@@ -40584,7 +41339,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.531Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "James Cameron"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:27.583Z"
+        }
       },
       "lb-303-2aQY": {
         "addedDate": "2025-09-01",
@@ -40593,7 +41356,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "James Cameron"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:27.856Z"
+        }
       },
       "lb-304-27M0": {
         "addedDate": "2025-09-14",
@@ -40602,7 +41373,16 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.531Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-14"
+        "watchedAddedDate": "2025-09-14",
+        "crew84": {
+          "directors": [
+            "Eric Bress",
+            "J. Mackye Gruber"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:28.120Z"
+        }
       },
       "lb-305-RKla": {
         "addedDate": "2025-09-01",
@@ -40611,7 +41391,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.531Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Katsuya Shigehara"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:28.396Z"
+        }
       },
       "lb-306-fA7G": {
         "addedDate": "2025-09-01",
@@ -40620,7 +41408,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.531Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Denis Villeneuve"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:28.674Z"
+        }
       },
       "lb-307-eSjI": {
         "addedDate": "2025-09-01",
@@ -40629,7 +41425,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.531Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Jon Favreau"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:28.947Z"
+        }
       },
       "lb-308-kPxE": {
         "addedDate": "2025-09-01",
@@ -40638,7 +41442,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.531Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Makoto Shinkai"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:29.205Z"
+        }
       },
       "lb-309-2aZ2": {
         "addedDate": "2025-09-01",
@@ -40647,7 +41459,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.531Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Steven Soderbergh"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:29.481Z"
+        }
       },
       "lb-310-azpY": {
         "addedDate": "2025-09-01",
@@ -40656,7 +41476,17 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.531Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Bob Persichetti",
+            "Peter Ramsey",
+            "Rodney Rothman"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:30.473Z"
+        }
       },
       "lb-311-z1jW": {
         "addedDate": "2025-09-15",
@@ -40665,7 +41495,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.531Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-15"
+        "watchedAddedDate": "2025-09-15",
+        "crew84": {
+          "directors": [
+            "Alex Garland"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:30.757Z"
+        }
       },
       "lb-312-1SRY": {
         "addedDate": "2025-09-15",
@@ -40674,7 +41512,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.531Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-15"
+        "watchedAddedDate": "2025-09-15",
+        "crew84": {
+          "directors": [
+            "Akira Kurosawa"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:31.053Z"
+        }
       },
       "lb-313-29eY": {
         "addedDate": "2025-09-15",
@@ -40683,7 +41529,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.531Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-15"
+        "watchedAddedDate": "2025-09-15",
+        "crew84": {
+          "directors": [
+            "Stanley Kubrick"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:31.319Z"
+        }
       },
       "lb-314-1blA": {
         "addedDate": "2025-09-20",
@@ -40692,7 +41546,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.531Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-20"
+        "watchedAddedDate": "2025-09-20",
+        "crew84": {
+          "directors": [
+            "Kiyoshi Kurosawa"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:31.581Z"
+        }
       },
       "lb-315-g32A": {
         "addedDate": "2025-09-01",
@@ -40701,7 +41563,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.531Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Yu Irie"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:31.838Z"
+        }
       },
       "lb-316-ekeY": {
         "addedDate": "2025-09-01",
@@ -40710,7 +41580,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.531Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Stephen Chbosky"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:32.092Z"
+        }
       },
       "lb-317-7FPC": {
         "addedDate": "2025-09-01",
@@ -40719,7 +41597,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "David Yates"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:32.354Z"
+        }
       },
       "lb-318-84xS": {
         "addedDate": "2025-09-01",
@@ -40728,7 +41614,16 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Byron Howard",
+            "Rich Moore"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:32.620Z"
+        }
       },
       "lb-319-2ab2": {
         "addedDate": "2025-09-17",
@@ -40737,7 +41632,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.531Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-17"
+        "watchedAddedDate": "2025-09-17",
+        "crew84": {
+          "directors": [
+            "Alfred Hitchcock"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:32.909Z"
+        }
       },
       "lb-320-28r8": {
         "addedDate": "2025-09-21",
@@ -40746,7 +41649,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-21"
+        "watchedAddedDate": "2025-09-21",
+        "crew84": {
+          "directors": [
+            "Alan Parker"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:45.274Z"
+        }
       },
       "lb-321-2aNK": {
         "addedDate": "2025-09-01",
@@ -40755,7 +41666,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Francis Ford Coppola"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:45.920Z"
+        }
       },
       "lb-322-2aeA": {
         "addedDate": "2025-09-01",
@@ -40764,7 +41683,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Miloš Forman"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:46.244Z"
+        }
       },
       "lb-323-1VEo": {
         "addedDate": "2025-09-01",
@@ -40773,7 +41700,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Andrew Stanton"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:46.507Z"
+        }
       },
       "lb-324-3qi6": {
         "addedDate": "2025-09-01",
@@ -40782,7 +41717,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Joss Whedon"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:46.774Z"
+        }
       },
       "lb-325-b5zc": {
         "addedDate": "2025-09-01",
@@ -40791,7 +41734,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Izuru Narushima"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:47.157Z"
+        }
       },
       "lb-326-4hka": {
         "addedDate": "2025-09-01",
@@ -40800,19 +41751,43 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Francis Lawrence"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:47.427Z"
+        }
       },
       "lb-327-4kUU": {
         "addedDate": "2025-09-23",
         "addedDateSource": "letterboxd-export-2026-09-27",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-23"
+        "watchedAddedDate": "2025-09-23",
+        "crew84": {
+          "directors": [
+            "Hiroaki Matsuyama"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:47.713Z"
+        }
       },
       "lb-328-DAQ": {
         "addedDate": "2025-09-01",
         "addedDateSource": "letterboxd-export-2026-09-27",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Hiroaki Matsuyama"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:47.988Z"
+        }
       },
       "lb-329-4TUK": {
         "addedDate": "2025-09-01",
@@ -40821,7 +41796,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Antoine Fuqua"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:48.250Z"
+        }
       },
       "lb-330-4JQS": {
         "addedDate": "2025-09-01",
@@ -40830,7 +41813,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Hayao Miyazaki"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:49.056Z"
+        }
       },
       "lb-331-26e2": {
         "addedDate": "2025-09-01",
@@ -40839,7 +41830,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "James Mangold"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:49.335Z"
+        }
       },
       "lb-332-28MA": {
         "addedDate": "2025-09-01",
@@ -40848,7 +41847,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Martin Scorsese"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:49.602Z"
+        }
       },
       "lb-333-2b4m": {
         "addedDate": "2025-09-01",
@@ -40857,7 +41864,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Hayao Miyazaki"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:49.885Z"
+        }
       },
       "lb-334-1Tp2": {
         "addedDate": "2025-09-01",
@@ -41079,7 +42094,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Yukiyo Teramoto"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:50.158Z"
+        }
       },
       "lb-359-gxWo": {
         "addedDate": "2025-09-01",
@@ -41088,7 +42111,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "crew84": {
+          "directors": [
+            "Atsushi Takahashi"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:50.443Z"
+        }
       },
       "lb-360-v2Wi": {
         "addedDate": "2026-01-01",
@@ -41097,7 +42128,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2026-01-01"
+        "watchedAddedDate": "2026-01-01",
+        "crew84": {
+          "directors": [
+            "Masayuki Suzuki"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:50.711Z"
+        }
       },
       "lb-361-26vC": {
         "addedDate": "2026-01-12",
@@ -41106,7 +42145,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2026-01-12"
+        "watchedAddedDate": "2026-01-12",
+        "crew84": {
+          "directors": [
+            "David Fincher"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:50.981Z"
+        }
       },
       "lb-362-4Oh4": {
         "addedDate": "2026-01-12",
@@ -41115,7 +42162,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2026-01-12"
+        "watchedAddedDate": "2026-01-12",
+        "crew84": {
+          "directors": [
+            "Giuseppe Tornatore"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:51.274Z"
+        }
       },
       "lb-363-b8wA": {
         "addedDate": "2026-01-12",
@@ -41124,7 +42179,15 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2026-01-12"
+        "watchedAddedDate": "2026-01-12",
+        "crew84": {
+          "directors": [
+            "Ruben Fleischer"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T04:15:51.577Z"
+        }
       },
       "lb-364-fpxe": {
         "addedDate": "2026-01-12",
