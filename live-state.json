@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791723197604,
-  "sourceUpdatedIso": "2026-10-11T12:53:17.604Z",
+  "sourceUpdatedAt": 1791723290639,
+  "sourceUpdatedIso": "2026-10-11T12:54:50.639Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -36655,7 +36655,13 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "path": "/vC4Dsk9xPcxeBMkvTme709THvMl.jpg",
+          "tmdbId": 38,
+          "checkedAt": "2026-10-11T12:54:29.924Z",
+          "provider": "tmdb"
+        }
       },
       "lb-9-1skk": {
         "addedDate": "2025-09-01",
@@ -36684,7 +36690,13 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "path": "/qzb0slJerd5bQgJxteJ5oAmfp09.jpg",
+          "tmdbId": 27205,
+          "checkedAt": "2026-10-11T12:54:28.950Z",
+          "provider": "tmdb"
+        }
       },
       "lb-10-kSz4": {
         "addedDate": "2025-09-01",
@@ -36947,7 +36959,13 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "path": "/vZ2KGsE9kDSZSuBqooh5wBK7EAK.jpg",
+          "tmdbId": 489,
+          "checkedAt": "2026-10-11T12:54:29.306Z",
+          "provider": "tmdb"
+        }
       },
       "lb-19-2cCk": {
         "addedDate": "2025-09-01",
@@ -37065,7 +37083,13 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "path": "/tlSn7UnfH2LxrBRwfTLs3JSYOTO.jpg",
+          "tmdbId": 603,
+          "checkedAt": "2026-10-11T12:54:27.587Z",
+          "provider": "tmdb"
+        }
       },
       "lb-23-2b8y": {
         "addedDate": "2025-09-01",
@@ -38217,7 +38241,13 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "path": "/mVdz3vlmioKWZaHTGfu99zIuayZ.jpg",
+          "tmdbId": 128,
+          "checkedAt": "2026-10-11T12:54:27.587Z",
+          "provider": "tmdb"
+        }
       },
       "lb-63-8MxC": {
         "addedDate": "2025-09-01",
@@ -39482,7 +39512,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 752
+        },
+        "crew84": {
+          "directors": [
+            "James McTeigue"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:53:41.936Z"
+        }
       },
       "lb-107-2a0I": {
         "addedDate": "2025-09-01",
@@ -40709,7 +40750,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 51739
+        },
+        "crew84": {
+          "directors": [
+            "Hiromasa Yonebayashi"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:53:42.379Z"
+        }
       },
       "lb-150-b5EQ": {
         "addedDate": "2025-09-01",
@@ -41396,7 +41448,11 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "crew87Failure": {
+          "at": 1791723222816,
+          "reason": "タイトル・公開年からTMDb作品を一意に照合できません"
+        }
       },
       "lb-174-29VI": {
         "addedDate": "2025-09-01",
@@ -41678,7 +41734,16 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "tmdbSeriesId": 93405,
+        "crew84": {
+          "directors": [],
+          "creators": [
+            "Hwang Dong-hyuk"
+          ],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:53:43.301Z"
+        }
       },
       "lb-184-2aH8": {
         "addedDate": "2025-09-01",
@@ -42140,7 +42205,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 257512
+        },
+        "crew84": {
+          "directors": [
+            "Kobun Shizuno"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:53:43.764Z"
+        }
       },
       "lb-201-aeu4": {
         "addedDate": "2025-09-01",
@@ -42161,7 +42237,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 316873
+        },
+        "crew84": {
+          "directors": [
+            "Kobun Shizuno"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:53:44.246Z"
+        }
       },
       "lb-202-d1km": {
         "addedDate": "2025-09-01",
@@ -42945,7 +43032,16 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "tmdbSeriesId": 65501,
+        "crew84": {
+          "directors": [],
+          "creators": [
+            "Tetsuya Honda"
+          ],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:53:44.689Z"
+        }
       },
       "lb-229-26tw": {
         "addedDate": "2025-09-01",
@@ -42992,7 +43088,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 122734
+        },
+        "crew84": {
+          "directors": [
+            "Nobuhiro Doi"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:53:45.138Z"
+        }
       },
       "lb-231-hd9e": {
         "addedDate": "2025-09-01",
@@ -43439,7 +43546,11 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "crew87Failure": {
+          "at": 1791723225605,
+          "reason": "タイトル・公開年からTMDb作品を一意に照合できません"
+        }
       },
       "lb-247-1L2a": {
         "addedDate": "2025-09-01",
@@ -43541,7 +43652,11 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "crew87Failure": {
+          "at": 1791723225822,
+          "reason": "タイトル・公開年からTMDb作品を一意に照合できません"
+        }
       },
       "lb-251-8TIi": {
         "addedDate": "2025-09-01",
@@ -43614,7 +43729,12 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "tmdbSeriesId": 45923,
+        "crew87Failure": {
+          "at": 1791723226073,
+          "reason": "作品は見つかりましたが監督・製作者情報が空です"
+        }
       },
       "lb-254-6ZCG": {
         "addedDate": "2025-09-01",
@@ -43632,7 +43752,11 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "crew87Failure": {
+          "at": 1791723226290,
+          "reason": "タイトル・公開年からTMDb作品を一意に照合できません"
+        }
       },
       "lb-255-xDsy": {
         "addedDate": "2025-09-01",
@@ -43769,7 +43893,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 1287819
+        },
+        "crew84": {
+          "directors": [
+            "Junichi Yasuda"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:53:46.749Z"
+        }
       },
       "lb-260-b5z2": {
         "addedDate": "2025-09-01",
@@ -44307,7 +44442,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 431
+        },
+        "crew84": {
+          "directors": [
+            "Vincenzo Natali"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:53:47.396Z"
+        }
       },
       "lb-279-215a": {
         "addedDate": "2025-09-01",
@@ -44812,7 +44958,11 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "crew87Failure": {
+          "at": 1791723227850,
+          "reason": "タイトル・公開年からTMDb作品を一意に照合できません"
+        }
       },
       "lb-297-28zG": {
         "addedDate": "2025-09-01",
@@ -45901,7 +46051,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 11621
+        },
+        "crew84": {
+          "directors": [
+            "Hayao Miyazaki"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:53:48.319Z"
+        }
       },
       "lb-335-2a0y": {
         "addedDate": "2025-09-01",
@@ -45919,7 +46080,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 608
+        },
+        "crew84": {
+          "directors": [
+            "Barry Sonnenfeld"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:53:48.810Z"
+        }
       },
       "lb-336-qH0": {
         "addedDate": "2025-10-06",
@@ -45940,7 +46112,24 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 55931
+        },
+        "crew84": {
+          "directors": [
+            "Yoshiaki Kawajiri",
+            "Mahiro Maeda",
+            "Shinichiro Watanabe",
+            "Takeshi Koike",
+            "Peter Chung",
+            "Kōji Morimoto",
+            "Andrew R. Jones"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:53:49.268Z"
+        }
       },
       "lb-337-1nRe": {
         "addedDate": "2025-10-08",
@@ -45961,7 +46150,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 29268
+        },
+        "crew84": {
+          "directors": [
+            "Yoshitarō Nomura"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:53:49.702Z"
+        }
       },
       "lb-338-a9lm": {
         "addedDate": "2025-10-08",
@@ -45982,7 +46182,19 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 315011
+        },
+        "crew84": {
+          "directors": [
+            "Shinji Higuchi",
+            "Hideaki Anno"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:53:50.141Z"
+        }
       },
       "lb-339-lPy0": {
         "addedDate": "2025-10-12",
@@ -46003,7 +46215,16 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "tmdbSeriesId": 9343,
+        "crew84": {
+          "directors": [],
+          "creators": [
+            "Satoshi Kon"
+          ],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:53:50.622Z"
+        }
       },
       "lb-340-3r58": {
         "addedDate": "2025-09-01",
@@ -46024,7 +46245,19 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 100402
+        },
+        "crew84": {
+          "directors": [
+            "Joe Russo",
+            "Anthony Russo"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:53:51.079Z"
+        }
       },
       "lb-341-1Qzy": {
         "addedDate": "2025-09-01",
@@ -46045,7 +46278,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 13223
+        },
+        "crew84": {
+          "directors": [
+            "Clint Eastwood"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:53:51.530Z"
+        }
       },
       "lb-342-X8s": {
         "addedDate": "2025-09-01",
@@ -46066,7 +46310,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 42341
+        },
+        "crew84": {
+          "directors": [
+            "Hiroshi Nishitani"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:53:51.964Z"
+        }
       },
       "lb-343-3zuA": {
         "addedDate": "2025-09-01",
@@ -46087,7 +46342,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 105210
+        },
+        "crew84": {
+          "directors": [
+            "Hideki Takeuchi"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:53:52.402Z"
+        }
       },
       "lb-344-5YPM": {
         "addedDate": "2025-10-13",
@@ -46108,7 +46374,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 198663
+        },
+        "crew84": {
+          "directors": [
+            "Wes Ball"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:53:52.891Z"
+        }
       },
       "lb-345-1USu": {
         "addedDate": "2025-10-27",
@@ -46129,7 +46406,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 11005
+        },
+        "crew84": {
+          "directors": [
+            "Penny Marshall"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:53:53.524Z"
+        }
       },
       "lb-346-1Aiw": {
         "addedDate": "2025-10-27",
@@ -46150,7 +46438,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 22617
+        },
+        "crew84": {
+          "directors": [
+            "Bob Giraldi"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:53:53.972Z"
+        }
       },
       "lb-347-4bW8": {
         "addedDate": "2025-11-07",
@@ -46171,7 +46470,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 128113
+        },
+        "crew84": {
+          "directors": [
+            "Kenji Uchida"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:53:54.408Z"
+        }
       },
       "lb-348-71k": {
         "addedDate": "2025-11-07",
@@ -46192,7 +46502,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 18
+        },
+        "crew84": {
+          "directors": [
+            "Luc Besson"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:53:55.041Z"
+        }
       },
       "lb-349-2aGY": {
         "addedDate": "2025-09-01",
@@ -46213,7 +46534,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 280
+        },
+        "crew84": {
+          "directors": [
+            "James Cameron"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:53:55.532Z"
+        }
       },
       "lb-350-2bcK": {
         "addedDate": "2025-09-01",
@@ -46234,7 +46566,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 77
+        },
+        "crew84": {
+          "directors": [
+            "Christopher Nolan"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:53:55.980Z"
+        }
       },
       "lb-351-2DqA": {
         "addedDate": "2025-09-01",
@@ -46255,7 +46598,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 76338
+        },
+        "crew84": {
+          "directors": [
+            "Alan Taylor"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:53:56.449Z"
+        }
       },
       "lb-352-14eM": {
         "addedDate": "2025-09-01",
@@ -46276,7 +46630,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 39202
+        },
+        "crew84": {
+          "directors": [
+            "Kenji Kodama"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:53:56.882Z"
+        }
       },
       "lb-353-Sw0": {
         "addedDate": "2025-09-01",
@@ -46297,7 +46662,21 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "path": "/qWja0V3iopt5H24LhaxTaXAMJcr.jpg",
+          "tmdbId": 44214,
+          "checkedAt": "2026-10-11T12:54:28.818Z",
+          "provider": "tmdb"
+        },
+        "crew84": {
+          "directors": [
+            "Darren Aronofsky"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:53:57.315Z"
+        }
       },
       "lb-354-aNGk": {
         "addedDate": "2025-09-01",
@@ -46318,7 +46697,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 329865
+        },
+        "crew84": {
+          "directors": [
+            "Denis Villeneuve"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:53:57.787Z"
+        }
       },
       "lb-355-8lFu": {
         "addedDate": "2025-11-26",
@@ -46339,7 +46729,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 274870
+        },
+        "crew84": {
+          "directors": [
+            "Morten Tyldum"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:53:58.226Z"
+        }
       },
       "lb-356-28dK": {
         "addedDate": "2025-12-08",
@@ -46360,7 +46761,19 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 1725
+        },
+        "crew84": {
+          "directors": [
+            "Robert Wise",
+            "Jerome Robbins"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:53:58.662Z"
+        }
       },
       "lb-357-1XHu": {
         "addedDate": "2025-12-08",
@@ -46381,7 +46794,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 9833
+        },
+        "crew84": {
+          "directors": [
+            "Joel Schumacher"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:53:59.116Z"
+        }
       },
       "lb-358-6uNS": {
         "addedDate": "2025-09-01",
@@ -47672,7 +48096,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 1642331
+        },
+        "crew84": {
+          "directors": [
+            "Will Mascaro"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:53:59.792Z"
+        }
       },
       "lb-404-27q4": {
         "addedDate": "2026-03-13",
@@ -49274,7 +49709,14 @@
             "source": "letterboxd-export",
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 1461632
+        },
+        "crew87Failure": {
+          "at": 1791723240041,
+          "reason": "作品は見つかりましたが監督・製作者情報が空です"
+        }
       },
       "lb-460-20eA": {
         "addedDate": "2025-09-01",
@@ -49411,7 +49853,16 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "tmdbSeriesId": 87108,
+        "crew84": {
+          "directors": [],
+          "creators": [
+            "Craig Mazin"
+          ],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:00.495Z"
+        }
       },
       "lb-465-F0vO": {
         "addedDate": "2026-04-19",
@@ -49491,7 +49942,12 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "tmdbSeriesId": 890,
+        "crew87Failure": {
+          "at": 1791723240946,
+          "reason": "作品は見つかりましたが監督・製作者情報が空です"
+        }
       },
       "lb-468-1GRM": {
         "addedDate": "2026-05-29",
@@ -49521,7 +49977,13 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "path": "/yBanOpNIccxjZlH4QH7ag4ojWOI.jpg",
+          "tmdbId": 18491,
+          "checkedAt": "2026-10-11T12:54:30.710Z",
+          "provider": "tmdb"
+        }
       },
       "lb-469-1MKi": {
         "addedDate": "2025-10-09",
@@ -49731,7 +50193,12 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "tmdbSeriesId": 73841,
+        "crew87Failure": {
+          "at": 1791723241372,
+          "reason": "作品は見つかりましたが監督・製作者情報が空です"
+        }
       },
       "lb-476-738K": {
         "addedDate": "2026-06-01",
@@ -49923,7 +50390,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 411088
+        },
+        "crew84": {
+          "directors": [
+            "Oriol Paulo"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:02.127Z"
+        }
       },
       "lb-483-1RSc": {
         "addedDate": "2026-08-03",
@@ -50060,7 +50538,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 1443
+        },
+        "crew84": {
+          "directors": [
+            "Sofia Coppola"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:02.606Z"
+        }
       },
       "lb-488-294O": {
         "addedDate": "2025-09-01",
@@ -50205,7 +50694,13 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "path": "/42H4UqYSkNxKAFYO1hkm8cvTyfd.jpg",
+          "tmdbId": 78,
+          "checkedAt": "2026-10-11T12:54:29.590Z",
+          "provider": "tmdb"
+        }
       },
       "lb-493-28No": {
         "addedDate": "2026-08-13",
@@ -51088,7 +51583,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 220289
+        },
+        "crew84": {
+          "directors": [
+            "James Ward Byrkit"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:03.289Z"
+        }
       },
       "lb-524-7bQA": {
         "addedDate": "2025-09-01",
@@ -51454,7 +51960,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 1209217
+        },
+        "crew84": {
+          "directors": [
+            "Chika Nagaoka"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:03.730Z"
+        }
       },
       "lb-537-14e8": {
         "addedDate": "2025-09-01",
@@ -51568,7 +52085,13 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "path": "/79vujbsWEbX4dzffBV541QXN6sf.jpg",
+          "tmdbId": 10494,
+          "checkedAt": "2026-10-11T12:54:28.876Z",
+          "provider": "tmdb"
+        }
       },
       "lb-541-27MO": {
         "addedDate": "2025-09-01",
@@ -52544,7 +53067,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 786
+        },
+        "crew84": {
+          "directors": [
+            "Cameron Crowe"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:03.946Z"
+        }
       },
       "lb-575-1fK0": {
         "addedDate": "2025-09-01",
@@ -52565,7 +53099,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 33320
+        },
+        "crew84": {
+          "directors": [
+            "Satoshi Kon"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:04.398Z"
+        }
       },
       "lb-576-18H4": {
         "addedDate": "2026-09-06",
@@ -52586,7 +53131,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 37257
+        },
+        "crew84": {
+          "directors": [
+            "Billy Wilder"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:04.651Z"
+        }
       },
       "added-anchor-577": {
         "addedDate": "2026-09-08",
@@ -52607,7 +53163,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 582
+        },
+        "crew84": {
+          "directors": [
+            "Florian Henckel von Donnersmarck"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:04.868Z"
+        }
       },
       "added-anchor-578": {
         "addedDate": "2026-09-12",
@@ -52628,7 +53195,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 103663
+        },
+        "crew84": {
+          "directors": [
+            "Thomas Vinterberg"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:05.083Z"
+        }
       },
       "added-anchor-579": {
         "addedDate": "2026-09-08",
@@ -52649,7 +53227,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 8740
+        },
+        "crew84": {
+          "directors": [
+            "George Sluizer"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:05.527Z"
+        }
       },
       "added-anchor-580": {
         "addedDate": "2026-09-08",
@@ -52670,7 +53259,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 26466
+        },
+        "crew84": {
+          "directors": [
+            "Christopher Smith"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:05.743Z"
+        }
       },
       "added-anchor-581": {
         "addedDate": "2026-09-09",
@@ -52691,7 +53291,20 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 42994
+        },
+        "crew84": {
+          "directors": [
+            "Katsuhiro Otomo",
+            "Kōji Morimoto",
+            "Tensai Okamura"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:05.994Z"
+        }
       },
       "added-anchor-582": {
         "addedDate": "2026-09-07",
@@ -52712,7 +53325,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 493922
+        },
+        "crew84": {
+          "directors": [
+            "Ari Aster"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:06.212Z"
+        }
       },
       "added-anchor-583": {
         "addedDate": "2026-09-11",
@@ -52733,7 +53357,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 396535
+        },
+        "crew84": {
+          "directors": [
+            "Yeon Sang-ho"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:06.428Z"
+        }
       },
       "base-perks-2012": {
         "addedDate": "2026-09-07",
@@ -52754,7 +53389,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 84892
+        },
+        "crew84": {
+          "directors": [
+            "Stephen Chbosky"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:06.644Z"
+        }
       },
       "base-chinatown-1974": {
         "addedDate": "2026-09-07",
@@ -52775,7 +53421,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 829
+        },
+        "crew84": {
+          "directors": [
+            "Roman Polanski"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:06.861Z"
+        }
       },
       "base-simple-plan-1998": {
         "addedDate": "2026-09-07",
@@ -52796,7 +53453,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 10223
+        },
+        "crew84": {
+          "directors": [
+            "Sam Raimi"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:07.109Z"
+        }
       },
       "base-clue-1985": {
         "addedDate": "2026-09-07",
@@ -52817,7 +53485,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 15196
+        },
+        "crew84": {
+          "directors": [
+            "Jonathan Lynn"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:07.326Z"
+        }
       },
       "base-timecrimes-2007": {
         "addedDate": "2026-09-07",
@@ -52838,7 +53517,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 14139
+        },
+        "crew84": {
+          "directors": [
+            "Nacho Vigalondo"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:07.542Z"
+        }
       },
       "custom-1789385859985-uylk": {
         "addedDate": "2026-09-11",
@@ -52859,7 +53549,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 653567
+        },
+        "crew84": {
+          "directors": [
+            "Lana Wilson"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:07.757Z"
+        }
       },
       "custom-1789385860026-8m1d": {
         "addedDate": "2026-09-11",
@@ -52880,7 +53581,11 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "crew87Failure": {
+          "at": 1791723248211,
+          "reason": "TMDB検索に失敗しました (HTTP 404)"
+        }
       },
       "custom-1789385860057-z7ka": {
         "addedDate": "2026-09-10",
@@ -52901,7 +53606,33 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 262833
+        },
+        "crew84": {
+          "directors": [
+            "Mamoru Oshii",
+            "Satoshi Kon",
+            "Osamu Kobayashi",
+            "Atsushi Takeuchi",
+            "Mahiro Maeda",
+            "Shojiro Nishimi",
+            "Kazuto Nakazawa",
+            "Michael Arias",
+            "Yasufumi Soejima",
+            "Ranji Murata",
+            "Shoji Kawamori",
+            "Makoto Shinkai",
+            "Akemi Hayashi",
+            "Shinji Kimura",
+            "Yasuyuki Shimizu",
+            "Tobira Oda"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:08.461Z"
+        }
       },
       "custom-1789385860088-xif1": {
         "addedDate": "2026-09-10",
@@ -52922,7 +53653,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 486947
+        },
+        "crew84": {
+          "directors": [
+            "Gustav Möller"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:08.677Z"
+        }
       },
       "custom-1789385860147-fi90": {
         "addedDate": "2026-09-09",
@@ -52943,7 +53685,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 110415
+        },
+        "crew84": {
+          "directors": [
+            "Bong Joon Ho"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:08.894Z"
+        }
       },
       "custom-1789385860198-bkq0": {
         "addedDate": "2026-09-09",
@@ -52964,7 +53717,12 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "tmdbSeriesId": 242331,
+        "crew87Failure": {
+          "at": 1791723249376,
+          "reason": "作品は見つかりましたが監督・製作者情報が空です"
+        }
       },
       "custom-1789385860247-k5ps": {
         "addedDate": "2026-09-09",
@@ -52985,7 +53743,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 4951
+        },
+        "crew84": {
+          "directors": [
+            "Gil Junger"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:09.592Z"
+        }
       },
       "custom-1789385860341-pd09": {
         "addedDate": "2026-09-09",
@@ -53006,7 +53775,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 10234
+        },
+        "crew84": {
+          "directors": [
+            "Michael Haneke"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:09.842Z"
+        }
       },
       "custom-1789385860389-93a2": {
         "addedDate": "2026-09-09",
@@ -53027,7 +53807,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 306947
+        },
+        "crew84": {
+          "directors": [
+            "Karyn Kusama"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:10.058Z"
+        }
       },
       "custom-1789385860426-8e86": {
         "addedDate": "2026-09-08",
@@ -53048,7 +53839,11 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "crew87Failure": {
+          "at": 1791723250489,
+          "reason": "TMDB検索に失敗しました (HTTP 404)"
+        }
       },
       "custom-1789385860459-6dw6": {
         "addedDate": "2026-09-08",
@@ -53069,7 +53864,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 923526
+        },
+        "crew84": {
+          "directors": [
+            "Hisashi Kimura"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:10.705Z"
+        }
       },
       "custom-1789385860498-gvii": {
         "addedDate": "2026-09-08",
@@ -53090,7 +53896,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 360635
+        },
+        "crew84": {
+          "directors": [
+            "Masayuki Suzuki"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:10.920Z"
+        }
       },
       "custom-1789385860541-6lzx": {
         "addedDate": "2026-09-08",
@@ -53111,7 +53928,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 51550
+        },
+        "crew84": {
+          "directors": [
+            "Masayuki Suzuki"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:11.169Z"
+        }
       },
       "custom-1789385860580-5td5": {
         "addedDate": "2026-09-08",
@@ -53132,7 +53960,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 663509
+        },
+        "crew84": {
+          "directors": [
+            "Tōya Satō"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:11.384Z"
+        }
       },
       "custom-1789385860628-ogsm": {
         "addedDate": "2026-09-08",
@@ -53153,7 +53992,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 106417
+        },
+        "crew84": {
+          "directors": [
+            "Tōya Satō"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:11.600Z"
+        }
       },
       "custom-1789385860674-ow4o": {
         "addedDate": "2026-09-08",
@@ -53174,7 +54024,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 37961
+        },
+        "crew84": {
+          "directors": [
+            "Tōya Satō"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:11.815Z"
+        }
       },
       "custom-1789385860718-itqh": {
         "addedDate": "2026-09-08",
@@ -53195,7 +54056,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 65841
+        },
+        "crew84": {
+          "directors": [
+            "Katsuyuki Motohiro"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:12.033Z"
+        }
       },
       "custom-1789385860756-dujj": {
         "addedDate": "2026-09-08",
@@ -53216,14 +54088,36 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 55384
+        },
+        "crew84": {
+          "directors": [
+            "Katsuyuki Motohiro"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:12.281Z"
+        }
       },
       "custom-1789385860847-w7kt": {
         "addedDate": "2026-09-08",
         "addedDateSource": "letterboxd-export-2026-09-27",
         "note": "結構すき。恩田の怪我や、サイコサイトや誘拐の話はありふれているが、ドラマとして綺麗にまとまってる。青島が刺されるのも含めて、スケールは少しドラマより大きいのかなって印象。ドラマの枠を抜けれてはない。",
         "noteSource": "letterboxd-export",
-        "noteImportedAt": "2026-10-10T10:44:56.532Z"
+        "noteImportedAt": "2026-10-10T10:44:56.532Z",
+        "poster84": {
+          "tmdbId": 55382
+        },
+        "crew84": {
+          "directors": [
+            "Katsuyuki Motohiro"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:12.497Z"
+        }
       },
       "custom-1789385860920-hsho": {
         "addedDate": "2026-09-08",
@@ -53244,7 +54138,20 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 11224
+        },
+        "crew84": {
+          "directors": [
+            "Clyde Geronimi",
+            "Wilfred Jackson",
+            "Hamilton Luske"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:12.712Z"
+        }
       },
       "custom-1789385861007-nhdf": {
         "addedDate": "2026-09-08",
@@ -53265,7 +54172,19 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 11544
+        },
+        "crew84": {
+          "directors": [
+            "Dean DeBlois",
+            "Chris Sanders"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:12.928Z"
+        }
       },
       "custom-1789385861101-oomm": {
         "addedDate": "2026-09-08",
@@ -53286,7 +54205,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 161699
+        },
+        "crew84": {
+          "directors": [
+            "Tsutomu Shibayama"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:13.144Z"
+        }
       },
       "custom-1789387775661-0mdh": {
         "addedDate": "2026-09-12",
@@ -53307,7 +54237,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 13398
+        },
+        "crew84": {
+          "directors": [
+            "Satoshi Kon"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:13.391Z"
+        }
       },
       "custom-1789408864046-u4p4": {
         "addedDate": "2026-09-15",
@@ -53328,7 +54269,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 2291
+        },
+        "crew84": {
+          "directors": [
+            "Adrian Lyne"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:13.607Z"
+        }
       },
       "custom-1789918000606-jgbg": {
         "addedDate": "2026-09-21",
@@ -53349,7 +54301,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 5548
+        },
+        "crew84": {
+          "directors": [
+            "Paul Verhoeven"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:13.823Z"
+        }
       },
       "custom-1789929101832-iwdt": {
         "addedDate": "2026-09-21",
@@ -53370,7 +54333,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 30018
+        },
+        "crew84": {
+          "directors": [
+            "Bong Joon Ho"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:14.039Z"
+        }
       },
       "custom-1790089712252-cunv": {
         "addedDate": "2026-09-23",
@@ -53391,7 +54365,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 4771
+        },
+        "crew84": {
+          "directors": [
+            "Ben Affleck"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:14.256Z"
+        }
       },
       "custom-1790185843981-dk0y": {
         "addedDate": "2026-09-24",
@@ -53412,7 +54397,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 215
+        },
+        "crew84": {
+          "directors": [
+            "Darren Lynn Bousman"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:14.508Z"
+        }
       },
       "custom-1790185844045-qhut": {
         "addedDate": "2026-09-24",
@@ -53433,7 +54429,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 420817
+        },
+        "crew84": {
+          "directors": [
+            "Guy Ritchie"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:14.976Z"
+        }
       },
       "custom-1790185844080-jquu": {
         "addedDate": "2026-09-24",
@@ -53454,7 +54461,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 281
+        },
+        "crew84": {
+          "directors": [
+            "Kathryn Bigelow"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:15.195Z"
+        }
       },
       "custom-1790185844116-j1vu": {
         "addedDate": "2026-09-23",
@@ -53475,7 +54493,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 132131
+        },
+        "crew84": {
+          "directors": [
+            "Harry A. Davis"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:15.411Z"
+        }
       },
       "custom-1790254612541-iyij": {
         "addedDate": "2026-09-25",
@@ -53496,7 +54525,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 68
+        },
+        "crew84": {
+          "directors": [
+            "Terry Gilliam"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:15.877Z"
+        }
       },
       "custom-1790322756418-p88i": {
         "addedDate": "2026-09-25",
@@ -53519,7 +54559,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 1368337
+        },
+        "crew84": {
+          "directors": [
+            "Christopher Nolan"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:16.312Z"
+        }
       },
       "custom-1790322756823-bi61": {
         "addedDate": "2026-09-25",
@@ -53542,7 +54593,11 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "crew87Failure": {
+          "at": 1791723256529,
+          "reason": "タイトル・公開年からTMDb作品を一意に照合できません"
+        }
       },
       "custom-1790322757185-u25f": {
         "addedDate": "2026-09-25",
@@ -53565,7 +54620,11 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "crew87Failure": {
+          "at": 1791723256982,
+          "reason": "タイトル・公開年からTMDb作品を一意に照合できません"
+        }
       },
       "custom-1790322757548-hd0x": {
         "addedDate": "2026-09-25",
@@ -53588,7 +54647,11 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "crew87Failure": {
+          "at": 1791723257231,
+          "reason": "タイトル・公開年からTMDb作品を一意に照合できません"
+        }
       },
       "custom-1790322757929-0kod": {
         "addedDate": "2026-09-25",
@@ -53611,7 +54674,11 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "crew87Failure": {
+          "at": 1791723257447,
+          "reason": "タイトル・公開年からTMDb作品を一意に照合できません"
+        }
       },
       "custom-1790322758188-46qe": {
         "addedDate": "2026-09-25",
@@ -53634,7 +54701,11 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "crew87Failure": {
+          "at": 1791723257664,
+          "reason": "タイトル・公開年からTMDb作品を一意に照合できません"
+        }
       },
       "custom-1790322758638-0juw": {
         "addedDate": "2026-09-25",
@@ -53657,7 +54728,16 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "tmdbSeriesId": 81016,
+        "crew84": {
+          "directors": [],
+          "creators": [
+            "Yoshiko Morishita"
+          ],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:18.159Z"
+        }
       },
       "custom-1790322759131-6bsn": {
         "addedDate": "2026-09-25",
@@ -53680,7 +54760,12 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "tmdbSeriesId": 296719,
+        "crew87Failure": {
+          "at": 1791723258618,
+          "reason": "作品は見つかりましたが監督・製作者情報が空です"
+        }
       },
       "custom-1790322759601-kg73": {
         "addedDate": "2026-09-25",
@@ -53703,7 +54788,12 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "tmdbSeriesId": 75701,
+        "crew87Failure": {
+          "at": 1791723259115,
+          "reason": "作品は見つかりましたが監督・製作者情報が空です"
+        }
       },
       "custom-1790322760094-cjek": {
         "addedDate": "2026-09-25",
@@ -53726,7 +54816,16 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "tmdbSeriesId": 275998,
+        "crew84": {
+          "directors": [],
+          "creators": [
+            "Rito Asami"
+          ],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:19.591Z"
+        }
       },
       "custom-1790322760608-2vle": {
         "addedDate": "2026-09-25",
@@ -53749,7 +54848,12 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "tmdbSeriesId": 88570,
+        "crew87Failure": {
+          "at": 1791723260039,
+          "reason": "作品は見つかりましたが監督・製作者情報が空です"
+        }
       },
       "custom-1790322760871-t21s": {
         "addedDate": "2026-09-25",
@@ -53772,7 +54876,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 915295
+        },
+        "crew84": {
+          "directors": [
+            "Noriyoshi Sakuma"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:20.255Z"
+        }
       },
       "custom-1790322761365-fzvo": {
         "addedDate": "2026-09-25",
@@ -53795,7 +54910,17 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "tmdbSeriesId": 98929,
+        "crew84": {
+          "directors": [],
+          "creators": [
+            "Daisuke Yamamuro",
+            "Yasuharu Ishii"
+          ],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:20.699Z"
+        }
       },
       "custom-1790322761655-im7g": {
         "addedDate": "2026-09-25",
@@ -53818,7 +54943,11 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "crew87Failure": {
+          "at": 1791723260953,
+          "reason": "タイトル・公開年からTMDb作品を一意に照合できません"
+        }
       },
       "custom-1790322761955-twge": {
         "addedDate": "2026-09-25",
@@ -53841,7 +54970,11 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "crew87Failure": {
+          "at": 1791723261171,
+          "reason": "タイトル・公開年からTMDb作品を一意に照合できません"
+        }
       },
       "custom-1790322762266-mrn9": {
         "addedDate": "2026-09-25",
@@ -53864,7 +54997,11 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "crew87Failure": {
+          "at": 1791723261388,
+          "reason": "タイトル・公開年からTMDb作品を一意に照合できません"
+        }
       },
       "custom-1790322762725-70dy": {
         "addedDate": "2026-09-25",
@@ -53887,7 +55024,12 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "tmdbSeriesId": 249906,
+        "crew87Failure": {
+          "at": 1791723261874,
+          "reason": "作品は見つかりましたが監督・製作者情報が空です"
+        }
       },
       "custom-1790322763195-rro9": {
         "addedDate": "2026-09-25",
@@ -53910,7 +55052,16 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "tmdbSeriesId": 78685,
+        "crew84": {
+          "directors": [],
+          "creators": [
+            "Ryota Kosawa"
+          ],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:22.327Z"
+        }
       },
       "custom-1790322763462-yaoz": {
         "addedDate": "2026-09-25",
@@ -53933,7 +55084,11 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "crew87Failure": {
+          "at": 1791723262580,
+          "reason": "タイトル・公開年からTMDb作品を一意に照合できません"
+        }
       },
       "custom-1790322763953-lex8": {
         "addedDate": "2026-09-25",
@@ -53956,7 +55111,12 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "tmdbSeriesId": 4939,
+        "crew87Failure": {
+          "at": 1791723263044,
+          "reason": "作品は見つかりましたが監督・製作者情報が空です"
+        }
       },
       "custom-1790322764349-xp48": {
         "addedDate": "2026-09-25",
@@ -53979,7 +55139,11 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "crew87Failure": {
+          "at": 1791723263260,
+          "reason": "タイトル・公開年からTMDb作品を一意に照合できません"
+        }
       },
       "custom-1790322764890-2w6w": {
         "addedDate": "2026-09-25",
@@ -54002,7 +55166,12 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "tmdbSeriesId": 218038,
+        "crew87Failure": {
+          "at": 1791723263710,
+          "reason": "作品は見つかりましたが監督・製作者情報が空です"
+        }
       },
       "custom-1790322765489-7o9h": {
         "addedDate": "2026-09-25",
@@ -54025,7 +55194,12 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "tmdbSeriesId": 68293,
+        "crew87Failure": {
+          "at": 1791723264159,
+          "reason": "作品は見つかりましたが監督・製作者情報が空です"
+        }
       },
       "custom-1790322766063-ab5l": {
         "addedDate": "2026-09-25",
@@ -54048,7 +55222,12 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "tmdbSeriesId": 210955,
+        "crew87Failure": {
+          "at": 1791723264662,
+          "reason": "作品は見つかりましたが監督・製作者情報が空です"
+        }
       },
       "custom-1790322766664-63q5": {
         "addedDate": "2026-09-25",
@@ -54071,7 +55250,12 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "tmdbSeriesId": 79983,
+        "crew87Failure": {
+          "at": 1791723265110,
+          "reason": "作品は見つかりましたが監督・製作者情報が空です"
+        }
       },
       "custom-1790322767220-ea4l": {
         "addedDate": "2026-09-25",
@@ -54094,7 +55278,16 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "tmdbSeriesId": 74706,
+        "crew84": {
+          "directors": [],
+          "creators": [
+            "Jun Ikeido"
+          ],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:25.550Z"
+        }
       },
       "custom-1790322767762-8oh7": {
         "addedDate": "2026-09-25",
@@ -54117,7 +55310,17 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "tmdbSeriesId": 126849,
+        "crew84": {
+          "directors": [],
+          "creators": [
+            "Hiroaki Matsuyama",
+            "Tomoko Aizawa"
+          ],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:25.995Z"
+        }
       },
       "custom-1790322768095-ya1h": {
         "addedDate": "2026-09-25",
@@ -54140,7 +55343,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 1064669
+        },
+        "crew84": {
+          "directors": [
+            "Hiroaki Matsuyama"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:26.211Z"
+        }
       },
       "custom-1790322768630-3s2i": {
         "addedDate": "2026-09-25",
@@ -54161,7 +55375,16 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "tmdbSeriesId": 75058,
+        "crew84": {
+          "directors": [],
+          "creators": [
+            "Yoshihiro Izumi"
+          ],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:26.705Z"
+        }
       },
       "custom-1790322769206-k4pm": {
         "addedDate": "2026-09-25",
@@ -54182,7 +55405,16 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "tmdbSeriesId": 83119,
+        "crew84": {
+          "directors": [],
+          "creators": [
+            "Hiroyuki Nishimori"
+          ],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:27.138Z"
+        }
       },
       "custom-1790322769753-zbsb": {
         "addedDate": "2026-09-25",
@@ -54203,7 +55435,12 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "tmdbSeriesId": 85529,
+        "crew87Failure": {
+          "at": 1791723267606,
+          "reason": "作品は見つかりましたが監督・製作者情報が空です"
+        }
       },
       "custom-1790352007604-3jj6": {
         "addedDate": "2026-09-26",
@@ -54226,7 +55463,19 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 445571
+        },
+        "crew84": {
+          "directors": [
+            "John Francis Daley",
+            "Jonathan Goldstein"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:28.044Z"
+        }
       },
       "custom-1790358520071-ybym": {
         "addedDate": "2026-09-26",
@@ -54249,7 +55498,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 805627
+        },
+        "crew84": {
+          "directors": [
+            "Junta Yamaguchi"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:28.483Z"
+        }
       },
       "custom-1790420198451-g42l": {
         "addedDate": "2026-09-26",
@@ -54272,7 +55532,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 1955
+        },
+        "crew84": {
+          "directors": [
+            "David Lynch"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:28.740Z"
+        }
       },
       "custom-1790423279439-sn81": {
         "addedDate": "2026-09-26",
@@ -54295,7 +55566,16 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "tmdbSeriesId": 65501,
+        "crew84": {
+          "directors": [],
+          "creators": [
+            "Tetsuya Honda"
+          ],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:28.951Z"
+        }
       },
       "custom-1790423279786-lguu": {
         "addedDate": "2026-09-26",
@@ -54318,7 +55598,11 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "crew87Failure": {
+          "at": 1791723269165,
+          "reason": "タイトル・公開年からTMDb作品を一意に照合できません"
+        }
       },
       "custom-1790423280120-qki8": {
         "addedDate": "2026-09-26",
@@ -54341,7 +55625,11 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "crew87Failure": {
+          "at": 1791723269393,
+          "reason": "タイトル・公開年からTMDb作品を一意に照合できません"
+        }
       },
       "custom-1790423280570-6eki": {
         "addedDate": "2026-09-26",
@@ -54364,7 +55652,11 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "crew87Failure": {
+          "at": 1791723269674,
+          "reason": "タイトル・公開年からTMDb作品を一意に照合できません"
+        }
       },
       "custom-1790423280875-9b4j": {
         "addedDate": "2026-09-26",
@@ -54373,7 +55665,12 @@
         "reportedWatchedDate": "2026-09-26",
         "note": "臭めのネタもあるがいい感じのテンポ感と恋愛とドラマと捜査。熱い男の捜査っていうよくあるやつだが、面白くはある。",
         "noteSource": "letterboxd-export",
-        "noteImportedAt": "2026-10-10T10:44:56.532Z"
+        "noteImportedAt": "2026-10-10T10:44:56.532Z",
+        "tmdbSeriesId": 20794,
+        "crew87Failure": {
+          "at": 1791723270124,
+          "reason": "作品は見つかりましたが監督・製作者情報が空です"
+        }
       },
       "custom-1790433924185-cva1": {
         "addedDate": "2026-09-27",
@@ -54396,7 +55693,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 587792
+        },
+        "crew84": {
+          "directors": [
+            "Max Barbakow"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:30.347Z"
+        }
       },
       "custom-1790433924585-k3b0": {
         "addedDate": "2026-09-26",
@@ -54419,7 +55727,12 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "tmdbSeriesId": 303405,
+        "crew87Failure": {
+          "at": 1791723270804,
+          "reason": "作品は見つかりましたが監督・製作者情報が空です"
+        }
       },
       "custom-1790433925207-8m83": {
         "addedDate": "2026-09-26",
@@ -54442,7 +55755,17 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "tmdbSeriesId": 253960,
+        "crew84": {
+          "directors": [],
+          "creators": [
+            "Yeon Sang-ho",
+            "Ryu Yong-jae"
+          ],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:31.264Z"
+        }
       },
       "custom-1790458138074-p8hs": {
         "addedDate": "2026-09-27",
@@ -54465,7 +55788,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 548
+        },
+        "crew84": {
+          "directors": [
+            "Akira Kurosawa"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:31.479Z"
+        }
       },
       "custom-1790458138407-21ka": {
         "addedDate": "2026-09-27",
@@ -54488,7 +55822,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "tmdbSeriesId": 249929,
+        "crew84": {
+          "directors": [],
+          "creators": [
+            "Eriko Shinozaki",
+            "Keita Motohashi",
+            "Yuki Saito"
+          ],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:31.965Z"
+        }
       },
       "custom-1790458138748-ky5y": {
         "addedDate": "2026-09-27",
@@ -54511,7 +55856,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 257327
+        },
+        "crew84": {
+          "directors": [
+            "Masato Hijikata"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:32.180Z"
+        }
       },
       "custom-1790508958519-2edt": {
         "addedDate": "2026-09-27",
@@ -54534,7 +55890,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 1050035
+        },
+        "crew84": {
+          "directors": [
+            "Hirokazu Kore-eda"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:32.616Z"
+        }
       },
       "custom-1790508958909-q6d6": {
         "addedDate": "2026-09-27",
@@ -54557,7 +55924,12 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "tmdbSeriesId": 313024,
+        "crew87Failure": {
+          "at": 1791723272834,
+          "reason": "作品は見つかりましたが監督・製作者情報が空です"
+        }
       },
       "custom-1790508959270-dbu3": {
         "addedDate": "2026-09-27",
@@ -54580,7 +55952,12 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "tmdbSeriesId": 313028,
+        "crew87Failure": {
+          "at": 1791723273052,
+          "reason": "作品は見つかりましたが監督・製作者情報が空です"
+        }
       },
       "custom-1790508959663-6kld": {
         "addedDate": "2026-09-27",
@@ -54603,7 +55980,11 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "crew87Failure": {
+          "at": 1791723273301,
+          "reason": "タイトル・公開年からTMDb作品を一意に照合できません"
+        }
       },
       "custom-1790508960074-n6fj": {
         "addedDate": "2026-09-27",
@@ -54626,7 +56007,12 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "tmdbSeriesId": 31911,
+        "crew87Failure": {
+          "at": 1791723273793,
+          "reason": "作品は見つかりましたが監督・製作者情報が空です"
+        }
       },
       "custom-1790665767820-1d1q": {
         "publishedAt": "Tue, 29 Sep 2026 19:16:58 +1300",
@@ -54655,7 +56041,19 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 473033
+        },
+        "crew84": {
+          "directors": [
+            "Josh Safdie",
+            "Benny Safdie"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:34.228Z"
+        }
       },
       "custom-1790665768168-uxk0": {
         "publishedAt": "Tue, 29 Sep 2026 03:42:17 +1300",
@@ -54678,7 +56076,11 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "crew87Failure": {
+          "at": 1791723274446,
+          "reason": "タイトル・公開年からTMDb作品を一意に照合できません"
+        }
       },
       "custom-1790509701063-jule": {
         "publishedAt": "Mon, 28 Sep 2026 00:46:30 +1300",
@@ -54699,7 +56101,11 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "crew87Failure": {
+          "at": 1791723274010,
+          "reason": "タイトル・公開年からTMDb作品を一意に照合できません"
+        }
       },
       "custom-1790965876380-nqs0": {
         "publishedAt": "Sat, 3 Oct 2026 07:13:15 +1300",
@@ -54728,7 +56134,12 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "tmdbSeriesId": 102014,
+        "crew87Failure": {
+          "at": 1791723275376,
+          "reason": "作品は見つかりましたが監督・製作者情報が空です"
+        }
       },
       "custom-1790960881562-cn74": {
         "publishedAt": "Sat, 3 Oct 2026 04:45:22 +1300",
@@ -54755,7 +56166,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 27064
+        },
+        "crew84": {
+          "directors": [
+            "Paul Schrader"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:34.916Z"
+        }
       },
       "custom-1790924446793-9ts4": {
         "publishedAt": "Thu, 1 Oct 2026 20:44:56 +1300",
@@ -54782,7 +56204,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 9426
+        },
+        "crew84": {
+          "directors": [
+            "David Cronenberg"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:34.697Z"
+        }
       },
       "custom-1790971112940-kuhf": {
         "publishedAt": "Sat, 3 Oct 2026 07:24:10 +1300",
@@ -54811,7 +56244,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 26130
+        },
+        "crew84": {
+          "directors": [
+            "Katsuyuki Motohiro"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:35.593Z"
+        }
       },
       "custom-1791018448490-bpdn": {
         "publishedAt": "Sat, 3 Oct 2026 22:06:52 +1300",
@@ -54849,7 +56293,12 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-03"
+        "watchedAddedDate": "2026-10-03",
+        "tmdbSeriesId": 29452,
+        "crew87Failure": {
+          "at": 1791723276049,
+          "reason": "作品は見つかりましたが監督・製作者情報が空です"
+        }
       },
       "custom-1791018448927-b4o3": {
         "publishedAt": "Sat, 3 Oct 2026 09:28:15 +1300",
@@ -54877,7 +56326,11 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-03"
+        "watchedAddedDate": "2026-10-03",
+        "crew87Failure": {
+          "at": 1791723276297,
+          "reason": "タイトル・公開年からTMDb作品を一意に照合できません"
+        }
       },
       "custom-1791023391963-vdu9": {
         "publishedAt": "Sat, 3 Oct 2026 22:55:24 +1300",
@@ -54905,7 +56358,18 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-03"
+        "watchedAddedDate": "2026-10-03",
+        "poster84": {
+          "tmdbId": 10386
+        },
+        "crew84": {
+          "directors": [
+            "Brad Bird"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:36.516Z"
+        }
       },
       "custom-1791036345616-3tph": {
         "publishedAt": "Sun, 4 Oct 2026 02:07:33 +1300",
@@ -54943,7 +56407,18 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-04"
+        "watchedAddedDate": "2026-10-04",
+        "poster84": {
+          "tmdbId": 204
+        },
+        "crew84": {
+          "directors": [
+            "Henri-Georges Clouzot"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:36.732Z"
+        }
       },
       "custom-1791057232858-35ld": {
         "publishedAt": "Sun, 4 Oct 2026 07:37:58 +1300",
@@ -54971,7 +56446,18 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-04"
+        "watchedAddedDate": "2026-10-04",
+        "poster84": {
+          "tmdbId": 502033
+        },
+        "crew84": {
+          "directors": [
+            "Darius Marder"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:37.177Z"
+        }
       },
       "custom-1791113241266-l3xb": {
         "publishedAt": "Sun, 4 Oct 2026 22:41:52 +1300",
@@ -54999,7 +56485,18 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-04"
+        "watchedAddedDate": "2026-10-04",
+        "poster84": {
+          "tmdbId": 359344
+        },
+        "crew84": {
+          "directors": [
+            "Sang-il Lee"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:37.394Z"
+        }
       },
       "custom-1791113241627-mf17": {
         "publishedAt": "Sun, 4 Oct 2026 10:13:14 +1300",
@@ -55027,7 +56524,18 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-04"
+        "watchedAddedDate": "2026-10-04",
+        "poster84": {
+          "tmdbId": 503314
+        },
+        "crew84": {
+          "directors": [
+            "Tatsuya Nagamine"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:37.644Z"
+        }
       },
       "custom-1791113241748-xivg": {
         "publishedAt": "Sun, 4 Oct 2026 10:12:05 +1300",
@@ -55065,7 +56573,12 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-04"
+        "watchedAddedDate": "2026-10-04",
+        "tmdbSeriesId": 85937,
+        "crew87Failure": {
+          "at": 1791723278127,
+          "reason": "作品は見つかりましたが監督・製作者情報が空です"
+        }
       },
       "custom-1791113242089-wnyx": {
         "publishedAt": "Sun, 4 Oct 2026 10:09:23 +1300",
@@ -55093,7 +56606,18 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-04"
+        "watchedAddedDate": "2026-10-04",
+        "poster84": {
+          "tmdbId": 126963
+        },
+        "crew84": {
+          "directors": [
+            "Masahiro Hosoda"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:38.344Z"
+        }
       },
       "custom-1791113242437-wcok": {
         "publishedAt": "Sun, 4 Oct 2026 10:07:31 +1300",
@@ -55121,7 +56645,18 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-04"
+        "watchedAddedDate": "2026-10-04",
+        "poster84": {
+          "tmdbId": 610150
+        },
+        "crew84": {
+          "directors": [
+            "Tetsuro Kodama"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:38.559Z"
+        }
       },
       "custom-1791122852357-22zp": {
         "publishedAt": "Mon, 5 Oct 2026 01:08:27 +1300",
@@ -55159,7 +56694,18 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-05"
+        "watchedAddedDate": "2026-10-05",
+        "poster84": {
+          "tmdbId": 38142
+        },
+        "crew84": {
+          "directors": [
+            "Makoto Shinkai"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:38.775Z"
+        }
       },
       "custom-1791139747386-vy04": {
         "publishedAt": "Mon, 5 Oct 2026 05:14:36 +1300",
@@ -55197,7 +56743,18 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-05"
+        "watchedAddedDate": "2026-10-05",
+        "poster84": {
+          "tmdbId": 414906
+        },
+        "crew84": {
+          "directors": [
+            "Matt Reeves"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:39.025Z"
+        }
       },
       "custom-1791139748091-0goj": {
         "publishedAt": "Mon, 5 Oct 2026 04:38:04 +1300",
@@ -55235,7 +56792,12 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-05"
+        "watchedAddedDate": "2026-10-05",
+        "tmdbSeriesId": 95479,
+        "crew87Failure": {
+          "at": 1791723279489,
+          "reason": "作品は見つかりましたが監督・製作者情報が空です"
+        }
       },
       "custom-1791353624251-egky": {
         "publishedAt": "Wed, 7 Oct 2026 17:56:56 +1300",
@@ -55263,7 +56825,18 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-07"
+        "watchedAddedDate": "2026-10-07",
+        "poster84": {
+          "tmdbId": 968
+        },
+        "crew84": {
+          "directors": [
+            "Sidney Lumet"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:39.705Z"
+        }
       },
       "custom-1791362786595-8onp": {
         "publishedAt": "Wed, 7 Oct 2026 20:54:32 +1300",
@@ -55291,7 +56864,18 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-07"
+        "watchedAddedDate": "2026-10-07",
+        "poster84": {
+          "tmdbId": 60308
+        },
+        "crew84": {
+          "directors": [
+            "Bennett Miller"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:39.923Z"
+        }
       },
       "custom-1791374649583-3zqi": {
         "publishedAt": "Wed, 7 Oct 2026 22:52:04 +1300",
@@ -55319,7 +56903,18 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-07"
+        "watchedAddedDate": "2026-10-07",
+        "poster84": {
+          "tmdbId": 933260
+        },
+        "crew84": {
+          "directors": [
+            "Coralie Fargeat"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:40.142Z"
+        }
       },
       "custom-1791377114135-l3hd": {
         "publishedAt": "Thu, 8 Oct 2026 01:44:49 +1300",
@@ -55357,7 +56952,11 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-08"
+        "watchedAddedDate": "2026-10-08",
+        "crew87Failure": {
+          "at": 1791723280394,
+          "reason": "タイトル・公開年からTMDb作品を一意に照合できません"
+        }
       },
       "custom-1791377844608-310l": {
         "publishedAt": "Thu, 8 Oct 2026 01:56:45 +1300",
@@ -55395,7 +56994,11 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-08"
+        "watchedAddedDate": "2026-10-08",
+        "crew87Failure": {
+          "at": 1791723280611,
+          "reason": "タイトル・公開年からTMDb作品を一意に照合できません"
+        }
       },
       "custom-1791379032352-50zf": {
         "publishedAt": "Thu, 8 Oct 2026 02:16:21 +1300",
@@ -55433,7 +57036,11 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-08"
+        "watchedAddedDate": "2026-10-08",
+        "crew87Failure": {
+          "at": 1791723280828,
+          "reason": "タイトル・公開年からTMDb作品を一意に照合できません"
+        }
       },
       "custom-1791381276187-mxp2": {
         "publishedAt": "Thu, 8 Oct 2026 02:27:04 +1300",
@@ -55471,7 +57078,11 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-08"
+        "watchedAddedDate": "2026-10-08",
+        "crew87Failure": {
+          "at": 1791723281045,
+          "reason": "タイトル・公開年からTMDb作品を一意に照合できません"
+        }
       },
       "custom-1791382461963-kb93": {
         "publishedAt": "Thu, 8 Oct 2026 06:52:07 +1300",
@@ -55499,7 +57110,11 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-08"
+        "watchedAddedDate": "2026-10-08",
+        "crew87Failure": {
+          "at": 1791723281262,
+          "reason": "タイトル・公開年からTMDb作品を一意に照合できません"
+        }
       },
       "custom-1791382999848-25pc": {
         "publishedAt": "Thu, 8 Oct 2026 01:37:53 +1300",
@@ -55537,7 +57152,18 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-08"
+        "watchedAddedDate": "2026-10-08",
+        "poster84": {
+          "tmdbId": 45070
+        },
+        "crew84": {
+          "directors": [
+            "Ryôichi Kimizuka"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:41.512Z"
+        }
       },
       "custom-1791392809656-3sql": {
         "publishedAt": "Thu, 8 Oct 2026 06:53:33 +1300",
@@ -55565,7 +57191,11 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-08"
+        "watchedAddedDate": "2026-10-08",
+        "crew87Failure": {
+          "at": 1791723281729,
+          "reason": "タイトル・公開年からTMDb作品を一意に照合できません"
+        }
       },
       "custom-1791392809782-lca8": {
         "publishedAt": "Thu, 8 Oct 2026 05:42:52 +1300",
@@ -55593,7 +57223,18 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-08"
+        "watchedAddedDate": "2026-10-08",
+        "tmdbSeriesId": 114463,
+        "crew84": {
+          "directors": [],
+          "creators": [
+            "Trent Correy",
+            "Josie Trinidad",
+            "Michael Herrera"
+          ],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:42.155Z"
+        }
       },
       "custom-1791392810098-rjyg": {
         "publishedAt": "Thu, 8 Oct 2026 05:32:13 +1300",
@@ -55621,7 +57262,19 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-08"
+        "watchedAddedDate": "2026-10-08",
+        "poster84": {
+          "tmdbId": 808
+        },
+        "crew84": {
+          "directors": [
+            "Andrew Adamson",
+            "Vicky Jenson"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:42.372Z"
+        }
       },
       "custom-1791393440445-arl6": {
         "publishedAt": "Thu, 8 Oct 2026 06:55:45 +1300",
@@ -55662,7 +57315,11 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-08"
+        "watchedAddedDate": "2026-10-08",
+        "crew87Failure": {
+          "at": 1791723282589,
+          "reason": "タイトル・公開年からTMDb作品を一意に照合できません"
+        }
       },
       "custom-1791394775097-fjc5": {
         "publishedAt": "Thu, 8 Oct 2026 06:56:56 +1300",
@@ -55690,7 +57347,11 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-08"
+        "watchedAddedDate": "2026-10-08",
+        "crew87Failure": {
+          "at": 1791723282843,
+          "reason": "タイトル・公開年からTMDb作品を一意に照合できません"
+        }
       },
       "custom-1791396105970-bm2m": {
         "publishedAt": "Thu, 8 Oct 2026 06:59:10 +1300",
@@ -55718,7 +57379,11 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-08"
+        "watchedAddedDate": "2026-10-08",
+        "crew87Failure": {
+          "at": 1791723283060,
+          "reason": "タイトル・公開年からTMDb作品を一意に照合できません"
+        }
       },
       "custom-1791397387325-yqut": {
         "publishedAt": "Thu, 8 Oct 2026 07:22:48 +1300",
@@ -55746,7 +57411,11 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-08"
+        "watchedAddedDate": "2026-10-08",
+        "crew87Failure": {
+          "at": 1791723283276,
+          "reason": "タイトル・公開年からTMDb作品を一意に照合できません"
+        }
       },
       "custom-1791398329125-3r8f": {
         "publishedAt": "Thu, 8 Oct 2026 07:38:09 +1300",
@@ -55774,7 +57443,11 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-08"
+        "watchedAddedDate": "2026-10-08",
+        "crew87Failure": {
+          "at": 1791723283493,
+          "reason": "タイトル・公開年からTMDb作品を一意に照合できません"
+        }
       },
       "custom-1791447953969-ah3e": {
         "publishedAt": "Thu, 8 Oct 2026 18:52:25 +1300",
@@ -55809,7 +57482,17 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-08"
+        "watchedAddedDate": "2026-10-08",
+        "crew84": {
+          "directors": [
+            "Otto Bathurst"
+          ],
+          "creators": [
+            "Charlie Brooker"
+          ],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:43.934Z"
+        }
       },
       "custom-1791449338315-twqr": {
         "publishedAt": "Thu, 8 Oct 2026 21:32:23 +1300",
@@ -55844,7 +57527,17 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-08"
+        "watchedAddedDate": "2026-10-08",
+        "crew84": {
+          "directors": [
+            "Euros Lyn"
+          ],
+          "creators": [
+            "Charlie Brooker"
+          ],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:44.393Z"
+        }
       },
       "custom-1791469823654-dpbh": {
         "publishedAt": "Fri, 9 Oct 2026 02:57:54 +1300",
@@ -55889,7 +57582,17 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-09"
+        "watchedAddedDate": "2026-10-09",
+        "crew84": {
+          "directors": [
+            "Owen Harris"
+          ],
+          "creators": [
+            "Charlie Brooker"
+          ],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:44.833Z"
+        }
       },
       "custom-1791469824035-6gcd": {
         "publishedAt": "Thu, 8 Oct 2026 22:31:53 +1300",
@@ -55924,7 +57627,17 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-08"
+        "watchedAddedDate": "2026-10-08",
+        "crew84": {
+          "directors": [
+            "Brian Welsh"
+          ],
+          "creators": [
+            "Charlie Brooker"
+          ],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:45.257Z"
+        }
       },
       "custom-1791476522514-wpj8": {
         "publishedAt": "Fri, 9 Oct 2026 05:21:19 +1300",
@@ -55962,7 +57675,11 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-09"
+        "watchedAddedDate": "2026-10-09",
+        "crew87Failure": {
+          "at": 1791723285474,
+          "reason": "タイトル・公開年からTMDb作品を一意に照合できません"
+        }
       },
       "custom-1791476522907-cd9b": {
         "publishedAt": "Fri, 9 Oct 2026 03:32:29 +1300",
@@ -56007,7 +57724,17 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-09"
+        "watchedAddedDate": "2026-10-09",
+        "crew84": {
+          "directors": [
+            "Carl Tibbetts"
+          ],
+          "creators": [
+            "Charlie Brooker"
+          ],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:45.911Z"
+        }
       },
       "custom-1791480095339-p808": {
         "publishedAt": "Fri, 9 Oct 2026 06:20:52 +1300",
@@ -56035,7 +57762,11 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-09"
+        "watchedAddedDate": "2026-10-09",
+        "crew87Failure": {
+          "at": 1791723286162,
+          "reason": "タイトル・公開年からTMDb作品を一意に照合できません"
+        }
       },
       "custom-1791553824276-cl9b": {
         "publishedAt": "Sat, 10 Oct 2026 02:46:51 +1300",
@@ -56073,7 +57804,11 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-10"
+        "watchedAddedDate": "2026-10-10",
+        "crew87Failure": {
+          "at": 1791723286379,
+          "reason": "タイトル・公開年からTMDb作品を一意に照合できません"
+        }
       },
       "custom-1791563602274-2p5j": {
         "publishedAt": "Sat, 10 Oct 2026 05:30:53 +1300",
@@ -56108,7 +57843,17 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-10"
+        "watchedAddedDate": "2026-10-10",
+        "crew84": {
+          "directors": [
+            "Dan Trachtenberg"
+          ],
+          "creators": [
+            "Charlie Brooker"
+          ],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:46.811Z"
+        }
       },
       "custom-1791567440043-bmc8": {
         "publishedAt": "Sat, 10 Oct 2026 05:34:06 +1300",
@@ -56143,7 +57888,17 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-10"
+        "watchedAddedDate": "2026-10-10",
+        "crew84": {
+          "directors": [
+            "Joe Wright"
+          ],
+          "creators": [
+            "Charlie Brooker"
+          ],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:47.256Z"
+        }
       },
       "custom-1791570909341-auj1": {
         "publishedAt": "Sat, 10 Oct 2026 06:52:34 +1300",
@@ -56178,7 +57933,17 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-10"
+        "watchedAddedDate": "2026-10-10",
+        "crew84": {
+          "directors": [
+            "James Watkins"
+          ],
+          "creators": [
+            "Charlie Brooker"
+          ],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:47.702Z"
+        }
       },
       "custom-1791576150006-qu8m": {
         "publishedAt": "Sat, 10 Oct 2026 08:11:42 +1300",
@@ -56212,7 +57977,17 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-10"
+        "watchedAddedDate": "2026-10-10",
+        "crew84": {
+          "directors": [
+            "Owen Harris"
+          ],
+          "creators": [
+            "Charlie Brooker"
+          ],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:48.168Z"
+        }
       },
       "custom-lb-unrated-bOnU": {
         "addedDate": "2026-09-08",
@@ -56234,7 +58009,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 351286
+        },
+        "crew84": {
+          "directors": [
+            "J. A. Bayona"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:48.386Z"
+        }
       },
       "custom-lb-unrated-1Qcu": {
         "addedDate": "2026-09-08",
@@ -56252,7 +58038,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 13430
+        },
+        "crew84": {
+          "directors": [
+            "Takashi Yamazaki"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:48.601Z"
+        }
       },
       "custom-1791627813752-lf6s": {
         "publishedAt": "Sat, 10 Oct 2026 21:54:20 +1300",
@@ -56287,7 +58084,17 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-10"
+        "watchedAddedDate": "2026-10-10",
+        "crew84": {
+          "directors": [
+            "James Hawes"
+          ],
+          "creators": [
+            "Charlie Brooker"
+          ],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:49.032Z"
+        }
       },
       "custom-1790247938551-ixfs": {
         "note": "序盤の幸せからの落差を大事にしている印象。実際とても愛らしくいいのだがそこの薄れが早い気もした。レゼの声優のボムの時の演技は少し下手？やば女のとにに演技感が出ている気もする。チェンソーマン全体としての噛ませ感やモブの死に安さは分かりやすすぎてまあり好きではない。ボムのキャラ自体はとても良い能力の派手さも華やかさもよく、映像になった時の美しさは素晴らしい。序盤の平和シーンのirisoutの使い方は浮いていた。戦闘シーンのbgmはいい時とまあ普通な時があり概ねGood。連続した戦いの緊迫感の持続の感じはめっちゃ好き。いい感じに区切れはあるが途切れずずっと続く感じ。漫画の劇場版としては感情的な部分ではあまり強くないが、映像アクションとしてはスタイリッシュさすらあるほどに素晴らしい。短いのは物足りなく感じたけど。2部の漫画でも思ったがこのはっちゃっけた感じのネタはそこまで好きではない。台風対チェンソーマンはそこまで好きではなかったな。ただ切ってて演出がない。\r\nラストはアニメに限らずとも上位で切ない。いい脚本だと思う。jane doe そこまで好きでなかったが、入り方もこのシーンに使うと考えるととても良い。ロシアでの過去も多くは語らないが寂しさや兵器的運用の切なさみたいなストレンジャーシングスのイレブン的なよくあるテーマではあるが触れ方もオシャレで、感情面もバックアップしている。鬼滅のように臭くなく、いい塩梅。\r\n全体として、まんがの1章ながら映画に最適な尺とストーリー、戦闘描写は少し短いが質がよく、感情面でもラストの持ってき方や展開は素直に素晴らしいと思う。",
@@ -56306,7 +58113,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 1218925
+        },
+        "crew84": {
+          "directors": [
+            "Tatsuya Yoshihara"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:15.627Z"
+        }
       },
       "custom-1790269934541-2ps3": {
         "note": "面白い。いいんテンポ感とつまり具合。しまるところもあり、一つ一つのアクションが真に迫っていてスリルがちゃんと持続する。たまに過剰な画面揺がるかが強さの演出が入ることがあるがそれを除けばアクションとして完璧に近いと思う。1対多のマチェーテでよ戦いのシーンは多少やりすぎ感もある。マチェーテ持ってる割にみんなまあいちか過ぎ、素手で抑えられに行ってる。\r\n銃、刀、素手や、階をまたいでの戦闘や、舞台の扉や即席爆弾など、ボーンほどでは無いがクリエイティブで幅広い戦闘があり飽きない。ボーンより素手格闘の派手さはあると思うが、戦闘中あーあー言い過ぎなとこもある。関節を蹴ったり外したりする演出や、殴る時の音などの効果音は全体として結構すき。組手がすごい上手い。いいスタントマン使ってる。程よいぐろ描写。あと主人公が最強でないのも良い。リアリティを踏まえると流石に強すぎるがいい塩梅。\r\nストーリー自体は、特に捻りがある訳では無いが、敵に囲まれる舞台としてこのビルは結構いいと思う。各階似ているがたまに階を跨ぎ少しずつ戦闘も変わるし、構造も頭に入りやすい。敵組織はかなり物語的でリアリティがないがジョンウィックのほど過剰ではないし、戦いの連続も無理矢理感がない。自然に連続して戦いっている。ビル内なので密室っぽくて逃げれないし。\r\n申し訳程度の家族の描写など、一応感情面も使っているが、そこは最小限であくまでバトルに終始しているのは割り切ってていいと思う。どうせこういったアクションの悪役の悪の描写や、恐怖、感情面の表現などは拙いレベルでしかないのだから、そこはもう補わせてしまっていいと思うし。\r\nもうひとつ文句を言うなら階層が上がって行ってボスまでじわじわ近づくような演出が弱い気がした。いつの間にたどり着いてる。\r\nまとめるとストーリーやキャラクターは稚拙だが、テンポ感とアクション特に格闘が素晴らしく全体として最後まで楽しめた。",
@@ -56325,7 +58143,18 @@
             "inferred": true,
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "tmdbId": 94329
+        },
+        "crew84": {
+          "directors": [
+            "Gareth Evans"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:16.095Z"
+        }
       },
       "custom-1791636834270-874l": {
         "publishedAt": "Sat, 10 Oct 2026 23:58:15 +1300",
@@ -56360,7 +58189,17 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-10"
+        "watchedAddedDate": "2026-10-10",
+        "crew84": {
+          "directors": [
+            "Jakob Verbruggen"
+          ],
+          "creators": [
+            "Charlie Brooker"
+          ],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:49.497Z"
+        }
       },
       "custom-1791664054005-kkyc": {
         "publishedAt": "Sun, 11 Oct 2026 06:36:16 +1300",
@@ -56388,7 +58227,18 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-11"
+        "watchedAddedDate": "2026-10-11",
+        "poster84": {
+          "tmdbId": 1354550
+        },
+        "crew84": {
+          "directors": [
+            "Tomokazu Yamada"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:49.748Z"
+        }
       },
       "custom-1791664054514-pksv": {
         "publishedAt": "Sun, 11 Oct 2026 06:34:06 +1300",
@@ -56416,7 +58266,18 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-11"
+        "watchedAddedDate": "2026-10-11",
+        "poster84": {
+          "tmdbId": 925907
+        },
+        "crew84": {
+          "directors": [
+            "Kiyoshi Iwasawa"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:49.964Z"
+        }
       },
       "custom-1791664055006-96rv": {
         "publishedAt": "Sun, 11 Oct 2026 06:29:30 +1300",
@@ -56444,7 +58305,17 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-11"
+        "watchedAddedDate": "2026-10-11",
+        "poster84": {
+          "path": null,
+          "tmdbId": null,
+          "checkedAt": "2026-10-11T12:54:29.042Z",
+          "provider": "tmdb"
+        },
+        "crew87Failure": {
+          "at": 1791723290180,
+          "reason": "タイトル・公開年からTMDb作品を一意に照合できません"
+        }
       },
       "custom-1791664055469-au2b": {
         "publishedAt": "Sun, 11 Oct 2026 06:19:17 +1300",
@@ -56482,7 +58353,18 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-11"
+        "watchedAddedDate": "2026-10-11",
+        "poster84": {
+          "tmdbId": 611716
+        },
+        "crew84": {
+          "directors": [
+            "Wataru Takeishi"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:50.396Z"
+        }
       },
       "custom-1791664055911-cuz4": {
         "publishedAt": "Sun, 11 Oct 2026 06:12:28 +1300",
@@ -56510,7 +58392,18 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-11"
+        "watchedAddedDate": "2026-10-11",
+        "poster84": {
+          "tmdbId": 948094
+        },
+        "crew84": {
+          "directors": [
+            "David Barnard"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-11T12:54:50.611Z"
+        }
       },
       "__unmatchedHistory83": {
         "diary": {},
