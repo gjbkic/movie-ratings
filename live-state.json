@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791722613065,
-  "sourceUpdatedIso": "2026-10-11T12:43:33.065Z",
+  "sourceUpdatedAt": 1791722649457,
+  "sourceUpdatedIso": "2026-10-11T12:44:09.457Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -42452,7 +42452,7 @@
           }
         ],
         "crew85Failure": {
-          "at": 1791722453138,
+          "at": 1791722647553,
           "reason": "TMDb映画を照合できません"
         },
         "crew84Failure": {
@@ -45113,7 +45113,7 @@
           }
         ],
         "crew85Failure": {
-          "at": 1791722453067,
+          "at": 1791722647567,
           "reason": "TMDB検索に失敗しました (HTTP 404)"
         },
         "crew84Failure": {
@@ -46693,7 +46693,7 @@
           }
         ],
         "crew85Failure": {
-          "at": 1791722453137,
+          "at": 1791722647560,
           "reason": "TMDb映画を照合できません"
         },
         "crew84Failure": {
@@ -56928,7 +56928,7 @@
           }
         ],
         "crew85Failure": {
-          "at": 1791722453366,
+          "at": 1791722647959,
           "reason": "TMDB検索に失敗しました (HTTP 404)"
         },
         "crew84Failure": {
@@ -57211,7 +57211,7 @@
           }
         ],
         "crew85Failure": {
-          "at": 1791722453435,
+          "at": 1791722647959,
           "reason": "TMDB検索に失敗しました (HTTP 404)"
         },
         "crew84Failure": {
@@ -58039,7 +58039,7 @@
           }
         ],
         "crew85Failure": {
-          "at": 1791722453283,
+          "at": 1791722647711,
           "reason": "TMDbシリーズを照合できません"
         },
         "crew84Failure": {
@@ -58101,7 +58101,7 @@
           }
         ],
         "crew85Failure": {
-          "at": 1791722453428,
+          "at": 1791722647855,
           "reason": "TMDbシリーズを照合できません"
         },
         "crew84Failure": {
@@ -58133,7 +58133,7 @@
           }
         ],
         "crew85Failure": {
-          "at": 1791722453509,
+          "at": 1791722647999,
           "reason": "TMDbシリーズを照合できません"
         },
         "crew84Failure": {
@@ -58487,7 +58487,7 @@
           }
         ],
         "crew85Failure": {
-          "at": 1791722453731,
+          "at": 1791722648357,
           "reason": "TMDB検索に失敗しました (HTTP 404)"
         },
         "crew84Failure": {
@@ -58525,7 +58525,7 @@
           }
         ],
         "crew85Failure": {
-          "at": 1791722453731,
+          "at": 1791722648349,
           "reason": "TMDB検索に失敗しました (HTTP 404)"
         },
         "crew84Failure": {
@@ -58625,7 +58625,7 @@
           }
         ],
         "crew85Failure": {
-          "at": 1791722453822,
+          "at": 1791722648435,
           "reason": "TMDB検索に失敗しました (HTTP 404)"
         },
         "crew84Failure": {
@@ -58699,7 +58699,7 @@
           }
         ],
         "crew85Failure": {
-          "at": 1791722453874,
+          "at": 1791722648493,
           "reason": "TMDbシリーズを照合できません"
         },
         "crew84Failure": {
@@ -59224,7 +59224,7 @@
           }
         ],
         "crew85Failure": {
-          "at": 1791722454006,
+          "at": 1791722648738,
           "reason": "TMDB検索に失敗しました (HTTP 404)"
         },
         "crew84Failure": {
@@ -59267,7 +59267,7 @@
           "retryAfterMs": 1209600000
         },
         "crew85Failure": {
-          "at": 1791722454128,
+          "at": 1791722648807,
           "reason": "TMDB検索に失敗しました (HTTP 404)"
         },
         "poster84": {
@@ -59300,7 +59300,7 @@
           }
         ],
         "crew85Failure": {
-          "at": 1791722454156,
+          "at": 1791722648870,
           "reason": "TMDB検索に失敗しました (HTTP 404)"
         },
         "crew84Failure": {
@@ -59807,7 +59807,7 @@
           "retryAfterMs": 1209600000
         },
         "crew85Failure": {
-          "at": 1791722454510,
+          "at": 1791722649181,
           "reason": "TMDB検索に失敗しました (HTTP 404)"
         },
         "poster84": {
@@ -59843,7 +59843,7 @@
           "retryAfterMs": 1209600000
         },
         "crew85Failure": {
-          "at": 1791722454290,
+          "at": 1791722649107,
           "reason": "TMDB検索に失敗しました (HTTP 404)"
         },
         "poster84": {
@@ -60093,7 +60093,7 @@
         "watchedFlag": true,
         "watchedAddedDate": "2026-10-03",
         "crew85Failure": {
-          "at": 1791722454457,
+          "at": 1791722649253,
           "reason": "TMDB検索に失敗しました (HTTP 404)"
         },
         "crew84Failure": {
@@ -62392,7 +62392,7 @@
           "retryAfterMs": 1209600000
         },
         "crew85Failure": {
-          "at": 1791722454473,
+          "at": 1791722649288,
           "reason": "TMDb映画を照合できません"
         }
       },
