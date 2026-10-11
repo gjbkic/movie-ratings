@@ -40,6 +40,8 @@ def get(path, params=None):
         except HTTPError as exc:
             if exc.code in (401,403):
                 raise RuntimeError("TMDb authentication failed: HTTP "+str(exc.code)) from None
+            if exc.code in (404,422):
+                raise ValueError("TMDb title/ID not found: HTTP "+str(exc.code)) from None
             if exc.code==429 or 500<=exc.code<600:
                 pause=min(30,(2**attempt)*2)
                 if exc.code==429:
