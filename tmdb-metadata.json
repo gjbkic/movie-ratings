@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "updatedAt": "2026-10-11T13:51:38.789528+00:00",
+  "updatedAt": "2026-10-11T13:51:45.448Z",
   "catalogSize": 731,
-  "matchedCount": 702,
+  "matchedCount": 709,
   "newCount": 682,
   "unmatchedCount": 41,
   "films": {
@@ -8968,6 +8968,91 @@
       "creators": [],
       "posterPath": "/ppEnERNpu47LHZX60UHOdUpQAoD.jpg",
       "source": "tmdb"
+    },
+    "custom-1790322756823-bi61": {
+      "tmdbId": null,
+      "title": "JoJo's Bizarre Adventure: Stone Ocean",
+      "year": "2021",
+      "type": "drama",
+      "directors": [
+        "Toshiyuki Kato",
+        "Kenichi Suzuki"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "official-and-crew-reference"
+    },
+    "custom-1790322762266-mrn9": {
+      "tmdbId": null,
+      "title": "Legal High SP",
+      "year": "2013",
+      "type": "drama",
+      "directors": [
+        "Junichi Ishikawa"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "official-and-crew-reference"
+    },
+    "custom-1790322761955-twge": {
+      "tmdbId": null,
+      "title": "Legal High 2 SP",
+      "year": "2014",
+      "type": "drama",
+      "directors": [
+        "Junichi Ishikawa"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "official-and-crew-reference"
+    },
+    "custom-1790423280120-qki8": {
+      "tmdbId": null,
+      "title": "Trick Shinsaku Special",
+      "year": "2005",
+      "type": "drama",
+      "directors": [
+        "Yukihiko Tsutsumi"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "official-and-crew-reference"
+    },
+    "custom-1790423279786-lguu": {
+      "tmdbId": null,
+      "title": "Trick Shinsaku Special 2",
+      "year": "2010",
+      "type": "drama",
+      "directors": [
+        "Yukihiko Tsutsumi"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "official-and-crew-reference"
+    },
+    "custom-1790423280570-6eki": {
+      "tmdbId": null,
+      "title": "Trick Shinsaku Special 3",
+      "year": "2014",
+      "type": "drama",
+      "directors": [
+        "Yukihiko Tsutsumi"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "official-and-crew-reference"
+    },
+    "custom-1790322763462-yaoz": {
+      "tmdbId": null,
+      "title": "Ikebukuro West Gate Park SP",
+      "year": "2003",
+      "type": "drama",
+      "directors": [
+        "Yukihiko Tsutsumi"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "official-and-crew-reference"
     }
   },
   "unmatched": {
@@ -9012,5 +9097,6 @@
     "custom-1791664055006-96rv": "No exact matching TMDb title/year",
     "lb-173-oCkK": "No exact matching TMDb title/year",
     "lb-296-l7zS": "No exact matching TMDb title/year"
-  }
+  },
+  "seededDirectorCount": 707
 }
