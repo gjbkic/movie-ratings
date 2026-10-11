@@ -36,13 +36,13 @@
     <div class="progress"><div id="progressBar" style="width:0"></div></div>
   </div>
   <section id="page-rank" class="page active">
-    <div class="tools"><input class="search" id="searchRank" placeholder="タイトル検索"><select class="field" id="categoryFilterRank" aria-label="カテゴリ絞り込み"></select><button class="btn" id="toggleEmpty">空の点数枠: 非表示</button></div>
+    <div class="tools"><input class="search" id="searchRank" placeholder="作品名・監督・制作者で検索"><select class="field" id="categoryFilterRank" aria-label="カテゴリ絞り込み"></select><button class="btn" id="toggleEmpty">空の点数枠: 非表示</button></div>
     <div class="persist"><span class="dot"></span><span>変更はこのブラウザに自動保存されます。同じサイトURLをSafariで開けば次回も復元します。別URL・別端末へ移すときだけ「JSONバックアップ」か「HTMLスナップショット」を使ってください。</span></div>
     <div class="tip">左の「≡」を指でドラッグ。上下で同点内の順位変更、別の点数枠へ移せば点数も変更されます。タイトル部分をタップすると個別編集できます。</div>
     <main id="rankRoot"></main>
   </section>
   <section id="page-classify" class="page">
-    <div class="tools"><input class="search" id="searchClassify" placeholder="タイトル検索"><select class="field" id="categoryFilterClassify" aria-label="カテゴリ絞り込み"></select><button class="btn active" id="sortBtn">分類順</button><button class="btn" id="oldBtn">点数: 表示</button></div>
+    <div class="tools"><input class="search" id="searchClassify" placeholder="作品名・監督・制作者で検索"><select class="field" id="categoryFilterClassify" aria-label="カテゴリ絞り込み"></select><button class="btn active" id="sortBtn">分類順</button><button class="btn" id="oldBtn">点数: 表示</button></div>
     <div class="tip">星ごとの大まかな「上・中・下」。細かな1点刻みと同点内順位は「点数・順位」タブで調整します。</div><main id="classifyRoot"></main>
   </section>
   <section id="page-distribution" class="page">
@@ -79,7 +79,7 @@ function load(){testStorage();let candidates=[];if(storageWorks){for(const k of 
 function save(touch=true){if(window.__movie30BulkBoot)return;if(touch)state.updatedAt=Date.now();if(storageWorks){try{const next=JSON.stringify(state),prev=localStorage.getItem(STORAGE_KEY);if(touch&&prev&&prev!==next){localStorage.setItem(BACKUP_KEYS[2],localStorage.getItem(BACKUP_KEYS[1])||"");localStorage.setItem(BACKUP_KEYS[1],localStorage.getItem(BACKUP_KEYS[0])||"");localStorage.setItem(BACKUP_KEYS[0],prev)}localStorage.setItem(STORAGE_KEY,next);localStorage.setItem(VIEW_KEY,JSON.stringify(view));setSaveStatus("自動保存済み · "+new Date().toLocaleTimeString("ja-JP",{hour:"2-digit",minute:"2-digit"}));return}catch(e){}}setSaveStatus("自動保存不可 · バックアップ推奨")}
 function setSaveStatus(t){const el=document.getElementById("saveState");if(el)el.textContent=t}function allFilms(){return BASE_FILMS.concat(state.customFilms||[])}function filmById(id){return allFilms().find(f=>f.id===id)}function titleInfo(f){const o=state.titleOverrides[f.id]||{};return {title:String(o.title??f.title??"").trim(),originalTitle:String(o.originalTitle??f.originalTitle??"").trim(),englishTitle:String(o.englishTitle??f.englishTitle??f.lbTitle??"").trim(),tmdbId:o.tmdbId??f.tmdbId??null}}function displayTitle(f){const x=titleInfo(f);return x.title||x.englishTitle||x.originalTitle||"（無題）"}function secondaryTitle(f){const x=titleInfo(f),main=displayTitle(f);if(x.originalTitle&&x.originalTitle!==main)return x.originalTitle;if(x.englishTitle&&x.englishTitle!==main)return x.englishTitle;return ""}function filmCategory(f){return String((state.categoryOverrides||{})[f.id]??f.category??"").trim()}function categoryOptions(){const extra=["SF","アクション","サスペンス、ミステリー","スリラー、ホラー","マフィア、クライム","ドラマ","コメディ","恋愛、ミュージカル","戦争、歴史","ファンタジー、アドベンチャー","ほかアニメ","邦画","スタジオジブリ系作品","ピクサー・ディズニー作品","MCU作品","スパイダーマン作品","スターウォーズシリーズ","ハリーポッター シリーズ","コナン映画","Letterboxd追加","追加映画"];const vals=allFilms().map(f=>filmCategory(f)).filter(Boolean).concat(extra);return Array.from(new Set(vals)).sort((a,b)=>a.localeCompare(b,"ja"))}function fillCategorySelect(id,{filter=false,value=null}={}){const el=document.getElementById(id);if(!el)return;const old=value??el.value;el.innerHTML=(filter?`<option value="">すべてのカテゴリ</option>`:`<option value="">カテゴリ未設定</option>`)+categoryOptions().map(c=>`<option value="${esc(c)}">${esc(c)}</option>`).join("");if([...el.options].some(o=>o.value===old))el.value=old}function refreshCategoryControls(){fillCategorySelect("newCategory");fillCategorySelect("qCategory");fillCategorySelect("categoryFilterRank",{filter:true});fillCategorySelect("categoryFilterClassify",{filter:true})}function filmStar(f){return Object.prototype.hasOwnProperty.call(state.starOverrides,f.id)?Number(state.starOverrides[f.id]):Number(f.star)}function tier(f){return state.assignments[f.id]||null}function mappedScore(f){const t=tier(f),s=filmStar(f);if(!t||s==null)return null;return state.scoreMap[sk(s)]?.[t]??null}function effectiveScore(f){if(Object.prototype.hasOwnProperty.call(state.exactScores,f.id))return Number(state.exactScores[f.id]);const m=mappedScore(f);return m!=null?Number(m):(f.oldScore!=null?Number(f.oldScore):null)}
 function scoreToStar(score){score=Number(score);if(score>=98)return 5;if(score>=93)return 4.5;if(score>=87)return 4;if(score>=84)return 3.5;if(score>=81)return 3;if(score>=77)return 2.5;if(score>=71)return 2;if(score>=63)return 1.5;if(score>=50)return 1;return .5}function nearestTier(star,score){const m=state.scoreMap[sk(star)]||DEFAULT_MAP[sk(star)];return ["low","mid","high"].sort((a,b)=>Math.abs(m[a]-score)-Math.abs(m[b]-score))[0]}
-function originalSort(a,b){if(filmCategory(a)!==filmCategory(b))return filmCategory(a).localeCompare(filmCategory(b),"ja");return (a.order??999999)-(b.order??999999)||((a._seq??999999)-(b._seq??999999))}function classSort(a,b){const d=SORT_RANK[tier(a)||"none"]-SORT_RANK[tier(b)||"none"];return d||((effectiveScore(b)??-1)-(effectiveScore(a)??-1))||originalSort(a,b)}function match(f,q){if(!q)return true;q=q.toLowerCase();const x=titleInfo(f);return ([x.title,x.originalTitle,x.englishTitle,f.lbTitle||"",filmCategory(f),f.year||""] .join(" ")).toLowerCase().includes(q)}function totalRated(){return allFilms().filter(f=>effectiveScore(f)!=null||filmStar(f)!=null).length}function toast(msg){const t=document.getElementById("toast");t.textContent=msg;t.classList.add("show");clearTimeout(toast._t);toast._t=setTimeout(()=>t.classList.remove("show"),1400)}
+function originalSort(a,b){if(filmCategory(a)!==filmCategory(b))return filmCategory(a).localeCompare(filmCategory(b),"ja");return (a.order??999999)-(b.order??999999)||((a._seq??999999)-(b._seq??999999))}function classSort(a,b){const d=SORT_RANK[tier(a)||"none"]-SORT_RANK[tier(b)||"none"];return d||((effectiveScore(b)??-1)-(effectiveScore(a)??-1))||originalSort(a,b)}function match(f,q){if(!q)return true;q=String(q).normalize("NFKC").toLowerCase().trim();const x=titleInfo(f),m=state.letterboxdMeta?.[f.id]||{},c=m.crew84||{};const directors=[...(c.directors||[]),...(c.creators||[]),...(m.directors84Manual||[])];return ([x.title,x.originalTitle,x.englishTitle,f.lbTitle||"",filmCategory(f),f.year||"",...directors].join(" ")).normalize("NFKC").toLowerCase().includes(q)}function totalRated(){return allFilms().filter(f=>effectiveScore(f)!=null||filmStar(f)!=null).length}function toast(msg){const t=document.getElementById("toast");t.textContent=msg;t.classList.add("show");clearTimeout(toast._t);toast._t=setTimeout(()=>t.classList.remove("show"),1400)}
 function renderHeader(){const t=allFilms().length,sc=allFilms().filter(f=>effectiveScore(f)!=null).length;document.getElementById("summary").textContent=`${t}本 · 点数あり ${sc}本`;document.getElementById("progressBar").style.width=(t?Math.round(sc/t*100):0)+"%";document.querySelectorAll(".tab").forEach(b=>b.classList.toggle("active",b.dataset.page===view.page));document.querySelectorAll(".page").forEach(p=>p.classList.toggle("active",p.id==="page-"+view.page))}
 function rankSorted(arr,score){const saved=state.rankOrder[String(score)]||[],pos=new Map(saved.map((id,i)=>[id,i]));return arr.sort((a,b)=>{const pa=pos.has(a.id)?pos.get(a.id):1e9,pb=pos.has(b.id)?pos.get(b.id):1e9;return pa-pb||originalSort(a,b)})}
 function scoreListForStar(star){const [lo,hi]=STAR_RANGES[sk(star)];let scores=[];for(let x=hi;x>=lo;x--)scores.push(x);if(star===.5&&!view.showEmpty){const used=new Set(allFilms().map(effectiveScore).filter(v=>v!=null&&v<50));scores=scores.filter(x=>used.has(x));if(!scores.length)scores=[40]}return scores}
@@ -7823,6 +7823,7 @@ function drawList(){
   listRoot.querySelectorAll('[data-month83]').forEach(btn=>btn.onclick=()=>{
     tocMonth=btn.dataset.month83;listLimit=80;drawList();scrollToToc();
   });
+  if(typeof window.__movie30PosterDecorate84==='function')window.__movie30PosterDecorate84();
 }
 const oldRank=renderRank;
 renderRank=function(...args){
@@ -7922,7 +7923,7 @@ const marker=document.getElementById('movie30BuildV29');if(marker)marker.textCon
 'use strict';
 // v84: source-aware TMDb director (films), show creator and episode director (TV).
 // Stored in letterboxdMeta only; score/rank and review data are untouched.
-const BUILD='20261011c';
+const BUILD='20261011f';
 const unique=names=>[...new Set((names||[]).map(v=>String(v||'').trim()).filter(Boolean))];
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const active=new Map();
@@ -8013,16 +8014,198 @@ function populateInWatchList(){
     button.appendChild(small);
   });
 }
+
+// Lazy, non-blocking poster library. Film scores, reviews and ranks are untouched.
+const POSTER_CDN84='https://image.tmdb.org/t/p/';
+const posterValid84=path=>typeof path==='string'&&/^\/[a-zA-Z0-9_\-./]+\.(jpg|jpeg|png|webp)$/i.test(path)&&!path.includes('..');
+const posterMeta84=f=>state.letterboxdMeta?.[f.id]?.poster84||null;
+const posterUrl84=(path,size='w185')=>posterValid84(path)?POSTER_CDN84+size+path:'';
+function normPoster84(t){return String(t||'').normalize('NFKC').toLowerCase().replace(/[^\p{L}\p{N}]/gu,'');}
+const posterTasks84=[],queuedPoster84=new Set();let fetchingPoster84=0,savePosterTimer84=0;
+let posterIntersection84=null;
+function cachePoster84(f,poster){
+  if(!filmById(f.id))return;
+  state.letterboxdMeta=state.letterboxdMeta||{};
+  const m=state.letterboxdMeta[f.id]=state.letterboxdMeta[f.id]||{};
+  m.poster84=poster;
+  if(savePosterTimer84)clearTimeout(savePosterTimer84);
+  savePosterTimer84=setTimeout(()=>{savePosterTimer84=0;save();},4000);
+}
+async function loadPoster84(f,force=false){
+  if(!f) return null;
+  const old=posterMeta84(f);
+  if(!force&&posterValid84(old?.path))return old.path;
+  if(!force&&old?.checkedAt&&Date.now()-Date.parse(old.checkedAt)<14*86400000)return null;
+  if(!getTmdbCredential())return null;
+  const m=state.letterboxdMeta?.[f.id]||{};
+  const tv=m.contentType==='tv_episode'||m.contentType==='tv_series';
+  const stamp=new Date().toISOString();
+  let path=null,matchedId=null;
+  if(tv){
+    let id=Number(m.tmdbSeriesId)||0;
+    if(!id){
+      const candidate=(m.englishTitle||titleInfo(f).englishTitle||f.lbTitle||f.title||'').split(':')[0].trim();
+      if(candidate){
+        const result=await tmdbFetch('/search/tv',{query:candidate,language:'en-US'});
+        const hit=(result.results||[]).find(x=>normPoster84(x.name)===normPoster84(candidate));
+        id=Number(hit?.id)||0;
+      }
+    }
+    if(id){
+      const details=await tmdbFetch('/tv/'+id,{language:'ja-JP'});
+      path=details.poster_path||null;
+      matchedId=id;
+    }
+  }else{
+    let id=Number(m.poster84?.tmdbId||titleInfo(f).tmdbId||f.tmdbId)||0;
+    if(id){
+      const details=await tmdbFetch('/movie/'+id,{language:'ja-JP'});
+      path=details.poster_path||null;
+      matchedId=id;
+    }else{
+      const t=titleInfo(f);
+      const english=t.englishTitle||f.lbTitle||t.originalTitle||t.title||'';
+      const y=Number(f.year)||0;
+      if(english){
+        const result=await tmdbFetch('/search/movie',{query:english,language:'en-US',include_adult:'false'});
+        const aliases=[english,t.originalTitle,t.title].map(normPoster84).filter(Boolean);
+        const hit=(result.results||[]).find(x=>
+          aliases.includes(normPoster84(x.title))||aliases.includes(normPoster84(x.original_title)));
+        const eligible=hit&&(!y||!hit.release_date||Math.abs(Number(hit.release_date.slice(0,4))-y)<=2);
+        if(eligible){path=hit.poster_path||null;matchedId=hit.id;}
+      }
+    }
+  }
+  cachePoster84(f,{path:posterValid84(path)?path:null,tmdbId:matchedId,checkedAt:stamp,provider:'tmdb'});
+  return posterValid84(path)?path:null;
+}
+function setPosterSources84(id,path){
+  if(!posterValid84(path))return;
+  document.querySelectorAll('.movie30-poster84[data-poster-id]').forEach(img=>{
+    if(img.dataset.posterId!==id)return;
+    const url=posterUrl84(path,img.dataset.posterSize||'w185');
+    if(url&&img.getAttribute('src')!==url)img.src=url;
+    img.classList.add('movie30-poster-loaded84');
+  });
+}
+function queuePoster84(f,force=false){
+  if(!f||!getTmdbCredential())return;
+  const p=posterMeta84(f);
+  if(!force&&posterValid84(p?.path)){setPosterSources84(f.id,p.path);return;}
+  if(!force&&p?.checkedAt&&Date.now()-Date.parse(p.checkedAt)<14*86400000)return;
+  if(queuedPoster84.has(f.id))return;
+  queuedPoster84.add(f.id);posterTasks84.push({id:f.id,force});runPosterQueue84();
+}
+function runPosterQueue84(){
+  while(fetchingPoster84<3&&posterTasks84.length){
+    const item=posterTasks84.shift();
+    const f=filmById(item.id);
+    if(!f){queuedPoster84.delete(item.id);continue;}
+    fetchingPoster84++;
+    Promise.resolve().then(()=>loadPoster84(f,item.force)).then(path=>{
+      if(path)setPosterSources84(item.id,path);
+      if(selectedId===item.id)drawPosterDetail84(item.id);
+    }).catch(e=>{
+      // Abort/retry errors are intentionally not persisted as a missing poster.
+      if(selectedId===item.id){
+        const target=document.getElementById('posterStatus84');
+        if(target)target.textContent='ポスターを取得できません：'+String(e?.message||e);
+      }
+    }).finally(()=>{queuedPoster84.delete(item.id);fetchingPoster84--;runPosterQueue84();});
+  }
+}
+function observePoster84(img,f){
+  const p=posterMeta84(f);
+  if(posterValid84(p?.path)){
+    img.src=posterUrl84(p.path,img.dataset.posterSize||'w185');img.classList.add('movie30-poster-loaded84');
+    return;
+  }
+  if(!getTmdbCredential())return;
+  if(!posterIntersection84&&typeof IntersectionObserver==='function'){
+    posterIntersection84=new IntersectionObserver(changes=>{
+      for(const e of changes)if(e.isIntersecting){
+        posterIntersection84.unobserve(e.target);
+        const film=filmById(e.target.dataset.posterId);
+        if(film)queuePoster84(film);
+      }
+    },{rootMargin:'250px'});
+  }
+  if(posterIntersection84)posterIntersection84.observe(img);
+  else if(document.querySelectorAll('.movie30-poster84:not([src])').length<=12)queuePoster84(f);
+}
+function putPoster84(el,id,mode){
+  if(el.querySelector('.movie30-poster84'))return;
+  const f=filmById(id);if(!f)return;
+  const img=document.createElement('img');img.className='movie30-poster84';img.dataset.posterId=id;
+  img.dataset.posterSize=mode==='detail'?'w342':'w185';
+  img.alt='';img.loading='lazy';img.decoding='async';img.referrerPolicy='no-referrer';
+  el.classList.add(mode==='rank'?'movie30-rank-poster84':'movie30-watch-poster84');
+  el.appendChild(img);
+  observePoster84(img,f);
+}
+function decoratePosters84(){
+  const rank=document.getElementById('rankRoot');
+  if(rank&&rank.style.display!=='none'){
+    rank.querySelectorAll('.rank-card[data-id]').forEach(el=>putPoster84(el,decodeURIComponent(el.dataset.id),'rank'));
+  }
+  const watch=document.getElementById('watchList83');
+  if(watch&&watch.style.display!=='none'){
+    watch.querySelectorAll('.watch83-item[data-film]').forEach(el=>
+      putPoster84(el,decodeURIComponent(el.dataset.film),'watch'));
+  }
+}
+window.__movie30PosterDecorate84=decoratePosters84;
+const posterStyles84=document.createElement('style');
+posterStyles84.textContent=
+ '.rank-card.movie30-rank-poster84{position:relative;padding-left:43px;min-height:53px}'
+ +'.movie30-rank-poster84>.movie30-poster84{position:absolute;left:5px;top:50%;transform:translateY(-50%);width:30px;height:45px;object-fit:cover;pointer-events:none}'
+ +'.watch83-item.movie30-watch-poster84{position:relative;padding-left:70px;min-height:92px}'
+ +'.movie30-watch-poster84>.movie30-poster84{position:absolute;top:8px;left:9px;width:50px;height:75px;object-fit:cover;pointer-events:none}'
+ +'.movie30-poster84{display:block;border-radius:5px;background:linear-gradient(155deg,#21334b,#101823);border:1px solid #3f4d5f;color:transparent}'
+ +'.movie30-poster-detail84{display:flex;align-items:flex-start;gap:12px;margin:9px 0 12px;font-size:12px}'
+ +'.movie30-poster-detail84 img{width:88px;height:132px;object-fit:cover;background:#21334b;border-radius:7px;border:1px solid #465569}'
+ +'.movie30-poster-detail84 button{font-size:12px;border:1px solid #475569;border-radius:7px;background:#192b40;color:#eef4ff;padding:8px}'
+ +'.movie30-poster-detail84 small{display:block;color:#aabbd0;line-height:1.5;margin:7px 0}';
+document.head.appendChild(posterStyles84);
+let posterDetail84=null;
+const posterSheet84=document.querySelector('#sheetBg .sheet');
+if(posterSheet84){
+  posterDetail84=document.createElement('section');
+  posterDetail84.id='movie30PosterDetail84';posterDetail84.className='movie30-poster-detail84';
+  const header=posterSheet84.querySelector('.sheet-title');
+  if(header)header.insertAdjacentElement('afterend',posterDetail84);
+}
+function drawPosterDetail84(id){
+  if(!posterDetail84)return;
+  const f=filmById(id);if(!f)return;
+  const m=posterMeta84(f),url=posterUrl84(m?.path,'w342');
+  posterDetail84.innerHTML='<img class="movie30-poster84" data-poster-id="'+encodeURIComponent(id)
+    +'" data-poster-size="w342" alt="ポスター" loading="lazy"'+(url?' src="'+url+'"':'')+'>'
+    +'<div><button type="button" id="posterReload84">TMDbからポスター取得・更新</button>'
+    +'<small id="posterStatus84">'+(url?'ポスター取得済み':getTmdbCredential()?'未取得：画面に表示されると自動取得します':'TMDb APIキーを設定すると取得できます')
+    +'</small><small>画像提供：The Movie Database (TMDb)</small></div>';
+  const img=posterDetail84.querySelector('img');
+  if(img)observePoster84(img,f);
+  const btn=posterDetail84.querySelector('#posterReload84');
+  if(btn)btn.onclick=()=>{
+    const status=posterDetail84.querySelector('#posterStatus84');
+    status.textContent=getTmdbCredential()?'更新中…':'TMDb APIキーが必要です';
+    if(getTmdbCredential())queuePoster84(f,true);
+  };
+}
+
 const openBefore=openSheet;
 openSheet=function(...args){
   const result=openBefore.apply(this,args);
   drawCrew(args[0]);
+  drawPosterDetail84(args[0]);
   return result;
 };
 const renderRankBefore=renderRank;
 renderRank=function(...args){
   const result=renderRankBefore.apply(this,args);
   populateInWatchList();
+  decoratePosters84();
   return result;
 };
 // Credit lookup for freshly imported films and manually added TMDb films.
@@ -8084,6 +8267,7 @@ if(data&&!document.getElementById('directorTool84')){
   };
 }
 populateInWatchList();
+decoratePosters84();
 window.__movie30TmdbCreditsV84={build:BUILD};
 const marker=document.getElementById('movie30BuildV29');if(marker)marker.textContent='app build '+BUILD;
 })();
@@ -8093,7 +8277,7 @@ save();
 render();
 document.documentElement.classList.add('movie30-ready');
 const movie30BuildLabel=document.getElementById('movie30BuildV29');
-if(movie30BuildLabel)movie30BuildLabel.textContent='app build 20261011e';
+if(movie30BuildLabel)movie30BuildLabel.textContent='app build 20261011f';
 
 </script>
 
