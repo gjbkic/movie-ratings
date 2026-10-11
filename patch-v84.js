@@ -2,7 +2,7 @@
 'use strict';
 // v84: source-aware TMDb director (films), show creator and episode director (TV).
 // Stored in letterboxdMeta only; score/rank and review data are untouched.
-const BUILD='20261011f';
+const BUILD='20261011i';
 const unique=names=>[...new Set((names||[]).map(v=>String(v||'').trim()).filter(Boolean))];
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const active=new Map();
@@ -498,7 +498,7 @@ if(data&&!document.getElementById('directorTool84')){
   retry.onclick=()=>bulkCrew84(true);
   // Continue small unattended batches only in the browser already holding the key.
   // Keep the initial render fast; work happens after the application is visible.
-  if(getTmdbCredential())setTimeout(()=>bulkCrew84(false,30).catch(()=>{}),9000);
+  if(getTmdbCredential())setTimeout(()=>bulkCrew84(false).catch(()=>{}),9000);
 }
 populateInWatchList();
 decoratePosters84();
