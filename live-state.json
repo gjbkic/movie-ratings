@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791692667345,
-  "sourceUpdatedIso": "2026-10-11T04:24:27.345Z",
+  "sourceUpdatedAt": 1791693061073,
+  "sourceUpdatedIso": "2026-10-11T04:31:01.073Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -36547,7 +36547,13 @@
           "fetchedAt": "2026-10-11T04:07:59.008Z"
         },
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "poster84": {
+          "path": "/vC4Dsk9xPcxeBMkvTme709THvMl.jpg",
+          "tmdbId": 38,
+          "checkedAt": "2026-10-11T04:30:56.552Z",
+          "provider": "tmdb"
+        }
       },
       "lb-9-1skk": {
         "addedDate": "2025-09-01",
@@ -36564,7 +36570,13 @@
           "fetchedAt": "2026-10-11T04:07:59.308Z"
         },
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "poster84": {
+          "path": "/qzb0slJerd5bQgJxteJ5oAmfp09.jpg",
+          "tmdbId": 27205,
+          "checkedAt": "2026-10-11T04:30:56.325Z",
+          "provider": "tmdb"
+        }
       },
       "lb-10-kSz4": {
         "addedDate": "2025-09-01",
@@ -36719,6 +36731,12 @@
           "creators": [],
           "source": "tmdb",
           "fetchedAt": "2026-10-11T04:11:34.816Z"
+        },
+        "poster84": {
+          "path": "/vZ2KGsE9kDSZSuBqooh5wBK7EAK.jpg",
+          "tmdbId": 489,
+          "checkedAt": "2026-10-11T04:30:56.513Z",
+          "provider": "tmdb"
         }
       },
       "lb-19-2cCk": {
@@ -36789,6 +36807,12 @@
           "creators": [],
           "source": "tmdb",
           "fetchedAt": "2026-10-11T04:11:36.251Z"
+        },
+        "poster84": {
+          "path": "/tlSn7UnfH2LxrBRwfTLs3JSYOTO.jpg",
+          "tmdbId": 603,
+          "checkedAt": "2026-10-11T04:30:55.190Z",
+          "provider": "tmdb"
         }
       },
       "lb-23-2b8y": {
@@ -37461,6 +37485,12 @@
           "creators": [],
           "source": "tmdb",
           "fetchedAt": "2026-10-11T04:11:58.244Z"
+        },
+        "poster84": {
+          "path": "/mVdz3vlmioKWZaHTGfu99zIuayZ.jpg",
+          "tmdbId": 128,
+          "checkedAt": "2026-10-11T04:30:55.190Z",
+          "provider": "tmdb"
         }
       },
       "lb-63-8MxC": {
@@ -42022,7 +42052,13 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "poster84": {
+          "path": "/nzlv62aC0octS5AklAiWpXLX9Z0.jpg",
+          "tmdbId": 77,
+          "checkedAt": "2026-10-11T04:30:56.831Z",
+          "provider": "tmdb"
+        }
       },
       "lb-351-2DqA": {
         "addedDate": "2025-09-01",
@@ -42049,7 +42085,13 @@
         "noteSource": "letterboxd-export",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
-        "watchedAddedDate": "2025-09-01"
+        "watchedAddedDate": "2025-09-01",
+        "poster84": {
+          "path": "/viWheBd44bouiLCHgNMvahLThqx.jpg",
+          "tmdbId": 44214,
+          "checkedAt": "2026-10-11T04:30:56.265Z",
+          "provider": "tmdb"
+        }
       },
       "lb-354-aNGk": {
         "addedDate": "2025-09-01",
@@ -43917,6 +43959,12 @@
           "creators": [],
           "source": "tmdb",
           "fetchedAt": "2026-10-11T04:16:55.734Z"
+        },
+        "poster84": {
+          "path": "/yBanOpNIccxjZlH4QH7ag4ojWOI.jpg",
+          "tmdbId": 18491,
+          "checkedAt": "2026-10-11T04:30:56.756Z",
+          "provider": "tmdb"
         }
       },
       "lb-469-1MKi": {
@@ -44313,6 +44361,12 @@
           "creators": [],
           "source": "tmdb",
           "fetchedAt": "2026-10-11T04:17:03.149Z"
+        },
+        "poster84": {
+          "path": "/42H4UqYSkNxKAFYO1hkm8cvTyfd.jpg",
+          "tmdbId": 78,
+          "checkedAt": "2026-10-11T04:30:56.551Z",
+          "provider": "tmdb"
         }
       },
       "lb-493-28No": {
@@ -45100,6 +45154,12 @@
           "creators": [],
           "source": "tmdb",
           "fetchedAt": "2026-10-11T04:17:17.617Z"
+        },
+        "poster84": {
+          "path": "/79vujbsWEbX4dzffBV541QXN6sf.jpg",
+          "tmdbId": 10494,
+          "checkedAt": "2026-10-11T04:30:56.295Z",
+          "provider": "tmdb"
         }
       },
       "lb-541-27MO": {
@@ -47795,7 +47855,13 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-08"
+        "watchedAddedDate": "2026-10-08",
+        "poster84": {
+          "path": "/lw3t91kiFVgE2qgFdgXCwGpGIH6.jpg",
+          "tmdbId": 808,
+          "checkedAt": "2026-10-11T04:30:50.906Z",
+          "provider": "tmdb"
+        }
       },
       "custom-1791393440445-arl6": {
         "publishedAt": "Thu, 8 Oct 2026 06:55:45 +1300",
@@ -47892,7 +47958,13 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-08"
+        "watchedAddedDate": "2026-10-08",
+        "poster84": {
+          "path": "/rB0V4Pc5meRdPTXysiJGH4nnaqV.jpg",
+          "tmdbId": 845788,
+          "checkedAt": "2026-10-11T04:30:51.629Z",
+          "provider": "tmdb"
+        }
       },
       "custom-1791397387325-yqut": {
         "publishedAt": "Thu, 8 Oct 2026 07:22:48 +1300",
@@ -47948,7 +48020,13 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-08"
+        "watchedAddedDate": "2026-10-08",
+        "poster84": {
+          "path": "/9mCVBtlTenpsdFwJWchynhHPNNj.jpg",
+          "tmdbId": 901030,
+          "checkedAt": "2026-10-11T04:30:51.835Z",
+          "provider": "tmdb"
+        }
       },
       "custom-1791447953969-ah3e": {
         "publishedAt": "Thu, 8 Oct 2026 18:52:25 +1300",
@@ -47983,7 +48061,13 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-08"
+        "watchedAddedDate": "2026-10-08",
+        "poster84": {
+          "path": "/seN6rRfN0I6n8iDXjlSMk1QjNcq.jpg",
+          "tmdbId": 42009,
+          "checkedAt": "2026-10-11T04:30:51.626Z",
+          "provider": "tmdb"
+        }
       },
       "custom-1791449338315-twqr": {
         "publishedAt": "Thu, 8 Oct 2026 21:32:23 +1300",
@@ -48018,7 +48102,13 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-08"
+        "watchedAddedDate": "2026-10-08",
+        "poster84": {
+          "path": "/seN6rRfN0I6n8iDXjlSMk1QjNcq.jpg",
+          "tmdbId": 42009,
+          "checkedAt": "2026-10-11T04:30:51.621Z",
+          "provider": "tmdb"
+        }
       },
       "custom-1791469823654-dpbh": {
         "publishedAt": "Fri, 9 Oct 2026 02:57:54 +1300",
@@ -48053,7 +48143,13 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-09"
+        "watchedAddedDate": "2026-10-09",
+        "poster84": {
+          "path": "/seN6rRfN0I6n8iDXjlSMk1QjNcq.jpg",
+          "tmdbId": 42009,
+          "checkedAt": "2026-10-11T04:30:51.625Z",
+          "provider": "tmdb"
+        }
       },
       "custom-1791469824035-6gcd": {
         "publishedAt": "Thu, 8 Oct 2026 22:31:53 +1300",
@@ -48088,7 +48184,13 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-08"
+        "watchedAddedDate": "2026-10-08",
+        "poster84": {
+          "path": "/seN6rRfN0I6n8iDXjlSMk1QjNcq.jpg",
+          "tmdbId": 42009,
+          "checkedAt": "2026-10-11T04:30:51.627Z",
+          "provider": "tmdb"
+        }
       },
       "custom-1791476522514-wpj8": {
         "publishedAt": "Fri, 9 Oct 2026 05:21:19 +1300",
@@ -48116,7 +48218,13 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-09"
+        "watchedAddedDate": "2026-10-09",
+        "poster84": {
+          "path": "/e1OZA1LFK7KU8z3o4R3HU8r0c18.jpg",
+          "tmdbId": 947350,
+          "checkedAt": "2026-10-11T04:30:51.628Z",
+          "provider": "tmdb"
+        }
       },
       "custom-1791476522907-cd9b": {
         "publishedAt": "Fri, 9 Oct 2026 03:32:29 +1300",
@@ -48151,7 +48259,13 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-09"
+        "watchedAddedDate": "2026-10-09",
+        "poster84": {
+          "path": "/seN6rRfN0I6n8iDXjlSMk1QjNcq.jpg",
+          "tmdbId": 42009,
+          "checkedAt": "2026-10-11T04:30:51.622Z",
+          "provider": "tmdb"
+        }
       },
       "custom-1791480095339-p808": {
         "publishedAt": "Fri, 9 Oct 2026 06:20:52 +1300",
@@ -48179,7 +48293,13 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-09"
+        "watchedAddedDate": "2026-10-09",
+        "poster84": {
+          "path": "/xvpYE1kyuwMM6EbckHRGNb4DrCg.jpg",
+          "tmdbId": 743055,
+          "checkedAt": "2026-10-11T04:30:50.856Z",
+          "provider": "tmdb"
+        }
       },
       "custom-1791553824276-cl9b": {
         "publishedAt": "Sat, 10 Oct 2026 02:46:51 +1300",
@@ -48207,7 +48327,13 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-10"
+        "watchedAddedDate": "2026-10-10",
+        "poster84": {
+          "path": "/h7GkgiipzDC3QEtCuybXNc636NB.jpg",
+          "tmdbId": 647616,
+          "checkedAt": "2026-10-11T04:30:50.822Z",
+          "provider": "tmdb"
+        }
       },
       "custom-1791563602274-2p5j": {
         "publishedAt": "Sat, 10 Oct 2026 05:30:53 +1300",
@@ -48242,7 +48368,13 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-10"
+        "watchedAddedDate": "2026-10-10",
+        "poster84": {
+          "path": "/seN6rRfN0I6n8iDXjlSMk1QjNcq.jpg",
+          "tmdbId": 42009,
+          "checkedAt": "2026-10-11T04:25:05.195Z",
+          "provider": "tmdb"
+        }
       },
       "custom-1791567440043-bmc8": {
         "publishedAt": "Sat, 10 Oct 2026 05:34:06 +1300",
@@ -48277,7 +48409,13 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-10"
+        "watchedAddedDate": "2026-10-10",
+        "poster84": {
+          "path": "/seN6rRfN0I6n8iDXjlSMk1QjNcq.jpg",
+          "tmdbId": 42009,
+          "checkedAt": "2026-10-11T04:25:04.792Z",
+          "provider": "tmdb"
+        }
       },
       "custom-1791570909341-auj1": {
         "publishedAt": "Sat, 10 Oct 2026 06:52:34 +1300",
@@ -48312,7 +48450,13 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-10"
+        "watchedAddedDate": "2026-10-10",
+        "poster84": {
+          "path": "/seN6rRfN0I6n8iDXjlSMk1QjNcq.jpg",
+          "tmdbId": 42009,
+          "checkedAt": "2026-10-11T04:30:50.775Z",
+          "provider": "tmdb"
+        }
       },
       "custom-1791576150006-qu8m": {
         "publishedAt": "Sat, 10 Oct 2026 08:11:42 +1300",
@@ -48346,7 +48490,13 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-10"
+        "watchedAddedDate": "2026-10-10",
+        "poster84": {
+          "path": "/seN6rRfN0I6n8iDXjlSMk1QjNcq.jpg",
+          "tmdbId": 42009,
+          "checkedAt": "2026-10-11T04:25:04.608Z",
+          "provider": "tmdb"
+        }
       },
       "custom-lb-unrated-bOnU": {
         "addedDate": "2026-09-08",
@@ -48397,7 +48547,13 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-10"
+        "watchedAddedDate": "2026-10-10",
+        "poster84": {
+          "path": "/seN6rRfN0I6n8iDXjlSMk1QjNcq.jpg",
+          "tmdbId": 42009,
+          "checkedAt": "2026-10-11T04:25:05.811Z",
+          "provider": "tmdb"
+        }
       },
       "custom-1790247938551-ixfs": {
         "note": "序盤の幸せからの落差を大事にしている印象。実際とても愛らしくいいのだがそこの薄れが早い気もした。レゼの声優のボムの時の演技は少し下手？やば女のとにに演技感が出ている気もする。チェンソーマン全体としての噛ませ感やモブの死に安さは分かりやすすぎてまあり好きではない。ボムのキャラ自体はとても良い能力の派手さも華やかさもよく、映像になった時の美しさは素晴らしい。序盤の平和シーンのirisoutの使い方は浮いていた。戦闘シーンのbgmはいい時とまあ普通な時があり概ねGood。連続した戦いの緊迫感の持続の感じはめっちゃ好き。いい感じに区切れはあるが途切れずずっと続く感じ。漫画の劇場版としては感情的な部分ではあまり強くないが、映像アクションとしてはスタイリッシュさすらあるほどに素晴らしい。短いのは物足りなく感じたけど。2部の漫画でも思ったがこのはっちゃっけた感じのネタはそこまで好きではない。台風対チェンソーマンはそこまで好きではなかったな。ただ切ってて演出がない。\r\nラストはアニメに限らずとも上位で切ない。いい脚本だと思う。jane doe そこまで好きでなかったが、入り方もこのシーンに使うと考えるととても良い。ロシアでの過去も多くは語らないが寂しさや兵器的運用の切なさみたいなストレンジャーシングスのイレブン的なよくあるテーマではあるが触れ方もオシャレで、感情面もバックアップしている。鬼滅のように臭くなく、いい塩梅。\r\n全体として、まんがの1章ながら映画に最適な尺とストーリー、戦闘描写は少し短いが質がよく、感情面でもラストの持ってき方や展開は素直に素晴らしいと思う。",
@@ -48462,7 +48618,13 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-10"
+        "watchedAddedDate": "2026-10-10",
+        "poster84": {
+          "path": "/seN6rRfN0I6n8iDXjlSMk1QjNcq.jpg",
+          "tmdbId": 42009,
+          "checkedAt": "2026-10-11T04:30:49.962Z",
+          "provider": "tmdb"
+        }
       },
       "custom-1791664054005-kkyc": {
         "publishedAt": "Sun, 11 Oct 2026 06:36:16 +1300",
@@ -48490,7 +48652,13 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-11"
+        "watchedAddedDate": "2026-10-11",
+        "poster84": {
+          "path": "/kGeGP0CRRvhHMim4TklNujTGSyZ.jpg",
+          "tmdbId": 1354550,
+          "checkedAt": "2026-10-11T04:25:03.189Z",
+          "provider": "tmdb"
+        }
       },
       "custom-1791664054514-pksv": {
         "publishedAt": "Sun, 11 Oct 2026 06:34:06 +1300",
@@ -48518,7 +48686,13 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-11"
+        "watchedAddedDate": "2026-10-11",
+        "poster84": {
+          "path": "/9qk4vFYMMeLYmB9O438ofOFx9uE.jpg",
+          "tmdbId": 925907,
+          "checkedAt": "2026-10-11T04:25:03.190Z",
+          "provider": "tmdb"
+        }
       },
       "custom-1791664055006-96rv": {
         "publishedAt": "Sun, 11 Oct 2026 06:29:30 +1300",
@@ -48546,7 +48720,13 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-11"
+        "watchedAddedDate": "2026-10-11",
+        "poster84": {
+          "path": null,
+          "tmdbId": null,
+          "checkedAt": "2026-10-11T04:25:03.480Z",
+          "provider": "tmdb"
+        }
       },
       "custom-1791664055469-au2b": {
         "publishedAt": "Sun, 11 Oct 2026 06:19:17 +1300",
@@ -48574,7 +48754,13 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-11"
+        "watchedAddedDate": "2026-10-11",
+        "poster84": {
+          "path": "/jevByc1pGXEHuFYS7C0qYwVgpGg.jpg",
+          "tmdbId": 611716,
+          "checkedAt": "2026-10-11T04:25:04.477Z",
+          "provider": "tmdb"
+        }
       },
       "custom-1791664055911-cuz4": {
         "publishedAt": "Sun, 11 Oct 2026 06:12:28 +1300",
@@ -48602,7 +48788,13 @@
           }
         ],
         "watchedFlag": true,
-        "watchedAddedDate": "2026-10-11"
+        "watchedAddedDate": "2026-10-11",
+        "poster84": {
+          "path": "/ppEnERNpu47LHZX60UHOdUpQAoD.jpg",
+          "tmdbId": 948094,
+          "checkedAt": "2026-10-11T04:25:03.189Z",
+          "provider": "tmdb"
+        }
       },
       "__unmatchedHistory83": {
         "diary": {},
