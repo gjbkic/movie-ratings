@@ -7472,6 +7472,55 @@ const events=f=>Array.isArray(state.letterboxdMeta?.[f.id]?.watchHistory)?state.
 const latest=f=>events(f).map(x=>validDate(x.date)).filter(Boolean).sort().at(-1)||'';
 const logged=f=>events(f).map(x=>x.recordedAt||'').filter(Boolean).sort().at(-1)||'';
 const rewatches=f=>events(f).filter(x=>x.rewatch).length;
+
+const WATCHED_SOURCE83='letterboxd-watched-csv';
+function materializeWatchedDates83(){
+  // For this user's Letterboxd workflow, watched.csv Date is normally the view date.
+  // Keep that source explicit; a backdated entry can later be flagged as historical.
+  let added=0,known=0,missing=0;
+  const metaMap=state.letterboxdMeta||{};
+  for(const f of allFilms()){
+    const m=metaMap[f.id];
+    if(!m?.watchedFlag)continue;
+    const date=validDate(m.watchedAddedDate);
+    if(!date){missing++;continue;}
+    const rows=Array.isArray(m.watchHistory)?m.watchHistory:(m.watchHistory=[]);
+    // A more specific diary/RSS/manual viewing already exists. No fake second viewing.
+    if(rows.length){known++;continue;}
+    const id='csv:watched:'+f.id+'|'+date;
+    if((m.watchHistoryDeleted||[]).includes(id)){known++;continue;}
+    rows.push({
+      id,date,recordedAt:date+'T12:00:00Z',rewatch:false,
+      retroactive:!!m.historicalWatched,source:WATCHED_SOURCE83,
+      inferred:true,manualEdited:false
+    });
+    added++;
+  }
+  return {added,known,missing};
+}
+function watchedDateStats83(){
+  let total=0,inferred=0,explicit=0,flagged=0,undated=0;
+  for(const f of allFilms()){
+    const m=state.letterboxdMeta?.[f.id]||{},rows=Array.isArray(m.watchHistory)?m.watchHistory:[];
+    for(const r of rows){
+      total++;
+      if(r.source===WATCHED_SOURCE83)inferred++;else explicit++;
+      if(r.retroactive)flagged++;
+      if(!validDate(r.date))undated++;
+    }
+  }
+  return {total,inferred,explicit,flagged,undated};
+}
+function updateWatchStats83(){
+  const el=document.getElementById('watchImportStatus83');
+  if(!el)return;
+  const s=watchedDateStats83();
+  el.textContent='保存済み鑑賞履歴：'+s.total+'件（Letterboxd追加日を鑑賞日とみなしたもの '
+    +s.inferred+'件／Diary・RSS・手入力 '+s.explicit+'件）'
+    +(s.flagged?'／過去に見た作品のチェック '+s.flagged+'件':'')
+    +'。追加日より前に見た作品は詳細画面でチェック・日付修正できます。';
+}
+
 let sortMode='rank';try{sortMode=localStorage.getItem('movie30_watch_sort_v83')||'rank'}catch(_){}
 if(!['rank','watched-new','watched-old','rewatch','logged-new'].includes(sortMode))sortMode='rank';
 let listLimit=80;
@@ -7522,7 +7571,13 @@ function mergeRss(list){
     const retroactive=!!(date&&recordedAt&&time-Date.parse(date+'T00:00:00Z')>14*86400000);
     const data={id,date,recordedAt,rewatch:String(x.rewatch||'').toLowerCase()==='yes',
       retroactive,source:'letterboxd-rss',manualEdited:false};
-    if(!old){rows.push(data);added++;touched.add(f.id);}
+    if(!old){
+      // Replace an unedited inferred date when the same viewing has RSS evidence.
+      const duplicate=rows.findIndex(v=>v.source===WATCHED_SOURCE83&&!v.manualEdited&&
+        v.date===date&&!v.rewatch);
+      if(duplicate>=0)rows.splice(duplicate,1);
+      rows.push(data);added++;touched.add(f.id);
+    }
     else if(!old.manualEdited){
       let change=false;
       for(const k of ['date','recordedAt','rewatch','retroactive'])if(old[k]!==data[k]){old[k]=data[k];change=true;}
@@ -7614,6 +7669,9 @@ function importDiaryCsv83(diaryText,watchedText,source){
     const itemKey='csv:diary:'+dateKey+':'+nth;
     if((m.watchHistoryDeleted||[]).includes(itemKey))continue;
     if(arr.some(x=>x.id===itemKey)){duplicates++;continue;}
+    const inferredDup=arr.findIndex(x=>x.source===WATCHED_SOURCE83&&!x.manualEdited&&
+      x.date===date&&x.rewatch===/^(yes|true|1)$/i.test(raw.rewatch));
+    if(inferredDup>=0)arr.splice(inferredDup,1);
     // RSS may already contain the same diary event. Avoid duplicating viewings.
     const existing=arr.find(x=>x.id.startsWith('rss:')&&x.date===date&&!consumed.has(x.id));
     if(existing){consumed.add(existing.id);duplicates++;continue;}
@@ -7628,12 +7686,15 @@ function importDiaryCsv83(diaryText,watchedText,source){
     if(!f){unmatched++;trackUnmatched('watched',raw);continue;}
     const m=meta(f.id),date=validDate(raw.recordDate);
     if(!m.watchedFlag){m.watchedFlag=true;marked++;}
-    // "Date" in watched.csv is when marked watched, NOT when actually viewed.
+    // The user normally marks watched when actually viewing. Keep as an inferred date.
     if(date&&(!m.watchedAddedDate||date<m.watchedAddedDate))m.watchedAddedDate=date;
   }
+  const populated=materializeWatchedDates83();
   save();drawList();
   if(selectedId)drawEditor(selectedId);
-  return {diary:diary.length,watched:watched.length,entries,marked,unmatched,duplicates,source};
+  updateWatchStats83();
+  return {diary:diary.length,watched:watched.length,entries,marked,
+    inferred:populated.added,unmatched,duplicates,source};
 }
 async function readExport83(file){
   const name=String(file.name||'').toLowerCase();
@@ -7727,7 +7788,7 @@ function drawList(){
         entries.push({f,entry,sortDate:value,count:rows.length});
       }
     }else{
-      // watched.csv registration date is not an actual viewing date.
+      // If there is no history yet, use the watched.csv Date as a provisional view date.
       const known=sortMode==='logged-new'
         ?(state.letterboxdMeta?.[f.id]?.watchedAddedDate||''):'';
       entries.push({f,entry:null,sortDate:known,count:0});
@@ -7805,6 +7866,7 @@ function drawList(){
     return section+'<button type="button" class="watch83-item" data-film="'+encodeURIComponent(f.id)+'"><strong>'
       +esc(displayTitle(f))+'</strong><small>'+esc(dateLabel)
       +(entry?.rewatch?' · 再鑑賞':'')
+      +(entry?.source===WATCHED_SOURCE83?' · 追加日から推定':'')
       +(entry?.retroactive?' · 過去の鑑賞を後日登録':'')
       +(!entry&&m.historicalWatched?' · 以前から鑑賞済み':'')
       +'</small><small>'+(sc==null?'未採点':sc+'点')
@@ -7857,17 +7919,21 @@ function drawEditor(id){
   const m=meta(f.id);
   const rows=[...events(f)].sort((a,b)=>(b.date||b.recordedAt||'').localeCompare(a.date||a.recordedAt||''));
   editor.innerHTML='<h3>鑑賞日・再鑑賞履歴</h3>'
-    +'<p>登録されている鑑賞記録 '+rows.length+'件。昔見たものを後日登録した場合はチェックを付けてください。鑑賞日が不明なら空欄で保存できます。</p>'
-    +'<label style="display:flex;margin:8px 0"><input type="checkbox" id="watchPast83" '+(m.historicalWatched?'checked':'')+'>以前から見ていた作品（鑑賞日不明）</label>'
+    +'<p>登録されている鑑賞記録 '+rows.length+'件。Letterboxdに追加した日を原則鑑賞日として表示しています。以前に見た作品は「過去に観たものを後から登録」にチェックし、必要なら日付を修正できます。</p>'
+    +'<label style="display:flex;margin:8px 0"><input type="checkbox" id="watchPast83" '+(m.historicalWatched?'checked':'')+'>この作品は追加日より前にも見ていた（推定鑑賞日を後日登録扱い）</label>'
     +'<button type="button" id="watchAdd83">＋ 鑑賞記録を追加</button>'
     +rows.map(x=>'<div class="watch83-record" data-id="'+encodeURIComponent(x.id)+'"><div>'
       +'<input aria-label="鑑賞日" type="date" data-date value="'+esc(x.date||'')+'">'
       +'<label><input type="checkbox" data-rewatch '+(x.rewatch?'checked':'')+'>再鑑賞</label>'
       +'<label><input type="checkbox" data-retro '+(x.retroactive?'checked':'')+'>過去に観たものを後から登録</label>'
       +'<button type="button" data-delete>削除</button></div><small>'
-      +(x.source==='letterboxd-rss'?'Letterboxdから取得':'手入力')+' ／ 記録日：'
+      +(x.source==='letterboxd-rss'?'Letterboxd RSS':x.source===WATCHED_SOURCE83?'Letterboxd追加日（推定）':x.source==='letterboxd-export'?'Letterboxd Diary':'手入力')+' ／ 登録日：'
       +(x.recordedAt?esc(x.recordedAt.slice(0,10)):'不明')+'</small></div>').join('');
-  editor.querySelector('#watchPast83').onchange=e=>{m.historicalWatched=e.target.checked;save();drawList();};
+  editor.querySelector('#watchPast83').onchange=e=>{
+    const checked=e.target.checked;m.historicalWatched=checked;
+    for(const r of events(f))if(r.source===WATCHED_SOURCE83){r.retroactive=checked;r.manualEdited=true;}
+    save();drawList();drawEditor(f.id);updateWatchStats83();
+  };
   editor.querySelector('#watchAdd83').onclick=()=>{
     const m=meta(f.id);m.watchHistory=m.watchHistory||[];
     m.watchHistory.push({id:'manual:'+Date.now()+'-'+Math.random().toString(36).slice(2,6),
@@ -7913,15 +7979,20 @@ if(page&&!document.getElementById('watchImport83')){
     try{
       const r=await readExport83(file);
       status.textContent='取得：Diary '+r.diary+'件、Watched '+r.watched
-        +'件／新しい鑑賞記録 '+r.entries+'件／既存重複 '+r.duplicates
-        +'件／照合できなかった記録 '+r.unmatched+'件。';
+        +'件／鑑賞日を追加 '+(r.entries+r.inferred)+'件（登録日から '+r.inferred+'件）'
+        +'／既存重複 '+r.duplicates+'件／未照合 '+r.unmatched+'件。';
     }catch(err){status.textContent='読み込みできません：'+(err?.message||err);}
     e.target.value='';
   };
 }
+// Backfill already-imported watched.csv data on startup. No ZIP re-upload needed.
+const initialCsv83=materializeWatchedDates83();
 drawList();
-setTimeout(importSavedRss,700);
-window.__movie30WatchDiaryV83={build:BUILD};
+setTimeout(()=>{
+  updateWatchStats83();
+  importSavedRss();
+},700);
+window.__movie30WatchDiaryV83={build:BUILD,inferredAtStartup:initialCsv83.added};
 const marker=document.getElementById('movie30BuildV29');if(marker)marker.textContent='app build '+BUILD;
 })();
 ;
@@ -8284,7 +8355,7 @@ save();
 render();
 document.documentElement.classList.add('movie30-ready');
 const movie30BuildLabel=document.getElementById('movie30BuildV29');
-if(movie30BuildLabel)movie30BuildLabel.textContent='app build 20261011g';
+if(movie30BuildLabel)movie30BuildLabel.textContent='app build 20261011h';
 
 </script>
 
