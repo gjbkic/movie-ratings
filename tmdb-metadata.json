@@ -1,9 +1,9 @@
 {
   "schema": 1,
-  "updatedAt": "2026-10-11T13:17:18.916Z",
+  "updatedAt": "2026-10-11T13:46:53.376Z",
   "catalogSize": 730,
-  "matchedCount": 527,
-  "seededDirectorCount": 525,
+  "matchedCount": 630,
+  "seededDirectorCount": 629,
   "seededPosterCount": 8,
   "films": {
     "lb-62-2b4w": {
@@ -36,10 +36,12 @@
       "type": "movie",
       "title": "Black Swan",
       "year": "2010",
-      "directors": [],
+      "directors": [
+        "Darren Aronofsky"
+      ],
       "creators": [],
       "posterPath": "/viWheBd44bouiLCHgNMvahLThqx.jpg",
-      "source": "tmdb-synced"
+      "source": "curated-film-credits"
     },
     "lb-540-1W7A": {
       "tmdbId": 10494,
@@ -6387,6 +6389,1249 @@
       "posterPath": "",
       "posterUrl": "https://www.sonymusic.co.jp/Music/Info/utadahikaru/en/music/img/dvd/img_music_dvd_14.jpg",
       "source": "official-artist-site"
+    },
+    "lb-350-2bcK": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Memento",
+      "year": "2000",
+      "directors": [
+        "Christopher Nolan"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "lb-334-1Tp2": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Porco Rosso",
+      "year": "1992",
+      "directors": [
+        "Hayao Miyazaki"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1790508958519-2edt": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Monster",
+      "year": "2023",
+      "directors": [
+        "Hirokazu Kore-eda"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1790420198451-g42l": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "The Elephant Man",
+      "year": "1980",
+      "directors": [
+        "David Lynch"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "lb-349-2aGY": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Terminator 2: Judgment Day",
+      "year": "1991",
+      "directors": [
+        "James Cameron"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1790458138074-p8hs": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Rashomon",
+      "year": "1950",
+      "directors": [
+        "Akira Kurosawa"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "lb-487-28JG": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "The Virgin Suicides",
+      "year": "1999",
+      "directors": [
+        "Sofia Coppola"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "added-anchor-577": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "The Lives of Others",
+      "year": "2006",
+      "directors": [
+        "Florian Henckel von Donnersmarck"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1790254612541-iyij": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Brazil",
+      "year": "1985",
+      "directors": [
+        "Terry Gilliam"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1790960881562-cn74": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Mishima: A Life in Four Chapters",
+      "year": "1985",
+      "directors": [
+        "Paul Schrader"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "added-anchor-578": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "The Hunt",
+      "year": "2012",
+      "directors": [
+        "Thomas Vinterberg"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1791057232858-35ld": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Sound of Metal",
+      "year": "2020",
+      "directors": [
+        "Darius Marder"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1791023391963-vdu9": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "The Iron Giant",
+      "year": "1999",
+      "directors": [
+        "Brad Bird"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1791036345616-3tph": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "The Wages of Fear",
+      "year": "1953",
+      "directors": [
+        "Henri-Georges Clouzot"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1791353624251-egky": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Dog Day Afternoon",
+      "year": "1975",
+      "directors": [
+        "Sidney Lumet"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "lb-464-mkbG": {
+      "tmdbId": null,
+      "type": "drama",
+      "title": "Chernobyl",
+      "year": "2019",
+      "directors": [
+        "Johan Renck"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "lb-296-l7zS": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Mission: Impossible – Dead Reckoning",
+      "year": "2023",
+      "directors": [
+        "Christopher McQuarrie"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1791139747386-vy04": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "The Batman",
+      "year": "2022",
+      "directors": [
+        "Matt Reeves"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "lb-576-18H4": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Witness for the Prosecution",
+      "year": "1957",
+      "directors": [
+        "Billy Wilder"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "base-chinatown-1974": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Chinatown",
+      "year": "1974",
+      "directors": [
+        "Roman Polanski"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "added-anchor-579": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "The Vanishing",
+      "year": "1988",
+      "directors": [
+        "George Sluizer"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "lb-345-1USu": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Awakenings",
+      "year": "1990",
+      "directors": [
+        "Penny Marshall"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1791576150006-qu8m": {
+      "tmdbId": null,
+      "type": "drama",
+      "title": "Black Mirror: San Junipero",
+      "year": "2016",
+      "directors": [
+        "Owen Harris"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "lb-574-29CQ": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Almost Famous",
+      "year": "2000",
+      "directors": [
+        "Cameron Crowe"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1790971112940-kuhf": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Summer Time Machine Blues",
+      "year": "2005",
+      "directors": [
+        "Katsuyuki Motohiro"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1791374649583-3zqi": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "The Substance",
+      "year": "2024",
+      "directors": [
+        "Coralie Fargeat"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1791570909341-auj1": {
+      "tmdbId": null,
+      "type": "drama",
+      "title": "Black Mirror: Shut Up and Dance",
+      "year": "2016",
+      "directors": [
+        "James Watkins"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1789387775661-0mdh": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Tokyo Godfathers",
+      "year": "2003",
+      "directors": [
+        "Satoshi Kon"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1790269934541-2ps3": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "The Raid",
+      "year": "2012",
+      "directors": [
+        "Gareth Evans"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1791476522907-cd9b": {
+      "tmdbId": null,
+      "type": "drama",
+      "title": "Black Mirror: White Bear",
+      "year": "2013",
+      "directors": [
+        "Carl Tibbetts"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "added-anchor-580": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Triangle",
+      "year": "2009",
+      "directors": [
+        "Christopher Smith"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "base-perks-2012": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "The Perks of Being a Wallflower",
+      "year": "2012",
+      "directors": [
+        "Stephen Chbosky"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1790924446793-9ts4": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "The Fly",
+      "year": "1986",
+      "directors": [
+        "David Cronenberg"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1790665767820-1d1q": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Uncut Gems",
+      "year": "2019",
+      "directors": [
+        "Josh Safdie",
+        "Benny Safdie"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1791627813752-lf6s": {
+      "tmdbId": null,
+      "type": "drama",
+      "title": "Black Mirror: Hated in the Nation",
+      "year": "2016",
+      "directors": [
+        "James Hawes"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "lb-278-2aoU": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Cube",
+      "year": "1997",
+      "directors": [
+        "Vincenzo Natali"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "lb-341-1Qzy": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Gran Torino",
+      "year": "2008",
+      "directors": [
+        "Clint Eastwood"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1789385860341-pd09": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Funny Games",
+      "year": "1997",
+      "directors": [
+        "Michael Haneke"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1790322762725-70dy": {
+      "tmdbId": null,
+      "type": "drama",
+      "title": "Tokyo Swindlers",
+      "year": "2024",
+      "directors": [
+        "Hitoshi One"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "lb-335-2a0y": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Men in Black II",
+      "year": "2002",
+      "directors": [
+        "Barry Sonnenfeld"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1789918000606-jgbg": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "RoboCop",
+      "year": "1987",
+      "directors": [
+        "Paul Verhoeven"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "base-simple-plan-1998": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "A Simple Plan",
+      "year": "1998",
+      "directors": [
+        "Sam Raimi"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "lb-337-1nRe": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "The Castle of Sand",
+      "year": "1974",
+      "directors": [
+        "Yoshitaro Nomura"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "lb-348-71k": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "The Fifth Element",
+      "year": "1997",
+      "directors": [
+        "Luc Besson"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1790433924185-cva1": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Palm Springs",
+      "year": "2020",
+      "directors": [
+        "Max Barbakow"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1790185844080-jquu": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Strange Days",
+      "year": "1995",
+      "directors": [
+        "Kathryn Bigelow"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "lb-575-1fK0": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Millennium Actress",
+      "year": "2001",
+      "directors": [
+        "Satoshi Kon"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1791469824035-6gcd": {
+      "tmdbId": null,
+      "type": "drama",
+      "title": "Black Mirror: The Entire History of You",
+      "year": "2011",
+      "directors": [
+        "Brian Welsh"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1789385860147-fi90": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Snowpiercer",
+      "year": "2013",
+      "directors": [
+        "Bong Joon-ho"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1791362786595-8onp": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Moneyball",
+      "year": "2011",
+      "directors": [
+        "Bennett Miller"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "lb-183-x1OG": {
+      "tmdbId": null,
+      "type": "drama",
+      "title": "Squid Game",
+      "year": "2021",
+      "directors": [
+        "Hwang Dong-hyuk"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "lb-523-6xza": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Coherence",
+      "year": "2013",
+      "directors": [
+        "James Ward Byrkit"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "lb-403-uAKS": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Wake Up Dead Man",
+      "year": "2025",
+      "directors": [
+        "Rian Johnson"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1789929101832-iwdt": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Mother",
+      "year": "2009",
+      "directors": [
+        "Bong Joon-ho"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "lb-149-AF4": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "The Secret World of Arrietty",
+      "year": "2010",
+      "directors": [
+        "Hiromasa Yonebayashi"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1789408864046-u4p4": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Jacob's Ladder",
+      "year": "1990",
+      "directors": [
+        "Adrian Lyne"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1791449338315-twqr": {
+      "tmdbId": null,
+      "type": "drama",
+      "title": "Black Mirror: Fifteen Million Merits",
+      "year": "2011",
+      "directors": [
+        "Euros Lyn"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1790185843981-dk0y": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Saw II",
+      "year": "2005",
+      "directors": [
+        "Darren Lynn Bousman"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1791567440043-bmc8": {
+      "tmdbId": null,
+      "type": "drama",
+      "title": "Black Mirror: Nosedive",
+      "year": "2016",
+      "directors": [
+        "Joe Wright"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "lb-354-aNGk": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Arrival",
+      "year": "2016",
+      "directors": [
+        "Denis Villeneuve"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "base-clue-1985": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Clue",
+      "year": "1985",
+      "directors": [
+        "Jonathan Lynn"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1790089712252-cunv": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Gone Baby Gone",
+      "year": "2007",
+      "directors": [
+        "Ben Affleck"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "lb-347-4bW8": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Key of Life",
+      "year": "2012",
+      "directors": [
+        "Kenji Uchida"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1791122852357-22zp": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "5 Centimeters per Second",
+      "year": "2007",
+      "directors": [
+        "Makoto Shinkai"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1789385860088-xif1": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "The Guilty",
+      "year": "2018",
+      "directors": [
+        "Gustav Möller"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1789385860389-93a2": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "The Invitation",
+      "year": "2015",
+      "directors": [
+        "Karyn Kusama"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1791447953969-ah3e": {
+      "tmdbId": null,
+      "type": "drama",
+      "title": "Black Mirror: The National Anthem",
+      "year": "2011",
+      "directors": [
+        "Otto Bathurst"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "lb-338-a9lm": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Shin Godzilla",
+      "year": "2016",
+      "directors": [
+        "Hideaki Anno",
+        "Shinji Higuchi"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1791392810098-rjyg": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Shrek",
+      "year": "2001",
+      "directors": [
+        "Andrew Adamson",
+        "Vicky Jenson"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1790358520071-ybym": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Beyond the Infinite Two Minutes",
+      "year": "2020",
+      "directors": [
+        "Junta Yamaguchi"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1790352007604-3jj6": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Game Night",
+      "year": "2018",
+      "directors": [
+        "John Francis Daley",
+        "Jonathan Goldstein"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1789385860847-w7kt": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Bayside Shakedown",
+      "year": "1998",
+      "directors": [
+        "Katsuyuki Motohiro"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "lb-344-5YPM": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "The Maze Runner",
+      "year": "2014",
+      "directors": [
+        "Wes Ball"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "lb-346-1Aiw": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Dinner Rush",
+      "year": "2000",
+      "directors": [
+        "Bob Giraldi"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1791469823654-dpbh": {
+      "tmdbId": null,
+      "type": "drama",
+      "title": "Black Mirror: Be Right Back",
+      "year": "2013",
+      "directors": [
+        "Owen Harris"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "lb-343-3zuA": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Thermae Romae",
+      "year": "2012",
+      "directors": [
+        "Hideki Takeuchi"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1791113241627-mf17": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Dragon Ball Super: Broly",
+      "year": "2018",
+      "directors": [
+        "Tatsuya Nagamine"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "lb-339-lPy0": {
+      "tmdbId": null,
+      "type": "drama",
+      "title": "Paranoia Agent",
+      "year": "2004",
+      "directors": [
+        "Satoshi Kon"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "lb-482-euce": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "The Invisible Guest",
+      "year": "2016",
+      "directors": [
+        "Oriol Paulo"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "lb-355-8lFu": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Passengers",
+      "year": "2016",
+      "directors": [
+        "Morten Tyldum"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1789385860756-dujj": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Bayside Shakedown 2",
+      "year": "2003",
+      "directors": [
+        "Katsuyuki Motohiro"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1791113242437-wcok": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Dragon Ball Super: Super Hero",
+      "year": "2022",
+      "directors": [
+        "Tetsuro Kodama"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1791563602274-2p5j": {
+      "tmdbId": null,
+      "type": "drama",
+      "title": "Black Mirror: Playtest",
+      "year": "2016",
+      "directors": [
+        "Dan Trachtenberg"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "lb-340-3r58": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Captain America: The Winter Soldier",
+      "year": "2014",
+      "directors": [
+        "Anthony Russo",
+        "Joe Russo"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "base-timecrimes-2007": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Timecrimes",
+      "year": "2007",
+      "directors": [
+        "Nacho Vigalondo"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "lb-173-oCkK": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Glass Onion",
+      "year": "2022",
+      "directors": [
+        "Rian Johnson"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "added-anchor-583": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Train to Busan",
+      "year": "2016",
+      "directors": [
+        "Yeon Sang-ho"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1789385860247-k5ps": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "10 Things I Hate About You",
+      "year": "1999",
+      "directors": [
+        "Gil Junger"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1791636834270-874l": {
+      "tmdbId": null,
+      "type": "drama",
+      "title": "Black Mirror: Men Against Fire",
+      "year": "2016",
+      "directors": [
+        "Jakob Verbruggen"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "lb-106-29Ik": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "V for Vendetta",
+      "year": "2005",
+      "directors": [
+        "James McTeigue"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1789385860718-itqh": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Bayside Shakedown 3: Set the Guys Loose",
+      "year": "2010",
+      "directors": [
+        "Katsuyuki Motohiro"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1789385860580-5td5": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Kaiji: Final Game",
+      "year": "2020",
+      "directors": [
+        "Toya Sato"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "lb-351-2DqA": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Thor: The Dark World",
+      "year": "2013",
+      "directors": [
+        "Alan Taylor"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "lb-356-28dK": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "West Side Story",
+      "year": "1961",
+      "directors": [
+        "Robert Wise",
+        "Jerome Robbins"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1789385861007-nhdf": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Lilo & Stitch",
+      "year": "2002",
+      "directors": [
+        "Chris Sanders",
+        "Dean DeBlois"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "lb-259-N7ZC": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "A Samurai in Time",
+      "year": "2023",
+      "directors": [
+        "Junichi Yasuda"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1790185844045-qhut": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Aladdin",
+      "year": "2019",
+      "directors": [
+        "Guy Ritchie"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "lb-357-1XHu": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "The Phantom of the Opera",
+      "year": "2004",
+      "directors": [
+        "Joel Schumacher"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "added-anchor-582": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Hereditary",
+      "year": "2018",
+      "directors": [
+        "Ari Aster"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1790322764890-2w6w": {
+      "tmdbId": null,
+      "type": "drama",
+      "title": "Vivant",
+      "year": "2023",
+      "directors": [
+        "Katsuo Fukuzawa"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-1790322766063-ab5l": {
+      "tmdbId": null,
+      "type": "drama",
+      "title": "First Love",
+      "year": "2022",
+      "directors": [
+        "Yuri Kanchiku"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-lb-unrated-bOnU": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Jurassic World: Fallen Kingdom",
+      "year": "2018",
+      "directors": [
+        "J. A. Bayona"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
+    },
+    "custom-lb-unrated-1Qcu": {
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Always - Sunset on Third Street",
+      "year": "2005",
+      "directors": [
+        "Takashi Yamazaki"
+      ],
+      "creators": [],
+      "posterPath": "",
+      "source": "curated-film-credits"
     }
   },
   "unmatched": {}
