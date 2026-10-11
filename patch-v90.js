@@ -1,7 +1,7 @@
 (() => {
 'use strict';
 // v90: Search results reuse posters in every view; details open a full-screen cover viewer.
-const VERSION='20261011v';
+const VERSION='20261011y';
 const WILD='custom-1791664055006-96rv';
 const WILD_COVER='https://www.sonymusic.co.jp/Music/Info/utadahikaru/en/music/img/dvd/img_music_dvd_14.jpg';
 const css=document.createElement('style');css.id='movie30-search-posters-lightbox90';
@@ -9,6 +9,7 @@ css.textContent=[
 '.movie90-result-with-art{position:relative!important;display:flex!important;flex-direction:row!important;align-items:center!important;justify-content:flex-start!important;gap:8px!important;min-height:76px!important;box-sizing:border-box!important;overflow:hidden!important}',
 '.movie90-result-with-art .movie90-result-art{display:block!important;position:static!important;flex:none!important;width:42px!important;height:63px!important;object-fit:contain!important;border-radius:5px;border:1px solid #405169;background:#15202e}',
 '.movie90-result-text{display:flex;flex-direction:column;min-width:0;flex:1;align-items:flex-start}',
+'.movie90-result-art-placeholder{font-size:9px;line-height:1.5;color:#bdcadb;text-align:center;display:flex!important;align-items:center;justify-content:center;padding:5px;box-sizing:border-box}',
 '.movie90-result-text .card-title,.movie90-result-text strong{overflow-wrap:anywhere}',
 '#classifyRoot .card.movie90-result-with-art .badge{margin-top:6px}',
 '#rankRoot .uns-card.movie90-result-with-art{min-height:77px!important}',
@@ -41,13 +42,17 @@ function posterFor(id,size='w342'){
 const roots=['rankRoot','classifyRoot','watchList83'];
 function decorateResult(card,id){
  if(card.querySelector('.movie90-result-art'))return;
- const src=posterFor(id,'w185');if(!src)return;
+ const src=posterFor(id,'w185');
+ const searched=Boolean(document.getElementById('searchRank')?.value.trim()||document.getElementById('searchClassify')?.value.trim());
+ if(!src&&!searched)return;
  card.classList.add('movie90-result-with-art');
- const img=document.createElement('img');
- img.className='movie90-result-art';img.src=src;img.alt='';img.loading='lazy';img.decoding='async';
+ const art=document.createElement(src?'img':'span');
+ art.className='movie90-result-art'+(src?'':' movie90-result-art-placeholder');
+ if(src){art.src=src;art.alt='';art.loading='lazy';art.decoding='async';}
+ else art.textContent='画像未取得';
  const wrapper=document.createElement('span');wrapper.className='movie90-result-text';
  while(card.firstChild)wrapper.appendChild(card.firstChild);
- card.append(img,wrapper);
+ card.append(art,wrapper);
 }
 function refreshPosters(){
  // Rank list posters and date-sort posters already exist in v84; also fill in after searches.
@@ -69,7 +74,13 @@ function refreshPosters(){
   const id=decodeURIComponent(card.dataset.id||card.dataset.uns||'');
   const wanted=posterFor(id,'w185');
   const img=card.querySelector('.movie90-result-art');
-  if(wanted&&img&&img.getAttribute('src')!==wanted)img.src=wanted;
+  if(!wanted||!img)continue;
+  if(img.tagName==='IMG'){if(img.getAttribute('src')!==wanted)img.src=wanted;}
+  else{
+   const real=document.createElement('img');real.className='movie90-result-art';
+   real.src=wanted;real.alt='';real.loading='lazy';real.decoding='async';
+   img.replaceWith(real);
+  }
  }
  const detail=document.getElementById('movie30PosterDetail84');
  const img=detail?.querySelector('img.movie30-poster84[data-poster-id]');
