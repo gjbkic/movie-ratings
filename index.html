@@ -7490,7 +7490,7 @@ function materializeWatchedDates83(){
     const id='csv:watched:'+f.id+'|'+date;
     if((m.watchHistoryDeleted||[]).includes(id)){known++;continue;}
     rows.push({
-      id,date,recordedAt:date+'T12:00:00Z',rewatch:false,
+      id,date,recordedAt:'',rewatch:false,
       retroactive:!!m.historicalWatched,source:WATCHED_SOURCE83,
       inferred:true,manualEdited:false
     });
@@ -7784,7 +7784,9 @@ function drawList(){
     // Each Letterboxd diary entry appears independently, including rewatches.
     if(rows.length){
       for(const entry of rows){
-        const value=sortMode==='logged-new'?(entry.recordedAt||'').slice(0,10):validDate(entry.date);
+        const value=sortMode==='logged-new'
+          ?((entry.recordedAt||'').slice(0,10)||validDate(state.letterboxdMeta?.[f.id]?.watchedAddedDate))
+          :validDate(entry.date);
         entries.push({f,entry,sortDate:value,count:rows.length});
       }
     }else{
@@ -7928,7 +7930,7 @@ function drawEditor(id){
       +'<label><input type="checkbox" data-retro '+(x.retroactive?'checked':'')+'>過去に観たものを後から登録</label>'
       +'<button type="button" data-delete>削除</button></div><small>'
       +(x.source==='letterboxd-rss'?'Letterboxd RSS':x.source===WATCHED_SOURCE83?'Letterboxd追加日（推定）':x.source==='letterboxd-export'?'Letterboxd Diary':'手入力')+' ／ 登録日：'
-      +(x.recordedAt?esc(x.recordedAt.slice(0,10)):'不明')+'</small></div>').join('');
+      +(x.recordedAt?esc(x.recordedAt.slice(0,10)):x.source===WATCHED_SOURCE83?'追加日 '+esc(m.watchedAddedDate||'不明'):'不明')+'</small></div>').join('');
   editor.querySelector('#watchPast83').onchange=e=>{
     const checked=e.target.checked;m.historicalWatched=checked;
     for(const r of events(f))if(r.source===WATCHED_SOURCE83){r.retroactive=checked;r.manualEdited=true;}
