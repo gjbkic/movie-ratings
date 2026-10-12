@@ -5700,20 +5700,25 @@ function jumpGlobal(id){
  clearFilters();
  view.page='rank';
  render();
+ let attempts=0;
  const jump=()=>{
-  // A previous render can be replaced by async metadata updates, so always
-  // resolve the current card from the COMPLETE ranking, not filtered DOM.
+  attempts++;
   const c=cardForRank(id);
-  if(!c)return false;
+  if(!c){window.__movie30LastJump99={id,attempts,found:false};return false}
   posTools(id);
-  centerRankCard(c);
-  c.classList.add('movie30-jump-highlight');
-  setTimeout(()=>c.classList.remove('movie30-jump-highlight'),1800);
+  // Work with the reattached live card after posTools changed its height.
+  const current=cardForRank(id);
+  centerRankCard(current);
+  current.classList.add('movie30-jump-highlight');
+  window.__movie30LastJump99={id,attempts,found:true,scrollY:window.scrollY,top:current.getBoundingClientRect().top};
+  setTimeout(()=>current.classList.remove('movie30-jump-highlight'),1800);
   return true;
  };
- const run=()=>{requestAnimationFrame(()=>requestAnimationFrame(jump));};
- // iOS viewport grows after dismissing the software keyboard.
- run();setTimeout(run,230);setTimeout(run,570);
+ // Do an immediate jump. Old rAF-only implementation sometimes never
+ // completed while the Safari search input / keyboard was still active.
+ jump();
+ const later=()=>requestAnimationFrame(jump);
+ later();setTimeout(later,260);setTimeout(later,640);
  toast('全体ランキング内の該当作品へ移動しました');
 }
 window.__movie30JumpToGlobalRank=jumpGlobal;window.__movie30IsRankFiltered=filtered;
