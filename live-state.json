@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791823923145,
-  "sourceUpdatedIso": "2026-10-12T16:52:03.145Z",
+  "sourceUpdatedAt": 1791823928545,
+  "sourceUpdatedIso": "2026-10-12T16:52:08.545Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -12650,35 +12650,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1791449338315-twqr",
-      "title": "ブラック・ミラー「1500万メリット」",
-      "originalTitle": "",
-      "englishTitle": "Black Mirror: Fifteen Million Merits",
-      "year": 2011,
-      "score": 79,
-      "star": 2.5,
-      "overallRank": 441,
-      "sameScoreRank": 9,
-      "category": "Letterboxd",
-      "mediaType": "drama",
-      "genre": [
-        "ドラマ",
-        "SF",
-        "社会問題・生活",
-        "娯楽",
-        "恋愛",
-        "世界観",
-        "TV本編"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": null,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-08",
-      "letterboxdPublishedAt": "Thu, 8 Oct 2026 21:32:23 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-08"
-    },
-    {
       "id": "lb-285-2aVu",
       "title": "ラッキーナンバー7",
       "originalTitle": "",
@@ -12686,8 +12657,8 @@
       "year": 2006,
       "score": 79,
       "star": 2.5,
-      "overallRank": 442,
-      "sameScoreRank": 10,
+      "overallRank": 441,
+      "sameScoreRank": 9,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -12713,8 +12684,8 @@
       "year": 2011,
       "score": 79,
       "star": 2.5,
-      "overallRank": 443,
-      "sameScoreRank": 11,
+      "overallRank": 442,
+      "sameScoreRank": 10,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -12732,6 +12703,35 @@
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1791449338315-twqr",
+      "title": "ブラック・ミラー「1500万メリット」",
+      "originalTitle": "",
+      "englishTitle": "Black Mirror: Fifteen Million Merits",
+      "year": 2011,
+      "score": 79,
+      "star": 2.5,
+      "overallRank": 443,
+      "sameScoreRank": 11,
+      "category": "Letterboxd",
+      "mediaType": "drama",
+      "genre": [
+        "ドラマ",
+        "SF",
+        "社会問題・生活",
+        "娯楽",
+        "恋愛",
+        "世界観",
+        "TV本編"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-08",
+      "letterboxdPublishedAt": "Thu, 8 Oct 2026 21:32:23 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-08"
     },
     {
       "id": "lb-412-2b68",
@@ -21745,9 +21745,9 @@
         "custom-1791113241748-xivg",
         "custom-1791122852357-22zp",
         "lb-415-1Spq",
-        "custom-1791449338315-twqr",
         "lb-285-2aVu",
         "lb-264-FPS",
+        "custom-1791449338315-twqr",
         "lb-412-2b68",
         "lb-265-fdo",
         "custom-1790322757185-u25f",
