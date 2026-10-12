@@ -103,3 +103,5 @@ jobs:
 # Retest full finger handoff after replacing v15 endDrag override
 
 # Verify shared instant-scroll helper after drag pointer release
+
+# Verify render freeze and original finger anchor during search-to-drag release
