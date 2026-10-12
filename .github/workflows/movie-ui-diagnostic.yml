@@ -61,7 +61,7 @@ jobs:
           })().catch(e=>{console.error(e.stack||e);process.exitCode=1});
           NODE
 
-      - name: Verify search jump and animated rank swapping
+      - name: Verify restored drag-style rank swapping
         shell: bash
         run: |
           set -e
@@ -113,16 +113,39 @@ jobs:
             if(move.length>1){
               const d=move.idx<move.length-1?'1':'-1';
               await page.locator('#rankRoot .rank-card[data-id="'+id+'"] .v66-pos [data-sw="'+d+'"]').click({force:true});
-              const active=await page.evaluate(()=>({ghost:document.querySelectorAll('.movie30-swap-ghost').length,animations:document.getAnimations().length}));
-              await page.waitForTimeout(700);
+              const active=await page.evaluate(()=>{
+                const ghost=document.querySelector('.movie30-swap-ghost'),card=ghost&&document.querySelector('#rankRoot .rank-card[data-id="'+ghost.dataset.id+'"]');
+                return {ghost:!!ghost,originalGhostClass:ghost?.classList.contains('drag-ghost'),
+                  position:ghost&&getComputedStyle(ghost).position,
+                  zIndex:ghost&&getComputedStyle(ghost).zIndex,
+                  animations:document.getAnimations().length,
+                  state:window.__movie30SwapMotion,rankSwapInFlight:!!ghost};
+              });
+              await page.waitForTimeout(230);
+              const during=await page.evaluate(id=>{
+                const ghost=document.querySelector('.movie30-swap-ghost'),
+                  selected=document.querySelector('#rankRoot .rank-card[data-id="'+id+'"]'),
+                  rect=ghost?.getBoundingClientRect();
+                return {ghost:!!ghost,transform:ghost&&getComputedStyle(ghost).transform,
+                  top:rect?.top,left:rect?.left,opacity:ghost&&getComputedStyle(ghost).opacity,
+                  selectedVisibility:selected&&getComputedStyle(selected).visibility,
+                  selectedPosition:selected?.getBoundingClientRect().top,
+                  state:window.__movie30SwapMotion};
+              },id);
+              const screenshot=(await page.screenshot({type:'jpeg',quality:62})).toString('base64');
+              console.log('VISUAL_FRAME_230 '+screenshot);
+              await page.waitForTimeout(820);
               const after=await page.evaluate(id=>{
                 const c=document.querySelector('#rankRoot .rank-card[data-id="'+id+'"]'),ls=c.closest('.score-list');
                 const ids=[...ls.querySelectorAll('.rank-card[data-id]')].map(x=>x.dataset.id);
                 return {idx:ids.indexOf(id),ghost:document.querySelectorAll('.movie30-swap-ghost').length,focused:c.classList.contains('v66-focus')};
               },id);
-              console.log('SWAP_ANIMATION',JSON.stringify(active),'SWAP_AFTER',JSON.stringify(after),'DIRECTION',d);
+              console.log('SWAP_ANIMATION',JSON.stringify(active),'DURING',JSON.stringify(during),'SWAP_AFTER',JSON.stringify(after),'DIRECTION',d);
               if(after.idx!==move.idx+Number(d))throw Error('Same-score rank swap failed');
-              if(active.ghost<1)throw Error('Lifted ghost animation was not shown');
+              if(!active.ghost||!active.originalGhostClass||active.position!=='fixed'||active.animations<1)throw Error('Original floating drag ghost is missing');
+              if(during.selectedVisibility!=='hidden'||!during.ghost)throw Error('Card did not visibly lift out before ranking updates');
+              if(Math.abs(during.top-active.state.start[1])<7)throw Error('Ghost did not lift and move');
+              if(after.ghost!==0||!after.focused)throw Error('Floating drag item did not land and restore selected card');
             }
             console.log('RANK_TEST_PASS',JSON.stringify({searched,jumped,errors}));
             await browser.close();
