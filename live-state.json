@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791825685654,
-  "sourceUpdatedIso": "2026-10-12T17:21:25.654Z",
+  "sourceUpdatedAt": 1791825741412,
+  "sourceUpdatedIso": "2026-10-12T17:22:21.412Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -8224,35 +8224,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-369-2aVk",
-      "title": "シン・シティ",
-      "originalTitle": "",
-      "englishTitle": "Sin City",
-      "year": 2005,
-      "score": 82,
-      "star": 3,
-      "overallRank": 285,
-      "sameScoreRank": 2,
-      "category": "アクション",
-      "mediaType": "movie",
-      "genre": [
-        "アクション",
-        "娯楽",
-        "サスペンス",
-        "クライム",
-        "ドラマ",
-        "バイオレンス",
-        "雰囲気・美学"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 124,
-      "exact": true,
-      "letterboxdAddedDate": "2026-01-19",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-391-24EC",
       "title": "スクリーム",
       "originalTitle": "",
@@ -8260,8 +8231,8 @@
       "year": 1996,
       "score": 82,
       "star": 3,
-      "overallRank": 286,
-      "sameScoreRank": 3,
+      "overallRank": 285,
+      "sameScoreRank": 2,
       "category": "スリラー、ホラー",
       "mediaType": "movie",
       "genre": [
@@ -8287,8 +8258,8 @@
       "year": 1975,
       "score": 82,
       "star": 3,
-      "overallRank": 287,
-      "sameScoreRank": 4,
+      "overallRank": 286,
+      "sameScoreRank": 3,
       "category": "スリラー、ホラー",
       "mediaType": "movie",
       "genre": [
@@ -8304,6 +8275,35 @@
       "runtime": 124,
       "exact": true,
       "letterboxdAddedDate": "2026-09-06",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "lb-369-2aVk",
+      "title": "シン・シティ",
+      "originalTitle": "",
+      "englishTitle": "Sin City",
+      "year": 2005,
+      "score": 82,
+      "star": 3,
+      "overallRank": 287,
+      "sameScoreRank": 4,
+      "category": "アクション",
+      "mediaType": "movie",
+      "genre": [
+        "アクション",
+        "娯楽",
+        "サスペンス",
+        "クライム",
+        "ドラマ",
+        "バイオレンス",
+        "雰囲気・美学"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 124,
+      "exact": true,
+      "letterboxdAddedDate": "2026-01-19",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -21879,9 +21879,9 @@
       ],
       "82": [
         "lb-522-1RYu",
-        "lb-369-2aVk",
         "lb-391-24EC",
         "lb-572-2a5e",
+        "lb-369-2aVk",
         "lb-555-2b8o",
         "added-anchor-581",
         "lb-31-2uds",
@@ -60783,6 +60783,12 @@
           "creators": [],
           "source": "tmdb-github",
           "fetchedAt": "2026-10-12T04:35:13.665959+00:00"
+        },
+        "poster84": {
+          "path": "/9VCdkgRvLYahbwRCWcUaxSUSTT1.jpg",
+          "tmdbId": 1203652,
+          "checkedAt": "2026-10-12T17:22:17.175Z",
+          "provider": "tmdb"
         }
       },
       "custom-1791382999848-25pc": {
