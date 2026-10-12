@@ -97,11 +97,32 @@ function moveDrag(e){
  else if(!target)list.appendChild(dragCtx.card);
 }
 function finishDragUi(ctx){clearDragListeners();try{ctx?.handle?.releasePointerCapture?.(ctx.pointerId)}catch(_){}ctx?.ghost?.remove();ctx?.card?.classList.remove("dragging");document.body.classList.remove("drag-active");document.querySelectorAll(".drop-hot").forEach(x=>x.classList.remove("drop-hot"));document.querySelectorAll(".drag-ghost").forEach(x=>x.remove())}
-function cancelDrag(){if(!dragCtx){document.querySelectorAll(".drag-ghost").forEach(x=>x.remove());document.body.classList.remove("drag-active");clearDragListeners();return}const ctx=dragCtx;dragCtx=null;finishDragUi(ctx);renderRank()}
+function cancelDrag(e){
+ if(!dragCtx){document.querySelectorAll(".drag-ghost").forEach(x=>x.remove());document.body.classList.remove("drag-active");clearDragListeners();return}
+ const ctx=dragCtx,visibleTop=ctx.card?.getBoundingClientRect().top;
+ window.__movie30DragFinalizer={type:'cancel',event:e?.type||'',id:ctx.id,moved:ctx.moved,top:visibleTop};
+ dragCtx=null;finishDragUi(ctx);renderRank();
+ // A pointercancel after search->rank DOM replacement must not leave the
+ // selected movie thousands of pixels offscreen. Preserve its release position.
+ const restore=()=>{
+  if(view.page!=='rank'||window.__movie30IsRankFiltered?.()===true)return;
+  let card=document.querySelector('.rank-card[data-id="'+encodeURIComponent(ctx.id)+'"]');
+  if(!card)return;
+  if(!card.querySelector('.v66-pos'))window.__movie30FocusRankCard?.(ctx.id);
+  card=document.querySelector('.rank-card[data-id="'+encodeURIComponent(ctx.id)+'"]');
+  if(card&&Number.isFinite(visibleTop)){
+   const delta=card.getBoundingClientRect().top-visibleTop;
+   if(Math.abs(delta)>1)scrollRankInstant(window.scrollY+delta);
+  }
+ };
+ restore();requestAnimationFrame(restore);setTimeout(restore,100);
+ setTimeout(restore,320);setTimeout(restore,640);
+}
 function endDrag(e){
  if(!dragCtx)return;
  try{e?.preventDefault?.()}catch(_){}
  const ctx=dragCtx;dragCtx=null;
+ window.__movie30DragFinalizer={type:'end',event:e?.type||'',id:ctx.id,moved:ctx.moved};
  if(!ctx.moved){
   const wantedTop=ctx.card?.getBoundingClientRect().top;
   finishDragUi(ctx);
