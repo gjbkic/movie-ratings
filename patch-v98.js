@@ -157,7 +157,10 @@ function backupRepair(){
   // Refuse conflicting backups; score choices are the user's, not ours.
   const numbers=[...new Set(values.map(v=>v.score))];
   if(numbers.length!==1)continue;
-  const target=films.find(f=>values.some(v=>v.id===f.id))||films[0];
+  const exact=films.find(f=>values.some(v=>v.id===f.id));
+  // Never guess between two distinct records of the same TV episode.
+  const target=exact||(films.length===1?films[0]:null);
+  if(!target)continue;
   state.exactScores[target.id]=numbers[0];
   state.starOverrides[target.id]=scoreToStar(numbers[0]);
   restored++;
@@ -188,6 +191,30 @@ if(syncButton)syncButton.onclick=()=>syncLetterboxd(false);
 const topSync=document.getElementById('topLbSyncV73');
 // The upper shortcut invokes the lexical syncLetterboxd binding at click time;
 // it already uses the new wrapper, so no need to replace its handler.
+// Do not display a stray unrated duplicate of an already-scored identical
+// episode. Its record is retained in saved state; only a disposable,
+ // note-free duplicate is removed from read-only list output.
+const originalAllFilms=allFilms;
+allFilms=function(...args){
+ const items=originalAllFilms.apply(this,args);
+ const scored=new Map();
+ for(const f of items){
+  const k=keyFor(f);
+  if(k&&validScore(state.exactScores?.[f.id])&&!scored.has(k))scored.set(k,f);
+ }
+ if(!scored.size)return items;
+ return items.filter(f=>{
+  const k=keyFor(f),keeper=k?scored.get(k):null;
+  if(!keeper||keeper.id===f.id||validScore(state.exactScores?.[f.id]))return true;
+  const note=state.letterboxdMeta?.[f.id]||{};
+  if(note.note||note.watchHistory?.length||note.rssReviewRecords&&Object.keys(note.rssReviewRecords).length)return true;
+  if(Number(f.year||0)!==Number(keeper.year||0))return true;
+  const sameUri=uri(f.uri)&&uri(f.uri)===uri(keeper.uri);
+  const sameEnglish=normalize(titleInfo(f).englishTitle||f.lbTitle)
+   ===normalize(titleInfo(keeper).englishTitle||keeper.lbTitle);
+  return !(sameUri||sameEnglish);
+ });
+};
 const backfilled=backupRepair();
 if(backfilled){save();render();}
 window.__movie30SyncGuard98={version:BUILD,restoreFromBackupCount:backfilled};
