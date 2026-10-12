@@ -239,7 +239,14 @@
       if (input.value.trim()) input.dispatchEvent(new Event('input', {bubbles: true}));
     });
   }
-  const ready = loadCache().then(() => {
+  const ready = Promise.all([loadCache(), window.__movie30CastSource.ready]).then(() => {
+    // Cached cast from a different TMDB title must never override the corrected catalog ID.
+    const published = window.__movie30CastSource.catalog();
+    for (const [filmId, entry] of casts) {
+      const canonicalId = Number(published[filmId]?.tmdbId) || 0;
+      const cachedId = Number(entry.tmdbId) || 0;
+      if (canonicalId && cachedId && canonicalId !== cachedId) casts.delete(filmId);
+    }
     updateCounts();
     if (document.documentElement.classList.contains('movie30-ready')) updateSearch();
     else window.__movie30StorageReady?.then(() => {

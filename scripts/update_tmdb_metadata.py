@@ -83,7 +83,7 @@ def read_json(path,default):
     except (OSError,ValueError): return default
 
 def collect():
-    html=(ROOT/"index.html").read_text(encoding="utf-8")
+    html=(ROOT/"app-core.js").read_text(encoding="utf-8")
     start="const BASE_FILMS="
     st=html.find(start)
     if st<0:raise RuntimeError("BASE_FILMS not found")
@@ -120,6 +120,7 @@ def search_id(f, ignore_explicit=False):
     known_movie_ids={
         ("glassonion",2022):661374,
         ("missionimpossibledeadreckoning",2023):575264,
+        ("onyourmark",1995):10840,
     }
     if not tv:
         for alias in titles:
@@ -174,7 +175,8 @@ def compatible(f, details, kind):
     known={normalized(x) for x in aliases}
     if kind=="movie":
         verified={("glassonion",2022):661374,
-                  ("missionimpossibledeadreckoning",2023):575264}
+                  ("missionimpossibledeadreckoning",2023):575264,
+                  ("onyourmark",1995):10840}
         actual_id=int(details.get("id") or 0)
         film_year=int(f.get("year") or 0)
         if any(verified.get((normalized(a),film_year))==actual_id for a in aliases):
