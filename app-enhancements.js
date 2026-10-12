@@ -1001,7 +1001,7 @@ function localData(q){
     detail:[f.year||'',ti.englishTitle&&ti.englishTitle!==displayTitle(f)?ti.englishTitle:''].filter(Boolean).join(' · '),
     score:(exact?900:prefix?700:400)+(effectiveScore(f)!=null?10:0),image:poster(f)});
   }
-  const persons=[...(crew.directors||r.directors||[]),...(crew.creators||r.creators||[])];
+  const persons=[...(crew.directors||r.directors||[]),...(crew.creators||r.creators||[]),...(window.__movie30Cast?.namesForFilm(f.id)||[])];
   for(const name of persons){
    const key=norm(name);if(!key)continue;
    let item=people.get(key);
@@ -1055,7 +1055,7 @@ function remoteAlreadyLocal(item){
  if(item.media==='person'){
   return allFilms().some(f=>{
    const crew=state.letterboxdMeta?.[f.id]?.crew84||catalog[f.id]||{};
-   return [...(crew.directors||[]),...(crew.creators||[])].some(n=>norm(n)===norm(item.label));
+   return [...(crew.directors||[]),...(crew.creators||[]),...(window.__movie30Cast?.namesForFilm(f.id)||[])].some(n=>norm(n)===norm(item.label));
   });
  }
  return allFilms().some(f=>{
@@ -1097,7 +1097,7 @@ function refresh(box){
  const local=localData(q);
  box.menu.textContent='';box.entries=[];box.selected=-1;box.menu.hidden=false;
  section(box,'登録済みの作品',local.movies);
- section(box,'監督・製作者',local.people);
+ section(box,'監督・製作者・出演者',local.people);
  const online=(box.remoteQuery===q?box.remoteItems:[]).filter(x=>!remoteAlreadyLocal(x));
  section(box,'TMDbオンライン（未登録・追加候補）',online);
  const foot=document.createElement('div');foot.className='movie92-footer';
@@ -1122,7 +1122,7 @@ async function choose(box,item){
   const q=norm(item.label);
   let canonical=allFilms().flatMap(f=>{
    const crew=state.letterboxdMeta?.[f.id]?.crew84||catalog[f.id]||{};
-   return [...(crew.directors||[]),...(crew.creators||[])];
+   return [...(crew.directors||[]),...(crew.creators||[]),...(window.__movie30Cast?.namesForFilm(f.id)||[])];
   }).find(name=>norm(name)===q);
   if(!canonical&&getTmdbCredential()){
    try{
@@ -1130,7 +1130,7 @@ async function choose(box,item){
     const variants=[detail.name,...(detail.also_known_as||[])].map(norm);
     canonical=allFilms().flatMap(f=>{
      const crew=state.letterboxdMeta?.[f.id]?.crew84||catalog[f.id]||{};
-     return [...(crew.directors||[]),...(crew.creators||[])];
+     return [...(crew.directors||[]),...(crew.creators||[]),...(window.__movie30Cast?.namesForFilm(f.id)||[])];
     }).find(name=>variants.includes(norm(name)));
    }catch(_){}
   }
