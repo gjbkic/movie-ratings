@@ -5669,6 +5669,7 @@ function animateRankSwap(before,movedId){
  }
 }
 function swap(id,d){
+ window.__movie30PendingJump99=null;
  const f=filmById(id),sc=f&&effectiveScore(f);if(sc==null)return;
  const a=rankSorted(allFilms().filter(x=>effectiveScore(x)===sc),sc),i=a.findIndex(x=>x.id===id),j=i+d;
  if(j<0||j>=a.length){toast('この点数内では端です。点数をまたぐ移動は≡ドラッグで');return}
@@ -5694,6 +5695,7 @@ function jumpFocus(id,afterLayout,center=true){
  }));
 }
 function jumpGlobal(id){
+ window.__movie30PendingJump99={id,until:Date.now()+4200};
  window.__movie30LastJump99={id,phase:'started'};
  try{if(filtered())backFilters=cap()}catch(error){console.warn('Movie jump filter snapshot',error)}
  document.activeElement?.blur?.();
@@ -5722,7 +5724,17 @@ function jumpGlobal(id){
  later();setTimeout(later,260);setTimeout(later,640);
  toast('全体ランキング内の該当作品へ移動しました');
 }
-window.__movie30JumpToGlobalRank=jumpGlobal;window.__movie30IsRankFiltered=filtered;
+window.__movie30JumpToGlobalRank=jumpGlobal;
+window.__movie30IsRankFiltered=filtered;
+window.__movie30RefocusRank99=function(){
+ const pending=window.__movie30PendingJump99;
+ if(!pending||Date.now()>pending.until)return false;
+ const card=cardForRank(pending.id);
+ if(!card)return false;
+ posTools(pending.id);
+ centerRankCard(cardForRank(pending.id));
+ return true;
+};
 function decorate(){const f=filtered();for(const c of document.querySelectorAll('#rankRoot .rank-card')){const id=decodeURIComponent(c.dataset.id||''),h=c.querySelector('.drag-handle');if(!h)continue;h.disabled=false;if(f){h.textContent='↗';h.classList.add('movie99-jump');h.title='検索を解除して全体ランキングのこの映画へ';h.onpointerdown=e=>{e.preventDefault();e.stopPropagation();jumpGlobal(id)};h.onclick=e=>{e.preventDefault();e.stopPropagation();jumpGlobal(id)}}else{h.classList.remove('movie99-jump');h.textContent='≡';h.title='ドラッグで順位変更';h.onpointerdown=startDrag;h.onclick=null}}document.getElementById('advBadge66')?.classList.toggle('on',!!advOn());if(focusId)posTools(focusId)}
 const rr=renderRank;renderRank=function(){rr();if(advOn()){document.querySelectorAll('#rankRoot .rank-card').forEach(c=>{const f=filmById(decodeURIComponent(c.dataset.id||''));if(f&&!pass(f))c.remove()});for(const bin of document.querySelectorAll('#rankRoot .score-bin')){const n=bin.querySelectorAll('.rank-card').length,sm=bin.querySelector('.score-label small');if(sm)sm.textContent=n+'本';if(!n)bin.remove()}for(const s of document.querySelectorAll('#rankRoot .rank-star'))if(!s.querySelector('.rank-card'))s.remove()}decorate()};
 
