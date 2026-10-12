@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791792889446,
-  "sourceUpdatedIso": "2026-10-12T08:14:49.446Z",
+  "sourceUpdatedAt": 1791792989219,
+  "sourceUpdatedIso": "2026-10-12T08:16:29.219Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -6712,6 +6712,32 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-82-8SeG",
+      "title": "オデッセイ",
+      "originalTitle": "",
+      "englishTitle": "The Martian",
+      "year": 2015,
+      "score": 84,
+      "star": 3.5,
+      "overallRank": 233,
+      "sameScoreRank": 27,
+      "category": "SF",
+      "mediaType": "movie",
+      "genre": [
+        "SF",
+        "ドラマ",
+        "感動",
+        "娯楽"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 141,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "custom-1791476522907-cd9b",
       "title": "ブラック・ミラー「シロクマ」",
       "originalTitle": "",
@@ -6719,8 +6745,8 @@
       "year": 2013,
       "score": 84,
       "star": 3.5,
-      "overallRank": 233,
-      "sameScoreRank": 27,
+      "overallRank": 234,
+      "sameScoreRank": 28,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -6744,32 +6770,6 @@
       "letterboxdAddedDate": "2026-10-08",
       "letterboxdPublishedAt": "Fri, 9 Oct 2026 03:32:29 +1300",
       "letterboxdReportedWatchedDate": "2026-10-08"
-    },
-    {
-      "id": "lb-82-8SeG",
-      "title": "オデッセイ",
-      "originalTitle": "",
-      "englishTitle": "The Martian",
-      "year": 2015,
-      "score": 84,
-      "star": 3.5,
-      "overallRank": 234,
-      "sameScoreRank": 28,
-      "category": "SF",
-      "mediaType": "movie",
-      "genre": [
-        "SF",
-        "ドラマ",
-        "感動",
-        "娯楽"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 141,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "lb-394-2b5O",
@@ -21974,8 +21974,8 @@
         "lb-76-4vru",
         "lb-181-2aB0",
         "lb-319-2ab2",
-        "custom-1791476522907-cd9b",
         "lb-82-8SeG",
+        "custom-1791476522907-cd9b",
         "lb-394-2b5O",
         "base-perks-2012",
         "lb-458-2bg8",
