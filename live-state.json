@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791799038673,
-  "sourceUpdatedIso": "2026-10-12T09:57:18.673Z",
+  "sourceUpdatedAt": 1791799669263,
+  "sourceUpdatedIso": "2026-10-12T10:07:49.263Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -199,7 +199,7 @@
       "origin": "ハリウッド",
       "format": "live",
       "runtime": 127,
-      "exact": true,
+      "exact": false,
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
@@ -21300,8 +21300,7 @@
       "custom-1791664055469-au2b": 90,
       "custom-1791664055006-96rv": 98,
       "custom-1791664054514-pksv": 93,
-      "custom-1791664055911-cuz4": 93,
-      "lb-18-2ahY": 98
+      "custom-1791664055911-cuz4": 93
     },
     "rankOrder": {
       "40": [
@@ -25304,8 +25303,7 @@
       "custom-1791664055006-96rv": 5,
       "custom-1791664054514-pksv": 4.5,
       "custom-1791664055911-cuz4": 4.5,
-      "custom-1789385860389-93a2": 2.5,
-      "lb-18-2ahY": 5
+      "custom-1789385860389-93a2": 2.5
     },
     "titleOverrides": {
       "added-anchor-578": {
@@ -36733,9 +36731,10 @@
           }
         ],
         "poster84": {
-          "tmdbId": 27205,
           "path": "/qzb0slJerd5bQgJxteJ5oAmfp09.jpg",
-          "checkedAt": "2026-10-12T04:35:13.665959+00:00"
+          "tmdbId": 27205,
+          "checkedAt": "2026-10-12T04:35:13.665959+00:00",
+          "provider": "tmdb"
         }
       },
       "lb-10-kSz4": {
@@ -37181,7 +37180,7 @@
         "poster84": {
           "path": "/tlSn7UnfH2LxrBRwfTLs3JSYOTO.jpg",
           "tmdbId": 603,
-          "checkedAt": "2026-10-12T09:57:13.167Z",
+          "checkedAt": "2026-10-12T04:35:13.665959+00:00",
           "provider": "tmdb"
         }
       },
@@ -38534,7 +38533,7 @@
         "poster84": {
           "path": "/mVdz3vlmioKWZaHTGfu99zIuayZ.jpg",
           "tmdbId": 128,
-          "checkedAt": "2026-10-12T09:57:13.166Z",
+          "checkedAt": "2026-10-12T04:35:13.665959+00:00",
           "provider": "tmdb"
         }
       },
@@ -48352,6 +48351,12 @@
             "manualEdited": false
           }
         ],
+        "poster84": {
+          "path": "/viWheBd44bouiLCHgNMvahLThqx.jpg",
+          "tmdbId": 44214,
+          "checkedAt": "2026-10-12T04:35:13.665959+00:00",
+          "provider": "tmdb"
+        },
         "crew84": {
           "directors": [
             "Darren Aronofsky"
@@ -48359,12 +48364,6 @@
           "creators": [],
           "source": "tmdb-github",
           "fetchedAt": "2026-10-12T04:35:13.665959+00:00"
-        },
-        "poster84": {
-          "path": "/viWheBd44bouiLCHgNMvahLThqx.jpg",
-          "tmdbId": 44214,
-          "checkedAt": "2026-10-12T09:57:13.167Z",
-          "provider": "tmdb"
         }
       },
       "lb-354-aNGk": {
@@ -54684,9 +54683,10 @@
           }
         ],
         "poster84": {
-          "tmdbId": 10494,
           "path": "/79vujbsWEbX4dzffBV541QXN6sf.jpg",
-          "checkedAt": "2026-10-12T04:35:13.665959+00:00"
+          "tmdbId": 10494,
+          "checkedAt": "2026-10-12T04:35:13.665959+00:00",
+          "provider": "tmdb"
         }
       },
       "lb-541-27MO": {
@@ -62039,7 +62039,7 @@
         "poster84": {
           "path": null,
           "tmdbId": null,
-          "checkedAt": "2026-10-12T09:57:14.023Z",
+          "checkedAt": "2026-10-12T10:07:50.107Z",
           "provider": "tmdb"
         }
       },
