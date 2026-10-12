@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791817892444,
-  "sourceUpdatedIso": "2026-10-12T15:11:32.444Z",
+  "sourceUpdatedAt": 1791822528048,
+  "sourceUpdatedIso": "2026-10-12T16:28:48.048Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -946,29 +946,6 @@
       "letterboxdReportedWatchedDate": "2026-09-27"
     },
     {
-      "id": "custom-1791664054514-pksv",
-      "title": "Luv Live",
-      "originalTitle": "Luv Live",
-      "englishTitle": "Luv Live",
-      "year": 2014,
-      "score": 94,
-      "star": 4.5,
-      "overallRank": 33,
-      "sameScoreRank": 10,
-      "category": "Letterboxd",
-      "mediaType": "other",
-      "genre": [
-        "ミュージカル"
-      ],
-      "origin": "日本",
-      "format": "live",
-      "runtime": 65,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-11",
-      "letterboxdPublishedAt": "Sun, 11 Oct 2026 06:34:06 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-11"
-    },
-    {
       "id": "lb-112-1W4G",
       "title": "天空の城ラピュタ",
       "originalTitle": "",
@@ -976,8 +953,8 @@
       "year": 1986,
       "score": 94,
       "star": 4.5,
-      "overallRank": 34,
-      "sameScoreRank": 11,
+      "overallRank": 33,
+      "sameScoreRank": 10,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
       "genre": [
@@ -1006,7 +983,7 @@
       "year": 1950,
       "score": 93,
       "star": 4.5,
-      "overallRank": 35,
+      "overallRank": 34,
       "sameScoreRank": 1,
       "category": "Letterboxd",
       "mediaType": "movie",
@@ -1036,7 +1013,7 @@
       "year": 2008,
       "score": 93,
       "star": 4.5,
-      "overallRank": 36,
+      "overallRank": 35,
       "sameScoreRank": 2,
       "category": "ピクサー・ディズニー作品",
       "mediaType": "movie",
@@ -1058,6 +1035,29 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "custom-1791664054514-pksv",
+      "title": "Luv Live",
+      "originalTitle": "Luv Live",
+      "englishTitle": "Luv Live",
+      "year": 2014,
+      "score": 93,
+      "star": 4.5,
+      "overallRank": 36,
+      "sameScoreRank": 3,
+      "category": "Letterboxd",
+      "mediaType": "other",
+      "genre": [
+        "ミュージカル"
+      ],
+      "origin": "日本",
+      "format": "live",
+      "runtime": 65,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-11",
+      "letterboxdPublishedAt": "Sun, 11 Oct 2026 06:34:06 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-11"
+    },
+    {
       "id": "lb-333-2b4m",
       "title": "千と千尋の神隠し",
       "originalTitle": "",
@@ -1066,7 +1066,7 @@
       "score": 93,
       "star": 4.5,
       "overallRank": 37,
-      "sameScoreRank": 3,
+      "sameScoreRank": 4,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
       "genre": [
@@ -1097,7 +1097,7 @@
       "score": 93,
       "star": 4.5,
       "overallRank": 38,
-      "sameScoreRank": 4,
+      "sameScoreRank": 5,
       "category": "Letterboxd",
       "mediaType": "other",
       "genre": [],
@@ -1118,7 +1118,7 @@
       "score": 93,
       "star": 4.5,
       "overallRank": 39,
-      "sameScoreRank": 5,
+      "sameScoreRank": 6,
       "category": "Letterboxd",
       "mediaType": "other",
       "genre": [
@@ -1141,7 +1141,7 @@
       "score": 93,
       "star": 4.5,
       "overallRank": 40,
-      "sameScoreRank": 6,
+      "sameScoreRank": 7,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -1171,7 +1171,7 @@
       "score": 93,
       "star": 4.5,
       "overallRank": 41,
-      "sameScoreRank": 7,
+      "sameScoreRank": 8,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -1197,7 +1197,7 @@
       "score": 93,
       "star": 4.5,
       "overallRank": 42,
-      "sameScoreRank": 8,
+      "sameScoreRank": 9,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -1227,7 +1227,7 @@
       "score": 93,
       "star": 4.5,
       "overallRank": 43,
-      "sameScoreRank": 9,
+      "sameScoreRank": 10,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -1254,7 +1254,7 @@
       "score": 93,
       "star": 4.5,
       "overallRank": 44,
-      "sameScoreRank": 10,
+      "sameScoreRank": 11,
       "category": "スタジオジブリ系作品",
       "mediaType": "other",
       "genre": [
@@ -1283,7 +1283,7 @@
       "score": 93,
       "star": 4.5,
       "overallRank": 45,
-      "sameScoreRank": 11,
+      "sameScoreRank": 12,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -1307,7 +1307,7 @@
       "score": 93,
       "star": 4.5,
       "overallRank": 46,
-      "sameScoreRank": 12,
+      "sameScoreRank": 13,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -1336,7 +1336,7 @@
       "score": 93,
       "star": 4.5,
       "overallRank": 47,
-      "sameScoreRank": 13,
+      "sameScoreRank": 14,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -7210,7 +7210,7 @@
     },
     {
       "id": "custom-1791802127938-6mow",
-      "title": "Black Mirror: USS Callister",
+      "title": "ブラック・ミラー「宇宙船カリスター号」",
       "originalTitle": "",
       "englishTitle": "Black Mirror: USS Callister",
       "year": 2017,
@@ -7381,7 +7381,7 @@
     },
     {
       "id": "custom-1791802126132-vr9o",
-      "title": "Black Mirror: Black Museum",
+      "title": "ブラック・ミラー「ブラック・ミュージアム」",
       "originalTitle": "",
       "englishTitle": "Black Mirror: Black Museum",
       "year": 2017,
@@ -21386,7 +21386,7 @@
       "custom-1791664054005-kkyc": null,
       "custom-1791664055469-au2b": null,
       "custom-1791664055006-96rv": 98,
-      "custom-1791664054514-pksv": 94,
+      "custom-1791664054514-pksv": 93,
       "custom-1791664055911-cuz4": 93,
       "lb-10-kSz4": 94,
       "lb-97-2a7u": 94,
@@ -22164,6 +22164,7 @@
       "93": [
         "custom-1790458138074-p8hs",
         "lb-323-1VEo",
+        "custom-1791664054514-pksv",
         "lb-333-2b4m",
         "custom-1790185844116-j1vu",
         "custom-1791664055911-cuz4",
@@ -22186,7 +22187,6 @@
         "custom-1790420198451-g42l",
         "lb-467-ptEI",
         "custom-1790508958519-2edt",
-        "custom-1791664054514-pksv",
         "lb-112-1W4G"
       ],
       "95": [
@@ -27677,7 +27677,7 @@
         "englishTitle": "Black Mirror: Men Against Fire"
       },
       "custom-1791802126132-vr9o": {
-        "title": "Black Mirror: Black Museum",
+        "title": "ブラック・ミラー「ブラック・ミュージアム」",
         "originalTitle": "",
         "englishTitle": "Black Mirror: Black Museum"
       },
@@ -27687,7 +27687,7 @@
         "englishTitle": "Black Mirror: Hang the DJ"
       },
       "custom-1791802127938-6mow": {
-        "title": "Black Mirror: USS Callister",
+        "title": "ブラック・ミラー「宇宙船カリスター号」",
         "originalTitle": "",
         "englishTitle": "Black Mirror: USS Callister"
       }
