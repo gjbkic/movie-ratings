@@ -85,3 +85,5 @@ jobs:
           NODE
 
 # Recheck instant scroll and anchored release after selected-movie drag fix
+
+# Verify pointer coordinates are forwarded through search handoff
