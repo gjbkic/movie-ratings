@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791817872298,
-  "sourceUpdatedIso": "2026-10-12T15:11:12.298Z",
+  "sourceUpdatedAt": 1791817878206,
+  "sourceUpdatedIso": "2026-10-12T15:11:18.206Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -7209,35 +7209,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1791802126132-vr9o",
-      "title": "Black Mirror: Black Museum",
-      "originalTitle": "",
-      "englishTitle": "Black Mirror: Black Museum",
-      "year": 2017,
-      "score": 83,
-      "star": 3,
-      "overallRank": 250,
-      "sameScoreRank": 6,
-      "category": "Letterboxd",
-      "mediaType": "drama",
-      "genre": [
-        "TV本編",
-        "バイオレンス",
-        "娯楽",
-        "クライム",
-        "ドラマ",
-        "サスペンス",
-        "哲学・思想"
-      ],
-      "origin": "その他",
-      "format": "",
-      "runtime": null,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-12",
-      "letterboxdPublishedAt": "Mon, 12 Oct 2026 19:33:28 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-12"
-    },
-    {
       "id": "custom-1791802127938-6mow",
       "title": "Black Mirror: USS Callister",
       "originalTitle": "",
@@ -7245,8 +7216,8 @@
       "year": 2017,
       "score": 83,
       "star": 3,
-      "overallRank": 251,
-      "sameScoreRank": 7,
+      "overallRank": 250,
+      "sameScoreRank": 6,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -7274,8 +7245,8 @@
       "year": 2009,
       "score": 83,
       "star": 3,
-      "overallRank": 252,
-      "sameScoreRank": 8,
+      "overallRank": 251,
+      "sameScoreRank": 7,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -7304,8 +7275,8 @@
       "year": 2001,
       "score": 83,
       "star": 3,
-      "overallRank": 253,
-      "sameScoreRank": 9,
+      "overallRank": 252,
+      "sameScoreRank": 8,
       "category": "恋愛、ミュージカル",
       "mediaType": "movie",
       "genre": [
@@ -7324,6 +7295,35 @@
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1791802126132-vr9o",
+      "title": "Black Mirror: Black Museum",
+      "originalTitle": "",
+      "englishTitle": "Black Mirror: Black Museum",
+      "year": 2017,
+      "score": 83,
+      "star": 3,
+      "overallRank": 253,
+      "sameScoreRank": 9,
+      "category": "Letterboxd",
+      "mediaType": "drama",
+      "genre": [
+        "TV本編",
+        "バイオレンス",
+        "娯楽",
+        "クライム",
+        "ドラマ",
+        "サスペンス",
+        "哲学・思想"
+      ],
+      "origin": "その他",
+      "format": "",
+      "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-12",
+      "letterboxdPublishedAt": "Mon, 12 Oct 2026 19:33:28 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-12"
     },
     {
       "id": "lb-174-29VI",
@@ -21910,10 +21910,10 @@
         "lb-430-26uk",
         "lb-117-27A4",
         "lb-78-2aHM",
-        "custom-1791802126132-vr9o",
         "custom-1791802127938-6mow",
         "lb-261-1IGQ",
         "lb-161-2aUc",
+        "custom-1791802126132-vr9o",
         "lb-174-29VI",
         "lb-421-21ew",
         "lb-367-29EW",
