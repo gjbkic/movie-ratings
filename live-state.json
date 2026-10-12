@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791822528048,
-  "sourceUpdatedIso": "2026-10-12T16:28:48.048Z",
+  "sourceUpdatedAt": 1791822535950,
+  "sourceUpdatedIso": "2026-10-12T16:28:55.950Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -1006,6 +1006,29 @@
       "letterboxdReportedWatchedDate": "2026-09-27"
     },
     {
+      "id": "custom-1791664055911-cuz4",
+      "title": "Hikaru Utada Live Sessions from AIR Studios",
+      "originalTitle": "Hikaru Utada Live Sessions from Air Studios",
+      "englishTitle": "Hikaru Utada Live Sessions from Air Studios",
+      "year": 2024,
+      "score": 93,
+      "star": 4.5,
+      "overallRank": 35,
+      "sameScoreRank": 2,
+      "category": "Letterboxd",
+      "mediaType": "other",
+      "genre": [
+        "ミュージカル"
+      ],
+      "origin": "日本",
+      "format": "live",
+      "runtime": 56,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-11",
+      "letterboxdPublishedAt": "Sun, 11 Oct 2026 06:12:28 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-11"
+    },
+    {
       "id": "lb-323-1VEo",
       "title": "ウォーリー",
       "originalTitle": "",
@@ -1013,8 +1036,8 @@
       "year": 2008,
       "score": 93,
       "star": 4.5,
-      "overallRank": 35,
-      "sameScoreRank": 2,
+      "overallRank": 36,
+      "sameScoreRank": 3,
       "category": "ピクサー・ディズニー作品",
       "mediaType": "movie",
       "genre": [
@@ -1042,8 +1065,8 @@
       "year": 2014,
       "score": 93,
       "star": 4.5,
-      "overallRank": 36,
-      "sameScoreRank": 3,
+      "overallRank": 37,
+      "sameScoreRank": 4,
       "category": "Letterboxd",
       "mediaType": "other",
       "genre": [
@@ -1065,8 +1088,8 @@
       "year": 2001,
       "score": 93,
       "star": 4.5,
-      "overallRank": 37,
-      "sameScoreRank": 4,
+      "overallRank": 38,
+      "sameScoreRank": 5,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
       "genre": [
@@ -1096,8 +1119,8 @@
       "year": 2008,
       "score": 93,
       "star": 4.5,
-      "overallRank": 38,
-      "sameScoreRank": 5,
+      "overallRank": 39,
+      "sameScoreRank": 6,
       "category": "Letterboxd",
       "mediaType": "other",
       "genre": [],
@@ -1108,29 +1131,6 @@
       "letterboxdAddedDate": "2026-09-23",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "custom-1791664055911-cuz4",
-      "title": "Hikaru Utada Live Sessions from AIR Studios",
-      "originalTitle": "Hikaru Utada Live Sessions from Air Studios",
-      "englishTitle": "Hikaru Utada Live Sessions from Air Studios",
-      "year": 2024,
-      "score": 93,
-      "star": 4.5,
-      "overallRank": 39,
-      "sameScoreRank": 6,
-      "category": "Letterboxd",
-      "mediaType": "other",
-      "genre": [
-        "ミュージカル"
-      ],
-      "origin": "日本",
-      "format": "live",
-      "runtime": 56,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-11",
-      "letterboxdPublishedAt": "Sun, 11 Oct 2026 06:12:28 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-11"
     },
     {
       "id": "lb-2-2a9q",
@@ -22163,11 +22163,11 @@
       ],
       "93": [
         "custom-1790458138074-p8hs",
+        "custom-1791664055911-cuz4",
         "lb-323-1VEo",
         "custom-1791664054514-pksv",
         "lb-333-2b4m",
         "custom-1790185844116-j1vu",
-        "custom-1791664055911-cuz4",
         "lb-2-2a9q",
         "lb-332-28MA",
         "lb-86-cUqs",
