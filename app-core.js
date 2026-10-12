@@ -98,13 +98,13 @@ function endDrag(e){
  try{e?.preventDefault?.()}catch(_){}
  const ctx=dragCtx;dragCtx=null;
  if(!ctx.moved){
-  finishDragUi(ctx);renderRank();posTools(ctx.id);return;
+  finishDragUi(ctx);renderRank();window.__movie30FocusRankCard?.(ctx.id);return;
  }
  const list=ctx.card?.closest(".score-list"),newScore=Number(list?.dataset.score??ctx.fromScore),f=filmById(ctx.id);
  if(f){state.exactScores[f.id]=newScore;const newStar=scoreToStar(newScore);state.starOverrides[f.id]=newStar;state.assignments[f.id]=nearestTier(newStar,newScore)}
  document.querySelectorAll(".score-list").forEach(l=>{const score=l.dataset.score;state.rankOrder[score]=[...l.querySelectorAll(".rank-card")].map(c=>decodeURIComponent(c.dataset.id))});
  finishDragUi(ctx);window.__movie30PendingJump99=null;save();render();
- const restoreAfterDrag=()=>{if(view.page==='rank'&&!filtered()&&cardForRank(ctx.id))posTools(ctx.id)};
+ const restoreAfterDrag=()=>{if(view.page==='rank'&&window.__movie30IsRankFiltered?.()!==true&&document.querySelector('.rank-card[data-id="'+encodeURIComponent(ctx.id)+'"]'))window.__movie30FocusRankCard?.(ctx.id)};
  restoreAfterDrag();requestAnimationFrame(restoreAfterDrag);
  setTimeout(restoreAfterDrag,220);setTimeout(restoreAfterDrag,600);
  toast(newScore===ctx.fromScore?"同点内の順位を保存":""+newScore+"点へ移動")
@@ -5811,6 +5811,7 @@ function jumpGlobal(id,pointerEvent){
 }
 window.__movie30JumpToGlobalRank=jumpGlobal;
 window.__movie30IsRankFiltered=filtered;
+window.__movie30FocusRankCard=posTools;
 window.__movie30RefocusRank99=function(){
  const pending=window.__movie30PendingJump99;
  if(!pending||Date.now()>pending.until||dragCtx)return false;
