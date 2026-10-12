@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791792037838,
-  "sourceUpdatedIso": "2026-10-12T08:00:37.838Z",
+  "sourceUpdatedAt": 1791792055038,
+  "sourceUpdatedIso": "2026-10-12T08:00:55.038Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -15710,7 +15710,7 @@
       "englishTitle": "Dragon Ball Super: Super Hero",
       "year": 2022,
       "score": 76,
-      "star": 2.5,
+      "star": 2,
       "overallRank": 551,
       "sameScoreRank": 13,
       "category": "Letterboxd",
@@ -18954,7 +18954,7 @@
       "englishTitle": "Detective Conan: The Counterfeit Case of Ultra 30",
       "year": 2026,
       "score": 69,
-      "star": 2,
+      "star": 1.5,
       "overallRank": 668,
       "sameScoreRank": 1,
       "category": "Letterboxd",
@@ -20603,6 +20603,75 @@
       "letterboxdAddedDate": "2026-09-08",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1791792053812-0uov",
+      "title": "ブラック・ミラー「ブラック・ミュージアム」",
+      "originalTitle": "Black Mirror: Black Museum",
+      "englishTitle": "Black Mirror: Black Museum",
+      "year": 2017,
+      "score": null,
+      "star": 3,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "drama",
+      "genre": [
+        "TV本編"
+      ],
+      "origin": "その他",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": "2026-10-12",
+      "letterboxdPublishedAt": "Mon, 12 Oct 2026 19:33:28 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-12"
+    },
+    {
+      "id": "custom-1791792053995-4s1q",
+      "title": "Black Mirror: Hang the DJ",
+      "originalTitle": "Black Mirror: Hang the DJ",
+      "englishTitle": "Black Mirror: Hang the DJ",
+      "year": 2017,
+      "score": null,
+      "star": 3.5,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "drama",
+      "genre": [
+        "TV本編"
+      ],
+      "origin": "その他",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": "2026-10-12",
+      "letterboxdPublishedAt": "Mon, 12 Oct 2026 18:21:35 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-12"
+    },
+    {
+      "id": "custom-1791792054167-val3",
+      "title": "ブラック・ミラー「宇宙船カリスター号」",
+      "originalTitle": "Black Mirror: USS Callister",
+      "englishTitle": "Black Mirror: USS Callister",
+      "year": 2017,
+      "score": null,
+      "star": 3,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "drama",
+      "genre": [
+        "TV本編"
+      ],
+      "origin": "その他",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": "2026-10-12",
+      "letterboxdPublishedAt": "Mon, 12 Oct 2026 16:49:10 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-12"
     }
   ],
   "state": {
@@ -24606,6 +24675,57 @@
         "added": true,
         "_seq": 1791664055911,
         "source": "letterboxd"
+      },
+      {
+        "id": "custom-1791792053812-0uov",
+        "title": "ブラック・ミラー「ブラック・ミュージアム」",
+        "originalTitle": "Black Mirror: Black Museum",
+        "englishTitle": "Black Mirror: Black Museum",
+        "lbTitle": "Black Mirror: Black Museum",
+        "tmdbId": null,
+        "year": 2017,
+        "uri": "https://letterboxd.com/gjbkic/film/black-mirror-black-museum/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 3,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791792053812,
+        "source": "letterboxd"
+      },
+      {
+        "id": "custom-1791792053995-4s1q",
+        "title": "Black Mirror: Hang the DJ",
+        "originalTitle": "Black Mirror: Hang the DJ",
+        "englishTitle": "Black Mirror: Hang the DJ",
+        "lbTitle": "Black Mirror: Hang the DJ",
+        "tmdbId": null,
+        "year": 2017,
+        "uri": "https://letterboxd.com/gjbkic/film/black-mirror-hang-the-dj/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 3.5,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791792053995,
+        "source": "letterboxd"
+      },
+      {
+        "id": "custom-1791792054167-val3",
+        "title": "ブラック・ミラー「宇宙船カリスター号」",
+        "originalTitle": "Black Mirror: USS Callister",
+        "englishTitle": "Black Mirror: USS Callister",
+        "lbTitle": "Black Mirror: USS Callister",
+        "tmdbId": null,
+        "year": 2017,
+        "uri": "https://letterboxd.com/gjbkic/film/black-mirror-uss-callister/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 3,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791792054167,
+        "source": "letterboxd"
       }
     ],
     "starOverrides": {
@@ -25240,7 +25360,7 @@
       "custom-1790508960074-n6fj": 3,
       "custom-1790509701063-jule": 2,
       "custom-1789385860756-dujj": 2,
-      "custom-1790665768168-uxk0": 2,
+      "custom-1790665768168-uxk0": 1.5,
       "custom-1790665767820-1d1q": 3,
       "custom-1790924446793-9ts4": 3,
       "custom-1790960881562-cn74": 4,
@@ -25254,7 +25374,7 @@
       "custom-1791057232858-35ld": 4,
       "custom-1791113241266-l3xb": 3,
       "custom-1791113241748-xivg": 2.5,
-      "custom-1791113242437-wcok": 2.5,
+      "custom-1791113242437-wcok": 2,
       "custom-1791113242089-wnyx": 2,
       "custom-1791113241627-mf17": 2.5,
       "lb-259-N7ZC": 1.5,
@@ -28258,7 +28378,10 @@
       "custom-1791382999848-25pc": "movie",
       "custom-1791392810098-rjyg": "movie",
       "custom-lb-unrated-bOnU": "movie",
-      "custom-lb-unrated-1Qcu": "movie"
+      "custom-lb-unrated-1Qcu": "movie",
+      "custom-1791792053812-0uov": "drama",
+      "custom-1791792053995-4s1q": "drama",
+      "custom-1791792054167-val3": "drama"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -34260,6 +34383,15 @@
       ],
       "custom-1791664055006-96rv": [
         "ミュージカル"
+      ],
+      "custom-1791792053812-0uov": [
+        "TV本編"
+      ],
+      "custom-1791792053995-4s1q": [
+        "TV本編"
+      ],
+      "custom-1791792054167-val3": [
+        "TV本編"
       ]
     },
     "originOverrides": {
@@ -34994,7 +35126,10 @@
       "custom-1791664054514-pksv": "日本",
       "custom-1791664055006-96rv": "日本",
       "custom-1791664055469-au2b": "日本",
-      "custom-1791664055911-cuz4": "日本"
+      "custom-1791664055911-cuz4": "日本",
+      "custom-1791792053812-0uov": "その他",
+      "custom-1791792053995-4s1q": "その他",
+      "custom-1791792054167-val3": "その他"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -61965,13 +62100,13 @@
         "addedDate": "2026-10-11",
         "addedDateSource": "rss-first-seen",
         "reportedWatchedDate": "2026-10-11",
-        "note": "若いめちゃくちゃ若い。ライブのできる喜びで溢れている。この時期のハスキーボイスも本当に好き。甘いワナで入場する時の弾ける感じが好き。スチャダラパーとの今夜はブギーバックは普通に本家とは違う魅力で俺的には本家より好き。本家もめっちゃ好きだけど。まだ曲が少ないが、全曲いい。やっぱいいアルバム",
+        "note": "若いめちゃくちゃ若い。ライブのできる喜びで溢れている。この時期のハスキーボイスも本当に好き。甘いワナで入場する時の弾ける感じが好き。スチャダラパーとの今夜はブギーバックは普通に本家とは違う魅力で俺的には本家より好き。ハスキーのサビと合いの手的入れる声の全てがいい。観客の盛り上がりもエネルギーを感じる。本家もめっちゃ好きだけど。never let goの歌唱が全体で一番好きかも。素晴らしい。まだ曲が少ないが、全曲いい。やっぱいいアルバム。あと当然だが歌声時代と共に変わってるのでfirst loveの音源と同じような歌声で感慨深い。movin' on without youはやっぱ素晴らしい。勢い。スパッと終わるのもいいね。\nend creditのB&Cはなんか本当に良かった。懐かしいような寂しいような、楽しかった時間の終わり、修学旅行の最後のような、胸が締めつけられるよう。\nまじで良かった。",
         "noteSource": "letterboxd-rss",
-        "noteImportedAt": "2026-10-10T20:27:36.411Z",
+        "noteImportedAt": "2026-10-12T08:00:54.479Z",
         "rssReviewRecords": {
           "letterboxd-review-1531651964": {
-            "body": "若いめちゃくちゃ若い。ライブのできる喜びで溢れている。この時期のハスキーボイスも本当に好き。甘いワナで入場する時の弾ける感じが好き。スチャダラパーとの今夜はブギーバックは普通に本家とは違う魅力で俺的には本家より好き。本家もめっちゃ好きだけど。まだ曲が少ないが、全曲いい。やっぱいいアルバム",
-            "block": "若いめちゃくちゃ若い。ライブのできる喜びで溢れている。この時期のハスキーボイスも本当に好き。甘いワナで入場する時の弾ける感じが好き。スチャダラパーとの今夜はブギーバックは普通に本家とは違う魅力で俺的には本家より好き。本家もめっちゃ好きだけど。まだ曲が少ないが、全曲いい。やっぱいいアルバム"
+            "body": "若いめちゃくちゃ若い。ライブのできる喜びで溢れている。この時期のハスキーボイスも本当に好き。甘いワナで入場する時の弾ける感じが好き。スチャダラパーとの今夜はブギーバックは普通に本家とは違う魅力で俺的には本家より好き。ハスキーのサビと合いの手的入れる声の全てがいい。観客の盛り上がりもエネルギーを感じる。本家もめっちゃ好きだけど。never let goの歌唱が全体で一番好きかも。素晴らしい。まだ曲が少ないが、全曲いい。やっぱいいアルバム。あと当然だが歌声時代と共に変わってるのでfirst loveの音源と同じような歌声で感慨深い。movin' on without youはやっぱ素晴らしい。勢い。スパッと終わるのもいいね。\nend creditのB&Cはなんか本当に良かった。懐かしいような寂しいような、楽しかった時間の終わり、修学旅行の最後のような、胸が締めつけられるよう。\nまじで良かった。",
+            "block": "若いめちゃくちゃ若い。ライブのできる喜びで溢れている。この時期のハスキーボイスも本当に好き。甘いワナで入場する時の弾ける感じが好き。スチャダラパーとの今夜はブギーバックは普通に本家とは違う魅力で俺的には本家より好き。ハスキーのサビと合いの手的入れる声の全てがいい。観客の盛り上がりもエネルギーを感じる。本家もめっちゃ好きだけど。never let goの歌唱が全体で一番好きかも。素晴らしい。まだ曲が少ないが、全曲いい。やっぱいいアルバム。あと当然だが歌声時代と共に変わってるのでfirst loveの音源と同じような歌声で感慨深い。movin' on without youはやっぱ素晴らしい。勢い。スパッと終わるのもいいね。\nend creditのB&Cはなんか本当に良かった。懐かしいような寂しいような、楽しかった時間の終わり、修学旅行の最後のような、胸が締めつけられるよう。\nまじで良かった。"
           }
         },
         "watchHistory": [
@@ -62154,6 +62289,132 @@
             "recordDate": "2026-09-26",
             "rewatch": ""
           }
+        }
+      },
+      "custom-1791792053812-0uov": {
+        "contentType": "tv_episode",
+        "tmdbSeriesId": 42009,
+        "publishedAt": "Mon, 12 Oct 2026 19:33:28 +1300",
+        "addedDate": "2026-10-12",
+        "addedDateSource": "rss-first-seen",
+        "reportedWatchedDate": "2026-10-12",
+        "seasonNumber": 4,
+        "episodeNumber": 6,
+        "episodeTmdbId": 1402689,
+        "letterboxdMovieId": null,
+        "note": "序盤だが不穏さの作り方が上手い。自分博物館とかと比べても演出が全然れべち\n細かいネタ感も好き。\n話の構造は特殊だがとても綺麗。\nドーソン(痛みにハマる医者)の話も単体で結構いい話になるくらいレベル高い。\n猿の話もすごくいい。とても共感するが、身近に来た瞬間自分は処理したくなくなる。\n肝心の死刑囚の話だけ辛さが肉体的な永遠の苦痛的な、作りやすいところに限られちゃってると思う。\n復讐で同じことすることを正当と感じてそうなのがほんとに嫌い。父も一緒にやってるわけだしまじで何正しいと思っちゃってんのかわかんない。\nそれこそこの内部がオムニバスの世にもみたいで、楽しい。繋がりもあり、綺麗ではある。\nしかし語りベースだからあくまで観測者として本人たちの気持ちに入りにくいのは難点かも。",
+        "noteSource": "letterboxd-rss",
+        "noteImportedAt": "2026-10-12T08:00:54.479Z",
+        "rssReviewRecords": {
+          "letterboxd-review-1534621132": {
+            "body": "序盤だが不穏さの作り方が上手い。自分博物館とかと比べても演出が全然れべち\n細かいネタ感も好き。\n話の構造は特殊だがとても綺麗。\nドーソン(痛みにハマる医者)の話も単体で結構いい話になるくらいレベル高い。\n猿の話もすごくいい。とても共感するが、身近に来た瞬間自分は処理したくなくなる。\n肝心の死刑囚の話だけ辛さが肉体的な永遠の苦痛的な、作りやすいところに限られちゃってると思う。\n復讐で同じことすることを正当と感じてそうなのがほんとに嫌い。父も一緒にやってるわけだしまじで何正しいと思っちゃってんのかわかんない。\nそれこそこの内部がオムニバスの世にもみたいで、楽しい。繋がりもあり、綺麗ではある。\nしかし語りベースだからあくまで観測者として本人たちの気持ちに入りにくいのは難点かも。",
+            "block": "序盤だが不穏さの作り方が上手い。自分博物館とかと比べても演出が全然れべち\n細かいネタ感も好き。\n話の構造は特殊だがとても綺麗。\nドーソン(痛みにハマる医者)の話も単体で結構いい話になるくらいレベル高い。\n猿の話もすごくいい。とても共感するが、身近に来た瞬間自分は処理したくなくなる。\n肝心の死刑囚の話だけ辛さが肉体的な永遠の苦痛的な、作りやすいところに限られちゃってると思う。\n復讐で同じことすることを正当と感じてそうなのがほんとに嫌い。父も一緒にやってるわけだしまじで何正しいと思っちゃってんのかわかんない。\nそれこそこの内部がオムニバスの世にもみたいで、楽しい。繋がりもあり、綺麗ではある。\nしかし語りベースだからあくまで観測者として本人たちの気持ちに入りにくいのは難点かも。"
+          }
+        },
+        "watchHistory": [
+          {
+            "id": "rss:letterboxd-review-1534621132",
+            "date": "2026-10-12",
+            "recordedAt": "2026-10-12T06:33:28.000Z",
+            "rewatch": false,
+            "retroactive": false,
+            "source": "letterboxd-rss",
+            "manualEdited": false
+          }
+        ],
+        "crew84": {
+          "directors": [
+            "Colm McCarthy"
+          ],
+          "creators": [
+            "Charlie Brooker"
+          ],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-12T08:00:53.994Z"
+        }
+      },
+      "custom-1791792053995-4s1q": {
+        "contentType": "tv_episode",
+        "tmdbSeriesId": 42009,
+        "publishedAt": "Mon, 12 Oct 2026 18:21:35 +1300",
+        "addedDate": "2026-10-12",
+        "addedDateSource": "rss-first-seen",
+        "reportedWatchedDate": "2026-10-12",
+        "seasonNumber": 4,
+        "episodeNumber": 4,
+        "episodeTmdbId": 1402687,
+        "letterboxdMovieId": null,
+        "note": "画一化された車などの演出が細かい。どうでもいい監督ごとに裸の写し方も違って面白い。\n周りのスタンガンや見てくる人達によってシステムの大きさがわかる瞬間はとても良かった。\n全てはシュミレーション演出も憎い。まとまりやsfとしての起承転結というか展開も素晴らしかったと思う。",
+        "noteSource": "letterboxd-rss",
+        "noteImportedAt": "2026-10-12T08:00:54.479Z",
+        "rssReviewRecords": {
+          "letterboxd-review-1534558654": {
+            "body": "画一化された車などの演出が細かい。どうでもいい監督ごとに裸の写し方も違って面白い。\n周りのスタンガンや見てくる人達によってシステムの大きさがわかる瞬間はとても良かった。\n全てはシュミレーション演出も憎い。まとまりやsfとしての起承転結というか展開も素晴らしかったと思う。",
+            "block": "画一化された車などの演出が細かい。どうでもいい監督ごとに裸の写し方も違って面白い。\n周りのスタンガンや見てくる人達によってシステムの大きさがわかる瞬間はとても良かった。\n全てはシュミレーション演出も憎い。まとまりやsfとしての起承転結というか展開も素晴らしかったと思う。"
+          }
+        },
+        "watchHistory": [
+          {
+            "id": "rss:letterboxd-review-1534558654",
+            "date": "2026-10-12",
+            "recordedAt": "2026-10-12T05:21:35.000Z",
+            "rewatch": false,
+            "retroactive": false,
+            "source": "letterboxd-rss",
+            "manualEdited": false
+          }
+        ],
+        "crew84": {
+          "directors": [
+            "Tim Van Patten"
+          ],
+          "creators": [
+            "Charlie Brooker"
+          ],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-12T08:00:54.167Z"
+        }
+      },
+      "custom-1791792054167-val3": {
+        "contentType": "tv_episode",
+        "tmdbSeriesId": 42009,
+        "publishedAt": "Mon, 12 Oct 2026 16:49:10 +1300",
+        "addedDate": "2026-10-12",
+        "addedDateSource": "rss-first-seen",
+        "reportedWatchedDate": "2026-10-12",
+        "seasonNumber": 4,
+        "episodeNumber": 1,
+        "episodeTmdbId": 1402684,
+        "letterboxdMovieId": null,
+        "note": "すごい時が経ったのにNetflixがまだあるのがやかましい。いいけどね\n現実世界で蔑まれた人間が仮想で偉そうにする。今でもありそう。さらに彼らに自意識が連続していたとしたら、結構素晴らしい世界観だと思う。自分がコピーでしかないという葛藤。なんのために生きるのか全て虚しくなりそう。キャプテン含めて\nラストの追いかけっこも爽やかで、なんか冒険ものみたい。\n終わり方好き。結局ゲーム。その後も気になる。",
+        "noteSource": "letterboxd-rss",
+        "noteImportedAt": "2026-10-12T08:00:54.479Z",
+        "rssReviewRecords": {
+          "letterboxd-review-1534442741": {
+            "body": "すごい時が経ったのにNetflixがまだあるのがやかましい。いいけどね\n現実世界で蔑まれた人間が仮想で偉そうにする。今でもありそう。さらに彼らに自意識が連続していたとしたら、結構素晴らしい世界観だと思う。自分がコピーでしかないという葛藤。なんのために生きるのか全て虚しくなりそう。キャプテン含めて\nラストの追いかけっこも爽やかで、なんか冒険ものみたい。\n終わり方好き。結局ゲーム。その後も気になる。",
+            "block": "すごい時が経ったのにNetflixがまだあるのがやかましい。いいけどね\n現実世界で蔑まれた人間が仮想で偉そうにする。今でもありそう。さらに彼らに自意識が連続していたとしたら、結構素晴らしい世界観だと思う。自分がコピーでしかないという葛藤。なんのために生きるのか全て虚しくなりそう。キャプテン含めて\nラストの追いかけっこも爽やかで、なんか冒険ものみたい。\n終わり方好き。結局ゲーム。その後も気になる。"
+          }
+        },
+        "watchHistory": [
+          {
+            "id": "rss:letterboxd-review-1534442741",
+            "date": "2026-10-12",
+            "recordedAt": "2026-10-12T03:49:10.000Z",
+            "rewatch": false,
+            "retroactive": false,
+            "source": "letterboxd-rss",
+            "manualEdited": false
+          }
+        ],
+        "crew84": {
+          "directors": [
+            "Toby Haynes"
+          ],
+          "creators": [
+            "Charlie Brooker"
+          ],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-12T08:00:54.478Z"
         }
       }
     }
