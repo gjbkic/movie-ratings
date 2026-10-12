@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791823916439,
-  "sourceUpdatedIso": "2026-10-12T16:51:56.439Z",
+  "sourceUpdatedAt": 1791823923145,
+  "sourceUpdatedIso": "2026-10-12T16:52:03.145Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -12480,35 +12480,6 @@
       "letterboxdReportedWatchedDate": "2026-10-10"
     },
     {
-      "id": "custom-1791449338315-twqr",
-      "title": "ブラック・ミラー「1500万メリット」",
-      "originalTitle": "",
-      "englishTitle": "Black Mirror: Fifteen Million Merits",
-      "year": 2011,
-      "score": 79,
-      "star": 2.5,
-      "overallRank": 435,
-      "sameScoreRank": 3,
-      "category": "Letterboxd",
-      "mediaType": "drama",
-      "genre": [
-        "ドラマ",
-        "SF",
-        "社会問題・生活",
-        "娯楽",
-        "恋愛",
-        "世界観",
-        "TV本編"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": null,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-08",
-      "letterboxdPublishedAt": "Thu, 8 Oct 2026 21:32:23 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-08"
-    },
-    {
       "id": "lb-192-1hUc",
       "title": "名探偵コナン 天国へのカウントダウン",
       "originalTitle": "",
@@ -12516,8 +12487,8 @@
       "year": 2001,
       "score": 79,
       "star": 2.5,
-      "overallRank": 436,
-      "sameScoreRank": 4,
+      "overallRank": 435,
+      "sameScoreRank": 3,
       "category": "コナン映画",
       "mediaType": "movie",
       "genre": [
@@ -12544,8 +12515,8 @@
       "year": 1984,
       "score": 79,
       "star": 2.5,
-      "overallRank": 437,
-      "sameScoreRank": 5,
+      "overallRank": 436,
+      "sameScoreRank": 4,
       "category": "ファンタジー、アドベンチャー",
       "mediaType": "movie",
       "genre": [
@@ -12573,8 +12544,8 @@
       "year": 2013,
       "score": 79,
       "star": 2.5,
-      "overallRank": 438,
-      "sameScoreRank": 6,
+      "overallRank": 437,
+      "sameScoreRank": 5,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -12601,8 +12572,8 @@
       "year": 2019,
       "score": 79,
       "star": 2.5,
-      "overallRank": 439,
-      "sameScoreRank": 7,
+      "overallRank": 438,
+      "sameScoreRank": 6,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -12630,8 +12601,8 @@
       "year": 2007,
       "score": 79,
       "star": 2.5,
-      "overallRank": 440,
-      "sameScoreRank": 8,
+      "overallRank": 439,
+      "sameScoreRank": 7,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -12656,8 +12627,8 @@
       "year": 2010,
       "score": 79,
       "star": 2.5,
-      "overallRank": 441,
-      "sameScoreRank": 9,
+      "overallRank": 440,
+      "sameScoreRank": 8,
       "category": "ピクサー・ディズニー作品",
       "mediaType": "movie",
       "genre": [
@@ -12677,6 +12648,35 @@
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1791449338315-twqr",
+      "title": "ブラック・ミラー「1500万メリット」",
+      "originalTitle": "",
+      "englishTitle": "Black Mirror: Fifteen Million Merits",
+      "year": 2011,
+      "score": 79,
+      "star": 2.5,
+      "overallRank": 441,
+      "sameScoreRank": 9,
+      "category": "Letterboxd",
+      "mediaType": "drama",
+      "genre": [
+        "ドラマ",
+        "SF",
+        "社会問題・生活",
+        "娯楽",
+        "恋愛",
+        "世界観",
+        "TV本編"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-08",
+      "letterboxdPublishedAt": "Thu, 8 Oct 2026 21:32:23 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-08"
     },
     {
       "id": "lb-285-2aVu",
@@ -21739,13 +21739,13 @@
       "79": [
         "lb-214-2aoA",
         "custom-1791567440043-bmc8",
-        "custom-1791449338315-twqr",
         "lb-192-1hUc",
         "lb-269-1dE0",
         "lb-294-2Bsu",
         "custom-1791113241748-xivg",
         "custom-1791122852357-22zp",
         "lb-415-1Spq",
+        "custom-1791449338315-twqr",
         "lb-285-2aVu",
         "lb-264-FPS",
         "lb-412-2b68",
