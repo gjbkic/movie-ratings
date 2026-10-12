@@ -5623,60 +5623,88 @@ function centerRankCard(card){
  const desired=Math.min(wanted,Math.max(covered+8,height-r.height-8));
  instant(()=>window.scrollTo({left:window.scrollX,top:window.scrollY+r.top-desired,behavior:'auto'}));
 }
-function animateRankSwap(before,movedId){
- if(!before.size||window.matchMedia?.('(prefers-reduced-motion: reduce)').matches)return;
- const scrollX=window.scrollX,scrollY=window.scrollY;
- for(const [key,old] of before){
-  const card=cardForRank(key);if(!card)continue;
-  const r=card.getBoundingClientRect();
-  const newLeft=r.left+scrollX,newTop=r.top+scrollY;
-  const dx=old.left-newLeft,dy=old.top-newTop;
-  if(Math.abs(dx)+Math.abs(dy)<2)continue;
-  if(key===movedId&&typeof card.animate==='function'){
-   // Lift the MOVED card out from its old slot, travel to its NEW slot,
-   // then lower it into place. The prior version used the old-minus-new
-   // delta on an already old-positioned ghost, moving in the wrong direction.
-   const ghost=card.cloneNode(true);
-   ghost.querySelector('.v66-pos')?.remove();
-   ghost.classList.remove('v66-focus');
-   const newRect=card.getBoundingClientRect();
-   Object.assign(ghost.style,{
-    position:'fixed',left:(old.left-scrollX)+'px',top:(old.top-scrollY)+'px',
-    width:old.width+'px',height:old.height+'px',margin:'0',
-    boxSizing:'border-box',zIndex:'2147483000',pointerEvents:'none',
-    opacity:'1',transformOrigin:'center center',willChange:'transform,filter,box-shadow',
-    boxShadow:'0 5px 16px rgba(0,0,0,.25)'
-   });
-   ghost.classList.add('movie30-swap-ghost');
-   document.body.appendChild(ghost);
-   card.style.opacity='0';
-   const deltaX=(newRect.left+scrollX)-old.left,deltaY=(newRect.top+scrollY)-old.top;
-   const animation=ghost.animate([
-    {transform:'translate3d(0,0,0) scale(1)',boxShadow:'0 5px 16px rgba(0,0,0,.25)',filter:'brightness(1)',offset:0},
-    {transform:'translate3d('+(deltaX*.18)+'px,'+(deltaY*.18-13)+'px,0) scale(1.065)',boxShadow:'0 22px 48px rgba(0,0,0,.68)',filter:'brightness(1.13)',offset:.24},
-    {transform:'translate3d('+(deltaX*.77)+'px,'+(deltaY*.77-11)+'px,0) scale(1.055)',boxShadow:'0 20px 42px rgba(0,0,0,.60)',filter:'brightness(1.09)',offset:.77},
-    {transform:'translate3d('+deltaX+'px,'+deltaY+'px,0) scale(1)',boxShadow:'0 5px 16px rgba(0,0,0,.25)',filter:'brightness(1)',offset:1}
-   ],{duration:540,easing:'cubic-bezier(.22,.72,.24,1)'});
-   const finish=()=>{ghost.remove();card.style.opacity='';};
-   animation.onfinish=finish;animation.oncancel=finish;
-   setTimeout(finish,750);
-  }else if(typeof card.animate==='function'){
-   card.animate([
-    {transform:'translate3d('+dx+'px,'+dy+'px,0)'},
-    {transform:'translate3d(0,0,0)'}
-   ],{duration:510,easing:'cubic-bezier(.22,.72,.24,1)'});
-  }
- }
-}
+// Use the original drag ghost (index-v13 .drag-ghost) for ↑/↓ swaps.
+// Unlike the post-render FLIP effect, the card visibly lifts FIRST, travels
+// while detached from the list, and is only committed into its new slot on drop.
+let rankSwapInFlight=false;
 function swap(id,d){
- window.__movie30PendingJump99=null;
- const f=filmById(id),sc=f&&effectiveScore(f);if(sc==null)return;
- const a=rankSorted(allFilms().filter(x=>effectiveScore(x)===sc),sc),i=a.findIndex(x=>x.id===id),j=i+d;
- if(j<0||j>=a.length){toast('この点数内では端です。点数をまたぐ移動は≡ドラッグで');return}
- const affected=[a[i].id,a[j].id],before=new Map();
- for(const key of affected){const c=cardForRank(key);if(c){const r=c.getBoundingClientRect();before.set(key,{left:r.left+window.scrollX,top:r.top+window.scrollY,width:r.width,height:r.height})}}
- [a[i],a[j]]=[a[j],a[i]];state.rankOrder[String(sc)]=a.map(x=>x.id);save();renderRank();
- jumpFocus(id,()=>animateRankSwap(before,id),false);
+ if(rankSwapInFlight)return;
+ const film=filmById(id),score=film&&effectiveScore(film);
+ if(score==null)return;
+ const ordered=rankSorted(allFilms().filter(x=>effectiveScore(x)===score),score);
+ const index=ordered.findIndex(x=>x.id===id),next=index+d;
+ if(index<0)return;
+ if(next<0||next>=ordered.length){
+  toast('この点数内では端です。点数をまたぐ移動は≡ドラッグで');
+  return;
+ }
+ const picked=cardForRank(id),adjacent=cardForRank(ordered[next].id);
+ const commit=()=>{
+  if(picked)picked.style.visibility='';
+  [ordered[index],ordered[next]]=[ordered[next],ordered[index]];
+  state.rankOrder[String(score)]=ordered.map(x=>x.id);
+  window.__movie30PendingJump99=null;
+  save();renderRank();
+  posTools(id);
+ };
+ if(!picked||!adjacent||typeof picked.animate!=='function'){
+  commit();return;
+ }
+ rankSwapInFlight=true;
+ const from=picked.getBoundingClientRect(),dest=adjacent.getBoundingClientRect();
+ const dy=dest.top-from.top,dx=dest.left-from.left;
+ // Clone exactly like the former drag interaction: its drag-ghost class,
+ // shadow, slight tilt, actual movie poster and original card contents.
+ const ghost=picked.cloneNode(true);
+ ghost.classList.add('drag-ghost','movie30-swap-ghost');
+ ghost.classList.remove('v66-focus','dragging');
+ const computed=getComputedStyle(picked);
+ Object.assign(ghost.style,{
+  position:'fixed',left:from.left+'px',top:from.top+'px',
+  width:from.width+'px',height:from.height+'px',
+  display:computed.display,gridTemplateColumns:computed.gridTemplateColumns,
+  gap:computed.gap,padding:computed.padding,
+  boxSizing:'border-box',background:computed.backgroundColor,
+  color:computed.color,border:computed.border,borderRadius:computed.borderRadius,
+  margin:'0',zIndex:'2147483000',pointerEvents:'none',
+  opacity:'.97',transformOrigin:'50% 50%',
+  boxShadow:'0 12px 34px rgba(0,0,0,.45)',
+  willChange:'transform,box-shadow'
+ });
+ document.body.appendChild(ghost);
+ picked.style.visibility='hidden';
+ window.__movie30SwapMotion={id,phase:'lifted',start:[from.left,from.top],end:[dest.left,dest.top]};
+ const duration=800;
+ let completed=false;
+ const finish=()=>{
+  if(completed)return;
+  completed=true;
+  try{ghost.remove();commit();}
+  finally{picked.style.visibility='';rankSwapInFlight=false;window.__movie30SwapMotion={id,phase:'dropped'};}
+ };
+ try{
+  // A genuine lift-out, short elevated travel, and soft landing: the same
+  // tilted floating-card impression as the old ≡ drag behavior.
+  const animation=ghost.animate([
+   {transform:'translate3d(0,0,0) rotate(0deg) scale(1)',boxShadow:'0 7px 20px rgba(0,0,0,.3)',offset:0},
+   {transform:'translate3d(17px,-21px,0) rotate(1deg) scale(1.055)',boxShadow:'0 24px 58px rgba(0,0,0,.72)',offset:.23},
+   {transform:'translate3d('+(dx+17)+'px,'+(dy-21)+'px,0) rotate(1deg) scale(1.055)',boxShadow:'0 24px 58px rgba(0,0,0,.72)',offset:.78},
+   {transform:'translate3d('+dx+'px,'+dy+'px,0) rotate(0deg) scale(1)',boxShadow:'0 7px 20px rgba(0,0,0,.3)',offset:1}
+  ],{duration,easing:'cubic-bezier(.25,.72,.28,1)',fill:'both'});
+  // The displaced neighbour slides into the vacant space just as dragging
+  // past it used to shift the adjacent card in the original list.
+  adjacent.animate([
+   {transform:'translate3d(0,0,0)',offset:0},
+   {transform:'translate3d(0,0,0)',offset:.18},
+   {transform:'translate3d('+(-dx)+'px,'+(-dy)+'px,0)',offset:1}
+  ],{duration:duration*.93,easing:'cubic-bezier(.22,.65,.3,1)'});
+  animation.onfinish=finish;
+  animation.oncancel=finish;
+  setTimeout(finish,duration+180);
+ }catch(error){
+  console.warn('Drag-style rank animation unavailable',error);
+  finish();
+ }
 }
 function posTools(id){
  const c=cardForRank(id);if(!c)return;
