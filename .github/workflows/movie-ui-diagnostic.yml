@@ -60,3 +60,71 @@ jobs:
             await browser.close();
           })().catch(e=>{console.error(e.stack||e);process.exitCode=1});
           NODE
+
+      - name: Verify search jump and animated rank swapping
+        shell: bash
+        run: |
+          set -e
+          npm install --no-save --no-package-lock playwright-core@1.56.1 >/dev/null 2>&1
+          python3 -m http.server 8766 >/tmp/movie-http-2.log 2>&1 &
+          node <<'NODE'
+          const {chromium}=require('playwright-core'),fs=require('fs');
+          (async()=>{
+            const browser=await chromium.launch({executablePath:'/usr/bin/google-chrome',headless:true,args:['--no-sandbox']});
+            const context=await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true});
+            const page=await context.newPage();
+            const doc=JSON.parse(fs.readFileSync('live-state.json','utf8'));
+            await page.addInitScript(data=>localStorage.setItem('movie30_data_v1',data),JSON.stringify({...doc.state,updatedAt:Date.now()}));
+            let errors=[];page.on('pageerror',e=>errors.push(String(e)));
+            await page.goto('http://localhost:8766/index.html',{waitUntil:'domcontentloaded'});
+            await page.waitForSelector('html.movie30-ready',{timeout:20000});
+            await page.locator('#searchRank').fill('パラサイト');
+            await page.waitForTimeout(400);
+            const searched=await page.evaluate(()=>{
+              const root=document.querySelector('#rankRoot');
+              const card=root.querySelector('.rank-card[data-id]'),h=card?.querySelector('.drag-handle');
+              return {query:document.querySelector('#searchRank').value,count:root.querySelectorAll('.rank-card').length,
+                title:card?.querySelector('.rank-title')?.textContent,handle:h?.textContent,
+                hidden:h?.disabled,toolsZ:getComputedStyle(document.querySelector('#page-rank>.tools')).zIndex,
+                navZ:getComputedStyle(document.querySelector('#starJumpBar')).zIndex};
+            });
+            console.log('SEARCHED',JSON.stringify(searched));
+            if(searched.count<1||searched.count>15||searched.handle!=='↗'||searched.hidden)throw Error('Search result lacks active global jump arrow');
+            const id=await page.locator('#rankRoot .rank-card[data-id]').first().getAttribute('data-id');
+            await page.locator('#rankRoot .drag-handle.movie99-jump').first().click({force:true,timeout:8000});
+            await page.waitForTimeout(850);
+            const jumped=await page.evaluate(id=>{
+              const q=document.querySelector('#searchRank'),card=document.querySelector('#rankRoot .rank-card[data-id="'+id+'"]');
+              const rect=card?.getBoundingClientRect(),nav=document.querySelector('#starJumpBar').getBoundingClientRect();
+              return {query:q.value,count:document.querySelectorAll('#rankRoot .rank-card').length,
+               focused:!!card?.classList.contains('v66-focus'),buttons:card?.querySelectorAll('.v66-pos [data-sw]').length,
+               rect:rect&&{top:Math.round(rect.top),bottom:Math.round(rect.bottom)},
+               nav:{top:Math.round(nav.top),bottom:Math.round(nav.bottom)},height:innerHeight};
+            },id);
+            console.log('JUMPED',JSON.stringify(jumped));
+            if(jumped.query!==''||jumped.count<300||!jumped.focused||jumped.buttons!==2)throw Error('Search arrow did not restore full ranking at target');
+            if(jumped.rect.top<0||jumped.rect.top>=jumped.height)throw Error('Target is offscreen after global jump');
+            const move=await page.evaluate(id=>{
+              const c=document.querySelector('#rankRoot .rank-card[data-id="'+id+'"]');
+              const list=c?.closest('.score-list'),cards=[...(list?.querySelectorAll('.rank-card[data-id]')||[])].map(x=>x.dataset.id);
+              return {length:cards.length,idx:cards.indexOf(id),order:cards};
+            },id);
+            console.log('SWAP_BEFORE',JSON.stringify({length:move.length,idx:move.idx}));
+            if(move.length>1){
+              const d=move.idx<move.length-1?'1':'-1';
+              await page.locator('#rankRoot .rank-card[data-id="'+id+'"] .v66-pos [data-sw="'+d+'"]').click({force:true});
+              const active=await page.evaluate(()=>({ghost:document.querySelectorAll('.movie30-swap-ghost').length,animations:document.getAnimations().length}));
+              await page.waitForTimeout(700);
+              const after=await page.evaluate(id=>{
+                const c=document.querySelector('#rankRoot .rank-card[data-id="'+id+'"]'),ls=c.closest('.score-list');
+                const ids=[...ls.querySelectorAll('.rank-card[data-id]')].map(x=>x.dataset.id);
+                return {idx:ids.indexOf(id),ghost:document.querySelectorAll('.movie30-swap-ghost').length,focused:c.classList.contains('v66-focus')};
+              },id);
+              console.log('SWAP_ANIMATION',JSON.stringify(active),'SWAP_AFTER',JSON.stringify(after),'DIRECTION',d);
+              if(after.idx!==move.idx+Number(d))throw Error('Same-score rank swap failed');
+              if(active.ghost<1)throw Error('Lifted ghost animation was not shown');
+            }
+            console.log('RANK_TEST_PASS',JSON.stringify({searched,jumped,errors}));
+            await browser.close();
+          })().catch(e=>{console.error(e.stack||e);process.exit(1)});
+          NODE
