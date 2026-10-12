@@ -126,7 +126,7 @@ for(const id of ['rankRoot','watchList83','classifyRoot']){
  if(root)new MutationObserver(queueFocus).observe(root,{childList:true,subtree:true,attributes:true,attributeFilter:['class']});
 }
 queueFocus();
-window.__movie30JPDirector91={build:BUILD,knownNames:aliases.size};
+window.__movie30JPDirector91={build:BUILD,knownNames:aliases.size,aliases};
 const marker=document.getElementById('movie30BuildV29');
 if(marker)marker.textContent='app build '+BUILD;
 })();
