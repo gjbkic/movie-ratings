@@ -206,6 +206,75 @@ def enrich(f,existing):
             "year":str(f.get("year") or ""),"directors":directors,"creators":creators,
             "posterPath":x.get("poster_path") or "","source":"tmdb"}
 
+
+JP_CHARACTERS=re.compile(r"[\u3040-\u30ff\u3400-\u9fff]")
+
+def supplement_japanese_director_aliases(records,films):
+    """Resolve exact TMDb person IDs, then collect real Japanese-script person aliases.
+
+    Only titles whose TMDb original language is Japanese are queried for person
+    aliases. IDs are checked against stored credits; no name is guessed from
+    romaji pronunciation (which can give the wrong kanji).
+    """
+    today=datetime.now(timezone.utc).isoformat()
+    person_cache={}
+    production_cache={}
+    scanned=0
+    added=0
+    for film_id,record in records.items():
+        if film_id not in films or record.get("aliasesCheckedAt"):
+            continue
+        film=films[film_id]
+        tmdb_id=record.get("tmdbId")
+        typ=record.get("type") or "movie"
+        credited=distinct((record.get("directors") or [])+(record.get("creators") or []))
+        if typ not in ("movie","tv") or not str(tmdb_id).isdigit() or not credited:
+            continue
+        key=(typ,int(tmdb_id))
+        try:
+            if key not in production_cache:
+                ext="credits" if typ=="movie" else "aggregate_credits"
+                url=("/movie/" if typ=="movie" else "/tv/")+str(tmdb_id)
+                production_cache[key]=get(url,{"append_to_response":ext,"language":"en-US"})
+            data=production_cache[key]
+            if not compatible(film,data,typ):
+                # A legacy mismatch may be corrected in a later TMDb refresh.
+                continue
+            if data.get("original_language")!="ja":
+                record["aliasesCheckedAt"]=today
+                continue
+            if typ=="movie":
+                people=[p for p in (data.get("credits") or {}).get("crew") or []
+                        if p.get("job")=="Director"]
+            else:
+                people=[p for p in (data.get("aggregate_credits") or {}).get("crew") or []
+                        if any(job.get("job")=="Director" for job in p.get("jobs") or [])]
+                people+=data.get("created_by") or []
+            wanted={normalized(n) for n in credited}
+            person_ids={int(p["id"]) for p in people if p.get("id") and
+                        normalized(p.get("name")) in wanted}
+            aliases=[]
+            for person_id in sorted(person_ids):
+                if person_id not in person_cache:
+                    p=get("/person/"+str(person_id),{"language":"ja-JP"})
+                    native=distinct([p.get("name")]+(p.get("also_known_as") or []))
+                    person_cache[person_id]=[n for n in native
+                           if JP_CHARACTERS.search(n) and 2<=len(n)<=55][:8]
+                aliases.extend(person_cache[person_id])
+            old_aliases=record.get("directorAliases") or []
+            merged=distinct(old_aliases+aliases)
+            if merged!=old_aliases:
+                added+=len(merged)-len(old_aliases)
+                record["directorAliases"]=merged
+            record["aliasesCheckedAt"]=today
+            scanned+=1
+        except ValueError:
+            # Missing person records should not prevent other films being enriched.
+            continue
+        if scanned and scanned%60==0:
+            print("Japanese director aliases checked "+str(scanned)+" films; new names "+str(added),flush=True)
+    return scanned,added
+
 def main():
     get("/configuration") # fail fast rather than marking all movies as misses
     films=collect()
@@ -243,6 +312,8 @@ def main():
             raise
         if i%25==0:
             print("Checked "+str(i)+"/"+str(len(films))+"; newly fetched "+str(completed)+"; unmatched "+str(len(failures)),flush=True)
+    alias_scanned,alias_added=supplement_japanese_director_aliases(records,films)
+    print("JP director names: scanned "+str(alias_scanned)+", newly added "+str(alias_added),flush=True)
     now=datetime.now(timezone.utc).isoformat()
     result={"schema":1,"updatedAt":now,"catalogSize":len(films),
             "matchedCount":len(records),"newCount":completed,"unmatchedCount":len(failures),
