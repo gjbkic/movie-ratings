@@ -48,6 +48,10 @@ def detail(f, row, kind, id, trust=False):
     return kind, int(id), data, None, None
 
 def resolve(f, row):
+    # This 1995 Studio Ghibli short shares its title with unrelated films.
+    # Never trust a previously stored TMDB ID for this particular film.
+    if f.get("id") == "lb-459-1Vgm":
+        return detail(f, row, "movie", 10840, True)
     m = f["meta"]
     if m.get("contentType") == "tv_episode" and m.get("tmdbSeriesId") and m.get("seasonNumber") is not None and m.get("episodeNumber") is not None:
         id, season, episode = m["tmdbSeriesId"], m["seasonNumber"], m["episodeNumber"]
@@ -158,6 +162,10 @@ def fetch_cast(f, row):
         if len(cast) >= 15:
             break
     extra = {"cast":cast,"castCheckedAt":datetime.now(timezone.utc).isoformat(),"castResolverVersion":2,"tmdbId":id,"type":"movie" if kind=="movie" else "tv"}
+    if f.get("id") == "lb-459-1Vgm":
+        # The official TMDB poster for the verified short replaces the incorrect cover.
+        extra["posterPath"] = data.get("poster_path") or ""
+        extra["source"] = "tmdb"
     if kind in ("episode", "season"):
         extra.update(contentType="tv_"+kind, seasonNumber=season, episodeNumber=episode)
     return extra
