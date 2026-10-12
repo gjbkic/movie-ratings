@@ -105,21 +105,23 @@ function restoreScored(before){
 // older "find existing film" handlers and make an unrated copy appear.
 const previousFind=findExistingFilm;
 findExistingFilm=function(raw){
- const target=previousFind(raw);
- if(target)return target;
+ const previous=previousFind(raw);
  const pseudo={
   uri:raw?.link||raw?.uri||'',title:raw?.title||'',
   englishTitle:raw?.englishTitle||raw?.title||'',
   originalTitle:raw?.originalTitle||''
  };
  const key=keyFor(pseudo);
- if(!key)return null;
+ if(!key)return previous;
  const candidates=allFilms().filter(f=>keyFor(f)===key&&(!raw.year||!f.year||Number(raw.year)===Number(f.year)));
- if(!candidates.length)return null;
+ if(!candidates.length)return previous;
+ // The already-scored exact episode wins even if an older importer first found
+ // the unrated duplicate by URL. Distinct episodes have distinct keys.
+ const scored=candidates.filter(f=>validScore(state.exactScores?.[f.id]));
+ if(scored.length===1)return scored[0];
+ if(previous)return previous;
  const matched=candidates.filter(f=>uri(f.uri)&&uri(f.uri)===uri(pseudo.uri));
  const pool=matched.length?matched:candidates;
- // If duplicates exist, prefer an already numerically scored record.
- pool.sort((a,b)=>Number(validScore(state.exactScores?.[b.id]))-Number(validScore(state.exactScores?.[a.id])));
  return pool[0];
 };
 
