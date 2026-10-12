@@ -103,15 +103,36 @@ function endDrag(e){
  try{e?.preventDefault?.()}catch(_){}
  const ctx=dragCtx;dragCtx=null;
  if(!ctx.moved){
-  finishDragUi(ctx);renderRank();window.__movie30FocusRankCard?.(ctx.id);return;
+  const wantedTop=ctx.card?.getBoundingClientRect().top;
+  finishDragUi(ctx);
+  renderRank();
+  window.__movie30FocusRankCard?.(ctx.id);
+  const selected=document.querySelector('.rank-card[data-id="'+encodeURIComponent(ctx.id)+'"]');
+  if(selected&&Number.isFinite(wantedTop)){
+   const difference=selected.getBoundingClientRect().top-wantedTop;
+   if(Math.abs(difference)>1)scrollRankInstant(window.scrollY+difference);
+  }
+  window.__movie30PendingJump99=null;
+  return;
  }
  const list=ctx.card?.closest(".score-list"),newScore=Number(list?.dataset.score??ctx.fromScore),f=filmById(ctx.id);
  if(f){state.exactScores[f.id]=newScore;const newStar=scoreToStar(newScore);state.starOverrides[f.id]=newStar;state.assignments[f.id]=nearestTier(newStar,newScore)}
  document.querySelectorAll(".score-list").forEach(l=>{const score=l.dataset.score;state.rankOrder[score]=[...l.querySelectorAll(".rank-card")].map(c=>decodeURIComponent(c.dataset.id))});
+ const droppedTop=ctx.card?.getBoundingClientRect().top;
  finishDragUi(ctx);window.__movie30PendingJump99=null;save();render();
- const restoreAfterDrag=()=>{if(view.page==='rank'&&window.__movie30IsRankFiltered?.()!==true&&document.querySelector('.rank-card[data-id="'+encodeURIComponent(ctx.id)+'"]'))window.__movie30FocusRankCard?.(ctx.id)};
+ const restoreAfterDrag=()=>{
+  if(view.page!=='rank'||window.__movie30IsRankFiltered?.()===true)return;
+  const selected=document.querySelector('.rank-card[data-id="'+encodeURIComponent(ctx.id)+'"]');
+  if(!selected)return;
+  if(!selected.querySelector('.v66-pos'))window.__movie30FocusRankCard?.(ctx.id);
+  const latest=document.querySelector('.rank-card[data-id="'+encodeURIComponent(ctx.id)+'"]');
+  if(latest&&Number.isFinite(droppedTop)){
+   const difference=latest.getBoundingClientRect().top-droppedTop;
+   if(Math.abs(difference)>1)scrollRankInstant(window.scrollY+difference);
+  }
+ };
  restoreAfterDrag();requestAnimationFrame(restoreAfterDrag);
- setTimeout(restoreAfterDrag,220);setTimeout(restoreAfterDrag,600);
+ setTimeout(restoreAfterDrag,180);setTimeout(restoreAfterDrag,420);
  toast(newScore===ctx.fromScore?"同点内の順位を保存":""+newScore+"点へ移動")
 }
 document.addEventListener("visibilitychange",()=>{if(document.hidden&&dragCtx)cancelDrag()});
@@ -5766,6 +5787,22 @@ function jumpFocus(id,afterLayout,center=true){
   afterLayout?.();
  }));
 }
+// Search-to-rank must NEVER inherit html {scroll-behavior:smooth}.
+// 'auto' follows the CSS property and previously started a 20,000px
+// animation while the user was already dragging the selected movie.
+function scrollRankInstant(top){
+ const style=document.documentElement.style;
+ const old=style.getPropertyValue('scroll-behavior'),priority=style.getPropertyPriority('scroll-behavior');
+ style.setProperty('scroll-behavior','auto','important');
+ try{
+  window.scrollTo({left:window.scrollX,top:Math.max(0,top),behavior:'instant'});
+ }catch(error){
+  window.scrollTo({left:window.scrollX,top:Math.max(0,top),behavior:'auto'});
+ }finally{
+  if(old)style.setProperty('scroll-behavior',old,priority);
+  else style.removeProperty('scroll-behavior');
+ }
+}
 function jumpGlobal(id,pointerEvent){
  const source=cardForRank(id),sourceRect=source?.getBoundingClientRect();
  const anchorTop=sourceRect?.top??null;
@@ -5794,7 +5831,7 @@ function jumpGlobal(id,pointerEvent){
   // ranking is restored underneath it. Never recenter a finger-initiated jump.
   if(anchorTop!=null&&!dragCtx){
    const delta=rect.top-anchorTop;
-   if(Math.abs(delta)>1)window.scrollTo({left:window.scrollX,top:window.scrollY+delta,behavior:'auto'});
+   if(Math.abs(delta)>1)scrollRankInstant(window.scrollY+delta);
   }
   current.classList.add('movie30-jump-highlight');
   window.__movie30LastJump99={id,attempts,found:true,scrollY:window.scrollY,top:current.getBoundingClientRect().top,phase:pointer?'ready-to-drag':'anchored'};
@@ -5827,7 +5864,7 @@ window.__movie30RefocusRank99=function(){
  const current=cardForRank(pending.id),rect=current?.getBoundingClientRect();
  if(rect&&Number.isFinite(pending.anchorTop)){
   const delta=rect.top-pending.anchorTop;
-  if(Math.abs(delta)>1)window.scrollTo({left:window.scrollX,top:window.scrollY+delta,behavior:'auto'});
+  if(Math.abs(delta)>1)scrollRankInstant(window.scrollY+delta);
  }
  return true;
 };
