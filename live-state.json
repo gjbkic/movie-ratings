@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791822558948,
-  "sourceUpdatedIso": "2026-10-12T16:29:18.948Z",
+  "sourceUpdatedAt": 1791823402202,
+  "sourceUpdatedIso": "2026-10-12T16:43:22.202Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -20690,6 +20690,27 @@
       "letterboxdAddedDate": "2026-10-11",
       "letterboxdPublishedAt": "Sun, 11 Oct 2026 06:19:17 +1300",
       "letterboxdReportedWatchedDate": "2026-10-10"
+    },
+    {
+      "id": "custom-1791823398409-njce",
+      "title": "All Too Well: The Short Film",
+      "originalTitle": "",
+      "englishTitle": "All Too Well: The Short Film",
+      "year": 2021,
+      "score": null,
+      "star": 3,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": "",
+      "origin": "その他",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": "2026-10-13",
+      "letterboxdPublishedAt": "Tue, 13 Oct 2026 05:42:34 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-13"
     }
   ],
   "state": {
@@ -24753,6 +24774,23 @@
         "_seq": 1791802127938,
         "source": "letterboxd",
         "tmdbType": "movie"
+      },
+      {
+        "id": "custom-1791823398409-njce",
+        "title": "All Too Well: The Short Film",
+        "originalTitle": "",
+        "englishTitle": "All Too Well: The Short Film",
+        "lbTitle": "All Too Well: The Short Film",
+        "tmdbId": null,
+        "year": 2021,
+        "uri": "https://letterboxd.com/gjbkic/film/all-too-well-the-short-film/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 3,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791823398409,
+        "source": "letterboxd"
       }
     ],
     "starOverrides": {
@@ -28428,7 +28466,8 @@
       "custom-lb-unrated-1Qcu": "movie",
       "custom-1791802126132-vr9o": "drama",
       "custom-1791802127464-uge5": "drama",
-      "custom-1791802127938-6mow": "drama"
+      "custom-1791802127938-6mow": "drama",
+      "custom-1791823398409-njce": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -35194,7 +35233,8 @@
       "custom-1791664055911-cuz4": "日本",
       "custom-1791802126132-vr9o": "その他",
       "custom-1791802127464-uge5": "その他",
-      "custom-1791802127938-6mow": "その他"
+      "custom-1791802127938-6mow": "その他",
+      "custom-1791823398409-njce": "その他"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -62538,6 +62578,46 @@
           "path": "/seN6rRfN0I6n8iDXjlSMk1QjNcq.jpg",
           "tmdbId": 42009,
           "checkedAt": "2026-10-12T15:07:22.970Z",
+          "provider": "tmdb"
+        }
+      },
+      "custom-1791823398409-njce": {
+        "publishedAt": "Tue, 13 Oct 2026 05:42:34 +1300",
+        "addedDate": "2026-10-13",
+        "addedDateSource": "rss-first-seen",
+        "reportedWatchedDate": "2026-10-13",
+        "note": "いい曲だと思う。MV自体はただの恋愛のすれ違い。曲自体は素晴らしいが、映像としては地味で悪くはないがまあって感じ。実を言うと追加部分もいいけど短い元バージョンの方が好きかも。少しMVだけでなく落ち葉感が強い。Redの頃の若い悲しみや怒りの混じったようなザラつきが好き。いい曲だけどね",
+        "noteSource": "letterboxd-rss",
+        "noteImportedAt": "2026-10-12T16:43:20.756Z",
+        "rssReviewRecords": {
+          "letterboxd-review-1535139086": {
+            "body": "いい曲だと思う。MV自体はただの恋愛のすれ違い。曲自体は素晴らしいが、映像としては地味で悪くはないがまあって感じ。実を言うと追加部分もいいけど短い元バージョンの方が好きかも。少しMVだけでなく落ち葉感が強い。Redの頃の若い悲しみや怒りの混じったようなザラつきが好き。いい曲だけどね",
+            "block": "いい曲だと思う。MV自体はただの恋愛のすれ違い。曲自体は素晴らしいが、映像としては地味で悪くはないがまあって感じ。実を言うと追加部分もいいけど短い元バージョンの方が好きかも。少しMVだけでなく落ち葉感が強い。Redの頃の若い悲しみや怒りの混じったようなザラつきが好き。いい曲だけどね"
+          }
+        },
+        "watchHistory": [
+          {
+            "id": "rss:letterboxd-review-1535139086",
+            "date": "2026-10-13",
+            "recordedAt": "2026-10-12T16:42:34.000Z",
+            "rewatch": false,
+            "retroactive": false,
+            "source": "letterboxd-rss",
+            "manualEdited": false
+          }
+        ],
+        "crew84": {
+          "directors": [
+            "Taylor Swift"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-12T16:43:20.754Z"
+        },
+        "poster84": {
+          "path": "/zfgHyodGNdtBxO8R7d0qmR2JSEz.jpg",
+          "tmdbId": 897429,
+          "checkedAt": "2026-10-12T16:43:24.809Z",
           "provider": "tmdb"
         }
       }
