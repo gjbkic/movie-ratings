@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791801438677,
-  "sourceUpdatedIso": "2026-10-12T10:37:18.677Z",
+  "sourceUpdatedAt": 1791801447730,
+  "sourceUpdatedIso": "2026-10-12T10:37:27.730Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -7558,6 +7558,35 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-490-2beQ",
+      "title": "12モンキーズ",
+      "originalTitle": "",
+      "englishTitle": "Twelve Monkeys",
+      "year": 1995,
+      "score": 83,
+      "star": 3,
+      "overallRank": 262,
+      "sameScoreRank": 16,
+      "category": "SF",
+      "mediaType": "movie",
+      "genre": [
+        "SF",
+        "世界観",
+        "アクション",
+        "切ない",
+        "娯楽",
+        "心理・内面",
+        "時間"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 129,
+      "exact": true,
+      "letterboxdAddedDate": "2026-01-12",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-263-6bJM",
       "title": "プレデスティネーション",
       "originalTitle": "",
@@ -7565,8 +7594,8 @@
       "year": 2014,
       "score": 83,
       "star": 3,
-      "overallRank": 262,
-      "sameScoreRank": 16,
+      "overallRank": 263,
+      "sameScoreRank": 17,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -7586,35 +7615,6 @@
       "runtime": 98,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "lb-490-2beQ",
-      "title": "12モンキーズ",
-      "originalTitle": "",
-      "englishTitle": "Twelve Monkeys",
-      "year": 1995,
-      "score": 83,
-      "star": 3,
-      "overallRank": 263,
-      "sameScoreRank": 17,
-      "category": "SF",
-      "mediaType": "movie",
-      "genre": [
-        "SF",
-        "世界観",
-        "アクション",
-        "切ない",
-        "娯楽",
-        "心理・内面",
-        "時間"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 129,
-      "exact": true,
-      "letterboxdAddedDate": "2026-01-12",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -21912,8 +21912,8 @@
         "custom-1791800382402-9inx",
         "lb-267-29u8",
         "lb-430-26uk",
-        "lb-263-6bJM",
         "lb-490-2beQ",
+        "lb-263-6bJM",
         "lb-16-70w",
         "lb-127-28zw",
         "lb-369-2aVk",
