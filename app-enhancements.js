@@ -2147,15 +2147,23 @@ const topSync=document.getElementById('topLbSyncV73');
 // episode. Its record is retained in saved state; only a disposable,
  // note-free duplicate is removed from read-only list output.
 const originalAllFilms=allFilms;
+// Cache the duplicate-episode result. Calling the expensive matching pass on
+// EVERY allFilms() call made rendering O(N^2) with many Unicode normalizations;
+// hundreds of rank rows then blocked the main thread and disabled all taps.
+let movie98ListCache=null, movie98CacheState=null, movie98CacheFilms=null;
+let movie98CacheUpdatedAt=null, movie98CacheLength=-1;
 allFilms=function(...args){
  const items=originalAllFilms.apply(this,args);
+ if(movie98ListCache && movie98CacheState===state &&
+    movie98CacheFilms===state.customFilms &&
+    movie98CacheUpdatedAt===state.updatedAt &&
+    movie98CacheLength===items.length) return movie98ListCache.slice();
  const scored=new Map();
  for(const f of items){
   const k=keyFor(f);
   if(k&&validScore(state.exactScores?.[f.id])&&!scored.has(k))scored.set(k,f);
  }
- if(!scored.size)return items;
- return items.filter(f=>{
+ const filtered=!scored.size?items:items.filter(f=>{
   const k=keyFor(f),keeper=k?scored.get(k):null;
   if(!keeper||keeper.id===f.id||validScore(state.exactScores?.[f.id]))return true;
   const note=state.letterboxdMeta?.[f.id]||{};
@@ -2164,9 +2172,14 @@ allFilms=function(...args){
   const sameUri=uri(f.uri)&&uri(f.uri)===uri(keeper.uri);
   const englishA=normalize(titleInfo(f).englishTitle||f.lbTitle);
   const englishB=normalize(titleInfo(keeper).englishTitle||keeper.lbTitle);
-  const sameEnglish=Boolean(englishA&&englishB&&englishA===englishB);
   return !(sameUri||sameEnglish);
  });
+ movie98ListCache=filtered;
+ movie98CacheState=state;
+ movie98CacheFilms=state.customFilms;
+ movie98CacheUpdatedAt=state.updatedAt;
+ movie98CacheLength=items.length;
+ return filtered.slice();
 };
 const backfilled=backupRepair();
 if(backfilled){save();render();}
