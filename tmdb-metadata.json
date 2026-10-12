@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updatedAt": "2026-10-12T20:59:24.671857+00:00",
+  "updatedAt": "2026-10-12T21:19:00.689527+00:00",
   "catalogSize": 731,
   "matchedCount": 735,
   "newCount": 0,
@@ -32639,7 +32639,7 @@
         "アニメーション",
         "ドラマ"
       ],
-      "castCheckedAt": "2026-10-12T20:59:04.890238+00:00",
+      "castCheckedAt": "2026-10-12T21:18:54.001551+00:00",
       "castResolverVersion": 2
     },
     "lb-565-6YA": {
@@ -68767,7 +68767,7 @@
       "castCheckedAt": "2026-10-12T04:28:43.271036+00:00"
     },
     "lb-459-1Vgm": {
-      "tmdbId": 10840,
+      "tmdbId": 1461632,
       "title": "On Your Mark",
       "year": "1995",
       "type": "movie",
@@ -68781,7 +68781,29 @@
         "宮崎駿",
         "宮﨑駿"
       ],
-      "sourceUrl": "https://www.ghibli.jp/works/onyourmark/"
+      "sourceUrl": "https://www.ghibli.jp/works/onyourmark/",
+      "cast": [
+        {
+          "id": 5358358,
+          "name": "Mark Fuller",
+          "originalName": "Mark Fuller",
+          "role": "Mark Fuller"
+        },
+        {
+          "id": 5358359,
+          "name": "MJ Rizzo",
+          "originalName": "MJ Rizzo",
+          "role": "Sydney Westcot"
+        },
+        {
+          "id": 5358360,
+          "name": "Jordan McConnell",
+          "originalName": "Jordan McConnell",
+          "role": "Blake Porte"
+        }
+      ],
+      "castCheckedAt": "2026-10-12T21:18:53.503585+00:00",
+      "castResolverVersion": 2
     },
     "custom-1789385859985-uylk": {
       "tmdbId": 653567,
@@ -68894,8 +68916,33 @@
       "creators": [],
       "posterPath": "",
       "source": "curated-film-and-series-credits",
-      "cast": [],
-      "castCheckedAt": "2026-10-12T20:59:11.399920+00:00",
+      "cast": [
+        {
+          "id": 23987,
+          "name": "中田譲治",
+          "originalName": "中田譲治",
+          "role": "Arabaki (Blaze Man) (voice)"
+        },
+        {
+          "id": 122566,
+          "name": "兵藤まこ",
+          "originalName": "兵藤まこ",
+          "role": "Mermaid (voice)"
+        },
+        {
+          "id": 2622619,
+          "name": "掟ポルシェ",
+          "originalName": "掟ポルシェ",
+          "role": "Shopkeeper's Uncle (voice)"
+        },
+        {
+          "id": 1071546,
+          "name": "千葉優輝",
+          "originalName": "千葉優輝",
+          "role": "Hiroshi (voice)"
+        }
+      ],
+      "castCheckedAt": "2026-10-12T21:18:54.257107+00:00",
       "castResolverVersion": 2,
       "contentType": "tv_episode",
       "seasonNumber": 3,
@@ -68912,8 +68959,33 @@
       "creators": [],
       "posterPath": "",
       "source": "curated-film-and-series-credits",
-      "cast": [],
-      "castCheckedAt": "2026-10-12T20:59:09.654084+00:00",
+      "cast": [
+        {
+          "id": 23987,
+          "name": "中田譲治",
+          "originalName": "中田譲治",
+          "role": "Arabaki (Blaze Man) (voice)"
+        },
+        {
+          "id": 122566,
+          "name": "兵藤まこ",
+          "originalName": "兵藤まこ",
+          "role": "Mermaid (voice)"
+        },
+        {
+          "id": 2622619,
+          "name": "掟ポルシェ",
+          "originalName": "掟ポルシェ",
+          "role": "Shopkeeper's Uncle (voice)"
+        },
+        {
+          "id": 1071546,
+          "name": "千葉優輝",
+          "originalName": "千葉優輝",
+          "role": "Hiroshi (voice)"
+        }
+      ],
+      "castCheckedAt": "2026-10-12T21:18:54.257049+00:00",
       "castResolverVersion": 2,
       "contentType": "tv_episode",
       "seasonNumber": 3,
@@ -69204,7 +69276,7 @@
       "posterPath": "",
       "source": "curated-film-and-series-credits",
       "cast": [],
-      "castCheckedAt": "2026-10-12T20:59:22.660953+00:00",
+      "castCheckedAt": "2026-10-12T21:18:58.689288+00:00",
       "castResolverVersion": 2
     },
     "custom-1790508958909-q6d6": {
@@ -69219,7 +69291,7 @@
       "posterPath": "",
       "source": "curated-film-and-series-credits",
       "cast": [],
-      "castCheckedAt": "2026-10-12T20:59:21.420577+00:00",
+      "castCheckedAt": "2026-10-12T21:18:57.435552+00:00",
       "castResolverVersion": 2
     },
     "lb-253-SVAW": {
@@ -76317,7 +76389,7 @@
       "sourceUrl": "https://hanaballoon.com/dorachan/data/anime/mizuta/list/data/201107.html",
       "posterPath": "",
       "cast": [],
-      "castCheckedAt": "2026-10-12T20:59:23.164679+00:00",
+      "castCheckedAt": "2026-10-12T21:18:59.188180+00:00",
       "castResolverVersion": 2,
       "tmdbId": 1704979
     },

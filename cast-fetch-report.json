@@ -1,9 +1,9 @@
 {
-  "at": "2026-10-12T20:59:24.671857+00:00",
+  "at": "2026-10-12T21:19:00.689527+00:00",
   "counts": {
     "total": 735,
-    "success": 727,
-    "empty": 6,
+    "success": 729,
+    "empty": 4,
     "unmatched": 2,
     "api": 0
   },
@@ -4723,10 +4723,10 @@
     {
       "id": "custom-1789385860026-8m1d",
       "title": "Ani*Kuri15: ネコの集会",
-      "status": "empty",
-      "reason": "日本語・英語クレジットを再取得しましたが出演者情報なし",
+      "status": "success",
+      "reason": "",
       "tmdbId": 44587,
-      "castCount": 0
+      "castCount": 4
     },
     {
       "id": "custom-1789385860057-z7ka",
@@ -4787,10 +4787,10 @@
     {
       "id": "custom-1789385860426-8e86",
       "title": "Ani*Kuri15: Good Morning",
-      "status": "empty",
-      "reason": "日本語・英語クレジットを再取得しましたが出演者情報なし",
+      "status": "success",
+      "reason": "",
       "tmdbId": 44587,
-      "castCount": 0
+      "castCount": 4
     },
     {
       "id": "custom-1789385860459-6dw6",
