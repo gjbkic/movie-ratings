@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791799033529,
-  "sourceUpdatedIso": "2026-10-12T09:57:13.529Z",
+  "sourceUpdatedAt": 1791799038673,
+  "sourceUpdatedIso": "2026-10-12T09:57:18.673Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -199,7 +199,7 @@
       "origin": "ハリウッド",
       "format": "live",
       "runtime": 127,
-      "exact": false,
+      "exact": true,
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
@@ -21300,7 +21300,8 @@
       "custom-1791664055469-au2b": 90,
       "custom-1791664055006-96rv": 98,
       "custom-1791664054514-pksv": 93,
-      "custom-1791664055911-cuz4": 93
+      "custom-1791664055911-cuz4": 93,
+      "lb-18-2ahY": 98
     },
     "rankOrder": {
       "40": [
@@ -25303,7 +25304,8 @@
       "custom-1791664055006-96rv": 5,
       "custom-1791664054514-pksv": 4.5,
       "custom-1791664055911-cuz4": 4.5,
-      "custom-1789385860389-93a2": 2.5
+      "custom-1789385860389-93a2": 2.5,
+      "lb-18-2ahY": 5
     },
     "titleOverrides": {
       "added-anchor-578": {
