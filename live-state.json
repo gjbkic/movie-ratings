@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791801304049,
-  "sourceUpdatedIso": "2026-10-12T10:35:04.049Z",
+  "sourceUpdatedAt": 1791801309039,
+  "sourceUpdatedIso": "2026-10-12T10:35:09.039Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -6914,6 +6914,33 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-554-igK",
+      "title": "太陽を盗んだ男",
+      "originalTitle": "",
+      "englishTitle": "The Man Who Stole the Sun",
+      "year": 1979,
+      "score": 84,
+      "star": 3.5,
+      "overallRank": 240,
+      "sameScoreRank": 34,
+      "category": "邦画",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "社会問題・生活",
+        "アクション",
+        "娯楽",
+        "雰囲気・美学"
+      ],
+      "origin": "日本",
+      "format": "live",
+      "runtime": 147,
+      "exact": true,
+      "letterboxdAddedDate": "2026-09-04",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-159-18U8",
       "title": "トゥルーマン・ショー",
       "originalTitle": "",
@@ -6921,8 +6948,8 @@
       "year": 1998,
       "score": 84,
       "star": 3.5,
-      "overallRank": 240,
-      "sameScoreRank": 34,
+      "overallRank": 241,
+      "sameScoreRank": 35,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -6949,8 +6976,8 @@
       "year": 2001,
       "score": 84,
       "star": 3.5,
-      "overallRank": 241,
-      "sameScoreRank": 35,
+      "overallRank": 242,
+      "sameScoreRank": 36,
       "category": "ファンタジー、アドベンチャー",
       "mediaType": "movie",
       "genre": [
@@ -6976,8 +7003,8 @@
       "year": 2015,
       "score": 84,
       "star": 3.5,
-      "overallRank": 242,
-      "sameScoreRank": 36,
+      "overallRank": 243,
+      "sameScoreRank": 37,
       "category": "ファンタジー、アドベンチャー",
       "mediaType": "movie",
       "genre": [
@@ -6993,33 +7020,6 @@
       "runtime": 137,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "lb-554-igK",
-      "title": "太陽を盗んだ男",
-      "originalTitle": "",
-      "englishTitle": "The Man Who Stole the Sun",
-      "year": 1979,
-      "score": 84,
-      "star": 3.5,
-      "overallRank": 243,
-      "sameScoreRank": 37,
-      "category": "邦画",
-      "mediaType": "movie",
-      "genre": [
-        "ドラマ",
-        "社会問題・生活",
-        "アクション",
-        "娯楽",
-        "雰囲気・美学"
-      ],
-      "origin": "日本",
-      "format": "live",
-      "runtime": 147,
-      "exact": true,
-      "letterboxdAddedDate": "2026-09-04",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -21955,10 +21955,10 @@
         "lb-176-2aZm",
         "lb-63-8MxC",
         "base-perks-2012",
+        "lb-554-igK",
         "lb-159-18U8",
         "lb-394-2b5O",
         "lb-99-4hk0",
-        "lb-554-igK",
         "lb-212-acjI",
         "lb-524-7bQA"
       ],
