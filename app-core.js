@@ -5628,21 +5628,43 @@ function animateRankSwap(before,movedId){
  const scrollX=window.scrollX,scrollY=window.scrollY;
  for(const [key,old] of before){
   const card=cardForRank(key);if(!card)continue;
-  const r=card.getBoundingClientRect(),dx=old.left-(r.left+scrollX),dy=old.top-(r.top+scrollY);
+  const r=card.getBoundingClientRect();
+  const newLeft=r.left+scrollX,newTop=r.top+scrollY;
+  const dx=old.left-newLeft,dy=old.top-newTop;
+  if(Math.abs(dx)+Math.abs(dy)<2)continue;
   if(key===movedId&&typeof card.animate==='function'){
-   const ghost=card.cloneNode(true);ghost.querySelector('.v66-pos')?.remove();ghost.classList.remove('v66-focus');
-   Object.assign(ghost.style,{position:'fixed',left:(old.left-scrollX)+'px',top:(old.top-scrollY)+'px',width:old.width+'px',height:old.height+'px',margin:'0',boxSizing:'border-box',zIndex:'2147483000',pointerEvents:'none',opacity:'.98',transformOrigin:'center center',boxShadow:'0 18px 44px rgba(0,0,0,.62)',willChange:'transform'});
-   document.body.appendChild(ghost);card.style.opacity='0';
+   // Lift the MOVED card out from its old slot, travel to its NEW slot,
+   // then lower it into place. The prior version used the old-minus-new
+   // delta on an already old-positioned ghost, moving in the wrong direction.
+   const ghost=card.cloneNode(true);
+   ghost.querySelector('.v66-pos')?.remove();
+   ghost.classList.remove('v66-focus');
+   const newRect=card.getBoundingClientRect();
+   Object.assign(ghost.style,{
+    position:'fixed',left:(old.left-scrollX)+'px',top:(old.top-scrollY)+'px',
+    width:old.width+'px',height:old.height+'px',margin:'0',
+    boxSizing:'border-box',zIndex:'2147483000',pointerEvents:'none',
+    opacity:'1',transformOrigin:'center center',willChange:'transform,filter,box-shadow',
+    boxShadow:'0 5px 16px rgba(0,0,0,.25)'
+   });
+   ghost.classList.add('movie30-swap-ghost');
+   document.body.appendChild(ghost);
+   card.style.opacity='0';
+   const deltaX=(newRect.left+scrollX)-old.left,deltaY=(newRect.top+scrollY)-old.top;
    const animation=ghost.animate([
-    {transform:'translate3d(0,0,0) scale(1)',filter:'brightness(1)',offset:0},
-    {transform:'translate3d('+(dx*.28)+'px,'+(dy*.28-12)+'px,0) scale(1.045)',filter:'brightness(1.13)',offset:.34},
-    {transform:'translate3d('+dx+'px,'+dy+'px,0) scale(1)',filter:'brightness(1)',offset:1}
-   ],{duration:390,easing:'cubic-bezier(.2,.75,.25,1)'});
-   animation.onfinish=()=>{ghost.remove();card.style.opacity='';};
-   animation.oncancel=()=>{ghost.remove();card.style.opacity='';};
-  }else if(typeof card.animate==='function'&&Math.abs(dx)+Math.abs(dy)>=2){
-   card.animate([{transform:'translate3d('+dx+'px,'+dy+'px,0)'},{transform:'translate3d(0,0,0)'}],
-    {duration:390,easing:'cubic-bezier(.2,.75,.25,1)'});
+    {transform:'translate3d(0,0,0) scale(1)',boxShadow:'0 5px 16px rgba(0,0,0,.25)',filter:'brightness(1)',offset:0},
+    {transform:'translate3d('+(deltaX*.18)+'px,'+(deltaY*.18-13)+'px,0) scale(1.065)',boxShadow:'0 22px 48px rgba(0,0,0,.68)',filter:'brightness(1.13)',offset:.24},
+    {transform:'translate3d('+(deltaX*.77)+'px,'+(deltaY*.77-11)+'px,0) scale(1.055)',boxShadow:'0 20px 42px rgba(0,0,0,.60)',filter:'brightness(1.09)',offset:.77},
+    {transform:'translate3d('+deltaX+'px,'+deltaY+'px,0) scale(1)',boxShadow:'0 5px 16px rgba(0,0,0,.25)',filter:'brightness(1)',offset:1}
+   ],{duration:540,easing:'cubic-bezier(.22,.72,.24,1)'});
+   const finish=()=>{ghost.remove();card.style.opacity='';};
+   animation.onfinish=finish;animation.oncancel=finish;
+   setTimeout(finish,750);
+  }else if(typeof card.animate==='function'){
+   card.animate([
+    {transform:'translate3d('+dx+'px,'+dy+'px,0)'},
+    {transform:'translate3d(0,0,0)'}
+   ],{duration:510,easing:'cubic-bezier(.22,.72,.24,1)'});
   }
  }
 }
@@ -5671,7 +5693,30 @@ function jumpFocus(id,afterLayout,center=true){
   afterLayout?.();
  }));
 }
-function jumpGlobal(id){if(filtered())backFilters=cap();clearFilters();renderRank();jumpFocus(id);toast('全体順位の位置へ移動しました')}
+function jumpGlobal(id){
+ if(filtered())backFilters=cap();
+ document.activeElement?.blur?.();
+ document.querySelectorAll('.movie92-suggestions').forEach(menu=>{menu.hidden=true});
+ clearFilters();
+ view.page='rank';
+ render();
+ const jump=()=>{
+  // A previous render can be replaced by async metadata updates, so always
+  // resolve the current card from the COMPLETE ranking, not filtered DOM.
+  const c=cardForRank(id);
+  if(!c)return false;
+  posTools(id);
+  centerRankCard(c);
+  c.classList.add('movie30-jump-highlight');
+  setTimeout(()=>c.classList.remove('movie30-jump-highlight'),1800);
+  return true;
+ };
+ const run=()=>{requestAnimationFrame(()=>requestAnimationFrame(jump));};
+ // iOS viewport grows after dismissing the software keyboard.
+ run();setTimeout(run,230);setTimeout(run,570);
+ toast('全体ランキング内の該当作品へ移動しました');
+}
+window.__movie30JumpToGlobalRank=jumpGlobal;window.__movie30IsRankFiltered=filtered;
 function decorate(){const f=filtered();for(const c of document.querySelectorAll('#rankRoot .rank-card')){const id=decodeURIComponent(c.dataset.id||''),h=c.querySelector('.drag-handle');if(!h)continue;h.disabled=false;if(f){h.textContent='↕';h.title='全体順位の位置へ';h.onpointerdown=e=>{e.preventDefault();e.stopPropagation();jumpGlobal(id)}}else{h.textContent='≡';h.title='ドラッグで順位変更';h.onpointerdown=startDrag}}document.getElementById('advBadge66')?.classList.toggle('on',!!advOn());if(focusId)posTools(focusId)}
 const rr=renderRank;renderRank=function(){rr();if(advOn()){document.querySelectorAll('#rankRoot .rank-card').forEach(c=>{const f=filmById(decodeURIComponent(c.dataset.id||''));if(f&&!pass(f))c.remove()});for(const bin of document.querySelectorAll('#rankRoot .score-bin')){const n=bin.querySelectorAll('.rank-card').length,sm=bin.querySelector('.score-label small');if(sm)sm.textContent=n+'本';if(!n)bin.remove()}for(const s of document.querySelectorAll('#rankRoot .rank-star'))if(!s.querySelector('.rank-card'))s.remove()}decorate()};
 
