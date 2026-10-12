@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791792582279,
-  "sourceUpdatedIso": "2026-10-12T08:09:42.279Z",
+  "sourceUpdatedAt": 1791792592250,
+  "sourceUpdatedIso": "2026-10-12T08:09:52.250Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -7438,6 +7438,36 @@
       "letterboxdReportedWatchedDate": "2026-09-29"
     },
     {
+      "id": "lb-261-1IGQ",
+      "title": "月に囚われた男",
+      "originalTitle": "",
+      "englishTitle": "Moon",
+      "year": 2009,
+      "score": 83,
+      "star": 3,
+      "overallRank": 258,
+      "sameScoreRank": 12,
+      "category": "SF",
+      "mediaType": "movie",
+      "genre": [
+        "SF",
+        "ミステリー",
+        "サスペンス",
+        "どんでん返し",
+        "ドラマ",
+        "胸糞",
+        "心理・内面",
+        "哲学・思想"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 97,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "custom-1791627813752-lf6s",
       "title": "ブラック・ミラー「殺意の追跡」",
       "originalTitle": "",
@@ -7445,8 +7475,8 @@
       "year": 2016,
       "score": 83,
       "star": 3,
-      "overallRank": 258,
-      "sameScoreRank": 12,
+      "overallRank": 259,
+      "sameScoreRank": 13,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -7467,36 +7497,6 @@
       "letterboxdAddedDate": "2026-10-10",
       "letterboxdPublishedAt": "Sat, 10 Oct 2026 21:54:20 +1300",
       "letterboxdReportedWatchedDate": "2026-10-10"
-    },
-    {
-      "id": "lb-261-1IGQ",
-      "title": "月に囚われた男",
-      "originalTitle": "",
-      "englishTitle": "Moon",
-      "year": 2009,
-      "score": 83,
-      "star": 3,
-      "overallRank": 259,
-      "sameScoreRank": 13,
-      "category": "SF",
-      "mediaType": "movie",
-      "genre": [
-        "SF",
-        "ミステリー",
-        "サスペンス",
-        "どんでん返し",
-        "ドラマ",
-        "胸糞",
-        "心理・内面",
-        "哲学・思想"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 97,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "lb-263-6bJM",
@@ -21916,8 +21916,8 @@
         "custom-1790924446793-9ts4",
         "custom-1789385859985-uylk",
         "custom-1790665767820-1d1q",
-        "custom-1791627813752-lf6s",
         "lb-261-1IGQ",
+        "custom-1791627813752-lf6s",
         "lb-263-6bJM",
         "lb-490-2beQ",
         "lb-267-29u8",
