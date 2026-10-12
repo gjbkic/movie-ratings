@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791834430024,
-  "sourceUpdatedIso": "2026-10-12T19:47:10.024Z",
+  "sourceUpdatedAt": 1791834435294,
+  "sourceUpdatedIso": "2026-10-12T19:47:15.294Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -63441,10 +63441,10 @@
             "id": "rss:letterboxd-review-1535341239",
             "date": "2026-10-13",
             "recordedAt": "2026-10-12T19:17:14.000Z",
-            "rewatch": true,
+            "rewatch": false,
             "retroactive": false,
             "source": "letterboxd-rss",
-            "manualEdited": false
+            "manualEdited": true
           }
         ],
         "crew84": {
