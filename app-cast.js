@@ -197,6 +197,7 @@
       button.textContent = p.name;
       if (p.role) { const small = document.createElement('small'); small.textContent = p.role; button.appendChild(small); }
       button.addEventListener('click', () => {
+        if (window.__movie30People) { window.__movie30People.open({id:p.id,name:p.name,role:'出演',filmId:f.id}); return; }
         document.getElementById('closeSheet')?.click();
         view.page = 'rank'; render();
         const input = document.getElementById('searchRank');

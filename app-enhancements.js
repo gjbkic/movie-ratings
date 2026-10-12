@@ -1104,7 +1104,7 @@ function refresh(box){
  if(!box.entries.length){foot.textContent='候補はまだありません。通常の検索はそのまま使えます。';}
  else if(!getTmdbCredential())foot.textContent='現在は登録作品の候補を表示中。オンライン候補は端末側にTMDbキーを設定すると使えます。';
  else if(box.remoteQuery!==q&&q.length>=2)foot.textContent='入力を止めるとTMDbの追加候補も表示します。';
- else foot.textContent='候補を選ぶと一覧を絞り込みます。TMDb未登録作品は「＋映画」画面で確認できます。';
+ else foot.textContent='人物候補は人物の作品一覧を開きます。作品候補は一覧の絞り込み・追加に使えます。';
  box.menu.appendChild(foot);
 }
 function setQuery(box,s){
@@ -1115,6 +1115,11 @@ function setQuery(box,s){
 }
 async function choose(box,item){
  hide(box);
+ if(window.__movie30People && (item.kind==='director'||item.media==='person')){
+  box.input.blur();
+  window.__movie30People.open({id:item.media==='person'?item.tmdbId:0,name:item.name||item.label});
+  return;
+ }
  if(item.kind==='movie'){setQuery(box,displayTitle(item.f));return;}
  if(item.kind==='director'){setQuery(box,item.name);return;}
  if(item.media==='person'){
