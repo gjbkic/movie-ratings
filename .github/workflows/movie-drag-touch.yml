@@ -1,0 +1,92 @@
+name: iPhone ranking touch drag regression
+on:
+  push:
+    paths:
+      - .github/workflows/movie-drag-touch.yml
+  workflow_dispatch:
+jobs:
+  drag:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test actual finger dragging and lifted card in mobile Chromium
+        shell: bash
+        run: |
+          npm install --no-save --no-package-lock playwright-core@1.56.1 >/dev/null 2>&1
+          python3 -m http.server 8777 >/tmp/movie-server.log 2>&1 &
+          node <<'NODE'
+          const {chromium}=require('playwright-core'),fs=require('fs');
+          (async()=>{
+            const browser=await chromium.launch({executablePath:'/usr/bin/google-chrome',headless:true,args:['--no-sandbox']});
+            const page=await browser.newPage({viewport:{width:390,height:844},deviceScaleFactor:1,isMobile:true,hasTouch:true});
+            const data=JSON.parse(fs.readFileSync('live-state.json','utf8'));
+            await page.addInitScript(state=>localStorage.setItem('movie30_data_v1',JSON.stringify({...state,updatedAt:Date.now()})),data.state);
+            const errors=[];page.on('pageerror',e=>errors.push(String(e)));
+            await page.goto('http://localhost:8777/index.html',{waitUntil:'domcontentloaded'});
+            await page.waitForSelector('html.movie30-ready',{timeout:25000});
+            await page.waitForTimeout(1500);
+            let before=await page.evaluate(()=>{
+              const lists=[...document.querySelectorAll('#rankRoot .score-list')];
+              const list=lists.find(l=>l.querySelectorAll('.rank-card').length>=4);
+              if(!list)throw Error('No ranking list with at least 4 cards');
+              const cards=[...list.querySelectorAll('.rank-card')];
+              cards[1].scrollIntoView({behavior:'instant',block:'center'});
+              return {score:list.dataset.score,from:cards[1].dataset.id,to:cards[2].dataset.id};
+            });
+            await page.waitForTimeout(150);
+            const pts=await page.evaluate(({from,to})=>{
+              const source=document.querySelector('.rank-card[data-id="'+from+'"]');
+              const target=document.querySelector('.rank-card[data-id="'+to+'"]');
+              const handle=source.querySelector('.drag-handle').getBoundingClientRect();
+              const tgt=target.getBoundingClientRect();
+              return {start:{x:handle.left+handle.width/2,y:handle.top+handle.height/2},target:{x:handle.left+handle.width/2,y:tgt.bottom-tgt.height*.25},
+                fromRect:source.getBoundingClientRect().toJSON(),toRect:tgt.toJSON(),
+                order:[...source.closest('.score-list').querySelectorAll('.rank-card')].map(x=>x.dataset.id)};
+            },before);
+            console.log('BEFORE',JSON.stringify({before,pts}));
+            const session=await page.context().newCDPSession(page);
+            await session.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{id:7,x:pts.start.x,y:pts.start.y,radiusX:5,radiusY:5}]});
+            await page.waitForTimeout(160);
+            const lifted=await page.evaluate(()=>{
+              const el=document.querySelector('.movie30-floating-drag');
+              return {found:!!el,top:el?.getBoundingClientRect().top,
+                position:el&&getComputedStyle(el).position,
+                zIndex:el&&getComputedStyle(el).zIndex,
+                transform:el&&getComputedStyle(el).transform,
+                originalOpacity:document.querySelector('.rank-card.dragging')&&getComputedStyle(document.querySelector('.rank-card.dragging')).opacity}
+            });
+            const midway={x:pts.start.x+(pts.target.x-pts.start.x)*.65,y:pts.start.y+(pts.target.y-pts.start.y)*.65};
+            await session.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{id:7,x:midway.x,y:midway.y,radiusX:5,radiusY:5}]});
+            await page.waitForTimeout(210);
+            const during=await page.evaluate(()=>{
+              const ghost=document.querySelector('.movie30-floating-drag');
+              const r=ghost?.getBoundingClientRect();
+              return {ghost:!!ghost,top:r?.top,left:r?.left,width:r?.width,height:r?.height,
+                transform:ghost&&getComputedStyle(ghost).transform,shadow:ghost&&getComputedStyle(ghost).boxShadow,
+                moved:typeof dragCtx!=='undefined'&&dragCtx?.moved, originalOpacity:document.querySelector('.rank-card.dragging')&&getComputedStyle(document.querySelector('.rank-card.dragging')).opacity}
+            });
+            console.log('LIFTED',JSON.stringify(lifted),'DURING',JSON.stringify(during));
+            const frame=(await page.screenshot({type:'jpeg',quality:50})).toString('base64');
+            console.log('DRAG_FRAME_BASE64 '+frame);
+            await session.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{id:7,x:pts.target.x,y:pts.target.y,radiusX:5,radiusY:5}]});
+            await page.waitForTimeout(130);
+            await session.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});
+            await page.waitForTimeout(450);
+            const after=await page.evaluate(({score,from})=>{
+              const l=[...document.querySelectorAll('#rankRoot .score-list')].find(x=>x.dataset.score===score);
+              return {order:[...(l?.querySelectorAll('.rank-card')||[])].map(x=>x.dataset.id),
+                saved:state.rankOrder[score],savedTime:state.updatedAt,
+                floating:document.querySelectorAll('.movie30-floating-drag').length,
+                card:!!l?.querySelector('.rank-card[data-id="'+from+'"]')};
+            },before);
+            console.log('AFTER',JSON.stringify(after),'ERRORS',JSON.stringify(errors));
+            if(!lifted.found||lifted.position!=='fixed'||!during.ghost||!during.moved||Math.abs(during.top-lifted.top)<10)throw Error('Card did not lift and follow the finger');
+            const original=pts.order.indexOf(before.from),final=after.order.indexOf(before.from);
+            if(final===original||!after.saved||after.saved.indexOf(before.from)===original)throw Error('Finger reorder not saved');
+            if(after.floating)throw Error('Drag ghost remains after release');
+            if(errors.length)throw Error('JavaScript errors during touch drag');
+            console.log('TOUCH_DRAG_PASS',JSON.stringify({original,final}));
+            await browser.close();
+          })().catch(e=>{console.error(e.stack||e);process.exitCode=1});
+          NODE
