@@ -103,7 +103,11 @@ function endDrag(e){
  const list=ctx.card?.closest(".score-list"),newScore=Number(list?.dataset.score??ctx.fromScore),f=filmById(ctx.id);
  if(f){state.exactScores[f.id]=newScore;const newStar=scoreToStar(newScore);state.starOverrides[f.id]=newStar;state.assignments[f.id]=nearestTier(newStar,newScore)}
  document.querySelectorAll(".score-list").forEach(l=>{const score=l.dataset.score;state.rankOrder[score]=[...l.querySelectorAll(".rank-card")].map(c=>decodeURIComponent(c.dataset.id))});
- finishDragUi(ctx);window.__movie30PendingJump99=null;save();render();if(!filtered())posTools(ctx.id);toast(newScore===ctx.fromScore?"同点内の順位を保存":""+newScore+"点へ移動")
+ finishDragUi(ctx);window.__movie30PendingJump99=null;save();render();
+ const restoreAfterDrag=()=>{if(view.page==='rank'&&!filtered()&&cardForRank(ctx.id))posTools(ctx.id)};
+ restoreAfterDrag();requestAnimationFrame(restoreAfterDrag);
+ setTimeout(restoreAfterDrag,220);setTimeout(restoreAfterDrag,600);
+ toast(newScore===ctx.fromScore?"同点内の順位を保存":""+newScore+"点へ移動")
 }
 document.addEventListener("visibilitychange",()=>{if(document.hidden&&dragCtx)cancelDrag()});
 function cardHtml(f){const tt=tier(f)||"none",sc=effectiveScore(f);return `<button class="card ${tt}" data-id="${encodeURIComponent(f.id)}"><div class="card-title">${esc(displayTitle(f))}</div><div class="badge">${tt==="none"?"未分類":LABEL[tt]}${view.showOld&&sc!=null?" · "+sc+"点":""}</div></button>`}
