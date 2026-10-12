@@ -99,3 +99,5 @@ jobs:
 # Recheck delayed search-tap render anchor
 
 # Verify card remains anchored after pointercancel from search DOM handoff
+
+# Retest full finger handoff after replacing v15 endDrag override
