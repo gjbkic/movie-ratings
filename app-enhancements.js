@@ -2244,5 +2244,23 @@ renderRank=function(...args){
  if(!window.__movie30BulkBoot)jumpBindings();
  return result;
 };
-window.__movie30SearchJump99={version:'20261012n',bind:jumpBindings};
+// Older input handlers capture a pre-wrapper renderRank reference. Apply the
+// navigation action after those handlers finish, and after root replacements.
+const search=document.getElementById('searchRank');
+const rankRoot=document.getElementById('rankRoot');
+let scheduled=false;
+function scheduleJumpBindings(){
+ if(scheduled)return;
+ scheduled=true;
+ requestAnimationFrame(()=>{scheduled=false;jumpBindings();});
+}
+search?.addEventListener('input',scheduleJumpBindings);
+search?.addEventListener('change',scheduleJumpBindings);
+if(rankRoot&&typeof MutationObserver==='function'){
+ new MutationObserver(changes=>{
+  if(changes.some(m=>m.target===rankRoot&&m.type==='childList'))scheduleJumpBindings();
+ }).observe(rankRoot,{childList:true});
+}
+scheduleJumpBindings();
+window.__movie30SearchJump99={version:'20261012p',bind:jumpBindings};
 })();
