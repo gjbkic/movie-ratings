@@ -5596,9 +5596,75 @@ document.getElementById('clearAdv66').onclick=()=>{adv=def();write(ADV_KEY,adv);
 drawAdv();document.getElementById('advToggle66')?.addEventListener('click',()=>ab?.classList.toggle('open'));
 
 let backFilters=null, focusId=null;
-function swap(id,d){const f=filmById(id),sc=f&&effectiveScore(f);if(sc==null)return;const a=rankSorted(allFilms().filter(x=>effectiveScore(x)===sc),sc),i=a.findIndex(x=>x.id===id),j=i+d;if(j<0||j>=a.length){toast('この点数内では端です。点数をまたぐ移動は≡ドラッグで');return}[a[i],a[j]]=[a[j],a[i]];state.rankOrder[String(sc)]=a.map(x=>x.id);save();renderRank();jumpFocus(id)}
-function posTools(id){const c=document.querySelector(`.rank-card[data-id="${encodeURIComponent(id)}"]`);if(!c)return;document.querySelectorAll('.v66-pos').forEach(x=>x.remove());document.querySelectorAll('.rank-card.v66-focus').forEach(x=>x.classList.remove('v66-focus'));c.classList.add('v66-focus');const d=document.createElement('div');d.className='v66-pos';d.innerHTML=`<button data-sw="-1">↑ 前と入替</button><button data-sw="1">↓ 次と入替</button>${backFilters?'<button class="back" data-back="1">← 検索・絞込結果へ戻る</button>':'<span></span>'}`;c.appendChild(d);d.querySelectorAll('[data-sw]').forEach(b=>b.onclick=e=>{e.stopPropagation();swap(id,Number(b.dataset.sw))});d.querySelector('[data-back]')?.addEventListener('click',e=>{e.stopPropagation();const s=backFilters;backFilters=null;applyCap(s);setTimeout(()=>document.querySelector(`.rank-card[data-id="${encodeURIComponent(id)}"]`)?.scrollIntoView({behavior:'smooth',block:'center'}),50)})}
-function jumpFocus(id){focusId=id;requestAnimationFrame(()=>{const c=document.querySelector(`.rank-card[data-id="${encodeURIComponent(id)}"]`);if(c){c.scrollIntoView({behavior:'auto',block:'center'});posTools(id)}focusId=null})}
+function cardForRank(id){return document.querySelector(`.rank-card[data-id="${encodeURIComponent(id)}"]`)}
+function centerRankCard(card){
+ const root=document.documentElement,previous=root.style.scrollBehavior;
+ const instant=fn=>{root.style.scrollBehavior='auto';try{fn()}finally{root.style.scrollBehavior=previous}};
+ instant(()=>card.scrollIntoView({behavior:'auto',block:'center'}));
+ const section=card.closest('.rank-star'),bin=card.closest('.score-bin');
+ const layers=[
+  document.querySelector('.top'),
+  document.getElementById('starJumpBar'),
+  section?.querySelector('.rank-star-head'),
+  bin?.querySelector('.score-label')
+ ];
+ let covered=0;
+ for(const el of layers){
+  if(!el)continue;
+  const r=el.getBoundingClientRect();
+  // Include only sticky items in the top stack; a 50px allowance covers the
+  // intentional gaps between the app header, star nav, star heading and score.
+  if(r.height>0&&r.top<=covered+50&&r.bottom>covered)covered=r.bottom;
+ }
+ const r=card.getBoundingClientRect(),height=window.innerHeight;
+ const available=Math.max(1,height-covered-16);
+ const wanted=covered+Math.max(8,(available-r.height)/2);
+ const desired=Math.min(wanted,Math.max(covered+8,height-r.height-8));
+ instant(()=>window.scrollTo({left:window.scrollX,top:window.scrollY+r.top-desired,behavior:'auto'}));
+}
+function animateRankSwap(before){
+ if(!before.size||window.matchMedia?.('(prefers-reduced-motion: reduce)').matches)return;
+ for(const [id,old] of before){
+  const card=cardForRank(id);if(!card)continue;
+  const r=card.getBoundingClientRect();
+  const dx=old.left-(r.left+window.scrollX),dy=old.top-(r.top+window.scrollY);
+  if(Math.abs(dx)+Math.abs(dy)<2)continue;
+  if(typeof card.animate==='function'){
+   card.animate([{transform:`translate3d(${dx}px,${dy}px,0)`},{transform:'translate3d(0,0,0)'}],
+    {duration:260,easing:'cubic-bezier(.22,.61,.36,1)'});
+  }else{
+   card.style.transition='none';card.style.transform=`translate3d(${dx}px,${dy}px,0)`;
+   card.getBoundingClientRect();
+   requestAnimationFrame(()=>{card.style.transition='transform 260ms cubic-bezier(.22,.61,.36,1)';card.style.transform='';});
+   setTimeout(()=>{card.style.transition='';card.style.transform='';},300);
+  }
+ }
+}
+function swap(id,d){
+ const f=filmById(id),sc=f&&effectiveScore(f);if(sc==null)return;
+ const a=rankSorted(allFilms().filter(x=>effectiveScore(x)===sc),sc),i=a.findIndex(x=>x.id===id),j=i+d;
+ if(j<0||j>=a.length){toast('この点数内では端です。点数をまたぐ移動は≡ドラッグで');return}
+ const affected=[a[i].id,a[j].id],before=new Map();
+ for(const key of affected){const c=cardForRank(key);if(c){const r=c.getBoundingClientRect();before.set(key,{left:r.left+window.scrollX,top:r.top+window.scrollY})}}
+ [a[i],a[j]]=[a[j],a[i]];state.rankOrder[String(sc)]=a.map(x=>x.id);save();renderRank();
+ jumpFocus(id,()=>animateRankSwap(before));
+}
+function posTools(id){
+ const c=cardForRank(id);if(!c)return;
+ document.querySelectorAll('.v66-pos').forEach(x=>x.remove());document.querySelectorAll('.rank-card.v66-focus').forEach(x=>x.classList.remove('v66-focus'));c.classList.add('v66-focus');
+ const d=document.createElement('div');d.className='v66-pos';d.innerHTML=`<button data-sw="-1">↑ 前と入替</button><button data-sw="1">↓ 次と入替</button>${backFilters?'<button class="back" data-back="1">← 検索・絞込結果へ戻る</button>':'<span></span>'}`;c.appendChild(d);
+ d.querySelectorAll('[data-sw]').forEach(b=>b.onclick=e=>{e.stopPropagation();swap(id,Number(b.dataset.sw))});
+ d.querySelector('[data-back]')?.addEventListener('click',e=>{e.stopPropagation();const s=backFilters;backFilters=null;applyCap(s);setTimeout(()=>{const target=cardForRank(id);if(target)centerRankCard(target)},50)});
+}
+function jumpFocus(id,afterLayout){
+ focusId=id;
+ requestAnimationFrame(()=>requestAnimationFrame(()=>{
+  const c=cardForRank(id);
+  if(c){posTools(id);centerRankCard(c)}
+  focusId=null;
+  afterLayout?.();
+ }));
+}
 function jumpGlobal(id){if(filtered())backFilters=cap();clearFilters();renderRank();jumpFocus(id);toast('全体順位の位置へ移動しました')}
 function decorate(){const f=filtered();for(const c of document.querySelectorAll('#rankRoot .rank-card')){const id=decodeURIComponent(c.dataset.id||''),h=c.querySelector('.drag-handle');if(!h)continue;h.disabled=false;if(f){h.textContent='↕';h.title='全体順位の位置へ';h.onpointerdown=e=>{e.preventDefault();e.stopPropagation();jumpGlobal(id)}}else{h.textContent='≡';h.title='ドラッグで順位変更';h.onpointerdown=startDrag}}document.getElementById('advBadge66')?.classList.toggle('on',!!advOn());if(focusId)posTools(focusId)}
 const rr=renderRank;renderRank=function(){rr();if(advOn()){document.querySelectorAll('#rankRoot .rank-card').forEach(c=>{const f=filmById(decodeURIComponent(c.dataset.id||''));if(f&&!pass(f))c.remove()});for(const bin of document.querySelectorAll('#rankRoot .score-bin')){const n=bin.querySelectorAll('.rank-card').length,sm=bin.querySelector('.score-label small');if(sm)sm.textContent=n+'本';if(!n)bin.remove()}for(const s of document.querySelectorAll('#rankRoot .rank-star'))if(!s.querySelector('.rank-card'))s.remove()}decorate()};
