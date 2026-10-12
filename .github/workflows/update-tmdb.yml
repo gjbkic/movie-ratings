@@ -69,7 +69,16 @@ jobs:
                   for field in ('directors','creators','source','sourceUrl','creditRole'):
                       if field in original:
                           next_rec[field]=original[field]
-              merged[id]=next_rec
+              # A concurrent job can have been launched before the manual TMDB correction.
+          # Never re-introduce another movie's ID, cast, or poster for the Ghibli short.
+          if id == 'lb-459-1Vgm' and int(next_rec.get('tmdbId') or 0) != 10840:
+              next_rec['tmdbId']=10840
+              next_rec['posterPath']=''
+              next_rec.pop('cast',None)
+              next_rec.pop('castCheckedAt',None)
+              next_rec.pop('castResolverVersion',None)
+              next_rec['source']='corrected-credits-recheck-required'
+          merged[id]=next_rec
           generated['films']=merged
           generated['matchedCount']=len(merged)
           target.write_text(json.dumps(generated,ensure_ascii=False,indent=2)+'\n')
