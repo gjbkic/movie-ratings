@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791792828965,
-  "sourceUpdatedIso": "2026-10-12T08:13:48.965Z",
+  "sourceUpdatedAt": 1791792859500,
+  "sourceUpdatedIso": "2026-10-12T08:14:19.500Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -7289,36 +7289,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-26-4O24",
-      "title": "her／世界でひとつの彼女",
-      "originalTitle": "",
-      "englishTitle": "Her",
-      "year": 2013,
-      "score": 83,
-      "star": 3,
-      "overallRank": 253,
-      "sameScoreRank": 7,
-      "category": "SF",
-      "mediaType": "movie",
-      "genre": [
-        "SF",
-        "胸糞",
-        "恋愛",
-        "ドラマ",
-        "社会問題・生活",
-        "哲学・思想",
-        "心理・内面",
-        "雰囲気・美学"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 126,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "custom-1791792054167-val3",
       "title": "ブラック・ミラー「宇宙船カリスター号」",
       "originalTitle": "Black Mirror: USS Callister",
@@ -7326,8 +7296,8 @@
       "year": 2017,
       "score": 83,
       "star": 3,
-      "overallRank": 254,
-      "sameScoreRank": 8,
+      "overallRank": 253,
+      "sameScoreRank": 7,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -7347,6 +7317,36 @@
       "letterboxdAddedDate": "2026-10-12",
       "letterboxdPublishedAt": "Mon, 12 Oct 2026 16:49:10 +1300",
       "letterboxdReportedWatchedDate": "2026-10-12"
+    },
+    {
+      "id": "lb-26-4O24",
+      "title": "her／世界でひとつの彼女",
+      "originalTitle": "",
+      "englishTitle": "Her",
+      "year": 2013,
+      "score": 83,
+      "star": 3,
+      "overallRank": 254,
+      "sameScoreRank": 8,
+      "category": "SF",
+      "mediaType": "movie",
+      "genre": [
+        "SF",
+        "胸糞",
+        "恋愛",
+        "ドラマ",
+        "社会問題・生活",
+        "哲学・思想",
+        "心理・内面",
+        "雰囲気・美学"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 126,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "custom-1789385859985-uylk",
@@ -21911,8 +21911,8 @@
         "lb-208-1MLK",
         "lb-271-29zW",
         "lb-469-1MKi",
-        "lb-26-4O24",
         "custom-1791792054167-val3",
+        "lb-26-4O24",
         "custom-1789385859985-uylk",
         "custom-1790665767820-1d1q",
         "lb-261-1IGQ",
