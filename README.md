@@ -1,4 +1,4 @@
-# movie-ratings — persistence repair 20261012ad
+# movie-ratings — persistence repair 20261012ae
 
 The verified ranking source is `016f78b559f54f56078654abc927a016b71a6962` (2026-10-10 23:31 JST): 721 ranked films. The Oct11 reference used by release `20261012ac` contained damaged ranks; `recovery-ranks-20261011.json` is now a deprecation stub and must never be used as a ranking source.
 

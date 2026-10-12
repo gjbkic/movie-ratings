@@ -186,7 +186,7 @@ function save(touch=true){
   window.__movie30SaveFailed=!ok&&!localSaved;
   if(ok||localSaved){movie30LastSavedJson=json;setSaveStatus('自動保存済み · '+(localSaved?'この端末':'IndexedDB'))}
   else setSaveStatus('保存失敗 · アプリを閉じずJSONバックアップを保存してください');
-  movie30StorageWarning(!ok&&!localSaved, !localSaved&&ok);
+  movie30StorageWarning(!ok&&!localSaved, false);
   return ok||localSaved;
  });
  return window.__movie30PendingSave;
