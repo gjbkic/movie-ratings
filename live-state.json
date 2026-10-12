@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791825785462,
-  "sourceUpdatedIso": "2026-10-12T17:23:05.462Z",
+  "sourceUpdatedAt": 1791825806953,
+  "sourceUpdatedIso": "2026-10-12T17:23:26.953Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -15547,6 +15547,34 @@
       "letterboxdReportedWatchedDate": "2026-10-04"
     },
     {
+      "id": "lb-173-oCkK",
+      "title": "ナイブズ・アウト: グラス・オニオン",
+      "originalTitle": "",
+      "englishTitle": "Glass Onion",
+      "year": 2022,
+      "score": 76,
+      "star": 2,
+      "overallRank": 545,
+      "sameScoreRank": 5,
+      "category": "サスペンス、ミステリー",
+      "mediaType": "movie",
+      "genre": [
+        "サスペンス",
+        "ミステリー",
+        "胸糞",
+        "どんでん返し",
+        "娯楽",
+        "コメディ"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "custom-1789385860198-bkq0",
       "title": "十角館の殺人",
       "originalTitle": "",
@@ -15554,8 +15582,8 @@
       "year": 2024,
       "score": 76,
       "star": 2,
-      "overallRank": 545,
-      "sameScoreRank": 5,
+      "overallRank": 546,
+      "sameScoreRank": 6,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -15580,8 +15608,8 @@
       "year": 2016,
       "score": 76,
       "star": 2,
-      "overallRank": 546,
-      "sameScoreRank": 6,
+      "overallRank": 547,
+      "sameScoreRank": 7,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -15593,34 +15621,6 @@
       "origin": "ハリウッド",
       "format": "animation",
       "runtime": 108,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "lb-173-oCkK",
-      "title": "ナイブズ・アウト: グラス・オニオン",
-      "originalTitle": "",
-      "englishTitle": "Glass Onion",
-      "year": 2022,
-      "score": 76,
-      "star": 2,
-      "overallRank": 547,
-      "sameScoreRank": 7,
-      "category": "サスペンス、ミステリー",
-      "mediaType": "movie",
-      "genre": [
-        "サスペンス",
-        "ミステリー",
-        "胸糞",
-        "どんでん返し",
-        "娯楽",
-        "コメディ"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": null,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
@@ -21640,9 +21640,9 @@
         "lb-376-jhxe",
         "lb-340-3r58",
         "custom-1791113242437-wcok",
+        "lb-173-oCkK",
         "custom-1789385860198-bkq0",
         "lb-150-b5EQ",
-        "lb-173-oCkK",
         "lb-510-5dz8",
         "lb-365-GZY",
         "lb-151-uvFS",
@@ -61020,6 +61020,12 @@
           "creators": [],
           "source": "tmdb-github",
           "fetchedAt": "2026-10-12T04:35:13.665959+00:00"
+        },
+        "poster84": {
+          "path": "/jUYZpCHpgiXNTy2mJAYF4rQOkwB.jpg",
+          "tmdbId": 1048225,
+          "checkedAt": "2026-10-12T17:23:27.886Z",
+          "provider": "tmdb"
         }
       },
       "custom-1791394775097-fjc5": {
