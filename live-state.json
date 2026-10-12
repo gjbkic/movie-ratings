@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791823552282,
-  "sourceUpdatedIso": "2026-10-12T16:45:52.282Z",
+  "sourceUpdatedAt": 1791823566821,
+  "sourceUpdatedIso": "2026-10-12T16:46:06.821Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -11695,34 +11695,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1791469824035-6gcd",
-      "title": "ブラック・ミラー「人生の軌跡のすべて」",
-      "originalTitle": "",
-      "englishTitle": "Black Mirror: The Entire History of You",
-      "year": 2011,
-      "score": 80,
-      "star": 2.5,
-      "overallRank": 407,
-      "sameScoreRank": 11,
-      "category": "Letterboxd",
-      "mediaType": "drama",
-      "genre": [
-        "恋愛",
-        "ドラマ",
-        "サスペンス",
-        "娯楽",
-        "SF",
-        "TV本編"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": null,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-08",
-      "letterboxdPublishedAt": "Thu, 8 Oct 2026 22:31:53 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-08"
-    },
-    {
       "id": "lb-50-28dA",
       "title": "アイアンマン",
       "originalTitle": "",
@@ -11730,8 +11702,8 @@
       "year": 2008,
       "score": 80,
       "star": 2.5,
-      "overallRank": 408,
-      "sameScoreRank": 12,
+      "overallRank": 407,
+      "sameScoreRank": 11,
       "category": "MCU作品",
       "mediaType": "movie",
       "genre": [
@@ -11756,8 +11728,8 @@
       "year": 1992,
       "score": 80,
       "star": 2.5,
-      "overallRank": 409,
-      "sameScoreRank": 13,
+      "overallRank": 408,
+      "sameScoreRank": 12,
       "category": "コメディ",
       "mediaType": "movie",
       "genre": [
@@ -11782,8 +11754,8 @@
       "year": 2007,
       "score": 80,
       "star": 2.5,
-      "overallRank": 410,
-      "sameScoreRank": 14,
+      "overallRank": 409,
+      "sameScoreRank": 13,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -11809,8 +11781,8 @@
       "year": 2019,
       "score": 80,
       "star": 2.5,
-      "overallRank": 411,
-      "sameScoreRank": 15,
+      "overallRank": 410,
+      "sameScoreRank": 14,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -11831,24 +11803,23 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1791449338315-twqr",
-      "title": "ブラック・ミラー「1500万メリット」",
+      "id": "custom-1791469824035-6gcd",
+      "title": "ブラック・ミラー「人生の軌跡のすべて」",
       "originalTitle": "",
-      "englishTitle": "Black Mirror: Fifteen Million Merits",
+      "englishTitle": "Black Mirror: The Entire History of You",
       "year": 2011,
       "score": 80,
       "star": 2.5,
-      "overallRank": 412,
-      "sameScoreRank": 16,
+      "overallRank": 411,
+      "sameScoreRank": 15,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
-        "ドラマ",
-        "SF",
-        "社会問題・生活",
-        "娯楽",
         "恋愛",
-        "世界観",
+        "ドラマ",
+        "サスペンス",
+        "娯楽",
+        "SF",
         "TV本編"
       ],
       "origin": "ハリウッド",
@@ -11856,7 +11827,7 @@
       "runtime": null,
       "exact": true,
       "letterboxdAddedDate": "2026-10-08",
-      "letterboxdPublishedAt": "Thu, 8 Oct 2026 21:32:23 +1300",
+      "letterboxdPublishedAt": "Thu, 8 Oct 2026 22:31:53 +1300",
       "letterboxdReportedWatchedDate": "2026-10-08"
     },
     {
@@ -11867,8 +11838,8 @@
       "year": 2000,
       "score": 80,
       "star": 2.5,
-      "overallRank": 413,
-      "sameScoreRank": 17,
+      "overallRank": 412,
+      "sameScoreRank": 16,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -11891,8 +11862,8 @@
       "year": 2007,
       "score": 80,
       "star": 2.5,
-      "overallRank": 414,
-      "sameScoreRank": 18,
+      "overallRank": 413,
+      "sameScoreRank": 17,
       "category": "ハリーポッター シリーズ",
       "mediaType": "movie",
       "genre": [
@@ -11918,8 +11889,8 @@
       "year": 1996,
       "score": 80,
       "star": 2.5,
-      "overallRank": 415,
-      "sameScoreRank": 19,
+      "overallRank": 414,
+      "sameScoreRank": 18,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -11935,6 +11906,35 @@
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1791449338315-twqr",
+      "title": "ブラック・ミラー「1500万メリット」",
+      "originalTitle": "",
+      "englishTitle": "Black Mirror: Fifteen Million Merits",
+      "year": 2011,
+      "score": 80,
+      "star": 2.5,
+      "overallRank": 415,
+      "sameScoreRank": 19,
+      "category": "Letterboxd",
+      "mediaType": "drama",
+      "genre": [
+        "ドラマ",
+        "SF",
+        "社会問題・生活",
+        "娯楽",
+        "恋愛",
+        "世界観",
+        "TV本編"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-08",
+      "letterboxdPublishedAt": "Thu, 8 Oct 2026 21:32:23 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-08"
     },
     {
       "id": "custom-1790322769206-k4pm",
@@ -21786,15 +21786,15 @@
         "lb-405-yuDE",
         "lb-226-g0d6",
         "lb-481-1rbm",
-        "custom-1791469824035-6gcd",
         "lb-50-28dA",
         "lb-165-29F6",
         "lb-518-2aEy",
         "lb-242-kif8",
-        "custom-1791449338315-twqr",
+        "custom-1791469824035-6gcd",
         "lb-118-29cS",
         "lb-410-29Qe",
         "lb-418-2a1w",
+        "custom-1791449338315-twqr",
         "custom-1790322769206-k4pm",
         "lb-291-dX0",
         "base-clue-1985",
@@ -57847,6 +57847,12 @@
           "creators": [],
           "source": "tmdb-github",
           "fetchedAt": "2026-10-12T04:35:13.665959+00:00"
+        },
+        "poster84": {
+          "path": "/ETM22SMarGwvTEhTNaTVZykR02.jpg",
+          "tmdbId": 960478,
+          "checkedAt": "2026-10-12T16:46:08.101Z",
+          "provider": "tmdb"
         }
       },
       "custom-1790322758638-0juw": {
