@@ -83,3 +83,5 @@ jobs:
             console.log('SEARCH_DRAG_STABLE_PASS');
           })().catch(e=>{console.error('SEARCH_DRAG_TEST_FAILED',e.stack||e);process.exit(1)});
           NODE
+
+# Recheck instant scroll and anchored release after selected-movie drag fix
