@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791784579723,
-  "sourceUpdatedIso": "2026-10-12T05:56:19.723Z",
+  "sourceUpdatedAt": 1791785029248,
+  "sourceUpdatedIso": "2026-10-12T06:03:49.248Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -36733,7 +36733,7 @@
         "poster84": {
           "path": "/qzb0slJerd5bQgJxteJ5oAmfp09.jpg",
           "tmdbId": 27205,
-          "checkedAt": "2026-10-12T05:53:16.462Z",
+          "checkedAt": "2026-10-12T06:03:49.463Z",
           "provider": "tmdb"
         }
       },
@@ -48351,6 +48351,12 @@
             "manualEdited": false
           }
         ],
+        "poster84": {
+          "path": "/viWheBd44bouiLCHgNMvahLThqx.jpg",
+          "tmdbId": 44214,
+          "checkedAt": "2026-10-12T04:35:13.665959+00:00",
+          "provider": "tmdb"
+        },
         "crew84": {
           "directors": [
             "Darren Aronofsky"
@@ -48358,12 +48364,6 @@
           "creators": [],
           "source": "tmdb-github",
           "fetchedAt": "2026-10-12T04:35:13.665959+00:00"
-        },
-        "poster84": {
-          "path": "/viWheBd44bouiLCHgNMvahLThqx.jpg",
-          "tmdbId": 44214,
-          "checkedAt": "2026-10-12T05:53:16.124Z",
-          "provider": "tmdb"
         }
       },
       "lb-354-aNGk": {
@@ -54685,7 +54685,7 @@
         "poster84": {
           "path": "/79vujbsWEbX4dzffBV541QXN6sf.jpg",
           "tmdbId": 10494,
-          "checkedAt": "2026-10-12T05:53:16.461Z",
+          "checkedAt": "2026-10-12T06:03:49.462Z",
           "provider": "tmdb"
         }
       },
@@ -57362,12 +57362,6 @@
           ],
           "source": "tmdb-github",
           "fetchedAt": "2026-10-12T04:35:13.665959+00:00"
-        },
-        "poster84": {
-          "path": "/4RXlOwnx87Mfbx52qjUGlquZkZi.jpg",
-          "tmdbId": 132131,
-          "checkedAt": "2026-10-12T05:56:15.681Z",
-          "provider": "tmdb"
         }
       },
       "custom-1790254612541-iyij": {
@@ -62041,12 +62035,6 @@
           "creators": [],
           "source": "tmdb-github",
           "fetchedAt": "2026-10-12T04:35:13.665959+00:00"
-        },
-        "poster84": {
-          "path": null,
-          "tmdbId": null,
-          "checkedAt": "2026-10-12T05:55:26.396Z",
-          "provider": "tmdb"
         }
       },
       "custom-1791664055469-au2b": {
