@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791834435294,
-  "sourceUpdatedIso": "2026-10-12T19:47:15.294Z",
+  "sourceUpdatedAt": 1791835564594,
+  "sourceUpdatedIso": "2026-10-12T20:06:04.594Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -10095,7 +10095,7 @@
       ],
       "origin": "ハリウッド",
       "format": "",
-      "runtime": null,
+      "runtime": 15,
       "exact": true,
       "letterboxdAddedDate": "2026-10-13",
       "letterboxdPublishedAt": "Tue, 13 Oct 2026 05:42:34 +1300",
@@ -27787,6 +27787,9 @@
         "title": "ブラック・ミラー「宇宙船カリスター号」",
         "originalTitle": "",
         "englishTitle": "Black Mirror: USS Callister"
+      },
+      "custom-1791823398409-njce": {
+        "tmdbId": 897429
       }
     },
     "categoryOverrides": {},
@@ -36708,7 +36711,8 @@
       "custom-1791664054005-kkyc": 151,
       "custom-1791664054514-pksv": 65,
       "custom-1791664055469-au2b": 141,
-      "custom-1791664055911-cuz4": 56
+      "custom-1791664055911-cuz4": 56,
+      "custom-1791823398409-njce": 15
     },
     "letterboxdMeta": {
       "lb-0-hTha": {
