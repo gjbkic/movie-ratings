@@ -101,9 +101,14 @@ if(persist)extras.append(persist);
 if(info)extras.append(info);
 
 function attachPersistent(){
- // Repeated reattachment is safe even while the legacy advanced UI updates itself.
- if(title.parentElement!==adv)adv.prepend(title);
- if(basic.parentElement!==adv)title.insertAdjacentElement('afterend',basic);
+ // v66's redrawing and v95's own facet observer both rearrange the panel.
+ // Reestablish a deterministic header -> TMDb facets -> classic filters -> actions order.
+ if(adv.firstElementChild!==title)adv.prepend(title);
+ const facet=document.getElementById('movie95FacetGroup');
+ if(facet&&facet.parentElement===adv&&title.nextElementSibling!==facet)
+  title.insertAdjacentElement('afterend',facet);
+ const anchor=facet?.parentElement===adv?facet:title;
+ if(basic.previousElementSibling!==anchor)anchor.insertAdjacentElement('afterend',basic);
  if(extras.parentElement!==adv)adv.append(extras);
 }
 attachPersistent();
@@ -130,7 +135,7 @@ tools.classList.add('movie96-compact-tools');
 // Original "詳細絞込" button is superseded by the arrow inside the search field.
 if(quickToggle)quickToggle.hidden=true;
 const badge=document.getElementById('advBadge66');
-if(badge)badge.hidden=true;
+if(badge){badge.hidden=true;badge.style.setProperty('display','none','important');}
 
 function openPanel(open){
  adv.classList.toggle('movie96-is-open',Boolean(open));
