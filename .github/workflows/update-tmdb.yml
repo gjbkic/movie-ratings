@@ -53,6 +53,10 @@ jobs:
               for field in ('directors','creators','posterPath','posterUrl'):
                   if not next_rec.get(field) and original.get(field):
                       next_rec[field]=original[field]
+              # Concurrent app and workflow writes must never erase Japanese name aliases.
+              jp_aliases=list(dict.fromkeys((original.get('directorAliases') or [])+(rec.get('directorAliases') or [])))
+              if jp_aliases:
+                  next_rec['directorAliases']=jp_aliases
               # Manually verified credits take precedence over automatic TMDb recrawls.
               verified=original.get('source','') not in ('','tmdb','tmdb-synced','corrected-credits-recheck-required')
               if verified:
