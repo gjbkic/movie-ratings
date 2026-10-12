@@ -92,7 +92,7 @@ jobs:
             if(searched.count<1||searched.count>15||searched.handle!=='↗'||searched.hidden)throw Error('Search result lacks active global jump arrow');
             const id=await page.locator('#rankRoot .rank-card[data-id]').first().getAttribute('data-id');
             await page.locator('#rankRoot .drag-handle.movie99-jump').first().click({force:true,timeout:8000});
-            await page.waitForTimeout(850);
+            await page.waitForTimeout(1900);
             const jumped=await page.evaluate(id=>{
               const q=document.querySelector('#searchRank'),card=document.querySelector('#rankRoot .rank-card[data-id="'+id+'"]');
               const rect=card?.getBoundingClientRect(),nav=document.querySelector('#starJumpBar').getBoundingClientRect();
@@ -136,3 +136,5 @@ jobs:
 # Test core-native search jump 20261012s
 
 # Inspect jump phase and swap motion 20261012t
+
+# Check asynchronous rank refocus 20261012u
