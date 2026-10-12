@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791823817617,
-  "sourceUpdatedIso": "2026-10-12T16:50:17.617Z",
+  "sourceUpdatedAt": 1791823825316,
+  "sourceUpdatedIso": "2026-10-12T16:50:25.316Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -14231,6 +14231,34 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-130-3VH2",
+      "title": "ガーディアンズ・オブ・ギャラクシー",
+      "originalTitle": "",
+      "englishTitle": "Guardians of the Galaxy",
+      "year": 2014,
+      "score": 78,
+      "star": 2.5,
+      "overallRank": 498,
+      "sameScoreRank": 26,
+      "category": "MCU作品",
+      "mediaType": "movie",
+      "genre": [
+        "アクション",
+        "SF",
+        "娯楽",
+        "ファンタジー",
+        "ヒーロー",
+        "コメディ"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 121,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "custom-1790433925207-8m83",
       "title": "ガス人間",
       "originalTitle": "ガス人間",
@@ -14238,8 +14266,8 @@
       "year": 2026,
       "score": 78,
       "star": 2.5,
-      "overallRank": 498,
-      "sameScoreRank": 26,
+      "overallRank": 499,
+      "sameScoreRank": 27,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -14261,34 +14289,6 @@
       "letterboxdAddedDate": "2026-09-26",
       "letterboxdPublishedAt": "Sat, 26 Sep 2026 23:53:01 +1200",
       "letterboxdReportedWatchedDate": "2026-09-26"
-    },
-    {
-      "id": "lb-130-3VH2",
-      "title": "ガーディアンズ・オブ・ギャラクシー",
-      "originalTitle": "",
-      "englishTitle": "Guardians of the Galaxy",
-      "year": 2014,
-      "score": 78,
-      "star": 2.5,
-      "overallRank": 499,
-      "sameScoreRank": 27,
-      "category": "MCU作品",
-      "mediaType": "movie",
-      "genre": [
-        "アクション",
-        "SF",
-        "娯楽",
-        "ファンタジー",
-        "ヒーロー",
-        "コメディ"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 121,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "lb-140-27Wk",
@@ -21719,8 +21719,8 @@
         "lb-239-kidw",
         "lb-257-2Ev2",
         "lb-61-297o",
-        "custom-1790433925207-8m83",
         "lb-130-3VH2",
+        "custom-1790433925207-8m83",
         "lb-140-27Wk",
         "lb-346-1Aiw",
         "lb-344-5YPM",
