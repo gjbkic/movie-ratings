@@ -58,10 +58,10 @@ async function check(p,e){const s=await snapshot(p);assert(s.customFilms.some(f=
   await p.close();p=await c.newPage();await p.goto(origin+'/');await p.waitForSelector('html.movie30-ready');await check(p,e);
   await c.close();console.log('PASS add/score/review/history/filtered reorder/reload/close-open',JSON.stringify(options));
  }
- c=await context();p=await init(c,null);assert.deepEqual((await snapshot(p)).rankOrder,seed.rankOrder);await c.close();console.log('PASS fresh install restores confirmed 726 ranks');
+ c=await context();p=await init(c,null);assert.deepEqual((await snapshot(p)).rankOrder,seed.rankOrder);await c.close();console.log('PASS fresh install restores confirmed 721 ranks');
  c=await context();p=await init(c,seed);await p.evaluate(()=>localStorage.setItem('movie30_data_v1',JSON.stringify({updatedAt:Date.now(),rankOrder:{}})));await restart(p);assert.deepEqual((await snapshot(p)).rankOrder,seed.rankOrder);await c.close();console.log('PASS incomplete newer record cannot overwrite valid IndexedDB');
- const partial={...seed,rankOrder:{},updatedAt:Date.now()};partial.letterboxdMeta=JSON.parse(JSON.stringify(seed.letterboxdMeta));partial.letterboxdMeta[seed.customFilms[0].id]={note:'最新の正当な変更'};
- c=await context();p=await init(c,partial);assert.deepEqual((await snapshot(p)).rankOrder,seed.rankOrder);assert.equal((await snapshot(p)).letterboxdMeta[seed.customFilms[0].id].note,'最新の正当な変更');await c.close();console.log('PASS missing 726 ranks restored from confirmed record without replacing latest review');
+ const partial={...seed,rankOrder:{},rankRecovery:null,updatedAt:Date.now()};partial.letterboxdMeta=JSON.parse(JSON.stringify(seed.letterboxdMeta));partial.letterboxdMeta[seed.customFilms[0].id]={note:'最新の正当な変更'};
+ c=await context();p=await init(c,partial);assert.deepEqual((await snapshot(p)).rankOrder,seed.rankOrder);assert.equal((await snapshot(p)).letterboxdMeta[seed.customFilms[0].id].note,'最新の正当な変更');await c.close();console.log('PASS missing 721 ranks restored from confirmed record without replacing latest review');
  }
  const profiles=path.resolve(root,'..','browser-profiles');fs.mkdirSync(profiles,{recursive:true});
  const profile=fs.mkdtempSync(path.join(profiles,'movie-save-regression-'));

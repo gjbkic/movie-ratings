@@ -2183,7 +2183,8 @@ allFilms=function(...args){
  movie98CacheLength=items.length;
  return filtered.slice();
 };
-const backfilled=backupRepair();
+// Old backups cannot distinguish a missing score from an intentional clear.
+const backfilled=0;
 if(backfilled){save();render();}
 window.__movie30SyncGuard98={version:BUILD,restoreFromBackupCount:backfilled};
 const label=document.getElementById('movie30BuildV29');
