@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791796645947,
-  "sourceUpdatedIso": "2026-10-12T09:17:25.947Z",
+  "sourceUpdatedAt": 1791796687390,
+  "sourceUpdatedIso": "2026-10-12T09:18:07.390Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -297,7 +297,7 @@
       "origin": "日本",
       "format": "animation",
       "runtime": 87,
-      "exact": false,
+      "exact": true,
       "letterboxdAddedDate": "2026-05-29",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
@@ -21300,7 +21300,8 @@
       "custom-1791664055469-au2b": 90,
       "custom-1791664055006-96rv": 98,
       "custom-1791664054514-pksv": 93,
-      "custom-1791664055911-cuz4": 93
+      "custom-1791664055911-cuz4": 93,
+      "lb-468-1GRM": 97
     },
     "rankOrder": {
       "40": [
@@ -25303,7 +25304,8 @@
       "custom-1791664055006-96rv": 5,
       "custom-1791664054514-pksv": 4.5,
       "custom-1791664055911-cuz4": 4.5,
-      "custom-1789385860389-93a2": 2.5
+      "custom-1789385860389-93a2": 2.5,
+      "lb-468-1GRM": 4.5
     },
     "titleOverrides": {
       "added-anchor-578": {
