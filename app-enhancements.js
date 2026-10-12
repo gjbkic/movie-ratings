@@ -2249,10 +2249,15 @@ renderRank=function(...args){
 const search=document.getElementById('searchRank');
 const rankRoot=document.getElementById('rankRoot');
 let scheduled=false;
+function keepJumpLocation(){
+ const pending=window.__movie30PendingJump99;
+ if(!pending||Date.now()>pending.until)return;
+ try{window.__movie30RefocusRank99?.()}catch(e){console.warn('Restore full-rank target',e)}
+}
 function scheduleJumpBindings(){
  if(scheduled)return;
  scheduled=true;
- requestAnimationFrame(()=>{scheduled=false;jumpBindings();});
+ requestAnimationFrame(()=>{scheduled=false;jumpBindings();keepJumpLocation();});
 }
 search?.addEventListener('input',scheduleJumpBindings);
 search?.addEventListener('change',scheduleJumpBindings);
@@ -2260,6 +2265,17 @@ if(rankRoot&&typeof MutationObserver==='function'){
  new MutationObserver(changes=>{
   if(changes.some(m=>m.target===rankRoot&&m.type==='childList'))scheduleJumpBindings();
  }).observe(rankRoot,{childList:true});
+}
+// Cover layout shifts from metadata, poster loads and dismissal of the iOS keyboard.
+const originalJump=window.__movie30JumpToGlobalRank;
+if(typeof originalJump==='function'){
+ window.__movie30JumpToGlobalRank=function(id){
+  const result=originalJump(id);
+  for(const delay of [100,420,850,1400,2300,3400]){
+   setTimeout(()=>{keepJumpLocation();scheduleJumpBindings()},delay);
+  }
+  return result;
+ };
 }
 scheduleJumpBindings();
 window.__movie30SearchJump99={version:'20261012p',bind:jumpBindings};
