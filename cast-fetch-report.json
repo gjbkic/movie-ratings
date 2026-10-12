@@ -1,10 +1,10 @@
 {
-  "at": "2026-10-12T20:51:41.771247+00:00",
+  "at": "2026-10-12T20:59:24.671857+00:00",
   "counts": {
     "total": 735,
-    "success": 723,
-    "empty": 4,
-    "unmatched": 8,
+    "success": 727,
+    "empty": 6,
+    "unmatched": 2,
     "api": 0
   },
   "results": [
@@ -4723,9 +4723,9 @@
     {
       "id": "custom-1789385860026-8m1d",
       "title": "Ani*Kuri15: ネコの集会",
-      "status": "unmatched",
-      "reason": "TMDb title/ID not found: HTTP 404。保存ID・邦題・英題・原題・別名・映画/TV・該当シーズンを確認しましたが一意に特定不可",
-      "tmdbId": null,
+      "status": "empty",
+      "reason": "日本語・英語クレジットを再取得しましたが出演者情報なし",
+      "tmdbId": 44587,
       "castCount": 0
     },
     {
@@ -4787,9 +4787,9 @@
     {
       "id": "custom-1789385860426-8e86",
       "title": "Ani*Kuri15: Good Morning",
-      "status": "unmatched",
-      "reason": "TMDb title/ID not found: HTTP 404。保存ID・邦題・英題・原題・別名・映画/TV・該当シーズンを確認しましたが一意に特定不可",
-      "tmdbId": null,
+      "status": "empty",
+      "reason": "日本語・英語クレジットを再取得しましたが出演者情報なし",
+      "tmdbId": 44587,
       "castCount": 0
     },
     {
@@ -4995,34 +4995,34 @@
     {
       "id": "custom-1790322756823-bi61",
       "title": "ジョジョの奇妙な冒険 ストーンオーシャン",
-      "status": "unmatched",
-      "reason": "TMDb title/ID not found: HTTP 404。保存ID・邦題・英題・原題・別名・映画/TV・該当シーズンを確認しましたが一意に特定不可",
-      "tmdbId": null,
-      "castCount": 0
+      "status": "success",
+      "reason": "",
+      "tmdbId": 45790,
+      "castCount": 15
     },
     {
       "id": "custom-1790322757185-u25f",
       "title": "ジョジョの奇妙な冒険 スターダストクルセイダース",
-      "status": "unmatched",
-      "reason": "TMDb title/ID not found: HTTP 404。保存ID・邦題・英題・原題・別名・映画/TV・該当シーズンを確認しましたが一意に特定不可",
-      "tmdbId": null,
-      "castCount": 0
+      "status": "success",
+      "reason": "",
+      "tmdbId": 45790,
+      "castCount": 15
     },
     {
       "id": "custom-1790322757548-hd0x",
       "title": "ジョジョの奇妙な冒険 黄金の風",
-      "status": "unmatched",
-      "reason": "TMDb title/ID not found: HTTP 404。保存ID・邦題・英題・原題・別名・映画/TV・該当シーズンを確認しましたが一意に特定不可",
-      "tmdbId": null,
-      "castCount": 0
+      "status": "success",
+      "reason": "",
+      "tmdbId": 45790,
+      "castCount": 15
     },
     {
       "id": "custom-1790322757929-0kod",
       "title": "ジョジョの奇妙な冒険 ダイヤモンドは砕けない",
-      "status": "unmatched",
-      "reason": "TMDb title/ID not found: HTTP 404。保存ID・邦題・英題・原題・別名・映画/TV・該当シーズンを確認しましたが一意に特定不可",
-      "tmdbId": null,
-      "castCount": 0
+      "status": "success",
+      "reason": "",
+      "tmdbId": 45790,
+      "castCount": 15
     },
     {
       "id": "custom-1790322758188-46qe",

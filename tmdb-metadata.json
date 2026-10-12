@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updatedAt": "2026-10-12T20:51:41.771247+00:00",
+  "updatedAt": "2026-10-12T20:59:24.671857+00:00",
   "catalogSize": 731,
   "matchedCount": 735,
   "newCount": 0,
@@ -32639,7 +32639,7 @@
         "アニメーション",
         "ドラマ"
       ],
-      "castCheckedAt": "2026-10-12T20:51:12.458085+00:00",
+      "castCheckedAt": "2026-10-12T20:59:04.890238+00:00",
       "castResolverVersion": 2
     },
     "lb-565-6YA": {
@@ -68899,28 +68899,40 @@
       "castCheckedAt": "2026-10-12T04:28:43.271036+00:00"
     },
     "custom-1789385860426-8e86": {
-      "tmdbId": null,
+      "tmdbId": 44587,
       "title": "Ani*Kuri15: Good Morning",
       "year": "2007",
-      "type": "other",
+      "type": "tv",
       "directors": [
         "Satoshi Kon"
       ],
       "creators": [],
       "posterPath": "",
-      "source": "curated-film-and-series-credits"
+      "source": "curated-film-and-series-credits",
+      "cast": [],
+      "castCheckedAt": "2026-10-12T20:59:11.399920+00:00",
+      "castResolverVersion": 2,
+      "contentType": "tv_episode",
+      "seasonNumber": 3,
+      "episodeNumber": 5
     },
     "custom-1789385860026-8m1d": {
-      "tmdbId": null,
+      "tmdbId": 44587,
       "title": "Ani*Kuri15: A Gathering of Cats",
       "year": "2007",
-      "type": "other",
+      "type": "tv",
       "directors": [
         "Makoto Shinkai"
       ],
       "creators": [],
       "posterPath": "",
-      "source": "curated-film-and-series-credits"
+      "source": "curated-film-and-series-credits",
+      "cast": [],
+      "castCheckedAt": "2026-10-12T20:59:09.654084+00:00",
+      "castResolverVersion": 2,
+      "contentType": "tv_episode",
+      "seasonNumber": 3,
+      "episodeNumber": 1
     },
     "lb-467-ptEI": {
       "tmdbId": 890,
@@ -69207,7 +69219,7 @@
       "posterPath": "",
       "source": "curated-film-and-series-credits",
       "cast": [],
-      "castCheckedAt": "2026-10-12T20:51:31.977835+00:00",
+      "castCheckedAt": "2026-10-12T20:59:22.660953+00:00",
       "castResolverVersion": 2
     },
     "custom-1790508958909-q6d6": {
@@ -69222,7 +69234,7 @@
       "posterPath": "",
       "source": "curated-film-and-series-credits",
       "cast": [],
-      "castCheckedAt": "2026-10-12T20:51:30.480614+00:00",
+      "castCheckedAt": "2026-10-12T20:59:21.420577+00:00",
       "castResolverVersion": 2
     },
     "lb-253-SVAW": {
@@ -69915,17 +69927,114 @@
       "castResolverVersion": 2
     },
     "custom-1790322757548-hd0x": {
-      "tmdbId": null,
+      "tmdbId": 45790,
       "title": "JoJo's Bizarre Adventure: Golden Wind",
       "year": "2018",
-      "type": "drama",
+      "type": "tv",
       "directors": [
         "Yasuhiro Kimura",
         "Hideya Takahashi"
       ],
       "creators": [],
       "posterPath": "",
-      "source": "curated-film-and-series-credits"
+      "source": "curated-film-and-series-credits",
+      "cast": [
+        {
+          "id": 1065297,
+          "name": "小野賢章",
+          "originalName": "小野賢章",
+          "role": "Giorno Giovanna (voice)"
+        },
+        {
+          "id": 149894,
+          "name": "梶裕貴",
+          "originalName": "梶裕貴",
+          "role": "Koichi Hirose (voice)"
+        },
+        {
+          "id": 1221114,
+          "name": "中村悠一",
+          "originalName": "中村悠一",
+          "role": "Bruno Bucciarati (voice)"
+        },
+        {
+          "id": 122647,
+          "name": "鳥海浩輔",
+          "originalName": "鳥海浩輔",
+          "role": "Guido Mista (voice)"
+        },
+        {
+          "id": 9721,
+          "name": "諏訪部順一",
+          "originalName": "諏訪部順一",
+          "role": "Leone Abbacchio (voice)"
+        },
+        {
+          "id": 1241498,
+          "name": "小野大輔",
+          "originalName": "小野大輔",
+          "role": "Jotaro Kujo (voice)"
+        },
+        {
+          "id": 1325962,
+          "name": "山下大輝",
+          "originalName": "山下大輝",
+          "role": "Narancia Ghirga (voice)"
+        },
+        {
+          "id": 1606164,
+          "name": "榎木淳弥",
+          "originalName": "榎木淳弥",
+          "role": "Pannacotta Fugo (voice)"
+        },
+        {
+          "id": 1563028,
+          "name": "小松史法",
+          "originalName": "小松史法",
+          "role": "Jean-Pierre Polnareff (voice)"
+        },
+        {
+          "id": 1652653,
+          "name": "白熊寛嗣",
+          "originalName": "白熊寛嗣",
+          "role": "Man X (voice)"
+        },
+        {
+          "id": 2158087,
+          "name": "田所陽向",
+          "originalName": "田所陽向",
+          "role": "Giorno's Father (voice)"
+        },
+        {
+          "id": 1991799,
+          "name": "東内マリ子",
+          "originalName": "東内マリ子",
+          "role": "Giorno's Mother (voice)"
+        },
+        {
+          "id": 1991242,
+          "name": "濱野大輝",
+          "originalName": "濱野大輝",
+          "role": "Luca (voice)"
+        },
+        {
+          "id": 2019896,
+          "name": "相馬康一",
+          "originalName": "相馬康一",
+          "role": "Truck Driver (voice)"
+        },
+        {
+          "id": 2644897,
+          "name": "弘松芹香",
+          "originalName": "弘松芹香",
+          "role": "Mela Ghirga (voice)"
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:59:17.067644+00:00",
+      "castResolverVersion": 2,
+      "contentType": "tv_season",
+      "seasonNumber": 4,
+      "episodeNumber": null
     },
     "custom-1790322763953-lex8": {
       "tmdbId": 4939,
@@ -73840,17 +73949,114 @@
       "castCheckedAt": "2026-10-12T04:28:43.271036+00:00"
     },
     "custom-1790322756823-bi61": {
-      "tmdbId": null,
+      "tmdbId": 45790,
       "title": "JoJo's Bizarre Adventure: Stone Ocean",
       "year": "2021",
-      "type": "drama",
+      "type": "tv",
       "directors": [
         "Toshiyuki Kato",
         "Kenichi Suzuki"
       ],
       "creators": [],
       "posterPath": "",
-      "source": "official-and-crew-reference"
+      "source": "official-and-crew-reference",
+      "cast": [
+        {
+          "id": 2359492,
+          "name": "ファイルーズあい",
+          "originalName": "ファイルーズあい",
+          "role": "Jolyne Cujoh (voice)"
+        },
+        {
+          "id": 1588597,
+          "name": "種﨑敦美",
+          "originalName": "種﨑敦美",
+          "role": "Emporio Alniño (voice)"
+        },
+        {
+          "id": 1253972,
+          "name": "田村睦心",
+          "originalName": "田村睦心",
+          "role": "Ermes Costello (voice)"
+        },
+        {
+          "id": 1250465,
+          "name": "伊瀬茉莉也",
+          "originalName": "伊瀬茉莉也",
+          "role": "Foo Fighters (voice)"
+        },
+        {
+          "id": 1483496,
+          "name": "梅原裕一郎",
+          "originalName": "梅原裕一郎",
+          "role": "Weather Report (voice)"
+        },
+        {
+          "id": 110665,
+          "name": "浪川大輔",
+          "originalName": "浪川大輔",
+          "role": "Narciso Anasui (voice)"
+        },
+        {
+          "id": 84508,
+          "name": "子安武人",
+          "originalName": "子安武人",
+          "role": "DIO (voice)"
+        },
+        {
+          "id": 1919881,
+          "name": "梶原岳人",
+          "originalName": "梶原岳人",
+          "role": "Romeo (voice)"
+        },
+        {
+          "id": 1276791,
+          "name": "かぬか光明",
+          "originalName": "かぬか光明",
+          "role": "Rocco Barocco (voice)"
+        },
+        {
+          "id": 1518605,
+          "name": "高橋英則",
+          "originalName": "高橋英則",
+          "role": "Lawyer (voice)"
+        },
+        {
+          "id": 1247909,
+          "name": "ふくまつ進紗",
+          "originalName": "ふくまつ進紗",
+          "role": "Judge (voice)"
+        },
+        {
+          "id": 2019301,
+          "name": "塙英子",
+          "originalName": "塙英子",
+          "role": "Chief Guard (voice)"
+        },
+        {
+          "id": 2030015,
+          "name": "杉山里穂",
+          "originalName": "杉山里穂",
+          "role": "Woman A (voice)"
+        },
+        {
+          "id": 2817514,
+          "name": "関口雄吾",
+          "originalName": "関口雄吾",
+          "role": "Policeman A (voice)"
+        },
+        {
+          "id": 9719,
+          "name": "大川透",
+          "originalName": "大川透",
+          "role": "Narration (voice)"
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:59:14.438874+00:00",
+      "castResolverVersion": 2,
+      "contentType": "tv_season",
+      "seasonNumber": 5,
+      "episodeNumber": null
     },
     "custom-1790322762266-mrn9": {
       "tmdbId": 356255,
@@ -74423,9 +74629,106 @@
       ],
       "creators": [],
       "posterPath": "",
-      "type": "drama",
-      "tmdbId": null,
-      "source": "official-program-staff"
+      "type": "tv",
+      "tmdbId": 45790,
+      "source": "official-program-staff",
+      "cast": [
+        {
+          "id": 1241498,
+          "name": "小野大輔",
+          "originalName": "小野大輔",
+          "role": "Jotaro Kujo (voice)"
+        },
+        {
+          "id": 68916,
+          "name": "石塚運昇",
+          "originalName": "石塚運昇",
+          "role": "Joseph Joestar (voice)"
+        },
+        {
+          "id": 1563028,
+          "name": "小松史法",
+          "originalName": "小松史法",
+          "role": "Jean-Pierre Polnareff (voice)"
+        },
+        {
+          "id": 1096528,
+          "name": "平川大輔",
+          "originalName": "平川大輔",
+          "role": "Noriaki Kakyoin (voice)"
+        },
+        {
+          "id": 225603,
+          "name": "三宅健太",
+          "originalName": "三宅健太",
+          "role": "Muhammad Avdol (voice)"
+        },
+        {
+          "id": 84508,
+          "name": "子安武人",
+          "originalName": "子安武人",
+          "role": "DIO (voice)"
+        },
+        {
+          "id": 1164932,
+          "name": "村瀬迪与",
+          "originalName": "村瀬迪与",
+          "role": "Mail Box (voice)"
+        },
+        {
+          "id": 219575,
+          "name": "福圓美里",
+          "originalName": "福圓美里",
+          "role": "Iggy (voice)"
+        },
+        {
+          "id": 9721,
+          "name": "諏訪部順一",
+          "originalName": "諏訪部順一",
+          "role": "Terence T. D'Arby (voice)"
+        },
+        {
+          "id": 222404,
+          "name": "樫井笙人",
+          "originalName": "樫井笙人",
+          "role": "Devo the Cursed (voice)"
+        },
+        {
+          "id": 83928,
+          "name": "釘宮理恵",
+          "originalName": "釘宮理恵",
+          "role": "Anne (voice)"
+        },
+        {
+          "id": 1037692,
+          "name": "桐本拓哉",
+          "originalName": "桐本拓哉",
+          "role": "J. Geil (voice)"
+        },
+        {
+          "id": 225655,
+          "name": "木内秀信",
+          "originalName": "木内秀信",
+          "role": "Hol Horse (voice)"
+        },
+        {
+          "id": 552681,
+          "name": "鈴木れい子",
+          "originalName": "鈴木れい子",
+          "role": "Enya (voice)"
+        },
+        {
+          "id": 225656,
+          "name": "岩崎征実",
+          "originalName": "岩崎征実",
+          "role": "ZZ (voice)"
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:59:15.800109+00:00",
+      "castResolverVersion": 2,
+      "contentType": "tv_season",
+      "seasonNumber": 2,
+      "episodeNumber": null
     },
     "custom-1790322757929-0kod": {
       "title": "JoJo's Bizarre Adventure: Diamond is Unbreakable",
@@ -74436,9 +74739,106 @@
       ],
       "creators": [],
       "posterPath": "",
-      "type": "drama",
-      "tmdbId": null,
-      "source": "official-program-staff"
+      "type": "tv",
+      "tmdbId": 45790,
+      "source": "official-program-staff",
+      "cast": [
+        {
+          "id": 1206317,
+          "name": "小野友樹",
+          "originalName": "小野友樹",
+          "role": "Josuke Higashikata (voice)"
+        },
+        {
+          "id": 149894,
+          "name": "梶裕貴",
+          "originalName": "梶裕貴",
+          "role": "Koichi Hirose (voice)"
+        },
+        {
+          "id": 112278,
+          "name": "高木渉",
+          "originalName": "高木渉",
+          "role": "Okuyasu Nijimura (voice)"
+        },
+        {
+          "id": 1241498,
+          "name": "小野大輔",
+          "originalName": "小野大輔",
+          "role": "Jotaro Kujo (voice)"
+        },
+        {
+          "id": 68916,
+          "name": "石塚運昇",
+          "originalName": "石塚運昇",
+          "role": "Joseph Joestar (voice)"
+        },
+        {
+          "id": 1491333,
+          "name": "原紗友里",
+          "originalName": "原紗友里",
+          "role": "Reimi Sugimoto (voice)"
+        },
+        {
+          "id": 68472,
+          "name": "山口勝平",
+          "originalName": "山口勝平",
+          "role": "Shigechi (voice)"
+        },
+        {
+          "id": 89903,
+          "name": "能登麻美子",
+          "originalName": "能登麻美子",
+          "role": "Yukako Yamagishi (voice)"
+        },
+        {
+          "id": 9714,
+          "name": "森久保祥太郎",
+          "originalName": "森久保祥太郎",
+          "role": "Akira Otoishi (voice)"
+        },
+        {
+          "id": 114909,
+          "name": "川島得愛",
+          "originalName": "川島得愛",
+          "role": "Tonio Trussardi (voice)"
+        },
+        {
+          "id": 1247847,
+          "name": "浜田賢二",
+          "originalName": "浜田賢二",
+          "role": "Angelo (voice)"
+        },
+        {
+          "id": 148447,
+          "name": "大原さやか",
+          "originalName": "大原さやか",
+          "role": "Aya Tsuji (voice)"
+        },
+        {
+          "id": 1991799,
+          "name": "東内マリ子",
+          "originalName": "東内マリ子",
+          "role": "Young Keicho (voice)"
+        },
+        {
+          "id": 553294,
+          "name": "志村知幸",
+          "originalName": "志村知幸",
+          "role": "Keicho Nijimura (voice)"
+        },
+        {
+          "id": 111375,
+          "name": "加瀬康之",
+          "originalName": "加瀬康之",
+          "role": "Mikitaka Hazekura (voice)"
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:59:18.239309+00:00",
+      "castResolverVersion": 2,
+      "contentType": "tv_season",
+      "seasonNumber": 3,
+      "episodeNumber": null
     },
     "custom-1790509701063-jule": {
       "title": "Bayside Shakedown the Last TV: Salaryman Cop and the Last Tough Case",
@@ -75932,7 +76332,7 @@
       "sourceUrl": "https://hanaballoon.com/dorachan/data/anime/mizuta/list/data/201107.html",
       "posterPath": "",
       "cast": [],
-      "castCheckedAt": "2026-10-12T20:51:33.224093+00:00",
+      "castCheckedAt": "2026-10-12T20:59:23.164679+00:00",
       "castResolverVersion": 2,
       "tmdbId": 1704979
     },
