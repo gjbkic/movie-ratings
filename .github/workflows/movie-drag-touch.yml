@@ -87,6 +87,14 @@ jobs:
             if(after.floating)throw Error('Drag ghost remains after release');
             if(errors.length)throw Error('JavaScript errors during touch drag');
             console.log('TOUCH_DRAG_PASS',JSON.stringify({original,final}));
+            console.log('CONTROL_DIAG',JSON.stringify(await page.evaluate(id=>{
+              const c=document.querySelector('.rank-card[data-id="'+id+'"]');
+              return {view:typeof view!=='undefined'?view.page:null,rankCount:document.querySelectorAll('#rankRoot .rank-card').length,
+                focused:c?.className,hasControls:!!c?.querySelector('.v66-pos'),
+                filter:window.__movie30IsRankFiltered?.(),
+                focusExport:typeof window.__movie30FocusRankCard,
+                diagnostic:window.__movie30LastJump99};
+            },before.from)));
             const controls=page.locator('.rank-card[data-id="'+before.from+'"] .v66-pos [data-sw]');
             await controls.first().waitFor({timeout:5000});
             const reverse=final>0?'-1':'1';
