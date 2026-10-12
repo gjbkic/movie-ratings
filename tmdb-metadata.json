@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "updatedAt": "2026-10-12T04:35:13.665959+00:00",
+  "updatedAt": "2026-10-12T20:51:41.771247+00:00",
   "catalogSize": 731,
-  "matchedCount": 730,
+  "matchedCount": 735,
   "newCount": 0,
   "unmatchedCount": 41,
   "films": {
@@ -7505,7 +7505,101 @@
         "宮﨑駿",
         "照樹務"
       ],
-      "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00"
+      "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00",
+      "cast": [
+        {
+          "id": 109746,
+          "name": "山田康雄",
+          "originalName": "山田康雄",
+          "role": "Arsène Lupin III (voice)"
+        },
+        {
+          "id": 82508,
+          "name": "小林清志",
+          "originalName": "小林清志",
+          "role": "Daisuke Jigen (voice)"
+        },
+        {
+          "id": 109747,
+          "name": "増山江威子",
+          "originalName": "増山江威子",
+          "role": "Fujiko Mine (voice)"
+        },
+        {
+          "id": 1222049,
+          "name": "井上真樹夫",
+          "originalName": "井上真樹夫",
+          "role": "Goemon Ishikawa XIII (voice)"
+        },
+        {
+          "id": 616,
+          "name": "納谷悟朗",
+          "originalName": "納谷悟朗",
+          "role": "Inspector Koichi Zenigata (voice)"
+        },
+        {
+          "id": 613,
+          "name": "島本須美",
+          "originalName": "島本須美",
+          "role": "Lady Clarisse de Cagliostro (voice)"
+        },
+        {
+          "id": 58158,
+          "name": "石田太郎",
+          "originalName": "石田太郎",
+          "role": "Count Cagliostro (voice)"
+        },
+        {
+          "id": 618,
+          "name": "宮内幸平",
+          "originalName": "宮内幸平",
+          "role": "Gardener (voice)"
+        },
+        {
+          "id": 617,
+          "name": "永井一郎",
+          "originalName": "永井一郎",
+          "role": "Jodo (voice)"
+        },
+        {
+          "id": 553106,
+          "name": "常泉忠通",
+          "originalName": "Tadamichi Tsuneizumi",
+          "role": "Gustav (voice)"
+        },
+        {
+          "id": 553100,
+          "name": "あずさ欣平",
+          "originalName": "あずさ欣平",
+          "role": "Archbishop (voice)"
+        },
+        {
+          "id": 552680,
+          "name": "峰恵研",
+          "originalName": "峰恵研",
+          "role": "Archbishop's Driver (voice)"
+        },
+        {
+          "id": 553104,
+          "name": "平林尚三",
+          "originalName": "平林尚三",
+          "role": "Interpol Chief (voice)"
+        },
+        {
+          "id": 553102,
+          "name": "緑川稔",
+          "originalName": "緑川稔",
+          "role": "Servant (voice)"
+        },
+        {
+          "id": 142706,
+          "name": "寺島幹夫",
+          "originalName": "寺島幹夫",
+          "role": "German Delegate (voice)"
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:06.595473+00:00",
+      "castResolverVersion": 2
     },
     "lb-310-azpY": {
       "tmdbId": 324857,
@@ -12131,7 +12225,95 @@
       "directorAliases": [
         "寺本幸代"
       ],
-      "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00"
+      "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00",
+      "cast": [
+        {
+          "id": 1241939,
+          "name": "水田わさび",
+          "originalName": "水田わさび",
+          "role": "Doraemon (voice)"
+        },
+        {
+          "id": 932986,
+          "name": "大原めぐみ",
+          "originalName": "大原めぐみ",
+          "role": "Nobita (voice)"
+        },
+        {
+          "id": 9715,
+          "name": "かかずゆみ",
+          "originalName": "かかずゆみ",
+          "role": "Shizuka (voice)"
+        },
+        {
+          "id": 1142780,
+          "name": "木村昴",
+          "originalName": "木村昴",
+          "role": "Gian (voice)"
+        },
+        {
+          "id": 90567,
+          "name": "関智一",
+          "originalName": "関智一",
+          "role": "Suneo (voice)"
+        },
+        {
+          "id": 932984,
+          "name": "千秋",
+          "originalName": "千秋",
+          "role": "Dorami (voice)"
+        },
+        {
+          "id": 77931,
+          "name": "三石琴乃",
+          "originalName": "三石琴乃",
+          "role": "Tamako Nobi (voice)"
+        },
+        {
+          "id": 1246273,
+          "name": "松本さち",
+          "originalName": "松本さち",
+          "role": "Sewashi (voice)"
+        },
+        {
+          "id": 230658,
+          "name": "向井理",
+          "originalName": "向井理",
+          "role": "Osaru Mukashi (voice)"
+        },
+        {
+          "id": 1201637,
+          "name": "三瓶由布子",
+          "originalName": "三瓶由布子",
+          "role": "Kurt (voice)"
+        },
+        {
+          "id": 202806,
+          "name": "堀江由衣",
+          "originalName": "堀江由衣",
+          "role": "Ginger (voice)"
+        },
+        {
+          "id": 105816,
+          "name": "千葉繁",
+          "originalName": "千葉繁",
+          "role": "Doctor Peppeler (voice)"
+        },
+        {
+          "id": 122373,
+          "name": "龍田直樹",
+          "originalName": "龍田直樹",
+          "role": "Gonsuke (voice)"
+        },
+        {
+          "id": 40332,
+          "name": "愛河里花子",
+          "originalName": "愛河里花子",
+          "role": "Poppon (voice)"
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:11.718234+00:00",
+      "castResolverVersion": 2
     },
     "lb-45-29VS": {
       "tmdbId": 640,
@@ -32457,7 +32639,8 @@
         "アニメーション",
         "ドラマ"
       ],
-      "castCheckedAt": "2026-10-12T04:28:43.271036+00:00"
+      "castCheckedAt": "2026-10-12T20:51:12.458085+00:00",
+      "castResolverVersion": 2
     },
     "lb-565-6YA": {
       "tmdbId": 14337,
@@ -39205,7 +39388,101 @@
         "児玉兼嗣",
         "こだま けんじ"
       ],
-      "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00"
+      "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00",
+      "cast": [
+        {
+          "id": 68470,
+          "name": "高山みなみ",
+          "originalName": "高山みなみ",
+          "role": "Conan Edogawa (voice)"
+        },
+        {
+          "id": 68472,
+          "name": "山口勝平",
+          "originalName": "山口勝平",
+          "role": "Shinichi Kudo (voice)"
+        },
+        {
+          "id": 87582,
+          "name": "山崎和佳奈",
+          "originalName": "山崎和佳奈",
+          "role": "Ran Mouri (voice)"
+        },
+        {
+          "id": 54690,
+          "name": "神谷明",
+          "originalName": "神谷明",
+          "role": "Kogoro Mouri (voice)"
+        },
+        {
+          "id": 20663,
+          "name": "高島雅羅",
+          "originalName": "高島雅羅",
+          "role": "Eri Kisaki (voice)"
+        },
+        {
+          "id": 87583,
+          "name": "茶風林",
+          "originalName": "茶風林",
+          "role": "Inspector Megure (voice)"
+        },
+        {
+          "id": 57733,
+          "name": "塩沢兼人",
+          "originalName": "塩沢兼人",
+          "role": "Ninzaburou Shiratori (voice)"
+        },
+        {
+          "id": 142704,
+          "name": "緒方賢一",
+          "originalName": "緒方賢一",
+          "role": "Hiroshi Agasa (voice)"
+        },
+        {
+          "id": 1244457,
+          "name": "岩居由希子",
+          "originalName": "岩居由希子",
+          "role": "Ayumi Yoshida (voice)"
+        },
+        {
+          "id": 112278,
+          "name": "高木渉",
+          "originalName": "高木渉",
+          "role": "Genta Kojima / Wataru Takagi (voice)"
+        },
+        {
+          "id": 73044,
+          "name": "大谷育江",
+          "originalName": "大谷育江",
+          "role": "Mitsuhiko Tsuburaya (voice)"
+        },
+        {
+          "id": 87585,
+          "name": "松井菜桜子",
+          "originalName": "松井菜桜子",
+          "role": "Sonoko Suzuki (voice)"
+        },
+        {
+          "id": 126281,
+          "name": "百々麻子",
+          "originalName": "百々麻子",
+          "role": "Midori Kuriyama (voice)"
+        },
+        {
+          "id": 115305,
+          "name": "中尾隆聖",
+          "originalName": "中尾隆聖",
+          "role": "Kouhei Sawaki (voice)"
+        },
+        {
+          "id": 100124,
+          "name": "鈴置洋孝",
+          "originalName": "鈴置洋孝",
+          "role": "Minoru Nishina (voice)"
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:06.702181+00:00",
+      "castResolverVersion": 2
     },
     "lb-414-8gw8": {
       "tmdbId": 273248,
@@ -44845,7 +45122,101 @@
         "堤幸彦",
         "堤ユキヒコ"
       ],
-      "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00"
+      "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00",
+      "cast": [
+        {
+          "id": 84620,
+          "name": "戸田恵梨香",
+          "originalName": "戸田恵梨香",
+          "role": "Saya Toma"
+        },
+        {
+          "id": 33517,
+          "name": "加瀬亮",
+          "originalName": "加瀬亮",
+          "role": "Takeru Sebumi"
+        },
+        {
+          "id": 225730,
+          "name": "神木隆之介",
+          "originalName": "神木隆之介",
+          "role": "Juichi Ninomae"
+        },
+        {
+          "id": 2538,
+          "name": "栗山千明",
+          "originalName": "栗山千明",
+          "role": "Satoko Aoike"
+        },
+        {
+          "id": 91871,
+          "name": "福田沙紀",
+          "originalName": "福田沙紀",
+          "role": "Mirei Shimura"
+        },
+        {
+          "id": 76934,
+          "name": "伊藤淳史",
+          "originalName": "伊藤淳史",
+          "role": ""
+        },
+        {
+          "id": 1096815,
+          "name": "三浦貴大",
+          "originalName": "三浦貴大",
+          "role": "Tamaki Miyano"
+        },
+        {
+          "id": 63696,
+          "name": "椎名桔平",
+          "originalName": "椎名桔平",
+          "role": "Sukehiro Tsuda"
+        },
+        {
+          "id": 137028,
+          "name": "でんでん",
+          "originalName": "でんでん",
+          "role": "Kenzo Ichiyanagi"
+        },
+        {
+          "id": 589924,
+          "name": "浅野ゆう子",
+          "originalName": "浅野ゆう子",
+          "role": "Madame Yo"
+        },
+        {
+          "id": 1257036,
+          "name": "竜雷太",
+          "originalName": "竜雷太",
+          "role": "Kotaro Nonomura"
+        },
+        {
+          "id": 2544,
+          "name": "麿赤兒",
+          "originalName": "麿赤兒",
+          "role": "Akira Nitanai"
+        },
+        {
+          "id": 96863,
+          "name": "利重剛",
+          "originalName": "利重剛",
+          "role": "Kaoru Fukutomi"
+        },
+        {
+          "id": 1039305,
+          "name": "有村架純",
+          "originalName": "有村架純",
+          "role": "Miyabi Masaki"
+        },
+        {
+          "id": 1406716,
+          "name": "岡田浩暉",
+          "originalName": "岡田浩暉",
+          "role": "Kaoru Baba"
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:08.464393+00:00",
+      "castResolverVersion": 2
     },
     "lb-234-2qRS": {
       "tmdbId": 71485,
@@ -44862,7 +45233,53 @@
         "堤幸彦",
         "堤ユキヒコ"
       ],
-      "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00"
+      "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00",
+      "cast": [
+        {
+          "id": 58674,
+          "name": "仲間由紀恵",
+          "originalName": "仲間由紀恵",
+          "role": "Naoko Yamada"
+        },
+        {
+          "id": 66155,
+          "name": "阿部寛",
+          "originalName": "阿部寛",
+          "role": "Jiro Ueda"
+        },
+        {
+          "id": 91873,
+          "name": "生瀬勝久",
+          "originalName": "生瀬勝久",
+          "role": "Kenzo Yabe"
+        },
+        {
+          "id": 230659,
+          "name": "佐藤健",
+          "originalName": "佐藤健",
+          "role": "Shohei Nakamori"
+        },
+        {
+          "id": 564893,
+          "name": "野際陽子",
+          "originalName": "野際陽子",
+          "role": "Satomi Yamada"
+        },
+        {
+          "id": 1044524,
+          "name": "片瀬那奈",
+          "originalName": "片瀬那奈",
+          "role": "Sonoko Sugi"
+        },
+        {
+          "id": 228079,
+          "name": "夏帆",
+          "originalName": "夏帆",
+          "role": "Miyoko Takashina"
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:08.212088+00:00",
+      "castResolverVersion": 2
     },
     "lb-325-b5zc": {
       "tmdbId": 335718,
@@ -44879,7 +45296,101 @@
         "成島出",
         "成岛出"
       ],
-      "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00"
+      "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00",
+      "cast": [
+        {
+          "id": 1747571,
+          "name": "藤野涼子",
+          "originalName": "藤野涼子",
+          "role": "Ryoko Fujino"
+        },
+        {
+          "id": 1486070,
+          "name": "板垣瑞生",
+          "originalName": "板垣瑞生",
+          "role": "Kazuhiko Kanbara"
+        },
+        {
+          "id": 1632067,
+          "name": "石井杏奈",
+          "originalName": "石井杏奈",
+          "role": "Juri Miyake"
+        },
+        {
+          "id": 1405981,
+          "name": "清水尋也",
+          "originalName": "清水尋也",
+          "role": "Shunji Ooide"
+        },
+        {
+          "id": 1736342,
+          "name": "富田望生",
+          "originalName": "富田望生",
+          "role": "Matsuko Asai"
+        },
+        {
+          "id": 586790,
+          "name": "前田航基",
+          "originalName": "前田航基",
+          "role": "Kenichi Noda"
+        },
+        {
+          "id": 2370985,
+          "name": "望月歩",
+          "originalName": "望月歩",
+          "role": "Takuya Kashiwagi"
+        },
+        {
+          "id": 2957162,
+          "name": "西畑澪花",
+          "originalName": "西畑澪花",
+          "role": "Mariko Kurata"
+        },
+        {
+          "id": 2144023,
+          "name": "若林時英",
+          "originalName": "若林時英",
+          "role": "Yukio Sakisaka"
+        },
+        {
+          "id": 2957163,
+          "name": "Naritada Nishimura",
+          "originalName": "Naritada Nishimura",
+          "role": "Kosei Inoue"
+        },
+        {
+          "id": 2957166,
+          "name": "加藤幹夫",
+          "originalName": "Mikio Katō",
+          "role": "Yutaro Hashida"
+        },
+        {
+          "id": 2957167,
+          "name": "石川新太",
+          "originalName": "Arata Ishikawa",
+          "role": "Mitsuru Iguchi"
+        },
+        {
+          "id": 20705,
+          "name": "尾野真千子",
+          "originalName": "尾野真千子",
+          "role": "Ryoko Fujino (adult)"
+        },
+        {
+          "id": 1054260,
+          "name": "黒木華",
+          "originalName": "黒木華",
+          "role": "Emiko Moriuchi"
+        },
+        {
+          "id": 148469,
+          "name": "永作博美",
+          "originalName": "永作博美",
+          "role": "Mirai Miyake"
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:11.219399+00:00",
+      "castResolverVersion": 2
     },
     "lb-441-27EA": {
       "tmdbId": 2005,
@@ -46202,7 +46713,101 @@
         "滝口禎一",
         "泷口 祯一"
       ],
-      "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00"
+      "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00",
+      "cast": [
+        {
+          "id": 1046843,
+          "name": "栗田貫一",
+          "originalName": "栗田貫一",
+          "role": "Arsène Lupin III (voice)"
+        },
+        {
+          "id": 82508,
+          "name": "小林清志",
+          "originalName": "小林清志",
+          "role": "Daisuke Jigen (voice)"
+        },
+        {
+          "id": 186341,
+          "name": "沢城みゆき",
+          "originalName": "沢城みゆき",
+          "role": "Fujiko Mine (voice)"
+        },
+        {
+          "id": 110665,
+          "name": "浪川大輔",
+          "originalName": "浪川大輔",
+          "role": "Goemon Ishikawa XIII (voice)"
+        },
+        {
+          "id": 20664,
+          "name": "山寺宏一",
+          "originalName": "山寺宏一",
+          "role": "Inspector Koichi Zenigata (voice)"
+        },
+        {
+          "id": 81244,
+          "name": "石田彰",
+          "originalName": "石田彰",
+          "role": "Himuro (voice)"
+        },
+        {
+          "id": 2687560,
+          "name": "渋谷はるか",
+          "originalName": "渋谷はるか",
+          "role": "Maki (voice)"
+        },
+        {
+          "id": 1255760,
+          "name": "清水理沙",
+          "originalName": "清水理沙",
+          "role": "Misa (voice)"
+        },
+        {
+          "id": 90496,
+          "name": "野沢雅子",
+          "originalName": "野沢雅子",
+          "role": "Masae Todo (voice)"
+        },
+        {
+          "id": 1243817,
+          "name": "斎藤志郎",
+          "originalName": "斎藤志郎",
+          "role": "Kageura (voice)"
+        },
+        {
+          "id": 1515741,
+          "name": "楠見藍子",
+          "originalName": "Aiko Kusumi",
+          "role": "Girl (voice)"
+        },
+        {
+          "id": 1921816,
+          "name": "仲田隼人",
+          "originalName": "中田隼人",
+          "role": "Prisoner (voice)"
+        },
+        {
+          "id": 2191979,
+          "name": "中川慶一",
+          "originalName": "中川慶一",
+          "role": "M.C. (voice)"
+        },
+        {
+          "id": 1253093,
+          "name": "村治学",
+          "originalName": "村治学",
+          "role": "Manager (voice)"
+        },
+        {
+          "id": 3263912,
+          "name": "大澤洋子",
+          "originalName": "Yoko Osawa",
+          "role": "Principal (voice)"
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:13.467199+00:00",
+      "castResolverVersion": 2
     },
     "lb-293-99fw": {
       "tmdbId": 291805,
@@ -46524,7 +47129,101 @@
         "成島出",
         "成岛出"
       ],
-      "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00"
+      "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00",
+      "cast": [
+        {
+          "id": 1747571,
+          "name": "藤野涼子",
+          "originalName": "藤野涼子",
+          "role": "Ryoko Fujino"
+        },
+        {
+          "id": 1486070,
+          "name": "板垣瑞生",
+          "originalName": "板垣瑞生",
+          "role": "Kazuhiko Kanbara"
+        },
+        {
+          "id": 1632067,
+          "name": "石井杏奈",
+          "originalName": "石井杏奈",
+          "role": "Juri Miyake"
+        },
+        {
+          "id": 1405981,
+          "name": "清水尋也",
+          "originalName": "清水尋也",
+          "role": "Shunji Ooide"
+        },
+        {
+          "id": 1736342,
+          "name": "富田望生",
+          "originalName": "富田望生",
+          "role": "Matsuko Asai"
+        },
+        {
+          "id": 586790,
+          "name": "前田航基",
+          "originalName": "前田航基",
+          "role": "Kenichi Noda"
+        },
+        {
+          "id": 2370985,
+          "name": "望月歩",
+          "originalName": "望月歩",
+          "role": "Takuya Kashiwagi"
+        },
+        {
+          "id": 2957162,
+          "name": "西畑澪花",
+          "originalName": "西畑澪花",
+          "role": "Mariko Kurata"
+        },
+        {
+          "id": 2957163,
+          "name": "Naritada Nishimura",
+          "originalName": "Naritada Nishimura",
+          "role": "Kosei Inoue"
+        },
+        {
+          "id": 2144023,
+          "name": "若林時英",
+          "originalName": "若林時英",
+          "role": "Yukio Sakisaka"
+        },
+        {
+          "id": 2957166,
+          "name": "加藤幹夫",
+          "originalName": "Mikio Katō",
+          "role": "Yutaro Hashida"
+        },
+        {
+          "id": 2957167,
+          "name": "石川新太",
+          "originalName": "Arata Ishikawa",
+          "role": "Mitsuru Iguchi"
+        },
+        {
+          "id": 20705,
+          "name": "尾野真千子",
+          "originalName": "尾野真千子",
+          "role": "Ryoko Fujino (adult)"
+        },
+        {
+          "id": 1054260,
+          "name": "黒木華",
+          "originalName": "黒木華",
+          "role": "Emiko Moriuchi"
+        },
+        {
+          "id": 148469,
+          "name": "永作博美",
+          "originalName": "永作博美",
+          "role": "Mirai Miyake"
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:10.712258+00:00",
+      "castResolverVersion": 2
     },
     "lb-232-81oI": {
       "tmdbId": 268002,
@@ -47519,7 +48218,101 @@
         "堤幸彦",
         "堤ユキヒコ"
       ],
-      "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00"
+      "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00",
+      "cast": [
+        {
+          "id": 84620,
+          "name": "戸田恵梨香",
+          "originalName": "戸田恵梨香",
+          "role": "Saya Toma"
+        },
+        {
+          "id": 33517,
+          "name": "加瀬亮",
+          "originalName": "加瀬亮",
+          "role": "Takeru sebumi"
+        },
+        {
+          "id": 1257036,
+          "name": "竜雷太",
+          "originalName": "竜雷太",
+          "role": "Kotaro Nonomura"
+        },
+        {
+          "id": 2542,
+          "name": "北村一輝",
+          "originalName": "北村一輝",
+          "role": "Shu Kikkawa"
+        },
+        {
+          "id": 2538,
+          "name": "栗山千明",
+          "originalName": "栗山千明",
+          "role": "Satoko Aoike"
+        },
+        {
+          "id": 1039305,
+          "name": "有村架純",
+          "originalName": "有村架純",
+          "role": "Miyabi Masaki"
+        },
+        {
+          "id": 127306,
+          "name": "さいねい龍二",
+          "originalName": "さいねい龍二",
+          "role": "Souji Inomada"
+        },
+        {
+          "id": 1167120,
+          "name": "松澤一之",
+          "originalName": "松澤一之",
+          "role": "Ayumu Shikahama"
+        },
+        {
+          "id": 97563,
+          "name": "香椎由宇",
+          "originalName": "香椎由宇",
+          "role": "Jyokai Jyoukyokusai"
+        },
+        {
+          "id": 127895,
+          "name": "渡辺いっけい",
+          "originalName": "渡辺いっけい",
+          "role": "Doctor Banana"
+        },
+        {
+          "id": 230658,
+          "name": "向井理",
+          "originalName": "向井理",
+          "role": "Sekai"
+        },
+        {
+          "id": 225730,
+          "name": "神木隆之介",
+          "originalName": "神木隆之介",
+          "role": "Juichi Ninomae"
+        },
+        {
+          "id": 127299,
+          "name": "城田優",
+          "originalName": "城田優",
+          "role": "Satoshi Chii"
+        },
+        {
+          "id": 91871,
+          "name": "福田沙紀",
+          "originalName": "福田沙紀",
+          "role": "Mirei Shimura"
+        },
+        {
+          "id": 1406716,
+          "name": "岡田浩暉",
+          "originalName": "岡田浩暉",
+          "role": "Kaoru Baba"
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:09.966906+00:00",
+      "castResolverVersion": 2
     },
     "lb-147-1WYO": {
       "tmdbId": 10144,
@@ -47637,7 +48430,101 @@
       "directorAliases": [
         "亀垣一"
       ],
-      "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00"
+      "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00",
+      "cast": [
+        {
+          "id": 1046843,
+          "name": "栗田貫一",
+          "originalName": "栗田貫一",
+          "role": "Lupin the Third (voice)"
+        },
+        {
+          "id": 68470,
+          "name": "高山みなみ",
+          "originalName": "高山みなみ",
+          "role": "Conan Edogawa (voice)"
+        },
+        {
+          "id": 68472,
+          "name": "山口勝平",
+          "originalName": "山口勝平",
+          "role": "Shinichi Kudo / Kaito Kuroba (voice)"
+        },
+        {
+          "id": 87582,
+          "name": "山崎和佳奈",
+          "originalName": "山崎和佳奈",
+          "role": "Ran Mouri (voice)"
+        },
+        {
+          "id": 82508,
+          "name": "小林清志",
+          "originalName": "小林清志",
+          "role": "Daisuke Jigen (voice)"
+        },
+        {
+          "id": 237076,
+          "name": "小山力也",
+          "originalName": "小山力也",
+          "role": "Kogoro Mouri (voice)"
+        },
+        {
+          "id": 40325,
+          "name": "林原めぐみ",
+          "originalName": "林原めぐみ",
+          "role": "Ai Haibara (voice)"
+        },
+        {
+          "id": 110665,
+          "name": "浪川大輔",
+          "originalName": "浪川大輔",
+          "role": "Goemon Ishikawa XIII (voice)"
+        },
+        {
+          "id": 186341,
+          "name": "沢城みゆき",
+          "originalName": "沢城みゆき",
+          "role": "Fujiko Mine (voice)"
+        },
+        {
+          "id": 20664,
+          "name": "山寺宏一",
+          "originalName": "山寺宏一",
+          "role": "Koichi Zenigata (voice)"
+        },
+        {
+          "id": 87583,
+          "name": "茶風林",
+          "originalName": "茶風林",
+          "role": "Juzo Megure (voice)"
+        },
+        {
+          "id": 73044,
+          "name": "大谷育江",
+          "originalName": "大谷育江",
+          "role": "Mitsuhiko Tsuburaya (voice)"
+        },
+        {
+          "id": 1244457,
+          "name": "岩居由希子",
+          "originalName": "岩居由希子",
+          "role": "Ayumi Yoshida (voice)"
+        },
+        {
+          "id": 87585,
+          "name": "松井菜桜子",
+          "originalName": "松井菜桜子",
+          "role": "Sonoko Suzuki (voice)"
+        },
+        {
+          "id": 625,
+          "name": "家弓家正",
+          "originalName": "家弓家正",
+          "role": "James Black (voice)"
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:12.735211+00:00",
+      "castResolverVersion": 2
     },
     "lb-195-14ei": {
       "tmdbId": 39205,
@@ -47972,7 +48859,101 @@
         "堤幸彦",
         "堤ユキヒコ"
       ],
-      "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00"
+      "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00",
+      "cast": [
+        {
+          "id": 84620,
+          "name": "戸田恵梨香",
+          "originalName": "戸田恵梨香",
+          "role": "Saya Toma"
+        },
+        {
+          "id": 33517,
+          "name": "加瀬亮",
+          "originalName": "加瀬亮",
+          "role": "Takeru sebumi"
+        },
+        {
+          "id": 1257036,
+          "name": "竜雷太",
+          "originalName": "竜雷太",
+          "role": "Kotaro Nonomura"
+        },
+        {
+          "id": 2542,
+          "name": "北村一輝",
+          "originalName": "北村一輝",
+          "role": "Shu Kikkawa"
+        },
+        {
+          "id": 2538,
+          "name": "栗山千明",
+          "originalName": "栗山千明",
+          "role": "Satoko Aoike"
+        },
+        {
+          "id": 1039305,
+          "name": "有村架純",
+          "originalName": "有村架純",
+          "role": "Miyabi Masaki"
+        },
+        {
+          "id": 127306,
+          "name": "さいねい龍二",
+          "originalName": "さいねい龍二",
+          "role": "Souji Inomada"
+        },
+        {
+          "id": 1167120,
+          "name": "松澤一之",
+          "originalName": "松澤一之",
+          "role": "Ayumu Shikahama"
+        },
+        {
+          "id": 97563,
+          "name": "香椎由宇",
+          "originalName": "香椎由宇",
+          "role": "Jyokai Jyoukyokusai"
+        },
+        {
+          "id": 127895,
+          "name": "渡辺いっけい",
+          "originalName": "渡辺いっけい",
+          "role": "Doctor Banana"
+        },
+        {
+          "id": 230658,
+          "name": "向井理",
+          "originalName": "向井理",
+          "role": "Sekai"
+        },
+        {
+          "id": 225730,
+          "name": "神木隆之介",
+          "originalName": "神木隆之介",
+          "role": "Juichi Ninomae"
+        },
+        {
+          "id": 127299,
+          "name": "城田優",
+          "originalName": "城田優",
+          "role": "Satoshi Chii"
+        },
+        {
+          "id": 91871,
+          "name": "福田沙紀",
+          "originalName": "福田沙紀",
+          "role": "Mirei Shimura"
+        },
+        {
+          "id": 1406716,
+          "name": "岡田浩暉",
+          "originalName": "岡田浩暉",
+          "role": "Kaoru Baba"
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:09.857844+00:00",
+      "castResolverVersion": 2
     },
     "lb-531-29JC": {
       "tmdbId": 744,
@@ -48874,7 +49855,101 @@
       "directorAliases": [
         "重原克也"
       ],
-      "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00"
+      "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00",
+      "cast": [
+        {
+          "id": 68470,
+          "name": "高山みなみ",
+          "originalName": "高山みなみ",
+          "role": "Conan Edogawa (voice)"
+        },
+        {
+          "id": 68472,
+          "name": "山口勝平",
+          "originalName": "山口勝平",
+          "role": "Shinichi Kudo (voice)"
+        },
+        {
+          "id": 87582,
+          "name": "山崎和佳奈",
+          "originalName": "山崎和佳奈",
+          "role": "Ran Mouri (voice)"
+        },
+        {
+          "id": 237076,
+          "name": "小山力也",
+          "originalName": "小山力也",
+          "role": "Kogoro Mouri (voice)"
+        },
+        {
+          "id": 1241806,
+          "name": "高田裕司",
+          "originalName": "高田裕司",
+          "role": "Kensuke Yamato (voice)"
+        },
+        {
+          "id": 1220947,
+          "name": "小清水亜美",
+          "originalName": "小清水亜美",
+          "role": "Yui Uehara (voice)"
+        },
+        {
+          "id": 144773,
+          "name": "速水奨",
+          "originalName": "速水奨",
+          "role": "Takaaki Morofushi (voice)"
+        },
+        {
+          "id": 40325,
+          "name": "林原めぐみ",
+          "originalName": "林原めぐみ",
+          "role": "Ai Haibara (voice)"
+        },
+        {
+          "id": 74377,
+          "name": "山田孝之",
+          "originalName": "山田孝之",
+          "role": "Takashi Otomo (voice)"
+        },
+        {
+          "id": 2094067,
+          "name": "山下美月",
+          "originalName": "山下美月",
+          "role": "Madoka Tsuburai (voice)"
+        },
+        {
+          "id": 1244239,
+          "name": "岸野幸正",
+          "originalName": "岸野幸正",
+          "role": "Hyoe Kuroda (voice)"
+        },
+        {
+          "id": 1686,
+          "name": "草尾毅",
+          "originalName": "草尾毅",
+          "role": "Rei Furuya (voice)"
+        },
+        {
+          "id": 1221143,
+          "name": "飛田展男",
+          "originalName": "飛田展男",
+          "role": "Yuya Kazami (voice)"
+        },
+        {
+          "id": 87583,
+          "name": "茶風林",
+          "originalName": "茶風林",
+          "role": "Juzo Megure (voice)"
+        },
+        {
+          "id": 112278,
+          "name": "高木渉",
+          "originalName": "高木渉",
+          "role": "Wataru Takagi / Genta Kojima (voice)"
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:11.008683+00:00",
+      "castResolverVersion": 2
     },
     "lb-207-29yE": {
       "tmdbId": 812,
@@ -49096,7 +50171,101 @@
         "細田守",
         "细田 守"
       ],
-      "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00"
+      "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00",
+      "cast": [
+        {
+          "id": 3112441,
+          "name": "中村佳穂",
+          "originalName": "中村佳穂",
+          "role": "Suzu Naito / Belle (voice)"
+        },
+        {
+          "id": 1668610,
+          "name": "成田凌",
+          "originalName": "成田凌",
+          "role": "Shinobu Hisatake (voice)"
+        },
+        {
+          "id": 1018944,
+          "name": "染谷将太",
+          "originalName": "染谷将太",
+          "role": "Shinjiro 'Kamishin' Chikami (voice)"
+        },
+        {
+          "id": 1615061,
+          "name": "玉城ティナ",
+          "originalName": "玉城ティナ",
+          "role": "Ruka Watanabe (voice)"
+        },
+        {
+          "id": 2903486,
+          "name": "幾田りら",
+          "originalName": "幾田りら",
+          "role": "Hiroka 'Hiro' Betsuyaku (voice)"
+        },
+        {
+          "id": 1167870,
+          "name": "森山良子",
+          "originalName": "森山良子",
+          "role": "Yoshitani (voice)"
+        },
+        {
+          "id": 1058058,
+          "name": "清水ミチコ",
+          "originalName": "清水ミチコ",
+          "role": "Kita (voice)"
+        },
+        {
+          "id": 1688173,
+          "name": "坂本冬美",
+          "originalName": "坂本冬美",
+          "role": "Okumoto (voice)"
+        },
+        {
+          "id": 1809227,
+          "name": "岩崎良美",
+          "originalName": "岩崎良美",
+          "role": "Nakai (voice)"
+        },
+        {
+          "id": 3102473,
+          "name": "中尾幸世",
+          "originalName": "Sachiyo Nakao",
+          "role": "Hatanaka (voice)"
+        },
+        {
+          "id": 9706,
+          "name": "森川智之",
+          "originalName": "森川智之",
+          "role": "Justin (voice)"
+        },
+        {
+          "id": 93803,
+          "name": "宮野真守",
+          "originalName": "宮野真守",
+          "role": "Muitaro Hitokawa / Guttokoraemaru (voice)"
+        },
+        {
+          "id": 613,
+          "name": "島本須美",
+          "originalName": "島本須美",
+          "role": "Suzu's Mother (voice)"
+        },
+        {
+          "id": 18056,
+          "name": "役所広司",
+          "originalName": "役所広司",
+          "role": "Suzu's Father (voice)"
+        },
+        {
+          "id": 553890,
+          "name": "石黒賢",
+          "originalName": "石黒賢",
+          "role": "Kei and Tomo's Father (voice)"
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:12.987478+00:00",
+      "castResolverVersion": 2
     },
     "lb-199-6Kya": {
       "tmdbId": 228805,
@@ -49112,7 +50281,101 @@
       "directorAliases": [
         "静野孔文"
       ],
-      "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00"
+      "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00",
+      "cast": [
+        {
+          "id": 68470,
+          "name": "高山みなみ",
+          "originalName": "高山みなみ",
+          "role": "Conan Edogawa (voice)"
+        },
+        {
+          "id": 68472,
+          "name": "山口勝平",
+          "originalName": "山口勝平",
+          "role": "Shinichi Kudo (voice)"
+        },
+        {
+          "id": 87582,
+          "name": "山崎和佳奈",
+          "originalName": "山崎和佳奈",
+          "role": "Ran Mouri (voice)"
+        },
+        {
+          "id": 237076,
+          "name": "小山力也",
+          "originalName": "小山力也",
+          "role": "Kogoro Mouri (voice)"
+        },
+        {
+          "id": 40325,
+          "name": "林原めぐみ",
+          "originalName": "林原めぐみ",
+          "role": "Ai Haibara (voice)"
+        },
+        {
+          "id": 142704,
+          "name": "緒方賢一",
+          "originalName": "緒方賢一",
+          "role": "Hiroshi Agasa (voice)"
+        },
+        {
+          "id": 1244457,
+          "name": "岩居由希子",
+          "originalName": "岩居由希子",
+          "role": "Ayumi Yoshida (voice)"
+        },
+        {
+          "id": 112278,
+          "name": "高木渉",
+          "originalName": "高木渉",
+          "role": "Genta Kojima / Wataru Takagi (voice)"
+        },
+        {
+          "id": 73044,
+          "name": "大谷育江",
+          "originalName": "大谷育江",
+          "role": "Mitsuhiko Tsuburaya (voice)"
+        },
+        {
+          "id": 87585,
+          "name": "松井菜桜子",
+          "originalName": "松井菜桜子",
+          "role": "Sonoko Suzuki (voice)"
+        },
+        {
+          "id": 122501,
+          "name": "堀川りょう",
+          "originalName": "堀川りょう",
+          "role": "Heiji Hattori (voice)"
+        },
+        {
+          "id": 83768,
+          "name": "宮村優子",
+          "originalName": "宮村優子",
+          "role": "Kazuha Toyama (voice)"
+        },
+        {
+          "id": 87583,
+          "name": "茶風林",
+          "originalName": "茶風林",
+          "role": "Juzo Megure (voice)"
+        },
+        {
+          "id": 101914,
+          "name": "湯屋敦子",
+          "originalName": "湯屋敦子",
+          "role": "Miwako Sato (voice)"
+        },
+        {
+          "id": 1789711,
+          "name": "小山武宏",
+          "originalName": "小山武宏",
+          "role": "Heizou Hattori (voice)"
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:07.203851+00:00",
+      "castResolverVersion": 2
     },
     "lb-134-aPvo": {
       "tmdbId": 330457,
@@ -50053,7 +51316,89 @@
       "directorAliases": [
         "廣田裕介"
       ],
-      "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00"
+      "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00",
+      "cast": [
+        {
+          "id": 1087773,
+          "name": "窪田正孝",
+          "originalName": "窪田正孝",
+          "role": "Poupelle (voice)"
+        },
+        {
+          "id": 559416,
+          "name": "芦田愛菜",
+          "originalName": "芦田愛菜",
+          "role": "Lubicchi (voice)"
+        },
+        {
+          "id": 1375742,
+          "name": "立川志の輔",
+          "originalName": "立川志の輔",
+          "role": "Bruno (voice)"
+        },
+        {
+          "id": 131191,
+          "name": "小池栄子",
+          "originalName": "小池栄子",
+          "role": "Lola (voice)"
+        },
+        {
+          "id": 114920,
+          "name": "藤森慎吾",
+          "originalName": "藤森慎吾",
+          "role": "Scopp (voice)"
+        },
+        {
+          "id": 1405926,
+          "name": "野間口徹",
+          "originalName": "野間口徹",
+          "role": "Reta XV (voice)"
+        },
+        {
+          "id": 1732483,
+          "name": "伊藤沙莉",
+          "originalName": "伊藤沙莉",
+          "role": "Antonio (voice)"
+        },
+        {
+          "id": 2822414,
+          "name": "宮根誠司",
+          "originalName": "宮根誠司",
+          "role": "Toshiaki (voice)"
+        },
+        {
+          "id": 2822415,
+          "name": "大平祥生",
+          "originalName": "大平祥生",
+          "role": "Dennis (voice)"
+        },
+        {
+          "id": 1603825,
+          "name": "飯尾和樹",
+          "originalName": "飯尾和樹",
+          "role": "Sue (voice)"
+        },
+        {
+          "id": 1210686,
+          "name": "山内圭哉",
+          "originalName": "山内圭哉",
+          "role": "Eyepatch (voice)"
+        },
+        {
+          "id": 2541,
+          "name": "國村隼",
+          "originalName": "國村隼",
+          "role": "Dan (voice)"
+        },
+        {
+          "id": 3235944,
+          "name": "Tony Marot",
+          "originalName": "Tony Marot",
+          "role": ""
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:07.946583+00:00",
+      "castResolverVersion": 2
     },
     "lb-255-xDsy": {
       "tmdbId": 890526,
@@ -50735,7 +52080,101 @@
       "directorAliases": [
         "山本泰一郎"
       ],
-      "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00"
+      "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00",
+      "cast": [
+        {
+          "id": 68470,
+          "name": "高山みなみ",
+          "originalName": "高山みなみ",
+          "role": "Conan Edogawa (voice)"
+        },
+        {
+          "id": 68472,
+          "name": "山口勝平",
+          "originalName": "山口勝平",
+          "role": "Shinichi Kudou (voice)"
+        },
+        {
+          "id": 87582,
+          "name": "山崎和佳奈",
+          "originalName": "山崎和佳奈",
+          "role": "Ran Mouri (voice)"
+        },
+        {
+          "id": 54690,
+          "name": "神谷明",
+          "originalName": "神谷明",
+          "role": "Kogoro Mouri (voice)"
+        },
+        {
+          "id": 142704,
+          "name": "緒方賢一",
+          "originalName": "緒方賢一",
+          "role": "Hiroshi Agasa (voice)"
+        },
+        {
+          "id": 40325,
+          "name": "林原めぐみ",
+          "originalName": "林原めぐみ",
+          "role": "Ai Haibara (voice)"
+        },
+        {
+          "id": 1244457,
+          "name": "岩居由希子",
+          "originalName": "岩居由希子",
+          "role": "Ayumi Yoshida (voice)"
+        },
+        {
+          "id": 73044,
+          "name": "大谷育江",
+          "originalName": "大谷育江",
+          "role": "Mitsuhiko Tsuburaya (voice)"
+        },
+        {
+          "id": 112278,
+          "name": "高木渉",
+          "originalName": "高木渉",
+          "role": "Genta Kojima / Wataru Takagi (voice)"
+        },
+        {
+          "id": 87585,
+          "name": "松井菜桜子",
+          "originalName": "松井菜桜子",
+          "role": "Sonoko Suzuki (voice)"
+        },
+        {
+          "id": 87583,
+          "name": "茶風林",
+          "originalName": "茶風林",
+          "role": "Inspector Megure (voice)"
+        },
+        {
+          "id": 89968,
+          "name": "井上和彦",
+          "originalName": "井上和彦",
+          "role": "Ninzaburou Shiratori (voice)"
+        },
+        {
+          "id": 101914,
+          "name": "湯屋敦子",
+          "originalName": "湯屋敦子",
+          "role": "Miwako Satou (voice)"
+        },
+        {
+          "id": 126283,
+          "name": "千葉一伸",
+          "originalName": "千葉一伸",
+          "role": "Kazunobu Chiba (voice)"
+        },
+        {
+          "id": 126287,
+          "name": "中嶋聡彦",
+          "originalName": "中嶋聡彦",
+          "role": "Tome (voice)"
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:13.221872+00:00",
+      "castResolverVersion": 2
     },
     "lb-198-42Mo": {
       "tmdbId": 122583,
@@ -51211,7 +52650,101 @@
       "directorAliases": [
         "静野孔文"
       ],
-      "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00"
+      "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00",
+      "cast": [
+        {
+          "id": 68470,
+          "name": "高山みなみ",
+          "originalName": "高山みなみ",
+          "role": "Conan Edogawa (voice)"
+        },
+        {
+          "id": 68472,
+          "name": "山口勝平",
+          "originalName": "山口勝平",
+          "role": "Shinichi Kudo (voice)"
+        },
+        {
+          "id": 87582,
+          "name": "山崎和佳奈",
+          "originalName": "山崎和佳奈",
+          "role": "Ran Mouri (voice)"
+        },
+        {
+          "id": 237076,
+          "name": "小山力也",
+          "originalName": "小山力也",
+          "role": "Kogoro Mouri (voice)"
+        },
+        {
+          "id": 122501,
+          "name": "堀川りょう",
+          "originalName": "堀川りょう",
+          "role": "Heiji Hattori (voice)"
+        },
+        {
+          "id": 83768,
+          "name": "宮村優子",
+          "originalName": "宮村優子",
+          "role": "Kazuha Toyama (voice)"
+        },
+        {
+          "id": 112205,
+          "name": "ゆきのさつき",
+          "originalName": "ゆきのさつき",
+          "role": "Momiji Ooka (voice)"
+        },
+        {
+          "id": 83932,
+          "name": "阪脩",
+          "originalName": "阪脩",
+          "role": "Kensuke Achiwa (voice)"
+        },
+        {
+          "id": 1029280,
+          "name": "宮川大輔",
+          "originalName": "宮川大輔",
+          "role": "Koji Sekine (voice)"
+        },
+        {
+          "id": 550663,
+          "name": "石井康嗣",
+          "originalName": "石井康嗣",
+          "role": "Togo Kaieda (voice)"
+        },
+        {
+          "id": 81857,
+          "name": "一条和矢",
+          "originalName": "一条和矢",
+          "role": "Shikao Nagoro (voice)"
+        },
+        {
+          "id": 1576235,
+          "name": "吉岡里帆",
+          "originalName": "吉岡里帆",
+          "role": "Mikiko Hiramoto (voice)"
+        },
+        {
+          "id": 115792,
+          "name": "勝生真沙子",
+          "originalName": "勝生真沙子",
+          "role": "Shizuka Hattori (voice)"
+        },
+        {
+          "id": 552339,
+          "name": "山路和弘",
+          "originalName": "山路和弘",
+          "role": "Heizo Hattori (voice)"
+        },
+        {
+          "id": 1241498,
+          "name": "小野大輔",
+          "originalName": "小野大輔",
+          "role": "Muga Iori (voice)"
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:07.728538+00:00",
+      "castResolverVersion": 2
     },
     "lb-505-2GDC": {
       "tmdbId": 77617,
@@ -52075,7 +53608,101 @@
       "directorAliases": [
         "山本泰一郎"
       ],
-      "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00"
+      "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00",
+      "cast": [
+        {
+          "id": 68470,
+          "name": "高山みなみ",
+          "originalName": "高山みなみ",
+          "role": "Conan Edogawa (voice)"
+        },
+        {
+          "id": 68472,
+          "name": "山口勝平",
+          "originalName": "山口勝平",
+          "role": "Kaito Kid / Shinichi Kudou (voice)"
+        },
+        {
+          "id": 87582,
+          "name": "山崎和佳奈",
+          "originalName": "山崎和佳奈",
+          "role": "Ran Mouri (voice)"
+        },
+        {
+          "id": 54690,
+          "name": "神谷明",
+          "originalName": "神谷明",
+          "role": "Kogoro Mouri (voice)"
+        },
+        {
+          "id": 87585,
+          "name": "松井菜桜子",
+          "originalName": "松井菜桜子",
+          "role": "Sonoko Suzuki (voice)"
+        },
+        {
+          "id": 20663,
+          "name": "高島雅羅",
+          "originalName": "高島雅羅",
+          "role": "Eri Kisaki (voice)"
+        },
+        {
+          "id": 142704,
+          "name": "緒方賢一",
+          "originalName": "緒方賢一",
+          "role": "Hiroshi Agasa (voice)"
+        },
+        {
+          "id": 40325,
+          "name": "林原めぐみ",
+          "originalName": "林原めぐみ",
+          "role": "Ai Haibara (voice)"
+        },
+        {
+          "id": 1244457,
+          "name": "岩居由希子",
+          "originalName": "岩居由希子",
+          "role": "Ayumi Yoshida (voice)"
+        },
+        {
+          "id": 73044,
+          "name": "大谷育江",
+          "originalName": "大谷育江",
+          "role": "Mitsuhiko Tsuburaya (voice)"
+        },
+        {
+          "id": 112278,
+          "name": "高木渉",
+          "originalName": "高木渉",
+          "role": "Genta Kojima / Wataru Takagi (voice)"
+        },
+        {
+          "id": 68916,
+          "name": "石塚運昇",
+          "originalName": "石塚運昇",
+          "role": "Ginzou Nakamori (voice)"
+        },
+        {
+          "id": 87583,
+          "name": "茶風林",
+          "originalName": "茶風林",
+          "role": "Juuzou Megure (voice)"
+        },
+        {
+          "id": 89968,
+          "name": "井上和彦",
+          "originalName": "井上和彦",
+          "role": "Ninzaburou Shiratori (voice)"
+        },
+        {
+          "id": 126280,
+          "name": "氷上恭子",
+          "originalName": "氷上恭子",
+          "role": "Natsuki Sakai (voice)"
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:06.961879+00:00",
+      "castResolverVersion": 2
     },
     "lb-92-xjfE": {
       "tmdbId": 882598,
@@ -56002,84 +57629,70 @@
       "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00",
       "cast": [
         {
-          "id": 39459,
-          "name": "ヘイリー・アトウェル",
-          "aliases": []
+          "id": 1216606,
+          "name": "ググ・バサ＝ロー",
+          "originalName": "Gugu Mbatha-Raw",
+          "role": "Kelly Booth"
         },
         {
-          "id": 93210,
-          "name": "ドーナル・グリーソン",
-          "aliases": []
+          "id": 1110405,
+          "name": "マッケンジー・デイヴィス",
+          "originalName": "Mackenzie Davis",
+          "role": "Yorkie"
         },
         {
-          "id": 139549,
-          "name": "ロリー・キニア",
-          "aliases": []
+          "id": 1217637,
+          "name": "Denise Burse",
+          "originalName": "Denise Burse",
+          "role": "Elder Kelly"
         },
         {
-          "id": 30083,
-          "name": "リンゼイ・ダンカン",
-          "aliases": []
+          "id": 1408806,
+          "name": "Raymond McAnally",
+          "originalName": "Raymond McAnally",
+          "role": "Greg"
         },
         {
-          "id": 20425,
-          "name": "Donald Sumpter",
-          "aliases": []
+          "id": 234953,
+          "name": "Gavin Stenhouse",
+          "originalName": "Gavin Stenhouse",
+          "role": "Wes"
         },
         {
-          "id": 43034,
-          "name": "トム・グッドマン＝ヒル",
-          "aliases": []
+          "id": 1744235,
+          "name": "Cheryl Anderson",
+          "originalName": "Cheryl Anderson",
+          "role": "Laura"
         },
         {
-          "id": 20286,
-          "name": "Toby Kebbell",
-          "aliases": []
+          "id": 1502461,
+          "name": "Jackson Bews",
+          "originalName": "Jackson Bews",
+          "role": "Harvey"
         },
         {
-          "id": 202734,
-          "name": "Lenora Crichlow",
-          "aliases": []
+          "id": 1487014,
+          "name": "Annabel Davis",
+          "originalName": "Annabel Davis",
+          "role": "Elder Yorkie"
         },
         {
-          "id": 17078,
-          "name": "Michael Smiley",
-          "aliases": []
+          "id": 1650564,
+          "name": "Billy Griffin Jr.",
+          "originalName": "Billy Griffin Jr.",
+          "role": "Davis"
         },
         {
-          "id": 986808,
-          "name": "ワイアット・ラッセル",
-          "aliases": []
+          "id": 1744234,
+          "name": "Paul Kitson",
+          "originalName": "Paul Kitson",
+          "role": "Barman"
         },
         {
-          "id": 211368,
-          "name": "Daniel Rigby",
-          "aliases": []
-        },
-        {
-          "id": 80149,
-          "name": "Douglas Hodge",
-          "aliases": []
-        },
-        {
-          "id": 86477,
-          "name": "Claire Keelan",
-          "aliases": []
-        },
-        {
-          "id": 36668,
-          "name": "Sinéad Matthews",
-          "aliases": []
-        },
-        {
-          "id": 1836,
-          "name": "ジュリア・デイヴィス",
-          "aliases": []
-        },
-        {
-          "id": 1636813,
-          "name": "Ashley Thomas",
-          "aliases": []
+          "id": 1140091,
+          "name": "Jeff Mash",
+          "originalName": "Jeff Mash",
+          "role": "Doctor"
         }
       ],
       "genres": [
@@ -56087,7 +57700,11 @@
         "ドラマ",
         "謎"
       ],
-      "castCheckedAt": "2026-10-12T04:28:43.271036+00:00"
+      "castCheckedAt": "2026-10-12T20:51:38.984640+00:00",
+      "castResolverVersion": 2,
+      "contentType": "tv_episode",
+      "seasonNumber": 3,
+      "episodeNumber": 4
     },
     "lb-574-29CQ": {
       "tmdbId": 786,
@@ -56438,84 +58055,94 @@
       "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00",
       "cast": [
         {
-          "id": 39459,
-          "name": "ヘイリー・アトウェル",
-          "aliases": []
+          "id": 1379277,
+          "name": "アレックス・ローサー",
+          "originalName": "Alex Lawther",
+          "role": "Kenny"
         },
         {
-          "id": 93210,
-          "name": "ドーナル・グリーソン",
-          "aliases": []
+          "id": 195930,
+          "name": "ジェローム・フリン",
+          "originalName": "Jerome Flynn",
+          "role": "Hector"
         },
         {
-          "id": 139549,
-          "name": "ロリー・キニア",
-          "aliases": []
+          "id": 1220084,
+          "name": "Susannah Doyle",
+          "originalName": "Susannah Doyle",
+          "role": "Blackmailed Woman"
         },
         {
-          "id": 30083,
-          "name": "リンゼイ・ダンカン",
-          "aliases": []
+          "id": 1507580,
+          "name": "Frankie Wilson",
+          "originalName": "Frankie Wilson",
+          "role": "Tom"
         },
         {
-          "id": 20425,
-          "name": "Donald Sumpter",
-          "aliases": []
+          "id": 1781040,
+          "name": "Jimmy Roye-Dunne",
+          "originalName": "Jimmy Roye-Dunne",
+          "role": "Red"
         },
         {
-          "id": 43034,
-          "name": "トム・グッドマン＝ヒル",
-          "aliases": []
+          "id": 1593457,
+          "name": "Hannah Steele",
+          "originalName": "Hannah Steele",
+          "role": "Melissa"
         },
         {
-          "id": 20286,
-          "name": "Toby Kebbell",
-          "aliases": []
+          "id": 1781047,
+          "name": "Sarah Beck Mather",
+          "originalName": "Sarah Beck Mather",
+          "role": "Restaurant Mother"
         },
         {
-          "id": 202734,
-          "name": "Lenora Crichlow",
-          "aliases": []
+          "id": 4261564,
+          "name": "Beatrice Robertson-Jones",
+          "originalName": "Beatrice Robertson-Jones",
+          "role": "Restaurant Daughter"
         },
         {
-          "id": 17078,
-          "name": "Michael Smiley",
-          "aliases": []
+          "id": 3651740,
+          "name": "Maya Gerber",
+          "originalName": "Maya Gerber",
+          "role": "Lindsay"
         },
         {
-          "id": 986808,
-          "name": "ワイアット・ラッセル",
-          "aliases": []
+          "id": 94959,
+          "name": "Camilla Power",
+          "originalName": "Camilla Power",
+          "role": "Sandra"
         },
         {
-          "id": 211368,
-          "name": "Daniel Rigby",
-          "aliases": []
+          "id": 1064071,
+          "name": "Ivanno Jeremiah",
+          "originalName": "Ivanno Jeremiah",
+          "role": "Moped Man"
         },
         {
-          "id": 80149,
-          "name": "Douglas Hodge",
-          "aliases": []
+          "id": 1780968,
+          "name": "Mariam Haque",
+          "originalName": "Mariam Haque",
+          "role": "Petrol Station Attendant"
         },
         {
-          "id": 86477,
-          "name": "Claire Keelan",
-          "aliases": []
+          "id": 110581,
+          "name": "Natasha Little",
+          "originalName": "Natasha Little",
+          "role": "Karen"
         },
         {
-          "id": 36668,
-          "name": "Sinéad Matthews",
-          "aliases": []
+          "id": 1278494,
+          "name": "Nicola Sloane",
+          "originalName": "Nicola Sloane",
+          "role": "Bank Clerk"
         },
         {
-          "id": 1836,
-          "name": "ジュリア・デイヴィス",
-          "aliases": []
-        },
-        {
-          "id": 1636813,
-          "name": "Ashley Thomas",
-          "aliases": []
+          "id": 110075,
+          "name": "Paul Bazely",
+          "originalName": "Paul Bazely",
+          "role": "The Man in the Woods"
         }
       ],
       "genres": [
@@ -56523,7 +58150,11 @@
         "ドラマ",
         "謎"
       ],
-      "castCheckedAt": "2026-10-12T04:28:43.271036+00:00"
+      "castCheckedAt": "2026-10-12T20:51:38.736208+00:00",
+      "castResolverVersion": 2,
+      "contentType": "tv_episode",
+      "seasonNumber": 3,
+      "episodeNumber": 3
     },
     "custom-1789387775661-0mdh": {
       "tmdbId": 13398,
@@ -56797,84 +58428,58 @@
       "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00",
       "cast": [
         {
-          "id": 39459,
-          "name": "ヘイリー・アトウェル",
-          "aliases": []
-        },
-        {
-          "id": 93210,
-          "name": "ドーナル・グリーソン",
-          "aliases": []
-        },
-        {
-          "id": 139549,
-          "name": "ロリー・キニア",
-          "aliases": []
-        },
-        {
-          "id": 30083,
-          "name": "リンゼイ・ダンカン",
-          "aliases": []
-        },
-        {
-          "id": 20425,
-          "name": "Donald Sumpter",
-          "aliases": []
-        },
-        {
-          "id": 43034,
-          "name": "トム・グッドマン＝ヒル",
-          "aliases": []
-        },
-        {
-          "id": 20286,
-          "name": "Toby Kebbell",
-          "aliases": []
-        },
-        {
           "id": 202734,
           "name": "Lenora Crichlow",
-          "aliases": []
+          "originalName": "Lenora Crichlow",
+          "role": "Victoria Skillane"
         },
         {
           "id": 17078,
           "name": "Michael Smiley",
-          "aliases": []
+          "originalName": "Michael Smiley",
+          "role": "Baxter"
         },
         {
-          "id": 986808,
-          "name": "ワイアット・ラッセル",
-          "aliases": []
+          "id": 89822,
+          "name": "タペンス・ミドルトン",
+          "originalName": "Tuppence Middleton",
+          "role": "Jem"
         },
         {
-          "id": 211368,
-          "name": "Daniel Rigby",
-          "aliases": []
+          "id": 122556,
+          "name": "Ian Bonar",
+          "originalName": "Ian Bonar",
+          "role": "Damien"
         },
         {
-          "id": 80149,
-          "name": "Douglas Hodge",
-          "aliases": []
+          "id": 1525320,
+          "name": "Elisabeth Hopper",
+          "originalName": "Elisabeth Hopper",
+          "role": "Knife Woman"
         },
         {
-          "id": 86477,
-          "name": "Claire Keelan",
-          "aliases": []
+          "id": 19704,
+          "name": "Nick Bartlett",
+          "originalName": "Nick Bartlett",
+          "role": "Welder Guy"
         },
         {
-          "id": 36668,
-          "name": "Sinéad Matthews",
-          "aliases": []
+          "id": 1785004,
+          "name": "Nick Ofield",
+          "originalName": "Nick Ofield",
+          "role": "Iain Rannoch"
         },
         {
-          "id": 1836,
-          "name": "ジュリア・デイヴィス",
-          "aliases": []
+          "id": 1138284,
+          "name": "Russell Barnett",
+          "originalName": "Russell Barnett",
+          "role": "News Reporter"
         },
         {
-          "id": 1636813,
-          "name": "Ashley Thomas",
-          "aliases": []
+          "id": 1938283,
+          "name": "Imani Jackman",
+          "originalName": "Imani Jackman",
+          "role": "Jemima Sykes"
         }
       ],
       "genres": [
@@ -56882,7 +58487,11 @@
         "ドラマ",
         "謎"
       ],
-      "castCheckedAt": "2026-10-12T04:28:43.271036+00:00"
+      "castCheckedAt": "2026-10-12T20:51:37.538208+00:00",
+      "castResolverVersion": 2,
+      "contentType": "tv_episode",
+      "seasonNumber": 2,
+      "episodeNumber": 2
     },
     "added-anchor-580": {
       "tmdbId": 26466,
@@ -57269,84 +58878,94 @@
       "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00",
       "cast": [
         {
-          "id": 39459,
-          "name": "ヘイリー・アトウェル",
-          "aliases": []
+          "id": 9015,
+          "name": "ケリー・マクドナルド",
+          "originalName": "Kelly Macdonald",
+          "role": "Karin Parke"
         },
         {
-          "id": 93210,
-          "name": "ドーナル・グリーソン",
-          "aliases": []
+          "id": 1204956,
+          "name": "フェイ・マーセイ",
+          "originalName": "Faye Marsay",
+          "role": "Blue Colson"
         },
         {
-          "id": 139549,
-          "name": "ロリー・キニア",
-          "aliases": []
+          "id": 30082,
+          "name": "ベネディクト・ウォン",
+          "originalName": "Benedict Wong",
+          "role": "Shaun Li"
         },
         {
-          "id": 30083,
-          "name": "リンゼイ・ダンカン",
-          "aliases": []
+          "id": 47068,
+          "name": "Jonas Karlsson",
+          "originalName": "Jonas Karlsson",
+          "role": "Rasmus Sjolberg"
         },
         {
-          "id": 20425,
-          "name": "Donald Sumpter",
-          "aliases": []
+          "id": 202047,
+          "name": "Joe Armstrong",
+          "originalName": "Joe Armstrong",
+          "role": "Nick Shelton"
         },
         {
-          "id": 43034,
-          "name": "トム・グッドマン＝ヒル",
-          "aliases": []
+          "id": 42998,
+          "name": "Elizabeth Berrington",
+          "originalName": "Elizabeth Berrington",
+          "role": "Jo Powers"
         },
         {
-          "id": 20286,
-          "name": "Toby Kebbell",
-          "aliases": []
+          "id": 1500875,
+          "name": "Charles Babalola",
+          "originalName": "Charles Babalola",
+          "role": "Tusk"
         },
         {
-          "id": 202734,
-          "name": "Lenora Crichlow",
-          "aliases": []
+          "id": 11280,
+          "name": "ベン・マイルズ",
+          "originalName": "Ben Miles",
+          "role": "Tom Pickering"
         },
         {
-          "id": 17078,
-          "name": "Michael Smiley",
-          "aliases": []
+          "id": 1197829,
+          "name": "Esther Hall",
+          "originalName": "Esther Hall",
+          "role": "Vanessa Dahl"
         },
         {
-          "id": 986808,
-          "name": "ワイアット・ラッセル",
-          "aliases": []
+          "id": 1475015,
+          "name": "Holli Dempsey",
+          "originalName": "Holli Dempsey",
+          "role": "Clara Meades"
         },
         {
-          "id": 211368,
-          "name": "Daniel Rigby",
-          "aliases": []
+          "id": 21679,
+          "name": "Vinette Robinson",
+          "originalName": "Vinette Robinson",
+          "role": "Liza Bahar"
         },
         {
-          "id": 80149,
-          "name": "Douglas Hodge",
-          "aliases": []
+          "id": 1266584,
+          "name": "Georgina Rich",
+          "originalName": "Georgina Rich",
+          "role": "Tess Wallender"
         },
         {
-          "id": 86477,
-          "name": "Claire Keelan",
-          "aliases": []
+          "id": 1264237,
+          "name": "Duncan Pow",
+          "originalName": "Duncan Pow",
+          "role": "Garrett Scholes"
         },
         {
-          "id": 36668,
-          "name": "Sinéad Matthews",
-          "aliases": []
+          "id": 1438350,
+          "name": "Cecilia Noble",
+          "originalName": "Cecilia Noble",
+          "role": "Dame Patricia Lamarr"
         },
         {
-          "id": 1836,
-          "name": "ジュリア・デイヴィス",
-          "aliases": []
-        },
-        {
-          "id": 1636813,
-          "name": "Ashley Thomas",
-          "aliases": []
+          "id": 1231337,
+          "name": "Katherine Kingsley",
+          "originalName": "Katherine Kingsley",
+          "role": "Dana Costello"
         }
       ],
       "genres": [
@@ -57354,7 +58973,11 @@
         "ドラマ",
         "謎"
       ],
-      "castCheckedAt": "2026-10-12T04:28:43.271036+00:00"
+      "castCheckedAt": "2026-10-12T20:51:39.235217+00:00",
+      "castResolverVersion": 2,
+      "contentType": "tv_episode",
+      "seasonNumber": 3,
+      "episodeNumber": 6
     },
     "lb-278-2aoU": {
       "tmdbId": 431,
@@ -58569,84 +60192,82 @@
       "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00",
       "cast": [
         {
-          "id": 39459,
-          "name": "ヘイリー・アトウェル",
-          "aliases": []
-        },
-        {
-          "id": 93210,
-          "name": "ドーナル・グリーソン",
-          "aliases": []
-        },
-        {
-          "id": 139549,
-          "name": "ロリー・キニア",
-          "aliases": []
-        },
-        {
-          "id": 30083,
-          "name": "リンゼイ・ダンカン",
-          "aliases": []
-        },
-        {
-          "id": 20425,
-          "name": "Donald Sumpter",
-          "aliases": []
-        },
-        {
-          "id": 43034,
-          "name": "トム・グッドマン＝ヒル",
-          "aliases": []
-        },
-        {
           "id": 20286,
           "name": "Toby Kebbell",
-          "aliases": []
+          "originalName": "Toby Kebbell",
+          "role": "Liam Foxwell"
         },
         {
-          "id": 202734,
-          "name": "Lenora Crichlow",
-          "aliases": []
+          "id": 66431,
+          "name": "ジョディ・ウィテカー",
+          "originalName": "Jodie Whittaker",
+          "role": "Ffion Foxwell"
         },
         {
-          "id": 17078,
-          "name": "Michael Smiley",
-          "aliases": []
+          "id": 586000,
+          "name": "Tom Cullen",
+          "originalName": "Tom Cullen",
+          "role": "Jonas"
         },
         {
-          "id": 986808,
-          "name": "ワイアット・ラッセル",
-          "aliases": []
+          "id": 137411,
+          "name": "Amy Beth Hayes",
+          "originalName": "Amy Beth Hayes",
+          "role": "Lucy"
         },
         {
-          "id": 211368,
-          "name": "Daniel Rigby",
-          "aliases": []
+          "id": 78334,
+          "name": "レベッカ・ステイトン",
+          "originalName": "Rebekah Staton",
+          "role": "Colleen"
         },
         {
-          "id": 80149,
-          "name": "Douglas Hodge",
-          "aliases": []
+          "id": 432393,
+          "name": "Rhashan Stone",
+          "originalName": "Rhashan Stone",
+          "role": "Jeff"
         },
         {
-          "id": 86477,
-          "name": "Claire Keelan",
-          "aliases": []
+          "id": 1320609,
+          "name": "Phoebe Fox",
+          "originalName": "Phoebe Fox",
+          "role": "Hallam"
         },
         {
-          "id": 36668,
-          "name": "Sinéad Matthews",
-          "aliases": []
+          "id": 16756,
+          "name": "Jimi Mistry",
+          "originalName": "Jimi Mistry",
+          "role": "Paul"
         },
         {
-          "id": 1836,
-          "name": "ジュリア・デイヴィス",
-          "aliases": []
+          "id": 3072,
+          "name": "Daniel Lapaine",
+          "originalName": "Daniel Lapaine",
+          "role": "Max"
         },
         {
-          "id": 1636813,
-          "name": "Ashley Thomas",
-          "aliases": []
+          "id": 193356,
+          "name": "Karl Collins",
+          "originalName": "Karl Collins",
+          "role": "Robbie"
+        },
+        {
+          "id": 123403,
+          "name": "Elizabeth Chan",
+          "originalName": "Elizabeth Chan",
+          "role": "Leah"
+        },
+        {
+          "id": 1542375,
+          "name": "Mona Goodwin",
+          "originalName": "Mona Goodwin",
+          "role": "Gina"
+        },
+        {
+          "id": 1793748,
+          "name": "Kemal Sylvester",
+          "originalName": "Kemal Sylvester",
+          "role": "Airport Security"
         }
       ],
       "genres": [
@@ -58654,7 +60275,11 @@
         "ドラマ",
         "謎"
       ],
-      "castCheckedAt": "2026-10-12T04:28:43.271036+00:00"
+      "castCheckedAt": "2026-10-12T20:51:36.980484+00:00",
+      "castResolverVersion": 2,
+      "contentType": "tv_episode",
+      "seasonNumber": 1,
+      "episodeNumber": 3
     },
     "custom-1789385860147-fi90": {
       "tmdbId": 110415,
@@ -59050,7 +60675,53 @@
       "creators": [],
       "posterPath": "/xiyx7obD1DbL7yLTN3uIuIiyase.jpg",
       "source": "tmdb",
-      "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00"
+      "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00",
+      "cast": [
+        {
+          "id": 6031194,
+          "name": "Alexis Simpson",
+          "originalName": "Alexis Simpson",
+          "role": "Benji"
+        },
+        {
+          "id": 6031197,
+          "name": "Sean Penny",
+          "originalName": "Sean Penny",
+          "role": "Asher"
+        },
+        {
+          "id": 6031200,
+          "name": "Luísa Ambreser",
+          "originalName": "Luísa Ambreser",
+          "role": "Judy"
+        },
+        {
+          "id": 6031202,
+          "name": "Lukas Conforto",
+          "originalName": "Lukas Conforto",
+          "role": "Bobbi"
+        },
+        {
+          "id": 6031206,
+          "name": "Owen Milk",
+          "originalName": "Owen Milk",
+          "role": "Owen"
+        },
+        {
+          "id": 6031221,
+          "name": "Sofia Caetano",
+          "originalName": "Sofia Caetano",
+          "role": "Lily"
+        },
+        {
+          "id": 6148825,
+          "name": "Sophie Ferguson",
+          "originalName": "Sophie Ferguson",
+          "role": "William"
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:11.966862+00:00",
+      "castResolverVersion": 2
     },
     "custom-1789929101832-iwdt": {
       "tmdbId": 30018,
@@ -59391,84 +61062,94 @@
       "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00",
       "cast": [
         {
-          "id": 39459,
-          "name": "ヘイリー・アトウェル",
-          "aliases": []
-        },
-        {
-          "id": 93210,
-          "name": "ドーナル・グリーソン",
-          "aliases": []
-        },
-        {
-          "id": 139549,
-          "name": "ロリー・キニア",
-          "aliases": []
-        },
-        {
-          "id": 30083,
-          "name": "リンゼイ・ダンカン",
-          "aliases": []
-        },
-        {
-          "id": 20425,
-          "name": "Donald Sumpter",
-          "aliases": []
-        },
-        {
-          "id": 43034,
-          "name": "トム・グッドマン＝ヒル",
-          "aliases": []
-        },
-        {
-          "id": 20286,
-          "name": "Toby Kebbell",
-          "aliases": []
-        },
-        {
-          "id": 202734,
-          "name": "Lenora Crichlow",
-          "aliases": []
-        },
-        {
-          "id": 17078,
-          "name": "Michael Smiley",
-          "aliases": []
-        },
-        {
-          "id": 986808,
-          "name": "ワイアット・ラッセル",
-          "aliases": []
-        },
-        {
-          "id": 211368,
-          "name": "Daniel Rigby",
-          "aliases": []
-        },
-        {
-          "id": 80149,
-          "name": "Douglas Hodge",
-          "aliases": []
-        },
-        {
-          "id": 86477,
-          "name": "Claire Keelan",
-          "aliases": []
-        },
-        {
-          "id": 36668,
-          "name": "Sinéad Matthews",
-          "aliases": []
-        },
-        {
           "id": 1836,
           "name": "ジュリア・デイヴィス",
-          "aliases": []
+          "originalName": "Julia Davis",
+          "role": "Judge Charity"
         },
         {
           "id": 1636813,
           "name": "Ashley Thomas",
-          "aliases": []
+          "originalName": "Ashley Thomas",
+          "role": "Judge Wraith"
+        },
+        {
+          "id": 311811,
+          "name": "Paul Popplewell",
+          "originalName": "Paul Popplewell",
+          "role": "Dustin"
+        },
+        {
+          "id": 234930,
+          "name": "Isabella Laughland",
+          "originalName": "Isabella Laughland",
+          "role": "Swift"
+        },
+        {
+          "id": 204807,
+          "name": "David Fynn",
+          "originalName": "David Fynn",
+          "role": "Oliver"
+        },
+        {
+          "id": 1512263,
+          "name": "Colin Michael Carmichael",
+          "originalName": "Colin Michael Carmichael",
+          "role": "Kai"
+        },
+        {
+          "id": 1408809,
+          "name": "ハナ・ジョン＝カーメン",
+          "originalName": "Hannah John-Kamen",
+          "role": "Selma Telse"
+        },
+        {
+          "id": 570323,
+          "name": "Kerrie Hayes",
+          "originalName": "Kerrie Hayes",
+          "role": "Glee"
+        },
+        {
+          "id": 1762541,
+          "name": "Eugene O'Hare",
+          "originalName": "Eugene O'Hare",
+          "role": "Hammond"
+        },
+        {
+          "id": 1625157,
+          "name": "Jaimi Barbakoff",
+          "originalName": "Jaimi Barbakoff",
+          "role": "Anna"
+        },
+        {
+          "id": 3393503,
+          "name": "Mercè Ribot",
+          "originalName": "Mercè Ribot",
+          "role": "Big Shot Registration Lady"
+        },
+        {
+          "id": 4261496,
+          "name": "Matthew Burgess",
+          "originalName": "Matthew Burgess",
+          "role": "Botherguts Host"
+        },
+        {
+          "id": 3356667,
+          "name": "Laura Power",
+          "originalName": "Laura Power",
+          "role": "Interviewer"
+        },
+        {
+          "id": 1085178,
+          "name": "Matt Stokoe",
+          "originalName": "Matt Stokoe",
+          "role": "Guard"
+        },
+        {
+          "id": 206919,
+          "name": "ダニエル・カルーヤ",
+          "originalName": "Daniel Kaluuya",
+          "role": "Bingham 'Bing' Madsen"
         }
       ],
       "genres": [
@@ -59476,7 +61157,11 @@
         "ドラマ",
         "謎"
       ],
-      "castCheckedAt": "2026-10-12T04:28:43.271036+00:00"
+      "castCheckedAt": "2026-10-12T20:51:36.494363+00:00",
+      "castResolverVersion": 2,
+      "contentType": "tv_episode",
+      "seasonNumber": 1,
+      "episodeNumber": 2
     },
     "custom-1790185843981-dk0y": {
       "tmdbId": 215,
@@ -59617,84 +61302,94 @@
       "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00",
       "cast": [
         {
-          "id": 39459,
-          "name": "ヘイリー・アトウェル",
-          "aliases": []
+          "id": 59860,
+          "name": "アリス・イヴ",
+          "originalName": "Alice Eve",
+          "role": "Naomi Blestow"
         },
         {
-          "id": 93210,
-          "name": "ドーナル・グリーソン",
-          "aliases": []
+          "id": 1956,
+          "name": "チェリー・ジョーンズ",
+          "originalName": "Cherry Jones",
+          "role": "Susan Taylor"
         },
         {
-          "id": 139549,
-          "name": "ロリー・キニア",
-          "aliases": []
+          "id": 1205278,
+          "name": "ジェームズ・ノートン",
+          "originalName": "James Norton",
+          "role": "Ryan Pound"
         },
         {
-          "id": 30083,
-          "name": "リンゼイ・ダンカン",
-          "aliases": []
+          "id": 64295,
+          "name": "アラン・リッチソン",
+          "originalName": "Alan Ritchson",
+          "role": "Paul Mathesen"
         },
         {
-          "id": 20425,
-          "name": "Donald Sumpter",
-          "aliases": []
+          "id": 209458,
+          "name": "Daisy Haggard",
+          "originalName": "Daisy Haggard",
+          "role": "Bethany 'Bets' Jones"
         },
         {
-          "id": 43034,
-          "name": "トム・グッドマン＝ヒル",
-          "aliases": []
+          "id": 884406,
+          "name": "スザンナ・フィールディング",
+          "originalName": "Susannah Fielding",
+          "role": "Carol"
         },
         {
-          "id": 20286,
-          "name": "Toby Kebbell",
-          "aliases": []
+          "id": 1368012,
+          "name": "Michaela Coel",
+          "originalName": "Michaela Coel",
+          "role": "Airline Stewardess"
         },
         {
-          "id": 202734,
-          "name": "Lenora Crichlow",
-          "aliases": []
+          "id": 20471,
+          "name": "Demetri Goritsas",
+          "originalName": "Demetri Goritsas",
+          "role": "Hansen"
         },
         {
-          "id": 17078,
-          "name": "Michael Smiley",
-          "aliases": []
+          "id": 1411379,
+          "name": "カディフ・カーワン",
+          "originalName": "Kadiff Kirwan",
+          "role": "Chester"
         },
         {
-          "id": 986808,
-          "name": "ワイアット・ラッセル",
-          "aliases": []
+          "id": 1479869,
+          "name": "ショペ・ディリス",
+          "originalName": "Ṣọpẹ́ Dìrísù",
+          "role": "Man in Jail"
         },
         {
-          "id": 211368,
-          "name": "Daniel Rigby",
-          "aliases": []
+          "id": 1491629,
+          "name": "Clayton Evertson",
+          "originalName": "Clayton Evertson",
+          "role": "Ted"
         },
         {
-          "id": 80149,
-          "name": "Douglas Hodge",
-          "aliases": []
+          "id": 1360630,
+          "name": "Andrew Roux",
+          "originalName": "Andrew Roux",
+          "role": "Electro Station Assistant"
         },
         {
-          "id": 86477,
-          "name": "Claire Keelan",
-          "aliases": []
+          "id": 1503076,
+          "name": "Anjana Vasan",
+          "originalName": "Anjana Vasan",
+          "role": "Space Cop"
         },
         {
-          "id": 36668,
-          "name": "Sinéad Matthews",
-          "aliases": []
+          "id": 107525,
+          "name": "Colin Moss",
+          "originalName": "Colin Moss",
+          "role": "Anthony"
         },
         {
-          "id": 1836,
-          "name": "ジュリア・デイヴィス",
-          "aliases": []
-        },
-        {
-          "id": 1636813,
-          "name": "Ashley Thomas",
-          "aliases": []
+          "id": 2896748,
+          "name": "Nambitha Ben-Mazwi",
+          "originalName": "Nambitha Ben-Mazwi",
+          "role": "Glam Woman"
         }
       ],
       "genres": [
@@ -59702,7 +61397,11 @@
         "ドラマ",
         "謎"
       ],
-      "castCheckedAt": "2026-10-12T04:28:43.271036+00:00"
+      "castCheckedAt": "2026-10-12T20:51:38.486298+00:00",
+      "castResolverVersion": 2,
+      "contentType": "tv_episode",
+      "seasonNumber": 3,
+      "episodeNumber": 1
     },
     "lb-354-aNGk": {
       "tmdbId": 329865,
@@ -60482,84 +62181,94 @@
       "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00",
       "cast": [
         {
-          "id": 39459,
-          "name": "ヘイリー・アトウェル",
-          "aliases": []
-        },
-        {
-          "id": 93210,
-          "name": "ドーナル・グリーソン",
-          "aliases": []
-        },
-        {
           "id": 139549,
           "name": "ロリー・キニア",
-          "aliases": []
+          "originalName": "Rory Kinnear",
+          "role": "Michael Callow"
         },
         {
           "id": 30083,
           "name": "リンゼイ・ダンカン",
-          "aliases": []
+          "originalName": "Lindsay Duncan",
+          "role": "Alex Cairns"
         },
         {
           "id": 20425,
           "name": "Donald Sumpter",
-          "aliases": []
+          "originalName": "Donald Sumpter",
+          "role": "Julian Hereford"
         },
         {
           "id": 43034,
           "name": "トム・グッドマン＝ヒル",
-          "aliases": []
+          "originalName": "Tom Goodman-Hill",
+          "role": "Tom Blice"
         },
         {
-          "id": 20286,
-          "name": "Toby Kebbell",
-          "aliases": []
+          "id": 145632,
+          "name": "Anna Wilson-Jones",
+          "originalName": "Anna Wilson-Jones",
+          "role": "Jane Callow"
         },
         {
-          "id": 202734,
-          "name": "Lenora Crichlow",
-          "aliases": []
+          "id": 14432,
+          "name": "パトリック・ケネディ",
+          "originalName": "Patrick Kennedy",
+          "role": "Section Chief Walker"
         },
         {
-          "id": 17078,
-          "name": "Michael Smiley",
-          "aliases": []
+          "id": 39970,
+          "name": "Alastair Mackenzie",
+          "originalName": "Alastair Mackenzie",
+          "role": "Martin"
         },
         {
-          "id": 986808,
-          "name": "ワイアット・ラッセル",
-          "aliases": []
+          "id": 1619295,
+          "name": "Chetna Pandya",
+          "originalName": "Chetna Pandya",
+          "role": "Malaika"
         },
         {
-          "id": 211368,
-          "name": "Daniel Rigby",
-          "aliases": []
+          "id": 126042,
+          "name": "アレックス・マックイーン",
+          "originalName": "Alex Macqueen",
+          "role": "Special Agent Callett"
         },
         {
-          "id": 80149,
-          "name": "Douglas Hodge",
-          "aliases": []
+          "id": 86467,
+          "name": "Jay Simpson",
+          "originalName": "Jay Simpson",
+          "role": "Rod Senseless"
         },
         {
-          "id": 86477,
-          "name": "Claire Keelan",
-          "aliases": []
+          "id": 2026848,
+          "name": "Helen Fospero",
+          "originalName": "Helen Fospero",
+          "role": "Lucinda Towne"
         },
         {
-          "id": 36668,
-          "name": "Sinéad Matthews",
-          "aliases": []
+          "id": 1095524,
+          "name": "Lydia Wilson",
+          "originalName": "Lydia Wilson",
+          "role": "Princess Susannah"
         },
         {
-          "id": 1836,
-          "name": "ジュリア・デイヴィス",
-          "aliases": []
+          "id": 1151957,
+          "name": "Sophie Kennedy Clark",
+          "originalName": "Sophie Kennedy Clark",
+          "role": "Lauren"
         },
         {
-          "id": 1636813,
-          "name": "Ashley Thomas",
-          "aliases": []
+          "id": 55468,
+          "name": "アンドリュー・ノット",
+          "originalName": "Andrew Knott",
+          "role": "Brian"
+        },
+        {
+          "id": 85718,
+          "name": "アレン・リーチ",
+          "originalName": "Allen Leech",
+          "role": "Pike"
         }
       ],
       "genres": [
@@ -60567,7 +62276,11 @@
         "ドラマ",
         "謎"
       ],
-      "castCheckedAt": "2026-10-12T04:28:43.271036+00:00"
+      "castCheckedAt": "2026-10-12T20:51:36.242655+00:00",
+      "castResolverVersion": 2,
+      "contentType": "tv_episode",
+      "seasonNumber": 1,
+      "episodeNumber": 1
     },
     "lb-338-a9lm": {
       "tmdbId": 315011,
@@ -61363,82 +63076,50 @@
         {
           "id": 39459,
           "name": "ヘイリー・アトウェル",
-          "aliases": []
+          "originalName": "Hayley Atwell",
+          "role": "Martha Starmer"
         },
         {
           "id": 93210,
           "name": "ドーナル・グリーソン",
-          "aliases": []
-        },
-        {
-          "id": 139549,
-          "name": "ロリー・キニア",
-          "aliases": []
-        },
-        {
-          "id": 30083,
-          "name": "リンゼイ・ダンカン",
-          "aliases": []
-        },
-        {
-          "id": 20425,
-          "name": "Donald Sumpter",
-          "aliases": []
-        },
-        {
-          "id": 43034,
-          "name": "トム・グッドマン＝ヒル",
-          "aliases": []
-        },
-        {
-          "id": 20286,
-          "name": "Toby Kebbell",
-          "aliases": []
-        },
-        {
-          "id": 202734,
-          "name": "Lenora Crichlow",
-          "aliases": []
-        },
-        {
-          "id": 17078,
-          "name": "Michael Smiley",
-          "aliases": []
-        },
-        {
-          "id": 986808,
-          "name": "ワイアット・ラッセル",
-          "aliases": []
-        },
-        {
-          "id": 211368,
-          "name": "Daniel Rigby",
-          "aliases": []
-        },
-        {
-          "id": 80149,
-          "name": "Douglas Hodge",
-          "aliases": []
+          "originalName": "Domhnall Gleeson",
+          "role": "Ash Starmer"
         },
         {
           "id": 86477,
           "name": "Claire Keelan",
-          "aliases": []
+          "originalName": "Claire Keelan",
+          "role": "Naomi"
         },
         {
           "id": 36668,
           "name": "Sinéad Matthews",
-          "aliases": []
+          "originalName": "Sinéad Matthews",
+          "role": "Sarah"
         },
         {
-          "id": 1836,
-          "name": "ジュリア・デイヴィス",
-          "aliases": []
+          "id": 1256710,
+          "name": "Flora Nicholson",
+          "originalName": "Flora Nicholson",
+          "role": "Midwife"
         },
         {
-          "id": 1636813,
-          "name": "Ashley Thomas",
-          "aliases": []
+          "id": 1256674,
+          "name": "Glenn Hanning",
+          "originalName": "Glenn Hanning",
+          "role": "Delivery Man"
+        },
+        {
+          "id": 1256622,
+          "name": "Tim Delap",
+          "originalName": "Tim Delap",
+          "role": "Simon"
+        },
+        {
+          "id": 1866895,
+          "name": "Indira Ainger",
+          "originalName": "Indira Ainger",
+          "role": "Martha's Daughter"
         }
       ],
       "genres": [
@@ -61446,7 +63127,11 @@
         "ドラマ",
         "謎"
       ],
-      "castCheckedAt": "2026-10-12T04:28:43.271036+00:00"
+      "castCheckedAt": "2026-10-12T20:51:36.749091+00:00",
+      "castResolverVersion": 2,
+      "contentType": "tv_episode",
+      "seasonNumber": 2,
+      "episodeNumber": 1
     },
     "lb-343-3zuA": {
       "tmdbId": 105210,
@@ -62343,84 +64028,70 @@
       "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00",
       "cast": [
         {
-          "id": 39459,
-          "name": "ヘイリー・アトウェル",
-          "aliases": []
-        },
-        {
-          "id": 93210,
-          "name": "ドーナル・グリーソン",
-          "aliases": []
-        },
-        {
-          "id": 139549,
-          "name": "ロリー・キニア",
-          "aliases": []
-        },
-        {
-          "id": 30083,
-          "name": "リンゼイ・ダンカン",
-          "aliases": []
-        },
-        {
-          "id": 20425,
-          "name": "Donald Sumpter",
-          "aliases": []
-        },
-        {
-          "id": 43034,
-          "name": "トム・グッドマン＝ヒル",
-          "aliases": []
-        },
-        {
-          "id": 20286,
-          "name": "Toby Kebbell",
-          "aliases": []
-        },
-        {
-          "id": 202734,
-          "name": "Lenora Crichlow",
-          "aliases": []
-        },
-        {
-          "id": 17078,
-          "name": "Michael Smiley",
-          "aliases": []
-        },
-        {
           "id": 986808,
           "name": "ワイアット・ラッセル",
-          "aliases": []
+          "originalName": "Wyatt Russell",
+          "role": "Cooper Redfield"
         },
         {
-          "id": 211368,
-          "name": "Daniel Rigby",
-          "aliases": []
+          "id": 1408809,
+          "name": "ハナ・ジョン＝カーメン",
+          "originalName": "Hannah John-Kamen",
+          "role": "Sonja"
         },
         {
-          "id": 80149,
-          "name": "Douglas Hodge",
-          "aliases": []
+          "id": 134774,
+          "name": "ウンミ・モサク",
+          "originalName": "Wunmi Mosaku",
+          "role": "Katie"
         },
         {
-          "id": 86477,
-          "name": "Claire Keelan",
-          "aliases": []
+          "id": 1155715,
+          "name": "山村 憲之介",
+          "originalName": "山村 憲之介",
+          "role": "Shou Saito"
         },
         {
-          "id": 36668,
-          "name": "Sinéad Matthews",
-          "aliases": []
+          "id": 556446,
+          "name": "Elizabeth Moynihan",
+          "originalName": "Elizabeth Moynihan",
+          "role": "Cooper's Mum"
         },
         {
-          "id": 1836,
-          "name": "ジュリア・デイヴィス",
-          "aliases": []
+          "id": 1477995,
+          "name": "Jamie Paul",
+          "originalName": "Jamie Paul",
+          "role": "Rick Peters"
         },
         {
-          "id": 1636813,
-          "name": "Ashley Thomas",
-          "aliases": []
+          "id": 1876970,
+          "name": "Jessica Neil",
+          "originalName": "Jessica Neil",
+          "role": "Scared Girl on Plane"
+        },
+        {
+          "id": 5596099,
+          "name": "Jade Francine",
+          "originalName": "Jade Francine",
+          "role": "Pub Local (uncredited)"
+        },
+        {
+          "id": 5596100,
+          "name": "Alessandro Neri",
+          "originalName": "Alessandro Neri",
+          "role": "Tourist (uncredited)"
+        },
+        {
+          "id": 1813796,
+          "name": "Deborah Rock",
+          "originalName": "Deborah Rock",
+          "role": "Airline Passenger (uncredited)"
+        },
+        {
+          "id": 5596102,
+          "name": "James Tufnell",
+          "originalName": "James Tufnell",
+          "role": "Lab Technician (uncredited)"
         }
       ],
       "genres": [
@@ -62428,7 +64099,11 @@
         "ドラマ",
         "謎"
       ],
-      "castCheckedAt": "2026-10-12T04:28:43.271036+00:00"
+      "castCheckedAt": "2026-10-12T20:51:38.282511+00:00",
+      "castResolverVersion": 2,
+      "contentType": "tv_episode",
+      "seasonNumber": 3,
+      "episodeNumber": 2
     },
     "lb-340-3r58": {
       "tmdbId": 100402,
@@ -62936,84 +64611,94 @@
       "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00",
       "cast": [
         {
-          "id": 39459,
-          "name": "ヘイリー・アトウェル",
-          "aliases": []
+          "id": 1145665,
+          "name": "マラカイ・カービー",
+          "originalName": "Malachi Kirby",
+          "role": "Stripe"
         },
         {
-          "id": 93210,
-          "name": "ドーナル・グリーソン",
-          "aliases": []
+          "id": 1443712,
+          "name": "マデリーン・ブルーワー",
+          "originalName": "Madeline Brewer",
+          "role": "Raiman"
         },
         {
-          "id": 139549,
-          "name": "ロリー・キニア",
-          "aliases": []
+          "id": 235125,
+          "name": "Ariane Labed",
+          "originalName": "Ariane Labed",
+          "role": "Catarina"
         },
         {
-          "id": 30083,
-          "name": "リンゼイ・ダンカン",
-          "aliases": []
+          "id": 235416,
+          "name": "サラ・スヌーク",
+          "originalName": "Sarah Snook",
+          "role": "Medina"
         },
         {
-          "id": 20425,
-          "name": "Donald Sumpter",
-          "aliases": []
+          "id": 50217,
+          "name": "マイケル・ケリー",
+          "originalName": "Michael Kelly",
+          "role": "Arquette"
         },
         {
-          "id": 43034,
-          "name": "トム・グッドマン＝ヒル",
-          "aliases": []
+          "id": 1711173,
+          "name": "コラ・ボキニ",
+          "originalName": "Kola Bokinni",
+          "role": "Lennard"
         },
         {
-          "id": 20286,
-          "name": "Toby Kebbell",
-          "aliases": []
+          "id": 39661,
+          "name": "Francis Magee",
+          "originalName": "Francis Magee",
+          "role": "Parn Heidekker"
         },
         {
-          "id": 202734,
-          "name": "Lenora Crichlow",
-          "aliases": []
+          "id": 1347005,
+          "name": "Aruhan Galieva",
+          "originalName": "Aruhan Galieva",
+          "role": "Village Mother"
         },
         {
-          "id": 17078,
-          "name": "Michael Smiley",
-          "aliases": []
+          "id": 1743499,
+          "name": "Simon Connolly",
+          "originalName": "Simon Connolly",
+          "role": "Doctor"
         },
         {
-          "id": 986808,
-          "name": "ワイアット・ラッセル",
-          "aliases": []
+          "id": 1980397,
+          "name": "Dean Ashton",
+          "originalName": "Dean Ashton",
+          "role": "Guard Bradley"
         },
         {
-          "id": 211368,
-          "name": "Daniel Rigby",
-          "aliases": []
+          "id": 3196870,
+          "name": "Kavé Niku",
+          "originalName": "Kavé Niku",
+          "role": "Villager"
         },
         {
-          "id": 80149,
-          "name": "Douglas Hodge",
-          "aliases": []
+          "id": 1264776,
+          "name": "Thomas Thoroe",
+          "originalName": "Thomas Thoroe",
+          "role": "Villager #2"
         },
         {
-          "id": 86477,
-          "name": "Claire Keelan",
-          "aliases": []
+          "id": 2212127,
+          "name": "Loreece Harrison",
+          "originalName": "Loreece Harrison",
+          "role": "Dream Girl"
         },
         {
-          "id": 36668,
-          "name": "Sinéad Matthews",
-          "aliases": []
+          "id": 1992663,
+          "name": "Toby Oliver",
+          "originalName": "Toby Oliver",
+          "role": "Boy Roach"
         },
         {
-          "id": 1836,
-          "name": "ジュリア・デイヴィス",
-          "aliases": []
-        },
-        {
-          "id": 1636813,
-          "name": "Ashley Thomas",
-          "aliases": []
+          "id": 207451,
+          "name": "Michael Birch",
+          "originalName": "Michael Birch",
+          "role": "Roach"
         }
       ],
       "genres": [
@@ -63021,7 +64706,11 @@
         "ドラマ",
         "謎"
       ],
-      "castCheckedAt": "2026-10-12T04:28:43.271036+00:00"
+      "castCheckedAt": "2026-10-12T20:51:39.483372+00:00",
+      "castResolverVersion": 2,
+      "contentType": "tv_episode",
+      "seasonNumber": 3,
+      "episodeNumber": 5
     },
     "lb-106-29Ik": {
       "tmdbId": 752,
@@ -65387,7 +67076,101 @@
       "directorAliases": [
         "静野孔文"
       ],
-      "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00"
+      "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00",
+      "cast": [
+        {
+          "id": 68470,
+          "name": "高山みなみ",
+          "originalName": "高山みなみ",
+          "role": "Conan Edogawa (voice)"
+        },
+        {
+          "id": 68472,
+          "name": "山口勝平",
+          "originalName": "山口勝平",
+          "role": "Shinichi Kudo (voice)"
+        },
+        {
+          "id": 87582,
+          "name": "山崎和佳奈",
+          "originalName": "山崎和佳奈",
+          "role": "Ran Mouri (voice)"
+        },
+        {
+          "id": 237076,
+          "name": "小山力也",
+          "originalName": "小山力也",
+          "role": "Kogoro Mouri (voice)"
+        },
+        {
+          "id": 55662,
+          "name": "日髙のり子",
+          "originalName": "日髙のり子",
+          "role": "Masumi Sera (voice)"
+        },
+        {
+          "id": 90561,
+          "name": "池田秀一",
+          "originalName": "池田秀一",
+          "role": "Shuichi Akai (voice)"
+        },
+        {
+          "id": 89878,
+          "name": "置鮎龍太郎",
+          "originalName": "置鮎龍太郎",
+          "role": "Subaru Okiya / Fumimaro Ayanokoji (voice)"
+        },
+        {
+          "id": 40325,
+          "name": "林原めぐみ",
+          "originalName": "林原めぐみ",
+          "role": "Ai Haibara (voice)"
+        },
+        {
+          "id": 142704,
+          "name": "緒方賢一",
+          "originalName": "緒方賢一",
+          "role": "Hiroshi Agasa (voice)"
+        },
+        {
+          "id": 1244457,
+          "name": "岩居由希子",
+          "originalName": "岩居由希子",
+          "role": "Ayumi Yoshida (voice)"
+        },
+        {
+          "id": 112278,
+          "name": "高木渉",
+          "originalName": "高木渉",
+          "role": "Wataru Takagi / Genta Kojima (voice)"
+        },
+        {
+          "id": 73044,
+          "name": "大谷育江",
+          "originalName": "大谷育江",
+          "role": "Mitsuhiko Tsuburaya (voice)"
+        },
+        {
+          "id": 87585,
+          "name": "松井菜桜子",
+          "originalName": "松井菜桜子",
+          "role": "Sonoko Suzuki (voice)"
+        },
+        {
+          "id": 625,
+          "name": "家弓家正",
+          "originalName": "家弓家正",
+          "role": "James Black (voice)"
+        },
+        {
+          "id": 554537,
+          "name": "一城みゆ希",
+          "originalName": "一城みゆ希",
+          "role": "Jodie Starling (voice)"
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:07.465436+00:00",
+      "castResolverVersion": 2
     },
     "custom-1789385860541-6lzx": {
       "tmdbId": 51550,
@@ -65649,7 +67432,101 @@
         "児玉兼嗣",
         "こだま けんじ"
       ],
-      "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00"
+      "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00",
+      "cast": [
+        {
+          "id": 68470,
+          "name": "高山みなみ",
+          "originalName": "高山みなみ",
+          "role": "Conan Edogawa (voice)"
+        },
+        {
+          "id": 68472,
+          "name": "山口勝平",
+          "originalName": "山口勝平",
+          "role": "Shinichi Kudo (voice)"
+        },
+        {
+          "id": 87582,
+          "name": "山崎和佳奈",
+          "originalName": "山崎和佳奈",
+          "role": "Ran Mouri (voice)"
+        },
+        {
+          "id": 54690,
+          "name": "神谷明",
+          "originalName": "神谷明",
+          "role": "Kogoro Mouri (voice)"
+        },
+        {
+          "id": 122501,
+          "name": "堀川りょう",
+          "originalName": "堀川りょう",
+          "role": "Heiji Hattori (voice)"
+        },
+        {
+          "id": 83768,
+          "name": "宮村優子",
+          "originalName": "宮村優子",
+          "role": "Kazuha Toyama (voice)"
+        },
+        {
+          "id": 142704,
+          "name": "緒方賢一",
+          "originalName": "緒方賢一",
+          "role": "Hiroshi Agasa (voice)"
+        },
+        {
+          "id": 40325,
+          "name": "林原めぐみ",
+          "originalName": "林原めぐみ",
+          "role": "Ai Haibara (voice)"
+        },
+        {
+          "id": 1244457,
+          "name": "岩居由希子",
+          "originalName": "岩居由希子",
+          "role": "Ayumi Yoshida (voice)"
+        },
+        {
+          "id": 112278,
+          "name": "高木渉",
+          "originalName": "高木渉",
+          "role": "Genta Kojima / Wataru Takagi (voice)"
+        },
+        {
+          "id": 73044,
+          "name": "大谷育江",
+          "originalName": "大谷育江",
+          "role": "Mitsuhiko Tsuburaya (voice)"
+        },
+        {
+          "id": 87585,
+          "name": "松井菜桜子",
+          "originalName": "松井菜桜子",
+          "role": "Sonoko Suzuki (voice)"
+        },
+        {
+          "id": 89878,
+          "name": "置鮎龍太郎",
+          "originalName": "置鮎龍太郎",
+          "role": "Fumimaro Ayanokoji (voice)"
+        },
+        {
+          "id": 84504,
+          "name": "若本規夫",
+          "originalName": "若本規夫",
+          "role": "Gorō Ōtaki (voice)"
+        },
+        {
+          "id": 87583,
+          "name": "茶風林",
+          "originalName": "茶風林",
+          "role": "Juzo Megure (voice)"
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:11.468076+00:00",
+      "castResolverVersion": 2
     },
     "lb-230-43d0": {
       "tmdbId": 122734,
@@ -67219,40 +69096,134 @@
       "castCheckedAt": "2026-10-12T04:28:43.271036+00:00"
     },
     "custom-1790508959663-6kld": {
-      "tmdbId": null,
+      "tmdbId": 1333100,
       "title": "Attack on Titan: THE LAST ATTACK",
       "year": "2024",
-      "type": "drama",
+      "type": "movie",
       "directors": [
         "Yūichirō Hayashi"
       ],
       "creators": [],
       "posterPath": "",
-      "source": "curated-film-and-series-credits"
+      "source": "curated-film-and-series-credits",
+      "cast": [
+        {
+          "id": 149894,
+          "name": "梶裕貴",
+          "originalName": "梶裕貴",
+          "role": "Eren Yeager (voice)"
+        },
+        {
+          "id": 1224288,
+          "name": "石川由依",
+          "originalName": "石川由依",
+          "role": "Mikasa Ackerman (voice)"
+        },
+        {
+          "id": 90135,
+          "name": "井上麻里奈",
+          "originalName": "井上麻里奈",
+          "role": "Armin Arlert (voice)"
+        },
+        {
+          "id": 93801,
+          "name": "神谷浩史",
+          "originalName": "神谷浩史",
+          "role": "Levi Ackerman (voice)"
+        },
+        {
+          "id": 1253896,
+          "name": "嶋村侑",
+          "originalName": "嶋村侑",
+          "role": "Annie Leonheart (voice)"
+        },
+        {
+          "id": 81243,
+          "name": "朴璐美",
+          "originalName": "朴璐美",
+          "role": "Hange Zoë (voice)"
+        },
+        {
+          "id": 1253008,
+          "name": "細谷佳正",
+          "originalName": "細谷佳正",
+          "role": "Reiner Braun (voice)"
+        },
+        {
+          "id": 553959,
+          "name": "谷山紀章",
+          "originalName": "谷山紀章",
+          "role": "Jean Kirstein (voice)"
+        },
+        {
+          "id": 119145,
+          "name": "下野紘",
+          "originalName": "下野紘",
+          "role": "Connie Springer (voice)"
+        },
+        {
+          "id": 2951334,
+          "name": "樋渡宏嗣",
+          "originalName": "樋渡宏嗣",
+          "role": "Onyankopon (voice)"
+        },
+        {
+          "id": 84508,
+          "name": "子安武人",
+          "originalName": "子安武人",
+          "role": "Zeke Yeager (voice)"
+        },
+        {
+          "id": 992869,
+          "name": "佐倉綾音",
+          "originalName": "佐倉綾音",
+          "role": "Gabi Braun (voice)"
+        },
+        {
+          "id": 1256603,
+          "name": "花江夏樹",
+          "originalName": "花江夏樹",
+          "role": "Falco Grice (voice)"
+        },
+        {
+          "id": 1255653,
+          "name": "沼倉愛美",
+          "originalName": "沼倉愛美",
+          "role": "Pieck Finger (voice)"
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:32.224969+00:00",
+      "castResolverVersion": 2
     },
     "custom-1790508959270-dbu3": {
-      "tmdbId": null,
+      "tmdbId": 313028,
       "title": "Attack on Titan The Final Chapters: Special 2",
       "year": "2023",
-      "type": "drama",
+      "type": "tv",
       "directors": [
         "Yūichirō Hayashi"
       ],
       "creators": [],
       "posterPath": "",
-      "source": "curated-film-and-series-credits"
+      "source": "curated-film-and-series-credits",
+      "cast": [],
+      "castCheckedAt": "2026-10-12T20:51:31.977835+00:00",
+      "castResolverVersion": 2
     },
     "custom-1790508958909-q6d6": {
-      "tmdbId": null,
+      "tmdbId": 313024,
       "title": "Attack on Titan The Final Chapters: Special 1",
       "year": "2023",
-      "type": "drama",
+      "type": "tv",
       "directors": [
         "Yūichirō Hayashi"
       ],
       "creators": [],
       "posterPath": "",
-      "source": "curated-film-and-series-credits"
+      "source": "curated-film-and-series-credits",
+      "cast": [],
+      "castCheckedAt": "2026-10-12T20:51:30.480614+00:00",
+      "castResolverVersion": 2
     },
     "lb-253-SVAW": {
       "tmdbId": 45923,
@@ -67269,31 +69240,313 @@
         "堤幸彦",
         "堤ユキヒコ"
       ],
-      "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00"
+      "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00",
+      "cast": [
+        {
+          "id": 84620,
+          "name": "戸田恵梨香",
+          "originalName": "戸田恵梨香",
+          "role": "Saya Toma"
+        },
+        {
+          "id": 33517,
+          "name": "加瀬亮",
+          "originalName": "加瀬亮",
+          "role": "Takeru Sebumi"
+        },
+        {
+          "id": 1257036,
+          "name": "竜雷太",
+          "originalName": "竜雷太",
+          "role": "Kotaro Nonomura"
+        },
+        {
+          "id": 91871,
+          "name": "福田沙紀",
+          "originalName": "福田沙紀",
+          "role": "Mirei Shimura"
+        },
+        {
+          "id": 127299,
+          "name": "城田優",
+          "originalName": "城田優",
+          "role": "Satoshi Chii"
+        },
+        {
+          "id": 225730,
+          "name": "神木隆之介",
+          "originalName": "神木隆之介",
+          "role": "Juichi Ninomae"
+        },
+        {
+          "id": 1039305,
+          "name": "有村架純",
+          "originalName": "有村架純",
+          "role": "Miyabi Masaki"
+        },
+        {
+          "id": 63696,
+          "name": "椎名桔平",
+          "originalName": "椎名桔平",
+          "role": "Sekehiro Tsuda"
+        },
+        {
+          "id": 58604,
+          "name": "大森南朋",
+          "originalName": "大森南朋",
+          "role": "Mitsugu Satomi"
+        },
+        {
+          "id": 1248335,
+          "name": "上川隆也",
+          "originalName": "上川隆也",
+          "role": "Chihiro Waki"
+        },
+        {
+          "id": 73139,
+          "name": "佐野史郎",
+          "originalName": "佐野史郎",
+          "role": "Yuichi Oshima"
+        },
+        {
+          "id": 97341,
+          "name": "金子賢",
+          "originalName": "金子賢",
+          "role": "Haruki Gokitani"
+        },
+        {
+          "id": 237323,
+          "name": "滝藤賢一",
+          "originalName": "滝藤賢一",
+          "role": "Takuya Onikado"
+        },
+        {
+          "id": 115700,
+          "name": "斎藤工",
+          "originalName": "斎藤工",
+          "role": "Sadao Itano"
+        },
+        {
+          "id": 96563,
+          "name": "岡田義徳",
+          "originalName": "岡田義徳",
+          "role": "Kazuo Matsui"
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:10.216738+00:00",
+      "castResolverVersion": 2
     },
     "lb-250-bAcS": {
-      "tmdbId": null,
+      "tmdbId": 345699,
       "title": "SPEC: Life",
       "year": "2012",
-      "type": "drama",
+      "type": "movie",
       "directors": [
         "Yukihiko Tsutsumi"
       ],
       "creators": [],
       "posterPath": "",
-      "source": "curated-film-and-series-credits"
+      "source": "curated-film-and-series-credits",
+      "cast": [
+        {
+          "id": 84620,
+          "name": "戸田恵梨香",
+          "originalName": "戸田恵梨香",
+          "role": "Saya Toma"
+        },
+        {
+          "id": 33517,
+          "name": "加瀬亮",
+          "originalName": "加瀬亮",
+          "role": "Takeru Sebumi"
+        },
+        {
+          "id": 1257036,
+          "name": "竜雷太",
+          "originalName": "竜雷太",
+          "role": "Kotaro Nonomura"
+        },
+        {
+          "id": 118577,
+          "name": "谷村美月",
+          "originalName": "谷村美月",
+          "role": "Nozomi Kuon"
+        },
+        {
+          "id": 2542,
+          "name": "北村一輝",
+          "originalName": "北村一輝",
+          "role": "Shu Kikkawa"
+        },
+        {
+          "id": 137028,
+          "name": "でんでん",
+          "originalName": "でんでん",
+          "role": "Kenzo Ichiyanagi"
+        },
+        {
+          "id": 225730,
+          "name": "神木隆之介",
+          "originalName": "神木隆之介",
+          "role": "Juichi Ninomae"
+        },
+        {
+          "id": 91871,
+          "name": "福田沙紀",
+          "originalName": "福田沙紀",
+          "role": "Mirei Shimura"
+        },
+        {
+          "id": 1039220,
+          "name": "安田顕",
+          "originalName": "安田顕",
+          "role": "Ryota Unno"
+        },
+        {
+          "id": 587661,
+          "name": "田中哲司",
+          "originalName": "田中哲司",
+          "role": "Toshiaki Reisen"
+        },
+        {
+          "id": 1186978,
+          "name": "真野恵里菜",
+          "originalName": "真野恵里菜",
+          "role": "Hoshi Satori"
+        },
+        {
+          "id": 1417538,
+          "name": "宅間孝行",
+          "originalName": "宅間孝行",
+          "role": "Akira Kobe"
+        },
+        {
+          "id": 1406716,
+          "name": "岡田浩暉",
+          "originalName": "岡田浩暉",
+          "role": "Kaoru Baba"
+        },
+        {
+          "id": 1167120,
+          "name": "松澤一之",
+          "originalName": "松澤一之",
+          "role": "Ayumu Shikahama"
+        },
+        {
+          "id": 127306,
+          "name": "さいねい龍二",
+          "originalName": "さいねい龍二",
+          "role": "Souji Inomata"
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:08.718570+00:00",
+      "castResolverVersion": 2
     },
     "lb-254-6ZCG": {
-      "tmdbId": null,
+      "tmdbId": 237439,
       "title": "SPEC: Zero",
       "year": "2013",
-      "type": "tv",
+      "type": "movie",
       "directors": [
         "Yukihiko Tsutsumi"
       ],
       "creators": [],
       "posterPath": "",
-      "source": "corrected-credits-recheck-required"
+      "source": "corrected-credits-recheck-required",
+      "cast": [
+        {
+          "id": 84620,
+          "name": "戸田恵梨香",
+          "originalName": "戸田恵梨香",
+          "role": "Saya Toma"
+        },
+        {
+          "id": 33517,
+          "name": "加瀬亮",
+          "originalName": "加瀬亮",
+          "role": "Takeru Sebumi"
+        },
+        {
+          "id": 91871,
+          "name": "福田沙紀",
+          "originalName": "福田沙紀",
+          "role": "Mirei Shimura"
+        },
+        {
+          "id": 68706,
+          "name": "徳井優",
+          "originalName": "徳井優",
+          "role": "Akio Kondo"
+        },
+        {
+          "id": 587661,
+          "name": "田中哲司",
+          "originalName": "田中哲司",
+          "role": "Toshiaki Reisen"
+        },
+        {
+          "id": 127299,
+          "name": "城田優",
+          "originalName": "城田優",
+          "role": "Satoshi Chii"
+        },
+        {
+          "id": 1406716,
+          "name": "岡田浩暉",
+          "originalName": "岡田浩暉",
+          "role": "Kaoru Baba"
+        },
+        {
+          "id": 1167120,
+          "name": "松澤一之",
+          "originalName": "松澤一之",
+          "role": "Ayumu Shikahama"
+        },
+        {
+          "id": 127306,
+          "name": "さいねい龍二",
+          "originalName": "さいねい龍二",
+          "role": "Souji Inomada"
+        },
+        {
+          "id": 3027891,
+          "name": "伊藤毅",
+          "originalName": "伊藤毅",
+          "role": "Yusaku Shimura"
+        },
+        {
+          "id": 225730,
+          "name": "神木隆之介",
+          "originalName": "神木隆之介",
+          "role": "Juichi Ninomae"
+        },
+        {
+          "id": 1257036,
+          "name": "竜雷太",
+          "originalName": "竜雷太",
+          "role": "Kotaro Nonomura"
+        },
+        {
+          "id": 1107514,
+          "name": "川島海荷",
+          "originalName": "川島海荷",
+          "role": "Maho Ueno"
+        },
+        {
+          "id": 554498,
+          "name": "南野陽子",
+          "originalName": "南野陽子",
+          "role": ""
+        },
+        {
+          "id": 1605637,
+          "name": "Fujio Miyagawa",
+          "originalName": "Fujio Miyagawa",
+          "role": ""
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:10.463098+00:00",
+      "castResolverVersion": 2
     },
     "custom-1790508960074-n6fj": {
       "tmdbId": 31911,
@@ -67556,16 +69809,110 @@
       "castCheckedAt": "2026-10-12T04:28:43.271036+00:00"
     },
     "custom-1790322758188-46qe": {
-      "tmdbId": null,
+      "tmdbId": 960478,
       "title": "The Full-Time Wife Escapist: New Year's Special",
       "year": "2021",
-      "type": "drama",
+      "type": "movie",
       "directors": [
         "Fuminori Kaneko"
       ],
       "creators": [],
       "posterPath": "",
-      "source": "curated-film-and-series-credits"
+      "source": "curated-film-and-series-credits",
+      "cast": [
+        {
+          "id": 231364,
+          "name": "新垣結衣",
+          "originalName": "新垣結衣",
+          "role": "Mikuri Tsuzaki"
+        },
+        {
+          "id": 1098601,
+          "name": "星野源",
+          "originalName": "星野源",
+          "role": "Hiramasa Tsuzaki"
+        },
+        {
+          "id": 20330,
+          "name": "石田ゆり子",
+          "originalName": "石田ゆり子",
+          "role": "Yuri Tsuchiya"
+        },
+        {
+          "id": 1255724,
+          "name": "大谷亮平",
+          "originalName": "大谷亮平",
+          "role": "Ryota Kazami"
+        },
+        {
+          "id": 90159,
+          "name": "藤井隆",
+          "originalName": "藤井隆",
+          "role": "Hideshi Hino"
+        },
+        {
+          "id": 1186978,
+          "name": "真野恵里菜",
+          "originalName": "真野恵里菜",
+          "role": "Yasue Tanaka"
+        },
+        {
+          "id": 1668610,
+          "name": "成田凌",
+          "originalName": "成田凌",
+          "role": "Natsuki Umehara"
+        },
+        {
+          "id": 1014996,
+          "name": "古舘寛治",
+          "originalName": "古舘寛治",
+          "role": "Yama"
+        },
+        {
+          "id": 235147,
+          "name": "細田善彦",
+          "originalName": "細田善彦",
+          "role": "Chigaya Moriyama"
+        },
+        {
+          "id": 3282306,
+          "name": "高桥瞳",
+          "originalName": "高桥瞳",
+          "role": ""
+        },
+        {
+          "id": 131107,
+          "name": "宇梶剛士",
+          "originalName": "宇梶剛士",
+          "role": "Tochio Moriyama"
+        },
+        {
+          "id": 1211033,
+          "name": "富田靖子",
+          "originalName": "富田靖子",
+          "role": "Sakura Moriyama"
+        },
+        {
+          "id": 146785,
+          "name": "古田新太",
+          "originalName": "古田新太",
+          "role": "Yoritsuna Numata"
+        },
+        {
+          "id": 66153,
+          "name": "西田尚美",
+          "originalName": "西田尚美",
+          "role": "Ibuki Hanamura"
+        },
+        {
+          "id": 1443629,
+          "name": "Moro Shioka",
+          "originalName": "Moro Shioka",
+          "role": "Sohachi Tsuzaki"
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:24.980501+00:00",
+      "castResolverVersion": 2
     },
     "custom-1790322757548-hd0x": {
       "tmdbId": null,
@@ -69621,7 +71968,23 @@
         "副島恵文",
         "清水保行"
       ],
-      "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00"
+      "aliasesCheckedAt": "2026-10-12T04:11:01.544344+00:00",
+      "cast": [
+        {
+          "id": 1306755,
+          "name": "神田愛花",
+          "originalName": "神田愛花",
+          "role": "Announcer (voice)"
+        },
+        {
+          "id": 1306756,
+          "name": "Toshio Watanabe",
+          "originalName": "Toshio Watanabe",
+          "role": "Narrator (voice)"
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:15.725369+00:00",
+      "castResolverVersion": 2
     },
     "custom-1789385860198-bkq0": {
       "tmdbId": 242331,
@@ -69746,8 +72109,8 @@
       "castCheckedAt": "2026-10-12T04:28:43.271036+00:00"
     },
     "custom-1790185844116-j1vu": {
-      "tmdbId": null,
-      "type": "movie",
+      "tmdbId": 132131,
+      "type": "tv",
       "title": "Perfect Blue Lecture Series",
       "year": "2008",
       "directors": [],
@@ -69757,7 +72120,23 @@
       "posterPath": "",
       "source": "official-vap-lecture-presenter",
       "sourceUrl": "https://store.vap.co.jp/syousai.asp?item=VPXV-75206",
-      "creditRole": "講師・解説（監督とは別）"
+      "creditRole": "講師・解説（監督とは別）",
+      "cast": [
+        {
+          "id": 40333,
+          "name": "今敏",
+          "originalName": "今敏",
+          "role": "Himself"
+        },
+        {
+          "id": 145924,
+          "name": "永井流奈",
+          "originalName": "永井流奈",
+          "role": "Herself"
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:17.482246+00:00",
+      "castResolverVersion": 2
     },
     "custom-1790322759131-6bsn": {
       "tmdbId": 296719,
@@ -71474,76 +73853,478 @@
       "source": "official-and-crew-reference"
     },
     "custom-1790322762266-mrn9": {
-      "tmdbId": null,
+      "tmdbId": 356255,
       "title": "Legal High SP",
       "year": "2013",
-      "type": "drama",
+      "type": "movie",
       "directors": [
         "Junichi Ishikawa"
       ],
       "creators": [],
       "posterPath": "",
-      "source": "official-and-crew-reference"
+      "source": "official-and-crew-reference",
+      "cast": [
+        {
+          "id": 76933,
+          "name": "堺雅人",
+          "originalName": "堺雅人",
+          "role": "Kensuke Komikado"
+        },
+        {
+          "id": 231364,
+          "name": "新垣結衣",
+          "originalName": "新垣結衣",
+          "role": "Machiko Mayuzumi"
+        },
+        {
+          "id": 91873,
+          "name": "生瀬勝久",
+          "originalName": "生瀬勝久",
+          "role": "Choichiro Miki"
+        },
+        {
+          "id": 131191,
+          "name": "小池栄子",
+          "originalName": "小池栄子",
+          "role": "Kimie Sawachi"
+        },
+        {
+          "id": 1246899,
+          "name": "田口淳之介",
+          "originalName": "田口淳之介",
+          "role": "Ranmaru Kaga"
+        },
+        {
+          "id": 589923,
+          "name": "榮倉奈々",
+          "originalName": "榮倉奈々",
+          "role": "Minami Fujii"
+        },
+        {
+          "id": 21658,
+          "name": "広末涼子",
+          "originalName": "広末涼子",
+          "role": "Toshiko Beppu"
+        },
+        {
+          "id": 118982,
+          "name": "北大路欣也",
+          "originalName": "北大路欣也",
+          "role": "Isao Teshigawara"
+        },
+        {
+          "id": 227632,
+          "name": "里見浩太朗",
+          "originalName": "里見浩太朗",
+          "role": "Hattori"
+        },
+        {
+          "id": 1433818,
+          "name": "堀内敬子",
+          "originalName": "堀内敬子",
+          "role": "Hidemi Kogure"
+        },
+        {
+          "id": 1307868,
+          "name": "末岡拓人",
+          "originalName": "末岡拓人",
+          "role": "Kazuhiko Kogure"
+        },
+        {
+          "id": 1469324,
+          "name": "岡山智樹",
+          "originalName": "岡山智樹",
+          "role": "Shun Aoyama"
+        },
+        {
+          "id": 1369117,
+          "name": "矢野聖人",
+          "originalName": "矢野聖人",
+          "role": "Takao Ide"
+        },
+        {
+          "id": 1509670,
+          "name": "小野花梨",
+          "originalName": "小野花梨",
+          "role": "Yumiko Abe"
+        },
+        {
+          "id": 1251801,
+          "name": "木下隆行",
+          "originalName": "木下隆行",
+          "role": "Tanuma Kokichi"
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:25.726654+00:00",
+      "castResolverVersion": 2
     },
     "custom-1790322761955-twge": {
-      "tmdbId": null,
+      "tmdbId": 527056,
       "title": "Legal High 2 SP",
       "year": "2014",
-      "type": "drama",
+      "type": "movie",
       "directors": [
         "Junichi Ishikawa"
       ],
       "creators": [],
       "posterPath": "",
-      "source": "official-and-crew-reference"
+      "source": "official-and-crew-reference",
+      "cast": [
+        {
+          "id": 76933,
+          "name": "堺雅人",
+          "originalName": "堺雅人",
+          "role": "Kensuke Komikado"
+        },
+        {
+          "id": 231364,
+          "name": "新垣結衣",
+          "originalName": "新垣結衣",
+          "role": "Machiko Mayuzumi"
+        },
+        {
+          "id": 1185386,
+          "name": "東出昌大",
+          "originalName": "東出昌大",
+          "role": "Fumiya Hirose"
+        },
+        {
+          "id": 1210682,
+          "name": "剛力彩芽",
+          "originalName": "剛力彩芽",
+          "role": "Yoshimi Akame"
+        },
+        {
+          "id": 130659,
+          "name": "吉瀬美智子",
+          "originalName": "吉瀬美智子",
+          "role": "Sayaka Nakahara"
+        },
+        {
+          "id": 58604,
+          "name": "大森南朋",
+          "originalName": "大森南朋",
+          "role": "Kazuma Kujou"
+        },
+        {
+          "id": 227632,
+          "name": "里見浩太朗",
+          "originalName": "里見浩太朗",
+          "role": "Hattori"
+        },
+        {
+          "id": 1246899,
+          "name": "田口淳之介",
+          "originalName": "田口淳之介",
+          "role": "Ranmaru Kaga"
+        },
+        {
+          "id": 91873,
+          "name": "生瀬勝久",
+          "originalName": "生瀬勝久",
+          "role": "Choichiro Miki"
+        },
+        {
+          "id": 131191,
+          "name": "小池栄子",
+          "originalName": "小池栄子",
+          "role": "Kimie Sawachi"
+        },
+        {
+          "id": 1369117,
+          "name": "矢野聖人",
+          "originalName": "矢野聖人",
+          "role": "Takao Ide"
+        },
+        {
+          "id": 1181051,
+          "name": "古谷一行",
+          "originalName": "古谷一行",
+          "role": "Yoshiji Akame"
+        },
+        {
+          "id": 121750,
+          "name": "霧島れいか",
+          "originalName": "霧島れいか",
+          "role": "Tomoe Okabe"
+        },
+        {
+          "id": 1015002,
+          "name": "山田明郷",
+          "originalName": "山田明郷",
+          "role": "Yasufumi Aoba"
+        },
+        {
+          "id": 1014996,
+          "name": "古舘寛治",
+          "originalName": "古舘寛治",
+          "role": "Kunimitsu Isogai"
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:25.472503+00:00",
+      "castResolverVersion": 2
     },
     "custom-1790423280120-qki8": {
-      "tmdbId": null,
+      "tmdbId": 430925,
       "title": "Trick Shinsaku Special",
       "year": "2005",
-      "type": "drama",
+      "type": "movie",
       "directors": [
         "Yukihiko Tsutsumi"
       ],
       "creators": [],
       "posterPath": "",
-      "source": "official-and-crew-reference"
+      "source": "official-and-crew-reference",
+      "cast": [
+        {
+          "id": 58674,
+          "name": "仲間由紀恵",
+          "originalName": "仲間由紀恵",
+          "role": ""
+        },
+        {
+          "id": 66155,
+          "name": "阿部寛",
+          "originalName": "阿部寛",
+          "role": ""
+        },
+        {
+          "id": 91873,
+          "name": "生瀬勝久",
+          "originalName": "生瀬勝久",
+          "role": ""
+        },
+        {
+          "id": 564893,
+          "name": "野際陽子",
+          "originalName": "野際陽子",
+          "role": ""
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:28.226085+00:00",
+      "castResolverVersion": 2
     },
     "custom-1790423279786-lguu": {
-      "tmdbId": null,
+      "tmdbId": 430738,
       "title": "Trick Shinsaku Special 2",
       "year": "2010",
-      "type": "drama",
+      "type": "movie",
       "directors": [
         "Yukihiko Tsutsumi"
       ],
       "creators": [],
       "posterPath": "",
-      "source": "official-and-crew-reference"
+      "source": "official-and-crew-reference",
+      "cast": [
+        {
+          "id": 58674,
+          "name": "仲間由紀恵",
+          "originalName": "仲間由紀恵",
+          "role": "Naoko Yamada"
+        },
+        {
+          "id": 66155,
+          "name": "阿部寛",
+          "originalName": "阿部寛",
+          "role": "Jiro Ueda"
+        },
+        {
+          "id": 91873,
+          "name": "生瀬勝久",
+          "originalName": "生瀬勝久",
+          "role": "Kenzo Yabe"
+        },
+        {
+          "id": 1061236,
+          "name": "姜暢雄",
+          "originalName": "姜暢雄",
+          "role": "Aisuke Kikuchi"
+        },
+        {
+          "id": 564893,
+          "name": "野際陽子",
+          "originalName": "野際陽子",
+          "role": "Satomi Yamada"
+        },
+        {
+          "id": 237363,
+          "name": "永山絢斗",
+          "originalName": "永山絢斗",
+          "role": ""
+        },
+        {
+          "id": 1239043,
+          "name": "逢沢 りな",
+          "originalName": "逢沢 りな",
+          "role": ""
+        },
+        {
+          "id": 1104911,
+          "name": "美波",
+          "originalName": "美波",
+          "role": ""
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:27.978949+00:00",
+      "castResolverVersion": 2
     },
     "custom-1790423280570-6eki": {
-      "tmdbId": null,
+      "tmdbId": 581949,
       "title": "Trick Shinsaku Special 3",
       "year": "2014",
-      "type": "drama",
+      "type": "movie",
       "directors": [
         "Yukihiko Tsutsumi"
       ],
       "creators": [],
       "posterPath": "",
-      "source": "official-and-crew-reference"
+      "source": "official-and-crew-reference",
+      "cast": [
+        {
+          "id": 58674,
+          "name": "仲間由紀恵",
+          "originalName": "仲間由紀恵",
+          "role": ""
+        },
+        {
+          "id": 66155,
+          "name": "阿部寛",
+          "originalName": "阿部寛",
+          "role": ""
+        },
+        {
+          "id": 91873,
+          "name": "生瀬勝久",
+          "originalName": "生瀬勝久",
+          "role": ""
+        },
+        {
+          "id": 564893,
+          "name": "野際陽子",
+          "originalName": "野際陽子",
+          "role": ""
+        },
+        {
+          "id": 1149334,
+          "name": "福士蒼汰",
+          "originalName": "福士蒼汰",
+          "role": ""
+        },
+        {
+          "id": 1115687,
+          "name": "朝倉あき",
+          "originalName": "朝倉あき",
+          "role": ""
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:28.487979+00:00",
+      "castResolverVersion": 2
     },
     "custom-1790322763462-yaoz": {
-      "tmdbId": null,
+      "tmdbId": 1189773,
       "title": "Ikebukuro West Gate Park SP",
       "year": "2003",
-      "type": "drama",
+      "type": "movie",
       "directors": [
         "Yukihiko Tsutsumi"
       ],
       "creators": [],
       "posterPath": "",
-      "source": "official-and-crew-reference"
+      "source": "official-and-crew-reference",
+      "cast": [
+        {
+          "id": 83660,
+          "name": "長瀬智也",
+          "originalName": "長瀬智也",
+          "role": "Makoto Majima"
+        },
+        {
+          "id": 1109632,
+          "name": "加藤あい",
+          "originalName": "加藤あい",
+          "role": "Hikaru"
+        },
+        {
+          "id": 80108,
+          "name": "妻夫木聡",
+          "originalName": "妻夫木聡",
+          "role": "Fujio ‘Saru’ Saitō"
+        },
+        {
+          "id": 1082639,
+          "name": "坂口憲二",
+          "originalName": "坂口憲二",
+          "role": "Yamai"
+        },
+        {
+          "id": 121797,
+          "name": "佐藤隆太",
+          "originalName": "佐藤隆太",
+          "role": "Masa"
+        },
+        {
+          "id": 84755,
+          "name": "窪塚洋介",
+          "originalName": "窪塚洋介",
+          "role": "Takashi"
+        },
+        {
+          "id": 121796,
+          "name": "塚本高史",
+          "originalName": "塚本高史",
+          "role": ""
+        },
+        {
+          "id": 119241,
+          "name": "岡田准一",
+          "originalName": "岡田准一",
+          "role": ""
+        },
+        {
+          "id": 103604,
+          "name": "きたろう",
+          "originalName": "きたろう",
+          "role": "Yoshioka"
+        },
+        {
+          "id": 506447,
+          "name": "金子ノブアキ",
+          "originalName": "金子ノブアキ",
+          "role": ""
+        },
+        {
+          "id": 129827,
+          "name": "浅利陽介",
+          "originalName": "浅利陽介",
+          "role": ""
+        },
+        {
+          "id": 87662,
+          "name": "高橋一生",
+          "originalName": "高橋一生",
+          "role": "Kazunori"
+        },
+        {
+          "id": 96563,
+          "name": "岡田義徳",
+          "originalName": "岡田義徳",
+          "role": ""
+        },
+        {
+          "id": 2027978,
+          "name": "岡本健一",
+          "originalName": "岡本健一",
+          "role": ""
+        },
+        {
+          "id": 484514,
+          "name": "脇知弘",
+          "originalName": "脇知弘",
+          "role": ""
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:25.987701+00:00",
+      "castResolverVersion": 2
     },
     "custom-1790423279439-sn81": {
       "title": "Strawberry Night",
@@ -71553,9 +74334,85 @@
       ],
       "creators": [],
       "posterPath": "",
-      "type": "drama",
-      "tmdbId": null,
-      "source": "official-program-staff"
+      "type": "movie",
+      "tmdbId": 625530,
+      "source": "official-program-staff",
+      "cast": [
+        {
+          "id": 27779,
+          "name": "竹内結子",
+          "originalName": "竹内結子",
+          "role": "Reiko Himekawa"
+        },
+        {
+          "id": 13250,
+          "name": "西島秀俊",
+          "originalName": "西島秀俊",
+          "role": "Kazuo Kikuta"
+        },
+        {
+          "id": 107573,
+          "name": "桐谷健太",
+          "originalName": "桐谷健太",
+          "role": "Shinji Otsuka"
+        },
+        {
+          "id": 35642,
+          "name": "遠藤憲一",
+          "originalName": "遠藤憲一",
+          "role": ""
+        },
+        {
+          "id": 127221,
+          "name": "国仲涼子",
+          "originalName": "国仲涼子",
+          "role": ""
+        },
+        {
+          "id": 91873,
+          "name": "生瀬勝久",
+          "originalName": "生瀬勝久",
+          "role": ""
+        },
+        {
+          "id": 146817,
+          "name": "林遣都",
+          "originalName": "林遣都",
+          "role": ""
+        },
+        {
+          "id": 1256983,
+          "name": "岡本あずさ",
+          "originalName": "岡本あずさ",
+          "role": ""
+        },
+        {
+          "id": 50653,
+          "name": "髙嶋政宏",
+          "originalName": "髙嶋政宏",
+          "role": ""
+        },
+        {
+          "id": 390433,
+          "name": "武田鉄矢",
+          "originalName": "武田鉄矢",
+          "role": ""
+        },
+        {
+          "id": 118577,
+          "name": "谷村美月",
+          "originalName": "谷村美月",
+          "role": ""
+        },
+        {
+          "id": 127895,
+          "name": "渡辺いっけい",
+          "originalName": "渡辺いっけい",
+          "role": ""
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:27.771411+00:00",
+      "castResolverVersion": 2
     },
     "custom-1790322757185-u25f": {
       "title": "JoJo's Bizarre Adventure: Stardust Crusaders",
@@ -71591,14 +74448,96 @@
       ],
       "creators": [],
       "posterPath": "",
-      "type": "drama",
-      "tmdbId": null,
-      "source": "official-program-staff"
+      "type": "movie",
+      "tmdbId": 835865,
+      "source": "official-program-staff",
+      "cast": [
+        {
+          "id": 135373,
+          "name": "織田裕二",
+          "originalName": "織田裕二",
+          "role": "Shunsaku Aoshima"
+        },
+        {
+          "id": 234645,
+          "name": "柳葉敏郎",
+          "originalName": "柳葉敏郎",
+          "role": "Shinji Muroi"
+        },
+        {
+          "id": 110058,
+          "name": "深津絵里",
+          "originalName": "深津絵里",
+          "role": "Sumire Onda"
+        },
+        {
+          "id": 120435,
+          "name": "中山裕介",
+          "originalName": "中山裕介",
+          "role": "Masayoshi Mashita"
+        },
+        {
+          "id": 46364,
+          "name": "小栗旬",
+          "originalName": "小栗旬",
+          "role": "Seiichi Torikai"
+        },
+        {
+          "id": 76934,
+          "name": "伊藤淳史",
+          "originalName": "伊藤淳史",
+          "role": "Shinjiro Waku"
+        },
+        {
+          "id": 101367,
+          "name": "内田有紀",
+          "originalName": "内田有紀",
+          "role": "Natsumi Shinohara"
+        },
+        {
+          "id": 237323,
+          "name": "滝藤賢一",
+          "originalName": "滝藤賢一",
+          "role": "Wang"
+        },
+        {
+          "id": 230860,
+          "name": "川野直輝",
+          "originalName": "川野直輝",
+          "role": "Koji Kuriyama"
+        },
+        {
+          "id": 226829,
+          "name": "甲本雅裕",
+          "originalName": "甲本雅裕",
+          "role": "Kaoru Ogata"
+        },
+        {
+          "id": 1790737,
+          "name": "Lee Hae-in",
+          "originalName": "Lee Hae-in",
+          "role": "Shin Soo-hyeon"
+        },
+        {
+          "id": 544090,
+          "name": "佐戸井けん太",
+          "originalName": "佐戸井けん太",
+          "role": "Jiro Uozumi"
+        },
+        {
+          "id": 544088,
+          "name": "小野武彦",
+          "originalName": "小野武彦",
+          "role": "Kengo Hakamada"
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:32.483301+00:00",
+      "castResolverVersion": 2
     },
     "custom-1791553824276-cl9b": {
       "title": "Tales of the Bizarre: 2019 Fall Special",
       "year": "2019",
-      "type": "tv",
+      "type": "movie",
       "directors": [
         "植田泰史",
         "岩田和行",
@@ -71608,12 +74547,71 @@
       "creators": [],
       "posterPath": "",
       "source": "official-fuji-episode-directors",
-      "sourceUrl": "https://www.fujitv.co.jp/kimyo/2019110901-2019110904.html"
+      "sourceUrl": "https://www.fujitv.co.jp/kimyo/2019110901-2019110904.html",
+      "cast": [
+        {
+          "id": 124963,
+          "name": "ムロツヨシ",
+          "originalName": "ムロツヨシ",
+          "role": ""
+        },
+        {
+          "id": 227087,
+          "name": "落合モトキ",
+          "originalName": "落合モトキ",
+          "role": ""
+        },
+        {
+          "id": 1565127,
+          "name": "柳ゆり菜",
+          "originalName": "柳ゆり菜",
+          "role": ""
+        },
+        {
+          "id": 1565141,
+          "name": "桜井聖",
+          "originalName": "桜井聖",
+          "role": ""
+        },
+        {
+          "id": 1871927,
+          "name": "白石聖",
+          "originalName": "白石聖",
+          "role": ""
+        },
+        {
+          "id": 52809,
+          "name": "板尾創路",
+          "originalName": "板尾創路",
+          "role": ""
+        },
+        {
+          "id": 147897,
+          "name": "斉藤由貴",
+          "originalName": "斉藤由貴",
+          "role": ""
+        },
+        {
+          "id": 1348015,
+          "name": "杉咲花",
+          "originalName": "杉咲花",
+          "role": ""
+        },
+        {
+          "id": 1736952,
+          "name": "石川恋",
+          "originalName": "石川恋",
+          "role": ""
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:37.983954+00:00",
+      "castResolverVersion": 2,
+      "tmdbId": 647616
     },
     "custom-1791480095339-p808": {
       "title": "Tales of the Bizarre: 2020 Summer Special",
       "year": "2020",
-      "type": "tv",
+      "type": "movie",
       "directors": [
         "植田泰史",
         "河野圭太"
@@ -71621,12 +74619,107 @@
       "creators": [],
       "posterPath": "",
       "source": "official-fuji-episode-directors",
-      "sourceUrl": "https://www.fujitv.co.jp/kimyo/202001-202003.html"
+      "sourceUrl": "https://www.fujitv.co.jp/kimyo/202001-202003.html",
+      "cast": [
+        {
+          "id": 554570,
+          "name": "タモリ",
+          "originalName": "タモリ",
+          "role": ""
+        },
+        {
+          "id": 1222054,
+          "name": "たかはし智秋",
+          "originalName": "たかはし智秋",
+          "role": ""
+        },
+        {
+          "id": 96049,
+          "name": "宮川一朗太",
+          "originalName": "宮川一朗太",
+          "role": ""
+        },
+        {
+          "id": 1432936,
+          "name": "山口香緒里",
+          "originalName": "山口香緒里",
+          "role": ""
+        },
+        {
+          "id": 147880,
+          "name": "関めぐみ",
+          "originalName": "関めぐみ",
+          "role": ""
+        },
+        {
+          "id": 1015002,
+          "name": "山田明郷",
+          "originalName": "山田明郷",
+          "role": ""
+        },
+        {
+          "id": 1180452,
+          "name": "皆川猿時",
+          "originalName": "皆川猿時",
+          "role": ""
+        },
+        {
+          "id": 74861,
+          "name": "伊藤英明",
+          "originalName": "伊藤英明",
+          "role": ""
+        },
+        {
+          "id": 1810263,
+          "name": "松角洋平",
+          "originalName": "松角洋平",
+          "role": ""
+        },
+        {
+          "id": 83931,
+          "name": "沢井美優",
+          "originalName": "沢井美優",
+          "role": ""
+        },
+        {
+          "id": 237323,
+          "name": "滝藤賢一",
+          "originalName": "滝藤賢一",
+          "role": ""
+        },
+        {
+          "id": 1671408,
+          "name": "白洲迅",
+          "originalName": "白洲迅",
+          "role": ""
+        },
+        {
+          "id": 1434085,
+          "name": "広瀬アリス",
+          "originalName": "広瀬アリス",
+          "role": ""
+        },
+        {
+          "id": 572020,
+          "name": "杏",
+          "originalName": "杏",
+          "role": ""
+        },
+        {
+          "id": 2789480,
+          "name": "Kaori Yamaguti",
+          "originalName": "Kaori Yamaguti",
+          "role": ""
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:37.735134+00:00",
+      "castResolverVersion": 2,
+      "tmdbId": 743055
     },
     "custom-1791476522514-wpj8": {
       "title": "Tales of the Bizarre: 2020 Fall Special",
       "year": "2020",
-      "type": "tv",
+      "type": "movie",
       "directors": [
         "植田泰史",
         "松木創",
@@ -71636,12 +74729,107 @@
       "creators": [],
       "posterPath": "",
       "source": "official-fuji-episode-directors",
-      "sourceUrl": "https://www.fujitv.co.jp/kimyo/20201101-20201104.html"
+      "sourceUrl": "https://www.fujitv.co.jp/kimyo/20201101-20201104.html",
+      "cast": [
+        {
+          "id": 554570,
+          "name": "タモリ",
+          "originalName": "タモリ",
+          "role": "Storyteller"
+        },
+        {
+          "id": 105403,
+          "name": "濱田岳",
+          "originalName": "濱田岳",
+          "role": "Satoshi Hashimoto"
+        },
+        {
+          "id": 545825,
+          "name": "大竹しのぶ",
+          "originalName": "大竹しのぶ",
+          "role": "Masako Tatemoto"
+        },
+        {
+          "id": 84046,
+          "name": "成海璃子",
+          "originalName": "成海璃子",
+          "role": "Kaede Shikura"
+        },
+        {
+          "id": 1454976,
+          "name": "広瀬すず",
+          "originalName": "広瀬すず",
+          "role": "Saki Harada"
+        },
+        {
+          "id": 1745973,
+          "name": "吉川愛",
+          "originalName": "吉川愛",
+          "role": "Natsumi Kurosaki"
+        },
+        {
+          "id": 77875,
+          "name": "高橋克実",
+          "originalName": "高橋克実",
+          "role": "Nobuo Kurosaki"
+        },
+        {
+          "id": 1554032,
+          "name": "岡崎紗絵",
+          "originalName": "岡崎紗絵",
+          "role": "Ami Kondo"
+        },
+        {
+          "id": 1149343,
+          "name": "志保",
+          "originalName": "志保",
+          "role": ""
+        },
+        {
+          "id": 3335897,
+          "name": "コロッケ",
+          "originalName": "コロッケ",
+          "role": ""
+        },
+        {
+          "id": 1321983,
+          "name": "森高愛",
+          "originalName": "森高愛",
+          "role": ""
+        },
+        {
+          "id": 133696,
+          "name": "小松和重",
+          "originalName": "小松和重",
+          "role": ""
+        },
+        {
+          "id": 1564309,
+          "name": "佐伯大地",
+          "originalName": "佐伯大地",
+          "role": ""
+        },
+        {
+          "id": 4870640,
+          "name": "吉田れいな",
+          "originalName": "吉田れいな",
+          "role": ""
+        },
+        {
+          "id": 1433818,
+          "name": "堀内敬子",
+          "originalName": "堀内敬子",
+          "role": ""
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:37.243069+00:00",
+      "castResolverVersion": 2,
+      "tmdbId": 947350
     },
     "custom-1791396105970-bm2m": {
       "title": "Tales of the Bizarre: 2021 Summer Special",
       "year": "2021",
-      "type": "tv",
+      "type": "movie",
       "directors": [
         "城宝秀則",
         "植田泰史"
@@ -71649,12 +74837,65 @@
       "creators": [],
       "posterPath": "",
       "source": "official-fuji-episode-directors",
-      "sourceUrl": "https://www.fujitv.co.jp/kimyo/20210601-20210602.html"
+      "sourceUrl": "https://www.fujitv.co.jp/kimyo/20210601-20210602.html",
+      "cast": [
+        {
+          "id": 1547747,
+          "name": "上白石萌歌",
+          "originalName": "上白石萌歌",
+          "role": "Hikari Minamino"
+        },
+        {
+          "id": 130659,
+          "name": "吉瀬美智子",
+          "originalName": "吉瀬美智子",
+          "role": "Megumi Mikami"
+        },
+        {
+          "id": 1257419,
+          "name": "加藤シゲアキ",
+          "originalName": "加藤シゲアキ",
+          "role": "Takashi Kimura"
+        },
+        {
+          "id": 1507843,
+          "name": "又吉直樹",
+          "originalName": "又吉直樹",
+          "role": "Kentaro Iwaya"
+        },
+        {
+          "id": 554570,
+          "name": "タモリ",
+          "originalName": "タモリ",
+          "role": ""
+        },
+        {
+          "id": 58665,
+          "name": "鶴見辰吾",
+          "originalName": "鶴見辰吾",
+          "role": ""
+        },
+        {
+          "id": 1255097,
+          "name": "島崎遥香",
+          "originalName": "島崎遥香",
+          "role": ""
+        },
+        {
+          "id": 149894,
+          "name": "梶裕貴",
+          "originalName": "梶裕貴",
+          "role": ""
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:35.493849+00:00",
+      "castResolverVersion": 2,
+      "tmdbId": 845788
     },
     "custom-1791398329125-3r8f": {
       "title": "Tales of the Bizarre: 2021 Fall Special",
       "year": "2021",
-      "type": "tv",
+      "type": "movie",
       "directors": [
         "山内大典",
         "松木創",
@@ -71663,12 +74904,101 @@
       "creators": [],
       "posterPath": "",
       "source": "official-fuji-episode-directors",
-      "sourceUrl": "https://www.fujitv.co.jp/kimyo/202111.html"
+      "sourceUrl": "https://www.fujitv.co.jp/kimyo/202111.html",
+      "cast": [
+        {
+          "id": 554570,
+          "name": "タモリ",
+          "originalName": "タモリ",
+          "role": ""
+        },
+        {
+          "id": 2109360,
+          "name": "森七菜",
+          "originalName": "森七菜",
+          "role": ""
+        },
+        {
+          "id": 107573,
+          "name": "桐谷健太",
+          "originalName": "桐谷健太",
+          "role": ""
+        },
+        {
+          "id": 1509675,
+          "name": "赤楚衛二",
+          "originalName": "赤楚衛二",
+          "role": ""
+        },
+        {
+          "id": 145927,
+          "name": "山口紗弥加",
+          "originalName": "山口紗弥加",
+          "role": ""
+        },
+        {
+          "id": 2247084,
+          "name": "堀未央奈",
+          "originalName": "堀未央奈",
+          "role": ""
+        },
+        {
+          "id": 1500712,
+          "name": "坂口涼太郎",
+          "originalName": "坂口涼太郎",
+          "role": ""
+        },
+        {
+          "id": 1574954,
+          "name": "栁俊太郎",
+          "originalName": "栁俊太郎",
+          "role": ""
+        },
+        {
+          "id": 3319347,
+          "name": "時任勇気",
+          "originalName": "時任勇気",
+          "role": ""
+        },
+        {
+          "id": 2619769,
+          "name": "奥平大兼",
+          "originalName": "奥平大兼",
+          "role": ""
+        },
+        {
+          "id": 2647155,
+          "name": "倉悠貴",
+          "originalName": "倉悠貴",
+          "role": ""
+        },
+        {
+          "id": 132153,
+          "name": "野波麻帆",
+          "originalName": "野波麻帆",
+          "role": ""
+        },
+        {
+          "id": 133695,
+          "name": "長谷川朝晴",
+          "originalName": "長谷川朝晴",
+          "role": ""
+        },
+        {
+          "id": 1946537,
+          "name": "与田祐希",
+          "originalName": "与田祐希",
+          "role": ""
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:35.982967+00:00",
+      "castResolverVersion": 2,
+      "tmdbId": 901030
     },
     "custom-1791394775097-fjc5": {
       "title": "Tales of the Bizarre: 2022 Summer Special",
       "year": "2022",
-      "type": "tv",
+      "type": "movie",
       "directors": [
         "植田泰史",
         "城宝秀則",
@@ -71678,12 +75008,107 @@
       "creators": [],
       "posterPath": "",
       "source": "official-fuji-episode-directors",
-      "sourceUrl": "https://www.fujitv.co.jp/kimyo/202206.html"
+      "sourceUrl": "https://www.fujitv.co.jp/kimyo/202206.html",
+      "cast": [
+        {
+          "id": 1562018,
+          "name": "北山宏光",
+          "originalName": "北山宏光",
+          "role": ""
+        },
+        {
+          "id": 1182588,
+          "name": "小島藤子",
+          "originalName": "小島藤子",
+          "role": ""
+        },
+        {
+          "id": 1564417,
+          "name": "東根作寿英",
+          "originalName": "東根作寿英",
+          "role": ""
+        },
+        {
+          "id": 1247695,
+          "name": "紺野まひる",
+          "originalName": "紺野まひる",
+          "role": ""
+        },
+        {
+          "id": 1257215,
+          "name": "山本美月",
+          "originalName": "山本美月",
+          "role": ""
+        },
+        {
+          "id": 932012,
+          "name": "森口瑤子",
+          "originalName": "森口瑤子",
+          "role": ""
+        },
+        {
+          "id": 1501736,
+          "name": "生田絵梨花",
+          "originalName": "生田絵梨花",
+          "role": ""
+        },
+        {
+          "id": 3628517,
+          "name": "Higuchi Chennai",
+          "originalName": "Higuchi Chennai",
+          "role": ""
+        },
+        {
+          "id": 3595266,
+          "name": "伊礼姫奈",
+          "originalName": "伊礼姫奈",
+          "role": ""
+        },
+        {
+          "id": 1723037,
+          "name": "有田哲平",
+          "originalName": "有田哲平",
+          "role": ""
+        },
+        {
+          "id": 1409122,
+          "name": "稲葉友",
+          "originalName": "稲葉友",
+          "role": ""
+        },
+        {
+          "id": 99835,
+          "name": "神尾佑",
+          "originalName": "神尾佑",
+          "role": ""
+        },
+        {
+          "id": 135023,
+          "name": "綾田俊樹",
+          "originalName": "綾田俊樹",
+          "role": ""
+        },
+        {
+          "id": 2043852,
+          "name": "濱津隆之",
+          "originalName": "濱津隆之",
+          "role": ""
+        },
+        {
+          "id": 6095468,
+          "name": "外山史織",
+          "originalName": "外山史織",
+          "role": "Otani"
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:35.236420+00:00",
+      "castResolverVersion": 2,
+      "tmdbId": 989763
     },
     "custom-1791393440445-arl6": {
       "title": "Tales of the Bizarre: 2022 Fall Special",
       "year": "2022",
-      "type": "tv",
+      "type": "movie",
       "directors": [
         "水戸祐介",
         "河野圭太",
@@ -71693,12 +75118,101 @@
       "creators": [],
       "posterPath": "",
       "source": "official-fuji-episode-directors",
-      "sourceUrl": "https://www.fujitv.co.jp/kimyo/202211.html"
+      "sourceUrl": "https://www.fujitv.co.jp/kimyo/202211.html",
+      "cast": [
+        {
+          "id": 1076363,
+          "name": "土屋太鳳",
+          "originalName": "土屋太鳳",
+          "role": "ミカ"
+        },
+        {
+          "id": 1684342,
+          "name": "上杉柊平",
+          "originalName": "上杉柊平",
+          "role": "Akira"
+        },
+        {
+          "id": 1142780,
+          "name": "木村昴",
+          "originalName": "木村昴",
+          "role": "ジュン"
+        },
+        {
+          "id": 70124,
+          "name": "沢村一樹",
+          "originalName": "沢村一樹",
+          "role": "友枝秋斗"
+        },
+        {
+          "id": 1248542,
+          "name": "観月ありさ",
+          "originalName": "観月ありさ",
+          "role": "松久保真希"
+        },
+        {
+          "id": 506447,
+          "name": "金子ノブアキ",
+          "originalName": "金子ノブアキ",
+          "role": "大神マサテル"
+        },
+        {
+          "id": 1102624,
+          "name": "池谷のぶえ",
+          "originalName": "池谷のぶえ",
+          "role": "根岸美代子"
+        },
+        {
+          "id": 1419892,
+          "name": "渡辺翔太",
+          "originalName": "渡辺翔太",
+          "role": "広川悟"
+        },
+        {
+          "id": 1194981,
+          "name": "高田里穂",
+          "originalName": "高田里穂",
+          "role": "澤田里奈"
+        },
+        {
+          "id": 554570,
+          "name": "タモリ",
+          "originalName": "タモリ",
+          "role": ""
+        },
+        {
+          "id": 3677386,
+          "name": "荻野友里",
+          "originalName": "荻野友里",
+          "role": "友枝真美"
+        },
+        {
+          "id": 2742507,
+          "name": "Haruto Satō",
+          "originalName": "Haruto Satō",
+          "role": "わが様"
+        },
+        {
+          "id": 3307479,
+          "name": "山田暖絆",
+          "originalName": "山田暖絆",
+          "role": "友枝隼斗"
+        },
+        {
+          "id": 3624524,
+          "name": "Miyuko Ochii",
+          "originalName": "Miyuko Ochii",
+          "role": "松久保七海"
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:34.983711+00:00",
+      "castResolverVersion": 2,
+      "tmdbId": 1048225
     },
     "custom-1791392809656-3sql": {
       "title": "Tales of the Bizarre: 2023 Summer Special",
       "year": "2023",
-      "type": "tv",
+      "type": "movie",
       "directors": [
         "松木創",
         "小林義則",
@@ -71708,12 +75222,95 @@
       "creators": [],
       "posterPath": "",
       "source": "official-fuji-episode-directors",
-      "sourceUrl": "https://www.fujitv.co.jp/kimyo/202306.html"
+      "sourceUrl": "https://www.fujitv.co.jp/kimyo/202306.html",
+      "cast": [
+        {
+          "id": 554570,
+          "name": "タモリ",
+          "originalName": "タモリ",
+          "role": ""
+        },
+        {
+          "id": 1691461,
+          "name": "池田エライザ",
+          "originalName": "池田エライザ",
+          "role": ""
+        },
+        {
+          "id": 2194388,
+          "name": "醍醐虎汰朗",
+          "originalName": "醍醐虎汰朗",
+          "role": ""
+        },
+        {
+          "id": 83768,
+          "name": "宮村優子",
+          "originalName": "宮村優子",
+          "role": ""
+        },
+        {
+          "id": 553069,
+          "name": "鈴木保奈美",
+          "originalName": "鈴木保奈美",
+          "role": ""
+        },
+        {
+          "id": 4119897,
+          "name": "Tatsuhito Okuda",
+          "originalName": "Tatsuhito Okuda",
+          "role": ""
+        },
+        {
+          "id": 1723947,
+          "name": "栗原類",
+          "originalName": "栗原類",
+          "role": ""
+        },
+        {
+          "id": 1735211,
+          "name": "新津ちせ",
+          "originalName": "新津ちせ",
+          "role": ""
+        },
+        {
+          "id": 2095371,
+          "name": "Mugi Tachibana",
+          "originalName": "Mugi Tachibana",
+          "role": ""
+        },
+        {
+          "id": 1255318,
+          "name": "中川大志",
+          "originalName": "中川大志",
+          "role": ""
+        },
+        {
+          "id": 990589,
+          "name": "田口浩正",
+          "originalName": "田口浩正",
+          "role": ""
+        },
+        {
+          "id": 77931,
+          "name": "三石琴乃",
+          "originalName": "三石琴乃",
+          "role": ""
+        },
+        {
+          "id": 1134569,
+          "name": "篠崎愛",
+          "originalName": "篠崎愛",
+          "role": ""
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:34.785514+00:00",
+      "castResolverVersion": 2,
+      "tmdbId": 1142085
     },
     "custom-1791382461963-kb93": {
       "title": "Tales of the Bizarre: 2023 Fall Special",
       "year": "2023",
-      "type": "tv",
+      "type": "movie",
       "directors": [
         "星護",
         "松木創",
@@ -71722,12 +75319,107 @@
       "creators": [],
       "posterPath": "",
       "source": "official-fuji-episode-directors",
-      "sourceUrl": "https://www.fujitv.co.jp/kimyo/202311.html"
+      "sourceUrl": "https://www.fujitv.co.jp/kimyo/202311.html",
+      "cast": [
+        {
+          "id": 554570,
+          "name": "タモリ",
+          "originalName": "タモリ",
+          "role": ""
+        },
+        {
+          "id": 80753,
+          "name": "草彅剛",
+          "originalName": "草彅剛",
+          "role": ""
+        },
+        {
+          "id": 1395638,
+          "name": "大西礼芳",
+          "originalName": "大西礼芳",
+          "role": ""
+        },
+        {
+          "id": 1061236,
+          "name": "姜暢雄",
+          "originalName": "姜暢雄",
+          "role": ""
+        },
+        {
+          "id": 58615,
+          "name": "モロ師岡",
+          "originalName": "モロ師岡",
+          "role": ""
+        },
+        {
+          "id": 55784,
+          "name": "江口洋介",
+          "originalName": "江口洋介",
+          "role": ""
+        },
+        {
+          "id": 2542,
+          "name": "北村一輝",
+          "originalName": "北村一輝",
+          "role": ""
+        },
+        {
+          "id": 1256603,
+          "name": "花江夏樹",
+          "originalName": "花江夏樹",
+          "role": ""
+        },
+        {
+          "id": 1417325,
+          "name": "鈴之助",
+          "originalName": "鈴之助",
+          "role": ""
+        },
+        {
+          "id": 1741323,
+          "name": "西野七瀬",
+          "originalName": "西野七瀬",
+          "role": ""
+        },
+        {
+          "id": 96863,
+          "name": "利重剛",
+          "originalName": "利重剛",
+          "role": ""
+        },
+        {
+          "id": 1223087,
+          "name": "朝加真由美",
+          "originalName": "朝加真由美",
+          "role": ""
+        },
+        {
+          "id": 585209,
+          "name": "溝端淳平",
+          "originalName": "溝端淳平",
+          "role": ""
+        },
+        {
+          "id": 1039245,
+          "name": "阿部亮平",
+          "originalName": "阿部亮平",
+          "role": ""
+        },
+        {
+          "id": 1819567,
+          "name": "福澤朗",
+          "originalName": "福澤朗",
+          "role": ""
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:34.475085+00:00",
+      "castResolverVersion": 2,
+      "tmdbId": 1203652
     },
     "custom-1791397387325-yqut": {
       "title": "Tales of the Bizarre: 2024 Summer Special",
       "year": "2024",
-      "type": "tv",
+      "type": "movie",
       "directors": [
         "小林義則",
         "木下高男",
@@ -71737,12 +75429,107 @@
       "creators": [],
       "posterPath": "",
       "source": "official-fuji-episode-directors",
-      "sourceUrl": "https://www.fujitv.co.jp/kimyo/202406.html"
+      "sourceUrl": "https://www.fujitv.co.jp/kimyo/202406.html",
+      "cast": [
+        {
+          "id": 554570,
+          "name": "タモリ",
+          "originalName": "タモリ",
+          "role": "Tamori"
+        },
+        {
+          "id": 1564419,
+          "name": "原菜乃華",
+          "originalName": "原菜乃華",
+          "role": "Fujisaki Rin"
+        },
+        {
+          "id": 1318732,
+          "name": "高杉真宙",
+          "originalName": "高杉真宙",
+          "role": "Sakura Eisuke"
+        },
+        {
+          "id": 1822117,
+          "name": "髙橋ひかる",
+          "originalName": "髙橋ひかる",
+          "role": "Nanami"
+        },
+        {
+          "id": 99669,
+          "name": "若村麻由美",
+          "originalName": "若村麻由美",
+          "role": "Amagiri Kozue"
+        },
+        {
+          "id": 2467919,
+          "name": "水沢林太郎",
+          "originalName": "水沢林太郎",
+          "role": "Takahashi Soma"
+        },
+        {
+          "id": 3346980,
+          "name": "丈太郎",
+          "originalName": "Jyotaro",
+          "role": "Hibino Yamato"
+        },
+        {
+          "id": 555256,
+          "name": "山下容莉枝",
+          "originalName": "山下容莉枝",
+          "role": "Hibino Nozomi"
+        },
+        {
+          "id": 1906050,
+          "name": "前原実",
+          "originalName": "前原実",
+          "role": "Ushio Keisuke"
+        },
+        {
+          "id": 1413357,
+          "name": "春海四方",
+          "originalName": "春海四方",
+          "role": "Yamada Nariaki"
+        },
+        {
+          "id": 1738058,
+          "name": "新納慎也",
+          "originalName": "新納慎也",
+          "role": "Mishima Sakon"
+        },
+        {
+          "id": 1412420,
+          "name": "恒松祐里",
+          "originalName": "恒松祐里",
+          "role": "Miharu"
+        },
+        {
+          "id": 566167,
+          "name": "竹財輝之助",
+          "originalName": "竹財輝之助",
+          "role": "Otani"
+        },
+        {
+          "id": 2548669,
+          "name": "富田鈴花",
+          "originalName": "富田鈴花",
+          "role": "Airi"
+        },
+        {
+          "id": 2641622,
+          "name": "ジェシー",
+          "originalName": "ジェシー",
+          "role": "Hoshino Akira"
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:35.735456+00:00",
+      "castResolverVersion": 2,
+      "tmdbId": 1308067
     },
     "custom-1791381276187-mxp2": {
       "title": "Tales of the Bizarre: 2024 Winter Special",
       "year": "2024",
-      "type": "tv",
+      "type": "movie",
       "directors": [
         "小林洋介",
         "針谷大吾",
@@ -71753,12 +75540,107 @@
       "creators": [],
       "posterPath": "",
       "source": "official-fuji-episode-directors",
-      "sourceUrl": "https://www.fujitv.co.jp/kimyo/202412.html"
+      "sourceUrl": "https://www.fujitv.co.jp/kimyo/202412.html",
+      "cast": [
+        {
+          "id": 554570,
+          "name": "タモリ",
+          "originalName": "タモリ",
+          "role": "Tamori"
+        },
+        {
+          "id": 1393772,
+          "name": "清野菜名",
+          "originalName": "清野菜名",
+          "role": "Shinozaki Rika"
+        },
+        {
+          "id": 1254853,
+          "name": "田中卓志",
+          "originalName": "田中卓志",
+          "role": "Tanaka Kenichi"
+        },
+        {
+          "id": 1748365,
+          "name": "佐藤勝利",
+          "originalName": "佐藤勝利",
+          "role": "Sato Shori"
+        },
+        {
+          "id": 1774191,
+          "name": "尾上松也",
+          "originalName": "尾上松也",
+          "role": "I"
+        },
+        {
+          "id": 2349205,
+          "name": "片山友希",
+          "originalName": "片山友希",
+          "role": "Tsuji Misaki"
+        },
+        {
+          "id": 4605875,
+          "name": "Itakura Takeshi",
+          "originalName": "Itakura Takeshi",
+          "role": "Mizutani Kentaro"
+        },
+        {
+          "id": 1081086,
+          "name": "広田亮平",
+          "originalName": "広田亮平",
+          "role": "Takajo Jun"
+        },
+        {
+          "id": 13256,
+          "name": "津田寛治",
+          "originalName": "津田寛治",
+          "role": "Boss"
+        },
+        {
+          "id": 127304,
+          "name": "加治将樹",
+          "originalName": "加治将樹",
+          "role": "Salesman"
+        },
+        {
+          "id": 1322813,
+          "name": "大高洋夫",
+          "originalName": "大高洋夫",
+          "role": "President"
+        },
+        {
+          "id": 135205,
+          "name": "Kenkichi Watanabe",
+          "originalName": "Kenkichi Watanabe",
+          "role": "Prime Minister"
+        },
+        {
+          "id": 550611,
+          "name": "金剛地武志",
+          "originalName": "金剛地武志",
+          "role": "Male announcer"
+        },
+        {
+          "id": 2122671,
+          "name": "芝崎昇",
+          "originalName": "芝崎昇",
+          "role": "Military expert"
+        },
+        {
+          "id": 2041701,
+          "name": "Yuichi Saito",
+          "originalName": "Yuichi Saito",
+          "role": "Opposition party member"
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:34.232864+00:00",
+      "castResolverVersion": 2,
+      "tmdbId": 1399623
     },
     "custom-1791377844608-310l": {
       "title": "Tales of the Bizarre: 35th Anniversary Special – Autumn Special",
       "year": "2025",
-      "type": "tv",
+      "type": "movie",
       "directors": [
         "植田泰史",
         "アベラヒデノブ",
@@ -71768,12 +75650,89 @@
       "creators": [],
       "posterPath": "",
       "source": "official-fuji-episode-directors",
-      "sourceUrl": "https://www.fujitv.co.jp/kimyo/202511.html"
+      "sourceUrl": "https://www.fujitv.co.jp/kimyo/202511.html",
+      "cast": [
+        {
+          "id": 554570,
+          "name": "タモリ",
+          "originalName": "タモリ",
+          "role": "The Storyteller"
+        },
+        {
+          "id": 18056,
+          "name": "役所広司",
+          "originalName": "役所広司",
+          "role": ""
+        },
+        {
+          "id": 1247874,
+          "name": "山田涼介",
+          "originalName": "山田涼介",
+          "role": "Masao Tokunaga (from Green Light Red Light)"
+        },
+        {
+          "id": 1251240,
+          "name": "川口春奈",
+          "originalName": "川口春奈",
+          "role": "Misaki Shinoda (from Museum of You)"
+        },
+        {
+          "id": 1871926,
+          "name": "笠松将",
+          "originalName": "笠松将",
+          "role": "Kensuke Ito (from Museum of You)"
+        },
+        {
+          "id": 76934,
+          "name": "伊藤淳史",
+          "originalName": "伊藤淳史",
+          "role": ""
+        },
+        {
+          "id": 1946537,
+          "name": "与田祐希",
+          "originalName": "与田祐希",
+          "role": ""
+        },
+        {
+          "id": 1565127,
+          "name": "柳ゆり菜",
+          "originalName": "柳ゆり菜",
+          "role": "Tokunaga Yuno (from Green Light Red Light)"
+        },
+        {
+          "id": 1082696,
+          "name": "渡辺大知",
+          "originalName": "渡辺大知",
+          "role": "Inagaki (from Green Light Red Light)"
+        },
+        {
+          "id": 2566987,
+          "name": "えなこ",
+          "originalName": "えなこ",
+          "role": "Mysterious Nurse (from Green Light Red Light)"
+        },
+        {
+          "id": 133656,
+          "name": "螢雪次朗",
+          "originalName": "螢雪次朗",
+          "role": "Museum Director (from Museum of You)"
+        },
+        {
+          "id": 1813918,
+          "name": "西田幸治",
+          "originalName": "西田幸治",
+          "role": ""
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:33.731528+00:00",
+      "castResolverVersion": 2,
+      "tmdbId": 1577361
     },
     "custom-1791377114135-l3hd": {
       "title": "Tales of the Bizarre: 2026 Summer Special",
       "year": "2026",
-      "type": "tv",
+      "type": "movie",
       "directors": [
         "紙谷楓",
         "松木創",
@@ -71783,12 +75742,107 @@
       "creators": [],
       "posterPath": "",
       "source": "official-fuji-episode-directors",
-      "sourceUrl": "https://www.fujitv.co.jp/kimyo/202606.html"
+      "sourceUrl": "https://www.fujitv.co.jp/kimyo/202606.html",
+      "cast": [
+        {
+          "id": 554570,
+          "name": "タモリ",
+          "originalName": "タモリ",
+          "role": ""
+        },
+        {
+          "id": 1248335,
+          "name": "上川隆也",
+          "originalName": "上川隆也",
+          "role": ""
+        },
+        {
+          "id": 1765444,
+          "name": "高橋洋",
+          "originalName": "高橋洋",
+          "role": ""
+        },
+        {
+          "id": 3419746,
+          "name": "樋口幸平",
+          "originalName": "樋口幸平",
+          "role": ""
+        },
+        {
+          "id": 1401654,
+          "name": "趣里",
+          "originalName": "趣里",
+          "role": ""
+        },
+        {
+          "id": 58664,
+          "name": "佐伯日菜子",
+          "originalName": "佐伯日菜子",
+          "role": ""
+        },
+        {
+          "id": 1509243,
+          "name": "伊勢志摩",
+          "originalName": "伊勢志摩",
+          "role": ""
+        },
+        {
+          "id": 4449824,
+          "name": "永尾柚乃",
+          "originalName": "永尾柚乃",
+          "role": ""
+        },
+        {
+          "id": 1502395,
+          "name": "松尾諭",
+          "originalName": "松尾諭",
+          "role": ""
+        },
+        {
+          "id": 1061236,
+          "name": "姜暢雄",
+          "originalName": "姜暢雄",
+          "role": ""
+        },
+        {
+          "id": 1517396,
+          "name": "映美くらら",
+          "originalName": "映美くらら",
+          "role": ""
+        },
+        {
+          "id": 1907750,
+          "name": "杉野遥亮",
+          "originalName": "杉野遥亮",
+          "role": ""
+        },
+        {
+          "id": 1254030,
+          "name": "青木さやか",
+          "originalName": "青木さやか",
+          "role": ""
+        },
+        {
+          "id": 1074995,
+          "name": "大堀こういち",
+          "originalName": "大堀こういち",
+          "role": ""
+        },
+        {
+          "id": 2213028,
+          "name": "大水洋介",
+          "originalName": "大水洋介",
+          "role": ""
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:33.486268+00:00",
+      "castResolverVersion": 2,
+      "tmdbId": 1720684
     },
     "custom-1791379032352-50zf": {
       "title": "Tales of the Bizarre: 35th Anniversary Special",
       "year": "2025",
-      "type": "drama",
+      "type": "movie",
       "directors": [
         "石井克人",
         "鈴木雅之",
@@ -71799,43 +75853,636 @@
       "creators": [],
       "source": "official-fuji-retrospective-episode-directors",
       "sourceUrl": "https://www.fujitv.co.jp/kimyo/topics97.html",
-      "posterPath": ""
+      "posterPath": "",
+      "cast": [
+        {
+          "id": 554570,
+          "name": "タモリ",
+          "originalName": "タモリ",
+          "role": "Tamori"
+        },
+        {
+          "id": 12670,
+          "name": "木村拓哉",
+          "originalName": "木村拓哉",
+          "role": ""
+        },
+        {
+          "id": 137029,
+          "name": "大杉漣",
+          "originalName": "大杉漣",
+          "role": ""
+        },
+        {
+          "id": 135373,
+          "name": "織田裕二",
+          "originalName": "織田裕二",
+          "role": ""
+        },
+        {
+          "id": 80108,
+          "name": "妻夫木聡",
+          "originalName": "妻夫木聡",
+          "role": ""
+        },
+        {
+          "id": 147897,
+          "name": "斉藤由貴",
+          "originalName": "斉藤由貴",
+          "role": ""
+        },
+        {
+          "id": 237324,
+          "name": "志賀廣太郎",
+          "originalName": "志賀廣太郎",
+          "role": ""
+        },
+        {
+          "id": 43663,
+          "name": "樹木希林",
+          "originalName": "樹木希林",
+          "role": ""
+        },
+        {
+          "id": 1390040,
+          "name": "段田安則",
+          "originalName": "段田安則",
+          "role": ""
+        },
+        {
+          "id": 1030277,
+          "name": "臼田あさ美",
+          "originalName": "臼田あさ美",
+          "role": ""
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:33.987758+00:00",
+      "castResolverVersion": 2,
+      "tmdbId": 1488771
     },
     "custom-1791018448927-b4o3": {
       "title": "ドラえもん誕生日スペシャル 「走れドラえもん！ 銀河グランプリ」",
       "year": "2011",
-      "type": "drama",
+      "type": "movie",
       "directors": [
         "高橋渉"
       ],
       "creators": [],
       "source": "episode-storyboard-and-direction-credits",
       "sourceUrl": "https://hanaballoon.com/dorachan/data/anime/mizuta/list/data/201107.html",
-      "posterPath": ""
+      "posterPath": "",
+      "cast": [],
+      "castCheckedAt": "2026-10-12T20:51:33.224093+00:00",
+      "castResolverVersion": 2,
+      "tmdbId": 1704979
     },
     "custom-1790322761655-im7g": {
       "title": "Hanzawa Naoki: Spin-off",
       "year": "2020",
-      "type": "drama",
+      "type": "movie",
       "directors": [
         "松木彩"
       ],
       "creators": [],
       "source": "official-tbs-special-direction",
       "sourceUrl": "https://www.tbs.co.jp/hanzawa_naoki/sp2020/staff/",
-      "posterPath": ""
+      "posterPath": "",
+      "cast": [
+        {
+          "id": 1149341,
+          "name": "吉沢亮",
+          "originalName": "吉沢亮",
+          "role": "高坂圭"
+        },
+        {
+          "id": 1919754,
+          "name": "今田美桜",
+          "originalName": "今田美桜",
+          "role": "濱村瞳"
+        },
+        {
+          "id": 550565,
+          "name": "及川光博",
+          "originalName": "及川光博",
+          "role": "渡真利忍"
+        },
+        {
+          "id": 76933,
+          "name": "堺雅人",
+          "originalName": "堺雅人",
+          "role": "Hanzawa Naoki"
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:25.243366+00:00",
+      "castResolverVersion": 2,
+      "tmdbId": 680413
     },
     "custom-1790665768168-uxk0": {
       "title": "Detective Conan: The Counterfeit Case of Ultra 30",
       "year": "2026",
-      "type": "drama",
+      "type": "movie",
       "directors": [
         "鎌仲史陽"
       ],
       "creators": [],
       "source": "official-yomiuri-tv-episode-director",
       "sourceUrl": "https://www.ytv.co.jp/conan/30go/news/",
-      "posterPath": ""
+      "posterPath": "",
+      "cast": [
+        {
+          "id": 68470,
+          "name": "高山みなみ",
+          "originalName": "高山みなみ",
+          "role": "Conan Edogawa (voice)"
+        },
+        {
+          "id": 90133,
+          "name": "岡村明美",
+          "originalName": "岡村明美",
+          "role": "Ran Mouri (voice)"
+        },
+        {
+          "id": 68472,
+          "name": "山口勝平",
+          "originalName": "山口勝平",
+          "role": "Shinichi Kudo (voice)"
+        },
+        {
+          "id": 237076,
+          "name": "小山力也",
+          "originalName": "小山力也",
+          "role": "Kogoro Mouri (voice)"
+        },
+        {
+          "id": 1691461,
+          "name": "池田エライザ",
+          "originalName": "池田エライザ",
+          "role": "Toko Satomi (voice)"
+        },
+        {
+          "id": 142704,
+          "name": "緒方賢一",
+          "originalName": "緒方賢一",
+          "role": "Hiroshi Agasa (voice)"
+        },
+        {
+          "id": 40325,
+          "name": "林原めぐみ",
+          "originalName": "林原めぐみ",
+          "role": "Ai Haibara  (voice)"
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:32.734505+00:00",
+      "castResolverVersion": 2,
+      "tmdbId": 1777750
+    },
+    "custom-1791802126132-vr9o": {
+      "cast": [
+        {
+          "id": 80149,
+          "name": "Douglas Hodge",
+          "originalName": "Douglas Hodge",
+          "role": "Rolo Haynes"
+        },
+        {
+          "id": 1083010,
+          "name": "レティーシャ・ライト",
+          "originalName": "Letitia Wright",
+          "role": "Nish"
+        },
+        {
+          "id": 3072,
+          "name": "Daniel Lapaine",
+          "originalName": "Daniel Lapaine",
+          "role": "Dawson"
+        },
+        {
+          "id": 83860,
+          "name": "オルディス・ホッジ",
+          "originalName": "Aldis Hodge",
+          "role": "Jack"
+        },
+        {
+          "id": 237020,
+          "name": "アレクサンドラ・ローチ",
+          "originalName": "Alexandra Roach",
+          "role": "Carrie"
+        },
+        {
+          "id": 205923,
+          "name": "バブス･オルサンモクン",
+          "originalName": "Babs Olusanmokun",
+          "role": "Clayton"
+        },
+        {
+          "id": 1660453,
+          "name": "Emily Vere Nicoll",
+          "originalName": "Emily Vere Nicoll",
+          "role": "Madge"
+        },
+        {
+          "id": 1944189,
+          "name": "Yasha Jackson",
+          "originalName": "Yasha Jackson",
+          "role": "Emily"
+        },
+        {
+          "id": 1170657,
+          "name": "Amanda Warren",
+          "originalName": "Amanda Warren",
+          "role": "Angelica"
+        },
+        {
+          "id": 1950995,
+          "name": "Kyros McGee",
+          "originalName": "Kyros McGee",
+          "role": "Parker"
+        },
+        {
+          "id": 2234167,
+          "name": "Raj Paul",
+          "originalName": "Raj Paul",
+          "role": "Paramedic"
+        },
+        {
+          "id": 3019661,
+          "name": "Jan van der Black",
+          "originalName": "Jan van der Black",
+          "role": "Homeless Guy"
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:40.754277+00:00",
+      "castResolverVersion": 2,
+      "tmdbId": 42009,
+      "type": "tv",
+      "contentType": "tv_episode",
+      "seasonNumber": 4,
+      "episodeNumber": 6
+    },
+    "custom-1791802127464-uge5": {
+      "cast": [
+        {
+          "id": 1335315,
+          "name": "ジョージナ・キャンベル",
+          "originalName": "Georgina Campbell",
+          "role": "Amy"
+        },
+        {
+          "id": 1081875,
+          "name": "Joe Cole",
+          "originalName": "Joe Cole",
+          "role": "Frank"
+        },
+        {
+          "id": 990278,
+          "name": "Gina Bramhill",
+          "originalName": "Gina Bramhill",
+          "role": "Coach (voice)"
+        },
+        {
+          "id": 1256160,
+          "name": "George Blagden",
+          "originalName": "George Blagden",
+          "role": "Lenny"
+        },
+        {
+          "id": 1037611,
+          "name": "Gwyneth Keyworth",
+          "originalName": "Gwyneth Keyworth",
+          "role": "Nicola"
+        },
+        {
+          "id": 234924,
+          "name": "ジェシー・ケイヴ",
+          "originalName": "Jessie Cave",
+          "role": "Edna"
+        },
+        {
+          "id": 2190631,
+          "name": "Luke Manning",
+          "originalName": "Luke Manning",
+          "role": "Mike"
+        },
+        {
+          "id": 1944193,
+          "name": "Tim Pritchett",
+          "originalName": "Tim Pritchett",
+          "role": "Norman"
+        },
+        {
+          "id": 2190632,
+          "name": "Alex Tamaro",
+          "originalName": "Alex Tamaro",
+          "role": "Butch"
+        },
+        {
+          "id": 2190633,
+          "name": "Che Watson",
+          "originalName": "Che Watson",
+          "role": "Silverfox"
+        },
+        {
+          "id": 1743508,
+          "name": "Bruce Chong",
+          "originalName": "Bruce Chong",
+          "role": "David"
+        },
+        {
+          "id": 2190634,
+          "name": "Anna Dobrucki",
+          "originalName": "Anna Dobrucki",
+          "role": "Patty"
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:40.980714+00:00",
+      "castResolverVersion": 2,
+      "tmdbId": 42009,
+      "type": "tv",
+      "contentType": "tv_episode",
+      "seasonNumber": 4,
+      "episodeNumber": 4
+    },
+    "custom-1791802127938-6mow": {
+      "cast": [
+        {
+          "id": 88124,
+          "name": "ジェシー・プレモンス",
+          "originalName": "Jesse Plemons",
+          "role": "Robert Daly"
+        },
+        {
+          "id": 204392,
+          "name": "クリスティン・ミリオティ",
+          "originalName": "Cristin Milioti",
+          "role": "Nanette Cole"
+        },
+        {
+          "id": 22125,
+          "name": "ジミ・シンプソン",
+          "originalName": "Jimmi Simpson",
+          "role": "James Walton"
+        },
+        {
+          "id": 1368012,
+          "name": "Michaela Coel",
+          "originalName": "Michaela Coel",
+          "role": "Shania"
+        },
+        {
+          "id": 141034,
+          "name": "ビリー・マグヌッセン",
+          "originalName": "Billy Magnussen",
+          "role": "Karl Plowman / Valdak"
+        },
+        {
+          "id": 1579304,
+          "name": "Milanka Brooks",
+          "originalName": "Milanka Brooks",
+          "role": "Elena Tulaska"
+        },
+        {
+          "id": 1388917,
+          "name": "Osy Ikhile",
+          "originalName": "Osy Ikhile",
+          "role": "Nate Packer"
+        },
+        {
+          "id": 1951011,
+          "name": "Paul G. Raymond",
+          "originalName": "Paul G. Raymond",
+          "role": "Kabir Dudani"
+        },
+        {
+          "id": 1208302,
+          "name": "Hammed Animashaun",
+          "originalName": "Hammed Animashaun",
+          "role": "Pizza Guy"
+        },
+        {
+          "id": 1813743,
+          "name": "Tom Mulheron",
+          "originalName": "Tom Mulheron",
+          "role": "Tommy"
+        },
+        {
+          "id": 84497,
+          "name": "アーロン・ポール",
+          "originalName": "Aaron Paul",
+          "role": "Gamer691 (voice)"
+        },
+        {
+          "id": 205,
+          "name": "キルスティン・ダンスト",
+          "originalName": "Kirsten Dunst",
+          "role": "Callister Employee (uncredited)"
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:41.236240+00:00",
+      "castResolverVersion": 2,
+      "tmdbId": 42009,
+      "type": "tv",
+      "contentType": "tv_episode",
+      "seasonNumber": 4,
+      "episodeNumber": 1
+    },
+    "custom-1791823398409-njce": {
+      "cast": [
+        {
+          "id": 1590797,
+          "name": "セイディー・シンク",
+          "originalName": "Sadie Sink",
+          "role": "Her"
+        },
+        {
+          "id": 527393,
+          "name": "Dylan O'Brien",
+          "originalName": "Dylan O'Brien",
+          "role": "Him"
+        },
+        {
+          "id": 212208,
+          "name": "テイラー・スウィフト",
+          "originalName": "Taylor Swift",
+          "role": "Her, Later On"
+        },
+        {
+          "id": 3307246,
+          "name": "Jake Lyon",
+          "originalName": "Jake Lyon",
+          "role": "Him, Later On"
+        },
+        {
+          "id": 17825,
+          "name": "ショーン・レヴィ",
+          "originalName": "Shawn Levy",
+          "role": "Her Dad"
+        },
+        {
+          "id": 3307339,
+          "name": "Rashauna Eastman",
+          "originalName": "Rashauna Eastman",
+          "role": "His Friend"
+        },
+        {
+          "id": 3307340,
+          "name": "Anthony Espino",
+          "originalName": "Anthony Espino",
+          "role": "His Friend"
+        },
+        {
+          "id": 3307341,
+          "name": "Jeffrey Castillo Peña",
+          "originalName": "Jeffrey Castillo Peña",
+          "role": "His Friend"
+        },
+        {
+          "id": 3307342,
+          "name": "Elise Turin",
+          "originalName": "Elise Turin",
+          "role": "His Friend"
+        },
+        {
+          "id": 3307203,
+          "name": "Mariama Bonetti",
+          "originalName": "Mariama Bonetti",
+          "role": "Her Friend"
+        },
+        {
+          "id": 3307348,
+          "name": "Laura Krstovska-Guerrero",
+          "originalName": "Laura Krstovska-Guerrero",
+          "role": "Her Friend"
+        },
+        {
+          "id": 1126350,
+          "name": "Sophie Levy",
+          "originalName": "Sophie Levy",
+          "role": "Her Friend"
+        },
+        {
+          "id": 1126351,
+          "name": "Tess Levy",
+          "originalName": "Tess Levy",
+          "role": "Her Friend"
+        },
+        {
+          "id": 1126352,
+          "name": "Charlie Levy",
+          "originalName": "Charlie Levy",
+          "role": "Her Friend"
+        },
+        {
+          "id": 3307356,
+          "name": "Colette Levy",
+          "originalName": "Colette Levy",
+          "role": "Her Friend"
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:41.514156+00:00",
+      "castResolverVersion": 2,
+      "tmdbId": 897429,
+      "type": "movie"
+    },
+    "custom-1791834369925-gy7y": {
+      "cast": [
+        {
+          "id": 2500348,
+          "name": "Samuel Blenkin",
+          "originalName": "Samuel Blenkin",
+          "role": "Davis McCardle"
+        },
+        {
+          "id": 2673750,
+          "name": "マイハラ",
+          "originalName": "Myha'la",
+          "role": "Pia"
+        },
+        {
+          "id": 1034702,
+          "name": "Daniel Portman",
+          "originalName": "Daniel Portman",
+          "role": "Stuart King"
+        },
+        {
+          "id": 10727,
+          "name": "ジョン・ハナー",
+          "originalName": "John Hannah",
+          "role": "Richard King"
+        },
+        {
+          "id": 229606,
+          "name": "モニカ・ドラン",
+          "originalName": "Monica Dolan",
+          "role": "Janet McCardle"
+        },
+        {
+          "id": 1650559,
+          "name": "Gregor Firth",
+          "originalName": "Gregor Firth",
+          "role": "Kenneth McCardle"
+        },
+        {
+          "id": 1616784,
+          "name": "Ellie White",
+          "originalName": "Ellie White",
+          "role": "Kate Cezar"
+        },
+        {
+          "id": 4112662,
+          "name": "Tom Crowhurst",
+          "originalName": "Tom Crowhurst",
+          "role": "Iain Adair"
+        },
+        {
+          "id": 3031463,
+          "name": "Scott Mooney",
+          "originalName": "Scott Mooney",
+          "role": "Simon Challis"
+        },
+        {
+          "id": 4112664,
+          "name": "Beth Robb Adams",
+          "originalName": "Beth Robb Adams",
+          "role": "Dawn Challis"
+        },
+        {
+          "id": 4112665,
+          "name": "Alisa Gashi",
+          "originalName": "Alisa Gashi",
+          "role": "Reconstruction Dawn"
+        },
+        {
+          "id": 108125,
+          "name": "Kirsty Wark",
+          "originalName": "Kirsty Wark",
+          "role": "Award Presenter"
+        },
+        {
+          "id": 1948465,
+          "name": "ウェルシュ・オピア",
+          "originalName": "Weruche Opia",
+          "role": "Actress"
+        },
+        {
+          "id": 2727401,
+          "name": "Laura Cairns",
+          "originalName": "Laura Cairns",
+          "role": "Doctor"
+        },
+        {
+          "id": 4112666,
+          "name": "Marcella Whittingdale",
+          "originalName": "Marcella Whittingdale",
+          "role": "Reporter"
+        }
+      ],
+      "castCheckedAt": "2026-10-12T20:51:41.771193+00:00",
+      "castResolverVersion": 2,
+      "tmdbId": 42009,
+      "type": "tv",
+      "contentType": "tv_episode",
+      "seasonNumber": 6,
+      "episodeNumber": 2
     }
   },
   "unmatched": {
