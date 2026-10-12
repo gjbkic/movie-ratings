@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791817619313,
-  "sourceUpdatedIso": "2026-10-12T15:06:59.313Z",
+  "sourceUpdatedAt": 1791817630818,
+  "sourceUpdatedIso": "2026-10-12T15:07:10.818Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -880,29 +880,6 @@
       "letterboxdReportedWatchedDate": "2026-09-26"
     },
     {
-      "id": "custom-1791664054514-pksv",
-      "title": "Luv Live",
-      "originalTitle": "Luv Live",
-      "englishTitle": "Luv Live",
-      "year": 2014,
-      "score": 94,
-      "star": 4.5,
-      "overallRank": 31,
-      "sameScoreRank": 8,
-      "category": "Letterboxd",
-      "mediaType": "other",
-      "genre": [
-        "ミュージカル"
-      ],
-      "origin": "日本",
-      "format": "live",
-      "runtime": 65,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-11",
-      "letterboxdPublishedAt": "Sun, 11 Oct 2026 06:34:06 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-11"
-    },
-    {
       "id": "lb-467-ptEI",
       "title": "新世紀エヴァンゲリオン",
       "originalTitle": "",
@@ -910,8 +887,8 @@
       "year": 1995,
       "score": 94,
       "star": 4.5,
-      "overallRank": 32,
-      "sameScoreRank": 9,
+      "overallRank": 31,
+      "sameScoreRank": 8,
       "category": "Letterboxd追加",
       "mediaType": "drama",
       "genre": [
@@ -944,8 +921,8 @@
       "year": 2023,
       "score": 94,
       "star": 4.5,
-      "overallRank": 33,
-      "sameScoreRank": 10,
+      "overallRank": 32,
+      "sameScoreRank": 9,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -967,6 +944,29 @@
       "letterboxdAddedDate": "2026-09-27",
       "letterboxdPublishedAt": "Sun, 27 Sep 2026 22:28:02 +1300",
       "letterboxdReportedWatchedDate": "2026-09-27"
+    },
+    {
+      "id": "custom-1791664054514-pksv",
+      "title": "Luv Live",
+      "originalTitle": "Luv Live",
+      "englishTitle": "Luv Live",
+      "year": 2014,
+      "score": 94,
+      "star": 4.5,
+      "overallRank": 33,
+      "sameScoreRank": 10,
+      "category": "Letterboxd",
+      "mediaType": "other",
+      "genre": [
+        "ミュージカル"
+      ],
+      "origin": "日本",
+      "format": "live",
+      "runtime": 65,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-11",
+      "letterboxdPublishedAt": "Sun, 11 Oct 2026 06:34:06 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-11"
     },
     {
       "id": "lb-112-1W4G",
@@ -22160,9 +22160,9 @@
         "lb-97-2a7u",
         "lb-10-kSz4",
         "custom-1790420198451-g42l",
-        "custom-1791664054514-pksv",
         "lb-467-ptEI",
         "custom-1790508958519-2edt",
+        "custom-1791664054514-pksv",
         "lb-112-1W4G"
       ],
       "95": [
