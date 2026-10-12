@@ -410,29 +410,17 @@ window.__movie30AutoSyncPending=()=>{const x=getLbSettings();if(x.auto!==false)s
     placeAtNearest(e);
   };
 
-  endDrag = function(e){
-    if (!dragCtx) return;
-    try { e?.preventDefault?.(); } catch(_) {}
-    placeAtNearest(e);
-    const ctx = dragCtx;
-    dragCtx = null;
-    const list = ctx.card?.closest(".score-list");
-    const newScore = Number(list?.dataset.score ?? ctx.fromScore);
-    const f = filmById(ctx.id);
-    if (f) {
-      state.exactScores[f.id] = newScore;
-      const newStar = scoreToStar(newScore);
-      state.starOverrides[f.id] = newStar;
-      state.assignments[f.id] = nearestTier(newStar,newScore);
+  // Preserve the native endDrag() path (including no-movement taps,
+  // anchor restoration, and safe score/order saving). Previous v15 logic
+  // replaced it and blindly redrew the entire ranking on pointerup, which
+  // made search-to-drag jump unpredictably after release.
+  const endDragBeforeNearestPlacement=endDrag;
+  endDrag=function(e){
+    if(!dragCtx)return;
+    if(dragCtx.moved&&Number.isFinite(e?.clientX)&&Number.isFinite(e?.clientY)){
+      placeAtNearest(e);
     }
-    document.querySelectorAll(".score-list").forEach(l => {
-      const score = l.dataset.score;
-      state.rankOrder[score] = [...l.querySelectorAll(".rank-card")].map(c => decodeURIComponent(c.dataset.id));
-    });
-    finishDragUi(ctx);
-    save();
-    render();
-    toast(newScore===ctx.fromScore ? "同点内の順位を保存" : `${newScore}点へ移動`);
+    return endDragBeforeNearestPlacement(e);
   };
 
   render();
