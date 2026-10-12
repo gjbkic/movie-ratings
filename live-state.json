@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791811409708,
-  "sourceUpdatedIso": "2026-10-12T13:23:29.708Z",
+  "sourceUpdatedAt": 1791814904117,
+  "sourceUpdatedIso": "2026-10-12T14:21:44.117Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -20392,121 +20392,6 @@
   ],
   "unrated": [
     {
-      "id": "custom-1791664055006-96rv",
-      "title": "Utada Hikaru: Wild Life",
-      "originalTitle": "",
-      "englishTitle": "Utada Hikaru: Wild Life",
-      "year": 2011,
-      "score": null,
-      "star": 5,
-      "overallRank": null,
-      "sameScoreRank": null,
-      "category": "Letterboxd",
-      "mediaType": "other",
-      "genre": [
-        "ミュージカル"
-      ],
-      "origin": "日本",
-      "format": "live",
-      "runtime": null,
-      "exact": false,
-      "letterboxdAddedDate": "2026-10-11",
-      "letterboxdPublishedAt": "Sun, 11 Oct 2026 06:29:30 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-11"
-    },
-    {
-      "id": "custom-1791664055911-cuz4",
-      "title": "Hikaru Utada Live Sessions from AIR Studios",
-      "originalTitle": "Hikaru Utada Live Sessions from Air Studios",
-      "englishTitle": "Hikaru Utada Live Sessions from Air Studios",
-      "year": 2024,
-      "score": null,
-      "star": 4.5,
-      "overallRank": null,
-      "sameScoreRank": null,
-      "category": "Letterboxd",
-      "mediaType": "other",
-      "genre": [
-        "ミュージカル"
-      ],
-      "origin": "日本",
-      "format": "live",
-      "runtime": 56,
-      "exact": false,
-      "letterboxdAddedDate": "2026-10-11",
-      "letterboxdPublishedAt": "Sun, 11 Oct 2026 06:12:28 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-11"
-    },
-    {
-      "id": "custom-1791664054514-pksv",
-      "title": "Luv Live",
-      "originalTitle": "Luv Live",
-      "englishTitle": "Luv Live",
-      "year": 2014,
-      "score": null,
-      "star": 4.5,
-      "overallRank": null,
-      "sameScoreRank": null,
-      "category": "Letterboxd",
-      "mediaType": "other",
-      "genre": [
-        "ミュージカル"
-      ],
-      "origin": "日本",
-      "format": "live",
-      "runtime": 65,
-      "exact": false,
-      "letterboxdAddedDate": "2026-10-11",
-      "letterboxdPublishedAt": "Sun, 11 Oct 2026 06:34:06 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-11"
-    },
-    {
-      "id": "custom-1791664055469-au2b",
-      "title": "Hikaru Utada Laughter in the Dark Tour 2018",
-      "originalTitle": "Hikaru Utada Laughter in the Dark Tour 2018",
-      "englishTitle": "Hikaru Utada Laughter in the Dark Tour 2018",
-      "year": 2018,
-      "score": null,
-      "star": 4,
-      "overallRank": null,
-      "sameScoreRank": null,
-      "category": "Letterboxd",
-      "mediaType": "other",
-      "genre": [
-        "ミュージカル"
-      ],
-      "origin": "日本",
-      "format": "live",
-      "runtime": 141,
-      "exact": false,
-      "letterboxdAddedDate": "2026-10-11",
-      "letterboxdPublishedAt": "Sun, 11 Oct 2026 06:19:17 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-10"
-    },
-    {
-      "id": "custom-1791664054005-kkyc",
-      "title": "HIKARU UTADA SCIENCE FICTION TOUR 2024",
-      "originalTitle": "HIKARU UTADA SCIENCE FICTION TOUR 2024",
-      "englishTitle": "HIKARU UTADA SCIENCE FICTION TOUR 2024",
-      "year": 2024,
-      "score": null,
-      "star": 4,
-      "overallRank": null,
-      "sameScoreRank": null,
-      "category": "Letterboxd",
-      "mediaType": "other",
-      "genre": [
-        "ミュージカル"
-      ],
-      "origin": "日本",
-      "format": "live",
-      "runtime": 151,
-      "exact": false,
-      "letterboxdAddedDate": "2026-10-11",
-      "letterboxdPublishedAt": "Sun, 11 Oct 2026 06:36:16 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-11"
-    },
-    {
       "id": "custom-1790322764890-2w6w",
       "title": "VIVANT",
       "originalTitle": "VIVANT",
@@ -20603,6 +20488,121 @@
       "letterboxdAddedDate": "2026-09-08",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1791664054005-kkyc",
+      "title": "HIKARU UTADA SCIENCE FICTION TOUR 2024",
+      "originalTitle": "HIKARU UTADA SCIENCE FICTION TOUR 2024",
+      "englishTitle": "HIKARU UTADA SCIENCE FICTION TOUR 2024",
+      "year": 2024,
+      "score": null,
+      "star": 4,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "other",
+      "genre": [
+        "ミュージカル"
+      ],
+      "origin": "日本",
+      "format": "live",
+      "runtime": 151,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-11",
+      "letterboxdPublishedAt": "Sun, 11 Oct 2026 06:36:16 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-11"
+    },
+    {
+      "id": "custom-1791664054514-pksv",
+      "title": "Luv Live",
+      "originalTitle": "Luv Live",
+      "englishTitle": "Luv Live",
+      "year": 2014,
+      "score": null,
+      "star": 4.5,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "other",
+      "genre": [
+        "ミュージカル"
+      ],
+      "origin": "日本",
+      "format": "live",
+      "runtime": 65,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-11",
+      "letterboxdPublishedAt": "Sun, 11 Oct 2026 06:34:06 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-11"
+    },
+    {
+      "id": "custom-1791664055006-96rv",
+      "title": "Utada Hikaru: Wild Life",
+      "originalTitle": "",
+      "englishTitle": "Utada Hikaru: Wild Life",
+      "year": 2011,
+      "score": null,
+      "star": 5,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "other",
+      "genre": [
+        "ミュージカル"
+      ],
+      "origin": "日本",
+      "format": "live",
+      "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-11",
+      "letterboxdPublishedAt": "Sun, 11 Oct 2026 06:29:30 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-11"
+    },
+    {
+      "id": "custom-1791664055469-au2b",
+      "title": "Hikaru Utada Laughter in the Dark Tour 2018",
+      "originalTitle": "Hikaru Utada Laughter in the Dark Tour 2018",
+      "englishTitle": "Hikaru Utada Laughter in the Dark Tour 2018",
+      "year": 2018,
+      "score": null,
+      "star": 4,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "other",
+      "genre": [
+        "ミュージカル"
+      ],
+      "origin": "日本",
+      "format": "live",
+      "runtime": 141,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-11",
+      "letterboxdPublishedAt": "Sun, 11 Oct 2026 06:19:17 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-10"
+    },
+    {
+      "id": "custom-1791664055911-cuz4",
+      "title": "Hikaru Utada Live Sessions from AIR Studios",
+      "originalTitle": "Hikaru Utada Live Sessions from Air Studios",
+      "englishTitle": "Hikaru Utada Live Sessions from Air Studios",
+      "year": 2024,
+      "score": null,
+      "star": 4.5,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "other",
+      "genre": [
+        "ミュージカル"
+      ],
+      "origin": "日本",
+      "format": "live",
+      "runtime": 56,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-11",
+      "letterboxdPublishedAt": "Sun, 11 Oct 2026 06:12:28 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-11"
     },
     {
       "id": "custom-1791802126132-vr9o",
@@ -21365,11 +21365,11 @@
       "custom-1791636834270-874l": 74,
       "lb-129-24Nu": 40,
       "lb-453-2DF6": 50,
-      "custom-1791664055006-96rv": null,
-      "custom-1791664055911-cuz4": null,
-      "custom-1791664054514-pksv": null,
+      "custom-1791664054005-kkyc": null,
       "custom-1791664055469-au2b": null,
-      "custom-1791664054005-kkyc": null
+      "custom-1791664055006-96rv": null,
+      "custom-1791664054514-pksv": null,
+      "custom-1791664055911-cuz4": null
     },
     "rankOrder": {
       "40": [
@@ -62472,13 +62472,6 @@
         "legacyMovieId": 495281,
         "titleSource": "tmdb-tv"
       }
-    },
-    "rankRecovery": {
-      "baseline": "016f78b559f54f56078654abc927a016b71a6962",
-      "version": 2,
-      "at": "2026-10-12T13:23:29.696Z",
-      "restored": 721
-    },
-    "updatedAt": 1791811409708
+    }
   }
 }
