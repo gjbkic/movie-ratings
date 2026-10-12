@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0a0d12"><title>Films データ保護・診断</title>
+<style>body{box-sizing:border-box;margin:0;padding:20px 14px 70px;background:#0a0d12;color:#eef4fa;font:15px/1.65 -apple-system,BlinkMacSystemFont,"Hiragino Sans",sans-serif}*{box-sizing:border-box}main{max-width:740px;margin:auto}h1{font-size:23px;margin:6px 0 4px}h2{font-size:17px;margin:0 0 10px}.sub,.small{color:#9eafbf;font-size:13px}.panel{border:1px solid #334151;border-radius:13px;background:#151c25;padding:15px;margin:16px 0}.entry{padding:10px 0;border-bottom:1px solid #344150}.entry:last-child{border-bottom:0}.entry b{font-size:16px}.meta{color:#c2d0df;font-size:13px}.good{color:#60df9b}.warn{color:#ffd08e}.bad{color:#fa9999}button,.link{border:1px solid #4c6d89;background:#21394d;color:#f3f8ff;border-radius:10px;font:inherit;padding:11px 15px;min-height:46px;margin:5px 6px 5px 0}button.primary{background:#30ca7a;color:#08160f;font-weight:700;border-color:#30ca7a}button:disabled{opacity:.5}code{font-size:12px;overflow-wrap:anywhere}a{color:#9bc7ff}</style></head>
+<body><main><h1>Films · データ保護・診断</h1><p class="sub">読み取り専用の緊急確認ページです。通常の映画アプリのプログラムは起動せず、評価・視聴履歴・レビュー・設定を書き換えません。</p>
+<section class="panel"><h2>操作テスト</h2><button id="tap" class="primary">ここをタップして反応を確認</button><span id="tapped" class="meta">未確認</span></section>
+<section class="panel"><h2>このブラウザ内に残っているデータ</h2><div id="local">確認中…</div><button id="export" class="primary" disabled>ブラウザ保存データをバックアップ</button><p class="small">TMDb / GitHubなどのAPIキーやログイン情報はバックアップに含めません。別のブラウザやホーム画面版では保存領域が異なる場合があります。</p></section>
+<section class="panel"><h2>GitHubに保存されたデータ</h2><div id="remote">未確認</div><button id="check">GitHubの保存データを確認</button><button id="remoteExport" disabled>GitHub保存データをバックアップ</button><p class="small">サーバーのデータも参照するだけで、変更しません。</p></section>
+<p class="small">「データが0件」と出ても削除を意味するとは限りません。Safariの通常画面、ChatGPT内ブラウザ、ホーム画面アプリでは保存領域が異なる場合があります。サイトデータを消したり、映画管理アプリの「初期化」を押したりしないでください。</p>
+<a href="./" class="link">映画アプリに戻る</a>
+</main><script>
+"use strict";
+const names=["movie30_data_v1","movie30_data_backup_1","movie30_data_backup_2","movie30_data_backup_3","movie30_complete_v10","movie30_complete_v9","movie30_complete_v8","movie30_complete_v7","movie30_complete_v6"];
+let browserRecords=[],remoteData=null;
+const $=id=>document.getElementById(id);
+const date=t=>{const n=Number(t);if(!n)return "日時不明";try{return new Date(n).toLocaleString('ja-JP',{dateStyle:'medium',timeStyle:'short'})}catch{return "日時不明"}};
+const summary=raw=>{
+ const s=raw&&typeof raw==="object"?(raw.state||raw.data||raw):{};
+ const meta=s.letterboxdMeta&&typeof s.letterboxdMeta==="object"?Object.values(s.letterboxdMeta):[];
+ return {custom:Array.isArray(s.customFilms)?s.customFilms.length:0,
+ score:Object.keys(s.exactScores||{}).length,stars:Object.keys(s.starOverrides||{}).length,
+ watches:meta.reduce((n,x)=>n+(Array.isArray(x?.watchHistory)?x.watchHistory.length:0),0),
+ metaFilms:meta.length,reviews:meta.filter(x=>x?.note||x?.review||(x?.rssReviewRecords&&Object.keys(x.rssReviewRecords).length)).length,
+ updated:date(s.updatedAt||raw?.updatedAt)};
+};
+const line=(name,s)=>'<div class="entry"><b>'+name+'</b><div class="meta">追加映画 '+s.custom+'件 ／ 個別点数 '+s.score+'件 ／ 星の変更 '+s.stars+'件</div><div class="meta">視聴履歴 '+s.watches+'件 ／ レビュー関連 '+s.reviews+'件 ／ 作品別情報 '+s.metaFilms+'件</div><div class="meta">最終更新 '+s.updated+'</div></div>';
+function scan(){
+ try{
+  browserRecords=names.flatMap(k=>{const v=localStorage.getItem(k);if(!v)return [];try{const j=JSON.parse(v);return j&&typeof j==="object"?[{name:k,data:j}]:[]}catch{return []}});
+  $('local').innerHTML=browserRecords.length?browserRecords.map(r=>line(r.name,summary(r.data))).join(''):'<span class="warn">このブラウザの保存領域では見つかりません（削除されたとは限りません）。</span>';
+  $('export').disabled=!browserRecords.length;
+ }catch(err){$('local').textContent='保存領域が読み取れません: '+String(err)}
+}
+function download(obj,filename){
+ const blob=new Blob([JSON.stringify(obj,null,2)],{type:"application/json"});
+ const url=URL.createObjectURL(blob),a=document.createElement('a');
+ a.href=url;a.download=filename;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),2000);
+}
+$('tap').onclick=()=>{$('tapped').textContent="タップに反応しています ✓";$('tapped').className="meta good"};
+$('export').onclick=()=>download({type:"movie30-local-recovery",exportedAt:new Date().toISOString(),records:browserRecords},"films-local-backup-"+new Date().toISOString().slice(0,10)+".json");
+$('check').onclick=async()=>{const b=$('check');b.disabled=true;$('remote').textContent="確認中…";try{const res=await fetch("./live-state.json",{cache:"no-store"});if(!res.ok)throw Error("HTTP "+res.status);remoteData=await res.json();$('remote').innerHTML=line("live-state.json",summary(remoteData));$('remoteExport').disabled=false}catch(err){$('remote').textContent="読み取れません: "+String(err)}finally{b.disabled=false}};
+$('remoteExport').onclick=()=>{if(remoteData)download(remoteData,"films-github-backup-"+new Date().toISOString().slice(0,10)+".json")};
+scan();
+</script></body></html>
