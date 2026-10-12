@@ -101,7 +101,7 @@ jobs:
                rect:rect&&{top:Math.round(rect.top),bottom:Math.round(rect.bottom)},
                nav:{top:Math.round(nav.top),bottom:Math.round(nav.bottom)},height:innerHeight,debug:window.__movie30LastJump99||null};
             },id);
-            console.log('JUMPED',JSON.stringify(jumped));
+            console.log('JUMPED',JSON.stringify(jumped),'PAGE_ERRORS',JSON.stringify(errors.slice(-10)));
             if(jumped.query!==''||jumped.count<300||!jumped.focused||jumped.buttons!==2)throw Error('Search arrow did not restore full ranking at target');
             if(jumped.rect.top<0||jumped.rect.top>=jumped.height)throw Error('Target is offscreen after global jump');
             const move=await page.evaluate(id=>{
@@ -134,3 +134,5 @@ jobs:
 # Trigger on direct-focus fix 20261012r
 
 # Test core-native search jump 20261012s
+
+# Inspect jump phase and swap motion 20261012t
