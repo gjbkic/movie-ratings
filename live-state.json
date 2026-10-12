@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791817700745,
-  "sourceUpdatedIso": "2026-10-12T15:08:20.745Z",
+  "sourceUpdatedAt": 1791817745587,
+  "sourceUpdatedIso": "2026-10-12T15:09:05.587Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -20669,7 +20669,13 @@
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
-        "TV本編"
+        "TV本編",
+        "恋愛",
+        "どんでん返し",
+        "娯楽",
+        "哲学・思想",
+        "ドラマ",
+        "SF"
       ],
       "origin": "その他",
       "format": "",
@@ -34419,7 +34425,13 @@
         "TV本編"
       ],
       "custom-1791802127464-uge5": [
-        "TV本編"
+        "TV本編",
+        "恋愛",
+        "どんでん返し",
+        "娯楽",
+        "哲学・思想",
+        "ドラマ",
+        "SF"
       ],
       "custom-1791802127938-6mow": [
         "TV本編",
@@ -62449,7 +62461,13 @@
           "source": "tmdb",
           "fetchedAt": "2026-10-12T10:48:47.938Z"
         },
-        "legacyMovieId": 495275
+        "legacyMovieId": 495275,
+        "poster84": {
+          "path": "/seN6rRfN0I6n8iDXjlSMk1QjNcq.jpg",
+          "tmdbId": 42009,
+          "checkedAt": "2026-10-12T15:08:56.881Z",
+          "provider": "tmdb"
+        }
       },
       "custom-1791802127938-6mow": {
         "contentType": "tv_episode",
