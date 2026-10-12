@@ -5694,12 +5694,13 @@ function jumpFocus(id,afterLayout,center=true){
  }));
 }
 function jumpGlobal(id){
- if(filtered())backFilters=cap();
+ window.__movie30LastJump99={id,phase:'started'};
+ try{if(filtered())backFilters=cap()}catch(error){console.warn('Movie jump filter snapshot',error)}
  document.activeElement?.blur?.();
  document.querySelectorAll('.movie92-suggestions').forEach(menu=>{menu.hidden=true});
- clearFilters();
+ try{clearFilters()}catch(error){console.warn('Movie jump reset',error)}
  view.page='rank';
- render();
+ try{render()}catch(error){console.warn('Movie rank redrawn; continuing jump',error)}
  let attempts=0;
  const jump=()=>{
   attempts++;
