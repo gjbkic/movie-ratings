@@ -1,5 +1,11 @@
 (() => {
-  const start = () => {
+  const start = async () => {
+    try {
+      await Promise.race([
+        window.__movie30StorageReady || Promise.resolve(),
+        new Promise(resolve => setTimeout(resolve, 2500))
+      ]);
+    } catch (_) {}
     window.__movie30BulkBoot = false;
 
     document.querySelectorAll(".tab").forEach(button => {
@@ -11,7 +17,7 @@
     });
 
     const build = document.getElementById('movie30BuildV29');
-    if (build) build.textContent = 'app build 20261012m';
+    if (build) build.textContent = 'app build 20261012n';
 
     try {
       // The state is already loaded in memory. Writing it again during startup
