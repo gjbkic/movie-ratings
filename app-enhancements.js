@@ -2189,3 +2189,60 @@ window.__movie30SyncGuard98={version:BUILD,restoreFromBackupCount:backfilled};
 const label=document.getElementById('movie30BuildV29');
 if(label)label.textContent='app build '+BUILD;
 })();
+
+/* v99: Search result must jump to the SAME film inside the unfiltered rank,
+   and a focused search suggestion must stay above sticky navigation. */
+(() => {
+'use strict';
+const style=document.createElement('style');
+style.id='movie30-rank-search-layer99';
+style.textContent=[
+ '.top{z-index:120!important;background:#07090c!important;}',
+ '#page-rank>.tools.movie96-compact-tools{position:relative!important;z-index:1!important;}',
+ '#page-rank>.tools.movie96-compact-tools:focus-within{z-index:80!important;}',
+ '#page-rank>.tools.movie96-compact-tools:has(.movie92-suggestions:not([hidden])){z-index:80!important;}',
+ '#page-rank>.tools .movie92-search-wrap{isolation:isolate;}',
+ '#page-rank .movie92-suggestions{z-index:90!important;position:absolute!important;}',
+ '#page-rank #starJumpBar{z-index:55!important;isolation:isolate;background:#0a0e14!important;}',
+ '#rankRoot .rank-star>.rank-star-head{z-index:32!important;background:#111720!important;isolation:isolate;}',
+ '#rankRoot .score-bin>.score-label{z-index:28!important;background:#132031!important;}',
+ '#rankRoot .rank-star{overflow:visible!important;}',
+ '#rankRoot .rank-card .drag-handle.movie99-jump{cursor:pointer;color:#bcffe0!important;background:#173528!important;border:1px solid #3e8c65!important;font-size:18px!important;}',
+ '#rankRoot .rank-card.movie30-jump-highlight{outline:2px solid #61eca4!important;box-shadow:0 0 0 5px rgba(65,235,145,.21)!important;transition:outline-color .25s,box-shadow .25s;}',
+ '.movie30-swap-ghost{border:1px solid #78e5aa!important;border-radius:10px!important;overflow:hidden!important;background:#202e3b!important;}'
+].join('\n');
+document.head.appendChild(style);
+function jumpBindings(){
+ const isFiltered=window.__movie30IsRankFiltered?.();
+ for(const card of document.querySelectorAll('#rankRoot .rank-card[data-id]')){
+  const handle=card.querySelector('.drag-handle');
+  if(!handle)continue;
+  handle.classList.toggle('movie99-jump',Boolean(isFiltered));
+  if(!isFiltered)continue;
+  const id=decodeURIComponent(card.dataset.id||'');
+  handle.disabled=false;
+  handle.textContent='↗';
+  handle.title='検索を解除し、全体ランキング内のこの映画へ移動';
+  handle.setAttribute('aria-label','全体ランキングで'+(card.querySelector('.rank-title')?.textContent||'この作品')+'の位置へ移動');
+  // Safari can lose the synthesized click when the keyboard collapses.
+  // Pointerdown is the primary action; click is the keyboard/AT fallback.
+  let triggered=false;
+  const activate=event=>{
+   event.preventDefault();
+   event.stopPropagation();
+   if(triggered)return;
+   triggered=true;
+   window.__movie30JumpToGlobalRank?.(id);
+  };
+  handle.onpointerdown=activate;
+  handle.onclick=activate;
+ }
+}
+const previous=renderRank;
+renderRank=function(...args){
+ const result=previous.apply(this,args);
+ if(!window.__movie30BulkBoot)jumpBindings();
+ return result;
+};
+window.__movie30SearchJump99={version:'20261012n',bind:jumpBindings};
+})();
