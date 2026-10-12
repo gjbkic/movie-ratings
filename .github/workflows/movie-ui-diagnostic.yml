@@ -10,32 +10,48 @@ jobs:
     timeout-minutes: 7
     steps:
       - uses: actions/checkout@v4
-      - name: Exercise movie app in Chromium
+      - name: Isolate frozen frontend module with Chrome
         shell: bash
         run: |
           set -e
           npm install --no-save --no-package-lock playwright-core@1.56.1 >/dev/null 2>&1
-          which google-chrome || which chromium || true
           python3 -m http.server 8765 >/tmp/movie-http.log 2>&1 &
           node <<'NODE'
-          const {chromium}=require('playwright-core');
+          const {chromium}=require('playwright-core'),fs=require('fs');
+          const enh=fs.readFileSync('app-enhancements.js','utf8');
+          const bds=[['core-only',''],['through94',enh.split('/* Consolidated from patch-v95.js')[0]],['through95',enh.split('/* Consolidated from patch-v96.js')[0]],['through96',enh.split('/* Consolidated from patch-v97.js')[0]],['through97',enh.split('/* Consolidated from patch-v98.js')[0]],['all',enh]];
           (async()=>{
-            const exe=['/usr/bin/google-chrome','/usr/bin/chromium','/usr/bin/chromium-browser'].find(x=>require('fs').existsSync(x));
-            console.log('CHROME_PATH',exe);
-            const b=await chromium.launch({executablePath:exe,headless:true,args:['--no-sandbox']});
-            const page=await b.newPage({viewport:{width:390,height:844},isMobile:true,hasTouch:true});
-            const errors=[];page.on('pageerror',e=>errors.push(String(e)));
-            page.on('console',msg=>{if(msg.type()==='error')errors.push('CONSOLE '+msg.text())});
-            let t=Date.now();page.on('requestfailed',r=>{if(!r.url().includes('image.tmdb.org')) errors.push('REQFAIL '+r.url()+r.failure()?.errorText)});
-            await page.goto('http://localhost:8765/index.html',{waitUntil:'domcontentloaded',timeout:25000});
-            console.log('DOM_READY_MS',Date.now()-t);
-            await page.waitForTimeout(6000);
-            let state=await Promise.race([page.evaluate(()=>({ready:document.documentElement.classList.contains('movie30-ready'),count:document.querySelector('#summary')?.textContent,rank:document.querySelectorAll('#rankRoot .rank-card').length,active:document.querySelector('.tab.active')?.dataset.page,overlay:[...document.querySelectorAll('body *')].filter(x=>{const st=getComputedStyle(x);return st.position==='fixed'&&st.display!=='none'&&st.pointerEvents!=='none'&&x.getBoundingClientRect().height>window.innerHeight*.8}).slice(0,10).map(x=>x.id||x.className)})),new Promise(resolve=>setTimeout(()=>resolve('EVAL_STALLED'),3500))]);
-            console.log('INIT',JSON.stringify(state),'ELAPSED',Date.now()-t,'ERRORS',JSON.stringify(errors.slice(0,20)));
-            for(const selector of ['.tab[data-page="distribution"]','.tab[data-page="data"]','.tab[data-page="rank"]','#quickAdd','#closeSheet']){
-               try{const start=Date.now();await page.locator(selector).first().click({timeout:3500});console.log('CLICK',selector,'DURATION',Date.now()-start,'PAGE',await page.locator('.tab.active').first().getAttribute('data-page'))}catch(e){console.log('CLICK_FAIL',selector,String(e).slice(0,900))}
+            const browser=await chromium.launch({executablePath:'/usr/bin/google-chrome',headless:true,args:['--no-sandbox']});
+            for(const [name,source] of bds){
+              const context=await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true});
+              const page=await context.newPage();
+              const errors=[],frames=[];
+              page.on('pageerror',e=>errors.push('ERROR '+String(e)));
+              page.on('console',msg=>{if(msg.type()==='error')errors.push('CONSOLE '+msg.text());else if(msg.text().startsWith('TRACE_'))frames.push(msg.text())});
+              await page.route('**/app-enhancements.js*',route=>route.fulfill({status:200,contentType:'application/javascript',body:source}));
+              await page.addInitScript(()=>{
+                const Native=window.MutationObserver;let id=0;
+                window.MutationObserver=class extends Native {
+                  constructor(fn){
+                    const key=++id,at=String(new Error().stack||'').slice(0,240);let calls=0;
+                    super(function(mutations,observer){calls++;if(calls===15||calls===75||calls===250)console.log('TRACE_MUTATION',key,calls,at);
+                      if(calls>250){console.error('TRACE_MUTATION_DISABLED',key,calls,at);observer.disconnect();return;}
+                      return fn(mutations,observer);
+                    });
+                  }
+                };
+              });
+              let started=Date.now();
+              try{await page.goto('http://localhost:8765/index.html',{waitUntil:'domcontentloaded',timeout:12000})}catch(e){errors.push('NAV '+String(e))}
+              await new Promise(resolve=>setTimeout(resolve,2500));
+              const value=await Promise.race([page.evaluate(()=>({ready:document.documentElement.classList.contains('movie30-ready'),rank:document.querySelectorAll('#rankRoot .rank-card').length,text:document.querySelector('#summary')?.textContent})).catch(e=>String(e)),new Promise(resolve=>setTimeout(()=>resolve('BLOCKED'),2200))]);
+              let tap;
+              if(value!=='BLOCKED') {
+                try{await page.locator('.tab[data-page="distribution"]').click({timeout:1600});tap=await page.locator('.tab.active').getAttribute('data-page')}catch(e){tap='FAIL '+String(e).slice(0,160)}
+              } else tap='BLOCKED';
+              console.log('VARIANT',name,'LEN',source.length,'TIME',Date.now()-started,'EVAL',JSON.stringify(value),'TAP',tap,'TRACES',JSON.stringify(frames.slice(-10)),'ERRORS',JSON.stringify(errors.slice(0,8)));
+              await context.close().catch(()=>{});
             }
-            console.log('FINAL_ERRORS',JSON.stringify(errors.slice(0,20)));
-            await b.close();
+            await browser.close();
           })().catch(e=>{console.error(e.stack||e);process.exitCode=1});
           NODE
