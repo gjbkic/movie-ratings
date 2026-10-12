@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791801572246,
-  "sourceUpdatedIso": "2026-10-12T10:39:32.246Z",
+  "sourceUpdatedAt": 1791801592509,
+  "sourceUpdatedIso": "2026-10-12T10:39:52.509Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -20677,7 +20677,12 @@
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
-        "TV本編"
+        "TV本編",
+        "ファンタジー",
+        "アクション",
+        "アドベンチャー",
+        "娯楽",
+        "心理・内面"
       ],
       "origin": "その他",
       "format": "",
@@ -34425,7 +34430,12 @@
         "哲学・思想"
       ],
       "custom-1791800382838-o2vr": [
-        "TV本編"
+        "TV本編",
+        "ファンタジー",
+        "アクション",
+        "アドベンチャー",
+        "娯楽",
+        "心理・内面"
       ]
     },
     "originOverrides": {
@@ -62495,6 +62505,12 @@
           ],
           "source": "tmdb",
           "fetchedAt": "2026-10-12T10:19:43.199Z"
+        },
+        "poster84": {
+          "path": "/seN6rRfN0I6n8iDXjlSMk1QjNcq.jpg",
+          "tmdbId": 42009,
+          "checkedAt": "2026-10-12T10:39:42.985Z",
+          "provider": "tmdb"
         }
       }
     }
