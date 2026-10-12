@@ -5697,7 +5697,7 @@ function swap(id,d){
    {transform:'translate3d(0,0,0)',offset:0},
    {transform:'translate3d(0,0,0)',offset:.18},
    {transform:'translate3d('+(-dx)+'px,'+(-dy)+'px,0)',offset:1}
-  ],{duration:duration*.93,easing:'cubic-bezier(.22,.65,.3,1)'});
+  ],{duration,easing:'cubic-bezier(.22,.65,.3,1)',fill:'forwards'});
   animation.onfinish=finish;
   animation.oncancel=finish;
   setTimeout(finish,duration+180);
