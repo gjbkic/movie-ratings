@@ -1183,7 +1183,7 @@ function setup(input){
  input.setAttribute('autocomplete','off');
  input.setAttribute('aria-autocomplete','list');
  input.addEventListener('input',()=>{box.ticket++;refresh(box);queueOnline(box);});
- input.addEventListener('focus',()=>refresh(box));
+ // Suggestions appear in response to typing, not when the user merely focuses the field.
  input.addEventListener('keydown',event=>{
   if(menu.hidden)return;
   if(event.key==='Escape'){event.preventDefault();hide(box);return;}
@@ -1464,6 +1464,8 @@ async function load(){
 }
 window.__movie30AdvancedFilter93={matches,hasActive:()=>Boolean(chosen.director||chosen.actor||chosen.genre),reset:()=>{
  chosen.director='';chosen.actor='';chosen.genre='';syncValues();rerender();
+},setFilters:value=>{
+ chosen.director=String(value?.director||'');chosen.actor=String(value?.actor||'');chosen.genre=String(value?.genre||'');syncValues();rerender();
 },getFilters:()=>({...chosen}),version:VERSION};
 updateLabels();
 load();
@@ -1674,7 +1676,7 @@ if(marker)marker.textContent='app build '+BUILD;
 (() => {
 'use strict';
 // v96: one compact search field, expandable full filters and score labels below sticky star nav.
-const BUILD='20261012f';
+const BUILD='20261012h';
 const page=document.getElementById('page-rank');
 const tools=page?.querySelector(':scope > .tools');
 const adv=document.getElementById('advBox66');
@@ -1821,8 +1823,8 @@ function openPanel(open){
 }
 openPanel(false);
 input.setAttribute('aria-controls','advBox66');
-input.addEventListener('focus',()=>openPanel(true));
-input.addEventListener('pointerdown',()=>openPanel(true));
+// Keep the filter panel closed when the search field receives focus. The adjacent
+// chevron is the sole control that opens it.
 expand.addEventListener('pointerdown',e=>e.preventDefault());
 expand.addEventListener('click',()=>openPanel(!adv.classList.contains('movie96-is-open')));
 close.addEventListener('click',()=>{openPanel(false);input.blur();});
