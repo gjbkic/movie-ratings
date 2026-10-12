@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791817630818,
-  "sourceUpdatedIso": "2026-10-12T15:07:10.818Z",
+  "sourceUpdatedAt": 1791817653504,
+  "sourceUpdatedIso": "2026-10-12T15:07:33.504Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -20663,7 +20663,13 @@
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
-        "TV本編"
+        "TV本編",
+        "アクション",
+        "サスペンス",
+        "娯楽",
+        "ファンタジー",
+        "アドベンチャー",
+        "世界観"
       ],
       "origin": "その他",
       "format": "",
@@ -34414,7 +34420,13 @@
         "TV本編"
       ],
       "custom-1791802127938-6mow": [
-        "TV本編"
+        "TV本編",
+        "アクション",
+        "サスペンス",
+        "娯楽",
+        "ファンタジー",
+        "アドベンチャー",
+        "世界観"
       ]
     },
     "originOverrides": {
@@ -62479,7 +62491,13 @@
           "fetchedAt": "2026-10-12T10:48:48.346Z"
         },
         "legacyMovieId": 495281,
-        "titleSource": "tmdb-tv"
+        "titleSource": "tmdb-tv",
+        "poster84": {
+          "path": "/seN6rRfN0I6n8iDXjlSMk1QjNcq.jpg",
+          "tmdbId": 42009,
+          "checkedAt": "2026-10-12T15:07:22.970Z",
+          "provider": "tmdb"
+        }
       }
     }
   }
