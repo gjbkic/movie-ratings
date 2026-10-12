@@ -275,6 +275,82 @@ def supplement_japanese_director_aliases(records,films):
             print("Japanese director aliases checked "+str(scanned)+" films; new names "+str(added),flush=True)
     return scanned,added
 
+def supplement_cast_and_genres(records, films):
+    """Fetch TMDb cast and localized genres for safely matched titles.
+
+    Store cast separately from the user's curated movie categories and ranks.
+    A few actors in Japanese productions also receive verified Japanese-script
+    name aliases via TMDb person IDs rather than guessed translations.
+    """
+    scanned = 0
+    added = 0
+    people_cache = {}
+    date = datetime.now(timezone.utc).isoformat()
+    for film_id, rec in records.items():
+        if film_id not in films:
+            continue
+        # Empty results are valid and must not be refetched forever.
+        if isinstance(rec.get("cast"), list) and isinstance(rec.get("genres"), list):
+            continue
+        kind = rec.get("type") or "movie"
+        external_id = rec.get("tmdbId")
+        if kind not in ("movie", "tv") or not str(external_id).isdigit():
+            continue
+        path = ("/movie/" if kind == "movie" else "/tv/") + str(external_id)
+        extra = "credits" if kind == "movie" else "aggregate_credits"
+        try:
+            item = get(path, {"append_to_response": extra, "language": "ja-JP"})
+            if not compatible(films[film_id], item, kind):
+                continue
+            groups = item.get("genres") or []
+            genres = distinct(g.get("name") for g in groups if g.get("name"))
+            if kind == "movie":
+                actors = (item.get("credits") or {}).get("cast") or []
+            else:
+                actors = (item.get("aggregate_credits") or {}).get("cast") or []
+            actors = sorted(actors, key=lambda x: int(x.get("order") or 0))[:16]
+            cast = []
+            for i, actor in enumerate(actors):
+                person_id = actor.get("id")
+                name = str(actor.get("name") or actor.get("original_name") or "").strip()
+                if not name:
+                    continue
+                japanese_aliases = []
+                if (item.get("original_language") == "ja" and i < 7
+                        and person_id and str(person_id).isdigit()):
+                    pid = int(person_id)
+                    if pid not in people_cache:
+                        try:
+                            person = get("/person/" + str(pid), {"language": "ja-JP"})
+                            variants = distinct([person.get("name")]
+                                                + (person.get("also_known_as") or []))
+                            people_cache[pid] = [
+                                alias for alias in variants
+                                if JP_CHARACTERS.search(alias) and 2 <= len(alias) <= 55
+                            ][:8]
+                        except ValueError:
+                            people_cache[pid] = []
+                    japanese_aliases = people_cache.get(pid, [])
+                cast.append({
+                    "id": int(person_id) if str(person_id).isdigit() else None,
+                    "name": name,
+                    "aliases": distinct(japanese_aliases)
+                })
+            rec["cast"] = cast
+            rec["genres"] = genres
+            rec["castCheckedAt"] = date
+            scanned += 1
+            added += len(cast)
+        except ValueError:
+            # Mismatches and deleted TMDb IDs are retried in a later run.
+            continue
+        if scanned and scanned % 60 == 0:
+            print("TMDb cast/genres: enriched " + str(scanned)
+                  + " movies and series, " + str(added) + " actor entries",
+                  flush=True)
+    return scanned, added
+
+
 def main():
     get("/configuration") # fail fast rather than marking all movies as misses
     films=collect()
@@ -312,6 +388,8 @@ def main():
             raise
         if i%25==0:
             print("Checked "+str(i)+"/"+str(len(films))+"; newly fetched "+str(completed)+"; unmatched "+str(len(failures)),flush=True)
+    cast_scanned,cast_added=supplement_cast_and_genres(records,films)
+    print("Cast and genres: enriched "+str(cast_scanned)+" titles, "+str(cast_added)+" credited actors",flush=True)
     alias_scanned,alias_added=supplement_japanese_director_aliases(records,films)
     print("JP director names: scanned "+str(alias_scanned)+", newly added "+str(alias_added),flush=True)
     now=datetime.now(timezone.utc).isoformat()
