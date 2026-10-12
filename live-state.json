@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791792681104,
-  "sourceUpdatedIso": "2026-10-12T08:11:21.104Z",
+  "sourceUpdatedAt": 1791792691797,
+  "sourceUpdatedIso": "2026-10-12T08:11:31.797Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -7531,35 +7531,6 @@
       "letterboxdReportedWatchedDate": "2026-10-10"
     },
     {
-      "id": "lb-490-2beQ",
-      "title": "12モンキーズ",
-      "originalTitle": "",
-      "englishTitle": "Twelve Monkeys",
-      "year": 1995,
-      "score": 83,
-      "star": 3,
-      "overallRank": 261,
-      "sameScoreRank": 15,
-      "category": "SF",
-      "mediaType": "movie",
-      "genre": [
-        "SF",
-        "世界観",
-        "アクション",
-        "切ない",
-        "娯楽",
-        "心理・内面",
-        "時間"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 129,
-      "exact": true,
-      "letterboxdAddedDate": "2026-01-12",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-267-29u8",
       "title": "未知との遭遇",
       "originalTitle": "",
@@ -7567,8 +7538,8 @@
       "year": 1977,
       "score": 83,
       "star": 3,
-      "overallRank": 262,
-      "sameScoreRank": 16,
+      "overallRank": 261,
+      "sameScoreRank": 15,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -7596,8 +7567,8 @@
       "year": 1998,
       "score": 83,
       "star": 3,
-      "overallRank": 263,
-      "sameScoreRank": 17,
+      "overallRank": 262,
+      "sameScoreRank": 16,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -7623,8 +7594,8 @@
       "year": 2017,
       "score": 83,
       "star": 3,
-      "overallRank": 264,
-      "sameScoreRank": 18,
+      "overallRank": 263,
+      "sameScoreRank": 17,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -7646,6 +7617,35 @@
       "letterboxdAddedDate": "2026-10-12",
       "letterboxdPublishedAt": "Mon, 12 Oct 2026 19:33:28 +1300",
       "letterboxdReportedWatchedDate": "2026-10-12"
+    },
+    {
+      "id": "lb-490-2beQ",
+      "title": "12モンキーズ",
+      "originalTitle": "",
+      "englishTitle": "Twelve Monkeys",
+      "year": 1995,
+      "score": 83,
+      "star": 3,
+      "overallRank": 264,
+      "sameScoreRank": 18,
+      "category": "SF",
+      "mediaType": "movie",
+      "genre": [
+        "SF",
+        "世界観",
+        "アクション",
+        "切ない",
+        "娯楽",
+        "心理・内面",
+        "時間"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 129,
+      "exact": true,
+      "letterboxdAddedDate": "2026-01-12",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "lb-16-70w",
@@ -21919,10 +21919,10 @@
         "lb-261-1IGQ",
         "lb-263-6bJM",
         "custom-1791627813752-lf6s",
-        "lb-490-2beQ",
         "lb-267-29u8",
         "lb-430-26uk",
         "custom-1791792053812-0uov",
+        "lb-490-2beQ",
         "lb-16-70w",
         "lb-520-1Efm",
         "lb-127-28zw",
