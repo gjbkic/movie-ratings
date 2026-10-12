@@ -7,6 +7,7 @@ on:
     paths:
       - .github/workflows/update-tmdb.yml
       - scripts/update_tmdb_metadata.py
+      - scripts/recheck_cast.py
   schedule:
     - cron: '13 19 * * 0'
 
@@ -30,12 +31,17 @@ jobs:
         env:
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
           TMDB_READ_ACCESS_TOKEN: ${{ secrets.TMDB_READ_ACCESS_TOKEN }}
-        run: python3 scripts/update_tmdb_metadata.py
+        run: python3 scripts/recheck_cast.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cast-fetch-report
+          path: cast-fetch-report.json
       - name: Commit fetched metadata, merging concurrent app updates safely
         shell: bash
         run: |
           set -euo pipefail
           cp tmdb-metadata.json "$RUNNER_TEMP/tmdb-generated.json"
+          cp cast-fetch-report.json "$RUNNER_TEMP/cast-fetch-report.json"
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           for attempt in 1 2 3 4; do
@@ -60,7 +66,7 @@ jobs:
               # Manually verified credits take precedence over automatic TMDb recrawls.
               verified=original.get('source','') not in ('','tmdb','tmdb-synced','corrected-credits-recheck-required')
               if verified:
-                  for field in ('directors','creators','source','sourceUrl','creditRole','type'):
+                  for field in ('directors','creators','source','sourceUrl','creditRole'):
                       if field in original:
                           next_rec[field]=original[field]
               merged[id]=next_rec
@@ -68,7 +74,8 @@ jobs:
           generated['matchedCount']=len(merged)
           target.write_text(json.dumps(generated,ensure_ascii=False,indent=2)+'\n')
           PY
-            git add -- tmdb-metadata.json
+            cp "$RUNNER_TEMP/cast-fetch-report.json" cast-fetch-report.json
+            git add -- tmdb-metadata.json cast-fetch-report.json
             if git diff --cached --quiet; then
               echo "Metadata unchanged"
               exit 0

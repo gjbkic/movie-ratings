@@ -7,6 +7,7 @@ import sys
 import time
 import unicodedata
 from datetime import datetime, timezone
+from email.utils import parsedate_to_datetime
 from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.parse import urlencode
@@ -23,9 +24,12 @@ if TOKEN:
     HEADERS["Authorization"]="Bearer "+TOKEN
 API="https://api.themoviedb.org/3"
 last_call=0.0
+rate_blocked_until=0.0
 
 def get(path, params=None):
-    global last_call
+    global last_call, rate_blocked_until
+    if rate_blocked_until>time.time():
+        raise RuntimeError("TMDb rate limit HTTP 429: Retry-After待機中のため未試行")
     query=dict(params or {})
     if KEY and not TOKEN:
         query["api_key"]=KEY
@@ -46,7 +50,15 @@ def get(path, params=None):
                 pause=min(30,(2**attempt)*2)
                 if exc.code==429:
                     retry=exc.headers.get("Retry-After","")
-                    if retry.isdigit():pause=max(pause,min(30,int(retry)))
+                    if retry:
+                        try:
+                            wait=float(retry) if retry.isdigit() else parsedate_to_datetime(retry).timestamp()-time.time()
+                            if wait>300:
+                                rate_blocked_until=time.time()+wait
+                                raise RuntimeError("TMDb rate limit HTTP 429: Retry-Afterが5分を超えるため再実行待ち")
+                            pause=max(pause,wait)
+                        except (TypeError,ValueError,OverflowError):
+                            pass
                 time.sleep(pause)
                 continue
             raise RuntimeError("TMDb HTTP "+str(exc.code)+" on "+path) from None
