@@ -40,22 +40,40 @@ function startDrag(e){
  if(dragCtx)cancelDrag();
  const card=e.currentTarget.closest(".rank-card"),list=card?.closest(".score-list");
  if(!card||!list)return;
- const ghost=card.cloneNode(true);
+ const rect=card.getBoundingClientRect(),ghost=card.cloneNode(true);
  ghost.querySelector('.v66-pos')?.remove();
- dragCtx={id:decodeURIComponent(card.dataset.id),card,handle:e.currentTarget,fromScore:Number(list.dataset.score),ghost,pointerId:e.pointerId,startX:e.clientX,startY:e.clientY,moved:false};
- dragCtx.ghost.classList.add("drag-ghost");
- dragCtx.ghost.style.width=Math.min(card.getBoundingClientRect().width,520)+"px";
- document.body.appendChild(dragCtx.ghost);
+ dragCtx={id:decodeURIComponent(card.dataset.id),card,handle:e.currentTarget,fromScore:Number(list.dataset.score),ghost,pointerId:e.pointerId,startX:e.clientX,startY:e.clientY,moved:false,originRect:{left:rect.left,top:rect.top,width:rect.width,height:rect.height}};
+ ghost.classList.add("drag-ghost","movie30-floating-drag");
+ Object.assign(ghost.style,{
+  position:'fixed',left:rect.left+'px',top:rect.top+'px',
+  width:rect.width+'px',height:rect.height+'px',
+  maxWidth:'none',boxSizing:'border-box',margin:'0',
+  zIndex:'2147483000',pointerEvents:'none',
+  transform:'translate3d(0,0,0) rotate(0deg) scale(1)',
+  transformOrigin:'center center',opacity:'1',
+  boxShadow:'0 9px 24px rgba(0,0,0,.40)',
+  transition:'transform 130ms cubic-bezier(.22,.75,.25,1),box-shadow 130ms ease',
+  willChange:'transform,box-shadow'
+ });
+ document.body.appendChild(ghost);
  card.classList.add("dragging");
  document.body.classList.add("drag-active");
  try{if(Number.isFinite(e.pointerId)&&e.pointerId>=0)e.currentTarget.setPointerCapture(e.pointerId)}catch(_){}
  moveGhost(e);
+ setTimeout(()=>{if(ghost.isConnected)ghost.style.transition='none';},140);
  window.addEventListener("pointermove",moveDrag,{passive:false});
  window.addEventListener("pointerup",endDrag,{passive:false});
  window.addEventListener("pointercancel",cancelDrag,{passive:false});
  window.addEventListener("blur",cancelDrag);
 }
-function moveGhost(e){if(!dragCtx||!dragCtx.ghost?.isConnected)return;const w=dragCtx.ghost.getBoundingClientRect().width||0,h=dragCtx.ghost.getBoundingClientRect().height||0;dragCtx.ghost.style.left=Math.min(window.innerWidth-w-6,Math.max(6,e.clientX+12))+"px";dragCtx.ghost.style.top=Math.min(window.innerHeight-h-6,Math.max(6,e.clientY+12))+"px"}
+function moveGhost(e){
+ if(!dragCtx||!dragCtx.ghost?.isConnected)return;
+ const dx=e.clientX-dragCtx.startX,dy=e.clientY-dragCtx.startY;
+ // Keep the card at the same relative place under the user's finger.
+ // The previous pointer+12 offset suddenly teleported it on pointerdown.
+ dragCtx.ghost.style.transform='translate3d('+dx+'px,'+(dy-10)+'px,0) rotate(1deg) scale(1.045)';
+ dragCtx.ghost.style.boxShadow='0 24px 55px rgba(0,0,0,.7)';
+}
 function moveDrag(e){
  if(!dragCtx)return;
  e.preventDefault();
@@ -1686,7 +1704,7 @@ window.__movie30AutoSyncPending=()=>{const x=getLbSettings();if(x.auto!==false)s
   function ensureDragAuto(){if(!dragRaf)dragRaf=requestAnimationFrame(dragAutoFrame);}
   const startDragV21=startDrag, endDragV21=endDrag, cancelDragV21=cancelDrag;
   startDrag=function(e){startDragV21(e);if(dragCtx){dragPoint={x:e.clientX,y:e.clientY};ensureDragAuto();}};
-  moveDrag=function(e){if(!dragCtx)return;e.preventDefault();dragPoint={x:e.clientX,y:e.clientY};moveGhost(e);placeDragNearest(e.clientX,e.clientY);ensureDragAuto();};
+  moveDrag=function(e){if(!dragCtx)return;e.preventDefault();if(Math.hypot(e.clientX-dragCtx.startX,e.clientY-dragCtx.startY)>4)dragCtx.moved=true;dragPoint={x:e.clientX,y:e.clientY};moveGhost(e);placeDragNearest(e.clientX,e.clientY);ensureDragAuto();};
   endDrag=function(e){stopDragAuto();endDragV21(e);};
   cancelDrag=function(){stopDragAuto();cancelDragV21();};
 
