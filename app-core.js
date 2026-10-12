@@ -27,7 +27,7 @@ function renderHeader(){const t=allFilms().length,sc=allFilms().filter(f=>effect
 function rankSorted(arr,score){const saved=state.rankOrder[String(score)]||[],pos=new Map(saved.map((id,i)=>[id,i]));return arr.sort((a,b)=>{const pa=pos.has(a.id)?pos.get(a.id):1e9,pb=pos.has(b.id)?pos.get(b.id):1e9;return pa-pb||originalSort(a,b)})}
 function scoreListForStar(star){const [lo,hi]=STAR_RANGES[sk(star)];let scores=[];for(let x=hi;x>=lo;x--)scores.push(x);if(star===.5&&!view.showEmpty){const used=new Set(allFilms().map(effectiveScore).filter(v=>v!=null&&v<50));scores=scores.filter(x=>used.has(x));if(!scores.length)scores=[40]}return scores}
 function renderRank(){
- if(window.__movie30BulkBoot)return;
+ if(window.__movie30BulkBoot||dragCtx)return;
  if(!dragCtx){document.querySelectorAll(".drag-ghost").forEach(x=>x.remove());document.body.classList.remove("drag-active")}
  const root=document.getElementById("rankRoot"),q=(document.getElementById("searchRank").value||"").trim(),cat=document.getElementById("categoryFilterRank")?.value||"";root.innerHTML="";
  const advanced=window.__movie30AdvancedFilter93,searching=!!q||!!cat||Boolean(advanced?.hasActive()),matching=[];
@@ -99,7 +99,9 @@ function moveDrag(e){
 function finishDragUi(ctx){clearDragListeners();try{ctx?.handle?.releasePointerCapture?.(ctx.pointerId)}catch(_){}ctx?.ghost?.remove();ctx?.card?.classList.remove("dragging");document.body.classList.remove("drag-active");document.querySelectorAll(".drop-hot").forEach(x=>x.classList.remove("drop-hot"));document.querySelectorAll(".drag-ghost").forEach(x=>x.remove())}
 function cancelDrag(e){
  if(!dragCtx){document.querySelectorAll(".drag-ghost").forEach(x=>x.remove());document.body.classList.remove("drag-active");clearDragListeners();return}
- const ctx=dragCtx,visibleTop=ctx.card?.getBoundingClientRect().top;
+ const ctx=dragCtx,visibleTop=ctx.fromSearchHandoff&&Number.isFinite(ctx.anchorTop)
+  ?ctx.anchorTop+(Number(ctx.lastClientY??ctx.startY)-Number(ctx.startY))
+  :ctx.card?.getBoundingClientRect().top;
  window.__movie30DragFinalizer={type:'cancel',event:e?.type||'',id:ctx.id,moved:ctx.moved,top:visibleTop};
  dragCtx=null;finishDragUi(ctx);renderRank();
  // A pointercancel after search->rank DOM replacement must not leave the
@@ -124,7 +126,7 @@ function endDrag(e){
  const ctx=dragCtx;dragCtx=null;
  window.__movie30DragFinalizer={type:'end',event:e?.type||'',id:ctx.id,moved:ctx.moved};
  if(!ctx.moved){
-  const wantedTop=ctx.card?.getBoundingClientRect().top;
+  const wantedTop=ctx.fromSearchHandoff&&Number.isFinite(ctx.anchorTop)?ctx.anchorTop:ctx.card?.getBoundingClientRect().top;
   finishDragUi(ctx);
   window.__movie30PendingJump99=null;
   renderRank();
@@ -146,7 +148,9 @@ function endDrag(e){
  const list=ctx.card?.closest(".score-list"),newScore=Number(list?.dataset.score??ctx.fromScore),f=filmById(ctx.id);
  if(f){state.exactScores[f.id]=newScore;const newStar=scoreToStar(newScore);state.starOverrides[f.id]=newStar;state.assignments[f.id]=nearestTier(newStar,newScore)}
  document.querySelectorAll(".score-list").forEach(l=>{const score=l.dataset.score;state.rankOrder[score]=[...l.querySelectorAll(".rank-card")].map(c=>decodeURIComponent(c.dataset.id))});
- const droppedTop=ctx.card?.getBoundingClientRect().top;
+ const droppedTop=ctx.fromSearchHandoff&&Number.isFinite(ctx.anchorTop)
+  ?ctx.anchorTop+(Number(ctx.lastClientY??ctx.startY)-Number(ctx.startY))
+  :ctx.card?.getBoundingClientRect().top;
  finishDragUi(ctx);window.__movie30PendingJump99=null;save();render();
  const restoreAfterDrag=()=>{
   if(view.page!=='rank'||window.__movie30IsRankFiltered?.()===true)return;
@@ -1751,7 +1755,7 @@ window.__movie30AutoSyncPending=()=>{const x=getLbSettings();if(x.auto!==false)s
   function ensureDragAuto(){if(!dragRaf)dragRaf=requestAnimationFrame(dragAutoFrame);}
   const startDragV21=startDrag, endDragV21=endDrag, cancelDragV21=cancelDrag;
   startDrag=function(e){startDragV21(e);if(dragCtx){dragPoint={x:e.clientX,y:e.clientY};ensureDragAuto();}};
-  moveDrag=function(e){if(!dragCtx)return;e.preventDefault();if(Math.hypot(e.clientX-dragCtx.startX,e.clientY-dragCtx.startY)>4)dragCtx.moved=true;dragPoint={x:e.clientX,y:e.clientY};moveGhost(e);placeDragNearest(e.clientX,e.clientY);ensureDragAuto();};
+  moveDrag=function(e){if(!dragCtx)return;e.preventDefault();dragCtx.lastClientY=e.clientY;if(Math.hypot(e.clientX-dragCtx.startX,e.clientY-dragCtx.startY)>4)dragCtx.moved=true;dragPoint={x:e.clientX,y:e.clientY};moveGhost(e);placeDragNearest(e.clientX,e.clientY);ensureDragAuto();};
   endDrag=function(e){stopDragAuto();endDragV21(e);};
   cancelDrag=function(){stopDragAuto();cancelDragV21();};
 
@@ -5858,6 +5862,11 @@ function jumpGlobal(id,pointerEvent){
    if(handle){
     window.__movie30PendingJump99=null;
     startDrag({...pointer,currentTarget:handle,preventDefault(){}});
+    if(dragCtx){
+     dragCtx.fromSearchHandoff=true;
+     dragCtx.anchorTop=anchorTop;
+     dragCtx.lastClientY=pointer.clientY;
+    }
     dragStarted=!!dragCtx;
     window.__movie30LastJump99={id,attempts,found:true,phase:dragStarted?'dragging':'anchored',top:current.getBoundingClientRect().top};
    }
