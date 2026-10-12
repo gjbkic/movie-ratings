@@ -153,8 +153,7 @@
       const saved = await persist(entry);
       if (!saved) throw new Error('出演者情報をIndexedDBに保存できません。既存の映画データは変更していません');
       casts.set(f.id, entry);
-      updateSearch();
-      updateCounts();
+      if (!bulkRunning) { updateSearch(); updateCounts(); }
       return entry;
     })();
     pending.set(f.id, promise);
@@ -260,6 +259,7 @@
           failures.push(displayTitle(f) + ': ' + String(error.message || error));
         }
         done++;
+        if (done % 10 === 0) updateSearch();
         const status = document.getElementById('movieCastStatus');
         if (status && (done % 3 === 0 || done === films.length || errorsInARow >= 4))
           status.textContent = '取得 ' + done + '/' + films.length + ' · 成功 ' + ok + ' · 失敗 ' + failed +
@@ -270,6 +270,7 @@
       }
     } finally {
       bulkRunning = false;
+      updateSearch();
       if (runButton) runButton.textContent = '全作品の出演者を取得';
       if (retryButton) retryButton.disabled = false;
       const status = document.getElementById('movieCastStatus');
