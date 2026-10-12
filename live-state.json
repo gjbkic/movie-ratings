@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791792427840,
-  "sourceUpdatedIso": "2026-10-12T08:07:07.840Z",
+  "sourceUpdatedAt": 1791792482231,
+  "sourceUpdatedIso": "2026-10-12T08:08:02.231Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -6115,6 +6115,33 @@
       "letterboxdReportedWatchedDate": "2026-10-12"
     },
     {
+      "id": "custom-1790269934541-2ps3",
+      "title": "ザ・レイド",
+      "originalTitle": "Serbuan Maut",
+      "englishTitle": "The Raid",
+      "year": 2012,
+      "score": 84,
+      "star": 3.5,
+      "overallRank": 212,
+      "sameScoreRank": 6,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "アクション",
+        "スリラー",
+        "クライム",
+        "娯楽",
+        "バイオレンス"
+      ],
+      "origin": "その他",
+      "format": "live",
+      "runtime": 101,
+      "exact": true,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-379-R6yo",
       "title": "国宝",
       "originalTitle": "",
@@ -6122,8 +6149,8 @@
       "year": 2025,
       "score": 84,
       "star": 3.5,
-      "overallRank": 212,
-      "sameScoreRank": 6,
+      "overallRank": 213,
+      "sameScoreRank": 7,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -6144,39 +6171,6 @@
       "letterboxdAddedDate": "2026-03-13",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "custom-1790423279439-sn81",
-      "title": "ストロベリーナイト",
-      "originalTitle": "ストロベリーナイト",
-      "englishTitle": "Strawberry Night",
-      "year": 2010,
-      "score": 84,
-      "star": 3.5,
-      "overallRank": 213,
-      "sameScoreRank": 7,
-      "category": "Letterboxd",
-      "mediaType": "drama",
-      "genre": [
-        "心理・内面",
-        "サスペンス",
-        "ミステリー",
-        "スリラー",
-        "ドラマ",
-        "恋愛",
-        "切ない",
-        "娯楽",
-        "バイオレンス",
-        "雰囲気・美学",
-        "TV特番・SP"
-      ],
-      "origin": "日本",
-      "format": "live",
-      "runtime": 130,
-      "exact": true,
-      "letterboxdAddedDate": "2026-09-26",
-      "letterboxdPublishedAt": "Sat, 26 Sep 2026 23:45:09 +1200",
-      "letterboxdReportedWatchedDate": "2026-09-26"
     },
     {
       "id": "lb-499-948A",
@@ -6201,63 +6195,43 @@
       "origin": "その他",
       "format": "live",
       "runtime": 145,
-      "exact": false,
+      "exact": true,
       "letterboxdAddedDate": "2026-08-14",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1789385860026-8m1d",
-      "title": "Ani*Kuri15: ネコの集会",
-      "originalTitle": "",
-      "englishTitle": "Ani*Kuri15: A Gathering of Cats",
-      "year": 2007,
+      "id": "custom-1790423279439-sn81",
+      "title": "ストロベリーナイト",
+      "originalTitle": "ストロベリーナイト",
+      "englishTitle": "Strawberry Night",
+      "year": 2010,
       "score": 84,
       "star": 3.5,
       "overallRank": 215,
       "sameScoreRank": 9,
       "category": "Letterboxd",
-      "mediaType": "other",
+      "mediaType": "drama",
       "genre": [
-        "コメディ",
-        "ファンタジー",
-        "comfort",
-        "娯楽"
+        "心理・内面",
+        "サスペンス",
+        "ミステリー",
+        "スリラー",
+        "ドラマ",
+        "恋愛",
+        "切ない",
+        "娯楽",
+        "バイオレンス",
+        "雰囲気・美学",
+        "TV特番・SP"
       ],
       "origin": "日本",
-      "format": "animation",
-      "runtime": null,
-      "exact": true,
-      "letterboxdAddedDate": "2026-09-11",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "custom-1790269934541-2ps3",
-      "title": "ザ・レイド",
-      "originalTitle": "Serbuan Maut",
-      "englishTitle": "The Raid",
-      "year": 2012,
-      "score": 84,
-      "star": 3.5,
-      "overallRank": 216,
-      "sameScoreRank": 10,
-      "category": "Letterboxd",
-      "mediaType": "movie",
-      "genre": [
-        "アクション",
-        "スリラー",
-        "クライム",
-        "娯楽",
-        "バイオレンス"
-      ],
-      "origin": "その他",
       "format": "live",
-      "runtime": 101,
+      "runtime": 130,
       "exact": true,
-      "letterboxdAddedDate": null,
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
+      "letterboxdAddedDate": "2026-09-26",
+      "letterboxdPublishedAt": "Sat, 26 Sep 2026 23:45:09 +1200",
+      "letterboxdReportedWatchedDate": "2026-09-26"
     },
     {
       "id": "custom-1790322759601-kg73",
@@ -6267,8 +6241,8 @@
       "year": 2018,
       "score": 84,
       "star": 3.5,
-      "overallRank": 217,
-      "sameScoreRank": 11,
+      "overallRank": 216,
+      "sameScoreRank": 10,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -6289,6 +6263,32 @@
       "letterboxdAddedDate": "2026-09-25",
       "letterboxdPublishedAt": "Fri, 25 Sep 2026 06:38:41 +1200",
       "letterboxdReportedWatchedDate": "2026-09-24"
+    },
+    {
+      "id": "custom-1789385860026-8m1d",
+      "title": "Ani*Kuri15: ネコの集会",
+      "originalTitle": "",
+      "englishTitle": "Ani*Kuri15: A Gathering of Cats",
+      "year": 2007,
+      "score": 84,
+      "star": 3.5,
+      "overallRank": 217,
+      "sameScoreRank": 11,
+      "category": "Letterboxd",
+      "mediaType": "other",
+      "genre": [
+        "コメディ",
+        "ファンタジー",
+        "comfort",
+        "娯楽"
+      ],
+      "origin": "日本",
+      "format": "animation",
+      "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": "2026-09-11",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "custom-1790322762266-mrn9",
@@ -21382,7 +21382,8 @@
       "custom-1791664054514-pksv": 93,
       "custom-1791664055911-cuz4": 93,
       "custom-1791792054167-val3": 83,
-      "custom-1791792053995-4s1q": 84
+      "custom-1791792053995-4s1q": 84,
+      "lb-499-948A": 84
     },
     "rankOrder": {
       "40": [
@@ -21941,12 +21942,12 @@
         "lb-12-728",
         "lb-427-bSVc",
         "custom-1791792053995-4s1q",
-        "lb-379-R6yo",
-        "custom-1790423279439-sn81",
-        "lb-499-948A",
-        "custom-1789385860026-8m1d",
         "custom-1790269934541-2ps3",
+        "lb-379-R6yo",
+        "lb-499-948A",
+        "custom-1790423279439-sn81",
         "custom-1790322759601-kg73",
+        "custom-1789385860026-8m1d",
         "custom-1790322762266-mrn9",
         "lb-545-1vWw",
         "lb-266-1Iik",
@@ -25440,7 +25441,8 @@
       "custom-1791664055911-cuz4": 4.5,
       "custom-1789385860389-93a2": 2.5,
       "custom-1791792054167-val3": 3,
-      "custom-1791792053995-4s1q": 3.5
+      "custom-1791792053995-4s1q": 3.5,
+      "lb-499-948A": 3.5
     },
     "titleOverrides": {
       "added-anchor-578": {
