@@ -2273,8 +2273,8 @@ if(rankRoot&&typeof MutationObserver==='function'){
 // Cover layout shifts from metadata, poster loads and dismissal of the iOS keyboard.
 const originalJump=window.__movie30JumpToGlobalRank;
 if(typeof originalJump==='function'){
- window.__movie30JumpToGlobalRank=function(id){
-  const result=originalJump(id);
+ window.__movie30JumpToGlobalRank=function(id,pointerEvent){
+  const result=originalJump(id,pointerEvent);
   for(const delay of [100,420,850,1400,2300,3400]){
    setTimeout(()=>{keepJumpLocation();scheduleJumpBindings()},delay);
   }
