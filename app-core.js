@@ -105,14 +105,21 @@ function endDrag(e){
  if(!ctx.moved){
   const wantedTop=ctx.card?.getBoundingClientRect().top;
   finishDragUi(ctx);
-  renderRank();
-  window.__movie30FocusRankCard?.(ctx.id);
-  const selected=document.querySelector('.rank-card[data-id="'+encodeURIComponent(ctx.id)+'"]');
-  if(selected&&Number.isFinite(wantedTop)){
-   const difference=selected.getBoundingClientRect().top-wantedTop;
-   if(Math.abs(difference)>1)scrollRankInstant(window.scrollY+difference);
-  }
   window.__movie30PendingJump99=null;
+  renderRank();
+  const restoreAfterTap=()=>{
+   if(view.page!=='rank'||window.__movie30IsRankFiltered?.()===true)return;
+   let selected=document.querySelector('.rank-card[data-id="'+encodeURIComponent(ctx.id)+'"]');
+   if(!selected)return;
+   if(!selected.querySelector('.v66-pos'))window.__movie30FocusRankCard?.(ctx.id);
+   selected=document.querySelector('.rank-card[data-id="'+encodeURIComponent(ctx.id)+'"]');
+   if(selected&&Number.isFinite(wantedTop)){
+    const difference=selected.getBoundingClientRect().top-wantedTop;
+    if(Math.abs(difference)>1)scrollRankInstant(window.scrollY+difference);
+   }
+  };
+  restoreAfterTap();requestAnimationFrame(restoreAfterTap);
+  setTimeout(restoreAfterTap,100);setTimeout(restoreAfterTap,320);setTimeout(restoreAfterTap,640);
   return;
  }
  const list=ctx.card?.closest(".score-list"),newScore=Number(list?.dataset.score??ctx.fromScore),f=filmById(ctx.id);
