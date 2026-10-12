@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791792790806,
-  "sourceUpdatedIso": "2026-10-12T08:13:10.806Z",
+  "sourceUpdatedAt": 1791792818779,
+  "sourceUpdatedIso": "2026-10-12T08:13:38.779Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -8033,33 +8033,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-426-pEeQ",
-      "title": "プロジェクト・ヘイル・メアリー",
-      "originalTitle": "",
-      "englishTitle": "Project Hail Mary",
-      "year": 2026,
-      "score": 83,
-      "star": 3,
-      "overallRank": 278,
-      "sameScoreRank": 32,
-      "category": "SF",
-      "mediaType": "movie",
-      "genre": [
-        "SF",
-        "感動",
-        "大作",
-        "娯楽",
-        "アドベンチャー"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 157,
-      "exact": true,
-      "letterboxdAddedDate": "2026-03-26",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-290-26VK",
       "title": "フィールド・オブ・ドリームス",
       "originalTitle": "",
@@ -8067,8 +8040,8 @@
       "year": 1989,
       "score": 83,
       "star": 3,
-      "overallRank": 279,
-      "sameScoreRank": 33,
+      "overallRank": 278,
+      "sameScoreRank": 32,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -8092,8 +8065,8 @@
       "year": 2008,
       "score": 83,
       "star": 3,
-      "overallRank": 280,
-      "sameScoreRank": 34,
+      "overallRank": 279,
+      "sameScoreRank": 33,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -8119,8 +8092,8 @@
       "year": 2001,
       "score": 83,
       "star": 3,
-      "overallRank": 281,
-      "sameScoreRank": 35,
+      "overallRank": 280,
+      "sameScoreRank": 34,
       "category": "ハリーポッター シリーズ",
       "mediaType": "movie",
       "genre": [
@@ -8148,8 +8121,8 @@
       "year": 1993,
       "score": 83,
       "star": 3,
-      "overallRank": 282,
-      "sameScoreRank": 36,
+      "overallRank": 281,
+      "sameScoreRank": 35,
       "category": "ファンタジー、アドベンチャー",
       "mediaType": "movie",
       "genre": [
@@ -8173,8 +8146,8 @@
       "year": 2015,
       "score": 83,
       "star": 3,
-      "overallRank": 283,
-      "sameScoreRank": 37,
+      "overallRank": 282,
+      "sameScoreRank": 36,
       "category": "ファンタジー、アドベンチャー",
       "mediaType": "movie",
       "genre": [
@@ -8200,8 +8173,8 @@
       "year": 2000,
       "score": 83,
       "star": 3,
-      "overallRank": 284,
-      "sameScoreRank": 38,
+      "overallRank": 283,
+      "sameScoreRank": 37,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -8227,8 +8200,8 @@
       "year": 2001,
       "score": 83,
       "star": 3,
-      "overallRank": 285,
-      "sameScoreRank": 39,
+      "overallRank": 284,
+      "sameScoreRank": 38,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -8256,8 +8229,8 @@
       "year": 2006,
       "score": 83,
       "star": 3,
-      "overallRank": 286,
-      "sameScoreRank": 40,
+      "overallRank": 285,
+      "sameScoreRank": 39,
       "category": "戦争、歴史",
       "mediaType": "movie",
       "genre": [
@@ -8271,6 +8244,33 @@
       "runtime": 141,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "lb-426-pEeQ",
+      "title": "プロジェクト・ヘイル・メアリー",
+      "originalTitle": "",
+      "englishTitle": "Project Hail Mary",
+      "year": 2026,
+      "score": 83,
+      "star": 3,
+      "overallRank": 286,
+      "sameScoreRank": 40,
+      "category": "SF",
+      "mediaType": "movie",
+      "genre": [
+        "SF",
+        "感動",
+        "大作",
+        "娯楽",
+        "アドベンチャー"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 157,
+      "exact": true,
+      "letterboxdAddedDate": "2026-03-26",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -21936,7 +21936,6 @@
         "lb-177-2aWW",
         "lb-367-29EW",
         "lb-46-29Fg",
-        "lb-426-pEeQ",
         "lb-290-26VK",
         "lb-341-1Qzy",
         "lb-35-29QS",
@@ -21945,6 +21944,7 @@
         "lb-174-29VI",
         "lb-117-27A4",
         "lb-238-290C",
+        "lb-426-pEeQ",
         "lb-243-orTE"
       ],
       "84": [
