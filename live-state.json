@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791792859500,
-  "sourceUpdatedIso": "2026-10-12T08:14:19.500Z",
+  "sourceUpdatedAt": 1791792876067,
+  "sourceUpdatedIso": "2026-10-12T08:14:36.067Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -7787,37 +7787,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1791627813752-lf6s",
-      "title": "ブラック・ミラー「殺意の追跡」",
-      "originalTitle": "",
-      "englishTitle": "Black Mirror: Hated in the Nation",
-      "year": 2016,
-      "score": 83,
-      "star": 3,
-      "overallRank": 270,
-      "sameScoreRank": 24,
-      "category": "Letterboxd",
-      "mediaType": "drama",
-      "genre": [
-        "サスペンス",
-        "ミステリー",
-        "クライム",
-        "ドラマ",
-        "娯楽",
-        "胸糞",
-        "社会問題・生活",
-        "SF",
-        "TV本編"
-      ],
-      "origin": "その他",
-      "format": "live",
-      "runtime": null,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-10",
-      "letterboxdPublishedAt": "Sat, 10 Oct 2026 21:54:20 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-10"
-    },
-    {
       "id": "lb-179-2aAG",
       "title": "ミスティック・リバー",
       "originalTitle": "",
@@ -7825,8 +7794,8 @@
       "year": 2003,
       "score": 83,
       "star": 3,
-      "overallRank": 271,
-      "sameScoreRank": 25,
+      "overallRank": 270,
+      "sameScoreRank": 24,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -7847,6 +7816,37 @@
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1791627813752-lf6s",
+      "title": "ブラック・ミラー「殺意の追跡」",
+      "originalTitle": "",
+      "englishTitle": "Black Mirror: Hated in the Nation",
+      "year": 2016,
+      "score": 83,
+      "star": 3,
+      "overallRank": 271,
+      "sameScoreRank": 25,
+      "category": "Letterboxd",
+      "mediaType": "drama",
+      "genre": [
+        "サスペンス",
+        "ミステリー",
+        "クライム",
+        "ドラマ",
+        "娯楽",
+        "胸糞",
+        "社会問題・生活",
+        "SF",
+        "TV本編"
+      ],
+      "origin": "その他",
+      "format": "live",
+      "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-10",
+      "letterboxdPublishedAt": "Sat, 10 Oct 2026 21:54:20 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-10"
     },
     {
       "id": "custom-1790924446793-9ts4",
@@ -21928,8 +21928,8 @@
         "lb-78-2aHM",
         "lb-421-21ew",
         "lb-495-Msm",
-        "custom-1791627813752-lf6s",
         "lb-179-2aAG",
+        "custom-1791627813752-lf6s",
         "custom-1790924446793-9ts4",
         "lb-182-dR3i",
         "lb-278-2aoU",
