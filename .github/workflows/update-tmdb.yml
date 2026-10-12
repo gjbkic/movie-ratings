@@ -26,7 +26,7 @@ jobs:
         with:
           ref: main
           persist-credentials: true
-      - name: Fetch film directors and posters
+      - name: Fetch film credits, genres and posters
         env:
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
           TMDB_READ_ACCESS_TOKEN: ${{ secrets.TMDB_READ_ACCESS_TOKEN }}
@@ -50,7 +50,7 @@ jobs:
           for id,rec in (generated.get('films') or {}).items():
               original=merged.get(id) or {}
               next_rec={**original,**rec}
-              for field in ('directors','creators','posterPath','posterUrl'):
+              for field in ('directors','creators','posterPath','posterUrl','cast','genres'):
                   if not next_rec.get(field) and original.get(field):
                       next_rec[field]=original[field]
               # Concurrent app and workflow writes must never erase Japanese name aliases.
