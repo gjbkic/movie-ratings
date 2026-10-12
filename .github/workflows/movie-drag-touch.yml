@@ -103,5 +103,5 @@ jobs:
             console.log('BUTTON_SWAP',JSON.stringify({buttonFloating,reverted}));
             if(buttonFloating<1||reverted.index!==original||reverted.savedIndex!==original||reverted.remainingGhost!==0)throw Error('Button swap did not animate and restore original rank');
             await browser.close();
-          })().catch(e=>{console.error(e.stack||e);process.exitCode=1});
+          })().catch(e=>{console.error(e.stack||e);process.exit(1)});
           NODE
