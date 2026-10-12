@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791799745837,
-  "sourceUpdatedIso": "2026-10-12T10:09:05.837Z",
+  "sourceUpdatedAt": 1791799753277,
+  "sourceUpdatedIso": "2026-10-12T10:09:13.277Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -58650,6 +58650,12 @@
           "creators": [],
           "source": "tmdb-github",
           "fetchedAt": "2026-10-12T04:35:13.665959+00:00"
+        },
+        "poster84": {
+          "path": "/fuHQcu6tJIOMgwr1saQudvXGoHY.jpg",
+          "tmdbId": 625530,
+          "checkedAt": "2026-10-12T10:09:16.418Z",
+          "provider": "tmdb"
         }
       },
       "custom-1790423279786-lguu": {
@@ -60354,6 +60360,12 @@
           "creators": [],
           "source": "tmdb-github",
           "fetchedAt": "2026-10-12T04:35:13.665959+00:00"
+        },
+        "poster84": {
+          "path": "/bmU07bXtQcaDSaFPHfQkc40ttA2.jpg",
+          "tmdbId": 1488771,
+          "checkedAt": "2026-10-12T10:09:16.324Z",
+          "provider": "tmdb"
         }
       },
       "custom-1791381276187-mxp2": {
@@ -60748,6 +60760,12 @@
           "creators": [],
           "source": "tmdb-github",
           "fetchedAt": "2026-10-12T04:35:13.665959+00:00"
+        },
+        "poster84": {
+          "path": "/rB0V4Pc5meRdPTXysiJGH4nnaqV.jpg",
+          "tmdbId": 845788,
+          "checkedAt": "2026-10-12T10:09:16.342Z",
+          "provider": "tmdb"
         }
       },
       "custom-1791397387325-yqut": {
@@ -62041,6 +62059,12 @@
           "creators": [],
           "source": "tmdb-github",
           "fetchedAt": "2026-10-12T04:35:13.665959+00:00"
+        },
+        "poster84": {
+          "path": null,
+          "tmdbId": null,
+          "checkedAt": "2026-10-12T10:09:15.853Z",
+          "provider": "tmdb"
         }
       },
       "custom-1791664055469-au2b": {
