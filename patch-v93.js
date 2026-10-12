@@ -254,7 +254,7 @@ async function load(){
   rerender();
  }catch(e){console.warn('Movie cast/genre catalog unavailable; using saved genres and directors',e);}
 }
-window.__movie30AdvancedFilter93={matches,reset:()=>{
+window.__movie30AdvancedFilter93={matches,hasActive:()=>Boolean(chosen.director||chosen.actor||chosen.genre),reset:()=>{
  chosen.director='';chosen.actor='';chosen.genre='';syncValues();rerender();
 },getFilters:()=>({...chosen}),version:VERSION};
 updateLabels();
