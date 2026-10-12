@@ -47,6 +47,7 @@ css.textContent=[
  // Sticky rank numbers stay beneath BOTH the fixed header and sticky star navigation.
  '#rankRoot .score-bin>.score-label{top:var(--movie96-score-top,165px)!important;z-index:7!important;box-sizing:border-box!important;padding-top:8px!important;padding-bottom:8px!important;}',
  '#rankRoot .rank-star{overflow:visible!important;}',
+ '#rankRoot .rank-star,#rankRoot .uns-panel{scroll-margin-top:calc(var(--movie96-score-top,165px) + 10px)!important;}',
  '#rankRoot .rank-star-head{position:relative!important;}',
  '@media(max-width:620px){.movie96-basegrid{grid-template-columns:1fr 1fr;gap:7px}.movie96-basicfield select{font-size:12px}.movie96-viewbar>select{max-width:none}.movie96-filter-header{margin-bottom:9px}}'
 ].join('\n');
