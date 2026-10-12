@@ -101,3 +101,5 @@ jobs:
 # Verify card remains anchored after pointercancel from search DOM handoff
 
 # Retest full finger handoff after replacing v15 endDrag override
+
+# Verify shared instant-scroll helper after drag pointer release
