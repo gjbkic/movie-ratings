@@ -19,12 +19,17 @@ jobs:
           node <<'NODE'
           const {chromium}=require('playwright-core'),fs=require('fs');
           const enh=fs.readFileSync('app-enhancements.js','utf8');
-          const before95=enh.split('/* Consolidated from patch-v95.js')[0],v98='/* Consolidated from patch-v98.js'+enh.split('/* Consolidated from patch-v98.js')[1]; const bds=[['through94',before95],['through95',enh.split('/* Consolidated from patch-v96.js')[0]],['through96',enh.split('/* Consolidated from patch-v97.js')[0]],['through97',enh.split('/* Consolidated from patch-v98.js')[0]],['through94-plus98',before95+v98],['all',enh]];
+          const bds=[['clean-fix',enh],['saved-user-data-fix',enh]];
           (async()=>{
             const browser=await chromium.launch({executablePath:'/usr/bin/google-chrome',headless:true,args:['--no-sandbox']});
             for(const [name,source] of bds){
               const context=await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true});
               const page=await context.newPage();
+              if(name==='saved-user-data-fix'){
+                const doc=JSON.parse(fs.readFileSync('live-state.json','utf8'));
+                const persisted=Object.assign({version:23,updatedAt:Date.now()},doc.state);
+                await page.addInitScript(data=>localStorage.setItem('movie30_data_v1',data),JSON.stringify(persisted));
+              }
               const errors=[],frames=[];
               page.on('pageerror',e=>errors.push('ERROR '+String(e)));
               page.on('console',msg=>{if(msg.type()==='error')errors.push('CONSOLE '+msg.text());else if(msg.text().startsWith('TRACE_'))frames.push(msg.text())});
@@ -43,11 +48,11 @@ jobs:
               });
               let started=Date.now();
               try{await page.goto('http://localhost:8765/index.html',{waitUntil:'domcontentloaded',timeout:12000})}catch(e){errors.push('NAV '+String(e))}
-              await new Promise(resolve=>setTimeout(resolve,4200));
-              const value=await Promise.race([page.evaluate(()=>({ready:document.documentElement.classList.contains('movie30-ready'),rank:document.querySelectorAll('#rankRoot .rank-card').length,text:document.querySelector('#summary')?.textContent})).catch(e=>String(e)),new Promise(resolve=>setTimeout(()=>resolve('BLOCKED'),2200))]);
+              await new Promise(resolve=>setTimeout(resolve,6000));
+              const value=await Promise.race([page.evaluate(()=>({ready:document.documentElement.classList.contains('movie30-ready'),rank:document.querySelectorAll('#rankRoot .rank-card').length,text:document.querySelector('#summary')?.textContent})).catch(e=>String(e)),new Promise(resolve=>setTimeout(()=>resolve('BLOCKED'),3400))]);
               let tap;
               if(value!=='BLOCKED') {
-                try{await page.locator('.tab[data-page="distribution"]').click({timeout:1300});tap=await page.locator('.tab.active').getAttribute('data-page')}catch(e){tap='FAIL '+String(e).slice(0,160)}
+                try{await page.locator('.tab[data-page="distribution"]').click({timeout:1800});tap=await page.locator('.tab.active').getAttribute('data-page')}catch(e){tap='FAIL '+String(e).slice(0,160)}
               } else tap='BLOCKED';
               console.log('VARIANT',name,'LEN',source.length,'TIME',Date.now()-started,'EVAL',JSON.stringify(value),'TAP',tap,'TRACES',JSON.stringify(frames.slice(-10)),'ERRORS',JSON.stringify(errors.slice(0,8)));
               await context.close().catch(()=>{});
