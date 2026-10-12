@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791792876067,
-  "sourceUpdatedIso": "2026-10-12T08:14:36.067Z",
+  "sourceUpdatedAt": 1791792889446,
+  "sourceUpdatedIso": "2026-10-12T08:14:49.446Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -59778,6 +59778,12 @@
           "creators": [],
           "source": "tmdb-github",
           "fetchedAt": "2026-10-12T04:35:13.665959+00:00"
+        },
+        "poster84": {
+          "path": "/symADL17U9PiJ8c3VrppKMXQhIX.jpg",
+          "tmdbId": 1704979,
+          "checkedAt": "2026-10-12T08:14:44.978Z",
+          "provider": "tmdb"
         }
       },
       "custom-1791023391963-vdu9": {
@@ -61680,6 +61686,12 @@
           "creators": [],
           "source": "tmdb-github",
           "fetchedAt": "2026-10-12T04:35:13.665959+00:00"
+        },
+        "poster84": {
+          "path": "/h7GkgiipzDC3QEtCuybXNc636NB.jpg",
+          "tmdbId": 647616,
+          "checkedAt": "2026-10-12T08:14:45.248Z",
+          "provider": "tmdb"
         }
       },
       "custom-1791563602274-2p5j": {
