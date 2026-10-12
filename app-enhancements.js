@@ -2231,8 +2231,12 @@ function jumpBindings(){
    event.preventDefault();
    event.stopPropagation();
    if(triggered)return;
+   if(event.type==='click'&&event.detail!==0&&Date.now()<(window.__movie30SuppressRankJumpClickUntil||0)){
+    triggered=true;return;
+   }
    triggered=true;
-   window.__movie30JumpToGlobalRank?.(id);
+   if(event.type==='pointerdown')window.__movie30SuppressRankJumpClickUntil=Date.now()+1200;
+   window.__movie30JumpToGlobalRank?.(id,event);
   };
   handle.onpointerdown=activate;
   handle.onclick=activate;
@@ -2278,5 +2282,5 @@ if(typeof originalJump==='function'){
  };
 }
 scheduleJumpBindings();
-window.__movie30SearchJump99={version:'20261012p',bind:jumpBindings};
+window.__movie30SearchJump99={version:'20261012q',bind:jumpBindings};
 })();
