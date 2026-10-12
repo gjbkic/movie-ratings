@@ -3,7 +3,6 @@
   'use strict';
   const DB_NAME = 'movie30_cast_cache_v1';
   const STORE = 'films';
-  const LIMIT = 15;
   const casts = new Map();
   const pending = new Map();
   const fold = value => String(value || '').normalize('NFKC').toLowerCase().replace(/[^\p{L}\p{N}]/gu, '');
@@ -14,9 +13,10 @@
     databasePromise = new Promise(resolve => {
       if (!window.indexedDB) return resolve(null);
       try {
-        const req = indexedDB.open(DB_NAME, 1);
+        const req = indexedDB.open(DB_NAME, 2);
         req.onupgradeneeded = () => {
           if (!req.result.objectStoreNames.contains(STORE)) req.result.createObjectStore(STORE, {keyPath: 'filmId'});
+          if (!req.result.objectStoreNames.contains('reports')) req.result.createObjectStore('reports', {keyPath:'id'});
         };
         req.onsuccess = () => resolve(req.result);
         req.onerror = req.onblocked = () => resolve(null);
@@ -65,60 +65,6 @@
   const beforeMatch = match;
   match = function(f, q) { return beforeMatch(f, q) || matchesFilm(f.id, q); };
 
-  function filmKind(f, m) {
-    const contentType = String(m.contentType || '');
-    const override = String(state.mediaTypeOverrides?.[f.id] || '');
-    if (contentType === 'tv_episode') return 'episode';
-    if (contentType === 'tv_series' || override === 'drama') return 'tv';
-    return 'movie';
-  }
-  function identities(f) {
-    const info = titleInfo(f);
-    return [...new Set([info.englishTitle, info.originalTitle, info.title, f.lbTitle]
-      .map(x => String(x || '').trim()).filter(Boolean))];
-  }
-  async function lookupId(f, kind) {
-    const tv = kind !== 'movie';
-    const path = tv ? '/search/tv' : '/search/movie';
-    const year = Number(f.year) || 0, names = identities(f);
-    const matchNames = new Set(names.map(fold));
-    for (const name of names.slice(0, 4)) {
-      const options = {query: name, language: 'en-US'};
-      if (!tv) options.include_adult = 'false';
-      const result = await tmdbFetch(path, options);
-      const candidates = (result.results || []).filter(x => {
-        const releaseYear = Number(String(x.release_date || x.first_air_date || '').slice(0, 4));
-        if (year && releaseYear && Math.abs(year - releaseYear) > 1) return false;
-        return [x.title, x.name, x.original_title, x.original_name].some(n => matchNames.has(fold(n)));
-      });
-      if (candidates.length) {
-        candidates.sort((a, b) => {
-          const ya = Number(String(a.release_date || a.first_air_date || '').slice(0, 4));
-          const yb = Number(String(b.release_date || b.first_air_date || '').slice(0, 4));
-          return (Math.abs(year - ya) || 0) - (Math.abs(year - yb) || 0);
-        });
-        return Number(candidates[0].id);
-      }
-    }
-    throw new Error('TMDBの作品IDを特定できません（誤作品への紐付けを防止）');
-  }
-  function castPeople(payload, kind) {
-    const raw = kind === 'episode'
-      ? [...(payload.cast || []), ...(payload.guest_stars || [])]
-      : (payload.cast || []);
-    const seen = new Set(), result = [];
-    for (const p of raw) {
-      const id = Number(p.id) || 0, name = String(p.name || p.original_name || '').trim();
-      if (!name || (id && seen.has(id))) continue;
-      if (id) seen.add(id);
-      const role = String(p.character || p.roles?.[0]?.character || '').trim();
-      const originalName = String(p.original_name || '').trim();
-      result.push({id, name, originalName: originalName !== name ? originalName : '',
-        role, order: Number(p.order) || 0});
-      if (result.length >= LIMIT) break;
-    }
-    return result;
-  }
   function updateSearch() {
     if (document.getElementById('searchRank')?.value.trim()) renderRank();
     if (document.getElementById('searchClassify')?.value.trim()) renderClassify();
@@ -127,33 +73,21 @@
   function updateCounts() {
     const status = document.getElementById('movieCastStatus');
     if (!status || bulkRunning) return;
-    status.textContent = '出演者データ取得済み：' + casts.size + '/' + allFilms().length + '作品。取得済みデータはこの端末のIndexedDBに保存します。';
+    const films=allFilms(),positive=films.filter(f=>casts.get(f.id)?.cast.length).length;
+    status.textContent = '出演者情報あり：' + positive + '/' + films.length + '作品。空の取得結果・古いキャッシュは一括取得で再確認します。';
   }
   async function retrieve(f, force = false) {
     if (!f) throw new Error('作品が見つかりません');
     await ready;
-    if (!force && casts.has(f.id)) return casts.get(f.id);
+    const previous=casts.get(f.id),published=window.__movie30CastSource.catalog()[f.id];
+    if (!force && previous?.cast.length && previous.resolverVersion===2 && !(Date.parse(published?.castCheckedAt||'')>Date.parse(previous.fetchedAt||''))) return previous;
     if (pending.has(f.id)) return pending.get(f.id);
-    if (!getTmdbCredential()) throw new Error('「追加・保存」でTMDB APIキーを設定してください');
     const promise = (async () => {
-      const m = state.letterboxdMeta?.[f.id] || {};
-      const info = titleInfo(f), kind = filmKind(f, m);
-      let id = Number((kind === 'movie'
-        ? (info.tmdbId || m.poster84?.tmdbId || f.tmdbId)
-        : (m.tmdbSeriesId || info.tmdbId || m.poster84?.tmdbId)) || 0);
-      if (!id) id = await lookupId(f, kind);
-      let path;
-      if (kind === 'episode' && m.seasonNumber != null && m.episodeNumber != null)
-        path = '/tv/' + id + '/season/' + m.seasonNumber + '/episode/' + m.episodeNumber + '/credits';
-      else if (kind !== 'movie') path = '/tv/' + id + '/aggregate_credits';
-      else path = '/movie/' + id + '/credits';
-      const credits = await tmdbFetch(path, {language: 'ja-JP'});
-      const entry = {filmId: f.id, tmdbType: kind, tmdbId: id,
-        cast: castPeople(credits, kind), fetchedAt: new Date().toISOString()};
-      const saved = await persist(entry);
-      if (!saved) throw new Error('出演者情報をIndexedDBに保存できません。既存の映画データは変更していません');
-      casts.set(f.id, entry);
-      if (!bulkRunning) { updateSearch(); updateCounts(); }
+      const entry=await window.__movie30CastSource.retrieve(f,{force});
+      const saved=await persist(entry);
+      if(!saved)throw Object.assign(new Error('出演者キャッシュの保存失敗。映画データ・既存キャッシュは保持しています'),{type:'storage'});
+      casts.set(f.id,entry);
+      if(!bulkRunning){updateSearch();updateCounts();}
       return entry;
     })();
     pending.set(f.id, promise);
@@ -179,7 +113,9 @@
   sheetPanel.className = 'movie-cast-panel';
   sheetPanel.innerHTML = '<div class="movie-cast-head"><strong>出演者（上位15人）</strong><button type="button" class="btn" id="movieCastRefresh">取得・更新</button></div>' +
     '<div class="movie-cast-status" id="movieCastSheetStatus"></div><div class="movie-cast-list" id="movieCastList"></div>';
-  sheet?.insertBefore(sheetPanel, document.getElementById('closeSheet'));
+  const crewPanel=document.getElementById('directorPanel84');
+  if(crewPanel){crewPanel.className='movie-cast-panel';crewPanel.after(sheetPanel);}
+  else sheet?.insertBefore(sheetPanel, document.getElementById('closeSheet'));
   function displaySheet(f, error = '') {
     if (!f || sheetFilmId !== f.id) return;
     const container = document.getElementById('movieCastList');
@@ -215,7 +151,7 @@
     const f = filmById(id);
     sheetFilmId = id;
     displaySheet(f);
-    if (f && !casts.has(id) && getTmdbCredential()) {
+    if (f && !casts.get(id)?.cast.length) {
       document.getElementById('movieCastSheetStatus').textContent = '出演者を取得中…';
       retrieve(f).then(() => displaySheet(f)).catch(error => displaySheet(f, String(error.message || error)));
     }
@@ -235,50 +171,51 @@
   panel.className = 'panel movie-cast-data';
   panel.innerHTML = '<h2>出演者を取得（TMDB）</h2><div class="tip">作品の出演者・役名を上位15人まで取得し、検索候補と作品詳細に表示します。キャッシュは映画の順位・レビューとは別のIndexedDBに保存し、画像データは保存しません。</div>' +
     '<div class="tools"><button class="btn" type="button" id="movieCastBulk">全作品の出演者を取得</button><button class="btn" type="button" id="movieCastRetry">未取得作品を再確認</button></div>' +
-    '<div class="movie-cast-status" id="movieCastStatus" role="status"></div>';
+    '<div class="movie-cast-status" id="movieCastStatus" role="status"></div><details id="movieCastReport" hidden><summary>未解決作品と理由</summary><div id="movieCastFailures"></div><button type="button" class="btn" id="movieCastReportDownload">取得結果をJSON保存</button></details>';
   document.getElementById('tmdbCredential')?.closest('.panel')?.after(panel);
   const runButton = document.getElementById('movieCastBulk');
   const retryButton = document.getElementById('movieCastRetry');
+  let lastReport=null;
+  function showReport(report){
+    lastReport=report;
+    const s=report.counts,status=document.getElementById('movieCastStatus');
+    if(status)status.textContent=(report.source==='github'?'GitHubでの再確認結果 · ':'')+'全作品 '+s.total+' · 確認済み '+s.checked+' · 取得成功 '+s.success+' · 出演者情報なし '+s.empty+' · TMDB照合不可 '+s.unmatched+' · APIエラー '+s.api+' · 保存エラー '+s.storage+' · 未処理 '+s.pending+(report.stopped?'（一時停止）':'（全作品の確認終了）');
+    const details=document.getElementById('movieCastReport'),list=document.getElementById('movieCastFailures');
+    if(!details||!list)return;details.hidden=false;list.textContent='';
+    for(const row of report.results.filter(r=>r.status!=='success')){
+      const p=document.createElement('p');p.textContent=row.title+' — '+row.reason;list.append(p);
+    }
+    if(!list.children.length)list.textContent='未解決作品はありません。';
+  }
+  async function storeReport(report){const db=await database();if(!db)return;
+    return new Promise(resolve=>{try{const tx=db.transaction('reports','readwrite');tx.objectStore('reports').put({id:'latest',report});tx.oncomplete=tx.onabort=tx.onerror=()=>resolve();}catch(_){resolve();}});
+  }
+  document.getElementById('movieCastReportDownload')?.addEventListener('click',()=>{
+    if(lastReport)download('cast-report-'+Date.now()+'.json',JSON.stringify(lastReport,null,2),'application/json');
+  });
   async function runBulk() {
-    if (bulkRunning) { stopBulk = true; if (runButton) runButton.textContent = '停止しています…'; return; }
-    if (!getTmdbCredential()) { document.getElementById('movieCastStatus').textContent = 'まずTMDB APIキーを設定してください。'; return; }
-    await ready;
-    bulkRunning = true; stopBulk = false;
-    if (runButton) runButton.textContent = '一時停止';
-    if (retryButton) retryButton.disabled = true;
-    const films = allFilms().filter(f => !casts.has(f.id));
-    let done = 0, ok = 0, failed = 0, errorsInARow = 0;
-    const failures = [];
-    try {
-      for (const f of films) {
-        if (stopBulk) break;
-        try {
-          await retrieve(f);
-          ok++; errorsInARow = 0;
-        } catch (error) {
-          failed++; errorsInARow++;
-          failures.push(displayTitle(f) + ': ' + String(error.message || error));
-        }
-        done++;
-        if (done % 10 === 0) updateSearch();
-        const status = document.getElementById('movieCastStatus');
-        if (status && (done % 3 === 0 || done === films.length || errorsInARow >= 4))
-          status.textContent = '取得 ' + done + '/' + films.length + ' · 成功 ' + ok + ' · 失敗 ' + failed +
-            (errorsInARow >= 4 ? ' · 連続失敗のため停止' : '') +
-            (failures.length ? ' · 直近の失敗: ' + failures[failures.length - 1] : '');
-        if (errorsInARow >= 4) break;
-        await new Promise(resolve => setTimeout(resolve, 240));
+    if(bulkRunning){stopBulk=true;if(runButton)runButton.textContent='停止しています…';return;}
+    await ready;await window.__movie30CastSource.ready;window.__movie30CastSource.reset();
+    bulkRunning=true;stopBulk=false;runButton.textContent='一時停止';retryButton.disabled=true;
+    const films=[...allFilms()],results=[],counts={total:films.length,checked:0,success:0,empty:0,unmatched:0,api:0,storage:0,pending:films.length};
+    try{
+      for(const f of films){
+        if(stopBulk)break;
+        let status='success',reason='',entry;
+        try{entry=await retrieve(f);if(!entry.cast.length){status='empty';reason='既存ID・別名と日本語／英語のクレジットを再確認しましたが出演者情報なし';}}
+        catch(e){status=['unmatched','storage'].includes(e.type)?e.type:'api';reason=String(e.message||e);}
+        results.push({id:f.id,title:displayTitle(f),status,reason,tmdbType:entry?.tmdbType,tmdbId:entry?.tmdbId,castCount:entry?.cast.length||0});
+        counts[status]++;counts.checked++;counts.pending--;
+        const el=document.getElementById('movieCastStatus');if(el)el.textContent='確認 '+counts.checked+'/'+counts.total+' · 成功 '+counts.success+' · 情報なし '+counts.empty+' · 照合不可 '+counts.unmatched+' · APIエラー '+counts.api+' · '+displayTitle(f);
+        if(counts.checked%25===0){await storeReport({at:new Date().toISOString(),counts:{...counts},results:[...results],stopped:true});updateSearch();}
+        // Existing cache/catalog entries need no artificial per-film API delay.
+        if(entry?.source==='tmdb')await new Promise(r=>setTimeout(r,120));
       }
-    } finally {
-      bulkRunning = false;
-      updateSearch();
-      if (runButton) runButton.textContent = '全作品の出演者を取得';
-      if (retryButton) retryButton.disabled = false;
-      const status = document.getElementById('movieCastStatus');
-      if (status) status.textContent = '取得済み ' + casts.size + '/' + allFilms().length +
-        '作品 · この操作で成功 ' + ok + '件、失敗 ' + failed + '件' +
-        (stopBulk ? '（一時停止しました）' : errorsInARow >= 4 ? '（連続失敗で中断）' : '（処理終了）') +
-        (failures.length ? ' · 最後のエラー: ' + failures[failures.length - 1] : '');
+    }finally{
+      for(const f of films.slice(counts.checked))results.push({id:f.id,title:displayTitle(f),status:'pending',reason:'ユーザーによる一時停止のため未処理'});
+      const report={at:new Date().toISOString(),counts,results,stopped:stopBulk};
+      bulkRunning=false;updateSearch();runButton.textContent='全作品の出演者を取得';retryButton.disabled=false;
+      showReport(report);await storeReport(report);
     }
   }
   runButton?.addEventListener('click', runBulk);
@@ -309,7 +246,11 @@
       if (document.documentElement.classList.contains('movie30-ready')) updateSearch();
     });
   });
+  database().then(db=>{if(!db)return;try{const req=db.transaction('reports','readonly').objectStore('reports').get('latest');req.onsuccess=()=>{if(req.result?.report&&!bulkRunning)showReport(req.result.report);};}catch(_){} });
+  fetch('./cast-fetch-report.json?cast=20261013c',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(report=>{
+    if(report?.counts&&Array.isArray(report.results)&&!lastReport&&!bulkRunning)showReport({...report,source:'github',counts:{...report.counts,checked:report.counts.total,storage:0,pending:0}});
+  }).catch(()=>{});
   window.__movie30Cast = {ready, namesForFilm, matchesFilm,
-    get: filmId => casts.get(filmId), retrieve,
+    get: filmId => casts.get(filmId), retrieve, runBulk, report:()=>lastReport,
     stats: () => ({cached: casts.size, total: allFilms().length})};
 })();

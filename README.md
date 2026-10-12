@@ -1,4 +1,4 @@
-# movie-ratings — person filmographies 20261013b
+# movie-ratings — person dismissal and full cast recheck 20261013c
 
 The verified ranking source is `016f78b559f54f56078654abc927a016b71a6962` (2026-10-10 23:31 JST): 721 ranked films. The Oct11 reference used by release `20261012ac` contained damaged ranks; `recovery-ranks-20261011.json` is now a deprecation stub and must never be used as a ranking source.
 
@@ -33,3 +33,13 @@ Unregistered works open a read-only detail preview. The explicit registration ac
 - `node scripts/test-filtered-ui.cjs`: rerun successfully for filtered animated rank swaps and hidden ranks after reload.
 
 These new tests use simulated TMDB responses and Chromium mobile emulation. Live TMDB credentials/network behavior and physical iPhone Safari/Home Screen operation have not been tested.
+
+## Dismissal and cast recheck (20261013c)
+
+The person view captured the movie sheet's locked body overflow before closing that sheet. Closing the person view then restored hidden overflow. It now captures both document/body baselines after closing the sheet, restores them on every dismissal, closes nested detail locks, and supports physical pull-down dismissal from the header or at scroll top. Staff names use the same chips as cast; cast follows the staff panel directly.
+
+The cast batch visits every current film; title misses and zero cast do not stop it. Positive current caches/public catalog records are reused; legacy caches and empty results are rechecked without deleting old snapshots on failure. Movie versus TV namespaces are validated independently of UI classification; episode/season scopes, original/localized/alternate titles and English/Japanese credits are checked. Voice cast uses the same TMDB credit lists. 429 respects Retry-After; transport/5xx errors have bounded retry; authentication errors suppress further network calls while cached/catalog works continue. Totals and every unresolved title/reason are shown, with the latest report in the cast-only IndexedDB and downloadable JSON. GitHub's full-catalog report is displayed separately from device batch results.
+
+The server recheck reads app-core.js and live metadata (the old updater tried to extract BASE_FILMS from the now split HTML). It uses saved episode IDs, preserves manually verified staff, and publishes only tmdb-metadata.json/cast-fetch-report.json. A complete live run finished with API errors zero; current counts and unresolved titles are in cast-fetch-report.json.
+
+Verification: scripts/test-cast-bulk.cjs uses the full 735-film current dataset with controlled API responses: four consecutive misses, old zero-cast cache, voice actors, movie ID under drama, Retry-After, network/5xx/auth errors, continued catalog processing, persistent full report and byte-for-byte unchanged movie state. scripts/test-people.cjs now asserts real document scrolling after movie-to-person Close, physical CDP touch pull dismissal, and contiguous staff/cast layout. Python tests cover split-app data collection, movie/TV IDs, episode scope, English voice-credit fallback and API error classification. No physical iPhone Safari/Home Screen testing has been done.

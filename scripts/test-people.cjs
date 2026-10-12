@@ -53,7 +53,7 @@ async function waitPeople(p){await p.waitForSelector('#moviePersonScope');await 
  browser=await chromium.launch({executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true});
  const c=await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true});
  const {page:p,fixtures:f,errors}=await setup(c),before=await protectedState(p);
- await p.evaluate(id=>openSheet(id),f.films[0].id);await p.locator('.movie-cast-person').filter({hasText:name}).click();await waitPeople(p);
+ await p.evaluate(id=>openSheet(id),f.films[0].id);await p.locator('#movieCastList .movie-cast-person').filter({hasText:name}).click();await waitPeople(p);
  assert.equal(await p.locator('#moviePersonScope').inputValue(),'registered');assert.equal(await p.locator('#moviePersonSort').inputValue(),'rank');
  const ordered=before.rankOrder[f.key].filter(id=>f.films.some(x=>x.id===id));assert.deepEqual(await keys(p),ordered.map(id=>'local:'+id));
  assert.equal(await p.locator('.movie-person-badge.seen').count(),2);assert.equal(await p.locator('#moviePersonBg').evaluate(e=>e.scrollWidth<=e.clientWidth),true);
@@ -74,6 +74,11 @@ async function waitPeople(p){await p.waitForSelector('#moviePersonScope');await 
  await p.reload();await p.waitForSelector('html.movie30-ready');await p.evaluate(async()=>await window.__movie30PendingSave);
  assert.deepEqual((await protectedState(p)).rankOrder,before.rankOrder);assert.equal(await p.evaluate(id=>filmStar(filmById(id)),added.f.id),0);assert(await p.evaluate(id=>!!filmById(id),addedTV.id));console.log('PASS explicit unviewed/unscored movie and TV registration persists after reload; all existing scores/ranks/reviews/history unchanged');
  await p.evaluate(id=>openSheet(id),f.films[0].id);await p.locator('#directorPanel84 .movie-person-link').first().click();await waitPeople(p);await p.locator('#moviePersonBack').click();await p.waitForSelector('#moviePersonBg[hidden]',{state:'attached'});
+ assert.deepEqual(await p.evaluate(()=>[document.documentElement.style.overflow,document.body.style.overflow]),['','']);
+ await p.evaluate(()=>window.scrollTo(0,500));assert((await p.evaluate(()=>window.scrollY))>0);
+ await p.evaluate(id=>openSheet(id),f.films[0].id);assert.equal(await p.evaluate(()=>document.getElementById('directorPanel84').nextElementSibling.className),'movie-cast-panel');
+ await p.locator('#movieCastList .movie-cast-person').filter({hasText:name}).click();await waitPeople(p);
+ const touch=await c.newCDPSession(p);await touch.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x:220,y:45}]});for(const y of [65,100,150,190])await touch.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x:220,y}]});await touch.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});await p.waitForSelector('#moviePersonBg[hidden]',{state:'attached'});assert.deepEqual(await p.evaluate(()=>[document.documentElement.style.overflow,document.body.style.overflow]),['','']);console.log('PASS movie -> person -> Close and physical CDP pull-down restore scrolling; cast directly follows staff');
  const search=p.locator('#searchRank');await search.fill(name);await search.dispatchEvent('focus');await p.waitForSelector('.movie92-suggestions:not([hidden])');await p.locator('.movie92-entry').filter({hasText:name}).first().click();await waitPeople(p);console.log('PASS director tap and local person autocomplete open filmography');
  await p.locator('#moviePersonBack').click();await p.waitForSelector('#moviePersonBg[hidden]',{state:'attached'});await search.fill('オンライン検証');await search.dispatchEvent('focus');await p.locator('.movie92-entry').filter({hasText:'オンライン検証'}).click();await waitPeople(p);console.log('PASS online person autocomplete opens exact TMDB person ID');
  await p.locator('#moviePersonBack').click();await p.waitForSelector('#moviePersonBg[hidden]',{state:'attached'});await p.evaluate(()=>window.__movie30People.open({name:'同名検証'}));await p.waitForSelector('.movie-person-choice');assert.equal(await p.locator('.movie-person-choice').count(),2);console.log('PASS ambiguous names require person selection');

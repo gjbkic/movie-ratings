@@ -77,6 +77,9 @@ def resolve(f, row):
     for kind in (("tv","movie") if drama else ("movie","tv")):
         for query in queries:
             result = api("/search/"+kind, query=query, language="ja-JP", include_adult="false")
+            if kind == "tv":
+                english = api("/search/tv", query=query, language="en-US", include_adult="false")
+                result = {"results":result.get("results",[])+english.get("results",[])}
             for hit in result.get("results",[])[:8]:
                 if hit.get("adult"):
                     continue
@@ -93,20 +96,30 @@ def resolve(f, row):
                 if len(prefix) < 5 or not any(normalized(t).startswith(prefix) and normalized(t) != prefix for t in titles):
                     continue
                 series = api(f"/tv/{id}", language="ja-JP")
+                series_en = api(f"/tv/{id}", language="en-US")
                 suffixes = {normalized(re.split(r"[:：]", t, maxsplit=1)[1]) for t in titles if re.search(r"[:：]",t)}
+                for t in titles:
+                    for label in (hit.get("name"),series.get("name"),series_en.get("name"),series.get("original_name")):
+                        head=normalized(label)
+                        if head and normalized(t).startswith(head):
+                            suffixes.add(normalized(t)[len(head):])
+                season_names={s["season_number"]:normalized(s.get("name")) for s in series_en.get("seasons",[])}
                 for season in series.get("seasons",[]):
                     n = season["season_number"]
-                    if normalized(season.get("name")) in suffixes:
+                    if normalized(season.get("name")) in suffixes or season_names.get(n) in suffixes:
                         d = api(f"/tv/{id}/season/{n}", language="ja-JP", append_to_response="aggregate_credits")
                         return "season", id, d, n, None
-                    if n != 0:
+                    if n != 0 and not any(len(x)>3 for x in suffixes):
                         continue
-                    special = api(f"/tv/{id}/season/0", language="ja-JP")
+                    special = api(f"/tv/{id}/season/{n}", language="en-US")
                     matches = [ep for ep in special.get("episodes",[]) if compatible(f,row,{**ep,"first_air_date":ep.get("air_date")},"movie") or normalized(ep.get("name")) in suffixes]
+                    finale = [re.search(r"\b(\d+)\s*:\s*(?:the\s+)?finale\b",t,re.I) for t in titles]
+                    if not matches and any(x and int(x.group(1))==n for x in finale):
+                        matches=[ep for ep in special.get("episodes",[]) if ep.get("episode_type")=="finale"]
                     if len(matches) == 1:
                         ep = matches[0]["episode_number"]
-                        d = api(f"/tv/{id}/season/0/episode/{ep}", language="ja-JP", append_to_response="credits")
-                        return "episode", id, d, 0, ep
+                        d = api(f"/tv/{id}/season/{n}/episode/{ep}", language="ja-JP", append_to_response="credits")
+                        return "episode", id, d, n, ep
     raise ValueError((issues[0]+"。" if issues else "")+"保存ID・邦題・英題・原題・別名・映画/TV・該当シーズンを確認しましたが一意に特定不可")
 
 def fetch_cast(f, row):
@@ -121,6 +134,18 @@ def fetch_cast(f, row):
             path = f"/{kind}/{id}/" + ("aggregate_credits" if kind == "tv" else "credits")
         en = api(path, language="en-US")
         raw = en.get("cast", []) + en.get("guest_stars", [])
+        if not raw and kind in ("tv", "season"):
+            standard = f"/tv/{id}/credits" if kind == "tv" else f"/tv/{id}/season/{season}/credits"
+            en = api(standard, language="en-US")
+            raw = en.get("cast", [])
+        if not raw and kind == "tv" and data.get("number_of_episodes") == 1:
+            seasons = [s for s in data.get("seasons",[]) if s.get("episode_count") == 1]
+            if len(seasons) == 1:
+                n = seasons[0]["season_number"]
+                ep = api(f"/tv/{id}/season/{n}", language="en-US").get("episodes",[])
+                if len(ep) == 1:
+                    en = api(f"/tv/{id}/season/{n}/episode/{ep[0]['episode_number']}/credits", language="en-US")
+                    raw = en.get("cast", []) + en.get("guest_stars", [])
     cast, seen = [], set()
     for p in sorted(raw, key=lambda p:p.get("order") or 0):
         name = str(p.get("name") or p.get("original_name") or "").strip()

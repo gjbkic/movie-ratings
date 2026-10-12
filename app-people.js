@@ -12,6 +12,9 @@
   const namesMatch = (a, b) => aliases(a).some(x => aliases(b).some(y => fold(x) === fold(y)));
   function kindOf(f) {
     const m = state.letterboxdMeta?.[f.id] || {};
+    const cached=window.__movie30Cast?.get(f.id),record=catalog[f.id]||{};
+    if(cached?.tmdbType)return cached.tmdbType==='movie'?'movie':'tv';
+    if(['movie','tv'].includes(record.type))return record.type;
     return String(m.contentType || '').startsWith('tv_') || m.tmdbType === 'tv' || f.tmdbType === 'tv'
       || state.mediaTypeOverrides?.[f.id] === 'drama' ? 'tv' : 'movie';
   }
@@ -22,7 +25,7 @@
       : (titleInfo(f).tmdbId || m.poster84?.tmdbId || cast?.tmdbId || r.tmdbId));
     return id > 0 ? type + ':' + id : '';
   }
-  function isEpisode(f) { return state.letterboxdMeta?.[f.id]?.contentType === 'tv_episode'; }
+  function isEpisode(f) { return ['tv_episode','tv_season'].includes(state.letterboxdMeta?.[f.id]?.contentType)||['episode','season'].includes(window.__movie30Cast?.get(f.id)?.tmdbType); }
   function watched(f) {
     const m = state.letterboxdMeta?.[f.id] || {};
     return !!(m.watchHistory?.length || m.watchedDate || m.lastWatchedDate || f.watchedDate
@@ -84,7 +87,8 @@
   style.textContent = `
     #moviePersonBg{position:fixed;inset:0;z-index:4500;background:#0b111b;color:#edf4fc;overflow-y:auto;overscroll-behavior:contain;padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom);}
     #moviePersonBg[hidden]{display:none!important}.movie-person-shell{max-width:1000px;margin:auto;padding:14px 16px 35px;}
-    .movie-person-top{display:flex;align-items:center;justify-content:space-between;gap:10px;position:sticky;top:0;background:#0b111bf5;z-index:2;padding:8px 0;}
+    .movie-person-top{display:flex;align-items:center;justify-content:space-between;gap:10px;position:sticky;top:0;background:#0b111bf5;z-index:2;padding:8px 0;touch-action:none;user-select:none;}
+    .movie-person-pull{font-size:11px;color:#aebdd0;padding:8px;}.movie-person-shell{will-change:transform;}
     .movie-person-head{display:flex;gap:15px;align-items:center;margin:20px 0}.movie-person-head img{width:76px;height:102px;object-fit:cover;border-radius:9px;}
     .movie-person-head h2{font-size:24px;margin:0 0 6px}.movie-person-meta,.movie-person-note{font-size:12px;line-height:1.7;color:#aebdd0;}
     .movie-person-controls{display:flex;flex-wrap:wrap;gap:9px;margin:15px 0}.movie-person-controls label{font-size:11px;color:#b4c3d5;display:flex;flex-direction:column;gap:4px;}
@@ -95,7 +99,7 @@
     .movie-person-art img{width:100%;height:100%;object-fit:cover;}.movie-person-badges{position:absolute;bottom:0;inset-inline:0;display:flex;flex-wrap:wrap;gap:3px;padding:5px;background:linear-gradient(transparent,#000d);}
     .movie-person-badge{border-radius:5px;font-size:10px;font-weight:700;padding:4px 5px;background:#192536e8;color:#d9e4f2;}.movie-person-badge.seen{background:#126b43;color:#e4ffef;}
     .movie-person-work strong{display:block;font-size:12px;margin-top:7px;line-height:1.5;overflow-wrap:anywhere;}.movie-person-work small{display:block;font-size:10px;color:#b0bfd2;margin-top:3px;}
-    .movie-person-link{border:0;border-bottom:1px dotted #8fbced;color:#a9d5ff;background:transparent;padding:2px;font:inherit;cursor:pointer;}
+    #directorPanel84 p>strong{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;}#directorPanel84 h3{font-size:13px;margin:0 0 8px;}#directorPanel84 p{font-size:11px;}#directorPanel84 #getDirector84{font-size:11px;}#directorPanel84 small{display:block;color:#bbc8d8;font-size:11px;margin-top:8px;}
     #sheetBg.movie-person-detail-layer{z-index:4600!important}.movie-person-preview{display:flex;gap:20px;align-items:flex-start;margin:20px 0;}.movie-person-preview>img{width:min(33%,185px);border-radius:8px;}
     .movie-person-preview h2{font-size:22px;margin-top:0;}.movie-person-preview p{white-space:pre-line;font-size:13px;line-height:1.8;}.movie-person-choice{display:block;text-align:left;width:100%;margin:10px 0;padding:13px;}
     #moviePersonBg button:focus-visible{outline:2px solid #acd9ff;outline-offset:3px;}@media(max-width:430px){.movie-person-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:15px 10px}.movie-person-shell{padding-inline:12px}.movie-person-head h2{font-size:21px}}
@@ -104,22 +108,39 @@
   const overlay = document.createElement('section');
   overlay.id = 'moviePersonBg'; overlay.hidden = true; overlay.setAttribute('role','dialog');
   overlay.setAttribute('aria-modal','true'); overlay.setAttribute('aria-label','人物の作品一覧');
-  overlay.innerHTML = '<div class="movie-person-shell"><div class="movie-person-top"><button class="btn" id="moviePersonBack" type="button">閉じる</button><span class="movie-person-meta">人物・作品</span></div><div id="moviePersonContent"></div></div>';
+  overlay.innerHTML = '<div class="movie-person-shell"><div class="movie-person-top"><button class="btn" id="moviePersonBack" type="button">閉じる</button><span class="movie-person-pull">↓ 引っ張って戻る</span></div><div id="moviePersonContent"></div></div>';
   document.body.appendChild(overlay);
   const content = overlay.querySelector('#moviePersonContent');
   const back = overlay.querySelector('#moviePersonBack');
-  let bodyOverflow = '';
+  let bodyOverflow = '', htmlOverflow = '';
   function hide() {
-    ++ticket; active = null; overlay.hidden = true; document.body.style.overflow = bodyOverflow;
+    closeSheet();
+    ++ticket; active = null; overlay.hidden = true;
+    document.documentElement.style.overflow=htmlOverflow;document.body.style.overflow=bodyOverflow;
     document.getElementById('sheetBg')?.classList.remove('movie-person-detail-layer');
     originFocus?.focus?.({preventScroll:true});
   }
-  function close() { if (historyKey && depth) history.go(-depth); else hide(); }
+  function close() { const steps=depth;hide();depth=0;if(historyKey&&steps)history.go(-steps); }
   function goList() {
     if (active?.preview && depth > 1) history.back();
     else { if (active) active.preview = null; draw(); }
   }
   back.onclick = () => active?.preview ? goList() : close();
+  const shell=overlay.querySelector('.movie-person-shell');let pull=null;
+  overlay.addEventListener('touchstart',e=>{
+    pull=null;if(e.touches.length!==1||e.target.closest('button,input,select,a'))return;
+    const handle=e.target.closest('.movie-person-top');if(!handle&&overlay.scrollTop>1)return;
+    const p=e.touches[0];pull={x:p.clientX,y:p.clientY,dy:0,start:performance.now(),dragging:false};
+  },{passive:true});
+  overlay.addEventListener('touchmove',e=>{
+    if(!pull||e.touches.length!==1)return;const p=e.touches[0],dy=p.clientY-pull.y,dx=p.clientX-pull.x;
+    if(!pull.dragging){if(dy<0||Math.abs(dx)>Math.max(12,dy)){pull=null;return;}if(dy<8)return;pull.dragging=true;}
+    if(e.cancelable)e.preventDefault();pull.dy=Math.max(0,dy);shell.style.transition='none';shell.style.transform='translate3d(0,'+Math.min(320,pull.dy*.85)+'px,0)';
+  },{passive:false});
+  function finishPull(cancelled){const g=pull;pull=null;shell.style.transition='transform 160ms ease-out';shell.style.transform='';
+    if(g?.dragging&&!cancelled&&(g.dy>=105||(g.dy>55&&g.dy/Math.max(1,performance.now()-g.start)>.7))){active?.preview?goList():close();}
+  }
+  overlay.addEventListener('touchend',()=>finishPull(false),{passive:true});overlay.addEventListener('touchcancel',()=>finishPull(true),{passive:true});
   window.addEventListener('popstate', e => {
     if (!active) return;
     if (e.state?.moviePersonKey !== historyKey) { depth = 0; hide(); return; }
@@ -197,12 +218,15 @@
   function open(input) {
     if (!input?.name && !input?.id) return;
     const t = ++ticket;
-    if (overlay.hidden) { originFocus = document.activeElement; bodyOverflow = document.body.style.overflow; }
-    document.getElementById('closeSheet')?.click();
+    const first=overlay.hidden;
+    if(first)originFocus=document.activeElement;
+    // The movie sheet owns its own scroll lock. Close it before capturing the page baseline.
+    closeSheet();
+    if(first){bodyOverflow=document.body.style.overflow;htmlOverflow=document.documentElement.style.overflow;}
     document.querySelectorAll('.movie92-suggestions').forEach(x => x.hidden = true);
     document.activeElement?.blur?.();
     active = {input, name:input.name || '人物', names:[input.name].filter(Boolean), id:Number(input.id)||0, works:[], scope:'registered', type:'all', role:'all', sort:'rank', loaded:false, preview:null};
-    overlay.hidden = false; document.body.style.overflow = 'hidden'; overlay.scrollTop = 0;
+    overlay.hidden = false; document.body.style.overflow = 'hidden';document.documentElement.style.overflow='hidden';overlay.scrollTop = 0;
     historyKey = 'person-'+Date.now(); depth = 1;
     history.pushState({...history.state,moviePersonKey:historyKey,moviePersonWork:null},'');
     draw(); back.focus({preventScroll:true}); loadPerson(input,t);
@@ -298,7 +322,7 @@
       if(!names.length)continue;
       const role=strong.parentElement.textContent.includes('製作者')?'製作者':'監督';
       strong.textContent='';
-      names.forEach((name,i)=>{if(i)strong.append('、');const b=document.createElement('button');b.type='button';b.className='movie-person-link';b.textContent=name;b.onclick=()=>open({name,role,filmId:selectedId});strong.append(b);});
+      names.forEach(name=>{const b=document.createElement('button');b.type='button';b.className='movie-person-link movie-cast-person';b.textContent=name;b.onclick=()=>open({name,role,filmId:selectedId});strong.append(b);});
     }
   }
   if(panel)new MutationObserver(linkDirectors).observe(panel,{childList:true,subtree:true,characterData:true});
