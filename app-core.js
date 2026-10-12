@@ -112,7 +112,7 @@ function cancelDrag(e){
   card=document.querySelector('.rank-card[data-id="'+encodeURIComponent(ctx.id)+'"]');
   if(card&&Number.isFinite(visibleTop)){
    const delta=card.getBoundingClientRect().top-visibleTop;
-   if(Math.abs(delta)>1)scrollRankInstant(window.scrollY+delta);
+   if(Math.abs(delta)>1)window.__movie30ScrollRankInstant?.(window.scrollY+delta);
   }
  };
  restore();requestAnimationFrame(restore);setTimeout(restore,100);
@@ -136,7 +136,7 @@ function endDrag(e){
    selected=document.querySelector('.rank-card[data-id="'+encodeURIComponent(ctx.id)+'"]');
    if(selected&&Number.isFinite(wantedTop)){
     const difference=selected.getBoundingClientRect().top-wantedTop;
-    if(Math.abs(difference)>1)scrollRankInstant(window.scrollY+difference);
+    if(Math.abs(difference)>1)window.__movie30ScrollRankInstant?.(window.scrollY+difference);
    }
   };
   restoreAfterTap();requestAnimationFrame(restoreAfterTap);
@@ -156,7 +156,7 @@ function endDrag(e){
   const latest=document.querySelector('.rank-card[data-id="'+encodeURIComponent(ctx.id)+'"]');
   if(latest&&Number.isFinite(droppedTop)){
    const difference=latest.getBoundingClientRect().top-droppedTop;
-   if(Math.abs(difference)>1)scrollRankInstant(window.scrollY+difference);
+   if(Math.abs(difference)>1)window.__movie30ScrollRankInstant?.(window.scrollY+difference);
   }
  };
  restoreAfterDrag();requestAnimationFrame(restoreAfterDrag);
@@ -5819,6 +5819,7 @@ function scrollRankInstant(top){
   else style.removeProperty('scroll-behavior');
  }
 }
+window.__movie30ScrollRankInstant=scrollRankInstant;
 function jumpGlobal(id,pointerEvent){
  const source=cardForRank(id),sourceRect=source?.getBoundingClientRect();
  const anchorTop=sourceRect?.top??null;
