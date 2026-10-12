@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791823578432,
-  "sourceUpdatedIso": "2026-10-12T16:46:18.432Z",
+  "sourceUpdatedAt": 1791823590847,
+  "sourceUpdatedIso": "2026-10-12T16:46:30.847Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -12079,6 +12079,63 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "custom-1790089712252-cunv",
+      "title": "ゴーン・ベイビー・ゴーン",
+      "originalTitle": "Gone Baby Gone",
+      "englishTitle": "Gone Baby Gone",
+      "year": 2007,
+      "score": 80,
+      "star": 2.5,
+      "overallRank": 421,
+      "sameScoreRank": 25,
+      "category": "サスペンス、ミステリー",
+      "mediaType": "movie",
+      "genre": [
+        "サスペンス",
+        "ミステリー",
+        "心理・内面",
+        "哲学・思想",
+        "社会問題・生活",
+        "ドラマ"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 113,
+      "exact": true,
+      "letterboxdAddedDate": "2026-09-23",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "lb-354-aNGk",
+      "title": "メッセージ",
+      "originalTitle": "",
+      "englishTitle": "Arrival",
+      "year": 2016,
+      "score": 80,
+      "star": 2.5,
+      "overallRank": 422,
+      "sameScoreRank": 26,
+      "category": "SF",
+      "mediaType": "movie",
+      "genre": [
+        "SF",
+        "ファンタジー",
+        "ドラマ",
+        "感動",
+        "心理・内面",
+        "サスペンス",
+        "時間"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "custom-1791449338315-twqr",
       "title": "ブラック・ミラー「1500万メリット」",
       "originalTitle": "",
@@ -12086,8 +12143,8 @@
       "year": 2011,
       "score": 80,
       "star": 2.5,
-      "overallRank": 421,
-      "sameScoreRank": 25,
+      "overallRank": 423,
+      "sameScoreRank": 27,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -12115,8 +12172,8 @@
       "year": 2021,
       "score": 80,
       "star": 2.5,
-      "overallRank": 422,
-      "sameScoreRank": 26,
+      "overallRank": 424,
+      "sameScoreRank": 28,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -12134,63 +12191,6 @@
       "letterboxdAddedDate": "2026-09-25",
       "letterboxdPublishedAt": "Fri, 25 Sep 2026 06:41:54 +1200",
       "letterboxdReportedWatchedDate": "2026-09-25"
-    },
-    {
-      "id": "custom-1790089712252-cunv",
-      "title": "ゴーン・ベイビー・ゴーン",
-      "originalTitle": "Gone Baby Gone",
-      "englishTitle": "Gone Baby Gone",
-      "year": 2007,
-      "score": 80,
-      "star": 2.5,
-      "overallRank": 423,
-      "sameScoreRank": 27,
-      "category": "サスペンス、ミステリー",
-      "mediaType": "movie",
-      "genre": [
-        "サスペンス",
-        "ミステリー",
-        "心理・内面",
-        "哲学・思想",
-        "社会問題・生活",
-        "ドラマ"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 113,
-      "exact": true,
-      "letterboxdAddedDate": "2026-09-23",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "lb-354-aNGk",
-      "title": "メッセージ",
-      "originalTitle": "",
-      "englishTitle": "Arrival",
-      "year": 2016,
-      "score": 80,
-      "star": 2.5,
-      "overallRank": 424,
-      "sameScoreRank": 28,
-      "category": "SF",
-      "mediaType": "movie",
-      "genre": [
-        "SF",
-        "ファンタジー",
-        "ドラマ",
-        "感動",
-        "心理・内面",
-        "サスペンス",
-        "時間"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": null,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "custom-1791394775097-fjc5",
@@ -21800,10 +21800,10 @@
         "lb-235-8JWk",
         "lb-419-14FI",
         "lb-347-4bW8",
-        "custom-1791449338315-twqr",
-        "custom-1790322758188-46qe",
         "custom-1790089712252-cunv",
         "lb-354-aNGk",
+        "custom-1791449338315-twqr",
+        "custom-1790322758188-46qe",
         "custom-1791394775097-fjc5",
         "lb-517-k8dm",
         "custom-1790185843981-dk0y",
@@ -45131,6 +45131,12 @@
           "creators": [],
           "source": "tmdb-github",
           "fetchedAt": "2026-10-12T04:35:13.665959+00:00"
+        },
+        "poster84": {
+          "path": "/6Z0lsab5JLyUu2k1tsUljM4Fbzv.jpg",
+          "tmdbId": 345699,
+          "checkedAt": "2026-10-12T16:46:31.974Z",
+          "provider": "tmdb"
         }
       },
       "lb-251-8TIi": {
