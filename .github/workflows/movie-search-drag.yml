@@ -61,6 +61,7 @@ jobs:
                   focused:!!c?.classList.contains('v66-focus'),
                   pos:!!c?.querySelector('.v66-pos'),
                   lastJump:window.__movie30LastJump99,
+                  finalizer:window.__movie30DragFinalizer,
                   pending:window.__movie30PendingJump99,
                   height:innerHeight};
               },target.id);
@@ -96,3 +97,5 @@ jobs:
 # Verify pointer coordinates are forwarded through search handoff
 
 # Recheck delayed search-tap render anchor
+
+# Verify card remains anchored after pointercancel from search DOM handoff
