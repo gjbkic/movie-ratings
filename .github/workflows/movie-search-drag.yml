@@ -1,0 +1,85 @@
+name: Search to drag scroll anchor regression
+on:
+  push:
+    paths:
+      - .github/workflows/movie-search-drag.yml
+  workflow_dispatch:
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test search-to-ranking touch handoff
+        shell: bash
+        run: |
+          set -e
+          npm install --no-save --no-package-lock playwright-core@1.56.1 >/dev/null 2>&1
+          python3 -m http.server 8778 >/tmp/movie-search-server.log 2>&1 &
+          node <<'NODE'
+          const {chromium}=require('playwright-core'),fs=require('fs');
+          (async()=>{
+            const browser=await chromium.launch({executablePath:'/usr/bin/google-chrome',headless:true,args:['--no-sandbox']});
+            for(const movePixels of [0,55]){
+              const page=await browser.newPage({viewport:{width:390,height:844},deviceScaleFactor:1,isMobile:true,hasTouch:true});
+              const doc=JSON.parse(fs.readFileSync('live-state.json','utf8'));
+              await page.addInitScript(state=>localStorage.setItem('movie30_data_v1',JSON.stringify({...state,updatedAt:Date.now()})),doc.state);
+              const errors=[];page.on('pageerror',e=>errors.push(String(e)));
+              await page.goto('http://localhost:8778/index.html',{waitUntil:'domcontentloaded'});
+              await page.waitForSelector('html.movie30-ready',{timeout:20000});
+              await page.locator('#searchRank').fill('black');
+              await page.waitForTimeout(350);
+              const target=await page.evaluate(()=>{
+                const cards=[...document.querySelectorAll('#rankRoot .rank-card[data-id]')];
+                const desired=cards.find(c=>/シロクマ|White Bear/i.test(c.textContent))||cards.find(c=>c.closest('.score-list')?.dataset.score==='84')||cards[0];
+                if(!desired)throw Error('No Black Mirror film in results');
+                desired.scrollIntoView({behavior:'instant',block:'center'});
+                return {id:desired.dataset.id,name:desired.querySelector('.rank-title')?.textContent};
+              });
+              await page.waitForTimeout(220);
+              const point=await page.evaluate(id=>{
+                const c=document.querySelector('#rankRoot .rank-card[data-id="'+id+'"]');
+                const h=c.querySelector('.drag-handle'),rect=h.getBoundingClientRect(),card=c.getBoundingClientRect();
+                return {x:rect.left+rect.width/2,y:rect.top+rect.height/2,cardTop:card.top,cardBottom:card.bottom,scroll:scrollY,search:document.querySelector('#searchRank').value};
+              },target.id);
+              const read=()=>page.evaluate(id=>{
+                const c=document.querySelector('#rankRoot .rank-card[data-id="'+id+'"]');
+                const r=c?.getBoundingClientRect();
+                return {top:r?.top,bottom:r?.bottom,scrollY:window.scrollY,
+                  inViewport:!!r&&r.bottom>180&&r.top<innerHeight-60,
+                  query:document.querySelector('#searchRank').value,
+                  drag:typeof dragCtx!=='undefined'&&!!dragCtx,
+                  ctxId:typeof dragCtx!=='undefined'&&dragCtx?.id,
+                  ghost:document.querySelectorAll('.movie30-floating-drag').length,
+                  focused:!!c?.classList.contains('v66-focus'),
+                  pos:!!c?.querySelector('.v66-pos'),
+                  lastJump:window.__movie30LastJump99,
+                  pending:window.__movie30PendingJump99,
+                  height:innerHeight};
+              },target.id);
+              const session=await page.context().newCDPSession(page);
+              await session.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{id:12,x:point.x,y:point.y,radiusX:5,radiusY:5}]});
+              await page.waitForTimeout(120);
+              const picked=await read();
+              if(movePixels){
+                await session.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{id:12,x:point.x,y:point.y+movePixels,radiusX:5,radiusY:5}]});
+                await page.waitForTimeout(180);
+              }
+              const beforeEnd=await read();
+              await session.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});
+              await page.waitForTimeout(80);
+              const end80=await read();
+              await page.waitForTimeout(340);
+              const end420=await read();
+              await page.waitForTimeout(820);
+              const end1240=await read();
+              console.log('SEARCH_DRAG_SNAPSHOT',JSON.stringify({movePixels,target,point,picked,beforeEnd,end80,end420,end1240,errors}));
+              if(picked.query!==''||!picked.inViewport||beforeEnd.drag!==true)throw Error('Search handoff did not preserve the touched movie');
+              if(!end1240.inViewport||Math.abs((end1240.top??0)-(beforeEnd.top??0))>100)throw Error('After release movie jumped away from finger');
+              if(errors.length)throw Error('Browser JS error after search handoff');
+              await page.close();
+            }
+            await browser.close();
+            console.log('SEARCH_DRAG_STABLE_PASS');
+          })().catch(e=>{console.error('SEARCH_DRAG_TEST_FAILED',e.stack||e);process.exit(1)});
+          NODE
