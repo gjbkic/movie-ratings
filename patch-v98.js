@@ -210,8 +210,9 @@ allFilms=function(...args){
   if(note.note||note.watchHistory?.length||note.rssReviewRecords&&Object.keys(note.rssReviewRecords).length)return true;
   if(Number(f.year||0)!==Number(keeper.year||0))return true;
   const sameUri=uri(f.uri)&&uri(f.uri)===uri(keeper.uri);
-  const sameEnglish=normalize(titleInfo(f).englishTitle||f.lbTitle)
-   ===normalize(titleInfo(keeper).englishTitle||keeper.lbTitle);
+  const englishA=normalize(titleInfo(f).englishTitle||f.lbTitle);
+  const englishB=normalize(titleInfo(keeper).englishTitle||keeper.lbTitle);
+  const sameEnglish=Boolean(englishA&&englishB&&englishA===englishB);
   return !(sameUri||sameEnglish);
  });
 };
