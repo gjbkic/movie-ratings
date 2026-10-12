@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791800393691,
-  "sourceUpdatedIso": "2026-10-12T10:19:53.691Z",
+  "sourceUpdatedAt": 1791801124666,
+  "sourceUpdatedIso": "2026-10-12T10:32:04.666Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -6206,33 +6206,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1790269934541-2ps3",
-      "title": "ザ・レイド",
-      "originalTitle": "Serbuan Maut",
-      "englishTitle": "The Raid",
-      "year": 2012,
-      "score": 84,
-      "star": 3.5,
-      "overallRank": 215,
-      "sameScoreRank": 9,
-      "category": "Letterboxd",
-      "mediaType": "movie",
-      "genre": [
-        "アクション",
-        "スリラー",
-        "クライム",
-        "娯楽",
-        "バイオレンス"
-      ],
-      "origin": "その他",
-      "format": "live",
-      "runtime": 101,
-      "exact": true,
-      "letterboxdAddedDate": null,
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "custom-1790322759601-kg73",
       "title": "アンナチュラル",
       "originalTitle": "アンナチュラル",
@@ -6240,8 +6213,8 @@
       "year": 2018,
       "score": 84,
       "star": 3.5,
-      "overallRank": 216,
-      "sameScoreRank": 10,
+      "overallRank": 215,
+      "sameScoreRank": 9,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -6262,6 +6235,33 @@
       "letterboxdAddedDate": "2026-09-25",
       "letterboxdPublishedAt": "Fri, 25 Sep 2026 06:38:41 +1200",
       "letterboxdReportedWatchedDate": "2026-09-24"
+    },
+    {
+      "id": "custom-1790269934541-2ps3",
+      "title": "ザ・レイド",
+      "originalTitle": "Serbuan Maut",
+      "englishTitle": "The Raid",
+      "year": 2012,
+      "score": 84,
+      "star": 3.5,
+      "overallRank": 216,
+      "sameScoreRank": 10,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "アクション",
+        "スリラー",
+        "クライム",
+        "娯楽",
+        "バイオレンス"
+      ],
+      "origin": "その他",
+      "format": "live",
+      "runtime": 101,
+      "exact": true,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "custom-1790322762266-mrn9",
@@ -21930,8 +21930,8 @@
         "custom-1790423279439-sn81",
         "lb-499-948A",
         "custom-1789385860026-8m1d",
-        "custom-1790269934541-2ps3",
         "custom-1790322759601-kg73",
+        "custom-1790269934541-2ps3",
         "custom-1790322762266-mrn9",
         "custom-1791476522907-cd9b",
         "lb-545-1vWw",
