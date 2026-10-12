@@ -37,11 +37,18 @@ jobs:
                 return {id:desired.dataset.id,name:desired.querySelector('.rank-title')?.textContent};
               });
               await page.waitForTimeout(220);
+              // Metadata can repaint the ranking while search suggestions load.
+              // Re-anchor immediately before the touch so the pointer is on the intended film.
+              await page.evaluate(id=>document.querySelector('#rankRoot .rank-card[data-id="'+id+'"]')?.scrollIntoView({behavior:'instant',block:'center'}),target.id);
+              await page.waitForTimeout(90);
               const point=await page.evaluate(id=>{
                 const c=document.querySelector('#rankRoot .rank-card[data-id="'+id+'"]');
                 const h=c.querySelector('.drag-handle'),rect=h.getBoundingClientRect(),card=c.getBoundingClientRect();
                 return {x:rect.left+rect.width/2,y:rect.top+rect.height/2,cardTop:card.top,cardBottom:card.bottom,scroll:scrollY,search:document.querySelector('#searchRank').value};
               },target.id);
+              const hit=await page.evaluate(({x,y})=>document.elementFromPoint(x,y)?.closest('.rank-card')?.dataset.id||null,point);
+              console.log('TOUCH_HIT',JSON.stringify({wanted:target.id,hit}));
+              if(hit!==target.id)throw Error('Selected item moved before physical touch; retry when list settles');
               const read=()=>page.evaluate(id=>{
                 const c=document.querySelector('#rankRoot .rank-card[data-id="'+id+'"]');
                 const r=c?.getBoundingClientRect();
