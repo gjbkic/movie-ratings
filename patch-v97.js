@@ -9,6 +9,7 @@ style.textContent=[
   '#page-rank>.tools.movie96-compact-tools{position:relative!important;z-index:1!important;isolation:auto!important;}',
   '#page-rank>.tools .movie92-search-wrap{z-index:auto!important;}',
   // Remove the stray strip of background between the sticky header and star-jump navigation.
+  '#page-rank #movie96ViewBar{margin-bottom:0!important;}',
   '#page-rank #starJumpBar{position:sticky!important;top:var(--movie97-header-edge,0px)!important;margin-top:0!important;padding-top:5px!important;padding-bottom:5px!important;margin-bottom:7px!important;z-index:24!important;box-sizing:border-box!important;}',
   // Both the ★ category heading and current numeric score must remain visible.
   '#rankRoot .rank-star{overflow:visible!important;}',
