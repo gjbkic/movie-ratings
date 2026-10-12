@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791817829151,
-  "sourceUpdatedIso": "2026-10-12T15:10:29.151Z",
+  "sourceUpdatedAt": 1791817858813,
+  "sourceUpdatedIso": "2026-10-12T15:10:58.813Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -20675,7 +20675,13 @@
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
-        "TV本編"
+        "TV本編",
+        "バイオレンス",
+        "娯楽",
+        "クライム",
+        "ドラマ",
+        "サスペンス",
+        "哲学・思想"
       ],
       "origin": "その他",
       "format": "",
@@ -34424,7 +34430,13 @@
         "ミュージカル"
       ],
       "custom-1791802126132-vr9o": [
-        "TV本編"
+        "TV本編",
+        "バイオレンス",
+        "娯楽",
+        "クライム",
+        "ドラマ",
+        "サスペンス",
+        "哲学・思想"
       ],
       "custom-1791802127464-uge5": [
         "TV本編",
@@ -62420,7 +62432,13 @@
           "fetchedAt": "2026-10-12T10:48:47.458Z"
         },
         "legacyMovieId": 495417,
-        "titleSource": "tmdb-tv"
+        "titleSource": "tmdb-tv",
+        "poster84": {
+          "path": "/seN6rRfN0I6n8iDXjlSMk1QjNcq.jpg",
+          "tmdbId": 42009,
+          "checkedAt": "2026-10-12T15:10:51.937Z",
+          "provider": "tmdb"
+        }
       },
       "custom-1791802127464-uge5": {
         "contentType": "tv_episode",
