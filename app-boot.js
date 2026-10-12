@@ -1,12 +1,15 @@
 (() => {
   const start = async () => {
     try {
-      await Promise.race([
-        window.__movie30StorageReady || Promise.resolve(),
-        new Promise(resolve => setTimeout(resolve, 2500))
-      ]);
+      await window.__movie30StorageReady;
     } catch (_) {}
+    if(window.__movie30RecoveryBlocked){
+      const mask=document.getElementById('movie30-startup-mask');
+      if(mask)mask.innerHTML='<div><strong>保存データの復元を停止しました</strong><span>元の保存記録は上書きしていません。</span><a href="./recovery-check.html">保存データの確認・バックアップ</a></div>';
+      return;
+    }
     window.__movie30BulkBoot = false;
+    save(false);
 
     document.querySelectorAll(".tab").forEach(button => {
       button.onclick = () => {
@@ -17,11 +20,10 @@
     });
 
     const build = document.getElementById('movie30BuildV29');
-    if (build) build.textContent = 'app build 20261012n';
+    if (build) build.textContent = 'app build 20261012ac';
 
     try {
-      // The state is already loaded in memory. Writing it again during startup
-      // serializes the full library and rotates backups on every launch.
+      // All saved candidates have been read and raw local records archived.
       render();
       document.documentElement.classList.add('movie30-ready');
       document.getElementById('movie30-startup-mask')?.remove();

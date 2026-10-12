@@ -23,9 +23,21 @@ const summary=raw=>{
  updated:date(s.updatedAt||raw?.updatedAt)};
 };
 const line=(name,s)=>'<div class="entry"><b>'+name+'</b><div class="meta">追加映画 '+s.custom+'件 ／ 個別点数 '+s.score+'件 ／ 星の変更 '+s.stars+'件</div><div class="meta">視聴履歴 '+s.watches+'件 ／ レビュー関連 '+s.reviews+'件 ／ 作品別情報 '+s.metaFilms+'件</div><div class="meta">最終更新 '+s.updated+'</div></div>';
-function scan(){
+async function scan(){
  try{
-  browserRecords=names.flatMap(k=>{const v=localStorage.getItem(k);if(!v)return [];try{const j=JSON.parse(v);return j&&typeof j==="object"?[{name:k,data:j}]:[]}catch{return []}});
+  browserRecords=names.flatMap(k=>{const v=localStorage.getItem(k);if(!v)return [];try{const j=JSON.parse(v);return j&&typeof j==="object"?[{name:k,data:j,raw:v}]:[{name:k,raw:v}]}catch{return [{name:k,raw:v}]}});
+  try{
+   const records=await new Promise(resolve=>{
+    const req=indexedDB.open('movie30_state_db');
+    req.onupgradeneeded=()=>{req.transaction.abort();resolve([])};
+    req.onerror=req.onblocked=()=>resolve([]);
+    req.onsuccess=()=>{const db=req.result;try{
+     const tx=db.transaction('snapshots','readonly'),r=tx.objectStore('snapshots').getAll();
+     r.onsuccess=()=>resolve(r.result||[]);r.onerror=()=>resolve([]);tx.oncomplete=()=>db.close();tx.onabort=()=>{db.close();resolve([])};
+    }catch(_){db.close();resolve([])}};
+   });
+   for(const r of records){let data=null;try{data=JSON.parse(r.json)}catch(_){}browserRecords.push({name:'IndexedDB '+String(r.id).replace(/[<>&"']/g,''),data,raw:r.json})}
+  }catch(_){}
   $('local').innerHTML=browserRecords.length?browserRecords.map(r=>line(r.name,summary(r.data))).join(''):'<span class="warn">このブラウザの保存領域では見つかりません（削除されたとは限りません）。</span>';
   $('export').disabled=!browserRecords.length;
  }catch(err){$('local').textContent='保存領域が読み取れません: '+String(err)}
