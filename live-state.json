@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791781220578,
-  "sourceUpdatedIso": "2026-10-12T05:00:20.578Z",
+  "sourceUpdatedAt": 1791781235545,
+  "sourceUpdatedIso": "2026-10-12T05:00:35.545Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -20617,7 +20617,13 @@
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
-        "TV本編"
+        "TV本編",
+        "哲学・思想",
+        "娯楽",
+        "ファンタジー",
+        "アドベンチャー",
+        "SF",
+        "アクション"
       ],
       "origin": "その他",
       "format": "",
@@ -34303,7 +34309,13 @@
         "ミュージカル"
       ],
       "custom-1791781219166-99ms": [
-        "TV本編"
+        "TV本編",
+        "哲学・思想",
+        "娯楽",
+        "ファンタジー",
+        "アドベンチャー",
+        "SF",
+        "アクション"
       ]
     },
     "originOverrides": {
