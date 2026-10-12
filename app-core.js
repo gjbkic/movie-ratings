@@ -5575,11 +5575,12 @@ const genres=()=>{const s=new Set();const q=document.getElementById('genreFilter
 const fg=f=>uniq(state.genreOverrides?.[f?.id]||[]), rt=f=>{const n=Number(state.runtimeOverrides?.[f?.id]??f?.runtime);return Number.isFinite(n)&&n>0?n:null}, nb=v=>v!==''&&Number.isFinite(Number(v))?Number(v):null;
 const advOn=()=>adv.include.length||adv.exclude.length||['yearMin','yearMax','runtimeMin','runtimeMax','scoreMin','scoreMax'].some(k=>String(adv[k]??'')!=='');
 function pass(f){const g=fg(f),y=Number(f.year),r=rt(f),s=effectiveScore(f),a=nb(adv.yearMin),b=nb(adv.yearMax),c=nb(adv.runtimeMin),d=nb(adv.runtimeMax),e=nb(adv.scoreMin),h=nb(adv.scoreMax);if(adv.include.some(x=>!g.includes(x))||adv.exclude.some(x=>g.includes(x)))return false;if(a!=null&&(!Number.isFinite(y)||y<a))return false;if(b!=null&&(!Number.isFinite(y)||y>b))return false;if(c!=null&&(r==null||r<c))return false;if(d!=null&&(r==null||r>d))return false;if(e!=null&&(s==null||s<e))return false;if(h!=null&&(s==null||s>h))return false;return true}
-const filterIds=['searchRank','categoryFilterRank','genreFilterRank','mediaFilterRank','originFilterRank','formatFilterRank','decadeFilterRank','runtimeFilterRank'];
-const filtered=()=>!!advOn()||filterIds.some(id=>String(document.getElementById(id)?.value||'').trim());
-function cap(){const o={adv:clone(adv)};for(const id of filterIds)o[id]=document.getElementById(id)?.value||'';return o}
-function applyCap(o){if(!o)return;for(const id of filterIds){const e=document.getElementById(id);if(e)e.value=o[id]||''}adv={...def(),...(clone(o.adv)||{})};write(ADV_KEY,adv);drawAdv();renderRank()}
-function clearFilters(){for(const id of filterIds){const e=document.getElementById(id);if(e)e.value=''}adv=def();write(ADV_KEY,adv);drawAdv()}
+const filterIds=['searchRank','categoryFilterRank','genreFilterRank','mediaFilterRank','tvSubtypeFilterRank','originFilterRank','formatFilterRank','decadeFilterRank','runtimeFilterRank'];
+const directorFilters=()=>window.__movie30AdvancedFilter93;
+const filtered=()=>!!advOn()||filterIds.some(id=>String(document.getElementById(id)?.value||'').trim())||!!directorFilters()?.hasActive?.();
+function cap(){const o={adv:clone(adv),directorFilters:directorFilters()?.getFilters?.()||null};for(const id of filterIds)o[id]=document.getElementById(id)?.value||'';return o}
+function applyCap(o){if(!o)return;for(const id of filterIds){const e=document.getElementById(id);if(e)e.value=o[id]||''}adv={...def(),...(clone(o.adv)||{})};write(ADV_KEY,adv);drawAdv();if(o.directorFilters)directorFilters()?.setFilters?.(o.directorFilters);else directorFilters()?.reset?.();renderRank()}
+function clearFilters(){for(const id of filterIds){const e=document.getElementById(id);if(e)e.value=''}adv=def();write(ADV_KEY,adv);drawAdv();directorFilters()?.reset?.();window.__movie30CompactSearch96?.close?.()}
 
 const tools=document.querySelector('#page-rank .tools');if(tools&&!document.getElementById('advToggle66')){const badge=document.createElement('span');badge.id='advBadge66';badge.className='v66-badge';badge.textContent='詳細絞込中';tools.appendChild(badge);for(const [id,t] of [['advToggle66','詳細絞込'],['auditOpen66','ジャンル監査'],['histOpen66','履歴'],['undo66','↶ Undo']]){const b=document.createElement('button');b.id=id;b.className='btn';b.type='button';b.textContent=t;tools.appendChild(b)}}
 let ab=document.getElementById('advBox66');if(!ab&&tools){ab=document.createElement('div');ab.id='advBox66';ab.className='v66-adv';tools.insertAdjacentElement('afterend',ab)}
@@ -5622,21 +5623,26 @@ function centerRankCard(card){
  const desired=Math.min(wanted,Math.max(covered+8,height-r.height-8));
  instant(()=>window.scrollTo({left:window.scrollX,top:window.scrollY+r.top-desired,behavior:'auto'}));
 }
-function animateRankSwap(before){
+function animateRankSwap(before,movedId){
  if(!before.size||window.matchMedia?.('(prefers-reduced-motion: reduce)').matches)return;
- for(const [id,old] of before){
-  const card=cardForRank(id);if(!card)continue;
-  const r=card.getBoundingClientRect();
-  const dx=old.left-(r.left+window.scrollX),dy=old.top-(r.top+window.scrollY);
-  if(Math.abs(dx)+Math.abs(dy)<2)continue;
-  if(typeof card.animate==='function'){
-   card.animate([{transform:`translate3d(${dx}px,${dy}px,0)`},{transform:'translate3d(0,0,0)'}],
-    {duration:260,easing:'cubic-bezier(.22,.61,.36,1)'});
-  }else{
-   card.style.transition='none';card.style.transform=`translate3d(${dx}px,${dy}px,0)`;
-   card.getBoundingClientRect();
-   requestAnimationFrame(()=>{card.style.transition='transform 260ms cubic-bezier(.22,.61,.36,1)';card.style.transform='';});
-   setTimeout(()=>{card.style.transition='';card.style.transform='';},300);
+ const scrollX=window.scrollX,scrollY=window.scrollY;
+ for(const [key,old] of before){
+  const card=cardForRank(key);if(!card)continue;
+  const r=card.getBoundingClientRect(),dx=old.left-(r.left+scrollX),dy=old.top-(r.top+scrollY);
+  if(key===movedId&&typeof card.animate==='function'){
+   const ghost=card.cloneNode(true);ghost.querySelector('.v66-pos')?.remove();ghost.classList.remove('v66-focus');
+   Object.assign(ghost.style,{position:'fixed',left:(old.left-scrollX)+'px',top:(old.top-scrollY)+'px',width:old.width+'px',height:old.height+'px',margin:'0',boxSizing:'border-box',zIndex:'2147483000',pointerEvents:'none',opacity:'.98',transformOrigin:'center center',boxShadow:'0 18px 44px rgba(0,0,0,.62)',willChange:'transform'});
+   document.body.appendChild(ghost);card.style.opacity='0';
+   const animation=ghost.animate([
+    {transform:'translate3d(0,0,0) scale(1)',filter:'brightness(1)',offset:0},
+    {transform:'translate3d('+(dx*.28)+'px,'+(dy*.28-12)+'px,0) scale(1.045)',filter:'brightness(1.13)',offset:.34},
+    {transform:'translate3d('+dx+'px,'+dy+'px,0) scale(1)',filter:'brightness(1)',offset:1}
+   ],{duration:390,easing:'cubic-bezier(.2,.75,.25,1)'});
+   animation.onfinish=()=>{ghost.remove();card.style.opacity='';};
+   animation.oncancel=()=>{ghost.remove();card.style.opacity='';};
+  }else if(typeof card.animate==='function'&&Math.abs(dx)+Math.abs(dy)>=2){
+   card.animate([{transform:'translate3d('+dx+'px,'+dy+'px,0)'},{transform:'translate3d(0,0,0)'}],
+    {duration:390,easing:'cubic-bezier(.2,.75,.25,1)'});
   }
  }
 }
@@ -5645,9 +5651,9 @@ function swap(id,d){
  const a=rankSorted(allFilms().filter(x=>effectiveScore(x)===sc),sc),i=a.findIndex(x=>x.id===id),j=i+d;
  if(j<0||j>=a.length){toast('この点数内では端です。点数をまたぐ移動は≡ドラッグで');return}
  const affected=[a[i].id,a[j].id],before=new Map();
- for(const key of affected){const c=cardForRank(key);if(c){const r=c.getBoundingClientRect();before.set(key,{left:r.left+window.scrollX,top:r.top+window.scrollY})}}
+ for(const key of affected){const c=cardForRank(key);if(c){const r=c.getBoundingClientRect();before.set(key,{left:r.left+window.scrollX,top:r.top+window.scrollY,width:r.width,height:r.height})}}
  [a[i],a[j]]=[a[j],a[i]];state.rankOrder[String(sc)]=a.map(x=>x.id);save();renderRank();
- jumpFocus(id,()=>animateRankSwap(before));
+ jumpFocus(id,()=>animateRankSwap(before,id),false);
 }
 function posTools(id){
  const c=cardForRank(id);if(!c)return;
@@ -5656,11 +5662,11 @@ function posTools(id){
  d.querySelectorAll('[data-sw]').forEach(b=>b.onclick=e=>{e.stopPropagation();swap(id,Number(b.dataset.sw))});
  d.querySelector('[data-back]')?.addEventListener('click',e=>{e.stopPropagation();const s=backFilters;backFilters=null;applyCap(s);setTimeout(()=>{const target=cardForRank(id);if(target)centerRankCard(target)},50)});
 }
-function jumpFocus(id,afterLayout){
+function jumpFocus(id,afterLayout,center=true){
  focusId=id;
  requestAnimationFrame(()=>requestAnimationFrame(()=>{
   const c=cardForRank(id);
-  if(c){posTools(id);centerRankCard(c)}
+  if(c){posTools(id);if(center)centerRankCard(c)}
   focusId=null;
   afterLayout?.();
  }));
