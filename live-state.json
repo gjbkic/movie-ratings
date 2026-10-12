@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791823417780,
-  "sourceUpdatedIso": "2026-10-12T16:43:37.780Z",
+  "sourceUpdatedAt": 1791823426300,
+  "sourceUpdatedIso": "2026-10-12T16:43:46.300Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -62628,7 +62628,8 @@
           "tmdbId": 897429,
           "checkedAt": "2026-10-12T16:43:24.809Z",
           "provider": "tmdb"
-        }
+        },
+        "historicalWatched": true
       }
     }
   }
