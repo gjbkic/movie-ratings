@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791823983231,
-  "sourceUpdatedIso": "2026-10-12T16:53:03.231Z",
+  "sourceUpdatedAt": 1791824058771,
+  "sourceUpdatedIso": "2026-10-12T16:54:18.771Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -11176,33 +11176,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-377-azew",
-      "title": "ハクソー・リッジ",
-      "originalTitle": "",
-      "englishTitle": "Hacksaw Ridge",
-      "year": 2016,
-      "score": 81,
-      "star": 3,
-      "overallRank": 389,
-      "sameScoreRank": 52,
-      "category": "戦争、歴史",
-      "mediaType": "movie",
-      "genre": [
-        "戦争",
-        "歴史",
-        "娯楽",
-        "感動",
-        "バイオレンス"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 139,
-      "exact": true,
-      "letterboxdAddedDate": "2026-03-06",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-374-DUHM",
       "title": "ワン・バトル・アフター・アナザー",
       "originalTitle": "",
@@ -11210,8 +11183,8 @@
       "year": 2025,
       "score": 81,
       "star": 3,
-      "overallRank": 390,
-      "sameScoreRank": 53,
+      "overallRank": 389,
+      "sameScoreRank": 52,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -11236,8 +11209,8 @@
       "year": 1985,
       "score": 81,
       "star": 3,
-      "overallRank": 391,
-      "sameScoreRank": 54,
+      "overallRank": 390,
+      "sameScoreRank": 53,
       "category": "ファンタジー、アドベンチャー",
       "mediaType": "movie",
       "genre": [
@@ -11263,8 +11236,8 @@
       "year": 2001,
       "score": 81,
       "star": 3,
-      "overallRank": 392,
-      "sameScoreRank": 55,
+      "overallRank": 391,
+      "sameScoreRank": 54,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -11294,8 +11267,8 @@
       "year": 2025,
       "score": 81,
       "star": 3,
-      "overallRank": 393,
-      "sameScoreRank": 56,
+      "overallRank": 392,
+      "sameScoreRank": 55,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -11315,6 +11288,33 @@
       "runtime": null,
       "exact": true,
       "letterboxdAddedDate": "2026-01-19",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "lb-377-azew",
+      "title": "ハクソー・リッジ",
+      "originalTitle": "",
+      "englishTitle": "Hacksaw Ridge",
+      "year": 2016,
+      "score": 81,
+      "star": 3,
+      "overallRank": 393,
+      "sameScoreRank": 56,
+      "category": "戦争、歴史",
+      "mediaType": "movie",
+      "genre": [
+        "戦争",
+        "歴史",
+        "娯楽",
+        "感動",
+        "バイオレンス"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 139,
+      "exact": true,
+      "letterboxdAddedDate": "2026-03-06",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -21867,11 +21867,11 @@
         "lb-392-2aze",
         "custom-1791398329125-3r8f",
         "lb-575-1fK0",
-        "lb-377-azew",
         "lb-374-DUHM",
         "lb-136-1YVC",
         "lb-27-2b2A",
         "lb-403-uAKS",
+        "lb-377-azew",
         "custom-1790322761365-fzvo",
         "lb-149-AF4",
         "lb-416-2D2e"
