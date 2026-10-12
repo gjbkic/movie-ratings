@@ -34,12 +34,59 @@ function renderRank(){
  root.querySelectorAll('[data-open="1"]').forEach(b=>b.onclick=e=>{e.stopPropagation();openSheet(decodeURIComponent(b.closest(".rank-card").dataset.id))});root.querySelectorAll(".drag-handle").forEach(h=>{if(!h.disabled)h.onpointerdown=startDrag});document.getElementById("toggleEmpty").textContent="空の点数枠: "+(view.showEmpty?"表示":"非表示");document.getElementById("toggleEmpty").classList.toggle("active",view.showEmpty)
 }
 function clearDragListeners(){window.removeEventListener("pointermove",moveDrag);window.removeEventListener("pointerup",endDrag);window.removeEventListener("pointercancel",cancelDrag);window.removeEventListener("blur",cancelDrag)}
-function startDrag(e){if(e.button!=null&&e.button!==0)return;e.preventDefault();if(dragCtx)cancelDrag();const card=e.currentTarget.closest(".rank-card"),list=card?.closest(".score-list");if(!card||!list)return;dragCtx={id:decodeURIComponent(card.dataset.id),card,handle:e.currentTarget,fromScore:Number(list.dataset.score),ghost:card.cloneNode(true),pointerId:e.pointerId};dragCtx.ghost.classList.add("drag-ghost");dragCtx.ghost.style.width=Math.min(card.getBoundingClientRect().width,520)+"px";document.body.appendChild(dragCtx.ghost);card.classList.add("dragging");document.body.classList.add("drag-active");try{e.currentTarget.setPointerCapture(e.pointerId)}catch(_){}moveGhost(e);window.addEventListener("pointermove",moveDrag,{passive:false});window.addEventListener("pointerup",endDrag,{passive:false});window.addEventListener("pointercancel",cancelDrag,{passive:false});window.addEventListener("blur",cancelDrag)}
+function startDrag(e){
+ if(e.button!=null&&e.button!==0)return;
+ e.preventDefault();
+ if(dragCtx)cancelDrag();
+ const card=e.currentTarget.closest(".rank-card"),list=card?.closest(".score-list");
+ if(!card||!list)return;
+ const ghost=card.cloneNode(true);
+ ghost.querySelector('.v66-pos')?.remove();
+ dragCtx={id:decodeURIComponent(card.dataset.id),card,handle:e.currentTarget,fromScore:Number(list.dataset.score),ghost,pointerId:e.pointerId,startX:e.clientX,startY:e.clientY,moved:false};
+ dragCtx.ghost.classList.add("drag-ghost");
+ dragCtx.ghost.style.width=Math.min(card.getBoundingClientRect().width,520)+"px";
+ document.body.appendChild(dragCtx.ghost);
+ card.classList.add("dragging");
+ document.body.classList.add("drag-active");
+ try{if(Number.isFinite(e.pointerId)&&e.pointerId>=0)e.currentTarget.setPointerCapture(e.pointerId)}catch(_){}
+ moveGhost(e);
+ window.addEventListener("pointermove",moveDrag,{passive:false});
+ window.addEventListener("pointerup",endDrag,{passive:false});
+ window.addEventListener("pointercancel",cancelDrag,{passive:false});
+ window.addEventListener("blur",cancelDrag);
+}
 function moveGhost(e){if(!dragCtx||!dragCtx.ghost?.isConnected)return;const w=dragCtx.ghost.getBoundingClientRect().width||0,h=dragCtx.ghost.getBoundingClientRect().height||0;dragCtx.ghost.style.left=Math.min(window.innerWidth-w-6,Math.max(6,e.clientX+12))+"px";dragCtx.ghost.style.top=Math.min(window.innerHeight-h-6,Math.max(6,e.clientY+12))+"px"}
-function moveDrag(e){if(!dragCtx)return;e.preventDefault();moveGhost(e);const topEdge=(document.querySelector(".top")?.getBoundingClientRect().bottom||90)+24;if(e.clientY<topEdge)window.scrollBy(0,-12);else if(e.clientY>window.innerHeight-70)window.scrollBy(0,12);if(dragCtx.ghost)dragCtx.ghost.style.display="none";const el=document.elementFromPoint(e.clientX,e.clientY);if(dragCtx?.ghost)dragCtx.ghost.style.display="";document.querySelectorAll(".drop-hot").forEach(x=>x.classList.remove("drop-hot"));const list=el?.closest?.(".score-list");if(!list)return;list.classList.add("drop-hot");const target=el.closest?.(".rank-card");if(target&&target!==dragCtx.card){const r=target.getBoundingClientRect();list.insertBefore(dragCtx.card,e.clientY<r.top+r.height/2?target:target.nextSibling)}else if(!target)list.appendChild(dragCtx.card)}
+function moveDrag(e){
+ if(!dragCtx)return;
+ e.preventDefault();
+ if(Math.hypot(e.clientX-(dragCtx.startX??e.clientX),e.clientY-(dragCtx.startY??e.clientY))>4)dragCtx.moved=true;
+ moveGhost(e);
+ const topEdge=(document.querySelector(".top")?.getBoundingClientRect().bottom||90)+24;
+ if(e.clientY<topEdge)window.scrollBy(0,-12);else if(e.clientY>window.innerHeight-70)window.scrollBy(0,12);
+ if(dragCtx.ghost)dragCtx.ghost.style.display="none";
+ const el=document.elementFromPoint(e.clientX,e.clientY);
+ if(dragCtx?.ghost)dragCtx.ghost.style.display="";
+ document.querySelectorAll(".drop-hot").forEach(x=>x.classList.remove("drop-hot"));
+ const list=el?.closest?.(".score-list");if(!list)return;
+ list.classList.add("drop-hot");
+ const target=el.closest?.(".rank-card");
+ if(target&&target!==dragCtx.card){const r=target.getBoundingClientRect();list.insertBefore(dragCtx.card,e.clientY<r.top+r.height/2?target:target.nextSibling)}
+ else if(!target)list.appendChild(dragCtx.card);
+}
 function finishDragUi(ctx){clearDragListeners();try{ctx?.handle?.releasePointerCapture?.(ctx.pointerId)}catch(_){}ctx?.ghost?.remove();ctx?.card?.classList.remove("dragging");document.body.classList.remove("drag-active");document.querySelectorAll(".drop-hot").forEach(x=>x.classList.remove("drop-hot"));document.querySelectorAll(".drag-ghost").forEach(x=>x.remove())}
 function cancelDrag(){if(!dragCtx){document.querySelectorAll(".drag-ghost").forEach(x=>x.remove());document.body.classList.remove("drag-active");clearDragListeners();return}const ctx=dragCtx;dragCtx=null;finishDragUi(ctx);renderRank()}
-function endDrag(e){if(!dragCtx)return;try{e?.preventDefault?.()}catch(_){}const ctx=dragCtx;dragCtx=null;const list=ctx.card?.closest(".score-list"),newScore=Number(list?.dataset.score??ctx.fromScore),f=filmById(ctx.id);if(f){state.exactScores[f.id]=newScore;const newStar=scoreToStar(newScore);state.starOverrides[f.id]=newStar;state.assignments[f.id]=nearestTier(newStar,newScore)}document.querySelectorAll(".score-list").forEach(l=>{const score=l.dataset.score;state.rankOrder[score]=[...l.querySelectorAll(".rank-card")].map(c=>decodeURIComponent(c.dataset.id))});finishDragUi(ctx);save();render();toast(newScore===ctx.fromScore?"同点内の順位を保存":""+newScore+"点へ移動")}
+function endDrag(e){
+ if(!dragCtx)return;
+ try{e?.preventDefault?.()}catch(_){}
+ const ctx=dragCtx;dragCtx=null;
+ if(!ctx.moved){
+  finishDragUi(ctx);renderRank();return;
+ }
+ const list=ctx.card?.closest(".score-list"),newScore=Number(list?.dataset.score??ctx.fromScore),f=filmById(ctx.id);
+ if(f){state.exactScores[f.id]=newScore;const newStar=scoreToStar(newScore);state.starOverrides[f.id]=newStar;state.assignments[f.id]=nearestTier(newStar,newScore)}
+ document.querySelectorAll(".score-list").forEach(l=>{const score=l.dataset.score;state.rankOrder[score]=[...l.querySelectorAll(".rank-card")].map(c=>decodeURIComponent(c.dataset.id))});
+ finishDragUi(ctx);window.__movie30PendingJump99=null;save();render();toast(newScore===ctx.fromScore?"同点内の順位を保存":""+newScore+"点へ移動")
+}
 document.addEventListener("visibilitychange",()=>{if(document.hidden&&dragCtx)cancelDrag()});
 function cardHtml(f){const tt=tier(f)||"none",sc=effectiveScore(f);return `<button class="card ${tt}" data-id="${encodeURIComponent(f.id)}"><div class="card-title">${esc(displayTitle(f))}</div><div class="badge">${tt==="none"?"未分類":LABEL[tt]}${view.showOld&&sc!=null?" · "+sc+"点":""}</div></button>`}
 function renderClassify(){
@@ -5623,9 +5670,9 @@ function centerRankCard(card){
  const desired=Math.min(wanted,Math.max(covered+8,height-r.height-8));
  instant(()=>window.scrollTo({left:window.scrollX,top:window.scrollY+r.top-desired,behavior:'auto'}));
 }
-// Use the original drag ghost (index-v13 .drag-ghost) for ↑/↓ swaps.
-// Unlike the post-render FLIP effect, the card visibly lifts FIRST, travels
-// while detached from the list, and is only committed into its new slot on drop.
+// Reuse the same lift-and-drag implementation as a manual ≡ gesture.
+// The floating card follows a short path across the adjacent card; the real
+// card is inserted in the list at the same midpoint used by moveDrag().
 let rankSwapInFlight=false;
 function swap(id,d){
  if(rankSwapInFlight)return;
@@ -5638,73 +5685,42 @@ function swap(id,d){
   toast('この点数内では端です。点数をまたぐ移動は≡ドラッグで');
   return;
  }
- const picked=cardForRank(id),adjacent=cardForRank(ordered[next].id);
- const commit=()=>{
-  if(picked)picked.style.visibility='';
-  [ordered[index],ordered[next]]=[ordered[next],ordered[index]];
-  state.rankOrder[String(score)]=ordered.map(x=>x.id);
-  window.__movie30PendingJump99=null;
-  save();renderRank();
-  posTools(id);
- };
- if(!picked||!adjacent||typeof picked.animate!=='function'){
-  commit();return;
- }
+ const card=cardForRank(id),adjacent=cardForRank(ordered[next].id);
+ const handle=card?.querySelector('.drag-handle');
+ if(!card||!adjacent||!handle)return;
+ const a=card.getBoundingClientRect(),b=adjacent.getBoundingClientRect();
+ const startX=a.left+Math.min(22,a.width/2),startY=a.top+a.height/2;
+ const endX=b.left+Math.min(22,b.width/2);
+ // Cross the same half-card threshold a user's finger would cross to insert.
+ const endY=d<0?b.top+b.height*.28:b.bottom-b.height*.28;
  rankSwapInFlight=true;
- const from=picked.getBoundingClientRect(),dest=adjacent.getBoundingClientRect();
- const dy=dest.top-from.top,dx=dest.left-from.left;
- // Clone exactly like the former drag interaction: its drag-ghost class,
- // shadow, slight tilt, actual movie poster and original card contents.
- const ghost=picked.cloneNode(true);
- ghost.classList.add('drag-ghost','movie30-swap-ghost');
- ghost.classList.remove('v66-focus','dragging');
- const computed=getComputedStyle(picked);
- Object.assign(ghost.style,{
-  position:'fixed',left:from.left+'px',top:from.top+'px',
-  width:from.width+'px',height:from.height+'px',
-  display:computed.display,gridTemplateColumns:computed.gridTemplateColumns,
-  gap:computed.gap,padding:computed.padding,
-  boxSizing:'border-box',background:computed.backgroundColor,
-  color:computed.color,border:computed.border,borderRadius:computed.borderRadius,
-  margin:'0',zIndex:'2147483000',pointerEvents:'none',
-  opacity:'.97',transformOrigin:'50% 50%',
-  boxShadow:'0 12px 34px rgba(0,0,0,.45)',
-  willChange:'transform,box-shadow'
- });
- document.body.appendChild(ghost);
- picked.style.visibility='hidden';
- window.__movie30SwapMotion={id,phase:'lifted',start:[from.left,from.top],end:[dest.left,dest.top]};
- const duration=800;
- let completed=false;
- const finish=()=>{
-  if(completed)return;
-  completed=true;
-  try{ghost.remove();commit();}
-  finally{picked.style.visibility='';rankSwapInFlight=false;window.__movie30SwapMotion={id,phase:'dropped'};}
- };
+ window.__movie30PendingJump99=null;
  try{
-  // A genuine lift-out, short elevated travel, and soft landing: the same
-  // tilted floating-card impression as the old ≡ drag behavior.
-  const animation=ghost.animate([
-   {transform:'translate3d(0,0,0) rotate(0deg) scale(1)',boxShadow:'0 7px 20px rgba(0,0,0,.3)',offset:0},
-   {transform:'translate3d(17px,-21px,0) rotate(1deg) scale(1.055)',boxShadow:'0 24px 58px rgba(0,0,0,.72)',offset:.23},
-   {transform:'translate3d('+(dx+17)+'px,'+(dy-21)+'px,0) rotate(1deg) scale(1.055)',boxShadow:'0 24px 58px rgba(0,0,0,.72)',offset:.78},
-   {transform:'translate3d('+dx+'px,'+dy+'px,0) rotate(0deg) scale(1)',boxShadow:'0 7px 20px rgba(0,0,0,.3)',offset:1}
-  ],{duration,easing:'cubic-bezier(.25,.72,.28,1)',fill:'both'});
-  // The displaced neighbour slides into the vacant space just as dragging
-  // past it used to shift the adjacent card in the original list.
-  adjacent.animate([
-   {transform:'translate3d(0,0,0)',offset:0},
-   {transform:'translate3d(0,0,0)',offset:.18},
-   {transform:'translate3d('+(-dx)+'px,'+(-dy)+'px,0)',offset:1}
-  ],{duration,easing:'cubic-bezier(.22,.65,.3,1)',fill:'forwards'});
-  animation.onfinish=finish;
-  animation.oncancel=finish;
-  setTimeout(finish,duration+180);
+  startDrag({button:0,pointerId:-1,clientX:startX,clientY:startY,currentTarget:handle,preventDefault(){}});
  }catch(error){
-  console.warn('Drag-style rank animation unavailable',error);
-  finish();
+  rankSwapInFlight=false;console.warn('Could not start drag-style rank swap',error);return;
  }
+ const began=performance.now(),duration=540;
+ const move=(now)=>{
+  if(!dragCtx){rankSwapInFlight=false;return}
+  const t=Math.min(1,(now-began)/duration),eased=t*t*(3-2*t);
+  const event={clientX:startX+(endX-startX)*eased,clientY:startY+(endY-startY)*eased,preventDefault(){}};
+  moveDrag(event);
+  if(t<1){requestAnimationFrame(move);return}
+  const ctx=dragCtx;
+  dragCtx=null;
+  const list=ctx.card?.closest('.score-list');
+  if(list){
+   document.querySelectorAll('.score-list').forEach(l=>{
+    state.rankOrder[l.dataset.score]=[...l.querySelectorAll('.rank-card')].map(c=>decodeURIComponent(c.dataset.id));
+   });
+  }
+  finishDragUi(ctx);
+  save();renderRank();posTools(id);
+  rankSwapInFlight=false;
+  window.__movie30SwapMotion={id,phase:'dropped'};
+ };
+ requestAnimationFrame(move);
 }
 function posTools(id){
  const c=cardForRank(id);if(!c)return;
@@ -5722,48 +5738,71 @@ function jumpFocus(id,afterLayout,center=true){
   afterLayout?.();
  }));
 }
-function jumpGlobal(id){
- window.__movie30PendingJump99={id,until:Date.now()+4200};
- window.__movie30LastJump99={id,phase:'started'};
+function jumpGlobal(id,pointerEvent){
+ const source=cardForRank(id),sourceRect=source?.getBoundingClientRect();
+ const anchorTop=sourceRect?.top??null;
+ const pointer=pointerEvent?.type==='pointerdown'?{
+  button:pointerEvent.button,pointerId:pointerEvent.pointerId,
+  clientX:pointerEvent.clientX,clientY:pointerEvent.clientY
+ }:null;
+ let dragStarted=false,attempts=0;
+ window.__movie30PendingJump99={id,until:Date.now()+4200,anchorTop};
+ window.__movie30LastJump99={id,phase:'started',anchorTop};
  try{if(filtered())backFilters=cap()}catch(error){console.warn('Movie jump filter snapshot',error)}
  document.activeElement?.blur?.();
  document.querySelectorAll('.movie92-suggestions').forEach(menu=>{menu.hidden=true});
  try{clearFilters()}catch(error){console.warn('Movie jump reset',error)}
  view.page='rank';
  try{render()}catch(error){console.warn('Movie rank redrawn; continuing jump',error)}
- let attempts=0;
  const jump=()=>{
+  if(dragStarted)return;
   attempts++;
-  const c=cardForRank(id);
-  if(!c){window.__movie30LastJump99={id,attempts,found:false};return false}
-  posTools(id);
-  // Work with the reattached live card after posTools changed its height.
-  const current=cardForRank(id);
-  centerRankCard(current);
+  const card=cardForRank(id);
+  if(!card){window.__movie30LastJump99={id,attempts,found:false};return false}
+  if(!card.querySelector('.v66-pos'))posTools(id);
+  const current=cardForRank(id),rect=current?.getBoundingClientRect();
+  if(!current||!rect)return false;
+  // Keep the selected result at the same screen coordinate while the complete
+  // ranking is restored underneath it. Never recenter a finger-initiated jump.
+  if(anchorTop!=null&&!dragCtx){
+   const delta=rect.top-anchorTop;
+   if(Math.abs(delta)>1)window.scrollTo({left:window.scrollX,top:window.scrollY+delta,behavior:'auto'});
+  }
   current.classList.add('movie30-jump-highlight');
-  window.__movie30LastJump99={id,attempts,found:true,scrollY:window.scrollY,top:current.getBoundingClientRect().top};
+  window.__movie30LastJump99={id,attempts,found:true,scrollY:window.scrollY,top:current.getBoundingClientRect().top,phase:pointer?'ready-to-drag':'anchored'};
   setTimeout(()=>current.classList.remove('movie30-jump-highlight'),1800);
+  if(pointer){
+   const handle=current.querySelector('.drag-handle');
+   if(handle){
+    window.__movie30PendingJump99=null;
+    startDrag({...pointer,currentTarget:handle,preventDefault(){}});
+    dragStarted=!!dragCtx;
+    window.__movie30LastJump99={id,attempts,found:true,phase:dragStarted?'dragging':'anchored',top:current.getBoundingClientRect().top};
+   }
+  }
   return true;
  };
- // Do an immediate jump. Old rAF-only implementation sometimes never
- // completed while the Safari search input / keyboard was still active.
  jump();
- const later=()=>requestAnimationFrame(jump);
- later();setTimeout(later,260);setTimeout(later,640);
- toast('全体ランキング内の該当作品へ移動しました');
+ requestAnimationFrame(jump);
+ setTimeout(jump,180);
+ toast(pointer?'全体順位に戻りました。続けてドラッグできます':'全体ランキングの同じ位置に戻りました');
 }
 window.__movie30JumpToGlobalRank=jumpGlobal;
 window.__movie30IsRankFiltered=filtered;
 window.__movie30RefocusRank99=function(){
  const pending=window.__movie30PendingJump99;
- if(!pending||Date.now()>pending.until)return false;
+ if(!pending||Date.now()>pending.until||dragCtx)return false;
  const card=cardForRank(pending.id);
  if(!card)return false;
- posTools(pending.id);
- centerRankCard(cardForRank(pending.id));
+ if(!card.querySelector('.v66-pos'))posTools(pending.id);
+ const current=cardForRank(pending.id),rect=current?.getBoundingClientRect();
+ if(rect&&Number.isFinite(pending.anchorTop)){
+  const delta=rect.top-pending.anchorTop;
+  if(Math.abs(delta)>1)window.scrollTo({left:window.scrollX,top:window.scrollY+delta,behavior:'auto'});
+ }
  return true;
 };
-function decorate(){const f=filtered();for(const c of document.querySelectorAll('#rankRoot .rank-card')){const id=decodeURIComponent(c.dataset.id||''),h=c.querySelector('.drag-handle');if(!h)continue;h.disabled=false;if(f){h.textContent='↗';h.classList.add('movie99-jump');h.title='検索を解除して全体ランキングのこの映画へ';h.onpointerdown=e=>{e.preventDefault();e.stopPropagation();jumpGlobal(id)};h.onclick=e=>{e.preventDefault();e.stopPropagation();jumpGlobal(id)}}else{h.classList.remove('movie99-jump');h.textContent='≡';h.title='ドラッグで順位変更';h.onpointerdown=startDrag;h.onclick=null}}document.getElementById('advBadge66')?.classList.toggle('on',!!advOn());if(focusId)posTools(focusId)}
+function decorate(){const f=filtered();for(const c of document.querySelectorAll('#rankRoot .rank-card')){const id=decodeURIComponent(c.dataset.id||''),h=c.querySelector('.drag-handle');if(!h)continue;h.disabled=false;if(f){h.textContent='↗';h.classList.add('movie99-jump');h.title='検索を解除して全体ランキングのこの映画へ';h.onpointerdown=e=>{e.preventDefault();e.stopPropagation();jumpGlobal(id,e)};h.onclick=e=>{e.preventDefault();e.stopPropagation();if(e.detail===0)jumpGlobal(id,e)}}else{h.classList.remove('movie99-jump');h.textContent='≡';h.title='ドラッグで順位変更';h.onpointerdown=startDrag;h.onclick=null}}document.getElementById('advBadge66')?.classList.toggle('on',!!advOn());if(focusId)posTools(focusId)}
 const rr=renderRank;renderRank=function(){rr();if(advOn()){document.querySelectorAll('#rankRoot .rank-card').forEach(c=>{const f=filmById(decodeURIComponent(c.dataset.id||''));if(f&&!pass(f))c.remove()});for(const bin of document.querySelectorAll('#rankRoot .score-bin')){const n=bin.querySelectorAll('.rank-card').length,sm=bin.querySelector('.score-label small');if(sm)sm.textContent=n+'本';if(!n)bin.remove()}for(const s of document.querySelectorAll('#rankRoot .rank-star'))if(!s.querySelector('.rank-card'))s.remove()}decorate()};
 
 // richer detail in existing edit sheet
