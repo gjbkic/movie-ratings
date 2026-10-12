@@ -19,7 +19,7 @@ jobs:
           node <<'NODE'
           const {chromium}=require('playwright-core'),fs=require('fs');
           const enh=fs.readFileSync('app-enhancements.js','utf8');
-          const bds=[['through85',enh.split('/* Consolidated from patch-v86.js')[0]],['through88',enh.split('/* Consolidated from patch-v89.js')[0]],['through89',enh.split('/* Consolidated from patch-v90.js')[0]],['through90',enh.split('/* Consolidated from patch-v91.js')[0]],['through91',enh.split('/* Consolidated from patch-v92.js')[0]],['through92',enh.split('/* Consolidated from patch-v93.js')[0]],['through93',enh.split('/* Consolidated from patch-v94.js')[0]]];
+          const before94=enh.split('/* Consolidated from patch-v94.js')[0],after94='/* Consolidated from patch-v95.js'+enh.split('/* Consolidated from patch-v95.js')[1]; const bds=[['through93',before94],['full-without94',before94+after94],['through94',enh.split('/* Consolidated from patch-v95.js')[0]],['all',enh]];
           (async()=>{
             const browser=await chromium.launch({executablePath:'/usr/bin/google-chrome',headless:true,args:['--no-sandbox']});
             for(const [name,source] of bds){
