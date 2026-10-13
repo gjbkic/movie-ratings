@@ -121,6 +121,7 @@ def search_id(f, ignore_explicit=False):
         ("glassonion",2022):661374,
         ("missionimpossibledeadreckoning",2023):575264,
         ("onyourmark",1995):10840,
+        ("utadahikaruwildlife",2011):57044,
     }
     if not tv:
         for alias in titles:
@@ -176,7 +177,8 @@ def compatible(f, details, kind):
     if kind=="movie":
         verified={("glassonion",2022):661374,
                   ("missionimpossibledeadreckoning",2023):575264,
-                  ("onyourmark",1995):10840}
+                  ("onyourmark",1995):10840,
+                  ("utadahikaruwildlife",2011):57044}
         actual_id=int(details.get("id") or 0)
         film_year=int(f.get("year") or 0)
         if any(verified.get((normalized(a),film_year))==actual_id for a in aliases):
