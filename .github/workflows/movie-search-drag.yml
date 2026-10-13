@@ -59,6 +59,7 @@ jobs:
                   drag:typeof dragCtx!=='undefined'&&!!dragCtx,
                   ctxId:typeof dragCtx!=='undefined'&&dragCtx?.id,
                   ghost:document.querySelectorAll('.movie30-floating-drag').length,
+                  ghostTop:document.querySelector('.movie30-floating-drag')?.getBoundingClientRect().top,
                   focused:!!c?.classList.contains('v66-focus'),
                   pos:!!c?.querySelector('.v66-pos'),
                   lastJump:window.__movie30LastJump99,
@@ -84,7 +85,7 @@ jobs:
               const end1240=await read();
               console.log('SEARCH_DRAG_SNAPSHOT',JSON.stringify({movePixels,target,point,picked,beforeEnd,end80,end420,end1240,errors}));
               if(picked.query!==''||!picked.inViewport||beforeEnd.drag!==true)throw Error('Search handoff did not preserve the touched movie');
-              if(!end1240.inViewport||Math.abs((end1240.top??0)-(beforeEnd.top??0))>100)throw Error('After release movie jumped away from finger');
+              if(!end1240.inViewport||Math.abs((end1240.top??0)-(beforeEnd.ghostTop??beforeEnd.top??0))>100)throw Error('After release movie jumped away from lifted preview');
               if(errors.length)throw Error('Browser JS error after search handoff');
               await page.close();
             }
