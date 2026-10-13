@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791918827695,
-  "sourceUpdatedIso": "2026-10-13T19:13:47.695Z",
+  "sourceUpdatedAt": 1791918837133,
+  "sourceUpdatedIso": "2026-10-13T19:13:57.133Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -21019,6 +21019,27 @@
       "letterboxdAddedDate": null,
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1791918832001-xkpy",
+      "title": "ガリレオXX 内海薫最後の事件 愚弄ぶ",
+      "originalTitle": "ガリレオXX 内海薫最後の事件 愚弄ぶ",
+      "englishTitle": "Galileo XX",
+      "year": 2013,
+      "score": null,
+      "star": 0,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "サスペンス、ミステリー",
+      "mediaType": "movie",
+      "genre": "",
+      "origin": "",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     }
   ],
   "state": {
@@ -25332,6 +25353,23 @@
         "added": true,
         "_seq": 1791918827266,
         "tmdbType": "movie"
+      },
+      {
+        "id": "custom-1791918832001-xkpy",
+        "title": "ガリレオXX 内海薫最後の事件 愚弄ぶ",
+        "originalTitle": "ガリレオXX 内海薫最後の事件 愚弄ぶ",
+        "englishTitle": "Galileo XX",
+        "lbTitle": "Galileo XX",
+        "tmdbId": 235919,
+        "year": 2013,
+        "uri": "",
+        "category": "サスペンス、ミステリー",
+        "order": 999999,
+        "star": 0,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791918832001,
+        "tmdbType": "movie"
       }
     ],
     "starOverrides": {
@@ -26050,7 +26088,8 @@
       "custom-1791918794008-6b75": 0,
       "custom-1791918807010-n21d": 0,
       "custom-1791918817265-0l6y": 0,
-      "custom-1791918827266-rxb1": 0
+      "custom-1791918827266-rxb1": 0,
+      "custom-1791918832001-xkpy": 0
     },
     "titleOverrides": {
       "added-anchor-578": {
@@ -29040,7 +29079,8 @@
       "custom-1791918794008-6b75": "tvseries",
       "custom-1791918807010-n21d": "tvseries",
       "custom-1791918817265-0l6y": "movie",
-      "custom-1791918827266-rxb1": "movie"
+      "custom-1791918827266-rxb1": "movie",
+      "custom-1791918832001-xkpy": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -65024,6 +65064,24 @@
           "creators": [],
           "source": "tmdb",
           "fetchedAt": "2026-10-13T19:13:47.442Z"
+        }
+      },
+      "custom-1791918832001-xkpy": {
+        "contentType": "movie",
+        "tmdbType": "movie",
+        "poster84": {
+          "path": "/xGaEoW5Tse8cRdUhr9mz4VICcNP.jpg",
+          "tmdbId": 235919,
+          "provider": "tmdb",
+          "checkedAt": "2026-10-13T19:13:52.122Z"
+        },
+        "crew84": {
+          "directors": [
+            "Hiroshi Nishitani"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-13T19:13:52.165Z"
         }
       }
     }
