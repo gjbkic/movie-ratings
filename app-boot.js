@@ -20,7 +20,7 @@
     });
 
     const build = document.getElementById('movie30BuildV29');
-    if (build) build.textContent = 'app build 20261013f';
+    if (build) build.textContent = 'app build 20261014a';
 
     try {
       // All saved candidates have been read and raw local records archived.
