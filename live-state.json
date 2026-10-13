@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791916903314,
-  "sourceUpdatedIso": "2026-10-13T18:41:43.314Z",
+  "sourceUpdatedAt": 1791916913798,
+  "sourceUpdatedIso": "2026-10-13T18:41:53.798Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -10184,33 +10184,6 @@
       "letterboxdReportedWatchedDate": "2026-10-04"
     },
     {
-      "id": "custom-1789408864046-u4p4",
-      "title": "ジェイコブス・ラダー",
-      "originalTitle": "Jacob's Ladder",
-      "englishTitle": "Jacob's Ladder",
-      "year": 1990,
-      "score": 81,
-      "star": 3,
-      "overallRank": 354,
-      "sameScoreRank": 14,
-      "category": "スリラー、ホラー",
-      "mediaType": "movie",
-      "genre": [
-        "スリラー",
-        "ホラー",
-        "心理・内面",
-        "戦争",
-        "サスペンス"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 113,
-      "exact": true,
-      "letterboxdAddedDate": "2026-09-15",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-523-6xza",
       "title": "コヒーレンス",
       "originalTitle": "",
@@ -10218,8 +10191,8 @@
       "year": 2013,
       "score": 81,
       "star": 3,
-      "overallRank": 355,
-      "sameScoreRank": 15,
+      "overallRank": 354,
+      "sameScoreRank": 14,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -10244,8 +10217,8 @@
       "year": 2013,
       "score": 81,
       "star": 3,
-      "overallRank": 356,
-      "sameScoreRank": 16,
+      "overallRank": 355,
+      "sameScoreRank": 15,
       "category": "邦画",
       "mediaType": "drama",
       "genre": [
@@ -10265,6 +10238,33 @@
       "runtime": 127,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1789408864046-u4p4",
+      "title": "ジェイコブス・ラダー",
+      "originalTitle": "Jacob's Ladder",
+      "englishTitle": "Jacob's Ladder",
+      "year": 1990,
+      "score": 81,
+      "star": 3,
+      "overallRank": 356,
+      "sameScoreRank": 16,
+      "category": "スリラー、ホラー",
+      "mediaType": "movie",
+      "genre": [
+        "スリラー",
+        "ホラー",
+        "心理・内面",
+        "戦争",
+        "サスペンス"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 113,
+      "exact": true,
+      "letterboxdAddedDate": "2026-09-15",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -21993,9 +21993,9 @@
         "custom-1791834369925-gy7y",
         "custom-1791823398409-njce",
         "custom-1791139748091-0goj",
-        "custom-1789408864046-u4p4",
         "lb-523-6xza",
         "lb-228-6eCu",
+        "custom-1789408864046-u4p4",
         "lb-42-1xFW",
         "lb-277-eOCm",
         "lb-475-F1U6",
