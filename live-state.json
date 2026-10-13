@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791913695574,
-  "sourceUpdatedIso": "2026-10-13T17:48:15.574Z",
+  "sourceUpdatedAt": 1791913702354,
+  "sourceUpdatedIso": "2026-10-13T17:48:22.354Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -8488,32 +8488,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-553-2416",
-      "title": "ホット・ファズ 俺たちスーパーポリスメン！",
-      "originalTitle": "",
-      "englishTitle": "Hot Fuzz",
-      "year": 2007,
-      "score": 82,
-      "star": 3,
-      "overallRank": 294,
-      "sameScoreRank": 6,
-      "category": "コメディ",
-      "mediaType": "movie",
-      "genre": [
-        "コメディ",
-        "娯楽",
-        "アクション",
-        "クライム"
-      ],
-      "origin": "その他",
-      "format": "live",
-      "runtime": 121,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-470-2BwG",
       "title": "ヱヴァンゲリヲン新劇場版:Q",
       "originalTitle": "",
@@ -8521,8 +8495,8 @@
       "year": 2012,
       "score": 82,
       "star": 3,
-      "overallRank": 295,
-      "sameScoreRank": 7,
+      "overallRank": 294,
+      "sameScoreRank": 6,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -8554,8 +8528,8 @@
       "year": 1976,
       "score": 82,
       "star": 3,
-      "overallRank": 296,
-      "sameScoreRank": 8,
+      "overallRank": 295,
+      "sameScoreRank": 7,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -8582,8 +8556,8 @@
       "year": 2011,
       "score": 82,
       "star": 3,
-      "overallRank": 297,
-      "sameScoreRank": 9,
+      "overallRank": 296,
+      "sameScoreRank": 8,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -8615,8 +8589,8 @@
       "year": 2009,
       "score": 82,
       "star": 3,
-      "overallRank": 298,
-      "sameScoreRank": 10,
+      "overallRank": 297,
+      "sameScoreRank": 9,
       "category": "Letterboxd追加",
       "mediaType": "movie",
       "genre": [
@@ -8635,6 +8609,32 @@
       "runtime": 87,
       "exact": true,
       "letterboxdAddedDate": "2026-09-05",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "lb-553-2416",
+      "title": "ホット・ファズ 俺たちスーパーポリスメン！",
+      "originalTitle": "",
+      "englishTitle": "Hot Fuzz",
+      "year": 2007,
+      "score": 82,
+      "star": 3,
+      "overallRank": 298,
+      "sameScoreRank": 10,
+      "category": "コメディ",
+      "mediaType": "movie",
+      "genre": [
+        "コメディ",
+        "娯楽",
+        "アクション",
+        "クライム"
+      ],
+      "origin": "その他",
+      "format": "live",
+      "runtime": 121,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -22004,11 +22004,11 @@
         "custom-1791913497181-nqp6",
         "lb-31-2uds",
         "lb-426-pEeQ",
-        "lb-553-2416",
         "lb-470-2BwG",
         "lb-23-2b8y",
         "custom-1791018448927-b4o3",
         "lb-557-1WyQ",
+        "lb-553-2416",
         "lb-457-IG",
         "custom-1791553824276-cl9b",
         "lb-213-2TTS",
