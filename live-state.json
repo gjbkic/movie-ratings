@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791921401921,
-  "sourceUpdatedIso": "2026-10-13T19:56:41.921Z",
+  "sourceUpdatedAt": 1791921449100,
+  "sourceUpdatedIso": "2026-10-13T19:57:29.100Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -9962,35 +9962,6 @@
       "letterboxdReportedWatchedDate": "2026-10-07"
     },
     {
-      "id": "custom-1790322761955-twge",
-      "title": "リーガル・ハイ スペシャル2",
-      "originalTitle": "リーガル・ハイ スペシャル２",
-      "englishTitle": "Legal High 2 SP",
-      "year": 2014,
-      "score": 81,
-      "star": 3,
-      "overallRank": 346,
-      "sameScoreRank": 6,
-      "category": "Letterboxd",
-      "mediaType": "drama",
-      "genre": [
-        "ドラマ",
-        "コメディ",
-        "サスペンス",
-        "娯楽",
-        "comfort",
-        "ミステリー",
-        "TV特番・SP"
-      ],
-      "origin": "日本",
-      "format": "live",
-      "runtime": 109,
-      "exact": true,
-      "letterboxdAddedDate": "2026-09-25",
-      "letterboxdPublishedAt": "Fri, 25 Sep 2026 06:29:45 +1200",
-      "letterboxdReportedWatchedDate": "2026-09-25"
-    },
-    {
       "id": "custom-1791921346893-dshj",
       "title": "ブラック・ミラー「ユーロジー」",
       "originalTitle": "Black Mirror: Eulogy",
@@ -9998,8 +9969,8 @@
       "year": 2025,
       "score": 81,
       "star": 3,
-      "overallRank": 347,
-      "sameScoreRank": 7,
+      "overallRank": 346,
+      "sameScoreRank": 6,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -10020,6 +9991,35 @@
       "letterboxdAddedDate": "2026-10-14",
       "letterboxdPublishedAt": "Wed, 14 Oct 2026 07:04:12 +1300",
       "letterboxdReportedWatchedDate": "2026-10-14"
+    },
+    {
+      "id": "custom-1790322761955-twge",
+      "title": "リーガル・ハイ スペシャル2",
+      "originalTitle": "リーガル・ハイ スペシャル２",
+      "englishTitle": "Legal High 2 SP",
+      "year": 2014,
+      "score": 81,
+      "star": 3,
+      "overallRank": 347,
+      "sameScoreRank": 7,
+      "category": "Letterboxd",
+      "mediaType": "drama",
+      "genre": [
+        "ドラマ",
+        "コメディ",
+        "サスペンス",
+        "娯楽",
+        "comfort",
+        "ミステリー",
+        "TV特番・SP"
+      ],
+      "origin": "日本",
+      "format": "live",
+      "runtime": 109,
+      "exact": true,
+      "letterboxdAddedDate": "2026-09-25",
+      "letterboxdPublishedAt": "Fri, 25 Sep 2026 06:29:45 +1200",
+      "letterboxdReportedWatchedDate": "2026-09-25"
     },
     {
       "id": "lb-19-2cCk",
@@ -22424,8 +22424,8 @@
         "custom-1791476522514-wpj8",
         "lb-348-71k",
         "custom-1791381276187-mxp2",
-        "custom-1790322761955-twge",
         "custom-1791921346893-dshj",
+        "custom-1790322761955-twge",
         "lb-19-2cCk",
         "custom-1790433924185-cva1",
         "custom-1791113241266-l3xb",
