@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791919133245,
-  "sourceUpdatedIso": "2026-10-13T19:18:53.245Z",
+  "sourceUpdatedAt": 1791919156493,
+  "sourceUpdatedIso": "2026-10-13T19:19:16.493Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -21208,6 +21208,27 @@
       "letterboxdAddedDate": null,
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1791919156207-vna6",
+      "title": "ストレンジャー・シングス 未知の世界",
+      "originalTitle": "Stranger Things",
+      "englishTitle": "Stranger Things",
+      "year": 2016,
+      "score": null,
+      "star": 0,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "サスペンス、ミステリー",
+      "mediaType": "tvseries",
+      "genre": "",
+      "origin": "",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     }
   ],
   "state": {
@@ -25674,6 +25695,23 @@
         "added": true,
         "_seq": 1791919132954,
         "tmdbType": "tv"
+      },
+      {
+        "id": "custom-1791919156207-vna6",
+        "title": "ストレンジャー・シングス 未知の世界",
+        "originalTitle": "Stranger Things",
+        "englishTitle": "Stranger Things",
+        "lbTitle": "Stranger Things",
+        "tmdbId": 66732,
+        "year": 2016,
+        "uri": "",
+        "category": "サスペンス、ミステリー",
+        "order": 999999,
+        "star": 0,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791919156207,
+        "tmdbType": "tv"
       }
     ],
     "starOverrides": {
@@ -26401,7 +26439,8 @@
       "custom-1791919063908-ski9": 0,
       "custom-1791919090262-czju": 0,
       "custom-1791919109416-hxq8": 0,
-      "custom-1791919132954-1qh1": 0
+      "custom-1791919132954-1qh1": 0,
+      "custom-1791919156207-vna6": 0
     },
     "titleOverrides": {
       "added-anchor-578": {
@@ -29400,7 +29439,8 @@
       "custom-1791919063908-ski9": "tvseries",
       "custom-1791919090262-czju": "tvseries",
       "custom-1791919109416-hxq8": "tvseries",
-      "custom-1791919132954-1qh1": "tvseries"
+      "custom-1791919132954-1qh1": "tvseries",
+      "custom-1791919156207-vna6": "tvseries"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -65760,6 +65800,49 @@
           ],
           "source": "tmdb",
           "fetchedAt": "2026-10-13T19:18:53.197Z"
+        }
+      },
+      "custom-1791919156207-vna6": {
+        "contentType": "tv_series",
+        "tmdbType": "tv",
+        "poster84": {
+          "path": "/DGWUKWfKr03DoEDKZSR1DhNqA.jpg",
+          "tmdbId": 66732,
+          "provider": "tmdb",
+          "checkedAt": "2026-10-13T19:19:16.400Z"
+        },
+        "tmdbSeriesId": 66732,
+        "seasonCatalogV1": [
+          {
+            "number": 1,
+            "year": "2016"
+          },
+          {
+            "number": 2,
+            "year": "2017"
+          },
+          {
+            "number": 3,
+            "year": "2019"
+          },
+          {
+            "number": 4,
+            "year": "2022"
+          },
+          {
+            "number": 5,
+            "year": "2025"
+          }
+        ],
+        "seasonCountV1": 5,
+        "crew84": {
+          "directors": [],
+          "creators": [
+            "Ross Duffer",
+            "Matt Duffer"
+          ],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-13T19:19:16.448Z"
         }
       }
     }
