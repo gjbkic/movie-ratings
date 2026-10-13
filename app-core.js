@@ -6717,8 +6717,54 @@ renderRank();const marker=document.getElementById('movie30BuildV29');if(marker)m
   document.head.appendChild(css);
   const map=document.getElementById('mapRoot');
   if(map && map.parentElement) map.parentElement.style.display='none';
+  // The ★ field used to be hidden when the numeric ranking replaced the
+  // legacy classifications. Keep numeric scores authoritative, but allow a
+  // separate, optional ★ rating for films that have no numeric score.
   const editStar=document.getElementById('editStar');
-  if(editStar && editStar.closest('label')) editStar.closest('label').style.display='none';
+  const starLabel=editStar?.closest('label');
+  if(editStar && starLabel){
+    starLabel.style.display='';
+    editStar.style.width='100%';
+    if(!editStar.querySelector('option[value="0"]')){
+      const unset=document.createElement('option');
+      unset.value='0';
+      unset.textContent='未設定';
+      editStar.prepend(unset);
+    }
+    function refreshStarField(){
+      const f=filmById(selectedId);
+      if(!f)return;
+      const score=effectiveScore(f),scored=score!=null;
+      editStar.disabled=scored;
+      editStar.value=String(scored?scoreToStar(score):Number(filmStar(f)||0));
+      editStar.title=scored?'100点評価から自動表示。星を変更するには点数を未設定にしてください。':'点数を入力せず、星だけを設定できます。';
+      starLabel.style.opacity=scored?'0.76':'1';
+    }
+    const openBeforeStarEditor=openSheet;
+    openSheet=function(...args){
+      const result=openBeforeStarEditor.apply(this,args);
+      refreshStarField();
+      return result;
+    };
+    editStar.onchange=e=>{
+      const f=filmById(selectedId);
+      if(!f)return;
+      if(effectiveScore(f)!=null){refreshStarField();return;}
+      const star=Number(e.target.value);
+      if(!(star===0||STAR_ORDER.some(s=>Number(s)===star))){
+        refreshStarField();return;
+      }
+      state.starOverrides[f.id]=star;
+      // Do not create a 100-point score, infer an obsolete tier, or touch rankOrder.
+      save();
+      render();
+      refreshStarField();
+      toast(star===0?'星を未設定にしました':'星を保存しました（点数は未設定のまま）');
+    };
+    document.getElementById('editScore')?.addEventListener('change',()=>{
+      setTimeout(refreshStarField,0);
+    });
+  }
 
   // Restore the numeric-score screen if the obsolete classification tab was open.
   if(view.page==='classify') { view.page='rank'; save(false); }
