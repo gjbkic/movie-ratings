@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791903781377,
-  "sourceUpdatedIso": "2026-10-13T15:03:01.377Z",
+  "sourceUpdatedAt": 1791903801195,
+  "sourceUpdatedIso": "2026-10-13T15:03:21.195Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -11722,34 +11722,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-226-g0d6",
-      "title": "君の膵臓をたべたい",
-      "originalTitle": "",
-      "englishTitle": "Let Me Eat Your Pancreas",
-      "year": 2017,
-      "score": 80,
-      "star": 2.5,
-      "overallRank": 408,
-      "sameScoreRank": 10,
-      "category": "邦画",
-      "mediaType": "movie",
-      "genre": [
-        "切ない",
-        "恋愛",
-        "ドラマ",
-        "青春・若者",
-        "心理・内面",
-        "娯楽"
-      ],
-      "origin": "日本",
-      "format": "live",
-      "runtime": 116,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-481-1rbm",
       "title": "キサラギ",
       "originalTitle": "",
@@ -11757,8 +11729,8 @@
       "year": 2007,
       "score": 80,
       "star": 2.5,
-      "overallRank": 409,
-      "sameScoreRank": 11,
+      "overallRank": 408,
+      "sameScoreRank": 10,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -11775,6 +11747,34 @@
       "runtime": 108,
       "exact": true,
       "letterboxdAddedDate": "2025-09-24",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "lb-226-g0d6",
+      "title": "君の膵臓をたべたい",
+      "originalTitle": "",
+      "englishTitle": "Let Me Eat Your Pancreas",
+      "year": 2017,
+      "score": 80,
+      "star": 2.5,
+      "overallRank": 409,
+      "sameScoreRank": 11,
+      "category": "邦画",
+      "mediaType": "movie",
+      "genre": [
+        "切ない",
+        "恋愛",
+        "ドラマ",
+        "青春・若者",
+        "心理・内面",
+        "娯楽"
+      ],
+      "origin": "日本",
+      "format": "live",
+      "runtime": 116,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -21874,8 +21874,8 @@
         "lb-144-1Mne",
         "lb-229-26tw",
         "lb-405-yuDE",
-        "lb-226-g0d6",
         "lb-481-1rbm",
+        "lb-226-g0d6",
         "lb-50-28dA",
         "lb-165-29F6",
         "lb-518-2aEy",
