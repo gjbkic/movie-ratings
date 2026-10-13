@@ -106,7 +106,9 @@ jobs:
             const updated=await view();
             console.log('DETAIL_UPDATED',JSON.stringify(updated));
             assert.equal(updated.scored,beforeScore,'Classification changed numeric score');
+            assert.equal(updated.meta,'2026','Older classification handlers restored a duplicate metadata line');
             assert(updated.preview?.includes('制作'),'Classification summary disappeared');
+            assert.notEqual(updated.preview,rated.preview,'Classification preview did not refresh after choosing a different production group');
             await page.locator('#movie30-detail-classification>summary').click();
             assert(!(await view()).genreOpen,'Classification did not fold');
             await page.evaluate(id=>openSheet(id),ids.empty);
@@ -119,6 +121,15 @@ jobs:
             assert(unrated.genreExists&&!unrated.genreOpen,'Genre detail did not reset for another film');
             assert(unrated.starsVisible&&!unrated.starDisabled,'Unscored stars no longer editable');
             assert(unrated.notePresent&&unrated.watchEditor,'Notes/watch editing lost for unrated film');
+            await page.locator('#editScore').fill('92');
+            await page.locator('#editScore').blur();
+            await page.waitForTimeout(180);
+            const newlyRated=await view();
+            console.log('DETAIL_NEWLY_RATED',JSON.stringify(newlyRated));
+            assert.equal(newlyRated.scored,92);
+            assert(newlyRated.statsVisible,'Ranking did not appear after adding a point score');
+            assert(newlyRated.statsText.includes('92点内'),'Ranking group did not update after numeric scoring');
+            assert.equal(newlyRated.statsCount,2,'Duplicate stats returned after scoring');
             await page.reload({waitUntil:'domcontentloaded'});
             await page.waitForSelector('html.movie30-ready',{timeout:30000});
             await page.evaluate(id=>openSheet(id),ids.scored);
