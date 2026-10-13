@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791918807280,
-  "sourceUpdatedIso": "2026-10-13T19:13:27.280Z",
+  "sourceUpdatedAt": 1791918817707,
+  "sourceUpdatedIso": "2026-10-13T19:13:37.707Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -20977,6 +20977,27 @@
       "letterboxdAddedDate": null,
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1791918817265-0l6y",
+      "title": "ガリレオΦ",
+      "originalTitle": "ガリレオΦ",
+      "englishTitle": "Galileo Zero",
+      "year": 2008,
+      "score": null,
+      "star": 0,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "サスペンス、ミステリー",
+      "mediaType": "movie",
+      "genre": "",
+      "origin": "",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     }
   ],
   "state": {
@@ -25256,6 +25277,23 @@
         "added": true,
         "_seq": 1791918807010,
         "tmdbType": "tv"
+      },
+      {
+        "id": "custom-1791918817265-0l6y",
+        "title": "ガリレオΦ",
+        "originalTitle": "ガリレオΦ",
+        "englishTitle": "Galileo Zero",
+        "lbTitle": "Galileo Zero",
+        "tmdbId": 1165692,
+        "year": 2008,
+        "uri": "",
+        "category": "サスペンス、ミステリー",
+        "order": 999999,
+        "star": 0,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791918817265,
+        "tmdbType": "movie"
       }
     ],
     "starOverrides": {
@@ -25972,7 +26010,8 @@
       "custom-1791918752014-2ngd": 0,
       "custom-1791918777504-yyaq": 0,
       "custom-1791918794008-6b75": 0,
-      "custom-1791918807010-n21d": 0
+      "custom-1791918807010-n21d": 0,
+      "custom-1791918817265-0l6y": 0
     },
     "titleOverrides": {
       "added-anchor-578": {
@@ -28960,7 +28999,8 @@
       "custom-1791918752014-2ngd": "tvseries",
       "custom-1791918777504-yyaq": "tvseries",
       "custom-1791918794008-6b75": "tvseries",
-      "custom-1791918807010-n21d": "tvseries"
+      "custom-1791918807010-n21d": "tvseries",
+      "custom-1791918817265-0l6y": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -64908,6 +64948,24 @@
           ],
           "source": "tmdb",
           "fetchedAt": "2026-10-13T19:13:27.239Z"
+        }
+      },
+      "custom-1791918817265-0l6y": {
+        "contentType": "movie",
+        "tmdbType": "movie",
+        "poster84": {
+          "path": "/w4pVh43n2cBQmaABtYfR0J1uJDK.jpg",
+          "tmdbId": 1165692,
+          "provider": "tmdb",
+          "checkedAt": "2026-10-13T19:13:37.392Z"
+        },
+        "crew84": {
+          "directors": [
+            "Mizuki Nishisaka"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-13T19:13:37.439Z"
         }
       }
     }
