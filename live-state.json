@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791919173235,
-  "sourceUpdatedIso": "2026-10-13T19:19:33.235Z",
+  "sourceUpdatedAt": 1791919192340,
+  "sourceUpdatedIso": "2026-10-13T19:19:52.340Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -21250,6 +21250,27 @@
       "letterboxdAddedDate": null,
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1791919192064-3kb8",
+      "title": "MONSTER",
+      "originalTitle": "MONSTER",
+      "englishTitle": "Monster",
+      "year": 2004,
+      "score": null,
+      "star": 0,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "サスペンス、ミステリー",
+      "mediaType": "tvseries",
+      "genre": "",
+      "origin": "",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     }
   ],
   "state": {
@@ -25750,6 +25771,23 @@
         "added": true,
         "_seq": 1791919172943,
         "tmdbType": "tv"
+      },
+      {
+        "id": "custom-1791919192064-3kb8",
+        "title": "MONSTER",
+        "originalTitle": "MONSTER",
+        "englishTitle": "Monster",
+        "lbTitle": "Monster",
+        "tmdbId": 30981,
+        "year": 2004,
+        "uri": "",
+        "category": "サスペンス、ミステリー",
+        "order": 999999,
+        "star": 0,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791919192064,
+        "tmdbType": "tv"
       }
     ],
     "starOverrides": {
@@ -26479,7 +26517,8 @@
       "custom-1791919109416-hxq8": 0,
       "custom-1791919132954-1qh1": 0,
       "custom-1791919156207-vna6": 0,
-      "custom-1791919172943-3ibi": 0
+      "custom-1791919172943-3ibi": 0,
+      "custom-1791919192064-3kb8": 0
     },
     "titleOverrides": {
       "added-anchor-578": {
@@ -29480,7 +29519,8 @@
       "custom-1791919109416-hxq8": "tvseries",
       "custom-1791919132954-1qh1": "tvseries",
       "custom-1791919156207-vna6": "tvseries",
-      "custom-1791919172943-3ibi": "tvseries"
+      "custom-1791919172943-3ibi": "tvseries",
+      "custom-1791919192064-3kb8": "tvseries"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -65925,6 +65965,30 @@
           ],
           "source": "tmdb",
           "fetchedAt": "2026-10-13T19:19:33.186Z"
+        }
+      },
+      "custom-1791919192064-3kb8": {
+        "contentType": "tv_series",
+        "tmdbType": "tv",
+        "poster84": {
+          "path": "/7ZhHyA0IIQOyz1hzCXpTilXg4Q2.jpg",
+          "tmdbId": 30981,
+          "provider": "tmdb",
+          "checkedAt": "2026-10-13T19:19:52.252Z"
+        },
+        "tmdbSeriesId": 30981,
+        "seasonCatalogV1": [
+          {
+            "number": 1,
+            "year": "2004"
+          }
+        ],
+        "seasonCountV1": 1,
+        "crew84": {
+          "directors": [],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-13T19:19:52.295Z"
         }
       }
     }
