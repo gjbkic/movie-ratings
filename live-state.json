@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791839581540,
-  "sourceUpdatedIso": "2026-10-12T21:13:01.540Z",
+  "sourceUpdatedAt": 1791863528543,
+  "sourceUpdatedIso": "2026-10-13T03:52:08.543Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -20745,6 +20745,29 @@
       "letterboxdAddedDate": "2026-10-11",
       "letterboxdPublishedAt": "Sun, 11 Oct 2026 06:19:17 +1300",
       "letterboxdReportedWatchedDate": "2026-10-10"
+    },
+    {
+      "id": "custom-1791863527797-qm90",
+      "title": "BOHEMIAN SUMMER ～宇多田ヒカル Circuit Live 2000",
+      "originalTitle": "BOHEMIAN SUMMER ～宇多田ヒカル Circuit Live 2000",
+      "englishTitle": "BOHEMIAN SUMMER ~Utada Hikaru Circuit Live 2000",
+      "year": 2000,
+      "score": null,
+      "star": 4.5,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "ミュージカル"
+      ],
+      "origin": "日本",
+      "format": "live",
+      "runtime": 147,
+      "exact": false,
+      "letterboxdAddedDate": "2026-10-13",
+      "letterboxdPublishedAt": "Tue, 13 Oct 2026 05:59:38 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-12"
     }
   ],
   "state": {
@@ -24847,6 +24870,23 @@
         "added": true,
         "_seq": 1791834369925,
         "source": "letterboxd"
+      },
+      {
+        "id": "custom-1791863527797-qm90",
+        "title": "BOHEMIAN SUMMER ～宇多田ヒカル Circuit Live 2000",
+        "originalTitle": "BOHEMIAN SUMMER ～宇多田ヒカル Circuit Live 2000",
+        "englishTitle": "BOHEMIAN SUMMER ~Utada Hikaru Circuit Live 2000",
+        "lbTitle": "BOHEMIAN SUMMER ~Utada Hikaru Circuit Live 2000",
+        "tmdbId": 57043,
+        "year": 2000,
+        "uri": "https://letterboxd.com/gjbkic/film/bohemian-summer-utada-hikaru-circuit-live-2000/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 4.5,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791863527797,
+        "source": "letterboxd"
       }
     ],
     "starOverrides": {
@@ -28530,7 +28570,8 @@
       "custom-1791802127464-uge5": "drama",
       "custom-1791802127938-6mow": "drama",
       "custom-1791823398409-njce": "movie",
-      "custom-1791834369925-gy7y": "drama"
+      "custom-1791834369925-gy7y": "drama",
+      "custom-1791863527797-qm90": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -34574,6 +34615,9 @@
         "クライム",
         "サスペンス",
         "スリラー"
+      ],
+      "custom-1791863527797-qm90": [
+        "ミュージカル"
       ]
     },
     "originOverrides": {
@@ -35313,7 +35357,8 @@
       "custom-1791802127464-uge5": "その他",
       "custom-1791802127938-6mow": "その他",
       "custom-1791823398409-njce": "ハリウッド",
-      "custom-1791834369925-gy7y": "その他"
+      "custom-1791834369925-gy7y": "その他",
+      "custom-1791863527797-qm90": "日本"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -36047,7 +36092,8 @@
       "custom-1791664054514-pksv": "live",
       "custom-1791664055469-au2b": "live",
       "custom-1791664055911-cuz4": "live",
-      "custom-1791664055006-96rv": "live"
+      "custom-1791664055006-96rv": "live",
+      "custom-1791863527797-qm90": "live"
     },
     "runtimeOverrides": {
       "custom-1790247938551-ixfs": 100,
@@ -36712,7 +36758,8 @@
       "custom-1791664054514-pksv": 65,
       "custom-1791664055469-au2b": 141,
       "custom-1791664055911-cuz4": 56,
-      "custom-1791823398409-njce": 15
+      "custom-1791823398409-njce": 15,
+      "custom-1791863527797-qm90": 147
     },
     "letterboxdMeta": {
       "lb-0-hTha": {
@@ -63464,6 +63511,40 @@
           "tmdbId": 42009,
           "checkedAt": "2026-10-12T19:46:57.567Z",
           "provider": "tmdb"
+        }
+      },
+      "custom-1791863527797-qm90": {
+        "publishedAt": "Tue, 13 Oct 2026 05:59:38 +1300",
+        "addedDate": "2026-10-13",
+        "addedDateSource": "rss-first-seen",
+        "reportedWatchedDate": "2026-10-12",
+        "note": "若さ、初ツアー、屋外、夏、全てが熱気としてめっちゃ伝わってくる。まじでずっといい。\nアンコールからさらに良かった。盛り上がってまた締めに向かってく感じ。ひとつのまとまりとして美しい。\n最初の申し訳ばかりのダンサーたちはなんか少し面白い。time will tellが初期の中で少し浮いてると思ってた時もあるがやっぱりこうして聞くと全体の中に流れてる筋のようなものがこの曲にもある。本人が一番好きと言っていたが、やっぱりin my roomは素晴らしい。歌唱含めて。automaticで一番歓声が上がるのは若干悲しいが、聞くとやっぱ素晴らしい曲。この頃の高音めちゃめちゃ好き。キャリア通していちばんハスキーだと思う。正直take on meにはそこまで会ってないと思う。もっとドラムとか強くしてロック感足したら方がいい気もする。けどサビ前の高音はめっちゃ好き。automaticからtake on meって結構意味分かんないけど、好きだからいいや。\nMCも一人の人間が大勢を前に喋ってるは感じですごい好き。I love youのめちゃくちゃなビブラートはやっぱすごい。play back part 2の方が好き。ちょっと待っての囁きは大袈裟だけどバカにしないでの声質めっちゃ好き。\nドカント1発欲しいか！じゃあお見舞いしてやるー、いぇーいからのmovin' on without youめちゃいい。\n椎名林檎のモノマネの後の2回の高音好き\nwait&see 良すぎる。来ると思わなかったし\nアンコールのただいまが普通に可愛い\nバンド紹介も楽しそうでめっちゃいい。\n甘いワナはluv liveでも思ったけどやっぱしょっぱなとしてめっちゃいいね。\nI see your red dog の当たりもふぃあーすみたいな歌い方でアレンジも好き。\nluv liveの時も思ったけど、マジでb&cがいいんだよね。ボニー&クライド自体は破滅的なんだけど、take a chanceの連続とか前向きで希望をもてる曲で、終わり際の悲しさや未来への感じとか本当に合ってる。\nアップテンポfirst loveはなんか新鮮で面白いね、さわやかに前を向くという解釈？やっぱ少し変だけどこういうのもあり？思い出を振り返るような編集でもう終わってしまうのだと動画を見てるだけのこっちでも感じる。現地だったらやばかったのだろう。全国ライブの最終日。black copのコスプレとかも今思うとkeep tryin' などにその系統は生きてるんじゃないかと思う。\n早替えに関する副音声的な声も最後まで見る側を楽しませてくれる。",
+        "noteSource": "letterboxd-rss",
+        "noteImportedAt": "2026-10-13T03:52:08.191Z",
+        "rssReviewRecords": {
+          "letterboxd-review-1535157574": {
+            "body": "若さ、初ツアー、屋外、夏、全てが熱気としてめっちゃ伝わってくる。まじでずっといい。\nアンコールからさらに良かった。盛り上がってまた締めに向かってく感じ。ひとつのまとまりとして美しい。\n最初の申し訳ばかりのダンサーたちはなんか少し面白い。time will tellが初期の中で少し浮いてると思ってた時もあるがやっぱりこうして聞くと全体の中に流れてる筋のようなものがこの曲にもある。本人が一番好きと言っていたが、やっぱりin my roomは素晴らしい。歌唱含めて。automaticで一番歓声が上がるのは若干悲しいが、聞くとやっぱ素晴らしい曲。この頃の高音めちゃめちゃ好き。キャリア通していちばんハスキーだと思う。正直take on meにはそこまで会ってないと思う。もっとドラムとか強くしてロック感足したら方がいい気もする。けどサビ前の高音はめっちゃ好き。automaticからtake on meって結構意味分かんないけど、好きだからいいや。\nMCも一人の人間が大勢を前に喋ってるは感じですごい好き。I love youのめちゃくちゃなビブラートはやっぱすごい。play back part 2の方が好き。ちょっと待っての囁きは大袈裟だけどバカにしないでの声質めっちゃ好き。\nドカント1発欲しいか！じゃあお見舞いしてやるー、いぇーいからのmovin' on without youめちゃいい。\n椎名林檎のモノマネの後の2回の高音好き\nwait&see 良すぎる。来ると思わなかったし\nアンコールのただいまが普通に可愛い\nバンド紹介も楽しそうでめっちゃいい。\n甘いワナはluv liveでも思ったけどやっぱしょっぱなとしてめっちゃいいね。\nI see your red dog の当たりもふぃあーすみたいな歌い方でアレンジも好き。\nluv liveの時も思ったけど、マジでb&cがいいんだよね。ボニー&クライド自体は破滅的なんだけど、take a chanceの連続とか前向きで希望をもてる曲で、終わり際の悲しさや未来への感じとか本当に合ってる。\nアップテンポfirst loveはなんか新鮮で面白いね、さわやかに前を向くという解釈？やっぱ少し変だけどこういうのもあり？思い出を振り返るような編集でもう終わってしまうのだと動画を見てるだけのこっちでも感じる。現地だったらやばかったのだろう。全国ライブの最終日。black copのコスプレとかも今思うとkeep tryin' などにその系統は生きてるんじゃないかと思う。\n早替えに関する副音声的な声も最後まで見る側を楽しませてくれる。",
+            "block": "若さ、初ツアー、屋外、夏、全てが熱気としてめっちゃ伝わってくる。まじでずっといい。\nアンコールからさらに良かった。盛り上がってまた締めに向かってく感じ。ひとつのまとまりとして美しい。\n最初の申し訳ばかりのダンサーたちはなんか少し面白い。time will tellが初期の中で少し浮いてると思ってた時もあるがやっぱりこうして聞くと全体の中に流れてる筋のようなものがこの曲にもある。本人が一番好きと言っていたが、やっぱりin my roomは素晴らしい。歌唱含めて。automaticで一番歓声が上がるのは若干悲しいが、聞くとやっぱ素晴らしい曲。この頃の高音めちゃめちゃ好き。キャリア通していちばんハスキーだと思う。正直take on meにはそこまで会ってないと思う。もっとドラムとか強くしてロック感足したら方がいい気もする。けどサビ前の高音はめっちゃ好き。automaticからtake on meって結構意味分かんないけど、好きだからいいや。\nMCも一人の人間が大勢を前に喋ってるは感じですごい好き。I love youのめちゃくちゃなビブラートはやっぱすごい。play back part 2の方が好き。ちょっと待っての囁きは大袈裟だけどバカにしないでの声質めっちゃ好き。\nドカント1発欲しいか！じゃあお見舞いしてやるー、いぇーいからのmovin' on without youめちゃいい。\n椎名林檎のモノマネの後の2回の高音好き\nwait&see 良すぎる。来ると思わなかったし\nアンコールのただいまが普通に可愛い\nバンド紹介も楽しそうでめっちゃいい。\n甘いワナはluv liveでも思ったけどやっぱしょっぱなとしてめっちゃいいね。\nI see your red dog の当たりもふぃあーすみたいな歌い方でアレンジも好き。\nluv liveの時も思ったけど、マジでb&cがいいんだよね。ボニー&クライド自体は破滅的なんだけど、take a chanceの連続とか前向きで希望をもてる曲で、終わり際の悲しさや未来への感じとか本当に合ってる。\nアップテンポfirst loveはなんか新鮮で面白いね、さわやかに前を向くという解釈？やっぱ少し変だけどこういうのもあり？思い出を振り返るような編集でもう終わってしまうのだと動画を見てるだけのこっちでも感じる。現地だったらやばかったのだろう。全国ライブの最終日。black copのコスプレとかも今思うとkeep tryin' などにその系統は生きてるんじゃないかと思う。\n早替えに関する副音声的な声も最後まで見る側を楽しませてくれる。"
+          }
+        },
+        "watchHistory": [
+          {
+            "id": "rss:letterboxd-review-1535157574",
+            "date": "2026-10-12",
+            "recordedAt": "2026-10-12T16:59:38.000Z",
+            "rewatch": false,
+            "retroactive": false,
+            "source": "letterboxd-rss",
+            "manualEdited": false
+          }
+        ],
+        "crew84": {
+          "directors": [
+            "Wataru Takeishi"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-13T03:52:08.191Z"
         }
       }
     }
