@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791921349019,
-  "sourceUpdatedIso": "2026-10-13T19:55:49.019Z",
+  "sourceUpdatedAt": 1791921374596,
+  "sourceUpdatedIso": "2026-10-13T19:56:14.596Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -21293,7 +21293,12 @@
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
-        "TV本編"
+        "TV本編",
+        "ドラマ",
+        "SF",
+        "恋愛",
+        "切ない",
+        "娯楽"
       ],
       "origin": "その他",
       "format": "",
@@ -35649,7 +35654,12 @@
         "どんでん返し"
       ],
       "custom-1791921346893-dshj": [
-        "TV本編"
+        "TV本編",
+        "ドラマ",
+        "SF",
+        "恋愛",
+        "切ない",
+        "娯楽"
       ]
     },
     "originOverrides": {
