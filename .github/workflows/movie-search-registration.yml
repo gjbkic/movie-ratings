@@ -33,8 +33,8 @@ jobs:
             await page.addInitScript(()=>{localStorage.setItem('movie30_tmdb_credential','test-key-not-secret')});
             await page.route('https://api.themoviedb.org/3/**',async route=>{
               const url=new URL(route.request().url()),p=url.pathname,lang=url.searchParams.get('language')||'';
-              const movie={id:995001,media_type:'movie',title:'CIUnique Movie 2026',original_title:'CIUnique Movie 2026',release_date:'2026-04-02',poster_path:null,overview:'Automated movie test.',genres:[{id:18,name:'Drama'}]};
-              const tv={id:995001,media_type:'tv',name:'CIUnique Series 2026',original_name:'CIUnique Series 2026',first_air_date:'2026-06-01',poster_path:null,overview:'Automated series test.',seasons:[{season_number:0,air_date:'2026-06-01'},{season_number:1,air_date:'2026-06-01'},{season_number:2,air_date:'2026-09-01'}],number_of_seasons:2,genres:[{id:18,name:'Drama'}]};
+              const movie={id:995001,media_type:'movie',title:'CIUnique Movie 2026',original_title:'CIUnique Movie 2026',release_date:'2026-04-02',poster_path:'/mock-image.jpg',overview:'Automated movie test.',genres:[{id:18,name:'Drama'}]};
+              const tv={id:995001,media_type:'tv',name:'CIUnique Series 2026',original_name:'CIUnique Series 2026',first_air_date:'2026-06-01',poster_path:'/mock-image.jpg',overview:'Automated series test.',seasons:[{season_number:0,air_date:'2026-06-01'},{season_number:1,air_date:'2026-06-01'},{season_number:2,air_date:'2026-09-01'}],number_of_seasons:2,genres:[{id:18,name:'Drama'}]};
               let data={results:[]};
               if(p.endsWith('/search/multi'))data={results:[movie,tv]};
               else if(p.endsWith('/movie/995001'))data=movie;
@@ -48,7 +48,18 @@ jobs:
             const search=page.locator('#searchRank');
             await search.fill('CIUnique');
             await page.locator('.movie92-entry').filter({hasText:'CIUnique Movie 2026'}).waitFor({timeout:20000});
-            await page.locator('.movie92-entry').filter({hasText:'CIUnique Movie 2026'}).click();
+            // Real touch on poster coordinates, not a synthetic button click.
+            const poster=page.locator('.movie92-entry').filter({hasText:'CIUnique Movie 2026'}).locator('img');
+            await poster.waitFor({timeout:8000});
+            const rect=await poster.boundingBox();
+            assert.ok(rect,'TMDB poster did not render');
+            const pageBefore=page.url();
+            const popups=[];
+            page.on('popup',p=>popups.push(p));
+            await page.touchscreen.tap(rect.x+rect.width/2,rect.y+rect.height/2);
+            assert.equal(page.url(),pageBefore,'poster tap navigated away');
+            assert.equal(popups.length,0,'poster tap opened an external browser');
+            console.log('PASS poster-tap: actual touch opens local preview without dismissing');
             await page.locator('#movie30RemotePreview:not([hidden])').waitFor({timeout:8000});
             await page.locator('#remoteAddName').waitFor();
             assert.equal(await page.locator('#remoteAddTitle').textContent(),'CIUnique Movie 2026');
@@ -66,6 +77,8 @@ jobs:
             await search.fill('CIUnique Series 2026');
             await page.locator('.movie92-entry').filter({hasText:'CIUnique Series 2026'}).waitFor({timeout:20000});
             await page.locator('.movie92-entry').filter({hasText:'CIUnique Series 2026'}).click();
+            assert.equal(page.url(),'http://localhost:8799/index.html','TV search result navigated outside the app');
+            assert.equal(popups.length,0,'TV search result opened an external browser');
             await page.locator('#movie30RemotePreview:not([hidden])').waitFor({timeout:8000});
             await page.locator('#remoteAddScore').fill('');
             await page.locator('#remoteAddSave').click();
