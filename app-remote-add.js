@@ -71,7 +71,7 @@
   function matchesMedia(f,media){
     const m=metaFor(f),kind=String(state.mediaTypeOverrides?.[f.id]||f.mediaType||'').toLowerCase();
     const tv=kind==='tvseries'||kind==='drama'||kind==='series'||m.tmdbType==='tv'||f.tmdbType==='tv'||['tv_series','tv_season','tv_episode'].includes(m.contentType);
-    return media==='tv'?tv:!tv;
+    return media==='tv'?(tv&&!['tv_season','tv_episode'].includes(m.contentType)):!tv;
   }
   function existing(item,year){
     const id=Number(item.tmdbId);
