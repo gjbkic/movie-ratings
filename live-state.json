@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791913786716,
-  "sourceUpdatedIso": "2026-10-13T17:49:46.716Z",
+  "sourceUpdatedAt": 1791913796229,
+  "sourceUpdatedIso": "2026-10-13T17:49:56.229Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -8615,6 +8615,37 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "custom-1791553824276-cl9b",
+      "title": "世にも奇妙な物語 '19秋の特別編",
+      "originalTitle": "世にも奇妙な物語 '19秋の特別編",
+      "englishTitle": "Tales of the Bizarre: 2019 Fall Special",
+      "year": 2019,
+      "score": 82,
+      "star": 3,
+      "overallRank": 298,
+      "sameScoreRank": 11,
+      "category": "Letterboxd",
+      "mediaType": "drama",
+      "genre": [
+        "ホラー",
+        "コメディ",
+        "スリラー",
+        "サスペンス",
+        "ドラマ",
+        "感動",
+        "切ない",
+        "TV特番・SP",
+        "娯楽"
+      ],
+      "origin": "日本",
+      "format": "live",
+      "runtime": 105,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-09",
+      "letterboxdPublishedAt": "Sat, 10 Oct 2026 02:46:51 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-09"
+    },
+    {
       "id": "lb-426-pEeQ",
       "title": "プロジェクト・ヘイル・メアリー",
       "originalTitle": "",
@@ -8622,8 +8653,8 @@
       "year": 2026,
       "score": 82,
       "star": 3,
-      "overallRank": 298,
-      "sameScoreRank": 11,
+      "overallRank": 299,
+      "sameScoreRank": 12,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -8649,8 +8680,8 @@
       "year": 2007,
       "score": 82,
       "star": 3,
-      "overallRank": 299,
-      "sameScoreRank": 12,
+      "overallRank": 300,
+      "sameScoreRank": 13,
       "category": "コメディ",
       "mediaType": "movie",
       "genre": [
@@ -8666,37 +8697,6 @@
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "custom-1791553824276-cl9b",
-      "title": "世にも奇妙な物語 '19秋の特別編",
-      "originalTitle": "世にも奇妙な物語 '19秋の特別編",
-      "englishTitle": "Tales of the Bizarre: 2019 Fall Special",
-      "year": 2019,
-      "score": 82,
-      "star": 3,
-      "overallRank": 300,
-      "sameScoreRank": 13,
-      "category": "Letterboxd",
-      "mediaType": "drama",
-      "genre": [
-        "ホラー",
-        "コメディ",
-        "スリラー",
-        "サスペンス",
-        "ドラマ",
-        "感動",
-        "切ない",
-        "TV特番・SP",
-        "娯楽"
-      ],
-      "origin": "日本",
-      "format": "live",
-      "runtime": 105,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-09",
-      "letterboxdPublishedAt": "Sat, 10 Oct 2026 02:46:51 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-09"
     },
     {
       "id": "lb-213-2TTS",
@@ -22009,9 +22009,9 @@
         "custom-1791018448927-b4o3",
         "lb-557-1WyQ",
         "lb-457-IG",
+        "custom-1791553824276-cl9b",
         "lb-426-pEeQ",
         "lb-553-2416",
-        "custom-1791553824276-cl9b",
         "lb-213-2TTS",
         "lb-282-1Q9K",
         "custom-1790508960074-n6fj",
@@ -62401,7 +62401,7 @@
           "checkedAt": "2026-10-12T16:52:45.772Z",
           "provider": "tmdb"
         },
-        "noteEditedAt": "2026-10-12T16:56:11.664Z"
+        "noteEditedAt": "2026-10-13T17:49:50.706Z"
       },
       "custom-1791563602274-2p5j": {
         "publishedAt": "Sat, 10 Oct 2026 05:30:53 +1300",
