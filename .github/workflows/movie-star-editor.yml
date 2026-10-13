@@ -33,6 +33,10 @@ jobs:
               const unscored=addFilm('Star Test Unscored',2026,'追加映画',0,'',{keepUnscored:true});
               const scored=addFilm('Star Test Scored',2026,'追加映画',4,88,{});
               if(!unscored||!scored)throw Error('Cannot add isolated test films');
+              // Manual addFilm defaults an unspecified star to three. Explicitly
+              // emulate the actual unrated TMDB import, which stores star zero.
+              state.starOverrides[unscored.id]=0;
+              await save();
               await window.__movie30StorageReady;
               return {unscored:unscored.id,scored:scored.id};
             });
@@ -41,6 +45,7 @@ jobs:
               const sel=document.getElementById('editStar'),label=sel.closest('label');
               return {visible:getComputedStyle(label).display!=='none',disabled:sel.disabled,value:sel.value,score:document.getElementById('editScore').value,option0:!!sel.querySelector('option[value="0"]')};
             });
+            console.log('STAR_INITIAL',JSON.stringify(initial));
             assert(initial.visible&&!initial.disabled&&initial.value==='0'&&initial.score===''&&initial.option0,'Unscored star selector is not visible/editable');
             await page.locator('#editStar').selectOption('4.5');
             await page.waitForTimeout(250);
