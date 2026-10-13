@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791919040979,
-  "sourceUpdatedIso": "2026-10-13T19:17:20.979Z",
+  "sourceUpdatedAt": 1791919051351,
+  "sourceUpdatedIso": "2026-10-13T19:17:31.351Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -21103,6 +21103,27 @@
       "letterboxdAddedDate": null,
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1791919051056-56pv",
+      "title": "相棒",
+      "originalTitle": "相棒",
+      "englishTitle": "AIBOU: Tokyo Detective Duo",
+      "year": 2002,
+      "score": null,
+      "star": 0,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "サスペンス、ミステリー",
+      "mediaType": "tvseries",
+      "genre": "",
+      "origin": "",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     }
   ],
   "state": {
@@ -25484,6 +25505,23 @@
         "added": true,
         "_seq": 1791919040705,
         "tmdbType": "tv"
+      },
+      {
+        "id": "custom-1791919051056-56pv",
+        "title": "相棒",
+        "originalTitle": "相棒",
+        "englishTitle": "AIBOU: Tokyo Detective Duo",
+        "lbTitle": "AIBOU: Tokyo Detective Duo",
+        "tmdbId": 40663,
+        "year": 2002,
+        "uri": "",
+        "category": "サスペンス、ミステリー",
+        "order": 999999,
+        "star": 0,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791919051056,
+        "tmdbType": "tv"
       }
     ],
     "starOverrides": {
@@ -26206,7 +26244,8 @@
       "custom-1791918832001-xkpy": 0,
       "custom-1791919010317-zu85": 0,
       "custom-1791919024950-k1ok": 0,
-      "custom-1791919040705-bn6z": 0
+      "custom-1791919040705-bn6z": 0,
+      "custom-1791919051056-56pv": 0
     },
     "titleOverrides": {
       "added-anchor-578": {
@@ -29200,7 +29239,8 @@
       "custom-1791918832001-xkpy": "movie",
       "custom-1791919010317-zu85": "tvseries",
       "custom-1791919024950-k1ok": "tvseries",
-      "custom-1791919040705-bn6z": "tvseries"
+      "custom-1791919040705-bn6z": "tvseries",
+      "custom-1791919051056-56pv": "tvseries"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -65290,6 +65330,126 @@
           "creators": [],
           "source": "tmdb",
           "fetchedAt": "2026-10-13T19:17:20.932Z"
+        }
+      },
+      "custom-1791919051056-56pv": {
+        "contentType": "tv_series",
+        "tmdbType": "tv",
+        "poster84": {
+          "path": "/lahVy2ZYCDrVc5Rhgj1qqq4WIau.jpg",
+          "tmdbId": 40663,
+          "provider": "tmdb",
+          "checkedAt": "2026-10-13T19:17:31.250Z"
+        },
+        "tmdbSeriesId": 40663,
+        "seasonCatalogV1": [
+          {
+            "number": 1,
+            "year": "2002"
+          },
+          {
+            "number": 2,
+            "year": "2003"
+          },
+          {
+            "number": 3,
+            "year": "2004"
+          },
+          {
+            "number": 4,
+            "year": "2005"
+          },
+          {
+            "number": 5,
+            "year": "2006"
+          },
+          {
+            "number": 6,
+            "year": "2007"
+          },
+          {
+            "number": 7,
+            "year": "2008"
+          },
+          {
+            "number": 8,
+            "year": "2009"
+          },
+          {
+            "number": 9,
+            "year": "2010"
+          },
+          {
+            "number": 10,
+            "year": "2011"
+          },
+          {
+            "number": 11,
+            "year": "2012"
+          },
+          {
+            "number": 12,
+            "year": "2013"
+          },
+          {
+            "number": 13,
+            "year": "2014"
+          },
+          {
+            "number": 14,
+            "year": "2015"
+          },
+          {
+            "number": 15,
+            "year": "2016"
+          },
+          {
+            "number": 16,
+            "year": "2017"
+          },
+          {
+            "number": 17,
+            "year": "2018"
+          },
+          {
+            "number": 18,
+            "year": "2019"
+          },
+          {
+            "number": 19,
+            "year": "2020"
+          },
+          {
+            "number": 20,
+            "year": "2021"
+          },
+          {
+            "number": 21,
+            "year": "2022"
+          },
+          {
+            "number": 22,
+            "year": "2023"
+          },
+          {
+            "number": 23,
+            "year": "2024"
+          },
+          {
+            "number": 24,
+            "year": "2025"
+          },
+          {
+            "number": 25,
+            "year": "2026"
+          }
+        ],
+        "seasonCountV1": 25,
+        "crew84": {
+          "directors": [],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-13T19:17:31.299Z"
         }
       }
     }
