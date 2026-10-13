@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791903698391,
-  "sourceUpdatedIso": "2026-10-13T15:01:38.391Z",
+  "sourceUpdatedAt": 1791903703201,
+  "sourceUpdatedIso": "2026-10-13T15:01:43.201Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -7257,6 +7257,33 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-174-29VI",
+      "title": "レクイエム・フォー・ドリーム",
+      "originalTitle": "",
+      "englishTitle": "Requiem for a Dream",
+      "year": 2000,
+      "score": 83,
+      "star": 3,
+      "overallRank": 252,
+      "sameScoreRank": 9,
+      "category": "マフィア、クライム",
+      "mediaType": "movie",
+      "genre": [
+        "クライム",
+        "サスペンス",
+        "社会問題・生活",
+        "心理・内面",
+        "ドラマ"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 102,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "custom-1791476522907-cd9b",
       "title": "ブラック・ミラー「シロクマ」",
       "originalTitle": "",
@@ -7264,8 +7291,8 @@
       "year": 2013,
       "score": 83,
       "star": 3,
-      "overallRank": 252,
-      "sameScoreRank": 9,
+      "overallRank": 253,
+      "sameScoreRank": 10,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -7289,33 +7316,6 @@
       "letterboxdAddedDate": "2026-10-08",
       "letterboxdPublishedAt": "Fri, 9 Oct 2026 03:32:29 +1300",
       "letterboxdReportedWatchedDate": "2026-10-08"
-    },
-    {
-      "id": "lb-174-29VI",
-      "title": "レクイエム・フォー・ドリーム",
-      "originalTitle": "",
-      "englishTitle": "Requiem for a Dream",
-      "year": 2000,
-      "score": 83,
-      "star": 3,
-      "overallRank": 253,
-      "sameScoreRank": 10,
-      "category": "マフィア、クライム",
-      "mediaType": "movie",
-      "genre": [
-        "クライム",
-        "サスペンス",
-        "社会問題・生活",
-        "心理・内面",
-        "ドラマ"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 102,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "lb-421-21ew",
@@ -22020,8 +22020,8 @@
         "custom-1791802127938-6mow",
         "lb-261-1IGQ",
         "lb-161-2aUc",
-        "custom-1791476522907-cd9b",
         "lb-174-29VI",
+        "custom-1791476522907-cd9b",
         "lb-421-21ew",
         "lb-243-orTE",
         "lb-367-29EW",
