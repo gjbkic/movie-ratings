@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791913600369,
-  "sourceUpdatedIso": "2026-10-13T17:46:40.369Z",
+  "sourceUpdatedAt": 1791913604514,
+  "sourceUpdatedIso": "2026-10-13T17:46:44.514Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -7927,33 +7927,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-426-pEeQ",
-      "title": "プロジェクト・ヘイル・メアリー",
-      "originalTitle": "",
-      "englishTitle": "Project Hail Mary",
-      "year": 2026,
-      "score": 83,
-      "star": 3,
-      "overallRank": 275,
-      "sameScoreRank": 32,
-      "category": "SF",
-      "mediaType": "movie",
-      "genre": [
-        "SF",
-        "感動",
-        "大作",
-        "娯楽",
-        "アドベンチャー"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 157,
-      "exact": true,
-      "letterboxdAddedDate": "2026-03-26",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-35-29QS",
       "title": "ハリー・ポッターと賢者の石",
       "originalTitle": "",
@@ -7961,8 +7934,8 @@
       "year": 2001,
       "score": 83,
       "star": 3,
-      "overallRank": 276,
-      "sameScoreRank": 33,
+      "overallRank": 275,
+      "sameScoreRank": 32,
       "category": "ハリーポッター シリーズ",
       "mediaType": "movie",
       "genre": [
@@ -7990,8 +7963,8 @@
       "year": 1986,
       "score": 83,
       "star": 3,
-      "overallRank": 277,
-      "sameScoreRank": 34,
+      "overallRank": 276,
+      "sameScoreRank": 33,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -8016,6 +7989,33 @@
       "letterboxdAddedDate": null,
       "letterboxdPublishedAt": "Thu, 1 Oct 2026 20:44:56 +1300",
       "letterboxdReportedWatchedDate": "2026-10-01"
+    },
+    {
+      "id": "lb-426-pEeQ",
+      "title": "プロジェクト・ヘイル・メアリー",
+      "originalTitle": "",
+      "englishTitle": "Project Hail Mary",
+      "year": 2026,
+      "score": 83,
+      "star": 3,
+      "overallRank": 277,
+      "sameScoreRank": 34,
+      "category": "SF",
+      "mediaType": "movie",
+      "genre": [
+        "SF",
+        "感動",
+        "大作",
+        "娯楽",
+        "アドベンチャー"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 157,
+      "exact": true,
+      "letterboxdAddedDate": "2026-03-26",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "lb-208-1MLK",
@@ -22086,9 +22086,9 @@
         "lb-490-2beQ",
         "lb-238-290C",
         "lb-520-1Efm",
-        "lb-426-pEeQ",
         "lb-35-29QS",
         "custom-1790924446793-9ts4",
+        "lb-426-pEeQ",
         "lb-208-1MLK",
         "lb-271-29zW",
         "lb-469-1MKi",
