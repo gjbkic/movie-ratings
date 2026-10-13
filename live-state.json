@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791863620173,
-  "sourceUpdatedIso": "2026-10-13T03:53:40.173Z",
+  "sourceUpdatedAt": 1791863667007,
+  "sourceUpdatedIso": "2026-10-13T03:54:27.007Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -824,33 +824,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-10-kSz4",
-      "title": "スパイダーマン：アクロス・ザ・スパイダーバース",
-      "originalTitle": "",
-      "englishTitle": "Spider-Man: Across the Spider-Verse",
-      "year": 2023,
-      "score": 94,
-      "star": 4.5,
-      "overallRank": 29,
-      "sameScoreRank": 6,
-      "category": "スパイダーマン作品",
-      "mediaType": "movie",
-      "genre": [
-        "アクション",
-        "SF",
-        "ヒーロー",
-        "comfort",
-        "娯楽"
-      ],
-      "origin": "ハリウッド",
-      "format": "animation",
-      "runtime": 140,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "custom-1790420198451-g42l",
       "title": "エレファント・マン",
       "originalTitle": "The Elephant Man",
@@ -858,8 +831,8 @@
       "year": 1980,
       "score": 94,
       "star": 4.5,
-      "overallRank": 30,
-      "sameScoreRank": 7,
+      "overallRank": 29,
+      "sameScoreRank": 6,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -878,6 +851,33 @@
       "letterboxdAddedDate": "2026-09-26",
       "letterboxdPublishedAt": "Sat, 26 Sep 2026 22:55:55 +1200",
       "letterboxdReportedWatchedDate": "2026-09-26"
+    },
+    {
+      "id": "lb-10-kSz4",
+      "title": "スパイダーマン：アクロス・ザ・スパイダーバース",
+      "originalTitle": "",
+      "englishTitle": "Spider-Man: Across the Spider-Verse",
+      "year": 2023,
+      "score": 94,
+      "star": 4.5,
+      "overallRank": 30,
+      "sameScoreRank": 7,
+      "category": "スパイダーマン作品",
+      "mediaType": "movie",
+      "genre": [
+        "アクション",
+        "SF",
+        "ヒーロー",
+        "comfort",
+        "娯楽"
+      ],
+      "origin": "ハリウッド",
+      "format": "animation",
+      "runtime": 140,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "lb-467-ptEI",
@@ -22267,8 +22267,8 @@
         "lb-349-2aGY",
         "lb-549-iEBG",
         "lb-97-2a7u",
-        "lb-10-kSz4",
         "custom-1790420198451-g42l",
+        "lb-10-kSz4",
         "lb-467-ptEI",
         "custom-1790508958519-2edt",
         "custom-1791863527797-qm90",
