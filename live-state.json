@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791918794293,
-  "sourceUpdatedIso": "2026-10-13T19:13:14.293Z",
+  "sourceUpdatedAt": 1791918807280,
+  "sourceUpdatedIso": "2026-10-13T19:13:27.280Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -20956,6 +20956,27 @@
       "letterboxdAddedDate": null,
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1791918807010-n21d",
+      "title": "ガリレオ",
+      "originalTitle": "ガリレオ",
+      "englishTitle": "Galileo",
+      "year": 2007,
+      "score": null,
+      "star": 0,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "サスペンス、ミステリー",
+      "mediaType": "tvseries",
+      "genre": "",
+      "origin": "",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     }
   ],
   "state": {
@@ -25218,6 +25239,23 @@
         "added": true,
         "_seq": 1791918794008,
         "tmdbType": "tv"
+      },
+      {
+        "id": "custom-1791918807010-n21d",
+        "title": "ガリレオ",
+        "originalTitle": "ガリレオ",
+        "englishTitle": "Galileo",
+        "lbTitle": "Galileo",
+        "tmdbId": 6964,
+        "year": 2007,
+        "uri": "",
+        "category": "サスペンス、ミステリー",
+        "order": 999999,
+        "star": 0,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791918807010,
+        "tmdbType": "tv"
       }
     ],
     "starOverrides": {
@@ -25933,7 +25971,8 @@
       "custom-1791918726645-mxr9": 0,
       "custom-1791918752014-2ngd": 0,
       "custom-1791918777504-yyaq": 0,
-      "custom-1791918794008-6b75": 0
+      "custom-1791918794008-6b75": 0,
+      "custom-1791918807010-n21d": 0
     },
     "titleOverrides": {
       "added-anchor-578": {
@@ -28920,7 +28959,8 @@
       "custom-1791918726645-mxr9": "tvseries",
       "custom-1791918752014-2ngd": "tvseries",
       "custom-1791918777504-yyaq": "tvseries",
-      "custom-1791918794008-6b75": "tvseries"
+      "custom-1791918794008-6b75": "tvseries",
+      "custom-1791918807010-n21d": "tvseries"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -64835,6 +64875,39 @@
           ],
           "source": "tmdb",
           "fetchedAt": "2026-10-13T19:13:14.255Z"
+        }
+      },
+      "custom-1791918807010-n21d": {
+        "contentType": "tv_series",
+        "tmdbType": "tv",
+        "poster84": {
+          "path": "/qJ5h8LufzdLBtax3N0gQt6ZSP34.jpg",
+          "tmdbId": 6964,
+          "provider": "tmdb",
+          "checkedAt": "2026-10-13T19:13:27.197Z"
+        },
+        "tmdbSeriesId": 6964,
+        "seasonCatalogV1": [
+          {
+            "number": 1,
+            "year": "2007"
+          },
+          {
+            "number": 2,
+            "year": "2013"
+          }
+        ],
+        "seasonCountV1": 2,
+        "crew84": {
+          "directors": [],
+          "creators": [
+            "Takashi Narita",
+            "Hiroshi Nishitani",
+            "Mizuki Nishisaka",
+            "Kensaku Sawada"
+          ],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-13T19:13:27.239Z"
         }
       }
     }
