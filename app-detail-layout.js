@@ -11,7 +11,10 @@
     '#sheetBg .sheet{--detail-accent:#a9e8bd;}',
     '#sheetBg .sheet-meta{font-size:12px;line-height:1.4;color:#aeb7c4;margin-top:5px;margin-bottom:12px;}',
     '#sheetBg .edit-title-grid{margin:10px 0 13px;}',
-    '#sheetBg .sheetgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:13px 0;}',
+    '#sheetBg .sheetgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:7px 0 13px;}',
+    '#sheetBg .movie30-detail-score-title{font-size:13px;font-weight:850;color:#eef6fb;margin:13px 0 0;padding-left:1px;}',
+    '#sheetBg #detail66 .v66-lbl{font-size:12px;font-weight:800;color:#e6eef6;margin:15px 0 7px;}',
+    '#sheetBg #detail66 .v66-note{background:#101720;border:1px solid #2b3947;border-radius:11px;padding:11px;min-height:76px;}',
     '#sheetBg .sheetgrid label:not([hidden]){min-width:0;font-size:11px;color:#aeb7c4;}',
     '#sheetBg .sheetgrid .field{width:100%;min-height:39px;margin-top:5px;}',
     '#sheetBg label:has(#editMediaType),#sheetBg label:has(#editCategory){display:none!important;}',
@@ -62,6 +65,14 @@
   }
   const type=document.getElementById('editMediaType');
   if(type?.closest('label'))type.closest('label').style.display='none';
+  const scoreGrid=document.querySelector('#sheetBg .sheetgrid');
+  if(scoreGrid && !document.getElementById('movie30-detail-score-title')){
+    const heading=document.createElement('div');
+    heading.id='movie30-detail-score-title';
+    heading.className='movie30-detail-score-title';
+    heading.textContent='評価・上映時間';
+    scoreGrid.before(heading);
+  }
 
   function preview(){
     const target=document.getElementById('movie30-detail-class-preview');
@@ -133,6 +144,10 @@
     const meta=document.getElementById('sheetMeta');
     if(meta)meta.textContent=f.year?String(f.year):'公開年未設定';
     const detail=document.getElementById('detail66');
+    // Show editable values before the corresponding rank and review summary.
+    if(scoreGrid&&detail&&detail.previousElementSibling!==scoreGrid){
+      scoreGrid.insertAdjacentElement('afterend',detail);
+    }
     const score=effectiveScore(f);
     if(detail){
       const stats=detail.querySelector('.v66-stats');
