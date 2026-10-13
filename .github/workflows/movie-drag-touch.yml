@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - .github/workflows/movie-drag-touch.yml
+      - index.html
   workflow_dispatch:
 jobs:
   drag:
