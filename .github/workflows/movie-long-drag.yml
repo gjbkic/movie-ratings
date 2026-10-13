@@ -29,19 +29,21 @@ jobs:
             await page.goto('http://localhost:8783/index.html',{waitUntil:'domcontentloaded'});
             await page.waitForSelector('html.movie30-ready',{timeout:30000});
             await page.evaluate(dir=>{
+             const cards=[...document.querySelectorAll('#rankRoot .rank-card[data-id]')].filter(e=>!!e.querySelector('.drag-handle:not([disabled])'));
+             const item=cards[dir==='down'?3:80];
+             if(!item)throw Error('Cannot find draggable card');
              document.documentElement.style.setProperty('scroll-behavior','auto','important');
-             window.scrollTo(0,dir==='down'?500:2400);
+             item.scrollIntoView({behavior:'instant',block:'center'});
              document.documentElement.style.removeProperty('scroll-behavior');
             },dir);
             await page.waitForTimeout(400);
-            const point=await page.evaluate(()=>{
-             const candidates=[...document.querySelectorAll('#rankRoot .rank-card[data-id]')]
-               .filter(e=>{const r=e.getBoundingClientRect();return r.top>340&&r.bottom<innerHeight-150&&!!e.querySelector('.drag-handle:not([disabled])')});
-             const item=candidates[0];
+            const point=await page.evaluate(dir=>{
+             const cards=[...document.querySelectorAll('#rankRoot .rank-card[data-id]')].filter(e=>!!e.querySelector('.drag-handle:not([disabled])'));
+             const item=cards[dir==='down'?3:80];
              if(!item)throw Error('Cannot find visible draggable card');
              const h=item.querySelector('.drag-handle').getBoundingClientRect();
              return {id:item.dataset.id,x:h.left+h.width/2,y:h.top+h.height/2,scrollY:scrollY,height:innerHeight,computed:getComputedStyle(document.documentElement).scrollBehavior};
-            });
+            },dir);
             const cdp=await page.context().newCDPSession(page);
             const y=dir==='down'?point.height-22:Math.min(190,point.height*.24);
             const t=(type,py)=>cdp.send('Input.dispatchTouchEvent',{type,touchPoints:type==='touchEnd'?[]:[{id:2,x:point.x,y:py,radiusX:5,radiusY:5}]});
