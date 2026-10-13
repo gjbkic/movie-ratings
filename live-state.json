@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791918752307,
-  "sourceUpdatedIso": "2026-10-13T19:12:32.307Z",
+  "sourceUpdatedAt": 1791918794293,
+  "sourceUpdatedIso": "2026-10-13T19:13:14.293Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -20914,6 +20914,48 @@
       "letterboxdAddedDate": null,
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1791918777504-yyaq",
+      "title": "99.9 -刑事専門弁護士-",
+      "originalTitle": "99.9 -刑事専門弁護士-",
+      "englishTitle": "99.9 Criminal Lawyer",
+      "year": 2016,
+      "score": null,
+      "star": 0,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "マフィア、クライム",
+      "mediaType": "tvseries",
+      "genre": "",
+      "origin": "",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1791918794008-6b75",
+      "title": "ストロベリーナイト",
+      "originalTitle": "ストロベリーナイト",
+      "englishTitle": "Strawberry Night",
+      "year": 2012,
+      "score": null,
+      "star": 0,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "サスペンス、ミステリー",
+      "mediaType": "tvseries",
+      "genre": "",
+      "origin": "",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     }
   ],
   "state": {
@@ -25142,6 +25184,40 @@
         "added": true,
         "_seq": 1791918752014,
         "tmdbType": "tv"
+      },
+      {
+        "id": "custom-1791918777504-yyaq",
+        "title": "99.9 -刑事専門弁護士-",
+        "originalTitle": "99.9 -刑事専門弁護士-",
+        "englishTitle": "99.9 Criminal Lawyer",
+        "lbTitle": "99.9 Criminal Lawyer",
+        "tmdbId": 66584,
+        "year": 2016,
+        "uri": "",
+        "category": "マフィア、クライム",
+        "order": 999999,
+        "star": 0,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791918777504,
+        "tmdbType": "tv"
+      },
+      {
+        "id": "custom-1791918794008-6b75",
+        "title": "ストロベリーナイト",
+        "originalTitle": "ストロベリーナイト",
+        "englishTitle": "Strawberry Night",
+        "lbTitle": "Strawberry Night",
+        "tmdbId": 65501,
+        "year": 2012,
+        "uri": "",
+        "category": "サスペンス、ミステリー",
+        "order": 999999,
+        "star": 0,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791918794008,
+        "tmdbType": "tv"
       }
     ],
     "starOverrides": {
@@ -25855,7 +25931,9 @@
       "custom-1791915774599-jgkn": 0,
       "custom-1791915849111-yhiu": 0,
       "custom-1791918726645-mxr9": 0,
-      "custom-1791918752014-2ngd": 0
+      "custom-1791918752014-2ngd": 0,
+      "custom-1791918777504-yyaq": 0,
+      "custom-1791918794008-6b75": 0
     },
     "titleOverrides": {
       "added-anchor-578": {
@@ -28840,7 +28918,9 @@
       "custom-1791915774599-jgkn": "drama",
       "custom-1791915849111-yhiu": "drama",
       "custom-1791918726645-mxr9": "tvseries",
-      "custom-1791918752014-2ngd": "tvseries"
+      "custom-1791918752014-2ngd": "tvseries",
+      "custom-1791918777504-yyaq": "tvseries",
+      "custom-1791918794008-6b75": "tvseries"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -64701,6 +64781,60 @@
           "creators": [],
           "source": "tmdb",
           "fetchedAt": "2026-10-13T19:12:32.265Z"
+        }
+      },
+      "custom-1791918777504-yyaq": {
+        "contentType": "tv_series",
+        "tmdbType": "tv",
+        "poster84": {
+          "path": "/e618kxJ6LfMW9DcIQxR58ApkuHO.jpg",
+          "tmdbId": 66584,
+          "provider": "tmdb",
+          "checkedAt": "2026-10-13T19:12:57.680Z"
+        },
+        "tmdbSeriesId": 66584,
+        "seasonCatalogV1": [
+          {
+            "number": 1,
+            "year": "2016"
+          },
+          {
+            "number": 2,
+            "year": "2018"
+          }
+        ],
+        "seasonCountV1": 2,
+        "crew84": {
+          "directors": [],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-13T19:12:57.721Z"
+        }
+      },
+      "custom-1791918794008-6b75": {
+        "contentType": "tv_series",
+        "tmdbType": "tv",
+        "poster84": {
+          "path": "/hEmkdb6FTz0AVgwdhZ1cKqrgiEs.jpg",
+          "tmdbId": 65501,
+          "provider": "tmdb",
+          "checkedAt": "2026-10-13T19:13:14.206Z"
+        },
+        "tmdbSeriesId": 65501,
+        "seasonCatalogV1": [
+          {
+            "number": 1,
+            "year": "2012"
+          }
+        ],
+        "seasonCountV1": 1,
+        "crew84": {
+          "directors": [],
+          "creators": [
+            "Tetsuya Honda"
+          ],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-13T19:13:14.255Z"
         }
       }
     }
