@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791913933729,
-  "sourceUpdatedIso": "2026-10-13T17:52:13.729Z",
+  "sourceUpdatedAt": 1791913938301,
+  "sourceUpdatedIso": "2026-10-13T17:52:18.301Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -8929,33 +8929,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1790322756823-bi61",
-      "title": "ジョジョの奇妙な冒険 ストーンオーシャン",
-      "originalTitle": "",
-      "englishTitle": "JoJo's Bizarre Adventure: Stone Ocean",
-      "year": 2021,
-      "score": 82,
-      "star": 3,
-      "overallRank": 309,
-      "sameScoreRank": 22,
-      "category": "Letterboxd",
-      "mediaType": "drama",
-      "genre": [
-        "サスペンス",
-        "アクション",
-        "ファンタジー",
-        "切ない",
-        "TV本編"
-      ],
-      "origin": "その他",
-      "format": "animation",
-      "runtime": null,
-      "exact": true,
-      "letterboxdAddedDate": "2026-09-25",
-      "letterboxdPublishedAt": "Fri, 25 Sep 2026 06:50:54 +1200",
-      "letterboxdReportedWatchedDate": "2026-09-24"
-    },
-    {
       "id": "custom-1789918000606-jgbg",
       "title": "ロボコップ",
       "originalTitle": "RoboCop",
@@ -8963,8 +8936,8 @@
       "year": 1987,
       "score": 82,
       "star": 3,
-      "overallRank": 310,
-      "sameScoreRank": 23,
+      "overallRank": 309,
+      "sameScoreRank": 22,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -8999,8 +8972,8 @@
       "year": 2023,
       "score": 82,
       "star": 3,
-      "overallRank": 311,
-      "sameScoreRank": 24,
+      "overallRank": 310,
+      "sameScoreRank": 23,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -9020,6 +8993,33 @@
       "letterboxdAddedDate": "2026-10-13",
       "letterboxdPublishedAt": "Tue, 13 Oct 2026 08:17:14 +1300",
       "letterboxdReportedWatchedDate": "2026-10-13"
+    },
+    {
+      "id": "custom-1790322756823-bi61",
+      "title": "ジョジョの奇妙な冒険 ストーンオーシャン",
+      "originalTitle": "",
+      "englishTitle": "JoJo's Bizarre Adventure: Stone Ocean",
+      "year": 2021,
+      "score": 82,
+      "star": 3,
+      "overallRank": 311,
+      "sameScoreRank": 24,
+      "category": "Letterboxd",
+      "mediaType": "drama",
+      "genre": [
+        "サスペンス",
+        "アクション",
+        "ファンタジー",
+        "切ない",
+        "TV本編"
+      ],
+      "origin": "その他",
+      "format": "animation",
+      "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": "2026-09-25",
+      "letterboxdPublishedAt": "Fri, 25 Sep 2026 06:50:54 +1200",
+      "letterboxdReportedWatchedDate": "2026-09-24"
     },
     {
       "id": "lb-280-230G",
@@ -22020,9 +22020,9 @@
         "lb-478-i4gW",
         "lb-297-28zG",
         "lb-15-6hQu",
-        "custom-1790322756823-bi61",
         "custom-1789918000606-jgbg",
         "custom-1791834369925-gy7y",
+        "custom-1790322756823-bi61",
         "lb-280-230G",
         "lb-420-CFrC",
         "lb-337-1nRe",
