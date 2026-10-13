@@ -70,13 +70,30 @@
     const rows=[...document.querySelectorAll('#editGenrePicker .struct-row')];
     const display=[];
     const labels={ '種別':'種別','制作区分':'制作','形式':'形式','TV区分':'TV区分','ジャンル（複数選択可）':'ジャンル'};
+    const film=selectedId?filmById(selectedId):null;
     for(const row of rows){
       if(getComputedStyle(row).display==='none')continue;
       const raw=row.querySelector('.struct-label')?.textContent?.trim()||'';
       const label=labels[raw]||(/ジャンル/.test(raw)?'ジャンル':raw);
       if(!label)continue;
-      const on=[...row.querySelectorAll('.struct-chip.on')].filter(b=>getComputedStyle(b).display!=='none').map(b=>b.textContent.trim()).filter(Boolean);
-      if(on.length)display.push([label,on.join('・')]);
+      const buttons=[...row.querySelectorAll('.struct-chip')].filter(b=>getComputedStyle(b).display!=='none');
+      let chosen=null;
+      if(film&&raw==='種別')chosen=state.mediaTypeOverrides?.[film.id]||film.mediaType||'movie';
+      if(film&&raw==='制作区分')chosen=state.originOverrides?.[film.id]||'';
+      if(film&&raw==='形式')chosen=state.formatOverrides?.[film.id]||'live';
+      if(film&&/ジャンル/.test(raw))chosen=state.genreOverrides?.[film.id]||[];
+      if(film&&raw==='TV区分')chosen=row.querySelector('.struct-chip.on')?.dataset.tvSubtype||'';
+      let values=[];
+      if(raw==='形式'&&chosen==='hybrid')values=['実写','アニメ'];
+      else if(Array.isArray(chosen)&&chosen.length)values=chosen.map(v=>buttons.find(b=>b.dataset.structValue===v||b.dataset.genre===v)?.textContent.trim()||v);
+      else if(typeof chosen==='string'&&chosen){
+        const match=buttons.find(b=>b.dataset.structValue===chosen||b.dataset.tvSubtype===chosen);
+        if(match)values=[match.textContent.trim()];
+        else if(raw==='制作区分')values=[chosen];
+      }
+      if(!values.length)values=buttons.filter(b=>b.classList.contains('on')).map(b=>b.textContent.trim());
+      values=[...new Set(values.filter(Boolean))];
+      if(values.length)display.push([label,values.join('・')]);
     }
     const seen=new Set();
     for(const [label,value] of display){
@@ -95,13 +112,14 @@
   function ranks(f){
     const score=effectiveScore(f);
     if(score==null)return null;
-    const sortedScores=[...new Set(allFilms().map(effectiveScore).filter(x=>x!=null).map(Number))].sort((a,b)=>b-a);
+    const rated=allFilms().filter(x=>effectiveScore(x)!=null);
+    const scores=[...new Set(rated.map(x=>Number(effectiveScore(x))))].sort((a,b)=>b-a);
     let above=0;
-    for(const s of sortedScores){
-      const tied=rankSorted(allFilms().filter(x=>effectiveScore(x)===s),s);
+    for(const s of scores){
+      const tied=rankSorted(rated.filter(x=>Number(effectiveScore(x))===s),s);
       if(s===Number(score)){
-        const i=tied.findIndex(x=>x.id===f.id);
-        return {overall:i<0?null:above+i+1,total:above+sortedScores.filter(y=>y<=s).reduce((n,y)=>n+allFilms().filter(x=>effectiveScore(x)===y).length,0),same:i<0?null:i+1,tied:tied.length,score};
+        const index=tied.findIndex(x=>x.id===f.id);
+        return {overall:index<0?null:above+index+1,total:rated.length,same:index<0?null:index+1,tied:tied.length,score};
       }
       above+=tied.length;
     }
@@ -125,6 +143,14 @@
         }
         stats.hidden=score==null;
         if(score==null)stats.style.display='none';else stats.style.display='';
+        const rank=score!=null?ranks(f):null;
+        const cells=[...stats.querySelectorAll('.v66-stat')];
+        if(rank&&cells.length===2){
+          cells[0].querySelector('strong').textContent=rank.overall?rank.overall+'位':'—';
+          cells[0].querySelector('span').textContent='全体 '+rank.total+'本';
+          cells[1].querySelector('strong').textContent=rank.same?rank.same+'位':'—';
+          cells[1].querySelector('span').textContent=rank.score+'点内 '+rank.tied+'本';
+        }
       }
       const near=detail.querySelector('.v66-nei');if(near)near.remove();
       const jump=detail.querySelector('#detailJump66');
@@ -164,10 +190,11 @@
       setTimeout(()=>{if(id===selectedId)tidy(id)},0);
     });
   }
+  // Capture before older chip handlers stop propagation, then refresh after their writes.
   editor?.addEventListener('click',()=>{
     const id=selectedId;
     setTimeout(()=>{if(id===selectedId)tidy(id)},0);
     setTimeout(()=>{if(id===selectedId)tidy(id)},120);
-  });
+  },true);
   window.__movie30DetailUnified={version:'20261014h',refresh:()=>selectedId&&tidy(selectedId)};
 })();
