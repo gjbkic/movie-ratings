@@ -85,10 +85,10 @@
   }
   const style = document.createElement('style');
   style.textContent = `
-    #moviePersonBg{position:fixed;inset:0;z-index:4500;background:#0b111b;color:#edf4fc;overflow-y:auto;overscroll-behavior:contain;padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom);}
+    #moviePersonBg{position:fixed;inset:0;z-index:4500;background:#0b111b;color:#edf4fc;overflow-y:auto;overscroll-behavior:contain;padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom);will-change:transform;}
     #moviePersonBg[hidden]{display:none!important}.movie-person-shell{max-width:1000px;margin:auto;padding:14px 16px 35px;}
     .movie-person-top{display:flex;align-items:center;justify-content:space-between;gap:10px;position:sticky;top:0;background:#0b111bf5;z-index:2;padding:8px 0;touch-action:none;user-select:none;}
-    .movie-person-pull{font-size:11px;color:#aebdd0;padding:8px;}.movie-person-shell{will-change:transform;}
+    .movie-person-pull{font-size:11px;color:#aebdd0;padding:8px;}
     .movie-person-head{display:flex;gap:15px;align-items:center;margin:20px 0}.movie-person-head img{width:76px;height:102px;object-fit:cover;border-radius:9px;}
     .movie-person-head h2{font-size:24px;margin:0 0 6px}.movie-person-meta,.movie-person-note{font-size:12px;line-height:1.7;color:#aebdd0;}
     .movie-person-controls{display:flex;flex-wrap:wrap;gap:9px;margin:15px 0}.movie-person-controls label{font-size:11px;color:#b4c3d5;display:flex;flex-direction:column;gap:4px;}
@@ -112,10 +112,21 @@
   document.body.appendChild(overlay);
   const content = overlay.querySelector('#moviePersonContent');
   const back = overlay.querySelector('#moviePersonBack');
-  let bodyOverflow = '', htmlOverflow = '';
+  let bodyOverflow = '', htmlOverflow = '', pull = null, dismissTimer = 0, settleTimer = 0, dismissing = false;
+  function resetMotion() {
+    if (dismissTimer) clearTimeout(dismissTimer);
+    if (settleTimer) clearTimeout(settleTimer);
+    dismissTimer = settleTimer = 0;
+    pull = null; dismissing = false;
+    overlay.style.transition = 'none';
+    overlay.style.transform = '';
+    overlay.style.borderRadius = '';
+    overlay.style.boxShadow = '';
+  }
   function hide() {
     closeSheet();
     ++ticket; active = null; overlay.hidden = true;
+    resetMotion();
     document.documentElement.style.overflow=htmlOverflow;document.body.style.overflow=bodyOverflow;
     document.getElementById('sheetBg')?.classList.remove('movie-person-detail-layer');
     originFocus?.focus?.({preventScroll:true});
@@ -126,21 +137,62 @@
     else { if (active) active.preview = null; draw(); }
   }
   back.onclick = () => active?.preview ? goList() : close();
-  const shell=overlay.querySelector('.movie-person-shell');let pull=null;
+  // Move the whole full-screen layer, not just its contents: this exposes
+  // the original ranking page continuously above the dragged sheet.
   overlay.addEventListener('touchstart',e=>{
-    pull=null;if(e.touches.length!==1||e.target.closest('button,input,select,a'))return;
-    const handle=e.target.closest('.movie-person-top');if(!handle&&overlay.scrollTop>1)return;
-    const p=e.touches[0];pull={x:p.clientX,y:p.clientY,dy:0,start:performance.now(),dragging:false};
+    pull=null;
+    if(dismissing||e.touches.length!==1||e.target.closest('button,input,select,a'))return;
+    const handle=e.target.closest('.movie-person-top');
+    if(!handle&&overlay.scrollTop>1)return;
+    if(settleTimer){clearTimeout(settleTimer);settleTimer=0;resetMotion();}
+    const p=e.touches[0];
+    pull={x:p.clientX,y:p.clientY,dy:0,start:performance.now(),dragging:false};
   },{passive:true});
   overlay.addEventListener('touchmove',e=>{
-    if(!pull||e.touches.length!==1)return;const p=e.touches[0],dy=p.clientY-pull.y,dx=p.clientX-pull.x;
-    if(!pull.dragging){if(dy<0||Math.abs(dx)>Math.max(12,dy)){pull=null;return;}if(dy<8)return;pull.dragging=true;}
-    if(e.cancelable)e.preventDefault();pull.dy=Math.max(0,dy);shell.style.transition='none';shell.style.transform='translate3d(0,'+Math.min(320,pull.dy*.85)+'px,0)';
+    if(!pull||e.touches.length!==1||dismissing)return;
+    const p=e.touches[0],dy=p.clientY-pull.y,dx=p.clientX-pull.x;
+    if(!pull.dragging){
+      if(dy<0||Math.abs(dx)>Math.max(12,dy)){pull=null;return;}
+      if(dy<5)return;
+      pull.dragging=true;
+    }
+    if(e.cancelable)e.preventDefault();
+    pull.dy=Math.max(0,dy);
+    overlay.style.transition='none';
+    overlay.style.transform='translate3d(0,'+pull.dy+'px,0)';
+    overlay.style.borderRadius='16px 16px 0 0';
+    overlay.style.boxShadow='0 -10px 30px rgba(0,0,0,.3)';
   },{passive:false});
-  function finishPull(cancelled){const g=pull;pull=null;shell.style.transition='transform 160ms ease-out';shell.style.transform='';
-    if(g?.dragging&&!cancelled&&(g.dy>=105||(g.dy>55&&g.dy/Math.max(1,performance.now()-g.start)>.7))){active?.preview?goList():close();}
+  function finishPull(cancelled){
+    const g=pull;pull=null;
+    if(!g?.dragging||dismissing)return;
+    const duration=Math.max(1,performance.now()-g.start);
+    const shouldDismiss=!cancelled&&(g.dy>=62||(g.dy>=30&&g.dy/duration>.48));
+    const reducedMotion=window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+    if(shouldDismiss){
+      dismissing=true;
+      const ms=reducedMotion?0:230;
+      overlay.style.transition=ms?'transform '+ms+'ms cubic-bezier(.22,.7,.23,1)':'none';
+      overlay.style.transform='translate3d(0,'+(window.innerHeight+24)+'px,0)';
+      dismissTimer=setTimeout(()=>{
+        dismissTimer=0;
+        if(active?.preview){resetMotion();goList();}
+        else close();
+      },ms+15);
+    }else{
+      const ms=reducedMotion?0:205;
+      overlay.style.transition=ms?'transform '+ms+'ms cubic-bezier(.22,.7,.23,1)':'none';
+      overlay.style.transform='';
+      settleTimer=setTimeout(()=>{
+        settleTimer=0;
+        overlay.style.transition='none';
+        overlay.style.borderRadius='';
+        overlay.style.boxShadow='';
+      },ms+15);
+    }
   }
-  overlay.addEventListener('touchend',()=>finishPull(false),{passive:true});overlay.addEventListener('touchcancel',()=>finishPull(true),{passive:true});
+  overlay.addEventListener('touchend',()=>finishPull(false),{passive:true});
+  overlay.addEventListener('touchcancel',()=>finishPull(true),{passive:true});
   window.addEventListener('popstate', e => {
     if (!active) return;
     if (e.state?.moviePersonKey !== historyKey) { depth = 0; hide(); return; }
@@ -226,7 +278,7 @@
     document.querySelectorAll('.movie92-suggestions').forEach(x => x.hidden = true);
     document.activeElement?.blur?.();
     active = {input, name:input.name || '人物', names:[input.name].filter(Boolean), id:Number(input.id)||0, works:[], scope:'registered', type:'all', role:'all', sort:'rank', loaded:false, preview:null};
-    overlay.hidden = false; document.body.style.overflow = 'hidden';document.documentElement.style.overflow='hidden';overlay.scrollTop = 0;
+    resetMotion();overlay.hidden = false; document.body.style.overflow = 'hidden';document.documentElement.style.overflow='hidden';overlay.scrollTop = 0;
     historyKey = 'person-'+Date.now(); depth = 1;
     history.pushState({...history.state,moviePersonKey:historyKey,moviePersonWork:null},'');
     draw(); back.focus({preventScroll:true}); loadPerson(input,t);
