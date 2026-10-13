@@ -7,6 +7,7 @@ on:
       - app-enhancements.js
       - app-seasons.js
       - app-search-stability.js
+      - app-unrated-panels.js
       - index.html
   workflow_dispatch:
 permissions:
@@ -56,13 +57,15 @@ jobs:
               save();renderRank();
             });
             const layout=()=>page.evaluate(()=>({
-              watched:[...document.querySelectorAll('#rankRoot .uns-head strong')].some(x=>x.textContent.includes('鑑賞済み・点数未設定')),
+              watched:[...document.querySelectorAll('#rankRoot .uns-head strong')].some(x=>x.textContent.includes('星も未確定')),
+              scorePending:[...document.querySelectorAll('#rankRoot .uns-head strong')].some(x=>x.textContent.includes('点数未確定')),
               actions:document.querySelectorAll('#rankRoot .uns-card-v67 .uns-actions-v67 button').length,
               jumpText:document.querySelector('#starJumpBar')?.textContent||'',
               clearPresent:!!document.getElementById('movie30ClearSearch')
             }));
             const before=await layout();
             assert.ok(before.watched,'Initial separate watched/unscored panel missing');
+            assert.ok(before.scorePending,'Initial point-unset section missing');
             assert.ok(before.actions>=2,'Initial genre/rating action buttons missing');
             assert.ok(before.jumpText.includes('検索'),'Initial new jump navigation missing');
             assert.ok(before.clearPresent,'Search clear button not initialized');
@@ -73,6 +76,7 @@ jobs:
             assert.equal(await page.locator('#movie30ClearSearch').isVisible(),false,'Clear X must disappear for an empty query');
             const after=await layout();
             assert.ok(after.watched,'Search reset lost separate watched/unscored panel');
+            assert.ok(after.scorePending,'Search reset lost point-unset section');
             assert.ok(after.actions>=2,'Search reset reverted genre/rating action buttons');
             assert.ok(after.jumpText.includes('検索'),'Search reset reverted jump navigation');
             console.log('PASS search reset: latest panels, actions and navigation persist after clear',JSON.stringify({before,after}));
