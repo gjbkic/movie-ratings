@@ -970,6 +970,7 @@ style.textContent=[
  '.movie92-entry{display:flex;align-items:center;gap:9px;width:100%;min-height:49px;background:transparent;border:0;border-radius:8px;padding:6px 7px;text-align:left;color:#eaf1fb;}',
  '.movie92-entry:hover,.movie92-entry.is-current,.movie92-entry:focus-visible{background:#29405a;outline:none;}',
  '.movie92-entry img{width:28px;height:42px;flex:0 0 28px;object-fit:contain;background:#0d141d;border-radius:4px;}',
+ '.movie92-entry>*{pointer-events:none;}.movie92-entry{touch-action:manipulation;-webkit-tap-highlight-color:rgba(70,130,180,.2);}',
  '.movie92-person{display:flex;align-items:center;justify-content:center;width:28px;height:42px;flex:0 0 28px;background:#233346;border-radius:5px;font-size:17px;}',
  '.movie92-entry-text{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px;}',
  '.movie92-entry-title{font-weight:700;font-size:12px;line-height:1.3;overflow-wrap:anywhere;}',
@@ -1088,8 +1089,26 @@ function addEntry(box,item){
  const sub=document.createElement('span');sub.className='movie92-entry-sub';sub.textContent=item.detail||'';
  span.append(title,sub);b.appendChild(span);
  if(item.kind==='remote'){const tag=document.createElement('span');tag.className='movie92-entry-tag';tag.textContent='TMDb';b.append(tag);}
+ // iOS installed-web-app Safari can cancel click on an image while dismissing
+ // the software keyboard. Handle a stationary finger lift directly as well.
+ let finger=null,lastTouch=0;
  b.addEventListener('pointerdown',event=>event.preventDefault());
- b.addEventListener('click',()=>choose(box,item));
+ b.addEventListener('touchstart',event=>{
+  const t=event.touches[0];
+  finger=t?{x:t.clientX,y:t.clientY}:null;
+ },{passive:true});
+ b.addEventListener('touchend',event=>{
+  const t=event.changedTouches[0],origin=finger;finger=null;
+  if(!t||!origin||Math.hypot(t.clientX-origin.x,t.clientY-origin.y)>14)return;
+  event.preventDefault();event.stopPropagation();lastTouch=Date.now();
+  choose(box,item);
+ },{passive:false});
+ b.addEventListener('touchcancel',()=>{finger=null;},{passive:true});
+ b.addEventListener('click',event=>{
+  event.preventDefault();event.stopPropagation();
+  if(Date.now()-lastTouch<800)return;
+  choose(box,item);
+ });
  box.menu.appendChild(b);box.entries.push(b);
 }
 function section(box,title,list){
@@ -1120,8 +1139,29 @@ function setQuery(box,s){
  hide(box);
  box.input.focus({preventScroll:true});
 }
+let movie92RemoteLoader=null;
+function loadRemoteAdd92(){
+ if(window.__movie30RemoteAdd?.open)return Promise.resolve(true);
+ if(movie92RemoteLoader)return movie92RemoteLoader;
+ movie92RemoteLoader=new Promise(resolve=>{
+  const script=document.createElement('script');
+  script.src=new URL('app-remote-add.js?v=20261014c',document.baseURI).href;
+  script.async=true;
+  script.onload=()=>resolve(!!window.__movie30RemoteAdd?.open);
+  script.onerror=()=>resolve(false);
+  document.head.appendChild(script);
+ }).finally(()=>{movie92RemoteLoader=null;});
+ return movie92RemoteLoader;
+}
 async function choose(box,item){
  hide(box);
+ if(item.kind==='remote' && (item.media==='movie'||item.media==='tv')){
+  box.input.blur();
+  const ready=await loadRemoteAdd92();
+  if(ready){window.__movie30RemoteAdd.open(item);}
+  else toast('作品追加画面を読み込めません。再読み込みしてください。');
+  return;
+ }
  if(window.__movie30People && (item.kind==='director'||item.media==='person')){
   box.input.blur();
   window.__movie30People.open({id:item.media==='person'?item.tmdbId:0,name:item.name||item.label});
@@ -1149,11 +1189,6 @@ async function choose(box,item){
   setQuery(box,canonical||item.label);
   return;
  }
- if(item.kind==='remote' && (item.media==='movie'||item.media==='tv') && window.__movie30RemoteAdd){
-  box.input.blur();
-  window.__movie30RemoteAdd.open(item);
-  return;
- }
  if(item.media==='movie'){
   const local=allFilms().find(f=>{
    const ti=titleInfo(f),rec=catalog[f.id]||{},m=state.letterboxdMeta?.[f.id]||{};
@@ -1163,9 +1198,6 @@ async function choose(box,item){
   document.getElementById('quickAdd')?.click();
   if(typeof selectTmdb==='function')selectTmdb(item.tmdbId);
   return;
- }
- if(item.media==='tv'){
-  window.open('https://www.themoviedb.org/tv/'+encodeURIComponent(item.tmdbId),'_blank','noopener');
  }
 }
 function queueOnline(box){
