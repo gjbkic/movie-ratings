@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791919010596,
-  "sourceUpdatedIso": "2026-10-13T19:16:50.596Z",
+  "sourceUpdatedAt": 1791919025228,
+  "sourceUpdatedIso": "2026-10-13T19:17:05.228Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -21061,6 +21061,27 @@
       "letterboxdAddedDate": null,
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1791919024950-k1ok",
+      "title": "コード・ブルー　ドクターヘリ緊急救命",
+      "originalTitle": "コード・ブルー　ドクターヘリ緊急救命",
+      "englishTitle": "Code Blue",
+      "year": 2008,
+      "score": null,
+      "star": 0,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "ドラマ",
+      "mediaType": "tvseries",
+      "genre": "",
+      "origin": "",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     }
   ],
   "state": {
@@ -25408,6 +25429,23 @@
         "added": true,
         "_seq": 1791919010317,
         "tmdbType": "tv"
+      },
+      {
+        "id": "custom-1791919024950-k1ok",
+        "title": "コード・ブルー　ドクターヘリ緊急救命",
+        "originalTitle": "コード・ブルー　ドクターヘリ緊急救命",
+        "englishTitle": "Code Blue",
+        "lbTitle": "Code Blue",
+        "tmdbId": 21021,
+        "year": 2008,
+        "uri": "",
+        "category": "ドラマ",
+        "order": 999999,
+        "star": 0,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791919024950,
+        "tmdbType": "tv"
       }
     ],
     "starOverrides": {
@@ -26128,7 +26166,8 @@
       "custom-1791918817265-0l6y": 0,
       "custom-1791918827266-rxb1": 0,
       "custom-1791918832001-xkpy": 0,
-      "custom-1791919010317-zu85": 0
+      "custom-1791919010317-zu85": 0,
+      "custom-1791919024950-k1ok": 0
     },
     "titleOverrides": {
       "added-anchor-578": {
@@ -29120,7 +29159,8 @@
       "custom-1791918817265-0l6y": "movie",
       "custom-1791918827266-rxb1": "movie",
       "custom-1791918832001-xkpy": "movie",
-      "custom-1791919010317-zu85": "tvseries"
+      "custom-1791919010317-zu85": "tvseries",
+      "custom-1791919024950-k1ok": "tvseries"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -65150,6 +65190,38 @@
           "creators": [],
           "source": "tmdb",
           "fetchedAt": "2026-10-13T19:16:50.555Z"
+        }
+      },
+      "custom-1791919024950-k1ok": {
+        "contentType": "tv_series",
+        "tmdbType": "tv",
+        "poster84": {
+          "path": "/rBzW9ugeSJ0PvfqD1jkSkNaeKQh.jpg",
+          "tmdbId": 21021,
+          "provider": "tmdb",
+          "checkedAt": "2026-10-13T19:17:05.138Z"
+        },
+        "tmdbSeriesId": 21021,
+        "seasonCatalogV1": [
+          {
+            "number": 1,
+            "year": "2008"
+          },
+          {
+            "number": 2,
+            "year": "2010"
+          },
+          {
+            "number": 3,
+            "year": "2017"
+          }
+        ],
+        "seasonCountV1": 3,
+        "crew84": {
+          "directors": [],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-13T19:17:05.180Z"
         }
       }
     }
