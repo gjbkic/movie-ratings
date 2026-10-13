@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791915807978,
-  "sourceUpdatedIso": "2026-10-13T18:23:27.978Z",
+  "sourceUpdatedAt": 1791915849363,
+  "sourceUpdatedIso": "2026-10-13T18:24:09.363Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -20851,6 +20851,27 @@
       "letterboxdAddedDate": null,
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1791915849111-yhiu",
+      "title": "リーガル・ハイ",
+      "originalTitle": "リーガル・ハイ",
+      "englishTitle": "Legal High",
+      "year": 2012,
+      "score": null,
+      "star": 0,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "コメディ",
+      "mediaType": "tvseries",
+      "genre": "",
+      "origin": "",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     }
   ],
   "state": {
@@ -25028,6 +25049,23 @@
         "added": true,
         "_seq": 1791915774599,
         "tmdbType": "tv"
+      },
+      {
+        "id": "custom-1791915849111-yhiu",
+        "title": "リーガル・ハイ",
+        "originalTitle": "リーガル・ハイ",
+        "englishTitle": "Legal High",
+        "lbTitle": "Legal High",
+        "tmdbId": 46234,
+        "year": 2012,
+        "uri": "",
+        "category": "コメディ",
+        "order": 999999,
+        "star": 0,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791915849111,
+        "tmdbType": "tv"
       }
     ],
     "starOverrides": {
@@ -25738,7 +25776,8 @@
       "custom-1791903545078-e1rc": 2.5,
       "custom-1791913497181-nqp6": 3,
       "lb-16-70w": 3,
-      "custom-1791915774599-jgkn": 0
+      "custom-1791915774599-jgkn": 0,
+      "custom-1791915849111-yhiu": 0
     },
     "titleOverrides": {
       "added-anchor-578": {
@@ -28720,7 +28759,8 @@
       "custom-1791863527797-qm90": "movie",
       "custom-1791903545078-e1rc": "drama",
       "custom-1791913497181-nqp6": "drama",
-      "custom-1791915774599-jgkn": "drama"
+      "custom-1791915774599-jgkn": "drama",
+      "custom-1791915849111-yhiu": "tvseries"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -63886,6 +63926,34 @@
           ],
           "source": "tmdb",
           "fetchedAt": "2026-10-13T18:22:54.820Z"
+        }
+      },
+      "custom-1791915849111-yhiu": {
+        "contentType": "tv_series",
+        "tmdbType": "tv",
+        "poster84": {
+          "path": "/2fmB1XXHiQCgnk8R0QLP8FoBVwF.jpg",
+          "tmdbId": 46234,
+          "provider": "tmdb",
+          "checkedAt": "2026-10-13T18:24:09.283Z"
+        },
+        "tmdbSeriesId": 46234,
+        "seasonCatalogV1": [
+          {
+            "number": 1,
+            "year": "2012"
+          },
+          {
+            "number": 2,
+            "year": "2013"
+          }
+        ],
+        "seasonCountV1": 2,
+        "crew84": {
+          "directors": [],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-13T18:24:09.328Z"
         }
       }
     }
