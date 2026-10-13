@@ -6,6 +6,7 @@ on:
       - app-remote-add.js
       - app-enhancements.js
       - app-seasons.js
+      - app-search-stability.js
       - index.html
   workflow_dispatch:
 permissions:
@@ -46,6 +47,35 @@ jobs:
             await page.goto('http://localhost:8799/index.html',{waitUntil:'domcontentloaded',timeout:18000});
             await page.waitForSelector('html.movie30-ready',{timeout:35000});
             const search=page.locator('#searchRank');
+            // Regression: searches must not resurrect the pre-feature rank renderer.
+            await page.evaluate(()=>{
+              const one=addFilm('CI Watched No Score 2026',2026,'追加映画',0,'',{keepUnscored:true});
+              one.star=0;state.starOverrides[one.id]=0;
+              const two=addFilm('CI Unrated With Stars 2026',2026,'追加映画',4,'',{keepUnscored:true});
+              two.star=4;state.starOverrides[two.id]=4;
+              save();renderRank();
+            });
+            const layout=()=>page.evaluate(()=>({
+              watched:[...document.querySelectorAll('#rankRoot .uns-head strong')].some(x=>x.textContent.includes('鑑賞済み・点数未設定')),
+              actions:document.querySelectorAll('#rankRoot .uns-card-v67 .uns-actions-v67 button').length,
+              jumpText:document.querySelector('#starJumpBar')?.textContent||'',
+              clearPresent:!!document.getElementById('movie30ClearSearch')
+            }));
+            const before=await layout();
+            assert.ok(before.watched,'Initial separate watched/unscored panel missing');
+            assert.ok(before.actions>=2,'Initial genre/rating action buttons missing');
+            assert.ok(before.jumpText.includes('検索'),'Initial new jump navigation missing');
+            assert.ok(before.clearPresent,'Search clear button not initialized');
+            await search.fill('CI Unrated With Stars');
+            assert.equal(await page.locator('#movie30ClearSearch').isVisible(),true,'Clear X must appear while typing');
+            await page.locator('#movie30ClearSearch').click();
+            assert.equal(await search.inputValue(),'','Clear X did not erase the query');
+            assert.equal(await page.locator('#movie30ClearSearch').isVisible(),false,'Clear X must disappear for an empty query');
+            const after=await layout();
+            assert.ok(after.watched,'Search reset lost separate watched/unscored panel');
+            assert.ok(after.actions>=2,'Search reset reverted genre/rating action buttons');
+            assert.ok(after.jumpText.includes('検索'),'Search reset reverted jump navigation');
+            console.log('PASS search reset: latest panels, actions and navigation persist after clear',JSON.stringify({before,after}));
             await search.fill('CIUnique');
             await page.locator('.movie92-entry').filter({hasText:'CIUnique Movie 2026'}).waitFor({timeout:20000});
             // Real touch on poster coordinates, not a synthetic button click.
