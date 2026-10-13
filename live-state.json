@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791918837133,
-  "sourceUpdatedIso": "2026-10-13T19:13:57.133Z",
+  "sourceUpdatedAt": 1791919010596,
+  "sourceUpdatedIso": "2026-10-13T19:16:50.596Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -21040,6 +21040,27 @@
       "letterboxdAddedDate": null,
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1791919010317-zu85",
+      "title": "ライアーゲーム",
+      "originalTitle": "ライアーゲーム",
+      "englishTitle": "Liar Game",
+      "year": 2007,
+      "score": null,
+      "star": 0,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "マフィア、クライム",
+      "mediaType": "tvseries",
+      "genre": "",
+      "origin": "",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     }
   ],
   "state": {
@@ -25370,6 +25391,23 @@
         "added": true,
         "_seq": 1791918832001,
         "tmdbType": "movie"
+      },
+      {
+        "id": "custom-1791919010317-zu85",
+        "title": "ライアーゲーム",
+        "originalTitle": "ライアーゲーム",
+        "englishTitle": "Liar Game",
+        "lbTitle": "Liar Game",
+        "tmdbId": 13967,
+        "year": 2007,
+        "uri": "",
+        "category": "マフィア、クライム",
+        "order": 999999,
+        "star": 0,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791919010317,
+        "tmdbType": "tv"
       }
     ],
     "starOverrides": {
@@ -26089,7 +26127,8 @@
       "custom-1791918807010-n21d": 0,
       "custom-1791918817265-0l6y": 0,
       "custom-1791918827266-rxb1": 0,
-      "custom-1791918832001-xkpy": 0
+      "custom-1791918832001-xkpy": 0,
+      "custom-1791919010317-zu85": 0
     },
     "titleOverrides": {
       "added-anchor-578": {
@@ -29080,7 +29119,8 @@
       "custom-1791918807010-n21d": "tvseries",
       "custom-1791918817265-0l6y": "movie",
       "custom-1791918827266-rxb1": "movie",
-      "custom-1791918832001-xkpy": "movie"
+      "custom-1791918832001-xkpy": "movie",
+      "custom-1791919010317-zu85": "tvseries"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -65082,6 +65122,34 @@
           "creators": [],
           "source": "tmdb",
           "fetchedAt": "2026-10-13T19:13:52.165Z"
+        }
+      },
+      "custom-1791919010317-zu85": {
+        "contentType": "tv_series",
+        "tmdbType": "tv",
+        "poster84": {
+          "path": "/vmT5VZb6AACzIt3s6FcIfARbqfP.jpg",
+          "tmdbId": 13967,
+          "provider": "tmdb",
+          "checkedAt": "2026-10-13T19:16:50.511Z"
+        },
+        "tmdbSeriesId": 13967,
+        "seasonCatalogV1": [
+          {
+            "number": 1,
+            "year": "2007"
+          },
+          {
+            "number": 2,
+            "year": "2009"
+          }
+        ],
+        "seasonCountV1": 2,
+        "crew84": {
+          "directors": [],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-13T19:16:50.555Z"
         }
       }
     }
