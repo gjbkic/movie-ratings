@@ -1142,6 +1142,11 @@ async function choose(box,item){
   setQuery(box,canonical||item.label);
   return;
  }
+ if(item.kind==='remote' && (item.media==='movie'||item.media==='tv') && window.__movie30RemoteAdd){
+  box.input.blur();
+  window.__movie30RemoteAdd.open(item);
+  return;
+ }
  if(item.media==='movie'){
   const local=allFilms().find(f=>{
    const ti=titleInfo(f),rec=catalog[f.id]||{},m=state.letterboxdMeta?.[f.id]||{};
