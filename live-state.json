@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791919090536,
-  "sourceUpdatedIso": "2026-10-13T19:18:10.536Z",
+  "sourceUpdatedAt": 1791919109677,
+  "sourceUpdatedIso": "2026-10-13T19:18:29.677Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -21166,6 +21166,27 @@
       "letterboxdAddedDate": null,
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1791919109416-hxq8",
+      "title": "今際の国のアリス",
+      "originalTitle": "今際の国のアリス",
+      "englishTitle": "Alice in Borderland",
+      "year": 2020,
+      "score": null,
+      "star": 0,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "サスペンス、ミステリー",
+      "mediaType": "tvseries",
+      "genre": "",
+      "origin": "",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     }
   ],
   "state": {
@@ -25598,6 +25619,23 @@
         "added": true,
         "_seq": 1791919090262,
         "tmdbType": "tv"
+      },
+      {
+        "id": "custom-1791919109416-hxq8",
+        "title": "今際の国のアリス",
+        "originalTitle": "今際の国のアリス",
+        "englishTitle": "Alice in Borderland",
+        "lbTitle": "Alice in Borderland",
+        "tmdbId": 110316,
+        "year": 2020,
+        "uri": "",
+        "category": "サスペンス、ミステリー",
+        "order": 999999,
+        "star": 0,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791919109416,
+        "tmdbType": "tv"
       }
     ],
     "starOverrides": {
@@ -26323,7 +26361,8 @@
       "custom-1791919040705-bn6z": 0,
       "custom-1791919051056-56pv": 0,
       "custom-1791919063908-ski9": 0,
-      "custom-1791919090262-czju": 0
+      "custom-1791919090262-czju": 0,
+      "custom-1791919109416-hxq8": 0
     },
     "titleOverrides": {
       "added-anchor-578": {
@@ -29320,7 +29359,8 @@
       "custom-1791919040705-bn6z": "tvseries",
       "custom-1791919051056-56pv": "tvseries",
       "custom-1791919063908-ski9": "tvseries",
-      "custom-1791919090262-czju": "tvseries"
+      "custom-1791919090262-czju": "tvseries",
+      "custom-1791919109416-hxq8": "tvseries"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -65606,6 +65646,38 @@
           "creators": [],
           "source": "tmdb",
           "fetchedAt": "2026-10-13T19:18:10.492Z"
+        }
+      },
+      "custom-1791919109416-hxq8": {
+        "contentType": "tv_series",
+        "tmdbType": "tv",
+        "poster84": {
+          "path": "/i0i7kGDrArtM1sCd8niZDC7iboV.jpg",
+          "tmdbId": 110316,
+          "provider": "tmdb",
+          "checkedAt": "2026-10-13T19:18:29.596Z"
+        },
+        "tmdbSeriesId": 110316,
+        "seasonCatalogV1": [
+          {
+            "number": 1,
+            "year": "2020"
+          },
+          {
+            "number": 2,
+            "year": "2022"
+          },
+          {
+            "number": 3,
+            "year": "2025"
+          }
+        ],
+        "seasonCountV1": 3,
+        "crew84": {
+          "directors": [],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-13T19:18:29.639Z"
         }
       }
     }
