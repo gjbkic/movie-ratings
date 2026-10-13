@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791916893561,
-  "sourceUpdatedIso": "2026-10-13T18:41:33.561Z",
+  "sourceUpdatedAt": 1791916903314,
+  "sourceUpdatedIso": "2026-10-13T18:41:43.314Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -10048,36 +10048,6 @@
       "letterboxdReportedWatchedDate": "2026-09-26"
     },
     {
-      "id": "custom-1791834369925-gy7y",
-      "title": "ブラック・ミラー「ヘンリー湖」",
-      "originalTitle": "Black Mirror: Loch Henry",
-      "englishTitle": "Black Mirror: Loch Henry",
-      "year": 2023,
-      "score": 81,
-      "star": 3,
-      "overallRank": 349,
-      "sameScoreRank": 9,
-      "category": "Letterboxd",
-      "mediaType": "drama",
-      "genre": [
-        "TV本編",
-        "娯楽",
-        "どんでん返し",
-        "胸糞",
-        "ドラマ",
-        "クライム",
-        "サスペンス",
-        "スリラー"
-      ],
-      "origin": "その他",
-      "format": "",
-      "runtime": null,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-13",
-      "letterboxdPublishedAt": "Tue, 13 Oct 2026 08:17:14 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-13"
-    },
-    {
       "id": "custom-1791113241266-l3xb",
       "title": "怒り",
       "originalTitle": "怒り",
@@ -10085,8 +10055,8 @@
       "year": 2016,
       "score": 81,
       "star": 3,
-      "overallRank": 350,
-      "sameScoreRank": 10,
+      "overallRank": 349,
+      "sameScoreRank": 9,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -10114,8 +10084,8 @@
       "year": 2011,
       "score": 81,
       "star": 3,
-      "overallRank": 351,
-      "sameScoreRank": 11,
+      "overallRank": 350,
+      "sameScoreRank": 10,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -10129,6 +10099,36 @@
       "letterboxdAddedDate": "2026-10-07",
       "letterboxdPublishedAt": "Wed, 7 Oct 2026 20:54:32 +1300",
       "letterboxdReportedWatchedDate": "2026-10-07"
+    },
+    {
+      "id": "custom-1791834369925-gy7y",
+      "title": "ブラック・ミラー「ヘンリー湖」",
+      "originalTitle": "Black Mirror: Loch Henry",
+      "englishTitle": "Black Mirror: Loch Henry",
+      "year": 2023,
+      "score": 81,
+      "star": 3,
+      "overallRank": 351,
+      "sameScoreRank": 11,
+      "category": "Letterboxd",
+      "mediaType": "drama",
+      "genre": [
+        "TV本編",
+        "娯楽",
+        "どんでん返し",
+        "胸糞",
+        "ドラマ",
+        "クライム",
+        "サスペンス",
+        "スリラー"
+      ],
+      "origin": "その他",
+      "format": "",
+      "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-13",
+      "letterboxdPublishedAt": "Tue, 13 Oct 2026 08:17:14 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-13"
     },
     {
       "id": "custom-1791823398409-njce",
@@ -21988,9 +21988,9 @@
         "custom-1790322761955-twge",
         "lb-19-2cCk",
         "custom-1790433924185-cva1",
-        "custom-1791834369925-gy7y",
         "custom-1791113241266-l3xb",
         "custom-1791362786595-8onp",
+        "custom-1791834369925-gy7y",
         "custom-1791823398409-njce",
         "custom-1791139748091-0goj",
         "custom-1789408864046-u4p4",
