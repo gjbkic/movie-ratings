@@ -52,6 +52,9 @@ def resolve(f, row):
     # Never trust a previously stored TMDB ID for this particular film.
     if f.get("id") == "lb-459-1Vgm":
         return detail(f, row, "movie", 10840, True)
+    # The 2011 concert has a longer TMDB title than the Letterboxd import.
+    if f.get("id") == "custom-1791664055006-96rv":
+        return detail(f, row, "movie", 57044, True)
     m = f["meta"]
     if m.get("contentType") == "tv_episode" and m.get("tmdbSeriesId") and m.get("seasonNumber") is not None and m.get("episodeNumber") is not None:
         id, season, episode = m["tmdbSeriesId"], m["seasonNumber"], m["episodeNumber"]
