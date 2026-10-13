@@ -1,10 +1,10 @@
 {
-  "at": "2026-10-12T21:21:49.123804+00:00",
+  "at": "2026-10-13T04:07:09.759580+00:00",
   "counts": {
-    "total": 735,
-    "success": 728,
+    "total": 736,
+    "success": 730,
     "empty": 4,
-    "unmatched": 3,
+    "unmatched": 2,
     "api": 0
   },
   "results": [
@@ -5827,10 +5827,10 @@
     {
       "id": "custom-1791664055006-96rv",
       "title": "Utada Hikaru: Wild Life",
-      "status": "unmatched",
-      "reason": "保存ID・邦題・英題・原題・別名・映画/TV・該当シーズンを確認しましたが一意に特定不可",
-      "tmdbId": null,
-      "castCount": 0
+      "status": "success",
+      "reason": "",
+      "tmdbId": 57044,
+      "castCount": 1
     },
     {
       "id": "custom-1791664055469-au2b",
@@ -5887,6 +5887,14 @@
       "reason": "",
       "tmdbId": 42009,
       "castCount": 15
+    },
+    {
+      "id": "custom-1791863527797-qm90",
+      "title": "BOHEMIAN SUMMER ～宇多田ヒカル Circuit Live 2000",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 57043,
+      "castCount": 1
     }
   ]
 }

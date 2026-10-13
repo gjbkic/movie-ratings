@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "updatedAt": "2026-10-12T21:21:49.123804+00:00",
+  "updatedAt": "2026-10-13T04:07:09.759580+00:00",
   "catalogSize": 731,
-  "matchedCount": 735,
+  "matchedCount": 736,
   "newCount": 0,
   "unmatchedCount": 41,
   "films": {
@@ -76925,6 +76925,20 @@
       "contentType": "tv_episode",
       "seasonNumber": 6,
       "episodeNumber": 2
+    },
+    "custom-1791863527797-qm90": {
+      "cast": [
+        {
+          "id": 225448,
+          "name": "宇多田ヒカル",
+          "originalName": "宇多田ヒカル",
+          "role": "Self"
+        }
+      ],
+      "castCheckedAt": "2026-10-13T04:07:09.759526+00:00",
+      "castResolverVersion": 2,
+      "tmdbId": 57043,
+      "type": "movie"
     }
   },
   "unmatched": {
