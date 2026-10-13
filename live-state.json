@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791913658479,
-  "sourceUpdatedIso": "2026-10-13T17:47:38.479Z",
+  "sourceUpdatedAt": 1791913671876,
+  "sourceUpdatedIso": "2026-10-13T17:47:51.876Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -8220,34 +8220,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-46-29Fg",
-      "title": "ホーム・アローン",
-      "originalTitle": "",
-      "englishTitle": "Home Alone",
-      "year": 1990,
-      "score": 83,
-      "star": 3,
-      "overallRank": 285,
-      "sameScoreRank": 42,
-      "category": "コメディ",
-      "mediaType": "movie",
-      "genre": [
-        "コメディ",
-        "娯楽",
-        "comfort",
-        "アクション",
-        "ドラマ",
-        "子供向け"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 102,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-522-1RYu",
       "title": "ハリー・ポッターと死の秘宝 PART1",
       "originalTitle": "",
@@ -8255,8 +8227,8 @@
       "year": 2010,
       "score": 83,
       "star": 3,
-      "overallRank": 286,
-      "sameScoreRank": 43,
+      "overallRank": 285,
+      "sameScoreRank": 42,
       "category": "ハリーポッター シリーズ",
       "mediaType": "movie",
       "genre": [
@@ -8284,8 +8256,8 @@
       "year": 1996,
       "score": 83,
       "star": 3,
-      "overallRank": 287,
-      "sameScoreRank": 44,
+      "overallRank": 286,
+      "sameScoreRank": 43,
       "category": "スリラー、ホラー",
       "mediaType": "movie",
       "genre": [
@@ -8311,8 +8283,8 @@
       "year": 1975,
       "score": 83,
       "star": 3,
-      "overallRank": 288,
-      "sameScoreRank": 45,
+      "overallRank": 287,
+      "sameScoreRank": 44,
       "category": "スリラー、ホラー",
       "mediaType": "movie",
       "genre": [
@@ -8339,8 +8311,8 @@
       "year": 2005,
       "score": 83,
       "star": 3,
-      "overallRank": 289,
-      "sameScoreRank": 46,
+      "overallRank": 288,
+      "sameScoreRank": 45,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -8368,8 +8340,8 @@
       "year": 1998,
       "score": 83,
       "star": 3,
-      "overallRank": 290,
-      "sameScoreRank": 47,
+      "overallRank": 289,
+      "sameScoreRank": 46,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -8390,6 +8362,34 @@
       "runtime": 80,
       "exact": true,
       "letterboxdAddedDate": "2026-09-05",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "lb-46-29Fg",
+      "title": "ホーム・アローン",
+      "originalTitle": "",
+      "englishTitle": "Home Alone",
+      "year": 1990,
+      "score": 83,
+      "star": 3,
+      "overallRank": 290,
+      "sameScoreRank": 47,
+      "category": "コメディ",
+      "mediaType": "movie",
+      "genre": [
+        "コメディ",
+        "娯楽",
+        "comfort",
+        "アクション",
+        "ドラマ",
+        "子供向け"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 102,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -22092,12 +22092,12 @@
         "lb-290-26VK",
         "lb-426-pEeQ",
         "lb-127-28zw",
-        "lb-46-29Fg",
         "lb-522-1RYu",
         "lb-391-24EC",
         "lb-572-2a5e",
         "lb-369-2aVk",
-        "lb-555-2b8o"
+        "lb-555-2b8o",
+        "lb-46-29Fg"
       ],
       "84": [
         "lb-181-2aB0",
