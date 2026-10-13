@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791914265643,
-  "sourceUpdatedIso": "2026-10-13T17:57:45.643Z",
+  "sourceUpdatedAt": 1791915774864,
+  "sourceUpdatedIso": "2026-10-13T18:22:54.864Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -20830,6 +20830,27 @@
       "letterboxdAddedDate": "2026-10-11",
       "letterboxdPublishedAt": "Sun, 11 Oct 2026 06:19:17 +1300",
       "letterboxdReportedWatchedDate": "2026-10-10"
+    },
+    {
+      "id": "custom-1791915774599-jgkn",
+      "title": "半沢直樹",
+      "originalTitle": "半沢直樹",
+      "englishTitle": "Hanzawa Naoki",
+      "year": 2013,
+      "score": null,
+      "star": 0,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "コメディ",
+      "mediaType": "tvseries",
+      "genre": "",
+      "origin": "",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     }
   ],
   "state": {
@@ -24990,6 +25011,23 @@
         "added": true,
         "_seq": 1791913497181,
         "source": "letterboxd"
+      },
+      {
+        "id": "custom-1791915774599-jgkn",
+        "title": "半沢直樹",
+        "originalTitle": "半沢直樹",
+        "englishTitle": "Hanzawa Naoki",
+        "lbTitle": "Hanzawa Naoki",
+        "tmdbId": 55925,
+        "year": 2013,
+        "uri": "",
+        "category": "コメディ",
+        "order": 999999,
+        "star": 0,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791915774599,
+        "tmdbType": "tv"
       }
     ],
     "starOverrides": {
@@ -25699,7 +25737,8 @@
       "custom-1791863527797-qm90": 4.5,
       "custom-1791903545078-e1rc": 2.5,
       "custom-1791913497181-nqp6": 3,
-      "lb-16-70w": 3
+      "lb-16-70w": 3,
+      "custom-1791915774599-jgkn": 0
     },
     "titleOverrides": {
       "added-anchor-578": {
@@ -28680,7 +28719,8 @@
       "custom-1791834369925-gy7y": "drama",
       "custom-1791863527797-qm90": "movie",
       "custom-1791903545078-e1rc": "drama",
-      "custom-1791913497181-nqp6": "drama"
+      "custom-1791913497181-nqp6": "drama",
+      "custom-1791915774599-jgkn": "tvseries"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -63815,6 +63855,36 @@
           "tmdbId": 42009,
           "checkedAt": "2026-10-13T17:45:07.320Z",
           "provider": "tmdb"
+        }
+      },
+      "custom-1791915774599-jgkn": {
+        "contentType": "tv_series",
+        "tmdbType": "tv",
+        "poster84": {
+          "path": "/4Qnk3QvC8gxTWH5uM8thovg1j4Q.jpg",
+          "tmdbId": 55925,
+          "provider": "tmdb",
+          "checkedAt": "2026-10-13T18:22:54.776Z"
+        },
+        "tmdbSeriesId": 55925,
+        "seasonCatalogV1": [
+          {
+            "number": 1,
+            "year": "2013"
+          },
+          {
+            "number": 2,
+            "year": "2020"
+          }
+        ],
+        "seasonCountV1": 2,
+        "crew84": {
+          "directors": [],
+          "creators": [
+            "Jun Ikeido"
+          ],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-13T18:22:54.820Z"
         }
       }
     }
