@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791913702354,
-  "sourceUpdatedIso": "2026-10-13T17:48:22.354Z",
+  "sourceUpdatedAt": 1791913712511,
+  "sourceUpdatedIso": "2026-10-13T17:48:32.511Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -8112,35 +8112,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1791802126132-vr9o",
-      "title": "ブラック・ミラー「ブラック・ミュージアム」",
-      "originalTitle": "",
-      "englishTitle": "Black Mirror: Black Museum",
-      "year": 2017,
-      "score": 83,
-      "star": 3,
-      "overallRank": 281,
-      "sameScoreRank": 38,
-      "category": "Letterboxd",
-      "mediaType": "drama",
-      "genre": [
-        "TV本編",
-        "バイオレンス",
-        "娯楽",
-        "クライム",
-        "ドラマ",
-        "サスペンス",
-        "哲学・思想"
-      ],
-      "origin": "その他",
-      "format": "",
-      "runtime": null,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-12",
-      "letterboxdPublishedAt": "Mon, 12 Oct 2026 19:33:28 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-12"
-    },
-    {
       "id": "lb-290-26VK",
       "title": "フィールド・オブ・ドリームス",
       "originalTitle": "",
@@ -8148,8 +8119,8 @@
       "year": 1989,
       "score": 83,
       "star": 3,
-      "overallRank": 282,
-      "sameScoreRank": 39,
+      "overallRank": 281,
+      "sameScoreRank": 38,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -8173,8 +8144,8 @@
       "year": 2010,
       "score": 83,
       "star": 3,
-      "overallRank": 283,
-      "sameScoreRank": 40,
+      "overallRank": 282,
+      "sameScoreRank": 39,
       "category": "ハリーポッター シリーズ",
       "mediaType": "movie",
       "genre": [
@@ -8202,8 +8173,8 @@
       "year": 1996,
       "score": 83,
       "star": 3,
-      "overallRank": 284,
-      "sameScoreRank": 41,
+      "overallRank": 283,
+      "sameScoreRank": 40,
       "category": "スリラー、ホラー",
       "mediaType": "movie",
       "genre": [
@@ -8229,8 +8200,8 @@
       "year": 1975,
       "score": 83,
       "star": 3,
-      "overallRank": 285,
-      "sameScoreRank": 42,
+      "overallRank": 284,
+      "sameScoreRank": 41,
       "category": "スリラー、ホラー",
       "mediaType": "movie",
       "genre": [
@@ -8248,6 +8219,35 @@
       "letterboxdAddedDate": "2026-09-06",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1791802126132-vr9o",
+      "title": "ブラック・ミラー「ブラック・ミュージアム」",
+      "originalTitle": "",
+      "englishTitle": "Black Mirror: Black Museum",
+      "year": 2017,
+      "score": 83,
+      "star": 3,
+      "overallRank": 285,
+      "sameScoreRank": 42,
+      "category": "Letterboxd",
+      "mediaType": "drama",
+      "genre": [
+        "TV本編",
+        "バイオレンス",
+        "娯楽",
+        "クライム",
+        "ドラマ",
+        "サスペンス",
+        "哲学・思想"
+      ],
+      "origin": "その他",
+      "format": "",
+      "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-12",
+      "letterboxdPublishedAt": "Mon, 12 Oct 2026 19:33:28 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-12"
     },
     {
       "id": "lb-127-28zw",
@@ -22090,11 +22090,11 @@
         "lb-271-29zW",
         "lb-16-70w",
         "lb-26-4O24",
-        "custom-1791802126132-vr9o",
         "lb-290-26VK",
         "lb-522-1RYu",
         "lb-391-24EC",
         "lb-572-2a5e",
+        "custom-1791802126132-vr9o",
         "lb-127-28zw",
         "lb-369-2aVk",
         "lb-46-29Fg"
