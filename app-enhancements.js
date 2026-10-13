@@ -1043,7 +1043,7 @@ function remoteData(data,q){
   const image=kind==='person'?x.profile_path:x.poster_path;
   result.push({
    kind:'remote',media:kind,tmdbId:x.id,label:title,
-   detail:kind==='person'?'人物・別名からの候補':kind==='tv'?'ドラマ・番組':(x.release_date||'').slice(0,4)+' · TMDb',
+   detail:kind==='person'?'人物・別名からの候補':kind==='tv'?[(x.first_air_date||'').slice(0,4),'ドラマ・番組'].filter(Boolean).join(' · '):(x.release_date||'').slice(0,4)+' · TMDb',
    image:validPoster(image)?'https://image.tmdb.org/t/p/w92'+image:'',
    original:x.original_title||x.original_name||'',
   });
@@ -1060,9 +1060,16 @@ function remoteAlreadyLocal(item){
  }
  return allFilms().some(f=>{
    const ti=titleInfo(f),m=state.letterboxdMeta?.[f.id]||{},r=catalog[f.id]||{};
-   if(Number(item.tmdbId)===Number(m.poster84?.tmdbId||ti.tmdbId||r.tmdbId)&&Number(item.tmdbId)>0)return true;
-   const matches=[ti.title,ti.englishTitle,ti.originalTitle,f.lbTitle].some(n=>norm(n)===norm(item.label)||norm(n)===norm(item.original));
-   return matches&&(!item.detail.slice(0,4).match(/^\d{4}$/)||Number(f.year)===Number(item.detail.slice(0,4)));
+   if(item.media==='tv'&&['tv_episode','tv_season'].includes(m.contentType))return false;
+   const kind=String(state.mediaTypeOverrides?.[f.id]||f.mediaType||'').toLowerCase();
+   const tv=['tvseries','drama','series'].includes(kind)||m.contentType==='tv_series'||m.tmdbType==='tv'||f.tmdbType==='tv';
+   if((item.media==='tv')!==tv)return false;
+   const ids=item.media==='tv'?[m.tmdbSeriesId,m.poster84?.tmdbId,ti.tmdbId,r.tmdbId]:[m.poster84?.tmdbId,ti.tmdbId,r.tmdbId];
+   if(Number(item.tmdbId)>0&&ids.some(id=>Number(id)===Number(item.tmdbId)))return true;
+   const year=Number(item.year||String(item.detail||'').slice(0,4))||0;
+   if(!year||Number(f.year)!==year)return false;
+   return [ti.title,ti.englishTitle,ti.originalTitle,f.lbTitle].some(n=>
+    !!norm(n)&&(norm(n)===norm(item.label)||norm(n)===norm(item.original)));
  });
 }
 function hide(box){box.menu.hidden=true;box.entries=[];box.selected=-1;}
