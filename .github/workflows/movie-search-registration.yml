@@ -79,7 +79,7 @@ jobs:
             assert.deepEqual(tvCheck,{found:true,media:'tv',contentType:'tv_series',tmdbSeriesId:995001,seasonCount:2,scored:false});
             console.log('PASS TV: separate media despite same numeric TMDB ID, unscored, season catalog persisted',JSON.stringify(tvCheck));
             await page.locator('#remoteAddSave').click();
-            await page.locator('#movie30RemotePreview[hidden]').waitFor({timeout:8000});
+            await page.locator('#movie30RemotePreview').waitFor({state:'hidden',timeout:8000});
             await page.locator('#movie30SeasonPanel:not([hidden])').waitFor({timeout:8000});
             assert.equal(await page.locator('#movie30SeasonRows input').count(),2);
             console.log('PASS TV detail: 2 independent season rating fields');
