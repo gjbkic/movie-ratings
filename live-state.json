@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791903826843,
-  "sourceUpdatedIso": "2026-10-13T15:03:46.843Z",
+  "sourceUpdatedAt": 1791903832440,
+  "sourceUpdatedIso": "2026-10-13T15:03:52.440Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -12052,34 +12052,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1791469824035-6gcd",
-      "title": "ブラック・ミラー「人生の軌跡のすべて」",
-      "originalTitle": "",
-      "englishTitle": "Black Mirror: The Entire History of You",
-      "year": 2011,
-      "score": 80,
-      "star": 2.5,
-      "overallRank": 420,
-      "sameScoreRank": 22,
-      "category": "Letterboxd",
-      "mediaType": "drama",
-      "genre": [
-        "恋愛",
-        "ドラマ",
-        "サスペンス",
-        "娯楽",
-        "SF",
-        "TV本編"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": null,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-08",
-      "letterboxdPublishedAt": "Thu, 8 Oct 2026 22:31:53 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-08"
-    },
-    {
       "id": "lb-291-dX0",
       "title": "英国王のスピーチ",
       "originalTitle": "",
@@ -12087,8 +12059,8 @@
       "year": 2010,
       "score": 80,
       "star": 2.5,
-      "overallRank": 421,
-      "sameScoreRank": 23,
+      "overallRank": 420,
+      "sameScoreRank": 22,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -12113,8 +12085,8 @@
       "year": 2010,
       "score": 80,
       "star": 2.5,
-      "overallRank": 422,
-      "sameScoreRank": 24,
+      "overallRank": 421,
+      "sameScoreRank": 23,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -12146,8 +12118,8 @@
       "year": 2012,
       "score": 80,
       "star": 2.5,
-      "overallRank": 423,
-      "sameScoreRank": 25,
+      "overallRank": 422,
+      "sameScoreRank": 24,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -12161,6 +12133,34 @@
       "letterboxdAddedDate": "2025-11-07",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1791469824035-6gcd",
+      "title": "ブラック・ミラー「人生の軌跡のすべて」",
+      "originalTitle": "",
+      "englishTitle": "Black Mirror: The Entire History of You",
+      "year": 2011,
+      "score": 80,
+      "star": 2.5,
+      "overallRank": 423,
+      "sameScoreRank": 25,
+      "category": "Letterboxd",
+      "mediaType": "drama",
+      "genre": [
+        "恋愛",
+        "ドラマ",
+        "サスペンス",
+        "娯楽",
+        "SF",
+        "TV本編"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-08",
+      "letterboxdPublishedAt": "Thu, 8 Oct 2026 22:31:53 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-08"
     },
     {
       "id": "custom-1790089712252-cunv",
@@ -21886,10 +21886,10 @@
         "lb-418-2a1w",
         "custom-1790322769206-k4pm",
         "lb-235-8JWk",
-        "custom-1791469824035-6gcd",
         "lb-291-dX0",
         "lb-419-14FI",
         "lb-347-4bW8",
+        "custom-1791469824035-6gcd",
         "custom-1790089712252-cunv",
         "lb-354-aNGk",
         "custom-1790322758188-46qe",
