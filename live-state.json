@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791918817707,
-  "sourceUpdatedIso": "2026-10-13T19:13:37.707Z",
+  "sourceUpdatedAt": 1791918827695,
+  "sourceUpdatedIso": "2026-10-13T19:13:47.695Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -20998,6 +20998,27 @@
       "letterboxdAddedDate": null,
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1791918827266-rxb1",
+      "title": "ガリレオ 禁断の魔術",
+      "originalTitle": "ガリレオ 禁断の魔術",
+      "englishTitle": "Galileo: Forbidden Sorcery",
+      "year": 2022,
+      "score": null,
+      "star": 0,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "サスペンス、ミステリー",
+      "mediaType": "movie",
+      "genre": "",
+      "origin": "",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     }
   ],
   "state": {
@@ -25294,6 +25315,23 @@
         "added": true,
         "_seq": 1791918817265,
         "tmdbType": "movie"
+      },
+      {
+        "id": "custom-1791918827266-rxb1",
+        "title": "ガリレオ 禁断の魔術",
+        "originalTitle": "ガリレオ 禁断の魔術",
+        "englishTitle": "Galileo: Forbidden Sorcery",
+        "lbTitle": "Galileo: Forbidden Sorcery",
+        "tmdbId": 1166741,
+        "year": 2022,
+        "uri": "",
+        "category": "サスペンス、ミステリー",
+        "order": 999999,
+        "star": 0,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791918827266,
+        "tmdbType": "movie"
       }
     ],
     "starOverrides": {
@@ -26011,7 +26049,8 @@
       "custom-1791918777504-yyaq": 0,
       "custom-1791918794008-6b75": 0,
       "custom-1791918807010-n21d": 0,
-      "custom-1791918817265-0l6y": 0
+      "custom-1791918817265-0l6y": 0,
+      "custom-1791918827266-rxb1": 0
     },
     "titleOverrides": {
       "added-anchor-578": {
@@ -29000,7 +29039,8 @@
       "custom-1791918777504-yyaq": "tvseries",
       "custom-1791918794008-6b75": "tvseries",
       "custom-1791918807010-n21d": "tvseries",
-      "custom-1791918817265-0l6y": "movie"
+      "custom-1791918817265-0l6y": "movie",
+      "custom-1791918827266-rxb1": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -64966,6 +65006,24 @@
           "creators": [],
           "source": "tmdb",
           "fetchedAt": "2026-10-13T19:13:37.439Z"
+        }
+      },
+      "custom-1791918827266-rxb1": {
+        "contentType": "movie",
+        "tmdbType": "movie",
+        "poster84": {
+          "path": "/i4bHIyilXcdLWfIzyJ1i1eRra9N.jpg",
+          "tmdbId": 1166741,
+          "provider": "tmdb",
+          "checkedAt": "2026-10-13T19:13:47.394Z"
+        },
+        "crew84": {
+          "directors": [
+            "Toshiyuki Mihashi"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-13T19:13:47.442Z"
         }
       }
     }
