@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791918727129,
-  "sourceUpdatedIso": "2026-10-13T19:12:07.129Z",
+  "sourceUpdatedAt": 1791918752307,
+  "sourceUpdatedIso": "2026-10-13T19:12:32.307Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -20893,6 +20893,27 @@
       "letterboxdAddedDate": null,
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1791918752014-2ngd",
+      "title": "HERO",
+      "originalTitle": "ヒーロー",
+      "englishTitle": "Hero",
+      "year": 2001,
+      "score": null,
+      "star": 0,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "ドラマ",
+      "mediaType": "tvseries",
+      "genre": "",
+      "origin": "",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     }
   ],
   "state": {
@@ -25104,6 +25125,23 @@
         "added": true,
         "_seq": 1791918726645,
         "tmdbType": "tv"
+      },
+      {
+        "id": "custom-1791918752014-2ngd",
+        "title": "HERO",
+        "originalTitle": "ヒーロー",
+        "englishTitle": "Hero",
+        "lbTitle": "Hero",
+        "tmdbId": 1454,
+        "year": 2001,
+        "uri": "",
+        "category": "ドラマ",
+        "order": 999999,
+        "star": 0,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791918752014,
+        "tmdbType": "tv"
       }
     ],
     "starOverrides": {
@@ -25816,7 +25854,8 @@
       "lb-16-70w": 3,
       "custom-1791915774599-jgkn": 0,
       "custom-1791915849111-yhiu": 0,
-      "custom-1791918726645-mxr9": 0
+      "custom-1791918726645-mxr9": 0,
+      "custom-1791918752014-2ngd": 0
     },
     "titleOverrides": {
       "added-anchor-578": {
@@ -28800,7 +28839,8 @@
       "custom-1791913497181-nqp6": "drama",
       "custom-1791915774599-jgkn": "drama",
       "custom-1791915849111-yhiu": "drama",
-      "custom-1791918726645-mxr9": "tvseries"
+      "custom-1791918726645-mxr9": "tvseries",
+      "custom-1791918752014-2ngd": "tvseries"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -64633,6 +64673,34 @@
           ],
           "source": "tmdb",
           "fetchedAt": "2026-10-13T19:12:06.871Z"
+        }
+      },
+      "custom-1791918752014-2ngd": {
+        "contentType": "tv_series",
+        "tmdbType": "tv",
+        "poster84": {
+          "path": "/iYK5j1E7jiLgzIznI1VvdFBU4Xd.jpg",
+          "tmdbId": 1454,
+          "provider": "tmdb",
+          "checkedAt": "2026-10-13T19:12:32.216Z"
+        },
+        "tmdbSeriesId": 1454,
+        "seasonCatalogV1": [
+          {
+            "number": 1,
+            "year": "2001"
+          },
+          {
+            "number": 2,
+            "year": "2014"
+          }
+        ],
+        "seasonCountV1": 2,
+        "crew84": {
+          "directors": [],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-13T19:12:32.265Z"
         }
       }
     }
