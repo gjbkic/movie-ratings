@@ -4,6 +4,7 @@ on:
     paths:
       - .github/workflows/movie-long-drag.yml
       - app-core.js
+      - index.html
   workflow_dispatch:
 jobs:
   mobile:
@@ -55,15 +56,17 @@ jobs:
             const afterHold=await page.evaluate(()=>({scrollY,drag:!!dragCtx,ghost:!!document.querySelector('.movie30-floating-drag'),computed:getComputedStyle(document.documentElement).scrollBehavior}));
             await t('touchEnd',y);
             await page.waitForTimeout(370);
-            const after=await page.evaluate(id=>({scrollY,drag:!!dragCtx,ghost:!!document.querySelector('.movie30-floating-drag'),saved:!!state.rankOrder,active:document.querySelector('.drag-active')!==null,visible:!!document.querySelector('.rank-card[data-id="'+id+'"]')}),point.id);
+            const after=await page.evaluate(id=>({scrollY,drag:!!dragCtx,ghost:!!document.querySelector('.movie30-floating-drag'),saved:!!state.rankOrder,computed:getComputedStyle(document.documentElement).scrollBehavior,active:document.querySelector('.drag-active')!==null,visible:!!document.querySelector('.rank-card[data-id="'+id+'"]')}),point.id);
             const distance=afterHold.scrollY-beforeHold.scrollY;
             console.log('EDGE_HOLD',JSON.stringify({dir,point,beforeHold,afterHold,after,distance,errors:errors.slice(0,6)}));
             assert(beforeHold.drag&&beforeHold.ghost,'touch drag did not start');
+            assert.equal(beforeHold.computed,'auto','scroll behavior should be immediate during drag');
             assert(afterHold.drag&&afterHold.ghost,'touch drag cancelled during hold');
             assert(dir==='down'?distance>260:distance< -260,'Holding at '+dir+' edge did not continuously scroll beyond one screen: '+distance+'px');
             assert.equal(after.drag,false,'drag did not finish');
             assert.equal(after.ghost,false,'floating card remained');
             assert.equal(after.active,false,'dragging style remained');
+            assert.equal(after.computed,'smooth','normal smooth scrolling was not restored');
             assert.equal(errors.length,0,'browser errors');
             await page.close();
            }
