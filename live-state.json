@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791915849363,
-  "sourceUpdatedIso": "2026-10-13T18:24:09.363Z",
+  "sourceUpdatedAt": 1791916685445,
+  "sourceUpdatedIso": "2026-10-13T18:38:05.445Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -20863,9 +20863,9 @@
       "overallRank": null,
       "sameScoreRank": null,
       "category": "コメディ",
-      "mediaType": "tvseries",
+      "mediaType": "drama",
       "genre": "",
-      "origin": "",
+      "origin": "日本",
       "format": "",
       "runtime": null,
       "exact": false,
@@ -28760,7 +28760,7 @@
       "custom-1791903545078-e1rc": "drama",
       "custom-1791913497181-nqp6": "drama",
       "custom-1791915774599-jgkn": "drama",
-      "custom-1791915849111-yhiu": "tvseries"
+      "custom-1791915849111-yhiu": "drama"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -35572,7 +35572,8 @@
       "custom-1791863527797-qm90": "日本",
       "custom-1791903545078-e1rc": "その他",
       "custom-1791913497181-nqp6": "その他",
-      "custom-1791915774599-jgkn": "日本"
+      "custom-1791915774599-jgkn": "日本",
+      "custom-1791915849111-yhiu": "日本"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
