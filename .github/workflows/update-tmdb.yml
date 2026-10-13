@@ -78,6 +78,14 @@ jobs:
               next_rec.pop('castCheckedAt',None)
               next_rec.pop('castResolverVersion',None)
               next_rec['source']='corrected-credits-recheck-required'
+          # Keep the verified Hikaru Utada concert mapping even if an older
+          # scheduled run generated data before the 57044 correction.
+          if id == 'custom-1791664055006-96rv' and int(next_rec.get('tmdbId') or 0) != 57044:
+              next_rec['tmdbId']=57044
+              next_rec['type']='movie'
+              next_rec.pop('cast',None)
+              next_rec.pop('castCheckedAt',None)
+              next_rec.pop('castResolverVersion',None)
           merged[id]=next_rec
           generated['films']=merged
           generated['matchedCount']=len(merged)
