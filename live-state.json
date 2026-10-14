@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791966876594,
-  "sourceUpdatedIso": "2026-10-14T08:34:36.594Z",
+  "sourceUpdatedAt": 1791967029972,
+  "sourceUpdatedIso": "2026-10-14T08:37:09.972Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -593,39 +593,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1791919172943-3ibi",
-      "title": "ブレイキング・バッド",
-      "originalTitle": "Breaking Bad",
-      "englishTitle": "Breaking Bad",
-      "year": 2008,
-      "score": 95,
-      "star": 4.5,
-      "overallRank": 21,
-      "sameScoreRank": 3,
-      "category": "マフィア、クライム",
-      "mediaType": "drama",
-      "genre": [
-        "クライム",
-        "TV本編",
-        "サスペンス",
-        "ドラマ",
-        "娯楽",
-        "心理・内面",
-        "切ない",
-        "コメディ",
-        "青春・若者",
-        "社会問題・生活",
-        "大作"
-      ],
-      "origin": "ハリウッド",
-      "format": "",
-      "runtime": null,
-      "exact": true,
-      "letterboxdAddedDate": null,
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-83-2b8S",
       "title": "レオン",
       "originalTitle": "",
@@ -633,8 +600,8 @@
       "year": 1994,
       "score": 95,
       "star": 4.5,
-      "overallRank": 22,
-      "sameScoreRank": 4,
+      "overallRank": 21,
+      "sameScoreRank": 3,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -661,8 +628,8 @@
       "year": 2008,
       "score": 95,
       "star": 4.5,
-      "overallRank": 23,
-      "sameScoreRank": 5,
+      "overallRank": 22,
+      "sameScoreRank": 4,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -693,8 +660,8 @@
       "year": 1952,
       "score": 95,
       "star": 4.5,
-      "overallRank": 24,
-      "sameScoreRank": 6,
+      "overallRank": 23,
+      "sameScoreRank": 5,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -720,7 +687,7 @@
       "year": 1982,
       "score": 94,
       "star": 4.5,
-      "overallRank": 25,
+      "overallRank": 24,
       "sameScoreRank": 1,
       "category": "SF",
       "mediaType": "movie",
@@ -742,6 +709,39 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "custom-1791919172943-3ibi",
+      "title": "ブレイキング・バッド",
+      "originalTitle": "Breaking Bad",
+      "englishTitle": "Breaking Bad",
+      "year": 2008,
+      "score": 94,
+      "star": 4.5,
+      "overallRank": 25,
+      "sameScoreRank": 2,
+      "category": "マフィア、クライム",
+      "mediaType": "drama",
+      "genre": [
+        "クライム",
+        "TV本編",
+        "サスペンス",
+        "ドラマ",
+        "娯楽",
+        "心理・内面",
+        "切ない",
+        "コメディ",
+        "青春・若者",
+        "社会問題・生活",
+        "大作"
+      ],
+      "origin": "ハリウッド",
+      "format": "",
+      "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-349-2aGY",
       "title": "ターミネーター2",
       "originalTitle": "",
@@ -750,7 +750,7 @@
       "score": 94,
       "star": 4.5,
       "overallRank": 26,
-      "sameScoreRank": 2,
+      "sameScoreRank": 3,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -781,7 +781,7 @@
       "score": 94,
       "star": 4.5,
       "overallRank": 27,
-      "sameScoreRank": 3,
+      "sameScoreRank": 4,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -810,7 +810,7 @@
       "score": 94,
       "star": 4.5,
       "overallRank": 28,
-      "sameScoreRank": 4,
+      "sameScoreRank": 5,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -836,7 +836,7 @@
       "score": 94,
       "star": 4.5,
       "overallRank": 29,
-      "sameScoreRank": 5,
+      "sameScoreRank": 6,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -864,7 +864,7 @@
       "score": 94,
       "star": 4.5,
       "overallRank": 30,
-      "sameScoreRank": 6,
+      "sameScoreRank": 7,
       "category": "スパイダーマン作品",
       "mediaType": "movie",
       "genre": [
@@ -891,7 +891,7 @@
       "score": 94,
       "star": 4.5,
       "overallRank": 31,
-      "sameScoreRank": 7,
+      "sameScoreRank": 8,
       "category": "Letterboxd追加",
       "mediaType": "drama",
       "genre": [
@@ -925,7 +925,7 @@
       "score": 94,
       "star": 4.5,
       "overallRank": 32,
-      "sameScoreRank": 8,
+      "sameScoreRank": 9,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -948,7 +948,7 @@
       "score": 94,
       "star": 4.5,
       "overallRank": 33,
-      "sameScoreRank": 9,
+      "sameScoreRank": 10,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -980,7 +980,7 @@
       "score": 94,
       "star": 4.5,
       "overallRank": 34,
-      "sameScoreRank": 10,
+      "sameScoreRank": 11,
       "category": "戦争、歴史",
       "mediaType": "movie",
       "genre": [
@@ -1010,7 +1010,7 @@
       "score": 94,
       "star": 4.5,
       "overallRank": 35,
-      "sameScoreRank": 11,
+      "sameScoreRank": 12,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
       "genre": [
@@ -22139,7 +22139,7 @@
       "lb-16-70w": 83,
       "custom-1791921346893-dshj": 81,
       "custom-1791915774599-jgkn": 89,
-      "custom-1791919172943-3ibi": 95,
+      "custom-1791919172943-3ibi": 94,
       "custom-1791919109416-hxq8": 86,
       "custom-1791915849111-yhiu": 91,
       "lb-137-2a1c": 94,
@@ -22943,6 +22943,7 @@
       ],
       "94": [
         "lb-488-294O",
+        "custom-1791919172943-3ibi",
         "lb-349-2aGY",
         "custom-1790420198451-g42l",
         "lb-97-2a7u",
@@ -22957,7 +22958,6 @@
       "95": [
         "lb-322-2aeA",
         "lb-334-1Tp2",
-        "custom-1791919172943-3ibi",
         "lb-83-2b8S",
         "lb-171-2b0k",
         "lb-396-251c"
