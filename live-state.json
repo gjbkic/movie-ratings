@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791967568179,
-  "sourceUpdatedIso": "2026-10-14T08:46:08.179Z",
+  "sourceUpdatedAt": 1791967586548,
+  "sourceUpdatedIso": "2026-10-14T08:46:26.548Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -21302,7 +21302,14 @@
       "sameScoreRank": null,
       "category": "ドラマ",
       "mediaType": "drama",
-      "genre": "",
+      "genre": [
+        "恋愛",
+        "TV本編",
+        "ドラマ",
+        "心理・内面",
+        "社会問題・生活",
+        "娯楽"
+      ],
       "origin": "日本",
       "format": "",
       "runtime": null,
@@ -35945,6 +35952,14 @@
         "サスペンス",
         "娯楽",
         "どんでん返し"
+      ],
+      "custom-1791919024950-k1ok": [
+        "恋愛",
+        "TV本編",
+        "ドラマ",
+        "心理・内面",
+        "社会問題・生活",
+        "娯楽"
       ]
     },
     "originOverrides": {
