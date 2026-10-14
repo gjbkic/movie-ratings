@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791967044502,
-  "sourceUpdatedIso": "2026-10-14T08:37:24.502Z",
+  "sourceUpdatedAt": 1791967052380,
+  "sourceUpdatedIso": "2026-10-14T08:37:32.380Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -1142,32 +1142,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-332-28MA",
-      "title": "ディパーテッド",
-      "originalTitle": "",
-      "englishTitle": "The Departed",
-      "year": 2006,
-      "score": 93,
-      "star": 4.5,
-      "overallRank": 40,
-      "sameScoreRank": 6,
-      "category": "マフィア、クライム",
-      "mediaType": "movie",
-      "genre": [
-        "クライム",
-        "ドラマ",
-        "胸糞",
-        "サスペンス"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 151,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "custom-1791966715148-h5tp",
       "title": "HUNTER×HUNTER",
       "originalTitle": "HUNTER×HUNTER",
@@ -1175,8 +1149,8 @@
       "year": 2011,
       "score": 93,
       "star": 4.5,
-      "overallRank": 41,
-      "sameScoreRank": 7,
+      "overallRank": 40,
+      "sameScoreRank": 6,
       "category": "ほかアニメ",
       "mediaType": "tvseries",
       "genre": [
@@ -1207,8 +1181,8 @@
       "year": 2008,
       "score": 93,
       "star": 4.5,
-      "overallRank": 42,
-      "sameScoreRank": 8,
+      "overallRank": 41,
+      "sameScoreRank": 7,
       "category": "マフィア、クライム",
       "mediaType": "drama",
       "genre": [
@@ -1229,6 +1203,32 @@
       "runtime": null,
       "exact": true,
       "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "lb-332-28MA",
+      "title": "ディパーテッド",
+      "originalTitle": "",
+      "englishTitle": "The Departed",
+      "year": 2006,
+      "score": 93,
+      "star": 4.5,
+      "overallRank": 42,
+      "sameScoreRank": 8,
+      "category": "マフィア、クライム",
+      "mediaType": "movie",
+      "genre": [
+        "クライム",
+        "ドラマ",
+        "胸糞",
+        "サスペンス"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 151,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -22930,9 +22930,9 @@
         "lb-323-1VEo",
         "lb-333-2b4m",
         "lb-2-2a9q",
-        "lb-332-28MA",
         "custom-1791966715148-h5tp",
         "custom-1791919172943-3ibi",
+        "lb-332-28MA",
         "custom-1791664054514-pksv",
         "lb-86-cUqs",
         "lb-24-2aHi",
