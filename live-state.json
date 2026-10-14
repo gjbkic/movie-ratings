@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791973272373,
-  "sourceUpdatedIso": "2026-10-14T10:21:12.373Z",
+  "sourceUpdatedAt": 1791973292881,
+  "sourceUpdatedIso": "2026-10-14T10:21:32.881Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -3937,6 +3937,36 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "custom-1791919010317-zu85",
+      "title": "ライアーゲーム",
+      "originalTitle": "ライアーゲーム",
+      "englishTitle": "Liar Game",
+      "year": 2007,
+      "score": 86,
+      "star": 3.5,
+      "overallRank": 136,
+      "sameScoreRank": 9,
+      "category": "マフィア、クライム",
+      "mediaType": "drama",
+      "genre": [
+        "サスペンス",
+        "TV本編",
+        "ドラマ",
+        "コメディ",
+        "世界観",
+        "娯楽",
+        "どんでん返し",
+        "comfort"
+      ],
+      "origin": "日本",
+      "format": "",
+      "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "custom-1791919109416-hxq8",
       "title": "今際の国のアリス",
       "originalTitle": "今際の国のアリス",
@@ -3944,8 +3974,8 @@
       "year": 2020,
       "score": 86,
       "star": 3.5,
-      "overallRank": 136,
-      "sameScoreRank": 9,
+      "overallRank": 137,
+      "sameScoreRank": 10,
       "category": "サスペンス、ミステリー",
       "mediaType": "drama",
       "genre": [
@@ -3978,8 +4008,8 @@
       "year": 2007,
       "score": 86,
       "star": 3.5,
-      "overallRank": 137,
-      "sameScoreRank": 10,
+      "overallRank": 138,
+      "sameScoreRank": 11,
       "category": "Letterboxd",
       "mediaType": "other",
       "genre": [
@@ -4004,8 +4034,8 @@
       "year": 2003,
       "score": 86,
       "star": 3.5,
-      "overallRank": 138,
-      "sameScoreRank": 11,
+      "overallRank": 139,
+      "sameScoreRank": 12,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -4022,35 +4052,6 @@
       "runtime": 116,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "custom-1791919010317-zu85",
-      "title": "ライアーゲーム",
-      "originalTitle": "ライアーゲーム",
-      "englishTitle": "Liar Game",
-      "year": 2007,
-      "score": 86,
-      "star": 3.5,
-      "overallRank": 139,
-      "sameScoreRank": 12,
-      "category": "マフィア、クライム",
-      "mediaType": "drama",
-      "genre": [
-        "サスペンス",
-        "TV本編",
-        "ドラマ",
-        "コメディ",
-        "世界観",
-        "娯楽",
-        "どんでん返し"
-      ],
-      "origin": "日本",
-      "format": "",
-      "runtime": null,
-      "exact": true,
-      "letterboxdAddedDate": null,
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -22888,10 +22889,10 @@
         "lb-552-m8Ie",
         "lb-542-2b6C",
         "lb-368-2as8",
+        "custom-1791919010317-zu85",
         "custom-1791919109416-hxq8",
         "custom-1789385860426-8e86",
         "lb-279-215a",
-        "custom-1791919010317-zu85",
         "custom-1791139747386-vy04",
         "lb-382-20TI",
         "added-anchor-579",
@@ -35916,7 +35917,8 @@
         "コメディ",
         "世界観",
         "娯楽",
-        "どんでん返し"
+        "どんでん返し",
+        "comfort"
       ],
       "custom-1791921346893-dshj": [
         "TV本編",
