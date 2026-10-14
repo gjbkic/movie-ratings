@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791966672005,
-  "sourceUpdatedIso": "2026-10-14T08:31:12.005Z",
+  "sourceUpdatedAt": 1791966715341,
+  "sourceUpdatedIso": "2026-10-14T08:31:55.341Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -21384,8 +21384,31 @@
         "哲学・思想",
         "社会問題・生活",
         "戦争",
-        "ファンタジー"
+        "ファンタジー",
+        "娯楽",
+        "大作"
       ],
+      "origin": "",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1791966715148-h5tp",
+      "title": "HUNTER×HUNTER",
+      "originalTitle": "HUNTER×HUNTER",
+      "englishTitle": "Hunter x Hunter",
+      "year": 2011,
+      "score": null,
+      "star": 0,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "ほかアニメ",
+      "mediaType": "tvseries",
+      "genre": "",
       "origin": "",
       "format": "",
       "runtime": null,
@@ -25957,6 +25980,23 @@
         "added": true,
         "_seq": 1791966534875,
         "tmdbType": "tv"
+      },
+      {
+        "id": "custom-1791966715148-h5tp",
+        "title": "HUNTER×HUNTER",
+        "originalTitle": "HUNTER×HUNTER",
+        "englishTitle": "Hunter x Hunter",
+        "lbTitle": "Hunter x Hunter",
+        "tmdbId": 46298,
+        "year": 2011,
+        "uri": "",
+        "category": "ほかアニメ",
+        "order": 999999,
+        "star": 0,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791966715148,
+        "tmdbType": "tv"
       }
     ],
     "starOverrides": {
@@ -26690,7 +26730,8 @@
       "custom-1791919192064-3kb8": 0,
       "custom-1791921346893-dshj": 3,
       "lb-137-2a1c": 4.5,
-      "custom-1791966534875-2yiz": 4
+      "custom-1791966534875-2yiz": 4,
+      "custom-1791966715148-h5tp": 0
     },
     "titleOverrides": {
       "added-anchor-578": {
@@ -29694,7 +29735,8 @@
       "custom-1791919172943-3ibi": "drama",
       "custom-1791919192064-3kb8": "drama",
       "custom-1791921346893-dshj": "drama",
-      "custom-1791966534875-2yiz": "tvseries"
+      "custom-1791966534875-2yiz": "tvseries",
+      "custom-1791966715148-h5tp": "tvseries"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -35850,7 +35892,9 @@
         "哲学・思想",
         "社会問題・生活",
         "戦争",
-        "ファンタジー"
+        "ファンタジー",
+        "娯楽",
+        "大作"
       ]
     },
     "originOverrides": {
@@ -66411,6 +66455,38 @@
           "creators": [],
           "source": "tmdb",
           "fetchedAt": "2026-10-14T08:28:55.036Z"
+        }
+      },
+      "custom-1791966715148-h5tp": {
+        "contentType": "tv_series",
+        "tmdbType": "tv",
+        "poster84": {
+          "path": "/9WxfAQquTun9ATkV6iAeFHMkqxv.jpg",
+          "tmdbId": 46298,
+          "provider": "tmdb",
+          "checkedAt": "2026-10-14T08:31:55.283Z"
+        },
+        "tmdbSeriesId": 46298,
+        "seasonCatalogV1": [
+          {
+            "number": 1,
+            "year": "2011"
+          },
+          {
+            "number": 2,
+            "year": "2012"
+          },
+          {
+            "number": 3,
+            "year": "2014"
+          }
+        ],
+        "seasonCountV1": 3,
+        "crew84": {
+          "directors": [],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-14T08:31:55.309Z"
         }
       }
     }
