@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791965860958,
-  "sourceUpdatedIso": "2026-10-14T08:17:40.958Z",
+  "sourceUpdatedAt": 1791965873728,
+  "sourceUpdatedIso": "2026-10-14T08:17:53.728Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -686,6 +686,35 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "custom-1791915849111-yhiu",
+      "title": "リーガル・ハイ",
+      "originalTitle": "リーガル・ハイ",
+      "englishTitle": "Legal High",
+      "year": 2012,
+      "score": 95,
+      "star": 4.5,
+      "overallRank": 24,
+      "sameScoreRank": 6,
+      "category": "コメディ",
+      "mediaType": "drama",
+      "genre": [
+        "TV本編",
+        "サスペンス",
+        "コメディ",
+        "ドラマ",
+        "恋愛",
+        "娯楽",
+        "comfort"
+      ],
+      "origin": "日本",
+      "format": "",
+      "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-396-251c",
       "title": "生きる",
       "originalTitle": "",
@@ -693,8 +722,8 @@
       "year": 1952,
       "score": 95,
       "star": 4.5,
-      "overallRank": 24,
-      "sameScoreRank": 6,
+      "overallRank": 25,
+      "sameScoreRank": 7,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -720,7 +749,7 @@
       "year": 1982,
       "score": 94,
       "star": 4.5,
-      "overallRank": 25,
+      "overallRank": 26,
       "sameScoreRank": 1,
       "category": "SF",
       "mediaType": "movie",
@@ -749,7 +778,7 @@
       "year": 1991,
       "score": 94,
       "star": 4.5,
-      "overallRank": 26,
+      "overallRank": 27,
       "sameScoreRank": 2,
       "category": "アクション",
       "mediaType": "movie",
@@ -780,7 +809,7 @@
       "year": 2019,
       "score": 94,
       "star": 4.5,
-      "overallRank": 27,
+      "overallRank": 28,
       "sameScoreRank": 3,
       "category": "戦争、歴史",
       "mediaType": "movie",
@@ -810,7 +839,7 @@
       "year": 1980,
       "score": 94,
       "star": 4.5,
-      "overallRank": 28,
+      "overallRank": 29,
       "sameScoreRank": 4,
       "category": "Letterboxd",
       "mediaType": "movie",
@@ -832,35 +861,6 @@
       "letterboxdReportedWatchedDate": "2026-09-26"
     },
     {
-      "id": "custom-1791915849111-yhiu",
-      "title": "リーガル・ハイ",
-      "originalTitle": "リーガル・ハイ",
-      "englishTitle": "Legal High",
-      "year": 2012,
-      "score": 94,
-      "star": 4.5,
-      "overallRank": 29,
-      "sameScoreRank": 5,
-      "category": "コメディ",
-      "mediaType": "drama",
-      "genre": [
-        "TV本編",
-        "サスペンス",
-        "コメディ",
-        "ドラマ",
-        "恋愛",
-        "娯楽",
-        "comfort"
-      ],
-      "origin": "日本",
-      "format": "",
-      "runtime": null,
-      "exact": true,
-      "letterboxdAddedDate": null,
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-97-2a7u",
       "title": "ダイ・ハード",
       "originalTitle": "",
@@ -869,7 +869,7 @@
       "score": 94,
       "star": 4.5,
       "overallRank": 30,
-      "sameScoreRank": 6,
+      "sameScoreRank": 5,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -895,7 +895,7 @@
       "score": 94,
       "star": 4.5,
       "overallRank": 31,
-      "sameScoreRank": 7,
+      "sameScoreRank": 6,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -923,7 +923,7 @@
       "score": 94,
       "star": 4.5,
       "overallRank": 32,
-      "sameScoreRank": 8,
+      "sameScoreRank": 7,
       "category": "スパイダーマン作品",
       "mediaType": "movie",
       "genre": [
@@ -950,7 +950,7 @@
       "score": 94,
       "star": 4.5,
       "overallRank": 33,
-      "sameScoreRank": 9,
+      "sameScoreRank": 8,
       "category": "Letterboxd追加",
       "mediaType": "drama",
       "genre": [
@@ -984,7 +984,7 @@
       "score": 94,
       "star": 4.5,
       "overallRank": 34,
-      "sameScoreRank": 10,
+      "sameScoreRank": 9,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -1007,7 +1007,7 @@
       "score": 94,
       "star": 4.5,
       "overallRank": 35,
-      "sameScoreRank": 11,
+      "sameScoreRank": 10,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -1039,7 +1039,7 @@
       "score": 94,
       "star": 4.5,
       "overallRank": 36,
-      "sameScoreRank": 12,
+      "sameScoreRank": 11,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
       "genre": [
@@ -22072,7 +22072,7 @@
       "custom-1791915774599-jgkn": 91,
       "custom-1791919172943-3ibi": 95,
       "custom-1791919109416-hxq8": 86,
-      "custom-1791915849111-yhiu": 94,
+      "custom-1791915849111-yhiu": 95,
       "lb-137-2a1c": 94
     },
     "rankOrder": {
@@ -22870,7 +22870,6 @@
         "lb-349-2aGY",
         "lb-549-iEBG",
         "custom-1790420198451-g42l",
-        "custom-1791915849111-yhiu",
         "lb-97-2a7u",
         "lb-137-2a1c",
         "lb-10-kSz4",
@@ -22885,6 +22884,7 @@
         "lb-83-2b8S",
         "lb-171-2b0k",
         "custom-1791919172943-3ibi",
+        "custom-1791915849111-yhiu",
         "lb-396-251c"
       ],
       "96": [
