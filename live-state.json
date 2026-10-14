@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791965834059,
-  "sourceUpdatedIso": "2026-10-14T08:17:14.059Z",
+  "sourceUpdatedAt": 1791965843066,
+  "sourceUpdatedIso": "2026-10-14T08:17:23.066Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -715,43 +715,15 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-137-2a1c",
-      "title": "マトリックス リローデッド",
-      "originalTitle": "",
-      "englishTitle": "The Matrix Reloaded",
-      "year": 2003,
-      "score": 95,
-      "star": 4.5,
-      "overallRank": 25,
-      "sameScoreRank": 7,
-      "category": "SF",
-      "mediaType": "movie",
-      "genre": [
-        "SF",
-        "アクション",
-        "哲学・思想",
-        "世界観",
-        "娯楽",
-        "雰囲気・美学"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 138,
-      "exact": false,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-396-251c",
       "title": "生きる",
       "originalTitle": "",
       "englishTitle": "Ikiru",
       "year": 1952,
-      "score": 94,
+      "score": 95,
       "star": 4.5,
-      "overallRank": 26,
-      "sameScoreRank": 1,
+      "overallRank": 25,
+      "sameScoreRank": 7,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -777,8 +749,8 @@
       "year": 1982,
       "score": 94,
       "star": 4.5,
-      "overallRank": 27,
-      "sameScoreRank": 2,
+      "overallRank": 26,
+      "sameScoreRank": 1,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -806,8 +778,8 @@
       "year": 1991,
       "score": 94,
       "star": 4.5,
-      "overallRank": 28,
-      "sameScoreRank": 3,
+      "overallRank": 27,
+      "sameScoreRank": 2,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -824,6 +796,34 @@
       "origin": "ハリウッド",
       "format": "live",
       "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "lb-137-2a1c",
+      "title": "マトリックス リローデッド",
+      "originalTitle": "",
+      "englishTitle": "The Matrix Reloaded",
+      "year": 2003,
+      "score": 94,
+      "star": 4.5,
+      "overallRank": 28,
+      "sameScoreRank": 3,
+      "category": "SF",
+      "mediaType": "movie",
+      "genre": [
+        "SF",
+        "アクション",
+        "哲学・思想",
+        "世界観",
+        "娯楽",
+        "雰囲気・美学"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 138,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
@@ -21387,7 +21387,7 @@
       "lb-83-2b8S": 95,
       "lb-334-1Tp2": 95,
       "lb-571-28qk": 93,
-      "lb-396-251c": 94,
+      "lb-396-251c": 95,
       "lb-488-294O": 94,
       "lb-112-1W4G": 94,
       "lb-463-4Xuw": 91,
@@ -22072,7 +22072,8 @@
       "custom-1791915774599-jgkn": 91,
       "custom-1791919172943-3ibi": 95,
       "custom-1791919109416-hxq8": 86,
-      "custom-1791915849111-yhiu": 95
+      "custom-1791915849111-yhiu": 95,
+      "lb-137-2a1c": 94
     },
     "rankOrder": {
       "40": [
@@ -22865,9 +22866,9 @@
         "lb-556-2b9m"
       ],
       "94": [
-        "lb-396-251c",
         "lb-488-294O",
         "lb-349-2aGY",
+        "lb-137-2a1c",
         "lb-549-iEBG",
         "lb-97-2a7u",
         "custom-1790420198451-g42l",
@@ -22884,7 +22885,7 @@
         "lb-171-2b0k",
         "custom-1791915849111-yhiu",
         "custom-1791919172943-3ibi",
-        "lb-137-2a1c"
+        "lb-396-251c"
       ],
       "96": [
         "lb-81-2aqc",
@@ -26633,7 +26634,8 @@
       "custom-1791919156207-vna6": 2.5,
       "custom-1791919172943-3ibi": 4.5,
       "custom-1791919192064-3kb8": 0,
-      "custom-1791921346893-dshj": 3
+      "custom-1791921346893-dshj": 3,
+      "lb-137-2a1c": 4.5
     },
     "titleOverrides": {
       "added-anchor-578": {
