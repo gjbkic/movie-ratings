@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791967509388,
-  "sourceUpdatedIso": "2026-10-14T08:45:09.388Z",
+  "sourceUpdatedAt": 1791967547212,
+  "sourceUpdatedIso": "2026-10-14T08:45:47.212Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -65970,6 +65970,10 @@
           "creators": [],
           "source": "tmdb",
           "fetchedAt": "2026-10-13T19:16:50.555Z"
+        },
+        "seasonScoresV1": {
+          "1": 87,
+          "2": 85
         }
       },
       "custom-1791919024950-k1ok": {
