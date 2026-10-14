@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791973964609,
-  "sourceUpdatedIso": "2026-10-14T10:32:44.609Z",
+  "sourceUpdatedAt": 1791973996427,
+  "sourceUpdatedIso": "2026-10-14T10:33:16.427Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -21501,6 +21501,27 @@
       "letterboxdAddedDate": null,
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1791973996242-1our",
+      "title": "ゼロ 一獲千金ゲーム",
+      "originalTitle": "ゼロ 一獲千金ゲーム",
+      "englishTitle": "ZERO -The Bravest Money Game-",
+      "year": 2018,
+      "score": null,
+      "star": 0,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "ドラマ",
+      "mediaType": "tvseries",
+      "genre": "",
+      "origin": "",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     }
   ],
   "state": {
@@ -26108,6 +26129,23 @@
         "added": true,
         "_seq": 1791966715148,
         "tmdbType": "tv"
+      },
+      {
+        "id": "custom-1791973996242-1our",
+        "title": "ゼロ 一獲千金ゲーム",
+        "originalTitle": "ゼロ 一獲千金ゲーム",
+        "englishTitle": "ZERO -The Bravest Money Game-",
+        "lbTitle": "ZERO -The Bravest Money Game-",
+        "tmdbId": 81176,
+        "year": 2018,
+        "uri": "",
+        "category": "ドラマ",
+        "order": 999999,
+        "star": 0,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791973996242,
+        "tmdbType": "tv"
       }
     ],
     "starOverrides": {
@@ -26842,7 +26880,8 @@
       "custom-1791921346893-dshj": 3,
       "lb-137-2a1c": 4.5,
       "custom-1791966534875-2yiz": 4,
-      "custom-1791966715148-h5tp": 4.5
+      "custom-1791966715148-h5tp": 4.5,
+      "custom-1791973996242-1our": 0
     },
     "titleOverrides": {
       "added-anchor-578": {
@@ -29847,7 +29886,8 @@
       "custom-1791919192064-3kb8": "drama",
       "custom-1791921346893-dshj": "drama",
       "custom-1791966534875-2yiz": "tvseries",
-      "custom-1791966715148-h5tp": "tvseries"
+      "custom-1791966715148-h5tp": "tvseries",
+      "custom-1791973996242-1our": "tvseries"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -66778,6 +66818,32 @@
         "note": "1番好きな漫画。世界観が本当に好き。念という能力システムは本当に完成されてるし素晴らしい。ヨークシン編も好きだが、グリードアイランドのrpgのワクワク感とキメラアント編の特に後半の素晴らしいバトルとドラマは本当に全フィクション屈指だと思う。アニメは絵がめっちゃ好きという訳では無いのでこの点数だが、漫画のダークなとこの書き方など含めたら本当に大好き。",
         "noteSource": "manual",
         "noteEditedAt": "2026-10-14T10:11:47.213Z"
+      },
+      "custom-1791973996242-1our": {
+        "contentType": "tv_series",
+        "tmdbType": "tv",
+        "poster84": {
+          "path": "/yV9bpjaqijQn2jHNHNq0VxmyDUp.jpg",
+          "tmdbId": 81176,
+          "provider": "tmdb",
+          "checkedAt": "2026-10-14T10:33:16.379Z"
+        },
+        "tmdbSeriesId": 81176,
+        "seasonCatalogV1": [
+          {
+            "number": 1,
+            "year": "2018"
+          }
+        ],
+        "seasonCountV1": 1,
+        "crew84": {
+          "directors": [],
+          "creators": [
+            "Nobuyuki Fukumoto"
+          ],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-14T10:33:16.405Z"
+        }
       }
     }
   }
