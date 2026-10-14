@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791967842798,
-  "sourceUpdatedIso": "2026-10-14T08:50:42.798Z",
+  "sourceUpdatedAt": 1791967848099,
+  "sourceUpdatedIso": "2026-10-14T08:50:48.099Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -10801,33 +10801,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-109-28wi",
-      "title": "ナイト ミュージアム",
-      "originalTitle": "",
-      "englishTitle": "Night at the Museum",
-      "year": 2006,
-      "score": 81,
-      "star": 3,
-      "overallRank": 375,
-      "sameScoreRank": 26,
-      "category": "ファンタジー、アドベンチャー",
-      "mediaType": "movie",
-      "genre": [
-        "ファンタジー",
-        "アドベンチャー",
-        "comfort",
-        "娯楽",
-        "コメディ"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 108,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "custom-1790322760608-2vle",
       "title": "あなたの番です",
       "originalTitle": "あなたの番です",
@@ -10835,8 +10808,8 @@
       "year": 2019,
       "score": 81,
       "star": 3,
-      "overallRank": 376,
-      "sameScoreRank": 27,
+      "overallRank": 375,
+      "sameScoreRank": 26,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -10857,6 +10830,33 @@
       "letterboxdAddedDate": "2026-09-25",
       "letterboxdPublishedAt": "Fri, 25 Sep 2026 06:36:04 +1200",
       "letterboxdReportedWatchedDate": "2026-09-24"
+    },
+    {
+      "id": "lb-109-28wi",
+      "title": "ナイト ミュージアム",
+      "originalTitle": "",
+      "englishTitle": "Night at the Museum",
+      "year": 2006,
+      "score": 81,
+      "star": 3,
+      "overallRank": 376,
+      "sameScoreRank": 27,
+      "category": "ファンタジー、アドベンチャー",
+      "mediaType": "movie",
+      "genre": [
+        "ファンタジー",
+        "アドベンチャー",
+        "comfort",
+        "娯楽",
+        "コメディ"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 108,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "custom-1791918807010-n21d",
@@ -22607,8 +22607,8 @@
         "lb-93-2au4",
         "lb-570-3C1m",
         "lb-183-x1OG",
-        "lb-109-28wi",
         "custom-1790322760608-2vle",
+        "lb-109-28wi",
         "custom-1791918807010-n21d",
         "lb-246-mqyw",
         "lb-424-2cBQ",
