@@ -70,8 +70,8 @@ test('sync/save: duplicate add form hidden; top button still opens TMDB/manual a
   await page.locator('[data-page=data]').click();
   assert.equal(await page.locator('[data-page=data]').textContent(),'同期・保存');
   assert.equal(await page.locator('#newTitle').isVisible(),false);
-  assert.equal(await page.locator('#movie30DataAdd').isVisible(),true);
-  await page.locator('#movie30DataAdd').click();
+  // Only the persistent global ＋作品 opens the add sheet.
+  await page.locator('#quickAdd').click();
   assert.equal(await page.locator('#addSheetBg').evaluate(el=>el.classList.contains('open')),true);
  }finally{await context.close()}
 });
@@ -94,6 +94,8 @@ test('sync/save: both sync status panels and JSON backup stay visible, advanced 
   const backup=page.locator('#movie30-data-backup-advanced');
   await backup.locator('summary').click();
   assert.equal(await page.locator('#downloadCsv').isVisible(),true);
+  assert.equal(await page.locator('#resetAll').isVisible(),false);
+  await page.locator('#movie30-data-reset-danger>summary').click();
   assert.equal(await page.locator('#resetAll').isVisible(),true);
  }finally{await context.close()}
 });
