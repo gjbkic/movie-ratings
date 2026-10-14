@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791973996427,
-  "sourceUpdatedIso": "2026-10-14T10:33:16.427Z",
+  "sourceUpdatedAt": 1791986099769,
+  "sourceUpdatedIso": "2026-10-14T13:54:59.769Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -1185,7 +1185,7 @@
       "overallRank": 41,
       "sameScoreRank": 7,
       "category": "ほかアニメ",
-      "mediaType": "tvseries",
+      "mediaType": "drama",
       "genre": [
         "TV本編",
         "アクション",
@@ -1836,7 +1836,7 @@
       "overallRank": 64,
       "sameScoreRank": 4,
       "category": "ほかアニメ",
-      "mediaType": "tvseries",
+      "mediaType": "drama",
       "genre": [
         "ドラマ",
         "TV本編",
@@ -1854,7 +1854,7 @@
         "娯楽",
         "大作"
       ],
-      "origin": "",
+      "origin": "日本",
       "format": "",
       "runtime": null,
       "exact": true,
@@ -21513,9 +21513,9 @@
       "overallRank": null,
       "sameScoreRank": null,
       "category": "ドラマ",
-      "mediaType": "tvseries",
+      "mediaType": "drama",
       "genre": "",
-      "origin": "",
+      "origin": "日本",
       "format": "",
       "runtime": null,
       "exact": false,
@@ -29885,9 +29885,9 @@
       "custom-1791919172943-3ibi": "drama",
       "custom-1791919192064-3kb8": "drama",
       "custom-1791921346893-dshj": "drama",
-      "custom-1791966534875-2yiz": "tvseries",
-      "custom-1791966715148-h5tp": "tvseries",
-      "custom-1791973996242-1our": "tvseries"
+      "custom-1791966534875-2yiz": "drama",
+      "custom-1791966715148-h5tp": "drama",
+      "custom-1791973996242-1our": "drama"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -36907,7 +36907,9 @@
       "custom-1791919172943-3ibi": "ハリウッド",
       "custom-1791919192064-3kb8": "日本",
       "custom-1791921346893-dshj": "その他",
-      "custom-1791966715148-h5tp": "日本"
+      "custom-1791966715148-h5tp": "日本",
+      "custom-1791966534875-2yiz": "日本",
+      "custom-1791973996242-1our": "日本"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -46925,9 +46927,7 @@
           "fetchedAt": "2026-10-13T04:07:09.759580+00:00"
         },
         "poster84": {
-          "path": "/jHSBVaU2K0tPLYtTMg07nGTHGOW.jpg",
           "tmdbId": 237439,
-          "checkedAt": "2026-10-14T08:41:11.132Z",
           "provider": "tmdb"
         }
       },
