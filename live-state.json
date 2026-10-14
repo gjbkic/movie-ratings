@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791966873796,
-  "sourceUpdatedIso": "2026-10-14T08:34:33.796Z",
+  "sourceUpdatedAt": 1791966876594,
+  "sourceUpdatedIso": "2026-10-14T08:34:36.594Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -1888,35 +1888,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1791915849111-yhiu",
-      "title": "リーガル・ハイ",
-      "originalTitle": "リーガル・ハイ",
-      "englishTitle": "Legal High",
-      "year": 2012,
-      "score": 91,
-      "star": 4,
-      "overallRank": 66,
-      "sameScoreRank": 6,
-      "category": "コメディ",
-      "mediaType": "drama",
-      "genre": [
-        "TV本編",
-        "サスペンス",
-        "コメディ",
-        "ドラマ",
-        "恋愛",
-        "娯楽",
-        "comfort"
-      ],
-      "origin": "日本",
-      "format": "",
-      "runtime": null,
-      "exact": true,
-      "letterboxdAddedDate": null,
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-461-1JAY",
       "title": "魔女の宅急便",
       "originalTitle": "",
@@ -1924,8 +1895,8 @@
       "year": 1989,
       "score": 91,
       "star": 4,
-      "overallRank": 67,
-      "sameScoreRank": 7,
+      "overallRank": 66,
+      "sameScoreRank": 6,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
       "genre": [
@@ -1943,6 +1914,35 @@
       "runtime": 112,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1791915849111-yhiu",
+      "title": "リーガル・ハイ",
+      "originalTitle": "リーガル・ハイ",
+      "englishTitle": "Legal High",
+      "year": 2012,
+      "score": 91,
+      "star": 4,
+      "overallRank": 67,
+      "sameScoreRank": 7,
+      "category": "コメディ",
+      "mediaType": "drama",
+      "genre": [
+        "TV本編",
+        "サスペンス",
+        "コメディ",
+        "ドラマ",
+        "恋愛",
+        "娯楽",
+        "comfort"
+      ],
+      "origin": "日本",
+      "format": "",
+      "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": null,
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -22904,8 +22904,8 @@
         "custom-1790254612541-iyij",
         "custom-1791966534875-2yiz",
         "lb-559-abBm",
-        "custom-1791915849111-yhiu",
         "lb-461-1JAY",
+        "custom-1791915849111-yhiu",
         "lb-558-1pDe",
         "lb-49-27US",
         "lb-463-4Xuw",
