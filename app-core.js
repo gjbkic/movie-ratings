@@ -56,17 +56,18 @@ async function movie30Record(id){
  const db=await openMovie30Db();if(!db)return null;
  return new Promise(resolve=>{try{const tx=db.transaction('snapshots','readonly'),r=tx.objectStore('snapshots').get(id);r.onsuccess=()=>resolve(r.result||null);r.onerror=tx.onabort=()=>resolve(null)}catch(_){resolve(null)}});
 }
+function movie30UnsavedJson(){const copy=deepCopy(state);delete copy.storageIntegrity;return JSON.stringify(copy)}
 function movie30ConflictNotice(entries,durable){
  let el=document.getElementById('movie30-tab-conflict');
  if(!el){el=document.createElement('div');el.id='movie30-tab-conflict';el.setAttribute('role','alert');el.style.cssText='position:sticky;top:0;z-index:501;padding:12px;background:#502b17;color:white';document.body.prepend(el)}
  el.textContent=durable?'別タブとの競合データを退避しました。自動統合せず保護しています。JSONを保存し、内容を確認してください。':'別タブとの競合を検出しました。退避保存できません。アプリを閉じず、今すぐ両候補のJSONを保存してください。';
  const button=document.createElement('button');button.textContent='競合した両候補をJSON保存';
- button.onclick=()=>{const candidates=[...entries,{source:'current-tab',json:JSON.stringify(state)}];const url=URL.createObjectURL(new Blob([JSON.stringify({type:'movie30-conflict-backup',candidates},null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='films-tab-conflict-'+Date.now()+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),2000)};el.append(button);
+ button.onclick=()=>{const candidates=[...entries,{source:'current-tab',json:movie30UnsavedJson()}];const url=URL.createObjectURL(new Blob([JSON.stringify({type:'movie30-conflict-backup',candidates},null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='films-tab-conflict-'+Date.now()+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),2000)};el.append(button);
 }
 async function movie30ShowArchivedConflicts(){const record=await movie30Record('multitab-conflicts');if(record?.entries?.length)movie30ConflictNotice(record.entries,true)}
 async function movie30Conflict(disk,reason){
  window.__movie30TabConflict=true;window.__movie30SaveFailed=true;
- const entries=[{source:'local-tab',json:JSON.stringify(state)},{source:'localStorage',json:disk?.local},{source:'indexedDB',json:disk?.db}].filter(x=>x.json);
+ const entries=[{source:'local-tab',json:movie30UnsavedJson()},{source:'localStorage',json:disk?.local},{source:'indexedDB',json:disk?.db}].filter(x=>x.json);
  let durable=false;const db=await openMovie30Db();
  if(db)durable=await new Promise(resolve=>{try{
   const tx=db.transaction('snapshots','readwrite'),store=tx.objectStore('snapshots'),r=store.get('multitab-conflicts');

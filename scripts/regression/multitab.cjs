@@ -90,6 +90,8 @@ test('MULTITAB: conflict archive failure leaves both stores untouched and offers
   const stream=await download.createReadStream();let text='';for await(const chunk of stream)text+=chunk;
   const backup=JSON.parse(text);assert(backup.candidates.some(e=>JSON.parse(e.json).letterboxdMeta['fixture-0012'].note==='uncommitted A'));
   assert(backup.candidates.some(e=>JSON.parse(e.json).genreOverrides['fixture-0013']?.includes('SF')));
+  // Unsaved edits must not retain an old checksum that makes their export unimportable.
+  for(const entry of backup.candidates)assert.equal(await a.evaluate(json=>!!movie30Candidate(json,'export test'),entry.json),true);
  }finally{await context.close()}
 });
 test('MULTITAB: signed truncation is not proof of a legitimate edit',async()=>{
