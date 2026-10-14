@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791965809649,
-  "sourceUpdatedIso": "2026-10-14T08:16:49.649Z",
+  "sourceUpdatedAt": 1791965834059,
+  "sourceUpdatedIso": "2026-10-14T08:17:14.059Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -563,39 +563,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1791919172943-3ibi",
-      "title": "ブレイキング・バッド",
-      "originalTitle": "Breaking Bad",
-      "englishTitle": "Breaking Bad",
-      "year": 2008,
-      "score": 95,
-      "star": 4.5,
-      "overallRank": 20,
-      "sameScoreRank": 2,
-      "category": "マフィア、クライム",
-      "mediaType": "drama",
-      "genre": [
-        "クライム",
-        "TV本編",
-        "サスペンス",
-        "ドラマ",
-        "娯楽",
-        "心理・内面",
-        "切ない",
-        "コメディ",
-        "青春・若者",
-        "社会問題・生活",
-        "大作"
-      ],
-      "origin": "ハリウッド",
-      "format": "",
-      "runtime": null,
-      "exact": true,
-      "letterboxdAddedDate": null,
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-334-1Tp2",
       "title": "紅の豚",
       "originalTitle": "",
@@ -603,8 +570,8 @@
       "year": 1992,
       "score": 95,
       "star": 4.5,
-      "overallRank": 21,
-      "sameScoreRank": 3,
+      "overallRank": 20,
+      "sameScoreRank": 2,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
       "genre": [
@@ -633,8 +600,8 @@
       "year": 1994,
       "score": 95,
       "star": 4.5,
-      "overallRank": 22,
-      "sameScoreRank": 4,
+      "overallRank": 21,
+      "sameScoreRank": 3,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -661,8 +628,8 @@
       "year": 2008,
       "score": 95,
       "star": 4.5,
-      "overallRank": 23,
-      "sameScoreRank": 5,
+      "overallRank": 22,
+      "sameScoreRank": 4,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -693,8 +660,8 @@
       "year": 2012,
       "score": 95,
       "star": 4.5,
-      "overallRank": 24,
-      "sameScoreRank": 6,
+      "overallRank": 23,
+      "sameScoreRank": 5,
       "category": "コメディ",
       "mediaType": "drama",
       "genre": [
@@ -707,6 +674,39 @@
         "comfort"
       ],
       "origin": "日本",
+      "format": "",
+      "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1791919172943-3ibi",
+      "title": "ブレイキング・バッド",
+      "originalTitle": "Breaking Bad",
+      "englishTitle": "Breaking Bad",
+      "year": 2008,
+      "score": 95,
+      "star": 4.5,
+      "overallRank": 24,
+      "sameScoreRank": 6,
+      "category": "マフィア、クライム",
+      "mediaType": "drama",
+      "genre": [
+        "クライム",
+        "TV本編",
+        "サスペンス",
+        "ドラマ",
+        "娯楽",
+        "心理・内面",
+        "切ない",
+        "コメディ",
+        "青春・若者",
+        "社会問題・生活",
+        "大作"
+      ],
+      "origin": "ハリウッド",
       "format": "",
       "runtime": null,
       "exact": true,
@@ -22879,11 +22879,11 @@
       ],
       "95": [
         "lb-322-2aeA",
-        "custom-1791919172943-3ibi",
         "lb-334-1Tp2",
         "lb-83-2b8S",
         "lb-171-2b0k",
         "custom-1791915849111-yhiu",
+        "custom-1791919172943-3ibi",
         "lb-137-2a1c"
       ],
       "96": [
