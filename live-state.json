@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791973877901,
-  "sourceUpdatedIso": "2026-10-14T10:31:17.901Z",
+  "sourceUpdatedAt": 1791973894770,
+  "sourceUpdatedIso": "2026-10-14T10:31:34.770Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -13349,7 +13349,13 @@
       "sameScoreRank": 14,
       "category": "ドラマ",
       "mediaType": "drama",
-      "genre": "",
+      "genre": [
+        "ミステリー",
+        "TV本編",
+        "ドラマ",
+        "恋愛",
+        "娯楽"
+      ],
       "origin": "日本",
       "format": "",
       "runtime": null,
@@ -36089,6 +36095,13 @@
         "サスペンス",
         "娯楽",
         "アクション"
+      ],
+      "custom-1791918752014-2ngd": [
+        "ミステリー",
+        "TV本編",
+        "ドラマ",
+        "恋愛",
+        "娯楽"
       ]
     },
     "originOverrides": {
