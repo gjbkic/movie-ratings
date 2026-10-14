@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791965946397,
-  "sourceUpdatedIso": "2026-10-14T08:19:06.397Z",
+  "sourceUpdatedAt": 1791965954300,
+  "sourceUpdatedIso": "2026-10-14T08:19:14.300Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -857,36 +857,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-549-iEBG",
-      "title": "ジョジョ・ラビット",
-      "originalTitle": "",
-      "englishTitle": "Jojo Rabbit",
-      "year": 2019,
-      "score": 94,
-      "star": 4.5,
-      "overallRank": 30,
-      "sameScoreRank": 6,
-      "category": "戦争、歴史",
-      "mediaType": "movie",
-      "genre": [
-        "戦争",
-        "歴史",
-        "ファンタジー",
-        "差別・人権",
-        "感動",
-        "comfort",
-        "心理・内面",
-        "コメディ"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 108,
-      "exact": true,
-      "letterboxdAddedDate": "2026-09-04",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-137-2a1c",
       "title": "マトリックス リローデッド",
       "originalTitle": "",
@@ -894,8 +864,8 @@
       "year": 2003,
       "score": 94,
       "star": 4.5,
-      "overallRank": 31,
-      "sameScoreRank": 7,
+      "overallRank": 30,
+      "sameScoreRank": 6,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -922,8 +892,8 @@
       "year": 2023,
       "score": 94,
       "star": 4.5,
-      "overallRank": 32,
-      "sameScoreRank": 8,
+      "overallRank": 31,
+      "sameScoreRank": 7,
       "category": "スパイダーマン作品",
       "mediaType": "movie",
       "genre": [
@@ -949,8 +919,8 @@
       "year": 1995,
       "score": 94,
       "star": 4.5,
-      "overallRank": 33,
-      "sameScoreRank": 9,
+      "overallRank": 32,
+      "sameScoreRank": 8,
       "category": "Letterboxd追加",
       "mediaType": "drama",
       "genre": [
@@ -983,8 +953,8 @@
       "year": 2000,
       "score": 94,
       "star": 4.5,
-      "overallRank": 34,
-      "sameScoreRank": 10,
+      "overallRank": 33,
+      "sameScoreRank": 9,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -1006,8 +976,8 @@
       "year": 2023,
       "score": 94,
       "star": 4.5,
-      "overallRank": 35,
-      "sameScoreRank": 11,
+      "overallRank": 34,
+      "sameScoreRank": 10,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -1029,6 +999,36 @@
       "letterboxdAddedDate": "2026-09-27",
       "letterboxdPublishedAt": "Sun, 27 Sep 2026 22:28:02 +1300",
       "letterboxdReportedWatchedDate": "2026-09-27"
+    },
+    {
+      "id": "lb-549-iEBG",
+      "title": "ジョジョ・ラビット",
+      "originalTitle": "",
+      "englishTitle": "Jojo Rabbit",
+      "year": 2019,
+      "score": 94,
+      "star": 4.5,
+      "overallRank": 35,
+      "sameScoreRank": 11,
+      "category": "戦争、歴史",
+      "mediaType": "movie",
+      "genre": [
+        "戦争",
+        "歴史",
+        "ファンタジー",
+        "差別・人権",
+        "感動",
+        "comfort",
+        "心理・内面",
+        "コメディ"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 108,
+      "exact": true,
+      "letterboxdAddedDate": "2026-09-04",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "lb-112-1W4G",
@@ -22871,12 +22871,12 @@
         "custom-1790420198451-g42l",
         "lb-97-2a7u",
         "custom-1791915849111-yhiu",
-        "lb-549-iEBG",
         "lb-137-2a1c",
         "lb-10-kSz4",
         "lb-467-ptEI",
         "custom-1791863527797-qm90",
         "custom-1790508958519-2edt",
+        "lb-549-iEBG",
         "lb-112-1W4G"
       ],
       "95": [
