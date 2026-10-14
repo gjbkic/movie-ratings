@@ -82,6 +82,12 @@ test('sync/save: both sync status panels and JSON backup stay visible, advanced 
   for(const id of ['lbStatus','gptSyncStatus','downloadJson','importFile']){
     assert.equal(await page.locator('#'+id).count(),1,'missing '+id);
   }
+  // Empty status elements can legitimately have zero height. Simulate the
+  // completed-sync messages the user needs to be able to check later.
+  await page.evaluate(()=>{
+    document.getElementById('lbStatus').textContent='同期完了 · 取り込み済み';
+    document.getElementById('gptSyncStatus').textContent='設定済み · 最終同期 22:00';
+  });
   assert.equal(await page.locator('#lbStatus').isVisible(),true);
   assert.equal(await page.locator('#gptSyncStatus').isVisible(),true);
   assert.equal(await page.locator('#downloadJson').isVisible(),true);
