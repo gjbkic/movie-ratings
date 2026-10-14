@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791966721745,
-  "sourceUpdatedIso": "2026-10-14T08:32:01.745Z",
+  "sourceUpdatedAt": 1791966731932,
+  "sourceUpdatedIso": "2026-10-14T08:32:11.932Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -21409,7 +21409,11 @@
       "category": "ほかアニメ",
       "mediaType": "tvseries",
       "genre": [
-        "TV本編"
+        "TV本編",
+        "アクション",
+        "アドベンチャー",
+        "ファンタジー",
+        "ドラマ"
       ],
       "origin": "日本",
       "format": "",
@@ -35899,7 +35903,11 @@
         "大作"
       ],
       "custom-1791966715148-h5tp": [
-        "TV本編"
+        "TV本編",
+        "アクション",
+        "アドベンチャー",
+        "ファンタジー",
+        "ドラマ"
       ]
     },
     "originOverrides": {
