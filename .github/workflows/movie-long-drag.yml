@@ -1,76 +1,10 @@
 name: Movie long-distance drag auto-scroll
 on:
-  push:
-    paths:
-      - .github/workflows/movie-long-drag.yml
-      - app-core.js
-      - index.html
   workflow_dispatch:
+permissions:
+  contents: read
 jobs:
-  mobile:
-    runs-on: ubuntu-latest
-    timeout-minutes: 7
-    steps:
-      - uses: actions/checkout@v4
-      - name: Hold dragged film at screen edges and validate continuous scrolling
-        shell: bash
-        run: |
-          set -e
-          npm install --no-save --no-package-lock playwright-core@1.56.1 >/dev/null 2>&1
-          python3 -m http.server 8783 >/tmp/movie-draglong-http.log 2>&1 &
-          node <<'NODE'
-          const {chromium}=require('playwright-core'),fs=require('fs'),assert=require('node:assert/strict');
-          (async()=>{
-           const browser=await chromium.launch({executablePath:'/usr/bin/google-chrome',headless:true,args:['--no-sandbox']});
-           for(const dir of ['down','up']){
-            const page=await browser.newPage({viewport:{width:390,height:844},isMobile:true,hasTouch:true});
-            const saved=JSON.parse(fs.readFileSync('live-state.json','utf8'));
-            await page.addInitScript(s=>localStorage.setItem('movie30_data_v1',JSON.stringify({...s,updatedAt:Date.now()})),saved.state);
-            const errors=[];page.on('pageerror',e=>errors.push(String(e)));
-            await page.goto('http://localhost:8783/index.html',{waitUntil:'domcontentloaded'});
-            await page.waitForSelector('html.movie30-ready',{timeout:30000});
-            await page.evaluate(dir=>{
-             const cards=[...document.querySelectorAll('#rankRoot .rank-card[data-id]')].filter(e=>!!e.querySelector('.drag-handle:not([disabled])'));
-             const item=cards[dir==='down'?3:80];
-             if(!item)throw Error('Cannot find draggable card');
-             document.documentElement.style.setProperty('scroll-behavior','auto','important');
-             item.scrollIntoView({behavior:'instant',block:'center'});
-             document.documentElement.style.removeProperty('scroll-behavior');
-            },dir);
-            await page.waitForTimeout(400);
-            const point=await page.evaluate(dir=>{
-             const cards=[...document.querySelectorAll('#rankRoot .rank-card[data-id]')].filter(e=>!!e.querySelector('.drag-handle:not([disabled])'));
-             const item=cards[dir==='down'?3:80];
-             if(!item)throw Error('Cannot find visible draggable card');
-             const h=item.querySelector('.drag-handle').getBoundingClientRect();
-             return {id:item.dataset.id,x:h.left+h.width/2,y:h.top+h.height/2,scrollY:scrollY,height:innerHeight,computed:getComputedStyle(document.documentElement).scrollBehavior};
-            },dir);
-            const cdp=await page.context().newCDPSession(page);
-            const y=dir==='down'?point.height-22:Math.min(190,point.height*.24);
-            const t=(type,py)=>cdp.send('Input.dispatchTouchEvent',{type,touchPoints:type==='touchEnd'?[]:[{id:2,x:point.x,y:py,radiusX:5,radiusY:5}]});
-            await t('touchStart',point.y);
-            await page.waitForTimeout(130);
-            for(let step=1;step<=7;step++){await t('touchMove',point.y+(y-point.y)*step/7);await page.waitForTimeout(35);}
-            const beforeHold=await page.evaluate(()=>({scrollY,drag:!!dragCtx,ghost:!!document.querySelector('.movie30-floating-drag'),computed:getComputedStyle(document.documentElement).scrollBehavior}));
-            await page.waitForTimeout(1300);
-            const afterHold=await page.evaluate(()=>({scrollY,drag:!!dragCtx,ghost:!!document.querySelector('.movie30-floating-drag'),computed:getComputedStyle(document.documentElement).scrollBehavior}));
-            await t('touchEnd',y);
-            await page.waitForTimeout(370);
-            const after=await page.evaluate(id=>({scrollY,drag:!!dragCtx,ghost:!!document.querySelector('.movie30-floating-drag'),saved:!!state.rankOrder,computed:getComputedStyle(document.documentElement).scrollBehavior,active:document.querySelector('.drag-active')!==null,visible:!!document.querySelector('.rank-card[data-id="'+id+'"]')}),point.id);
-            const distance=afterHold.scrollY-beforeHold.scrollY;
-            console.log('EDGE_HOLD',JSON.stringify({dir,point,beforeHold,afterHold,after,distance,errors:errors.slice(0,6)}));
-            assert(beforeHold.drag&&beforeHold.ghost,'touch drag did not start');
-            assert.equal(beforeHold.computed,'auto','scroll behavior should be immediate during drag');
-            assert(afterHold.drag&&afterHold.ghost,'touch drag cancelled during hold');
-            assert(dir==='down'?distance>260:distance< -260,'Holding at '+dir+' edge did not continuously scroll beyond one screen: '+distance+'px');
-            assert.equal(after.drag,false,'drag did not finish');
-            assert.equal(after.ghost,false,'floating card remained');
-            assert.equal(after.active,false,'dragging style remained');
-            assert.equal(after.computed,'smooth','normal smooth scrolling was not restored');
-            assert.equal(errors.length,0,'browser errors');
-            await page.close();
-           }
-           await browser.close();
-           console.log('LONG_DISTANCE_DRAG_PASS');
-          })().catch(e=>{console.error('LONG_DISTANCE_DRAG_FAILED',e.stack||e);process.exit(1)});
-          NODE
+  regression:
+    uses: ./.github/workflows/movie-regression.yml
+    with:
+      suite: long-drag

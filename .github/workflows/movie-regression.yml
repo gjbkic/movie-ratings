@@ -1,0 +1,61 @@
+name: Movie regression foundation (isolated fixtures)
+on:
+  pull_request:
+    paths:
+      - 'app-*.js'
+      - 'index.html'
+      - 'scripts/**'
+      - '.github/workflows/**'
+  push:
+    branches: [main, 'codex/phase1-*']
+    paths:
+      - 'app-*.js'
+      - 'index.html'
+      - 'scripts/**'
+      - '.github/workflows/**'
+  workflow_dispatch:
+  workflow_call:
+    inputs:
+      suite:
+        type: string
+        default: all
+permissions:
+  contents: read
+concurrency:
+  group: regression-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  chromium:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install pinned test runner and browser
+        run: |
+          npm install --no-save --no-package-lock playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Check JavaScript syntax
+        shell: bash
+        run: |
+          set -euo pipefail
+          for file in app-*.js scripts/regression/*.cjs; do node --check "$file"; done
+      - name: Run isolated compatibility and safety tests
+        env:
+          REGRESSION_SUITE: ${{ inputs.suite || 'all' }}
+        run: node scripts/regression/run.cjs "$REGRESSION_SUITE"
+      - name: Assert production code and data stayed unchanged
+        if: always()
+        run: git diff --exit-code
+      - name: Upload synthetic test summaries
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: regression-summaries
+          path: test-results/*.json
+          if-no-files-found: warn
+          retention-days: 14
