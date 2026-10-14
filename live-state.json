@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791948954067,
-  "sourceUpdatedIso": "2026-10-14T03:35:54.067Z",
+  "sourceUpdatedAt": 1791948960612,
+  "sourceUpdatedIso": "2026-10-14T03:36:00.612Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -1726,6 +1726,32 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "custom-1791915774599-jgkn",
+      "title": "半沢直樹",
+      "originalTitle": "半沢直樹",
+      "englishTitle": "Hanzawa Naoki",
+      "year": 2013,
+      "score": 91,
+      "star": 4,
+      "overallRank": 61,
+      "sameScoreRank": 3,
+      "category": "コメディ",
+      "mediaType": "drama",
+      "genre": [
+        "ドラマ",
+        "TV本編",
+        "娯楽",
+        "コメディ"
+      ],
+      "origin": "日本",
+      "format": "",
+      "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-559-abBm",
       "title": "海街diary",
       "originalTitle": "",
@@ -1733,8 +1759,8 @@
       "year": 2015,
       "score": 91,
       "star": 4,
-      "overallRank": 61,
-      "sameScoreRank": 3,
+      "overallRank": 62,
+      "sameScoreRank": 4,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -1759,8 +1785,8 @@
       "year": 1989,
       "score": 91,
       "star": 4,
-      "overallRank": 62,
-      "sameScoreRank": 4,
+      "overallRank": 63,
+      "sameScoreRank": 5,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
       "genre": [
@@ -1778,32 +1804,6 @@
       "runtime": 112,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "custom-1791915774599-jgkn",
-      "title": "半沢直樹",
-      "originalTitle": "半沢直樹",
-      "englishTitle": "Hanzawa Naoki",
-      "year": 2013,
-      "score": 91,
-      "star": 4,
-      "overallRank": 63,
-      "sameScoreRank": 5,
-      "category": "コメディ",
-      "mediaType": "drama",
-      "genre": [
-        "ドラマ",
-        "TV本編",
-        "娯楽",
-        "コメディ"
-      ],
-      "origin": "日本",
-      "format": "",
-      "runtime": null,
-      "exact": true,
-      "letterboxdAddedDate": null,
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -22780,9 +22780,9 @@
       "91": [
         "lb-493-28No",
         "added-anchor-578",
+        "custom-1791915774599-jgkn",
         "lb-559-abBm",
         "lb-461-1JAY",
-        "custom-1791915774599-jgkn",
         "lb-558-1pDe",
         "custom-1790960881562-cn74",
         "lb-463-4Xuw",
