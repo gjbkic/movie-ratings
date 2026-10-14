@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791966048502,
-  "sourceUpdatedIso": "2026-10-14T08:20:48.502Z",
+  "sourceUpdatedAt": 1791966055571,
+  "sourceUpdatedIso": "2026-10-14T08:20:55.571Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -2659,32 +2659,6 @@
       "letterboxdReportedWatchedDate": "2026-10-03"
     },
     {
-      "id": "custom-1791915774599-jgkn",
-      "title": "半沢直樹",
-      "originalTitle": "半沢直樹",
-      "englishTitle": "Hanzawa Naoki",
-      "year": 2013,
-      "score": 89,
-      "star": 4,
-      "overallRank": 93,
-      "sameScoreRank": 10,
-      "category": "コメディ",
-      "mediaType": "drama",
-      "genre": [
-        "ドラマ",
-        "TV本編",
-        "娯楽",
-        "コメディ"
-      ],
-      "origin": "日本",
-      "format": "",
-      "runtime": null,
-      "exact": true,
-      "letterboxdAddedDate": null,
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "custom-1791036345616-3tph",
       "title": "恐怖の報酬",
       "originalTitle": "Le Salaire de la peur",
@@ -2692,8 +2666,8 @@
       "year": 1953,
       "score": 89,
       "star": 4,
-      "overallRank": 94,
-      "sameScoreRank": 11,
+      "overallRank": 93,
+      "sameScoreRank": 10,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -2713,6 +2687,32 @@
       "letterboxdAddedDate": "2026-10-03",
       "letterboxdPublishedAt": "Sun, 4 Oct 2026 02:07:33 +1300",
       "letterboxdReportedWatchedDate": "2026-10-03"
+    },
+    {
+      "id": "custom-1791915774599-jgkn",
+      "title": "半沢直樹",
+      "originalTitle": "半沢直樹",
+      "englishTitle": "Hanzawa Naoki",
+      "year": 2013,
+      "score": 89,
+      "star": 4,
+      "overallRank": 94,
+      "sameScoreRank": 11,
+      "category": "コメディ",
+      "mediaType": "drama",
+      "genre": [
+        "ドラマ",
+        "TV本編",
+        "娯楽",
+        "コメディ"
+      ],
+      "origin": "日本",
+      "format": "",
+      "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "lb-100-aZes",
@@ -22801,8 +22801,8 @@
         "custom-1791057232858-35ld",
         "lb-154-1Mn4",
         "custom-1791023391963-vdu9",
-        "custom-1791915774599-jgkn",
         "custom-1791036345616-3tph",
+        "custom-1791915774599-jgkn",
         "lb-100-aZes",
         "lb-6-29Pq",
         "lb-185-HTIi",
