@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791966107097,
-  "sourceUpdatedIso": "2026-10-14T08:21:47.097Z",
+  "sourceUpdatedAt": 1791966122935,
+  "sourceUpdatedIso": "2026-10-14T08:22:02.935Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -1759,6 +1759,35 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "custom-1791915849111-yhiu",
+      "title": "リーガル・ハイ",
+      "originalTitle": "リーガル・ハイ",
+      "englishTitle": "Legal High",
+      "year": 2012,
+      "score": 91,
+      "star": 4,
+      "overallRank": 62,
+      "sameScoreRank": 3,
+      "category": "コメディ",
+      "mediaType": "drama",
+      "genre": [
+        "TV本編",
+        "サスペンス",
+        "コメディ",
+        "ドラマ",
+        "恋愛",
+        "娯楽",
+        "comfort"
+      ],
+      "origin": "日本",
+      "format": "",
+      "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-559-abBm",
       "title": "海街diary",
       "originalTitle": "",
@@ -1766,8 +1795,8 @@
       "year": 2015,
       "score": 91,
       "star": 4,
-      "overallRank": 62,
-      "sameScoreRank": 3,
+      "overallRank": 63,
+      "sameScoreRank": 4,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -1792,8 +1821,8 @@
       "year": 1989,
       "score": 91,
       "star": 4,
-      "overallRank": 63,
-      "sameScoreRank": 4,
+      "overallRank": 64,
+      "sameScoreRank": 5,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
       "genre": [
@@ -1822,8 +1851,8 @@
       "year": 2008,
       "score": 91,
       "star": 4,
-      "overallRank": 64,
-      "sameScoreRank": 5,
+      "overallRank": 65,
+      "sameScoreRank": 6,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -1845,35 +1874,6 @@
       "runtime": 237,
       "exact": true,
       "letterboxdAddedDate": "2026-09-05",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "custom-1791915849111-yhiu",
-      "title": "リーガル・ハイ",
-      "originalTitle": "リーガル・ハイ",
-      "englishTitle": "Legal High",
-      "year": 2012,
-      "score": 91,
-      "star": 4,
-      "overallRank": 65,
-      "sameScoreRank": 6,
-      "category": "コメディ",
-      "mediaType": "drama",
-      "genre": [
-        "TV本編",
-        "サスペンス",
-        "コメディ",
-        "ドラマ",
-        "恋愛",
-        "娯楽",
-        "comfort"
-      ],
-      "origin": "日本",
-      "format": "",
-      "runtime": null,
-      "exact": true,
-      "letterboxdAddedDate": null,
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -22828,10 +22828,10 @@
       "91": [
         "lb-493-28No",
         "added-anchor-578",
+        "custom-1791915849111-yhiu",
         "lb-559-abBm",
         "lb-461-1JAY",
         "lb-558-1pDe",
-        "custom-1791915849111-yhiu",
         "lb-463-4Xuw",
         "lb-49-27US",
         "custom-1790254612541-iyij",
