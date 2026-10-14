@@ -1,0 +1,109 @@
+// Extracted from .github/workflows/movie-search-registration.yml; original behavioral assertions retained.
+const {launch}=require('./harness.cjs');
+const assert=require('node:assert/strict');
+(async()=>{
+  const browser=await launch();
+  const page=await browser.newPage({viewport:{width:390,height:844},isMobile:true,hasTouch:true,deviceScaleFactor:1});
+  const errors=[];
+  page.on('pageerror',e=>errors.push(String(e)));
+  await page.addInitScript(()=>{localStorage.setItem('movie30_tmdb_credential','test-key-not-secret')});
+  await page.route('https://api.themoviedb.org/3/**',async route=>{
+    const url=new URL(route.request().url()),p=url.pathname,lang=url.searchParams.get('language')||'';
+    const movie={id:995001,media_type:'movie',title:'CIUnique Movie 2026',original_title:'CIUnique Movie 2026',release_date:'2026-04-02',poster_path:'/mock-image.jpg',overview:'Automated movie test.',genres:[{id:18,name:'Drama'}]};
+    const tv={id:995001,media_type:'tv',name:'CIUnique Series 2026',original_name:'CIUnique Series 2026',first_air_date:'2026-06-01',poster_path:'/mock-image.jpg',overview:'Automated series test.',seasons:[{season_number:0,air_date:'2026-06-01'},{season_number:1,air_date:'2026-06-01'},{season_number:2,air_date:'2026-09-01'}],number_of_seasons:2,genres:[{id:18,name:'Drama'}]};
+    let data={results:[]};
+    if(p.endsWith('/search/multi'))data={results:[movie,tv]};
+    else if(p.endsWith('/movie/995001'))data=movie;
+    else if(p.endsWith('/tv/995001'))data=tv;
+    else if(p.endsWith('/search/tv'))data={results:[tv]};
+    else if(p.endsWith('/search/movie'))data={results:[movie]};
+    await route.fulfill({status:200,contentType:'application/json',body:JSON.stringify(data)});
+  });
+  await page.goto('http://localhost:8799/index.html',{waitUntil:'domcontentloaded',timeout:18000});
+  await page.waitForSelector('html.movie30-ready',{timeout:35000});
+  const search=page.locator('#searchRank');
+  // Regression: searches must not resurrect the pre-feature rank renderer.
+  await page.evaluate(()=>{
+    const one=addFilm('CI Watched No Score 2026',2026,'追加映画',0,'',{keepUnscored:true});
+    one.star=0;state.starOverrides[one.id]=0;
+    const two=addFilm('CI Unrated With Stars 2026',2026,'追加映画',4,'',{keepUnscored:true});
+    two.star=4;state.starOverrides[two.id]=4;
+    save();renderRank();
+  });
+  const layout=()=>page.evaluate(()=>({
+    watched:[...document.querySelectorAll('#rankRoot .uns-head strong')].some(x=>x.textContent.includes('星も未確定')),
+    scorePending:[...document.querySelectorAll('#rankRoot .uns-head strong')].some(x=>x.textContent.includes('点数未確定')),
+    actions:document.querySelectorAll('#rankRoot .uns-card-v67 .uns-actions-v67 button').length,
+    jumpText:document.querySelector('#starJumpBar')?.textContent||'',
+    clearPresent:!!document.getElementById('movie30ClearSearch')
+  }));
+  const before=await layout();
+  assert.ok(before.watched,'Initial separate watched/unscored panel missing');
+  assert.ok(before.scorePending,'Initial point-unset section missing');
+  assert.ok(before.actions>=2,'Initial genre/rating action buttons missing');
+  assert.ok(before.jumpText.includes('検索'),'Initial new jump navigation missing');
+  assert.ok(before.clearPresent,'Search clear button not initialized');
+  await search.fill('CI Unrated With Stars');
+  assert.equal(await page.locator('#movie30ClearSearch').isVisible(),true,'Clear X must appear while typing');
+  await page.locator('#movie30ClearSearch').click();
+  assert.equal(await search.inputValue(),'','Clear X did not erase the query');
+  assert.equal(await page.locator('#movie30ClearSearch').isVisible(),false,'Clear X must disappear for an empty query');
+  const after=await layout();
+  assert.ok(after.watched,'Search reset lost separate watched/unscored panel');
+  assert.ok(after.scorePending,'Search reset lost point-unset section');
+  assert.ok(after.actions>=2,'Search reset reverted genre/rating action buttons');
+  assert.ok(after.jumpText.includes('検索'),'Search reset reverted jump navigation');
+  console.log('PASS search reset: latest panels, actions and navigation persist after clear',JSON.stringify({before,after}));
+  await search.fill('CIUnique');
+  await page.locator('.movie92-entry').filter({hasText:'CIUnique Movie 2026'}).waitFor({timeout:20000});
+  // Real touch on poster coordinates, not a synthetic button click.
+  const poster=page.locator('.movie92-entry').filter({hasText:'CIUnique Movie 2026'}).locator('img');
+  await poster.waitFor({timeout:8000});
+  const rect=await poster.boundingBox();
+  assert.ok(rect,'TMDB poster did not render');
+  const pageBefore=page.url();
+  const popups=[];
+  page.on('popup',p=>popups.push(p));
+  await page.touchscreen.tap(rect.x+rect.width/2,rect.y+rect.height/2);
+  assert.equal(page.url(),pageBefore,'poster tap navigated away');
+  assert.equal(popups.length,0,'poster tap opened an external browser');
+  console.log('PASS poster-tap: actual touch opens local preview without dismissing');
+  await page.locator('#movie30RemotePreview:not([hidden])').waitFor({timeout:8000});
+  await page.locator('#remoteAddName').waitFor();
+  assert.equal(await page.locator('#remoteAddTitle').textContent(),'CIUnique Movie 2026');
+  await page.locator('#remoteAddScore').fill('88');
+  await page.locator('#remoteAddSave').click();
+  await page.locator('#remoteAddStatus').getByText('点数付きで登録・保存しました。').waitFor({timeout:15000});
+  const movieCheck=await page.evaluate(()=>{
+    const state=JSON.parse(localStorage.getItem('movie30_data_v1'));
+    const f=state.customFilms.find(f=>f.title==='CIUnique Movie 2026');
+    return {found:!!f,score:f&&state.exactScores[f.id],ranked:f&&Object.values(state.rankOrder).some(a=>a.includes(f.id)),media:f&&state.letterboxdMeta[f.id]?.tmdbType};
+  });
+  assert.deepEqual(movieCheck,{found:true,score:88,ranked:true,media:'movie'});
+  console.log('PASS movie: searched, previewed, rated and persisted',JSON.stringify(movieCheck));
+  await page.locator('#remoteAddClose').click();
+  await search.fill('CIUnique Series 2026');
+  await page.locator('.movie92-entry').filter({hasText:'CIUnique Series 2026'}).waitFor({timeout:20000});
+  await page.locator('.movie92-entry').filter({hasText:'CIUnique Series 2026'}).click();
+  assert.equal(page.url(),'http://localhost:8799/index.html','TV search result navigated outside the app');
+  assert.equal(popups.length,0,'TV search result opened an external browser');
+  await page.locator('#movie30RemotePreview:not([hidden])').waitFor({timeout:8000});
+  await page.locator('#remoteAddScore').fill('');
+  await page.locator('#remoteAddSave').click();
+  await page.locator('#remoteAddStatus').getByText('未採点で登録・保存しました。').waitFor({timeout:15000});
+  const tvCheck=await page.evaluate(()=>{
+    const state=JSON.parse(localStorage.getItem('movie30_data_v1'));
+    const f=state.customFilms.find(f=>f.title==='CIUnique Series 2026');
+    const m=f&&state.letterboxdMeta[f.id];
+    return {found:!!f,media:m?.tmdbType,contentType:m?.contentType,tmdbSeriesId:m?.tmdbSeriesId,seasonCount:m?.seasonCountV1,scored:f&&Object.prototype.hasOwnProperty.call(state.exactScores,f.id)};
+  });
+  assert.deepEqual(tvCheck,{found:true,media:'tv',contentType:'tv_series',tmdbSeriesId:995001,seasonCount:2,scored:false});
+  console.log('PASS TV: separate media despite same numeric TMDB ID, unscored, season catalog persisted',JSON.stringify(tvCheck));
+  await page.locator('#remoteAddSave').click();
+  await page.locator('#movie30RemotePreview').waitFor({state:'hidden',timeout:8000});
+  await page.locator('#movie30SeasonPanel:not([hidden])').waitFor({timeout:8000});
+  assert.equal(await page.locator('#movie30SeasonRows input').count(),2);
+  console.log('PASS TV detail: 2 independent season rating fields');
+  assert.equal(errors.length,0,'Unexpected browser errors');
+  await browser.close();
+})().catch(e=>{console.error('SMOKE_TEST_FAILED',e);process.exit(1)});

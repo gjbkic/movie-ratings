@@ -1,0 +1,121 @@
+// Extracted from .github/workflows/movie-detail-unified.yml; original behavioral assertions retained.
+const {launch}=require('./harness.cjs'),assert=require('node:assert/strict');
+(async()=>{
+  const browser=await launch();
+  const page=await browser.newPage({viewport:{width:390,height:844},isMobile:true,hasTouch:true});
+  const errors=[];page.on('pageerror',e=>errors.push(String(e)));
+  await page.addInitScript(()=>localStorage.setItem('movie30_letterboxd_settings_v1',JSON.stringify({username:'gjbkic',auto:false})));
+  await page.goto('http://localhost:8789/index.html',{waitUntil:'domcontentloaded'});
+  await page.waitForSelector('html.movie30-ready',{timeout:30000});
+  const ids=await page.evaluate(async()=>{
+    const scored=addFilm('Detail CI Scored',2026,'追加映画',4,88,{});
+    const empty=addFilm('Detail CI Unscored',2026,'追加映画',0,'',{keepUnscored:true});
+    state.starOverrides[empty.id]=0;
+    await save();
+    return {scored:scored.id,empty:empty.id};
+  });
+  const view=()=>page.evaluate(()=>{
+    const q=x=>document.querySelector(x);
+    const detail=q('#detail66');
+    const stats=detail?.querySelector('.v66-stats');
+    const genre=q('#movie30-detail-classification');
+    const preview=q('#movie30-detail-class-preview');
+    const crew=q('#directorPanel84');
+    const media=q('#editMediaType')?.closest('label');
+    const jump=q('#detailJump66');
+    const score=q('#editScore');
+    const runtime=q('#editRuntime');
+    const stars=q('#editStar');
+    const visibility=x=>x?getComputedStyle(x).display!=='none'&&getComputedStyle(x).visibility!=='hidden'&&!x.hidden:false;
+    return {
+      id:selectedId,
+      meta:q('#sheetMeta')?.textContent,
+      scored:effectiveScore(filmById(selectedId)),
+      detail:!!detail,
+      statsVisible:visibility(stats),
+      statsCount:stats?.querySelectorAll('.v66-stat').length,
+      statsText:stats?.textContent,
+      neighbors:!!detail?.querySelector('.v66-nei'),
+      jumpVisible:visibility(jump),
+      notePresent:!!q('#note66')&&!!q('#memoSave77'),
+      reviewReadonly:q('#note66')?.readOnly,
+      directorButtonVisible:visibility(q('#getDirector84')),
+      directorsExist:!!crew&&!!crew.querySelector('strong'),
+      mediaFieldVisible:visibility(media),
+      titlePresent:visibility(q('#editTitle')),
+      runtimeInputVisible:visibility(runtime),
+      runtimeValue:runtime?.value,
+      starsVisible:visibility(stars),starDisabled:stars?.disabled,
+      scoreInputVisible:visibility(score),scoreInput:score?.value,
+      genreExists:!!genre,genreOpen:genre?.open,
+      preview:preview?.textContent,
+      options:genre?.querySelectorAll('.struct-chip').length,
+      moviePoster:!!q('#movie30PosterDetail84'),
+      watchEditor:!!q('#watchEditor83'),
+      seasonPanel:!!q('#movie30SeasonEditorV1')
+    };
+  });
+  await page.evaluate(id=>openSheet(id),ids.scored);
+  const rated=await view();
+  console.log('DETAIL_RATED',JSON.stringify(rated));
+  assert.equal(rated.scored,88);
+  assert.equal(rated.meta,'2026');
+  assert(rated.scoreInputVisible&&rated.runtimeInputVisible&&rated.starsVisible);
+  assert(!rated.mediaFieldVisible,'Legacy media selector still shown beside score');
+  assert.equal(rated.statsCount,2,'Duplicate score/runtime stats still shown');
+  assert(rated.statsVisible,'Rank should be shown for rated film');
+  assert(!rated.neighbors,'Old neighbors still shown');
+  assert(!rated.directorButtonVisible,'Manual fetch still shown');
+  assert(rated.directorsExist,'Directors display missing');
+  assert(rated.notePresent&&rated.reviewReadonly&&rated.watchEditor,'Notes/watch events lost');
+  assert(rated.titlePresent,'Title editor lost');
+  assert(rated.genreExists&&!rated.genreOpen&&rated.options>10,'Classification should be foldable with retained options');
+  assert(rated.preview?.includes('種別')&&rated.preview?.includes('制作')&&rated.preview?.includes('形式'),'Selected classification not shown');
+  await page.locator('#movie30-detail-classification>summary').click();
+  const expanded=await view();
+  assert(expanded.genreOpen,'Classification did not open');
+  const beforeScore=await page.evaluate(id=>effectiveScore(filmById(id)),ids.scored);
+  const buttons=page.locator('#editGenrePicker .struct-row').filter({has:page.locator('.struct-label', {hasText:'制作区分'})}).locator('button.struct-chip');
+  const labels=await buttons.allTextContents();
+  assert(labels.length>=2,'Production group unavailable');
+  const choose=buttons.filter({hasText:labels.find(x=>x!==(labels[0]))||labels[1]});
+  await choose.first().click({force:true});
+  await page.waitForTimeout(200);
+  const updated=await view();
+  console.log('DETAIL_UPDATED',JSON.stringify(updated));
+  assert.equal(updated.scored,beforeScore,'Classification changed numeric score');
+  assert.equal(updated.meta,'2026','Older classification handlers restored a duplicate metadata line');
+  assert(updated.preview?.includes('制作'),'Classification summary disappeared');
+  assert.notEqual(updated.preview,rated.preview,'Classification preview did not refresh after choosing a different production group');
+  await page.locator('#movie30-detail-classification>summary').click();
+  assert(!(await view()).genreOpen,'Classification did not fold');
+  await page.evaluate(id=>openSheet(id),ids.empty);
+  const unrated=await view();
+  console.log('DETAIL_UNRATED',JSON.stringify(unrated));
+  assert.equal(unrated.scored,null);
+  assert.equal(unrated.meta,'2026');
+  assert(!unrated.statsVisible,'Unscored film incorrectly shows rank');
+  assert(!unrated.jumpVisible,'Unscored jump button still shown');
+  assert(unrated.genreExists&&!unrated.genreOpen,'Genre detail did not reset for another film');
+  assert(unrated.starsVisible&&!unrated.starDisabled,'Unscored stars no longer editable');
+  assert(unrated.notePresent&&unrated.watchEditor,'Notes/watch editing lost for unrated film');
+  await page.locator('#editScore').fill('92');
+  await page.locator('#editScore').blur();
+  await page.waitForTimeout(180);
+  const newlyRated=await view();
+  console.log('DETAIL_NEWLY_RATED',JSON.stringify(newlyRated));
+  assert.equal(newlyRated.scored,92);
+  assert(newlyRated.statsVisible,'Ranking did not appear after adding a point score');
+  assert(newlyRated.statsText.includes('92点内'),'Ranking group did not update after numeric scoring');
+  assert.equal(newlyRated.statsCount,2,'Duplicate stats returned after scoring');
+  await page.reload({waitUntil:'domcontentloaded'});
+  await page.waitForSelector('html.movie30-ready',{timeout:30000});
+  await page.evaluate(id=>openSheet(id),ids.scored);
+  const after=await view();
+  assert.equal(after.scored,88);
+  assert(after.statsVisible&&after.statsCount===2&&!after.mediaFieldVisible);
+  assert(after.preview?.includes('制作'));
+  assert.equal(errors.length,0,'JavaScript errors '+errors.join(' / '));
+  console.log('DETAIL_UNIFIED_PASS',JSON.stringify({rated:{rank:rated.statsText,preview:rated.preview},unrated:{statsVisible:unrated.statsVisible,jumpVisible:unrated.jumpVisible},after:{score:after.scored,rank:after.statsText},errors}));
+  await browser.close();
+})().catch(e=>{console.error('DETAIL_UNIFIED_FAILED',e.stack||e);process.exit(1)});
