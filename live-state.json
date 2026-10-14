@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791967338925,
-  "sourceUpdatedIso": "2026-10-14T08:42:18.925Z",
+  "sourceUpdatedAt": 1791967341277,
+  "sourceUpdatedIso": "2026-10-14T08:42:21.277Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -13216,32 +13216,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1791122852357-22zp",
-      "title": "秒速5センチメートル",
-      "originalTitle": "秒速5センチメートル",
-      "englishTitle": "5 Centimeters per Second",
-      "year": 2007,
-      "score": 79,
-      "star": 2.5,
-      "overallRank": 460,
-      "sameScoreRank": 15,
-      "category": "Letterboxd",
-      "mediaType": "movie",
-      "genre": [
-        "恋愛",
-        "ドラマ",
-        "青春・若者",
-        "切ない"
-      ],
-      "origin": "日本",
-      "format": "animation",
-      "runtime": 63,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-04",
-      "letterboxdPublishedAt": "Mon, 5 Oct 2026 01:08:27 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-04"
-    },
-    {
       "id": "lb-370-ham",
       "title": "ルーパー",
       "originalTitle": "",
@@ -13249,8 +13223,8 @@
       "year": 2012,
       "score": 79,
       "star": 2.5,
-      "overallRank": 461,
-      "sameScoreRank": 16,
+      "overallRank": 460,
+      "sameScoreRank": 15,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -13269,6 +13243,32 @@
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1791122852357-22zp",
+      "title": "秒速5センチメートル",
+      "originalTitle": "秒速5センチメートル",
+      "englishTitle": "5 Centimeters per Second",
+      "year": 2007,
+      "score": 79,
+      "star": 2.5,
+      "overallRank": 461,
+      "sameScoreRank": 16,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "恋愛",
+        "ドラマ",
+        "青春・若者",
+        "切ない"
+      ],
+      "origin": "日本",
+      "format": "animation",
+      "runtime": 63,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-04",
+      "letterboxdPublishedAt": "Mon, 5 Oct 2026 01:08:27 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-04"
     },
     {
       "id": "lb-417-29cI",
@@ -22488,8 +22488,8 @@
         "lb-562-3utM",
         "lb-309-2aZ2",
         "custom-1789385860674-ow4o",
-        "custom-1791122852357-22zp",
         "lb-370-ham",
+        "custom-1791122852357-22zp",
         "lb-417-29cI",
         "lb-338-a9lm",
         "lb-455-Ro",
