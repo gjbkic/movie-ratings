@@ -38,10 +38,82 @@ test('MULTITAB: a stale tab save must not erase an already committed peer edit',
  const {context,a,b}=await pair();try{
   // Pause only event dispatch, reproducing a suspended/background tab. Shared
   // localStorage and real saves are untouched; this is not a synthetic StorageEvent.
-  await a.evaluate(()=>window.addEventListener('storage',e=>e.stopImmediatePropagation(),true));
+  await a.evaluate(()=>{window.addEventListener('storage',e=>e.stopImmediatePropagation(),true);movie30Channel.close()});
   await b.evaluate(()=>{state.letterboxdMeta['fixture-0012'].note='committed B review';return save()});
   await a.evaluate(()=>{state.genreOverrides['fixture-0013']=['SF','ドラマ'];return save()});
   const disk=await b.evaluate(()=>JSON.parse(localStorage.getItem(STORAGE_KEY)));
   assert.equal(disk.letterboxdMeta['fixture-0012'].note,'committed B review');
+ }finally{await context.close()}
+});
+
+async function disk(page){return page.evaluate(async()=>({ls:localStorage.getItem(STORAGE_KEY),db:(await movie30ReadSnapshot())?.json}));}
+async function conflict(page){await page.waitForFunction(()=>window.__movie30TabConflict);await page.waitForSelector('#movie30-tab-conflict');}
+test('MULTITAB: competing saves are serialized; losing edit is archived and survives reopening',async()=>{
+ const {context,a,b}=await pair();try{
+  await a.evaluate(()=>{window.testHolding=navigator.locks.request('movie30-state-write',()=>new Promise(resolve=>{window.testRelease=resolve}));});
+  await a.waitForFunction(()=>!!window.testRelease);
+  await Promise.all([a.evaluate(()=>{state.letterboxdMeta['fixture-0012'].note='simultaneous A';void save()}),b.evaluate(()=>{state.letterboxdMeta['fixture-0012'].note='simultaneous B';void save()})]);
+  await a.evaluate(()=>window.testRelease());
+  const results=await Promise.all([a.evaluate(()=>window.__movie30PendingSave),b.evaluate(()=>window.__movie30PendingSave)]);
+  assert.equal(results.filter(Boolean).length,1);
+  const winner=results[0]?a:b,loser=results[0]?b:a;await conflict(loser);
+  const committed=await disk(winner);assert.equal(committed.ls,committed.db);
+  const archive=await loser.evaluate(()=>movie30Record('multitab-conflicts'));
+  for(const note of ['simultaneous A','simultaneous B'])assert(archive.entries.some(e=>JSON.parse(e.json).letterboxdMeta['fixture-0012'].note===note));
+  await loser.close();const reopened=await context.newPage();await reopened.goto(origin);await ready(reopened);
+  await reopened.waitForSelector('#movie30-tab-conflict');assert.equal((await snapshot(reopened)).letterboxdMeta['fixture-0012'].note,JSON.parse(committed.db).letterboxdMeta['fixture-0012'].note);
+ }finally{await context.close()}
+});
+test('MULTITAB: IDB-only peer save propagates and stale writer cannot overwrite it',async()=>{
+ const {context,a,b}=await pair();try{
+  await b.evaluate(()=>{Storage.prototype.setItem=function(){throw new DOMException('quota','QuotaExceededError')};state.letterboxdMeta['fixture-0012'].note='IDB-only peer';return save()});
+  await a.waitForFunction(()=>state.letterboxdMeta['fixture-0012'].note==='IDB-only peer');
+  await a.evaluate(()=>{state.genreOverrides['fixture-0013']=['SF'];return save()});
+  assert.equal(JSON.parse((await disk(a)).db).letterboxdMeta['fixture-0012'].note,'IDB-only peer');
+ }finally{await context.close()}
+});
+test('MULTITAB: localStorage-only commit can propagate when IDB writes fail',async()=>{
+ const {context,a,b}=await pair();try{
+  await b.evaluate(()=>{const original=IDBDatabase.prototype.transaction;IDBDatabase.prototype.transaction=function(...args){if(args[1]==='readwrite')throw new DOMException('quota','QuotaExceededError');return original.apply(this,args)};state.letterboxdMeta['fixture-0012'].note='LS-only peer';return save()});
+  await a.waitForFunction(()=>state.letterboxdMeta['fixture-0012'].note==='LS-only peer',{},{timeout:5000});
+  assert.equal(await b.evaluate(()=>window.__movie30SaveFailed),false);
+ }finally{await context.close()}
+});
+test('MULTITAB: conflict archive failure leaves both stores untouched and offers both JSON candidates',async()=>{
+ const {context,a,b}=await pair();try{
+  await a.evaluate(()=>{state.letterboxdMeta['fixture-0012'].note='uncommitted A';const original=IDBDatabase.prototype.transaction;IDBDatabase.prototype.transaction=function(...args){if(args[1]==='readwrite')throw Error('archive unavailable');return original.apply(this,args)}});
+  await b.evaluate(()=>{state.genreOverrides['fixture-0013']=['SF'];return save()});
+  await conflict(a);const before=await disk(b);
+  assert.equal(await a.evaluate(()=>save()),false);assert.deepEqual(await disk(b),before);
+  assert.match(await a.locator('#movie30-tab-conflict').textContent(),/退避保存できません/);
+  const [download]=await Promise.all([a.waitForEvent('download'),a.locator('#movie30-tab-conflict button').click()]);
+  const stream=await download.createReadStream();let text='';for await(const chunk of stream)text+=chunk;
+  const backup=JSON.parse(text);assert(backup.candidates.some(e=>JSON.parse(e.json).letterboxdMeta['fixture-0012'].note==='uncommitted A'));
+  assert(backup.candidates.some(e=>JSON.parse(e.json).genreOverrides['fixture-0013']?.includes('SF')));
+ }finally{await context.close()}
+});
+test('MULTITAB: signed truncation is not proof of a legitimate edit',async()=>{
+ const {context,a,b}=await pair();try{
+  const before=await snapshot(a);
+  await b.evaluate(()=>{state.customFilms=[];state.rankOrder={};state.letterboxdMeta={};state.updatedAt++;movie30SealState();localStorage.setItem(STORAGE_KEY,JSON.stringify(state))});
+  await conflict(a);assert(isDeepStrictEqual(payload(await snapshot(a)),payload(before)));
+ }finally{await context.close()}
+});
+test('MULTITAB: legitimate score clearing and deletion propagate with null, zero, stars and unknown fields intact',async()=>{
+ const {context,a,b}=await pair();try{
+  await b.evaluate(()=>{state.exactScores['fixture-0002']=null;state.rankOrder['0']=[];state.customFilms=state.customFilms.filter(f=>f.id!=='fixture-0000');state.fixtureUnknown={zero:0,empty:null};return save()});
+  await a.waitForFunction(()=>state.exactScores['fixture-0002']===null);
+  assert(isDeepStrictEqual(payload(await snapshot(a)),payload(await snapshot(b))));
+  await a.reload();await ready(a);assert(isDeepStrictEqual(payload(await snapshot(a)),payload(await snapshot(b))));
+ }finally{await context.close()}
+});
+test('MULTITAB: missing Web Locks reads existing data but refuses unsafe saves',async()=>{
+ const {context,a,b}=await pair();try{
+  const before=await snapshot(a),stored=await disk(a);
+  await context.addInitScript(()=>Object.defineProperty(navigator,'locks',{value:undefined}));
+  await a.reload();await ready(a);
+  assert(isDeepStrictEqual(payload(await snapshot(a)),payload(before)));
+  assert.equal(await a.evaluate(()=>{state.letterboxdMeta['fixture-0012'].note='unsupported edit';return save()}),false);
+  assert.deepEqual(await disk(b),stored);assert.equal(await a.evaluate(()=>window.__movie30SaveFailed),true);
  }finally{await context.close()}
 });
