@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791967894665,
-  "sourceUpdatedIso": "2026-10-14T08:51:34.665Z",
+  "sourceUpdatedAt": 1791967920740,
+  "sourceUpdatedIso": "2026-10-14T08:52:00.740Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -21435,7 +21435,17 @@
       "sameScoreRank": null,
       "category": "サスペンス、ミステリー",
       "mediaType": "drama",
-      "genre": "",
+      "genre": [
+        "アクション",
+        "TV本編",
+        "ファンタジー",
+        "アドベンチャー",
+        "スリラー",
+        "ドラマ",
+        "娯楽",
+        "世界観",
+        "切ない"
+      ],
       "origin": "ハリウッド",
       "format": "",
       "runtime": null,
@@ -36013,6 +36023,17 @@
         "コメディ",
         "ミステリー",
         "娯楽"
+      ],
+      "custom-1791919156207-vna6": [
+        "アクション",
+        "TV本編",
+        "ファンタジー",
+        "アドベンチャー",
+        "スリラー",
+        "ドラマ",
+        "娯楽",
+        "世界観",
+        "切ない"
       ]
     },
     "originOverrides": {
