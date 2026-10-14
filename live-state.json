@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791965889062,
-  "sourceUpdatedIso": "2026-10-14T08:18:09.062Z",
+  "sourceUpdatedAt": 1791965911518,
+  "sourceUpdatedIso": "2026-10-14T08:18:31.518Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -686,35 +686,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1791915849111-yhiu",
-      "title": "リーガル・ハイ",
-      "originalTitle": "リーガル・ハイ",
-      "englishTitle": "Legal High",
-      "year": 2012,
-      "score": 95,
-      "star": 4.5,
-      "overallRank": 24,
-      "sameScoreRank": 6,
-      "category": "コメディ",
-      "mediaType": "drama",
-      "genre": [
-        "TV本編",
-        "サスペンス",
-        "コメディ",
-        "ドラマ",
-        "恋愛",
-        "娯楽",
-        "comfort"
-      ],
-      "origin": "日本",
-      "format": "",
-      "runtime": null,
-      "exact": true,
-      "letterboxdAddedDate": null,
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-396-251c",
       "title": "生きる",
       "originalTitle": "",
@@ -722,8 +693,8 @@
       "year": 1952,
       "score": 95,
       "star": 4.5,
-      "overallRank": 25,
-      "sameScoreRank": 7,
+      "overallRank": 24,
+      "sameScoreRank": 6,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -749,7 +720,7 @@
       "year": 1982,
       "score": 94,
       "star": 4.5,
-      "overallRank": 26,
+      "overallRank": 25,
       "sameScoreRank": 1,
       "category": "SF",
       "mediaType": "movie",
@@ -778,7 +749,7 @@
       "year": 1991,
       "score": 94,
       "star": 4.5,
-      "overallRank": 27,
+      "overallRank": 26,
       "sameScoreRank": 2,
       "category": "アクション",
       "mediaType": "movie",
@@ -802,6 +773,35 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "custom-1791915849111-yhiu",
+      "title": "リーガル・ハイ",
+      "originalTitle": "リーガル・ハイ",
+      "englishTitle": "Legal High",
+      "year": 2012,
+      "score": 94,
+      "star": 4.5,
+      "overallRank": 27,
+      "sameScoreRank": 3,
+      "category": "コメディ",
+      "mediaType": "drama",
+      "genre": [
+        "TV本編",
+        "サスペンス",
+        "コメディ",
+        "ドラマ",
+        "恋愛",
+        "娯楽",
+        "comfort"
+      ],
+      "origin": "日本",
+      "format": "",
+      "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-549-iEBG",
       "title": "ジョジョ・ラビット",
       "originalTitle": "",
@@ -810,7 +810,7 @@
       "score": 94,
       "star": 4.5,
       "overallRank": 28,
-      "sameScoreRank": 3,
+      "sameScoreRank": 4,
       "category": "戦争、歴史",
       "mediaType": "movie",
       "genre": [
@@ -840,7 +840,7 @@
       "score": 94,
       "star": 4.5,
       "overallRank": 29,
-      "sameScoreRank": 4,
+      "sameScoreRank": 5,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -869,7 +869,7 @@
       "score": 94,
       "star": 4.5,
       "overallRank": 30,
-      "sameScoreRank": 5,
+      "sameScoreRank": 6,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -895,7 +895,7 @@
       "score": 94,
       "star": 4.5,
       "overallRank": 31,
-      "sameScoreRank": 6,
+      "sameScoreRank": 7,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -923,7 +923,7 @@
       "score": 94,
       "star": 4.5,
       "overallRank": 32,
-      "sameScoreRank": 7,
+      "sameScoreRank": 8,
       "category": "スパイダーマン作品",
       "mediaType": "movie",
       "genre": [
@@ -950,7 +950,7 @@
       "score": 94,
       "star": 4.5,
       "overallRank": 33,
-      "sameScoreRank": 8,
+      "sameScoreRank": 9,
       "category": "Letterboxd追加",
       "mediaType": "drama",
       "genre": [
@@ -984,7 +984,7 @@
       "score": 94,
       "star": 4.5,
       "overallRank": 34,
-      "sameScoreRank": 9,
+      "sameScoreRank": 10,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -1007,7 +1007,7 @@
       "score": 94,
       "star": 4.5,
       "overallRank": 35,
-      "sameScoreRank": 10,
+      "sameScoreRank": 11,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -1039,7 +1039,7 @@
       "score": 94,
       "star": 4.5,
       "overallRank": 36,
-      "sameScoreRank": 11,
+      "sameScoreRank": 12,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
       "genre": [
@@ -22072,7 +22072,7 @@
       "custom-1791915774599-jgkn": 91,
       "custom-1791919172943-3ibi": 95,
       "custom-1791919109416-hxq8": 86,
-      "custom-1791915849111-yhiu": 95,
+      "custom-1791915849111-yhiu": 94,
       "lb-137-2a1c": 94
     },
     "rankOrder": {
@@ -22868,6 +22868,7 @@
       "94": [
         "lb-488-294O",
         "lb-349-2aGY",
+        "custom-1791915849111-yhiu",
         "lb-549-iEBG",
         "custom-1790420198451-g42l",
         "lb-97-2a7u",
@@ -22884,7 +22885,6 @@
         "custom-1791919172943-3ibi",
         "lb-83-2b8S",
         "lb-171-2b0k",
-        "custom-1791915849111-yhiu",
         "lb-396-251c"
       ],
       "96": [
