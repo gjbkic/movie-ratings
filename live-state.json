@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791967848099,
-  "sourceUpdatedIso": "2026-10-14T08:50:48.099Z",
+  "sourceUpdatedAt": 1791967858093,
+  "sourceUpdatedIso": "2026-10-14T08:50:58.093Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -10859,33 +10859,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1791918807010-n21d",
-      "title": "ガリレオ",
-      "originalTitle": "ガリレオ",
-      "englishTitle": "Galileo",
-      "year": 2007,
-      "score": 81,
-      "star": 3,
-      "overallRank": 377,
-      "sameScoreRank": 28,
-      "category": "サスペンス、ミステリー",
-      "mediaType": "drama",
-      "genre": [
-        "コメディ",
-        "TV本編",
-        "サスペンス",
-        "ミステリー",
-        "娯楽"
-      ],
-      "origin": "日本",
-      "format": "",
-      "runtime": null,
-      "exact": true,
-      "letterboxdAddedDate": null,
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-246-mqyw",
       "title": "コンフィデンスマンJP 運勢編",
       "originalTitle": "",
@@ -10893,8 +10866,8 @@
       "year": 2019,
       "score": 81,
       "star": 3,
-      "overallRank": 378,
-      "sameScoreRank": 29,
+      "overallRank": 377,
+      "sameScoreRank": 28,
       "category": "Letterboxd追加",
       "mediaType": "drama",
       "genre": [
@@ -10911,6 +10884,33 @@
       "runtime": null,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1791918807010-n21d",
+      "title": "ガリレオ",
+      "originalTitle": "ガリレオ",
+      "englishTitle": "Galileo",
+      "year": 2007,
+      "score": 81,
+      "star": 3,
+      "overallRank": 378,
+      "sameScoreRank": 29,
+      "category": "サスペンス、ミステリー",
+      "mediaType": "drama",
+      "genre": [
+        "コメディ",
+        "TV本編",
+        "サスペンス",
+        "ミステリー",
+        "娯楽"
+      ],
+      "origin": "日本",
+      "format": "",
+      "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": null,
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -22609,8 +22609,8 @@
         "lb-183-x1OG",
         "custom-1790322760608-2vle",
         "lb-109-28wi",
-        "custom-1791918807010-n21d",
         "lb-246-mqyw",
+        "custom-1791918807010-n21d",
         "lb-424-2cBQ",
         "custom-1790322757929-0kod",
         "lb-326-4hka",
