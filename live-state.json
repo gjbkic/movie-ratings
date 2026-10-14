@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791966485813,
-  "sourceUpdatedIso": "2026-10-14T08:28:05.813Z",
+  "sourceUpdatedAt": 1791966535061,
+  "sourceUpdatedIso": "2026-10-14T08:28:55.061Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -21358,6 +21358,27 @@
       "letterboxdAddedDate": null,
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1791966534875-2yiz",
+      "title": "進撃の巨人",
+      "originalTitle": "進撃の巨人",
+      "englishTitle": "Attack on Titan",
+      "year": 2013,
+      "score": null,
+      "star": 0,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "ほかアニメ",
+      "mediaType": "tvseries",
+      "genre": "",
+      "origin": "",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     }
   ],
   "state": {
@@ -25905,6 +25926,23 @@
         "added": true,
         "_seq": 1791921346894,
         "source": "letterboxd"
+      },
+      {
+        "id": "custom-1791966534875-2yiz",
+        "title": "進撃の巨人",
+        "originalTitle": "進撃の巨人",
+        "englishTitle": "Attack on Titan",
+        "lbTitle": "Attack on Titan",
+        "tmdbId": 1429,
+        "year": 2013,
+        "uri": "",
+        "category": "ほかアニメ",
+        "order": 999999,
+        "star": 0,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1791966534875,
+        "tmdbType": "tv"
       }
     ],
     "starOverrides": {
@@ -26637,7 +26675,8 @@
       "custom-1791919172943-3ibi": 4.5,
       "custom-1791919192064-3kb8": 0,
       "custom-1791921346893-dshj": 3,
-      "lb-137-2a1c": 4.5
+      "lb-137-2a1c": 4.5,
+      "custom-1791966534875-2yiz": 0
     },
     "titleOverrides": {
       "added-anchor-578": {
@@ -29640,7 +29679,8 @@
       "custom-1791919156207-vna6": "drama",
       "custom-1791919172943-3ibi": "drama",
       "custom-1791919192064-3kb8": "drama",
-      "custom-1791921346893-dshj": "drama"
+      "custom-1791921346893-dshj": "drama",
+      "custom-1791966534875-2yiz": "tvseries"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -66306,6 +66346,42 @@
           "tmdbId": 42009,
           "checkedAt": "2026-10-13T19:55:51.275Z",
           "provider": "tmdb"
+        }
+      },
+      "custom-1791966534875-2yiz": {
+        "contentType": "tv_series",
+        "tmdbType": "tv",
+        "poster84": {
+          "path": "/qlbcGr0EYKRICD0MTrIwnIztQna.jpg",
+          "tmdbId": 1429,
+          "provider": "tmdb",
+          "checkedAt": "2026-10-14T08:28:55.010Z"
+        },
+        "tmdbSeriesId": 1429,
+        "seasonCatalogV1": [
+          {
+            "number": 1,
+            "year": "2013"
+          },
+          {
+            "number": 2,
+            "year": "2017"
+          },
+          {
+            "number": 3,
+            "year": "2018"
+          },
+          {
+            "number": 4,
+            "year": "2020"
+          }
+        ],
+        "seasonCountV1": 4,
+        "crew84": {
+          "directors": [],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-14T08:28:55.036Z"
         }
       }
     }
