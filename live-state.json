@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791967731643,
-  "sourceUpdatedIso": "2026-10-14T08:48:51.643Z",
+  "sourceUpdatedAt": 1791967740469,
+  "sourceUpdatedIso": "2026-10-14T08:49:00.469Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -9657,33 +9657,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1789385860341-pd09",
-      "title": "ファニーゲーム",
-      "originalTitle": "",
-      "englishTitle": "Funny Games",
-      "year": 1997,
-      "score": 82,
-      "star": 3,
-      "overallRank": 334,
-      "sameScoreRank": 39,
-      "category": "Letterboxd",
-      "mediaType": "movie",
-      "genre": [
-        "胸糞",
-        "クライム",
-        "サスペンス",
-        "スリラー",
-        "バイオレンス"
-      ],
-      "origin": "その他",
-      "format": "live",
-      "runtime": 108,
-      "exact": true,
-      "letterboxdAddedDate": "2026-09-09",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "custom-1791919132954-1qh1",
       "title": "プリズン・ブレイク",
       "originalTitle": "Prison Break",
@@ -9691,8 +9664,8 @@
       "year": 2005,
       "score": 82,
       "star": 3,
-      "overallRank": 335,
-      "sameScoreRank": 40,
+      "overallRank": 334,
+      "sameScoreRank": 39,
       "category": "マフィア、クライム",
       "mediaType": "drama",
       "genre": [
@@ -9710,6 +9683,33 @@
       "runtime": null,
       "exact": true,
       "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1789385860341-pd09",
+      "title": "ファニーゲーム",
+      "originalTitle": "",
+      "englishTitle": "Funny Games",
+      "year": 1997,
+      "score": 82,
+      "star": 3,
+      "overallRank": 335,
+      "sameScoreRank": 40,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "胸糞",
+        "クライム",
+        "サスペンス",
+        "スリラー",
+        "バイオレンス"
+      ],
+      "origin": "その他",
+      "format": "live",
+      "runtime": 108,
+      "exact": true,
+      "letterboxdAddedDate": "2026-09-09",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -22675,8 +22675,8 @@
         "lb-281-2a3i",
         "lb-422-2bcU",
         "lb-193-1tqo",
-        "custom-1789385860341-pd09",
         "custom-1791919132954-1qh1",
+        "custom-1789385860341-pd09",
         "custom-1789385860628-ogsm",
         "base-simple-plan-1998",
         "lb-335-2a0y",
