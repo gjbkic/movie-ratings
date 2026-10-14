@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791966626292,
-  "sourceUpdatedIso": "2026-10-14T08:30:26.292Z",
+  "sourceUpdatedAt": 1791966651673,
+  "sourceUpdatedIso": "2026-10-14T08:30:51.673Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -21371,7 +21371,11 @@
       "sameScoreRank": null,
       "category": "ほかアニメ",
       "mediaType": "tvseries",
-      "genre": "",
+      "genre": [
+        "ドラマ",
+        "TV本編",
+        "アクション"
+      ],
       "origin": "",
       "format": "",
       "runtime": null,
@@ -35822,6 +35826,11 @@
         "恋愛",
         "娯楽",
         "comfort"
+      ],
+      "custom-1791966534875-2yiz": [
+        "ドラマ",
+        "TV本編",
+        "アクション"
       ]
     },
     "originOverrides": {
