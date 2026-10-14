@@ -30,8 +30,7 @@
   if(duplicate)duplicate.classList.add('hidden');
   const intro=document.createElement('div');
   intro.id='movie30-data-intro';intro.className='panel movie30-data-intro';
-  intro.innerHTML='<p>作品の追加・検索は画面上部の「＋ 作品」から。ここでは同期状況とバックアップを管理します。</p><button type="button" class="btn" id="movie30DataAdd">＋ 作品を追加</button>';
-  intro.querySelector('button').addEventListener('click',()=>document.getElementById('quickAdd')?.click());
+  intro.innerHTML='<p>作品の追加・検索は画面上部の「＋ 作品」から。ここでは同期状況とバックアップを管理します。</p>';
   page.prepend(intro);
 
   function fold(title,id){
@@ -47,20 +46,25 @@
     const title=backup.querySelector('h2');if(title)title.textContent='バックアップ';
     const tools=backup.querySelector('.tools');
     const advanced=fold('その他の書き出し・復元操作','movie30-data-backup-advanced');
-    for(const id of ['downloadCsv','showBackup','copyBackup','restoreText']){
-      const node=document.getElementById(id);
-      if(!node)continue;
-      // Move controls without recreating elements (their existing onclick handlers survive).
-      advanced.content.append(node);
-    }
+    const otherExports=document.createElement('div');otherExports.className='tools';
+    const csv=document.getElementById('downloadCsv');if(csv)otherExports.append(csv);
+    if(otherExports.children.length)advanced.content.append(otherExports);
     const textarea=document.getElementById('backupText');
-    if(textarea)advanced.content.insertBefore(textarea,advanced.content.querySelector('#showBackup'));
+    if(textarea)advanced.content.append(textarea);
+    const textTools=document.createElement('div');textTools.className='tools';
+    for(const id of ['showBackup','copyBackup','restoreText']){
+      const node=document.getElementById(id);
+      if(node)textTools.append(node); // Preserve existing handlers.
+    }
+    if(textTools.children.length)advanced.content.append(textTools);
     const danger=document.getElementById('resetAll');
     if(danger){
+      const caution=fold('全データ初期化（危険）','movie30-data-reset-danger');
       const warning=document.createElement('div');warning.className='movie30-data-info';
-      warning.textContent='初期化は全評価・順位を消す危険な操作です。通常は使用しないでください。';
-      advanced.content.append(warning,danger);
+      warning.textContent='全評価・順位が消える操作です。通常は使わず、JSONバックアップを保存してください。';
+      caution.content.append(warning,danger);
       danger.classList.add('movie30-data-danger');
+      advanced.content.append(caution.details);
     }
     // Known HTML snapshot defect: keep the existing button/handler available
     // in DOM for future repair, but do not advertise a broken backup route.
