@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791966808943,
-  "sourceUpdatedIso": "2026-10-14T08:33:28.943Z",
+  "sourceUpdatedAt": 1791966824567,
+  "sourceUpdatedIso": "2026-10-14T08:33:44.567Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -1145,29 +1145,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1791664054514-pksv",
-      "title": "Luv Live",
-      "originalTitle": "Luv Live",
-      "englishTitle": "Luv Live",
-      "year": 2014,
-      "score": 93,
-      "star": 4.5,
-      "overallRank": 40,
-      "sameScoreRank": 5,
-      "category": "Letterboxd",
-      "mediaType": "other",
-      "genre": [
-        "ミュージカル"
-      ],
-      "origin": "日本",
-      "format": "live",
-      "runtime": 65,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-11",
-      "letterboxdPublishedAt": "Sun, 11 Oct 2026 06:34:06 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-11"
-    },
-    {
       "id": "lb-2-2a9q",
       "title": "ファイト・クラブ",
       "originalTitle": "",
@@ -1175,8 +1152,8 @@
       "year": 1999,
       "score": 93,
       "star": 4.5,
-      "overallRank": 41,
-      "sameScoreRank": 6,
+      "overallRank": 40,
+      "sameScoreRank": 5,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -1205,8 +1182,8 @@
       "year": 2006,
       "score": 93,
       "star": 4.5,
-      "overallRank": 42,
-      "sameScoreRank": 7,
+      "overallRank": 41,
+      "sameScoreRank": 6,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -1231,8 +1208,8 @@
       "year": 2011,
       "score": 93,
       "star": 4.5,
-      "overallRank": 43,
-      "sameScoreRank": 8,
+      "overallRank": 42,
+      "sameScoreRank": 7,
       "category": "ほかアニメ",
       "mediaType": "tvseries",
       "genre": [
@@ -1254,6 +1231,29 @@
       "letterboxdAddedDate": null,
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1791664054514-pksv",
+      "title": "Luv Live",
+      "originalTitle": "Luv Live",
+      "englishTitle": "Luv Live",
+      "year": 2014,
+      "score": 93,
+      "star": 4.5,
+      "overallRank": 43,
+      "sameScoreRank": 8,
+      "category": "Letterboxd",
+      "mediaType": "other",
+      "genre": [
+        "ミュージカル"
+      ],
+      "origin": "日本",
+      "format": "live",
+      "runtime": 65,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-11",
+      "letterboxdPublishedAt": "Sun, 11 Oct 2026 06:34:06 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-11"
     },
     {
       "id": "lb-86-cUqs",
@@ -22927,10 +22927,10 @@
         "custom-1791664055911-cuz4",
         "lb-323-1VEo",
         "lb-333-2b4m",
-        "custom-1791664054514-pksv",
         "lb-2-2a9q",
         "lb-332-28MA",
         "custom-1791966715148-h5tp",
+        "custom-1791664054514-pksv",
         "lb-86-cUqs",
         "lb-24-2aHi",
         "custom-1790185844116-j1vu",
