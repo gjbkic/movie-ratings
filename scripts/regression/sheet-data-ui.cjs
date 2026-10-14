@@ -94,7 +94,7 @@ test('sync/save: both sync status panels and JSON backup stay visible, advanced 
   assert.equal(await page.locator('#downloadHtml').isVisible(),false);
   const advanced=page.locator('#movie30-data-extra');
   assert.equal(await advanced.evaluate(e=>e.open),false);
-  await advanced.locator('summary').click();
+  await page.locator('#movie30-data-extra>summary').click();
   assert.equal(await page.locator('#tmdbCredential').isVisible(),true);
   assert.equal(await page.locator('#directorTool84').isVisible(),true);
   const backup=page.locator('#movie30-data-backup-advanced');
