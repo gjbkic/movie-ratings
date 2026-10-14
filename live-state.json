@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791965857428,
-  "sourceUpdatedIso": "2026-10-14T08:17:37.428Z",
+  "sourceUpdatedAt": 1791965860958,
+  "sourceUpdatedIso": "2026-10-14T08:17:40.958Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -803,35 +803,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1791915849111-yhiu",
-      "title": "リーガル・ハイ",
-      "originalTitle": "リーガル・ハイ",
-      "englishTitle": "Legal High",
-      "year": 2012,
-      "score": 94,
-      "star": 4.5,
-      "overallRank": 28,
-      "sameScoreRank": 4,
-      "category": "コメディ",
-      "mediaType": "drama",
-      "genre": [
-        "TV本編",
-        "サスペンス",
-        "コメディ",
-        "ドラマ",
-        "恋愛",
-        "娯楽",
-        "comfort"
-      ],
-      "origin": "日本",
-      "format": "",
-      "runtime": null,
-      "exact": true,
-      "letterboxdAddedDate": null,
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "custom-1790420198451-g42l",
       "title": "エレファント・マン",
       "originalTitle": "The Elephant Man",
@@ -839,8 +810,8 @@
       "year": 1980,
       "score": 94,
       "star": 4.5,
-      "overallRank": 29,
-      "sameScoreRank": 5,
+      "overallRank": 28,
+      "sameScoreRank": 4,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -859,6 +830,35 @@
       "letterboxdAddedDate": "2026-09-26",
       "letterboxdPublishedAt": "Sat, 26 Sep 2026 22:55:55 +1200",
       "letterboxdReportedWatchedDate": "2026-09-26"
+    },
+    {
+      "id": "custom-1791915849111-yhiu",
+      "title": "リーガル・ハイ",
+      "originalTitle": "リーガル・ハイ",
+      "englishTitle": "Legal High",
+      "year": 2012,
+      "score": 94,
+      "star": 4.5,
+      "overallRank": 29,
+      "sameScoreRank": 5,
+      "category": "コメディ",
+      "mediaType": "drama",
+      "genre": [
+        "TV本編",
+        "サスペンス",
+        "コメディ",
+        "ドラマ",
+        "恋愛",
+        "娯楽",
+        "comfort"
+      ],
+      "origin": "日本",
+      "format": "",
+      "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "lb-97-2a7u",
@@ -22869,8 +22869,8 @@
         "lb-488-294O",
         "lb-349-2aGY",
         "lb-549-iEBG",
-        "custom-1791915849111-yhiu",
         "custom-1790420198451-g42l",
+        "custom-1791915849111-yhiu",
         "lb-97-2a7u",
         "lb-137-2a1c",
         "lb-10-kSz4",
