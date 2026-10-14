@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791973041629,
-  "sourceUpdatedIso": "2026-10-14T10:17:21.629Z",
+  "sourceUpdatedAt": 1791973050254,
+  "sourceUpdatedIso": "2026-10-14T10:17:30.254Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -2217,6 +2217,33 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "custom-1790322763195-rro9",
+      "title": "コンフィデンスマンJP",
+      "originalTitle": "コンフィデンスマンJP",
+      "englishTitle": "The Confidence Man JP",
+      "year": 2018,
+      "score": 90,
+      "star": 4,
+      "overallRank": 77,
+      "sameScoreRank": 5,
+      "category": "Letterboxd",
+      "mediaType": "drama",
+      "genre": [
+        "コメディ",
+        "ドラマ",
+        "クライム",
+        "comfort",
+        "TV本編"
+      ],
+      "origin": "日本",
+      "format": "live",
+      "runtime": 54,
+      "exact": true,
+      "letterboxdAddedDate": "2026-09-25",
+      "letterboxdPublishedAt": "Fri, 25 Sep 2026 06:23:41 +1200",
+      "letterboxdReportedWatchedDate": "2026-09-24"
+    },
+    {
       "id": "lb-205-1UlA",
       "title": "ニュー・シネマ・パラダイス",
       "originalTitle": "",
@@ -2224,8 +2251,8 @@
       "year": 1988,
       "score": 90,
       "star": 4,
-      "overallRank": 77,
-      "sameScoreRank": 5,
+      "overallRank": 78,
+      "sameScoreRank": 6,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -2252,8 +2279,8 @@
       "year": 1999,
       "score": 90,
       "star": 4,
-      "overallRank": 78,
-      "sameScoreRank": 6,
+      "overallRank": 79,
+      "sameScoreRank": 7,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -2278,8 +2305,8 @@
       "year": 1999,
       "score": 90,
       "star": 4,
-      "overallRank": 79,
-      "sameScoreRank": 7,
+      "overallRank": 80,
+      "sameScoreRank": 8,
       "category": "スターウォーズシリーズ",
       "mediaType": "movie",
       "genre": [
@@ -2308,8 +2335,8 @@
       "year": 2012,
       "score": 90,
       "star": 4,
-      "overallRank": 80,
-      "sameScoreRank": 8,
+      "overallRank": 81,
+      "sameScoreRank": 9,
       "category": "恋愛、ミュージカル",
       "mediaType": "movie",
       "genre": [
@@ -2337,8 +2364,8 @@
       "year": 2004,
       "score": 90,
       "star": 4,
-      "overallRank": 81,
-      "sameScoreRank": 9,
+      "overallRank": 82,
+      "sameScoreRank": 10,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -2356,33 +2383,6 @@
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "custom-1790322763195-rro9",
-      "title": "コンフィデンスマンJP",
-      "originalTitle": "コンフィデンスマンJP",
-      "englishTitle": "The Confidence Man JP",
-      "year": 2018,
-      "score": 90,
-      "star": 4,
-      "overallRank": 82,
-      "sameScoreRank": 10,
-      "category": "Letterboxd",
-      "mediaType": "drama",
-      "genre": [
-        "コメディ",
-        "ドラマ",
-        "クライム",
-        "comfort",
-        "TV本編"
-      ],
-      "origin": "日本",
-      "format": "live",
-      "runtime": 54,
-      "exact": true,
-      "letterboxdAddedDate": "2026-09-25",
-      "letterboxdPublishedAt": "Fri, 25 Sep 2026 06:23:41 +1200",
-      "letterboxdReportedWatchedDate": "2026-09-24"
     },
     {
       "id": "lb-33-29Qy",
@@ -22975,12 +22975,12 @@
         "lb-44-2bf0",
         "lb-471-8LnQ",
         "lb-301-2a2a",
+        "custom-1790322763195-rro9",
         "lb-205-1UlA",
         "lb-90-71Y",
         "lb-73-27Vc",
         "lb-162-2TTo",
         "lb-286-2bdI",
-        "custom-1790322763195-rro9",
         "lb-33-29Qy",
         "lb-17-1U82",
         "lb-566-2b5u",
