@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1791986099769,
-  "sourceUpdatedIso": "2026-10-14T13:54:59.769Z",
+  "sourceUpdatedAt": 1792067621734,
+  "sourceUpdatedIso": "2026-10-15T12:33:41.734Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -21522,6 +21522,50 @@
       "letterboxdAddedDate": null,
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1792067619800-hky7",
+      "title": "Utada Hikaru: Unplugged",
+      "originalTitle": "",
+      "englishTitle": "Utada Hikaru: Unplugged",
+      "year": 2001,
+      "score": null,
+      "star": 4,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": "",
+      "origin": "その他",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": "2026-10-14",
+      "letterboxdPublishedAt": "Thu, 15 Oct 2026 02:37:03 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-14"
+    },
+    {
+      "id": "custom-1792067620393-qnt8",
+      "title": "UH LIVE STREAMING 20代はイケイケ！",
+      "originalTitle": "UH LIVE STREAMING 20代はイケイケ！",
+      "englishTitle": "UH Live Streaming 20 Dai wa Ike Ike!",
+      "year": 2003,
+      "score": null,
+      "star": 4,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "ミュージカル"
+      ],
+      "origin": "日本",
+      "format": "live",
+      "runtime": 79,
+      "exact": false,
+      "letterboxdAddedDate": "2026-10-13",
+      "letterboxdPublishedAt": "Tue, 13 Oct 2026 17:03:49 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-13"
     }
   ],
   "state": {
@@ -26146,6 +26190,40 @@
         "added": true,
         "_seq": 1791973996242,
         "tmdbType": "tv"
+      },
+      {
+        "id": "custom-1792067619800-hky7",
+        "title": "Utada Hikaru: Unplugged",
+        "originalTitle": "",
+        "englishTitle": "Utada Hikaru: Unplugged",
+        "lbTitle": "Utada Hikaru: Unplugged",
+        "tmdbId": null,
+        "year": 2001,
+        "uri": "https://letterboxd.com/gjbkic/film/utada-hikaru-unplugged/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 4,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1792067619800,
+        "source": "letterboxd"
+      },
+      {
+        "id": "custom-1792067620393-qnt8",
+        "title": "UH LIVE STREAMING 20代はイケイケ！",
+        "originalTitle": "UH LIVE STREAMING 20代はイケイケ！",
+        "englishTitle": "UH Live Streaming 20 Dai wa Ike Ike!",
+        "lbTitle": "UH Live Streaming 20 Dai wa Ike Ike!",
+        "tmdbId": 618918,
+        "year": 2003,
+        "uri": "https://letterboxd.com/gjbkic/film/uh-live-streaming-20-dai-wa-ike-ike/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 4,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1792067620393,
+        "source": "letterboxd"
       }
     ],
     "starOverrides": {
@@ -29887,7 +29965,9 @@
       "custom-1791921346893-dshj": "drama",
       "custom-1791966534875-2yiz": "drama",
       "custom-1791966715148-h5tp": "drama",
-      "custom-1791973996242-1our": "drama"
+      "custom-1791973996242-1our": "drama",
+      "custom-1792067619800-hky7": "movie",
+      "custom-1792067620393-qnt8": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -36142,6 +36222,9 @@
         "ドラマ",
         "恋愛",
         "娯楽"
+      ],
+      "custom-1792067620393-qnt8": [
+        "ミュージカル"
       ]
     },
     "originOverrides": {
@@ -36909,7 +36992,9 @@
       "custom-1791921346893-dshj": "その他",
       "custom-1791966715148-h5tp": "日本",
       "custom-1791966534875-2yiz": "日本",
-      "custom-1791973996242-1our": "日本"
+      "custom-1791973996242-1our": "日本",
+      "custom-1792067619800-hky7": "その他",
+      "custom-1792067620393-qnt8": "日本"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -37644,7 +37729,8 @@
       "custom-1791664055469-au2b": "live",
       "custom-1791664055911-cuz4": "live",
       "custom-1791664055006-96rv": "live",
-      "custom-1791863527797-qm90": "live"
+      "custom-1791863527797-qm90": "live",
+      "custom-1792067620393-qnt8": "live"
     },
     "runtimeOverrides": {
       "custom-1790247938551-ixfs": 100,
@@ -38310,7 +38396,8 @@
       "custom-1791664055469-au2b": 141,
       "custom-1791664055911-cuz4": 56,
       "custom-1791823398409-njce": 15,
-      "custom-1791863527797-qm90": 147
+      "custom-1791863527797-qm90": 147,
+      "custom-1792067620393-qnt8": 79
     },
     "letterboxdMeta": {
       "lb-0-hTha": {
@@ -54136,7 +54223,7 @@
         "addedDate": "2026-05-29",
         "addedDateSource": "letterboxd-export-2026-09-27",
         "note": "素晴らしい。マトリックスを見た以来の感覚かもしれない。結局人は他者を恐れながらも他者なしには生きていけない。シンジの幼少期のトラウマ？や父母との関係から来る他者への恐怖を乗り越える過程を世界に重ねて描いてるんだと解釈した。細かいアダムやリリス、死海文書のロジックは未だ完璧には掴んでいないが、テーマは掴みかけてきた。アスカや、リツコなど他のキャラクターも似つつも違った課題を抱えている。アスカは母に拒絶された経験から常に承認を求め、自分自身の価値をエヴァのみに見出していた。ラストの気持ち悪いっていうのは多分シンジが一人でなよなよ悩み苦しみ解決している姿への嫌悪感であり、この世界から目が覚める感じだった。考えすぎるのも良くない。全体として、ほんとに久しぶりに衝撃を受ける感じに素晴らしかった。",
-        "noteSource": "letterboxd-export",
+        "noteSource": "manual",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
         "watchedAddedDate": "2026-05-29",
@@ -54165,7 +54252,8 @@
           "tmdbId": 18491,
           "path": "/j6G24dqI4WgUtChhWjfnI4lnmiK.jpg",
           "checkedAt": "2026-10-13T04:07:09.759580+00:00"
-        }
+        },
+        "noteEditedAt": "2026-10-14T13:55:06.365Z"
       },
       "lb-469-1MKi": {
         "addedDate": "2025-10-09",
@@ -66701,13 +66789,17 @@
         "episodeNumber": 5,
         "episodeTmdbId": 5534732,
         "letterboxdMovieId": null,
-        "note": "本筋となんも関係ないが、わかんないとこをAI生成するよりポリゴン的にした方がキモくないね。\n記憶で色づくなど演出がいい。全体は素朴で暖かい感じですごい好き。演技含めて。\nもっとその彩度が増してくとかそういう演出重ねればいいのにと思う。この設定は素晴らしい。サスペンスにもミステリーにも何にでも活かせる。\n悲しみで画面暗くなる等よくある演出はそれなりに使ってる。\n本人かと思ったが、娘なのは結構納得がいく。というかこのストーリー全体が本当に未来起こりうるというかちゃんとしている。\n人生はタイミング。あとから知っても遅いことはあると最近分かってきたが、こういうのは切ない。",
+        "note": "本筋となんも関係ないが、わかんないとこをAI生成するよりポリゴン的にした方がキモくないね。\n記憶で色づくなど演出がいい。全体は素朴で暖かい感じですごい好き。演技含めて。\nもっとその彩度が増してくとかそういう演出重ねればいいのにと思う。この設定は素晴らしい。サスペンスにもミステリーにも何にでも活かせる。\n悲しみで画面暗くなる等よくある演出はそれなりに使ってる。\n本人かと思ったが、娘なのは結構納得がいく。というかこのストーリー全体が本当に未来起こりうるというかちゃんとしている。\n人生はタイミング。あとから知っても遅いことはあると最近分かってきたが、こういうのは切ない。\n\n────────────\n\n【2026-10-14・Letterboxd RSS】\nbohemian summerとうって変わって、全体的に落ち着きのある。曲自体はwait&seeでロケットスタートなのだが、演奏がピコピコしてないからかボーカルの勢いは強いが演奏そこまで\nオシャレながら温かみのあるセッティングいいね\naddicted to youはセットによく合う。新ミックスもキレではなく木のような優しさがある。蹴っ飛ばせもいいね。\nautomaticはやっぱり素晴らしい。どんな曲調にも合う。トークもしっとりしてて。ラストのfinal distanceも素晴らしかった。まとまってていい回だった。",
         "noteSource": "letterboxd-rss",
-        "noteImportedAt": "2026-10-13T19:55:47.713Z",
+        "noteImportedAt": "2026-10-15T12:33:40.855Z",
         "rssReviewRecords": {
           "letterboxd-review-1536735574": {
             "body": "本筋となんも関係ないが、わかんないとこをAI生成するよりポリゴン的にした方がキモくないね。\n記憶で色づくなど演出がいい。全体は素朴で暖かい感じですごい好き。演技含めて。\nもっとその彩度が増してくとかそういう演出重ねればいいのにと思う。この設定は素晴らしい。サスペンスにもミステリーにも何にでも活かせる。\n悲しみで画面暗くなる等よくある演出はそれなりに使ってる。\n本人かと思ったが、娘なのは結構納得がいく。というかこのストーリー全体が本当に未来起こりうるというかちゃんとしている。\n人生はタイミング。あとから知っても遅いことはあると最近分かってきたが、こういうのは切ない。",
             "block": "本筋となんも関係ないが、わかんないとこをAI生成するよりポリゴン的にした方がキモくないね。\n記憶で色づくなど演出がいい。全体は素朴で暖かい感じですごい好き。演技含めて。\nもっとその彩度が増してくとかそういう演出重ねればいいのにと思う。この設定は素晴らしい。サスペンスにもミステリーにも何にでも活かせる。\n悲しみで画面暗くなる等よくある演出はそれなりに使ってる。\n本人かと思ったが、娘なのは結構納得がいく。というかこのストーリー全体が本当に未来起こりうるというかちゃんとしている。\n人生はタイミング。あとから知っても遅いことはあると最近分かってきたが、こういうのは切ない。"
+          },
+          "letterboxd-review-1537823838": {
+            "body": "bohemian summerとうって変わって、全体的に落ち着きのある。曲自体はwait&seeでロケットスタートなのだが、演奏がピコピコしてないからかボーカルの勢いは強いが演奏そこまで\nオシャレながら温かみのあるセッティングいいね\naddicted to youはセットによく合う。新ミックスもキレではなく木のような優しさがある。蹴っ飛ばせもいいね。\nautomaticはやっぱり素晴らしい。どんな曲調にも合う。トークもしっとりしてて。ラストのfinal distanceも素晴らしかった。まとまってていい回だった。",
+            "block": "【2026-10-14・Letterboxd RSS】\nbohemian summerとうって変わって、全体的に落ち着きのある。曲自体はwait&seeでロケットスタートなのだが、演奏がピコピコしてないからかボーカルの勢いは強いが演奏そこまで\nオシャレながら温かみのあるセッティングいいね\naddicted to youはセットによく合う。新ミックスもキレではなく木のような優しさがある。蹴っ飛ばせもいいね。\nautomaticはやっぱり素晴らしい。どんな曲調にも合う。トークもしっとりしてて。ラストのfinal distanceも素晴らしかった。まとまってていい回だった。"
           }
         },
         "watchHistory": [
@@ -66715,6 +66807,15 @@
             "id": "rss:letterboxd-review-1536735574",
             "date": "2026-10-14",
             "recordedAt": "2026-10-13T18:04:12.000Z",
+            "rewatch": false,
+            "retroactive": false,
+            "source": "letterboxd-rss",
+            "manualEdited": false
+          },
+          {
+            "id": "rss:letterboxd-review-1537823838",
+            "date": "2026-10-14",
+            "recordedAt": "2026-10-14T13:37:03.000Z",
             "rewatch": false,
             "retroactive": false,
             "source": "letterboxd-rss",
@@ -66843,6 +66944,70 @@
           ],
           "source": "tmdb",
           "fetchedAt": "2026-10-14T10:33:16.405Z"
+        }
+      },
+      "custom-1792067619800-hky7": {
+        "publishedAt": "Thu, 15 Oct 2026 02:37:03 +1300",
+        "addedDate": "2026-10-14",
+        "addedDateSource": "rss-first-seen",
+        "reportedWatchedDate": "2026-10-14",
+        "note": "声が澄んできてる。美しい。光によく合う。というか時代ごとにその時代の曲が声にあってるきがする。聞き慣れてるだけかもしれないが。\nTravelingは素晴らしい。\ncan you keep a secretなどイントロから瞬間的に盛り上がる曲等ライブ向きな曲が意外に多いなって思った。",
+        "noteSource": "letterboxd-rss",
+        "noteImportedAt": "2026-10-15T12:33:40.855Z",
+        "rssReviewRecords": {
+          "letterboxd-review-1538730109": {
+            "body": "声が澄んできてる。美しい。光によく合う。というか時代ごとにその時代の曲が声にあってるきがする。聞き慣れてるだけかもしれないが。\nTravelingは素晴らしい。\ncan you keep a secretなどイントロから瞬間的に盛り上がる曲等ライブ向きな曲が意外に多いなって思った。",
+            "block": "声が澄んできてる。美しい。光によく合う。というか時代ごとにその時代の曲が声にあってるきがする。聞き慣れてるだけかもしれないが。\nTravelingは素晴らしい。\ncan you keep a secretなどイントロから瞬間的に盛り上がる曲等ライブ向きな曲が意外に多いなって思った。"
+          }
+        },
+        "watchHistory": [
+          {
+            "id": "rss:letterboxd-review-1538730109",
+            "date": "2026-10-14",
+            "recordedAt": "2026-10-15T03:55:41.000Z",
+            "rewatch": false,
+            "retroactive": false,
+            "source": "letterboxd-rss",
+            "manualEdited": false
+          }
+        ],
+        "crew84": {
+          "directors": [],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-15T12:33:40.096Z"
+        }
+      },
+      "custom-1792067620393-qnt8": {
+        "publishedAt": "Tue, 13 Oct 2026 17:03:49 +1300",
+        "addedDate": "2026-10-13",
+        "addedDateSource": "rss-first-seen",
+        "reportedWatchedDate": "2026-10-13",
+        "note": "前半のスタートは本当に素晴らしい。その後はグライダー的にその貯金で食ってるだけにも感じる。精神的孤独の話を恋愛の孤独に落とし込んでるのは少し勿体ない。\n前半のドラマは素晴らしいと思う。本当に辛いだろうし、自然を美しく感じるだろう。設定の使い方と展開の組み立て方が見事。憎いカルトたちの演技も臭くはあるがちゃんと被害者に感情移入できた。\n男側はあまりに不誠実とはいえ少し仕方ないとこもある。全てを失い人間が生きるには希望も必要。\n妻も孤独と言いながら、気を許しすぎだし、そして不誠実。ハグしたことをなぜ中途半端に隠すのか。聞かなかったじゃんなど言い訳並べてそれがあたかも正論で相対化出来てるかのように思ってる。\n寂しかったのよー的な話はどうしても理解できない。\n明確に悪い人はカルトだけだが、それによってみなが傷つけあう。\n主人公も極度の孤独を抱えてる人間に対し不要に傷つける。\nラストはHuston we have an problem的なスリラー\nラストはまあ読めた。その後のふたりを想像するのは楽しい。",
+        "noteSource": "letterboxd-rss",
+        "noteImportedAt": "2026-10-15T12:33:40.856Z",
+        "rssReviewRecords": {
+          "letterboxd-review-1536523784": {
+            "body": "前半のスタートは本当に素晴らしい。その後はグライダー的にその貯金で食ってるだけにも感じる。精神的孤独の話を恋愛の孤独に落とし込んでるのは少し勿体ない。\n前半のドラマは素晴らしいと思う。本当に辛いだろうし、自然を美しく感じるだろう。設定の使い方と展開の組み立て方が見事。憎いカルトたちの演技も臭くはあるがちゃんと被害者に感情移入できた。\n男側はあまりに不誠実とはいえ少し仕方ないとこもある。全てを失い人間が生きるには希望も必要。\n妻も孤独と言いながら、気を許しすぎだし、そして不誠実。ハグしたことをなぜ中途半端に隠すのか。聞かなかったじゃんなど言い訳並べてそれがあたかも正論で相対化出来てるかのように思ってる。\n寂しかったのよー的な話はどうしても理解できない。\n明確に悪い人はカルトだけだが、それによってみなが傷つけあう。\n主人公も極度の孤独を抱えてる人間に対し不要に傷つける。\nラストはHuston we have an problem的なスリラー\nラストはまあ読めた。その後のふたりを想像するのは楽しい。",
+            "block": "前半のスタートは本当に素晴らしい。その後はグライダー的にその貯金で食ってるだけにも感じる。精神的孤独の話を恋愛の孤独に落とし込んでるのは少し勿体ない。\n前半のドラマは素晴らしいと思う。本当に辛いだろうし、自然を美しく感じるだろう。設定の使い方と展開の組み立て方が見事。憎いカルトたちの演技も臭くはあるがちゃんと被害者に感情移入できた。\n男側はあまりに不誠実とはいえ少し仕方ないとこもある。全てを失い人間が生きるには希望も必要。\n妻も孤独と言いながら、気を許しすぎだし、そして不誠実。ハグしたことをなぜ中途半端に隠すのか。聞かなかったじゃんなど言い訳並べてそれがあたかも正論で相対化出来てるかのように思ってる。\n寂しかったのよー的な話はどうしても理解できない。\n明確に悪い人はカルトだけだが、それによってみなが傷つけあう。\n主人公も極度の孤独を抱えてる人間に対し不要に傷つける。\nラストはHuston we have an problem的なスリラー\nラストはまあ読めた。その後のふたりを想像するのは楽しい。"
+          }
+        },
+        "watchHistory": [
+          {
+            "id": "rss:letterboxd-review-1536523784",
+            "date": "2026-10-13",
+            "recordedAt": "2026-10-13T14:15:01.000Z",
+            "rewatch": false,
+            "retroactive": false,
+            "source": "letterboxd-rss",
+            "manualEdited": false
+          }
+        ],
+        "crew84": {
+          "directors": [],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-15T12:33:40.855Z"
         }
       }
     }
