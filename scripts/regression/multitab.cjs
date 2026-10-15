@@ -119,3 +119,26 @@ test('MULTITAB: missing Web Locks reads existing data but refuses unsafe saves',
   assert.deepEqual(await disk(b),stored);assert.equal(await a.evaluate(()=>window.__movie30SaveFailed),true);
  }finally{await context.close()}
 });
+
+test('P1: edits after a stop are archived before reopening',async()=>{
+ const {context,a,b}=await pair();try{
+  await a.evaluate(()=>{state.letterboxdMeta['fixture-0012'].note='first local'});
+  await b.evaluate(()=>{state.letterboxdMeta['fixture-0012'].note='peer';return save()});await conflict(a);
+  await a.evaluate(()=>{state.letterboxdMeta['fixture-0012'].note='after stop';return save()});
+  const archive=await a.evaluate(()=>movie30Record('multitab-conflicts'));
+  assert(archive.entries.some(e=>JSON.parse(e.json).letterboxdMeta['fixture-0012'].note==='after stop'));
+ }finally{await context.close()}
+});
+test('P1: explicit field choices restore both edits and survive reopening',async()=>{
+ const {context,a,b}=await pair();try{
+  await a.evaluate(()=>{state.letterboxdMeta['fixture-0012'].note='local review';state.fixtureUnknown.local='keep'});
+  await b.evaluate(()=>{state.letterboxdMeta['fixture-0012'].note='peer review';state.genreOverrides['fixture-0013']=['SF'];return save()});await conflict(a);
+  assert.equal(await a.evaluate(()=>typeof movie30RecoveryPlan),'function');
+  await a.evaluate(async()=>{window.testPlan=await movie30RecoveryPlan();});
+  assert.equal(await a.evaluate(()=>movie30ResolveConflict(testPlan,{})),false);
+  const ok=await a.evaluate(()=>{const choices={};for(const d of testPlan.diffs)choices[d.key]=d.path.includes('genreOverrides')?'right':'left';return movie30ResolveConflict(testPlan,choices)});assert.equal(ok,true);
+  assert.equal((await snapshot(a)).letterboxdMeta['fixture-0012'].note,'local review');assert.deepEqual((await snapshot(a)).genreOverrides['fixture-0013'],['SF']);
+  await a.reload();await ready(a);assert.equal((await snapshot(a)).letterboxdMeta['fixture-0012'].note,'local review');assert.deepEqual((await snapshot(a)).genreOverrides['fixture-0013'],['SF']);
+  assert.equal(await a.evaluate(()=>window.__movie30TabConflict),false);
+ }finally{await context.close()}
+});
