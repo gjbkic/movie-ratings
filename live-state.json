@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792067704405,
-  "sourceUpdatedIso": "2026-10-15T12:35:04.405Z",
+  "sourceUpdatedAt": 1792067709248,
+  "sourceUpdatedIso": "2026-10-15T12:35:09.248Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -2500,32 +2500,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-141-2a12",
-      "title": "マトリックス レボリューションズ",
-      "originalTitle": "",
-      "englishTitle": "The Matrix Revolutions",
-      "year": 2003,
-      "score": 89,
-      "star": 4,
-      "overallRank": 87,
-      "sameScoreRank": 1,
-      "category": "SF",
-      "mediaType": "movie",
-      "genre": [
-        "SF",
-        "アクション",
-        "哲学・思想",
-        "世界観"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 129,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-489-7T2k",
       "title": "エクス・マキナ",
       "originalTitle": "",
@@ -2533,8 +2507,8 @@
       "year": 2015,
       "score": 89,
       "star": 4,
-      "overallRank": 88,
-      "sameScoreRank": 2,
+      "overallRank": 87,
+      "sameScoreRank": 1,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -2548,6 +2522,32 @@
       "origin": "ハリウッド",
       "format": "live",
       "runtime": 108,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "lb-141-2a12",
+      "title": "マトリックス レボリューションズ",
+      "originalTitle": "",
+      "englishTitle": "The Matrix Revolutions",
+      "year": 2003,
+      "score": 89,
+      "star": 4,
+      "overallRank": 88,
+      "sameScoreRank": 2,
+      "category": "SF",
+      "mediaType": "movie",
+      "genre": [
+        "SF",
+        "アクション",
+        "哲学・思想",
+        "世界観"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 129,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
@@ -23026,8 +23026,8 @@
         "lb-71-27Vm"
       ],
       "89": [
-        "lb-141-2a12",
         "lb-489-7T2k",
+        "lb-141-2a12",
         "lb-29-2a2k",
         "lb-526-4JQI",
         "lb-65-2auI",
