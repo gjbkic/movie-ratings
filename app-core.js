@@ -240,7 +240,7 @@ async function movie30RestoreMissingRanks(){
 }
 
 function save(touch=true){
- if(window.__movie30TabConflict)return window.__movie30PendingSave=movie30WithLock(async()=>movie30Conflict(await movie30ReadDisk(),'停止後の編集を退避しました'));
+ if(window.__movie30TabConflict)return window.__movie30PendingSave=movie30WithLock(async()=>movie30Conflict(await movie30ReadDisk(),'停止後の編集があります'));
  if(window.__movie30BulkBoot||window.__movie30RecoveryBlocked)return;
  // Refuse destructive partial rank saves, regardless of the caller/UI path.
  try{
