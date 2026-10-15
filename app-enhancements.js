@@ -2223,6 +2223,7 @@ allFilms=function(...args){
   const sameUri=uri(f.uri)&&uri(f.uri)===uri(keeper.uri);
   const englishA=normalize(titleInfo(f).englishTitle||f.lbTitle);
   const englishB=normalize(titleInfo(keeper).englishTitle||keeper.lbTitle);
+  const sameEnglish=!!englishA&&englishA===englishB;
   return !(sameUri||sameEnglish);
  });
  movie98ListCache=filtered;
