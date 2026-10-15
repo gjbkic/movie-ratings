@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792067733092,
-  "sourceUpdatedIso": "2026-10-15T12:35:33.092Z",
+  "sourceUpdatedAt": 1792067750112,
+  "sourceUpdatedIso": "2026-10-15T12:35:50.112Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -2922,67 +2922,15 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1792067620393-qnt8",
-      "title": "UH LIVE STREAMING 20代はイケイケ！",
-      "originalTitle": "UH LIVE STREAMING 20代はイケイケ！",
-      "englishTitle": "UH Live Streaming 20 Dai wa Ike Ike!",
-      "year": 2003,
-      "score": 89,
-      "star": 4,
-      "overallRank": 102,
-      "sameScoreRank": 16,
-      "category": "Letterboxd",
-      "mediaType": "other",
-      "genre": [
-        "ミュージカル"
-      ],
-      "origin": "日本",
-      "format": "live",
-      "runtime": 79,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-13",
-      "letterboxdPublishedAt": "Tue, 13 Oct 2026 17:03:49 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-13"
-    },
-    {
-      "id": "lb-100-aZes",
-      "title": "レディ・プレイヤー1",
-      "originalTitle": "",
-      "englishTitle": "Ready Player One",
-      "year": 2018,
-      "score": 89,
-      "star": 4,
-      "overallRank": 103,
-      "sameScoreRank": 17,
-      "category": "SF",
-      "mediaType": "movie",
-      "genre": [
-        "SF",
-        "アクション",
-        "ファンタジー",
-        "ヒーロー",
-        "世界観",
-        "娯楽",
-        "大作"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 140,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "custom-1791353624251-egky",
       "title": "狼たちの午後",
       "originalTitle": "Dog Day Afternoon",
       "englishTitle": "Dog Day Afternoon",
       "year": 1975,
-      "score": 89,
+      "score": 88,
       "star": 4,
-      "overallRank": 104,
-      "sameScoreRank": 18,
+      "overallRank": 102,
+      "sameScoreRank": 1,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -3003,6 +2951,58 @@
       "letterboxdReportedWatchedDate": "2026-10-07"
     },
     {
+      "id": "custom-1792067620393-qnt8",
+      "title": "UH LIVE STREAMING 20代はイケイケ！",
+      "originalTitle": "UH LIVE STREAMING 20代はイケイケ！",
+      "englishTitle": "UH Live Streaming 20 Dai wa Ike Ike!",
+      "year": 2003,
+      "score": 88,
+      "star": 4,
+      "overallRank": 103,
+      "sameScoreRank": 2,
+      "category": "Letterboxd",
+      "mediaType": "other",
+      "genre": [
+        "ミュージカル"
+      ],
+      "origin": "日本",
+      "format": "live",
+      "runtime": 79,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-13",
+      "letterboxdPublishedAt": "Tue, 13 Oct 2026 17:03:49 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-13"
+    },
+    {
+      "id": "lb-100-aZes",
+      "title": "レディ・プレイヤー1",
+      "originalTitle": "",
+      "englishTitle": "Ready Player One",
+      "year": 2018,
+      "score": 88,
+      "star": 4,
+      "overallRank": 104,
+      "sameScoreRank": 3,
+      "category": "SF",
+      "mediaType": "movie",
+      "genre": [
+        "SF",
+        "アクション",
+        "ファンタジー",
+        "ヒーロー",
+        "世界観",
+        "娯楽",
+        "大作"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 140,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-0-hTha",
       "title": "パラサイト 半地下の家族",
       "originalTitle": "기생충",
@@ -3011,7 +3011,7 @@
       "score": 88,
       "star": 4,
       "overallRank": 105,
-      "sameScoreRank": 1,
+      "sameScoreRank": 4,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -3040,7 +3040,7 @@
       "score": 88,
       "star": 4,
       "overallRank": 106,
-      "sameScoreRank": 2,
+      "sameScoreRank": 5,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
       "genre": [
@@ -3070,7 +3070,7 @@
       "score": 88,
       "star": 4,
       "overallRank": 107,
-      "sameScoreRank": 3,
+      "sameScoreRank": 6,
       "category": "スリラー、ホラー",
       "mediaType": "movie",
       "genre": [
@@ -3099,7 +3099,7 @@
       "score": 88,
       "star": 4,
       "overallRank": 108,
-      "sameScoreRank": 4,
+      "sameScoreRank": 7,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -3127,7 +3127,7 @@
       "score": 88,
       "star": 4,
       "overallRank": 109,
-      "sameScoreRank": 5,
+      "sameScoreRank": 8,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -3154,7 +3154,7 @@
       "score": 88,
       "star": 4,
       "overallRank": 110,
-      "sameScoreRank": 6,
+      "sameScoreRank": 9,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -3183,7 +3183,7 @@
       "score": 88,
       "star": 4,
       "overallRank": 111,
-      "sameScoreRank": 7,
+      "sameScoreRank": 10,
       "category": "コメディ",
       "mediaType": "movie",
       "genre": [
@@ -3209,7 +3209,7 @@
       "score": 88,
       "star": 4,
       "overallRank": 112,
-      "sameScoreRank": 8,
+      "sameScoreRank": 11,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -3241,7 +3241,7 @@
       "score": 88,
       "star": 4,
       "overallRank": 113,
-      "sameScoreRank": 9,
+      "sameScoreRank": 12,
       "category": "スターウォーズシリーズ",
       "mediaType": "movie",
       "genre": [
@@ -3273,7 +3273,7 @@
       "score": 88,
       "star": 4,
       "overallRank": 114,
-      "sameScoreRank": 10,
+      "sameScoreRank": 13,
       "category": "スターウォーズシリーズ",
       "mediaType": "movie",
       "genre": [
@@ -21626,7 +21626,7 @@
       "lb-3-a5fa": 91,
       "lb-162-2TTo": 90,
       "lb-49-27US": 91,
-      "lb-100-aZes": 89,
+      "lb-100-aZes": 88,
       "lb-33-29Qy": 90,
       "lb-66-2aq2": 90,
       "lb-301-2a2a": 90,
@@ -22225,7 +22225,7 @@
       "custom-1791139748091-0goj": 81,
       "custom-1791139747386-vy04": 86,
       "lb-62-2b4w": 100,
-      "custom-1791353624251-egky": 89,
+      "custom-1791353624251-egky": 88,
       "custom-1791362786595-8onp": 81,
       "custom-1791374649583-3zqi": 85,
       "custom-1791377114135-l3hd": 78,
@@ -22296,7 +22296,7 @@
       "custom-1791919063908-ski9": 64,
       "custom-1791919051056-56pv": 77,
       "custom-1791918752014-2ngd": 79,
-      "custom-1792067620393-qnt8": 89
+      "custom-1792067620393-qnt8": 88
     },
     "rankOrder": {
       "40": [
@@ -23014,6 +23014,9 @@
         "lb-98-2bbs"
       ],
       "88": [
+        "custom-1791353624251-egky",
+        "custom-1792067620393-qnt8",
+        "lb-100-aZes",
         "lb-0-hTha",
         "lb-460-20eA",
         "lb-91-29Js",
@@ -23040,10 +23043,7 @@
         "lb-185-HTIi",
         "lb-48-27Vw",
         "lb-310-azpY",
-        "lb-84-29ro",
-        "custom-1792067620393-qnt8",
-        "lb-100-aZes",
-        "custom-1791353624251-egky"
+        "lb-84-29ro"
       ],
       "90": [
         "lb-66-2aq2",
