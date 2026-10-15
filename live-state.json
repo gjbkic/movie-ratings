@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792067797841,
-  "sourceUpdatedIso": "2026-10-15T12:36:37.841Z",
+  "sourceUpdatedAt": 1792067802433,
+  "sourceUpdatedIso": "2026-10-15T12:36:42.433Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -3674,29 +3674,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1792067619800-hky7",
-      "title": "Utada Hikaru: Unplugged",
-      "originalTitle": "",
-      "englishTitle": "Utada Hikaru: Unplugged",
-      "year": 2001,
-      "score": 87,
-      "star": 4,
-      "overallRank": 127,
-      "sameScoreRank": 13,
-      "category": "Letterboxd",
-      "mediaType": "other",
-      "genre": [
-        "ミュージカル"
-      ],
-      "origin": "その他",
-      "format": "",
-      "runtime": null,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-14",
-      "letterboxdPublishedAt": "Thu, 15 Oct 2026 02:37:03 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-14"
-    },
-    {
       "id": "lb-101-ce74",
       "title": "フォードvsフェラーリ",
       "originalTitle": "",
@@ -3704,8 +3681,8 @@
       "year": 2019,
       "score": 87,
       "star": 4,
-      "overallRank": 128,
-      "sameScoreRank": 14,
+      "overallRank": 127,
+      "sameScoreRank": 13,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -3722,6 +3699,29 @@
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1792067619800-hky7",
+      "title": "Utada Hikaru: Unplugged",
+      "originalTitle": "",
+      "englishTitle": "Utada Hikaru: Unplugged",
+      "year": 2001,
+      "score": 87,
+      "star": 4,
+      "overallRank": 128,
+      "sameScoreRank": 14,
+      "category": "Letterboxd",
+      "mediaType": "other",
+      "genre": [
+        "ミュージカル"
+      ],
+      "origin": "その他",
+      "format": "",
+      "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-14",
+      "letterboxdPublishedAt": "Thu, 15 Oct 2026 02:37:03 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-14"
     },
     {
       "id": "lb-98-2bbs",
@@ -23013,8 +23013,8 @@
         "custom-1790508959270-dbu3",
         "custom-1790508958909-q6d6",
         "lb-37-72s",
-        "custom-1792067619800-hky7",
         "lb-101-ce74",
+        "custom-1792067619800-hky7",
         "lb-98-2bbs"
       ],
       "88": [
