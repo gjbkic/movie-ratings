@@ -20,7 +20,7 @@ preview-posters.js は fixture ID の未確定カードに /fictional-poster.svg
 - 修正後3件成功。両未確定グループの全カードに1画像、ローカル画像のnaturalWidth=180、文字との非重複、再描画・再読み込み後のstate全体一致を確認。
 - node scripts/regression/run.cjs all：正常系13スイート成功（追加pending-postersを含む）。data-contract 9件、MULTITAB 18件、sheet-data-ui 5件成功。既知問題4件は別枠で再現し、今回未修正。
 - 最後の画像レイアウト調整後、検証版3件を再実行して成功。保存・競合復旧・JSON出力・下スワイプの検証版テストも成功、外部要求0、pageerror 0。
-- iPhone Safari / ホーム画面版の実機動作・GPU合成時の滑らかさは未確認。Chromeのモバイル画面・タッチ合成を実機結果と混同しない。
+- 自動検証完了時点ではiPhone Safari / ホーム画面版の実機動作・GPU合成時の滑らかさは未確認だった。最新のユーザーによる実機結果は iphone-validation-status.md に記録する。Chromeのモバイル画面・タッチ合成を実機結果と混同しない。
 
 ## iPhoneでの確認
 
