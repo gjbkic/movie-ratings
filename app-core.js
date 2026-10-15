@@ -5879,7 +5879,7 @@ window.__movie30AutoSyncPending=()=>{const x=getLbSettings();if(x.auto!==false)s
       const sentMetaFp=metaFp(payload.state.letterboxdMeta);
       const url=`https://api.github.com/repos/${REPO}/contents/${LIVE_PATH}`;let sha=null,r=await fetch(url,{headers:headers(token),cache:'no-store'});
       if(r.ok)sha=(await r.json()).sha||null;else if(r.status!==404)throw new Error(`GitHub確認に失敗 (${r.status})`);
-      if(window.__movie30RecoveryBlocked||window.__movie30SaveFailed||window.__movie30TabConflict||movie30PendingWrites||
+      if(window.__movie30RecoveryBlocked||window.__movie30SaveFailed||window.__movie30TabConflict||(typeof movie30PendingWrites!=='undefined'&&movie30PendingWrites)||
          sentDataFp!==window.__movie30GithubDataFingerprintV29(state)||sentMetaFp!==metaFp()){
         status('保存状態が変わったため同期を中止しました。保存完了後に再試行してください。','bad');return;
       }
