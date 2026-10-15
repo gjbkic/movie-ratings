@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792067692959,
-  "sourceUpdatedIso": "2026-10-15T12:34:52.959Z",
+  "sourceUpdatedAt": 1792067704405,
+  "sourceUpdatedIso": "2026-10-15T12:35:04.405Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -2526,34 +2526,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-29-2a2k",
-      "title": "タイタニック",
-      "originalTitle": "",
-      "englishTitle": "Titanic",
-      "year": 1997,
-      "score": 89,
-      "star": 4,
-      "overallRank": 88,
-      "sameScoreRank": 2,
-      "category": "恋愛、ミュージカル",
-      "mediaType": "movie",
-      "genre": [
-        "恋愛",
-        "切ない",
-        "ドラマ",
-        "サスペンス",
-        "大作",
-        "歴史"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 189,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-489-7T2k",
       "title": "エクス・マキナ",
       "originalTitle": "",
@@ -2561,8 +2533,8 @@
       "year": 2015,
       "score": 89,
       "star": 4,
-      "overallRank": 89,
-      "sameScoreRank": 3,
+      "overallRank": 88,
+      "sameScoreRank": 2,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -2576,6 +2548,34 @@
       "origin": "ハリウッド",
       "format": "live",
       "runtime": 108,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "lb-29-2a2k",
+      "title": "タイタニック",
+      "originalTitle": "",
+      "englishTitle": "Titanic",
+      "year": 1997,
+      "score": 89,
+      "star": 4,
+      "overallRank": 89,
+      "sameScoreRank": 3,
+      "category": "恋愛、ミュージカル",
+      "mediaType": "movie",
+      "genre": [
+        "恋愛",
+        "切ない",
+        "ドラマ",
+        "サスペンス",
+        "大作",
+        "歴史"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 189,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
@@ -23027,8 +23027,8 @@
       ],
       "89": [
         "lb-141-2a12",
-        "lb-29-2a2k",
         "lb-489-7T2k",
+        "lb-29-2a2k",
         "lb-526-4JQI",
         "lb-65-2auI",
         "custom-1791057232858-35ld",
