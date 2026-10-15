@@ -1,6 +1,6 @@
 'use strict';
 const {spawnSync}=require('node:child_process'),fs=require('node:fs'),path=require('node:path');
-const suites=['data-contract','multitab','star-editor','unrated-panels','detail-unified','filtered-ui','drag-touch','long-drag','search-drag','search-registration','letterboxd','sheet-data-ui','known-issues'];
+const suites=['data-contract','multitab','star-editor','unrated-panels','pending-posters','detail-unified','filtered-ui','drag-touch','long-drag','search-drag','search-registration','letterboxd','sheet-data-ui','known-issues'];
 const requested=process.argv[2]||'all';
 if(requested!=='all'&&!suites.includes(requested))throw Error('Unknown regression suite: '+requested);
 const selected=requested==='all'?suites:[requested],results=[];

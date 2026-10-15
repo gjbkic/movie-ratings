@@ -8896,6 +8896,11 @@ function decoratePosters84(){
   const rank=document.getElementById('rankRoot');
   if(rank&&rank.style.display!=='none'){
     rank.querySelectorAll('.rank-card[data-id]').forEach(el=>putPoster84(el,decodeURIComponent(el.dataset.id),'rank'));
+    rank.querySelectorAll('.uns-card[data-uns],.uns-card[data-v76-open]').forEach(el=>{
+      const id=el.dataset.uns||el.dataset.v76Open;
+      el.classList.add('movie30-pending-poster84');
+      putPoster84(el,decodeURIComponent(id),'rank');
+    });
   }
   const watch=document.getElementById('watchList83');
   if(watch&&watch.style.display!=='none'){
@@ -8958,7 +8963,9 @@ if(rankPosterButton84)rankPosterButton84.onclick=()=>{
 window.__movie30PosterDecorate84=decoratePosters84;
 const posterStyles84=document.createElement('style');
 posterStyles84.textContent=
- '.rank-card.movie30-rank-poster84{position:relative;padding-left:43px;min-height:53px}'
+ '.uns-card.movie30-pending-poster84{position:relative;padding-left:52px!important;min-height:82px}'
+ +'#rankRoot .pending-g .uns-card.movie30-pending-poster84>.movie30-poster84{left:7px!important;top:8px!important;transform:none!important;width:36px!important;height:54px!important;max-height:54px!important}'
+ +'.rank-card.movie30-rank-poster84{position:relative;padding-left:43px;min-height:53px}'
  +'.movie30-rank-poster84>.movie30-poster84{position:absolute;left:5px;top:50%;transform:translateY(-50%);width:30px;height:45px;object-fit:cover;pointer-events:none}'
  +'.watch83-item.movie30-watch-poster84{position:relative;padding-left:70px;min-height:92px}'
  +'.movie30-watch-poster84>.movie30-poster84{position:absolute;top:8px;left:9px;width:50px;height:75px;object-fit:cover;pointer-events:none}'

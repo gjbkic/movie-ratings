@@ -57,7 +57,7 @@ renderRank=function(...args){
  const ps=[...document.querySelectorAll('#rankRoot .uns-panel')];
  panel(ps.find(p=>p.querySelector('[data-v76-open]')),'star');
  panel(ps.find(p=>p.querySelector('[data-uns]')),'score');
- jump();return result;
+ jump();window.__movie30PosterDecorate84?.();return result;
 };
 renderRank();
 })();
