@@ -7377,32 +7377,44 @@ renderRank();const marker=document.getElementById('movie30BuildV29');if(marker)m
     if(target.closest('textarea')&&!target.closest('#note66'))return;
     const fromHandle=bar.contains(target);
     const child=scrollableChild(target);
-    if(child&&child.scrollTop>1)return;
-    if(!fromHandle&&sheet.scrollTop>1)return;
     const t=event.touches[0];
-    gesture={y:t.clientY,x:t.clientX,fromHandle,dragging:false,dy:0,started:performance.now()};
+    // Keep native content scrolling, but remember quick downward flicks started
+    // lower in the sheet even if its content is currently scrolled.
+    const nativeScrolling=!fromHandle&&(sheet.scrollTop>1||(child&&child.scrollTop>1));
+    const box=sheet.getBoundingClientRect();
+    gesture={y:t.clientY,x:t.clientX,fromHandle,nativeScrolling,
+      fromLowerHalf:t.clientY>=box.top+box.height*0.48,
+      dragging:false,dy:0,started:performance.now()};
   },{passive:true});
   sheet.addEventListener('touchmove',event=>{
     const g=gesture;
     if(!g||event.touches.length!==1||!overlay.classList.contains('open'))return;
     const t=event.touches[0],dy=t.clientY-g.y,dx=t.clientX-g.x;
+    if(dy<0||(Math.abs(dx)>11&&Math.abs(dx)>Math.abs(dy))){gesture=null;return;}
+    g.dy=Math.max(0,dy);
+    // When the user begins below a scrolled area, don't steal native scrolling.
+    // A quick flick from the lower half may still dismiss at touchend.
+    if(g.nativeScrolling)return;
     if(!g.dragging){
-      if(dy<0||(Math.abs(dx)>11&&Math.abs(dx)>Math.abs(dy))){gesture=null;return;}
-      if(dy<7)return;
-      if(dy<Math.abs(dx)*1.1)return;
-      if(!g.fromHandle&&sheet.scrollTop>1){gesture=null;return;}
+      if(dy<7||dy<Math.abs(dx)*1.1)return;
       g.dragging=true;
     }
     if(event.cancelable)event.preventDefault();
-    g.dy=Math.max(0,dy);
     sheet.style.transition='none';
     sheet.style.transform='translate3d(0,'+Math.min(320,Math.round(g.dy*0.85))+'px,0)';
   },{passive:false});
-  function finishTouch(cancelled){
+  function finishTouch(cancelled,event){
     const g=gesture;gesture=null;
-    if(!g||!g.dragging)return;
-    const fast=g.dy>55&&(g.dy/Math.max(1,performance.now()-g.started))>0.7;
-    if(!cancelled&&(g.dy>=105||fast)){
+    if(!g)return;
+    const touch=event.changedTouches?.[0];
+    if(touch)g.dy=Math.max(g.dy,touch.clientY-g.y);
+    const speed=g.dy/Math.max(1,performance.now()-g.started);
+    const normalDismiss=g.dragging&&(g.dy>=105||(g.dy>55&&speed>0.7));
+    // A lower-half flick works even after the sheet has been scrolled.
+    // Require both distance and velocity so slow reading scrolls remain native.
+    const lowerFlick=g.nativeScrolling&&g.fromLowerHalf&&g.dy>=90&&speed>1.0;
+    if(!g.dragging&&!lowerFlick)return;
+    if(!cancelled&&(normalDismiss||lowerFlick)){
       sheet.style.transition='transform 150ms ease-out';
       sheet.style.transform='translate3d(0,100dvh,0)';
       closeTimer=setTimeout(()=>{
@@ -7410,14 +7422,14 @@ renderRank();const marker=document.getElementById('movie30BuildV29');if(marker)m
         if(overlay.classList.contains('open'))closeSheet();
         else resetSheetVisual();
       },155);
-    }else{
+    }else if(g.dragging){
       sheet.style.transition='transform 160ms ease-out';
       sheet.style.transform='';
       closeTimer=setTimeout(()=>{closeTimer=0;sheet.style.transition='';},180);
     }
   }
-  sheet.addEventListener('touchend',()=>finishTouch(false),{passive:true});
-  sheet.addEventListener('touchcancel',()=>finishTouch(true),{passive:true});
+  sheet.addEventListener('touchend',event=>finishTouch(false,event),{passive:true});
+  sheet.addEventListener('touchcancel',event=>finishTouch(true,event),{passive:true});
   overlay.addEventListener('touchmove',event=>{
     if(event.target===overlay&&event.cancelable)event.preventDefault();
   },{passive:false});
