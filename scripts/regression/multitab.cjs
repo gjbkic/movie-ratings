@@ -86,7 +86,7 @@ test('MULTITAB: conflict archive failure leaves both stores untouched and offers
   await conflict(a);const before=await disk(b);
   assert.equal(await a.evaluate(()=>save()),false);assert.deepEqual(await disk(b),before);
   assert.match(await a.locator('#movie30-tab-conflict').textContent(),/退避保存できません/);
-  const [download]=await Promise.all([a.waitForEvent('download'),a.locator('#movie30-tab-conflict button').click()]);
+  const [download]=await Promise.all([a.waitForEvent('download'),a.getByRole('button',{name:'競合した両候補をJSON保存',exact:true}).click()]);
   const stream=await download.createReadStream();let text='';for await(const chunk of stream)text+=chunk;
   const backup=JSON.parse(text);assert(backup.candidates.some(e=>JSON.parse(e.json).letterboxdMeta['fixture-0012'].note==='uncommitted A'));
   assert(backup.candidates.some(e=>JSON.parse(e.json).genreOverrides['fixture-0013']?.includes('SF')));
@@ -132,13 +132,56 @@ test('P1: edits after a stop are archived before reopening',async()=>{
 test('P1: explicit field choices restore both edits and survive reopening',async()=>{
  const {context,a,b}=await pair();try{
   await a.evaluate(()=>{state.letterboxdMeta['fixture-0012'].note='local review';state.fixtureUnknown.local='keep'});
-  await b.evaluate(()=>{state.letterboxdMeta['fixture-0012'].note='peer review';state.genreOverrides['fixture-0013']=['SF'];return save()});await conflict(a);
+  await b.evaluate(()=>{state.letterboxdMeta['fixture-0012'].note='peer review';state.genreOverrides['fixture-0013']=['SF'];state.rankOrder['88'].reverse();return save()});await conflict(a);
   assert.equal(await a.evaluate(()=>typeof movie30RecoveryPlan),'function');
   await a.evaluate(async()=>{window.testPlan=await movie30RecoveryPlan();});
   assert.equal(await a.evaluate(()=>movie30ResolveConflict(testPlan,{})),false);
-  const ok=await a.evaluate(()=>{const choices={};for(const d of testPlan.diffs)choices[d.key]=d.path.includes('genreOverrides')?'right':'left';return movie30ResolveConflict(testPlan,choices)});assert.equal(ok,true);
+  const ok=await a.evaluate(()=>{const choices={};for(const d of testPlan.diffs)choices[d.key]=(d.path.includes('genreOverrides')||d.path.includes('rankOrder'))?'right':'left';return movie30ResolveConflict(testPlan,choices)});assert.equal(ok,true);
   assert.equal((await snapshot(a)).letterboxdMeta['fixture-0012'].note,'local review');assert.deepEqual((await snapshot(a)).genreOverrides['fixture-0013'],['SF']);
   await a.reload();await ready(a);assert.equal((await snapshot(a)).letterboxdMeta['fixture-0012'].note,'local review');assert.deepEqual((await snapshot(a)).genreOverrides['fixture-0013'],['SF']);
-  assert.equal(await a.evaluate(()=>window.__movie30TabConflict),false);
+  assert.equal(await a.evaluate(()=>!!window.__movie30TabConflict),false);assert.deepEqual((await snapshot(a)).rankOrder,(await snapshot(b)).rankOrder);
+ }finally{await context.close()}
+});
+
+test('P1: changed shared data invalidates an explicit recovery plan',async()=>{
+ const {context,a,b}=await pair();try{
+  await a.evaluate(()=>{state.letterboxdMeta['fixture-0012'].note='A'});await b.evaluate(()=>{state.letterboxdMeta['fixture-0012'].note='B';return save()});await conflict(a);
+  await a.evaluate(async()=>{window.testPlan=await movie30RecoveryPlan()});
+  await b.evaluate(()=>{state.letterboxdMeta['fixture-0012'].note='newer B';return save()});const before=await disk(b);
+  assert.equal(await a.evaluate(()=>movie30ResolveConflict(testPlan,Object.fromEntries(testPlan.diffs.map(d=>[d.key,'left'])))),false);assert.deepEqual(await disk(b),before);
+ }finally{await context.close()}
+});
+test('P1: pre-recovery archive failure preserves both stores and the local review',async()=>{
+ const {context,a,b}=await pair();try{
+  await a.evaluate(()=>{state.letterboxdMeta['fixture-0012'].note='A'});await b.evaluate(()=>{state.letterboxdMeta['fixture-0012'].note='B';return save()});await conflict(a);
+  const before=await disk(b);await a.evaluate(async()=>{window.testPlan=await movie30RecoveryPlan();const original=IDBDatabase.prototype.transaction;IDBDatabase.prototype.transaction=function(...args){if(args[1]==='readwrite')throw Error('quota');return original.apply(this,args)}});
+  assert.equal(await a.evaluate(()=>movie30ResolveConflict(testPlan,Object.fromEntries(testPlan.diffs.map(d=>[d.key,'left'])))),false);assert.deepEqual(await disk(b),before);assert.equal((await snapshot(a)).letterboxdMeta['fixture-0012'].note,'A');
+ }finally{await context.close()}
+});
+test('P1: recovery UI requires explicit review choice and persists it',async()=>{
+ const {context,a,b}=await pair();try{
+  await a.evaluate(()=>{state.letterboxdMeta['fixture-0012'].note='UI local review'});await b.evaluate(()=>{state.letterboxdMeta['fixture-0012'].note='UI peer review';return save()});await conflict(a);
+  await a.getByRole('button',{name:'退避候補を比較して復帰'}).click();
+  const panel=a.locator('.movie30-recovery');await panel.getByRole('button',{name:'候補を比較',exact:true}).click();
+  await panel.locator('details').first().locator('summary').click();assert.match(await panel.textContent(),/UI local review/);assert.match(await panel.textContent(),/UI peer review/);
+  for(const select of await panel.locator('details select').all())await select.selectOption('left');
+  a.on('dialog',d=>d.accept());await panel.getByRole('button',{name:'選択内容を退避・保存して復帰'}).click();await a.waitForFunction(()=>!window.__movie30TabConflict);
+  await a.reload();await ready(a);assert.equal((await snapshot(a)).letterboxdMeta['fixture-0012'].note,'UI local review');
+ }finally{await context.close()}
+});
+
+test('P1: both recovery writes failing cannot release the stop or change current data',async()=>{
+ const {context,a,b}=await pair();try{
+  await a.evaluate(()=>{state.letterboxdMeta['fixture-0012'].note='unsaved A'});await b.evaluate(()=>{state.letterboxdMeta['fixture-0012'].note='saved B';return save()});await conflict(a);const before=await disk(b);
+  await a.evaluate(async()=>{window.testPlan=await movie30RecoveryPlan();const archive=movie30ArchiveConflictEntries;movie30ArchiveConflictEntries=async e=>{const ok=await archive(e);Storage.prototype.setItem=function(){throw Error('quota')};movie30WriteSnapshot=async()=>false;return ok}});
+  assert.equal(await a.evaluate(()=>movie30ResolveConflict(testPlan,Object.fromEntries(testPlan.diffs.map(d=>[d.key,'left'])))),false);assert.deepEqual(await disk(b),before);assert.equal((await snapshot(a)).letterboxdMeta['fixture-0012'].note,'unsaved A');assert.equal(await a.evaluate(()=>!!window.__movie30TabConflict),true);
+ }finally{await context.close()}
+});
+test('P1: editing during recovery commit is retained and archived instead of replaced',async()=>{
+ const {context,a,b}=await pair();try{
+  await a.evaluate(()=>{state.letterboxdMeta['fixture-0012'].note='A'});await b.evaluate(()=>{state.letterboxdMeta['fixture-0012'].note='B';return save()});await conflict(a);
+  await a.evaluate(async()=>{window.testPlan=await movie30RecoveryPlan();const write=movie30WriteSnapshot;movie30WriteSnapshot=async(...args)=>{const result=await write(...args);state.letterboxdMeta['fixture-0012'].note='during commit';return result}});
+  assert.equal(await a.evaluate(()=>movie30ResolveConflict(testPlan,Object.fromEntries(testPlan.diffs.map(d=>[d.key,'left'])))),false);assert.equal((await snapshot(a)).letterboxdMeta['fixture-0012'].note,'during commit');
+  assert((await a.evaluate(()=>movie30Record('multitab-conflicts'))).entries.some(e=>JSON.parse(e.json).letterboxdMeta['fixture-0012'].note==='during commit'));
  }finally{await context.close()}
 });

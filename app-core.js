@@ -58,24 +58,19 @@ async function movie30Record(id){
 }
 function movie30UnsavedJson(){const copy=deepCopy(state);delete copy.storageIntegrity;return JSON.stringify(copy)}
 function movie30ConflictNotice(entries,durable){
+ movie30ConflictEntries=[...movie30ConflictEntries,...entries].filter((e,i,all)=>all.findIndex(x=>x.json===e.json)===i);
  let el=document.getElementById('movie30-tab-conflict');
  if(!el){el=document.createElement('div');el.id='movie30-tab-conflict';el.setAttribute('role','alert');el.style.cssText='position:sticky;top:0;z-index:501;padding:12px;background:#502b17;color:white';document.body.prepend(el)}
  el.textContent=durable?'別タブとの競合データを退避しました。自動統合せず保護しています。JSONを保存し、内容を確認してください。':'別タブとの競合を検出しました。退避保存できません。アプリを閉じず、今すぐ両候補のJSONを保存してください。';
  const button=document.createElement('button');button.textContent='競合した両候補をJSON保存';
- button.onclick=()=>{const candidates=[...entries,{source:'current-tab',json:movie30UnsavedJson()}];const url=URL.createObjectURL(new Blob([JSON.stringify({type:'movie30-conflict-backup',candidates},null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='films-tab-conflict-'+Date.now()+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),2000)};el.append(button);
+ button.onclick=()=>{const candidates=[...movie30ConflictEntries,{source:'current-tab',json:movie30UnsavedJson()}];const url=URL.createObjectURL(new Blob([JSON.stringify({type:'movie30-conflict-backup',candidates},null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='films-tab-conflict-'+Date.now()+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),2000)};el.append(button);
+ const recover=document.createElement('button');recover.textContent='退避候補を比較して復帰';recover.onclick=()=>movie30RecoveryUi().catch(e=>alert(e.message));el.append(recover);
 }
-async function movie30ShowArchivedConflicts(){const record=await movie30Record('multitab-conflicts');if(record?.entries?.length)movie30ConflictNotice(record.entries,true)}
+async function movie30ShowArchivedConflicts(){const record=await movie30Record('multitab-conflicts');if(record?.entries?.length&&record.active!==false){window.__movie30TabConflict=true;window.__movie30SaveFailed=true;movie30ConflictNotice(record.entries,true)}}
 async function movie30Conflict(disk,reason){
  window.__movie30TabConflict=true;window.__movie30SaveFailed=true;
  const entries=[{source:'local-tab',json:movie30UnsavedJson()},{source:'localStorage',json:disk?.local},{source:'indexedDB',json:disk?.db}].filter(x=>x.json);
- let durable=false;const db=await openMovie30Db();
- if(db)durable=await new Promise(resolve=>{try{
-  const tx=db.transaction('snapshots','readwrite'),store=tx.objectStore('snapshots'),r=store.get('multitab-conflicts');
-  r.onsuccess=()=>{const all=[...(r.result?.entries||[])];for(const e of entries)if(!all.some(x=>x.json===e.json))all.push(e);
-   // Bound auxiliary storage; never evict an unresolved candidate to make room.
-   if(all.length>12||all.reduce((n,e)=>n+e.json.length,0)>12000000){tx.abort();return}store.put({id:'multitab-conflicts',entries:all})};
-  tx.oncomplete=()=>resolve(true);tx.onerror=tx.onabort=()=>resolve(false);
- }catch(_){resolve(false)}});
+ const durable=await movie30ArchiveConflictEntries(entries);
  setSaveStatus('保存停止 · '+reason+' · 両候補を確認してください');movie30ConflictNotice(entries,durable);return false;
 }
 function movie30ReceivePeer(){
@@ -245,7 +240,7 @@ async function movie30RestoreMissingRanks(){
 }
 
 function save(touch=true){
- if(window.__movie30TabConflict)return window.__movie30PendingSave=Promise.resolve(false);
+ if(window.__movie30TabConflict)return window.__movie30PendingSave=movie30WithLock(async()=>movie30Conflict(await movie30ReadDisk(),'停止後の編集を退避しました'));
  if(window.__movie30BulkBoot||window.__movie30RecoveryBlocked)return;
  // Refuse destructive partial rank saves, regardless of the caller/UI path.
  try{
