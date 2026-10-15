@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792067686164,
-  "sourceUpdatedIso": "2026-10-15T12:34:46.164Z",
+  "sourceUpdatedAt": 1792067692959,
+  "sourceUpdatedIso": "2026-10-15T12:34:52.959Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -2785,35 +2785,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-100-aZes",
-      "title": "レディ・プレイヤー1",
-      "originalTitle": "",
-      "englishTitle": "Ready Player One",
-      "year": 2018,
-      "score": 89,
-      "star": 4,
-      "overallRank": 97,
-      "sameScoreRank": 11,
-      "category": "SF",
-      "mediaType": "movie",
-      "genre": [
-        "SF",
-        "アクション",
-        "ファンタジー",
-        "ヒーロー",
-        "世界観",
-        "娯楽",
-        "大作"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 140,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-6-29Pq",
       "title": "パルプ・フィクション",
       "originalTitle": "",
@@ -2821,8 +2792,8 @@
       "year": 1994,
       "score": 89,
       "star": 4,
-      "overallRank": 98,
-      "sameScoreRank": 12,
+      "overallRank": 97,
+      "sameScoreRank": 11,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -2848,8 +2819,8 @@
       "year": 2023,
       "score": 89,
       "star": 4,
-      "overallRank": 99,
-      "sameScoreRank": 13,
+      "overallRank": 98,
+      "sameScoreRank": 12,
       "category": "Letterboxd追加",
       "mediaType": "other",
       "genre": [
@@ -2872,8 +2843,8 @@
       "year": 1980,
       "score": 89,
       "star": 4,
-      "overallRank": 100,
-      "sameScoreRank": 14,
+      "overallRank": 99,
+      "sameScoreRank": 13,
       "category": "スターウォーズシリーズ",
       "mediaType": "movie",
       "genre": [
@@ -2901,8 +2872,8 @@
       "year": 2018,
       "score": 89,
       "star": 4,
-      "overallRank": 101,
-      "sameScoreRank": 15,
+      "overallRank": 100,
+      "sameScoreRank": 14,
       "category": "スパイダーマン作品",
       "mediaType": "movie",
       "genre": [
@@ -2930,8 +2901,8 @@
       "year": 1998,
       "score": 89,
       "star": 4,
-      "overallRank": 102,
-      "sameScoreRank": 16,
+      "overallRank": 101,
+      "sameScoreRank": 15,
       "category": "戦争、歴史",
       "mediaType": "movie",
       "genre": [
@@ -2958,8 +2929,8 @@
       "year": 2003,
       "score": 89,
       "star": 4,
-      "overallRank": 103,
-      "sameScoreRank": 17,
+      "overallRank": 102,
+      "sameScoreRank": 16,
       "category": "Letterboxd",
       "mediaType": "other",
       "genre": [
@@ -2972,6 +2943,35 @@
       "letterboxdAddedDate": "2026-10-13",
       "letterboxdPublishedAt": "Tue, 13 Oct 2026 17:03:49 +1300",
       "letterboxdReportedWatchedDate": "2026-10-13"
+    },
+    {
+      "id": "lb-100-aZes",
+      "title": "レディ・プレイヤー1",
+      "originalTitle": "",
+      "englishTitle": "Ready Player One",
+      "year": 2018,
+      "score": 89,
+      "star": 4,
+      "overallRank": 103,
+      "sameScoreRank": 17,
+      "category": "SF",
+      "mediaType": "movie",
+      "genre": [
+        "SF",
+        "アクション",
+        "ファンタジー",
+        "ヒーロー",
+        "世界観",
+        "娯楽",
+        "大作"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 140,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "custom-1791353624251-egky",
@@ -23036,13 +23036,13 @@
         "custom-1791023391963-vdu9",
         "custom-1791036345616-3tph",
         "custom-1791915774599-jgkn",
-        "lb-100-aZes",
         "lb-6-29Pq",
         "lb-185-HTIi",
         "lb-48-27Vw",
         "lb-310-azpY",
         "lb-84-29ro",
         "custom-1792067620393-qnt8",
+        "lb-100-aZes",
         "custom-1791353624251-egky"
       ],
       "90": [
