@@ -1167,7 +1167,7 @@ async function choose(box,item){
   window.__movie30People.open({id:item.media==='person'?item.tmdbId:0,name:item.name||item.label});
   return;
  }
- if(item.kind==='movie'){setQuery(box,displayTitle(item.f));return;}
+ if(item.kind==='movie'){box.input.blur();openSheet(item.f.id);return;}
  if(item.kind==='director'){setQuery(box,item.name);return;}
  if(item.media==='person'){
   // TMDb often returns the Latin spelling for a Japanese alias.
@@ -1194,7 +1194,7 @@ async function choose(box,item){
    const ti=titleInfo(f),rec=catalog[f.id]||{},m=state.letterboxdMeta?.[f.id]||{};
    return Number(item.tmdbId)===Number(m.poster84?.tmdbId||ti.tmdbId||rec.tmdbId);
   });
-  if(local){setQuery(box,displayTitle(local));return;}
+  if(local){box.input.blur();openSheet(local.id);return;}
   document.getElementById('quickAdd')?.click();
   if(typeof selectTmdb==='function')selectTmdb(item.tmdbId);
   return;
@@ -1698,7 +1698,7 @@ function alignLabel(){
  raf=0;
  const header=document.querySelector('.top');
  if(!header)return;
- const bottom=header.getBoundingClientRect().bottom;
+ const bottom=(header.getBoundingClientRect().height+(parseFloat(getComputedStyle(header).top)||0));
  const offset=Math.max(0,Math.ceil(bottom+5));
  if(Math.abs(offset-previous)>=1){
   previous=offset;
@@ -1711,7 +1711,7 @@ function scheduleAlign(){
 }
 alignLabel();
 window.addEventListener('resize',scheduleAlign,{passive:true});
-window.addEventListener('scroll',scheduleAlign,{passive:true});
+
 if(typeof ResizeObserver==='function'){
  const header=document.querySelector('.top');
  if(header)new ResizeObserver(scheduleAlign).observe(header);
@@ -1895,28 +1895,16 @@ let lastTop=-1,frame=0;
 function align(){
  frame=0;
  const header=document.querySelector('.top');
- const fixedEnd=header?Math.max(0,header.getBoundingClientRect().bottom):0;
+ const fixedEnd=header?Math.max(0,(header.getBoundingClientRect().height+(parseFloat(getComputedStyle(header).top)||0))):0;
  const bar=document.getElementById('starJumpBar');
- let end=fixedEnd;
- if(bar&&getComputedStyle(bar).display!=='none'){
-  const r=bar.getBoundingClientRect();
-  // Only count the star menu when the menu is currently stuck below the top header.
-  if(r.height>0&&r.top<=fixedEnd+17&&r.bottom>fixedEnd){
-   end=Math.max(end,r.bottom);
-  }
-  // The older jump navigation uses a hardcoded header height; realign after rotation.
-  if(header&&r.top<=fixedEnd+17){
-   const expected=Math.max(0,Math.ceil(fixedEnd));
-   if(Math.abs(parseFloat(bar.style.top||'0')-expected)>1)bar.style.top=expected+'px';
-  }
- }
+ const end=fixedEnd+(bar&&getComputedStyle(bar).display!=='none'?bar.getBoundingClientRect().height:0);
  const target=Math.ceil(end+7);
  if(target!==lastTop){
   lastTop=target;rootStyle.setProperty('--movie96-score-top',target+'px');
  }
 }
 function queueAlign(){if(frame)return;frame=requestAnimationFrame(align);}
-window.addEventListener('scroll',queueAlign,{passive:true});
+
 window.addEventListener('resize',queueAlign,{passive:true});
 window.addEventListener('orientationchange',queueAlign,{passive:true});
 if(typeof ResizeObserver==='function'){
@@ -1962,7 +1950,7 @@ let scheduled=false,prior='';
 function alignStack(){
  scheduled=false;
  if(!head)return;
- const bottom=Math.max(0,Math.ceil(head.getBoundingClientRect().bottom));
+ const bottom=Math.max(0,Math.ceil((head.getBoundingClientRect().height+(parseFloat(getComputedStyle(head).top)||0))));
  const navHeight=nav&&nav.getBoundingClientRect().height>0
    ?Math.ceil(nav.getBoundingClientRect().height):0;
  // No fixed magic offsets: all three sticky elements share the same measurements.
@@ -1987,7 +1975,7 @@ if(head&&typeof ResizeObserver==='function'){
  obs.observe(head);
  if(nav)obs.observe(nav);
 }
-window.addEventListener('scroll',schedule,{passive:true});
+
 window.addEventListener('resize',schedule,{passive:true});
 window.addEventListener('orientationchange',schedule,{passive:true});
 if(rank)new MutationObserver(changes=>{
@@ -2018,7 +2006,7 @@ function align(){
  ticking=false;
  const header=document.querySelector('.top'),jump=document.getElementById('starJumpBar');
  if(!header||!jump)return;
- const headerBottom=Math.max(0,Math.ceil(header.getBoundingClientRect().bottom));
+ const headerBottom=Math.max(0,Math.ceil((header.getBoundingClientRect().height+(parseFloat(getComputedStyle(header).top)||0))));
  const h=Math.ceil(jump.getBoundingClientRect().height);
  const heading=document.querySelector('#rankRoot .rank-star>.rank-star-head');
  const headingHeight=Math.ceil(heading?.getBoundingClientRect().height||38);
@@ -2032,7 +2020,7 @@ function align(){
  }
 }
 function queue(){if(ticking)return;ticking=true;requestAnimationFrame(align);}
-window.addEventListener('scroll',queue,{passive:true});
+
 window.addEventListener('resize',queue,{passive:true});
 if(typeof ResizeObserver==='function'){
  const ro=new ResizeObserver(queue);

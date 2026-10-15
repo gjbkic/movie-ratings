@@ -17,8 +17,75 @@ const MOVIE30_DB_NAME="movie30_state_db",MOVIE30_DB_VERSION=1;
 let movie30DbPromise=null,movie30WriteQueue=Promise.resolve(),movie30SaveSequence=0;
 function openMovie30Db(){if(movie30DbPromise)return movie30DbPromise;if(!window.indexedDB){movie30DbPromise=Promise.resolve(null);return movie30DbPromise}movie30DbPromise=new Promise(resolve=>{let settled=false,req;const done=db=>{if(settled){if(db)db.close();return}settled=true;resolve(db)};try{req=indexedDB.open(MOVIE30_DB_NAME,MOVIE30_DB_VERSION);req.onupgradeneeded=()=>{const db=req.result;if(!db.objectStoreNames.contains("snapshots"))db.createObjectStore("snapshots",{keyPath:"id"})};req.onsuccess=()=>done(req.result);req.onerror=()=>{console.warn('Movie state database unavailable',req.error);done(null)};req.onblocked=()=>done(null)}catch(error){console.warn('Movie state database unavailable',error);done(null)}});return movie30DbPromise}
 function movie30ReadSnapshot(){return openMovie30Db().then(db=>new Promise(resolve=>{if(!db)return resolve(null);try{const tx=db.transaction("snapshots","readonly"),req=tx.objectStore("snapshots").get("current");req.onsuccess=()=>resolve(req.result||null);req.onerror=()=>resolve(null);tx.onabort=()=>resolve(null)}catch(_){resolve(null)}}))}
-function movie30WriteSnapshot(json,updatedAt){movie30WriteQueue=movie30WriteQueue.then(()=>openMovie30Db()).then(db=>new Promise(resolve=>{if(!db)return resolve(false);try{const tx=db.transaction("snapshots","readwrite");const store=tx.objectStore("snapshots"),read=store.get("current");read.onsuccess=()=>{if(read.result&&read.result.json!==json)store.put({...read.result,id:"previous"});store.put({id:"current",json,updatedAt:Number(updatedAt)||0})};tx.oncomplete=()=>resolve(true);tx.onerror=()=>resolve(false);tx.onabort=()=>resolve(false)}catch(_){resolve(false)}})).catch(()=>false);return movie30WriteQueue}
+function movie30WriteSnapshot(json,updatedAt,receipt){movie30WriteQueue=movie30WriteQueue.then(()=>openMovie30Db()).then(db=>new Promise(resolve=>{if(!db)return resolve(false);try{const tx=db.transaction("snapshots","readwrite");const store=tx.objectStore("snapshots"),read=store.get("current");read.onsuccess=()=>{if(read.result&&read.result.json!==json)store.put({...read.result,id:"previous"});store.put({id:"current",json,updatedAt:Number(updatedAt)||0});if(receipt)store.put({...receipt,id:"multitab-commit"})};tx.oncomplete=()=>resolve(true);tx.onerror=()=>resolve(false);tx.onabort=()=>resolve(false)}catch(_){resolve(false)}})).catch(()=>false);return movie30WriteQueue}
 let movie30Candidates=[],movie30LastSavedJson='',movie30StartupArchive=[];
+// Same-origin tab coordination. Neither timestamps nor checksums establish ancestry.
+let movie30DiskBase=null,movie30PendingWrites=0,movie30PeerReceipt=null;
+let movie30Channel=null;
+try{movie30Channel=new BroadcastChannel('movie30-committed-state');movie30Channel.onmessage=e=>{movie30PeerReceipt=e.data;movie30ReceivePeer()}}catch(_){}
+function movie30Payload(value){
+ try{const x=typeof value==='string'?JSON.parse(value):value;if(!x)return '';
+  const {updatedAt,storageIntegrity,...body}=x;
+  const canonical=v=>Array.isArray(v)?v.map(canonical):v&&typeof v==='object'?Object.fromEntries(Object.keys(v).sort().map(k=>[k,canonical(v[k])])):v;
+  return JSON.stringify(canonical(body));
+ }catch(_){return ''}
+}
+function movie30WithLock(work){
+ if(!navigator.locks?.request){
+  window.__movie30TabConflict=true;window.__movie30SaveFailed=true;
+  setSaveStatus('保存停止 · このブラウザでは安全なタブ間保存を利用できません');
+  movie30StorageWarning(true,false);return Promise.resolve(false);
+ }
+ return navigator.locks.request('movie30-state-write',work).catch(error=>{
+  window.__movie30TabConflict=true;window.__movie30SaveFailed=true;
+  setSaveStatus('保存停止 · タブ間保存の確認に失敗しました');movie30StorageWarning(true,false);
+  console.error('Tab coordination failed',error);return false;
+ });
+}
+async function movie30ReadDisk(){
+ // A read failure is not evidence that the store is empty: fail closed.
+ const local=localStorage.getItem(STORAGE_KEY),db=await openMovie30Db();
+ if(!db)return {local,db:null};
+ return new Promise((resolve,reject)=>{try{
+  const tx=db.transaction('snapshots','readonly'),r=tx.objectStore('snapshots').get('current');
+  r.onsuccess=()=>resolve({local,db:r.result?.json||null});r.onerror=tx.onabort=()=>reject(Error('Cannot read committed state'));
+ }catch(e){reject(e)}});
+}
+function movie30SameDisk(a,b){return !!a&&!!b&&a.local===b.local&&a.db===b.db}
+async function movie30Record(id){
+ const db=await openMovie30Db();if(!db)return null;
+ return new Promise(resolve=>{try{const tx=db.transaction('snapshots','readonly'),r=tx.objectStore('snapshots').get(id);r.onsuccess=()=>resolve(r.result||null);r.onerror=tx.onabort=()=>resolve(null)}catch(_){resolve(null)}});
+}
+function movie30UnsavedJson(){const copy=deepCopy(state);delete copy.storageIntegrity;return JSON.stringify(copy)}
+function movie30ConflictNotice(entries,durable){
+ movie30ConflictEntries=[...movie30ConflictEntries,...entries].filter((e,i,all)=>all.findIndex(x=>x.json===e.json)===i);
+ let el=document.getElementById('movie30-tab-conflict');
+ if(!el){el=document.createElement('div');el.id='movie30-tab-conflict';el.setAttribute('role','alert');el.style.cssText='position:sticky;top:0;z-index:501;padding:12px;background:#502b17;color:white';document.body.prepend(el)}
+ el.textContent=durable?'別タブとの競合データを退避しました。自動統合せず保護しています。JSONを保存し、内容を確認してください。':'別タブとの競合を検出しました。退避保存できません。アプリを閉じず、今すぐ両候補のJSONを保存してください。';
+ const button=document.createElement('button');button.textContent='競合した両候補をJSON保存';
+ button.onclick=()=>{const candidates=[...movie30ConflictEntries,{source:'current-tab',json:movie30UnsavedJson()}];const url=URL.createObjectURL(new Blob([JSON.stringify({type:'movie30-conflict-backup',candidates},null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='films-tab-conflict-'+Date.now()+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),2000)};el.append(button);
+ const recover=document.createElement('button');recover.textContent='退避候補を比較して復帰';recover.onclick=()=>movie30RecoveryUi().catch(e=>alert(e.message));el.append(recover);
+}
+async function movie30ShowArchivedConflicts(){const record=await movie30Record('multitab-conflicts');if(record?.entries?.length&&record.active!==false){window.__movie30TabConflict=true;window.__movie30SaveFailed=true;movie30ConflictNotice(record.entries,true)}}
+async function movie30Conflict(disk,reason){
+ window.__movie30TabConflict=true;window.__movie30SaveFailed=true;
+ const entries=[{source:'local-tab',json:movie30UnsavedJson()},{source:'localStorage',json:disk?.local},{source:'indexedDB',json:disk?.db}].filter(x=>x.json);
+ const durable=await movie30ArchiveConflictEntries(entries);
+ setSaveStatus('保存停止 · '+reason+' · 両候補を確認してください');movie30ConflictNotice(entries,durable);return false;
+}
+function movie30ReceivePeer(){
+ if(!movie30DiskBase||window.__movie30BulkBoot||window.__movie30TabConflict)return;
+ return movie30WithLock(async()=>{
+  if(window.__movie30TabConflict)return false;
+  const disk=await movie30ReadDisk();if(movie30SameDisk(disk,movie30DiskBase))return true;
+  const stored=await movie30Record('multitab-commit');
+  const receipt=[movie30PeerReceipt,stored&&{...stored,disk:{local:stored.local,db:stored.json}}].find(r=>r&&movie30SameDisk(r.disk,disk));
+  const candidate=receipt&&movie30Candidate(receipt.json,'committed peer');
+  if(!candidate||!candidate.state.storageIntegrity||receipt.parent!==movie30Payload(movie30LastSavedJson)||movie30PendingWrites||movie30Payload(state)!==movie30Payload(movie30LastSavedJson))return movie30Conflict(disk,'競合または由来を確認できない別タブ更新');
+  state=normalizeState(candidate.state);movie30LastSavedJson=JSON.stringify(state);movie30DiskBase=disk;
+  render();setSaveStatus('別タブの保存済み変更を反映');return true;
+ });
+}
 function movie30ValidState(x){
  return !!x&&typeof x==='object'&&!Array.isArray(x)&&Array.isArray(x.customFilms)&&
  ['exactScores','rankOrder'].every(k=>x[k]&&typeof x[k]==='object'&&!Array.isArray(x[k]))&&
@@ -82,6 +149,18 @@ async function movie30ArchiveStartup(){
  }catch(_){resolve(false)}});
 }
 async function movie30RestoreStorage(){
+ const restore=async()=>{
+  movie30Candidates=[];load();
+  movie30DiskBase=await movie30ReadDisk();
+  const result=await movie30RestoreStorageLocked();
+  await movie30ShowArchivedConflicts();
+  return result;
+ };
+ // Unsupported coordination must not prevent reading existing data.
+ if(!navigator.locks?.request){const result=await restore();await movie30WithLock(()=>{});return result}
+ return movie30WithLock(restore);
+}
+async function movie30RestoreStorageLocked(){
  const snap=await movie30ReadSnapshot();
  if(snap?.json){movie30StartupArchive.push({id:'pre-ac:indexedDB-current',json:snap.json,updatedAt:snap.updatedAt});const c=movie30Candidate(snap.json,'indexedDB',snap.updatedAt);if(c)movie30Candidates.push(c)}
  const db=await openMovie30Db();
@@ -161,6 +240,7 @@ async function movie30RestoreMissingRanks(){
 }
 
 function save(touch=true){
+ if(window.__movie30TabConflict)return window.__movie30PendingSave=movie30WithLock(async()=>movie30Conflict(await movie30ReadDisk(),'停止後の編集があります'));
  if(window.__movie30BulkBoot||window.__movie30RecoveryBlocked)return;
  // Refuse destructive partial rank saves, regardless of the caller/UI path.
  try{
@@ -175,20 +255,31 @@ function save(touch=true){
  if(touch)state.updatedAt=Math.max(Date.now(),Number(state.updatedAt||0)+1);
  const seq=++movie30SaveSequence;let json;movie30SealState();
  try{json=JSON.stringify(state)}catch(_){setSaveStatus('保存失敗 · JSONバックアップが必要です');return}
- let localSaved=false;
- // Retry on every save: quota errors must not permanently disable storage.
- try{localStorage.setItem(STORAGE_KEY,json);localSaved=localStorage.getItem(STORAGE_KEY)===json;storageWorks=localSaved}catch(_){storageWorks=false}
- if(localSaved){try{localStorage.setItem(VIEW_KEY,JSON.stringify(view))}catch(_){}setSaveStatus('保存中 · 確認しています')}
- else setSaveStatus('保存中 · アプリを閉じずにお待ちください');
- window.__movie30PendingSave=movie30WriteSnapshot(json,Number(state.updatedAt)||0).then(ok=>{
-  // Keep every existing local backup even when quota-full; IndexedDB is independent.
-  if(seq!==movie30SaveSequence)return ok||localSaved;
-  window.__movie30SaveFailed=!ok&&!localSaved;
-  if(ok||localSaved){movie30LastSavedJson=json;setSaveStatus('自動保存済み · '+(localSaved?'この端末':'IndexedDB'))}
-  else setSaveStatus('保存失敗 · アプリを閉じずJSONバックアップを保存してください');
-  movie30StorageWarning(!ok&&!localSaved, false);
+ // Capture the edit now; never read a later mutable state inside a queued save.
+ movie30PendingWrites++;
+ setSaveStatus('保存中 · アプリを閉じずにお待ちください');
+ window.__movie30PendingSave=movie30WithLock(async()=>{
+  if(window.__movie30TabConflict)return false;
+  const disk=await movie30ReadDisk();
+  if(!movie30SameDisk(disk,movie30DiskBase))return movie30Conflict(disk,'別タブで保存データが変更されました');
+  const parent=movie30Payload(movie30LastSavedJson),previous={...disk};
+  let localSaved=false;
+  try{localStorage.setItem(STORAGE_KEY,json);localSaved=localStorage.getItem(STORAGE_KEY)===json;storageWorks=localSaved}catch(_){storageWorks=false}
+  const receipt={parent,json,local:localSaved?json:previous.local};
+  const ok=await movie30WriteSnapshot(json,JSON.parse(json).updatedAt,receipt);
+  const committed={local:receipt.local,db:ok?json:previous.db};
+  if(ok||localSaved){
+   movie30DiskBase=committed;movie30LastSavedJson=json;
+   try{localStorage.setItem(VIEW_KEY,JSON.stringify(view))}catch(_){}
+   try{movie30Channel?.postMessage({...receipt,disk:committed})}catch(_){}
+  }
+  if(seq===movie30SaveSequence){
+   window.__movie30SaveFailed=!ok&&!localSaved;
+   setSaveStatus(ok||localSaved?'自動保存済み · '+(localSaved?'この端末':'IndexedDB'):'保存失敗 · アプリを閉じずJSONバックアップを保存してください');
+   movie30StorageWarning(!ok&&!localSaved,false);
+  }
   return ok||localSaved;
- });
+ }).finally(()=>{movie30PendingWrites--});
  return window.__movie30PendingSave;
 }
 function movie30StorageWarning(failed,fallback){
@@ -401,7 +492,10 @@ document.getElementById("addMovie").onclick=()=>{const f=addFilm(document.getEle
 document.getElementById("quickAdd").onclick=()=>{selectedTmdbId=null;document.getElementById("qResults").innerHTML='<div class="lookup-empty">検索結果から選ぶとタイトルと公開年を自動入力します。</div>';document.getElementById("addSheetBg").classList.add("open");setTimeout(()=>document.getElementById("qLookup").focus(),80)};document.getElementById("qCancel").onclick=()=>document.getElementById("addSheetBg").classList.remove("open");document.getElementById("addSheetBg").onclick=e=>{if(e.target===e.currentTarget)e.currentTarget.classList.remove("open")};document.getElementById("qSearch").onclick=searchTmdb;document.getElementById("qLookup").onkeydown=e=>{if(e.key==="Enter"){e.preventDefault();searchTmdb()}};document.getElementById("qAdd").onclick=()=>{const f=addFilm(document.getElementById("qTitle").value,document.getElementById("qYear").value,document.getElementById("qCategory").value,document.getElementById("qStar").value,document.getElementById("qScore").value,{originalTitle:document.getElementById("qOriginalTitle").value,englishTitle:document.getElementById("qEnglishTitle").value,tmdbId:selectedTmdbId});if(f){["qLookup","qTitle","qOriginalTitle","qEnglishTitle","qYear","qCategory","qScore"].forEach(id=>document.getElementById(id).value="");selectedTmdbId=null;document.getElementById("addSheetBg").classList.remove("open");view.page="rank";save();render();document.getElementById("searchRank").value=displayTitle(f);renderRank();toast("追加しました。検索で表示中")}};
 const lbs=getLbSettings();document.getElementById("lbUsername").value=lbs.username||"gjbkic";document.getElementById("lbAutoSync").checked=lbs.auto!==false;document.getElementById("lbUsername").onchange=()=>saveLbSettings({username:document.getElementById("lbUsername").value.trim()||"gjbkic",auto:document.getElementById("lbAutoSync").checked});document.getElementById("lbAutoSync").onchange=()=>saveLbSettings({username:document.getElementById("lbUsername").value.trim()||"gjbkic",auto:document.getElementById("lbAutoSync").checked});document.getElementById("syncLetterboxd").onclick=()=>syncLetterboxd(false);document.getElementById("lbCsvImport").onchange=e=>{const file=e.target.files[0];if(!file)return;const r=new FileReader();r.onload=async()=>{try{setLbStatus("CSVを読み込み中…");const z=await importLetterboxdCsv(r.result);setLbStatus(`CSV取込完了：新規 ${z.added}本／既存 ${z.found}本`,"ok")}catch(err){setLbStatus("CSV取込失敗："+err.message,"bad")}};r.readAsText(file)};document.getElementById("tmdbCredential").value=getTmdbCredential();updateTmdbStatus();document.getElementById("saveTmdb").onclick=()=>{const v=document.getElementById("tmdbCredential").value.trim();saveTmdbCredential(v)};document.getElementById("clearTmdb").onclick=()=>{document.getElementById("tmdbCredential").value="";saveTmdbCredential("")};
 document.getElementById("downloadJson").onclick=()=>download("movie30_backup_v13.json",JSON.stringify(exportPackage(),null,2),"application/json");document.getElementById("downloadCsv").onclick=()=>{const rows=exportRows(),head=["邦題／表示名","原題","英題","年","星","星内","点数","カテゴリ","追加映画","TMDB ID"];const csv=[head,...rows.map(x=>[x.title,x.original_title,x.english_title,x.year,x.star,x.tier,x.score,x.category,x.added,x.tmdb_id])].map(r=>r.map(csvCell).join(",")).join("\r\n");download("movie30_scores_v13.csv","\ufeff"+csv,"text/csv;charset=utf-8")};document.getElementById("showBackup").onclick=()=>document.getElementById("backupText").value=backupString();document.getElementById("copyBackup").onclick=()=>copyText(backupString());document.getElementById("restoreText").onclick=()=>{try{restorePackage(JSON.parse(document.getElementById("backupText").value.trim()))}catch(e){alert("復元できません: "+e.message)}};document.getElementById("downloadHtml").onclick=()=>{try{download("movie30_snapshot_v13.html",snapshotHtml(),"text/html;charset=utf-8");toast("保存版HTMLを作成しました")}catch(e){alert(e.message)}};document.getElementById("importFile").onchange=e=>{const file=e.target.files[0];if(!file)return;const r=new FileReader();r.onload=()=>{try{restorePackage(JSON.parse(r.result))}catch(err){alert("読み込み失敗: "+err.message)}};r.readAsText(file)};document.getElementById("resetAll").onclick=()=>{if(confirm("分類・点数・順位・追加映画をすべて初期状態へ戻しますか？")){state=normalizeState({});save();render();document.getElementById("backupText").value="";toast("初期化しました")}};
-window.addEventListener("beforeunload",()=>save(false));window.addEventListener("storage",e=>{if(e.key===STORAGE_KEY&&e.newValue){const c=movie30Candidate(e.newValue,'storage event');if(c&&c.stamp>Number(state.updatedAt||0)){state=normalizeState(c.state);render();setSaveStatus("別タブの新しい変更を反映")}}});
+window.addEventListener("beforeunload",e=>{if(movie30PendingWrites||window.__movie30TabConflict||movie30Payload(state)!==movie30Payload(movie30LastSavedJson)){e.preventDefault();e.returnValue='';}});
+window.addEventListener("storage",e=>{if(e.key===STORAGE_KEY||e.key===null)movie30ReceivePeer();});
+window.addEventListener('focus',()=>movie30ReceivePeer());
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')movie30ReceivePeer()});
 load();
 window.__movie30StorageReady=movie30RestoreStorage();
 render();
@@ -2317,7 +2411,7 @@ window.__movie30AutoSyncPending=()=>{const x=getLbSettings();if(x.auto!==false)s
     return (await r.json()).sha||null;
   }
   async function syncToGithub(manual=false){
-    if(window.__movie30BulkBoot||window.__movie30RecoveryBlocked||window.__movie30SaveFailed)return;
+    if(window.__movie30BulkBoot||window.__movie30RecoveryBlocked||window.__movie30SaveFailed||window.__movie30TabConflict||movie30PendingWrites)return;
     if(syncBusy)return;
     const token=getToken().trim();
     if(!token){if(manual)setSyncUi('トークンが未設定です。','bad');return;}
@@ -5741,7 +5835,7 @@ window.__movie30AutoSyncPending=()=>{const x=getLbSettings();if(x.auto!==false)s
   function status(msg,kind=''){const el=document.getElementById('gptSyncStatus');if(!el)return;el.className='gpt-sync-status'+(kind?' '+kind:'');el.textContent=msg}
   let cloudBusy=false;
   async function syncMetaCloud(manual=false){
-    if(window.__movie30BulkBoot||window.__movie30RecoveryBlocked||window.__movie30SaveFailed)return;
+    if(window.__movie30BulkBoot||window.__movie30RecoveryBlocked||window.__movie30SaveFailed||window.__movie30TabConflict||movie30PendingWrites)return;
     if(cloudBusy)return;let token='';try{token=localStorage.getItem(TOKEN_KEY)||''}catch(_){}token=token.trim();
     if(!token){if(manual)status('トークンが未設定です。','bad');return}cloudBusy=true;if(manual)status('GitHubへ同期中…');
     try{
@@ -7377,32 +7471,44 @@ renderRank();const marker=document.getElementById('movie30BuildV29');if(marker)m
     if(target.closest('textarea')&&!target.closest('#note66'))return;
     const fromHandle=bar.contains(target);
     const child=scrollableChild(target);
-    if(child&&child.scrollTop>1)return;
-    if(!fromHandle&&sheet.scrollTop>1)return;
     const t=event.touches[0];
-    gesture={y:t.clientY,x:t.clientX,fromHandle,dragging:false,dy:0,started:performance.now()};
+    // Keep native content scrolling, but remember quick downward flicks started
+    // lower in the sheet even if its content is currently scrolled.
+    const nativeScrolling=!fromHandle&&(sheet.scrollTop>1||(child&&child.scrollTop>1));
+    const box=sheet.getBoundingClientRect();
+    gesture={y:t.clientY,x:t.clientX,fromHandle,nativeScrolling,
+      fromLowerHalf:t.clientY>=box.top+box.height*0.48,
+      dragging:false,dy:0,started:performance.now()};
   },{passive:true});
   sheet.addEventListener('touchmove',event=>{
     const g=gesture;
     if(!g||event.touches.length!==1||!overlay.classList.contains('open'))return;
     const t=event.touches[0],dy=t.clientY-g.y,dx=t.clientX-g.x;
+    if(dy<0||(Math.abs(dx)>11&&Math.abs(dx)>Math.abs(dy))){gesture=null;return;}
+    g.dy=Math.max(0,dy);
+    // When the user begins below a scrolled area, don't steal native scrolling.
+    // A quick flick from the lower half may still dismiss at touchend.
+    if(g.nativeScrolling)return;
     if(!g.dragging){
-      if(dy<0||(Math.abs(dx)>11&&Math.abs(dx)>Math.abs(dy))){gesture=null;return;}
-      if(dy<7)return;
-      if(dy<Math.abs(dx)*1.1)return;
-      if(!g.fromHandle&&sheet.scrollTop>1){gesture=null;return;}
+      if(dy<7||dy<Math.abs(dx)*1.1)return;
       g.dragging=true;
     }
     if(event.cancelable)event.preventDefault();
-    g.dy=Math.max(0,dy);
     sheet.style.transition='none';
     sheet.style.transform='translate3d(0,'+Math.min(320,Math.round(g.dy*0.85))+'px,0)';
   },{passive:false});
-  function finishTouch(cancelled){
+  function finishTouch(cancelled,event){
     const g=gesture;gesture=null;
-    if(!g||!g.dragging)return;
-    const fast=g.dy>55&&(g.dy/Math.max(1,performance.now()-g.started))>0.7;
-    if(!cancelled&&(g.dy>=105||fast)){
+    if(!g)return;
+    const touch=event.changedTouches?.[0];
+    if(touch)g.dy=Math.max(g.dy,touch.clientY-g.y);
+    const speed=g.dy/Math.max(1,performance.now()-g.started);
+    const normalDismiss=g.dragging&&(g.dy>=105||(g.dy>55&&speed>0.7));
+    // A lower-half flick works even after the sheet has been scrolled.
+    // Require both distance and velocity so slow reading scrolls remain native.
+    const lowerFlick=g.nativeScrolling&&g.fromLowerHalf&&g.dy>=90&&speed>1.0;
+    if(!g.dragging&&!lowerFlick)return;
+    if(!cancelled&&(normalDismiss||lowerFlick)){
       sheet.style.transition='transform 150ms ease-out';
       sheet.style.transform='translate3d(0,100dvh,0)';
       closeTimer=setTimeout(()=>{
@@ -7410,14 +7516,14 @@ renderRank();const marker=document.getElementById('movie30BuildV29');if(marker)m
         if(overlay.classList.contains('open'))closeSheet();
         else resetSheetVisual();
       },155);
-    }else{
+    }else if(g.dragging){
       sheet.style.transition='transform 160ms ease-out';
       sheet.style.transform='';
       closeTimer=setTimeout(()=>{closeTimer=0;sheet.style.transition='';},180);
     }
   }
-  sheet.addEventListener('touchend',()=>finishTouch(false),{passive:true});
-  sheet.addEventListener('touchcancel',()=>finishTouch(true),{passive:true});
+  sheet.addEventListener('touchend',event=>finishTouch(false,event),{passive:true});
+  sheet.addEventListener('touchcancel',event=>finishTouch(true,event),{passive:true});
   overlay.addEventListener('touchmove',event=>{
     if(event.target===overlay&&event.cancelable)event.preventDefault();
   },{passive:false});
@@ -8790,6 +8896,11 @@ function decoratePosters84(){
   const rank=document.getElementById('rankRoot');
   if(rank&&rank.style.display!=='none'){
     rank.querySelectorAll('.rank-card[data-id]').forEach(el=>putPoster84(el,decodeURIComponent(el.dataset.id),'rank'));
+    rank.querySelectorAll('.uns-card[data-uns],.uns-card[data-v76-open]').forEach(el=>{
+      const id=el.dataset.uns||el.dataset.v76Open;
+      el.classList.add('movie30-pending-poster84');
+      putPoster84(el,decodeURIComponent(id),'rank');
+    });
   }
   const watch=document.getElementById('watchList83');
   if(watch&&watch.style.display!=='none'){
@@ -8852,7 +8963,9 @@ if(rankPosterButton84)rankPosterButton84.onclick=()=>{
 window.__movie30PosterDecorate84=decoratePosters84;
 const posterStyles84=document.createElement('style');
 posterStyles84.textContent=
- '.rank-card.movie30-rank-poster84{position:relative;padding-left:43px;min-height:53px}'
+ '.uns-card.movie30-pending-poster84{position:relative;padding-left:52px!important;min-height:82px}'
+ +'#rankRoot .pending-g .uns-card.movie30-pending-poster84>.movie30-poster84{left:7px!important;top:8px!important;transform:none!important;width:36px!important;height:54px!important;max-height:54px!important}'
+ +'.rank-card.movie30-rank-poster84{position:relative;padding-left:43px;min-height:53px}'
  +'.movie30-rank-poster84>.movie30-poster84{position:absolute;left:5px;top:50%;transform:translateY(-50%);width:30px;height:45px;object-fit:cover;pointer-events:none}'
  +'.watch83-item.movie30-watch-poster84{position:relative;padding-left:70px;min-height:92px}'
  +'.movie30-watch-poster84>.movie30-poster84{position:absolute;top:8px;left:9px;width:50px;height:75px;object-fit:cover;pointer-events:none}'

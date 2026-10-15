@@ -19,7 +19,7 @@ function panel(p,k){
  p.classList.add('pending-g');p.dataset.pendingKind=k;
  const h=p.querySelector('.uns-head'),grid=p.querySelector('.uns-grid');
  if(!h||!grid)return;
- const label=k==='star'?'星も未確定':'点数未確定';
+ const label=k==='star'?'星・点数未確定':'点数未確定';
  const strong=h.querySelector('strong');if(strong)strong.textContent=label;
  const count=grid.querySelectorAll(k==='star'?'[data-v76-open]':'[data-uns]').length;
  const meta=h.querySelector('.meta')||h.querySelector('small');
@@ -46,7 +46,7 @@ function jump(){
  }
  if(star){
    const c=document.createElement('button');c.type='button';c.className='unrated';
-   c.dataset.pendingStarJump='1';c.textContent='星も未確定';c.onclick=()=>star.scrollIntoView({behavior:'smooth',block:'start'});
+   c.dataset.pendingStarJump='1';c.textContent='星・点数未確定';c.onclick=()=>star.scrollIntoView({behavior:'smooth',block:'start'});
    bar.insertBefore(c,b||bar.querySelector('[data-jump-star]'));
  }
 }
@@ -57,7 +57,7 @@ renderRank=function(...args){
  const ps=[...document.querySelectorAll('#rankRoot .uns-panel')];
  panel(ps.find(p=>p.querySelector('[data-v76-open]')),'star');
  panel(ps.find(p=>p.querySelector('[data-uns]')),'score');
- jump();return result;
+ jump();window.__movie30PosterDecorate84?.();return result;
 };
 renderRank();
 })();

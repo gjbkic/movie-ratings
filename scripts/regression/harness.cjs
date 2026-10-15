@@ -2,7 +2,7 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const {fixture}=require('./fixture.cjs');
 const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
-const root=path.resolve(__dirname,'../..'),origin='http://movie-regression.test';
+const root=path.resolve(__dirname,'../..'),origin='https://movie-regression.test';
 const sourceRoot=path.resolve(process.env.MOVIE_APP_ROOT||root);
 const allowed=new Set(fs.readdirSync(sourceRoot).filter(n=>/^app-[\w-]+\.js$/.test(n)).concat(['index.html','recovery-check.html']));
 const options={headless:true,...(process.env.CHROME_PATH?{executablePath:process.env.CHROME_PATH}:{})};
