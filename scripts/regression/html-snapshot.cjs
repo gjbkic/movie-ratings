@@ -9,7 +9,7 @@ test('standalone HTML reopens fictional state offline, escapes content and exclu
   const before=await clean(),html=await page.evaluate(()=>snapshotHtml());
   assert.equal(typeof html,'string');assert(!html.includes('snapshot-secret-must-not-export'));
   const offline=await browser.newContext();const assetRequests=[];await offline.route('**/*',r=>{const u=new URL(r.request().url());if(u.origin==='https://offline-snapshot.test'&&u.pathname==='/')return r.fulfill({contentType:'text/html',body:html});assetRequests.push(u.pathname);return r.abort()});
-  const restored=await offline.newPage(),errors=[];restored.on('pageerror',e=>errors.push(e.message));await restored.goto('https://offline-snapshot.test');await ready(restored);
+  const restored=await offline.newPage(),errors=[];restored.on('pageerror',e=>errors.push(e.message));await restored.goto('https://offline-snapshot.test');try{await ready(restored)}catch(e){throw new Error(JSON.stringify({errors,blocked:await restored.evaluate(()=>({mask:document.getElementById('movie30-startup-mask')?.textContent,ready:document.documentElement.className,scripts:document.scripts.length,text:document.body.innerText.slice(-400)}))}))}
   assert.equal(await restored.evaluate(()=>!!globalThis.snapshotInjected),false);
   assert.deepEqual(await restored.evaluate(()=>{const x=JSON.parse(JSON.stringify(state));delete x.storageIntegrity;return x}),before);
   assert(!assetRequests.some(p=>/app-[\w-]+\.js$/.test(p)),JSON.stringify(assetRequests));assert.deepEqual(errors,[]);

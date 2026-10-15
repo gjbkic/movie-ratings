@@ -69,9 +69,9 @@
     // Known HTML snapshot defect: keep the existing button/handler available
     // in DOM for future repair, but do not advertise a broken backup route.
     const html=document.getElementById('downloadHtml');
-    if(html){html.hidden=true;html.classList.add('hidden');advanced.content.append(html)}
+    if(html){html.hidden=false;html.classList.remove('hidden');advanced.content.append(html)}
     if(advanced.content.children.length)backup.append(advanced.details);
-    // Old helper text advertised a snapshot export that is currently broken.
+    // JSON remains the recommended data backup.
     const tip=backup.querySelector(':scope > .tip');
     if(tip)tip.textContent='通常は自動保存されます。機種変更や万一の復旧に備え、JSONバックアップを保存してください。';
     if(tools&&!tools.children.length)tools.remove();

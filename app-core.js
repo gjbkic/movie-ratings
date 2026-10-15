@@ -485,13 +485,48 @@ function getLbSettings(){try{return {...{username:"gjbkic",auto:true},...(JSON.p
  const ranked=new Set(Object.values(next.rankOrder).flat());
  for(const [k,order]of Object.entries(prior.rankOrder))for(const id of order)if(!ranked.has(id)&&Number(next.exactScores[id])===Number(k)&&next.exactScores[id]!=null){(next.rankOrder[k]??=[]).push(id);ranked.add(id)}
  state=next;const ok=await save();render();toast(ok?'復元して保存しました':'復元内容は未保存です。JSONを保存してください');return !!ok;
-}function snapshotHtml(){const pkg=JSON.stringify(state).replace(/</g,"\u003c");let src="<!doctype html>\n"+document.documentElement.outerHTML;const re=/const EMBEDDED_STATE=\/\*SNAPSHOT_STATE\*\/ [^;]*;/;if(!re.test(src))throw new Error("スナップショット埋込位置が見つかりません");return src.replace(re,`const EMBEDDED_STATE=/*SNAPSHOT_STATE*/ ${pkg};`)}
+}async function snapshotHtml(){
+  // Reuse the pristine template/program when exporting from a standalone copy.
+  const cachedTemplate=document.getElementById('movie30-snapshot-template');
+  const cachedProgram=document.getElementById('movie30-snapshot-program');
+  let template,program;
+  if(cachedTemplate&&cachedProgram){
+    template=JSON.parse(cachedTemplate.textContent);program=cachedProgram.textContent;
+  }else{
+    const getText=async url=>{
+      const response=await fetch(url,{cache:'no-cache'});
+      if(!response.ok)throw new Error('保存版HTMLのソースを取得できません。JSONバックアップを保存してください。');
+      return response.text();
+    };
+    template=await getText(new URL('index.html',document.baseURI));
+    const parsed=new DOMParser().parseFromString(template,'text/html');
+    const nodes=[...parsed.querySelectorAll('script')];
+    const paths=nodes.map(node=>node.getAttribute('src'));
+    const current=[...document.scripts].map(node=>node.getAttribute('src')).filter(src=>src&&/^app-[\w-]+\.js(?:\?|$)/.test(src));
+    if(!paths.length||JSON.stringify(paths)!==JSON.stringify(current)||
+       paths.some(src=>!src||!/^app-[\w-]+\.js(?:\?|$)/.test(src))){
+      throw new Error('アプリの読込版が変わっています。JSONを保存し、再読み込みしてからHTMLを作成してください。');
+    }
+    const sources=await Promise.all(paths.map(src=>getText(new URL(src,document.baseURI))));
+    const marker='const EMBEDDED_STATE=/*SNAPSHOT_STATE*/ null;';
+    if(sources.filter(source=>source.includes(marker)).length!==1)throw new Error('保存版HTMLのデータ埋込位置を確認できません。JSONを保存してください。');
+    program=sources.map(source=>source.replace(marker,"const EMBEDDED_STATE=/*SNAPSHOT_STATE*/ JSON.parse(document.getElementById('movie30-snapshot-data').textContent);")).join('\n;\n');
+    nodes.forEach(node=>node.remove());
+    template='<!doctype html>\n'+parsed.documentElement.outerHTML;
+  }
+  const json=value=>JSON.stringify(value).replace(/</g,'\\u003c');
+  const safeProgram=program.replace(/<\/script/gi,'<\\/script');
+  const scripts='<script type="application/json" id="movie30-snapshot-template">'+json(template)+'</script>'+
+    '<script type="application/json" id="movie30-snapshot-data">'+json(exportPackage().state)+'</script>'+
+    '<script id="movie30-snapshot-program">'+safeProgram+'</script>';
+  return template.replace('</body>',()=>scripts+'\n</body>');
+}
 
 document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{view.page=b.dataset.page;save();renderHeader()});document.getElementById("searchRank").oninput=renderRank;document.getElementById("searchClassify").oninput=renderClassify;document.getElementById("categoryFilterRank").onchange=renderRank;document.getElementById("categoryFilterClassify").onchange=renderClassify;document.getElementById("toggleEmpty").onclick=()=>{view.showEmpty=!view.showEmpty;save();renderRank()};document.getElementById("sortBtn").onclick=()=>{view.sortMode=view.sortMode==="tier"?"original":"tier";save();renderClassify()};document.getElementById("oldBtn").onclick=()=>{view.showOld=!view.showOld;save();renderClassify()};document.querySelectorAll(".choice").forEach(b=>b.onclick=()=>setTier(b.dataset.tier));function saveEditedTitles(){const f=filmById(selectedId);if(!f)return;state.titleOverrides[f.id]={...(state.titleOverrides[f.id]||{}),title:document.getElementById("editTitle").value.trim(),originalTitle:document.getElementById("editOriginalTitle").value.trim(),englishTitle:document.getElementById("editEnglishTitle").value.trim()};save();document.getElementById("sheetTitle").textContent=displayTitle(f);render()}["editTitle","editOriginalTitle","editEnglishTitle"].forEach(id=>document.getElementById(id).onchange=saveEditedTitles);document.getElementById("editCategory").onchange=e=>{const f=filmById(selectedId);if(!f)return;state.categoryOverrides[f.id]=e.target.value;save();document.getElementById("sheetMeta").textContent=`${f.year||""}${filmCategory(f)?" · "+filmCategory(f):""}`;refreshCategoryControls();render()};document.getElementById("resetTitles").onclick=()=>{const f=filmById(selectedId);if(!f)return;delete state.titleOverrides[f.id];save();openSheet(f.id);render();toast("元のタイトル表記に戻しました")};document.getElementById("editStar").onchange=e=>{const f=filmById(selectedId);if(!f)return;state.starOverrides[f.id]=parseFloat(e.target.value);const sc=effectiveScore(f);if(sc!=null&&scoreToStar(sc)!==Number(e.target.value))delete state.exactScores[f.id];save();render()};document.getElementById("editScore").onchange=e=>{const f=filmById(selectedId);if(!f)return;if(e.target.value==="")delete state.exactScores[f.id];else{const sc=Math.max(0,Math.min(100,parseInt(e.target.value,10)));state.exactScores[f.id]=sc;state.starOverrides[f.id]=scoreToStar(sc);state.assignments[f.id]=nearestTier(scoreToStar(sc),sc)}save();render()};document.getElementById("clearExact").onclick=()=>{const f=filmById(selectedId);if(!f)return;delete state.exactScores[f.id];save();document.getElementById("editScore").value=effectiveScore(f)??"";render()};document.getElementById("deleteCustom").onclick=()=>{const f=filmById(selectedId);if(!f||!f.added)return;if(confirm("この追加映画を削除しますか？")){state.customFilms=state.customFilms.filter(x=>x.id!==f.id);delete state.assignments[f.id];delete state.starOverrides[f.id];delete state.exactScores[f.id];delete state.titleOverrides[f.id];delete state.categoryOverrides[f.id];for(const k in state.rankOrder)state.rankOrder[k]=state.rankOrder[k].filter(id=>id!==f.id);save();closeSheet();render()}};document.getElementById("closeSheet").onclick=closeSheet;document.getElementById("sheetBg").onclick=e=>{if(e.target===e.currentTarget)closeSheet()};
 document.getElementById("addMovie").onclick=()=>{const f=addFilm(document.getElementById("newTitle").value,document.getElementById("newYear").value,document.getElementById("newCategory").value,document.getElementById("newStar").value,document.getElementById("newScore").value,{originalTitle:document.getElementById("newOriginalTitle").value,englishTitle:document.getElementById("newEnglishTitle").value});if(f){["newTitle","newOriginalTitle","newEnglishTitle","newYear","newScore"].forEach(id=>document.getElementById(id).value="");toast("映画を追加しました")}};
 document.getElementById("quickAdd").onclick=()=>{selectedTmdbId=null;document.getElementById("qResults").innerHTML='<div class="lookup-empty">検索結果から選ぶとタイトルと公開年を自動入力します。</div>';document.getElementById("addSheetBg").classList.add("open");setTimeout(()=>document.getElementById("qLookup").focus(),80)};document.getElementById("qCancel").onclick=()=>document.getElementById("addSheetBg").classList.remove("open");document.getElementById("addSheetBg").onclick=e=>{if(e.target===e.currentTarget)e.currentTarget.classList.remove("open")};document.getElementById("qSearch").onclick=searchTmdb;document.getElementById("qLookup").onkeydown=e=>{if(e.key==="Enter"){e.preventDefault();searchTmdb()}};document.getElementById("qAdd").onclick=()=>{const f=addFilm(document.getElementById("qTitle").value,document.getElementById("qYear").value,document.getElementById("qCategory").value,document.getElementById("qStar").value,document.getElementById("qScore").value,{originalTitle:document.getElementById("qOriginalTitle").value,englishTitle:document.getElementById("qEnglishTitle").value,tmdbId:selectedTmdbId});if(f){["qLookup","qTitle","qOriginalTitle","qEnglishTitle","qYear","qCategory","qScore"].forEach(id=>document.getElementById(id).value="");selectedTmdbId=null;document.getElementById("addSheetBg").classList.remove("open");view.page="rank";save();render();document.getElementById("searchRank").value=displayTitle(f);renderRank();toast("追加しました。検索で表示中")}};
 const lbs=getLbSettings();document.getElementById("lbUsername").value=lbs.username||"gjbkic";document.getElementById("lbAutoSync").checked=lbs.auto!==false;document.getElementById("lbUsername").onchange=()=>saveLbSettings({username:document.getElementById("lbUsername").value.trim()||"gjbkic",auto:document.getElementById("lbAutoSync").checked});document.getElementById("lbAutoSync").onchange=()=>saveLbSettings({username:document.getElementById("lbUsername").value.trim()||"gjbkic",auto:document.getElementById("lbAutoSync").checked});document.getElementById("syncLetterboxd").onclick=()=>syncLetterboxd(false);document.getElementById("lbCsvImport").onchange=e=>{const file=e.target.files[0];if(!file)return;const r=new FileReader();r.onload=async()=>{try{setLbStatus("CSVを読み込み中…");const z=await importLetterboxdCsv(r.result);setLbStatus(`CSV取込完了：新規 ${z.added}本／既存 ${z.found}本`,"ok")}catch(err){setLbStatus("CSV取込失敗："+err.message,"bad")}};r.readAsText(file)};document.getElementById("tmdbCredential").value=getTmdbCredential();updateTmdbStatus();document.getElementById("saveTmdb").onclick=()=>{const v=document.getElementById("tmdbCredential").value.trim();saveTmdbCredential(v)};document.getElementById("clearTmdb").onclick=()=>{document.getElementById("tmdbCredential").value="";saveTmdbCredential("")};
-document.getElementById("downloadJson").onclick=()=>download("movie30_backup_v13.json",JSON.stringify(exportPackage(),null,2),"application/json");document.getElementById("downloadCsv").onclick=()=>{const rows=exportRows(),head=["邦題／表示名","原題","英題","年","星","星内","点数","カテゴリ","追加映画","TMDB ID"];const csv=[head,...rows.map(x=>[x.title,x.original_title,x.english_title,x.year,x.star,x.tier,x.score,x.category,x.added,x.tmdb_id])].map(r=>r.map(csvCell).join(",")).join("\r\n");download("movie30_scores_v13.csv","\ufeff"+csv,"text/csv;charset=utf-8")};document.getElementById("showBackup").onclick=()=>document.getElementById("backupText").value=backupString();document.getElementById("copyBackup").onclick=()=>copyText(backupString());document.getElementById("restoreText").onclick=()=>{try{restorePackage(JSON.parse(document.getElementById("backupText").value.trim()))}catch(e){alert("復元できません: "+e.message)}};document.getElementById("downloadHtml").onclick=()=>{try{download("movie30_snapshot_v13.html",snapshotHtml(),"text/html;charset=utf-8");toast("保存版HTMLを作成しました")}catch(e){alert(e.message)}};document.getElementById("importFile").onchange=e=>{const file=e.target.files[0];if(!file)return;const r=new FileReader();r.onload=()=>{try{restorePackage(JSON.parse(r.result))}catch(err){alert("読み込み失敗: "+err.message)}};r.readAsText(file)};document.getElementById("resetAll").onclick=()=>{if(confirm("分類・点数・順位・追加映画をすべて初期状態へ戻しますか？")){state=normalizeState({});save();render();document.getElementById("backupText").value="";toast("初期化しました")}};
+document.getElementById("downloadJson").onclick=()=>download("movie30_backup_v13.json",JSON.stringify(exportPackage(),null,2),"application/json");document.getElementById("downloadCsv").onclick=()=>{const rows=exportRows(),head=["邦題／表示名","原題","英題","年","星","星内","点数","カテゴリ","追加映画","TMDB ID"];const csv=[head,...rows.map(x=>[x.title,x.original_title,x.english_title,x.year,x.star,x.tier,x.score,x.category,x.added,x.tmdb_id])].map(r=>r.map(csvCell).join(",")).join("\r\n");download("movie30_scores_v13.csv","\ufeff"+csv,"text/csv;charset=utf-8")};document.getElementById("showBackup").onclick=()=>document.getElementById("backupText").value=backupString();document.getElementById("copyBackup").onclick=()=>copyText(backupString());document.getElementById("restoreText").onclick=()=>{try{restorePackage(JSON.parse(document.getElementById("backupText").value.trim()))}catch(e){alert("復元できません: "+e.message)}};document.getElementById("downloadHtml").onclick=async()=>{try{download("movie30_snapshot_v13.html",await snapshotHtml(),"text/html;charset=utf-8");toast("保存版HTMLを作成しました")}catch(e){alert(e.message)}};document.getElementById("importFile").onchange=e=>{const file=e.target.files[0];if(!file)return;const r=new FileReader();r.onload=()=>{try{restorePackage(JSON.parse(r.result))}catch(err){alert("読み込み失敗: "+err.message)}};r.readAsText(file)};document.getElementById("resetAll").onclick=()=>{if(confirm("分類・点数・順位・追加映画をすべて初期状態へ戻しますか？")){state=normalizeState({});save();render();document.getElementById("backupText").value="";toast("初期化しました")}};
 window.addEventListener("beforeunload",e=>{if(movie30PendingWrites||window.__movie30TabConflict||movie30Payload(state)!==movie30Payload(movie30LastSavedJson)){e.preventDefault();e.returnValue='';}});
 window.addEventListener("storage",e=>{if(e.key===STORAGE_KEY||e.key===null)movie30ReceivePeer();});
 window.addEventListener('focus',()=>movie30ReceivePeer());
@@ -3114,19 +3149,19 @@ window.__movie30AutoSyncPending=()=>{const x=getLbSettings();if(x.auto!==false)s
     };
   }
 
-  function fpV29(){
+  function fpV29(source=state){
     const s={
-      exactScores:state.exactScores||{},rankOrder:state.rankOrder||{},customFilms:state.customFilms||[],
-      starOverrides:state.starOverrides||{},titleOverrides:state.titleOverrides||{},categoryOverrides:state.categoryOverrides||{},
-      mediaTypeOverrides:state.mediaTypeOverrides||{},genreOverrides:state.genreOverrides||{},originOverrides:state.originOverrides||{},
-      formatOverrides:state.formatOverrides||{},runtimeOverrides:state.runtimeOverrides||{}
+      exactScores:source.exactScores||{},rankOrder:source.rankOrder||{},customFilms:source.customFilms||[],
+      starOverrides:source.starOverrides||{},titleOverrides:source.titleOverrides||{},categoryOverrides:source.categoryOverrides||{},
+      mediaTypeOverrides:source.mediaTypeOverrides||{},genreOverrides:source.genreOverrides||{},originOverrides:source.originOverrides||{},
+      formatOverrides:source.formatOverrides||{},runtimeOverrides:source.runtimeOverrides||{}
     };
     const str=JSON.stringify(s);
     let h=2166136261;
     for(let i=0;i<str.length;i++){h^=str.charCodeAt(i);h=Math.imul(h,16777619)}
     return String(h>>>0)+':'+str.length;
   }
-  try{if(!localStorage.getItem(FP_KEY))localStorage.setItem(FP_KEY,fpV29())}catch(_){}
+  window.__movie30GithubDataFingerprintV29=fpV29;
 
   let stableTimer=0;
   function scheduleStableSyncV29(){
@@ -3139,7 +3174,6 @@ window.__movie30AutoSyncPending=()=>{const x=getLbSettings();if(x.auto!==false)s
     stableTimer=setTimeout(()=>{
       const now=fpV29(); let prev=''; try{prev=localStorage.getItem(FP_KEY)||''}catch(_){}
       if(now===prev)return;
-      try{localStorage.setItem(FP_KEY,now)}catch(_){}
       document.getElementById('gptSyncNow')?.click();
     },3500);
   }
@@ -5839,23 +5873,37 @@ window.__movie30AutoSyncPending=()=>{const x=getLbSettings();if(x.auto!==false)s
     if(cloudBusy)return;let token='';try{token=localStorage.getItem(TOKEN_KEY)||''}catch(_){}token=token.trim();
     if(!token){if(manual)status('トークンが未設定です。','bad');return}cloudBusy=true;if(manual)status('GitHubへ同期中…');
     try{
+      // Later edits must not be acknowledged by this request.
+      const payload=JSON.parse(JSON.stringify(livePayload()));
+      const sentDataFp=window.__movie30GithubDataFingerprintV29(payload.state);
+      const sentMetaFp=metaFp(payload.state.letterboxdMeta);
       const url=`https://api.github.com/repos/${REPO}/contents/${LIVE_PATH}`;let sha=null,r=await fetch(url,{headers:headers(token),cache:'no-store'});
       if(r.ok)sha=(await r.json()).sha||null;else if(r.status!==404)throw new Error(`GitHub確認に失敗 (${r.status})`);
-      const body={message:`Sync live movie ratings + Letterboxd metadata (${Date.now()})`,content:b64(JSON.stringify(livePayload(),null,2))};if(sha)body.sha=sha;
+      if(window.__movie30RecoveryBlocked||window.__movie30SaveFailed||window.__movie30TabConflict||movie30PendingWrites||
+         sentDataFp!==window.__movie30GithubDataFingerprintV29(state)||sentMetaFp!==metaFp()){
+        status('保存状態が変わったため同期を中止しました。保存完了後に再試行してください。','bad');return;
+      }
+      const body={message:`Sync live movie ratings + Letterboxd metadata (${Date.now()})`,content:b64(JSON.stringify(payload,null,2))};if(sha)body.sha=sha;
       r=await fetch(url,{method:'PUT',headers:{...headers(token),'Content-Type':'application/json'},body:JSON.stringify(body)});
       if(r.status===409)throw new Error('別の端末またはWorkの更新と競合しました。上書きせず同期を停止しました。JSONを保存してください。');
       if(!r.ok)throw new Error(`GitHub書き込みに失敗 (${r.status})`);
-      try{localStorage.setItem('movie30_github_sync_last_v1',JSON.stringify({sourceUpdatedAt:Number(state.updatedAt||0),at:Date.now()}))}catch(_){}
+      try{
+        localStorage.setItem('movie30_github_sync_last_v1',JSON.stringify({sourceUpdatedAt:payload.sourceUpdatedAt,at:Date.now()}));
+        localStorage.setItem('movie30_github_synced_fingerprint_v1',sentDataFp);
+        localStorage.setItem(META_FP_KEY,sentMetaFp);
+      }catch(_){}
       status('同期しました。Letterboxd追加日も保存されています。','ok');
     }catch(e){status('同期できませんでした：'+(e?.message||e),'bad')}finally{cloudBusy=false}
   }
   const syncBtn=document.getElementById('gptSyncNow');if(syncBtn)syncBtn.onclick=()=>syncMetaCloud(true);
 
-  function metaFp(){const str=JSON.stringify(state.letterboxdMeta||{});let h=2166136261;for(let i=0;i<str.length;i++){h^=str.charCodeAt(i);h=Math.imul(h,16777619)}return String(h>>>0)+':'+str.length}
+  function metaFp(meta=state.letterboxdMeta){const str=JSON.stringify(meta||{});let h=2166136261;for(let i=0;i<str.length;i++){h^=str.charCodeAt(i);h=Math.imul(h,16777619)}return String(h>>>0)+':'+str.length}
   let metaTimer=0;
   function scheduleMetaSync(){
     const cur=metaFp();let prev='';try{prev=localStorage.getItem(META_FP_KEY)||''}catch(_){}if(cur===prev)return;
-    clearTimeout(metaTimer);metaTimer=setTimeout(()=>{try{localStorage.setItem(META_FP_KEY,cur)}catch(_){}
+    clearTimeout(metaTimer);metaTimer=setTimeout(()=>{
+      let latest='';try{latest=localStorage.getItem(META_FP_KEY)||''}catch(_){}
+      if(metaFp()===latest)return;
       let auto=true;try{auto=localStorage.getItem('movie30_github_stable_auto_v1')!=='0'}catch(_){}if(auto)syncMetaCloud(false)},3000);
   }
   const savePrev=save;save=function(...args){const out=savePrev(...args);scheduleMetaSync();return out};

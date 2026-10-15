@@ -100,6 +100,7 @@ test('sync/save: both sync status panels and JSON backup stay visible, advanced 
   const backup=page.locator('#movie30-data-backup-advanced');
   await page.locator('#movie30-data-backup-advanced>summary').click();
   assert.equal(await page.locator('#downloadCsv').isVisible(),true);
+  assert.equal(await page.locator('#downloadHtml').isVisible(),true);
   assert.equal(await page.locator('#resetAll').isVisible(),false);
   await page.locator('#movie30-data-reset-danger>summary').click();
   assert.equal(await page.locator('#resetAll').isVisible(),true);
