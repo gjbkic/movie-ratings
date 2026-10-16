@@ -2414,7 +2414,7 @@ window.__movie30AutoSyncPending=()=>{const x=getLbSettings();if(x.auto!==false)s
       const v=tokenInput.value.trim();
       if(!v){ setSyncUi('トークンを入力してください。','bad'); return; }
       try{localStorage.setItem(TOKEN_KEY,v)}catch(_){}
-      setSyncSettings({auto:autoInput.checked});
+      setSyncSettings({auto:false});
       setSyncUi('設定しました。最初の同期を実行します…');
       await syncToGithub(true);
     };
@@ -2446,32 +2446,9 @@ window.__movie30AutoSyncPending=()=>{const x=getLbSettings();if(x.auto!==false)s
     return (await r.json()).sha||null;
   }
   async function syncToGithub(manual=false){
-    if(window.__movie30BulkBoot||window.__movie30RecoveryBlocked||window.__movie30SaveFailed||window.__movie30TabConflict||movie30PendingWrites)return;
-    if(syncBusy)return;
-    const token=getToken().trim();
-    if(!token){if(manual)setSyncUi('トークンが未設定です。','bad');return;}
-    const last=getLastSync();
-    const sourceUpdatedAt=Number(state.updatedAt||0);
-    if(!manual && Number(last.sourceUpdatedAt||0)===sourceUpdatedAt)return;
-    syncBusy=true; if(syncTimer){clearTimeout(syncTimer);syncTimer=0;}
-    setSyncUi('GitHubへ同期中…');
-    try{
-      const payload=makeLivePayload(), text=JSON.stringify(payload,null,2), content=utf8Base64(text);
-      let sha=await remoteSha(token);
-      const body={message:`Sync live movie ratings (${sourceUpdatedAt||Date.now()})`,content};
-      if(sha)body.sha=sha;
-      const url=`https://api.github.com/repos/${REPO}/contents/${LIVE_PATH}`;
-      let r=await fetch(url,{method:'PUT',headers:{...syncHeaders(token),'Content-Type':'application/json'},body:JSON.stringify(body)});
-      if(r.status===409)throw new Error('別の端末またはWorkでGitHubが更新されました。上書きせず同期を停止しました。JSONを保存して最新記録を確認してください。');
-      if(!r.ok){
-        let detail=''; try{detail=(await r.json())?.message||''}catch(_){}
-        throw new Error(`同期失敗 (${r.status})${detail?': '+detail:''}`);
-      }
-      setLastSync({at:Date.now(),sourceUpdatedAt});
-      refreshSyncUi();
-    }catch(e){
-      setSyncUi(e?.message||String(e),'bad');
-    }finally{syncBusy=false;}
+    // Includes the settings button and any legacy timer already queued at boot.
+    if(window.__movie30SyncGithub)return window.__movie30SyncGithub(manual);
+    if(manual)setSyncUi('同期の準備が完了していません。再試行してください。','bad');
   }
   function scheduleSync(delay=2200){
     const settings=getSyncSettings();
@@ -3169,11 +3146,12 @@ window.__movie30AutoSyncPending=()=>{const x=getLbSettings();if(x.auto!==false)s
     let token=''; try{token=localStorage.getItem(TOKEN_KEY)||''}catch(_){}
     if(!token)return;
     const cur=fpV29(); let last=''; try{last=localStorage.getItem(FP_KEY)||''}catch(_){}
-    if(cur===last)return;
+    if(cur===last&&!window.__movie30CloudNeedsVerification?.())return;
     clearTimeout(stableTimer);
     stableTimer=setTimeout(()=>{
+      if(!wantedAuto)return;
       const now=fpV29(); let prev=''; try{prev=localStorage.getItem(FP_KEY)||''}catch(_){}
-      if(now===prev)return;
+      if(now===prev&&!window.__movie30CloudNeedsVerification?.())return;
       document.getElementById('gptSyncNow')?.click();
     },3500);
   }
@@ -5867,9 +5845,26 @@ window.__movie30AutoSyncPending=()=>{const x=getLbSettings();if(x.auto!==false)s
   function headers(token){return {Accept:'application/vnd.github+json',Authorization:`Bearer ${token}`,'X-GitHub-Api-Version':'2022-11-28'}}
   function b64(text){const bytes=new TextEncoder().encode(text);let bin='';for(let i=0;i<bytes.length;i+=0x8000)bin+=String.fromCharCode(...bytes.subarray(i,i+0x8000));return btoa(bin)}
   function status(msg,kind=''){const el=document.getElementById('gptSyncStatus');if(!el)return;el.className='gpt-sync-status'+(kind?' '+kind:'');el.textContent=msg}
-  let cloudBusy=false;
+  // A session may only write over a revision whose contents it actually knows.
+  // Legacy fingerprints are scheduling hints, never evidence of ancestry.
+  const canonical=v=>JSON.stringify(v,(_k,x)=>x&&typeof x==='object'&&!Array.isArray(x)?Object.keys(x).sort().reduce((o,k)=>(Object.defineProperty(o,k,{value:x[k],enumerable:true,configurable:true}),o),{}):x);
+  let cloudBusy=false,cloudBase=null,cloudSha=null,cloudAttempt=null,cloudConflict=false,cloudFollowup=0;
+  window.__movie30CloudNeedsVerification=()=>!cloudSha||!!cloudAttempt;
+  window.__movie30StorageReady?.then(()=>{cloudBase=canonical(livePayload().state)});
+  function protectCloud(remote,reason){
+    cloudConflict=true;
+    status('GitHub同期を停止しました：'+reason+'。手元の編集は保持しています。両方のJSONを保存して比較してください。','bad');
+    let box=document.getElementById('gptSyncCandidates');
+    if(!box){box=document.createElement('div');box.id='gptSyncCandidates';document.getElementById('gptSyncStatus')?.after(box)}
+    box.replaceChildren();
+    const note=document.createElement('p');note.textContent='端末のJSONは最新の追加編集も含みます。GitHubのJSONは確認時点の内容です。比較・統合が完了するまで同期を再開しません。再読み込み前に両方を保存してください。';box.append(note);
+    for(const [label,name,content] of [
+      ['現在の端末JSONを保存','movie30_local_conflict.json',()=>JSON.stringify(exportPackage(),null,2)],
+      ['GitHub側JSONを保存','movie30_remote_conflict.json',()=>remote]
+    ]){const b=document.createElement('button');b.className='btn';b.textContent=label;b.disabled=content===null||(!remote&&name.includes('remote'));b.onclick=()=>download(name,content(),'application/json');box.append(b)}
+  }
   async function syncMetaCloud(manual=false){
-    if(window.__movie30BulkBoot||window.__movie30RecoveryBlocked||window.__movie30SaveFailed||window.__movie30TabConflict||movie30PendingWrites)return;
+    if(window.__movie30BulkBoot||window.__movie30RecoveryBlocked||window.__movie30SaveFailed||window.__movie30TabConflict||cloudConflict||(typeof movie30PendingWrites!=='undefined'&&movie30PendingWrites))return;
     if(cloudBusy)return;let token='';try{token=localStorage.getItem(TOKEN_KEY)||''}catch(_){}token=token.trim();
     if(!token){if(manual)status('トークンが未設定です。','bad');return}cloudBusy=true;if(manual)status('GitHubへ同期中…');
     try{
@@ -5877,33 +5872,64 @@ window.__movie30AutoSyncPending=()=>{const x=getLbSettings();if(x.auto!==false)s
       const payload=JSON.parse(JSON.stringify(livePayload()));
       const sentDataFp=window.__movie30GithubDataFingerprintV29(payload.state);
       const sentMetaFp=metaFp(payload.state.letterboxdMeta);
-      const url=`https://api.github.com/repos/${REPO}/contents/${LIVE_PATH}`;let sha=null,r=await fetch(url,{headers:headers(token),cache:'no-store'});
-      if(r.ok)sha=(await r.json()).sha||null;else if(r.status!==404)throw new Error(`GitHub確認に失敗 (${r.status})`);
+      const url=`https://api.github.com/repos/${REPO}/contents/${LIVE_PATH}`;let r=await fetch(url,{headers:{...headers(token),Accept:'application/vnd.github.object+json'},cache:'no-store'});
+      if(!r.ok)throw new Error(`GitHub確認に失敗 (${r.status})`);
+      let entry=await r.json();let remoteText,remote;
+      // Contents API omits base64 content above 1 MB. Read that exact immutable
+      // blob, not a second request for the potentially changed branch head.
+      if(entry.sha&&entry.encoding==='none'){
+        const expected=entry.sha;
+        r=await fetch(`https://api.github.com/repos/${REPO}/git/blobs/${encodeURIComponent(expected)}`,{headers:headers(token),cache:'no-store'});
+        if(!r.ok)throw new Error(`GitHub内容確認に失敗 (${r.status})`);
+        entry=await r.json();if(entry.sha!==expected)throw new Error('GitHubの版が一致しません。上書きせず停止しました。');
+      }
+      try{
+        if(!entry.sha||entry.encoding!=='base64'||typeof entry.content!=='string')throw Error('missing content');
+        remoteText=new TextDecoder('utf-8',{fatal:true}).decode(Uint8Array.from(atob(entry.content.replace(/\s/g,'')),c=>c.charCodeAt(0)));
+        remote=JSON.parse(remoteText);
+        if(remote.app!=='movie30-live'||remote.schema!==2||!remote.state||!movie30ValidState(remote.state))throw Error('invalid state');
+      }catch(_){protectCloud(remoteText||null,'同期先の内容を検証できません');return}
+      const sha=entry.sha,remoteState=canonical(remote.state),sentState=canonical(payload.state);
+      // A lost PUT response is acknowledged only when the exact sent state is present.
+      if(cloudAttempt&&remoteState===cloudAttempt.state){cloudBase=remoteState;cloudSha=sha;cloudAttempt=null}
+      if(remoteState!==sentState&&((cloudSha&&sha!==cloudSha)||(!cloudSha&&remoteState!==cloudBase))){
+        protectCloud(remoteText,'別端末の変更、または編集元を確認できない差分があります');return;
+      }
+      if(!cloudSha){cloudSha=sha;cloudBase=remoteState}
       if(window.__movie30RecoveryBlocked||window.__movie30SaveFailed||window.__movie30TabConflict||(typeof movie30PendingWrites!=='undefined'&&movie30PendingWrites)||
          sentDataFp!==window.__movie30GithubDataFingerprintV29(state)||sentMetaFp!==metaFp()){
         status('保存状態が変わったため同期を中止しました。保存完了後に再試行してください。','bad');return;
       }
-      const body={message:`Sync live movie ratings + Letterboxd metadata (${Date.now()})`,content:b64(JSON.stringify(payload,null,2))};if(sha)body.sha=sha;
-      r=await fetch(url,{method:'PUT',headers:{...headers(token),'Content-Type':'application/json'},body:JSON.stringify(body)});
-      if(r.status===409)throw new Error('別の端末またはWorkの更新と競合しました。上書きせず同期を停止しました。JSONを保存してください。');
-      if(!r.ok)throw new Error(`GitHub書き込みに失敗 (${r.status})`);
+      if(remoteState!==sentState){
+        const body={message:`Sync live movie ratings + Letterboxd metadata (${Date.now()})`,content:b64(JSON.stringify({...remote,...payload},null,2)),sha};
+        cloudAttempt={state:sentState};
+        r=await fetch(url,{method:'PUT',headers:{...headers(token),'Content-Type':'application/json'},body:JSON.stringify(body)});
+        if(!r.ok)throw new Error(`GitHub書き込みに失敗 (${r.status})。送信元の版を保持して停止しました。`);
+        const result=await r.json();
+        if(!result.content?.sha)throw new Error('書き込み結果の版を確認できません。次回は内容を再確認します。');
+        cloudSha=result.content.sha;cloudBase=sentState;cloudAttempt=null;
+      }else{cloudSha=sha;cloudBase=sentState}
       try{
         localStorage.setItem('movie30_github_sync_last_v1',JSON.stringify({sourceUpdatedAt:payload.sourceUpdatedAt,at:Date.now()}));
         localStorage.setItem('movie30_github_synced_fingerprint_v1',sentDataFp);
         localStorage.setItem(META_FP_KEY,sentMetaFp);
       }catch(_){}
-      status('同期しました。Letterboxd追加日も保存されています。','ok');
+      if(canonical(livePayload().state)!==sentState){
+        status('送信した版は保存済みです。送信中の追加編集は未同期です。');
+        clearTimeout(cloudFollowup);cloudFollowup=setTimeout(()=>{let auto=false;try{auto=localStorage.getItem('movie30_github_stable_auto_v1')==='1'}catch(_){}if(auto)syncMetaCloud(false)},3500);
+      }else status('同期しました。Letterboxd追加日も保存されています。','ok');
     }catch(e){status('同期できませんでした：'+(e?.message||e),'bad')}finally{cloudBusy=false}
   }
+  window.__movie30SyncGithub=syncMetaCloud;
   const syncBtn=document.getElementById('gptSyncNow');if(syncBtn)syncBtn.onclick=()=>syncMetaCloud(true);
 
   function metaFp(meta=state.letterboxdMeta){const str=JSON.stringify(meta||{});let h=2166136261;for(let i=0;i<str.length;i++){h^=str.charCodeAt(i);h=Math.imul(h,16777619)}return String(h>>>0)+':'+str.length}
   let metaTimer=0;
   function scheduleMetaSync(){
-    const cur=metaFp();let prev='';try{prev=localStorage.getItem(META_FP_KEY)||''}catch(_){}if(cur===prev)return;
+    const cur=metaFp();let prev='';try{prev=localStorage.getItem(META_FP_KEY)||''}catch(_){}if(cur===prev&&!window.__movie30CloudNeedsVerification())return;
     clearTimeout(metaTimer);metaTimer=setTimeout(()=>{
       let latest='';try{latest=localStorage.getItem(META_FP_KEY)||''}catch(_){}
-      if(metaFp()===latest)return;
+      if(metaFp()===latest&&!window.__movie30CloudNeedsVerification())return;
       let auto=true;try{auto=localStorage.getItem('movie30_github_stable_auto_v1')!=='0'}catch(_){}if(auto)syncMetaCloud(false)},3000);
   }
   const savePrev=save;save=function(...args){const out=savePrev(...args);scheduleMetaSync();return out};
