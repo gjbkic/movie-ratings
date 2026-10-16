@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792180068236,
-  "sourceUpdatedIso": "2026-10-16T19:47:48.236Z",
+  "sourceUpdatedAt": 1792180098100,
+  "sourceUpdatedIso": "2026-10-16T19:48:18.100Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -21611,8 +21611,16 @@
       "sameScoreRank": null,
       "category": "Letterboxd",
       "mediaType": "movie",
-      "genre": "",
-      "origin": "その他",
+      "genre": [
+        "子供向け",
+        "娯楽",
+        "comfort",
+        "切ない",
+        "心理・内面",
+        "社会問題・生活",
+        "ドラマ"
+      ],
+      "origin": "日本",
       "format": "",
       "runtime": null,
       "exact": false,
@@ -36336,6 +36344,15 @@
         "ファンタジー",
         "SF",
         "アドベンチャー"
+      ],
+      "custom-1792179458643-m8hx": [
+        "子供向け",
+        "娯楽",
+        "comfort",
+        "切ない",
+        "心理・内面",
+        "社会問題・生活",
+        "ドラマ"
       ]
     },
     "originOverrides": {
@@ -37107,7 +37124,7 @@
       "custom-1792067619800-hky7": "その他",
       "custom-1792067620393-qnt8": "日本",
       "custom-1792173022533-1kos": "その他",
-      "custom-1792179458643-m8hx": "その他"
+      "custom-1792179458643-m8hx": "日本"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
