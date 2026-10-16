@@ -2212,86 +2212,17 @@ window.__movie30AutoSyncPending=()=>{const x=getLbSettings();if(x.auto!==false)s
     renderStageOne();
   };
 
-  const REPO = 'gjbkic/movie-ratings';
-  const LIVE_PATH = 'live-state.json';
+
+
   const TOKEN_KEY = 'movie30_github_sync_token_v1';
   const SETTINGS_KEY = 'movie30_github_sync_settings_v1';
   const LAST_KEY = 'movie30_github_sync_last_v1';
-  let syncTimer = 0, syncBusy = false;
+  let syncTimer = 0;
 
   function getToken(){ try{return localStorage.getItem(TOKEN_KEY)||''}catch(_){return ''} }
   function getSyncSettings(){ try{return {auto:true,...(JSON.parse(localStorage.getItem(SETTINGS_KEY)||'null')||{})}}catch(_){return {auto:true}} }
   function setSyncSettings(v){ try{localStorage.setItem(SETTINGS_KEY,JSON.stringify(v))}catch(_){} }
   function getLastSync(){ try{return JSON.parse(localStorage.getItem(LAST_KEY)||'null')||{}}catch(_){return {}} }
-  function setLastSync(v){ try{localStorage.setItem(LAST_KEY,JSON.stringify(v))}catch(_){} }
-  function syncHeaders(token){ return {Accept:'application/vnd.github+json',Authorization:`Bearer ${token}`,'X-GitHub-Api-Version':'2022-11-28'}; }
-  function utf8Base64(text){
-    const bytes = new TextEncoder().encode(text);
-    let bin = '';
-    for(let i=0;i<bytes.length;i+=0x8000) bin += String.fromCharCode(...bytes.subarray(i, i+0x8000));
-    return btoa(bin);
-  }
-  function liveFilmRow(f, score, overallRank, sameScoreRank){
-    const x = titleInfo(f);
-    return {
-      id:f.id,
-      title:displayTitle(f),
-      originalTitle:x.originalTitle||'',
-      englishTitle:x.englishTitle||'',
-      year:f.year||'',
-      score:score==null?null:Number(score),
-      star:Number(filmStar(f)),
-      overallRank:overallRank||null,
-      sameScoreRank:sameScoreRank||null,
-      category:filmCategory(f)||'',
-      mediaType:state.mediaTypeOverrides?.[f.id]||f.mediaType||'movie',
-      genre:state.genreOverrides?.[f.id]||'',
-      origin:state.originOverrides?.[f.id]||'',
-      format:state.formatOverrides?.[f.id]||'',
-      runtime:state.runtimeOverrides?.[f.id]||null,
-      exact:Object.prototype.hasOwnProperty.call(state.exactScores||{},f.id)
-    };
-  }
-  function makeLivePayload(){
-    const films = allFilms();
-    const scored = new Map(), unrated = [];
-    for(const f of films){
-      const sc = effectiveScore(f);
-      if(sc==null || !Number.isFinite(Number(sc))) unrated.push(f);
-      else {
-        const k=String(Number(sc));
-        if(!scored.has(k))scored.set(k,[]);
-        scored.get(k).push(f);
-      }
-    }
-    const ranked=[]; let overall=0;
-    const scores=[...scored.keys()].map(Number).sort((a,b)=>b-a);
-    for(const score of scores){
-      const arr=rankSorted(scored.get(String(score))||[],score);
-      arr.forEach((f,i)=>ranked.push(liveFilmRow(f,score,++overall,i+1)));
-    }
-    return {
-      app:'movie30-live',
-      schema:1,
-      sourceUpdatedAt:Number(state.updatedAt||0),
-      sourceUpdatedIso:state.updatedAt?new Date(Number(state.updatedAt)).toISOString():null,
-      ranked,
-      unrated:unrated.map(f=>liveFilmRow(f,null,null,null)),
-      state:{
-        exactScores:state.exactScores||{},
-        rankOrder:state.rankOrder||{},
-        customFilms:state.customFilms||[],
-        starOverrides:state.starOverrides||{},
-        titleOverrides:state.titleOverrides||{},
-        categoryOverrides:state.categoryOverrides||{},
-        mediaTypeOverrides:state.mediaTypeOverrides||{},
-        genreOverrides:state.genreOverrides||{},
-        originOverrides:state.originOverrides||{},
-        formatOverrides:state.formatOverrides||{},
-        runtimeOverrides:state.runtimeOverrides||{}
-      }
-    };
-  }
 
   const dataPage = document.getElementById('page-data');
   let syncStatus = null, tokenInput = null, autoInput = null;
@@ -2343,13 +2274,6 @@ window.__movie30AutoSyncPending=()=>{const x=getLbSettings();if(x.auto!==false)s
       const d=new Date(last.at);
       setSyncUi(`設定済み · 最終同期 ${d.toLocaleString('ja-JP')}`,'ok');
     }else setSyncUi('トークン設定済み。まだ同期していません。');
-  }
-  async function remoteSha(token){
-    const url=`https://api.github.com/repos/${REPO}/contents/${LIVE_PATH}`;
-    const r=await fetch(url,{headers:syncHeaders(token),cache:'no-store'});
-    if(r.status===404)return null;
-    if(!r.ok)throw new Error(`GitHub確認に失敗 (${r.status})`);
-    return (await r.json()).sha||null;
   }
   async function syncToGithub(manual=false){
     // Includes the settings button and any legacy timer already queued at boot.
