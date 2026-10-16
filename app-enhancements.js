@@ -529,14 +529,15 @@ function applyCatalog(data){
  return {recognized,directors,posters};
 }
 let fetching=false;
-async function loadCloud(){
+async function loadCloud(refresh=true){
  if(fetching)return;
  fetching=true;reload.disabled=true;
  status.textContent='GitHubのメタデータを確認中…';
  try{
-  const response=await fetch('./tmdb-metadata.json?t='+Date.now(),{cache:'no-store'});
-  if(!response.ok)throw Error('データファイルがまだ公開されていません (HTTP '+response.status+')');
-  const data=await response.json();
+  const data=await window.__movie30LoadCatalog({refresh});
+  // Restoring IDB replaces state; apply automatic metadata only after that completes.
+  await window.__movie30StorageReady;
+  if(window.__movie30RecoveryBlocked)throw Error('保存データの復元が完了していません');
   const result=applyCatalog(data);
   status.textContent='反映済み：監督・製作者 '+result.directors+'作品／ポスター '+result.posters+'作品（照合 '+result.recognized+'作品）。データ更新：'+String(data.updatedAt||'').slice(0,10)+'。';
  }catch(e){
@@ -544,7 +545,7 @@ async function loadCloud(){
  }finally{fetching=false;reload.disabled=false}
 }
 reload.onclick=()=>loadCloud();
-loadCloud();
+loadCloud(false);
 // Make runtime debugging possible without exposing secret data.
 window.__movie30CloudCredits88={reload:loadCloud,stats:()=>({total:Object.keys(catalog).length,withDirectors:Object.values(catalog).filter(x=>x.directors?.length||x.creators?.length).length})};
 const marker=document.getElementById('movie30BuildV29');if(marker)marker.textContent='app build '+BUILD;
@@ -949,8 +950,7 @@ match=function(f,q){
  return [...(rec.directorAliases||[]),rec.title||'']
    .some(label=>norm(label).includes(needle));
 };
-fetch('./tmdb-metadata.json?autocomplete=20261012c',{cache:'no-store'})
- .then(res=>res.ok?res.json():null)
+window.__movie30LoadCatalog()
  .then(data=>{
    if(!data?.films)return;
    catalog=data.films;
@@ -1501,9 +1501,7 @@ document.addEventListener('pointerdown',event=>{
 });
 async function load(){
  try{
-  const response=await fetch('./tmdb-metadata.json?filters=20261012d',{cache:'no-store'});
-  if(!response.ok)throw Error('HTTP '+response.status);
-  const data=await response.json();
+  const data=await window.__movie30LoadCatalog();
   if(data.schema!==1||!data.films)return;
   catalog=data.films;
   candidates=options();
