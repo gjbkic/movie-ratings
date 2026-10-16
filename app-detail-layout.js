@@ -8,6 +8,7 @@
   const css=document.createElement('style');
   css.id='movie30-detail-unified-style';
   css.textContent=[
+    '#sheetBg{z-index:180;}',
     '#sheetBg .sheet{--detail-accent:#a9e8bd;}',
     '#sheetBg .sheet-meta{font-size:12px;line-height:1.4;color:#aeb7c4;margin-top:5px;margin-bottom:12px;}',
     '#sheetBg .edit-title-grid{margin:10px 0 13px;}',
