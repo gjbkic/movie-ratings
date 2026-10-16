@@ -1,0 +1,6 @@
+// Frozen pre-extraction functions from 697e6e4; no movie records.
+function filmById(id){return allFilms().find(f=>f.id===id)}
+function titleInfo(f){const o=state.titleOverrides[f.id]||{};return {title:String(o.title??f.title??"").trim(),originalTitle:String(o.originalTitle??f.originalTitle??"").trim(),englishTitle:String(o.englishTitle??f.englishTitle??f.lbTitle??"").trim(),tmdbId:o.tmdbId??f.tmdbId??null}}
+function displayTitle(f){const x=titleInfo(f);return x.title||x.englishTitle||x.originalTitle||"（無題）"}
+function secondaryTitle(f){const x=titleInfo(f),main=displayTitle(f);if(x.originalTitle&&x.originalTitle!==main)return x.originalTitle;if(x.englishTitle&&x.englishTitle!==main)return x.englishTitle;return ""}
+function filmCategory(f){return String((state.categoryOverrides||{})[f.id]??f.category??"").trim()}
