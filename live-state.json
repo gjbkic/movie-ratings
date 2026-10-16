@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792067802433,
-  "sourceUpdatedIso": "2026-10-15T12:36:42.433Z",
+  "sourceUpdatedAt": 1792173057265,
+  "sourceUpdatedIso": "2026-10-16T17:50:57.265Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -21568,6 +21568,36 @@
       "letterboxdAddedDate": null,
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1792173022533-1kos",
+      "title": "ブラック・ミラー「宇宙船カリスター号: インフィニティの中へ」",
+      "originalTitle": "Black Mirror: USS Callister – Into Infinity",
+      "englishTitle": "Black Mirror: USS Callister – Into Infinity",
+      "year": 2025,
+      "score": null,
+      "star": 2.5,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "drama",
+      "genre": [
+        "TV本編",
+        "アクション",
+        "サスペンス",
+        "ドラマ",
+        "娯楽",
+        "ファンタジー",
+        "SF",
+        "アドベンチャー"
+      ],
+      "origin": "その他",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": "2026-10-17",
+      "letterboxdPublishedAt": "Sat, 17 Oct 2026 05:48:12 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-17"
     }
   ],
   "state": {
@@ -26230,6 +26260,23 @@
         "added": true,
         "_seq": 1792067620393,
         "source": "letterboxd"
+      },
+      {
+        "id": "custom-1792173022533-1kos",
+        "title": "ブラック・ミラー「宇宙船カリスター号: インフィニティの中へ」",
+        "originalTitle": "Black Mirror: USS Callister – Into Infinity",
+        "englishTitle": "Black Mirror: USS Callister – Into Infinity",
+        "lbTitle": "Black Mirror: USS Callister – Into Infinity",
+        "tmdbId": null,
+        "year": 2025,
+        "uri": "https://letterboxd.com/gjbkic/film/black-mirror-uss-callister-into-infinity/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 2.5,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1792173022533,
+        "source": "letterboxd"
       }
     ],
     "starOverrides": {
@@ -29975,7 +30022,8 @@
       "custom-1791966715148-h5tp": "drama",
       "custom-1791973996242-1our": "drama",
       "custom-1792067619800-hky7": "other",
-      "custom-1792067620393-qnt8": "other"
+      "custom-1792067620393-qnt8": "other",
+      "custom-1792173022533-1kos": "drama"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -36236,6 +36284,16 @@
       ],
       "custom-1792067619800-hky7": [
         "ミュージカル"
+      ],
+      "custom-1792173022533-1kos": [
+        "TV本編",
+        "アクション",
+        "サスペンス",
+        "ドラマ",
+        "娯楽",
+        "ファンタジー",
+        "SF",
+        "アドベンチャー"
       ]
     },
     "originOverrides": {
@@ -37005,7 +37063,8 @@
       "custom-1791966534875-2yiz": "日本",
       "custom-1791973996242-1our": "日本",
       "custom-1792067619800-hky7": "その他",
-      "custom-1792067620393-qnt8": "日本"
+      "custom-1792067620393-qnt8": "日本",
+      "custom-1792173022533-1kos": "その他"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -67030,6 +67089,54 @@
           "path": "/yfldephcvHDW0oRrjGWtPt72t0o.jpg",
           "tmdbId": 618918,
           "checkedAt": "2026-10-15T12:33:50.162Z",
+          "provider": "tmdb"
+        }
+      },
+      "custom-1792173022533-1kos": {
+        "contentType": "tv_episode",
+        "tmdbSeriesId": 42009,
+        "publishedAt": "Sat, 17 Oct 2026 05:48:12 +1300",
+        "addedDate": "2026-10-17",
+        "addedDateSource": "rss-first-seen",
+        "reportedWatchedDate": "2026-10-17",
+        "seasonNumber": 7,
+        "episodeNumber": 6,
+        "episodeTmdbId": 6085099,
+        "letterboxdMovieId": null,
+        "note": "だいぶコメディによった。それなりに面白い。ゲームの中と外の感じは結構好きなジャンルだが、ゲーム特有のアクションをもっと使ってほしいくはある。心臓部がクローンという発想は結構素晴らしいと思う。続編作る価値がある。神の部屋は本当に神のよう\n強盗した相手が来るってのは少し臭いな。\n彼女はかなり短絡的で自分勝手。結局は保身に走る。\nまあ悪くなかった、爽快感的なものにはかけてたけど",
+        "noteSource": "letterboxd-rss",
+        "noteImportedAt": "2026-10-16T17:50:22.973Z",
+        "rssReviewRecords": {
+          "letterboxd-review-1540575757": {
+            "body": "だいぶコメディによった。それなりに面白い。ゲームの中と外の感じは結構好きなジャンルだが、ゲーム特有のアクションをもっと使ってほしいくはある。心臓部がクローンという発想は結構素晴らしいと思う。続編作る価値がある。神の部屋は本当に神のよう\n強盗した相手が来るってのは少し臭いな。\n彼女はかなり短絡的で自分勝手。結局は保身に走る。\nまあ悪くなかった、爽快感的なものにはかけてたけど",
+            "block": "だいぶコメディによった。それなりに面白い。ゲームの中と外の感じは結構好きなジャンルだが、ゲーム特有のアクションをもっと使ってほしいくはある。心臓部がクローンという発想は結構素晴らしいと思う。続編作る価値がある。神の部屋は本当に神のよう\n強盗した相手が来るってのは少し臭いな。\n彼女はかなり短絡的で自分勝手。結局は保身に走る。\nまあ悪くなかった、爽快感的なものにはかけてたけど"
+          }
+        },
+        "watchHistory": [
+          {
+            "id": "rss:letterboxd-review-1540575757",
+            "date": "2026-10-17",
+            "recordedAt": "2026-10-16T16:48:12.000Z",
+            "rewatch": false,
+            "retroactive": false,
+            "source": "letterboxd-rss",
+            "manualEdited": false
+          }
+        ],
+        "crew84": {
+          "directors": [
+            "Toby Haynes"
+          ],
+          "creators": [
+            "Charlie Brooker"
+          ],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-16T17:50:22.972Z"
+        },
+        "poster84": {
+          "path": "/seN6rRfN0I6n8iDXjlSMk1QjNcq.jpg",
+          "tmdbId": 42009,
+          "checkedAt": "2026-10-16T17:50:41.653Z",
           "provider": "tmdb"
         }
       }
