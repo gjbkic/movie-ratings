@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792173074179,
-  "sourceUpdatedIso": "2026-10-16T17:51:14.179Z",
+  "sourceUpdatedAt": 1792173089447,
+  "sourceUpdatedIso": "2026-10-16T17:51:29.447Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -12904,6 +12904,36 @@
       "letterboxdReportedWatchedDate": "2026-10-17"
     },
     {
+      "id": "custom-1791567440043-bmc8",
+      "title": "ブラック・ミラー「ランク社会」",
+      "originalTitle": "",
+      "englishTitle": "Black Mirror: Nosedive",
+      "year": 2016,
+      "score": 80,
+      "star": 2.5,
+      "overallRank": 449,
+      "sameScoreRank": 37,
+      "category": "Letterboxd",
+      "mediaType": "drama",
+      "genre": [
+        "雰囲気・美学",
+        "娯楽",
+        "社会問題・生活",
+        "コメディ",
+        "ドラマ",
+        "ファンタジー",
+        "胸糞",
+        "TV本編"
+      ],
+      "origin": "その他",
+      "format": "live",
+      "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-10",
+      "letterboxdPublishedAt": "Sat, 10 Oct 2026 05:34:06 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-10"
+    },
+    {
       "id": "lb-434-8i7u",
       "title": "ボーダーライン",
       "originalTitle": "",
@@ -12911,8 +12941,8 @@
       "year": 2015,
       "score": 80,
       "star": 2.5,
-      "overallRank": 449,
-      "sameScoreRank": 37,
+      "overallRank": 450,
+      "sameScoreRank": 38,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -12940,8 +12970,8 @@
       "year": 1995,
       "score": 80,
       "star": 2.5,
-      "overallRank": 450,
-      "sameScoreRank": 38,
+      "overallRank": 451,
+      "sameScoreRank": 39,
       "category": "ピクサー・ディズニー作品",
       "mediaType": "movie",
       "genre": [
@@ -12968,8 +12998,8 @@
       "year": 2008,
       "score": 80,
       "star": 2.5,
-      "overallRank": 451,
-      "sameScoreRank": 39,
+      "overallRank": 452,
+      "sameScoreRank": 40,
       "category": "戦争、歴史",
       "mediaType": "movie",
       "genre": [
@@ -12986,36 +13016,6 @@
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "custom-1791567440043-bmc8",
-      "title": "ブラック・ミラー「ランク社会」",
-      "originalTitle": "",
-      "englishTitle": "Black Mirror: Nosedive",
-      "year": 2016,
-      "score": 80,
-      "star": 2.5,
-      "overallRank": 452,
-      "sameScoreRank": 40,
-      "category": "Letterboxd",
-      "mediaType": "drama",
-      "genre": [
-        "雰囲気・美学",
-        "娯楽",
-        "社会問題・生活",
-        "コメディ",
-        "ドラマ",
-        "ファンタジー",
-        "胸糞",
-        "TV本編"
-      ],
-      "origin": "その他",
-      "format": "live",
-      "runtime": null,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-10",
-      "letterboxdPublishedAt": "Sat, 10 Oct 2026 05:34:06 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-10"
     },
     {
       "id": "lb-516-23Fk",
@@ -22731,10 +22731,10 @@
         "lb-250-bAcS",
         "custom-1791919156207-vna6",
         "custom-1792173022533-1kos",
+        "custom-1791567440043-bmc8",
         "lb-434-8i7u",
         "lb-406-29qA",
         "lb-272-1Soi",
-        "custom-1791567440043-bmc8",
         "lb-516-23Fk"
       ],
       "81": [
