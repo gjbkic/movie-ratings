@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792273055182,
-  "sourceUpdatedIso": "2026-10-17T21:37:35.182Z",
+  "sourceUpdatedAt": 1792273154475,
+  "sourceUpdatedIso": "2026-10-17T21:39:14.475Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -21769,6 +21769,27 @@
       "letterboxdAddedDate": null,
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1792273154078-pahe",
+      "title": "消えた古畑任三郎",
+      "originalTitle": "消えた古畑任三郎",
+      "englishTitle": "The Disappearance of Furuhata Ninzaburo",
+      "year": 1996,
+      "score": null,
+      "star": 0,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "コメディ",
+      "mediaType": "movie",
+      "genre": "",
+      "origin": "",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     }
   ],
   "state": {
@@ -26573,6 +26594,23 @@
         "added": true,
         "_seq": 1792273054769,
         "tmdbType": "movie"
+      },
+      {
+        "id": "custom-1792273154078-pahe",
+        "title": "消えた古畑任三郎",
+        "originalTitle": "消えた古畑任三郎",
+        "englishTitle": "The Disappearance of Furuhata Ninzaburo",
+        "lbTitle": "The Disappearance of Furuhata Ninzaburo",
+        "tmdbId": 1337759,
+        "year": 1996,
+        "uri": "",
+        "category": "コメディ",
+        "order": 999999,
+        "star": 0,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1792273154078,
+        "tmdbType": "movie"
       }
     ],
     "starOverrides": {
@@ -27318,7 +27356,8 @@
       "custom-1792273038255-fiy3": 0,
       "custom-1792273043356-1hja": 0,
       "custom-1792273047752-gi3p": 0,
-      "custom-1792273054769-jfcv": 0
+      "custom-1792273054769-jfcv": 0,
+      "custom-1792273154078-pahe": 0
     },
     "titleOverrides": {
       "added-anchor-578": {
@@ -30334,7 +30373,8 @@
       "custom-1792273038255-fiy3": "movie",
       "custom-1792273043356-1hja": "movie",
       "custom-1792273047752-gi3p": "movie",
-      "custom-1792273054769-jfcv": "movie"
+      "custom-1792273054769-jfcv": "movie",
+      "custom-1792273154078-pahe": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -67648,6 +67688,22 @@
           "creators": [],
           "source": "tmdb",
           "fetchedAt": "2026-10-17T21:37:34.896Z"
+        }
+      },
+      "custom-1792273154078-pahe": {
+        "contentType": "movie",
+        "tmdbType": "movie",
+        "poster84": {
+          "path": "/o2KAiHmQ73XZ4gGfDh09Ea4IHeE.jpg",
+          "tmdbId": 1337759,
+          "provider": "tmdb",
+          "checkedAt": "2026-10-17T21:39:14.183Z"
+        },
+        "crew84": {
+          "directors": [],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-17T21:39:14.210Z"
         }
       }
     }
