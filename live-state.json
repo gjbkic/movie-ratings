@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792273154475,
-  "sourceUpdatedIso": "2026-10-17T21:39:14.475Z",
+  "sourceUpdatedAt": 1792273210511,
+  "sourceUpdatedIso": "2026-10-17T21:40:10.511Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -67620,7 +67620,8 @@
           ],
           "source": "tmdb",
           "fetchedAt": "2026-10-17T21:35:28.563Z"
-        }
+        },
+        "seasonCountV1": 2
       },
       "custom-1792273038255-fiy3": {
         "contentType": "movie",
