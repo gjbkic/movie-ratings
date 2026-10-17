@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792272953006,
-  "sourceUpdatedIso": "2026-10-17T21:35:53.006Z",
+  "sourceUpdatedAt": 1792272999694,
+  "sourceUpdatedIso": "2026-10-17T21:36:39.694Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -21670,8 +21670,10 @@
       "sameScoreRank": null,
       "category": "追加映画",
       "mediaType": "drama",
-      "genre": "",
-      "origin": "",
+      "genre": [
+        "TV本編"
+      ],
+      "origin": "日本",
       "format": "",
       "runtime": null,
       "exact": false,
@@ -36457,6 +36459,9 @@
         "特殊構造",
         "娯楽",
         "雰囲気・美学"
+      ],
+      "custom-1792272928425-wp78": [
+        "TV本編"
       ]
     },
     "originOverrides": {
@@ -37229,7 +37234,8 @@
       "custom-1792067620393-qnt8": "日本",
       "custom-1792173022533-1kos": "その他",
       "custom-1792179458643-m8hx": "日本",
-      "custom-1792272124188-0j6i": "日本"
+      "custom-1792272124188-0j6i": "日本",
+      "custom-1792272928425-wp78": "日本"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
