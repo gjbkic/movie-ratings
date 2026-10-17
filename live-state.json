@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792272266467,
-  "sourceUpdatedIso": "2026-10-17T21:24:26.467Z",
+  "sourceUpdatedAt": 1792272279696,
+  "sourceUpdatedIso": "2026-10-17T21:24:39.696Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -5062,6 +5062,38 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-304-27M0",
+      "title": "バタフライ・エフェクト",
+      "originalTitle": "",
+      "englishTitle": "The Butterfly Effect",
+      "year": 2004,
+      "score": 85,
+      "star": 3.5,
+      "overallRank": 175,
+      "sameScoreRank": 2,
+      "category": "SF",
+      "mediaType": "movie",
+      "genre": [
+        "切ない",
+        "恋愛",
+        "ファンタジー",
+        "ドラマ",
+        "青春・若者",
+        "娯楽",
+        "comfort",
+        "心理・内面",
+        "時間",
+        "特殊構造"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 113,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-14",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "custom-1791396105970-bm2m",
       "title": "世にも奇妙な物語 '21夏の特別編",
       "originalTitle": "世にも奇妙な物語 '21夏の特別編",
@@ -5069,8 +5101,8 @@
       "year": 2021,
       "score": 85,
       "star": 3.5,
-      "overallRank": 175,
-      "sameScoreRank": 2,
+      "overallRank": 176,
+      "sameScoreRank": 3,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -5104,8 +5136,8 @@
       "year": 2016,
       "score": 85,
       "star": 3.5,
-      "overallRank": 176,
-      "sameScoreRank": 3,
+      "overallRank": 177,
+      "sameScoreRank": 4,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -5130,38 +5162,6 @@
       "letterboxdAddedDate": "2026-10-10",
       "letterboxdPublishedAt": "Sat, 10 Oct 2026 08:11:42 +1300",
       "letterboxdReportedWatchedDate": "2026-10-10"
-    },
-    {
-      "id": "lb-304-27M0",
-      "title": "バタフライ・エフェクト",
-      "originalTitle": "",
-      "englishTitle": "The Butterfly Effect",
-      "year": 2004,
-      "score": 85,
-      "star": 3.5,
-      "overallRank": 177,
-      "sameScoreRank": 4,
-      "category": "SF",
-      "mediaType": "movie",
-      "genre": [
-        "切ない",
-        "恋愛",
-        "ファンタジー",
-        "ドラマ",
-        "青春・若者",
-        "娯楽",
-        "comfort",
-        "心理・内面",
-        "時間",
-        "特殊構造"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 113,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-14",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "lb-399-29PA",
@@ -23004,9 +23004,9 @@
       ],
       "85": [
         "lb-59-780m",
+        "lb-304-27M0",
         "custom-1791396105970-bm2m",
         "custom-1791576150006-qu8m",
-        "lb-304-27M0",
         "lb-399-29PA",
         "lb-25-17ue",
         "custom-1789387775661-0mdh",
