@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792272279696,
-  "sourceUpdatedIso": "2026-10-17T21:24:39.696Z",
+  "sourceUpdatedAt": 1792272928841,
+  "sourceUpdatedIso": "2026-10-17T21:35:28.841Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -21657,6 +21657,27 @@
       "letterboxdAddedDate": null,
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1792272928425-wp78",
+      "title": "古畑任三郎",
+      "originalTitle": "古畑任三郎",
+      "englishTitle": "古畑任三郎",
+      "year": 1994,
+      "score": null,
+      "star": 0,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "追加映画",
+      "mediaType": "drama",
+      "genre": "",
+      "origin": "",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     }
   ],
   "state": {
@@ -26376,6 +26397,23 @@
         "added": true,
         "_seq": 1792272124188,
         "source": "letterboxd"
+      },
+      {
+        "id": "custom-1792272928425-wp78",
+        "title": "古畑任三郎",
+        "originalTitle": "古畑任三郎",
+        "englishTitle": "古畑任三郎",
+        "lbTitle": "古畑任三郎",
+        "tmdbId": 9573,
+        "year": 1994,
+        "uri": "",
+        "category": "追加映画",
+        "order": 999999,
+        "star": 0,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1792272928425,
+        "tmdbType": "tv"
       }
     ],
     "starOverrides": {
@@ -27116,7 +27154,8 @@
       "custom-1792067619800-hky7": 4,
       "custom-1792173022533-1kos": 2.5,
       "custom-1792179458643-m8hx": 3.5,
-      "custom-1792272124188-0j6i": 3.5
+      "custom-1792272124188-0j6i": 3.5,
+      "custom-1792272928425-wp78": 0
     },
     "titleOverrides": {
       "added-anchor-578": {
@@ -30127,7 +30166,8 @@
       "custom-1792067620393-qnt8": "other",
       "custom-1792173022533-1kos": "drama",
       "custom-1792179458643-m8hx": "movie",
-      "custom-1792272124188-0j6i": "movie"
+      "custom-1792272124188-0j6i": "movie",
+      "custom-1792272928425-wp78": "drama"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -67345,6 +67385,25 @@
           "tmdbId": 11830,
           "checkedAt": "2026-10-17T21:22:26.300Z",
           "provider": "tmdb"
+        }
+      },
+      "custom-1792272928425-wp78": {
+        "contentType": "tv_series",
+        "tmdbType": "tv",
+        "poster84": {
+          "path": "/56aSKXj1zV2KVOc0FcSa9ENk4nc.jpg",
+          "tmdbId": 9573,
+          "provider": "tmdb",
+          "checkedAt": "2026-10-17T21:35:28.534Z"
+        },
+        "tmdbSeriesId": 9573,
+        "crew84": {
+          "directors": [],
+          "creators": [
+            "Koki Mitani"
+          ],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-17T21:35:28.563Z"
         }
       }
     }
