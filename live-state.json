@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792272213742,
-  "sourceUpdatedIso": "2026-10-17T21:23:33.742Z",
+  "sourceUpdatedAt": 1792272252522,
+  "sourceUpdatedIso": "2026-10-17T21:24:12.522Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -5033,41 +5033,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1791576150006-qu8m",
-      "title": "ブラック・ミラー「サン・ジュニペロ」",
-      "originalTitle": "",
-      "englishTitle": "Black Mirror: San Junipero",
-      "year": 2016,
-      "score": 85,
-      "star": 3.5,
-      "overallRank": 174,
-      "sameScoreRank": 1,
-      "category": "Letterboxd",
-      "mediaType": "drama",
-      "genre": [
-        "どんでん返し",
-        "娯楽",
-        "社会問題・生活",
-        "心理・内面",
-        "ファンタジー",
-        "SF",
-        "ドラマ",
-        "恋愛",
-        "感動",
-        "世界観",
-        "特殊構造",
-        "時間",
-        "TV本編"
-      ],
-      "origin": "その他",
-      "format": "live",
-      "runtime": null,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-10",
-      "letterboxdPublishedAt": "Sat, 10 Oct 2026 08:11:42 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-10"
-    },
-    {
       "id": "custom-1791396105970-bm2m",
       "title": "世にも奇妙な物語 '21夏の特別編",
       "originalTitle": "世にも奇妙な物語 '21夏の特別編",
@@ -5075,8 +5040,8 @@
       "year": 2021,
       "score": 85,
       "star": 3.5,
-      "overallRank": 175,
-      "sameScoreRank": 2,
+      "overallRank": 174,
+      "sameScoreRank": 1,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -5101,6 +5066,41 @@
       "letterboxdAddedDate": "2026-10-08",
       "letterboxdPublishedAt": "Thu, 8 Oct 2026 06:59:10 +1300",
       "letterboxdReportedWatchedDate": "2026-10-08"
+    },
+    {
+      "id": "custom-1791576150006-qu8m",
+      "title": "ブラック・ミラー「サン・ジュニペロ」",
+      "originalTitle": "",
+      "englishTitle": "Black Mirror: San Junipero",
+      "year": 2016,
+      "score": 85,
+      "star": 3.5,
+      "overallRank": 175,
+      "sameScoreRank": 2,
+      "category": "Letterboxd",
+      "mediaType": "drama",
+      "genre": [
+        "どんでん返し",
+        "娯楽",
+        "社会問題・生活",
+        "心理・内面",
+        "ファンタジー",
+        "SF",
+        "ドラマ",
+        "恋愛",
+        "感動",
+        "世界観",
+        "特殊構造",
+        "時間",
+        "TV本編"
+      ],
+      "origin": "その他",
+      "format": "live",
+      "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-10",
+      "letterboxdPublishedAt": "Sat, 10 Oct 2026 08:11:42 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-10"
     },
     {
       "id": "lb-304-27M0",
@@ -23003,8 +23003,8 @@
         "lb-159-18U8"
       ],
       "85": [
-        "custom-1791576150006-qu8m",
         "custom-1791396105970-bm2m",
+        "custom-1791576150006-qu8m",
         "lb-304-27M0",
         "lb-399-29PA",
         "lb-59-780m",
