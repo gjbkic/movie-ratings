@@ -9,3 +9,5 @@
 これは基礎検索の分離であり、全ラップを一つのパイプラインへ統合した意味ではない。後続ラップの統合は、監督別名辞書や非同期カタログの更新契約をさらに個別に固定してから行う。性能改善率は未測定。
 
 検証：search-base、catalog-shared、search-drag、search-registration、filtered-ui、html-snapshotの関連6スイート成功。構文・diffチェック成功、保護対象JSON差分なし。全体ゲートは続けて実行する。
+
+後続確認：固定コードca1d34c（cafea36は文書のみ）で全21スイート成功を回収済み。
