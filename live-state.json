@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792273038633,
-  "sourceUpdatedIso": "2026-10-17T21:37:18.633Z",
+  "sourceUpdatedAt": 1792273048140,
+  "sourceUpdatedIso": "2026-10-17T21:37:28.140Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -21706,6 +21706,48 @@
       "letterboxdAddedDate": null,
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1792273043356-1hja",
+      "title": "古畑任三郎ファイナル 今、甦る死",
+      "originalTitle": "古畑任三郎ファイナル 今、甦る死",
+      "englishTitle": "Furuhata Ninzaburo The Resurrection Of Death",
+      "year": 2006,
+      "score": null,
+      "star": 0,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "サスペンス、ミステリー",
+      "mediaType": "movie",
+      "genre": "",
+      "origin": "",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1792273047752-gi3p",
+      "title": "古畑任三郎 笑うカンガルー",
+      "originalTitle": "古畑任三郎 笑うカンガルー",
+      "englishTitle": "The Laughing Kangaroo",
+      "year": 1995,
+      "score": null,
+      "star": 0,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "サスペンス、ミステリー",
+      "mediaType": "movie",
+      "genre": "",
+      "origin": "",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     }
   ],
   "state": {
@@ -26459,6 +26501,40 @@
         "added": true,
         "_seq": 1792273038255,
         "tmdbType": "movie"
+      },
+      {
+        "id": "custom-1792273043356-1hja",
+        "title": "古畑任三郎ファイナル 今、甦る死",
+        "originalTitle": "古畑任三郎ファイナル 今、甦る死",
+        "englishTitle": "Furuhata Ninzaburo The Resurrection Of Death",
+        "lbTitle": "Furuhata Ninzaburo The Resurrection Of Death",
+        "tmdbId": 1274348,
+        "year": 2006,
+        "uri": "",
+        "category": "サスペンス、ミステリー",
+        "order": 999999,
+        "star": 0,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1792273043356,
+        "tmdbType": "movie"
+      },
+      {
+        "id": "custom-1792273047752-gi3p",
+        "title": "古畑任三郎 笑うカンガルー",
+        "originalTitle": "古畑任三郎 笑うカンガルー",
+        "englishTitle": "The Laughing Kangaroo",
+        "lbTitle": "The Laughing Kangaroo",
+        "tmdbId": 1269874,
+        "year": 1995,
+        "uri": "",
+        "category": "サスペンス、ミステリー",
+        "order": 999999,
+        "star": 0,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1792273047752,
+        "tmdbType": "movie"
       }
     ],
     "starOverrides": {
@@ -27201,7 +27277,9 @@
       "custom-1792179458643-m8hx": 3.5,
       "custom-1792272124188-0j6i": 3.5,
       "custom-1792272928425-wp78": 3.5,
-      "custom-1792273038255-fiy3": 0
+      "custom-1792273038255-fiy3": 0,
+      "custom-1792273043356-1hja": 0,
+      "custom-1792273047752-gi3p": 0
     },
     "titleOverrides": {
       "added-anchor-578": {
@@ -30214,7 +30292,9 @@
       "custom-1792179458643-m8hx": "movie",
       "custom-1792272124188-0j6i": "movie",
       "custom-1792272928425-wp78": "drama",
-      "custom-1792273038255-fiy3": "movie"
+      "custom-1792273038255-fiy3": "movie",
+      "custom-1792273043356-1hja": "movie",
+      "custom-1792273047752-gi3p": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -67478,6 +67558,40 @@
           "creators": [],
           "source": "tmdb",
           "fetchedAt": "2026-10-17T21:37:18.381Z"
+        }
+      },
+      "custom-1792273043356-1hja": {
+        "contentType": "movie",
+        "tmdbType": "movie",
+        "poster84": {
+          "path": "/W0doc88pW9tF9FepOFGMJjPcT8.jpg",
+          "tmdbId": 1274348,
+          "provider": "tmdb",
+          "checkedAt": "2026-10-17T21:37:23.457Z"
+        },
+        "crew84": {
+          "directors": [],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-17T21:37:23.481Z"
+        }
+      },
+      "custom-1792273047752-gi3p": {
+        "contentType": "movie",
+        "tmdbType": "movie",
+        "poster84": {
+          "path": "/kF5QPnV8A7K0A5BgIRztWnrDVXi.jpg",
+          "tmdbId": 1269874,
+          "provider": "tmdb",
+          "checkedAt": "2026-10-17T21:37:27.852Z"
+        },
+        "crew84": {
+          "directors": [
+            "Keita Kono"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-17T21:37:27.877Z"
         }
       }
     }
