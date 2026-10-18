@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792304219406,
-  "sourceUpdatedIso": "2026-10-18T06:16:59.406Z",
+  "sourceUpdatedAt": 1792304277688,
+  "sourceUpdatedIso": "2026-10-18T06:17:57.688Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -6672,32 +6672,6 @@
       "letterboxdReportedWatchedDate": "2026-09-25"
     },
     {
-      "id": "lb-82-8SeG",
-      "title": "オデッセイ",
-      "originalTitle": "",
-      "englishTitle": "The Martian",
-      "year": 2015,
-      "score": 84,
-      "star": 3.5,
-      "overallRank": 231,
-      "sameScoreRank": 13,
-      "category": "SF",
-      "mediaType": "movie",
-      "genre": [
-        "SF",
-        "ドラマ",
-        "感動",
-        "娯楽"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 141,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-76-4vru",
       "title": "スター・ウォーズ／フォースの覚醒",
       "originalTitle": "",
@@ -6705,8 +6679,8 @@
       "year": 2015,
       "score": 84,
       "star": 3.5,
-      "overallRank": 232,
-      "sameScoreRank": 14,
+      "overallRank": 231,
+      "sameScoreRank": 13,
       "category": "スターウォーズシリーズ",
       "mediaType": "movie",
       "genre": [
@@ -6735,8 +6709,8 @@
       "year": 1997,
       "score": 84,
       "star": 3.5,
-      "overallRank": 233,
-      "sameScoreRank": 15,
+      "overallRank": 232,
+      "sameScoreRank": 14,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -6762,8 +6736,8 @@
       "year": 2016,
       "score": 84,
       "star": 3.5,
-      "overallRank": 234,
-      "sameScoreRank": 16,
+      "overallRank": 233,
+      "sameScoreRank": 15,
       "category": "ピクサー・ディズニー作品",
       "mediaType": "movie",
       "genre": [
@@ -6782,6 +6756,32 @@
       "origin": "ハリウッド",
       "format": "animation",
       "runtime": 109,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "lb-82-8SeG",
+      "title": "オデッセイ",
+      "originalTitle": "",
+      "englishTitle": "The Martian",
+      "year": 2015,
+      "score": 84,
+      "star": 3.5,
+      "overallRank": 234,
+      "sameScoreRank": 16,
+      "category": "SF",
+      "mediaType": "movie",
+      "genre": [
+        "SF",
+        "ドラマ",
+        "感動",
+        "娯楽"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 141,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
@@ -23110,10 +23110,10 @@
         "custom-1789385860026-8m1d",
         "custom-1792272928425-wp78",
         "custom-1790322762266-mrn9",
-        "lb-82-8SeG",
         "lb-76-4vru",
         "lb-180-27oC",
         "lb-318-84xS",
+        "lb-82-8SeG",
         "added-anchor-580",
         "lb-319-2ab2",
         "lb-133-2a1G",
@@ -67630,7 +67630,12 @@
           "source": "tmdb",
           "fetchedAt": "2026-10-17T21:35:28.563Z"
         },
-        "seasonCountV1": 3
+        "seasonCountV1": 3,
+        "seasonScoresV1": {
+          "1": 85,
+          "2": 84,
+          "3": 83
+        }
       },
       "custom-1792273038255-fiy3": {
         "contentType": "movie",
