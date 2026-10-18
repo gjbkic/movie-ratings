@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792319129858,
-  "sourceUpdatedIso": "2026-10-18T10:25:29.858Z",
+  "sourceUpdatedAt": 1792319134137,
+  "sourceUpdatedIso": "2026-10-18T10:25:34.137Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -1734,34 +1734,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-58-293w",
-      "title": "プレステージ",
-      "originalTitle": "",
-      "englishTitle": "The Prestige",
-      "year": 2006,
-      "score": 91,
-      "star": 4,
-      "overallRank": 61,
-      "sameScoreRank": 1,
-      "category": "サスペンス、ミステリー",
-      "mediaType": "movie",
-      "genre": [
-        "サスペンス",
-        "ミステリー",
-        "ファンタジー",
-        "どんでん返し",
-        "心理・内面",
-        "特殊構造"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 130,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-486-b8wK",
       "title": "ブレードランナー 2049",
       "originalTitle": "",
@@ -1769,8 +1741,8 @@
       "year": 2017,
       "score": 91,
       "star": 4,
-      "overallRank": 62,
-      "sameScoreRank": 2,
+      "overallRank": 61,
+      "sameScoreRank": 1,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -1787,6 +1759,34 @@
       "origin": "ハリウッド",
       "format": "live",
       "runtime": 164,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "lb-58-293w",
+      "title": "プレステージ",
+      "originalTitle": "",
+      "englishTitle": "The Prestige",
+      "year": 2006,
+      "score": 91,
+      "star": 4,
+      "overallRank": 62,
+      "sameScoreRank": 2,
+      "category": "サスペンス、ミステリー",
+      "mediaType": "movie",
+      "genre": [
+        "サスペンス",
+        "ミステリー",
+        "ファンタジー",
+        "どんでん返し",
+        "心理・内面",
+        "特殊構造"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 130,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
@@ -23353,8 +23353,8 @@
         "lb-321-2aNK"
       ],
       "91": [
-        "lb-58-293w",
         "lb-486-b8wK",
+        "lb-58-293w",
         "lb-262-29Du",
         "lb-41-cjr4",
         "custom-1791966534875-2yiz",
