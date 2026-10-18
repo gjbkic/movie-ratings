@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792320600011,
-  "sourceUpdatedIso": "2026-10-18T10:50:00.011Z",
+  "sourceUpdatedAt": 1792320663141,
+  "sourceUpdatedIso": "2026-10-18T10:51:03.141Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -1378,10 +1378,10 @@
       "originalTitle": "パーフェクトブルー講座",
       "englishTitle": "Perfect Blue Lecture Series",
       "year": 2008,
-      "score": 93,
-      "star": 4.5,
+      "score": 92,
+      "star": 4,
       "overallRank": 48,
-      "sameScoreRank": 14,
+      "sameScoreRank": 1,
       "category": "Letterboxd",
       "mediaType": "other",
       "genre": [],
@@ -1402,7 +1402,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 49,
-      "sameScoreRank": 1,
+      "sameScoreRank": 2,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -1431,7 +1431,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 50,
-      "sameScoreRank": 2,
+      "sameScoreRank": 3,
       "category": "戦争、歴史",
       "mediaType": "movie",
       "genre": [
@@ -1461,7 +1461,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 51,
-      "sameScoreRank": 3,
+      "sameScoreRank": 4,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -1490,7 +1490,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 52,
-      "sameScoreRank": 4,
+      "sameScoreRank": 5,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -1519,7 +1519,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 53,
-      "sameScoreRank": 5,
+      "sameScoreRank": 6,
       "category": "戦争、歴史",
       "mediaType": "movie",
       "genre": [
@@ -1549,7 +1549,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 54,
-      "sameScoreRank": 6,
+      "sameScoreRank": 7,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -1583,7 +1583,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 55,
-      "sameScoreRank": 7,
+      "sameScoreRank": 8,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -1609,7 +1609,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 56,
-      "sameScoreRank": 8,
+      "sameScoreRank": 9,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -1636,7 +1636,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 57,
-      "sameScoreRank": 9,
+      "sameScoreRank": 10,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -1662,7 +1662,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 58,
-      "sameScoreRank": 10,
+      "sameScoreRank": 11,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -1693,7 +1693,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 59,
-      "sameScoreRank": 11,
+      "sameScoreRank": 12,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -1726,7 +1726,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 60,
-      "sameScoreRank": 12,
+      "sameScoreRank": 13,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -1753,7 +1753,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 61,
-      "sameScoreRank": 13,
+      "sameScoreRank": 14,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -1777,7 +1777,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 62,
-      "sameScoreRank": 14,
+      "sameScoreRank": 15,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -22415,7 +22415,7 @@
       "lb-492-2bcA": 97,
       "lb-138-2bc6": 97,
       "lb-353-Sw0": 99,
-      "custom-1790185844116-j1vu": 93,
+      "custom-1790185844116-j1vu": 92,
       "custom-1790185843981-dk0y": 80,
       "lb-418-2a1w": 80,
       "custom-1790185844045-qhut": 69,
@@ -23368,6 +23368,7 @@
         "lb-3-a5fa"
       ],
       "92": [
+        "custom-1790185844116-j1vu",
         "lb-116-1YYc",
         "lb-564-29Wm",
         "added-anchor-577",
@@ -23396,8 +23397,7 @@
         "custom-1791966715148-h5tp",
         "lb-459-1Vgm",
         "custom-1791664054514-pksv",
-        "lb-86-cUqs",
-        "custom-1790185844116-j1vu"
+        "lb-86-cUqs"
       ],
       "94": [
         "lb-488-294O",
@@ -27271,7 +27271,7 @@
       "lb-492-2bcA": 4.5,
       "lb-138-2bc6": 4.5,
       "lb-353-Sw0": 5,
-      "custom-1790185844116-j1vu": 4.5,
+      "custom-1790185844116-j1vu": 4,
       "custom-1790185843981-dk0y": 2.5,
       "lb-418-2a1w": 2.5,
       "custom-1790185844045-qhut": 1.5,
