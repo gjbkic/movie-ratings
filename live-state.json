@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792320565094,
-  "sourceUpdatedIso": "2026-10-18T10:49:25.094Z",
+  "sourceUpdatedAt": 1792320570482,
+  "sourceUpdatedIso": "2026-10-18T10:49:30.482Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -1738,33 +1738,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-556-2b9m",
-      "title": "グラディエーター",
-      "originalTitle": "",
-      "englishTitle": "Gladiator",
-      "year": 2000,
-      "score": 92,
-      "star": 4,
-      "overallRank": 61,
-      "sameScoreRank": 13,
-      "category": "アクション",
-      "mediaType": "movie",
-      "genre": [
-        "アクション",
-        "戦争",
-        "歴史",
-        "感動",
-        "心理・内面"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 155,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-262-29Du",
       "title": "ガタカ",
       "originalTitle": "",
@@ -1772,8 +1745,8 @@
       "year": 1997,
       "score": 92,
       "star": 4,
-      "overallRank": 62,
-      "sameScoreRank": 14,
+      "overallRank": 61,
+      "sameScoreRank": 13,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -1792,6 +1765,33 @@
       "origin": "ハリウッド",
       "format": "live",
       "runtime": 106,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "lb-556-2b9m",
+      "title": "グラディエーター",
+      "originalTitle": "",
+      "englishTitle": "Gladiator",
+      "year": 2000,
+      "score": 92,
+      "star": 4,
+      "overallRank": 62,
+      "sameScoreRank": 14,
+      "category": "アクション",
+      "mediaType": "movie",
+      "genre": [
+        "アクション",
+        "戦争",
+        "歴史",
+        "感動",
+        "心理・内面"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 155,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
@@ -23380,8 +23380,8 @@
         "custom-1792318978542-vitq",
         "lb-178-29XE",
         "lb-486-b8wK",
-        "lb-556-2b9m",
-        "lb-262-29Du"
+        "lb-262-29Du",
+        "lb-556-2b9m"
       ],
       "93": [
         "custom-1790458138074-p8hs",
