@@ -651,6 +651,9 @@ function refreshPosters(){
    img.replaceWith(real);
   }
  }
+ refreshDetailPoster();
+}
+function refreshDetailPoster(){
  const detail=document.getElementById('movie30PosterDetail84');
  const img=detail?.querySelector('img.movie30-poster84[data-poster-id]');
  if(img&&selectedId){
@@ -666,10 +669,14 @@ function refreshPosters(){
   }
  }
 }
-let queued=false;
-function scheduleRefresh(){
+let queued=false,fullPending=false;
+function scheduleRefresh(scope){
+ if(scope!=='detail')fullPending=true;
  if(queued)return;queued=true;
- requestAnimationFrame(()=>{queued=false;refreshPosters();});
+ requestAnimationFrame(()=>{
+  const full=fullPending;queued=false;fullPending=false;
+  if(full)refreshPosters();else refreshDetailPoster();
+ });
 }
 for(const id of roots){
  const el=document.getElementById(id);if(!el)continue;
@@ -684,7 +691,7 @@ for(const [method,original] of [['rank',renderRank],['classify',renderClassify]]
  else renderClassify=function(...args){const result=original.apply(this,args);scheduleRefresh();return result};
 }
 const posterPanel=document.getElementById('movie30PosterDetail84');
-if(posterPanel)new MutationObserver(scheduleRefresh).observe(posterPanel,{childList:true,subtree:true});
+if(posterPanel)new MutationObserver(()=>scheduleRefresh('detail')).observe(posterPanel,{childList:true,subtree:true});
 
 const overlay=document.createElement('div');
 overlay.id='movie30CoverLightbox90';overlay.className='movie90-viewer';overlay.hidden=true;
