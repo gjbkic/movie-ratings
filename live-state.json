@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792303922445,
-  "sourceUpdatedIso": "2026-10-18T06:12:02.445Z",
+  "sourceUpdatedAt": 1792303929067,
+  "sourceUpdatedIso": "2026-10-18T06:12:09.067Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -11794,6 +11794,37 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "custom-1790322761365-fzvo",
+      "title": "テセウスの船",
+      "originalTitle": "テセウスの船",
+      "englishTitle": "The Ship of Theseus",
+      "year": 2020,
+      "score": 81,
+      "star": 3,
+      "overallRank": 410,
+      "sameScoreRank": 57,
+      "category": "Letterboxd",
+      "mediaType": "drama",
+      "genre": [
+        "クライム",
+        "ミステリー",
+        "サスペンス",
+        "どんでん返し",
+        "娯楽",
+        "哲学・思想",
+        "TV本編",
+        "時間",
+        "SF"
+      ],
+      "origin": "日本",
+      "format": "live",
+      "runtime": 44,
+      "exact": true,
+      "letterboxdAddedDate": "2026-09-25",
+      "letterboxdPublishedAt": "Fri, 25 Sep 2026 06:33:32 +1200",
+      "letterboxdReportedWatchedDate": "2026-09-24"
+    },
+    {
       "id": "lb-377-azew",
       "title": "ハクソー・リッジ",
       "originalTitle": "",
@@ -11801,8 +11832,8 @@
       "year": 2016,
       "score": 81,
       "star": 3,
-      "overallRank": 410,
-      "sameScoreRank": 57,
+      "overallRank": 411,
+      "sameScoreRank": 58,
       "category": "戦争、歴史",
       "mediaType": "movie",
       "genre": [
@@ -11828,8 +11859,8 @@
       "year": 2021,
       "score": 81,
       "star": 3,
-      "overallRank": 411,
-      "sameScoreRank": 58,
+      "overallRank": 412,
+      "sameScoreRank": 59,
       "category": "スパイダーマン作品",
       "mediaType": "movie",
       "genre": [
@@ -11847,37 +11878,6 @@
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "custom-1790322761365-fzvo",
-      "title": "テセウスの船",
-      "originalTitle": "テセウスの船",
-      "englishTitle": "The Ship of Theseus",
-      "year": 2020,
-      "score": 81,
-      "star": 3,
-      "overallRank": 412,
-      "sameScoreRank": 59,
-      "category": "Letterboxd",
-      "mediaType": "drama",
-      "genre": [
-        "クライム",
-        "ミステリー",
-        "サスペンス",
-        "どんでん返し",
-        "娯楽",
-        "哲学・思想",
-        "TV本編",
-        "時間",
-        "SF"
-      ],
-      "origin": "日本",
-      "format": "live",
-      "runtime": 44,
-      "exact": true,
-      "letterboxdAddedDate": "2026-09-25",
-      "letterboxdPublishedAt": "Fri, 25 Sep 2026 06:33:32 +1200",
-      "letterboxdReportedWatchedDate": "2026-09-24"
     },
     {
       "id": "lb-149-AF4",
@@ -22988,9 +22988,9 @@
         "lb-374-DUHM",
         "lb-136-1YVC",
         "custom-1790185844080-jquu",
+        "custom-1790322761365-fzvo",
         "lb-377-azew",
         "lb-519-nwRw",
-        "custom-1790322761365-fzvo",
         "lb-149-AF4",
         "lb-416-2D2e"
       ],
