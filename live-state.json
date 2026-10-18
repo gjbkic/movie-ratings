@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792320367409,
-  "sourceUpdatedIso": "2026-10-18T10:46:07.409Z",
+  "sourceUpdatedAt": 1792320371579,
+  "sourceUpdatedIso": "2026-10-18T10:46:11.579Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -1234,29 +1234,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1791664054514-pksv",
-      "title": "Luv Live",
-      "originalTitle": "Luv Live",
-      "englishTitle": "Luv Live",
-      "year": 2014,
-      "score": 93,
-      "star": 4.5,
-      "overallRank": 43,
-      "sameScoreRank": 9,
-      "category": "Letterboxd",
-      "mediaType": "other",
-      "genre": [
-        "ミュージカル"
-      ],
-      "origin": "日本",
-      "format": "live",
-      "runtime": 65,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-11",
-      "letterboxdPublishedAt": "Sun, 11 Oct 2026 06:34:06 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-11"
-    },
-    {
       "id": "lb-24-2aHi",
       "title": "ショーシャンクの空に",
       "originalTitle": "",
@@ -1264,8 +1241,8 @@
       "year": 1994,
       "score": 93,
       "star": 4.5,
-      "overallRank": 44,
-      "sameScoreRank": 10,
+      "overallRank": 43,
+      "sameScoreRank": 9,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -1291,8 +1268,8 @@
       "year": 1999,
       "score": 93,
       "star": 4.5,
-      "overallRank": 45,
-      "sameScoreRank": 11,
+      "overallRank": 44,
+      "sameScoreRank": 10,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -1312,6 +1289,29 @@
       "letterboxdAddedDate": "2026-03-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1791664054514-pksv",
+      "title": "Luv Live",
+      "originalTitle": "Luv Live",
+      "englishTitle": "Luv Live",
+      "year": 2014,
+      "score": 93,
+      "star": 4.5,
+      "overallRank": 45,
+      "sameScoreRank": 11,
+      "category": "Letterboxd",
+      "mediaType": "other",
+      "genre": [
+        "ミュージカル"
+      ],
+      "origin": "日本",
+      "format": "live",
+      "runtime": 65,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-11",
+      "letterboxdPublishedAt": "Sun, 11 Oct 2026 06:34:06 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-11"
     },
     {
       "id": "lb-86-cUqs",
@@ -23389,9 +23389,9 @@
         "custom-1791919172943-3ibi",
         "custom-1791966715148-h5tp",
         "lb-332-28MA",
-        "custom-1791664054514-pksv",
         "lb-24-2aHi",
         "lb-487-28JG",
+        "custom-1791664054514-pksv",
         "lb-86-cUqs",
         "custom-1790185844116-j1vu",
         "lb-459-1Vgm",
