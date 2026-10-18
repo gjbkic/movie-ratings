@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792321560223,
-  "sourceUpdatedIso": "2026-10-18T11:06:00.223Z",
+  "sourceUpdatedAt": 1792321573476,
+  "sourceUpdatedIso": "2026-10-18T11:06:13.476Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -2640,32 +2640,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-141-2a12",
-      "title": "マトリックス レボリューションズ",
-      "originalTitle": "",
-      "englishTitle": "The Matrix Revolutions",
-      "year": 2003,
-      "score": 89,
-      "star": 4,
-      "overallRank": 92,
-      "sameScoreRank": 4,
-      "category": "SF",
-      "mediaType": "movie",
-      "genre": [
-        "SF",
-        "アクション",
-        "哲学・思想",
-        "世界観"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 129,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-154-1Mn4",
       "title": "カリオストロの城",
       "originalTitle": "",
@@ -2673,8 +2647,8 @@
       "year": 1979,
       "score": 89,
       "star": 4,
-      "overallRank": 93,
-      "sameScoreRank": 5,
+      "overallRank": 92,
+      "sameScoreRank": 4,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
       "genre": [
@@ -2702,8 +2676,8 @@
       "year": 1999,
       "score": 89,
       "star": 4,
-      "overallRank": 94,
-      "sameScoreRank": 6,
+      "overallRank": 93,
+      "sameScoreRank": 5,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -2735,8 +2709,8 @@
       "year": 1953,
       "score": 89,
       "star": 4,
-      "overallRank": 95,
-      "sameScoreRank": 7,
+      "overallRank": 94,
+      "sameScoreRank": 6,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -2756,6 +2730,32 @@
       "letterboxdAddedDate": "2026-10-03",
       "letterboxdPublishedAt": "Sun, 4 Oct 2026 02:07:33 +1300",
       "letterboxdReportedWatchedDate": "2026-10-03"
+    },
+    {
+      "id": "lb-141-2a12",
+      "title": "マトリックス レボリューションズ",
+      "originalTitle": "",
+      "englishTitle": "The Matrix Revolutions",
+      "year": 2003,
+      "score": 89,
+      "star": 4,
+      "overallRank": 95,
+      "sameScoreRank": 7,
+      "category": "SF",
+      "mediaType": "movie",
+      "genre": [
+        "SF",
+        "アクション",
+        "哲学・思想",
+        "世界観"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 129,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "lb-29-2a2k",
@@ -23326,10 +23326,10 @@
         "lb-489-7T2k",
         "lb-65-2auI",
         "lb-526-4JQI",
-        "lb-141-2a12",
         "lb-154-1Mn4",
         "custom-1791023391963-vdu9",
         "custom-1791036345616-3tph",
+        "lb-141-2a12",
         "lb-29-2a2k",
         "lb-6-29Pq",
         "custom-1791915774599-jgkn",
