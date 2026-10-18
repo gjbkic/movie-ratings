@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792303530510,
-  "sourceUpdatedIso": "2026-10-18T06:05:30.510Z",
+  "sourceUpdatedAt": 1792303538395,
+  "sourceUpdatedIso": "2026-10-18T06:05:38.395Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -4073,6 +4073,35 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-382-20TI",
+      "title": "ソナチネ",
+      "originalTitle": "",
+      "englishTitle": "Sonatine",
+      "year": 1993,
+      "score": 86,
+      "star": 3.5,
+      "overallRank": 141,
+      "sameScoreRank": 12,
+      "category": "邦画",
+      "mediaType": "movie",
+      "genre": [
+        "サスペンス",
+        "クライム",
+        "アクション",
+        "社会問題・生活",
+        "心理・内面",
+        "バイオレンス",
+        "雰囲気・美学"
+      ],
+      "origin": "日本",
+      "format": "live",
+      "runtime": 94,
+      "exact": true,
+      "letterboxdAddedDate": "2026-03-25",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "custom-1791919010317-zu85",
       "title": "ライアーゲーム",
       "originalTitle": "ライアーゲーム",
@@ -4080,8 +4109,8 @@
       "year": 2007,
       "score": 86,
       "star": 3.5,
-      "overallRank": 141,
-      "sameScoreRank": 12,
+      "overallRank": 142,
+      "sameScoreRank": 13,
       "category": "マフィア、クライム",
       "mediaType": "drama",
       "genre": [
@@ -4110,8 +4139,8 @@
       "year": 2022,
       "score": 86,
       "star": 3.5,
-      "overallRank": 142,
-      "sameScoreRank": 13,
+      "overallRank": 143,
+      "sameScoreRank": 14,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -4134,35 +4163,6 @@
       "letterboxdAddedDate": "2026-10-05",
       "letterboxdPublishedAt": "Mon, 5 Oct 2026 05:14:36 +1300",
       "letterboxdReportedWatchedDate": "2026-10-04"
-    },
-    {
-      "id": "lb-382-20TI",
-      "title": "ソナチネ",
-      "originalTitle": "",
-      "englishTitle": "Sonatine",
-      "year": 1993,
-      "score": 86,
-      "star": 3.5,
-      "overallRank": 143,
-      "sameScoreRank": 14,
-      "category": "邦画",
-      "mediaType": "movie",
-      "genre": [
-        "サスペンス",
-        "クライム",
-        "アクション",
-        "社会問題・生活",
-        "心理・内面",
-        "バイオレンス",
-        "雰囲気・美学"
-      ],
-      "origin": "日本",
-      "format": "live",
-      "runtime": 94,
-      "exact": true,
-      "letterboxdAddedDate": "2026-03-25",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "added-anchor-579",
@@ -23194,9 +23194,9 @@
         "custom-1789385860426-8e86",
         "lb-279-215a",
         "custom-1791919109416-hxq8",
+        "lb-382-20TI",
         "custom-1791919010317-zu85",
         "custom-1791139747386-vy04",
-        "lb-382-20TI",
         "added-anchor-579",
         "lb-345-1USu",
         "lb-287-2amk",
