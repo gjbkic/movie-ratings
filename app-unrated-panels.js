@@ -50,14 +50,12 @@ function jump(){
    bar.insertBefore(c,b||bar.querySelector('[data-jump-star]'));
  }
 }
-const old=renderRank;
-renderRank=function(...args){
- const result=old.apply(this,args);
- if(dragCtx)return result;
+renderRank=window.Movie30RenderLifecycle.decorate(renderRank,{after(){
+ if(dragCtx)return;
  const ps=[...document.querySelectorAll('#rankRoot .uns-panel')];
  panel(ps.find(p=>p.querySelector('[data-v76-open]')),'star');
  panel(ps.find(p=>p.querySelector('[data-uns]')),'score');
- jump();window.__movie30PosterDecorate84?.();return result;
-};
+ jump();window.__movie30PosterDecorate84?.();
+}});
 renderRank();
 })();

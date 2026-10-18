@@ -192,14 +192,10 @@
 
   // Preserve the previous expanded state only when editing the same item.
   let lastId=null;
-  const formerOpen=openSheet;
-  openSheet=function(id,...rest){
-    if(classification&&id!==lastId)classification.open=false;
-    const result=formerOpen.call(this,id,...rest);
-    lastId=id;
-    tidy(id);
-    return result;
-  };
+  openSheet=window.Movie30RenderLifecycle.decorate(openSheet,{
+    before(id){if(classification&&id!==lastId)classification.open=false;},
+    after(result,id){lastId=id;tidy(id);}
+  });
   const rating=document.getElementById('editScore');
   const runtime=document.getElementById('editRuntime');
   for(const control of [rating,runtime]){
