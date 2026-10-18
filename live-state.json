@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792310069586,
-  "sourceUpdatedIso": "2026-10-18T07:54:29.586Z",
+  "sourceUpdatedAt": 1792318967583,
+  "sourceUpdatedIso": "2026-10-18T10:22:47.583Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -11567,7 +11567,7 @@
       "overallRank": 402,
       "sameScoreRank": 48,
       "category": "Letterboxd",
-      "mediaType": "movie",
+      "mediaType": "drama",
       "genre": [
         "コメディ",
         "ファンタジー",
@@ -11576,7 +11576,7 @@
         "雰囲気・美学",
         "世界観"
       ],
-      "origin": "日本",
+      "origin": "ハリウッド",
       "format": "live",
       "runtime": 88,
       "exact": true,
@@ -30425,7 +30425,7 @@
       "custom-1792273047752-gi3p": "movie",
       "custom-1792273054769-jfcv": "movie",
       "custom-1792273154078-pahe": "movie",
-      "custom-1792310002695-j7ls": "movie"
+      "custom-1792310002695-j7ls": "drama"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -37510,7 +37510,7 @@
       "custom-1792273054769-jfcv": "日本",
       "custom-1792273047752-gi3p": "日本",
       "custom-1792273154078-pahe": "日本",
-      "custom-1792310002695-j7ls": "日本"
+      "custom-1792310002695-j7ls": "ハリウッド"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
