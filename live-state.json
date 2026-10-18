@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792352431608,
-  "sourceUpdatedIso": "2026-10-18T19:40:31.608Z",
+  "sourceUpdatedAt": 1792352445501,
+  "sourceUpdatedIso": "2026-10-18T19:40:45.501Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -3066,29 +3066,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1792067620393-qnt8",
-      "title": "UH LIVE STREAMING 20代はイケイケ！",
-      "originalTitle": "UH LIVE STREAMING 20代はイケイケ！",
-      "englishTitle": "UH Live Streaming 20 Dai wa Ike Ike!",
-      "year": 2003,
-      "score": 88,
-      "star": 4,
-      "overallRank": 107,
-      "sameScoreRank": 3,
-      "category": "Letterboxd",
-      "mediaType": "other",
-      "genre": [
-        "ミュージカル"
-      ],
-      "origin": "日本",
-      "format": "live",
-      "runtime": 79,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-13",
-      "letterboxdPublishedAt": "Tue, 13 Oct 2026 17:03:49 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-13"
-    },
-    {
       "id": "lb-100-aZes",
       "title": "レディ・プレイヤー1",
       "originalTitle": "",
@@ -3096,8 +3073,8 @@
       "year": 2018,
       "score": 88,
       "star": 4,
-      "overallRank": 108,
-      "sameScoreRank": 4,
+      "overallRank": 107,
+      "sameScoreRank": 3,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -3125,8 +3102,8 @@
       "year": 1988,
       "score": 88,
       "star": 4,
-      "overallRank": 109,
-      "sameScoreRank": 5,
+      "overallRank": 108,
+      "sameScoreRank": 4,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
       "genre": [
@@ -3155,8 +3132,8 @@
       "year": 1999,
       "score": 88,
       "star": 4,
-      "overallRank": 110,
-      "sameScoreRank": 6,
+      "overallRank": 109,
+      "sameScoreRank": 5,
       "category": "スリラー、ホラー",
       "mediaType": "movie",
       "genre": [
@@ -3175,6 +3152,29 @@
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1792067620393-qnt8",
+      "title": "UH LIVE STREAMING 20代はイケイケ！",
+      "originalTitle": "UH LIVE STREAMING 20代はイケイケ！",
+      "englishTitle": "UH Live Streaming 20 Dai wa Ike Ike!",
+      "year": 2003,
+      "score": 88,
+      "star": 4,
+      "overallRank": 110,
+      "sameScoreRank": 6,
+      "category": "Letterboxd",
+      "mediaType": "other",
+      "genre": [
+        "ミュージカル"
+      ],
+      "origin": "日本",
+      "format": "live",
+      "runtime": 79,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-13",
+      "letterboxdPublishedAt": "Tue, 13 Oct 2026 17:03:49 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-13"
     },
     {
       "id": "lb-77-2aNq",
@@ -23341,10 +23341,10 @@
       "88": [
         "lb-175-2aOe",
         "lb-0-hTha",
-        "custom-1792067620393-qnt8",
         "lb-100-aZes",
         "lb-460-20eA",
         "lb-91-29Js",
+        "custom-1792067620393-qnt8",
         "lb-77-2aNq",
         "lb-312-1SRY",
         "lb-85-1GjK",
