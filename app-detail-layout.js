@@ -140,12 +140,15 @@
     return null;
   }
 
+  function setPlainText(node,value){
+    if(node.textContent!==value||node.childNodes.length!==1||node.firstChild?.nodeType!==3)node.textContent=value;
+  }
   function tidy(id){
     if(selectedId!==id)return;
     const f=filmById(id);if(!f)return;
     // Category metadata is in the collapsible classification preview; runtime has one editable field.
     const meta=document.getElementById('sheetMeta');
-    if(meta)meta.textContent=f.year?String(f.year):'公開年未設定';
+    if(meta)setPlainText(meta,f.year?String(f.year):'公開年未設定');
     const detail=document.getElementById('detail66');
     // Show editable values before the corresponding rank and review summary.
     if(scoreGrid&&detail&&detail.previousElementSibling!==scoreGrid){
@@ -164,10 +167,10 @@
         const rank=score!=null?ranks(f):null;
         const cells=[...stats.querySelectorAll('.v66-stat')];
         if(rank&&cells.length===2){
-          cells[0].querySelector('strong').textContent=rank.overall?rank.overall+'位':'—';
-          cells[0].querySelector('span').textContent='全体 '+rank.total+'本';
-          cells[1].querySelector('strong').textContent=rank.same?rank.same+'位':'—';
-          cells[1].querySelector('span').textContent=rank.score+'点内 '+rank.tied+'本';
+          setPlainText(cells[0].querySelector('strong'),rank.overall?rank.overall+'位':'—');
+          setPlainText(cells[0].querySelector('span'),'全体 '+rank.total+'本');
+          setPlainText(cells[1].querySelector('strong'),rank.same?rank.same+'位':'—');
+          setPlainText(cells[1].querySelector('span'),rank.score+'点内 '+rank.tied+'本');
         }
       }
       const near=detail.querySelector('.v66-nei');if(near)near.remove();
@@ -179,7 +182,7 @@
         const bits=[];
         if(m.reportedWatchedDate)bits.push('鑑賞日：'+m.reportedWatchedDate);
         if(m.addedDate)bits.push('Letterboxd追加：'+m.addedDate);
-        tip.textContent=bits.join(' · ');
+        setPlainText(tip,bits.join(' · '));
         tip.hidden=!bits.length;
       }
     }
