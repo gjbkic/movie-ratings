@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792322280933,
-  "sourceUpdatedIso": "2026-10-18T11:18:00.933Z",
+  "sourceUpdatedAt": 1792340036048,
+  "sourceUpdatedIso": "2026-10-18T16:13:56.048Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -1498,33 +1498,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1792318978542-vitq",
-      "title": "別離",
-      "originalTitle": "جدایی نادر از سیمین",
-      "englishTitle": "A Separation",
-      "year": 2011,
-      "score": 92,
-      "star": 4,
-      "overallRank": 52,
-      "sameScoreRank": 5,
-      "category": "Letterboxd",
-      "mediaType": "movie",
-      "genre": [
-        "ドラマ",
-        "雰囲気・美学",
-        "心理・内面",
-        "哲学・思想",
-        "社会問題・生活"
-      ],
-      "origin": "その他",
-      "format": "live",
-      "runtime": 123,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-18",
-      "letterboxdPublishedAt": "Sun, 18 Oct 2026 22:00:18 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-18"
-    },
-    {
       "id": "custom-1791057232858-35ld",
       "title": "サウンド・オブ・メタル ～聞こえるということ～",
       "originalTitle": "Sound of Metal",
@@ -1532,8 +1505,8 @@
       "year": 2020,
       "score": 92,
       "star": 4,
-      "overallRank": 53,
-      "sameScoreRank": 6,
+      "overallRank": 52,
+      "sameScoreRank": 5,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -1552,6 +1525,33 @@
       "letterboxdAddedDate": "2026-10-04",
       "letterboxdPublishedAt": "Sun, 4 Oct 2026 07:37:58 +1300",
       "letterboxdReportedWatchedDate": "2026-10-04"
+    },
+    {
+      "id": "custom-1792318978542-vitq",
+      "title": "別離",
+      "originalTitle": "جدایی نادر از سیمین",
+      "englishTitle": "A Separation",
+      "year": 2011,
+      "score": 92,
+      "star": 4,
+      "overallRank": 53,
+      "sameScoreRank": 6,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "雰囲気・美学",
+        "心理・内面",
+        "哲学・思想",
+        "社会問題・生活"
+      ],
+      "origin": "その他",
+      "format": "live",
+      "runtime": 123,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-18",
+      "letterboxdPublishedAt": "Sun, 18 Oct 2026 22:00:18 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-18"
     },
     {
       "id": "lb-459-1Vgm",
@@ -23375,8 +23375,8 @@
         "lb-378-26E0",
         "lb-262-29Du",
         "added-anchor-578",
-        "custom-1792318978542-vitq",
         "custom-1791057232858-35ld",
+        "custom-1792318978542-vitq",
         "lb-459-1Vgm",
         "lb-486-b8wK",
         "custom-1791966715148-h5tp",
