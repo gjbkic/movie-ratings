@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792321395977,
-  "sourceUpdatedIso": "2026-10-18T11:03:15.977Z",
+  "sourceUpdatedAt": 1792321400021,
+  "sourceUpdatedIso": "2026-10-18T11:03:20.021Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -2100,35 +2100,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1791915849111-yhiu",
-      "title": "リーガル・ハイ",
-      "originalTitle": "リーガル・ハイ",
-      "englishTitle": "Legal High",
-      "year": 2012,
-      "score": 90,
-      "star": 4,
-      "overallRank": 73,
-      "sameScoreRank": 1,
-      "category": "コメディ",
-      "mediaType": "drama",
-      "genre": [
-        "TV本編",
-        "サスペンス",
-        "コメディ",
-        "ドラマ",
-        "恋愛",
-        "娯楽",
-        "comfort"
-      ],
-      "origin": "日本",
-      "format": "",
-      "runtime": null,
-      "exact": true,
-      "letterboxdAddedDate": null,
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-49-27US",
       "title": "スター・ウォーズ エピソード3／シスの復讐",
       "originalTitle": "",
@@ -2136,8 +2107,8 @@
       "year": 2005,
       "score": 90,
       "star": 4,
-      "overallRank": 74,
-      "sameScoreRank": 2,
+      "overallRank": 73,
+      "sameScoreRank": 1,
       "category": "スターウォーズシリーズ",
       "mediaType": "movie",
       "genre": [
@@ -2165,8 +2136,8 @@
       "year": 2021,
       "score": 90,
       "star": 4,
-      "overallRank": 75,
-      "sameScoreRank": 3,
+      "overallRank": 74,
+      "sameScoreRank": 2,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -2186,6 +2157,35 @@
       "runtime": 155,
       "exact": true,
       "letterboxdAddedDate": "2026-05-31",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1791915849111-yhiu",
+      "title": "リーガル・ハイ",
+      "originalTitle": "リーガル・ハイ",
+      "englishTitle": "Legal High",
+      "year": 2012,
+      "score": 90,
+      "star": 4,
+      "overallRank": 75,
+      "sameScoreRank": 3,
+      "category": "コメディ",
+      "mediaType": "drama",
+      "genre": [
+        "TV本編",
+        "サスペンス",
+        "コメディ",
+        "ドラマ",
+        "恋愛",
+        "娯楽",
+        "comfort"
+      ],
+      "origin": "日本",
+      "format": "",
+      "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": null,
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -23339,9 +23339,9 @@
         "lb-84-29ro"
       ],
       "90": [
-        "custom-1791915849111-yhiu",
         "lb-49-27US",
         "lb-471-8LnQ",
+        "custom-1791915849111-yhiu",
         "lb-463-4Xuw",
         "custom-1790322763195-rro9",
         "lb-3-a5fa",
