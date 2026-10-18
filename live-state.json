@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792344438843,
-  "sourceUpdatedIso": "2026-10-18T17:27:18.843Z",
+  "sourceUpdatedAt": 1792344454698,
+  "sourceUpdatedIso": "2026-10-18T17:27:34.698Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -2014,6 +2014,32 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-90-71Y",
+      "title": "アメリカン・ビューティー",
+      "originalTitle": "",
+      "englishTitle": "American Beauty",
+      "year": 1999,
+      "score": 91,
+      "star": 4,
+      "overallRank": 70,
+      "sameScoreRank": 10,
+      "category": "ドラマ",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "胸糞",
+        "心理・内面",
+        "雰囲気・美学"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 117,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-461-1JAY",
       "title": "魔女の宅急便",
       "originalTitle": "",
@@ -2021,8 +2047,8 @@
       "year": 1989,
       "score": 91,
       "star": 4,
-      "overallRank": 70,
-      "sameScoreRank": 10,
+      "overallRank": 71,
+      "sameScoreRank": 11,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
       "genre": [
@@ -2038,33 +2064,6 @@
       "origin": "日本",
       "format": "animation",
       "runtime": 112,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "lb-41-cjr4",
-      "title": "トップガン マーヴェリック",
-      "originalTitle": "",
-      "englishTitle": "Top Gun: Maverick",
-      "year": 2022,
-      "score": 91,
-      "star": 4,
-      "overallRank": 71,
-      "sameScoreRank": 11,
-      "category": "アクション",
-      "mediaType": "movie",
-      "genre": [
-        "アクション",
-        "サスペンス",
-        "戦争",
-        "大作",
-        "娯楽"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 131,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
@@ -2100,6 +2099,33 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-41-cjr4",
+      "title": "トップガン マーヴェリック",
+      "originalTitle": "",
+      "englishTitle": "Top Gun: Maverick",
+      "year": 2022,
+      "score": 91,
+      "star": 4,
+      "overallRank": 73,
+      "sameScoreRank": 13,
+      "category": "アクション",
+      "mediaType": "movie",
+      "genre": [
+        "アクション",
+        "サスペンス",
+        "戦争",
+        "大作",
+        "娯楽"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 131,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-44-2bf0",
       "title": "2001年宇宙の旅",
       "originalTitle": "",
@@ -2107,8 +2133,8 @@
       "year": 1968,
       "score": 91,
       "star": 4,
-      "overallRank": 73,
-      "sameScoreRank": 13,
+      "overallRank": 74,
+      "sameScoreRank": 14,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -2124,32 +2150,6 @@
       "origin": "ハリウッド",
       "format": "live",
       "runtime": 149,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "lb-90-71Y",
-      "title": "アメリカン・ビューティー",
-      "originalTitle": "",
-      "englishTitle": "American Beauty",
-      "year": 1999,
-      "score": 91,
-      "star": 4,
-      "overallRank": 74,
-      "sameScoreRank": 14,
-      "category": "ドラマ",
-      "mediaType": "movie",
-      "genre": [
-        "ドラマ",
-        "胸糞",
-        "心理・内面",
-        "雰囲気・美学"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 117,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
@@ -23365,11 +23365,11 @@
         "custom-1790960881562-cn74",
         "custom-1790185844116-j1vu",
         "custom-1791966534875-2yiz",
+        "lb-90-71Y",
         "lb-461-1JAY",
-        "lb-41-cjr4",
         "lb-66-2aq2",
-        "lb-44-2bf0",
-        "lb-90-71Y"
+        "lb-41-cjr4",
+        "lb-44-2bf0"
       ],
       "92": [
         "lb-487-28JG",
