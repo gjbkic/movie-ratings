@@ -127,6 +127,17 @@
     return window.Movie30RankQueries.detailRank(f,{allFilms,effectiveScore,rankSorted});
   }
 
+  // Called at the original v66 construction point, before v77 binds the review editor.
+  // tidy owns rank/date presentation after the intervening openSheet decorators finish.
+  // Keep fresh note/jump nodes: their handlers are attached by those existing decorators.
+  function buildSummary(f){
+    const m=state.letterboxdMeta?.[f.id]||{};
+    return '<div class="v66-stats"><div class="v66-stat"><strong></strong><span></span></div><div class="v66-stat"><strong></strong><span></span></div></div>'+
+      '<div class="tip"></div><div class="v66-lbl">一言メモ</div>'+
+      '<textarea id="note66" class="v66-note" placeholder="この点数にした理由、印象、再鑑賞メモなど">'+esc(m.note||'')+'</textarea>'+
+      '<div class="v66-actions"><button class="btn" id="detailJump66">全体順位の位置へ</button></div>';
+  }
+
   function setPlainText(node,value){
     if(node.textContent!==value||node.childNodes.length!==1||node.firstChild?.nodeType!==3)node.textContent=value;
   }
@@ -203,5 +214,5 @@
     setTimeout(()=>{if(id===selectedId)tidy(id)},0);
     setTimeout(()=>{if(id===selectedId)tidy(id)},120);
   },true);
-  window.__movie30DetailUnified={version:'20261014h',refresh:()=>selectedId&&tidy(selectedId)};
+  window.__movie30DetailUnified={version:'20261019summary',buildSummary,refresh:()=>selectedId&&tidy(selectedId)};
 })();
