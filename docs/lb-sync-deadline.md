@@ -16,3 +16,11 @@
 全回帰のdata-contractでIDB-onlyプロセス再起動テストが、初回保存時「保存停止 · タブ間保存の確認に失敗しました」で失敗。単独でも再現。test-results/lb-baselineへ変更前a97075aのcoreを置き、同じ隔離テストで同じ失敗を確認。通信変更前でも再現するため今回の変更による回帰とは断定できない。原因は未確定。診断のため同テストのアサーションに保存結果を追加した。安全性に関わるため無視して公開せず、別途切り分ける。保存停止ガードは緩めない。
 
 実ネットワーク・実機iPhone・本番の1分現象は未検証。公開・main変更・実データ操作なし。レビュー修正1d466b1も含む整理中ブランチ内だけの変更。
+
+## 最終結果と環境の切り分け
+
+全30スイートの一括実行は28成功、data-contractとmultitabが各1件失敗。両失敗は変更前coreでも再現した。最小のIndexedDBプローブで、サンドボックスのAC/Temp内プロファイルはUnknownError（Internal error opening backing store）、作業ディレクトリ内プロファイルでは成功。サンドボックス外で同じ隔離条件のスイートを再実行するとdata-contract全9件、MULTITAB全18件とも成功した。アプリの保存保護を変更せず、環境差による失敗と切り分けた。一括実行そのものの全成功と、失敗スイート再実行の成功は区別する。
+
+記録：test-results/lb-deadline-full.log、all.json（28/2）、lb-data-contract-unsandboxed.log、data-contract.json（9成功）、lb-multitab-unsandboxed.log、multitab.json（18成功）。ログ・診断用プロファイルはコミット対象外。
+
+次回の通常作業はSol中で可能：第⑤段階に戻り、既存poster-refreshの通常runnerへの登録と関連UI検証を行う。LB保存/描画の一括化、取得元の競争、Actions変更は今回実施していない。第⑥段階で順序・例外・保存成功表示の契約を先に設計する。ユーザーの約1分の実測原因には、今後端末側の各段階の計測が必要。
