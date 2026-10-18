@@ -409,9 +409,7 @@ const matchPrior=match;
 match=function(f,q){
  if(matchPrior(f,q))return true;
  if(!q)return true;
- const words=String(q).normalize('NFKC').toLowerCase().trim();
- const m=meta(f.id),c=m.crew84||{};
- return [...(c.directors||[]),...(c.creators||[])].join(' ').normalize('NFKC').toLowerCase().includes(words);
+ return window.Movie30SearchQueries.crew(q,meta(f.id));
 };
 if(wildlife.length)try{renderRank()}catch(_){}
 window.__movie30V87={build:BUILD,wildlifeCount:wildlife.length,fetchDirectors:run};
@@ -859,10 +857,7 @@ const aliases=new Map(pairs.map(([english,...names])=>[fold(english),names]));
 const priorMatch=match;
 match=function(f,q){
  if(priorMatch(f,q))return true;
- const needle=fold(String(q||'').trim());if(!needle)return false;
- const m=state.letterboxdMeta?.[f.id]||{},c=m.crew84||{};
- return [...(m.directors84Manual||[]),...(c.directors||[]),...(c.creators||[])]
-   .some(person=>(aliases.get(fold(person))||[]).some(jp=>fold(jp).includes(needle)));
+ return window.Movie30SearchQueries.directorAliases(q,state.letterboxdMeta?.[f.id]||{},aliases,fold);
 };
 const style=document.createElement('style');
 style.id='movie30-poster-click91';
@@ -943,12 +938,7 @@ let catalog=Object.create(null);
 const baseMatch=match;
 match=function(f,q){
  if(baseMatch(f,q))return true;
- if(!q)return true;
- const needle=norm(q);
- if(!needle)return false;
- const rec=catalog[f.id]||{};
- return [...(rec.directorAliases||[]),rec.title||'']
-   .some(label=>norm(label).includes(needle));
+ return window.Movie30SearchQueries.catalogLabels(q,catalog[f.id]||{},norm);
 };
 window.__movie30LoadCatalog()
  .then(data=>{
