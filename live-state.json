@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792319237436,
-  "sourceUpdatedIso": "2026-10-18T10:27:17.436Z",
+  "sourceUpdatedAt": 1792319262641,
+  "sourceUpdatedIso": "2026-10-18T10:27:42.641Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -1980,6 +1980,39 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "custom-1790960881562-cn74",
+      "title": "MISHIMA",
+      "originalTitle": "",
+      "englishTitle": "Mishima: A Life in Four Chapters",
+      "year": 1985,
+      "score": 91,
+      "star": 4,
+      "overallRank": 69,
+      "sameScoreRank": 7,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "サスペンス",
+        "クライム",
+        "ドラマ",
+        "歴史",
+        "哲学・思想",
+        "心理・内面",
+        "ファンタジー",
+        "雰囲気・美学",
+        "大作",
+        "切ない",
+        "社会問題・生活"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 121,
+      "exact": true,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": "Sat, 3 Oct 2026 04:45:22 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-02"
+    },
+    {
       "id": "custom-1791915849111-yhiu",
       "title": "リーガル・ハイ",
       "originalTitle": "リーガル・ハイ",
@@ -1987,8 +2020,8 @@
       "year": 2012,
       "score": 91,
       "star": 4,
-      "overallRank": 69,
-      "sameScoreRank": 7,
+      "overallRank": 70,
+      "sameScoreRank": 8,
       "category": "コメディ",
       "mediaType": "drama",
       "genre": [
@@ -2016,8 +2049,8 @@
       "year": 2005,
       "score": 91,
       "star": 4,
-      "overallRank": 70,
-      "sameScoreRank": 8,
+      "overallRank": 71,
+      "sameScoreRank": 9,
       "category": "スターウォーズシリーズ",
       "mediaType": "movie",
       "genre": [
@@ -2045,8 +2078,8 @@
       "year": 2002,
       "score": 91,
       "star": 4,
-      "overallRank": 71,
-      "sameScoreRank": 9,
+      "overallRank": 72,
+      "sameScoreRank": 10,
       "category": "Letterboxd追加",
       "mediaType": "movie",
       "genre": [
@@ -2073,8 +2106,8 @@
       "year": 2018,
       "score": 91,
       "star": 4,
-      "overallRank": 72,
-      "sameScoreRank": 10,
+      "overallRank": 73,
+      "sameScoreRank": 11,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -2091,39 +2124,6 @@
       "letterboxdAddedDate": "2026-09-25",
       "letterboxdPublishedAt": "Fri, 25 Sep 2026 06:23:41 +1200",
       "letterboxdReportedWatchedDate": "2026-09-24"
-    },
-    {
-      "id": "custom-1790960881562-cn74",
-      "title": "MISHIMA",
-      "originalTitle": "",
-      "englishTitle": "Mishima: A Life in Four Chapters",
-      "year": 1985,
-      "score": 91,
-      "star": 4,
-      "overallRank": 73,
-      "sameScoreRank": 11,
-      "category": "Letterboxd",
-      "mediaType": "movie",
-      "genre": [
-        "サスペンス",
-        "クライム",
-        "ドラマ",
-        "歴史",
-        "哲学・思想",
-        "心理・内面",
-        "ファンタジー",
-        "雰囲気・美学",
-        "大作",
-        "切ない",
-        "社会問題・生活"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 121,
-      "exact": true,
-      "letterboxdAddedDate": null,
-      "letterboxdPublishedAt": "Sat, 3 Oct 2026 04:45:22 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-02"
     },
     {
       "id": "lb-3-a5fa",
@@ -23359,11 +23359,11 @@
         "lb-558-1pDe",
         "custom-1791966534875-2yiz",
         "lb-461-1JAY",
+        "custom-1790960881562-cn74",
         "custom-1791915849111-yhiu",
         "lb-49-27US",
         "lb-463-4Xuw",
         "custom-1790322763195-rro9",
-        "custom-1790960881562-cn74",
         "lb-3-a5fa"
       ],
       "92": [
