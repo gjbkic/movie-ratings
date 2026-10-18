@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792321821335,
-  "sourceUpdatedIso": "2026-10-18T11:10:21.335Z",
+  "sourceUpdatedAt": 1792321827268,
+  "sourceUpdatedIso": "2026-10-18T11:10:27.268Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -49151,7 +49151,7 @@
         "addedDate": "2025-09-03",
         "addedDateSource": "letterboxd-export-2026-09-27",
         "note": "テンポというかストーリーの見せ方は軽快だが、ストーリーはスラムの現実や怖さやそこで生きる人たちのことがよく伝わってきた。こういう世界について知れてよかった",
-        "noteSource": "letterboxd-export",
+        "noteSource": "manual",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
         "watchedAddedDate": "2025-09-03",
@@ -49179,7 +49179,8 @@
           "tmdbId": 598,
           "path": "/k7eYdWvhYQyRQoU2TB2A2Xu2TfD.jpg",
           "checkedAt": "2026-10-13T04:07:09.759580+00:00"
-        }
+        },
+        "noteEditedAt": "2026-10-18T11:10:27.221Z"
       },
       "lb-302-2E2E": {
         "addedDate": "2025-09-01",
