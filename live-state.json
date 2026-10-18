@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792342347037,
-  "sourceUpdatedIso": "2026-10-18T16:52:27.037Z",
+  "sourceUpdatedAt": 1792342352881,
+  "sourceUpdatedIso": "2026-10-18T16:52:32.881Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -7208,6 +7208,33 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-541-27MO",
+      "title": "ゾディアック",
+      "originalTitle": "",
+      "englishTitle": "Zodiac",
+      "year": 2007,
+      "score": 84,
+      "star": 3.5,
+      "overallRank": 250,
+      "sameScoreRank": 31,
+      "category": "サスペンス、ミステリー",
+      "mediaType": "movie",
+      "genre": [
+        "サスペンス",
+        "ミステリー",
+        "胸糞",
+        "クライム",
+        "ドラマ"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 157,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-379-R6yo",
       "title": "国宝",
       "originalTitle": "",
@@ -7215,8 +7242,8 @@
       "year": 2025,
       "score": 84,
       "star": 3.5,
-      "overallRank": 250,
-      "sameScoreRank": 31,
+      "overallRank": 251,
+      "sameScoreRank": 32,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -7235,33 +7262,6 @@
       "runtime": 174,
       "exact": true,
       "letterboxdAddedDate": "2026-03-13",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "lb-541-27MO",
-      "title": "ゾディアック",
-      "originalTitle": "",
-      "englishTitle": "Zodiac",
-      "year": 2007,
-      "score": 84,
-      "star": 3.5,
-      "overallRank": 251,
-      "sameScoreRank": 32,
-      "category": "サスペンス、ミステリー",
-      "mediaType": "movie",
-      "genre": [
-        "サスペンス",
-        "ミステリー",
-        "胸糞",
-        "クライム",
-        "ドラマ"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 157,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -23188,8 +23188,8 @@
         "custom-1790269934541-2ps3",
         "lb-427-bSVc",
         "lb-524-7bQA",
-        "lb-379-R6yo",
         "lb-541-27MO",
+        "lb-379-R6yo",
         "lb-381-1alk",
         "lb-394-2b5O",
         "lb-63-8MxC",
