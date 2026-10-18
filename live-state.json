@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792321046247,
-  "sourceUpdatedIso": "2026-10-18T10:57:26.247Z",
+  "sourceUpdatedAt": 1792321057160,
+  "sourceUpdatedIso": "2026-10-18T10:57:37.160Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -1029,6 +1029,36 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-493-28No",
+      "title": "パンズ・ラビリンス",
+      "originalTitle": "El laberinto del fauno",
+      "englishTitle": "Pan's Labyrinth",
+      "year": 2006,
+      "score": 93,
+      "star": 4.5,
+      "overallRank": 36,
+      "sameScoreRank": 1,
+      "category": "戦争、歴史",
+      "mediaType": "movie",
+      "genre": [
+        "戦争",
+        "歴史",
+        "切ない",
+        "胸糞",
+        "差別・人権",
+        "心理・内面",
+        "雰囲気・美学",
+        "ファンタジー"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 119,
+      "exact": true,
+      "letterboxdAddedDate": "2026-08-13",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "custom-1790458138074-p8hs",
       "title": "羅生門",
       "originalTitle": "羅生門",
@@ -1036,8 +1066,8 @@
       "year": 1950,
       "score": 93,
       "star": 4.5,
-      "overallRank": 36,
-      "sameScoreRank": 1,
+      "overallRank": 37,
+      "sameScoreRank": 2,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -1066,8 +1096,8 @@
       "year": 2006,
       "score": 93,
       "star": 4.5,
-      "overallRank": 37,
-      "sameScoreRank": 2,
+      "overallRank": 38,
+      "sameScoreRank": 3,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -1095,8 +1125,8 @@
       "year": 2024,
       "score": 93,
       "star": 4.5,
-      "overallRank": 38,
-      "sameScoreRank": 3,
+      "overallRank": 39,
+      "sameScoreRank": 4,
       "category": "Letterboxd",
       "mediaType": "other",
       "genre": [
@@ -1118,8 +1148,8 @@
       "year": 2008,
       "score": 93,
       "star": 4.5,
-      "overallRank": 39,
-      "sameScoreRank": 4,
+      "overallRank": 40,
+      "sameScoreRank": 5,
       "category": "ピクサー・ディズニー作品",
       "mediaType": "movie",
       "genre": [
@@ -1147,8 +1177,8 @@
       "year": 2008,
       "score": 93,
       "star": 4.5,
-      "overallRank": 40,
-      "sameScoreRank": 5,
+      "overallRank": 41,
+      "sameScoreRank": 6,
       "category": "マフィア、クライム",
       "mediaType": "drama",
       "genre": [
@@ -1180,8 +1210,8 @@
       "year": 2001,
       "score": 93,
       "star": 4.5,
-      "overallRank": 41,
-      "sameScoreRank": 6,
+      "overallRank": 42,
+      "sameScoreRank": 7,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
       "genre": [
@@ -1211,8 +1241,8 @@
       "year": 1995,
       "score": 93,
       "star": 4.5,
-      "overallRank": 42,
-      "sameScoreRank": 7,
+      "overallRank": 43,
+      "sameScoreRank": 8,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -1229,36 +1259,6 @@
       "runtime": 85,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "lb-493-28No",
-      "title": "パンズ・ラビリンス",
-      "originalTitle": "El laberinto del fauno",
-      "englishTitle": "Pan's Labyrinth",
-      "year": 2006,
-      "score": 93,
-      "star": 4.5,
-      "overallRank": 43,
-      "sameScoreRank": 8,
-      "category": "戦争、歴史",
-      "mediaType": "movie",
-      "genre": [
-        "戦争",
-        "歴史",
-        "切ない",
-        "胸糞",
-        "差別・人権",
-        "心理・内面",
-        "雰囲気・美学",
-        "ファンタジー"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 119,
-      "exact": true,
-      "letterboxdAddedDate": "2026-08-13",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -23383,6 +23383,7 @@
         "lb-308-kPxE"
       ],
       "93": [
+        "lb-493-28No",
         "custom-1790458138074-p8hs",
         "added-anchor-577",
         "custom-1791664055911-cuz4",
@@ -23390,7 +23391,6 @@
         "custom-1791919172943-3ibi",
         "lb-333-2b4m",
         "lb-116-1YYc",
-        "lb-493-28No",
         "lb-2-2a9q",
         "lb-332-28MA",
         "lb-24-2aHi",
