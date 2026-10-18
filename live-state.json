@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792343786837,
-  "sourceUpdatedIso": "2026-10-18T17:16:26.837Z",
+  "sourceUpdatedAt": 1792343809302,
+  "sourceUpdatedIso": "2026-10-18T17:16:49.302Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -1943,33 +1943,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-41-cjr4",
-      "title": "トップガン マーヴェリック",
-      "originalTitle": "",
-      "englishTitle": "Top Gun: Maverick",
-      "year": 2022,
-      "score": 91,
-      "star": 4,
-      "overallRank": 68,
-      "sameScoreRank": 8,
-      "category": "アクション",
-      "mediaType": "movie",
-      "genre": [
-        "アクション",
-        "サスペンス",
-        "戦争",
-        "大作",
-        "娯楽"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 131,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "custom-1791966534875-2yiz",
       "title": "進撃の巨人",
       "originalTitle": "進撃の巨人",
@@ -1977,8 +1950,8 @@
       "year": 2013,
       "score": 91,
       "star": 4,
-      "overallRank": 69,
-      "sameScoreRank": 9,
+      "overallRank": 68,
+      "sameScoreRank": 8,
       "category": "ほかアニメ",
       "mediaType": "drama",
       "genre": [
@@ -2014,8 +1987,8 @@
       "year": 1989,
       "score": 91,
       "star": 4,
-      "overallRank": 70,
-      "sameScoreRank": 10,
+      "overallRank": 69,
+      "sameScoreRank": 9,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
       "genre": [
@@ -2044,8 +2017,8 @@
       "year": 1985,
       "score": 91,
       "star": 4,
-      "overallRank": 71,
-      "sameScoreRank": 11,
+      "overallRank": 70,
+      "sameScoreRank": 10,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -2068,6 +2041,33 @@
       "letterboxdAddedDate": null,
       "letterboxdPublishedAt": "Sat, 3 Oct 2026 04:45:22 +1300",
       "letterboxdReportedWatchedDate": "2026-10-02"
+    },
+    {
+      "id": "lb-41-cjr4",
+      "title": "トップガン マーヴェリック",
+      "originalTitle": "",
+      "englishTitle": "Top Gun: Maverick",
+      "year": 2022,
+      "score": 91,
+      "star": 4,
+      "overallRank": 71,
+      "sameScoreRank": 11,
+      "category": "アクション",
+      "mediaType": "movie",
+      "genre": [
+        "アクション",
+        "サスペンス",
+        "戦争",
+        "大作",
+        "娯楽"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 131,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "lb-66-2aq2",
@@ -23362,10 +23362,10 @@
         "lb-556-2b9m",
         "lb-308-kPxE",
         "custom-1790185844116-j1vu",
-        "lb-41-cjr4",
         "custom-1791966534875-2yiz",
         "lb-461-1JAY",
         "custom-1790960881562-cn74",
+        "lb-41-cjr4",
         "lb-66-2aq2",
         "lb-44-2bf0",
         "lb-90-71Y"
