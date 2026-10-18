@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792321778949,
-  "sourceUpdatedIso": "2026-10-18T11:09:38.949Z",
+  "sourceUpdatedAt": 1792321794000,
+  "sourceUpdatedIso": "2026-10-18T11:09:54.000Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -1439,6 +1439,39 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-262-29Du",
+      "title": "ガタカ",
+      "originalTitle": "",
+      "englishTitle": "Gattaca",
+      "year": 1997,
+      "score": 92,
+      "star": 4,
+      "overallRank": 50,
+      "sameScoreRank": 3,
+      "category": "SF",
+      "mediaType": "movie",
+      "genre": [
+        "SF",
+        "ドラマ",
+        "切ない",
+        "感動",
+        "差別・人権",
+        "社会問題・生活",
+        "世界観",
+        "comfort",
+        "心理・内面",
+        "雰囲気・美学",
+        "哲学・思想"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 106,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "added-anchor-578",
       "title": "偽りなき者",
       "originalTitle": "Jagten",
@@ -1446,8 +1479,8 @@
       "year": 2012,
       "score": 92,
       "star": 4,
-      "overallRank": 50,
-      "sameScoreRank": 3,
+      "overallRank": 51,
+      "sameScoreRank": 4,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -1472,8 +1505,8 @@
       "year": 2011,
       "score": 92,
       "star": 4,
-      "overallRank": 51,
-      "sameScoreRank": 4,
+      "overallRank": 52,
+      "sameScoreRank": 5,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -1490,39 +1523,6 @@
       "letterboxdAddedDate": "2026-10-18",
       "letterboxdPublishedAt": "Sun, 18 Oct 2026 22:00:18 +1300",
       "letterboxdReportedWatchedDate": "2026-10-18"
-    },
-    {
-      "id": "lb-262-29Du",
-      "title": "ガタカ",
-      "originalTitle": "",
-      "englishTitle": "Gattaca",
-      "year": 1997,
-      "score": 92,
-      "star": 4,
-      "overallRank": 52,
-      "sameScoreRank": 5,
-      "category": "SF",
-      "mediaType": "movie",
-      "genre": [
-        "SF",
-        "ドラマ",
-        "切ない",
-        "感動",
-        "差別・人権",
-        "社会問題・生活",
-        "世界観",
-        "comfort",
-        "心理・内面",
-        "雰囲気・美学",
-        "哲学・思想"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 106,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "custom-1791057232858-35ld",
@@ -23373,9 +23373,9 @@
       "92": [
         "lb-487-28JG",
         "lb-378-26E0",
+        "lb-262-29Du",
         "added-anchor-578",
         "custom-1792318978542-vitq",
-        "lb-262-29Du",
         "custom-1791057232858-35ld",
         "lb-459-1Vgm",
         "lb-486-b8wK",
