@@ -1902,7 +1902,7 @@ window.__movie30AutoSyncPending=()=>{const x=getLbSettings();if(x.auto!==false)s
   const fc=document.getElementById('formatFilterClassify');if(fc)fc.onchange=renderClassify;
 
   const match21=match;
-  match=function(f,q){if(match21(f,q))return true;if(!q)return true;return formatLabel(f).toLowerCase().includes(String(q).toLowerCase());};
+  match=function(f,q){if(match21(f,q))return true;if(!q)return true;return window.Movie30SearchQueries.taxonomyLabel(q,formatLabel(f));};
 
   render();
 })();
@@ -3428,7 +3428,7 @@ window.__movie30AutoSyncPending=()=>{const x=getLbSettings();if(x.auto!==false)s
   match=function(f,q){
     if(matchV30(f,q))return true;
     if(!q)return true;
-    return mediaLabel31(f).toLowerCase().includes(String(q).toLowerCase());
+    return window.Movie30SearchQueries.taxonomyLabel(q,mediaLabel31(f));
   };
 
   // Replace the old diagnostic build marker text; index/app-version remain the authority.
@@ -3552,7 +3552,7 @@ window.__movie30AutoSyncPending=()=>{const x=getLbSettings();if(x.auto!==false)s
   renderClassify=function(){normalizeFilters();const ms=document.getElementById('mediaFilterClassify'),os=document.getElementById('originFilterClassify'),m=ms?.value||'',o=os?.value||'';if(ms)ms.value='';if(os)os.value='';renderClassBase();normalizeFilters();if(ms&&[...ms.options].some(x=>x.value===m))ms.value=m;if(os&&[...os.options].some(x=>x.value===o))os.value=o;postFilter('#classifyRoot','.card','.section',m,o);};
   normalizeFilters();
   for(const [id,fn] of [['mediaFilterRank',renderRank],['originFilterRank',renderRank],['mediaFilterClassify',renderClassify],['originFilterClassify',renderClassify]]){const e=document.getElementById(id);if(e)e.onchange=fn;}
-  const matchBase=match;match=function(f,q){if(matchBase(f,q))return true;if(!q)return true;return `${mediaLabel(f)} ${originOf(f)}`.toLowerCase().includes(String(q).toLowerCase());};
+  const matchBase=match;match=function(f,q){if(matchBase(f,q))return true;if(!q)return true;return window.Movie30SearchQueries.taxonomyLabel(q,`${mediaLabel(f)} ${originOf(f)}`);};
 
   const addLbBase=addLbFilm;
   addLbFilm=function(meta){const f=addLbBase(meta);if(!f)return f;mediaMap[f.id]=meta?.tmdbType==='tv'?'drama':heuristicMedia(f);originMap[f.id]=heuristicOrigin(f);apply();save();return f;};

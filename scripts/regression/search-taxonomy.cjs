@@ -10,11 +10,10 @@ for(const name of Object.keys(baseline))test(name+' taxonomy search retains lega
  mediaLabel:f=>{calls.push('media:'+f.id);return manual?'TVシリーズ':'映画'},
  originOf:f=>{calls.push('origin:'+f.id);return manual?'日本':'その他'}};
  const old=vm.runInNewContext('('+baseline[name]+')',deps);
- const next=(f,q)=>{
-  if(prior)return true;if(!q)return true;
-  const label=name==='format'?deps.formatLabel(f):name==='media'?deps.mediaLabel31(f):`${deps.mediaLabel(f)} ${deps.originOf(f)}`;
-  return ctx.window.Movie30SearchQueries.taxonomyLabel(q,label);
- };
+ const source=fs.readFileSync(path.join(__dirname,'../../app-core.js'),'utf8');
+ const marker={format:'const match21=match;',media:'const matchV30=match;',origin:'const matchBase=match;match=function(f,q)'}[name];
+ const body=source.slice(source.indexOf(marker)).match(/match=(function\(f,q\)\{[\s\S]*?\});/)[1];
+ const next=vm.runInNewContext('('+body+')',{...deps,window:{Movie30SearchQueries:ctx.window.Movie30SearchQueries}});
  for(manual of [false,true])for(prior of [false,true])for(const q of ['',null,0,false,' ','映画','TV','tv','日本','その他','実写・アニメ','映画 その他','ＴＶ','不存在']){
   calls.length=0;const expected=films.filter(f=>old(f,q)).map(f=>f.id),reads=[...calls];calls.length=0;
   assert.deepEqual(films.filter(f=>next(f,q)).map(f=>f.id),expected);assert.deepEqual(calls,reads);

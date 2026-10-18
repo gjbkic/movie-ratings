@@ -21,5 +21,6 @@ function castNames(id,query,namesForFilm,fold){
  const needle=fold(query);
  return !!needle&&namesForFilm(id).some(name=>fold(name).includes(needle));
 }
-window.Movie30SearchQueries=Object.freeze({structuredMatch,crew,directorAliases,catalogLabels,castNames});
+function taxonomyLabel(query,label){return label.toLowerCase().includes(String(query).toLowerCase());}
+window.Movie30SearchQueries=Object.freeze({structuredMatch,crew,directorAliases,catalogLabels,castNames,taxonomyLabel});
 })();
