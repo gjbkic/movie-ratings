@@ -124,20 +124,7 @@
   }
 
   function ranks(f){
-    const score=effectiveScore(f);
-    if(score==null)return null;
-    const rated=allFilms().filter(x=>effectiveScore(x)!=null);
-    const scores=[...new Set(rated.map(x=>Number(effectiveScore(x))))].sort((a,b)=>b-a);
-    let above=0;
-    for(const s of scores){
-      const tied=rankSorted(rated.filter(x=>Number(effectiveScore(x))===s),s);
-      if(s===Number(score)){
-        const index=tied.findIndex(x=>x.id===f.id);
-        return {overall:index<0?null:above+index+1,total:rated.length,same:index<0?null:index+1,tied:tied.length,score};
-      }
-      above+=tied.length;
-    }
-    return null;
+    return window.Movie30RankQueries.detailRank(f,{allFilms,effectiveScore,rankSorted});
   }
 
   function setPlainText(node,value){
