@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792321425395,
-  "sourceUpdatedIso": "2026-10-18T11:03:45.395Z",
+  "sourceUpdatedAt": 1792321526090,
+  "sourceUpdatedIso": "2026-10-18T11:05:26.090Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -907,6 +907,36 @@
       "letterboxdReportedWatchedDate": "2026-10-12"
     },
     {
+      "id": "lb-549-iEBG",
+      "title": "ジョジョ・ラビット",
+      "originalTitle": "",
+      "englishTitle": "Jojo Rabbit",
+      "year": 2019,
+      "score": 94,
+      "star": 4.5,
+      "overallRank": 32,
+      "sameScoreRank": 9,
+      "category": "戦争、歴史",
+      "mediaType": "movie",
+      "genre": [
+        "戦争",
+        "歴史",
+        "ファンタジー",
+        "差別・人権",
+        "感動",
+        "comfort",
+        "心理・内面",
+        "コメディ"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 108,
+      "exact": true,
+      "letterboxdAddedDate": "2026-09-04",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "custom-1790508958519-2edt",
       "title": "怪物",
       "originalTitle": "怪物",
@@ -914,8 +944,8 @@
       "year": 2023,
       "score": 94,
       "star": 4.5,
-      "overallRank": 32,
-      "sameScoreRank": 9,
+      "overallRank": 33,
+      "sameScoreRank": 10,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -937,36 +967,6 @@
       "letterboxdAddedDate": "2026-09-27",
       "letterboxdPublishedAt": "Sun, 27 Sep 2026 22:28:02 +1300",
       "letterboxdReportedWatchedDate": "2026-09-27"
-    },
-    {
-      "id": "lb-549-iEBG",
-      "title": "ジョジョ・ラビット",
-      "originalTitle": "",
-      "englishTitle": "Jojo Rabbit",
-      "year": 2019,
-      "score": 94,
-      "star": 4.5,
-      "overallRank": 33,
-      "sameScoreRank": 10,
-      "category": "戦争、歴史",
-      "mediaType": "movie",
-      "genre": [
-        "戦争",
-        "歴史",
-        "ファンタジー",
-        "差別・人権",
-        "感動",
-        "comfort",
-        "心理・内面",
-        "コメディ"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 108,
-      "exact": true,
-      "letterboxdAddedDate": "2026-09-04",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "lb-564-29Wm",
@@ -23408,8 +23408,8 @@
         "lb-10-kSz4",
         "lb-467-ptEI",
         "custom-1791863527797-qm90",
-        "custom-1790508958519-2edt",
         "lb-549-iEBG",
+        "custom-1790508958519-2edt",
         "lb-564-29Wm",
         "lb-112-1W4G"
       ],
