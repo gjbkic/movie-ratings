@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792344212061,
-  "sourceUpdatedIso": "2026-10-18T17:23:32.061Z",
+  "sourceUpdatedAt": 1792344269838,
+  "sourceUpdatedIso": "2026-10-18T17:24:29.838Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -1059,6 +1059,36 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "custom-1790458138074-p8hs",
+      "title": "羅生門",
+      "originalTitle": "羅生門",
+      "englishTitle": "Rashomon",
+      "year": 1950,
+      "score": 93,
+      "star": 4.5,
+      "overallRank": 37,
+      "sameScoreRank": 2,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "クライム",
+        "ドラマ",
+        "ミステリー",
+        "サスペンス",
+        "心理・内面",
+        "哲学・思想",
+        "雰囲気・美学",
+        "特殊構造"
+      ],
+      "origin": "日本",
+      "format": "live",
+      "runtime": 88,
+      "exact": true,
+      "letterboxdAddedDate": "2026-09-27",
+      "letterboxdPublishedAt": "Sun, 27 Sep 2026 09:44:56 +1300",
+      "letterboxdReportedWatchedDate": "2026-09-27"
+    },
+    {
       "id": "lb-558-1pDe",
       "title": "愛のむきだし",
       "originalTitle": "",
@@ -1066,8 +1096,8 @@
       "year": 2008,
       "score": 93,
       "star": 4.5,
-      "overallRank": 37,
-      "sameScoreRank": 2,
+      "overallRank": 38,
+      "sameScoreRank": 3,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -1091,36 +1121,6 @@
       "letterboxdAddedDate": "2026-09-05",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "custom-1790458138074-p8hs",
-      "title": "羅生門",
-      "originalTitle": "羅生門",
-      "englishTitle": "Rashomon",
-      "year": 1950,
-      "score": 93,
-      "star": 4.5,
-      "overallRank": 38,
-      "sameScoreRank": 3,
-      "category": "Letterboxd",
-      "mediaType": "movie",
-      "genre": [
-        "クライム",
-        "ドラマ",
-        "ミステリー",
-        "サスペンス",
-        "心理・内面",
-        "哲学・思想",
-        "雰囲気・美学",
-        "特殊構造"
-      ],
-      "origin": "日本",
-      "format": "live",
-      "runtime": 88,
-      "exact": true,
-      "letterboxdAddedDate": "2026-09-27",
-      "letterboxdPublishedAt": "Sun, 27 Sep 2026 09:44:56 +1300",
-      "letterboxdReportedWatchedDate": "2026-09-27"
     },
     {
       "id": "added-anchor-577",
@@ -23387,8 +23387,8 @@
       ],
       "93": [
         "lb-493-28No",
-        "lb-558-1pDe",
         "custom-1790458138074-p8hs",
+        "lb-558-1pDe",
         "added-anchor-577",
         "lb-323-1VEo",
         "custom-1791664055911-cuz4",
