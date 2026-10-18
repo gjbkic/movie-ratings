@@ -101,7 +101,7 @@ test('IDB-only edits survive closing and relaunching a browser process',async()=
  const profile=fs.mkdtempSync(path.join(os.tmpdir(),'movie-regression-'));let context;
  try{
   context=await chromium.launchPersistentContext(profile,options);await isolate(context);let page=await context.newPage();await page.goto(origin);await ready(page);
-  await page.evaluate(()=>{Storage.prototype.setItem=function(){throw new DOMException('quota','QuotaExceededError')};state.letterboxdMeta['fixture-0012'].note='process restart sentinel';return save()});assert.equal((await saved(page)).failed,false);const expected=await snapshot(page);await context.close();context=null;
+  await page.evaluate(()=>{Storage.prototype.setItem=function(){throw new DOMException('quota','QuotaExceededError')};state.letterboxdMeta['fixture-0012'].note='process restart sentinel';return save()});const saveResult=await saved(page);assert.equal(saveResult.failed,false,JSON.stringify(saveResult));const expected=await snapshot(page);await context.close();context=null;
   context=await chromium.launchPersistentContext(profile,options);await isolate(context);page=await context.newPage();await page.goto(origin);await ready(page);assert.deepEqual(content(await snapshot(page)),content(expected));
  }finally{await context?.close();if(path.dirname(profile)===os.tmpdir()&&path.basename(profile).startsWith('movie-regression-'))fs.rmSync(profile,{recursive:true,force:true});}
 });

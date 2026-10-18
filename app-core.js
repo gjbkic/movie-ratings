@@ -6427,34 +6427,35 @@ renderRank();const marker=document.getElementById('movie30BuildV29');if(marker)m
     for(let i=0;i<bytes.length;i+=0x8000)bin+=String.fromCharCode(...bytes.subarray(i,i+0x8000));
     return btoa(bin);
   }
-  async function gh(path,opt={}){
+  async function gh(path,opt={},timeoutMs=15000){
     const token=ghToken();if(!token)throw new Error('GitHub同期トークンがありません');
-    const r=await fetch(`https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${path}?t=${Date.now()}`,{
+    const {response:r,text}=await window.Movie30LbTransport.read(`https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${path}?t=${Date.now()}`,{
       ...opt,cache:'no-store',headers:{
         Accept:'application/vnd.github+json',Authorization:`Bearer ${token}`,'X-GitHub-Api-Version':'2022-11-28',...(opt.headers||{})
       }
-    });
-    if(!r.ok){let msg=`GitHub HTTP ${r.status}`;try{const j=await r.json();if(j?.message)msg+=': '+j.message}catch(_){}throw new Error(msg)}
-    return await r.json();
+    },timeoutMs);
+    if(!r.ok){let msg=`GitHub HTTP ${r.status}`;try{const j=JSON.parse(text);if(j?.message)msg+=': '+j.message}catch(_){}throw new Error(msg)}
+    return JSON.parse(text);
   }
-  async function ghText(path){const j=await gh(path);return {text:decodeB64Utf8(j.content||''),sha:j.sha||''}}
+  async function ghText(path,timeoutMs){const j=await gh(path,{},timeoutMs);return {text:decodeB64Utf8(j.content||''),sha:j.sha||''}}
   async function putTrigger(value){
     let cur=await ghText(TRIGGER_PATH);
     const url=`https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${TRIGGER_PATH}`;
     let body={message:'Trigger Letterboxd RSS refresh',content:encodeB64Utf8(value+'\n'),branch:GH_BRANCH,sha:cur.sha};
     const send=async()=>{
-      const r=await fetch(url,{method:'PUT',cache:'no-store',headers:{Accept:'application/vnd.github+json',Authorization:`Bearer ${ghToken()}`,'X-GitHub-Api-Version':'2022-11-28','Content-Type':'application/json'},body:JSON.stringify(body)});
-      if(!r.ok){let msg=`GitHub HTTP ${r.status}`;try{const j=await r.json();if(j?.message)msg+=': '+j.message}catch(_){}throw new Error(msg)}
+      const {response:r,text}=await window.Movie30LbTransport.read(url,{method:'PUT',cache:'no-store',headers:{Accept:'application/vnd.github+json',Authorization:`Bearer ${ghToken()}`,'X-GitHub-Api-Version':'2022-11-28','Content-Type':'application/json'},body:JSON.stringify(body)});
+      if(!r.ok){let msg=`GitHub HTTP ${r.status}`;try{const j=JSON.parse(text);if(j?.message)msg+=': '+j.message}catch(_){}throw new Error(msg)}
     };
-    try{await send()}catch(_){cur=await ghText(TRIGGER_PATH);body.sha=cur.sha;await send()}
+    try{await send()}catch(error){if(error?.name==='TimeoutError')throw error;cur=await ghText(TRIGGER_PATH);body.sha=cur.sha;await send()}
   }
   async function serverFetchRss(){
     const trigger=`movie30-${Date.now()}-${Math.random().toString(36).slice(2,8)}`;
     await putTrigger(trigger);
     const started=Date.now();let result=null;
     while(Date.now()-started<70000){
-      await sleep(2200);
-      try{const r=JSON.parse((await ghText(RESULT_PATH)).text);if(r?.trigger===trigger){result=r;break}}catch(_){}
+      await sleep(Math.min(2200,Math.max(0,70000-(Date.now()-started))));
+      const remaining=70000-(Date.now()-started);if(remaining<=0)break;
+      try{const r=JSON.parse((await ghText(RESULT_PATH,Math.min(15000,remaining))).text);if(r?.trigger===trigger){result=r;break}}catch(_){}
     }
     if(!result)throw new Error('サーバー側のLetterboxd確認が70秒以内に完了しませんでした');
     if(result.status!=='ok')throw new Error(result.error||'サーバー側でLetterboxd RSSを取得できませんでした');
@@ -6465,12 +6466,12 @@ renderRank();const marker=document.getElementById('movie30BuildV29');if(marker)m
   async function browserFetchFresh(username){
     const url=`https://letterboxd.com/${encodeURIComponent(username)}/rss/?movie30=${Date.now()}`;
     const targets=[url,'https://api.allorigins.win/raw?url='+encodeURIComponent(url),'https://corsproxy.io/?url='+encodeURIComponent(url),'https://api.codetabs.com/v1/proxy?quest='+encodeURIComponent(url)];
-    let errs=[];
+    let errs=[],timedOut=false;
     for(const target of targets){
-      try{const r=await fetch(target,{cache:'no-store',headers:{Accept:'application/rss+xml,application/xml,text/xml,text/plain,*/*'}});if(!r.ok)throw new Error('HTTP '+r.status);const t=await r.text();if(!/<(?:rss|item)[\s>]/i.test(t))throw new Error('RSS形式ではありません');return t}catch(e){errs.push(e?.message||String(e))}
+      try{const {response:r,text:t}=await window.Movie30LbTransport.read(target,{cache:'no-store',headers:{Accept:'application/rss+xml,application/xml,text/xml,text/plain,*/*'}});if(!r.ok)throw new Error('HTTP '+r.status);if(!/<(?:rss|item)[\s>]/i.test(t))throw new Error('RSS形式ではありません');return t}catch(e){timedOut=timedOut||e?.name==='TimeoutError';errs.push(e?.message||String(e))}
     }
-    if(String(username).toLowerCase()==='gjbkic'){
-      const r=await fetch('./letterboxd-gjbkic.xml?v='+Date.now(),{cache:'no-store'});if(r.ok){const t=await r.text();if(/<(?:rss|item)[\s>]/i.test(t))return t}
+    if(!timedOut&&String(username).toLowerCase()==='gjbkic'){
+      const {response:r,text:t}=await window.Movie30LbTransport.read('./letterboxd-gjbkic.xml?v='+Date.now(),{cache:'no-store'});if(r.ok){if(/<(?:rss|item)[\s>]/i.test(t))return t}
     }
     throw new Error('Letterboxd RSSを取得できませんでした'+(errs.length?' ('+errs.join(' / ')+')':''));
   }
