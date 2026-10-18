@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792321702054,
-  "sourceUpdatedIso": "2026-10-18T11:08:22.054Z",
+  "sourceUpdatedAt": 1792321711214,
+  "sourceUpdatedIso": "2026-10-18T11:08:31.214Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -1798,6 +1798,35 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "custom-1791057232858-35ld",
+      "title": "サウンド・オブ・メタル ～聞こえるということ～",
+      "originalTitle": "Sound of Metal",
+      "englishTitle": "Sound of Metal",
+      "year": 2020,
+      "score": 92,
+      "star": 4,
+      "overallRank": 63,
+      "sameScoreRank": 15,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "ミュージカル",
+        "心理・内面",
+        "社会問題・生活",
+        "恋愛",
+        "特殊構造",
+        "哲学・思想"
+      ],
+      "origin": "その他",
+      "format": "live",
+      "runtime": 121,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-04",
+      "letterboxdPublishedAt": "Sun, 4 Oct 2026 07:37:58 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-04"
+    },
+    {
       "id": "lb-58-293w",
       "title": "プレステージ",
       "originalTitle": "",
@@ -1805,7 +1834,7 @@
       "year": 2006,
       "score": 91,
       "star": 4,
-      "overallRank": 63,
+      "overallRank": 64,
       "sameScoreRank": 1,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
@@ -1833,7 +1862,7 @@
       "year": 2022,
       "score": 91,
       "star": 4,
-      "overallRank": 64,
+      "overallRank": 65,
       "sameScoreRank": 2,
       "category": "アクション",
       "mediaType": "movie",
@@ -1860,7 +1889,7 @@
       "year": 2015,
       "score": 91,
       "star": 4,
-      "overallRank": 65,
+      "overallRank": 66,
       "sameScoreRank": 3,
       "category": "邦画",
       "mediaType": "movie",
@@ -1886,7 +1915,7 @@
       "year": 2002,
       "score": 91,
       "star": 4,
-      "overallRank": 66,
+      "overallRank": 67,
       "sameScoreRank": 4,
       "category": "マフィア、クライム",
       "mediaType": "movie",
@@ -1907,35 +1936,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1791057232858-35ld",
-      "title": "サウンド・オブ・メタル ～聞こえるということ～",
-      "originalTitle": "Sound of Metal",
-      "englishTitle": "Sound of Metal",
-      "year": 2020,
-      "score": 91,
-      "star": 4,
-      "overallRank": 67,
-      "sameScoreRank": 5,
-      "category": "Letterboxd",
-      "mediaType": "movie",
-      "genre": [
-        "ドラマ",
-        "ミュージカル",
-        "心理・内面",
-        "社会問題・生活",
-        "恋愛",
-        "特殊構造",
-        "哲学・思想"
-      ],
-      "origin": "その他",
-      "format": "live",
-      "runtime": 121,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-04",
-      "letterboxdPublishedAt": "Sun, 4 Oct 2026 07:37:58 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-04"
-    },
-    {
       "id": "lb-558-1pDe",
       "title": "愛のむきだし",
       "originalTitle": "",
@@ -1944,7 +1944,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 68,
-      "sameScoreRank": 6,
+      "sameScoreRank": 5,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -1978,7 +1978,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 69,
-      "sameScoreRank": 7,
+      "sameScoreRank": 6,
       "category": "ほかアニメ",
       "mediaType": "drama",
       "genre": [
@@ -2015,7 +2015,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 70,
-      "sameScoreRank": 8,
+      "sameScoreRank": 7,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
       "genre": [
@@ -2045,7 +2045,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 71,
-      "sameScoreRank": 9,
+      "sameScoreRank": 8,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -2078,7 +2078,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 72,
-      "sameScoreRank": 10,
+      "sameScoreRank": 9,
       "category": "戦争、歴史",
       "mediaType": "movie",
       "genre": [
@@ -2107,7 +2107,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 73,
-      "sameScoreRank": 11,
+      "sameScoreRank": 10,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -2137,7 +2137,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 74,
-      "sameScoreRank": 12,
+      "sameScoreRank": 11,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -22492,7 +22492,7 @@
       "custom-1791023391963-vdu9": 89,
       "custom-1791036345616-3tph": 89,
       "lb-6-29Pq": 89,
-      "custom-1791057232858-35ld": 91,
+      "custom-1791057232858-35ld": 92,
       "custom-1791113241266-l3xb": 81,
       "custom-1791113241748-xivg": 79,
       "custom-1791113242437-wcok": 76,
@@ -23359,7 +23359,6 @@
         "lb-41-cjr4",
         "lb-559-abBm",
         "lb-301-2a2a",
-        "custom-1791057232858-35ld",
         "lb-558-1pDe",
         "custom-1791966534875-2yiz",
         "lb-461-1JAY",
@@ -23382,7 +23381,8 @@
         "lb-556-2b9m",
         "custom-1790185844116-j1vu",
         "lb-571-28qk",
-        "lb-308-kPxE"
+        "lb-308-kPxE",
+        "custom-1791057232858-35ld"
       ],
       "93": [
         "lb-493-28No",
