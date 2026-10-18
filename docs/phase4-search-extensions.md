@@ -10,3 +10,5 @@ app-enhancements.jsの監督/製作者、手動・日本語監督別名、カタ
 第④段階全体は未完了。既存coreの形式/媒体ラップ、enhancementsの別カタログ監督辞書（旧447付近）、app-cast.jsの出演者検索は残っている。UI変更や速度向上を今回の成果とはしない。全23スイート最終結果は後続追記。
 
 次回のSolで進める範囲：app-cast.jsのmatchesFilmの文字列照合だけを同じ方法で純粋関数へ分離。namesForFilm、casts Map、IndexedDB取得、updateSearchのタイミングは維持する。旧関数本文を固定し、空query/記号/全角/name/originalName、取得前後の結果を比較する。app-cast.jsのmatchラップの順序を変えない。続いてcore形式/媒体ラップの単純predicateを1件ずつ分離する。データ統合、保存競合、巨大な描画置換へ対象を広げない。複雑な447カタログ辞書の統合や第⑥保存設計は別途設計レビュー。
+
+最終検証：c9ebe9dの固定コードで全23スイート成功（MULTITAB18件・保存再接続6件を含む）。今回の検索拡張比較6件成功。保護対象JSON/本番/mainは無変更、作業ツリーのdiffチェック成功。iPhone実機ではこの未公開版を未確認。次回は上記の限定範囲をSol中で進められる状態。
