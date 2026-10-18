@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792321721237,
-  "sourceUpdatedIso": "2026-10-18T11:08:41.237Z",
+  "sourceUpdatedAt": 1792321732338,
+  "sourceUpdatedIso": "2026-10-18T11:08:52.338Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -1585,34 +1585,33 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-86-cUqs",
-      "title": "君の名は。",
-      "originalTitle": "",
-      "englishTitle": "Your Name.",
-      "year": 2016,
+      "id": "custom-1791057232858-35ld",
+      "title": "サウンド・オブ・メタル ～聞こえるということ～",
+      "originalTitle": "Sound of Metal",
+      "englishTitle": "Sound of Metal",
+      "year": 2020,
       "score": 92,
       "star": 4,
       "overallRank": 55,
       "sameScoreRank": 7,
-      "category": "ほかアニメ",
+      "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
-        "恋愛",
         "ドラマ",
-        "ファンタジー",
-        "青春・若者",
-        "comfort",
-        "大作",
-        "娯楽",
-        "時間"
+        "ミュージカル",
+        "心理・内面",
+        "社会問題・生活",
+        "恋愛",
+        "特殊構造",
+        "哲学・思想"
       ],
-      "origin": "日本",
-      "format": "animation",
-      "runtime": 107,
+      "origin": "その他",
+      "format": "live",
+      "runtime": 121,
       "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
+      "letterboxdAddedDate": "2026-10-04",
+      "letterboxdPublishedAt": "Sun, 4 Oct 2026 07:37:58 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-04"
     },
     {
       "id": "custom-1791966715148-h5tp",
@@ -1648,6 +1647,36 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-86-cUqs",
+      "title": "君の名は。",
+      "originalTitle": "",
+      "englishTitle": "Your Name.",
+      "year": 2016,
+      "score": 92,
+      "star": 4,
+      "overallRank": 57,
+      "sameScoreRank": 9,
+      "category": "ほかアニメ",
+      "mediaType": "movie",
+      "genre": [
+        "恋愛",
+        "ドラマ",
+        "ファンタジー",
+        "青春・若者",
+        "comfort",
+        "大作",
+        "娯楽",
+        "時間"
+      ],
+      "origin": "日本",
+      "format": "animation",
+      "runtime": 107,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-178-29XE",
       "title": "ユージュアル・サスペクツ",
       "originalTitle": "",
@@ -1655,8 +1684,8 @@
       "year": 1995,
       "score": 92,
       "star": 4,
-      "overallRank": 57,
-      "sameScoreRank": 9,
+      "overallRank": 58,
+      "sameScoreRank": 10,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -1681,8 +1710,8 @@
       "year": 2014,
       "score": 92,
       "star": 4,
-      "overallRank": 58,
-      "sameScoreRank": 10,
+      "overallRank": 59,
+      "sameScoreRank": 11,
       "category": "Letterboxd",
       "mediaType": "other",
       "genre": [
@@ -1704,8 +1733,8 @@
       "year": 2000,
       "score": 92,
       "star": 4,
-      "overallRank": 59,
-      "sameScoreRank": 11,
+      "overallRank": 60,
+      "sameScoreRank": 12,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -1722,35 +1751,6 @@
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "custom-1791057232858-35ld",
-      "title": "サウンド・オブ・メタル ～聞こえるということ～",
-      "originalTitle": "Sound of Metal",
-      "englishTitle": "Sound of Metal",
-      "year": 2020,
-      "score": 92,
-      "star": 4,
-      "overallRank": 60,
-      "sameScoreRank": 12,
-      "category": "Letterboxd",
-      "mediaType": "movie",
-      "genre": [
-        "ドラマ",
-        "ミュージカル",
-        "心理・内面",
-        "社会問題・生活",
-        "恋愛",
-        "特殊構造",
-        "哲学・思想"
-      ],
-      "origin": "その他",
-      "format": "live",
-      "runtime": 121,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-04",
-      "letterboxdPublishedAt": "Sun, 4 Oct 2026 07:37:58 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-04"
     },
     {
       "id": "lb-58-293w",
@@ -23377,12 +23377,12 @@
         "lb-262-29Du",
         "lb-459-1Vgm",
         "lb-486-b8wK",
-        "lb-86-cUqs",
+        "custom-1791057232858-35ld",
         "custom-1791966715148-h5tp",
+        "lb-86-cUqs",
         "lb-178-29XE",
         "custom-1791664054514-pksv",
-        "lb-556-2b9m",
-        "custom-1791057232858-35ld"
+        "lb-556-2b9m"
       ],
       "93": [
         "lb-493-28No",
