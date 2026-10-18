@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792273210511,
-  "sourceUpdatedIso": "2026-10-17T21:40:10.511Z",
+  "sourceUpdatedAt": 1792303442546,
+  "sourceUpdatedIso": "2026-10-18T06:04:02.546Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -21699,7 +21699,7 @@
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": "",
-      "origin": "",
+      "origin": "日本",
       "format": "",
       "runtime": null,
       "exact": false,
@@ -21720,7 +21720,7 @@
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": "",
-      "origin": "",
+      "origin": "日本",
       "format": "",
       "runtime": null,
       "exact": false,
@@ -21741,7 +21741,7 @@
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": "",
-      "origin": "",
+      "origin": "日本",
       "format": "",
       "runtime": null,
       "exact": false,
@@ -21762,7 +21762,7 @@
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": "",
-      "origin": "",
+      "origin": "日本",
       "format": "",
       "runtime": null,
       "exact": false,
@@ -21783,7 +21783,7 @@
       "category": "コメディ",
       "mediaType": "movie",
       "genre": "",
-      "origin": "",
+      "origin": "日本",
       "format": "",
       "runtime": null,
       "exact": false,
@@ -37445,7 +37445,12 @@
       "custom-1792173022533-1kos": "その他",
       "custom-1792179458643-m8hx": "日本",
       "custom-1792272124188-0j6i": "日本",
-      "custom-1792272928425-wp78": "日本"
+      "custom-1792272928425-wp78": "日本",
+      "custom-1792273038255-fiy3": "日本",
+      "custom-1792273043356-1hja": "日本",
+      "custom-1792273054769-jfcv": "日本",
+      "custom-1792273047752-gi3p": "日本",
+      "custom-1792273154078-pahe": "日本"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -67621,7 +67626,7 @@
           "source": "tmdb",
           "fetchedAt": "2026-10-17T21:35:28.563Z"
         },
-        "seasonCountV1": 2
+        "seasonCountV1": 3
       },
       "custom-1792273038255-fiy3": {
         "contentType": "movie",
