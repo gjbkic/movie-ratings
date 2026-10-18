@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792321009020,
-  "sourceUpdatedIso": "2026-10-18T10:56:49.020Z",
+  "sourceUpdatedAt": 1792321025797,
+  "sourceUpdatedIso": "2026-10-18T10:57:05.797Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -1398,35 +1398,6 @@
       "letterboxdReportedWatchedDate": "2026-10-11"
     },
     {
-      "id": "lb-378-26E0",
-      "title": "誰も知らない",
-      "originalTitle": "",
-      "englishTitle": "Nobody Knows",
-      "year": 2004,
-      "score": 92,
-      "star": 4,
-      "overallRank": 49,
-      "sameScoreRank": 1,
-      "category": "邦画",
-      "mediaType": "movie",
-      "genre": [
-        "ドラマ",
-        "社会問題・生活",
-        "青春・若者",
-        "切ない",
-        "差別・人権",
-        "心理・内面",
-        "雰囲気・美学"
-      ],
-      "origin": "日本",
-      "format": "live",
-      "runtime": 141,
-      "exact": true,
-      "letterboxdAddedDate": "2026-03-12",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-493-28No",
       "title": "パンズ・ラビリンス",
       "originalTitle": "El laberinto del fauno",
@@ -1434,8 +1405,8 @@
       "year": 2006,
       "score": 92,
       "star": 4,
-      "overallRank": 50,
-      "sameScoreRank": 2,
+      "overallRank": 49,
+      "sameScoreRank": 1,
       "category": "戦争、歴史",
       "mediaType": "movie",
       "genre": [
@@ -1453,6 +1424,35 @@
       "runtime": 119,
       "exact": true,
       "letterboxdAddedDate": "2026-08-13",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "lb-378-26E0",
+      "title": "誰も知らない",
+      "originalTitle": "",
+      "englishTitle": "Nobody Knows",
+      "year": 2004,
+      "score": 92,
+      "star": 4,
+      "overallRank": 50,
+      "sameScoreRank": 2,
+      "category": "邦画",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "社会問題・生活",
+        "青春・若者",
+        "切ない",
+        "差別・人権",
+        "心理・内面",
+        "雰囲気・美学"
+      ],
+      "origin": "日本",
+      "format": "live",
+      "runtime": 141,
+      "exact": true,
+      "letterboxdAddedDate": "2026-03-12",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -23368,8 +23368,8 @@
         "lb-3-a5fa"
       ],
       "92": [
-        "lb-378-26E0",
         "lb-493-28No",
+        "lb-378-26E0",
         "custom-1790254612541-iyij",
         "added-anchor-578",
         "custom-1792318978542-vitq",
