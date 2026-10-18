@@ -78,7 +78,7 @@
   function preview(){
     const target=document.getElementById('movie30-detail-class-preview');
     if(!target)return;
-    target.replaceChildren();
+    const fragment=document.createDocumentFragment();
     const rows=[...document.querySelectorAll('#editGenrePicker .struct-row')];
     const display=[];
     const labels={ '種別':'種別','制作区分':'制作','形式':'形式','TV区分':'TV区分','ジャンル（複数選択可）':'ジャンル'};
@@ -114,11 +114,13 @@
       const chip=document.createElement('span');chip.className='movie30-detail-class-token';
       const title=document.createElement('b');title.textContent=label;
       const val=document.createElement('span');val.textContent=value;
-      chip.append(title,val);target.append(chip);
+      chip.append(title,val);fragment.append(chip);
     }
     if(!display.length){
-      const blank=document.createElement('span');blank.className='movie30-detail-class-token';blank.textContent='分類は未設定';target.append(blank);
+      const blank=document.createElement('span');blank.className='movie30-detail-class-token';blank.textContent='分類は未設定';fragment.append(blank);
     }
+    const current=[...target.childNodes],next=[...fragment.childNodes];
+    if(current.length!==next.length||current.some((node,i)=>!node.isEqualNode(next[i])))target.replaceChildren(fragment);
   }
 
   function ranks(f){
