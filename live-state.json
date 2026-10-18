@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792344592841,
-  "sourceUpdatedIso": "2026-10-18T17:29:52.841Z",
+  "sourceUpdatedAt": 1792344772885,
+  "sourceUpdatedIso": "2026-10-18T17:32:52.885Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -1705,6 +1705,34 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-58-293w",
+      "title": "プレステージ",
+      "originalTitle": "",
+      "englishTitle": "The Prestige",
+      "year": 2006,
+      "score": 92,
+      "star": 4,
+      "overallRank": 59,
+      "sameScoreRank": 11,
+      "category": "サスペンス、ミステリー",
+      "mediaType": "movie",
+      "genre": [
+        "サスペンス",
+        "ミステリー",
+        "ファンタジー",
+        "どんでん返し",
+        "心理・内面",
+        "特殊構造"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 130,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-178-29XE",
       "title": "ユージュアル・サスペクツ",
       "originalTitle": "",
@@ -1712,8 +1740,8 @@
       "year": 1995,
       "score": 92,
       "star": 4,
-      "overallRank": 59,
-      "sameScoreRank": 11,
+      "overallRank": 60,
+      "sameScoreRank": 12,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -1738,8 +1766,8 @@
       "year": 2016,
       "score": 92,
       "star": 4,
-      "overallRank": 60,
-      "sameScoreRank": 12,
+      "overallRank": 61,
+      "sameScoreRank": 13,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -1761,34 +1789,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-58-293w",
-      "title": "プレステージ",
-      "originalTitle": "",
-      "englishTitle": "The Prestige",
-      "year": 2006,
-      "score": 91,
-      "star": 4,
-      "overallRank": 61,
-      "sameScoreRank": 1,
-      "category": "サスペンス、ミステリー",
-      "mediaType": "movie",
-      "genre": [
-        "サスペンス",
-        "ミステリー",
-        "ファンタジー",
-        "どんでん返し",
-        "心理・内面",
-        "特殊構造"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 130,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-559-abBm",
       "title": "海街diary",
       "originalTitle": "",
@@ -1797,7 +1797,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 62,
-      "sameScoreRank": 2,
+      "sameScoreRank": 1,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -1823,7 +1823,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 63,
-      "sameScoreRank": 3,
+      "sameScoreRank": 2,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -1847,7 +1847,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 64,
-      "sameScoreRank": 4,
+      "sameScoreRank": 3,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -1875,7 +1875,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 65,
-      "sameScoreRank": 5,
+      "sameScoreRank": 4,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -1902,7 +1902,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 66,
-      "sameScoreRank": 6,
+      "sameScoreRank": 5,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -1931,7 +1931,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 67,
-      "sameScoreRank": 7,
+      "sameScoreRank": 6,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -1964,7 +1964,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 68,
-      "sameScoreRank": 8,
+      "sameScoreRank": 7,
       "category": "ほかアニメ",
       "mediaType": "drama",
       "genre": [
@@ -2001,7 +2001,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 69,
-      "sameScoreRank": 9,
+      "sameScoreRank": 8,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -2027,7 +2027,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 70,
-      "sameScoreRank": 10,
+      "sameScoreRank": 9,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
       "genre": [
@@ -2057,7 +2057,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 71,
-      "sameScoreRank": 11,
+      "sameScoreRank": 10,
       "category": "Letterboxd",
       "mediaType": "other",
       "genre": [],
@@ -2078,7 +2078,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 72,
-      "sameScoreRank": 12,
+      "sameScoreRank": 11,
       "category": "戦争、歴史",
       "mediaType": "movie",
       "genre": [
@@ -2107,7 +2107,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 73,
-      "sameScoreRank": 13,
+      "sameScoreRank": 12,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -2137,7 +2137,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 74,
-      "sameScoreRank": 14,
+      "sameScoreRank": 13,
       "category": "スターウォーズシリーズ",
       "mediaType": "movie",
       "genre": [
@@ -2186,33 +2186,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-41-cjr4",
-      "title": "トップガン マーヴェリック",
-      "originalTitle": "",
-      "englishTitle": "Top Gun: Maverick",
-      "year": 2022,
-      "score": 90,
-      "star": 4,
-      "overallRank": 76,
-      "sameScoreRank": 2,
-      "category": "アクション",
-      "mediaType": "movie",
-      "genre": [
-        "アクション",
-        "サスペンス",
-        "戦争",
-        "大作",
-        "娯楽"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 131,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-471-8LnQ",
       "title": "シン・エヴァンゲリオン劇場版:||",
       "originalTitle": "",
@@ -2220,8 +2193,8 @@
       "year": 2021,
       "score": 90,
       "star": 4,
-      "overallRank": 77,
-      "sameScoreRank": 3,
+      "overallRank": 76,
+      "sameScoreRank": 2,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -2252,8 +2225,8 @@
       "year": 2012,
       "score": 90,
       "star": 4,
-      "overallRank": 78,
-      "sameScoreRank": 4,
+      "overallRank": 77,
+      "sameScoreRank": 3,
       "category": "コメディ",
       "mediaType": "drama",
       "genre": [
@@ -2281,8 +2254,8 @@
       "year": 2002,
       "score": 90,
       "star": 4,
-      "overallRank": 79,
-      "sameScoreRank": 5,
+      "overallRank": 78,
+      "sameScoreRank": 4,
       "category": "Letterboxd追加",
       "mediaType": "movie",
       "genre": [
@@ -2309,8 +2282,8 @@
       "year": 2018,
       "score": 90,
       "star": 4,
-      "overallRank": 80,
-      "sameScoreRank": 6,
+      "overallRank": 79,
+      "sameScoreRank": 5,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -2327,6 +2300,33 @@
       "letterboxdAddedDate": "2026-09-25",
       "letterboxdPublishedAt": "Fri, 25 Sep 2026 06:23:41 +1200",
       "letterboxdReportedWatchedDate": "2026-09-24"
+    },
+    {
+      "id": "lb-41-cjr4",
+      "title": "トップガン マーヴェリック",
+      "originalTitle": "",
+      "englishTitle": "Top Gun: Maverick",
+      "year": 2022,
+      "score": 90,
+      "star": 4,
+      "overallRank": 80,
+      "sameScoreRank": 6,
+      "category": "アクション",
+      "mediaType": "movie",
+      "genre": [
+        "アクション",
+        "サスペンス",
+        "戦争",
+        "大作",
+        "娯楽"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 131,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "lb-3-a5fa",
@@ -21895,7 +21895,7 @@
       "added-anchor-578": 92,
       "added-anchor-577": 93,
       "lb-564-29Wm": 94,
-      "lb-58-293w": 91,
+      "lb-58-293w": 92,
       "lb-378-26E0": 92,
       "lb-178-29XE": 92,
       "lb-262-29Du": 92,
@@ -23339,11 +23339,11 @@
       ],
       "90": [
         "lb-205-1UlA",
-        "lb-41-cjr4",
         "lb-471-8LnQ",
         "custom-1791915849111-yhiu",
         "lb-463-4Xuw",
         "custom-1790322763195-rro9",
+        "lb-41-cjr4",
         "lb-3-a5fa",
         "lb-73-27Vc",
         "lb-162-2TTo",
@@ -23356,7 +23356,6 @@
         "lb-526-4JQI"
       ],
       "91": [
-        "lb-58-293w",
         "lb-559-abBm",
         "lb-571-28qk",
         "lb-301-2a2a",
@@ -23382,6 +23381,7 @@
         "lb-486-b8wK",
         "custom-1791664054514-pksv",
         "custom-1791966715148-h5tp",
+        "lb-58-293w",
         "lb-178-29XE",
         "lb-86-cUqs"
       ],
