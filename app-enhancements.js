@@ -1643,9 +1643,7 @@ function flagActive(){
 
 // The v66 rank renderer otherwise makes the drag handles active again, even
 // after v93 filtered the list. Disable editing while these new facets are set.
-const beforeRank=renderRank;
-renderRank=function(...args){
- const result=beforeRank.apply(this,args);
+renderRank=window.Movie30RenderLifecycle.decorate(renderRank,{after(){
  if(flagActive()){
   for(const handle of document.querySelectorAll('#rankRoot .rank-card .drag-handle')){
    handle.disabled=true;
@@ -1655,8 +1653,7 @@ renderRank=function(...args){
    handle.style.opacity='.35';
   }
  }
- return result;
-};
+}});
 flagActive();
 
 // Compute the actual bottom of the existing sticky page header.
@@ -2249,12 +2246,9 @@ function jumpBindings(){
   handle.onclick=activate;
  }
 }
-const previous=renderRank;
-renderRank=function(...args){
- const result=previous.apply(this,args);
+renderRank=window.Movie30RenderLifecycle.decorate(renderRank,{after(){
  if(!window.__movie30BulkBoot)jumpBindings();
- return result;
-};
+}});
 // Older input handlers capture a pre-wrapper renderRank reference. Apply the
 // navigation action after those handlers finish, and after root replacements.
 const search=document.getElementById('searchRank');
