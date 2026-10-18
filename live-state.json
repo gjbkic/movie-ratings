@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792320241448,
-  "sourceUpdatedIso": "2026-10-18T10:44:01.448Z",
+  "sourceUpdatedAt": 1792320332131,
+  "sourceUpdatedIso": "2026-10-18T10:45:32.131Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -55461,7 +55461,7 @@
         "addedDate": "2026-03-01",
         "addedDateSource": "letterboxd-export-2026-09-27",
         "note": "すごい好き。この映画の絵の雰囲気もそうだけど、少女たちの今にも消えそうな儚さや、少しホラーチックな雰囲気が漂ってるのも。結局ラックスたちはなぜ死を選んだのか今の僕にはちゃんと言語化できないけど何となく理解できる。",
-        "noteSource": "letterboxd-export",
+        "noteSource": "manual",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
         "watchedAddedDate": "2026-03-01",
@@ -55489,7 +55489,8 @@
           "tmdbId": 1443,
           "path": "/1NCQtXPQnaHRjOZVmktA9BSM35F.jpg",
           "checkedAt": "2026-10-13T04:07:09.759580+00:00"
-        }
+        },
+        "noteEditedAt": "2026-10-18T10:45:32.081Z"
       },
       "lb-488-294O": {
         "addedDate": "2025-09-01",
