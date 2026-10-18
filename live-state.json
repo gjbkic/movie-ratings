@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792321732338,
-  "sourceUpdatedIso": "2026-10-18T11:08:52.338Z",
+  "sourceUpdatedAt": 1792321736573,
+  "sourceUpdatedIso": "2026-10-18T11:08:56.573Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -1554,6 +1554,35 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "custom-1791057232858-35ld",
+      "title": "サウンド・オブ・メタル ～聞こえるということ～",
+      "originalTitle": "Sound of Metal",
+      "englishTitle": "Sound of Metal",
+      "year": 2020,
+      "score": 92,
+      "star": 4,
+      "overallRank": 54,
+      "sameScoreRank": 6,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "ミュージカル",
+        "心理・内面",
+        "社会問題・生活",
+        "恋愛",
+        "特殊構造",
+        "哲学・思想"
+      ],
+      "origin": "その他",
+      "format": "live",
+      "runtime": 121,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-04",
+      "letterboxdPublishedAt": "Sun, 4 Oct 2026 07:37:58 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-04"
+    },
+    {
       "id": "lb-486-b8wK",
       "title": "ブレードランナー 2049",
       "originalTitle": "",
@@ -1561,8 +1590,8 @@
       "year": 2017,
       "score": 92,
       "star": 4,
-      "overallRank": 54,
-      "sameScoreRank": 6,
+      "overallRank": 55,
+      "sameScoreRank": 7,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -1583,35 +1612,6 @@
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "custom-1791057232858-35ld",
-      "title": "サウンド・オブ・メタル ～聞こえるということ～",
-      "originalTitle": "Sound of Metal",
-      "englishTitle": "Sound of Metal",
-      "year": 2020,
-      "score": 92,
-      "star": 4,
-      "overallRank": 55,
-      "sameScoreRank": 7,
-      "category": "Letterboxd",
-      "mediaType": "movie",
-      "genre": [
-        "ドラマ",
-        "ミュージカル",
-        "心理・内面",
-        "社会問題・生活",
-        "恋愛",
-        "特殊構造",
-        "哲学・思想"
-      ],
-      "origin": "その他",
-      "format": "live",
-      "runtime": 121,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-04",
-      "letterboxdPublishedAt": "Sun, 4 Oct 2026 07:37:58 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-04"
     },
     {
       "id": "custom-1791966715148-h5tp",
@@ -23376,8 +23376,8 @@
         "custom-1792318978542-vitq",
         "lb-262-29Du",
         "lb-459-1Vgm",
-        "lb-486-b8wK",
         "custom-1791057232858-35ld",
+        "lb-486-b8wK",
         "custom-1791966715148-h5tp",
         "lb-86-cUqs",
         "lb-178-29XE",
