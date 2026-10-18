@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792354081178,
-  "sourceUpdatedIso": "2026-10-18T20:08:01.178Z",
+  "sourceUpdatedAt": 1792354118380,
+  "sourceUpdatedIso": "2026-10-18T20:08:38.380Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -7673,40 +7673,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-495-Msm",
-      "title": "灼熱の魂",
-      "originalTitle": "Incendies",
-      "englishTitle": "Incendies",
-      "year": 2010,
-      "score": 83,
-      "star": 3,
-      "overallRank": 266,
-      "sameScoreRank": 7,
-      "category": "サスペンス、ミステリー",
-      "mediaType": "movie",
-      "genre": [
-        "サスペンス",
-        "ミステリー",
-        "胸糞",
-        "戦争",
-        "歴史",
-        "ドラマ",
-        "大作",
-        "差別・人権",
-        "クライム",
-        "どんでん返し",
-        "心理・内面",
-        "バイオレンス"
-      ],
-      "origin": "その他",
-      "format": "live",
-      "runtime": 131,
-      "exact": true,
-      "letterboxdAddedDate": "2026-08-13",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-174-29VI",
       "title": "レクイエム・フォー・ドリーム",
       "originalTitle": "",
@@ -7714,8 +7680,8 @@
       "year": 2000,
       "score": 83,
       "star": 3,
-      "overallRank": 267,
-      "sameScoreRank": 8,
+      "overallRank": 266,
+      "sameScoreRank": 7,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -7741,8 +7707,8 @@
       "year": 2007,
       "score": 83,
       "star": 3,
-      "overallRank": 268,
-      "sameScoreRank": 9,
+      "overallRank": 267,
+      "sameScoreRank": 8,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -7769,8 +7735,8 @@
       "year": 2020,
       "score": 83,
       "star": 3,
-      "overallRank": 269,
-      "sameScoreRank": 10,
+      "overallRank": 268,
+      "sameScoreRank": 9,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -7786,6 +7752,40 @@
       "runtime": 124,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "lb-495-Msm",
+      "title": "灼熱の魂",
+      "originalTitle": "Incendies",
+      "englishTitle": "Incendies",
+      "year": 2010,
+      "score": 83,
+      "star": 3,
+      "overallRank": 269,
+      "sameScoreRank": 10,
+      "category": "サスペンス、ミステリー",
+      "mediaType": "movie",
+      "genre": [
+        "サスペンス",
+        "ミステリー",
+        "胸糞",
+        "戦争",
+        "歴史",
+        "ドラマ",
+        "大作",
+        "差別・人権",
+        "クライム",
+        "どんでん返し",
+        "心理・内面",
+        "バイオレンス"
+      ],
+      "origin": "その他",
+      "format": "live",
+      "runtime": 131,
+      "exact": true,
+      "letterboxdAddedDate": "2026-08-13",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -21887,11 +21887,11 @@
       "overallRank": null,
       "sameScoreRank": null,
       "category": "Letterboxd",
-      "mediaType": "movie",
+      "mediaType": "other",
       "genre": [
         "ミュージカル"
       ],
-      "origin": "その他",
+      "origin": "日本",
       "format": "live",
       "runtime": 131,
       "exact": false,
@@ -23173,10 +23173,10 @@
         "lb-430-26uk",
         "custom-1791802127938-6mow",
         "lb-261-1IGQ",
-        "lb-495-Msm",
         "lb-174-29VI",
         "lb-421-21ew",
         "lb-243-orTE",
+        "lb-495-Msm",
         "lb-367-29EW",
         "custom-1789385859985-uylk",
         "lb-47-2aA2",
@@ -30569,7 +30569,7 @@
       "custom-1792310002695-j7ls": "drama",
       "custom-1792318978542-vitq": "movie",
       "custom-1792346885016-a70t": "movie",
-      "custom-1792354037608-u33d": "movie"
+      "custom-1792354037608-u33d": "other"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -37677,7 +37677,7 @@
       "custom-1792310002695-j7ls": "ハリウッド",
       "custom-1792318978542-vitq": "その他",
       "custom-1792346885016-a70t": "日本",
-      "custom-1792354037608-u33d": "その他"
+      "custom-1792354037608-u33d": "日本"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -68136,6 +68136,12 @@
           "creators": [],
           "source": "tmdb",
           "fetchedAt": "2026-10-18T20:07:18.051Z"
+        },
+        "poster84": {
+          "path": "/xid5MKiuD15EG77w0gkP4cSNOTk.jpg",
+          "tmdbId": 57041,
+          "checkedAt": "2026-10-18T20:08:30.635Z",
+          "provider": "tmdb"
         }
       }
     }
