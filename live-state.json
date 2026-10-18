@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792320760417,
-  "sourceUpdatedIso": "2026-10-18T10:52:40.417Z",
+  "sourceUpdatedAt": 1792320818866,
+  "sourceUpdatedIso": "2026-10-18T10:53:38.866Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -1228,6 +1228,35 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-116-1YYc",
+      "title": "GHOST IN THE SHELL／攻殻機動隊",
+      "originalTitle": "",
+      "englishTitle": "Ghost in the Shell",
+      "year": 1995,
+      "score": 93,
+      "star": 4.5,
+      "overallRank": 43,
+      "sameScoreRank": 9,
+      "category": "ほかアニメ",
+      "mediaType": "movie",
+      "genre": [
+        "サスペンス",
+        "アクション",
+        "SF",
+        "哲学・思想",
+        "世界観",
+        "心理・内面",
+        "雰囲気・美学"
+      ],
+      "origin": "日本",
+      "format": "animation",
+      "runtime": 85,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-487-28JG",
       "title": "ヴァージン・スーサイズ",
       "originalTitle": "",
@@ -1235,8 +1264,8 @@
       "year": 1999,
       "score": 93,
       "star": 4.5,
-      "overallRank": 43,
-      "sameScoreRank": 9,
+      "overallRank": 44,
+      "sameScoreRank": 10,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -1265,8 +1294,8 @@
       "year": 2011,
       "score": 93,
       "star": 4.5,
-      "overallRank": 44,
-      "sameScoreRank": 10,
+      "overallRank": 45,
+      "sameScoreRank": 11,
       "category": "ほかアニメ",
       "mediaType": "drama",
       "genre": [
@@ -1298,8 +1327,8 @@
       "year": 1995,
       "score": 93,
       "star": 4.5,
-      "overallRank": 45,
-      "sameScoreRank": 11,
+      "overallRank": 46,
+      "sameScoreRank": 12,
       "category": "スタジオジブリ系作品",
       "mediaType": "other",
       "genre": [
@@ -1327,8 +1356,8 @@
       "year": 2014,
       "score": 93,
       "star": 4.5,
-      "overallRank": 46,
-      "sameScoreRank": 12,
+      "overallRank": 47,
+      "sameScoreRank": 13,
       "category": "Letterboxd",
       "mediaType": "other",
       "genre": [
@@ -1350,8 +1379,8 @@
       "year": 2016,
       "score": 93,
       "star": 4.5,
-      "overallRank": 47,
-      "sameScoreRank": 13,
+      "overallRank": 48,
+      "sameScoreRank": 14,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -1373,35 +1402,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-116-1YYc",
-      "title": "GHOST IN THE SHELL／攻殻機動隊",
-      "originalTitle": "",
-      "englishTitle": "Ghost in the Shell",
-      "year": 1995,
-      "score": 92,
-      "star": 4,
-      "overallRank": 48,
-      "sameScoreRank": 1,
-      "category": "ほかアニメ",
-      "mediaType": "movie",
-      "genre": [
-        "サスペンス",
-        "アクション",
-        "SF",
-        "哲学・思想",
-        "世界観",
-        "心理・内面",
-        "雰囲気・美学"
-      ],
-      "origin": "日本",
-      "format": "animation",
-      "runtime": 85,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-564-29Wm",
       "title": "ライフ・イズ・ビューティフル",
       "originalTitle": "La vita è bella",
@@ -1410,7 +1410,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 49,
-      "sameScoreRank": 2,
+      "sameScoreRank": 1,
       "category": "戦争、歴史",
       "mediaType": "movie",
       "genre": [
@@ -1440,7 +1440,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 50,
-      "sameScoreRank": 3,
+      "sameScoreRank": 2,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -1469,7 +1469,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 51,
-      "sameScoreRank": 4,
+      "sameScoreRank": 3,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -1498,7 +1498,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 52,
-      "sameScoreRank": 5,
+      "sameScoreRank": 4,
       "category": "戦争、歴史",
       "mediaType": "movie",
       "genre": [
@@ -1528,7 +1528,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 53,
-      "sameScoreRank": 6,
+      "sameScoreRank": 5,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -1562,7 +1562,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 54,
-      "sameScoreRank": 7,
+      "sameScoreRank": 6,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -1588,7 +1588,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 55,
-      "sameScoreRank": 8,
+      "sameScoreRank": 7,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -1615,7 +1615,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 56,
-      "sameScoreRank": 9,
+      "sameScoreRank": 8,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -1648,7 +1648,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 57,
-      "sameScoreRank": 10,
+      "sameScoreRank": 9,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -1679,7 +1679,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 58,
-      "sameScoreRank": 11,
+      "sameScoreRank": 10,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -1705,7 +1705,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 59,
-      "sameScoreRank": 12,
+      "sameScoreRank": 11,
       "category": "Letterboxd",
       "mediaType": "other",
       "genre": [],
@@ -1726,7 +1726,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 60,
-      "sameScoreRank": 13,
+      "sameScoreRank": 12,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -1753,7 +1753,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 61,
-      "sameScoreRank": 14,
+      "sameScoreRank": 13,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -1777,7 +1777,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 62,
-      "sameScoreRank": 15,
+      "sameScoreRank": 14,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -21898,7 +21898,7 @@
       "lb-378-26E0": 92,
       "lb-178-29XE": 92,
       "lb-262-29Du": 92,
-      "lb-116-1YYc": 92,
+      "lb-116-1YYc": 93,
       "lb-461-1JAY": 91,
       "lb-559-abBm": 91,
       "lb-558-1pDe": 91,
@@ -23368,7 +23368,6 @@
         "lb-3-a5fa"
       ],
       "92": [
-        "lb-116-1YYc",
         "lb-564-29Wm",
         "added-anchor-577",
         "lb-378-26E0",
@@ -23393,6 +23392,7 @@
         "lb-2-2a9q",
         "lb-332-28MA",
         "lb-24-2aHi",
+        "lb-116-1YYc",
         "lb-487-28JG",
         "custom-1791966715148-h5tp",
         "lb-459-1Vgm",
@@ -26749,7 +26749,7 @@
       "lb-378-26E0": 4,
       "lb-178-29XE": 4,
       "lb-262-29Du": 4,
-      "lb-116-1YYc": 4,
+      "lb-116-1YYc": 4.5,
       "lb-461-1JAY": 4,
       "lb-559-abBm": 4,
       "lb-558-1pDe": 4,
