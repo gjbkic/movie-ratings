@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792321741895,
-  "sourceUpdatedIso": "2026-10-18T11:09:01.895Z",
+  "sourceUpdatedAt": 1792321778949,
+  "sourceUpdatedIso": "2026-10-18T11:09:38.949Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -1385,10 +1385,10 @@
       "originalTitle": "",
       "englishTitle": "The Virgin Suicides",
       "year": 1999,
-      "score": 93,
-      "star": 4.5,
+      "score": 92,
+      "star": 4,
       "overallRank": 48,
-      "sameScoreRank": 13,
+      "sameScoreRank": 1,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -1418,7 +1418,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 49,
-      "sameScoreRank": 1,
+      "sameScoreRank": 2,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -1447,7 +1447,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 50,
-      "sameScoreRank": 2,
+      "sameScoreRank": 3,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -1473,7 +1473,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 51,
-      "sameScoreRank": 3,
+      "sameScoreRank": 4,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -1500,7 +1500,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 52,
-      "sameScoreRank": 4,
+      "sameScoreRank": 5,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -1533,7 +1533,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 53,
-      "sameScoreRank": 5,
+      "sameScoreRank": 6,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -1562,7 +1562,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 54,
-      "sameScoreRank": 6,
+      "sameScoreRank": 7,
       "category": "スタジオジブリ系作品",
       "mediaType": "other",
       "genre": [
@@ -1591,7 +1591,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 55,
-      "sameScoreRank": 7,
+      "sameScoreRank": 8,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -1622,7 +1622,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 56,
-      "sameScoreRank": 8,
+      "sameScoreRank": 9,
       "category": "ほかアニメ",
       "mediaType": "drama",
       "genre": [
@@ -1655,7 +1655,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 57,
-      "sameScoreRank": 9,
+      "sameScoreRank": 10,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -1685,7 +1685,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 58,
-      "sameScoreRank": 10,
+      "sameScoreRank": 11,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -1711,7 +1711,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 59,
-      "sameScoreRank": 11,
+      "sameScoreRank": 12,
       "category": "Letterboxd",
       "mediaType": "other",
       "genre": [
@@ -1734,7 +1734,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 60,
-      "sameScoreRank": 12,
+      "sameScoreRank": 13,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -22583,7 +22583,7 @@
       "custom-1792272928425-wp78": 84,
       "custom-1792310002695-j7ls": 81,
       "custom-1792318978542-vitq": 92,
-      "lb-487-28JG": 93,
+      "lb-487-28JG": 92,
       "lb-44-2bf0": 91
     },
     "rankOrder": {
@@ -23371,6 +23371,7 @@
         "lb-90-71Y"
       ],
       "92": [
+        "lb-487-28JG",
         "lb-378-26E0",
         "added-anchor-578",
         "custom-1792318978542-vitq",
@@ -23396,8 +23397,7 @@
         "custom-1790254612541-iyij",
         "lb-2-2a9q",
         "lb-332-28MA",
-        "lb-24-2aHi",
-        "lb-487-28JG"
+        "lb-24-2aHi"
       ],
       "94": [
         "lb-488-294O",
@@ -27457,7 +27457,7 @@
       "custom-1792273154078-pahe": 0,
       "custom-1792310002695-j7ls": 3,
       "custom-1792318978542-vitq": 4,
-      "lb-487-28JG": 4.5,
+      "lb-487-28JG": 4,
       "lb-44-2bf0": 4
     },
     "titleOverrides": {
