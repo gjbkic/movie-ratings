@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792322107140,
-  "sourceUpdatedIso": "2026-10-18T11:15:07.140Z",
+  "sourceUpdatedAt": 1792322117163,
+  "sourceUpdatedIso": "2026-10-18T11:15:17.163Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -2614,10 +2614,10 @@
       "originalTitle": "",
       "englishTitle": "The Castle of Cagliostro",
       "year": 1979,
-      "score": 90,
+      "score": 89,
       "star": 4,
       "overallRank": 91,
-      "sameScoreRank": 17,
+      "sameScoreRank": 1,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
       "genre": [
@@ -2643,10 +2643,10 @@
       "originalTitle": "The Iron Giant",
       "englishTitle": "The Iron Giant",
       "year": 1999,
-      "score": 90,
+      "score": 89,
       "star": 4,
       "overallRank": 92,
-      "sameScoreRank": 18,
+      "sameScoreRank": 2,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -2676,10 +2676,10 @@
       "originalTitle": "Le Salaire de la peur",
       "englishTitle": "The Wages of Fear",
       "year": 1953,
-      "score": 90,
+      "score": 89,
       "star": 4,
       "overallRank": 93,
-      "sameScoreRank": 19,
+      "sameScoreRank": 3,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -2709,7 +2709,7 @@
       "score": 89,
       "star": 4,
       "overallRank": 94,
-      "sameScoreRank": 1,
+      "sameScoreRank": 4,
       "category": "スターウォーズシリーズ",
       "mediaType": "movie",
       "genre": [
@@ -2738,7 +2738,7 @@
       "score": 89,
       "star": 4,
       "overallRank": 95,
-      "sameScoreRank": 2,
+      "sameScoreRank": 5,
       "category": "ハリーポッター シリーズ",
       "mediaType": "movie",
       "genre": [
@@ -2769,7 +2769,7 @@
       "score": 89,
       "star": 4,
       "overallRank": 96,
-      "sameScoreRank": 3,
+      "sameScoreRank": 6,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -2795,7 +2795,7 @@
       "score": 89,
       "star": 4,
       "overallRank": 97,
-      "sameScoreRank": 4,
+      "sameScoreRank": 7,
       "category": "恋愛、ミュージカル",
       "mediaType": "movie",
       "genre": [
@@ -2823,7 +2823,7 @@
       "score": 89,
       "star": 4,
       "overallRank": 98,
-      "sameScoreRank": 5,
+      "sameScoreRank": 8,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -2850,7 +2850,7 @@
       "score": 89,
       "star": 4,
       "overallRank": 99,
-      "sameScoreRank": 6,
+      "sameScoreRank": 9,
       "category": "コメディ",
       "mediaType": "drama",
       "genre": [
@@ -2876,7 +2876,7 @@
       "score": 89,
       "star": 4,
       "overallRank": 100,
-      "sameScoreRank": 7,
+      "sameScoreRank": 10,
       "category": "Letterboxd追加",
       "mediaType": "other",
       "genre": [
@@ -2900,7 +2900,7 @@
       "score": 89,
       "star": 4,
       "overallRank": 101,
-      "sameScoreRank": 8,
+      "sameScoreRank": 11,
       "category": "スパイダーマン作品",
       "mediaType": "movie",
       "genre": [
@@ -2929,7 +2929,7 @@
       "score": 89,
       "star": 4,
       "overallRank": 102,
-      "sameScoreRank": 9,
+      "sameScoreRank": 12,
       "category": "戦争、歴史",
       "mediaType": "movie",
       "genre": [
@@ -21924,7 +21924,7 @@
       "lb-312-1SRY": 88,
       "lb-310-azpY": 89,
       "lb-48-27Vw": 89,
-      "lb-154-1Mn4": 90,
+      "lb-154-1Mn4": 89,
       "lb-464-mkbG": 87,
       "lb-36-29FA": 87,
       "lb-98-2bbs": 87,
@@ -22489,8 +22489,8 @@
       "custom-1790971112940-kuhf": 85,
       "custom-1791018448490-bpdn": 80,
       "custom-1791018448927-b4o3": 82,
-      "custom-1791023391963-vdu9": 90,
-      "custom-1791036345616-3tph": 90,
+      "custom-1791023391963-vdu9": 89,
+      "custom-1791036345616-3tph": 89,
       "lb-6-29Pq": 89,
       "custom-1791057232858-35ld": 92,
       "custom-1791113241266-l3xb": 81,
@@ -23323,6 +23323,9 @@
         "lb-71-27Vm"
       ],
       "89": [
+        "lb-154-1Mn4",
+        "custom-1791023391963-vdu9",
+        "custom-1791036345616-3tph",
         "lb-48-27Vw",
         "lb-33-29Qy",
         "lb-141-2a12",
@@ -23349,10 +23352,7 @@
         "lb-566-2b5u",
         "lb-65-2auI",
         "lb-321-2aNK",
-        "lb-526-4JQI",
-        "lb-154-1Mn4",
-        "custom-1791023391963-vdu9",
-        "custom-1791036345616-3tph"
+        "lb-526-4JQI"
       ],
       "91": [
         "lb-58-293w",
