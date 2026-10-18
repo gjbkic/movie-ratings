@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792342327655,
-  "sourceUpdatedIso": "2026-10-18T16:52:07.655Z",
+  "sourceUpdatedAt": 1792342338683,
+  "sourceUpdatedIso": "2026-10-18T16:52:18.683Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -7261,6 +7261,36 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-78-2aHM",
+      "title": "ファーゴ",
+      "originalTitle": "",
+      "englishTitle": "Fargo",
+      "year": 1996,
+      "score": 84,
+      "star": 3.5,
+      "overallRank": 252,
+      "sameScoreRank": 33,
+      "category": "サスペンス、ミステリー",
+      "mediaType": "movie",
+      "genre": [
+        "サスペンス",
+        "クライム",
+        "胸糞",
+        "娯楽",
+        "雰囲気・美学",
+        "バイオレンス",
+        "コメディ",
+        "ドラマ"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 98,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-394-2b5O",
       "title": "ロード・オブ・ザ・リング",
       "originalTitle": "",
@@ -7268,8 +7298,8 @@
       "year": 2001,
       "score": 84,
       "star": 3.5,
-      "overallRank": 252,
-      "sameScoreRank": 33,
+      "overallRank": 253,
+      "sameScoreRank": 34,
       "category": "ファンタジー、アドベンチャー",
       "mediaType": "movie",
       "genre": [
@@ -7295,8 +7325,8 @@
       "year": 2017,
       "score": 84,
       "star": 3.5,
-      "overallRank": 253,
-      "sameScoreRank": 34,
+      "overallRank": 254,
+      "sameScoreRank": 35,
       "category": "MCU作品",
       "mediaType": "movie",
       "genre": [
@@ -7324,8 +7354,8 @@
       "year": 2010,
       "score": 84,
       "star": 3.5,
-      "overallRank": 254,
-      "sameScoreRank": 35,
+      "overallRank": 255,
+      "sameScoreRank": 36,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -7348,36 +7378,6 @@
       "letterboxdAddedDate": "2026-09-26",
       "letterboxdPublishedAt": "Sat, 26 Sep 2026 23:45:09 +1200",
       "letterboxdReportedWatchedDate": "2026-09-26"
-    },
-    {
-      "id": "lb-78-2aHM",
-      "title": "ファーゴ",
-      "originalTitle": "",
-      "englishTitle": "Fargo",
-      "year": 1996,
-      "score": 84,
-      "star": 3.5,
-      "overallRank": 255,
-      "sameScoreRank": 36,
-      "category": "サスペンス、ミステリー",
-      "mediaType": "movie",
-      "genre": [
-        "サスペンス",
-        "クライム",
-        "胸糞",
-        "娯楽",
-        "雰囲気・美学",
-        "バイオレンス",
-        "コメディ",
-        "ドラマ"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 98,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "lb-499-948A",
@@ -23190,10 +23190,10 @@
         "lb-379-R6yo",
         "lb-541-27MO",
         "lb-381-1alk",
+        "lb-78-2aHM",
         "lb-394-2b5O",
         "lb-63-8MxC",
         "custom-1790423279439-sn81",
-        "lb-78-2aHM",
         "lb-499-948A",
         "lb-159-18U8"
       ],
