@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792303538395,
-  "sourceUpdatedIso": "2026-10-18T06:05:38.395Z",
+  "sourceUpdatedAt": 1792303544356,
+  "sourceUpdatedIso": "2026-10-18T06:05:44.356Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -4132,6 +4132,34 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "added-anchor-579",
+      "title": "消失",
+      "originalTitle": "Spoorloos",
+      "englishTitle": "The Vanishing",
+      "year": 1988,
+      "score": 86,
+      "star": 3.5,
+      "overallRank": 143,
+      "sameScoreRank": 14,
+      "category": "スリラー、ホラー",
+      "mediaType": "movie",
+      "genre": [
+        "スリラー",
+        "胸糞",
+        "サスペンス",
+        "ミステリー",
+        "ドラマ",
+        "クライム"
+      ],
+      "origin": "その他",
+      "format": "live",
+      "runtime": 106,
+      "exact": true,
+      "letterboxdAddedDate": "2026-09-08",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "custom-1791139747386-vy04",
       "title": "THE BATMAN－ザ・バットマン－",
       "originalTitle": "The Batman",
@@ -4139,8 +4167,8 @@
       "year": 2022,
       "score": 86,
       "star": 3.5,
-      "overallRank": 143,
-      "sameScoreRank": 14,
+      "overallRank": 144,
+      "sameScoreRank": 15,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -4163,34 +4191,6 @@
       "letterboxdAddedDate": "2026-10-05",
       "letterboxdPublishedAt": "Mon, 5 Oct 2026 05:14:36 +1300",
       "letterboxdReportedWatchedDate": "2026-10-04"
-    },
-    {
-      "id": "added-anchor-579",
-      "title": "消失",
-      "originalTitle": "Spoorloos",
-      "englishTitle": "The Vanishing",
-      "year": 1988,
-      "score": 86,
-      "star": 3.5,
-      "overallRank": 144,
-      "sameScoreRank": 15,
-      "category": "スリラー、ホラー",
-      "mediaType": "movie",
-      "genre": [
-        "スリラー",
-        "胸糞",
-        "サスペンス",
-        "ミステリー",
-        "ドラマ",
-        "クライム"
-      ],
-      "origin": "その他",
-      "format": "live",
-      "runtime": 106,
-      "exact": true,
-      "letterboxdAddedDate": "2026-09-08",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "lb-345-1USu",
@@ -23196,8 +23196,8 @@
         "custom-1791919109416-hxq8",
         "lb-382-20TI",
         "custom-1791919010317-zu85",
-        "custom-1791139747386-vy04",
         "added-anchor-579",
+        "custom-1791139747386-vy04",
         "lb-345-1USu",
         "lb-287-2amk",
         "lb-276-7UmK",
