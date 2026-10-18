@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792304277688,
-  "sourceUpdatedIso": "2026-10-18T06:17:57.688Z",
+  "sourceUpdatedAt": 1792310003495,
+  "sourceUpdatedIso": "2026-10-18T07:53:23.495Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -6762,32 +6762,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-82-8SeG",
-      "title": "オデッセイ",
-      "originalTitle": "",
-      "englishTitle": "The Martian",
-      "year": 2015,
-      "score": 84,
-      "star": 3.5,
-      "overallRank": 234,
-      "sameScoreRank": 16,
-      "category": "SF",
-      "mediaType": "movie",
-      "genre": [
-        "SF",
-        "ドラマ",
-        "感動",
-        "娯楽"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 141,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "added-anchor-580",
       "title": "トライアングル",
       "originalTitle": "",
@@ -6795,8 +6769,8 @@
       "year": 2009,
       "score": 84,
       "star": 3.5,
-      "overallRank": 235,
-      "sameScoreRank": 17,
+      "overallRank": 234,
+      "sameScoreRank": 16,
       "category": "スリラー、ホラー",
       "mediaType": "movie",
       "genre": [
@@ -6824,8 +6798,8 @@
       "year": 1960,
       "score": 84,
       "star": 3.5,
-      "overallRank": 236,
-      "sameScoreRank": 18,
+      "overallRank": 235,
+      "sameScoreRank": 17,
       "category": "スリラー、ホラー",
       "mediaType": "movie",
       "genre": [
@@ -6854,8 +6828,8 @@
       "year": 1982,
       "score": 84,
       "star": 3.5,
-      "overallRank": 237,
-      "sameScoreRank": 19,
+      "overallRank": 236,
+      "sameScoreRank": 18,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -6885,8 +6859,8 @@
       "year": 1995,
       "score": 84,
       "star": 3.5,
-      "overallRank": 238,
-      "sameScoreRank": 20,
+      "overallRank": 237,
+      "sameScoreRank": 19,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -6915,8 +6889,8 @@
       "year": 1979,
       "score": 84,
       "star": 3.5,
-      "overallRank": 239,
-      "sameScoreRank": 21,
+      "overallRank": 238,
+      "sameScoreRank": 20,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -6942,8 +6916,8 @@
       "year": 2009,
       "score": 84,
       "star": 3.5,
-      "overallRank": 240,
-      "sameScoreRank": 22,
+      "overallRank": 239,
+      "sameScoreRank": 21,
       "category": "Letterboxd追加",
       "mediaType": "movie",
       "genre": [
@@ -6970,8 +6944,8 @@
       "year": 2003,
       "score": 84,
       "star": 3.5,
-      "overallRank": 241,
-      "sameScoreRank": 23,
+      "overallRank": 240,
+      "sameScoreRank": 22,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -6989,6 +6963,32 @@
       "runtime": 130,
       "exact": true,
       "letterboxdAddedDate": "2025-09-14",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "lb-82-8SeG",
+      "title": "オデッセイ",
+      "originalTitle": "",
+      "englishTitle": "The Martian",
+      "year": 2015,
+      "score": 84,
+      "star": 3.5,
+      "overallRank": 241,
+      "sameScoreRank": 23,
+      "category": "SF",
+      "mediaType": "movie",
+      "genre": [
+        "SF",
+        "ドラマ",
+        "感動",
+        "娯楽"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 141,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -21790,6 +21790,31 @@
       "letterboxdAddedDate": null,
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1792310002695-j7ls",
+      "title": "ハウス",
+      "originalTitle": "ハウス",
+      "englishTitle": "House",
+      "year": 1977,
+      "score": null,
+      "star": 3,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "コメディ",
+        "ファンタジー",
+        "ホラー"
+      ],
+      "origin": "日本",
+      "format": "live",
+      "runtime": 88,
+      "exact": false,
+      "letterboxdAddedDate": "2026-10-18",
+      "letterboxdPublishedAt": "Sun, 18 Oct 2026 19:23:46 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-18"
     }
   ],
   "state": {
@@ -23113,7 +23138,6 @@
         "lb-76-4vru",
         "lb-180-27oC",
         "lb-318-84xS",
-        "lb-82-8SeG",
         "added-anchor-580",
         "lb-319-2ab2",
         "lb-133-2a1G",
@@ -23121,6 +23145,7 @@
         "lb-554-igK",
         "lb-545-1vWw",
         "lb-547-1TSo",
+        "lb-82-8SeG",
         "base-perks-2012",
         "lb-12-728",
         "lb-176-2aZm",
@@ -26613,6 +26638,23 @@
         "added": true,
         "_seq": 1792273154078,
         "tmdbType": "movie"
+      },
+      {
+        "id": "custom-1792310002695-j7ls",
+        "title": "ハウス",
+        "originalTitle": "ハウス",
+        "englishTitle": "House",
+        "lbTitle": "House",
+        "tmdbId": 25623,
+        "year": 1977,
+        "uri": "https://letterboxd.com/gjbkic/film/house/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 3,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1792310002695,
+        "source": "letterboxd"
       }
     ],
     "starOverrides": {
@@ -30376,7 +30418,8 @@
       "custom-1792273043356-1hja": "movie",
       "custom-1792273047752-gi3p": "movie",
       "custom-1792273054769-jfcv": "movie",
-      "custom-1792273154078-pahe": "movie"
+      "custom-1792273154078-pahe": "movie",
+      "custom-1792310002695-j7ls": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -36674,6 +36717,11 @@
         "comfort",
         "コメディ",
         "ミステリー"
+      ],
+      "custom-1792310002695-j7ls": [
+        "コメディ",
+        "ファンタジー",
+        "ホラー"
       ]
     },
     "originOverrides": {
@@ -37452,7 +37500,8 @@
       "custom-1792273043356-1hja": "日本",
       "custom-1792273054769-jfcv": "日本",
       "custom-1792273047752-gi3p": "日本",
-      "custom-1792273154078-pahe": "日本"
+      "custom-1792273154078-pahe": "日本",
+      "custom-1792310002695-j7ls": "日本"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -38189,7 +38238,8 @@
       "custom-1791664055006-96rv": "live",
       "custom-1791863527797-qm90": "live",
       "custom-1792067620393-qnt8": "live",
-      "custom-1792272124188-0j6i": "live"
+      "custom-1792272124188-0j6i": "live",
+      "custom-1792310002695-j7ls": "live"
     },
     "runtimeOverrides": {
       "custom-1790247938551-ixfs": 100,
@@ -38857,7 +38907,8 @@
       "custom-1791823398409-njce": 15,
       "custom-1791863527797-qm90": 147,
       "custom-1792067620393-qnt8": 79,
-      "custom-1792272124188-0j6i": 115
+      "custom-1792272124188-0j6i": 115,
+      "custom-1792310002695-j7ls": 88
     },
     "letterboxdMeta": {
       "lb-0-hTha": {
@@ -67719,6 +67770,46 @@
           "creators": [],
           "source": "tmdb",
           "fetchedAt": "2026-10-17T21:39:14.210Z"
+        }
+      },
+      "custom-1792310002695-j7ls": {
+        "publishedAt": "Sun, 18 Oct 2026 19:23:46 +1300",
+        "addedDate": "2026-10-18",
+        "addedDateSource": "rss-first-seen",
+        "reportedWatchedDate": "2026-10-18",
+        "note": "楽しかったし、結構すき。めっちゃすごいとは思わないけど。良くはあった。\nどういうつもり？みたいな全てがものすごい自由。愛のむきだしとか自由だと思っていたがそのレベルじゃないくらいに崩してる。実際映像表現なんてものは現実に寄せる必要など全くないし脈絡などなくていい。全体として見せるものは完全に自由なんだと再認識した。特にアニメなどではそれが顕著であえて崩したり変形したりと自由な表現があるが、実写でもそれは可能なのだろう。絵的な背景と終始鳴ってる変なBGMや効果音、鳥の鳴き声などで落ち着きがない。台詞回しや、場面転換がずっと脈絡がない。パッチワークみたいな映画。普通に取れるシーンも背景を絵にして街の人や物事をデフォルメして背景とすることで、明確にファンタジーにしてる。副音声っぽいシーンなど面白い。後半畳み掛けるような程よく安い演出たちは面白い。音楽のミスマッチというかも結構すき。ラスト愛を語るセリフで閉めるところも見せたいものを全て無理やり語りを押し付けられた感。嫌な意味ではなく。",
+        "noteSource": "letterboxd-rss",
+        "noteImportedAt": "2026-10-18T07:53:23.125Z",
+        "rssReviewRecords": {
+          "letterboxd-review-1543256393": {
+            "body": "楽しかったし、結構すき。めっちゃすごいとは思わないけど。良くはあった。\nどういうつもり？みたいな全てがものすごい自由。愛のむきだしとか自由だと思っていたがそのレベルじゃないくらいに崩してる。実際映像表現なんてものは現実に寄せる必要など全くないし脈絡などなくていい。全体として見せるものは完全に自由なんだと再認識した。特にアニメなどではそれが顕著であえて崩したり変形したりと自由な表現があるが、実写でもそれは可能なのだろう。絵的な背景と終始鳴ってる変なBGMや効果音、鳥の鳴き声などで落ち着きがない。台詞回しや、場面転換がずっと脈絡がない。パッチワークみたいな映画。普通に取れるシーンも背景を絵にして街の人や物事をデフォルメして背景とすることで、明確にファンタジーにしてる。副音声っぽいシーンなど面白い。後半畳み掛けるような程よく安い演出たちは面白い。音楽のミスマッチというかも結構すき。ラスト愛を語るセリフで閉めるところも見せたいものを全て無理やり語りを押し付けられた感。嫌な意味ではなく。",
+            "block": "楽しかったし、結構すき。めっちゃすごいとは思わないけど。良くはあった。\nどういうつもり？みたいな全てがものすごい自由。愛のむきだしとか自由だと思っていたがそのレベルじゃないくらいに崩してる。実際映像表現なんてものは現実に寄せる必要など全くないし脈絡などなくていい。全体として見せるものは完全に自由なんだと再認識した。特にアニメなどではそれが顕著であえて崩したり変形したりと自由な表現があるが、実写でもそれは可能なのだろう。絵的な背景と終始鳴ってる変なBGMや効果音、鳥の鳴き声などで落ち着きがない。台詞回しや、場面転換がずっと脈絡がない。パッチワークみたいな映画。普通に取れるシーンも背景を絵にして街の人や物事をデフォルメして背景とすることで、明確にファンタジーにしてる。副音声っぽいシーンなど面白い。後半畳み掛けるような程よく安い演出たちは面白い。音楽のミスマッチというかも結構すき。ラスト愛を語るセリフで閉めるところも見せたいものを全て無理やり語りを押し付けられた感。嫌な意味ではなく。"
+          }
+        },
+        "watchHistory": [
+          {
+            "id": "rss:letterboxd-review-1543256393",
+            "date": "2026-10-18",
+            "recordedAt": "2026-10-18T06:23:46.000Z",
+            "rewatch": false,
+            "retroactive": false,
+            "source": "letterboxd-rss",
+            "manualEdited": false
+          }
+        ],
+        "crew84": {
+          "directors": [
+            "Nobuhiko Obayashi"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-18T07:53:23.124Z"
+        },
+        "poster84": {
+          "path": "/5JmLSvGDPbq7w2avI2u6Y1OpZlD.jpg",
+          "tmdbId": 25623,
+          "checkedAt": "2026-10-18T07:53:25.963Z",
+          "provider": "tmdb"
         }
       }
     }
