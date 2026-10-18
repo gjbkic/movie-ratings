@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792320594185,
-  "sourceUpdatedIso": "2026-10-18T10:49:54.185Z",
+  "sourceUpdatedAt": 1792320600011,
+  "sourceUpdatedIso": "2026-10-18T10:50:00.011Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -1718,6 +1718,33 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-556-2b9m",
+      "title": "グラディエーター",
+      "originalTitle": "",
+      "englishTitle": "Gladiator",
+      "year": 2000,
+      "score": 92,
+      "star": 4,
+      "overallRank": 60,
+      "sameScoreRank": 12,
+      "category": "アクション",
+      "mediaType": "movie",
+      "genre": [
+        "アクション",
+        "戦争",
+        "歴史",
+        "感動",
+        "心理・内面"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 155,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-571-28qk",
       "title": "スピード",
       "originalTitle": "",
@@ -1725,8 +1752,8 @@
       "year": 1994,
       "score": 92,
       "star": 4,
-      "overallRank": 60,
-      "sameScoreRank": 12,
+      "overallRank": 61,
+      "sameScoreRank": 13,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -1749,8 +1776,8 @@
       "year": 2019,
       "score": 92,
       "star": 4,
-      "overallRank": 61,
-      "sameScoreRank": 13,
+      "overallRank": 62,
+      "sameScoreRank": 14,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -1765,33 +1792,6 @@
       "origin": "日本",
       "format": "animation",
       "runtime": 114,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "lb-556-2b9m",
-      "title": "グラディエーター",
-      "originalTitle": "",
-      "englishTitle": "Gladiator",
-      "year": 2000,
-      "score": 92,
-      "star": 4,
-      "overallRank": 62,
-      "sameScoreRank": 14,
-      "category": "アクション",
-      "mediaType": "movie",
-      "genre": [
-        "アクション",
-        "戦争",
-        "歴史",
-        "感動",
-        "心理・内面"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 155,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
@@ -23379,9 +23379,9 @@
         "lb-178-29XE",
         "lb-486-b8wK",
         "lb-262-29Du",
+        "lb-556-2b9m",
         "lb-571-28qk",
-        "lb-308-kPxE",
-        "lb-556-2b9m"
+        "lb-308-kPxE"
       ],
       "93": [
         "custom-1790458138074-p8hs",
