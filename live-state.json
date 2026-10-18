@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792321526090,
-  "sourceUpdatedIso": "2026-10-18T11:05:26.090Z",
+  "sourceUpdatedAt": 1792321560223,
+  "sourceUpdatedIso": "2026-10-18T11:06:00.223Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -2442,6 +2442,33 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-17-1U82",
+      "title": "シャッターアイランド",
+      "originalTitle": "",
+      "englishTitle": "Shutter Island",
+      "year": 2010,
+      "score": 90,
+      "star": 4,
+      "overallRank": 85,
+      "sameScoreRank": 11,
+      "category": "サスペンス、ミステリー",
+      "mediaType": "movie",
+      "genre": [
+        "サスペンス",
+        "ミステリー",
+        "胸糞",
+        "どんでん返し",
+        "心理・内面"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 138,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-33-29Qy",
       "title": "ハリー・ポッターとアズカバンの囚人",
       "originalTitle": "",
@@ -2449,8 +2476,8 @@
       "year": 2004,
       "score": 90,
       "star": 4,
-      "overallRank": 85,
-      "sameScoreRank": 11,
+      "overallRank": 86,
+      "sameScoreRank": 12,
       "category": "ハリーポッター シリーズ",
       "mediaType": "movie",
       "genre": [
@@ -2467,33 +2494,6 @@
       "origin": "ハリウッド",
       "format": "live",
       "runtime": 142,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "lb-17-1U82",
-      "title": "シャッターアイランド",
-      "originalTitle": "",
-      "englishTitle": "Shutter Island",
-      "year": 2010,
-      "score": 90,
-      "star": 4,
-      "overallRank": 86,
-      "sameScoreRank": 12,
-      "category": "サスペンス、ミステリー",
-      "mediaType": "movie",
-      "genre": [
-        "サスペンス",
-        "ミステリー",
-        "胸糞",
-        "どんでん返し",
-        "心理・内面"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 138,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
@@ -23349,8 +23349,8 @@
         "lb-73-27Vc",
         "lb-162-2TTo",
         "lb-286-2bdI",
-        "lb-33-29Qy",
         "lb-17-1U82",
+        "lb-33-29Qy",
         "lb-566-2b5u",
         "lb-321-2aNK"
       ],
