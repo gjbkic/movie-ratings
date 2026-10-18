@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792319033298,
-  "sourceUpdatedIso": "2026-10-18T10:23:53.298Z",
+  "sourceUpdatedAt": 1792319039793,
+  "sourceUpdatedIso": "2026-10-18T10:23:59.793Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -21833,7 +21833,10 @@
       "mediaType": "movie",
       "genre": [
         "ドラマ",
-        "雰囲気・美学"
+        "雰囲気・美学",
+        "心理・内面",
+        "哲学・思想",
+        "社会問題・生活"
       ],
       "origin": "その他",
       "format": "live",
@@ -36776,7 +36779,10 @@
       ],
       "custom-1792318978542-vitq": [
         "ドラマ",
-        "雰囲気・美学"
+        "雰囲気・美学",
+        "心理・内面",
+        "哲学・思想",
+        "社会問題・生活"
       ]
     },
     "originOverrides": {
