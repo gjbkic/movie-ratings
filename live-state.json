@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792322038481,
-  "sourceUpdatedIso": "2026-10-18T11:13:58.481Z",
+  "sourceUpdatedAt": 1792322043403,
+  "sourceUpdatedIso": "2026-10-18T11:14:03.403Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -2732,32 +2732,6 @@
       "letterboxdReportedWatchedDate": "2026-10-03"
     },
     {
-      "id": "lb-141-2a12",
-      "title": "マトリックス レボリューションズ",
-      "originalTitle": "",
-      "englishTitle": "The Matrix Revolutions",
-      "year": 2003,
-      "score": 89,
-      "star": 4,
-      "overallRank": 95,
-      "sameScoreRank": 1,
-      "category": "SF",
-      "mediaType": "movie",
-      "genre": [
-        "SF",
-        "アクション",
-        "哲学・思想",
-        "世界観"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 129,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-48-27Vw",
       "title": "スター・ウォーズ エピソード5／帝国の逆襲",
       "originalTitle": "",
@@ -2765,8 +2739,8 @@
       "year": 1980,
       "score": 89,
       "star": 4,
-      "overallRank": 96,
-      "sameScoreRank": 2,
+      "overallRank": 95,
+      "sameScoreRank": 1,
       "category": "スターウォーズシリーズ",
       "mediaType": "movie",
       "genre": [
@@ -2781,6 +2755,32 @@
       "origin": "ハリウッド",
       "format": "live",
       "runtime": 124,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "lb-141-2a12",
+      "title": "マトリックス レボリューションズ",
+      "originalTitle": "",
+      "englishTitle": "The Matrix Revolutions",
+      "year": 2003,
+      "score": 89,
+      "star": 4,
+      "overallRank": 96,
+      "sameScoreRank": 2,
+      "category": "SF",
+      "mediaType": "movie",
+      "genre": [
+        "SF",
+        "アクション",
+        "哲学・思想",
+        "世界観"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 129,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
@@ -23323,8 +23323,8 @@
         "lb-71-27Vm"
       ],
       "89": [
-        "lb-141-2a12",
         "lb-48-27Vw",
+        "lb-141-2a12",
         "lb-29-2a2k",
         "lb-6-29Pq",
         "custom-1791915774599-jgkn",
