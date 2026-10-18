@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792320977738,
-  "sourceUpdatedIso": "2026-10-18T10:56:17.738Z",
+  "sourceUpdatedAt": 1792320983258,
+  "sourceUpdatedIso": "2026-10-18T10:56:23.258Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -1059,6 +1059,35 @@
       "letterboxdReportedWatchedDate": "2026-09-27"
     },
     {
+      "id": "added-anchor-577",
+      "title": "善き人のためのソナタ",
+      "originalTitle": "Das Leben der Anderen",
+      "englishTitle": "The Lives of Others",
+      "year": 2006,
+      "score": 93,
+      "star": 4.5,
+      "overallRank": 37,
+      "sameScoreRank": 2,
+      "category": "ドラマ",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "歴史",
+        "サスペンス",
+        "差別・人権",
+        "社会問題・生活",
+        "心理・内面",
+        "雰囲気・美学"
+      ],
+      "origin": "その他",
+      "format": "live",
+      "runtime": 137,
+      "exact": true,
+      "letterboxdAddedDate": "2026-09-08",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "custom-1791664055911-cuz4",
       "title": "Hikaru Utada Live Sessions from AIR Studios",
       "originalTitle": "Hikaru Utada Live Sessions from Air Studios",
@@ -1066,8 +1095,8 @@
       "year": 2024,
       "score": 93,
       "star": 4.5,
-      "overallRank": 37,
-      "sameScoreRank": 2,
+      "overallRank": 38,
+      "sameScoreRank": 3,
       "category": "Letterboxd",
       "mediaType": "other",
       "genre": [
@@ -1089,8 +1118,8 @@
       "year": 2008,
       "score": 93,
       "star": 4.5,
-      "overallRank": 38,
-      "sameScoreRank": 3,
+      "overallRank": 39,
+      "sameScoreRank": 4,
       "category": "ピクサー・ディズニー作品",
       "mediaType": "movie",
       "genre": [
@@ -1118,8 +1147,8 @@
       "year": 2008,
       "score": 93,
       "star": 4.5,
-      "overallRank": 39,
-      "sameScoreRank": 4,
+      "overallRank": 40,
+      "sameScoreRank": 5,
       "category": "マフィア、クライム",
       "mediaType": "drama",
       "genre": [
@@ -1140,35 +1169,6 @@
       "runtime": null,
       "exact": true,
       "letterboxdAddedDate": null,
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "added-anchor-577",
-      "title": "善き人のためのソナタ",
-      "originalTitle": "Das Leben der Anderen",
-      "englishTitle": "The Lives of Others",
-      "year": 2006,
-      "score": 93,
-      "star": 4.5,
-      "overallRank": 40,
-      "sameScoreRank": 5,
-      "category": "ドラマ",
-      "mediaType": "movie",
-      "genre": [
-        "ドラマ",
-        "歴史",
-        "サスペンス",
-        "差別・人権",
-        "社会問題・生活",
-        "心理・内面",
-        "雰囲気・美学"
-      ],
-      "origin": "その他",
-      "format": "live",
-      "runtime": 137,
-      "exact": true,
-      "letterboxdAddedDate": "2026-09-08",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -23384,10 +23384,10 @@
       ],
       "93": [
         "custom-1790458138074-p8hs",
+        "added-anchor-577",
         "custom-1791664055911-cuz4",
         "lb-323-1VEo",
         "custom-1791919172943-3ibi",
-        "added-anchor-577",
         "lb-333-2b4m",
         "lb-116-1YYc",
         "lb-2-2a9q",
