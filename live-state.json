@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792319134137,
-  "sourceUpdatedIso": "2026-10-18T10:25:34.137Z",
+  "sourceUpdatedAt": 1792319142782,
+  "sourceUpdatedIso": "2026-10-18T10:25:42.782Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -1765,34 +1765,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-58-293w",
-      "title": "プレステージ",
-      "originalTitle": "",
-      "englishTitle": "The Prestige",
-      "year": 2006,
-      "score": 91,
-      "star": 4,
-      "overallRank": 62,
-      "sameScoreRank": 2,
-      "category": "サスペンス、ミステリー",
-      "mediaType": "movie",
-      "genre": [
-        "サスペンス",
-        "ミステリー",
-        "ファンタジー",
-        "どんでん返し",
-        "心理・内面",
-        "特殊構造"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 130,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-262-29Du",
       "title": "ガタカ",
       "originalTitle": "",
@@ -1800,8 +1772,8 @@
       "year": 1997,
       "score": 91,
       "star": 4,
-      "overallRank": 63,
-      "sameScoreRank": 3,
+      "overallRank": 62,
+      "sameScoreRank": 2,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -1820,6 +1792,34 @@
       "origin": "ハリウッド",
       "format": "live",
       "runtime": 106,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "lb-58-293w",
+      "title": "プレステージ",
+      "originalTitle": "",
+      "englishTitle": "The Prestige",
+      "year": 2006,
+      "score": 91,
+      "star": 4,
+      "overallRank": 63,
+      "sameScoreRank": 3,
+      "category": "サスペンス、ミステリー",
+      "mediaType": "movie",
+      "genre": [
+        "サスペンス",
+        "ミステリー",
+        "ファンタジー",
+        "どんでん返し",
+        "心理・内面",
+        "特殊構造"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 130,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
@@ -23354,8 +23354,8 @@
       ],
       "91": [
         "lb-486-b8wK",
-        "lb-58-293w",
         "lb-262-29Du",
+        "lb-58-293w",
         "lb-41-cjr4",
         "custom-1791966534875-2yiz",
         "lb-559-abBm",
