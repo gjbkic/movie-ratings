@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792321039566,
-  "sourceUpdatedIso": "2026-10-18T10:57:19.566Z",
+  "sourceUpdatedAt": 1792321046247,
+  "sourceUpdatedIso": "2026-10-18T10:57:26.247Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -1233,6 +1233,36 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-493-28No",
+      "title": "パンズ・ラビリンス",
+      "originalTitle": "El laberinto del fauno",
+      "englishTitle": "Pan's Labyrinth",
+      "year": 2006,
+      "score": 93,
+      "star": 4.5,
+      "overallRank": 43,
+      "sameScoreRank": 8,
+      "category": "戦争、歴史",
+      "mediaType": "movie",
+      "genre": [
+        "戦争",
+        "歴史",
+        "切ない",
+        "胸糞",
+        "差別・人権",
+        "心理・内面",
+        "雰囲気・美学",
+        "ファンタジー"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 119,
+      "exact": true,
+      "letterboxdAddedDate": "2026-08-13",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-2-2a9q",
       "title": "ファイト・クラブ",
       "originalTitle": "",
@@ -1240,8 +1270,8 @@
       "year": 1999,
       "score": 93,
       "star": 4.5,
-      "overallRank": 43,
-      "sameScoreRank": 8,
+      "overallRank": 44,
+      "sameScoreRank": 9,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -1270,8 +1300,8 @@
       "year": 2006,
       "score": 93,
       "star": 4.5,
-      "overallRank": 44,
-      "sameScoreRank": 9,
+      "overallRank": 45,
+      "sameScoreRank": 10,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -1296,8 +1326,8 @@
       "year": 1994,
       "score": 93,
       "star": 4.5,
-      "overallRank": 45,
-      "sameScoreRank": 10,
+      "overallRank": 46,
+      "sameScoreRank": 11,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -1323,8 +1353,8 @@
       "year": 1999,
       "score": 93,
       "star": 4.5,
-      "overallRank": 46,
-      "sameScoreRank": 11,
+      "overallRank": 47,
+      "sameScoreRank": 12,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -1353,8 +1383,8 @@
       "year": 1995,
       "score": 93,
       "star": 4.5,
-      "overallRank": 47,
-      "sameScoreRank": 12,
+      "overallRank": 48,
+      "sameScoreRank": 13,
       "category": "スタジオジブリ系作品",
       "mediaType": "other",
       "genre": [
@@ -1371,36 +1401,6 @@
       "runtime": null,
       "exact": true,
       "letterboxdAddedDate": "2026-03-31",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "lb-493-28No",
-      "title": "パンズ・ラビリンス",
-      "originalTitle": "El laberinto del fauno",
-      "englishTitle": "Pan's Labyrinth",
-      "year": 2006,
-      "score": 93,
-      "star": 4.5,
-      "overallRank": 48,
-      "sameScoreRank": 13,
-      "category": "戦争、歴史",
-      "mediaType": "movie",
-      "genre": [
-        "戦争",
-        "歴史",
-        "切ない",
-        "胸糞",
-        "差別・人権",
-        "心理・内面",
-        "雰囲気・美学",
-        "ファンタジー"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 119,
-      "exact": true,
-      "letterboxdAddedDate": "2026-08-13",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -23390,12 +23390,12 @@
         "custom-1791919172943-3ibi",
         "lb-333-2b4m",
         "lb-116-1YYc",
+        "lb-493-28No",
         "lb-2-2a9q",
         "lb-332-28MA",
         "lb-24-2aHi",
         "lb-487-28JG",
         "lb-459-1Vgm",
-        "lb-493-28No",
         "custom-1791664054514-pksv"
       ],
       "94": [
