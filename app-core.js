@@ -7146,7 +7146,7 @@ renderRank();const marker=document.getElementById('movie30BuildV29');if(marker)m
     +'<div class="v77-actions"><button class="btn" id="memoCancel77">キャンセル</button><button class="btn active" id="memoSave77">保存</button></div>'
     +'</div>';
   document.body.appendChild(backdrop);
-  let editingId=null;
+  let editingId=null,editingOriginal='';
   const fullText=document.getElementById('memoFull77');
   function dismiss(){backdrop.classList.remove('open');editingId=null;fullText.blur();}
   function launch(id){
@@ -7154,6 +7154,7 @@ renderRank();const marker=document.getElementById('movie30BuildV29');if(marker)m
     editingId=id;
     document.getElementById('memoTitle77').textContent=displayTitle(f)+' — レビュー全文';
     fullText.value=String(state.letterboxdMeta?.[id]?.note||'');
+    editingOriginal=fullText.value;
     backdrop.classList.add('open');
   }
   document.getElementById('memoCancel77').onclick=dismiss;
@@ -7163,6 +7164,12 @@ renderRank();const marker=document.getElementById('movie30BuildV29');if(marker)m
     state.letterboxdMeta=state.letterboxdMeta||{};
     const v=fullText.value;
     const prev=state.letterboxdMeta[editingId]||{};
+    // Textareas normalize CRLF. An unchanged editor must not mark an RSS review manual,
+    // or overwrite a newer note that arrived while the editor was open.
+    const sameText=(a,b)=>String(a??'').replace(/\r\n?/g,'\n')===String(b??'').replace(/\r\n?/g,'\n');
+    if(sameText(v,editingOriginal)||sameText(v,prev.note)){
+      dismiss();toast('レビューに変更はありません');return;
+    }
     state.letterboxdMeta[editingId]={...prev,note:v,noteSource:'manual',noteEditedAt:new Date().toISOString()};
     save();
     const box=document.getElementById('note66');
@@ -7623,11 +7630,19 @@ renderRank();const marker=document.getElementById('movie30BuildV29');if(marker)m
       if(seen.has(guid))continue;
       seen.add(guid);
       const id=f.id,m=state.letterboxdMeta[id]||{};
-      if(m.noteSource==='manual'){manual++;continue;}
       const previous=String(m.note||'');
       const register=m.rssReviewRecords&&typeof m.rssReviewRecords==='object'
         ?{...m.rssReviewRecords}:{};
       const old=register[guid];
+      if(m.noteSource==='manual'){
+        // Only a whole-note match proves there are no independent in-app edits.
+        // Matching a substring would discard edits to other rewatch reviews or notes.
+        if(typeof old?.body!=='string'||!(previous===old.body||old.block&&previous===old.block)){
+          manual++;continue;
+        }
+        m.noteSource='letterboxd-rss';
+        delete m.noteEditedAt;
+      }
       if(old?.body===body){already++;continue;}
       const date=raw.watchedDate||'日付未設定';
       const block='【'+date+(raw.reviewRewatch==='Yes'?'・再鑑賞':'・Letterboxd RSS')+'】\n'+body;
@@ -7638,8 +7653,9 @@ renderRank();const marker=document.getElementById('movie30BuildV29');if(marker)m
         register[guid]={body,block:body};
       }else if(old && typeof old.body==='string'){
         // Update an identifiable previous RSS block, never overwrite text edited in-app.
-        if(old.block && previous.includes(old.block)){
-          next=previous.replace(old.block,old.block===old.body&&previous===old.block?body:block);
+        if(previous===old.body || old.block && previous.includes(old.block)){
+          const oldBlock=previous===old.body?old.body:old.block;
+          next=previous.replace(oldBlock,()=>previous===old.body?body:block);
           change='updated';
           register[guid]={body,block:next===body?body:block};
         }else{
