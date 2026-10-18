@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792321692104,
-  "sourceUpdatedIso": "2026-10-18T11:08:12.104Z",
+  "sourceUpdatedAt": 1792321702054,
+  "sourceUpdatedIso": "2026-10-18T11:08:22.054Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -1907,6 +1907,35 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "custom-1791057232858-35ld",
+      "title": "サウンド・オブ・メタル ～聞こえるということ～",
+      "originalTitle": "Sound of Metal",
+      "englishTitle": "Sound of Metal",
+      "year": 2020,
+      "score": 91,
+      "star": 4,
+      "overallRank": 67,
+      "sameScoreRank": 5,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "ミュージカル",
+        "心理・内面",
+        "社会問題・生活",
+        "恋愛",
+        "特殊構造",
+        "哲学・思想"
+      ],
+      "origin": "その他",
+      "format": "live",
+      "runtime": 121,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-04",
+      "letterboxdPublishedAt": "Sun, 4 Oct 2026 07:37:58 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-04"
+    },
+    {
       "id": "lb-558-1pDe",
       "title": "愛のむきだし",
       "originalTitle": "",
@@ -1914,8 +1943,8 @@
       "year": 2008,
       "score": 91,
       "star": 4,
-      "overallRank": 67,
-      "sameScoreRank": 5,
+      "overallRank": 68,
+      "sameScoreRank": 6,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -1948,8 +1977,8 @@
       "year": 2013,
       "score": 91,
       "star": 4,
-      "overallRank": 68,
-      "sameScoreRank": 6,
+      "overallRank": 69,
+      "sameScoreRank": 7,
       "category": "ほかアニメ",
       "mediaType": "drama",
       "genre": [
@@ -1985,8 +2014,8 @@
       "year": 1989,
       "score": 91,
       "star": 4,
-      "overallRank": 69,
-      "sameScoreRank": 7,
+      "overallRank": 70,
+      "sameScoreRank": 8,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
       "genre": [
@@ -2015,8 +2044,8 @@
       "year": 1985,
       "score": 91,
       "star": 4,
-      "overallRank": 70,
-      "sameScoreRank": 8,
+      "overallRank": 71,
+      "sameScoreRank": 9,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -2039,35 +2068,6 @@
       "letterboxdAddedDate": null,
       "letterboxdPublishedAt": "Sat, 3 Oct 2026 04:45:22 +1300",
       "letterboxdReportedWatchedDate": "2026-10-02"
-    },
-    {
-      "id": "custom-1791057232858-35ld",
-      "title": "サウンド・オブ・メタル ～聞こえるということ～",
-      "originalTitle": "Sound of Metal",
-      "englishTitle": "Sound of Metal",
-      "year": 2020,
-      "score": 91,
-      "star": 4,
-      "overallRank": 71,
-      "sameScoreRank": 9,
-      "category": "Letterboxd",
-      "mediaType": "movie",
-      "genre": [
-        "ドラマ",
-        "ミュージカル",
-        "心理・内面",
-        "社会問題・生活",
-        "恋愛",
-        "特殊構造",
-        "哲学・思想"
-      ],
-      "origin": "その他",
-      "format": "live",
-      "runtime": 121,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-04",
-      "letterboxdPublishedAt": "Sun, 4 Oct 2026 07:37:58 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-04"
     },
     {
       "id": "lb-66-2aq2",
@@ -23359,11 +23359,11 @@
         "lb-41-cjr4",
         "lb-559-abBm",
         "lb-301-2a2a",
+        "custom-1791057232858-35ld",
         "lb-558-1pDe",
         "custom-1791966534875-2yiz",
         "lb-461-1JAY",
         "custom-1790960881562-cn74",
-        "custom-1791057232858-35ld",
         "lb-66-2aq2",
         "lb-44-2bf0",
         "lb-90-71Y"
