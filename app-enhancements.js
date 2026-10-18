@@ -657,8 +657,8 @@ function refreshPosters(){
   const src=posterFor(selectedId,'w342');
   if(src&&img.getAttribute('src')!==src)img.src=src;
   if(!img.hasAttribute('tabindex'))img.tabIndex=0;
-  img.setAttribute('role','button');
-  img.setAttribute('aria-label','ポスターを大きく表示');
+  if(img.getAttribute('role')!=='button')img.setAttribute('role','button');
+  if(img.getAttribute('aria-label')!=='ポスターを大きく表示')img.setAttribute('aria-label','ポスターを大きく表示');
   if(!detail.querySelector('.movie90-expand-note')){
    const note=document.createElement('small');note.className='movie90-expand-note';
    note.textContent='ポスターをタップして拡大表示';
