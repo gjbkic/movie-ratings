@@ -22,5 +22,28 @@ function castNames(id,query,namesForFilm,fold){
  return !!needle&&namesForFilm(id).some(name=>fold(name).includes(needle));
 }
 function taxonomyLabel(query,label){return label.toLowerCase().includes(String(query).toLowerCase());}
-window.Movie30SearchQueries=Object.freeze({structuredMatch,crew,directorAliases,catalogLabels,castNames,taxonomyLabel});
+function catalogCredits(q,r,allNames){
+ if(!q)return true;
+ const fold=v=>String(v||'').normalize('NFKC').toLowerCase().replace(/[^\p{L}\p{N}]/gu,'');
+ const needle=fold(q.trim());
+ const aliases={
+  christophernolan:['クリストファーノーラン','ノーラン'],
+  bongjoonho:['ポンジュノ'],
+  hayaomiyazaki:['宮崎駿'],
+  satoshikon:['今敏'],
+  davidfincher:['デヴィッドフィンチャー','デビッドフィンチャー'],
+  stanleykubrick:['スタンリーキューブリック'],
+  akirakurosawa:['黒澤明','黒沢明'],
+  hirokazukoreeda:['是枝裕和'],
+  wesanderson:['ウェスアンダーソン'],
+  davidlynch:['デヴィッドリンチ'],
+  martinscorsese:['マーティンスコセッシ'],
+  stevenspielberg:['スティーヴンスピルバーグ','スティーブンスピルバーグ']
+ };
+ return !!r&&allNames(r).some(name=>{
+  const key=fold(name);
+  return key.includes(needle)||(aliases[key]||[]).some(alias=>fold(alias).includes(needle));
+ });
+}
+window.Movie30SearchQueries=Object.freeze({structuredMatch,crew,directorAliases,catalogLabels,castNames,taxonomyLabel,catalogCredits});
 })();
