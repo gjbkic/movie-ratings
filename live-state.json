@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792320428014,
-  "sourceUpdatedIso": "2026-10-18T10:47:08.014Z",
+  "sourceUpdatedAt": 1792320540198,
+  "sourceUpdatedIso": "2026-10-18T10:49:00.198Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -1423,10 +1423,10 @@
       "originalTitle": "",
       "englishTitle": "Weathering with You",
       "year": 2019,
-      "score": 93,
-      "star": 4.5,
+      "score": 92,
+      "star": 4,
       "overallRank": 50,
-      "sameScoreRank": 16,
+      "sameScoreRank": 1,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -1452,10 +1452,10 @@
       "originalTitle": "",
       "englishTitle": "Gladiator",
       "year": 2000,
-      "score": 93,
-      "star": 4.5,
+      "score": 92,
+      "star": 4,
       "overallRank": 51,
-      "sameScoreRank": 17,
+      "sameScoreRank": 2,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -1482,7 +1482,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 52,
-      "sameScoreRank": 1,
+      "sameScoreRank": 3,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -1511,7 +1511,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 53,
-      "sameScoreRank": 2,
+      "sameScoreRank": 4,
       "category": "戦争、歴史",
       "mediaType": "movie",
       "genre": [
@@ -1541,7 +1541,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 54,
-      "sameScoreRank": 3,
+      "sameScoreRank": 5,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -1570,7 +1570,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 55,
-      "sameScoreRank": 4,
+      "sameScoreRank": 6,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -1599,7 +1599,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 56,
-      "sameScoreRank": 5,
+      "sameScoreRank": 7,
       "category": "戦争、歴史",
       "mediaType": "movie",
       "genre": [
@@ -1629,7 +1629,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 57,
-      "sameScoreRank": 6,
+      "sameScoreRank": 8,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -1663,7 +1663,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 58,
-      "sameScoreRank": 7,
+      "sameScoreRank": 9,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -1689,7 +1689,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 59,
-      "sameScoreRank": 8,
+      "sameScoreRank": 10,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -1716,7 +1716,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 60,
-      "sameScoreRank": 9,
+      "sameScoreRank": 11,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -1742,7 +1742,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 61,
-      "sameScoreRank": 10,
+      "sameScoreRank": 12,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -1773,7 +1773,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 62,
-      "sameScoreRank": 11,
+      "sameScoreRank": 13,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -21885,9 +21885,9 @@
       "lb-323-1VEo": 93,
       "lb-332-28MA": 93,
       "lb-86-cUqs": 93,
-      "lb-308-kPxE": 93,
+      "lb-308-kPxE": 92,
       "lb-459-1Vgm": 93,
-      "lb-556-2b9m": 93,
+      "lb-556-2b9m": 92,
       "lb-493-28No": 92,
       "lb-486-b8wK": 92,
       "lb-549-iEBG": 94,
@@ -23368,6 +23368,8 @@
         "lb-3-a5fa"
       ],
       "92": [
+        "lb-308-kPxE",
+        "lb-556-2b9m",
         "lb-116-1YYc",
         "lb-564-29Wm",
         "added-anchor-577",
@@ -23395,9 +23397,7 @@
         "custom-1791664054514-pksv",
         "lb-86-cUqs",
         "custom-1790185844116-j1vu",
-        "lb-571-28qk",
-        "lb-308-kPxE",
-        "lb-556-2b9m"
+        "lb-571-28qk"
       ],
       "94": [
         "lb-488-294O",
@@ -26736,9 +26736,9 @@
       "lb-323-1VEo": 4.5,
       "lb-332-28MA": 4.5,
       "lb-86-cUqs": 4.5,
-      "lb-308-kPxE": 4.5,
+      "lb-308-kPxE": 4,
       "lb-459-1Vgm": 4.5,
-      "lb-556-2b9m": 4.5,
+      "lb-556-2b9m": 4,
       "lb-493-28No": 4,
       "lb-486-b8wK": 4,
       "lb-549-iEBG": 4.5,
