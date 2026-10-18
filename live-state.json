@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792343675709,
-  "sourceUpdatedIso": "2026-10-18T17:14:35.709Z",
+  "sourceUpdatedAt": 1792343688797,
+  "sourceUpdatedIso": "2026-10-18T17:14:48.797Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -1647,6 +1647,32 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-178-29XE",
+      "title": "ユージュアル・サスペクツ",
+      "originalTitle": "",
+      "englishTitle": "The Usual Suspects",
+      "year": 1995,
+      "score": 92,
+      "star": 4,
+      "overallRank": 57,
+      "sameScoreRank": 10,
+      "category": "サスペンス、ミステリー",
+      "mediaType": "movie",
+      "genre": [
+        "サスペンス",
+        "ミステリー",
+        "どんでん返し",
+        "クライム"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 105,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-86-cUqs",
       "title": "君の名は。",
       "originalTitle": "",
@@ -1654,8 +1680,8 @@
       "year": 2016,
       "score": 92,
       "star": 4,
-      "overallRank": 57,
-      "sameScoreRank": 10,
+      "overallRank": 58,
+      "sameScoreRank": 11,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -1671,32 +1697,6 @@
       "origin": "日本",
       "format": "animation",
       "runtime": 107,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "lb-178-29XE",
-      "title": "ユージュアル・サスペクツ",
-      "originalTitle": "",
-      "englishTitle": "The Usual Suspects",
-      "year": 1995,
-      "score": 92,
-      "star": 4,
-      "overallRank": 58,
-      "sameScoreRank": 11,
-      "category": "サスペンス、ミステリー",
-      "mediaType": "movie",
-      "genre": [
-        "サスペンス",
-        "ミステリー",
-        "どんでん返し",
-        "クライム"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 105,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
@@ -1731,10 +1731,10 @@
       "originalTitle": "",
       "englishTitle": "The Prestige",
       "year": 2006,
-      "score": 91,
+      "score": 92,
       "star": 4,
       "overallRank": 60,
-      "sameScoreRank": 1,
+      "sameScoreRank": 13,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -1762,7 +1762,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 61,
-      "sameScoreRank": 2,
+      "sameScoreRank": 1,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -1790,7 +1790,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 62,
-      "sameScoreRank": 3,
+      "sameScoreRank": 2,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -1816,7 +1816,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 63,
-      "sameScoreRank": 4,
+      "sameScoreRank": 3,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -1840,7 +1840,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 64,
-      "sameScoreRank": 5,
+      "sameScoreRank": 4,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -1874,7 +1874,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 65,
-      "sameScoreRank": 6,
+      "sameScoreRank": 5,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -1901,7 +1901,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 66,
-      "sameScoreRank": 7,
+      "sameScoreRank": 6,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -1930,7 +1930,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 67,
-      "sameScoreRank": 8,
+      "sameScoreRank": 7,
       "category": "Letterboxd",
       "mediaType": "other",
       "genre": [],
@@ -1951,7 +1951,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 68,
-      "sameScoreRank": 9,
+      "sameScoreRank": 8,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -1978,7 +1978,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 69,
-      "sameScoreRank": 10,
+      "sameScoreRank": 9,
       "category": "ほかアニメ",
       "mediaType": "drama",
       "genre": [
@@ -2015,7 +2015,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 70,
-      "sameScoreRank": 11,
+      "sameScoreRank": 10,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
       "genre": [
@@ -2045,7 +2045,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 71,
-      "sameScoreRank": 12,
+      "sameScoreRank": 11,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -2078,7 +2078,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 72,
-      "sameScoreRank": 13,
+      "sameScoreRank": 12,
       "category": "戦争、歴史",
       "mediaType": "movie",
       "genre": [
@@ -2107,7 +2107,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 73,
-      "sameScoreRank": 14,
+      "sameScoreRank": 13,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -2137,7 +2137,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 74,
-      "sameScoreRank": 15,
+      "sameScoreRank": 14,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -21894,7 +21894,7 @@
       "added-anchor-578": 92,
       "added-anchor-577": 93,
       "lb-564-29Wm": 94,
-      "lb-58-293w": 91,
+      "lb-58-293w": 92,
       "lb-378-26E0": 92,
       "lb-178-29XE": 92,
       "lb-262-29Du": 92,
@@ -23355,7 +23355,6 @@
         "lb-526-4JQI"
       ],
       "91": [
-        "lb-58-293w",
         "lb-301-2a2a",
         "lb-559-abBm",
         "lb-571-28qk",
@@ -23381,9 +23380,10 @@
         "lb-459-1Vgm",
         "lb-486-b8wK",
         "custom-1791966715148-h5tp",
-        "lb-86-cUqs",
         "lb-178-29XE",
-        "custom-1791664054514-pksv"
+        "lb-86-cUqs",
+        "custom-1791664054514-pksv",
+        "lb-58-293w"
       ],
       "93": [
         "lb-493-28No",
