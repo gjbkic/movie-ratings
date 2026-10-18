@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792343643915,
-  "sourceUpdatedIso": "2026-10-18T17:14:03.915Z",
+  "sourceUpdatedAt": 1792343675709,
+  "sourceUpdatedIso": "2026-10-18T17:14:35.709Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -1726,33 +1726,6 @@
       "letterboxdReportedWatchedDate": "2026-10-11"
     },
     {
-      "id": "lb-556-2b9m",
-      "title": "グラディエーター",
-      "originalTitle": "",
-      "englishTitle": "Gladiator",
-      "year": 2000,
-      "score": 92,
-      "star": 4,
-      "overallRank": 60,
-      "sameScoreRank": 13,
-      "category": "アクション",
-      "mediaType": "movie",
-      "genre": [
-        "アクション",
-        "戦争",
-        "歴史",
-        "感動",
-        "心理・内面"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 155,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-58-293w",
       "title": "プレステージ",
       "originalTitle": "",
@@ -1760,7 +1733,7 @@
       "year": 2006,
       "score": 91,
       "star": 4,
-      "overallRank": 61,
+      "overallRank": 60,
       "sameScoreRank": 1,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
@@ -1788,7 +1761,7 @@
       "year": 2002,
       "score": 91,
       "star": 4,
-      "overallRank": 62,
+      "overallRank": 61,
       "sameScoreRank": 2,
       "category": "マフィア、クライム",
       "mediaType": "movie",
@@ -1816,7 +1789,7 @@
       "year": 2015,
       "score": 91,
       "star": 4,
-      "overallRank": 63,
+      "overallRank": 62,
       "sameScoreRank": 3,
       "category": "邦画",
       "mediaType": "movie",
@@ -1842,7 +1815,7 @@
       "year": 1994,
       "score": 91,
       "star": 4,
-      "overallRank": 64,
+      "overallRank": 63,
       "sameScoreRank": 4,
       "category": "アクション",
       "mediaType": "movie",
@@ -1866,7 +1839,7 @@
       "year": 2008,
       "score": 91,
       "star": 4,
-      "overallRank": 65,
+      "overallRank": 64,
       "sameScoreRank": 5,
       "category": "邦画",
       "mediaType": "movie",
@@ -1893,6 +1866,33 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-556-2b9m",
+      "title": "グラディエーター",
+      "originalTitle": "",
+      "englishTitle": "Gladiator",
+      "year": 2000,
+      "score": 91,
+      "star": 4,
+      "overallRank": 65,
+      "sameScoreRank": 6,
+      "category": "アクション",
+      "mediaType": "movie",
+      "genre": [
+        "アクション",
+        "戦争",
+        "歴史",
+        "感動",
+        "心理・内面"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 155,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-308-kPxE",
       "title": "天気の子",
       "originalTitle": "",
@@ -1901,7 +1901,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 66,
-      "sameScoreRank": 6,
+      "sameScoreRank": 7,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -1930,7 +1930,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 67,
-      "sameScoreRank": 7,
+      "sameScoreRank": 8,
       "category": "Letterboxd",
       "mediaType": "other",
       "genre": [],
@@ -1951,7 +1951,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 68,
-      "sameScoreRank": 8,
+      "sameScoreRank": 9,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -1978,7 +1978,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 69,
-      "sameScoreRank": 9,
+      "sameScoreRank": 10,
       "category": "ほかアニメ",
       "mediaType": "drama",
       "genre": [
@@ -2015,7 +2015,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 70,
-      "sameScoreRank": 10,
+      "sameScoreRank": 11,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
       "genre": [
@@ -2045,7 +2045,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 71,
-      "sameScoreRank": 11,
+      "sameScoreRank": 12,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -2078,7 +2078,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 72,
-      "sameScoreRank": 12,
+      "sameScoreRank": 13,
       "category": "戦争、歴史",
       "mediaType": "movie",
       "genre": [
@@ -2107,7 +2107,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 73,
-      "sameScoreRank": 13,
+      "sameScoreRank": 14,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -2137,7 +2137,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 74,
-      "sameScoreRank": 14,
+      "sameScoreRank": 15,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -21887,7 +21887,7 @@
       "lb-86-cUqs": 92,
       "lb-308-kPxE": 91,
       "lb-459-1Vgm": 92,
-      "lb-556-2b9m": 92,
+      "lb-556-2b9m": 91,
       "lb-493-28No": 93,
       "lb-486-b8wK": 92,
       "lb-549-iEBG": 94,
@@ -23360,6 +23360,7 @@
         "lb-559-abBm",
         "lb-571-28qk",
         "lb-558-1pDe",
+        "lb-556-2b9m",
         "lb-308-kPxE",
         "custom-1790185844116-j1vu",
         "lb-41-cjr4",
@@ -23382,8 +23383,7 @@
         "custom-1791966715148-h5tp",
         "lb-86-cUqs",
         "lb-178-29XE",
-        "custom-1791664054514-pksv",
-        "lb-556-2b9m"
+        "custom-1791664054514-pksv"
       ],
       "93": [
         "lb-493-28No",
