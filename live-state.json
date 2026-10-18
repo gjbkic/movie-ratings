@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792320738880,
-  "sourceUpdatedIso": "2026-10-18T10:52:18.880Z",
+  "sourceUpdatedAt": 1792320760417,
+  "sourceUpdatedIso": "2026-10-18T10:52:40.417Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -1580,6 +1580,33 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "custom-1792318978542-vitq",
+      "title": "別離",
+      "originalTitle": "جدایی نادر از سیمین",
+      "englishTitle": "A Separation",
+      "year": 2011,
+      "score": 92,
+      "star": 4,
+      "overallRank": 55,
+      "sameScoreRank": 8,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "雰囲気・美学",
+        "心理・内面",
+        "哲学・思想",
+        "社会問題・生活"
+      ],
+      "origin": "その他",
+      "format": "live",
+      "runtime": 123,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-18",
+      "letterboxdPublishedAt": "Sun, 18 Oct 2026 22:00:18 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-18"
+    },
+    {
       "id": "lb-262-29Du",
       "title": "ガタカ",
       "originalTitle": "",
@@ -1587,8 +1614,8 @@
       "year": 1997,
       "score": 92,
       "star": 4,
-      "overallRank": 55,
-      "sameScoreRank": 8,
+      "overallRank": 56,
+      "sameScoreRank": 9,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -1611,33 +1638,6 @@
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "custom-1792318978542-vitq",
-      "title": "別離",
-      "originalTitle": "جدایی نادر از سیمین",
-      "englishTitle": "A Separation",
-      "year": 2011,
-      "score": 92,
-      "star": 4,
-      "overallRank": 56,
-      "sameScoreRank": 9,
-      "category": "Letterboxd",
-      "mediaType": "movie",
-      "genre": [
-        "ドラマ",
-        "雰囲気・美学",
-        "心理・内面",
-        "哲学・思想",
-        "社会問題・生活"
-      ],
-      "origin": "その他",
-      "format": "live",
-      "runtime": 123,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-18",
-      "letterboxdPublishedAt": "Sun, 18 Oct 2026 22:00:18 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-18"
     },
     {
       "id": "lb-486-b8wK",
@@ -23375,8 +23375,8 @@
         "lb-493-28No",
         "custom-1790254612541-iyij",
         "added-anchor-578",
-        "lb-262-29Du",
         "custom-1792318978542-vitq",
+        "lb-262-29Du",
         "lb-486-b8wK",
         "lb-178-29XE",
         "custom-1790185844116-j1vu",
