@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792319120595,
-  "sourceUpdatedIso": "2026-10-18T10:25:20.595Z",
+  "sourceUpdatedAt": 1792319129858,
+  "sourceUpdatedIso": "2026-10-18T10:25:29.858Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -1591,32 +1591,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-178-29XE",
-      "title": "ユージュアル・サスペクツ",
-      "originalTitle": "",
-      "englishTitle": "The Usual Suspects",
-      "year": 1995,
-      "score": 92,
-      "star": 4,
-      "overallRank": 56,
-      "sameScoreRank": 6,
-      "category": "サスペンス、ミステリー",
-      "mediaType": "movie",
-      "genre": [
-        "サスペンス",
-        "ミステリー",
-        "どんでん返し",
-        "クライム"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 105,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-493-28No",
       "title": "パンズ・ラビリンス",
       "originalTitle": "El laberinto del fauno",
@@ -1624,8 +1598,8 @@
       "year": 2006,
       "score": 92,
       "star": 4,
-      "overallRank": 57,
-      "sameScoreRank": 7,
+      "overallRank": 56,
+      "sameScoreRank": 6,
       "category": "戦争、歴史",
       "mediaType": "movie",
       "genre": [
@@ -1654,8 +1628,8 @@
       "year": 1985,
       "score": 92,
       "star": 4,
-      "overallRank": 58,
-      "sameScoreRank": 8,
+      "overallRank": 57,
+      "sameScoreRank": 7,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -1688,8 +1662,8 @@
       "year": 2012,
       "score": 92,
       "star": 4,
-      "overallRank": 59,
-      "sameScoreRank": 9,
+      "overallRank": 58,
+      "sameScoreRank": 8,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -1714,8 +1688,8 @@
       "year": 2011,
       "score": 92,
       "star": 4,
-      "overallRank": 60,
-      "sameScoreRank": 10,
+      "overallRank": 59,
+      "sameScoreRank": 9,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -1734,15 +1708,41 @@
       "letterboxdReportedWatchedDate": "2026-10-18"
     },
     {
+      "id": "lb-178-29XE",
+      "title": "ユージュアル・サスペクツ",
+      "originalTitle": "",
+      "englishTitle": "The Usual Suspects",
+      "year": 1995,
+      "score": 92,
+      "star": 4,
+      "overallRank": 60,
+      "sameScoreRank": 10,
+      "category": "サスペンス、ミステリー",
+      "mediaType": "movie",
+      "genre": [
+        "サスペンス",
+        "ミステリー",
+        "どんでん返し",
+        "クライム"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 105,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-58-293w",
       "title": "プレステージ",
       "originalTitle": "",
       "englishTitle": "The Prestige",
       "year": 2006,
-      "score": 92,
+      "score": 91,
       "star": 4,
       "overallRank": 61,
-      "sameScoreRank": 11,
+      "sameScoreRank": 1,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -1770,7 +1770,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 62,
-      "sameScoreRank": 1,
+      "sameScoreRank": 2,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -1801,7 +1801,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 63,
-      "sameScoreRank": 2,
+      "sameScoreRank": 3,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -1834,7 +1834,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 64,
-      "sameScoreRank": 3,
+      "sameScoreRank": 4,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -1861,7 +1861,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 65,
-      "sameScoreRank": 4,
+      "sameScoreRank": 5,
       "category": "ほかアニメ",
       "mediaType": "drama",
       "genre": [
@@ -1898,7 +1898,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 66,
-      "sameScoreRank": 5,
+      "sameScoreRank": 6,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -1924,7 +1924,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 67,
-      "sameScoreRank": 6,
+      "sameScoreRank": 7,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
       "genre": [
@@ -1954,7 +1954,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 68,
-      "sameScoreRank": 7,
+      "sameScoreRank": 8,
       "category": "コメディ",
       "mediaType": "drama",
       "genre": [
@@ -1983,7 +1983,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 69,
-      "sameScoreRank": 8,
+      "sameScoreRank": 9,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -2017,7 +2017,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 70,
-      "sameScoreRank": 9,
+      "sameScoreRank": 10,
       "category": "スターウォーズシリーズ",
       "mediaType": "movie",
       "genre": [
@@ -2046,7 +2046,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 71,
-      "sameScoreRank": 10,
+      "sameScoreRank": 11,
       "category": "Letterboxd追加",
       "mediaType": "movie",
       "genre": [
@@ -2074,7 +2074,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 72,
-      "sameScoreRank": 11,
+      "sameScoreRank": 12,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -2101,7 +2101,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 73,
-      "sameScoreRank": 12,
+      "sameScoreRank": 13,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -2134,7 +2134,7 @@
       "score": 91,
       "star": 4,
       "overallRank": 74,
-      "sameScoreRank": 13,
+      "sameScoreRank": 14,
       "category": "恋愛、ミュージカル",
       "mediaType": "movie",
       "genre": [
@@ -21894,7 +21894,7 @@
       "added-anchor-578": 92,
       "added-anchor-577": 92,
       "lb-564-29Wm": 92,
-      "lb-58-293w": 92,
+      "lb-58-293w": 91,
       "lb-378-26E0": 92,
       "lb-178-29XE": 92,
       "lb-262-29Du": 91,
@@ -23353,6 +23353,7 @@
         "lb-321-2aNK"
       ],
       "91": [
+        "lb-58-293w",
         "lb-486-b8wK",
         "lb-262-29Du",
         "lb-41-cjr4",
@@ -23373,12 +23374,11 @@
         "lb-564-29Wm",
         "added-anchor-577",
         "lb-378-26E0",
-        "lb-178-29XE",
         "lb-493-28No",
         "custom-1790254612541-iyij",
         "added-anchor-578",
         "custom-1792318978542-vitq",
-        "lb-58-293w"
+        "lb-178-29XE"
       ],
       "93": [
         "custom-1790458138074-p8hs",
