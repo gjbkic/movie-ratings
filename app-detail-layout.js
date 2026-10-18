@@ -130,6 +130,9 @@
   function setPlainText(node,value){
     if(node.textContent!==value||node.childNodes.length!==1||node.firstChild?.nodeType!==3)node.textContent=value;
   }
+  function setHidden(node,value){
+    if(node.hidden!==value)node.hidden=value;
+  }
   function tidy(id){
     if(selectedId!==id)return;
     const f=filmById(id);if(!f)return;
@@ -149,7 +152,7 @@
         if(old.length>=4){
           old[0].remove();old[3].remove(); // Duplicate score and duplicate runtime.
         }
-        stats.hidden=score==null;
+        setHidden(stats,score==null);
         if(score==null)stats.style.display='none';else stats.style.display='';
         const rank=score!=null?ranks(f):null;
         const cells=[...stats.querySelectorAll('.v66-stat')];
@@ -162,7 +165,7 @@
       }
       const near=detail.querySelector('.v66-nei');if(near)near.remove();
       const jump=detail.querySelector('#detailJump66');
-      if(jump)jump.hidden=score==null;
+      if(jump)setHidden(jump,score==null);
       const tip=detail.querySelector('.tip');
       if(tip){
         const m=state.letterboxdMeta?.[id]||{};
@@ -170,13 +173,13 @@
         if(m.reportedWatchedDate)bits.push('鑑賞日：'+m.reportedWatchedDate);
         if(m.addedDate)bits.push('Letterboxd追加：'+m.addedDate);
         setPlainText(tip,bits.join(' · '));
-        tip.hidden=!bits.length;
+        setHidden(tip,!bits.length);
       }
     }
     const director=document.getElementById('getDirector84');
-    if(director)director.hidden=true;
+    if(director)setHidden(director,true);
     const dstatus=document.getElementById('directorStatus84');
-    if(dstatus)dstatus.hidden=true;
+    if(dstatus)setHidden(dstatus,true);
     preview();
   }
 
