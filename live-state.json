@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792319089807,
-  "sourceUpdatedIso": "2026-10-18T10:24:49.807Z",
+  "sourceUpdatedAt": 1792319099111,
+  "sourceUpdatedIso": "2026-10-18T10:24:59.111Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -1675,32 +1675,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "added-anchor-578",
-      "title": "偽りなき者",
-      "originalTitle": "Jagten",
-      "englishTitle": "The Hunt",
-      "year": 2012,
-      "score": 92,
-      "star": 4,
-      "overallRank": 59,
-      "sameScoreRank": 9,
-      "category": "ドラマ",
-      "mediaType": "movie",
-      "genre": [
-        "ドラマ",
-        "社会問題・生活",
-        "心理・内面",
-        "差別・人権"
-      ],
-      "origin": "その他",
-      "format": "live",
-      "runtime": 116,
-      "exact": true,
-      "letterboxdAddedDate": "2026-09-12",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "custom-1790254612541-iyij",
       "title": "未来世紀ブラジル",
       "originalTitle": "Brazil",
@@ -1708,8 +1682,8 @@
       "year": 1985,
       "score": 92,
       "star": 4,
-      "overallRank": 60,
-      "sameScoreRank": 10,
+      "overallRank": 59,
+      "sameScoreRank": 9,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -1731,6 +1705,32 @@
       "runtime": 143,
       "exact": true,
       "letterboxdAddedDate": "2026-09-25",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "added-anchor-578",
+      "title": "偽りなき者",
+      "originalTitle": "Jagten",
+      "englishTitle": "The Hunt",
+      "year": 2012,
+      "score": 92,
+      "star": 4,
+      "overallRank": 60,
+      "sameScoreRank": 10,
+      "category": "ドラマ",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "社会問題・生活",
+        "心理・内面",
+        "差別・人権"
+      ],
+      "origin": "その他",
+      "format": "live",
+      "runtime": 116,
+      "exact": true,
+      "letterboxdAddedDate": "2026-09-12",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -23376,8 +23376,8 @@
         "lb-58-293w",
         "lb-178-29XE",
         "lb-493-28No",
-        "added-anchor-578",
         "custom-1790254612541-iyij",
+        "added-anchor-578",
         "custom-1792318978542-vitq"
       ],
       "93": [
