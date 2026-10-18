@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792320724149,
-  "sourceUpdatedIso": "2026-10-18T10:52:04.149Z",
+  "sourceUpdatedAt": 1792320738880,
+  "sourceUpdatedIso": "2026-10-18T10:52:18.880Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -1554,6 +1554,32 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "added-anchor-578",
+      "title": "偽りなき者",
+      "originalTitle": "Jagten",
+      "englishTitle": "The Hunt",
+      "year": 2012,
+      "score": 92,
+      "star": 4,
+      "overallRank": 54,
+      "sameScoreRank": 7,
+      "category": "ドラマ",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "社会問題・生活",
+        "心理・内面",
+        "差別・人権"
+      ],
+      "origin": "その他",
+      "format": "live",
+      "runtime": 116,
+      "exact": true,
+      "letterboxdAddedDate": "2026-09-12",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-262-29Du",
       "title": "ガタカ",
       "originalTitle": "",
@@ -1561,8 +1587,8 @@
       "year": 1997,
       "score": 92,
       "star": 4,
-      "overallRank": 54,
-      "sameScoreRank": 7,
+      "overallRank": 55,
+      "sameScoreRank": 8,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -1583,32 +1609,6 @@
       "runtime": 106,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "added-anchor-578",
-      "title": "偽りなき者",
-      "originalTitle": "Jagten",
-      "englishTitle": "The Hunt",
-      "year": 2012,
-      "score": 92,
-      "star": 4,
-      "overallRank": 55,
-      "sameScoreRank": 8,
-      "category": "ドラマ",
-      "mediaType": "movie",
-      "genre": [
-        "ドラマ",
-        "社会問題・生活",
-        "心理・内面",
-        "差別・人権"
-      ],
-      "origin": "その他",
-      "format": "live",
-      "runtime": 116,
-      "exact": true,
-      "letterboxdAddedDate": "2026-09-12",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -23374,8 +23374,8 @@
         "lb-378-26E0",
         "lb-493-28No",
         "custom-1790254612541-iyij",
-        "lb-262-29Du",
         "added-anchor-578",
+        "lb-262-29Du",
         "custom-1792318978542-vitq",
         "lb-486-b8wK",
         "lb-178-29XE",
