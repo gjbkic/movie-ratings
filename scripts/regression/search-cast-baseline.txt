@@ -1,0 +1,4 @@
+  function matchesFilm(id, query) {
+    const needle = fold(query);
+    return !!needle && namesForFilm(id).some(name => fold(name).includes(needle));
+  }

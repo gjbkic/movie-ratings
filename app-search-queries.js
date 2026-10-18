@@ -17,5 +17,9 @@ function catalogLabels(q,rec,norm){
  const needle=norm(q);if(!needle)return false;
  return [...(rec.directorAliases||[]),rec.title||''].some(label=>norm(label).includes(needle));
 }
-window.Movie30SearchQueries=Object.freeze({structuredMatch,crew,directorAliases,catalogLabels});
+function castNames(id,query,namesForFilm,fold){
+ const needle=fold(query);
+ return !!needle&&namesForFilm(id).some(name=>fold(name).includes(needle));
+}
+window.Movie30SearchQueries=Object.freeze({structuredMatch,crew,directorAliases,catalogLabels,castNames});
 })();

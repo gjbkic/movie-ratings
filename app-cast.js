@@ -59,8 +59,7 @@
     return [...new Set(entry.cast.flatMap(p => [p.name, p.originalName]).filter(Boolean))];
   }
   function matchesFilm(id, query) {
-    const needle = fold(query);
-    return !!needle && namesForFilm(id).some(name => fold(name).includes(needle));
+    return window.Movie30SearchQueries.castNames(id,query,namesForFilm,fold);
   }
   const beforeMatch = match;
   match = function(f, q) { return beforeMatch(f, q) || matchesFilm(f.id, q); };
