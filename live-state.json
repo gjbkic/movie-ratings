@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792321218603,
-  "sourceUpdatedIso": "2026-10-18T11:00:18.603Z",
+  "sourceUpdatedAt": 1792321236470,
+  "sourceUpdatedIso": "2026-10-18T11:00:36.470Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -1346,6 +1346,40 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "custom-1790254612541-iyij",
+      "title": "未来世紀ブラジル",
+      "originalTitle": "Brazil",
+      "englishTitle": "Brazil",
+      "year": 1985,
+      "score": 93,
+      "star": 4.5,
+      "overallRank": 47,
+      "sameScoreRank": 12,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "SF",
+        "世界観",
+        "差別・人権",
+        "社会問題・生活",
+        "胸糞",
+        "アクション",
+        "コメディ",
+        "ファンタジー",
+        "恋愛",
+        "どんでん返し",
+        "大作",
+        "雰囲気・美学"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 143,
+      "exact": true,
+      "letterboxdAddedDate": "2026-09-25",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-487-28JG",
       "title": "ヴァージン・スーサイズ",
       "originalTitle": "",
@@ -1353,8 +1387,8 @@
       "year": 1999,
       "score": 93,
       "star": 4.5,
-      "overallRank": 47,
-      "sameScoreRank": 12,
+      "overallRank": 48,
+      "sameScoreRank": 13,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -1383,8 +1417,8 @@
       "year": 2014,
       "score": 93,
       "star": 4.5,
-      "overallRank": 48,
-      "sameScoreRank": 13,
+      "overallRank": 49,
+      "sameScoreRank": 14,
       "category": "Letterboxd",
       "mediaType": "other",
       "genre": [
@@ -1399,40 +1433,6 @@
       "letterboxdReportedWatchedDate": "2026-10-11"
     },
     {
-      "id": "custom-1790254612541-iyij",
-      "title": "未来世紀ブラジル",
-      "originalTitle": "Brazil",
-      "englishTitle": "Brazil",
-      "year": 1985,
-      "score": 92,
-      "star": 4,
-      "overallRank": 49,
-      "sameScoreRank": 1,
-      "category": "Letterboxd",
-      "mediaType": "movie",
-      "genre": [
-        "SF",
-        "世界観",
-        "差別・人権",
-        "社会問題・生活",
-        "胸糞",
-        "アクション",
-        "コメディ",
-        "ファンタジー",
-        "恋愛",
-        "どんでん返し",
-        "大作",
-        "雰囲気・美学"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 143,
-      "exact": true,
-      "letterboxdAddedDate": "2026-09-25",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-378-26E0",
       "title": "誰も知らない",
       "originalTitle": "",
@@ -1441,7 +1441,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 50,
-      "sameScoreRank": 2,
+      "sameScoreRank": 1,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -1470,7 +1470,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 51,
-      "sameScoreRank": 3,
+      "sameScoreRank": 2,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -1496,7 +1496,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 52,
-      "sameScoreRank": 4,
+      "sameScoreRank": 3,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -1523,7 +1523,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 53,
-      "sameScoreRank": 5,
+      "sameScoreRank": 4,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -1556,7 +1556,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 54,
-      "sameScoreRank": 6,
+      "sameScoreRank": 5,
       "category": "スタジオジブリ系作品",
       "mediaType": "other",
       "genre": [
@@ -1585,7 +1585,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 55,
-      "sameScoreRank": 7,
+      "sameScoreRank": 6,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -1616,7 +1616,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 56,
-      "sameScoreRank": 8,
+      "sameScoreRank": 7,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -1646,7 +1646,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 57,
-      "sameScoreRank": 9,
+      "sameScoreRank": 8,
       "category": "ほかアニメ",
       "mediaType": "drama",
       "genre": [
@@ -1679,7 +1679,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 58,
-      "sameScoreRank": 10,
+      "sameScoreRank": 9,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -1705,7 +1705,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 59,
-      "sameScoreRank": 11,
+      "sameScoreRank": 10,
       "category": "Letterboxd",
       "mediaType": "other",
       "genre": [],
@@ -1726,7 +1726,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 60,
-      "sameScoreRank": 12,
+      "sameScoreRank": 11,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -1753,7 +1753,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 61,
-      "sameScoreRank": 13,
+      "sameScoreRank": 12,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -1777,7 +1777,7 @@
       "score": 92,
       "star": 4,
       "overallRank": 62,
-      "sameScoreRank": 14,
+      "sameScoreRank": 13,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -22427,7 +22427,7 @@
       "lb-537-14e8": 64,
       "custom-1790247938551-ixfs": 86,
       "lb-132-aPvy": 88,
-      "custom-1790254612541-iyij": 92,
+      "custom-1790254612541-iyij": 93,
       "lb-545-1vWw": 84,
       "custom-1790269934541-2ps3": 84,
       "lb-450-6dLq": 69,
@@ -23368,7 +23368,6 @@
         "lb-3-a5fa"
       ],
       "92": [
-        "custom-1790254612541-iyij",
         "lb-378-26E0",
         "added-anchor-578",
         "custom-1792318978542-vitq",
@@ -23395,6 +23394,7 @@
         "lb-2-2a9q",
         "lb-332-28MA",
         "lb-24-2aHi",
+        "custom-1790254612541-iyij",
         "lb-487-28JG",
         "custom-1791664054514-pksv"
       ],
@@ -27283,7 +27283,7 @@
       "lb-537-14e8": 1.5,
       "custom-1790247938551-ixfs": 3.5,
       "lb-132-aPvy": 4,
-      "custom-1790254612541-iyij": 4,
+      "custom-1790254612541-iyij": 4.5,
       "custom-1789385860026-8m1d": 3.5,
       "lb-545-1vWw": 3.5,
       "custom-1790269934541-2ps3": 3.5,
