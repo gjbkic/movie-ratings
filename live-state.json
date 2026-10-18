@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792344772885,
-  "sourceUpdatedIso": "2026-10-18T17:32:52.885Z",
+  "sourceUpdatedAt": 1792344788065,
+  "sourceUpdatedIso": "2026-10-18T17:33:08.065Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -1618,6 +1618,34 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-58-293w",
+      "title": "プレステージ",
+      "originalTitle": "",
+      "englishTitle": "The Prestige",
+      "year": 2006,
+      "score": 92,
+      "star": 4,
+      "overallRank": 56,
+      "sameScoreRank": 8,
+      "category": "サスペンス、ミステリー",
+      "mediaType": "movie",
+      "genre": [
+        "サスペンス",
+        "ミステリー",
+        "ファンタジー",
+        "どんでん返し",
+        "心理・内面",
+        "特殊構造"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 130,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-486-b8wK",
       "title": "ブレードランナー 2049",
       "originalTitle": "",
@@ -1625,8 +1653,8 @@
       "year": 2017,
       "score": 92,
       "star": 4,
-      "overallRank": 56,
-      "sameScoreRank": 8,
+      "overallRank": 57,
+      "sameScoreRank": 9,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -1656,8 +1684,8 @@
       "year": 2014,
       "score": 92,
       "star": 4,
-      "overallRank": 57,
-      "sameScoreRank": 9,
+      "overallRank": 58,
+      "sameScoreRank": 10,
       "category": "Letterboxd",
       "mediaType": "other",
       "genre": [
@@ -1679,8 +1707,8 @@
       "year": 2011,
       "score": 92,
       "star": 4,
-      "overallRank": 58,
-      "sameScoreRank": 10,
+      "overallRank": 59,
+      "sameScoreRank": 11,
       "category": "ほかアニメ",
       "mediaType": "drama",
       "genre": [
@@ -1701,34 +1729,6 @@
       "runtime": null,
       "exact": true,
       "letterboxdAddedDate": null,
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "lb-58-293w",
-      "title": "プレステージ",
-      "originalTitle": "",
-      "englishTitle": "The Prestige",
-      "year": 2006,
-      "score": 92,
-      "star": 4,
-      "overallRank": 59,
-      "sameScoreRank": 11,
-      "category": "サスペンス、ミステリー",
-      "mediaType": "movie",
-      "genre": [
-        "サスペンス",
-        "ミステリー",
-        "ファンタジー",
-        "どんでん返し",
-        "心理・内面",
-        "特殊構造"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 130,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -23378,10 +23378,10 @@
         "added-anchor-578",
         "custom-1792318978542-vitq",
         "lb-459-1Vgm",
+        "lb-58-293w",
         "lb-486-b8wK",
         "custom-1791664054514-pksv",
         "custom-1791966715148-h5tp",
-        "lb-58-293w",
         "lb-178-29XE",
         "lb-86-cUqs"
       ],
