@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792406246498,
-  "sourceUpdatedIso": "2026-10-19T10:37:26.498Z",
+  "sourceUpdatedAt": 1792406248382,
+  "sourceUpdatedIso": "2026-10-19T10:37:28.382Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -17342,6 +17342,33 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-225-A7Am",
+      "title": "沈黙のパレード",
+      "originalTitle": "",
+      "englishTitle": "Silent Parade",
+      "year": 2022,
+      "score": 75,
+      "star": 2,
+      "overallRank": 608,
+      "sameScoreRank": 10,
+      "category": "邦画",
+      "mediaType": "movie",
+      "genre": [
+        "切ない",
+        "ドラマ",
+        "サスペンス",
+        "ミステリー",
+        "シリーズ劇場版"
+      ],
+      "origin": "日本",
+      "format": "live",
+      "runtime": 130,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "custom-1791918777504-yyaq",
       "title": "99.9 -刑事専門弁護士-",
       "originalTitle": "99.9 -刑事専門弁護士-",
@@ -17349,8 +17376,8 @@
       "year": 2016,
       "score": 75,
       "star": 2,
-      "overallRank": 608,
-      "sameScoreRank": 10,
+      "overallRank": 609,
+      "sameScoreRank": 11,
       "category": "マフィア、クライム",
       "mediaType": "drama",
       "genre": [
@@ -17376,8 +17403,8 @@
       "year": 2016,
       "score": 75,
       "star": 2,
-      "overallRank": 609,
-      "sameScoreRank": 11,
+      "overallRank": 610,
+      "sameScoreRank": 12,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -17402,8 +17429,8 @@
       "year": 1999,
       "score": 75,
       "star": 2,
-      "overallRank": 610,
-      "sameScoreRank": 12,
+      "overallRank": 611,
+      "sameScoreRank": 13,
       "category": "コメディ",
       "mediaType": "movie",
       "genre": [
@@ -17421,33 +17448,6 @@
       "runtime": 113,
       "exact": false,
       "letterboxdAddedDate": "2025-11-18",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "lb-225-A7Am",
-      "title": "沈黙のパレード",
-      "originalTitle": "",
-      "englishTitle": "Silent Parade",
-      "year": 2022,
-      "score": 75,
-      "star": 2,
-      "overallRank": 611,
-      "sameScoreRank": 13,
-      "category": "邦画",
-      "mediaType": "movie",
-      "genre": [
-        "切ない",
-        "ドラマ",
-        "サスペンス",
-        "ミステリー",
-        "シリーズ劇場版"
-      ],
-      "origin": "日本",
-      "format": "live",
-      "runtime": 130,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -22873,10 +22873,10 @@
         "lb-473-1U2o",
         "lb-68-201Q",
         "lb-359-gxWo",
+        "lb-225-A7Am",
         "custom-1791918777504-yyaq",
         "lb-215-aJ5E",
         "lb-438-2ahu",
-        "lb-225-A7Am",
         "custom-1792406096289-hqs7",
         "lb-433-5xlK",
         "lb-360-v2Wi",
