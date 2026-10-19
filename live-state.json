@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792406478030,
-  "sourceUpdatedIso": "2026-10-19T10:41:18.030Z",
+  "sourceUpdatedAt": 1792406488239,
+  "sourceUpdatedIso": "2026-10-19T10:41:28.239Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -21949,7 +21949,10 @@
       "sameScoreRank": null,
       "category": "サスペンス、ミステリー",
       "mediaType": "tvseries",
-      "genre": "",
+      "genre": [
+        "ファンタジー",
+        "TV本編"
+      ],
       "origin": "",
       "format": "",
       "runtime": null,
@@ -37016,6 +37019,10 @@
         "ミステリー",
         "サスペンス",
         "どんでん返し"
+      ],
+      "custom-1792406406780-xsf3": [
+        "ファンタジー",
+        "TV本編"
       ]
     },
     "originOverrides": {
