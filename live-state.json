@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792417702830,
-  "sourceUpdatedIso": "2026-10-19T13:48:22.830Z",
+  "sourceUpdatedAt": 1792417722262,
+  "sourceUpdatedIso": "2026-10-19T13:48:42.262Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -70424,7 +70424,10 @@
           ],
           "source": "tmdb",
           "fetchedAt": "2026-10-19T13:47:11.355Z"
-        }
+        },
+        "note": "普通に結構好き。回が少ないのが残念。短くてテンポよくてちゃんと面白い。",
+        "noteSource": "manual",
+        "noteEditedAt": "2026-10-19T13:48:42.212Z"
       }
     }
   }
