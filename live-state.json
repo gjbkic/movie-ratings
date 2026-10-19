@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792418465331,
-  "sourceUpdatedIso": "2026-10-19T14:01:05.331Z",
+  "sourceUpdatedAt": 1792418583334,
+  "sourceUpdatedIso": "2026-10-19T14:03:03.334Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -22233,12 +22233,18 @@
       "englishTitle": "ビッグバン★セオリー",
       "year": 2007,
       "score": null,
-      "star": 3,
+      "star": 2.5,
       "overallRank": null,
       "sameScoreRank": null,
       "category": "未確定",
       "mediaType": "drama",
-      "genre": "",
+      "genre": [
+        "コメディ",
+        "TV本編",
+        "恋愛",
+        "娯楽",
+        "青春・若者"
+      ],
       "origin": "ハリウッド",
       "format": "",
       "runtime": null,
@@ -29021,7 +29027,7 @@
       "custom-1792420000000-004": 2.5,
       "custom-1792420000000-005": 2.5,
       "custom-1792420000000-006": 0,
-      "custom-1792420000000-007": 3,
+      "custom-1792420000000-007": 2.5,
       "custom-1792420000000-008": 0,
       "custom-1792420000000-009": 2,
       "custom-1792420000000-010": 3,
@@ -38494,6 +38500,13 @@
         "SF",
         "ドラマ",
         "娯楽"
+      ],
+      "custom-1792420000000-007": [
+        "コメディ",
+        "TV本編",
+        "恋愛",
+        "娯楽",
+        "青春・若者"
       ]
     },
     "originOverrides": {
