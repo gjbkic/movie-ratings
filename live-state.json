@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792418778948,
-  "sourceUpdatedIso": "2026-10-19T14:06:18.948Z",
+  "sourceUpdatedAt": 1792418805489,
+  "sourceUpdatedIso": "2026-10-19T14:06:45.489Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -21628,6 +21628,31 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "custom-1792420000000-012",
+      "title": "ちびまる子ちゃん",
+      "originalTitle": "ちびまる子ちゃん",
+      "englishTitle": "ちびまる子ちゃん",
+      "year": 1990,
+      "score": 57,
+      "star": 1,
+      "overallRank": 765,
+      "sameScoreRank": 2,
+      "category": "未確定",
+      "mediaType": "drama",
+      "genre": [
+        "子供向け",
+        "TV本編",
+        "娯楽"
+      ],
+      "origin": "日本",
+      "format": "animation",
+      "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-452-cqUW",
       "title": "アントマン＆ワスプ",
       "originalTitle": "",
@@ -21635,8 +21660,8 @@
       "year": 2018,
       "score": 57,
       "star": 1,
-      "overallRank": 765,
-      "sameScoreRank": 2,
+      "overallRank": 766,
+      "sameScoreRank": 3,
       "category": "MCU作品",
       "mediaType": "movie",
       "genre": [
@@ -21663,7 +21688,7 @@
       "year": 2024,
       "score": 56,
       "star": 1,
-      "overallRank": 766,
+      "overallRank": 767,
       "sameScoreRank": 1,
       "category": "ほかアニメ",
       "mediaType": "movie",
@@ -21689,7 +21714,7 @@
       "year": 1997,
       "score": 55,
       "star": 1,
-      "overallRank": 767,
+      "overallRank": 768,
       "sameScoreRank": 1,
       "category": "コメディ",
       "mediaType": "movie",
@@ -21714,7 +21739,7 @@
       "year": 2019,
       "score": 54,
       "star": 1,
-      "overallRank": 768,
+      "overallRank": 769,
       "sameScoreRank": 1,
       "category": "コナン映画",
       "mediaType": "movie",
@@ -21741,7 +21766,7 @@
       "year": 2017,
       "score": 53,
       "star": 1,
-      "overallRank": 769,
+      "overallRank": 770,
       "sameScoreRank": 1,
       "category": "邦画",
       "mediaType": "movie",
@@ -21767,7 +21792,7 @@
       "year": 2019,
       "score": 52,
       "star": 1,
-      "overallRank": 770,
+      "overallRank": 771,
       "sameScoreRank": 1,
       "category": "スリラー、ホラー",
       "mediaType": "movie",
@@ -21793,7 +21818,7 @@
       "year": 2012,
       "score": 50,
       "star": 1,
-      "overallRank": 771,
+      "overallRank": 772,
       "sameScoreRank": 1,
       "category": "ほかアニメ",
       "mediaType": "movie",
@@ -21818,7 +21843,7 @@
       "year": 2002,
       "score": 40,
       "star": 0.5,
-      "overallRank": 772,
+      "overallRank": 773,
       "sameScoreRank": 1,
       "category": "アクション",
       "mediaType": "movie",
@@ -22392,31 +22417,6 @@
       "category": "未確定",
       "mediaType": "drama",
       "genre": "",
-      "origin": "日本",
-      "format": "animation",
-      "runtime": null,
-      "exact": false,
-      "letterboxdAddedDate": null,
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "custom-1792420000000-012",
-      "title": "ちびまる子ちゃん",
-      "originalTitle": "ちびまる子ちゃん",
-      "englishTitle": "ちびまる子ちゃん",
-      "year": 1990,
-      "score": null,
-      "star": 1,
-      "overallRank": null,
-      "sameScoreRank": null,
-      "category": "未確定",
-      "mediaType": "drama",
-      "genre": [
-        "子供向け",
-        "TV本編",
-        "娯楽"
-      ],
       "origin": "日本",
       "format": "animation",
       "runtime": null,
@@ -23534,7 +23534,8 @@
       "custom-1792420000000-007": 80,
       "custom-1792420000000-010": 81,
       "custom-1792417297007-rck1": 72,
-      "custom-1792417143714-5w33": 77
+      "custom-1792417143714-5w33": 77,
+      "custom-1792420000000-012": 57
     },
     "rankOrder": {
       "40": [
@@ -23560,6 +23561,7 @@
       ],
       "57": [
         "lb-201-aeu4",
+        "custom-1792420000000-012",
         "lb-452-cqUW"
       ],
       "58": [
