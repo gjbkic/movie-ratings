@@ -1,6 +1,6 @@
 # 星を維持する点数帯変更：変換エンジンと接続設計
 
-2026-10-20。要件は `score-band-update-requirements.md`。今回は変換エンジンを実装し、アプリ起動・保存への接続前で区切る。`app-score-policy.js` は index.html に読み込ませていない。本番・既存保存データには適用していない。
+2026-10-20。要件は `score-band-update-requirements.md`。今回は変換エンジンを実装し、アプリ起動・保存への接続前で区切る。現在は `app-score-policy.js` を読み込むが、通常起動では有効化しない。隔離した表示・入力接続の結果は `score-preview-integration.md`。本番・既存保存データには適用していない。
 
 ## 変換の決定
 

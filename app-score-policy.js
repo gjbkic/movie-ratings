@@ -1,5 +1,6 @@
 /* Pure conversion planning only. No storage, network, DOM or automatic migration.
- * Not loaded by index.html until the isolated persistence/import adapter is ready.
+ * Loading this module does not enable conversion. Balanced UI is opt-in in the
+ * isolated regression fixture; persistence/import migration is not connected.
  */
 ((root)=>{'use strict';
  const LEGACY='legacy-v23',CURRENT='balanced-v1';
