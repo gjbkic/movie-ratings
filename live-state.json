@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792406488239,
-  "sourceUpdatedIso": "2026-10-19T10:41:28.239Z",
+  "sourceUpdatedAt": 1792406515259,
+  "sourceUpdatedIso": "2026-10-19T10:41:55.259Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -21951,9 +21951,14 @@
       "mediaType": "tvseries",
       "genre": [
         "ファンタジー",
-        "TV本編"
+        "TV本編",
+        "サスペンス",
+        "アクション",
+        "娯楽",
+        "アドベンチャー",
+        "ドラマ"
       ],
-      "origin": "",
+      "origin": "日本",
       "format": "",
       "runtime": null,
       "exact": false,
@@ -37022,7 +37027,12 @@
       ],
       "custom-1792406406780-xsf3": [
         "ファンタジー",
-        "TV本編"
+        "TV本編",
+        "サスペンス",
+        "アクション",
+        "娯楽",
+        "アドベンチャー",
+        "ドラマ"
       ]
     },
     "originOverrides": {
@@ -37805,7 +37815,8 @@
       "custom-1792310002695-j7ls": "ハリウッド",
       "custom-1792318978542-vitq": "その他",
       "custom-1792346885016-a70t": "日本",
-      "custom-1792354037608-u33d": "日本"
+      "custom-1792354037608-u33d": "日本",
+      "custom-1792406406780-xsf3": "日本"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
