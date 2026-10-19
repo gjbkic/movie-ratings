@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792418150758,
-  "sourceUpdatedIso": "2026-10-19T13:55:50.758Z",
+  "sourceUpdatedAt": 1792418203598,
+  "sourceUpdatedIso": "2026-10-19T13:56:43.598Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -22062,7 +22062,7 @@
       "englishTitle": "イチケイのカラス",
       "year": 2021,
       "score": null,
-      "star": 0,
+      "star": 2,
       "overallRank": null,
       "sameScoreRank": null,
       "category": "未確定",
@@ -22696,6 +22696,27 @@
       "overallRank": null,
       "sameScoreRank": null,
       "category": "コメディ",
+      "mediaType": "tvseries",
+      "genre": "",
+      "origin": "",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1792418203307-qxck",
+      "title": "二月の勝者－絶対合格の教室－",
+      "originalTitle": "二月の勝者－絶対合格の教室－",
+      "englishTitle": "Pay to Ace",
+      "year": 2021,
+      "score": null,
+      "star": 0,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "ドラマ",
       "mediaType": "tvseries",
       "genre": "",
       "origin": "",
@@ -28189,6 +28210,23 @@
         "added": true,
         "_seq": 1792417631069,
         "tmdbType": "tv"
+      },
+      {
+        "id": "custom-1792418203307-qxck",
+        "title": "二月の勝者－絶対合格の教室－",
+        "originalTitle": "二月の勝者－絶対合格の教室－",
+        "englishTitle": "Pay to Ace",
+        "lbTitle": "Pay to Ace",
+        "tmdbId": 136582,
+        "year": 2021,
+        "uri": "",
+        "category": "ドラマ",
+        "order": 999999,
+        "star": 0,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1792418203307,
+        "tmdbType": "tv"
       }
     ],
     "starOverrides": {
@@ -28949,7 +28987,7 @@
       "custom-1792414087140-7n1k": 2.5,
       "custom-1792420000000-001": 0,
       "custom-1792420000000-002": 0,
-      "custom-1792420000000-003": 0,
+      "custom-1792420000000-003": 2,
       "custom-1792420000000-004": 2.5,
       "custom-1792420000000-005": 2.5,
       "custom-1792420000000-006": 0,
@@ -28979,7 +29017,8 @@
       "custom-1792417199807-u80c": 2,
       "custom-1792417268319-bu7k": 3,
       "custom-1792417297007-rck1": 2,
-      "custom-1792417631069-c0vt": 3.5
+      "custom-1792417631069-c0vt": 3.5,
+      "custom-1792418203307-qxck": 0
     },
     "titleOverrides": {
       "added-anchor-578": {
@@ -32037,7 +32076,8 @@
       "custom-1792417199807-u80c": "tvseries",
       "custom-1792417268319-bu7k": "tvseries",
       "custom-1792417297007-rck1": "tvseries",
-      "custom-1792417631069-c0vt": "tvseries"
+      "custom-1792417631069-c0vt": "tvseries",
+      "custom-1792418203307-qxck": "tvseries"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -70440,6 +70480,30 @@
         "note": "普通に結構好き。回が少ないのが残念。短くてテンポよくてちゃんと面白い。",
         "noteSource": "manual",
         "noteEditedAt": "2026-10-19T13:48:42.212Z"
+      },
+      "custom-1792418203307-qxck": {
+        "contentType": "tv_series",
+        "tmdbType": "tv",
+        "poster84": {
+          "path": "/y0jB1ZJc2VoXHmkf9GoZDxdZCOZ.jpg",
+          "tmdbId": 136582,
+          "provider": "tmdb",
+          "checkedAt": "2026-10-19T13:56:43.503Z"
+        },
+        "tmdbSeriesId": 136582,
+        "seasonCatalogV1": [
+          {
+            "number": 1,
+            "year": "2021"
+          }
+        ],
+        "seasonCountV1": 1,
+        "crew84": {
+          "directors": [],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-19T13:56:43.552Z"
+        }
       }
     }
   }
