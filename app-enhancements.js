@@ -1619,7 +1619,7 @@ if(old&&facets){
  group.id='movie95FacetGroup';
  const heading=document.createElement('div');
  heading.className='movie95-facet-title';
- heading.textContent='監督・出演者・TMDbジャンル';
+ heading.textContent='2. 監督・出演者・TMDBの情報で探す';
  group.append(heading,facets);
  facets.open=true;
  const relink=()=>{
@@ -1712,7 +1712,7 @@ css.id='movie30-search-unified96';
 css.textContent=[
  '#page-rank>.tools.movie96-compact-tools{display:block!important;margin:12px 0 8px!important;}',
  '#page-rank>.tools .movie92-search-wrap{display:block!important;position:relative!important;width:100%!important;max-width:100%!important;min-width:0!important;}',
- '#page-rank>.tools #searchRank{width:100%!important;min-width:0!important;padding-right:59px!important;min-height:43px!important;}',
+ '#page-rank>.tools #searchRank{width:100%!important;min-width:0!important;padding-right:83px!important;min-height:43px!important;}',
  '.movie96-expand{position:absolute;top:4px;right:5px;min-width:41px;min-height:35px;z-index:2;padding:0 8px;border-radius:8px;background:#213449;border:1px solid #50657a;color:#cfe7ff;font-size:16px;}',
  '.movie96-expand[aria-expanded="true"]{background:#31577c;border-color:#7398b8;}',
  '.movie96-expand.movie96-filtering:after{content:"";position:absolute;right:3px;top:2px;width:7px;height:7px;border-radius:50%;background:#4dd48a;}',
@@ -1737,6 +1737,7 @@ css.textContent=[
  '.movie96-viewbar{display:flex;gap:7px;flex-wrap:wrap;align-items:center;margin:7px 0 6px;}',
  '.movie96-viewbar>select{flex:1 1 170px;min-width:0;max-width:320px;}',
  '.movie96-viewbar>.btn{flex:0 0 auto;}',
+ '#advBox66 .v66-range{min-width:0;}#advBox66 .v66-range input{min-width:0;width:100%;box-sizing:border-box;}#advBox66 .v66-range em{flex-shrink:0;}',
  '#page-rank #advBox66 .persist{font-size:10px!important;padding:8px!important;}',
  '#page-rank #advBox66>.tip{font-size:10px!important;margin-top:10px!important;}',
  '#page-rank .star-jump{position:sticky!important;z-index:24!important;}',
@@ -1759,9 +1760,12 @@ title.append(head,close);
 
 const basic=document.createElement('section');
 basic.id='movie96BasicGroup';basic.className='movie96-filtergroup';
-const basicHeading=document.createElement('h3');basicHeading.textContent='ジャンル・種別・制作区分など';
+const basicHeading=document.createElement('h3');basicHeading.textContent='1. まずは基本条件で絞り込む';
 const basicGrid=document.createElement('div');basicGrid.className='movie96-basegrid';
-basic.append(basicHeading,basicGrid);
+basic.append(basicHeading);
+const guide=document.createElement('p');
+guide.className='tip';guide.textContent='条件を選ぶと一覧にすぐ反映されます。複数の条件を選ぶと、すべてに一致する作品を表示します。解除は各項目を「すべて」に戻してください。';
+basic.append(guide,basicGrid);
 const opts=document.createElement('div');opts.className='movie96-filteroptions';
 basic.append(opts);
 
@@ -1799,13 +1803,11 @@ if(info)extras.append(info);
 
 function attachPersistent(){
  // v66's redrawing and v95's own facet observer both rearrange the panel.
- // Reestablish a deterministic header -> TMDb facets -> classic filters -> actions order.
+ // Preserve control nodes and handlers across genre redraws; basic choices come first.
  if(adv.firstElementChild!==title)adv.prepend(title);
  const facet=document.getElementById('movie95FacetGroup');
- if(facet&&facet.parentElement===adv&&title.nextElementSibling!==facet)
-  title.insertAdjacentElement('afterend',facet);
- const anchor=facet?.parentElement===adv?facet:title;
- if(basic.previousElementSibling!==anchor)anchor.insertAdjacentElement('afterend',basic);
+ if(basic.previousElementSibling!==title)title.insertAdjacentElement('afterend',basic);
+ if(facet&&facet.parentElement===adv&&facet.previousElementSibling!==basic)basic.insertAdjacentElement('afterend',facet);
  if(extras.parentElement!==adv)adv.append(extras);
 }
 attachPersistent();
@@ -1826,7 +1828,7 @@ else adv.insertAdjacentElement('afterend',viewbar);
 
 const expand=document.createElement('button');
 expand.className='movie96-expand';expand.type='button';
-expand.textContent='⌄';expand.title='詳細絞り込みを開閉';expand.setAttribute('aria-label','詳細絞り込みを開閉する');
+expand.textContent='絞込 ▾';expand.title='詳細絞り込みを開閉';expand.setAttribute('aria-label','詳細絞り込みを開閉する');
 searchShell.append(expand);
 tools.classList.add('movie96-compact-tools');
 // Original "詳細絞込" button is superseded by the arrow inside the search field.
@@ -1837,7 +1839,7 @@ if(badge){badge.hidden=true;badge.style.setProperty('display','none','important'
 function openPanel(open){
  adv.classList.toggle('movie96-is-open',Boolean(open));
  adv.classList.toggle('open',Boolean(open));
- expand.textContent=open?'⌃':'⌄';
+ expand.textContent=open?'閉じる ▴':'絞込 ▾';
  expand.setAttribute('aria-expanded',String(Boolean(open)));
  expand.setAttribute('aria-controls','advBox66');
  input.setAttribute('aria-expanded',String(Boolean(open)));
