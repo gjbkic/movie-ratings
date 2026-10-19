@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792417606832,
-  "sourceUpdatedIso": "2026-10-19T13:46:46.832Z",
+  "sourceUpdatedAt": 1792417631401,
+  "sourceUpdatedIso": "2026-10-19T13:47:11.401Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -22684,6 +22684,27 @@
       "letterboxdAddedDate": null,
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1792417631069-c0vt",
+      "title": "爆笑! シアター・パコーン",
+      "originalTitle": "Right Now Kapow",
+      "englishTitle": "Right Now Kapow",
+      "year": 2016,
+      "score": null,
+      "star": 0,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "コメディ",
+      "mediaType": "tvseries",
+      "genre": "",
+      "origin": "",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     }
   ],
   "state": {
@@ -28151,6 +28172,23 @@
         "added": true,
         "_seq": 1792417297007,
         "tmdbType": "tv"
+      },
+      {
+        "id": "custom-1792417631069-c0vt",
+        "title": "爆笑! シアター・パコーン",
+        "originalTitle": "Right Now Kapow",
+        "englishTitle": "Right Now Kapow",
+        "lbTitle": "Right Now Kapow",
+        "tmdbId": 107953,
+        "year": 2016,
+        "uri": "",
+        "category": "コメディ",
+        "order": 999999,
+        "star": 0,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1792417631069,
+        "tmdbType": "tv"
       }
     ],
     "starOverrides": {
@@ -28940,7 +28978,8 @@
       "custom-1792417143714-5w33": 2.5,
       "custom-1792417199807-u80c": 2,
       "custom-1792417268319-bu7k": 3,
-      "custom-1792417297007-rck1": 2
+      "custom-1792417297007-rck1": 2,
+      "custom-1792417631069-c0vt": 0
     },
     "titleOverrides": {
       "added-anchor-578": {
@@ -31997,7 +32036,8 @@
       "custom-1792417143714-5w33": "tvseries",
       "custom-1792417199807-u80c": "tvseries",
       "custom-1792417268319-bu7k": "tvseries",
-      "custom-1792417297007-rck1": "tvseries"
+      "custom-1792417297007-rck1": "tvseries",
+      "custom-1792417631069-c0vt": "tvseries"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -70358,6 +70398,33 @@
         "note": "めっちゃ好きな人がいるのは分からなくもないが、ギャグはぬるいし、展開も日本に影響されたんだろうなあ的な話も多くそこまで。子供向けの中ではちゃんとストーリーがあるのは分かるが、それもディズニーチャンネル系の中に限った話。もっといいものは無限にある。",
         "noteSource": "manual",
         "noteEditedAt": "2026-10-19T13:42:59.738Z"
+      },
+      "custom-1792417631069-c0vt": {
+        "contentType": "tv_series",
+        "tmdbType": "tv",
+        "poster84": {
+          "path": "/wnfEa3SP1iSQ91RbkcA66pv7XuV.jpg",
+          "tmdbId": 107953,
+          "provider": "tmdb",
+          "checkedAt": "2026-10-19T13:47:11.296Z"
+        },
+        "tmdbSeriesId": 107953,
+        "seasonCatalogV1": [
+          {
+            "number": 1,
+            "year": "2016"
+          }
+        ],
+        "seasonCountV1": 1,
+        "crew84": {
+          "directors": [],
+          "creators": [
+            "Justin Becker",
+            "Marly Halpern-Graser"
+          ],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-19T13:47:11.355Z"
+        }
       }
     }
   }
