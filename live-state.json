@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792417096931,
-  "sourceUpdatedIso": "2026-10-19T13:38:16.931Z",
+  "sourceUpdatedAt": 1792417144039,
+  "sourceUpdatedIso": "2026-10-19T13:39:04.039Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -22600,6 +22600,27 @@
       "letterboxdAddedDate": null,
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1792417143714-5w33",
+      "title": "フィニアスとファーブ",
+      "originalTitle": "Phineas and Ferb",
+      "englishTitle": "Phineas and Ferb",
+      "year": 2007,
+      "score": null,
+      "star": 0,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "コメディ",
+      "mediaType": "tvseries",
+      "genre": "",
+      "origin": "",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     }
   ],
   "state": {
@@ -27999,6 +28020,23 @@
         "added": true,
         "_seq": 1792417096624,
         "tmdbType": "tv"
+      },
+      {
+        "id": "custom-1792417143714-5w33",
+        "title": "フィニアスとファーブ",
+        "originalTitle": "Phineas and Ferb",
+        "englishTitle": "Phineas and Ferb",
+        "lbTitle": "Phineas and Ferb",
+        "tmdbId": 1877,
+        "year": 2007,
+        "uri": "",
+        "category": "コメディ",
+        "order": 999999,
+        "star": 0,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1792417143714,
+        "tmdbType": "tv"
       }
     ],
     "starOverrides": {
@@ -28784,7 +28822,8 @@
       "custom-1792421000000-012": 0,
       "custom-1792421000000-013": 0,
       "custom-1792421000000-014": 0,
-      "custom-1792417096624-icxb": 0
+      "custom-1792417096624-icxb": 0,
+      "custom-1792417143714-5w33": 0
     },
     "titleOverrides": {
       "added-anchor-578": {
@@ -31837,7 +31876,8 @@
       "custom-1792421000000-012": "drama",
       "custom-1792421000000-013": "drama",
       "custom-1792421000000-014": "drama",
-      "custom-1792417096624-icxb": "tvseries"
+      "custom-1792417096624-icxb": "tvseries",
+      "custom-1792417143714-5w33": "tvseries"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -69929,6 +69969,53 @@
           ],
           "source": "tmdb",
           "fetchedAt": "2026-10-19T13:38:16.879Z"
+        }
+      },
+      "custom-1792417143714-5w33": {
+        "contentType": "tv_series",
+        "tmdbType": "tv",
+        "poster84": {
+          "path": "/sZZPcdxgYx08CXJC2oHOsuqzAYM.jpg",
+          "tmdbId": 1877,
+          "provider": "tmdb",
+          "checkedAt": "2026-10-19T13:39:03.923Z"
+        },
+        "tmdbSeriesId": 1877,
+        "seasonCatalogV1": [
+          {
+            "number": 1,
+            "year": "2007"
+          },
+          {
+            "number": 2,
+            "year": "2009"
+          },
+          {
+            "number": 3,
+            "year": "2011"
+          },
+          {
+            "number": 4,
+            "year": "2012"
+          },
+          {
+            "number": 5,
+            "year": "2025"
+          },
+          {
+            "number": 6,
+            "year": "2026"
+          }
+        ],
+        "seasonCountV1": 6,
+        "crew84": {
+          "directors": [],
+          "creators": [
+            "Dan Povenmire",
+            "Jeff 'Swampy' Marsh"
+          ],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-19T13:39:03.973Z"
         }
       }
     }
