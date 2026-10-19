@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792416932797,
-  "sourceUpdatedIso": "2026-10-19T13:35:32.797Z",
+  "sourceUpdatedAt": 1792416965971,
+  "sourceUpdatedIso": "2026-10-19T13:36:05.971Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -22083,7 +22083,7 @@
       "englishTitle": "緊急取調室",
       "year": 2014,
       "score": null,
-      "star": 0,
+      "star": 2.5,
       "overallRank": null,
       "sameScoreRank": null,
       "category": "未確定",
@@ -28722,7 +28722,7 @@
       "custom-1792420000000-001": 0,
       "custom-1792420000000-002": 0,
       "custom-1792420000000-003": 0,
-      "custom-1792420000000-004": 0,
+      "custom-1792420000000-004": 2.5,
       "custom-1792420000000-005": 0,
       "custom-1792420000000-006": 0,
       "custom-1792420000000-007": 0,
@@ -69681,7 +69681,10 @@
           "tmdbId": null,
           "checkedAt": "2026-10-19T13:35:28.488Z",
           "provider": "tmdb"
-        }
+        },
+        "note": "良くも悪くもbossみたいな。bossより臭さは抜けてるが、キレも落ちてる気がする。事件自体は結構コンスタントにクオリティが高い。",
+        "noteSource": "manual",
+        "noteEditedAt": "2026-10-19T13:36:03.064Z"
       },
       "custom-1792420000000-005": {
         "contentType": "tv_series",
