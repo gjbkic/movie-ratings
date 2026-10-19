@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792405305779,
-  "sourceUpdatedIso": "2026-10-19T10:21:45.779Z",
+  "sourceUpdatedAt": 1792406096505,
+  "sourceUpdatedIso": "2026-10-19T10:34:56.505Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -21898,6 +21898,27 @@
       "letterboxdAddedDate": null,
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1792406096289-hqs7",
+      "title": "イクサガミ",
+      "originalTitle": "イクサガミ",
+      "englishTitle": "Last Samurai Standing",
+      "year": 2025,
+      "score": null,
+      "star": 0,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "ドラマ",
+      "mediaType": "tvseries",
+      "genre": "",
+      "origin": "",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     }
   ],
   "state": {
@@ -26799,6 +26820,23 @@
         "added": true,
         "_seq": 1792354037608,
         "source": "letterboxd"
+      },
+      {
+        "id": "custom-1792406096289-hqs7",
+        "title": "イクサガミ",
+        "originalTitle": "イクサガミ",
+        "englishTitle": "Last Samurai Standing",
+        "lbTitle": "Last Samurai Standing",
+        "tmdbId": 252193,
+        "year": 2025,
+        "uri": "",
+        "category": "ドラマ",
+        "order": 999999,
+        "star": 0,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1792406096289,
+        "tmdbType": "tv"
       }
     ],
     "starOverrides": {
@@ -27551,7 +27589,8 @@
       "lb-487-28JG": 4,
       "lb-44-2bf0": 4,
       "custom-1792346885016-a70t": 4.5,
-      "custom-1792354037608-u33d": 4
+      "custom-1792354037608-u33d": 4,
+      "custom-1792406096289-hqs7": 0
     },
     "titleOverrides": {
       "added-anchor-578": {
@@ -30572,7 +30611,8 @@
       "custom-1792310002695-j7ls": "drama",
       "custom-1792318978542-vitq": "movie",
       "custom-1792346885016-a70t": "movie",
-      "custom-1792354037608-u33d": "other"
+      "custom-1792354037608-u33d": "other",
+      "custom-1792406096289-hqs7": "tvseries"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -68145,6 +68185,34 @@
           "tmdbId": 57041,
           "checkedAt": "2026-10-18T20:08:30.635Z",
           "provider": "tmdb"
+        }
+      },
+      "custom-1792406096289-hqs7": {
+        "contentType": "tv_series",
+        "tmdbType": "tv",
+        "poster84": {
+          "path": "/nDYns9hmLerhKEQc8hUZM44inpV.jpg",
+          "tmdbId": 252193,
+          "provider": "tmdb",
+          "checkedAt": "2026-10-19T10:34:56.445Z"
+        },
+        "tmdbSeriesId": 252193,
+        "seasonCatalogV1": [
+          {
+            "number": 1,
+            "year": "2025"
+          },
+          {
+            "number": 2,
+            "year": ""
+          }
+        ],
+        "seasonCountV1": 2,
+        "crew84": {
+          "directors": [],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-19T10:34:56.476Z"
         }
       }
     }
