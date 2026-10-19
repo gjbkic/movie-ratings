@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792416844394,
-  "sourceUpdatedIso": "2026-10-19T13:34:04.394Z",
+  "sourceUpdatedAt": 1792416891807,
+  "sourceUpdatedIso": "2026-10-19T13:34:51.807Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -22230,7 +22230,7 @@
       "englishTitle": "サザエさん",
       "year": 1969,
       "score": null,
-      "star": 0,
+      "star": 1.5,
       "overallRank": null,
       "sameScoreRank": null,
       "category": "未確定",
@@ -28729,7 +28729,7 @@
       "custom-1792420000000-008": 0,
       "custom-1792420000000-009": 2,
       "custom-1792420000000-010": 3,
-      "custom-1792420000000-011": 0,
+      "custom-1792420000000-011": 1.5,
       "custom-1792420000000-012": 1,
       "custom-1792420000000-013": 2.5,
       "custom-1792421000000-001": 0,
@@ -69722,7 +69722,13 @@
       },
       "custom-1792420000000-011": {
         "contentType": "tv_series",
-        "tmdbType": "tv"
+        "tmdbType": "tv",
+        "poster84": {
+          "path": null,
+          "tmdbId": null,
+          "checkedAt": "2026-10-19T13:34:47.523Z",
+          "provider": "tmdb"
+        }
       },
       "custom-1792420000000-012": {
         "contentType": "tv_series",
