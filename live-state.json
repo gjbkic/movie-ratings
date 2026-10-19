@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792418957307,
-  "sourceUpdatedIso": "2026-10-19T14:09:17.307Z",
+  "sourceUpdatedAt": 1792418965081,
+  "sourceUpdatedIso": "2026-10-19T14:09:25.081Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -19570,6 +19570,32 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "custom-1792420000000-003",
+      "title": "イチケイのカラス",
+      "originalTitle": "イチケイのカラス",
+      "englishTitle": "イチケイのカラス",
+      "year": 2021,
+      "score": 72,
+      "star": 2,
+      "overallRank": 688,
+      "sameScoreRank": 10,
+      "category": "未確定",
+      "mediaType": "drama",
+      "genre": [
+        "TV本編",
+        "ミステリー",
+        "コメディ",
+        "娯楽"
+      ],
+      "origin": "日本",
+      "format": "",
+      "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "custom-1792417297007-rck1",
       "title": "怪奇ゾーン グラビティフォールズ",
       "originalTitle": "Gravity Falls",
@@ -19577,8 +19603,8 @@
       "year": 2012,
       "score": 72,
       "star": 2,
-      "overallRank": 688,
-      "sameScoreRank": 10,
+      "overallRank": 689,
+      "sameScoreRank": 11,
       "category": "サスペンス、ミステリー",
       "mediaType": "tvseries",
       "genre": [
@@ -19590,32 +19616,6 @@
         "娯楽"
       ],
       "origin": "",
-      "format": "",
-      "runtime": null,
-      "exact": true,
-      "letterboxdAddedDate": null,
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "custom-1792420000000-003",
-      "title": "イチケイのカラス",
-      "originalTitle": "イチケイのカラス",
-      "englishTitle": "イチケイのカラス",
-      "year": 2021,
-      "score": 72,
-      "star": 2,
-      "overallRank": 689,
-      "sameScoreRank": 11,
-      "category": "未確定",
-      "mediaType": "drama",
-      "genre": [
-        "TV本編",
-        "ミステリー",
-        "コメディ",
-        "娯楽"
-      ],
-      "origin": "日本",
       "format": "",
       "runtime": null,
       "exact": true,
@@ -23702,8 +23702,8 @@
         "lb-166-3RKw",
         "custom-1790322768630-3s2i",
         "lb-327-4kUU",
-        "custom-1792417297007-rck1",
         "custom-1792420000000-003",
+        "custom-1792417297007-rck1",
         "lb-351-2DqA",
         "custom-1790433924585-k3b0",
         "lb-252-8THk",
