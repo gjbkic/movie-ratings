@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792419048938,
-  "sourceUpdatedIso": "2026-10-19T14:10:48.938Z",
+  "sourceUpdatedAt": 1792419072070,
+  "sourceUpdatedIso": "2026-10-19T14:11:12.070Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -15469,35 +15469,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1790352007604-3jj6",
-      "title": "ゲーム・ナイト",
-      "originalTitle": "Game Night",
-      "englishTitle": "Game Night",
-      "year": 2018,
-      "score": 78,
-      "star": 2.5,
-      "overallRank": 541,
-      "sameScoreRank": 36,
-      "category": "Letterboxd",
-      "mediaType": "movie",
-      "genre": [
-        "ミステリー",
-        "コメディ",
-        "クライム",
-        "恋愛",
-        "サスペンス",
-        "アクション",
-        "娯楽"
-      ],
-      "origin": "その他",
-      "format": "live",
-      "runtime": 100,
-      "exact": true,
-      "letterboxdAddedDate": "2026-09-26",
-      "letterboxdPublishedAt": "Sat, 26 Sep 2026 03:55:24 +1200",
-      "letterboxdReportedWatchedDate": "2026-09-25"
-    },
-    {
       "id": "custom-1789385860847-w7kt",
       "title": "踊る大捜査線 THE MOVIE",
       "originalTitle": "",
@@ -15505,8 +15476,8 @@
       "year": 1998,
       "score": 78,
       "star": 2.5,
-      "overallRank": 542,
-      "sameScoreRank": 37,
+      "overallRank": 541,
+      "sameScoreRank": 36,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -15535,8 +15506,8 @@
       "year": 2003,
       "score": 78,
       "star": 2.5,
-      "overallRank": 543,
-      "sameScoreRank": 38,
+      "overallRank": 542,
+      "sameScoreRank": 37,
       "category": "ピクサー・ディズニー作品",
       "mediaType": "movie",
       "genre": [
@@ -15563,8 +15534,8 @@
       "year": 2014,
       "score": 78,
       "star": 2.5,
-      "overallRank": 544,
-      "sameScoreRank": 39,
+      "overallRank": 543,
+      "sameScoreRank": 38,
       "category": "未確定",
       "mediaType": "drama",
       "genre": [
@@ -15580,6 +15551,35 @@
       "letterboxdAddedDate": null,
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1790352007604-3jj6",
+      "title": "ゲーム・ナイト",
+      "originalTitle": "Game Night",
+      "englishTitle": "Game Night",
+      "year": 2018,
+      "score": 78,
+      "star": 2.5,
+      "overallRank": 544,
+      "sameScoreRank": 39,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "ミステリー",
+        "コメディ",
+        "クライム",
+        "恋愛",
+        "サスペンス",
+        "アクション",
+        "娯楽"
+      ],
+      "origin": "その他",
+      "format": "live",
+      "runtime": 100,
+      "exact": true,
+      "letterboxdAddedDate": "2026-09-26",
+      "letterboxdPublishedAt": "Sat, 26 Sep 2026 03:55:24 +1200",
+      "letterboxdReportedWatchedDate": "2026-09-25"
     },
     {
       "id": "custom-1790322759131-6bsn",
@@ -22494,7 +22494,15 @@
       "sameScoreRank": null,
       "category": "未確定",
       "mediaType": "drama",
-      "genre": "",
+      "genre": [
+        "コメディ",
+        "TV本編",
+        "子供向け",
+        "哲学・思想",
+        "アクション",
+        "娯楽",
+        "ドラマ"
+      ],
       "origin": "日本",
       "format": "animation",
       "runtime": null,
@@ -23901,10 +23909,10 @@
         "lb-140-27Wk",
         "lb-346-1Aiw",
         "lb-344-5YPM",
-        "custom-1790352007604-3jj6",
         "custom-1789385860847-w7kt",
         "lb-56-72i",
         "custom-1792420000000-004",
+        "custom-1790352007604-3jj6",
         "custom-1790322759131-6bsn",
         "lb-407-fegG",
         "lb-143-15HA",
@@ -38661,6 +38669,15 @@
         "TV本編",
         "サスペンス",
         "娯楽"
+      ],
+      "custom-1792420000000-013": [
+        "コメディ",
+        "TV本編",
+        "子供向け",
+        "哲学・思想",
+        "アクション",
+        "娯楽",
+        "ドラマ"
       ]
     },
     "originOverrides": {
