@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792418617027,
-  "sourceUpdatedIso": "2026-10-19T14:03:37.027Z",
+  "sourceUpdatedAt": 1792418635597,
+  "sourceUpdatedIso": "2026-10-19T14:03:55.597Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -22306,7 +22306,15 @@
       "sameScoreRank": null,
       "category": "未確定",
       "mediaType": "drama",
-      "genre": "",
+      "genre": [
+        "comfort",
+        "TV本編",
+        "娯楽",
+        "SF",
+        "ファンタジー",
+        "ドラマ",
+        "青春・若者"
+      ],
       "origin": "日本",
       "format": "animation",
       "runtime": null,
@@ -38507,6 +38515,15 @@
         "TV本編",
         "恋愛",
         "娯楽"
+      ],
+      "custom-1792420000000-010": [
+        "comfort",
+        "TV本編",
+        "娯楽",
+        "SF",
+        "ファンタジー",
+        "ドラマ",
+        "青春・若者"
       ]
     },
     "originOverrides": {
