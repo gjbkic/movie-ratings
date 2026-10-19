@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792418074609,
-  "sourceUpdatedIso": "2026-10-19T13:54:34.609Z",
+  "sourceUpdatedAt": 1792418097722,
+  "sourceUpdatedIso": "2026-10-19T13:54:57.722Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -69911,7 +69911,13 @@
       },
       "custom-1792420000000-003": {
         "contentType": "tv_series",
-        "tmdbType": "tv"
+        "tmdbType": "tv",
+        "poster84": {
+          "path": null,
+          "tmdbId": null,
+          "checkedAt": "2026-10-19T13:54:53.443Z",
+          "provider": "tmdb"
+        }
       },
       "custom-1792420000000-004": {
         "contentType": "tv_series",
