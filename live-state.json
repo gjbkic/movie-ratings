@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792410472023,
-  "sourceUpdatedIso": "2026-10-19T11:47:52.023Z",
+  "sourceUpdatedAt": 1792410505659,
+  "sourceUpdatedIso": "2026-10-19T11:48:25.659Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -18129,33 +18129,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1790458138748-ky5y",
-      "title": "映画 謎解きはディナーのあとで",
-      "originalTitle": "映画 謎解きはディナーのあとで",
-      "englishTitle": "The After-Dinner Mysteries",
-      "year": 2013,
-      "score": 74,
-      "star": 2,
-      "overallRank": 636,
-      "sameScoreRank": 15,
-      "category": "Letterboxd",
-      "mediaType": "movie",
-      "genre": [
-        "ドラマ",
-        "ミステリー",
-        "恋愛",
-        "コメディ",
-        "サスペンス"
-      ],
-      "origin": "日本",
-      "format": "live",
-      "runtime": 121,
-      "exact": true,
-      "letterboxdAddedDate": "2026-09-27",
-      "letterboxdPublishedAt": "Sun, 27 Sep 2026 04:27:19 +1300",
-      "letterboxdReportedWatchedDate": "2026-09-26"
-    },
-    {
       "id": "lb-325-b5zc",
       "title": "ソロモンの偽証 後編",
       "originalTitle": "",
@@ -18163,8 +18136,8 @@
       "year": 2015,
       "score": 74,
       "star": 2,
-      "overallRank": 637,
-      "sameScoreRank": 16,
+      "overallRank": 636,
+      "sameScoreRank": 15,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -18194,8 +18167,8 @@
       "year": 2016,
       "score": 74,
       "star": 2,
-      "overallRank": 638,
-      "sameScoreRank": 17,
+      "overallRank": 637,
+      "sameScoreRank": 16,
       "category": "Letterboxd追加",
       "mediaType": "movie",
       "genre": [
@@ -18220,8 +18193,8 @@
       "year": 2025,
       "score": 74,
       "star": 2,
-      "overallRank": 639,
-      "sameScoreRank": 18,
+      "overallRank": 638,
+      "sameScoreRank": 17,
       "category": "ドラマ",
       "mediaType": "tvseries",
       "genre": [
@@ -18249,8 +18222,8 @@
       "year": 2017,
       "score": 74,
       "star": 2,
-      "overallRank": 640,
-      "sameScoreRank": 19,
+      "overallRank": 639,
+      "sameScoreRank": 18,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -18269,6 +18242,33 @@
       "letterboxdAddedDate": "2026-07-10",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1790458138748-ky5y",
+      "title": "映画 謎解きはディナーのあとで",
+      "originalTitle": "映画 謎解きはディナーのあとで",
+      "englishTitle": "The After-Dinner Mysteries",
+      "year": 2013,
+      "score": 74,
+      "star": 2,
+      "overallRank": 640,
+      "sameScoreRank": 19,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "ミステリー",
+        "恋愛",
+        "コメディ",
+        "サスペンス"
+      ],
+      "origin": "日本",
+      "format": "live",
+      "runtime": 121,
+      "exact": true,
+      "letterboxdAddedDate": "2026-09-27",
+      "letterboxdPublishedAt": "Sun, 27 Sep 2026 04:27:19 +1300",
+      "letterboxdReportedWatchedDate": "2026-09-26"
     },
     {
       "id": "lb-530-28b0",
@@ -22912,11 +22912,11 @@
         "lb-363-b8wA",
         "custom-1789385860920-hsho",
         "lb-234-2qRS",
-        "custom-1790458138748-ky5y",
         "lb-325-b5zc",
         "lb-387-em8S",
         "custom-1792406096289-hqs7",
         "lb-480-gVQk",
+        "custom-1790458138748-ky5y",
         "lb-530-28b0",
         "custom-1791636834270-874l",
         "custom-1789385860247-k5ps",
