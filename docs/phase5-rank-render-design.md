@@ -30,3 +30,13 @@ ui-profileの前後で全state不変。反復ランキング3回のchildList通�
 全体ラップの一括削除、監視の一括解除、保存・同期の分離はこの単位に含めない。次の大きなDOM再利用の導入は、上記の比較結果を得てから別途設計する。
 
 検証結果：advanced-search、filtered-ui、search-drag、drag-touch、pending-posters、html-snapshotの6スイート成功。全35再実行・iPhone実機確認は未実施。main・本番・実データは未変更。第⑤全体の完了ではない。
+
+## 基礎ビューの抽出
+
+app-rank-view.jsへ基礎DOM生成・ハンドラ登録を移動し、同じ位置でcoreから依存を渡す。BulkBoot/dragCtxガードとゴースト後始末はcoreに残した。openSheet/startDragは後から上書きされた最新関数へthisと引数を渡すアダプターで接続する。配列やDOMのキャッシュは導入しない。
+
+rank-view-baseline.txtは抽出直前aa64fb8の基礎関数。新旧の全装飾後innerHTMLを、初期、検索、同一state内の点数0/順位/タイトル変更、検索解除、空枠表示の5場面で比較し一致。描画前後state不変、詳細を開く操作、pageerrorなしも確認。通常runnerへ追加（全36スイート）。保存版HTMLで新モジュールが埋め込まれ、オフライン再起動できることも確認。
+
+rank-view、advanced-search、search-drag、drag-touch、pending-posters、html-snapshotの6スイート成功。全36は未実行。未公開・実データ未使用・iPhone未確認。
+
+次の設計対象はannotateTypes/fixSeriesPills/annotateRawGenres。現コードでは前二者が同じmedia-pillを消して挿入し直し、ジャンルも後から追加する。いずれもdocument全体のrank-cardを走査するため、基礎テンプレートへ移して旧処理を削除すると、後続が生成するカードの表示まで変わる可能性がある。Astra中で、基礎カードと後着カードそれぞれの装飾担当・分類取得の意味を比較してから統合する。今回の抽出はその準備であり、第⑤完了を意味しない。
