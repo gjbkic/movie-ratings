@@ -13,3 +13,13 @@ scripts/regression/search-guidance-probe.cjsはこの前後件数を出力する
 filtered-ui、search-drag、search-registration、html-snapshotの4既存スイート成功。全34は今回再実行していない。アプリstate不変、未公開、実データ未使用、iPhone実機未確認。
 
 次はAstra中：ジャンル操作から最終DOMまでの描画経路を追跡し、ランキング更新条件の設計と合わせて修正する。既存の検索ジャンプ・順位入替・プリセット・人物検索を保持する。第⑤は継続中。main/本番/実データへの変更は引き続き承認が必要。
+
+## 反映不良の原因と修正
+
+原因を特定：drawAdvのinnerHTML再生成でmovie96BasicGroup内のtoggleEmptyがDOMから外れる。直後のrenderRankがtoggleEmpty.textContentを設定しようとしてnull参照例外になり、v66の条件適用へ到達しない。MutationObserverが後から既存ノードを戻すため、手動の2回目のrenderRankでは成功していた。描画関数の古い参照が直接原因という仮説は採用しない。
+
+drawAdv終了時にCompactSearch96.restoreControlsを呼び、既存の基本・人物・操作ノードを同期復帰させてから描画へ進む。人物パネルも切断後に参照できるよう初期ノードを保持する。既存監視は互換経路として残す。追加タイマー、保存形式変更、全体描画の二重実行は導入していない。
+
+advanced-search正常回帰を先に作り、旧コードで730件のままとなる失敗を確認。修正後はクリックのみで365件へ減り、解除で730件に戻る。順序・点数0入力・全state不変・pageerrorなしを確認し通常runnerへ登録（全35スイート）。診断用search-guidance-probeは自動反映成功とは区別したまま残す。
+
+advanced-search、filtered-ui、search-drag、search-registration、html-snapshotの5スイート成功。全35は未実行、iPhone未確認、未公開。次はSol中で詳細検索の残る表示整理（選択中条件、解除範囲、必要に応じた折り畳み）と全体回帰を進められる。ランキング全面再描画の省略は別途更新条件の設計が必要で、今回それを実装したわけではない。

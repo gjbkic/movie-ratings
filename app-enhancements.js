@@ -1801,13 +1801,14 @@ const info=page.querySelector(':scope > .tip');
 if(persist)extras.append(persist);
 if(info)extras.append(info);
 
+const persistentFacet=document.getElementById('movie95FacetGroup');
 function attachPersistent(){
  // v66's redrawing and v95's own facet observer both rearrange the panel.
  // Preserve control nodes and handlers across genre redraws; basic choices come first.
  if(adv.firstElementChild!==title)adv.prepend(title);
- const facet=document.getElementById('movie95FacetGroup');
+ const facet=persistentFacet;
  if(basic.previousElementSibling!==title)title.insertAdjacentElement('afterend',basic);
- if(facet&&facet.parentElement===adv&&facet.previousElementSibling!==basic)basic.insertAdjacentElement('afterend',facet);
+ if(facet&&(facet.parentElement!==adv||facet.previousElementSibling!==basic))basic.insertAdjacentElement('afterend',facet);
  if(extras.parentElement!==adv)adv.append(extras);
 }
 attachPersistent();
@@ -1888,7 +1889,7 @@ if(typeof ResizeObserver==='function'){
 }
 align();
 
-window.__movie30CompactSearch96={version:BUILD,open:()=>openPanel(true),close:()=>openPanel(false),align};
+window.__movie30CompactSearch96={version:BUILD,restoreControls:attachPersistent,open:()=>openPanel(true),close:()=>openPanel(false),align};
 const build=document.getElementById('movie30BuildV29');
 if(build)build.textContent='app build '+BUILD;
 })();
