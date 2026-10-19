@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792417144039,
-  "sourceUpdatedIso": "2026-10-19T13:39:04.039Z",
+  "sourceUpdatedAt": 1792417175937,
+  "sourceUpdatedIso": "2026-10-19T13:39:35.937Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -70016,7 +70016,10 @@
           ],
           "source": "tmdb",
           "fetchedAt": "2026-10-19T13:39:03.973Z"
-        }
+        },
+        "note": "懐かしい。展開もあり、結構いいと思うが、やっぱ薄いというか裏に感情はないよね、",
+        "noteSource": "manual",
+        "noteEditedAt": "2026-10-19T13:39:35.885Z"
       }
     }
   }
