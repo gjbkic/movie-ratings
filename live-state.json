@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792416739184,
-  "sourceUpdatedIso": "2026-10-19T13:32:19.184Z",
+  "sourceUpdatedAt": 1792416798727,
+  "sourceUpdatedIso": "2026-10-19T13:33:18.727Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -22209,7 +22209,7 @@
       "englishTitle": "ドラえもん",
       "year": 1979,
       "score": null,
-      "star": 0,
+      "star": 3,
       "overallRank": null,
       "sameScoreRank": null,
       "category": "未確定",
@@ -28728,7 +28728,7 @@
       "custom-1792420000000-007": 0,
       "custom-1792420000000-008": 0,
       "custom-1792420000000-009": 2,
-      "custom-1792420000000-010": 0,
+      "custom-1792420000000-010": 3,
       "custom-1792420000000-011": 0,
       "custom-1792420000000-012": 1,
       "custom-1792420000000-013": 2.5,
@@ -69709,7 +69709,13 @@
       },
       "custom-1792420000000-010": {
         "contentType": "tv_series",
-        "tmdbType": "tv"
+        "tmdbType": "tv",
+        "poster84": {
+          "path": "/aVf73AHq2DveoD9jw1KSrMijtTT.jpg",
+          "tmdbId": 282057,
+          "checkedAt": "2026-10-19T13:33:13.029Z",
+          "provider": "tmdb"
+        }
       },
       "custom-1792420000000-011": {
         "contentType": "tv_series",
