@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792406189344,
-  "sourceUpdatedIso": "2026-10-19T10:36:29.344Z",
+  "sourceUpdatedAt": 1792406206079,
+  "sourceUpdatedIso": "2026-10-19T10:36:46.079Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -21911,7 +21911,14 @@
       "sameScoreRank": null,
       "category": "ドラマ",
       "mediaType": "tvseries",
-      "genre": "",
+      "genre": [
+        "バイオレンス",
+        "TV本編",
+        "娯楽",
+        "ファンタジー",
+        "アクション",
+        "ドラマ"
+      ],
       "origin": "",
       "format": "",
       "runtime": null,
@@ -36938,6 +36945,14 @@
       ],
       "custom-1792354037608-u33d": [
         "ミュージカル"
+      ],
+      "custom-1792406096289-hqs7": [
+        "バイオレンス",
+        "TV本編",
+        "娯楽",
+        "ファンタジー",
+        "アクション",
+        "ドラマ"
       ]
     },
     "originOverrides": {
