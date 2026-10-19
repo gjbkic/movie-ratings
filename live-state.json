@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792416965971,
-  "sourceUpdatedIso": "2026-10-19T13:36:05.971Z",
+  "sourceUpdatedAt": 1792416984145,
+  "sourceUpdatedIso": "2026-10-19T13:36:24.145Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -22146,7 +22146,7 @@
       "englishTitle": "ビッグバン★セオリー",
       "year": 2007,
       "score": null,
-      "star": 0,
+      "star": 3,
       "overallRank": null,
       "sameScoreRank": null,
       "category": "未確定",
@@ -28725,7 +28725,7 @@
       "custom-1792420000000-004": 2.5,
       "custom-1792420000000-005": 0,
       "custom-1792420000000-006": 0,
-      "custom-1792420000000-007": 0,
+      "custom-1792420000000-007": 3,
       "custom-1792420000000-008": 0,
       "custom-1792420000000-009": 2,
       "custom-1792420000000-010": 3,
@@ -69697,7 +69697,13 @@
       },
       "custom-1792420000000-007": {
         "contentType": "tv_series",
-        "tmdbType": "tv"
+        "tmdbType": "tv",
+        "poster84": {
+          "path": null,
+          "tmdbId": null,
+          "checkedAt": "2026-10-19T13:36:19.847Z",
+          "provider": "tmdb"
+        }
       },
       "custom-1792420000000-008": {
         "contentType": "tv_series",
