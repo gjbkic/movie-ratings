@@ -1852,15 +1852,32 @@ input.setAttribute('aria-controls','advBox66');
 expand.addEventListener('pointerdown',e=>e.preventDefault());
 expand.addEventListener('click',()=>openPanel(!adv.classList.contains('movie96-is-open')));
 close.addEventListener('click',()=>{openPanel(false);input.blur();});
+const activeSummary=document.createElement('div');
+activeSummary.id='movie96ActiveSummary';activeSummary.className='tip';
+const activeText=document.createElement('span');activeText.setAttribute('role','status');
+const clearAll=document.createElement('button');clearAll.type='button';clearAll.className='btn';clearAll.textContent='検索・絞り込みをすべて解除';
+clearAll.onclick=()=>window.__movie30ResetRankFilters66?.();
+activeSummary.append(activeText,document.createElement('br'),clearAll);tools.after(activeSummary);
 function updateActive(){
- const selected=Boolean(window.__movie30AdvancedFilter93?.hasActive?.());
- const other=['genreFilterRank','mediaFilterRank','originFilterRank','formatFilterRank','decadeFilterRank','runtimeFilterRank'].some(id=>Boolean(document.getElementById(id)?.value));
- expand.classList.toggle('movie96-filtering',selected||other);
+ const bits=[];
+ for(const [id,label] of [['searchRank','検索'],...controlNames]){
+  const el=document.getElementById(id);if(!el?.value)continue;
+  bits.push(label+'：'+(el.tagName==='SELECT'?el.selectedOptions[0]?.textContent:el.value));
+ }
+ for(const [id,label] of [['y166','公開年の下限'],['y266','公開年の上限'],['r166','時間の下限'],['r266','時間の上限'],['s166','点数の下限'],['s266','点数の上限']]){
+  const value=document.getElementById(id)?.value;if(value!=null&&value!=='')bits.push(label+'：'+value);
+ }
+ for(const [selector,label] of [['[data-inc].inc','必須ジャンル'],['[data-exc].exc','除外ジャンル']]){
+  const names=[...adv.querySelectorAll(selector)].map(el=>el.textContent);if(names.length)bits.push(label+'：'+names.join('・'));
+ }
+ const facets=window.__movie30AdvancedFilter93?.getFilters?.()||{};
+ for(const [key,label] of [['director','監督'],['actor','出演者'],['genre','TMDBジャンル']])if(facets[key])bits.push(label+'：'+facets[key]);
+ const text=bits.length?'適用中 — '+bits.join(' ／ '):'検索・絞り込み条件なし';
+ if(activeText.textContent!==text)activeText.textContent=text;
+ clearAll.hidden=!bits.length;expand.classList.toggle('movie96-filtering',!!bits.length);
 }
-for(const node of [basicGrid,adv]){
- node.addEventListener('change',updateActive);
- node.addEventListener('input',updateActive);
-}
+for(const event of ['change','input']){adv.addEventListener(event,updateActive);input.addEventListener(event,updateActive);}
+renderRank=window.Movie30RenderLifecycle.decorate(renderRank,{after(){updateActive()}});
 updateActive();
 
 // v95 had set top to the fixed header's bottom, overlooking the sticky ★ row.
