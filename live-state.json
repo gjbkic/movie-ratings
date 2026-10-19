@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792418377702,
-  "sourceUpdatedIso": "2026-10-19T13:59:37.702Z",
+  "sourceUpdatedAt": 1792418412404,
+  "sourceUpdatedIso": "2026-10-19T14:00:12.404Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -22692,7 +22692,14 @@
       "sameScoreRank": null,
       "category": "コメディ",
       "mediaType": "tvseries",
-      "genre": "",
+      "genre": [
+        "コメディ",
+        "TV本編",
+        "ファンタジー",
+        "SF",
+        "ドラマ",
+        "娯楽"
+      ],
       "origin": "",
       "format": "",
       "runtime": null,
@@ -38475,6 +38482,14 @@
         "ファンタジー",
         "世界観",
         "comfort"
+      ],
+      "custom-1792417268319-bu7k": [
+        "コメディ",
+        "TV本編",
+        "ファンタジー",
+        "SF",
+        "ドラマ",
+        "娯楽"
       ]
     },
     "originOverrides": {
