@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792419029699,
-  "sourceUpdatedIso": "2026-10-19T14:10:29.699Z",
+  "sourceUpdatedAt": 1792419048938,
+  "sourceUpdatedIso": "2026-10-19T14:10:48.938Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -15528,6 +15528,60 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-56-72i",
+      "title": "ファインディング・ニモ",
+      "originalTitle": "",
+      "englishTitle": "Finding Nemo",
+      "year": 2003,
+      "score": 78,
+      "star": 2.5,
+      "overallRank": 543,
+      "sameScoreRank": 38,
+      "category": "ピクサー・ディズニー作品",
+      "mediaType": "movie",
+      "genre": [
+        "comfort",
+        "娯楽",
+        "子供向け",
+        "ドラマ",
+        "感動",
+        "アドベンチャー"
+      ],
+      "origin": "ハリウッド",
+      "format": "animation",
+      "runtime": 100,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1792420000000-004",
+      "title": "緊急取調室",
+      "originalTitle": "緊急取調室",
+      "englishTitle": "緊急取調室",
+      "year": 2014,
+      "score": 78,
+      "star": 2.5,
+      "overallRank": 544,
+      "sameScoreRank": 39,
+      "category": "未確定",
+      "mediaType": "drama",
+      "genre": [
+        "ミステリー",
+        "TV本編",
+        "サスペンス",
+        "娯楽"
+      ],
+      "origin": "日本",
+      "format": "",
+      "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "custom-1790322759131-6bsn",
       "title": "じゃあ、あんたが作ってみろよ",
       "originalTitle": "じゃあ、あんたが作ってみろよ",
@@ -15535,8 +15589,8 @@
       "year": 2025,
       "score": 78,
       "star": 2.5,
-      "overallRank": 543,
-      "sameScoreRank": 38,
+      "overallRank": 545,
+      "sameScoreRank": 40,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -15561,8 +15615,8 @@
       "year": 2019,
       "score": 78,
       "star": 2.5,
-      "overallRank": 544,
-      "sameScoreRank": 39,
+      "overallRank": 546,
+      "sameScoreRank": 41,
       "category": "MCU作品",
       "mediaType": "movie",
       "genre": [
@@ -15583,34 +15637,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-56-72i",
-      "title": "ファインディング・ニモ",
-      "originalTitle": "",
-      "englishTitle": "Finding Nemo",
-      "year": 2003,
-      "score": 78,
-      "star": 2.5,
-      "overallRank": 545,
-      "sameScoreRank": 40,
-      "category": "ピクサー・ディズニー作品",
-      "mediaType": "movie",
-      "genre": [
-        "comfort",
-        "娯楽",
-        "子供向け",
-        "ドラマ",
-        "感動",
-        "アドベンチャー"
-      ],
-      "origin": "ハリウッド",
-      "format": "animation",
-      "runtime": 100,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-143-15HA",
       "title": "ベスト・キッド",
       "originalTitle": "",
@@ -15618,8 +15644,8 @@
       "year": 2010,
       "score": 78,
       "star": 2.5,
-      "overallRank": 546,
-      "sameScoreRank": 41,
+      "overallRank": 547,
+      "sameScoreRank": 42,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -15645,8 +15671,8 @@
       "year": 2010,
       "score": 78,
       "star": 2.5,
-      "overallRank": 547,
-      "sameScoreRank": 42,
+      "overallRank": 548,
+      "sameScoreRank": 43,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -15671,8 +15697,8 @@
       "year": 2026,
       "score": 78,
       "star": 2.5,
-      "overallRank": 548,
-      "sameScoreRank": 43,
+      "overallRank": 549,
+      "sameScoreRank": 44,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -15702,8 +15728,8 @@
       "year": 2011,
       "score": 78,
       "star": 2.5,
-      "overallRank": 549,
-      "sameScoreRank": 44,
+      "overallRank": 550,
+      "sameScoreRank": 45,
       "category": "Letterboxd追加",
       "mediaType": "movie",
       "genre": [
@@ -15728,7 +15754,7 @@
       "year": 2018,
       "score": 77,
       "star": 2.5,
-      "overallRank": 550,
+      "overallRank": 551,
       "sameScoreRank": 1,
       "category": "MCU作品",
       "mediaType": "movie",
@@ -15756,7 +15782,7 @@
       "year": 2016,
       "score": 77,
       "star": 2.5,
-      "overallRank": 551,
+      "overallRank": 552,
       "sameScoreRank": 2,
       "category": "Letterboxd追加",
       "mediaType": "movie",
@@ -15776,32 +15802,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1792420000000-004",
-      "title": "緊急取調室",
-      "originalTitle": "緊急取調室",
-      "englishTitle": "緊急取調室",
-      "year": 2014,
-      "score": 77,
-      "star": 2.5,
-      "overallRank": 552,
-      "sameScoreRank": 3,
-      "category": "未確定",
-      "mediaType": "drama",
-      "genre": [
-        "ミステリー",
-        "TV本編",
-        "サスペンス",
-        "娯楽"
-      ],
-      "origin": "日本",
-      "format": "",
-      "runtime": null,
-      "exact": true,
-      "letterboxdAddedDate": null,
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-339-lPy0",
       "title": "妄想代理人",
       "originalTitle": "",
@@ -15810,7 +15810,7 @@
       "score": 77,
       "star": 2.5,
       "overallRank": 553,
-      "sameScoreRank": 4,
+      "sameScoreRank": 3,
       "category": "Letterboxd追加",
       "mediaType": "drama",
       "genre": [
@@ -15840,7 +15840,7 @@
       "score": 77,
       "star": 2.5,
       "overallRank": 554,
-      "sameScoreRank": 5,
+      "sameScoreRank": 4,
       "category": "スリラー、ホラー",
       "mediaType": "movie",
       "genre": [
@@ -15868,7 +15868,7 @@
       "score": 77,
       "star": 2.5,
       "overallRank": 555,
-      "sameScoreRank": 6,
+      "sameScoreRank": 5,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -15902,7 +15902,7 @@
       "score": 77,
       "star": 2.5,
       "overallRank": 556,
-      "sameScoreRank": 7,
+      "sameScoreRank": 6,
       "category": "コナン映画",
       "mediaType": "movie",
       "genre": [
@@ -15925,7 +15925,7 @@
       "score": 77,
       "star": 2.5,
       "overallRank": 557,
-      "sameScoreRank": 8,
+      "sameScoreRank": 7,
       "category": "サスペンス、ミステリー",
       "mediaType": "drama",
       "genre": [
@@ -15952,7 +15952,7 @@
       "score": 77,
       "star": 2.5,
       "overallRank": 558,
-      "sameScoreRank": 9,
+      "sameScoreRank": 8,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -15977,7 +15977,7 @@
       "score": 77,
       "star": 2.5,
       "overallRank": 559,
-      "sameScoreRank": 10,
+      "sameScoreRank": 9,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -16005,7 +16005,7 @@
       "score": 77,
       "star": 2.5,
       "overallRank": 560,
-      "sameScoreRank": 11,
+      "sameScoreRank": 10,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -16033,7 +16033,7 @@
       "score": 77,
       "star": 2.5,
       "overallRank": 561,
-      "sameScoreRank": 12,
+      "sameScoreRank": 11,
       "category": "スパイダーマン作品",
       "mediaType": "movie",
       "genre": [
@@ -16062,7 +16062,7 @@
       "score": 77,
       "star": 2.5,
       "overallRank": 562,
-      "sameScoreRank": 13,
+      "sameScoreRank": 12,
       "category": "サスペンス、ミステリー",
       "mediaType": "drama",
       "genre": [
@@ -16089,7 +16089,7 @@
       "score": 77,
       "star": 2.5,
       "overallRank": 563,
-      "sameScoreRank": 14,
+      "sameScoreRank": 13,
       "category": "Letterboxd追加",
       "mediaType": "other",
       "genre": [
@@ -16114,7 +16114,7 @@
       "score": 77,
       "star": 2.5,
       "overallRank": 564,
-      "sameScoreRank": 15,
+      "sameScoreRank": 14,
       "category": "ピクサー・ディズニー作品",
       "mediaType": "movie",
       "genre": [
@@ -16143,7 +16143,7 @@
       "score": 77,
       "star": 2.5,
       "overallRank": 565,
-      "sameScoreRank": 16,
+      "sameScoreRank": 15,
       "category": "ピクサー・ディズニー作品",
       "mediaType": "movie",
       "genre": [
@@ -16170,7 +16170,7 @@
       "score": 77,
       "star": 2.5,
       "overallRank": 566,
-      "sameScoreRank": 17,
+      "sameScoreRank": 16,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -16200,7 +16200,7 @@
       "score": 77,
       "star": 2.5,
       "overallRank": 567,
-      "sameScoreRank": 18,
+      "sameScoreRank": 17,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -16228,7 +16228,7 @@
       "score": 77,
       "star": 2.5,
       "overallRank": 568,
-      "sameScoreRank": 19,
+      "sameScoreRank": 18,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -16256,7 +16256,7 @@
       "score": 77,
       "star": 2.5,
       "overallRank": 569,
-      "sameScoreRank": 20,
+      "sameScoreRank": 19,
       "category": "コナン映画",
       "mediaType": "movie",
       "genre": [
@@ -16284,7 +16284,7 @@
       "score": 77,
       "star": 2.5,
       "overallRank": 570,
-      "sameScoreRank": 21,
+      "sameScoreRank": 20,
       "category": "MCU作品",
       "mediaType": "movie",
       "genre": [
@@ -16312,7 +16312,7 @@
       "score": 77,
       "star": 2.5,
       "overallRank": 571,
-      "sameScoreRank": 22,
+      "sameScoreRank": 21,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -16340,7 +16340,7 @@
       "score": 77,
       "star": 2.5,
       "overallRank": 572,
-      "sameScoreRank": 23,
+      "sameScoreRank": 22,
       "category": "ファンタジー、アドベンチャー",
       "mediaType": "movie",
       "genre": [
@@ -16368,7 +16368,7 @@
       "score": 77,
       "star": 2.5,
       "overallRank": 573,
-      "sameScoreRank": 24,
+      "sameScoreRank": 23,
       "category": "コナン映画",
       "mediaType": "movie",
       "genre": [
@@ -16396,7 +16396,7 @@
       "score": 77,
       "star": 2.5,
       "overallRank": 574,
-      "sameScoreRank": 25,
+      "sameScoreRank": 24,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -16422,7 +16422,7 @@
       "score": 77,
       "star": 2.5,
       "overallRank": 575,
-      "sameScoreRank": 26,
+      "sameScoreRank": 25,
       "category": "スパイダーマン作品",
       "mediaType": "movie",
       "genre": [
@@ -16450,7 +16450,7 @@
       "score": 77,
       "star": 2.5,
       "overallRank": 576,
-      "sameScoreRank": 27,
+      "sameScoreRank": 26,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -16478,7 +16478,7 @@
       "score": 77,
       "star": 2.5,
       "overallRank": 577,
-      "sameScoreRank": 28,
+      "sameScoreRank": 27,
       "category": "コメディ",
       "mediaType": "tvseries",
       "genre": [
@@ -16505,7 +16505,7 @@
       "score": 77,
       "star": 2.5,
       "overallRank": 578,
-      "sameScoreRank": 29,
+      "sameScoreRank": 28,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -16534,7 +16534,7 @@
       "score": 77,
       "star": 2.5,
       "overallRank": 579,
-      "sameScoreRank": 30,
+      "sameScoreRank": 29,
       "category": "戦争、歴史",
       "mediaType": "movie",
       "genre": [
@@ -16562,7 +16562,7 @@
       "score": 77,
       "star": 2.5,
       "overallRank": 580,
-      "sameScoreRank": 31,
+      "sameScoreRank": 30,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -16594,7 +16594,7 @@
       "score": 77,
       "star": 2.5,
       "overallRank": 581,
-      "sameScoreRank": 32,
+      "sameScoreRank": 31,
       "category": "スパイダーマン作品",
       "mediaType": "movie",
       "genre": [
@@ -23577,7 +23577,7 @@
       "custom-1792420000000-009": 71,
       "custom-1792420000000-003": 72,
       "custom-1792420000000-005": 78,
-      "custom-1792420000000-004": 77
+      "custom-1792420000000-004": 78
     },
     "rankOrder": {
       "40": [
@@ -23835,7 +23835,6 @@
       "77": [
         "lb-561-8MHs",
         "lb-482-euce",
-        "custom-1792420000000-004",
         "lb-339-lPy0",
         "lb-414-8gw8",
         "custom-1791377844608-310l",
@@ -23904,9 +23903,10 @@
         "lb-344-5YPM",
         "custom-1790352007604-3jj6",
         "custom-1789385860847-w7kt",
+        "lb-56-72i",
+        "custom-1792420000000-004",
         "custom-1790322759131-6bsn",
         "lb-407-fegG",
-        "lb-56-72i",
         "lb-143-15HA",
         "lb-328-DAQ",
         "custom-1791377114135-l3hd",
