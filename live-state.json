@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792416662289,
-  "sourceUpdatedIso": "2026-10-19T13:31:02.289Z",
+  "sourceUpdatedAt": 1792416739184,
+  "sourceUpdatedIso": "2026-10-19T13:32:19.184Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -22188,7 +22188,7 @@
       "englishTitle": "クレヨンしんちゃん",
       "year": 1992,
       "score": null,
-      "star": 0,
+      "star": 2,
       "overallRank": null,
       "sameScoreRank": null,
       "category": "未確定",
@@ -28727,7 +28727,7 @@
       "custom-1792420000000-006": 0,
       "custom-1792420000000-007": 0,
       "custom-1792420000000-008": 0,
-      "custom-1792420000000-009": 0,
+      "custom-1792420000000-009": 2,
       "custom-1792420000000-010": 0,
       "custom-1792420000000-011": 0,
       "custom-1792420000000-012": 1,
@@ -69696,7 +69696,16 @@
       },
       "custom-1792420000000-009": {
         "contentType": "tv_series",
-        "tmdbType": "tv"
+        "tmdbType": "tv",
+        "poster84": {
+          "path": "/qTW3lU85NG83hXWtAdC3qwOgeDO.jpg",
+          "tmdbId": 324301,
+          "checkedAt": "2026-10-19T13:31:15.519Z",
+          "provider": "tmdb"
+        },
+        "note": "そこまで見てた訳では無いが、まあ意外と面白い。映画の方がだいたい面白いが、そこまで通常回に魅力はない。たくさんのキャラにキャラ付けしてそれを使って浅いとこで動かしてる感じ。",
+        "noteSource": "manual",
+        "noteEditedAt": "2026-10-19T13:32:16.059Z"
       },
       "custom-1792420000000-010": {
         "contentType": "tv_series",
