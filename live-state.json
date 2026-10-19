@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792418851320,
-  "sourceUpdatedIso": "2026-10-19T14:07:31.320Z",
+  "sourceUpdatedAt": 1792418860409,
+  "sourceUpdatedIso": "2026-10-19T14:07:40.409Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -18184,33 +18184,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1791382999848-25pc",
-      "title": "容疑者 室井慎次",
-      "originalTitle": "容疑者 室井慎次",
-      "englishTitle": "The Suspect: Muroi Shinji",
-      "year": 2005,
-      "score": 74,
-      "star": 2,
-      "overallRank": 638,
-      "sameScoreRank": 10,
-      "category": "Letterboxd",
-      "mediaType": "movie",
-      "genre": [
-        "コメディ",
-        "クライム",
-        "ドラマ",
-        "娯楽",
-        "シリーズ劇場版"
-      ],
-      "origin": "日本",
-      "format": "live",
-      "runtime": 117,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-07",
-      "letterboxdPublishedAt": "Thu, 8 Oct 2026 01:37:53 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-07"
-    },
-    {
       "id": "custom-1790423280570-6eki",
       "title": "トリック新作スペシャル3",
       "originalTitle": "TRICK 新作スペシャル3",
@@ -18218,8 +18191,8 @@
       "year": 2014,
       "score": 74,
       "star": 2,
-      "overallRank": 639,
-      "sameScoreRank": 11,
+      "overallRank": 638,
+      "sameScoreRank": 10,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -18250,8 +18223,8 @@
       "year": 2003,
       "score": 74,
       "star": 2,
-      "overallRank": 640,
-      "sameScoreRank": 12,
+      "overallRank": 639,
+      "sameScoreRank": 11,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -18267,6 +18240,33 @@
       "runtime": 98,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1789385860920-hsho",
+      "title": "シンデレラ",
+      "originalTitle": "",
+      "englishTitle": "Cinderella",
+      "year": 1950,
+      "score": 74,
+      "star": 2,
+      "overallRank": 640,
+      "sameScoreRank": 12,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "子供向け",
+        "ファンタジー",
+        "恋愛",
+        "娯楽",
+        "ミュージカル"
+      ],
+      "origin": "ハリウッド",
+      "format": "animation",
+      "runtime": 74,
+      "exact": true,
+      "letterboxdAddedDate": "2026-09-08",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -18298,11 +18298,11 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1789385860920-hsho",
-      "title": "シンデレラ",
-      "originalTitle": "",
-      "englishTitle": "Cinderella",
-      "year": 1950,
+      "id": "custom-1791382999848-25pc",
+      "title": "容疑者 室井慎次",
+      "originalTitle": "容疑者 室井慎次",
+      "englishTitle": "The Suspect: Muroi Shinji",
+      "year": 2005,
       "score": 74,
       "star": 2,
       "overallRank": 642,
@@ -18310,19 +18310,19 @@
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
-        "子供向け",
-        "ファンタジー",
-        "恋愛",
+        "コメディ",
+        "クライム",
+        "ドラマ",
         "娯楽",
-        "ミュージカル"
+        "シリーズ劇場版"
       ],
-      "origin": "ハリウッド",
-      "format": "animation",
-      "runtime": 74,
+      "origin": "日本",
+      "format": "live",
+      "runtime": 117,
       "exact": true,
-      "letterboxdAddedDate": "2026-09-08",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
+      "letterboxdAddedDate": "2026-10-07",
+      "letterboxdPublishedAt": "Thu, 8 Oct 2026 01:37:53 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-07"
     },
     {
       "id": "lb-234-2qRS",
@@ -23722,11 +23722,11 @@
         "custom-1790965876380-nqs0",
         "custom-1791113242089-wnyx",
         "lb-431-o0Hc",
-        "custom-1791382999848-25pc",
         "custom-1790423280570-6eki",
         "lb-284-1Vpy",
-        "lb-363-b8wA",
         "custom-1789385860920-hsho",
+        "lb-363-b8wA",
+        "custom-1791382999848-25pc",
         "lb-234-2qRS",
         "lb-325-b5zc",
         "lb-387-em8S",
