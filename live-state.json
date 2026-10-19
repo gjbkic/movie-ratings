@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792418860409,
-  "sourceUpdatedIso": "2026-10-19T14:07:40.409Z",
+  "sourceUpdatedAt": 1792418879079,
+  "sourceUpdatedIso": "2026-10-19T14:07:59.079Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -22445,7 +22445,12 @@
       "sameScoreRank": null,
       "category": "未確定",
       "mediaType": "drama",
-      "genre": "",
+      "genre": [
+        "子供向け",
+        "TV本編",
+        "娯楽",
+        "コメディ"
+      ],
       "origin": "日本",
       "format": "animation",
       "runtime": null,
@@ -38590,6 +38595,12 @@
         "娯楽",
         "子供向け",
         "ヒーロー"
+      ],
+      "custom-1792420000000-011": [
+        "子供向け",
+        "TV本編",
+        "娯楽",
+        "コメディ"
       ]
     },
     "originOverrides": {
@@ -70197,7 +70208,7 @@
         "poster84": {
           "path": null,
           "tmdbId": null,
-          "checkedAt": "2026-10-19T13:34:47.523Z",
+          "checkedAt": "2026-10-19T14:08:02.721Z",
           "provider": "tmdb"
         },
         "note": "面白くない。キャラに魅力がないし、展開も薄い。マンネリがすごい。",
