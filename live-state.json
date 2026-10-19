@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792416590880,
-  "sourceUpdatedIso": "2026-10-19T13:29:50.880Z",
+  "sourceUpdatedAt": 1792416612001,
+  "sourceUpdatedIso": "2026-10-19T13:30:12.001Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -22251,7 +22251,7 @@
       "englishTitle": "ちびまる子ちゃん",
       "year": 1990,
       "score": null,
-      "star": 0,
+      "star": 1,
       "overallRank": null,
       "sameScoreRank": null,
       "category": "未確定",
@@ -28730,7 +28730,7 @@
       "custom-1792420000000-009": 0,
       "custom-1792420000000-010": 0,
       "custom-1792420000000-011": 0,
-      "custom-1792420000000-012": 0,
+      "custom-1792420000000-012": 1,
       "custom-1792420000000-013": 2.5,
       "custom-1792421000000-001": 0,
       "custom-1792421000000-002": 0,
@@ -69708,7 +69708,13 @@
       },
       "custom-1792420000000-012": {
         "contentType": "tv_series",
-        "tmdbType": "tv"
+        "tmdbType": "tv",
+        "poster84": {
+          "path": null,
+          "tmdbId": null,
+          "checkedAt": "2026-10-19T13:30:04.336Z",
+          "provider": "tmdb"
+        }
       },
       "custom-1792420000000-013": {
         "contentType": "tv_series",
