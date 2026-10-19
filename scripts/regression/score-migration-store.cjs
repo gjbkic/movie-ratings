@@ -44,5 +44,22 @@ const fs=require('fs'),path=require('path'),policy=require('../../app-score-poli
   assert.equal((await tabs[0].evaluate(input=>Movie30ScoreMigrationStore.commit(input),input)).status,'conflict');
   assert.equal((await tabs[0].evaluate(()=>Movie30ScoreMigrationStore.read())).status,'damaged');
   console.log('SCORE_MIGRATION_STORE_RACE_PASS: two actual tabs, one winner; damaged checkpoint protected');
+  const moving=await browser.newContext();await isolate(moving);
+  const migration=await moving.newPage(),writer=await moving.newPage();
+  for(const tab of [migration,writer])await tab.goto(origin+'/seed');
+  for(const file of ['app-score-policy.js','app-score-migration-store.js','app-score-migration-stage.js'])await migration.addScriptTag({content:fs.readFileSync(path.join(__dirname,'../../'+file),'utf8')});
+  const latest=JSON.parse(input.sourceJson);latest.letterboxdMeta['fixture-0012'].note='Later legacy edit during migration';
+  await migration.exposeFunction('editFromOtherTab',()=>writer.evaluate(s=>localStorage.setItem('movie30_data_v1',JSON.stringify(s)),latest));
+  const staged=await migration.evaluate(async sourceJson=>{
+   return Movie30ScoreMigrationStage.stage({sourceJson,stamp:sourceJson,baseFilms:[],policy:Movie30ScorePolicy,
+    readSource:async()=>{const json=localStorage.getItem('movie30_data_v1');return {json,stamp:json}},
+    withLegacyLock:work=>navigator.locks.request('movie30-state-write',work),
+    store:{commit:async input=>{const result=await Movie30ScoreMigrationStore.commit(input);const observed=new Promise(resolve=>window.addEventListener("storage",resolve,{once:true}));await window.editFromOtherTab();await observed;return result}}
+   });
+  },input.sourceJson);
+  assert.equal(staged.status,'source-changed-after-stage');assert.equal(staged.activated,false);
+  assert.deepEqual(await writer.evaluate(()=>JSON.parse(localStorage.getItem('movie30_data_v1'))),latest);
+  const held=await migration.evaluate(()=>Movie30ScoreMigrationStore.read());assert.equal(held.sourceJson,input.sourceJson);assert.equal(held.targetJson,input.targetJson);
+  console.log('SCORE_MIGRATION_SOURCE_RACE_PASS: legacy edit survives, checkpoint retained, activation refused');
  }finally{await browser.close()}
 })().catch(e=>{console.error(e);process.exitCode=1});
