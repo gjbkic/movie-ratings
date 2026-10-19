@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792439556280,
-  "sourceUpdatedIso": "2026-10-19T19:52:36.280Z",
+  "sourceUpdatedAt": 1792439586468,
+  "sourceUpdatedIso": "2026-10-19T19:53:06.468Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -22871,7 +22871,9 @@
       "genre": [
         "コメディ",
         "SF",
-        "ファンタジー"
+        "ファンタジー",
+        "恋愛",
+        "娯楽"
       ],
       "origin": "日本",
       "format": "live",
@@ -38788,7 +38790,9 @@
       "custom-1792439512307-ncav": [
         "コメディ",
         "SF",
-        "ファンタジー"
+        "ファンタジー",
+        "恋愛",
+        "娯楽"
       ]
     },
     "originOverrides": {
@@ -70950,6 +70954,12 @@
           "creators": [],
           "source": "tmdb",
           "fetchedAt": "2026-10-19T19:51:52.809Z"
+        },
+        "poster84": {
+          "path": "/w29O9Th6hfNs42d3ERoWgbQEBBe.jpg",
+          "tmdbId": 1138476,
+          "checkedAt": "2026-10-19T19:53:00.317Z",
+          "provider": "tmdb"
         }
       }
     }
