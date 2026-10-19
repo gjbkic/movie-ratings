@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792418675397,
-  "sourceUpdatedIso": "2026-10-19T14:04:35.397Z",
+  "sourceUpdatedAt": 1792418691435,
+  "sourceUpdatedIso": "2026-10-19T14:04:51.435Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -22735,7 +22735,14 @@
       "sameScoreRank": null,
       "category": "サスペンス、ミステリー",
       "mediaType": "tvseries",
-      "genre": "",
+      "genre": [
+        "コメディ",
+        "TV本編",
+        "ファンタジー",
+        "アドベンチャー",
+        "子供向け",
+        "娯楽"
+      ],
       "origin": "",
       "format": "",
       "runtime": null,
@@ -38527,6 +38534,14 @@
         "青春・若者",
         "子供向け",
         "comfort",
+        "娯楽"
+      ],
+      "custom-1792417297007-rck1": [
+        "コメディ",
+        "TV本編",
+        "ファンタジー",
+        "アドベンチャー",
+        "子供向け",
         "娯楽"
       ]
     },
