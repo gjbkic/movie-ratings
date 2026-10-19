@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792417475459,
-  "sourceUpdatedIso": "2026-10-19T13:44:35.459Z",
+  "sourceUpdatedAt": 1792417517802,
+  "sourceUpdatedIso": "2026-10-19T13:45:17.802Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -22650,7 +22650,7 @@
       "englishTitle": "Family Guy",
       "year": 1999,
       "score": null,
-      "star": 0,
+      "star": 3,
       "overallRank": null,
       "sameScoreRank": null,
       "category": "コメディ",
@@ -28939,7 +28939,7 @@
       "custom-1792417096624-icxb": 0,
       "custom-1792417143714-5w33": 2.5,
       "custom-1792417199807-u80c": 2,
-      "custom-1792417268319-bu7k": 0,
+      "custom-1792417268319-bu7k": 3,
       "custom-1792417297007-rck1": 2
     },
     "titleOverrides": {
@@ -70321,7 +70321,10 @@
           ],
           "source": "tmdb",
           "fetchedAt": "2026-10-19T13:41:08.599Z"
-        }
+        },
+        "note": "",
+        "noteSource": "manual",
+        "noteEditedAt": "2026-10-19T13:45:15.349Z"
       },
       "custom-1792417297007-rck1": {
         "contentType": "tv_series",
