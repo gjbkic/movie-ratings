@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792434294707,
-  "sourceUpdatedIso": "2026-10-19T18:24:54.707Z",
+  "sourceUpdatedAt": 1792434308228,
+  "sourceUpdatedIso": "2026-10-19T18:25:08.228Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -12278,36 +12278,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-111-4pD0",
-      "title": "オール・ユー・ニード・イズ・キル",
-      "originalTitle": "",
-      "englishTitle": "Edge of Tomorrow",
-      "year": 2014,
-      "score": 80,
-      "star": 2.5,
-      "overallRank": 427,
-      "sameScoreRank": 6,
-      "category": "アクション",
-      "mediaType": "movie",
-      "genre": [
-        "アクション",
-        "SF",
-        "恋愛",
-        "ドラマ",
-        "娯楽",
-        "バイオレンス",
-        "時間",
-        "ファンタジー"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 113,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-405-yuDE",
       "title": "落下の解剖学",
       "originalTitle": "",
@@ -12315,8 +12285,8 @@
       "year": 2023,
       "score": 80,
       "star": 2.5,
-      "overallRank": 428,
-      "sameScoreRank": 7,
+      "overallRank": 427,
+      "sameScoreRank": 6,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -12340,8 +12310,8 @@
       "year": 2007,
       "score": 80,
       "star": 2.5,
-      "overallRank": 429,
-      "sameScoreRank": 8,
+      "overallRank": 428,
+      "sameScoreRank": 7,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -12358,6 +12328,36 @@
       "runtime": 108,
       "exact": true,
       "letterboxdAddedDate": "2025-09-24",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "lb-111-4pD0",
+      "title": "オール・ユー・ニード・イズ・キル",
+      "originalTitle": "",
+      "englishTitle": "Edge of Tomorrow",
+      "year": 2014,
+      "score": 80,
+      "star": 2.5,
+      "overallRank": 429,
+      "sameScoreRank": 8,
+      "category": "アクション",
+      "mediaType": "movie",
+      "genre": [
+        "アクション",
+        "SF",
+        "恋愛",
+        "ドラマ",
+        "娯楽",
+        "バイオレンス",
+        "時間",
+        "ファンタジー"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 113,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -24002,9 +24002,9 @@
         "custom-1791903545078-e1rc",
         "custom-1790322769753-zbsb",
         "lb-229-26tw",
-        "lb-111-4pD0",
         "lb-405-yuDE",
         "lb-481-1rbm",
+        "lb-111-4pD0",
         "lb-144-1Mne",
         "custom-1789385860057-z7ka",
         "lb-226-g0d6",
@@ -57270,7 +57270,7 @@
         "addedDate": "2025-09-24",
         "addedDateSource": "letterboxd-export-2026-09-27",
         "note": "面白かった。一室で起こること。ぎゃくっぽいのもそれなりに良かったし、脚本もよく練られてたと思う。伏線回収がすごいと言われたら微妙だがラストにかけての綺麗に纏まってく感じはとても良かった。",
-        "noteSource": "letterboxd-export",
+        "noteSource": "manual",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
         "watchedAddedDate": "2025-09-24",
@@ -57298,7 +57298,8 @@
           "tmdbId": 27698,
           "path": "/1K5Sz9GBbAyytWPC6xXWX426Pue.jpg",
           "checkedAt": "2026-10-18T21:28:20.190877+00:00"
-        }
+        },
+        "noteEditedAt": "2026-10-19T18:24:59.588Z"
       },
       "lb-482-euce": {
         "addedDate": "2026-08-02",
