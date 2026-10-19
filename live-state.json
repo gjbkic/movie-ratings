@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792406248382,
-  "sourceUpdatedIso": "2026-10-19T10:37:28.382Z",
+  "sourceUpdatedAt": 1792406302043,
+  "sourceUpdatedIso": "2026-10-19T10:38:22.043Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -21814,7 +21814,16 @@
       "sameScoreRank": null,
       "category": "ドラマ",
       "mediaType": "drama",
-      "genre": "",
+      "genre": [
+        "娯楽",
+        "TV本編",
+        "バイオレンス",
+        "ドラマ",
+        "アクション",
+        "ミステリー",
+        "サスペンス",
+        "どんでん返し"
+      ],
       "origin": "日本",
       "format": "",
       "runtime": null,
@@ -36957,6 +36966,16 @@
         "アクション",
         "ドラマ",
         "スリラー"
+      ],
+      "custom-1791973996242-1our": [
+        "娯楽",
+        "TV本編",
+        "バイオレンス",
+        "ドラマ",
+        "アクション",
+        "ミステリー",
+        "サスペンス",
+        "どんでん返し"
       ]
     },
     "originOverrides": {
