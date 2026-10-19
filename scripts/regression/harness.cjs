@@ -4,7 +4,7 @@ const {fixture}=require('./fixture.cjs');
 const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
 const root=path.resolve(__dirname,'../..'),origin='https://movie-regression.test';
 const sourceRoot=path.resolve(process.env.MOVIE_APP_ROOT||root);
-const allowed=new Set(fs.readdirSync(sourceRoot).filter(n=>/^app-[\w-]+\.js$/.test(n)).concat(['index.html','recovery-check.html']));
+const allowed=new Set(fs.readdirSync(sourceRoot).filter(n=>/^app-[\w-]+\.js$/.test(n)).concat(['index.html','recovery-check.html','score-preview.html']));
 const options={headless:true,...(process.env.CHROME_PATH?{executablePath:process.env.CHROME_PATH}:{})};
 async function isolate(context,{seed=fixture().state}={}){
   const requests=[];
