@@ -26,6 +26,21 @@ const policy=require('../../app-score-policy.js');
   await page.reload();await ready(page);const reopened=await snapshot(page);
   assert.deepEqual(reopened.exactScores,edited.exactScores);assert.deepEqual(reopened.rankOrder,edited.rankOrder);assert.equal(reopened.scorePolicy,policy.CURRENT);
   await page.evaluate(()=>openSheet('fixture-0012'));assert.equal(await page.locator('#editStar').inputValue(),'3');
-  assert.deepEqual(errors,[]);console.log('SCORE_PREVIEW_PASS: 101 thresholds, rank grouping, score input, metadata and reload');
+  page.on('dialog',d=>d.type()==='confirm'?d.accept():d.dismiss());
+  const beforeImport=await snapshot(page);
+  assert.equal(await page.evaluate(s=>restorePackage({state:s}),fixture().state),false,'legacy scores must not enter balanced state');
+  assert.deepEqual(await snapshot(page),beforeImport);
+  assert.equal(await page.evaluate(async()=>{try{await snapshotHtml();return false}catch(e){return /JSON/.test(e.message)}}),true,'balanced HTML must not reopen with legacy thresholds');
+  assert.deepEqual(errors,[]);console.log('SCORE_PREVIEW_PASS: thresholds, grouping, editing/reload, incompatible import and HTML protection');
+  const legacy=await browser.newContext();await isolate(legacy);
+  const oldPage=await legacy.newPage();oldPage.on('dialog',d=>d.type()==='confirm'?d.accept():d.dismiss());
+  await oldPage.goto(origin);await ready(oldPage);const oldBefore=await snapshot(oldPage);
+  const diskBefore=await oldPage.evaluate(()=>localStorage.getItem(STORAGE_KEY));
+  for(const incoming of [seed,{...seed,scorePolicy:'future'},{...seed,scorePolicy:null}]){
+   assert.equal(await oldPage.evaluate(s=>restorePackage({state:s}),incoming),false);
+   assert.deepEqual(await snapshot(oldPage),oldBefore);
+   assert.equal(await oldPage.evaluate(()=>localStorage.getItem(STORAGE_KEY)),diskBefore);
+  }
+  console.log('SCORE_POLICY_IMPORT_GUARD_PASS: balanced/future/null cannot replace legacy memory or disk');
  }finally{await browser.close()}
 })().catch(e=>{console.error(e);process.exitCode=1});
