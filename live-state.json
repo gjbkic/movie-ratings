@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792418965081,
-  "sourceUpdatedIso": "2026-10-19T14:09:25.081Z",
+  "sourceUpdatedAt": 1792418985220,
+  "sourceUpdatedIso": "2026-10-19T14:09:45.220Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -22418,7 +22418,15 @@
       "sameScoreRank": null,
       "category": "未確定",
       "mediaType": "drama",
-      "genre": "",
+      "genre": [
+        "ドラマ",
+        "TV本編",
+        "娯楽",
+        "SF",
+        "哲学・思想",
+        "ミステリー",
+        "サスペンス"
+      ],
       "origin": "日本",
       "format": "",
       "runtime": null,
@@ -38629,6 +38637,15 @@
         "ミステリー",
         "コメディ",
         "娯楽"
+      ],
+      "custom-1792420000000-005": [
+        "ドラマ",
+        "TV本編",
+        "娯楽",
+        "SF",
+        "哲学・思想",
+        "ミステリー",
+        "サスペンス"
       ]
     },
     "originOverrides": {
@@ -69016,7 +69033,13 @@
         "tmdbType": "tv",
         "note": "事件自体は面白い。キャラもいい。少しギャグが臭いとこが多いが、最後まで楽しめる。恋愛匂わせ的なのはマジでいらない。良くも悪くも(悪くも強め)この頃のドラマ",
         "noteSource": "manual",
-        "noteEditedAt": "2026-10-19T11:44:48.025Z"
+        "noteEditedAt": "2026-10-19T11:44:48.025Z",
+        "poster84": {
+          "path": null,
+          "tmdbId": null,
+          "checkedAt": "2026-10-19T14:09:31.520Z",
+          "provider": "tmdb"
+        }
       },
       "custom-1791919109416-hxq8": {
         "contentType": "tv_series",
