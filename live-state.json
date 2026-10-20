@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792523923958,
-  "sourceUpdatedIso": "2026-10-20T19:18:43.958Z",
+  "sourceUpdatedAt": 1792524249469,
+  "sourceUpdatedIso": "2026-10-20T19:24:09.469Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -15522,7 +15522,8 @@
         "娯楽",
         "感動",
         "バイオレンス",
-        "ヒーロー"
+        "ヒーロー",
+        "アクション"
       ],
       "origin": "ハリウッド",
       "format": "live",
@@ -35333,7 +35334,8 @@
         "娯楽",
         "感動",
         "バイオレンス",
-        "ヒーロー"
+        "ヒーロー",
+        "アクション"
       ],
       "lb-378-26E0": [
         "ドラマ",
@@ -52828,7 +52830,7 @@
         "addedDate": "2025-10-27",
         "addedDateSource": "letterboxd-export-2026-09-27",
         "note": "面白かった。それぞれの関係や人間がレストランの中で描かれてく。群像劇とはこういうことなのかと思った。賑やかなレストランの中でハプニングやドラマの中に映像では人が死にそうな不穏な空気が流れてるのも面白かった。普通に楽しめた",
-        "noteSource": "letterboxd-export",
+        "noteSource": "manual",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
         "watchedAddedDate": "2025-10-27",
@@ -52856,7 +52858,8 @@
           "tmdbId": 22617,
           "path": "/6qhSssp1RT3IU53OkomdpJsyJ0D.jpg",
           "checkedAt": "2026-10-18T21:28:20.190877+00:00"
-        }
+        },
+        "noteEditedAt": "2026-10-20T19:24:09.420Z"
       },
       "lb-347-4bW8": {
         "addedDate": "2025-11-07",
