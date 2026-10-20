@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792524263689,
-  "sourceUpdatedIso": "2026-10-20T19:24:23.689Z",
+  "sourceUpdatedAt": 1792524266653,
+  "sourceUpdatedIso": "2026-10-20T19:24:26.653Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -15145,6 +15145,32 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-346-1Aiw",
+      "title": "ディナーラッシュ",
+      "originalTitle": "",
+      "englishTitle": "Dinner Rush",
+      "year": 2000,
+      "score": 78,
+      "star": 2.5,
+      "overallRank": 529,
+      "sameScoreRank": 23,
+      "category": "マフィア、クライム",
+      "mediaType": "movie",
+      "genre": [
+        "クライム",
+        "サスペンス",
+        "ドラマ",
+        "娯楽"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": "2025-10-27",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-239-kidw",
       "title": "マスカレード・ホテル",
       "originalTitle": "",
@@ -15152,8 +15178,8 @@
       "year": 2019,
       "score": 78,
       "star": 2.5,
-      "overallRank": 529,
-      "sameScoreRank": 23,
+      "overallRank": 530,
+      "sameScoreRank": 24,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -15178,8 +15204,8 @@
       "year": 2006,
       "score": 78,
       "star": 2.5,
-      "overallRank": 530,
-      "sameScoreRank": 24,
+      "overallRank": 531,
+      "sameScoreRank": 25,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -15204,8 +15230,8 @@
       "year": 2007,
       "score": 78,
       "star": 2.5,
-      "overallRank": 531,
-      "sameScoreRank": 25,
+      "overallRank": 532,
+      "sameScoreRank": 26,
       "category": "ファンタジー、アドベンチャー",
       "mediaType": "movie",
       "genre": [
@@ -15219,32 +15245,6 @@
       "runtime": 170,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "lb-346-1Aiw",
-      "title": "ディナーラッシュ",
-      "originalTitle": "",
-      "englishTitle": "Dinner Rush",
-      "year": 2000,
-      "score": 78,
-      "star": 2.5,
-      "overallRank": 532,
-      "sameScoreRank": 26,
-      "category": "マフィア、クライム",
-      "mediaType": "movie",
-      "genre": [
-        "クライム",
-        "サスペンス",
-        "ドラマ",
-        "娯楽"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": null,
-      "exact": true,
-      "letterboxdAddedDate": "2025-10-27",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -23990,10 +23990,10 @@
         "lb-248-1KJs",
         "lb-224-68Wo",
         "lb-408-8MHi",
+        "lb-346-1Aiw",
         "lb-239-kidw",
         "lb-257-2Ev2",
         "lb-110-2aGu",
-        "lb-346-1Aiw",
         "lb-135-1ZLI",
         "lb-61-297o",
         "custom-1791973996242-1our",
