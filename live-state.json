@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792523573356,
-  "sourceUpdatedIso": "2026-10-20T19:12:53.356Z",
+  "sourceUpdatedAt": 1792523587926,
+  "sourceUpdatedIso": "2026-10-20T19:13:07.926Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -13063,34 +13063,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1791469824035-6gcd",
-      "title": "ブラック・ミラー「人生の軌跡のすべて」",
-      "originalTitle": "",
-      "englishTitle": "Black Mirror: The Entire History of You",
-      "year": 2011,
-      "score": 80,
-      "star": 2.5,
-      "overallRank": 455,
-      "sameScoreRank": 33,
-      "category": "Letterboxd",
-      "mediaType": "drama",
-      "genre": [
-        "恋愛",
-        "ドラマ",
-        "サスペンス",
-        "娯楽",
-        "SF",
-        "TV本編"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": null,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-08",
-      "letterboxdPublishedAt": "Thu, 8 Oct 2026 22:31:53 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-08"
-    },
-    {
       "id": "custom-1791919024950-k1ok",
       "title": "コード・ブルー　ドクターヘリ緊急救命",
       "originalTitle": "コード・ブルー　ドクターヘリ緊急救命",
@@ -13098,8 +13070,8 @@
       "year": 2008,
       "score": 80,
       "star": 2.5,
-      "overallRank": 456,
-      "sameScoreRank": 34,
+      "overallRank": 455,
+      "sameScoreRank": 33,
       "category": "ドラマ",
       "mediaType": "drama",
       "genre": [
@@ -13126,8 +13098,8 @@
       "year": 2021,
       "score": 80,
       "star": 2.5,
-      "overallRank": 457,
-      "sameScoreRank": 35,
+      "overallRank": 456,
+      "sameScoreRank": 34,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -13154,8 +13126,8 @@
       "year": 2022,
       "score": 80,
       "star": 2.5,
-      "overallRank": 458,
-      "sameScoreRank": 36,
+      "overallRank": 457,
+      "sameScoreRank": 35,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -13186,8 +13158,8 @@
       "year": 2017,
       "score": 80,
       "star": 2.5,
-      "overallRank": 459,
-      "sameScoreRank": 37,
+      "overallRank": 458,
+      "sameScoreRank": 36,
       "category": "ピクサー・ディズニー作品",
       "mediaType": "movie",
       "genre": [
@@ -13214,8 +13186,8 @@
       "year": 2012,
       "score": 80,
       "star": 2.5,
-      "overallRank": 460,
-      "sameScoreRank": 38,
+      "overallRank": 459,
+      "sameScoreRank": 37,
       "category": "邦画",
       "mediaType": "drama",
       "genre": [
@@ -13243,8 +13215,8 @@
       "year": 2015,
       "score": 80,
       "star": 2.5,
-      "overallRank": 461,
-      "sameScoreRank": 39,
+      "overallRank": 460,
+      "sameScoreRank": 38,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -13272,8 +13244,8 @@
       "year": 1995,
       "score": 80,
       "star": 2.5,
-      "overallRank": 462,
-      "sameScoreRank": 40,
+      "overallRank": 461,
+      "sameScoreRank": 39,
       "category": "ピクサー・ディズニー作品",
       "mediaType": "movie",
       "genre": [
@@ -13300,8 +13272,8 @@
       "year": 2008,
       "score": 80,
       "star": 2.5,
-      "overallRank": 463,
-      "sameScoreRank": 41,
+      "overallRank": 462,
+      "sameScoreRank": 40,
       "category": "戦争、歴史",
       "mediaType": "movie",
       "genre": [
@@ -13318,6 +13290,34 @@
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1791469824035-6gcd",
+      "title": "ブラック・ミラー「人生の軌跡のすべて」",
+      "originalTitle": "",
+      "englishTitle": "Black Mirror: The Entire History of You",
+      "year": 2011,
+      "score": 80,
+      "star": 2.5,
+      "overallRank": 463,
+      "sameScoreRank": 41,
+      "category": "Letterboxd",
+      "mediaType": "drama",
+      "genre": [
+        "恋愛",
+        "ドラマ",
+        "サスペンス",
+        "娯楽",
+        "SF",
+        "TV本編"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-08",
+      "letterboxdPublishedAt": "Thu, 8 Oct 2026 22:31:53 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-08"
     },
     {
       "id": "lb-516-23Fk",
@@ -24091,7 +24091,6 @@
         "custom-1790089712252-cunv",
         "lb-517-k8dm",
         "lb-377-azew",
-        "custom-1791469824035-6gcd",
         "custom-1791919024950-k1ok",
         "custom-1790322758188-46qe",
         "custom-1791394775097-fjc5",
@@ -24100,6 +24099,7 @@
         "lb-434-8i7u",
         "lb-406-29qA",
         "lb-272-1Soi",
+        "custom-1791469824035-6gcd",
         "lb-516-23Fk"
       ],
       "81": [
