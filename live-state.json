@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792507505551,
-  "sourceUpdatedIso": "2026-10-20T14:45:05.551Z",
+  "sourceUpdatedAt": 1792507516343,
+  "sourceUpdatedIso": "2026-10-20T14:45:16.343Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -16501,33 +16501,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1792417143714-5w33",
-      "title": "フィニアスとファーブ",
-      "originalTitle": "Phineas and Ferb",
-      "englishTitle": "Phineas and Ferb",
-      "year": 2007,
-      "score": 77,
-      "star": 2.5,
-      "overallRank": 578,
-      "sameScoreRank": 26,
-      "category": "コメディ",
-      "mediaType": "drama",
-      "genre": [
-        "TV本編",
-        "娯楽",
-        "ファンタジー",
-        "コメディ",
-        "子供向け"
-      ],
-      "origin": "ハリウッド",
-      "format": "",
-      "runtime": null,
-      "exact": true,
-      "letterboxdAddedDate": null,
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "custom-1792439512307-ncav",
       "title": "リバー、流れないでよ",
       "originalTitle": "リバー、流れないでよ",
@@ -16535,8 +16508,8 @@
       "year": 2023,
       "score": 77,
       "star": 2.5,
-      "overallRank": 579,
-      "sameScoreRank": 27,
+      "overallRank": 578,
+      "sameScoreRank": 26,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -16563,8 +16536,8 @@
       "year": 2012,
       "score": 77,
       "star": 2.5,
-      "overallRank": 580,
-      "sameScoreRank": 28,
+      "overallRank": 579,
+      "sameScoreRank": 27,
       "category": "スパイダーマン作品",
       "mediaType": "movie",
       "genre": [
@@ -16580,6 +16553,33 @@
       "runtime": 136,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1792417143714-5w33",
+      "title": "フィニアスとファーブ",
+      "originalTitle": "Phineas and Ferb",
+      "englishTitle": "Phineas and Ferb",
+      "year": 2007,
+      "score": 77,
+      "star": 2.5,
+      "overallRank": 580,
+      "sameScoreRank": 28,
+      "category": "コメディ",
+      "mediaType": "drama",
+      "genre": [
+        "TV本編",
+        "娯楽",
+        "ファンタジー",
+        "コメディ",
+        "子供向け"
+      ],
+      "origin": "ハリウッド",
+      "format": "",
+      "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": null,
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -23927,9 +23927,9 @@
         "lb-202-d1km",
         "lb-256-1HU8",
         "custom-1789385860541-6lzx",
-        "custom-1792417143714-5w33",
         "custom-1792439512307-ncav",
         "lb-79-27PI",
+        "custom-1792417143714-5w33",
         "lb-221-7VEK",
         "lb-311-z1jW",
         "custom-1791382461963-kb93",
