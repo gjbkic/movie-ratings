@@ -129,7 +129,7 @@ function movie30ChooseCandidate(candidates){
 function movie30Checksum(json){let h=2166136261;for(let i=0;i<json.length;i++){h^=json.charCodeAt(i);h=Math.imul(h,16777619)}return (h>>>0).toString(16)}
 function movie30SealState(){delete state.storageIntegrity;const json=JSON.stringify(state);state.storageIntegrity={version:1,checksum:movie30Checksum(json),films:state.customFilms.length,ranks:Object.values(state.rankOrder).flat().length}}
 function movie30Candidate(json,source,stamp){
- try{const x=JSON.parse(json);if(!movie30ValidState(x))return null;
+ try{const x=JSON.parse(json);if(window.__movie30BalancedScorePreview===true||window.Movie30ScoreEntryGate?.assess(x,{route:'startup',runtime:'legacy-v23'}).status!=='accept'||!movie30ValidState(x))return null;
  if(x.storageIntegrity){const {storageIntegrity,...payload}=x;if(storageIntegrity.checksum!==movie30Checksum(JSON.stringify(payload)))return null}return {state:x,json,source,stamp:Number(x.updatedAt||stamp||0)}}catch(_){return null}
 }
 function load(){
@@ -144,7 +144,7 @@ function load(){
  try{const json=localStorage.getItem('movie30_change_history_v66');if(json)movie30StartupArchive.push({id:'undo-before-ad',json,updatedAt:0,auxiliary:true})}catch(_){}
  try{const v=JSON.parse(localStorage.getItem(VIEW_KEY)||'null');if(v)view={...view,...v}}catch(_){}
  view.page='rank';
- if(EMBEDDED_STATE&&movie30ValidState(EMBEDDED_STATE))movie30Candidates.push({state:EMBEDDED_STATE,stamp:Number(EMBEDDED_STATE.updatedAt)||0,source:'embedded'});
+  if(EMBEDDED_STATE&&window.__movie30BalancedScorePreview!==true&&window.Movie30ScoreEntryGate?.assess(EMBEDDED_STATE,{route:'startup',runtime:'legacy-v23'}).status==='accept'&&movie30ValidState(EMBEDDED_STATE))movie30Candidates.push({state:EMBEDDED_STATE,stamp:Number(EMBEDDED_STATE.updatedAt)||0,source:'embedded'});
  movie30Candidates.sort((a,b)=>b.stamp-a.stamp);
  if(movie30Candidates.length)state=normalizeState(deepCopy(movie30Candidates[0].state));
  setSaveStatus('保存データを読み込み中…');
@@ -192,7 +192,11 @@ async function movie30RestoreStorageLocked(){
    try{return Number(JSON.parse(a.json).updatedAt||0)-Number(JSON.parse(b.json).updatedAt||0)}catch(_){return 0}
   })){
    try{const partial=JSON.parse(entry.json);
-    if(!partial||typeof partial!=='object'||Number(partial.updatedAt||0)<=Number(state.updatedAt||0)||movie30ValidState(partial))continue;
+     if(!partial||typeof partial!=='object'||Array.isArray(partial)||Number(partial.updatedAt||0)<=Number(state.updatedAt||0)||movie30ValidState(partial))continue;
+     // Incomplete legacy records cannot pass the full-state gate. Check their
+     // policy and bare-state identity before borrowing any metadata from them.
+     if(window.__movie30BalancedScorePreview===true||Object.prototype.hasOwnProperty.call(partial,'app')||Object.prototype.hasOwnProperty.call(partial,'type')||Object.prototype.hasOwnProperty.call(partial,'state')||
+        (Object.prototype.hasOwnProperty.call(partial,'scorePolicy')&&partial.scorePolicy!=='legacy-v23'))continue;
     const merged={...state};
     // Partial records may contribute new films and metadata, never replace ranking.
     for(const [k,v] of Object.entries(partial)){
