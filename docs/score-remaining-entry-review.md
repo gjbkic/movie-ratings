@@ -33,3 +33,18 @@ IDBは `movie30ReadSnapshot` (:21) / `movie30ReadDisk` (:47–65) がsnapshots/c
 最小失敗先行テスト：架空740作品で(1) IDB current=new、previous=legacy、LSなし、(2) LS current=new、backup=legacy、(3) 全てlegacyの独立IDB行を配置。起動後に実際のUI編集・保存を試し、(1)(2)のcurrent/previous/LS原文が維持され、保存成功を出さず、再起動でも拒否が続くことを確認。(3)は選択→編集保存→再起動の互換。null/unknown/preview変種も同じ保護条件で検証する。live-state要求数も数え、保存記録がある拒否ケースでremoteに逃げないことを確認する。probe/DB作成/退避は許容されるため「全領域無変更」とはしない。runtimeはJSON出力等で内容を比較し、RestoredFromの文字列だけで合成の安全性を判定しない。
 
 別タブ・履歴・自動復旧JSONは別工程。特に履歴の保存失敗時の消去と自動復旧の部分変更は未解決リスクとして残す。
+
+## 42e8350後の限定再レビューと次工程
+
+2026-10-21。起動current保護とそのテスト補強は完了済み。以下はコード読取によるリスクで、今回の再現実行ではない。アプリ変更・追加テストなし。activated:falseを維持。
+
+- **履歴Undoを先に扱う。** `app-core.js:6013–6022` の `snap` / `diff` / saveラッパーはpolicy・元envelopeを履歴に残さない。`undo(h)` は差分のフィールドや現在の形式を検査せず、直接stateを変え、`oldSave(false)`のPromiseを待たず履歴削除と成功toastへ進む。保存停止・両保存先の失敗でも履歴を失う経路がある。新帯の履歴が実際に混入したとの証拠はなく、無印履歴から由来を復元できないことが将来の形式混在リスクである。`whole`分岐は現在のdiffでは生成されないが、保存済み履歴からの読込経路がある。
+- **ドラッグ専用Undoは別入口。** `app-core.js:3203–3218` はupdatedAt一致のみを確認し、4つの評価mapを戻してUndo候補を消した後にsaveする。policy・保存停止・保存結果を確認しない。この入口まで同時に直すと範囲が増えるため、次工程では履歴Undoだけを対象とし、専用Undoの残存リスクを明記する。
+- **手動JSON復元は既存ガードを維持。** `restorePackage` は元envelopeとincoming/current policyを検査してから退避・state代入する。preview-only情報を剥がした後だけの検査へ退行させない。新帯拒否を追加する工程は不要。保存失敗後の復元メモリ保持は既存挙動として区別する。
+- **順位復旧JSONは別設計が必要。** `movie30RestoreMissingRanks`（`app-core.js:240–264`）はcorrectScores、rankOrder、clearScores、rankRecoveryの順に直接変更する。参照JSONのpolicy/envelopeや全件の構造検査がない。後半で不正なids等により例外になると先行変更が残る。catchは欠落がある場合だけ保存停止し、欠落がない初回復旧では途中変更が後続saveへ進む可能性がある。完全state用gateをそのまま流用せず、専用参照形式を全件検査してからcloneへ適用する案を次々工程に残す。
+
+### 次Solの一工程：履歴Undoの保存結果保護
+
+失敗先行fixtureは架空740作品で通常の編集から履歴を作り、履歴UIのUndoを押す。(1) localStorageとIDBの書込を両方失敗させ、成功toastが出ず、履歴候補とUndo前後の内容を失わない、(2) 保存停止中はstate・履歴を変更しない、(3) 通常成功なら保存読戻しとreload後に点数・順位・レビューが一致し、その後だけ履歴が消える、(4) 異policyのcurrentまたは明示preview/new/unknown履歴は拒否して原文を維持、を確認する。未知フィールド・0/null・星のみもfixture比較に含める。旧無印履歴の互換はlegacy currentでのみ評価し、履歴に存在しないpolicyを推測しない。
+
+最小案は、入口で停止状態/current policyと差分allowlist・形を検査し、候補をcloneに構築してUndo前後を退避、非同期保存の結果を確認するまで履歴削除と成功表示を遅らせる。連打を止め、保存待ち中に別編集・別タブ更新が来た場合は無条件rollbackで上書きせず、両候補を保持して停止通知する。既存の保存/競合機構を再利用する。退避不能なら適用前に停止。安全な候補保持と保存中の編集競合が小変更で成立しない場合は実装を広げずAstraレビューへ戻す。保存形式移行や新帯有効化は含めない。
