@@ -6019,7 +6019,47 @@ function diff(a,b){const z=[];for(const f of MAPS){const x=a[f]||{},y=b[f]||{},k
 const fl={exactScores:'点数',rankOrder:'順位',genreOverrides:'ジャンル',runtimeOverrides:'上映時間',titleOverrides:'タイトル',letterboxdMeta:'メモ',starOverrides:'星',mediaTypeOverrides:'種別',originOverrides:'制作区分',formatOverrides:'形式',customFilms:'作品追加・削除'};
 function htitle(c){const ids=uniq(c.filter(x=>x.k&&!/^\d+$/.test(x.k)).map(x=>x.k)),fs=uniq(c.map(x=>fl[x.f]||x.f));let t=ids.length===1?(()=>{try{return displayTitle(filmById(ids[0]))}catch(_){return ids[0]}})()+'：':'';return t+fs.slice(0,3).join('・')+'変更'}
 const oldSave=save;save=function(...a){const now=snap();if(!applying){const c=diff(shadow,now);if(c.length){hist.unshift({id:Date.now()+'-'+Math.random().toString(36).slice(2,6),at:Date.now(),t:htitle(c),c});hist=hist.slice(0,50);while(hist.length>1&&JSON.stringify(hist).length>250000)hist.pop();write(HISTORY_KEY,hist);renderHist()}}const r=oldSave(...a);shadow=now;return r};
-function undo(h){if(!h)return;applying=true;try{for(const c of [...h.c].reverse()){if(c.filmId){state.customFilms=state.customFilms.filter(f=>f.id!==c.filmId);if(c.had)state.customFilms.push(clone(c.b));continue}if(c.whole){state[c.f]=clone(c.b);continue}state[c.f]=state[c.f]||{};if(c.hx)state[c.f][c.k]=clone(c.b);else delete state[c.f][c.k]}oldSave(false);shadow=snap()}finally{applying=false}hist=hist.filter(x=>x.id!==h.id);write(HISTORY_KEY,hist);render();renderHist();toast('変更を元に戻しました')}
+let undoPending=false;
+async function undo(h){
+ if(!h||undoPending)return;
+ const policy=x=>Object.prototype.hasOwnProperty.call(x||{},'scorePolicy')?x.scorePolicy:'legacy-v23';
+ const expected=window.__movie30BalancedScorePreview===true?'balanced-v1':'legacy-v23';
+ if(window.__movie30RecoveryBlocked||window.__movie30SaveFailed||window.__movie30TabConflict||policy(state)!==expected||policy(h)!==expected||
+   !Array.isArray(h.c)||!h.c.length||h.c.some(c=>!c||!['customFilms',...MAPS].includes(c.f)||c.whole||
+     (c.f==='customFilms'?!c.filmId||typeof c.had!=='boolean':typeof c.k!=='string'||typeof c.hx!=='boolean'))){
+  setSaveStatus('履歴を戻せません · 保存状態と形式を確認しJSONを保存してください');movie30StorageWarning(true,false);return;
+ }
+ undoPending=true;
+ const before=clone(state),candidate=clone(state);
+ try{
+  for(const c of [...h.c].reverse()){
+   if(c.filmId){candidate.customFilms=candidate.customFilms.filter(f=>f.id!==c.filmId);if(c.had)candidate.customFilms.push(clone(c.b));continue}
+   candidate[c.f]=candidate[c.f]||{};if(c.hx)candidate[c.f][c.k]=clone(c.b);else delete candidate[c.f][c.k];
+  }
+  const db=await openMovie30Db();
+  const archived=db&&await new Promise(resolve=>{try{
+   const tx=db.transaction('snapshots','readwrite');
+   tx.objectStore('snapshots').put({id:'history-undo-pending',json:JSON.stringify({before,candidate,history:h}),updatedAt:Number(state.updatedAt||0)});
+   tx.oncomplete=()=>resolve(true);tx.onerror=tx.onabort=()=>resolve(false);
+  }catch(_){resolve(false)}});
+  if(!archived||!same(state,before)){setSaveStatus('履歴Undoの退避を確認できません · 元の編集を維持しました');movie30StorageWarning(true,false);return}
+  state=candidate;applying=true;
+  let saved,applied;
+  try{const pending=oldSave(false);applied=clone(state);saved=await pending}finally{applying=false}
+  if(saved!==true){
+   if(same(state,applied)){state=before;shadow=snap();render()}
+   setSaveStatus('履歴Undoを保存できません · 変更履歴と退避候補を維持しました');movie30StorageWarning(true,false);return;
+  }
+  shadow=snap();
+  const remaining=hist.filter(x=>x.id!==h.id),historyJson=JSON.stringify(remaining);
+  try{localStorage.setItem(HISTORY_KEY,historyJson);if(localStorage.getItem(HISTORY_KEY)!==historyJson)throw Error('History readback differs')}
+  catch(_){window.__movie30SaveFailed=true;setSaveStatus('Undoした作品は保存済みですが履歴を更新できません · JSONを保存してください');movie30StorageWarning(true,false);render();return}
+  hist=remaining;render();renderHist();toast('変更を元に戻しました');
+ }catch(error){
+  if(same(state,candidate)){state=before;shadow=snap();render()}
+  setSaveStatus('履歴Undoを停止しました · JSONを保存してください');movie30StorageWarning(true,false);console.error('History Undo failed',error);
+ }finally{undoPending=false}
+}
 
 // advanced filters
 const def=()=>({include:[],exclude:[],yearMin:'',yearMax:'',runtimeMin:'',runtimeMax:'',scoreMin:'',scoreMax:''});let adv={...def(),...(read(ADV_KEY,{})||{})};adv.include=uniq(adv.include);adv.exclude=uniq(adv.exclude).filter(x=>!adv.include.includes(x));let presets=read(PRESET_KEY,{});if(!presets||typeof presets!=='object'||Array.isArray(presets))presets={};
