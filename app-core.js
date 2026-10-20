@@ -181,6 +181,14 @@ async function movie30RestoreStorageLocked(){
  // Archive raw local records before any migration. Never clear them on a failure.
  window.__movie30StartupArchived=await movie30ArchiveStartup();
  if(!window.__movie30StartupArchived&&movie30StartupArchive.some(e=>!e.auxiliary&&!movie30Candidate(e.json,e.id))){window.__movie30RecoveryBlocked=true;setSaveStatus('不完全な保存記録の退避に失敗しました · 上書きせず停止しました');return false}
+  // A compatible backup must not make an incompatible current record writable.
+  // Keep both raw stores untouched until the user resolves the format conflict.
+  if((movie30DiskBase?.local&&!movie30Candidate(movie30DiskBase.local,'localStorage current'))||
+     (snap?.json&&!movie30Candidate(snap.json,'indexedDB current'))){
+   window.__movie30RecoveryBlocked=true;
+   setSaveStatus('現行の保存形式を確認できません · 上書きせず保存停止 · JSONを保存してください');
+   movie30StorageWarning(true,false);return false;
+  }
  movie30Candidates.sort((a,b)=>b.stamp-a.stamp);
  if(movie30Candidates.length){
   const selected=movie30ChooseCandidate(movie30Candidates);
