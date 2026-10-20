@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792519476658,
-  "sourceUpdatedIso": "2026-10-20T18:04:36.658Z",
+  "sourceUpdatedAt": 1792519492476,
+  "sourceUpdatedIso": "2026-10-20T18:04:52.476Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -22900,7 +22900,7 @@
         "ドラマ",
         "コメディ"
       ],
-      "origin": "その他",
+      "origin": "ハリウッド",
       "format": "live",
       "runtime": 155,
       "exact": false,
@@ -39667,7 +39667,7 @@
       "custom-1792418203307-qxck": "日本",
       "custom-1792433176003-xjc7": "日本",
       "custom-1792439512307-ncav": "ハリウッド",
-      "custom-1792519359060-7ic5": "その他"
+      "custom-1792519359060-7ic5": "ハリウッド"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -71050,6 +71050,12 @@
           "creators": [],
           "source": "tmdb",
           "fetchedAt": "2026-10-20T18:02:39.724Z"
+        },
+        "poster84": {
+          "path": "/q0b9TMVoKcoyrsE4bGKzPma2qMv.jpg",
+          "tmdbId": 4995,
+          "checkedAt": "2026-10-20T18:04:44.976Z",
+          "provider": "tmdb"
         }
       }
     }
