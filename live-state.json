@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792523884199,
-  "sourceUpdatedIso": "2026-10-20T19:18:04.199Z",
+  "sourceUpdatedAt": 1792523895173,
+  "sourceUpdatedIso": "2026-10-20T19:18:15.173Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -55099,7 +55099,7 @@
         "addedDate": "2025-09-01",
         "addedDateSource": "letterboxd-export-2026-09-27",
         "note": "過度なグロさは置いといて面白かった。良くも悪くもタランティーノっぽさがすごい映画。語りの多さと展開の作り方も楽しめたりくどかったり。",
-        "noteSource": "letterboxd-export",
+        "noteSource": "manual",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
         "watchedAddedDate": "2025-09-01",
@@ -55127,7 +55127,8 @@
           "tmdbId": 273248,
           "path": "/jIywvdPjia2t3eKYbjVTcwBQlG8.jpg",
           "checkedAt": "2026-10-18T21:28:20.190877+00:00"
-        }
+        },
+        "noteEditedAt": "2026-10-20T19:18:15.125Z"
       },
       "lb-415-1Spq": {
         "addedDate": "2025-09-01",
