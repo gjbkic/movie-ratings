@@ -6043,12 +6043,15 @@ async function undo(h){
    tx.oncomplete=()=>resolve(true);tx.onerror=tx.onabort=()=>resolve(false);
   }catch(_){resolve(false)}});
   if(!archived||!same(state,before)){setSaveStatus('履歴Undoの退避を確認できません · 元の編集を維持しました');movie30StorageWarning(true,false);return}
-  state=candidate;applying=true;
+  state=candidate;shadow=snap();
   let saved,applied;
-  try{const pending=oldSave(false);applied=clone(state);saved=await pending}finally{applying=false}
+  const pending=oldSave(false);applied=clone(state);saved=await pending;
   if(saved!==true){
    if(same(state,applied)){state=before;shadow=snap();render()}
    setSaveStatus('履歴Undoを保存できません · 変更履歴と退避候補を維持しました');movie30StorageWarning(true,false);return;
+  }
+  if(!same(state,applied)){
+   setSaveStatus('履歴Undoの保存中に別の編集がありました · 履歴と退避候補を維持しました');movie30StorageWarning(true,false);return;
   }
   shadow=snap();
   const remaining=hist.filter(x=>x.id!==h.id),historyJson=JSON.stringify(remaining);

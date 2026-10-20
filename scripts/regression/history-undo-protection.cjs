@@ -44,3 +44,40 @@ test('history Undo saves normally and survives reload',async()=>{
   assert.equal(await page.evaluate(()=>state.letterboxdMeta['fixture-0012'].note),original);
  }finally{await context.close();await browser.close()}
 });
+
+test('history Undo rolls back when movie save fails after candidate archive',async()=>{
+ const browser=await chromium.launch(options),context=await browser.newContext();try{
+  await isolate(context);const page=await context.newPage();await page.goto(origin);await ready(page);
+  await page.evaluate(async()=>{state.letterboxdMeta['fixture-0012'].note='saved original edit';await save()});
+  const before=await page.evaluate(()=>localStorage.getItem('movie30_change_history_v66'));
+  await page.evaluate(()=>{
+   const transaction=IDBDatabase.prototype.transaction,set=Storage.prototype.setItem;let writes=0;
+   IDBDatabase.prototype.transaction=function(...args){if(args[1]==='readwrite'&&++writes>1)throw new DOMException('quota','QuotaExceededError');return transaction.apply(this,args)};
+   Storage.prototype.setItem=function(key,...args){if(key==='movie30_data_v1')throw new DOMException('quota','QuotaExceededError');return set.call(this,key,...args)};
+   document.getElementById('histOpen66').click();
+  });
+  await page.locator('#histBody66 [data-u]').first().click();
+  await page.waitForFunction(()=>document.getElementById('saveState')?.textContent?.includes('履歴Undoを保存できません'));
+  const after=await page.evaluate(()=>({note:state.letterboxdMeta['fixture-0012'].note,history:localStorage.getItem('movie30_change_history_v66')}));
+  assert.equal(after.note,'saved original edit');assert.equal(after.history,before);
+ }finally{await context.close();await browser.close()}
+});
+
+test('history Undo does not roll back an edit made while its save waits',async()=>{
+ const browser=await chromium.launch(options),context=await browser.newContext();try{
+  await isolate(context);const page=await context.newPage();await page.goto(origin);await ready(page);
+  await page.evaluate(async()=>{state.letterboxdMeta['fixture-0012'].note='first edit';await save()});
+  const before=await page.evaluate(()=>localStorage.getItem('movie30_change_history_v66'));
+  await page.evaluate(()=>{
+   const request=navigator.locks.request.bind(navigator.locks);
+   navigator.locks.request=(...args)=>new Promise(resolve=>{window.__releaseHistorySave=()=>resolve(request(...args))});
+   document.getElementById('histOpen66').click();
+  });
+  await page.locator('#histBody66 [data-u]').first().click();
+  await page.waitForFunction(()=>typeof window.__releaseHistorySave==='function');
+  await page.evaluate(()=>{state.letterboxdMeta['fixture-0012'].note='later unsaved edit';window.__releaseHistorySave()});
+  await page.waitForFunction(()=>document.getElementById('saveState')?.textContent?.includes('別の編集'));
+  const after=await page.evaluate(()=>({note:state.letterboxdMeta['fixture-0012'].note,history:localStorage.getItem('movie30_change_history_v66')}));
+  assert.equal(after.note,'later unsaved edit');assert.equal(after.history,before);
+ }finally{await context.close();await browser.close()}
+});
