@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792519280298,
-  "sourceUpdatedIso": "2026-10-20T18:01:20.298Z",
+  "sourceUpdatedAt": 1792519332893,
+  "sourceUpdatedIso": "2026-10-20T18:02:12.893Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -5738,6 +5738,32 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-402-2agc",
+      "title": "レザボア・ドッグス",
+      "originalTitle": "",
+      "englishTitle": "Reservoir Dogs",
+      "year": 1992,
+      "score": 85,
+      "star": 3.5,
+      "overallRank": 198,
+      "sameScoreRank": 21,
+      "category": "マフィア、クライム",
+      "mediaType": "movie",
+      "genre": [
+        "クライム",
+        "アクション",
+        "サスペンス",
+        "バイオレンス"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 100,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-574-29CQ",
       "title": "あの頃ペニー・レインと",
       "originalTitle": "",
@@ -5745,8 +5771,8 @@
       "year": 2000,
       "score": 85,
       "star": 3.5,
-      "overallRank": 198,
-      "sameScoreRank": 21,
+      "overallRank": 199,
+      "sameScoreRank": 22,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -5762,32 +5788,6 @@
       "runtime": 124,
       "exact": true,
       "letterboxdAddedDate": "2026-09-06",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "lb-402-2agc",
-      "title": "レザボア・ドッグス",
-      "originalTitle": "",
-      "englishTitle": "Reservoir Dogs",
-      "year": 1992,
-      "score": 85,
-      "star": 3.5,
-      "overallRank": 199,
-      "sameScoreRank": 22,
-      "category": "マフィア、クライム",
-      "mediaType": "movie",
-      "genre": [
-        "クライム",
-        "アクション",
-        "サスペンス",
-        "バイオレンス"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 100,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -24300,8 +24300,8 @@
         "lb-107-2a0I",
         "lb-479-2a1Q",
         "lb-184-2aH8",
-        "lb-574-29CQ",
         "lb-402-2agc",
+        "lb-574-29CQ",
         "lb-43-2awY",
         "lb-28-4KHC",
         "lb-87-27V2",
