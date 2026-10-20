@@ -241,28 +241,44 @@ async function movie30RestoreMissingRanks(){
  // One-time verified repair; unknown later rank edits are never silently replaced.
  const membership=new Set(Object.values(state.rankOrder||{}).flat());const missing=allFilms().some(f=>effectiveScore(f)!=null&&!membership.has(f.id));
  if(state.rankRecovery?.version===2&&!missing)return;
+ const before=JSON.stringify(state);
  try{
   const r=await fetch('./recovery-ranks-20261010.json',{signal:AbortSignal.timeout(5000)});
-  if(!r.ok)throw Error('Recovery reference unavailable');const ref=await r.json();let restored=0;const conflicts=[];
-  for(const x of ref.correctScores||[]){const f=filmById(x.id);if(f&&effectiveScore(f)===x.from)state.exactScores[x.id]=x.to}
+  if(!r.ok)throw Error('Recovery reference unavailable');const ref=await r.json();
+  const plain=x=>!!x&&typeof x==='object'&&!Array.isArray(x),points=x=>typeof x==='number'&&Number.isInteger(x)&&x>=0&&x<=100;
+  const ids=a=>Array.isArray(a)&&a.every(x=>typeof x==='string'&&x.length>0)&&new Set(a).size===a.length;
+  if(!plain(ref)||Object.hasOwn(ref,'app')||Object.hasOwn(ref,'type')||Object.hasOwn(ref,'state')||
+     (Object.hasOwn(ref,'scorePolicy')&&ref.scorePolicy!=='legacy-v23')||window.__movie30BalancedScorePreview===true||
+     Object.hasOwn(state,'scorePolicy')&&state.scorePolicy!=='legacy-v23'||typeof ref.sourceCommit!=='string'||!ref.sourceCommit||
+     !plain(ref.rankOrder)||!plain(ref.knownDamagedOrders||{})||!Array.isArray(ref.correctScores||[])||!Array.isArray(ref.clearScores||[]))throw Error('Invalid recovery format');
+  for(const [key,order] of Object.entries(ref.rankOrder))if(!points(Number(key))||!ids(order))throw Error('Invalid recovery order');
+  for(const [key,orders] of Object.entries(ref.knownDamagedOrders||{}))if(!points(Number(key))||!Array.isArray(orders)||!orders.every(ids))throw Error('Invalid damaged order');
+  for(const x of ref.correctScores||[])if(!plain(x)||typeof x.id!=='string'||!points(x.from)||!points(x.to))throw Error('Invalid score correction');
+  for(const x of ref.clearScores||[])if(!plain(x)||typeof x.id!=='string'||!points(x.score))throw Error('Invalid score removal');
+  const next=deepCopy(state),films=new Map(BASE_FILMS.concat(next.customFilms||[]).map(f=>[f.id,f]));
+  const byId=id=>films.get(id),score=f=>{if(Object.hasOwn(next.exactScores,f.id))return Number(next.exactScores[f.id]);const tier=next.assignments[f.id],star=Object.hasOwn(next.starOverrides,f.id)?Number(next.starOverrides[f.id]):Number(f.star);const mapped=tier?next.scoreMap[sk(star)]?.[tier]:null;return mapped!=null?Number(mapped):f.oldScore!=null?Number(f.oldScore):null};
+  let restored=0;const conflicts=[];
+  for(const x of ref.correctScores||[]){const f=byId(x.id);if(f&&score(f)===x.from)next.exactScores[x.id]=x.to}
   for(const [key,ids] of Object.entries(ref.rankOrder||{})){
-   const eligible=ids.filter(id=>{const f=filmById(id);return f&&Number(effectiveScore(f))===Number(key)&&effectiveScore(f)!=null});
-   const previous=state.rankOrder[key]||[],known=new Set(ids),projection=previous.filter(id=>known.has(id));
+   const eligible=ids.filter(id=>{const f=byId(id);return f&&Number(score(f))===Number(key)&&score(f)!=null});
+   const previous=next.rankOrder[key]||[],known=new Set(ids),projection=previous.filter(id=>known.has(id));
    const equal=a=>JSON.stringify(a)===JSON.stringify(projection);
    const knownBad=(ref.knownDamagedOrders[key]||[]).some(equal);
    if(projection.length&& !equal(eligible)&&!knownBad){conflicts.push(key);continue}
    // Keep all newer films. Only historically verified membership can be repaired.
-   state.rankOrder[key]=eligible.concat(previous.filter(id=>!known.has(id)&&filmById(id)&&String(effectiveScore(filmById(id)))===key));
+   next.rankOrder[key]=eligible.concat(previous.filter(id=>!known.has(id)&&byId(id)&&String(score(byId(id)))===key));
    restored+=eligible.length;
   }
-  for(const x of ref.clearScores||[]){const f=filmById(x.id);if(!f||effectiveScore(f)==null||Number(effectiveScore(f))!==x.score)continue;
-   state.exactScores[x.id]=null;delete state.assignments[x.id];
+  for(const x of ref.clearScores||[]){const f=byId(x.id);if(!f||score(f)==null||Number(score(f))!==x.score)continue;
+   next.exactScores[x.id]=null;delete next.assignments[x.id];
    if(f.added)f.oldScore=null;
-   for(const k of Object.keys(state.rankOrder))state.rankOrder[k]=state.rankOrder[k].filter(id=>id!==x.id);
+   for(const k of Object.keys(next.rankOrder))next.rankOrder[k]=next.rankOrder[k].filter(id=>id!==x.id);
   }
-  state.rankRecovery={baseline:ref.sourceCommit,version:2,restored,conflicts,at:new Date().toISOString()};
+  next.rankRecovery={baseline:ref.sourceCommit,version:2,restored,conflicts,at:new Date().toISOString()};
+  if(!movie30ValidState(next)||JSON.stringify(state)!==before)throw Error('Recovery candidate or current state changed');
+  state=next;
   window.__movie30RankConflicts=conflicts;
- }catch(_){if(missing){window.__movie30RecoveryBlocked=true;setSaveStatus('順位の復旧参照を取得できません · 元の記録を維持して保存停止')}}
+ }catch(error){window.__movie30RecoveryBlocked=true;setSaveStatus('順位の復旧参照を確認できません · 元の記録を維持して保存停止');console.error('Rank recovery stopped',error)}
 }
 
 function save(touch=true){
