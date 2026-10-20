@@ -96,6 +96,7 @@ function movie30ReceivePeer(){
   const candidate=receipt&&movie30Candidate(receipt.json,'committed peer');
   if(!candidate||!candidate.state.storageIntegrity||receipt.parent!==movie30Payload(movie30LastSavedJson)||movie30PendingWrites||movie30Payload(state)!==movie30Payload(movie30LastSavedJson))return movie30Conflict(disk,'競合または由来を確認できない別タブ更新');
   state=normalizeState(candidate.state);movie30LastSavedJson=JSON.stringify(state);movie30DiskBase=disk;
+  window.__movie30HistoryEpoch=(window.__movie30HistoryEpoch||0)+1;
   render();setSaveStatus('別タブの保存済み変更を反映');return true;
  });
 }
@@ -6014,21 +6015,43 @@ const css=document.createElement('style');css.textContent=`
 const MAPS=['assignments','starOverrides','exactScores','rankOrder','titleOverrides','categoryOverrides','mediaTypeOverrides','genreOverrides','originOverrides','formatOverrides','runtimeOverrides','letterboxdMeta'];
 const snap=()=>{const o={};for(const k of MAPS)o[k]=clone(state[k]||{});o.customFilms=clone(state.customFilms||[]);return o};
 let shadow=snap(), applying=false, hist=read(HISTORY_KEY,[]);if(!Array.isArray(hist))hist=[];
+const sessionHistory=new Map();
 const same=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
 function diff(a,b){const z=[];for(const f of MAPS){const x=a[f]||{},y=b[f]||{},ks=new Set([...Object.keys(x),...Object.keys(y)]);for(const k of ks){const hx=Object.prototype.hasOwnProperty.call(x,k),hy=Object.prototype.hasOwnProperty.call(y,k);if(hx===hy&&same(x[k],y[k]))continue;z.push({f,k,hx,b:hx?clone(x[k]):null})}}if(!same(a.customFilms,b.customFilms)){const before=new Map(a.customFilms.map(f=>[f.id,f])),after=new Map(b.customFilms.map(f=>[f.id,f]));for(const id of new Set([...before.keys(),...after.keys()]))if(!same(before.get(id),after.get(id)))z.push({f:'customFilms',filmId:id,had:before.has(id),b:before.has(id)?clone(before.get(id)):null})}return z}
 const fl={exactScores:'点数',rankOrder:'順位',genreOverrides:'ジャンル',runtimeOverrides:'上映時間',titleOverrides:'タイトル',letterboxdMeta:'メモ',starOverrides:'星',mediaTypeOverrides:'種別',originOverrides:'制作区分',formatOverrides:'形式',customFilms:'作品追加・削除'};
 function htitle(c){const ids=uniq(c.filter(x=>x.k&&!/^\d+$/.test(x.k)).map(x=>x.k)),fs=uniq(c.map(x=>fl[x.f]||x.f));let t=ids.length===1?(()=>{try{return displayTitle(filmById(ids[0]))}catch(_){return ids[0]}})()+'：':'';return t+fs.slice(0,3).join('・')+'変更'}
-const oldSave=save;save=function(...a){const now=snap();if(!applying){const c=diff(shadow,now);if(c.length){hist.unshift({id:Date.now()+'-'+Math.random().toString(36).slice(2,6),at:Date.now(),t:htitle(c),c});hist=hist.slice(0,50);while(hist.length>1&&JSON.stringify(hist).length>250000)hist.pop();write(HISTORY_KEY,hist);renderHist()}}const r=oldSave(...a);shadow=now;return r};
+const oldSave=save;save=function(...a){const now=snap();if(!applying){const c=diff(shadow,now);if(c.length){const h={id:Date.now()+'-'+Math.random().toString(36).slice(2,6),at:Date.now(),t:htitle(c),c};hist.unshift(h);sessionHistory.set(h.id,{epoch:window.__movie30HistoryEpoch||0,after:now});hist=hist.slice(0,50);while(hist.length>1&&JSON.stringify(hist).length>250000)hist.pop();write(HISTORY_KEY,hist);renderHist()}}const r=oldSave(...a);shadow=now;return r};
 let undoPending=false;
+async function historyUndoArchives(){
+ const db=await openMovie30Db();if(!db)return [];
+ return new Promise(resolve=>{try{const tx=db.transaction('snapshots','readonly'),r=tx.objectStore('snapshots').getAll();r.onsuccess=()=>resolve((r.result||[]).filter(x=>String(x.id).startsWith('history-undo-')&&x.status!=='complete'));r.onerror=tx.onabort=()=>resolve([])}catch(_){resolve([])}});
+}
+async function historyUndoNotice(){
+ const rows=await historyUndoArchives();if(!rows.length)return;
+ let el=document.getElementById('movie30-history-undo-warning');if(!el){el=document.createElement('div');el.id='movie30-history-undo-warning';el.setAttribute('role','alert');el.style.cssText='position:sticky;top:0;z-index:502;padding:12px;background:#502b17;color:white';document.body.prepend(el)}
+ el.textContent='未解決の履歴Undo候補があります。内容をJSON保存して確認してください。 ';
+ const b=document.createElement('button');b.textContent='Undo候補をJSON保存';b.onclick=()=>{const u=URL.createObjectURL(new Blob([JSON.stringify({type:'movie30-history-undo-candidates',candidates:rows.map(x=>({id:x.id,...JSON.parse(x.json)}))},null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=u;a.download='films-history-undo-'+Date.now()+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(u),2000)};el.append(b);
+}
+void historyUndoNotice();
 async function undo(h){
  if(!h||undoPending)return;
  const policy=x=>Object.prototype.hasOwnProperty.call(x||{},'scorePolicy')?x.scorePolicy:'legacy-v23';
  const expected=window.__movie30BalancedScorePreview===true?'balanced-v1':'legacy-v23';
+ const origin=sessionHistory.get(h.id);
+ const unchanged=origin&&origin.epoch===(window.__movie30HistoryEpoch||0)&&Array.isArray(h.c)&&h.c.every(c=>{
+  if(!c||!['customFilms',...MAPS].includes(c.f))return false;
+  if(c.f==='customFilms')return same(state.customFilms.find(f=>f.id===c.filmId),origin.after.customFilms.find(f=>f.id===c.filmId));
+  return same(state[c.f]?.[c.k],origin.after[c.f]?.[c.k]);
+ });
  if(window.__movie30RecoveryBlocked||window.__movie30SaveFailed||window.__movie30TabConflict||policy(state)!==expected||policy(h)!==expected||
+   !unchanged||
    !Array.isArray(h.c)||!h.c.length||h.c.some(c=>!c||!['customFilms',...MAPS].includes(c.f)||c.whole||
      (c.f==='customFilms'?!c.filmId||typeof c.had!=='boolean':typeof c.k!=='string'||typeof c.hx!=='boolean'))){
   setSaveStatus('履歴を戻せません · 保存状態と形式を確認しJSONを保存してください');movie30StorageWarning(true,false);return;
  }
+ let historyRaw;
+ try{historyRaw=localStorage.getItem(HISTORY_KEY);if(!JSON.parse(historyRaw||'[]').some(x=>x.id===h.id))throw Error('History entry changed')}
+ catch(_){setSaveStatus('履歴の保存記録を確認できません · Undoを停止しました');movie30StorageWarning(true,false);return}
  undoPending=true;
  const before=clone(state),candidate=clone(state);
  try{
@@ -6037,26 +6060,28 @@ async function undo(h){
    candidate[c.f]=candidate[c.f]||{};if(c.hx)candidate[c.f][c.k]=clone(c.b);else delete candidate[c.f][c.k];
   }
   const db=await openMovie30Db();
+  const archiveId='history-undo-'+Date.now()+'-'+Math.random().toString(36).slice(2,9);
   const archived=db&&await new Promise(resolve=>{try{
    const tx=db.transaction('snapshots','readwrite');
-   tx.objectStore('snapshots').put({id:'history-undo-pending',json:JSON.stringify({before,candidate,history:h}),updatedAt:Number(state.updatedAt||0)});
+   tx.objectStore('snapshots').add({id:archiveId,status:'pending',json:JSON.stringify({before,candidate,history:h}),updatedAt:Number(state.updatedAt||0)});
    tx.oncomplete=()=>resolve(true);tx.onerror=tx.onabort=()=>resolve(false);
   }catch(_){resolve(false)}});
-  if(!archived||!same(state,before)){setSaveStatus('履歴Undoの退避を確認できません · 元の編集を維持しました');movie30StorageWarning(true,false);return}
+  if(!archived||!same(state,before)){setSaveStatus('履歴Undoの退避を確認できません · 元の編集を維持しました');movie30StorageWarning(true,false);void historyUndoNotice();return}
   state=candidate;shadow=snap();
   let saved,applied;
   const pending=oldSave(false);applied=clone(state);saved=await pending;
   if(saved!==true){
    if(same(state,applied)){state=before;shadow=snap();render()}
-   setSaveStatus('履歴Undoを保存できません · 変更履歴と退避候補を維持しました');movie30StorageWarning(true,false);return;
+   setSaveStatus('履歴Undoを保存できません · 変更履歴と退避候補を維持しました');movie30StorageWarning(true,false);void historyUndoNotice();return;
   }
   if(!same(state,applied)){
-   setSaveStatus('履歴Undoの保存中に別の編集がありました · 履歴と退避候補を維持しました');movie30StorageWarning(true,false);return;
+   setSaveStatus('履歴Undoの保存中に別の編集がありました · 履歴と退避候補を維持しました');movie30StorageWarning(true,false);void historyUndoNotice();return;
   }
   shadow=snap();
   const remaining=hist.filter(x=>x.id!==h.id),historyJson=JSON.stringify(remaining);
-  try{localStorage.setItem(HISTORY_KEY,historyJson);if(localStorage.getItem(HISTORY_KEY)!==historyJson)throw Error('History readback differs')}
-  catch(_){window.__movie30SaveFailed=true;setSaveStatus('Undoした作品は保存済みですが履歴を更新できません · JSONを保存してください');movie30StorageWarning(true,false);render();return}
+  try{if(localStorage.getItem(HISTORY_KEY)!==historyRaw)throw Error('History changed in another tab');localStorage.setItem(HISTORY_KEY,historyJson);if(localStorage.getItem(HISTORY_KEY)!==historyJson)throw Error('History readback differs')}
+  catch(_){window.__movie30SaveFailed=true;setSaveStatus('Undoした作品は保存済みですが履歴を更新できません · JSONを保存してください');movie30StorageWarning(true,false);void historyUndoNotice();render();return}
+  await new Promise(resolve=>{try{const tx=db.transaction('snapshots','readwrite');tx.objectStore('snapshots').put({id:archiveId,status:'complete',json:JSON.stringify({before,candidate,history:h}),updatedAt:Number(state.updatedAt||0)});tx.oncomplete=tx.onerror=tx.onabort=()=>resolve()}catch(_){resolve()}});
   hist=remaining;render();renderHist();toast('変更を元に戻しました');
  }catch(error){
   if(same(state,candidate)){state=before;shadow=snap();render()}

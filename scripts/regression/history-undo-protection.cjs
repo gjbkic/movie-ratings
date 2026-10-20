@@ -81,3 +81,34 @@ test('history Undo does not roll back an edit made while its save waits',async()
   assert.equal(after.note,'later unsaved edit');assert.equal(after.history,before);
  }finally{await context.close();await browser.close()}
 });
+
+test('a peer review update cannot be undone by an older tab history',async()=>{
+ const browser=await chromium.launch(options),context=await browser.newContext();try{
+  await isolate(context);const a=await context.newPage();await a.goto(origin);await ready(a);
+  await a.evaluate(async()=>{state.letterboxdMeta['fixture-0012'].note='A review';await save()});
+  const b=await context.newPage();await b.goto(origin);await ready(b);
+  await b.evaluate(async()=>{state.letterboxdMeta['fixture-0012'].note='B newer review';await save()});
+  await a.waitForFunction(()=>state.letterboxdMeta['fixture-0012'].note==='B newer review');
+  const history=await a.evaluate(()=>localStorage.getItem('movie30_change_history_v66'));
+  await a.evaluate(()=>document.getElementById('histOpen66').click());await a.locator('#histBody66 [data-u]').first().click();
+  await a.waitForTimeout(250);
+  assert.equal(await a.evaluate(()=>state.letterboxdMeta['fixture-0012'].note),'B newer review');
+  assert.equal(await a.evaluate(()=>localStorage.getItem('movie30_change_history_v66')),history);
+ }finally{await context.close();await browser.close()}
+});
+
+test('history write failure leaves an exportable candidate and stale Undo is refused after reload',async()=>{
+ const browser=await chromium.launch(options),context=await browser.newContext();try{
+  await isolate(context);const page=await context.newPage();await page.goto(origin);await ready(page);
+  await page.evaluate(async()=>{state.letterboxdMeta['fixture-0012'].note='changed before Undo';await save()});
+  await page.evaluate(()=>{const original=Storage.prototype.setItem;Storage.prototype.setItem=function(key,...rest){if(key==='movie30_change_history_v66')throw new DOMException('quota','QuotaExceededError');return original.call(this,key,...rest)};document.getElementById('histOpen66').click()});
+  await page.locator('#histBody66 [data-u]').first().click();
+  await page.waitForSelector('#movie30-history-undo-warning button');
+  const saved=await page.evaluate(()=>state.letterboxdMeta['fixture-0012'].note);
+  assert.equal(saved,'架空レビュー 12');
+  await page.reload();await ready(page);
+  await page.waitForSelector('#movie30-history-undo-warning button');
+  await page.evaluate(()=>document.getElementById('histOpen66').click());await page.locator('#histBody66 [data-u]').first().click();
+  assert.equal(await page.evaluate(()=>state.letterboxdMeta['fixture-0012'].note),saved);
+ }finally{await context.close();await browser.close()}
+});
