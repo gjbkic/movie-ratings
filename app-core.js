@@ -210,7 +210,7 @@ async function movie30RestoreStorageLocked(){
   // only after BOTH localStorage and IndexedDB have been examined.
   try{const r=await fetch('./live-state.json',{cache:'no-store',signal:AbortSignal.timeout(15000)});
    if(!r.ok)throw Error('HTTP '+r.status);const live=await r.json();
-   if(!movie30ValidState(live.state))throw Error('Invalid live state');
+   if(window.__movie30BalancedScorePreview===true||window.Movie30ScoreEntryGate?.assess(live,{route:'sync',runtime:'legacy-v23'}).status!=='accept'||!movie30ValidState(live.state))throw Error('Invalid live state');
    state=normalizeState({...live.state,updatedAt:Number(live.sourceUpdatedAt)||0});
    window.__movie30RestoredFrom='live-state';
   }catch(error){
@@ -5787,7 +5787,7 @@ window.__movie30AutoSyncPending=()=>{const x=getLbSettings();if(x.auto!==false)s
   const canonical=v=>JSON.stringify(v,(_k,x)=>x&&typeof x==='object'&&!Array.isArray(x)?Object.keys(x).sort().reduce((o,k)=>(Object.defineProperty(o,k,{value:x[k],enumerable:true,configurable:true}),o),{}):x);
   let cloudBusy=false,cloudBase=null,cloudSha=null,cloudAttempt=null,cloudConflict=false,cloudFollowup=0;
   window.__movie30CloudNeedsVerification=()=>!cloudSha||!!cloudAttempt;
-  window.__movie30StorageReady?.then(()=>{cloudBase=canonical(livePayload().state)});
+  window.__movie30StorageReady?.then(ok=>{if(ok&&!window.__movie30RecoveryBlocked&&legacySyncAllowed(state))cloudBase=canonical(livePayload().state)});
   function protectCloud(remote,reason){
     cloudConflict=true;
     status('GitHub同期を停止しました：'+reason+'。手元の編集は保持しています。両方のJSONを保存して比較してください。','bad');
