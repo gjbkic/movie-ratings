@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792523658167,
-  "sourceUpdatedIso": "2026-10-20T19:14:18.167Z",
+  "sourceUpdatedAt": 1792523826544,
+  "sourceUpdatedIso": "2026-10-20T19:17:06.544Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -15863,33 +15863,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-482-euce",
-      "title": "インビジブル・ゲスト 悪魔の証明",
-      "originalTitle": "",
-      "englishTitle": "The Invisible Guest",
-      "year": 2016,
-      "score": 77,
-      "star": 2.5,
-      "overallRank": 555,
-      "sameScoreRank": 2,
-      "category": "Letterboxd追加",
-      "mediaType": "movie",
-      "genre": [
-        "どんでん返し",
-        "ミステリー",
-        "サスペンス",
-        "娯楽",
-        "クライム"
-      ],
-      "origin": "その他",
-      "format": "live",
-      "runtime": null,
-      "exact": true,
-      "letterboxdAddedDate": "2026-08-02",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-339-lPy0",
       "title": "妄想代理人",
       "originalTitle": "",
@@ -15897,8 +15870,8 @@
       "year": 2004,
       "score": 77,
       "star": 2.5,
-      "overallRank": 556,
-      "sameScoreRank": 3,
+      "overallRank": 555,
+      "sameScoreRank": 2,
       "category": "Letterboxd追加",
       "mediaType": "drama",
       "genre": [
@@ -15927,8 +15900,8 @@
       "year": 2015,
       "score": 77,
       "star": 2.5,
-      "overallRank": 557,
-      "sameScoreRank": 4,
+      "overallRank": 556,
+      "sameScoreRank": 3,
       "category": "スリラー、ホラー",
       "mediaType": "movie",
       "genre": [
@@ -15944,6 +15917,33 @@
       "runtime": 168,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "lb-482-euce",
+      "title": "インビジブル・ゲスト 悪魔の証明",
+      "originalTitle": "",
+      "englishTitle": "The Invisible Guest",
+      "year": 2016,
+      "score": 77,
+      "star": 2.5,
+      "overallRank": 557,
+      "sameScoreRank": 4,
+      "category": "Letterboxd追加",
+      "mediaType": "movie",
+      "genre": [
+        "どんでん返し",
+        "ミステリー",
+        "サスペンス",
+        "娯楽",
+        "クライム"
+      ],
+      "origin": "その他",
+      "format": "live",
+      "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": "2026-08-02",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -23934,9 +23934,9 @@
       ],
       "77": [
         "lb-561-8MHs",
-        "lb-482-euce",
         "lb-339-lPy0",
         "lb-414-8gw8",
+        "lb-482-euce",
         "custom-1791377844608-310l",
         "lb-188-1BWM",
         "custom-1791919051056-56pv",
