@@ -25,3 +25,11 @@
 アプリを変えず、candidateテストを意味上の比較へ修正する。正常currentの点数・星・順位・レビュー・作品ID/未知フィールドを比較し、不適合partialの固有作品やメタデータがruntimeと保存結果へ入らないことを確認。正常起動保存の完了をapp-boot完了とPendingSaveで待つ。backup原文と不適合current原文の厳密比較は維持する。単に待ち時間を延ばしたりassertを削除する修正にはしない。
 
 current-protectionの正常系は自己比較をやめ、UIで編集した値をruntime/LS/IDBとreload後に確認する。拒否系も可能ならUI操作経由で確認し、保存成功表示を検査する。既存3ファイルを単独1回・並列1回で実行し、具体的な差分キーを失敗時に出す。失敗したら単独成功で打ち消さず差分を調べる。全回帰・実データは不要。
+
+## テスト補強の実施結果
+
+`score-startup-candidates.cjs` は正常な起動保存の完了を待ち、作品ID・点数・星・同点内順位・レビュー・未知フィールドをruntimeと保存済みcurrentで比較する。拒否されたcurrentとbackupは原文の厳密比較を維持した。balanced形式の部分データから架空の追加作品とレビューが混入しないことも確認する。旧形式の部分復元は追加作品を受け入れる既存契約として区別する。
+
+`score-startup-current-protection.cjs` は正常な旧形式で詳細画面の点数入力を実際に操作し、92点がruntime、localStorage、IndexedDB、再読み込み後にも残ることを確認する。拒否ケースは起動停止マスク、保存停止表示、raw current/previousとlocalStorage currentの不変を確認する。起動停止マスクがあるため拒否ケースはUI操作不能であり、保存停止の確認は直接の保存呼出による。
+
+架空740作品の隔離Chromeで、上記2ファイルは個別実行4/4・6/6成功。`score-live-startup.cjs`を含めた指定3ファイルの並列実行は15/15成功。`git diff --check`はエラーなし。アプリコード、実データ、保存形式は変更していない。全回帰テストとiPhone実機テストはこの限定作業では実施していない。

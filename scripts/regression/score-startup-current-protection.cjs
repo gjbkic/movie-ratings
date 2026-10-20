@@ -16,15 +16,36 @@ for(const kind of ['idb-new-current','ls-new-current','ls-null-current','ls-unkn
    await new Promise(resolve=>{const tx=db.transaction('snapshots','readwrite'),s=tx.objectStore('snapshots');s.put({id:'current',json:JSON.stringify(kind==='idb-new-current'?raw:legacy),updatedAt:kind==='idb-new-current'?raw.updatedAt:legacy.updatedAt});if(kind==='idb-new-current')s.put({id:'previous',json:JSON.stringify(legacy),updatedAt:legacy.updatedAt});tx.oncomplete=resolve});db.close();
   },{kind,legacy,raw});
   const before=await records(page);await page.goto(origin);await page.evaluate(()=>window.__movie30StorageReady);
-  const result=await page.evaluate(async()=>{state.genreOverrides['fixture-0012']=['new-genre'];save(false);return {ok:await window.__movie30PendingSave,blocked:!!window.__movie30RecoveryBlocked}});
+  let result;
+  if(kind==='idb-legacy'){
+   await page.waitForSelector('html.movie30-ready',{timeout:30000});
+   await page.evaluate(()=>openSheet('fixture-0012'));
+   await page.locator('#editScore').fill('92');await page.locator('#editScore').blur();
+   result=await page.evaluate(async()=>({ok:await window.__movie30PendingSave,blocked:!!window.__movie30RecoveryBlocked,score:state.exactScores['fixture-0012']}));
+   assert.equal(result.score,92,'UI score edit missing from runtime');
+  }else{
+   result=await page.evaluate(async()=>{state.genreOverrides['fixture-0012']=['new-genre'];save(false);return {ok:await window.__movie30PendingSave,blocked:!!window.__movie30RecoveryBlocked,status:document.getElementById('saveState')?.textContent||''}});
+   assert.match(result.status,/保存停止|保存できません/,'rejected startup did not show save stop');
+   await page.locator('#movie30-startup-mask').getByText('保存データの復元を停止しました').waitFor();
+   assert.equal(await page.locator('html.movie30-ready').count(),0,'rejected state became editable');
+  }
   const after=await records(page);
-  assert.equal(result.blocked,kind!=='idb-legacy');assert.equal(after.current,kind==='idb-legacy'?after.current:before.current);assert.equal(after.local,kind==='idb-legacy'?after.local:before.local);
+  assert.equal(result.blocked,kind!=='idb-legacy');
+  if(kind==='idb-legacy'){
+   assert.equal(JSON.parse(after.current).exactScores['fixture-0012'],92,'UI score missing from IndexedDB current');
+   assert.equal(JSON.parse(after.local).exactScores['fixture-0012'],92,'UI score missing from localStorage current');
+  }else{assert.equal(after.current,before.current);assert.equal(after.local,before.local)}
   if(kind!=='idb-legacy'){assert.notEqual(result.ok,true);assert.equal(after.previous,before.previous)}
   else assert.equal(result.ok,true);
   await page.reload();await page.evaluate(()=>window.__movie30StorageReady);
   const reopened=await records(page);
   if(kind!=='idb-legacy'){assert.equal(await page.evaluate(()=>!!window.__movie30RecoveryBlocked),true);assert.equal(reopened.current,before.current);assert.equal(reopened.local,before.local)}
-  else assert.equal(await page.evaluate(()=>!!window.__movie30RecoveryBlocked),false);
+  else{
+   assert.equal(await page.evaluate(()=>!!window.__movie30RecoveryBlocked),false);
+   assert.equal(await page.evaluate(()=>state.exactScores['fixture-0012']),92,'UI score missing after restart');
+   assert.equal(JSON.parse(reopened.current).exactScores['fixture-0012'],92,'IndexedDB score missing after restart');
+   assert.equal(JSON.parse(reopened.local).exactScores['fixture-0012'],92,'localStorage score missing after restart');
+  }
   assert.equal(requests.some(r=>r.path==='/live-state.json'),false);
  }finally{await context.close();await browser.close()}
 });
