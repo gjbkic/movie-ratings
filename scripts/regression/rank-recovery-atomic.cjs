@@ -22,6 +22,22 @@ for(const policy of ['balanced-v1',null,'future-v9'])test('rank recovery rejects
   assert.equal(await page.evaluate(()=>state.exactScores['fixture-0012']),seed.exactScores['fixture-0012']);
  }finally{await context.close();await browser.close()}
 });
+for(const [label,damage] of [
+ ['late clearScores record',ref=>ref.clearScores=[{id:'fixture-0013',score:80},{id:'fixture-0014',score:Infinity}]],
+ ['damaged-order entry',ref=>ref.knownDamagedOrders={'80':[['fixture-0013'],{}]}],
+ ['duplicate rank ID',ref=>ref.rankOrder['81']=['fixture-0012','fixture-0012']],
+ ['out-of-range score',ref=>ref.correctScores.push({id:'fixture-0013',from:80,to:101})]
+])test('rank recovery rejects entire malformed reference: '+label,async()=>{
+ const seed=fixture().state;seed.rankRecovery={version:1};
+ const ref={sourceCommit:'synthetic-only',correctScores:[{id:'fixture-0012',from:80,to:81}],rankOrder:{...seed.rankOrder,'81':['fixture-0012',...seed.rankOrder['81']]},clearScores:[],knownDamagedOrders:{}};
+ damage(ref);
+ const browser=await chromium.launch(options),context=await browser.newContext();try{
+  await isolate(context,{seed});await context.route('**/recovery-ranks-20261010.json',r=>r.fulfill({json:ref}));
+  const page=await context.newPage();await page.goto(origin);await page.evaluate(()=>window.__movie30StorageReady);
+  const actual=await page.evaluate(()=>({score:state.exactScores['fixture-0012'],rank:state.rankOrder['80'],blocked:!!window.__movie30RecoveryBlocked}));
+  assert.equal(actual.score,80);assert.deepEqual(actual.rank,seed.rankOrder['80']);assert.equal(actual.blocked,true);
+ }finally{await context.close();await browser.close()}
+});
 test('valid fictional rank repair preserves later films and survives reload',async()=>{
  const seed=fixture().state;seed.rankRecovery={version:1};
  const ref={sourceCommit:'synthetic-only',rankOrder:{...seed.rankOrder,'81':['fixture-0012',...seed.rankOrder['81']]},correctScores:[{id:'fixture-0012',from:80,to:81}],clearScores:[],knownDamagedOrders:{'81':[seed.rankOrder['81']]}};

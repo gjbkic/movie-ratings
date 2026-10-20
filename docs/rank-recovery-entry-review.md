@@ -43,6 +43,6 @@ catchは取得前に計算したmissingがtrueの場合だけRecoveryBlockedと�
 
 参照のbare形式、policy、配列・点数・IDを適用前に検査し、映画状態のclone上で既存の投影比較と新規作品保持を計算する。全計算成功と元stateがfetch中に変わらないことを確認した後だけ一括代入する。失敗時は復旧表示値を変えず、復旧を明示停止する。既知破損以外の後日順位をconflictsとして維持する条件は継続した。
 
-架空740作品の隔離Chromeで、後半の不正rankOrderに対する先頭correctScoresの部分適用を失敗先行で再現。修正後はmissingあり/なしの両方でstate維持、new/null/unknown policyの拒否、既知破損の正常復旧と再読み込み後保持、参照fetch中の編集保護の計7件が成功。`git diff --check`確認。実データ参照・全回帰・実機は未実施。
+架空740作品の隔離Chromeで、後半の不正rankOrderに対する先頭correctScoresの部分適用を失敗先行で再現。修正後はmissingあり/なしの両方でstate維持、new/null/unknown policyの拒否、後半の不正clearScores・knownDamagedOrders・重複ID・範囲外点数の全件拒否、既知破損の正常復旧と再読み込み後保持、参照fetch中の編集保護の計11件が成功。`git diff --check`確認。実データ参照・全回帰・実機は未実施。
 
 復旧関数自身は永続化せず、app-bootのsave(false)が通常保存を担当する。正常例ではそのPromiseを待ってreload保持を確認したが、両保存先失敗時の復旧表示と独立したIDB読戻しは未検証。保存完了より先に画面readyが付く従来の順序もこの限定工程では変更していない。復旧件数は保存成功の証拠として扱わない。
