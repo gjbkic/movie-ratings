@@ -65,6 +65,19 @@ test('successful in-memory rank repair does not claim persistence when both stor
   assert.equal(result.score,81);assert.equal(result.disk,80);assert.equal(result.ok,false);assert.equal(result.failed,true);assert.match(result.status,/保存失敗/);
  }finally{await context.close();await browser.close()}
 });
+test('rank repair persists through IndexedDB when localStorage is full',async()=>{
+ const seed=fixture().state;seed.rankRecovery={version:1};
+ const ref={sourceCommit:'synthetic-only',rankOrder:{...seed.rankOrder,'81':['fixture-0012',...seed.rankOrder['81']]},correctScores:[{id:'fixture-0012',from:80,to:81}],clearScores:[],knownDamagedOrders:{'81':[seed.rankOrder['81']]}};
+ const browser=await chromium.launch(options),context=await browser.newContext();try{
+  await isolate(context,{seed});await context.route('**/recovery-ranks-20261010.json',r=>r.fulfill({json:ref}));
+  const page=await context.newPage();await page.addInitScript(()=>{Storage.prototype.setItem=function(){throw new DOMException('fictional quota','QuotaExceededError')}});
+  await page.goto(origin);await page.waitForSelector('html.movie30-ready');
+  const first=await page.evaluate(async()=>{const ok=await window.__movie30PendingSave;return {ok,score:state.exactScores['fixture-0012'],local:JSON.parse(localStorage.getItem(STORAGE_KEY)).exactScores['fixture-0012'],db:JSON.parse((await movie30ReadSnapshot()).json).exactScores['fixture-0012']}});
+  assert.deepEqual(first,{ok:true,score:81,local:80,db:81});
+  await page.reload();await page.waitForSelector('html.movie30-ready');
+  assert.equal(await page.evaluate(()=>state.exactScores['fixture-0012']),81);
+ }finally{await context.close();await browser.close()}
+});
 test('rank recovery does not replace an edit made while reference fetch waits',async()=>{
  const seed=fixture().state;seed.rankRecovery={version:1};
  const browser=await chromium.launch(options),context=await browser.newContext();try{
