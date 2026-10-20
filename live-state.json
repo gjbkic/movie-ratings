@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792507516343,
-  "sourceUpdatedIso": "2026-10-20T14:45:16.343Z",
+  "sourceUpdatedAt": 1792507521274,
+  "sourceUpdatedIso": "2026-10-20T14:45:21.274Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -16501,6 +16501,35 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-221-7VEK",
+      "title": "STAND BY ME ドラえもん",
+      "originalTitle": "",
+      "englishTitle": "Stand by Me Doraemon",
+      "year": 2014,
+      "score": 77,
+      "star": 2.5,
+      "overallRank": 578,
+      "sameScoreRank": 26,
+      "category": "ほかアニメ",
+      "mediaType": "movie",
+      "genre": [
+        "感動",
+        "子供向け",
+        "娯楽",
+        "ドラマ",
+        "青春・若者",
+        "時間",
+        "シリーズ劇場版"
+      ],
+      "origin": "日本",
+      "format": "animation",
+      "runtime": 94,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "custom-1792439512307-ncav",
       "title": "リバー、流れないでよ",
       "originalTitle": "リバー、流れないでよ",
@@ -16508,8 +16537,8 @@
       "year": 2023,
       "score": 77,
       "star": 2.5,
-      "overallRank": 578,
-      "sameScoreRank": 26,
+      "overallRank": 579,
+      "sameScoreRank": 27,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -16536,8 +16565,8 @@
       "year": 2012,
       "score": 77,
       "star": 2.5,
-      "overallRank": 579,
-      "sameScoreRank": 27,
+      "overallRank": 580,
+      "sameScoreRank": 28,
       "category": "スパイダーマン作品",
       "mediaType": "movie",
       "genre": [
@@ -16564,8 +16593,8 @@
       "year": 2007,
       "score": 77,
       "star": 2.5,
-      "overallRank": 580,
-      "sameScoreRank": 28,
+      "overallRank": 581,
+      "sameScoreRank": 29,
       "category": "コメディ",
       "mediaType": "drama",
       "genre": [
@@ -16580,35 +16609,6 @@
       "runtime": null,
       "exact": true,
       "letterboxdAddedDate": null,
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "lb-221-7VEK",
-      "title": "STAND BY ME ドラえもん",
-      "originalTitle": "",
-      "englishTitle": "Stand by Me Doraemon",
-      "year": 2014,
-      "score": 77,
-      "star": 2.5,
-      "overallRank": 581,
-      "sameScoreRank": 29,
-      "category": "ほかアニメ",
-      "mediaType": "movie",
-      "genre": [
-        "感動",
-        "子供向け",
-        "娯楽",
-        "ドラマ",
-        "青春・若者",
-        "時間",
-        "シリーズ劇場版"
-      ],
-      "origin": "日本",
-      "format": "animation",
-      "runtime": 94,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -23927,10 +23927,10 @@
         "lb-202-d1km",
         "lb-256-1HU8",
         "custom-1789385860541-6lzx",
+        "lb-221-7VEK",
         "custom-1792439512307-ncav",
         "lb-79-27PI",
         "custom-1792417143714-5w33",
-        "lb-221-7VEK",
         "lb-311-z1jW",
         "custom-1791382461963-kb93",
         "lb-60-2a88"
