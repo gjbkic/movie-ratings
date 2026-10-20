@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792507521274,
-  "sourceUpdatedIso": "2026-10-20T14:45:21.274Z",
+  "sourceUpdatedAt": 1792507529775,
+  "sourceUpdatedIso": "2026-10-20T14:45:29.775Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -16558,6 +16558,34 @@
       "letterboxdReportedWatchedDate": "2026-10-20"
     },
     {
+      "id": "lb-311-z1jW",
+      "title": "シビル・ウォー アメリカ最後の日",
+      "originalTitle": "",
+      "englishTitle": "Civil War",
+      "year": 2024,
+      "score": 77,
+      "star": 2.5,
+      "overallRank": 580,
+      "sameScoreRank": 28,
+      "category": "戦争、歴史",
+      "mediaType": "movie",
+      "genre": [
+        "戦争",
+        "社会問題・生活",
+        "差別・人権",
+        "娯楽",
+        "サスペンス",
+        "バイオレンス"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 109,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-15",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-79-27PI",
       "title": "アメイジング・スパイダーマン",
       "originalTitle": "",
@@ -16565,8 +16593,8 @@
       "year": 2012,
       "score": 77,
       "star": 2.5,
-      "overallRank": 580,
-      "sameScoreRank": 28,
+      "overallRank": 581,
+      "sameScoreRank": 29,
       "category": "スパイダーマン作品",
       "mediaType": "movie",
       "genre": [
@@ -16593,8 +16621,8 @@
       "year": 2007,
       "score": 77,
       "star": 2.5,
-      "overallRank": 581,
-      "sameScoreRank": 29,
+      "overallRank": 582,
+      "sameScoreRank": 30,
       "category": "コメディ",
       "mediaType": "drama",
       "genre": [
@@ -16609,34 +16637,6 @@
       "runtime": null,
       "exact": true,
       "letterboxdAddedDate": null,
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "lb-311-z1jW",
-      "title": "シビル・ウォー アメリカ最後の日",
-      "originalTitle": "",
-      "englishTitle": "Civil War",
-      "year": 2024,
-      "score": 77,
-      "star": 2.5,
-      "overallRank": 582,
-      "sameScoreRank": 30,
-      "category": "戦争、歴史",
-      "mediaType": "movie",
-      "genre": [
-        "戦争",
-        "社会問題・生活",
-        "差別・人権",
-        "娯楽",
-        "サスペンス",
-        "バイオレンス"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 109,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-15",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -23929,9 +23929,9 @@
         "custom-1789385860541-6lzx",
         "lb-221-7VEK",
         "custom-1792439512307-ncav",
+        "lb-311-z1jW",
         "lb-79-27PI",
         "custom-1792417143714-5w33",
-        "lb-311-z1jW",
         "custom-1791382461963-kb93",
         "lb-60-2a88"
       ],
