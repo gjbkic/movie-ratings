@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792522081582,
-  "sourceUpdatedIso": "2026-10-20T18:48:01.582Z",
+  "sourceUpdatedAt": 1792522096591,
+  "sourceUpdatedIso": "2026-10-20T18:48:16.591Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -884,6 +884,36 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-493-28No",
+      "title": "パンズ・ラビリンス",
+      "originalTitle": "El laberinto del fauno",
+      "englishTitle": "Pan's Labyrinth",
+      "year": 2006,
+      "score": 94,
+      "star": 4.5,
+      "overallRank": 31,
+      "sameScoreRank": 8,
+      "category": "戦争、歴史",
+      "mediaType": "movie",
+      "genre": [
+        "戦争",
+        "歴史",
+        "切ない",
+        "胸糞",
+        "差別・人権",
+        "心理・内面",
+        "雰囲気・美学",
+        "ファンタジー"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 119,
+      "exact": true,
+      "letterboxdAddedDate": "2026-08-13",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "custom-1791863527797-qm90",
       "title": "BOHEMIAN SUMMER ～宇多田ヒカル Circuit Live 2000",
       "originalTitle": "BOHEMIAN SUMMER ～宇多田ヒカル Circuit Live 2000",
@@ -891,8 +921,8 @@
       "year": 2000,
       "score": 94,
       "star": 4.5,
-      "overallRank": 31,
-      "sameScoreRank": 8,
+      "overallRank": 32,
+      "sameScoreRank": 9,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -914,8 +944,8 @@
       "year": 2019,
       "score": 94,
       "star": 4.5,
-      "overallRank": 32,
-      "sameScoreRank": 9,
+      "overallRank": 33,
+      "sameScoreRank": 10,
       "category": "戦争、歴史",
       "mediaType": "movie",
       "genre": [
@@ -933,36 +963,6 @@
       "runtime": 108,
       "exact": true,
       "letterboxdAddedDate": "2026-09-04",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "lb-493-28No",
-      "title": "パンズ・ラビリンス",
-      "originalTitle": "El laberinto del fauno",
-      "englishTitle": "Pan's Labyrinth",
-      "year": 2006,
-      "score": 94,
-      "star": 4.5,
-      "overallRank": 33,
-      "sameScoreRank": 10,
-      "category": "戦争、歴史",
-      "mediaType": "movie",
-      "genre": [
-        "戦争",
-        "歴史",
-        "切ない",
-        "胸糞",
-        "差別・人権",
-        "心理・内面",
-        "雰囲気・美学",
-        "ファンタジー"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 119,
-      "exact": true,
-      "letterboxdAddedDate": "2026-08-13",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -24523,9 +24523,9 @@
         "lb-137-2a1c",
         "lb-10-kSz4",
         "lb-467-ptEI",
+        "lb-493-28No",
         "custom-1791863527797-qm90",
         "lb-549-iEBG",
-        "lb-493-28No",
         "custom-1790508958519-2edt",
         "lb-112-1W4G"
       ],
