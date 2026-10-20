@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792519425112,
-  "sourceUpdatedIso": "2026-10-20T18:03:45.112Z",
+  "sourceUpdatedAt": 1792519432303,
+  "sourceUpdatedIso": "2026-10-20T18:03:52.303Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -5205,6 +5205,35 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-168-2b7U",
+      "title": "スナッチ",
+      "originalTitle": "",
+      "englishTitle": "Snatch",
+      "year": 2000,
+      "score": 85,
+      "star": 3.5,
+      "overallRank": 180,
+      "sameScoreRank": 3,
+      "category": "マフィア、クライム",
+      "mediaType": "movie",
+      "genre": [
+        "クライム",
+        "アクション",
+        "サスペンス",
+        "ドラマ",
+        "娯楽",
+        "バイオレンス",
+        "コメディ"
+      ],
+      "origin": "その他",
+      "format": "live",
+      "runtime": 104,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "custom-1791396105970-bm2m",
       "title": "世にも奇妙な物語 '21夏の特別編",
       "originalTitle": "世にも奇妙な物語 '21夏の特別編",
@@ -5212,8 +5241,8 @@
       "year": 2021,
       "score": 85,
       "star": 3.5,
-      "overallRank": 180,
-      "sameScoreRank": 3,
+      "overallRank": 181,
+      "sameScoreRank": 4,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -5238,35 +5267,6 @@
       "letterboxdAddedDate": "2026-10-08",
       "letterboxdPublishedAt": "Thu, 8 Oct 2026 06:59:10 +1300",
       "letterboxdReportedWatchedDate": "2026-10-08"
-    },
-    {
-      "id": "lb-168-2b7U",
-      "title": "スナッチ",
-      "originalTitle": "",
-      "englishTitle": "Snatch",
-      "year": 2000,
-      "score": 85,
-      "star": 3.5,
-      "overallRank": 181,
-      "sameScoreRank": 4,
-      "category": "マフィア、クライム",
-      "mediaType": "movie",
-      "genre": [
-        "クライム",
-        "アクション",
-        "サスペンス",
-        "ドラマ",
-        "娯楽",
-        "バイオレンス",
-        "コメディ"
-      ],
-      "origin": "その他",
-      "format": "live",
-      "runtime": 104,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "lb-399-29PA",
@@ -24306,8 +24306,8 @@
       "85": [
         "lb-59-780m",
         "lb-304-27M0",
-        "custom-1791396105970-bm2m",
         "lb-168-2b7U",
+        "custom-1791396105970-bm2m",
         "lb-399-29PA",
         "lb-25-17ue",
         "custom-1789387775661-0mdh",
