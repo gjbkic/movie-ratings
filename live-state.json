@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792507537883,
-  "sourceUpdatedIso": "2026-10-20T14:45:37.883Z",
+  "sourceUpdatedAt": 1792507542629,
+  "sourceUpdatedIso": "2026-10-20T14:45:42.629Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -16614,33 +16614,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1792417143714-5w33",
-      "title": "フィニアスとファーブ",
-      "originalTitle": "Phineas and Ferb",
-      "englishTitle": "Phineas and Ferb",
-      "year": 2007,
-      "score": 77,
-      "star": 2.5,
-      "overallRank": 582,
-      "sameScoreRank": 30,
-      "category": "コメディ",
-      "mediaType": "drama",
-      "genre": [
-        "TV本編",
-        "娯楽",
-        "ファンタジー",
-        "コメディ",
-        "子供向け"
-      ],
-      "origin": "ハリウッド",
-      "format": "",
-      "runtime": null,
-      "exact": true,
-      "letterboxdAddedDate": null,
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "custom-1791382461963-kb93",
       "title": "世にも奇妙な物語 '23秋の特別編",
       "originalTitle": "世にも奇妙な物語 '23秋の特別編",
@@ -16648,8 +16621,8 @@
       "year": 2023,
       "score": 77,
       "star": 2.5,
-      "overallRank": 583,
-      "sameScoreRank": 31,
+      "overallRank": 582,
+      "sameScoreRank": 30,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -16671,6 +16644,33 @@
       "letterboxdAddedDate": "2026-10-07",
       "letterboxdPublishedAt": "Thu, 8 Oct 2026 06:52:07 +1300",
       "letterboxdReportedWatchedDate": "2026-10-08"
+    },
+    {
+      "id": "custom-1792417143714-5w33",
+      "title": "フィニアスとファーブ",
+      "originalTitle": "Phineas and Ferb",
+      "englishTitle": "Phineas and Ferb",
+      "year": 2007,
+      "score": 77,
+      "star": 2.5,
+      "overallRank": 583,
+      "sameScoreRank": 31,
+      "category": "コメディ",
+      "mediaType": "drama",
+      "genre": [
+        "TV本編",
+        "娯楽",
+        "ファンタジー",
+        "コメディ",
+        "子供向け"
+      ],
+      "origin": "ハリウッド",
+      "format": "",
+      "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "lb-60-2a88",
@@ -23931,8 +23931,8 @@
         "custom-1792439512307-ncav",
         "lb-311-z1jW",
         "lb-79-27PI",
-        "custom-1792417143714-5w33",
         "custom-1791382461963-kb93",
+        "custom-1792417143714-5w33",
         "lb-60-2a88"
       ],
       "78": [
