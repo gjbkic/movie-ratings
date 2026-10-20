@@ -5800,9 +5800,15 @@ window.__movie30AutoSyncPending=()=>{const x=getLbSettings();if(x.auto!==false)s
       ['GitHub側JSONを保存','movie30_remote_conflict.json',()=>remote]
     ]){const b=document.createElement('button');b.className='btn';b.textContent=label;b.disabled=content===null||(!remote&&name.includes('remote'));b.onclick=()=>download(name,content(),'application/json');box.append(b)}
   }
+  function legacySyncAllowed(source){
+    if(window.__movie30BalancedScorePreview===true)return false;
+    return window.Movie30ScoreEntryGate?.assess({app:'movie30-live',schema:2,state:source},{route:'sync',runtime:'legacy-v23'}).status==='accept';
+  }
   async function syncMetaCloud(manual=false){
     if(window.__movie30BulkBoot||window.__movie30RecoveryBlocked||window.__movie30SaveFailed||window.__movie30TabConflict||cloudConflict||(typeof movie30PendingWrites!=='undefined'&&movie30PendingWrites))return;
-    if(cloudBusy)return;let token='';try{token=localStorage.getItem(TOKEN_KEY)||''}catch(_){}token=token.trim();
+    if(cloudBusy)return;
+    if(!legacySyncAllowed(state)){status('点数帯の形式を確認できないためGitHub同期を停止しました。手元のデータは保持しています。','bad');return}
+    let token='';try{token=localStorage.getItem(TOKEN_KEY)||''}catch(_){}token=token.trim();
     if(!token){if(manual)status('トークンが未設定です。','bad');return}cloudBusy=true;if(manual)status('GitHubへ同期中…');
     try{
       // Later edits must not be acknowledged by this request.
@@ -5824,8 +5830,9 @@ window.__movie30AutoSyncPending=()=>{const x=getLbSettings();if(x.auto!==false)s
         if(!entry.sha||entry.encoding!=='base64'||typeof entry.content!=='string')throw Error('missing content');
         remoteText=new TextDecoder('utf-8',{fatal:true}).decode(Uint8Array.from(atob(entry.content.replace(/\s/g,'')),c=>c.charCodeAt(0)));
         remote=JSON.parse(remoteText);
-        if(remote.app!=='movie30-live'||remote.schema!==2||!remote.state||!movie30ValidState(remote.state))throw Error('invalid state');
+        if(remote.app!=='movie30-live'||remote.schema!==2||!remote.state||!movie30ValidState(remote.state)||window.Movie30ScoreEntryGate?.assess(remote,{route:'sync',runtime:'legacy-v23'}).status!=='accept')throw Error('invalid state');
       }catch(_){protectCloud(remoteText||null,'同期先の内容を検証できません');return}
+      if(!legacySyncAllowed(state)){status('送信中に点数帯の形式が変わったため同期を停止しました。','bad');return}
       const sha=entry.sha,remoteState=canonical(remote.state),sentState=canonical(payload.state);
       // A lost PUT response is acknowledged only when the exact sent state is present.
       if(cloudAttempt&&remoteState===cloudAttempt.state){cloudBase=remoteState;cloudSha=sha;cloudAttempt=null}
@@ -5846,6 +5853,7 @@ window.__movie30AutoSyncPending=()=>{const x=getLbSettings();if(x.auto!==false)s
         if(!result.content?.sha)throw new Error('書き込み結果の版を確認できません。次回は内容を再確認します。');
         cloudSha=result.content.sha;cloudBase=sentState;cloudAttempt=null;
       }else{cloudSha=sha;cloudBase=sentState}
+      if(!legacySyncAllowed(state)){status('送信中に点数帯の形式が変わりました。現在の編集は未同期です。','bad');return}
       try{
         localStorage.setItem('movie30_github_sync_last_v1',JSON.stringify({sourceUpdatedAt:payload.sourceUpdatedAt,at:Date.now()}));
         localStorage.setItem('movie30_github_synced_fingerprint_v1',sentDataFp);
@@ -5854,7 +5862,8 @@ window.__movie30AutoSyncPending=()=>{const x=getLbSettings();if(x.auto!==false)s
       if(canonical(livePayload().state)!==sentState){
         status('送信した版は保存済みです。送信中の追加編集は未同期です。');
         clearTimeout(cloudFollowup);cloudFollowup=setTimeout(()=>{let auto=false;try{auto=localStorage.getItem('movie30_github_stable_auto_v1')==='1'}catch(_){}if(auto)syncMetaCloud(false)},3500);
-      }else status('同期しました。Letterboxd追加日も保存されています。','ok');
+      }else if(legacySyncAllowed(state))status('同期しました。Letterboxd追加日も保存されています。','ok');
+      else status('送信中に点数帯の形式が変わりました。現在の編集は未同期です。','bad');
     }catch(e){status('同期できませんでした：'+(e?.message||e),'bad')}finally{cloudBusy=false}
   }
   window.__movie30SyncGithub=syncMetaCloud;

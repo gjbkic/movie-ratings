@@ -4,6 +4,32 @@ const {launch,origin,ready,assert}=require('./harness.cjs');let browser;
 const {remoteFrom,reply}=require('./cloud-fixture.cjs');
 after(async()=>browser?.close());
 const fpKey='movie30_github_synced_fingerprint_v1',metaKey='movie30_lb_meta_fp_v63';
+test('balanced local policy is stopped before GitHub GET',async()=>{
+ const {context,page,puts}=await setup();try{
+  let gets=0;await page.route('https://api.github.com/**',r=>{gets++;return r.fulfill({json:{}})});
+  await page.evaluate(()=>{state.scorePolicy='balanced-v1'});
+  await page.evaluate(()=>document.getElementById('gptSyncNow').onclick());
+  assert.equal(gets,0);assert.equal(puts.length,0);
+ }finally{await context.close()}
+});
+test('balanced remote policy is protected without PUT',async()=>{
+ const {context,page,puts,remote}=await setup();try{
+  remote.state.scorePolicy='balanced-v1';
+  let requests=0;await page.route('https://api.github.com/**',r=>{requests++;return r.fulfill({json:reply(remote)})});
+  await page.evaluate(()=>document.getElementById('gptSyncNow').onclick());
+  assert.equal(requests,1);assert.equal(puts.length,0);
+  assert.match(await page.locator('#gptSyncStatus').innerText(),/同期を停止/);
+ }finally{await context.close()}
+});
+test('policy change while GitHub GET waits cancels PUT',async()=>{
+ const {context,page,puts,remote}=await setup();try{
+  let unlock,notify;const held=new Promise(r=>unlock=r),arrived=new Promise(r=>notify=r);
+  let requests=0;await page.route('https://api.github.com/**',async r=>{requests++;notify();await held;return r.fulfill({json:reply(remote)})});
+  const pending=page.evaluate(()=>document.getElementById('gptSyncNow').onclick());await arrived;
+  await page.evaluate(()=>{state.scorePolicy='balanced-v1'});unlock();await pending;
+  assert.equal(requests,1);assert.equal(puts.length,0);assert.match(await page.locator('#gptSyncStatus').innerText(),/同期を停止/);
+ }finally{await context.close()}
+});
 async function setup(){browser??=await launch();const context=await browser.newContext();const page=await context.newPage();let fail=true,puts=[];
  let remote;
  await page.route('https://api.github.com/**',async r=>{if(r.request().method()==='PUT'){const sent=JSON.parse(Buffer.from(r.request().postDataJSON().content,'base64').toString('utf8'));puts.push(sent);if(!fail)remote=sent;return r.fulfill({status:fail?503:200,json:{content:{sha:'fixture-sha'}}})}return r.fulfill({json:reply(remote)})});
