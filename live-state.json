@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792519232805,
-  "sourceUpdatedIso": "2026-10-20T18:00:32.805Z",
+  "sourceUpdatedAt": 1792519241221,
+  "sourceUpdatedIso": "2026-10-20T18:00:41.221Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -4271,6 +4271,33 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-345-1USu",
+      "title": "レナードの朝",
+      "originalTitle": "",
+      "englishTitle": "Awakenings",
+      "year": 1990,
+      "score": 86,
+      "star": 3.5,
+      "overallRank": 148,
+      "sameScoreRank": 15,
+      "category": "ドラマ",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "感動",
+        "切ない",
+        "社会問題・生活",
+        "心理・内面"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": "2025-10-27",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "custom-1791139747386-vy04",
       "title": "THE BATMAN－ザ・バットマン－",
       "originalTitle": "The Batman",
@@ -4278,8 +4305,8 @@
       "year": 2022,
       "score": 86,
       "star": 3.5,
-      "overallRank": 148,
-      "sameScoreRank": 15,
+      "overallRank": 149,
+      "sameScoreRank": 16,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -4302,33 +4329,6 @@
       "letterboxdAddedDate": "2026-10-05",
       "letterboxdPublishedAt": "Mon, 5 Oct 2026 05:14:36 +1300",
       "letterboxdReportedWatchedDate": "2026-10-04"
-    },
-    {
-      "id": "lb-345-1USu",
-      "title": "レナードの朝",
-      "originalTitle": "",
-      "englishTitle": "Awakenings",
-      "year": 1990,
-      "score": 86,
-      "star": 3.5,
-      "overallRank": 149,
-      "sameScoreRank": 16,
-      "category": "ドラマ",
-      "mediaType": "movie",
-      "genre": [
-        "ドラマ",
-        "感動",
-        "切ない",
-        "社会問題・生活",
-        "心理・内面"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": null,
-      "exact": true,
-      "letterboxdAddedDate": "2025-10-27",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "lb-287-2amk",
@@ -24341,8 +24341,8 @@
         "custom-1791919109416-hxq8",
         "lb-382-20TI",
         "custom-1791919010317-zu85",
-        "custom-1791139747386-vy04",
         "lb-345-1USu",
+        "custom-1791139747386-vy04",
         "lb-287-2amk",
         "lb-276-7UmK",
         "custom-1792272124188-0j6i",
