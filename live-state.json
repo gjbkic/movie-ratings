@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792523449272,
-  "sourceUpdatedIso": "2026-10-20T19:10:49.272Z",
+  "sourceUpdatedAt": 1792523454574,
+  "sourceUpdatedIso": "2026-10-20T19:10:54.574Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -12949,34 +12949,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1790089712252-cunv",
-      "title": "ゴーン・ベイビー・ゴーン",
-      "originalTitle": "Gone Baby Gone",
-      "englishTitle": "Gone Baby Gone",
-      "year": 2007,
-      "score": 80,
-      "star": 2.5,
-      "overallRank": 451,
-      "sameScoreRank": 29,
-      "category": "サスペンス、ミステリー",
-      "mediaType": "movie",
-      "genre": [
-        "サスペンス",
-        "ミステリー",
-        "心理・内面",
-        "哲学・思想",
-        "社会問題・生活",
-        "ドラマ"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 113,
-      "exact": true,
-      "letterboxdAddedDate": "2026-09-23",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-354-aNGk",
       "title": "メッセージ",
       "originalTitle": "",
@@ -12984,8 +12956,8 @@
       "year": 2016,
       "score": 80,
       "star": 2.5,
-      "overallRank": 452,
-      "sameScoreRank": 30,
+      "overallRank": 451,
+      "sameScoreRank": 29,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -13002,6 +12974,34 @@
       "runtime": null,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1790089712252-cunv",
+      "title": "ゴーン・ベイビー・ゴーン",
+      "originalTitle": "Gone Baby Gone",
+      "englishTitle": "Gone Baby Gone",
+      "year": 2007,
+      "score": 80,
+      "star": 2.5,
+      "overallRank": 452,
+      "sameScoreRank": 30,
+      "category": "サスペンス、ミステリー",
+      "mediaType": "movie",
+      "genre": [
+        "サスペンス",
+        "ミステリー",
+        "心理・内面",
+        "哲学・思想",
+        "社会問題・生活",
+        "ドラマ"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 113,
+      "exact": true,
+      "letterboxdAddedDate": "2026-09-23",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -24085,8 +24085,8 @@
         "custom-1792420000000-007",
         "lb-419-14FI",
         "lb-347-4bW8",
-        "custom-1790089712252-cunv",
         "lb-354-aNGk",
+        "custom-1790089712252-cunv",
         "lb-377-azew",
         "custom-1791469824035-6gcd",
         "custom-1791919024950-k1ok",
