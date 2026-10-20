@@ -10,6 +10,7 @@
    body=input.state;
    if(input.type==='fictional-score-preview-only'&&!has(input,'app'))kind='preview';
    else if(input.type==='movie30-backup'&&!has(input,'app'))kind='backup';
+   else if(input.app==='movie30'&&input.version===13&&!has(input,'type'))kind='backup';
    else if(input.app==='movie30-live'&&input.schema===2&&!has(input,'type'))kind='live';
    else return verdict('reject','unknown-package');
   }else{

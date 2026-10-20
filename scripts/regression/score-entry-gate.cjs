@@ -5,6 +5,13 @@ const {fixture}=require('./fixture.cjs'),policy=require('../../app-score-policy.
 const {assess}=require('../../app-score-entry-gate.js');
 const clone=x=>structuredClone(x),old=()=>fixture().state,balanced=()=>policy.plan(old(),[]).target;
 const check=(input,route,runtime,expected)=>{const before=JSON.stringify(input),r=assess(input,{route,runtime});assert.equal(r.status,expected);assert.equal(JSON.stringify(input),before);return r};
+test('current exportPackage output is accepted for legacy restore',()=>{
+ const code=fs.readFileSync(path.join(__dirname,'../../app-core.js'),'utf8');
+ const fn=code.match(/function exportPackage\(\)\{[^]*?\}(?=function csvCell)/)?.[0];assert(fn);
+ const scope={state:old(),deepCopy:structuredClone,Date};vm.createContext(scope);vm.runInContext(fn,scope);
+ check(scope.exportPackage(),'restore','legacy-v23','accept');
+ check({...scope.exportPackage(),version:99},'restore','legacy-v23','reject');
+});
 test('legacy unmarked backup, bare state and live envelope remain compatible on legacy routes',()=>{
  check(old(),'restore','legacy-v23','accept');check({type:'movie30-backup',state:old()},'restore','legacy-v23','accept');
  check(old(),'startup','legacy-v23','accept');check({app:'movie30-live',schema:2,state:old()},'sync','legacy-v23','accept');
