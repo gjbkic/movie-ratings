@@ -67,6 +67,19 @@ test('JSON serialization/import preserves additions, reviews, watch events, seas
   const durable=await page.evaluate(()=>localStorage.getItem(STORAGE_KEY));assert.equal(await page.evaluate(()=>restorePackage({state:{rankOrder:{}}})),false);assert.equal(await page.evaluate(()=>localStorage.getItem(STORAGE_KEY)),durable);
  }finally{await context.close()}
 });
+test('manual restore rejects preview and unknown policy before confirmation or any write',async()=>{
+ const {context,page}=await app();try{
+  const before=await snapshot(page),backup=JSON.parse(await page.evaluate(()=>backupString()));
+  const storage=await page.evaluate(async()=>({ls:localStorage.getItem(STORAGE_KEY),db:await movie30ReadSnapshot()}));
+  let confirms=0;page.on('dialog',d=>{if(d.type()==='confirm')confirms++;d.dismiss()});
+  for(const pkg of [{type:'fictional-score-preview-only',state:backup.state},{...backup,state:{...backup.state,scorePolicy:null}}]){
+   assert.equal(await page.evaluate(x=>restorePackage(x),pkg),false);
+   assert.deepEqual(await snapshot(page),before);
+   assert.deepEqual(await page.evaluate(async()=>({ls:localStorage.getItem(STORAGE_KEY),db:await movie30ReadSnapshot()})),storage);
+  }
+  assert.equal(confirms,0);
+ }finally{await context.close()}
+});
 test('series season UI changes persist without rating the whole series',async()=>{
  const {context,page}=await app();try{
   const before=await snapshot(page);await page.evaluate(()=>openSheet('fixture-0010'));
