@@ -1,7 +1,8 @@
 'use strict';
 const {test}=require('node:test'),{chromium,options,isolate,fixture,origin,assert}=require('./harness.cjs');
-test('invalid late rank reference cannot partially change earlier scores',async()=>{
+for(const missing of [false,true])test('invalid late rank reference cannot partially change earlier scores; missing='+missing,async()=>{
  const seed=fixture().state;seed.rankRecovery={version:1};
+ if(missing)seed.rankOrder['80']=seed.rankOrder['80'].filter(id=>id!=='fixture-0012');
  const browser=await chromium.launch(options),context=await browser.newContext();try{
   await isolate(context,{seed});
   await context.route('**/recovery-ranks-20261010.json',r=>r.fulfill({json:{sourceCommit:'synthetic-only',correctScores:[{id:'fixture-0012',from:80,to:81}],rankOrder:{'80':{},'81':['fixture-0012']},clearScores:[],knownDamagedOrders:{}}}));
@@ -10,6 +11,15 @@ test('invalid late rank reference cannot partially change earlier scores',async(
   assert.equal(result.score,80,'early score correction survived a later reference error');
   assert.deepEqual(result.rank,seed.rankOrder['80']);
   assert.equal(result.blocked,true,'invalid reference was not reported as a stopped recovery');
+ }finally{await context.close();await browser.close()}
+});
+for(const policy of ['balanced-v1',null,'future-v9'])test('rank recovery rejects reference policy '+String(policy),async()=>{
+ const seed=fixture().state;seed.rankRecovery={version:1};
+ const browser=await chromium.launch(options),context=await browser.newContext();try{
+  await isolate(context,{seed});await context.route('**/recovery-ranks-20261010.json',r=>r.fulfill({json:{sourceCommit:'synthetic-only',scorePolicy:policy,rankOrder:seed.rankOrder,correctScores:[],clearScores:[],knownDamagedOrders:{}}}));
+  const page=await context.newPage();await page.goto(origin);await page.evaluate(()=>window.__movie30StorageReady);
+  assert.equal(await page.evaluate(()=>!!window.__movie30RecoveryBlocked),true);
+  assert.equal(await page.evaluate(()=>state.exactScores['fixture-0012']),seed.exactScores['fixture-0012']);
  }finally{await context.close();await browser.close()}
 });
 test('valid fictional rank repair preserves later films and survives reload',async()=>{
@@ -23,5 +33,19 @@ test('valid fictional rank repair preserves later films and survives reload',asy
   await page.reload();await page.waitForSelector('html.movie30-ready');
   const actual=await page.evaluate(()=>({score:state.exactScores['fixture-0012'],order:state.rankOrder['81'],review:state.letterboxdMeta['fixture-0012'].note,unknown:state.fixtureUnknown}));
   assert.deepEqual(actual,expected);
+ }finally{await context.close();await browser.close()}
+});
+test('rank recovery does not replace an edit made while reference fetch waits',async()=>{
+ const seed=fixture().state;seed.rankRecovery={version:1};
+ const browser=await chromium.launch(options),context=await browser.newContext();try{
+  await isolate(context,{seed});let release;
+  await context.route('**/recovery-ranks-20261010.json',async r=>{await new Promise(resolve=>release=resolve);await r.fulfill({json:{sourceCommit:'synthetic-only',rankOrder:seed.rankOrder,correctScores:[],clearScores:[],knownDamagedOrders:{}}})});
+  const page=await context.newPage();await page.goto(origin,{waitUntil:'domcontentloaded'});
+  for(let i=0;i<100&&!release;i++)await new Promise(resolve=>setTimeout(resolve,20));
+  assert.equal(typeof release,'function','fixture fetch did not start');
+  await page.evaluate(()=>{state.letterboxdMeta['fixture-0012'].note='later unsaved review'});release();
+  await page.evaluate(()=>window.__movie30StorageReady);
+  assert.equal(await page.evaluate(()=>!!window.__movie30RecoveryBlocked),true);
+  assert.equal(await page.evaluate(()=>state.letterboxdMeta['fixture-0012'].note),'later unsaved review');
  }finally{await context.close();await browser.close()}
 });
