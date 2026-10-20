@@ -6043,10 +6043,10 @@ async function undo(h){
   if(c.f==='customFilms')return same(state.customFilms.find(f=>f.id===c.filmId),origin.after.customFilms.find(f=>f.id===c.filmId));
   return same(state[c.f]?.[c.k],origin.after[c.f]?.[c.k]);
  });
- if(window.__movie30RecoveryBlocked||window.__movie30SaveFailed||window.__movie30TabConflict||policy(state)!==expected||policy(h)!==expected||
+ if(window.__movie30RecoveryBlocked||window.__movie30SaveFailed||window.__movie30TabConflict||policy(state)!==expected||policy(h)!==expected||Object.prototype.hasOwnProperty.call(h,'type')||
    !unchanged||
    !Array.isArray(h.c)||!h.c.length||h.c.some(c=>!c||!['customFilms',...MAPS].includes(c.f)||c.whole||
-     (c.f==='customFilms'?!c.filmId||typeof c.had!=='boolean':typeof c.k!=='string'||typeof c.hx!=='boolean'))){
+     (c.f==='customFilms'?!c.filmId||typeof c.had!=='boolean':!!c.filmId||typeof c.k!=='string'||typeof c.hx!=='boolean'))){
   setSaveStatus('履歴を戻せません · 保存状態と形式を確認しJSONを保存してください');movie30StorageWarning(true,false);return;
  }
  let historyRaw;
@@ -6059,6 +6059,7 @@ async function undo(h){
    if(c.filmId){candidate.customFilms=candidate.customFilms.filter(f=>f.id!==c.filmId);if(c.had)candidate.customFilms.push(clone(c.b));continue}
    candidate[c.f]=candidate[c.f]||{};if(c.hx)candidate[c.f][c.k]=clone(c.b);else delete candidate[c.f][c.k];
   }
+  if(!movie30ValidState(candidate))throw Error('Undo candidate is incomplete');
   const db=await openMovie30Db();
   const archiveId='history-undo-'+Date.now()+'-'+Math.random().toString(36).slice(2,9);
   const archived=db&&await new Promise(resolve=>{try{

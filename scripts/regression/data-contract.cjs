@@ -42,9 +42,18 @@ test('real localStorage quota exhaustion falls back to IDB; no false success whe
 test('checksum damage and unsigned newer truncation cannot replace the committed startup snapshot',async()=>{
  for(const mode of ['checksum','truncation']){
   const {context,page}=await app();try{
-   const before=await snapshot(page);
+   const before=await snapshot(page),idbBefore=await page.evaluate(async()=>await movie30ReadSnapshot().then(x=>x?.json));
    await page.evaluate(mode=>{const s=JSON.parse(localStorage.getItem(STORAGE_KEY));s.updatedAt+=100000;s.rankOrder={};if(mode==='truncation'){delete s.storageIntegrity;s.customFilms=[];s.letterboxdMeta={}}localStorage.setItem(STORAGE_KEY,JSON.stringify(s))},mode);
-   await reload(page);assert.deepEqual(content(await snapshot(page)),content(before));
+   const damaged=await page.evaluate(()=>localStorage.getItem(STORAGE_KEY));
+   await page.reload();await page.evaluate(()=>window.__movie30StorageReady);
+   await page.waitForFunction(()=>window.__movie30RecoveryBlocked||document.documentElement.classList.contains('movie30-ready'));
+   if(await page.evaluate(()=>!!window.__movie30RecoveryBlocked)){
+    await page.locator('#movie30-startup-mask').getByText('保存データの復元を停止しました').waitFor();
+    assert.equal(await page.evaluate(()=>localStorage.getItem(STORAGE_KEY)),damaged,mode+' rejected LS current changed');
+    assert.equal(await page.evaluate(async()=>await movie30ReadSnapshot().then(x=>x?.json)),idbBefore,mode+' committed IDB current changed');
+   }else{
+    assert.deepEqual(content(await snapshot(page)),content(before),mode+' restored content changed');
+   }
   }finally{await context.close()}
  }
 });

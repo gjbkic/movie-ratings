@@ -112,3 +112,14 @@ test('history write failure leaves an exportable candidate and stale Undo is ref
   assert.equal(await page.evaluate(()=>state.letterboxdMeta['fixture-0012'].note),saved);
  }finally{await context.close();await browser.close()}
 });
+
+test('a later Undo does not overwrite an older unresolved archive',async()=>{
+ const browser=await chromium.launch(options),context=await browser.newContext();try{
+  await isolate(context);const page=await context.newPage();await page.goto(origin);await ready(page);
+  await page.evaluate(async()=>{state.letterboxdMeta['fixture-0012'].note='new edit';await save();const db=await openMovie30Db();await new Promise(resolve=>{const tx=db.transaction('snapshots','readwrite');tx.objectStore('snapshots').put({id:'history-undo-older',status:'pending',json:JSON.stringify({before:{marker:'older'},candidate:{marker:'older'}})});tx.oncomplete=resolve})});
+  await page.evaluate(()=>document.getElementById('histOpen66').click());await page.locator('#histBody66 [data-u]').first().click();
+  await page.waitForFunction(()=>state.letterboxdMeta['fixture-0012'].note==='架空レビュー 12');
+  const rows=await page.evaluate(async()=>{const db=await openMovie30Db();return new Promise(resolve=>{const tx=db.transaction('snapshots','readonly'),r=tx.objectStore('snapshots').getAll();r.onsuccess=()=>resolve(r.result.filter(x=>String(x.id).startsWith('history-undo-')));})});
+  assert(rows.length>=2);assert.equal(JSON.parse(rows.find(x=>x.id==='history-undo-older').json).before.marker,'older');
+ }finally{await context.close();await browser.close()}
+});
