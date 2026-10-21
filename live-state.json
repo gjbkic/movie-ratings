@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792610087626,
-  "sourceUpdatedIso": "2026-10-21T19:14:47.626Z",
+  "sourceUpdatedAt": 1792610099341,
+  "sourceUpdatedIso": "2026-10-21T19:14:59.341Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -4300,6 +4300,33 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-345-1USu",
+      "title": "レナードの朝",
+      "originalTitle": "",
+      "englishTitle": "Awakenings",
+      "year": 1990,
+      "score": 86,
+      "star": 3.5,
+      "overallRank": 149,
+      "sameScoreRank": 16,
+      "category": "ドラマ",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "感動",
+        "切ない",
+        "社会問題・生活",
+        "心理・内面"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": "2025-10-27",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "custom-1791919010317-zu85",
       "title": "ライアーゲーム",
       "originalTitle": "ライアーゲーム",
@@ -4307,8 +4334,8 @@
       "year": 2007,
       "score": 86,
       "star": 3.5,
-      "overallRank": 149,
-      "sameScoreRank": 16,
+      "overallRank": 150,
+      "sameScoreRank": 17,
       "category": "マフィア、クライム",
       "mediaType": "drama",
       "genre": [
@@ -4326,33 +4353,6 @@
       "runtime": null,
       "exact": true,
       "letterboxdAddedDate": null,
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "lb-345-1USu",
-      "title": "レナードの朝",
-      "originalTitle": "",
-      "englishTitle": "Awakenings",
-      "year": 1990,
-      "score": 86,
-      "star": 3.5,
-      "overallRank": 150,
-      "sameScoreRank": 17,
-      "category": "ドラマ",
-      "mediaType": "movie",
-      "genre": [
-        "ドラマ",
-        "感動",
-        "切ない",
-        "社会問題・生活",
-        "心理・内面"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": null,
-      "exact": true,
-      "letterboxdAddedDate": "2025-10-27",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -24399,8 +24399,8 @@
         "custom-1791919109416-hxq8",
         "lb-382-20TI",
         "lb-276-7UmK",
-        "custom-1791919010317-zu85",
         "lb-345-1USu",
+        "custom-1791919010317-zu85",
         "custom-1791139747386-vy04",
         "custom-1789387775661-0mdh",
         "lb-287-2amk",
