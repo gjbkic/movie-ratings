@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792610567206,
-  "sourceUpdatedIso": "2026-10-21T19:22:47.206Z",
+  "sourceUpdatedAt": 1792610595272,
+  "sourceUpdatedIso": "2026-10-21T19:23:15.272Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -1749,12 +1749,12 @@
         "感動",
         "切ない",
         "世界観",
+        "comfort",
         "大作",
-        "娯楽",
-        "comfort"
+        "娯楽"
       ],
       "origin": "日本",
-      "format": "",
+      "format": "animation",
       "runtime": null,
       "exact": true,
       "letterboxdAddedDate": null,
@@ -38586,9 +38586,9 @@
         "感動",
         "切ない",
         "世界観",
+        "comfort",
         "大作",
-        "娯楽",
-        "comfort"
+        "娯楽"
       ],
       "custom-1791919040705-bn6z": [
         "コメディ",
@@ -40502,7 +40502,8 @@
       "custom-1792439512307-ncav": "live",
       "custom-1792519359060-7ic5": "live",
       "custom-1792609955834-8gl0": "live",
-      "custom-1791966534875-2yiz": "animation"
+      "custom-1791966534875-2yiz": "animation",
+      "custom-1791966715148-h5tp": "animation"
     },
     "runtimeOverrides": {
       "custom-1790247938551-ixfs": 100,
