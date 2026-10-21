@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792613791682,
-  "sourceUpdatedIso": "2026-10-21T20:16:31.682Z",
+  "sourceUpdatedAt": 1792613965652,
+  "sourceUpdatedIso": "2026-10-21T20:19:25.652Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -45799,7 +45799,7 @@
         "addedDate": "2025-09-01",
         "addedDateSource": "letterboxd-export-2026-09-27",
         "note": "素晴らしい映画。アクションはもちろん他では見れないスタイリッシュさもあるし、ストーリーの複雑性と言うか哲学性もある、素晴らしい",
-        "noteSource": "letterboxd-export",
+        "noteSource": "manual",
         "noteImportedAt": "2026-10-10T10:44:56.531Z",
         "watchedFlag": true,
         "watchedAddedDate": "2025-09-01",
@@ -45828,7 +45828,8 @@
           "tmdbId": 604,
           "path": "/8xEVAe84zlL9rkfYT6dZXero4KK.jpg",
           "checkedAt": "2026-10-18T21:28:20.190877+00:00"
-        }
+        },
+        "noteEditedAt": "2026-10-21T20:19:25.600Z"
       },
       "lb-138-2bc6": {
         "addedDate": "2025-09-01",
