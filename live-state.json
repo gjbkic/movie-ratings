@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792611106833,
-  "sourceUpdatedIso": "2026-10-21T19:31:46.833Z",
+  "sourceUpdatedAt": 1792611552693,
+  "sourceUpdatedIso": "2026-10-21T19:39:12.693Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -3685,7 +3685,7 @@
       "overallRank": 128,
       "sameScoreRank": 11,
       "category": "Letterboxd",
-      "mediaType": "tvseries",
+      "mediaType": "drama",
       "genre": [
         "サスペンス",
         "アクション",
@@ -3724,7 +3724,7 @@
       "overallRank": 129,
       "sameScoreRank": 12,
       "category": "Letterboxd",
-      "mediaType": "tvseries",
+      "mediaType": "drama",
       "genre": [
         "恋愛",
         "ドラマ",
@@ -4406,7 +4406,7 @@
         "コメディ",
         "恋愛"
       ],
-      "origin": "その他",
+      "origin": "ハリウッド",
       "format": "live",
       "runtime": 122,
       "exact": true,
@@ -31652,8 +31652,8 @@
       "custom-1790433924585-k3b0": "drama",
       "custom-1790433925207-8m83": "drama",
       "custom-1790458138407-21ka": "drama",
-      "custom-1790508958909-q6d6": "tvseries",
-      "custom-1790508959270-dbu3": "tvseries",
+      "custom-1790508958909-q6d6": "drama",
+      "custom-1790508959270-dbu3": "drama",
       "custom-1790508959663-6kld": "drama",
       "custom-1790508960074-n6fj": "drama",
       "custom-1790509701063-jule": "drama",
@@ -39752,7 +39752,7 @@
       "custom-1792433176003-xjc7": "日本",
       "custom-1792439512307-ncav": "ハリウッド",
       "custom-1792519359060-7ic5": "ハリウッド",
-      "custom-1792609955834-8gl0": "その他"
+      "custom-1792609955834-8gl0": "ハリウッド"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -49800,9 +49800,7 @@
           "fetchedAt": "2026-10-18T21:28:20.190877+00:00"
         },
         "poster84": {
-          "path": "/jHSBVaU2K0tPLYtTMg07nGTHGOW.jpg",
           "tmdbId": 237439,
-          "checkedAt": "2026-10-21T19:29:06.408Z",
           "provider": "tmdb"
         }
       },
