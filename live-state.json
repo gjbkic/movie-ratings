@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792612868965,
-  "sourceUpdatedIso": "2026-10-21T20:01:08.965Z",
+  "sourceUpdatedAt": 1792612884568,
+  "sourceUpdatedIso": "2026-10-21T20:01:24.568Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -11227,32 +11227,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-424-2cBQ",
-      "title": "アイアンマン3",
-      "originalTitle": "",
-      "englishTitle": "Iron Man 3",
-      "year": 2013,
-      "score": 81,
-      "star": 3,
-      "overallRank": 391,
-      "sameScoreRank": 30,
-      "category": "MCU作品",
-      "mediaType": "movie",
-      "genre": [
-        "アクション",
-        "SF",
-        "ヒーロー",
-        "娯楽"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 133,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "custom-1790322757929-0kod",
       "title": "ジョジョの奇妙な冒険 ダイヤモンドは砕けない",
       "originalTitle": "",
@@ -11260,8 +11234,8 @@
       "year": 2016,
       "score": 81,
       "star": 3,
-      "overallRank": 392,
-      "sameScoreRank": 31,
+      "overallRank": 391,
+      "sameScoreRank": 30,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -11288,8 +11262,8 @@
       "year": 2014,
       "score": 81,
       "star": 3,
-      "overallRank": 393,
-      "sameScoreRank": 32,
+      "overallRank": 392,
+      "sameScoreRank": 31,
       "category": "ファンタジー、アドベンチャー",
       "mediaType": "movie",
       "genre": [
@@ -11315,8 +11289,8 @@
       "year": 1996,
       "score": 81,
       "star": 3,
-      "overallRank": 394,
-      "sameScoreRank": 33,
+      "overallRank": 393,
+      "sameScoreRank": 32,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -11343,8 +11317,8 @@
       "year": 1983,
       "score": 81,
       "star": 3,
-      "overallRank": 395,
-      "sameScoreRank": 34,
+      "overallRank": 394,
+      "sameScoreRank": 33,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -11361,6 +11335,32 @@
       "runtime": 170,
       "exact": true,
       "letterboxdAddedDate": "2026-03-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "lb-424-2cBQ",
+      "title": "アイアンマン3",
+      "originalTitle": "",
+      "englishTitle": "Iron Man 3",
+      "year": 2013,
+      "score": 81,
+      "star": 3,
+      "overallRank": 395,
+      "sameScoreRank": 34,
+      "category": "MCU作品",
+      "mediaType": "movie",
+      "genre": [
+        "アクション",
+        "SF",
+        "ヒーロー",
+        "娯楽"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 133,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -24120,11 +24120,11 @@
         "lb-109-28wi",
         "lb-246-mqyw",
         "custom-1791918807010-n21d",
-        "lb-424-2cBQ",
         "custom-1790322757929-0kod",
         "lb-326-4hka",
         "lb-384-1UhS",
         "lb-372-2b7g",
+        "lb-424-2cBQ",
         "custom-1790423280120-qki8",
         "custom-1790322765489-7o9h",
         "custom-1789929101832-iwdt",
