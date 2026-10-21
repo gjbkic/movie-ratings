@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792610099341,
-  "sourceUpdatedIso": "2026-10-21T19:14:59.341Z",
+  "sourceUpdatedAt": 1792610145291,
+  "sourceUpdatedIso": "2026-10-21T19:15:45.291Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -22931,7 +22931,9 @@
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
-        "ドラマ"
+        "ドラマ",
+        "社会問題・生活",
+        "哲学・思想"
       ],
       "origin": "その他",
       "format": "live",
@@ -38910,7 +38912,9 @@
         "クライム"
       ],
       "custom-1792609955834-8gl0": [
-        "ドラマ"
+        "ドラマ",
+        "社会問題・生活",
+        "哲学・思想"
       ]
     },
     "originOverrides": {
@@ -71180,6 +71184,12 @@
           "creators": [],
           "source": "tmdb",
           "fetchedAt": "2026-10-21T19:12:36.176Z"
+        },
+        "poster84": {
+          "path": "/wxC2QBFAfVKkg2KdOdRP1ERYhvf.jpg",
+          "tmdbId": 10774,
+          "checkedAt": "2026-10-21T19:15:34.560Z",
+          "provider": "tmdb"
         }
       }
     }
