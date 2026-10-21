@@ -28,3 +28,9 @@ app-core.js:3257の完了putはoncomplete/onerror/onabortを同じresolveにし�
 失敗した場合だけ、退避直後のstate全文に加えepoch・停止/runtime policyの再検査を検討。共有save lockの書換えや通常履歴Undoへ拡張しない。上のP2は別途明記し、この1 fixtureで完了書込失敗まで網羅したとはしない。
 
 直近の実行証拠は新8件成功とdrag-touch成功。全42スイートの分割成功は6adab94以前であり、この変更後の全回帰ではない。実機・本番データ・実通信の検証なし。新帯はactivated:false。
+
+## 実2タブと完了記録失敗の追検証
+
+同一隔離browser/contextの2タブで、Aが実ドラッグ後にUndo退避行の読戻しを待機。Bがレビューを保存し、Aがpeer更新を受け入れた後に解放した。旧実装でもstate全文の適用直前比較で停止し、A/B/LS/IDBとAの再読込後にBのレビューが保持された。したがってこの実2タブケースで新たなデータ消失バグは再現せず、epoch再検査だけの追加変更は行っていない。
+
+別の失敗先行ケースでは、映画保存成功後の退避complete putだけをQuotaExceededErrorにすると、旧実装はpending行が残るのに成功toastを出した。修正後はtransaction成功とcomplete行の読戻しを確認してから候補を消し成功表示する。失敗時は「作品は保存済み・Undo候補の完了記録は未確認」と区別して停止し、pending行の警告とJSON出力を維持する。専用テスト10/10成功。全回帰・実機は未実施。完了行の累積容量と破損JSON時の出力は別工程の残件。

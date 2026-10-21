@@ -3246,10 +3246,13 @@ window.__movie30AutoSyncPending=()=>{const x=getLbSettings();if(x.auto!==false)s
       state=candidate;const pending=save(false),applied=JSON.stringify(state),saved=await pending;
       if(saved!==true){if(JSON.stringify(state)===applied){state=before;render()}throw Error('Drag Undo save failed')}
       if(JSON.stringify(state)!==applied){throw Error('Drag Undo changed during save')}
+      const completed=await new Promise(resolve=>{try{const tx=db.transaction('snapshots','readwrite');tx.objectStore('snapshots').put({id:archiveId,status:'complete',json:JSON.stringify({before,candidate}),updatedAt:Number(state.updatedAt||0)});tx.oncomplete=()=>resolve(true);tx.onerror=tx.onabort=()=>resolve(false)}catch(_){resolve(false)}});
+      if(!completed||(await movie30Record(archiveId))?.status!=='complete'){
+        window.__movie30SaveFailed=true;setSaveStatus('作品は保存済み · Undo候補の完了記録を確認できません · JSONを保存してください');movie30StorageWarning(true,false);void warning();render();return;
+      }
       clearUndo();render();
       const card=document.querySelector(`.rank-card[data-id="${encodeURIComponent(u.id)}"]`);
       if(card){card.scrollIntoView({behavior:'smooth',block:'center'});card.classList.add('just-placed');setTimeout(()=>card?.classList.remove('just-placed'),1800)}
-      await new Promise(resolve=>{try{const tx=db.transaction('snapshots','readwrite');tx.objectStore('snapshots').put({id:archiveId,status:'complete',json:JSON.stringify({before,candidate}),updatedAt:Number(state.updatedAt||0)});tx.oncomplete=tx.onerror=tx.onabort=()=>resolve()}catch(_){resolve()}});
       toast('直前のドラッグを戻しました');
     }catch(error){setSaveStatus('ドラッグUndoを保存できません · 候補を維持しました');movie30StorageWarning(true,false);void warning();console.error('Drag Undo stopped',error)}
     finally{undoPending=false}

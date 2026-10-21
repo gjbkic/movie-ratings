@@ -60,3 +60,28 @@ for(const kind of ['stopped','policy','later-map-edit','peer-epoch'])test('drag 
   assert.equal(await page.locator('#undoLastDrag').isEnabled(),true);
  }finally{await context.close();await browser.close()}
 });
+test('two tabs: peer review committed during drag Undo archive wins',async()=>{
+ const {browser,context,page:a}=await setup();try{
+  const b=await context.newPage();await b.goto(origin);await ready(b);
+  await drag(a);await b.waitForFunction(()=>state.rankOrder['80']&&JSON.stringify(state.rankOrder['80'])===JSON.stringify(JSON.parse(localStorage.getItem('movie30_data_v1')).rankOrder['80']));
+  await a.evaluate(()=>{const read=movie30Record;window.dragUndoReadPaused=false;movie30Record=async id=>{if(String(id).startsWith('drag-undo-')){window.dragUndoReadPaused=true;await new Promise(resolve=>window.releaseDragUndoRead=resolve)}return read(id)}});
+  await a.locator('#undoLastDrag').click();await a.waitForFunction(()=>window.dragUndoReadPaused);
+  await b.evaluate(async()=>{state.letterboxdMeta['fixture-0012'].note='peer fictional review';await save()});
+  await a.waitForFunction(()=>state.letterboxdMeta['fixture-0012'].note==='peer fictional review');
+  await a.evaluate(()=>window.releaseDragUndoRead());
+  await a.waitForFunction(()=>document.getElementById('saveState').textContent.includes('ドラッグUndoを保存できません'));
+  const current=await a.evaluate(async()=>({a:state.letterboxdMeta['fixture-0012'].note,ls:JSON.parse(localStorage.getItem(STORAGE_KEY)).letterboxdMeta['fixture-0012'].note,db:JSON.parse((await movie30ReadSnapshot()).json).letterboxdMeta['fixture-0012'].note,toast:document.getElementById('toast').textContent}));
+  assert.deepEqual([current.a,current.ls,current.db],Array(3).fill('peer fictional review'));assert.doesNotMatch(current.toast,/直前のドラッグを戻しました/);
+  await a.reload();await ready(a);assert.equal(await a.evaluate(()=>state.letterboxdMeta['fixture-0012'].note),'peer fictional review');
+ }finally{await context.close();await browser.close()}
+});
+test('drag Undo completion write failure keeps pending warning and avoids full success',async()=>{
+ const {browser,context,page}=await setup();try{
+  await drag(page);
+  await page.evaluate(()=>{const put=IDBObjectStore.prototype.put;IDBObjectStore.prototype.put=function(value,...rest){if(String(value?.id).startsWith('drag-undo-')&&value.status==='complete')throw new DOMException('quota','QuotaExceededError');return put.call(this,value,...rest)}});
+  await page.locator('#undoLastDrag').click();await page.waitForFunction(()=>document.getElementById('saveState').textContent.includes('完了記録を確認できません'));
+  const result=await page.evaluate(async()=>{const db=await openMovie30Db();const rows=await new Promise(resolve=>{const tx=db.transaction('snapshots','readonly'),r=tx.objectStore('snapshots').getAll();r.onsuccess=()=>resolve(r.result.filter(x=>String(x.id).startsWith('drag-undo-')))});return {rows:rows.map(x=>x.status),toast:document.getElementById('toast').textContent}});
+  assert.deepEqual(result.rows,['pending']);assert.doesNotMatch(result.toast,/直前のドラッグを戻しました/);
+  await page.reload();await page.waitForFunction(()=>!!document.getElementById('movie30-drag-undo-warning'));
+ }finally{await context.close();await browser.close()}
+});
