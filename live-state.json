@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792613665236,
-  "sourceUpdatedIso": "2026-10-21T20:14:25.236Z",
+  "sourceUpdatedAt": 1792613763277,
+  "sourceUpdatedIso": "2026-10-21T20:16:03.277Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -535,34 +535,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-322-2aeA",
-      "title": "カッコーの巣の上で",
-      "originalTitle": "",
-      "englishTitle": "One Flew Over the Cuckoo's Nest",
-      "year": 1975,
-      "score": 95,
-      "star": 4.5,
-      "overallRank": 19,
-      "sameScoreRank": 1,
-      "category": "ドラマ",
-      "mediaType": "movie",
-      "genre": [
-        "ドラマ",
-        "歴史",
-        "切ない",
-        "社会問題・生活",
-        "差別・人権",
-        "心理・内面"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 135,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-334-1Tp2",
       "title": "紅の豚",
       "originalTitle": "",
@@ -570,8 +542,8 @@
       "year": 1992,
       "score": 95,
       "star": 4.5,
-      "overallRank": 20,
-      "sameScoreRank": 2,
+      "overallRank": 19,
+      "sameScoreRank": 1,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
       "genre": [
@@ -587,6 +559,34 @@
       "origin": "日本",
       "format": "animation",
       "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "lb-322-2aeA",
+      "title": "カッコーの巣の上で",
+      "originalTitle": "",
+      "englishTitle": "One Flew Over the Cuckoo's Nest",
+      "year": 1975,
+      "score": 95,
+      "star": 4.5,
+      "overallRank": 20,
+      "sameScoreRank": 2,
+      "category": "ドラマ",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "歴史",
+        "切ない",
+        "社会問題・生活",
+        "差別・人権",
+        "心理・内面"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 135,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
@@ -24557,8 +24557,8 @@
         "lb-112-1W4G"
       ],
       "95": [
-        "lb-322-2aeA",
         "lb-334-1Tp2",
+        "lb-322-2aeA",
         "lb-83-2b8S",
         "lb-396-251c",
         "lb-171-2b0k"
