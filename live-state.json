@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792609991555,
-  "sourceUpdatedIso": "2026-10-21T19:13:11.555Z",
+  "sourceUpdatedAt": 1792610000320,
+  "sourceUpdatedIso": "2026-10-21T19:13:20.320Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -6134,6 +6134,35 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "custom-1791802127464-uge5",
+      "title": "Black Mirror: Hang the DJ",
+      "originalTitle": "",
+      "englishTitle": "Black Mirror: Hang the DJ",
+      "year": 2017,
+      "score": 85,
+      "star": 3.5,
+      "overallRank": 212,
+      "sameScoreRank": 34,
+      "category": "Letterboxd",
+      "mediaType": "drama",
+      "genre": [
+        "TV本編",
+        "恋愛",
+        "どんでん返し",
+        "娯楽",
+        "哲学・思想",
+        "ドラマ",
+        "SF"
+      ],
+      "origin": "その他",
+      "format": "",
+      "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-12",
+      "letterboxdPublishedAt": "Mon, 12 Oct 2026 18:21:35 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-12"
+    },
+    {
       "id": "lb-494-2b0E",
       "title": "ロスト・イン・トランスレーション",
       "originalTitle": "",
@@ -6141,8 +6170,8 @@
       "year": 2003,
       "score": 85,
       "star": 3.5,
-      "overallRank": 212,
-      "sameScoreRank": 34,
+      "overallRank": 213,
+      "sameScoreRank": 35,
       "category": "恋愛、ミュージカル",
       "mediaType": "movie",
       "genre": [
@@ -6169,8 +6198,8 @@
       "year": 2000,
       "score": 85,
       "star": 3.5,
-      "overallRank": 213,
-      "sameScoreRank": 35,
+      "overallRank": 214,
+      "sameScoreRank": 36,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -6188,35 +6217,6 @@
       "letterboxdAddedDate": "2026-09-06",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "custom-1791802127464-uge5",
-      "title": "Black Mirror: Hang the DJ",
-      "originalTitle": "",
-      "englishTitle": "Black Mirror: Hang the DJ",
-      "year": 2017,
-      "score": 85,
-      "star": 3.5,
-      "overallRank": 214,
-      "sameScoreRank": 36,
-      "category": "Letterboxd",
-      "mediaType": "drama",
-      "genre": [
-        "TV本編",
-        "恋愛",
-        "どんでん返し",
-        "娯楽",
-        "哲学・思想",
-        "ドラマ",
-        "SF"
-      ],
-      "origin": "その他",
-      "format": "",
-      "runtime": null,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-12",
-      "letterboxdPublishedAt": "Mon, 12 Oct 2026 18:21:35 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-12"
     },
     {
       "id": "lb-385-2axi",
@@ -24370,9 +24370,9 @@
         "lb-78-2aHM",
         "lb-295-1Z5s",
         "lb-393-24xc",
+        "custom-1791802127464-uge5",
         "lb-494-2b0E",
         "lb-574-29CQ",
-        "custom-1791802127464-uge5",
         "lb-385-2axi",
         "lb-119-25zS",
         "lb-64-leq4",
