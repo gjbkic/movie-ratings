@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792610595272,
-  "sourceUpdatedIso": "2026-10-21T19:23:15.272Z",
+  "sourceUpdatedAt": 1792610639600,
+  "sourceUpdatedIso": "2026-10-21T19:23:59.600Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -1166,14 +1166,14 @@
       "genre": [
         "コメディ",
         "世界観",
-        "雰囲気・美学",
-        "娯楽",
         "青春・若者",
+        "ドラマ",
         "comfort",
-        "ドラマ"
+        "娯楽",
+        "雰囲気・美学"
       ],
       "origin": "日本",
-      "format": "live",
+      "format": "hybrid",
       "runtime": 102,
       "exact": true,
       "letterboxdAddedDate": "2026-10-19",
@@ -38733,11 +38733,11 @@
       "custom-1792346885016-a70t": [
         "コメディ",
         "世界観",
-        "雰囲気・美学",
-        "娯楽",
         "青春・若者",
+        "ドラマ",
         "comfort",
-        "ドラマ"
+        "娯楽",
+        "雰囲気・美学"
       ],
       "custom-1792354037608-u33d": [
         "ミュージカル"
@@ -40488,7 +40488,7 @@
       "custom-1792272124188-0j6i": "live",
       "custom-1792310002695-j7ls": "live",
       "custom-1792318978542-vitq": "live",
-      "custom-1792346885016-a70t": "live",
+      "custom-1792346885016-a70t": "hybrid",
       "custom-1792354037608-u33d": "live",
       "custom-1792420000000-008": "animation",
       "custom-1792420000000-009": "animation",
