@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792613778956,
-  "sourceUpdatedIso": "2026-10-21T20:16:18.956Z",
+  "sourceUpdatedAt": 1792613791682,
+  "sourceUpdatedIso": "2026-10-21T20:16:31.682Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -620,34 +620,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-83-2b8S",
-      "title": "レオン",
-      "originalTitle": "",
-      "englishTitle": "Léon: The Professional",
-      "year": 1994,
-      "score": 95,
-      "star": 4.5,
-      "overallRank": 22,
-      "sameScoreRank": 4,
-      "category": "アクション",
-      "mediaType": "movie",
-      "genre": [
-        "アクション",
-        "ドラマ",
-        "切ない",
-        "雰囲気・美学",
-        "バイオレンス",
-        "クライム"
-      ],
-      "origin": "その他",
-      "format": "live",
-      "runtime": 133,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "custom-1790420198451-g42l",
       "title": "エレファント・マン",
       "originalTitle": "The Elephant Man",
@@ -655,8 +627,8 @@
       "year": 1980,
       "score": 95,
       "star": 4.5,
-      "overallRank": 23,
-      "sameScoreRank": 5,
+      "overallRank": 22,
+      "sameScoreRank": 4,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -675,6 +647,34 @@
       "letterboxdAddedDate": "2026-09-26",
       "letterboxdPublishedAt": "Sat, 26 Sep 2026 22:55:55 +1200",
       "letterboxdReportedWatchedDate": "2026-09-26"
+    },
+    {
+      "id": "lb-83-2b8S",
+      "title": "レオン",
+      "originalTitle": "",
+      "englishTitle": "Léon: The Professional",
+      "year": 1994,
+      "score": 95,
+      "star": 4.5,
+      "overallRank": 23,
+      "sameScoreRank": 5,
+      "category": "アクション",
+      "mediaType": "movie",
+      "genre": [
+        "アクション",
+        "ドラマ",
+        "切ない",
+        "雰囲気・美学",
+        "バイオレンス",
+        "クライム"
+      ],
+      "origin": "その他",
+      "format": "live",
+      "runtime": 133,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "lb-171-2b0k",
@@ -24560,8 +24560,8 @@
         "lb-334-1Tp2",
         "lb-322-2aeA",
         "lb-396-251c",
-        "lb-83-2b8S",
-        "custom-1790420198451-g42l"
+        "custom-1790420198451-g42l",
+        "lb-83-2b8S"
       ],
       "96": [
         "lb-81-2aqc",
