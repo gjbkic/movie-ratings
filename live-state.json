@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792613340488,
-  "sourceUpdatedIso": "2026-10-21T20:09:00.488Z",
+  "sourceUpdatedAt": 1792613352114,
+  "sourceUpdatedIso": "2026-10-21T20:09:12.114Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -17465,41 +17465,15 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-432-2a8i",
-      "title": "スパイダーマン",
-      "originalTitle": "",
-      "englishTitle": "Spider-Man",
-      "year": 2002,
-      "score": 76,
-      "star": 2,
-      "overallRank": 613,
-      "sameScoreRank": 28,
-      "category": "スパイダーマン作品",
-      "mediaType": "movie",
-      "genre": [
-        "アクション",
-        "ヒーロー",
-        "娯楽",
-        "SF"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 121,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "added-anchor-583",
       "title": "新感染 ファイナル・エクスプレス",
       "originalTitle": "부산행",
       "englishTitle": "Train to Busan",
       "year": 2016,
-      "score": 76,
+      "score": 75,
       "star": 2,
-      "overallRank": 614,
-      "sameScoreRank": 29,
+      "overallRank": 613,
+      "sameScoreRank": 1,
       "category": "スリラー、ホラー",
       "mediaType": "movie",
       "genre": [
@@ -17521,6 +17495,32 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-432-2a8i",
+      "title": "スパイダーマン",
+      "originalTitle": "",
+      "englishTitle": "Spider-Man",
+      "year": 2002,
+      "score": 75,
+      "star": 2,
+      "overallRank": 614,
+      "sameScoreRank": 2,
+      "category": "スパイダーマン作品",
+      "mediaType": "movie",
+      "genre": [
+        "アクション",
+        "ヒーロー",
+        "娯楽",
+        "SF"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 121,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-307-eSjI",
       "title": "ライオン・キング",
       "originalTitle": "",
@@ -17529,7 +17529,7 @@
       "score": 75,
       "star": 2,
       "overallRank": 615,
-      "sameScoreRank": 1,
+      "sameScoreRank": 3,
       "category": "ピクサー・ディズニー作品",
       "mediaType": "movie",
       "genre": [
@@ -17557,7 +17557,7 @@
       "score": 75,
       "star": 2,
       "overallRank": 616,
-      "sameScoreRank": 2,
+      "sameScoreRank": 4,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -17584,7 +17584,7 @@
       "score": 75,
       "star": 2,
       "overallRank": 617,
-      "sameScoreRank": 3,
+      "sameScoreRank": 5,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -17612,7 +17612,7 @@
       "score": 75,
       "star": 2,
       "overallRank": 618,
-      "sameScoreRank": 4,
+      "sameScoreRank": 6,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -17643,7 +17643,7 @@
       "score": 75,
       "star": 2,
       "overallRank": 619,
-      "sameScoreRank": 5,
+      "sameScoreRank": 7,
       "category": "スリラー、ホラー",
       "mediaType": "movie",
       "genre": [
@@ -17672,7 +17672,7 @@
       "score": 75,
       "star": 2,
       "overallRank": 620,
-      "sameScoreRank": 6,
+      "sameScoreRank": 8,
       "category": "ピクサー・ディズニー作品",
       "mediaType": "movie",
       "genre": [
@@ -17700,7 +17700,7 @@
       "score": 75,
       "star": 2,
       "overallRank": 621,
-      "sameScoreRank": 7,
+      "sameScoreRank": 9,
       "category": "ピクサー・ディズニー作品",
       "mediaType": "movie",
       "genre": [
@@ -17729,7 +17729,7 @@
       "score": 75,
       "star": 2,
       "overallRank": 622,
-      "sameScoreRank": 8,
+      "sameScoreRank": 10,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -17759,7 +17759,7 @@
       "score": 75,
       "star": 2,
       "overallRank": 623,
-      "sameScoreRank": 9,
+      "sameScoreRank": 11,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -17786,7 +17786,7 @@
       "score": 75,
       "star": 2,
       "overallRank": 624,
-      "sameScoreRank": 10,
+      "sameScoreRank": 12,
       "category": "マフィア、クライム",
       "mediaType": "drama",
       "genre": [
@@ -17813,7 +17813,7 @@
       "score": 75,
       "star": 2,
       "overallRank": 625,
-      "sameScoreRank": 11,
+      "sameScoreRank": 13,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -17839,7 +17839,7 @@
       "score": 75,
       "star": 2,
       "overallRank": 626,
-      "sameScoreRank": 12,
+      "sameScoreRank": 14,
       "category": "コメディ",
       "mediaType": "movie",
       "genre": [
@@ -17869,7 +17869,7 @@
       "score": 75,
       "star": 2,
       "overallRank": 627,
-      "sameScoreRank": 13,
+      "sameScoreRank": 15,
       "category": "Letterboxd追加",
       "mediaType": "movie",
       "genre": [
@@ -17897,7 +17897,7 @@
       "score": 75,
       "star": 2,
       "overallRank": 628,
-      "sameScoreRank": 14,
+      "sameScoreRank": 16,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -17922,7 +17922,7 @@
       "score": 75,
       "star": 2,
       "overallRank": 629,
-      "sameScoreRank": 15,
+      "sameScoreRank": 17,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -17949,7 +17949,7 @@
       "score": 75,
       "star": 2,
       "overallRank": 630,
-      "sameScoreRank": 16,
+      "sameScoreRank": 18,
       "category": "戦争、歴史",
       "mediaType": "movie",
       "genre": [
@@ -17976,7 +17976,7 @@
       "score": 75,
       "star": 2,
       "overallRank": 631,
-      "sameScoreRank": 17,
+      "sameScoreRank": 19,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -18002,7 +18002,7 @@
       "score": 75,
       "star": 2,
       "overallRank": 632,
-      "sameScoreRank": 18,
+      "sameScoreRank": 20,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -18028,7 +18028,7 @@
       "score": 75,
       "star": 2,
       "overallRank": 633,
-      "sameScoreRank": 19,
+      "sameScoreRank": 21,
       "category": "スターウォーズシリーズ",
       "mediaType": "movie",
       "genre": [
@@ -18058,7 +18058,7 @@
       "score": 75,
       "star": 2,
       "overallRank": 634,
-      "sameScoreRank": 20,
+      "sameScoreRank": 22,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -18089,7 +18089,7 @@
       "score": 75,
       "star": 2,
       "overallRank": 635,
-      "sameScoreRank": 21,
+      "sameScoreRank": 23,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -23193,7 +23193,7 @@
       "lb-325-b5zc": 74,
       "lb-480-gVQk": 74,
       "lb-441-27EA": 74,
-      "added-anchor-583": 76,
+      "added-anchor-583": 75,
       "lb-307-eSjI": 75,
       "lb-473-1U2o": 75,
       "lb-68-201Q": 75,
@@ -23212,7 +23212,7 @@
       "lb-360-v2Wi": 75,
       "lb-365-GZY": 76,
       "lb-355-8lFu": 76,
-      "lb-432-2a8i": 76,
+      "lb-432-2a8i": 75,
       "lb-131-1OEc": 76,
       "lb-436-n87k": 76,
       "lb-439-1OPa": 76,
@@ -23901,6 +23901,8 @@
         "lb-270-iF7M"
       ],
       "75": [
+        "added-anchor-583",
+        "lb-432-2a8i",
         "lb-307-eSjI",
         "lb-216-1DD8",
         "lb-80-29XY",
@@ -23950,9 +23952,7 @@
         "lb-444-DCs0",
         "custom-1790322760094-cjek",
         "custom-1789385860756-dujj",
-        "base-timecrimes-2007",
-        "lb-432-2a8i",
-        "added-anchor-583"
+        "base-timecrimes-2007"
       ],
       "77": [
         "lb-561-8MHs",
