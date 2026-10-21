@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792612562875,
-  "sourceUpdatedIso": "2026-10-21T19:56:02.875Z",
+  "sourceUpdatedAt": 1792612604555,
+  "sourceUpdatedIso": "2026-10-21T19:56:44.555Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -22875,12 +22875,18 @@
       "englishTitle": "Keibuho Yabe Kenzo",
       "year": 2010,
       "score": null,
-      "star": 0,
+      "star": 3,
       "overallRank": null,
       "sameScoreRank": null,
       "category": "マフィア、クライム",
       "mediaType": "tvseries",
-      "genre": "",
+      "genre": [
+        "TV本編",
+        "コメディ",
+        "ミステリー",
+        "サスペンス",
+        "娯楽"
+      ],
       "origin": "",
       "format": "",
       "runtime": null,
@@ -29268,7 +29274,7 @@
       "custom-1792439512307-ncav": 2.5,
       "custom-1792519359060-7ic5": 3.5,
       "custom-1792609955834-8gl0": 3.5,
-      "custom-1792612562683-9p69": 0
+      "custom-1792612562683-9p69": 3
     },
     "titleOverrides": {
       "added-anchor-578": {
@@ -38800,6 +38806,13 @@
         "雰囲気・美学",
         "コメディ",
         "恋愛"
+      ],
+      "custom-1792612562683-9p69": [
+        "TV本編",
+        "コメディ",
+        "ミステリー",
+        "サスペンス",
+        "娯楽"
       ]
     },
     "originOverrides": {
