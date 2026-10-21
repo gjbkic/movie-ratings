@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792613462904,
-  "sourceUpdatedIso": "2026-10-21T20:11:02.904Z",
+  "sourceUpdatedAt": 1792613640729,
+  "sourceUpdatedIso": "2026-10-21T20:14:00.729Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -127,29 +127,29 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-9-1skk",
-      "title": "インセプション",
+      "id": "lb-350-2bcK",
+      "title": "メメント",
       "originalTitle": "",
-      "englishTitle": "Inception",
-      "year": 2010,
+      "englishTitle": "Memento",
+      "year": 2000,
       "score": 98,
       "star": 5,
       "overallRank": 5,
       "sameScoreRank": 1,
-      "category": "SF",
+      "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
-        "SF",
-        "アクション",
+        "サスペンス",
+        "ミステリー",
         "クライム",
-        "大作",
-        "娯楽",
+        "どんでん返し",
+        "心理・内面",
         "特殊構造"
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": 148,
-      "exact": false,
+      "runtime": null,
+      "exact": true,
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
@@ -205,34 +205,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-350-2bcK",
-      "title": "メメント",
-      "originalTitle": "",
-      "englishTitle": "Memento",
-      "year": 2000,
-      "score": 97,
-      "star": 4.5,
-      "overallRank": 8,
-      "sameScoreRank": 1,
-      "category": "サスペンス、ミステリー",
-      "mediaType": "movie",
-      "genre": [
-        "サスペンス",
-        "ミステリー",
-        "クライム",
-        "どんでん返し",
-        "心理・内面",
-        "特殊構造"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": null,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-492-2bcA",
       "title": "ブレードランナー",
       "originalTitle": "",
@@ -240,8 +212,8 @@
       "year": 1982,
       "score": 97,
       "star": 4.5,
-      "overallRank": 9,
-      "sameScoreRank": 2,
+      "overallRank": 8,
+      "sameScoreRank": 1,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -270,8 +242,8 @@
       "year": 1984,
       "score": 97,
       "star": 4.5,
-      "overallRank": 10,
-      "sameScoreRank": 3,
+      "overallRank": 9,
+      "sameScoreRank": 2,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
       "genre": [
@@ -290,6 +262,34 @@
       "origin": "日本",
       "format": "animation",
       "runtime": 118,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "lb-9-1skk",
+      "title": "インセプション",
+      "originalTitle": "",
+      "englishTitle": "Inception",
+      "year": 2010,
+      "score": 97,
+      "star": 4.5,
+      "overallRank": 10,
+      "sameScoreRank": 3,
+      "category": "SF",
+      "mediaType": "movie",
+      "genre": [
+        "SF",
+        "アクション",
+        "クライム",
+        "大作",
+        "娯楽",
+        "特殊構造"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 148,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
@@ -22949,7 +22949,7 @@
       "custom-1789385861007-nhdf": 70,
       "custom-1789385861101-oomm": 74,
       "custom-1789385860341-pd09": 82,
-      "lb-350-2bcK": 97,
+      "lb-350-2bcK": 98,
       "lb-8-6YK": 97,
       "lb-491-29R2": 96,
       "lb-81-2aqc": 96,
@@ -23699,7 +23699,8 @@
       "custom-1792612562683-9p69": 81,
       "custom-1792612990758-vlmb": 81,
       "custom-1792418203307-qxck": 74,
-      "lb-270-iF7M": 73
+      "lb-270-iF7M": 73,
+      "lb-9-1skk": 97
     },
     "rankOrder": {
       "40": [
@@ -24569,15 +24570,15 @@
         "lb-39-2DjO"
       ],
       "97": [
-        "lb-350-2bcK",
         "lb-492-2bcA",
         "lb-138-2bc6",
+        "lb-9-1skk",
         "lb-8-6YK",
         "lb-88-1RUM",
         "lb-468-1GRM"
       ],
       "98": [
-        "lb-9-1skk",
+        "lb-350-2bcK",
         "custom-1791664055006-96rv",
         "lb-18-2ahY"
       ],
@@ -28548,7 +28549,7 @@
       "added-anchor-582": 1,
       "lb-557-1WyQ": 3,
       "custom-1789385860088-xif1": 2.5,
-      "lb-350-2bcK": 4.5,
+      "lb-350-2bcK": 5,
       "lb-8-6YK": 4.5,
       "lb-491-29R2": 4.5,
       "lb-81-2aqc": 4.5,
@@ -29338,7 +29339,8 @@
       "custom-1792609955834-8gl0": 3.5,
       "custom-1792612562683-9p69": 3,
       "custom-1792612990758-vlmb": 3,
-      "lb-270-iF7M": 2
+      "lb-270-iF7M": 2,
+      "lb-9-1skk": 4.5
     },
     "titleOverrides": {
       "added-anchor-578": {
