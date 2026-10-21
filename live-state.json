@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792612955060,
-  "sourceUpdatedIso": "2026-10-21T20:02:35.060Z",
+  "sourceUpdatedAt": 1792612990949,
+  "sourceUpdatedIso": "2026-10-21T20:03:10.949Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -22901,6 +22901,27 @@
       "letterboxdAddedDate": null,
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1792612990758-vlmb",
+      "title": "スーパーサラリーマン左江内氏",
+      "originalTitle": "スーパーサラリーマン左江内氏",
+      "englishTitle": "Super Salaryman Mr. Saenai",
+      "year": 2017,
+      "score": null,
+      "star": 0,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "コメディ",
+      "mediaType": "tvseries",
+      "genre": "",
+      "origin": "",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     }
   ],
   "state": {
@@ -28489,6 +28510,23 @@
         "added": true,
         "_seq": 1792612562683,
         "tmdbType": "tv"
+      },
+      {
+        "id": "custom-1792612990758-vlmb",
+        "title": "スーパーサラリーマン左江内氏",
+        "originalTitle": "スーパーサラリーマン左江内氏",
+        "englishTitle": "Super Salaryman Mr. Saenai",
+        "lbTitle": "Super Salaryman Mr. Saenai",
+        "tmdbId": 100118,
+        "year": 2017,
+        "uri": "",
+        "category": "コメディ",
+        "order": 999999,
+        "star": 0,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1792612990758,
+        "tmdbType": "tv"
       }
     ],
     "starOverrides": {
@@ -29283,7 +29321,8 @@
       "custom-1792439512307-ncav": 2.5,
       "custom-1792519359060-7ic5": 3.5,
       "custom-1792609955834-8gl0": 3.5,
-      "custom-1792612562683-9p69": 3
+      "custom-1792612562683-9p69": 3,
+      "custom-1792612990758-vlmb": 0
     },
     "titleOverrides": {
       "added-anchor-578": {
@@ -32339,7 +32378,8 @@
       "custom-1792439512307-ncav": "movie",
       "custom-1792519359060-7ic5": "movie",
       "custom-1792609955834-8gl0": "movie",
-      "custom-1792612562683-9p69": "tvseries"
+      "custom-1792612562683-9p69": "tvseries",
+      "custom-1792612990758-vlmb": "tvseries"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -71084,6 +71124,32 @@
         "seasonScoresV1": {
           "1": 82,
           "2": 79
+        }
+      },
+      "custom-1792612990758-vlmb": {
+        "contentType": "tv_series",
+        "tmdbType": "tv",
+        "poster84": {
+          "path": "/3c6NWMBTeC0wUq3kRBODSHl6WlT.jpg",
+          "tmdbId": 100118,
+          "provider": "tmdb",
+          "checkedAt": "2026-10-21T20:03:10.897Z"
+        },
+        "tmdbSeriesId": 100118,
+        "seasonCatalogV1": [
+          {
+            "number": 1,
+            "year": "2017"
+          }
+        ],
+        "seasonCountV1": 1,
+        "crew84": {
+          "directors": [],
+          "creators": [
+            "Yuichi Fukuda"
+          ],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-21T20:03:10.924Z"
         }
       }
     }
