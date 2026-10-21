@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792614037067,
-  "sourceUpdatedIso": "2026-10-21T20:20:37.067Z",
+  "sourceUpdatedAt": 1792614140033,
+  "sourceUpdatedIso": "2026-10-21T20:22:20.033Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -1152,35 +1152,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1792346885016-a70t",
-      "title": "下妻物語",
-      "originalTitle": "下妻物語",
-      "englishTitle": "Kamikaze Girls",
-      "year": 2004,
-      "score": 93,
-      "star": 4.5,
-      "overallRank": 40,
-      "sameScoreRank": 5,
-      "category": "Letterboxd",
-      "mediaType": "movie",
-      "genre": [
-        "コメディ",
-        "世界観",
-        "青春・若者",
-        "ドラマ",
-        "comfort",
-        "娯楽",
-        "雰囲気・美学"
-      ],
-      "origin": "日本",
-      "format": "hybrid",
-      "runtime": 102,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-19",
-      "letterboxdPublishedAt": "Mon, 19 Oct 2026 05:33:45 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-18"
-    },
-    {
       "id": "lb-323-1VEo",
       "title": "ウォーリー",
       "originalTitle": "",
@@ -1188,8 +1159,8 @@
       "year": 2008,
       "score": 93,
       "star": 4.5,
-      "overallRank": 41,
-      "sameScoreRank": 6,
+      "overallRank": 40,
+      "sameScoreRank": 5,
       "category": "ピクサー・ディズニー作品",
       "mediaType": "movie",
       "genre": [
@@ -1208,6 +1179,35 @@
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1792346885016-a70t",
+      "title": "下妻物語",
+      "originalTitle": "下妻物語",
+      "englishTitle": "Kamikaze Girls",
+      "year": 2004,
+      "score": 93,
+      "star": 4.5,
+      "overallRank": 41,
+      "sameScoreRank": 6,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "コメディ",
+        "世界観",
+        "青春・若者",
+        "ドラマ",
+        "comfort",
+        "娯楽",
+        "雰囲気・美学"
+      ],
+      "origin": "日本",
+      "format": "hybrid",
+      "runtime": 102,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-19",
+      "letterboxdPublishedAt": "Mon, 19 Oct 2026 05:33:45 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-18"
     },
     {
       "id": "custom-1791664055911-cuz4",
@@ -24531,8 +24531,8 @@
         "lb-564-29Wm",
         "lb-558-1pDe",
         "added-anchor-577",
-        "custom-1792346885016-a70t",
         "lb-323-1VEo",
+        "custom-1792346885016-a70t",
         "custom-1791664055911-cuz4",
         "custom-1791919172943-3ibi",
         "custom-1790254612541-iyij",
