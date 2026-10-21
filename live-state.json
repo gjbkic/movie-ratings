@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792600442185,
-  "sourceUpdatedIso": "2026-10-21T16:34:02.185Z",
+  "sourceUpdatedAt": 1792609957501,
+  "sourceUpdatedIso": "2026-10-21T19:12:37.501Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -4149,6 +4149,35 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "custom-1792519359060-7ic5",
+      "title": "ブギーナイツ",
+      "originalTitle": "Boogie Nights",
+      "englishTitle": "Boogie Nights",
+      "year": 1997,
+      "score": 86,
+      "star": 3.5,
+      "overallRank": 144,
+      "sameScoreRank": 11,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "コメディ",
+        "娯楽",
+        "社会問題・生活",
+        "サスペンス",
+        "雰囲気・美学",
+        "クライム"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 155,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-21",
+      "letterboxdPublishedAt": "Wed, 21 Oct 2026 04:56:53 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-20"
+    },
+    {
       "id": "lb-115-2aWi",
       "title": "マイノリティ・リポート",
       "originalTitle": "",
@@ -4156,8 +4185,8 @@
       "year": 2002,
       "score": 86,
       "star": 3.5,
-      "overallRank": 144,
-      "sameScoreRank": 11,
+      "overallRank": 145,
+      "sameScoreRank": 12,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -4185,8 +4214,8 @@
       "year": 2020,
       "score": 86,
       "star": 3.5,
-      "overallRank": 145,
-      "sameScoreRank": 12,
+      "overallRank": 146,
+      "sameScoreRank": 13,
       "category": "サスペンス、ミステリー",
       "mediaType": "drama",
       "genre": [
@@ -4219,8 +4248,8 @@
       "year": 1993,
       "score": 86,
       "star": 3.5,
-      "overallRank": 146,
-      "sameScoreRank": 13,
+      "overallRank": 147,
+      "sameScoreRank": 14,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -4239,35 +4268,6 @@
       "letterboxdAddedDate": "2026-03-25",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "custom-1792519359060-7ic5",
-      "title": "ブギーナイツ",
-      "originalTitle": "Boogie Nights",
-      "englishTitle": "Boogie Nights",
-      "year": 1997,
-      "score": 86,
-      "star": 3.5,
-      "overallRank": 147,
-      "sameScoreRank": 14,
-      "category": "Letterboxd",
-      "mediaType": "movie",
-      "genre": [
-        "ドラマ",
-        "コメディ",
-        "娯楽",
-        "社会問題・生活",
-        "サスペンス",
-        "雰囲気・美学",
-        "クライム"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 155,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-21",
-      "letterboxdPublishedAt": "Wed, 21 Oct 2026 04:56:53 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-20"
     },
     {
       "id": "custom-1791919010317-zu85",
@@ -6079,6 +6079,36 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-78-2aHM",
+      "title": "ファーゴ",
+      "originalTitle": "",
+      "englishTitle": "Fargo",
+      "year": 1996,
+      "score": 85,
+      "star": 3.5,
+      "overallRank": 210,
+      "sameScoreRank": 32,
+      "category": "サスペンス、ミステリー",
+      "mediaType": "movie",
+      "genre": [
+        "サスペンス",
+        "クライム",
+        "胸糞",
+        "娯楽",
+        "雰囲気・美学",
+        "バイオレンス",
+        "コメディ",
+        "ドラマ"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 98,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-295-1Z5s",
       "title": "スティング",
       "originalTitle": "",
@@ -6086,8 +6116,8 @@
       "year": 1973,
       "score": 85,
       "star": 3.5,
-      "overallRank": 210,
-      "sameScoreRank": 32,
+      "overallRank": 211,
+      "sameScoreRank": 33,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -6112,8 +6142,8 @@
       "year": 1999,
       "score": 85,
       "star": 3.5,
-      "overallRank": 211,
-      "sameScoreRank": 33,
+      "overallRank": 212,
+      "sameScoreRank": 34,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -6139,8 +6169,8 @@
       "year": 2003,
       "score": 85,
       "star": 3.5,
-      "overallRank": 212,
-      "sameScoreRank": 34,
+      "overallRank": 213,
+      "sameScoreRank": 35,
       "category": "恋愛、ミュージカル",
       "mediaType": "movie",
       "genre": [
@@ -6167,8 +6197,8 @@
       "year": 2017,
       "score": 85,
       "star": 3.5,
-      "overallRank": 213,
-      "sameScoreRank": 35,
+      "overallRank": 214,
+      "sameScoreRank": 36,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -6196,8 +6226,8 @@
       "year": 1954,
       "score": 85,
       "star": 3.5,
-      "overallRank": 214,
-      "sameScoreRank": 36,
+      "overallRank": 215,
+      "sameScoreRank": 37,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -6225,8 +6255,8 @@
       "year": 2000,
       "score": 85,
       "star": 3.5,
-      "overallRank": 215,
-      "sameScoreRank": 37,
+      "overallRank": 216,
+      "sameScoreRank": 38,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -6253,8 +6283,8 @@
       "year": 2020,
       "score": 85,
       "star": 3.5,
-      "overallRank": 216,
-      "sameScoreRank": 38,
+      "overallRank": 217,
+      "sameScoreRank": 39,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -6281,8 +6311,8 @@
       "year": 1988,
       "score": 85,
       "star": 3.5,
-      "overallRank": 217,
-      "sameScoreRank": 39,
+      "overallRank": 218,
+      "sameScoreRank": 40,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -6307,8 +6337,8 @@
       "year": 1971,
       "score": 85,
       "star": 3.5,
-      "overallRank": 218,
-      "sameScoreRank": 40,
+      "overallRank": 219,
+      "sameScoreRank": 41,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -6338,8 +6368,8 @@
       "year": 2009,
       "score": 85,
       "star": 3.5,
-      "overallRank": 219,
-      "sameScoreRank": 41,
+      "overallRank": 220,
+      "sameScoreRank": 42,
       "category": "ハリーポッター シリーズ",
       "mediaType": "movie",
       "genre": [
@@ -6369,8 +6399,8 @@
       "year": 1989,
       "score": 85,
       "star": 3.5,
-      "overallRank": 220,
-      "sameScoreRank": 42,
+      "overallRank": 221,
+      "sameScoreRank": 43,
       "category": "Letterboxd追加",
       "mediaType": "movie",
       "genre": [
@@ -6397,8 +6427,8 @@
       "year": 1984,
       "score": 85,
       "star": 3.5,
-      "overallRank": 221,
-      "sameScoreRank": 43,
+      "overallRank": 222,
+      "sameScoreRank": 44,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -6425,8 +6455,8 @@
       "year": 2018,
       "score": 85,
       "star": 3.5,
-      "overallRank": 222,
-      "sameScoreRank": 44,
+      "overallRank": 223,
+      "sameScoreRank": 45,
       "category": "MCU作品",
       "mediaType": "movie",
       "genre": [
@@ -6453,8 +6483,8 @@
       "year": 2005,
       "score": 85,
       "star": 3.5,
-      "overallRank": 223,
-      "sameScoreRank": 45,
+      "overallRank": 224,
+      "sameScoreRank": 46,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -6482,7 +6512,7 @@
       "year": 2002,
       "score": 84,
       "star": 3.5,
-      "overallRank": 224,
+      "overallRank": 225,
       "sameScoreRank": 1,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
@@ -6509,7 +6539,7 @@
       "year": 2015,
       "score": 84,
       "star": 3.5,
-      "overallRank": 225,
+      "overallRank": 226,
       "sameScoreRank": 2,
       "category": "ファンタジー、アドベンチャー",
       "mediaType": "movie",
@@ -6537,7 +6567,7 @@
       "year": 1989,
       "score": 84,
       "star": 3.5,
-      "overallRank": 226,
+      "overallRank": 227,
       "sameScoreRank": 3,
       "category": "SF",
       "mediaType": "movie",
@@ -6566,7 +6596,7 @@
       "year": 2002,
       "score": 84,
       "star": 3.5,
-      "overallRank": 227,
+      "overallRank": 228,
       "sameScoreRank": 4,
       "category": "アクション",
       "mediaType": "movie",
@@ -6594,7 +6624,7 @@
       "year": 2009,
       "score": 84,
       "star": 3.5,
-      "overallRank": 228,
+      "overallRank": 229,
       "sameScoreRank": 5,
       "category": "SF",
       "mediaType": "movie",
@@ -6624,7 +6654,7 @@
       "year": 2004,
       "score": 84,
       "star": 3.5,
-      "overallRank": 229,
+      "overallRank": 230,
       "sameScoreRank": 6,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
@@ -6655,7 +6685,7 @@
       "year": 2001,
       "score": 84,
       "star": 3.5,
-      "overallRank": 230,
+      "overallRank": 231,
       "sameScoreRank": 7,
       "category": "恋愛、ミュージカル",
       "mediaType": "movie",
@@ -6684,7 +6714,7 @@
       "year": 2018,
       "score": 84,
       "star": 3.5,
-      "overallRank": 231,
+      "overallRank": 232,
       "sameScoreRank": 8,
       "category": "Letterboxd",
       "mediaType": "drama",
@@ -6715,7 +6745,7 @@
       "year": 1996,
       "score": 84,
       "star": 3.5,
-      "overallRank": 232,
+      "overallRank": 233,
       "sameScoreRank": 9,
       "category": "アクション",
       "mediaType": "movie",
@@ -6739,7 +6769,7 @@
       "year": 1982,
       "score": 84,
       "star": 3.5,
-      "overallRank": 233,
+      "overallRank": 234,
       "sameScoreRank": 10,
       "category": "アクション",
       "mediaType": "movie",
@@ -6766,7 +6796,7 @@
       "year": 2007,
       "score": 84,
       "star": 3.5,
-      "overallRank": 234,
+      "overallRank": 235,
       "sameScoreRank": 11,
       "category": "Letterboxd",
       "mediaType": "other",
@@ -6792,7 +6822,7 @@
       "year": 1994,
       "score": 84,
       "star": 3.5,
-      "overallRank": 235,
+      "overallRank": 236,
       "sameScoreRank": 12,
       "category": "追加映画",
       "mediaType": "drama",
@@ -6820,7 +6850,7 @@
       "year": 2013,
       "score": 84,
       "star": 3.5,
-      "overallRank": 236,
+      "overallRank": 237,
       "sameScoreRank": 13,
       "category": "Letterboxd",
       "mediaType": "drama",
@@ -6848,7 +6878,7 @@
       "year": 2015,
       "score": 84,
       "star": 3.5,
-      "overallRank": 237,
+      "overallRank": 238,
       "sameScoreRank": 14,
       "category": "スターウォーズシリーズ",
       "mediaType": "movie",
@@ -6878,7 +6908,7 @@
       "year": 1997,
       "score": 84,
       "star": 3.5,
-      "overallRank": 238,
+      "overallRank": 239,
       "sameScoreRank": 15,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
@@ -6905,7 +6935,7 @@
       "year": 2016,
       "score": 84,
       "star": 3.5,
-      "overallRank": 239,
+      "overallRank": 240,
       "sameScoreRank": 16,
       "category": "ピクサー・ディズニー作品",
       "mediaType": "movie",
@@ -6938,7 +6968,7 @@
       "year": 2009,
       "score": 84,
       "star": 3.5,
-      "overallRank": 240,
+      "overallRank": 241,
       "sameScoreRank": 17,
       "category": "スリラー、ホラー",
       "mediaType": "movie",
@@ -6967,7 +6997,7 @@
       "year": 1960,
       "score": 84,
       "star": 3.5,
-      "overallRank": 241,
+      "overallRank": 242,
       "sameScoreRank": 18,
       "category": "スリラー、ホラー",
       "mediaType": "movie",
@@ -6997,7 +7027,7 @@
       "year": 1982,
       "score": 84,
       "star": 3.5,
-      "overallRank": 242,
+      "overallRank": 243,
       "sameScoreRank": 19,
       "category": "SF",
       "mediaType": "movie",
@@ -7028,7 +7058,7 @@
       "year": 1995,
       "score": 84,
       "star": 3.5,
-      "overallRank": 243,
+      "overallRank": 244,
       "sameScoreRank": 20,
       "category": "マフィア、クライム",
       "mediaType": "movie",
@@ -7058,7 +7088,7 @@
       "year": 1979,
       "score": 84,
       "star": 3.5,
-      "overallRank": 244,
+      "overallRank": 245,
       "sameScoreRank": 21,
       "category": "邦画",
       "mediaType": "movie",
@@ -7085,7 +7115,7 @@
       "year": 2009,
       "score": 84,
       "star": 3.5,
-      "overallRank": 245,
+      "overallRank": 246,
       "sameScoreRank": 22,
       "category": "Letterboxd追加",
       "mediaType": "movie",
@@ -7113,7 +7143,7 @@
       "year": 2003,
       "score": 84,
       "star": 3.5,
-      "overallRank": 246,
+      "overallRank": 247,
       "sameScoreRank": 23,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
@@ -7143,7 +7173,7 @@
       "year": 2016,
       "score": 84,
       "star": 3.5,
-      "overallRank": 247,
+      "overallRank": 248,
       "sameScoreRank": 24,
       "category": "コメディ",
       "mediaType": "drama",
@@ -7171,7 +7201,7 @@
       "year": 2015,
       "score": 84,
       "star": 3.5,
-      "overallRank": 248,
+      "overallRank": 249,
       "sameScoreRank": 25,
       "category": "SF",
       "mediaType": "movie",
@@ -7197,7 +7227,7 @@
       "year": 2012,
       "score": 84,
       "star": 3.5,
-      "overallRank": 249,
+      "overallRank": 250,
       "sameScoreRank": 26,
       "category": "ドラマ",
       "mediaType": "movie",
@@ -7224,7 +7254,7 @@
       "year": 1994,
       "score": 84,
       "star": 3.5,
-      "overallRank": 250,
+      "overallRank": 251,
       "sameScoreRank": 27,
       "category": "ドラマ",
       "mediaType": "movie",
@@ -7250,7 +7280,7 @@
       "year": 2001,
       "score": 84,
       "star": 3.5,
-      "overallRank": 251,
+      "overallRank": 252,
       "sameScoreRank": 28,
       "category": "マフィア、クライム",
       "mediaType": "movie",
@@ -7268,36 +7298,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-78-2aHM",
-      "title": "ファーゴ",
-      "originalTitle": "",
-      "englishTitle": "Fargo",
-      "year": 1996,
-      "score": 84,
-      "star": 3.5,
-      "overallRank": 252,
-      "sameScoreRank": 29,
-      "category": "サスペンス、ミステリー",
-      "mediaType": "movie",
-      "genre": [
-        "サスペンス",
-        "クライム",
-        "胸糞",
-        "娯楽",
-        "雰囲気・美学",
-        "バイオレンス",
-        "コメディ",
-        "ドラマ"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 98,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "custom-1790269934541-2ps3",
       "title": "ザ・レイド",
       "originalTitle": "Serbuan Maut",
@@ -7306,7 +7306,7 @@
       "score": 84,
       "star": 3.5,
       "overallRank": 253,
-      "sameScoreRank": 30,
+      "sameScoreRank": 29,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -7333,7 +7333,7 @@
       "score": 84,
       "star": 3.5,
       "overallRank": 254,
-      "sameScoreRank": 31,
+      "sameScoreRank": 30,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -7360,7 +7360,7 @@
       "score": 84,
       "star": 3.5,
       "overallRank": 255,
-      "sameScoreRank": 32,
+      "sameScoreRank": 31,
       "category": "恋愛、ミュージカル",
       "mediaType": "movie",
       "genre": [
@@ -7386,7 +7386,7 @@
       "score": 84,
       "star": 3.5,
       "overallRank": 256,
-      "sameScoreRank": 33,
+      "sameScoreRank": 32,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -7413,7 +7413,7 @@
       "score": 84,
       "star": 3.5,
       "overallRank": 257,
-      "sameScoreRank": 34,
+      "sameScoreRank": 33,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -7444,7 +7444,7 @@
       "score": 84,
       "star": 3.5,
       "overallRank": 258,
-      "sameScoreRank": 35,
+      "sameScoreRank": 34,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -7469,7 +7469,7 @@
       "score": 84,
       "star": 3.5,
       "overallRank": 259,
-      "sameScoreRank": 36,
+      "sameScoreRank": 35,
       "category": "ファンタジー、アドベンチャー",
       "mediaType": "movie",
       "genre": [
@@ -7496,7 +7496,7 @@
       "score": 84,
       "star": 3.5,
       "overallRank": 260,
-      "sameScoreRank": 37,
+      "sameScoreRank": 36,
       "category": "MCU作品",
       "mediaType": "movie",
       "genre": [
@@ -7525,7 +7525,7 @@
       "score": 84,
       "star": 3.5,
       "overallRank": 261,
-      "sameScoreRank": 38,
+      "sameScoreRank": 37,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -7558,7 +7558,7 @@
       "score": 84,
       "star": 3.5,
       "overallRank": 262,
-      "sameScoreRank": 39,
+      "sameScoreRank": 38,
       "category": "Letterboxd追加",
       "mediaType": "movie",
       "genre": [
@@ -7586,7 +7586,7 @@
       "score": 84,
       "star": 3.5,
       "overallRank": 263,
-      "sameScoreRank": 40,
+      "sameScoreRank": 39,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -22917,6 +22917,29 @@
       "letterboxdAddedDate": null,
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1792609955834-8gl0",
+      "title": "ネットワーク",
+      "originalTitle": "Network",
+      "englishTitle": "Network",
+      "year": 1976,
+      "score": null,
+      "star": 3.5,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ"
+      ],
+      "origin": "その他",
+      "format": "live",
+      "runtime": 122,
+      "exact": false,
+      "letterboxdAddedDate": "2026-10-22",
+      "letterboxdPublishedAt": "Thu, 22 Oct 2026 06:24:03 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-22"
     }
   ],
   "state": {
@@ -23276,7 +23299,7 @@
       "lb-430-26uk": 83,
       "lb-553-2416": 82,
       "lb-520-1Efm": 83,
-      "lb-78-2aHM": 84,
+      "lb-78-2aHM": 85,
       "lb-421-21ew": 83,
       "lb-179-2aAG": 83,
       "lb-182-dR3i": 83,
@@ -24301,7 +24324,6 @@
         "base-perks-2012",
         "lb-12-728",
         "lb-176-2aZm",
-        "lb-78-2aHM",
         "custom-1790269934541-2ps3",
         "lb-427-bSVc",
         "lb-524-7bQA",
@@ -24346,6 +24368,7 @@
         "lb-477-29gA",
         "lb-397-2a6Q",
         "lb-314-1blA",
+        "lb-78-2aHM",
         "lb-295-1Z5s",
         "lb-393-24xc",
         "lb-494-2b0E",
@@ -24372,10 +24395,10 @@
         "lb-368-2as8",
         "custom-1789385860426-8e86",
         "lb-279-215a",
+        "custom-1792519359060-7ic5",
         "lb-115-2aWi",
         "custom-1791919109416-hxq8",
         "lb-382-20TI",
-        "custom-1792519359060-7ic5",
         "custom-1791919010317-zu85",
         "lb-345-1USu",
         "custom-1791139747386-vy04",
@@ -28505,6 +28528,23 @@
         "added": true,
         "_seq": 1792519359060,
         "source": "letterboxd"
+      },
+      {
+        "id": "custom-1792609955834-8gl0",
+        "title": "ネットワーク",
+        "originalTitle": "Network",
+        "englishTitle": "Network",
+        "lbTitle": "Network",
+        "tmdbId": 10774,
+        "year": 1976,
+        "uri": "https://letterboxd.com/gjbkic/film/network/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 3.5,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1792609955834,
+        "source": "letterboxd"
       }
     ],
     "starOverrides": {
@@ -32361,7 +32401,8 @@
       "custom-1792418203307-qxck": "drama",
       "custom-1792433176003-xjc7": "movie",
       "custom-1792439512307-ncav": "movie",
-      "custom-1792519359060-7ic5": "movie"
+      "custom-1792519359060-7ic5": "movie",
+      "custom-1792609955834-8gl0": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -38867,6 +38908,9 @@
         "サスペンス",
         "雰囲気・美学",
         "クライム"
+      ],
+      "custom-1792609955834-8gl0": [
+        "ドラマ"
       ]
     },
     "originOverrides": {
@@ -39690,7 +39734,8 @@
       "custom-1792418203307-qxck": "日本",
       "custom-1792433176003-xjc7": "日本",
       "custom-1792439512307-ncav": "ハリウッド",
-      "custom-1792519359060-7ic5": "ハリウッド"
+      "custom-1792519359060-7ic5": "ハリウッド",
+      "custom-1792609955834-8gl0": "その他"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -40442,7 +40487,8 @@
       "custom-1792421000000-014": "animation",
       "custom-1792433176003-xjc7": "live",
       "custom-1792439512307-ncav": "live",
-      "custom-1792519359060-7ic5": "live"
+      "custom-1792519359060-7ic5": "live",
+      "custom-1792609955834-8gl0": "live"
     },
     "runtimeOverrides": {
       "custom-1790247938551-ixfs": 100,
@@ -41117,7 +41163,8 @@
       "custom-1792354037608-u33d": 131,
       "custom-1792433176003-xjc7": 99,
       "custom-1792439512307-ncav": 86,
-      "custom-1792519359060-7ic5": 155
+      "custom-1792519359060-7ic5": 155,
+      "custom-1792609955834-8gl0": 122
     },
     "letterboxdMeta": {
       "lb-0-hTha": {
@@ -53892,9 +53939,9 @@
       "lb-377-azew": {
         "addedDate": "2026-03-06",
         "addedDateSource": "letterboxd-export-2026-09-27",
-        "note": "まず第一に良かった。面白かったし、救助も絵も音楽も壮大で見せ方もよく、普通にちゃんと楽しめた。が、ひとつ思うのは死渦巻く戦場の中で両サイドの善悪ではなくただ命を救いたいという主人公の目線で戦争を語ろうとしているがその語り口せいでこれもまた一面的になっている気がする。分かりやすく米兵がしぬギリギリで日本兵が死んだりと、何かとヒーロー映画のような薄めの演出が続いた所や、序盤の信念を貫く主人公を見せたいシーンなど、少し違和感を覚えるところがある。というのも、彼は信念の人でそれを曲げずにたくさんの命を救ったと言いたいのは分かるが、そのことを賛美するのは完全に間違ってると思う。そもそも戦争を起こすのは信念であり、異なる信念を前にして柔軟な気持ちで周りに合わせる力がなければ戦争はなくならない。ただ主人公の信念が現状の倫理観とマッチしていたと言うだけでそれが正しいことにはならないし、その曲げない信念によって自身の無駄な危険など招いてることは多い。なので僕はいかなる信念であってもそれに固執することを賞賛すべきでないと思う。今回、彼はこれが宗教なので、周囲の環境からの教育の中でこの固執した信念を身につけてしまって本人は疑うこともできないと思うと、彼はこの信念賛美の被害者のひとりであると言えると思う。",
+        "note": "まず第一に良かった。面白かったし、救助も絵も音楽も壮大で見せ方もよく、普通にちゃんと楽しめた。が、ひとつ思うのは死渦巻く戦場の中で両サイドの善悪ではなくただ命を救いたいという主人公の目線で戦争を語ろうとしているがその語り口せいでこれもまた一面的になっている気がする。分かりやすく米兵がしぬギリギリで日本兵が死んだりと、何かとヒーロー映画のような薄めの演出が続いた所や、序盤の信念を貫く主人公を見せたいシーンなど、少し違和感を覚えるところがある。というのも、彼は信念の人でそれを曲げずにたくさんの命を救ったと言いたいのは分かるが、そのことを賛美するのは完全に間違ってると思う。そもそも戦争を起こすのは信念であり、異なる信念を前にして柔軟な気持ちで周りに合わせる力がなければ戦争はなくならない。ただ主人公の信念が現状の倫理観とマッチしていたと言うだけでそれが正しいことにはならないし、その曲げない信念によって自身の無駄な危険など招いてることは多い。なので僕はいかなる信念であってもそれに固執することを賞賛すべきでないと思う。今回、彼はこれが宗教なので、周囲の環境からの教育の中でこの固執した信念を身につけてしまって本人は疑うこともできないと思うと、彼はこの信念賛美の被害者のひとりであると言えると思う。\n\n────────────\n\n【2026-10-21・再鑑賞】\n改めてこの映画について考えると、違和感がわかる。主人公の信念を試す機会や揺れる機会がないからこそ、こいつが勝ち取った信念という感じがない。そして戦争描写の局所さや、ほかの人物感の無さが全ての要素が信念を貫く美徳を示すための背景として使われていて世界がたってこない。ってのが違和感の招待。",
         "noteSource": "letterboxd-export",
-        "noteImportedAt": "2026-10-10T10:44:56.532Z",
+        "noteImportedAt": "2026-10-21T19:12:36.177Z",
         "watchedFlag": true,
         "watchedAddedDate": "2026-03-06",
         "crew84": {
@@ -53915,12 +53962,27 @@
             "source": "letterboxd-watched-csv",
             "inferred": true,
             "manualEdited": false
+          },
+          {
+            "id": "rss:letterboxd-review-1547111921",
+            "date": "2026-10-21",
+            "recordedAt": "2026-10-20T19:33:41.000Z",
+            "rewatch": true,
+            "retroactive": false,
+            "source": "letterboxd-rss",
+            "manualEdited": false
           }
         ],
         "poster84": {
           "tmdbId": 324786,
           "path": "/fnOMP6mjmOmZwmlC1n0K7ivrzt1.jpg",
           "checkedAt": "2026-10-18T21:28:20.190877+00:00"
+        },
+        "rssReviewRecords": {
+          "letterboxd-review-1547111921": {
+            "body": "改めてこの映画について考えると、違和感がわかる。主人公の信念を試す機会や揺れる機会がないからこそ、こいつが勝ち取った信念という感じがない。そして戦争描写の局所さや、ほかの人物感の無さが全ての要素が信念を貫く美徳を示すための背景として使われていて世界がたってこない。ってのが違和感の招待。",
+            "block": "【2026-10-21・再鑑賞】\n改めてこの映画について考えると、違和感がわかる。主人公の信念を試す機会や揺れる機会がないからこそ、こいつが勝ち取った信念という感じがない。そして戦争描写の局所さや、ほかの人物感の無さが全ての要素が信念を貫く美徳を示すための背景として使われていて世界がたってこない。ってのが違和感の招待。"
+          }
         }
       },
       "lb-378-26E0": {
@@ -71084,6 +71146,40 @@
           "tmdbId": 4995,
           "checkedAt": "2026-10-20T18:04:44.976Z",
           "provider": "tmdb"
+        }
+      },
+      "custom-1792609955834-8gl0": {
+        "publishedAt": "Thu, 22 Oct 2026 06:24:03 +1300",
+        "addedDate": "2026-10-22",
+        "addedDateSource": "rss-first-seen",
+        "reportedWatchedDate": "2026-10-22",
+        "note": "前半は恋愛やドラマが少し大袈裟で助長に感じるところもあったが、それも彼ら自身がキャラクターを演じていてラストに向けての加速と結末はお見事であったと思う。普通に素晴らしかった。\n最初から視聴率のために現実の見えてないメディア風刺的にコミカルに振り切るかと思っていたがそんなこともない。\n事件報道では世間の怒りを代弁したいと言っているが視聴率ばっか気にしてるけど本人は実際に代弁したいと思ってると思ってるのだろう、自殺ほのめかしに対してもリアリティのある対応。真面目に報道したがる人もいる。\n世の中bull shitっていうのはその通りだが、そういうと人々は納得して何かを語ってる気になるし、観客もえられるだろうがたしかにそれでは何も進まない。それでも生きていかないといけないから。\nさっきの世間の声を代弁したいと言っているが結局は見たいものをショーとして見せたい。\n\n明らかに精神的におかしくなっていくキャスターを数字のために批判も聞かず使っていく。キャスターの怒りは真に迫ってるが、窓から叫ぶ人々はとりあえず扇動され叫んでるだけに見える。\n\nしごできを自称しながら、倫理を捨ててなりふり構ってないだけ。テロリストも抱き込む。\n番組もどんどん派手演出のやりすぎ都市伝説的なバラエティのようになる。\nテレビを風刺しするようなプロパガンダに影響されるなというスピーチだが人々には響かず、またその番組自体というトレンドに乗っかる皮肉。\n\nまた不倫が始まるが、これはなんのために入ってるのか。そこでも仕事の話でいっぱいと表現しているのが逆に仕事を楽しみながら数字取りのための道具的にしか捉えてないことを強調してるのか。\"父性を求めて不倫\"という物語を自分の人生までにも脚色として加えてるということ？\n\n金のシステムが神的な宇宙の心理も言うのをなじか。突然信じたのか。そこがわからん。民主主義の死と非人間化。\n\n女優少し演技は自らの人生を演じてる演技なのか？なんとなくだけど50,60年代とかヒッチコック時代的な演じ方。単純にこの時代でもそうなだけがしんないが。\nテレビの空虚さが加速する。\nダイアナは結局ラストはテレビのネタと同じように消費され捨てられる。悲しみや喜びに鈍感で世界と乖離した空虚さの結末。\nハワードの死すらオープニングの刺激、気にするのは契約関連。カメラも取り乱さずいつもみたいにゆっくり寄る。1回倒れた時も同じだった。ここら辺はかなり分かりやすく作ってくれてるがそれでも上手いと思う。\nハワードの必死？の主張も全てはテレビの1場面。\nラストのテレビの画面は集約として素晴らしい。子供の出てるCMも、日常のように淡々と放送され、ラストに無機質なナレーションで閉める。美しい。\n今見るとこの番組はテンポよく陰謀論をオムニバスに語ってて、ショート動画的。結構すごい。",
+        "noteSource": "letterboxd-rss",
+        "noteImportedAt": "2026-10-21T19:12:36.176Z",
+        "rssReviewRecords": {
+          "letterboxd-review-1548243593": {
+            "body": "前半は恋愛やドラマが少し大袈裟で助長に感じるところもあったが、それも彼ら自身がキャラクターを演じていてラストに向けての加速と結末はお見事であったと思う。普通に素晴らしかった。\n最初から視聴率のために現実の見えてないメディア風刺的にコミカルに振り切るかと思っていたがそんなこともない。\n事件報道では世間の怒りを代弁したいと言っているが視聴率ばっか気にしてるけど本人は実際に代弁したいと思ってると思ってるのだろう、自殺ほのめかしに対してもリアリティのある対応。真面目に報道したがる人もいる。\n世の中bull shitっていうのはその通りだが、そういうと人々は納得して何かを語ってる気になるし、観客もえられるだろうがたしかにそれでは何も進まない。それでも生きていかないといけないから。\nさっきの世間の声を代弁したいと言っているが結局は見たいものをショーとして見せたい。\n\n明らかに精神的におかしくなっていくキャスターを数字のために批判も聞かず使っていく。キャスターの怒りは真に迫ってるが、窓から叫ぶ人々はとりあえず扇動され叫んでるだけに見える。\n\nしごできを自称しながら、倫理を捨ててなりふり構ってないだけ。テロリストも抱き込む。\n番組もどんどん派手演出のやりすぎ都市伝説的なバラエティのようになる。\nテレビを風刺しするようなプロパガンダに影響されるなというスピーチだが人々には響かず、またその番組自体というトレンドに乗っかる皮肉。\n\nまた不倫が始まるが、これはなんのために入ってるのか。そこでも仕事の話でいっぱいと表現しているのが逆に仕事を楽しみながら数字取りのための道具的にしか捉えてないことを強調してるのか。\"父性を求めて不倫\"という物語を自分の人生までにも脚色として加えてるということ？\n\n金のシステムが神的な宇宙の心理も言うのをなじか。突然信じたのか。そこがわからん。民主主義の死と非人間化。\n\n女優少し演技は自らの人生を演じてる演技なのか？なんとなくだけど50,60年代とかヒッチコック時代的な演じ方。単純にこの時代でもそうなだけがしんないが。\nテレビの空虚さが加速する。\nダイアナは結局ラストはテレビのネタと同じように消費され捨てられる。悲しみや喜びに鈍感で世界と乖離した空虚さの結末。\nハワードの死すらオープニングの刺激、気にするのは契約関連。カメラも取り乱さずいつもみたいにゆっくり寄る。1回倒れた時も同じだった。ここら辺はかなり分かりやすく作ってくれてるがそれでも上手いと思う。\nハワードの必死？の主張も全てはテレビの1場面。\nラストのテレビの画面は集約として素晴らしい。子供の出てるCMも、日常のように淡々と放送され、ラストに無機質なナレーションで閉める。美しい。\n今見るとこの番組はテンポよく陰謀論をオムニバスに語ってて、ショート動画的。結構すごい。",
+            "block": "前半は恋愛やドラマが少し大袈裟で助長に感じるところもあったが、それも彼ら自身がキャラクターを演じていてラストに向けての加速と結末はお見事であったと思う。普通に素晴らしかった。\n最初から視聴率のために現実の見えてないメディア風刺的にコミカルに振り切るかと思っていたがそんなこともない。\n事件報道では世間の怒りを代弁したいと言っているが視聴率ばっか気にしてるけど本人は実際に代弁したいと思ってると思ってるのだろう、自殺ほのめかしに対してもリアリティのある対応。真面目に報道したがる人もいる。\n世の中bull shitっていうのはその通りだが、そういうと人々は納得して何かを語ってる気になるし、観客もえられるだろうがたしかにそれでは何も進まない。それでも生きていかないといけないから。\nさっきの世間の声を代弁したいと言っているが結局は見たいものをショーとして見せたい。\n\n明らかに精神的におかしくなっていくキャスターを数字のために批判も聞かず使っていく。キャスターの怒りは真に迫ってるが、窓から叫ぶ人々はとりあえず扇動され叫んでるだけに見える。\n\nしごできを自称しながら、倫理を捨ててなりふり構ってないだけ。テロリストも抱き込む。\n番組もどんどん派手演出のやりすぎ都市伝説的なバラエティのようになる。\nテレビを風刺しするようなプロパガンダに影響されるなというスピーチだが人々には響かず、またその番組自体というトレンドに乗っかる皮肉。\n\nまた不倫が始まるが、これはなんのために入ってるのか。そこでも仕事の話でいっぱいと表現しているのが逆に仕事を楽しみながら数字取りのための道具的にしか捉えてないことを強調してるのか。\"父性を求めて不倫\"という物語を自分の人生までにも脚色として加えてるということ？\n\n金のシステムが神的な宇宙の心理も言うのをなじか。突然信じたのか。そこがわからん。民主主義の死と非人間化。\n\n女優少し演技は自らの人生を演じてる演技なのか？なんとなくだけど50,60年代とかヒッチコック時代的な演じ方。単純にこの時代でもそうなだけがしんないが。\nテレビの空虚さが加速する。\nダイアナは結局ラストはテレビのネタと同じように消費され捨てられる。悲しみや喜びに鈍感で世界と乖離した空虚さの結末。\nハワードの死すらオープニングの刺激、気にするのは契約関連。カメラも取り乱さずいつもみたいにゆっくり寄る。1回倒れた時も同じだった。ここら辺はかなり分かりやすく作ってくれてるがそれでも上手いと思う。\nハワードの必死？の主張も全てはテレビの1場面。\nラストのテレビの画面は集約として素晴らしい。子供の出てるCMも、日常のように淡々と放送され、ラストに無機質なナレーションで閉める。美しい。\n今見るとこの番組はテンポよく陰謀論をオムニバスに語ってて、ショート動画的。結構すごい。"
+          }
+        },
+        "watchHistory": [
+          {
+            "id": "rss:letterboxd-review-1548243593",
+            "date": "2026-10-22",
+            "recordedAt": "2026-10-21T17:24:03.000Z",
+            "rewatch": false,
+            "retroactive": false,
+            "source": "letterboxd-rss",
+            "manualEdited": false
+          }
+        ],
+        "crew84": {
+          "directors": [
+            "Sidney Lumet"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-21T19:12:36.176Z"
         }
       }
     }
