@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792614027555,
-  "sourceUpdatedIso": "2026-10-21T20:20:27.555Z",
+  "sourceUpdatedAt": 1792614037067,
+  "sourceUpdatedIso": "2026-10-21T20:20:37.067Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -884,29 +884,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1791863527797-qm90",
-      "title": "BOHEMIAN SUMMER ～宇多田ヒカル Circuit Live 2000",
-      "originalTitle": "BOHEMIAN SUMMER ～宇多田ヒカル Circuit Live 2000",
-      "englishTitle": "BOHEMIAN SUMMER ~Utada Hikaru Circuit Live 2000",
-      "year": 2000,
-      "score": 94,
-      "star": 4.5,
-      "overallRank": 31,
-      "sameScoreRank": 8,
-      "category": "Letterboxd",
-      "mediaType": "movie",
-      "genre": [
-        "ミュージカル"
-      ],
-      "origin": "日本",
-      "format": "live",
-      "runtime": 147,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-13",
-      "letterboxdPublishedAt": "Tue, 13 Oct 2026 05:59:38 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-12"
-    },
-    {
       "id": "lb-493-28No",
       "title": "パンズ・ラビリンス",
       "originalTitle": "El laberinto del fauno",
@@ -914,8 +891,8 @@
       "year": 2006,
       "score": 94,
       "star": 4.5,
-      "overallRank": 32,
-      "sameScoreRank": 9,
+      "overallRank": 31,
+      "sameScoreRank": 8,
       "category": "戦争、歴史",
       "mediaType": "movie",
       "genre": [
@@ -935,6 +912,29 @@
       "letterboxdAddedDate": "2026-08-13",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1791863527797-qm90",
+      "title": "BOHEMIAN SUMMER ～宇多田ヒカル Circuit Live 2000",
+      "originalTitle": "BOHEMIAN SUMMER ～宇多田ヒカル Circuit Live 2000",
+      "englishTitle": "BOHEMIAN SUMMER ~Utada Hikaru Circuit Live 2000",
+      "year": 2000,
+      "score": 94,
+      "star": 4.5,
+      "overallRank": 32,
+      "sameScoreRank": 9,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "ミュージカル"
+      ],
+      "origin": "日本",
+      "format": "live",
+      "runtime": 147,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-13",
+      "letterboxdPublishedAt": "Tue, 13 Oct 2026 05:59:38 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-12"
     },
     {
       "id": "lb-549-iEBG",
@@ -24550,8 +24550,8 @@
         "lb-488-294O",
         "lb-10-kSz4",
         "lb-467-ptEI",
-        "custom-1791863527797-qm90",
         "lb-493-28No",
+        "custom-1791863527797-qm90",
         "lb-549-iEBG",
         "custom-1790508958519-2edt",
         "lb-112-1W4G"
