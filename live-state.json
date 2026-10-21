@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792610639600,
-  "sourceUpdatedIso": "2026-10-21T19:23:59.600Z",
+  "sourceUpdatedAt": 1792610654710,
+  "sourceUpdatedIso": "2026-10-21T19:24:14.710Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -1502,6 +1502,36 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "custom-1791057232858-35ld",
+      "title": "サウンド・オブ・メタル ～聞こえるということ～",
+      "originalTitle": "Sound of Metal",
+      "englishTitle": "Sound of Metal",
+      "year": 2020,
+      "score": 92,
+      "star": 4,
+      "overallRank": 52,
+      "sameScoreRank": 3,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "ミュージカル",
+        "心理・内面",
+        "社会問題・生活",
+        "恋愛",
+        "特殊構造",
+        "哲学・思想",
+        "雰囲気・美学"
+      ],
+      "origin": "その他",
+      "format": "live",
+      "runtime": 121,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-04",
+      "letterboxdPublishedAt": "Sun, 4 Oct 2026 07:37:58 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-04"
+    },
+    {
       "id": "lb-262-29Du",
       "title": "ガタカ",
       "originalTitle": "",
@@ -1509,8 +1539,8 @@
       "year": 1997,
       "score": 92,
       "star": 4,
-      "overallRank": 52,
-      "sameScoreRank": 3,
+      "overallRank": 53,
+      "sameScoreRank": 4,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -1533,36 +1563,6 @@
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "custom-1791057232858-35ld",
-      "title": "サウンド・オブ・メタル ～聞こえるということ～",
-      "originalTitle": "Sound of Metal",
-      "englishTitle": "Sound of Metal",
-      "year": 2020,
-      "score": 92,
-      "star": 4,
-      "overallRank": 53,
-      "sameScoreRank": 4,
-      "category": "Letterboxd",
-      "mediaType": "movie",
-      "genre": [
-        "ドラマ",
-        "ミュージカル",
-        "心理・内面",
-        "社会問題・生活",
-        "恋愛",
-        "特殊構造",
-        "哲学・思想",
-        "雰囲気・美学"
-      ],
-      "origin": "その他",
-      "format": "live",
-      "runtime": 121,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-04",
-      "letterboxdPublishedAt": "Sun, 4 Oct 2026 07:37:58 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-04"
     },
     {
       "id": "added-anchor-578",
@@ -24522,8 +24522,8 @@
       "92": [
         "lb-487-28JG",
         "lb-378-26E0",
-        "lb-262-29Du",
         "custom-1791057232858-35ld",
+        "lb-262-29Du",
         "added-anchor-578",
         "custom-1792318978542-vitq",
         "lb-459-1Vgm",
