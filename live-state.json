@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792610855157,
-  "sourceUpdatedIso": "2026-10-21T19:27:35.157Z",
+  "sourceUpdatedAt": 1792610918598,
+  "sourceUpdatedIso": "2026-10-21T19:28:38.598Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -8906,15 +8906,15 @@
         "ファンタジー",
         "恋愛",
         "アクション",
+        "サスペンス",
         "comfort",
         "娯楽",
-        "サスペンス",
         "雰囲気・美学",
-        "特殊構造",
-        "時間"
+        "時間",
+        "特殊構造"
       ],
       "origin": "その他",
-      "format": "live",
+      "format": "hybrid",
       "runtime": 80,
       "exact": true,
       "letterboxdAddedDate": "2026-09-05",
@@ -36808,12 +36808,12 @@
         "ファンタジー",
         "恋愛",
         "アクション",
+        "サスペンス",
         "comfort",
         "娯楽",
-        "サスペンス",
         "雰囲気・美学",
-        "特殊構造",
-        "時間"
+        "時間",
+        "特殊構造"
       ],
       "lb-556-2b9m": [
         "アクション",
@@ -40305,7 +40305,7 @@
       "lb-552-m8Ie": "live",
       "lb-553-2416": "live",
       "lb-554-igK": "live",
-      "lb-555-2b8o": "live",
+      "lb-555-2b8o": "hybrid",
       "lb-556-2b9m": "live",
       "lb-557-1WyQ": "animation",
       "lb-558-1pDe": "live",
