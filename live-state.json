@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792613965652,
-  "sourceUpdatedIso": "2026-10-21T20:19:25.652Z",
+  "sourceUpdatedAt": 1792613975735,
+  "sourceUpdatedIso": "2026-10-21T20:19:35.735Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -766,6 +766,34 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-137-2a1c",
+      "title": "マトリックス リローデッド",
+      "originalTitle": "",
+      "englishTitle": "The Matrix Reloaded",
+      "year": 2003,
+      "score": 94,
+      "star": 4.5,
+      "overallRank": 27,
+      "sameScoreRank": 4,
+      "category": "SF",
+      "mediaType": "movie",
+      "genre": [
+        "SF",
+        "アクション",
+        "哲学・思想",
+        "世界観",
+        "娯楽",
+        "雰囲気・美学"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 138,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-488-294O",
       "title": "遊星からの物体X",
       "originalTitle": "",
@@ -773,8 +801,8 @@
       "year": 1982,
       "score": 94,
       "star": 4.5,
-      "overallRank": 27,
-      "sameScoreRank": 4,
+      "overallRank": 28,
+      "sameScoreRank": 5,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -789,34 +817,6 @@
       "origin": "ハリウッド",
       "format": "live",
       "runtime": 109,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "lb-137-2a1c",
-      "title": "マトリックス リローデッド",
-      "originalTitle": "",
-      "englishTitle": "The Matrix Reloaded",
-      "year": 2003,
-      "score": 94,
-      "star": 4.5,
-      "overallRank": 28,
-      "sameScoreRank": 5,
-      "category": "SF",
-      "mediaType": "movie",
-      "genre": [
-        "SF",
-        "アクション",
-        "哲学・思想",
-        "世界観",
-        "娯楽",
-        "雰囲気・美学"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 138,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
@@ -24546,8 +24546,8 @@
         "lb-171-2b0k",
         "lb-349-2aGY",
         "lb-97-2a7u",
-        "lb-488-294O",
         "lb-137-2a1c",
+        "lb-488-294O",
         "lb-10-kSz4",
         "lb-493-28No",
         "lb-467-ptEI",
@@ -57699,7 +57699,7 @@
         "addedDate": "2025-09-01",
         "addedDateSource": "letterboxd-export-2026-09-27",
         "note": "謎解きあり、アクションあり、ホラーあり、本当に最後まで楽しめた。ラストシーンの哀愁もいいし、ずっと怖い感じも良い。素晴らしい映画。",
-        "noteSource": "letterboxd-export",
+        "noteSource": "manual",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
         "watchedAddedDate": "2025-09-01",
@@ -57727,7 +57727,8 @@
           "tmdbId": 1091,
           "path": "/tzGY49kseSE9QAKk47uuDGwnSCu.jpg",
           "checkedAt": "2026-10-18T21:28:20.190877+00:00"
-        }
+        },
+        "noteEditedAt": "2026-10-21T20:19:35.686Z"
       },
       "lb-489-7T2k": {
         "addedDate": "2025-09-01",
