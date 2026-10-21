@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792613640729,
-  "sourceUpdatedIso": "2026-10-21T20:14:00.729Z",
+  "sourceUpdatedAt": 1792613656373,
+  "sourceUpdatedIso": "2026-10-21T20:14:16.373Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -268,34 +268,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-9-1skk",
-      "title": "インセプション",
-      "originalTitle": "",
-      "englishTitle": "Inception",
-      "year": 2010,
-      "score": 97,
-      "star": 4.5,
-      "overallRank": 10,
-      "sameScoreRank": 3,
-      "category": "SF",
-      "mediaType": "movie",
-      "genre": [
-        "SF",
-        "アクション",
-        "クライム",
-        "大作",
-        "娯楽",
-        "特殊構造"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 148,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-8-6YK",
       "title": "エターナル・サンシャイン",
       "originalTitle": "",
@@ -303,8 +275,8 @@
       "year": 2004,
       "score": 97,
       "star": 4.5,
-      "overallRank": 11,
-      "sameScoreRank": 4,
+      "overallRank": 10,
+      "sameScoreRank": 3,
       "category": "恋愛、ミュージカル",
       "mediaType": "movie",
       "genre": [
@@ -325,27 +297,29 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-88-1RUM",
-      "title": "火垂るの墓",
+      "id": "lb-9-1skk",
+      "title": "インセプション",
       "originalTitle": "",
-      "englishTitle": "Grave of the Fireflies",
-      "year": 1988,
+      "englishTitle": "Inception",
+      "year": 2010,
       "score": 97,
       "star": 4.5,
-      "overallRank": 12,
-      "sameScoreRank": 5,
-      "category": "スタジオジブリ系作品",
+      "overallRank": 11,
+      "sameScoreRank": 4,
+      "category": "SF",
       "mediaType": "movie",
       "genre": [
-        "戦争",
-        "歴史",
-        "ドラマ",
-        "切ない"
+        "SF",
+        "アクション",
+        "クライム",
+        "大作",
+        "娯楽",
+        "特殊構造"
       ],
-      "origin": "日本",
-      "format": "animation",
-      "runtime": 88,
-      "exact": false,
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 148,
+      "exact": true,
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
@@ -358,8 +332,8 @@
       "year": 1997,
       "score": 97,
       "star": 4.5,
-      "overallRank": 13,
-      "sameScoreRank": 6,
+      "overallRank": 12,
+      "sameScoreRank": 5,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -384,8 +358,34 @@
       "origin": "日本",
       "format": "animation",
       "runtime": 87,
-      "exact": false,
+      "exact": true,
       "letterboxdAddedDate": "2026-05-29",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "lb-88-1RUM",
+      "title": "火垂るの墓",
+      "originalTitle": "",
+      "englishTitle": "Grave of the Fireflies",
+      "year": 1988,
+      "score": 97,
+      "star": 4.5,
+      "overallRank": 13,
+      "sameScoreRank": 6,
+      "category": "スタジオジブリ系作品",
+      "mediaType": "movie",
+      "genre": [
+        "戦争",
+        "歴史",
+        "ドラマ",
+        "切ない"
+      ],
+      "origin": "日本",
+      "format": "animation",
+      "runtime": 88,
+      "exact": false,
+      "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -23700,7 +23700,8 @@
       "custom-1792612990758-vlmb": 81,
       "custom-1792418203307-qxck": 74,
       "lb-270-iF7M": 73,
-      "lb-9-1skk": 97
+      "lb-9-1skk": 97,
+      "lb-468-1GRM": 97
     },
     "rankOrder": {
       "40": [
@@ -24572,10 +24573,10 @@
       "97": [
         "lb-492-2bcA",
         "lb-138-2bc6",
-        "lb-9-1skk",
         "lb-8-6YK",
-        "lb-88-1RUM",
-        "lb-468-1GRM"
+        "lb-9-1skk",
+        "lb-468-1GRM",
+        "lb-88-1RUM"
       ],
       "98": [
         "lb-350-2bcK",
@@ -29340,7 +29341,8 @@
       "custom-1792612562683-9p69": 3,
       "custom-1792612990758-vlmb": 3,
       "lb-270-iF7M": 2,
-      "lb-9-1skk": 4.5
+      "lb-9-1skk": 4.5,
+      "lb-468-1GRM": 4.5
     },
     "titleOverrides": {
       "added-anchor-578": {
