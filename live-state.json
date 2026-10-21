@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792612990949,
-  "sourceUpdatedIso": "2026-10-21T20:03:10.949Z",
+  "sourceUpdatedAt": 1792613128948,
+  "sourceUpdatedIso": "2026-10-21T20:05:28.948Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -22909,7 +22909,7 @@
       "englishTitle": "Super Salaryman Mr. Saenai",
       "year": 2017,
       "score": null,
-      "star": 0,
+      "star": 3,
       "overallRank": null,
       "sameScoreRank": null,
       "category": "コメディ",
@@ -29322,7 +29322,7 @@
       "custom-1792519359060-7ic5": 3.5,
       "custom-1792609955834-8gl0": 3.5,
       "custom-1792612562683-9p69": 3,
-      "custom-1792612990758-vlmb": 0
+      "custom-1792612990758-vlmb": 3
     },
     "titleOverrides": {
       "added-anchor-578": {
@@ -71150,7 +71150,10 @@
           ],
           "source": "tmdb",
           "fetchedAt": "2026-10-21T20:03:10.924Z"
-        }
+        },
+        "note": "小泉今日子、堤真一、ぱるる、皆それぞれ演技がうまい。そして福田雄一は基本的に評価してないが、これは結構面白い。ちゃんとふざけるだけでなくサラリーマン、父の悲哀的なものもあり、展開もしっかりしてて最後まで楽しめた。",
+        "noteSource": "manual",
+        "noteEditedAt": "2026-10-21T20:05:28.913Z"
       }
     }
   }
