@@ -52,3 +52,5 @@ catchは取得前に計算したmissingがtrueの場合だけRecoveryBlockedと�
 `scripts/regression/run.cjs all` は42スイート中41成功、`score-preview` だけ `html.movie30-ready` 待ちで30秒タイムアウト。単独再実行でも同じタイムアウトを再現した。現時点では原因未特定で、全回帰成功とは報告できない。次回は隔離fixtureの `scorePolicy: balanced-v1` と `rankRecovery.version=2`、`movie30RestoreMissingRanks` の `missing` 判定および `__movie30RecoveryBlocked` を起動時に観察し、プレビュー専用状態を誤って旧順位復旧へ送っていないか確認する。実作品・復旧JSONは参照しない。
 
 2026-10-22追記：原因は今回の順位復旧変更ではなく、先行する `75220ffa` 以降の起動入口保護と古い `score-preview.cjs` の期待値の不一致。隔離Chromeで `__movie30RecoveryBlocked=true`、`rankRecovery` 適用前に「現行の保存形式を確認できません」で停止し、元のbalanced候補はlocalStorageに残った。`app-score-entry-gate.js` は `balanced-v1` の通常起動を専用確定手順未実装として拒否する設計。`activated:false` を守るため本体を変更せず、テストを「新帯起動拒否、旧帯起動可、旧帯への新帯手動復元拒否」の契約へ更新。単独テスト成功。旧テストの新帯UI編集経路は現在意図的に到達不能で、独立の `score-preview-page` が変換表示を検証する。
+
+更新後の全回帰では `score-preview` を含む41/42スイートが成功。`multitab` はランナー内で途中から約45分進まず `spawnSync ... ETIMEDOUT`（18件のうち12件まで成功表示）となったため、その後単独で18/18成功を確認した。したがって全42スイートは分割実行で成功したが、全スイート一括実行の成功結果はまだ得ていない。コード起因の失敗とは判断していないが、ランナー中断の原因は未特定。実データ・本番・実機は未確認。
