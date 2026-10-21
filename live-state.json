@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792611965664,
-  "sourceUpdatedIso": "2026-10-21T19:46:05.664Z",
+  "sourceUpdatedAt": 1792612221526,
+  "sourceUpdatedIso": "2026-10-21T19:50:21.526Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -70974,13 +70974,6 @@
           "provider": "tmdb"
         }
       }
-    },
-    "updatedAt": 1792611965664,
-    "storageIntegrity": {
-      "version": 1,
-      "checksum": "c4a6eada",
-      "films": 230,
-      "ranks": 782
     }
   }
 }
