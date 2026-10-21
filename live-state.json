@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792612604555,
-  "sourceUpdatedIso": "2026-10-21T19:56:44.555Z",
+  "sourceUpdatedAt": 1792612614838,
+  "sourceUpdatedIso": "2026-10-21T19:56:54.838Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -22885,9 +22885,10 @@
         "コメディ",
         "ミステリー",
         "サスペンス",
-        "娯楽"
+        "娯楽",
+        "comfort"
       ],
-      "origin": "",
+      "origin": "日本",
       "format": "",
       "runtime": null,
       "exact": false,
@@ -38812,7 +38813,8 @@
         "コメディ",
         "ミステリー",
         "サスペンス",
-        "娯楽"
+        "娯楽",
+        "comfort"
       ]
     },
     "originOverrides": {
@@ -39635,7 +39637,8 @@
       "custom-1792433176003-xjc7": "日本",
       "custom-1792439512307-ncav": "ハリウッド",
       "custom-1792519359060-7ic5": "ハリウッド",
-      "custom-1792609955834-8gl0": "ハリウッド"
+      "custom-1792609955834-8gl0": "ハリウッド",
+      "custom-1792612562683-9p69": "日本"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
