@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792613763277,
-  "sourceUpdatedIso": "2026-10-21T20:16:03.277Z",
+  "sourceUpdatedAt": 1792613778956,
+  "sourceUpdatedIso": "2026-10-21T20:16:18.956Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -593,6 +593,33 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-396-251c",
+      "title": "生きる",
+      "originalTitle": "",
+      "englishTitle": "Ikiru",
+      "year": 1952,
+      "score": 95,
+      "star": 4.5,
+      "overallRank": 21,
+      "sameScoreRank": 3,
+      "category": "邦画",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "社会問題・生活",
+        "comfort",
+        "心理・内面",
+        "雰囲気・美学"
+      ],
+      "origin": "日本",
+      "format": "live",
+      "runtime": 143,
+      "exact": true,
+      "letterboxdAddedDate": "2025-10-05",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-83-2b8S",
       "title": "レオン",
       "originalTitle": "",
@@ -600,8 +627,8 @@
       "year": 1994,
       "score": 95,
       "star": 4.5,
-      "overallRank": 21,
-      "sameScoreRank": 3,
+      "overallRank": 22,
+      "sameScoreRank": 4,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -621,31 +648,33 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-396-251c",
-      "title": "生きる",
-      "originalTitle": "",
-      "englishTitle": "Ikiru",
-      "year": 1952,
+      "id": "custom-1790420198451-g42l",
+      "title": "エレファント・マン",
+      "originalTitle": "The Elephant Man",
+      "englishTitle": "The Elephant Man",
+      "year": 1980,
       "score": 95,
       "star": 4.5,
-      "overallRank": 22,
-      "sameScoreRank": 4,
-      "category": "邦画",
+      "overallRank": 23,
+      "sameScoreRank": 5,
+      "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
         "ドラマ",
-        "社会問題・生活",
-        "comfort",
+        "歴史",
         "心理・内面",
+        "差別・人権",
+        "切ない",
+        "社会問題・生活",
         "雰囲気・美学"
       ],
-      "origin": "日本",
+      "origin": "ハリウッド",
       "format": "live",
-      "runtime": 143,
+      "runtime": 124,
       "exact": true,
-      "letterboxdAddedDate": "2025-10-05",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
+      "letterboxdAddedDate": "2026-09-26",
+      "letterboxdPublishedAt": "Sat, 26 Sep 2026 22:55:55 +1200",
+      "letterboxdReportedWatchedDate": "2026-09-26"
     },
     {
       "id": "lb-171-2b0k",
@@ -653,10 +682,10 @@
       "originalTitle": "",
       "englishTitle": "The Dark Knight",
       "year": 2008,
-      "score": 95,
+      "score": 94,
       "star": 4.5,
-      "overallRank": 23,
-      "sameScoreRank": 5,
+      "overallRank": 24,
+      "sameScoreRank": 1,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -678,35 +707,6 @@
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "custom-1790420198451-g42l",
-      "title": "エレファント・マン",
-      "originalTitle": "The Elephant Man",
-      "englishTitle": "The Elephant Man",
-      "year": 1980,
-      "score": 94,
-      "star": 4.5,
-      "overallRank": 24,
-      "sameScoreRank": 1,
-      "category": "Letterboxd",
-      "mediaType": "movie",
-      "genre": [
-        "ドラマ",
-        "歴史",
-        "心理・内面",
-        "差別・人権",
-        "切ない",
-        "社会問題・生活",
-        "雰囲気・美学"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 124,
-      "exact": true,
-      "letterboxdAddedDate": "2026-09-26",
-      "letterboxdPublishedAt": "Sat, 26 Sep 2026 22:55:55 +1200",
-      "letterboxdReportedWatchedDate": "2026-09-26"
     },
     {
       "id": "lb-349-2aGY",
@@ -22957,7 +22957,7 @@
       "lb-39-2DjO": 96,
       "lb-11-29zs": 96,
       "lb-322-2aeA": 95,
-      "lb-171-2b0k": 95,
+      "lb-171-2b0k": 94,
       "lb-83-2b8S": 95,
       "lb-334-1Tp2": 95,
       "lb-571-28qk": 91,
@@ -23537,7 +23537,7 @@
       "custom-1790358520071-ybym": 78,
       "custom-1790322765489-7o9h": 81,
       "custom-1790322766664-63q5": 64,
-      "custom-1790420198451-g42l": 94,
+      "custom-1790420198451-g42l": 95,
       "custom-1790322769753-zbsb": 80,
       "custom-1790322767762-8oh7": 77,
       "custom-1790322768095-ya1h": 73,
@@ -24543,7 +24543,7 @@
         "lb-24-2aHi"
       ],
       "94": [
-        "custom-1790420198451-g42l",
+        "lb-171-2b0k",
         "lb-349-2aGY",
         "lb-97-2a7u",
         "lb-488-294O",
@@ -24559,9 +24559,9 @@
       "95": [
         "lb-334-1Tp2",
         "lb-322-2aeA",
-        "lb-83-2b8S",
         "lb-396-251c",
-        "lb-171-2b0k"
+        "lb-83-2b8S",
+        "custom-1790420198451-g42l"
       ],
       "96": [
         "lb-81-2aqc",
