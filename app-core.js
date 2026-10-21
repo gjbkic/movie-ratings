@@ -3204,7 +3204,7 @@ window.__movie30AutoSyncPending=()=>{const x=getLbSettings();if(x.auto!==false)s
     if(before){
       const after=rankSnapshot();
       if(before.signature!==sig(after)){
-        undoState={id:before.id,snapshot:before.snapshot,afterUpdatedAt:Number(state.updatedAt||0)};
+        undoState={id:before.id,snapshot:before.snapshot,after,afterUpdatedAt:Number(state.updatedAt||0),epoch:window.__movie30HistoryEpoch||0};
         setUndoAvailable(true);
       }
     }
@@ -3217,29 +3217,42 @@ window.__movie30AutoSyncPending=()=>{const x=getLbSettings();if(x.auto!==false)s
     return cancelDragV29();
   };
 
-  if(undoBtn)undoBtn.onclick=()=>{
-    if(!undoState)return;
-    // Do not roll back a later ranking/edit action by accident.
-    if(Number(state.updatedAt||0)!==Number(undoState.afterUpdatedAt||0)){
-      clearUndo();
-      toast('ドラッグ後に別の変更があるため戻せません');
-      return;
+  let undoPending=false;
+  const warning=async()=>{
+    const db=await openMovie30Db();if(!db)return;
+    const rows=await new Promise(resolve=>{try{const tx=db.transaction('snapshots','readonly'),r=tx.objectStore('snapshots').getAll();r.onsuccess=()=>resolve((r.result||[]).filter(x=>String(x.id).startsWith('drag-undo-')&&x.status!=='complete'));r.onerror=tx.onabort=()=>resolve([])}catch(_){resolve([])}});
+    if(!rows.length)return;
+    let el=document.getElementById('movie30-drag-undo-warning');if(!el){el=document.createElement('div');el.id='movie30-drag-undo-warning';el.setAttribute('role','alert');el.style.cssText='position:sticky;top:0;z-index:502;padding:12px;background:#502b17;color:white';document.body.prepend(el)}
+    el.textContent='未解決のドラッグUndo候補があります。内容をJSON保存して確認してください。 ';
+    const b=document.createElement('button');b.textContent='Undo候補をJSON保存';b.onclick=()=>{const u=URL.createObjectURL(new Blob([JSON.stringify({type:'movie30-drag-undo-candidates',candidates:rows.map(x=>({id:x.id,...JSON.parse(x.json)}))},null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=u;a.download='films-drag-undo-'+Date.now()+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(u),2000)};el.append(b);
+  };
+  void window.__movie30StorageReady?.then(()=>warning());
+  if(undoBtn)undoBtn.onclick=async()=>{
+    if(!undoState||undoPending)return;
+    const u=undoState,policy=Object.hasOwn(state,'scorePolicy')?state.scorePolicy:'legacy-v23';
+    if(window.__movie30RecoveryBlocked||window.__movie30SaveFailed||window.__movie30TabConflict||window.__movie30BalancedScorePreview===true||policy!=='legacy-v23'||
+      Number(state.updatedAt||0)!==Number(u.afterUpdatedAt||0)||(window.__movie30HistoryEpoch||0)!==u.epoch||sig(rankSnapshot())!==sig(u.after)){
+      setSaveStatus('ドラッグUndoを停止しました · 保存状態と後の編集を確認してください');movie30StorageWarning(true,false);return;
     }
-    const u=undoState;
-    state.exactScores=clone(u.snapshot.exactScores);
-    state.rankOrder=clone(u.snapshot.rankOrder);
-    state.starOverrides=clone(u.snapshot.starOverrides);
-    state.assignments=clone(u.snapshot.assignments);
-    clearUndo();
-    save();
-    render();
-    const card=document.querySelector(`.rank-card[data-id="${encodeURIComponent(u.id)}"]`);
-    if(card){
-      card.scrollIntoView({behavior:'smooth',block:'center'});
-      card.classList.add('just-placed');
-      setTimeout(()=>card?.classList.remove('just-placed'),1800);
-    }
-    toast('直前のドラッグを戻しました');
+    undoPending=true;
+    const before=deepCopy(state),candidate=deepCopy(state),archiveId='drag-undo-'+Date.now()+'-'+Math.random().toString(36).slice(2,9);
+    try{
+      for(const key of ['exactScores','rankOrder','starOverrides','assignments'])candidate[key]=clone(u.snapshot[key]);
+      if(!movie30ValidState(candidate))throw Error('Invalid drag Undo candidate');
+      const db=await openMovie30Db();
+      const archived=db&&await new Promise(resolve=>{try{const tx=db.transaction('snapshots','readwrite');tx.objectStore('snapshots').add({id:archiveId,status:'pending',json:JSON.stringify({before,candidate}),updatedAt:Number(state.updatedAt||0)});tx.oncomplete=()=>resolve(true);tx.onerror=tx.onabort=()=>resolve(false)}catch(_){resolve(false)}});
+      const recorded=archived&&await movie30Record(archiveId);
+      if(!recorded||recorded.status!=='pending'||recorded.json!==JSON.stringify({before,candidate})||JSON.stringify(state)!==JSON.stringify(before))throw Error('Drag Undo archive unavailable or state changed');
+      state=candidate;const pending=save(false),applied=JSON.stringify(state),saved=await pending;
+      if(saved!==true){if(JSON.stringify(state)===applied){state=before;render()}throw Error('Drag Undo save failed')}
+      if(JSON.stringify(state)!==applied){throw Error('Drag Undo changed during save')}
+      clearUndo();render();
+      const card=document.querySelector(`.rank-card[data-id="${encodeURIComponent(u.id)}"]`);
+      if(card){card.scrollIntoView({behavior:'smooth',block:'center'});card.classList.add('just-placed');setTimeout(()=>card?.classList.remove('just-placed'),1800)}
+      await new Promise(resolve=>{try{const tx=db.transaction('snapshots','readwrite');tx.objectStore('snapshots').put({id:archiveId,status:'complete',json:JSON.stringify({before,candidate}),updatedAt:Number(state.updatedAt||0)});tx.oncomplete=tx.onerror=tx.onabort=()=>resolve()}catch(_){resolve()}});
+      toast('直前のドラッグを戻しました');
+    }catch(error){setSaveStatus('ドラッグUndoを保存できません · 候補を維持しました');movie30StorageWarning(true,false);void warning();console.error('Drag Undo stopped',error)}
+    finally{undoPending=false}
   };
 })();
 ;
