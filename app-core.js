@@ -6061,10 +6061,11 @@ const fl={exactScores:'点数',rankOrder:'順位',genreOverrides:'ジャンル',
 function htitle(c){const ids=uniq(c.filter(x=>x.k&&!/^\d+$/.test(x.k)).map(x=>x.k)),fs=uniq(c.map(x=>fl[x.f]||x.f));let t=ids.length===1?(()=>{try{return displayTitle(filmById(ids[0]))}catch(_){return ids[0]}})()+'：':'';return t+fs.slice(0,3).join('・')+'変更'}
 window.__movie30CommitHistory=async(beforeJson,afterJson,action)=>{
  if(action?.skip)return true;
- const before=snapOf(JSON.parse(beforeJson||'{}')),after=snapOf(JSON.parse(afterJson)),changes=diff(before,after);
- if(!changes.length)return true;
- const h={id:Date.now()+'-'+Math.random().toString(36).slice(2,6),at:Date.now(),t:htitle(changes),c:changes};
- try{return await navigator.locks.request('movie30-history-write',()=>{
+ try{
+  const before=snapOf(JSON.parse(beforeJson||'{}')),after=snapOf(JSON.parse(afterJson)),changes=diff(before,after);
+  if(!changes.length)return true;
+  const h={id:Date.now()+'-'+Math.random().toString(36).slice(2,6),at:Date.now(),t:htitle(changes),c:changes};
+  return await navigator.locks.request('movie30-history-write',()=>{
   const raw=localStorage.getItem(HISTORY_KEY),latest=raw==null?[]:JSON.parse(raw);
   if(!Array.isArray(latest))throw Error('Invalid history');
   latest.unshift(h);while(latest.length>50)latest.pop();while(latest.length>1&&JSON.stringify(latest).length>250000)latest.pop();
