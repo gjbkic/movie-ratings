@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792648792652,
-  "sourceUpdatedIso": "2026-10-22T05:59:52.652Z",
+  "sourceUpdatedAt": 1792673937590,
+  "sourceUpdatedIso": "2026-10-22T12:58:57.590Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -11662,7 +11662,7 @@
       "overallRank": 406,
       "sameScoreRank": 45,
       "category": "マフィア、クライム",
-      "mediaType": "tvseries",
+      "mediaType": "drama",
       "genre": [
         "TV本編",
         "コメディ",
@@ -11924,7 +11924,7 @@
       "overallRank": 415,
       "sameScoreRank": 54,
       "category": "コメディ",
-      "mediaType": "tvseries",
+      "mediaType": "drama",
       "genre": [
         "コメディ",
         "TV本編",
@@ -11935,7 +11935,7 @@
         "ファンタジー",
         "社会問題・生活"
       ],
-      "origin": "",
+      "origin": "日本",
       "format": "",
       "runtime": null,
       "exact": true,
@@ -32398,8 +32398,8 @@
       "custom-1792439512307-ncav": "movie",
       "custom-1792519359060-7ic5": "movie",
       "custom-1792609955834-8gl0": "movie",
-      "custom-1792612562683-9p69": "tvseries",
-      "custom-1792612990758-vlmb": "tvseries"
+      "custom-1792612562683-9p69": "drama",
+      "custom-1792612990758-vlmb": "drama"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -39724,7 +39724,8 @@
       "custom-1792439512307-ncav": "ハリウッド",
       "custom-1792519359060-7ic5": "ハリウッド",
       "custom-1792609955834-8gl0": "ハリウッド",
-      "custom-1792612562683-9p69": "日本"
+      "custom-1792612562683-9p69": "日本",
+      "custom-1792612990758-vlmb": "日本"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -49774,9 +49775,7 @@
           "fetchedAt": "2026-10-18T21:28:20.190877+00:00"
         },
         "poster84": {
-          "path": "/jHSBVaU2K0tPLYtTMg07nGTHGOW.jpg",
           "tmdbId": 237439,
-          "checkedAt": "2026-10-21T19:55:32.875Z",
           "provider": "tmdb"
         }
       },
