@@ -332,6 +332,7 @@ function movie30StorageWarning(failed,fallback){
  el.innerHTML=conflicts&&!failed&&!fallback?'復旧基準と異なる順位が '+conflicts+' 点数帯にあります。後日の編集を保護して維持しています。必要ならJSONを保存して復旧データと比較してください。 ':failed?'保存できません。アプリを閉じる前にJSONを保存してください。 ':'保存領域が不足しています。IndexedDBに保存済みです。定期的にJSONを保存してください。 ';
  const b=document.createElement('button');b.textContent='現在のデータをJSON保存';b.onclick=()=>{const snapshot=deepCopy(state);delete snapshot.storageIntegrity;const u=URL.createObjectURL(new Blob([JSON.stringify({type:'movie30-backup',state:snapshot,exportedAt:new Date().toISOString()},null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=u;a.download='films-backup-'+Date.now()+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(u),2000)};el.append(b);
 }
+function movie30ExportUndoArchive(row){try{return {id:row.id,...JSON.parse(row.json)}}catch(_){return {id:row.id,rawJson:row.json,parseError:true}}}
 // Replace only visible slots. Hidden films keep their slots and relative order.
 function movie30StoreVisibleOrder(score,visible){
  const key=String(score),members=allFilms().filter(f=>String(effectiveScore(f))===key);
@@ -3225,7 +3226,7 @@ window.__movie30AutoSyncPending=()=>{const x=getLbSettings();if(x.auto!==false)s
     if(!rows.length)return;
     let el=document.getElementById('movie30-drag-undo-warning');if(!el){el=document.createElement('div');el.id='movie30-drag-undo-warning';el.setAttribute('role','alert');el.style.cssText='position:sticky;top:0;z-index:502;padding:12px;background:#502b17;color:white';document.body.prepend(el)}
     el.textContent='未解決のドラッグUndo候補があります。内容をJSON保存して確認してください。 ';
-    const b=document.createElement('button');b.textContent='Undo候補をJSON保存';b.onclick=()=>{const u=URL.createObjectURL(new Blob([JSON.stringify({type:'movie30-drag-undo-candidates',candidates:rows.map(x=>({id:x.id,...JSON.parse(x.json)}))},null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=u;a.download='films-drag-undo-'+Date.now()+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(u),2000)};el.append(b);
+    const b=document.createElement('button');b.textContent='Undo候補をJSON保存';b.onclick=()=>{const u=URL.createObjectURL(new Blob([JSON.stringify({type:'movie30-drag-undo-candidates',candidates:rows.map(movie30ExportUndoArchive)},null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=u;a.download='films-drag-undo-'+Date.now()+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(u),2000)};el.append(b);
   };
   void window.__movie30StorageReady?.then(()=>warning());
   if(undoBtn)undoBtn.onclick=async()=>{
@@ -6064,7 +6065,7 @@ async function historyUndoNotice(){
  const rows=await historyUndoArchives();if(!rows.length)return;
  let el=document.getElementById('movie30-history-undo-warning');if(!el){el=document.createElement('div');el.id='movie30-history-undo-warning';el.setAttribute('role','alert');el.style.cssText='position:sticky;top:0;z-index:502;padding:12px;background:#502b17;color:white';document.body.prepend(el)}
  el.textContent='未解決の履歴Undo候補があります。内容をJSON保存して確認してください。 ';
- const b=document.createElement('button');b.textContent='Undo候補をJSON保存';b.onclick=()=>{const u=URL.createObjectURL(new Blob([JSON.stringify({type:'movie30-history-undo-candidates',candidates:rows.map(x=>({id:x.id,...JSON.parse(x.json)}))},null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=u;a.download='films-history-undo-'+Date.now()+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(u),2000)};el.append(b);
+ const b=document.createElement('button');b.textContent='Undo候補をJSON保存';b.onclick=()=>{const u=URL.createObjectURL(new Blob([JSON.stringify({type:'movie30-history-undo-candidates',candidates:rows.map(movie30ExportUndoArchive)},null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=u;a.download='films-history-undo-'+Date.now()+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(u),2000)};el.append(b);
 }
 void historyUndoNotice();
 async function undo(h){
