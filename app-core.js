@@ -5839,6 +5839,7 @@ window.__movie30AutoSyncPending=()=>{const x=getLbSettings();if(x.auto!==false)s
   let cloudBusy=false,cloudBase=null,cloudSha=null,cloudAttempt=null,cloudConflict=false,cloudFollowup=0;
   window.__movie30CloudNeedsVerification=()=>!cloudSha||!!cloudAttempt;
   window.__movie30StorageReady?.then(ok=>{if(ok&&!window.__movie30RecoveryBlocked&&legacySyncAllowed(state))cloudBase=canonical(livePayload().state)});
+  window.__movie30CloudAdoptStartupState=()=>{if(!cloudBusy&&!cloudSha&&!cloudAttempt&&!window.__movie30RecoveryBlocked&&legacySyncAllowed(state))cloudBase=canonical(livePayload().state)};
   function protectCloud(remote,reason){
     cloudConflict=true;
     status('GitHub同期を停止しました：'+reason+'。手元の編集は保持しています。両方のJSONを保存して比較してください。','bad');

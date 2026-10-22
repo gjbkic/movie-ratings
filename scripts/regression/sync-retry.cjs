@@ -45,7 +45,7 @@ test('failed GitHub PUT cannot acknowledge data; unchanged save retries successf
  const {context,page,puts,succeed}=await setup();try{
   const before=await page.evaluate(k=>localStorage.getItem(k),fpKey);
   await page.evaluate(()=>{state.titleOverrides['fixture-0012']={title:'Synthetic retry title'};return save()});
-  await page.waitForFunction(()=>document.getElementById('gptSyncStatus').textContent.includes('同期できません'),{},{timeout:12000});
+  await page.waitForFunction(()=>document.getElementById('gptSyncStatus').textContent.includes('同期できません'),{},{timeout:12000}).catch(async error=>{throw Error(error.message+' status='+await page.locator('#gptSyncStatus').innerText()+' puts='+puts.length)});
   await page.waitForTimeout(1200);assert(puts.length>0);assert.equal(await page.evaluate(k=>localStorage.getItem(k),fpKey),before);
   succeed();const first=puts.length;await page.evaluate(()=>save());await page.waitForFunction(()=>document.getElementById('gptSyncStatus').textContent.includes('同期しました'),{},{timeout:12000});
   assert(puts.length>first);assert.notEqual(await page.evaluate(k=>localStorage.getItem(k),fpKey),before);

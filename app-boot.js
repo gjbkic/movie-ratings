@@ -9,6 +9,7 @@
       return;
     }
     window.__movie30BulkBoot = false;
+    window.__movie30CloudAdoptStartupState?.();
     save(false);
 
     document.querySelectorAll(".tab").forEach(button => {
