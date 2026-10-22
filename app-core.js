@@ -282,7 +282,7 @@ async function movie30RestoreMissingRanks(){
  }catch(error){window.__movie30RecoveryBlocked=true;setSaveStatus('順位の復旧参照を確認できません · 元の記録を維持して保存停止');console.error('Rank recovery stopped',error)}
 }
 
-function save(touch=true){
+function save(touch=true,historyAction=null){
  if(window.__movie30TabConflict)return window.__movie30PendingSave=movie30WithLock(async()=>movie30Conflict(await movie30ReadDisk(),'停止後の編集があります'));
  if(window.__movie30BulkBoot||window.__movie30RecoveryBlocked)return;
  // Refuse destructive partial rank saves, regardless of the caller/UI path.
@@ -305,7 +305,7 @@ function save(touch=true){
   if(window.__movie30TabConflict)return false;
   const disk=await movie30ReadDisk();
   if(!movie30SameDisk(disk,movie30DiskBase))return movie30Conflict(disk,'別タブで保存データが変更されました');
-  const parent=movie30Payload(movie30LastSavedJson),previous={...disk};
+  const parentJson=movie30LastSavedJson,parent=movie30Payload(parentJson),previous={...disk};
   let localSaved=false;
   try{localStorage.setItem(STORAGE_KEY,json);localSaved=localStorage.getItem(STORAGE_KEY)===json;storageWorks=localSaved}catch(_){storageWorks=false}
   const receipt={parent,json,local:localSaved?json:previous.local};
@@ -313,13 +313,17 @@ function save(touch=true){
   const committed={local:receipt.local,db:ok?json:previous.db};
   if(ok||localSaved){
    movie30DiskBase=committed;movie30LastSavedJson=json;
+   if(window.__movie30CommitHistory&&!await window.__movie30CommitHistory(parentJson,json,historyAction)){
+    window.__movie30HistorySaveFailed=true;
+    setSaveStatus('映画は保存済みですが変更履歴を保存できません · JSONを保存してください');movie30StorageWarning(true,false);
+   }
    try{localStorage.setItem(VIEW_KEY,JSON.stringify(view))}catch(_){}
    try{movie30Channel?.postMessage({...receipt,disk:committed})}catch(_){}
   }
   if(seq===movie30SaveSequence){
    window.__movie30SaveFailed=!ok&&!localSaved;
-   setSaveStatus(ok||localSaved?'自動保存済み · '+(localSaved?'この端末':'IndexedDB'):'保存失敗 · アプリを閉じずJSONバックアップを保存してください');
-   movie30StorageWarning(!ok&&!localSaved,false);
+   setSaveStatus(window.__movie30HistorySaveFailed?'映画は保存済みですが変更履歴を保存できません · JSONを保存してください':ok||localSaved?'自動保存済み · '+(localSaved?'この端末':'IndexedDB'):'保存失敗 · アプリを閉じずJSONバックアップを保存してください');
+   movie30StorageWarning(window.__movie30HistorySaveFailed||!ok&&!localSaved,false);
   }
   return ok||localSaved;
  }).finally(()=>{movie30PendingWrites--});
@@ -6047,7 +6051,7 @@ const css=document.createElement('style');css.textContent=`
 
 // history
 const MAPS=['assignments','starOverrides','exactScores','rankOrder','titleOverrides','categoryOverrides','mediaTypeOverrides','genreOverrides','originOverrides','formatOverrides','runtimeOverrides','letterboxdMeta'];
-const snap=()=>{const o={};for(const k of MAPS)o[k]=clone(state[k]||{});o.customFilms=clone(state.customFilms||[]);return o};
+const snapOf=s=>{const o={};for(const k of MAPS)o[k]=clone(s[k]||{});o.customFilms=clone(s.customFilms||[]);return o},snap=()=>snapOf(state);
 let shadow=snap(), applying=false, hist=read(HISTORY_KEY,[]);if(!Array.isArray(hist))hist=[];
 window.__movie30PeerHistoryBaseline=()=>{shadow=snap();const latest=read(HISTORY_KEY,null);if(Array.isArray(latest)){hist=latest;renderHist()}};
 const sessionHistory=new Map();
@@ -6055,7 +6059,21 @@ const same=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
 function diff(a,b){const z=[];for(const f of MAPS){const x=a[f]||{},y=b[f]||{},ks=new Set([...Object.keys(x),...Object.keys(y)]);for(const k of ks){const hx=Object.prototype.hasOwnProperty.call(x,k),hy=Object.prototype.hasOwnProperty.call(y,k);if(hx===hy&&same(x[k],y[k]))continue;z.push({f,k,hx,b:hx?clone(x[k]):null})}}if(!same(a.customFilms,b.customFilms)){const before=new Map(a.customFilms.map(f=>[f.id,f])),after=new Map(b.customFilms.map(f=>[f.id,f]));for(const id of new Set([...before.keys(),...after.keys()]))if(!same(before.get(id),after.get(id)))z.push({f:'customFilms',filmId:id,had:before.has(id),b:before.has(id)?clone(before.get(id)):null})}return z}
 const fl={exactScores:'点数',rankOrder:'順位',genreOverrides:'ジャンル',runtimeOverrides:'上映時間',titleOverrides:'タイトル',letterboxdMeta:'メモ',starOverrides:'星',mediaTypeOverrides:'種別',originOverrides:'制作区分',formatOverrides:'形式',customFilms:'作品追加・削除'};
 function htitle(c){const ids=uniq(c.filter(x=>x.k&&!/^\d+$/.test(x.k)).map(x=>x.k)),fs=uniq(c.map(x=>fl[x.f]||x.f));let t=ids.length===1?(()=>{try{return displayTitle(filmById(ids[0]))}catch(_){return ids[0]}})()+'：':'';return t+fs.slice(0,3).join('・')+'変更'}
-const oldSave=save;save=function(...a){const now=snap();if(!applying){const c=diff(shadow,now);if(c.length){const h={id:Date.now()+'-'+Math.random().toString(36).slice(2,6),at:Date.now(),t:htitle(c),c};hist.unshift(h);sessionHistory.set(h.id,{epoch:window.__movie30HistoryEpoch||0,after:now});hist=hist.slice(0,50);while(hist.length>1&&JSON.stringify(hist).length>250000)hist.pop();write(HISTORY_KEY,hist);renderHist()}}const r=oldSave(...a);shadow=now;return r};
+window.__movie30CommitHistory=async(beforeJson,afterJson,action)=>{
+ if(action?.skip)return true;
+ const before=snapOf(JSON.parse(beforeJson||'{}')),after=snapOf(JSON.parse(afterJson)),changes=diff(before,after);
+ if(!changes.length)return true;
+ const h={id:Date.now()+'-'+Math.random().toString(36).slice(2,6),at:Date.now(),t:htitle(changes),c:changes};
+ try{return await navigator.locks.request('movie30-history-write',()=>{
+  const raw=localStorage.getItem(HISTORY_KEY),latest=raw==null?[]:JSON.parse(raw);
+  if(!Array.isArray(latest))throw Error('Invalid history');
+  latest.unshift(h);while(latest.length>50)latest.pop();while(latest.length>1&&JSON.stringify(latest).length>250000)latest.pop();
+  const json=JSON.stringify(latest);localStorage.setItem(HISTORY_KEY,json);
+  if(localStorage.getItem(HISTORY_KEY)!==json)throw Error('History readback differs');
+  hist=latest;sessionHistory.set(h.id,{epoch:window.__movie30HistoryEpoch||0,after});renderHist();return true;
+ })}catch(error){console.error('History commit failed',error);return false}
+};
+const oldSave=save;save=function(...a){const r=oldSave(...a);shadow=snap();return r};
 let undoPending=false;
 async function historyUndoArchives(){
  const db=await openMovie30Db();if(!db)return [];
@@ -6105,7 +6123,7 @@ async function undo(h){
   if(!archived||!same(state,before)){setSaveStatus('履歴Undoの退避を確認できません · 元の編集を維持しました');movie30StorageWarning(true,false);void historyUndoNotice();return}
   state=candidate;shadow=snap();
   let saved,applied;
-  const pending=oldSave(false);applied=clone(state);saved=await pending;
+  const pending=oldSave(false,{skip:true});applied=clone(state);saved=await pending;
   if(saved!==true){
    if(same(state,applied)){state=before;shadow=snap();render()}
    setSaveStatus('履歴Undoを保存できません · 変更履歴と退避候補を維持しました');movie30StorageWarning(true,false);void historyUndoNotice();return;
@@ -6114,8 +6132,15 @@ async function undo(h){
    setSaveStatus('履歴Undoの保存中に別の編集がありました · 履歴と退避候補を維持しました');movie30StorageWarning(true,false);void historyUndoNotice();return;
   }
   shadow=snap();
-  const remaining=hist.filter(x=>x.id!==h.id),historyJson=JSON.stringify(remaining);
-  try{if(localStorage.getItem(HISTORY_KEY)!==historyRaw)throw Error('History changed in another tab');localStorage.setItem(HISTORY_KEY,historyJson);if(localStorage.getItem(HISTORY_KEY)!==historyJson)throw Error('History readback differs')}
+  let remaining;
+  try{remaining=await navigator.locks.request('movie30-history-write',()=>{
+   const raw=localStorage.getItem(HISTORY_KEY),latest=JSON.parse(raw||'[]');
+   if(!Array.isArray(latest)||!latest.some(x=>x.id===h.id))throw Error('History entry changed');
+   const next=latest.filter(x=>x.id!==h.id),historyJson=JSON.stringify(next);
+   localStorage.setItem(HISTORY_KEY,historyJson);
+   if(localStorage.getItem(HISTORY_KEY)!==historyJson)throw Error('History readback differs');
+   return next;
+  })}
   catch(_){window.__movie30SaveFailed=true;setSaveStatus('Undoした作品は保存済みですが履歴を更新できません · JSONを保存してください');movie30StorageWarning(true,false);void historyUndoNotice();render();return}
   await new Promise(resolve=>{try{const tx=db.transaction('snapshots','readwrite');tx.objectStore('snapshots').put({id:archiveId,status:'complete',json:JSON.stringify({before,candidate,history:h}),updatedAt:Number(state.updatedAt||0)});tx.oncomplete=tx.onerror=tx.onabort=()=>resolve()}catch(_){resolve()}});
   hist=remaining;render();renderHist();toast('変更を元に戻しました');
