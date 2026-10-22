@@ -7675,7 +7675,8 @@ renderRank();const marker=document.getElementById('movie30BuildV29');if(marker)m
     const normalDismiss=g.dragging&&(g.dy>=105||(g.dy>55&&speed>0.7));
     // A lower-half flick works even after the sheet has been scrolled.
     // Require both distance and velocity so slow reading scrolls remain native.
-    const lowerFlick=g.nativeScrolling&&g.fromLowerHalf&&g.dy>=90&&speed>1.0;
+    const lowerFlick=g.nativeScrolling&&g.fromLowerHalf&&
+      ((g.dy>=90&&speed>0.65)||g.dy>=160);
     if(!g.dragging&&!lowerFlick)return;
     if(!cancelled&&(normalDismiss||lowerFlick)){
       sheet.style.transition='transform 150ms ease-out';

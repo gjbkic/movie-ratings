@@ -1051,6 +1051,15 @@ function remoteAlreadyLocal(item){
  });
 }
 function hide(box){box.menu.hidden=true;box.entries=[];box.selected=-1;}
+function fitSuggestions(box){
+ if(box.menu.hidden)return;
+ const viewport=window.visualViewport;
+ const visibleBottom=viewport?viewport.offsetTop+viewport.height:window.innerHeight;
+ const top=box.menu.getBoundingClientRect().top;
+ const available=Math.max(0,visibleBottom-top-12);
+ box.menu.style.maxHeight=Math.min(410,available)+'px';
+ box.menu.style.visibility=available<48?'hidden':'';
+}
 function label(item){
  if(item.kind==='movie')return item.label;
  if(item.kind==='director')return item.label;
@@ -1109,6 +1118,7 @@ function refresh(box){
  else if(box.remoteQuery!==q&&q.length>=2)foot.textContent='入力を止めるとTMDbの追加候補も表示します。';
  else foot.textContent='人物候補は人物の作品一覧を開きます。作品候補は一覧の絞り込み・追加に使えます。';
  box.menu.appendChild(foot);
+ requestAnimationFrame(()=>fitSuggestions(box));
 }
 function setQuery(box,s){
  box.input.value=s;
@@ -1227,6 +1237,9 @@ function setup(input){
 }
 setup(document.getElementById('searchRank'));
 setup(document.getElementById('searchClassify'));
+window.visualViewport?.addEventListener('resize',()=>inputs.forEach(fitSuggestions),{passive:true});
+window.visualViewport?.addEventListener('scroll',()=>inputs.forEach(fitSuggestions),{passive:true});
+window.addEventListener('resize',()=>inputs.forEach(fitSuggestions),{passive:true});
 window.__movie30AutoComplete92={build:BUILD,refresh:()=>inputs.forEach(refresh)};
 const marker=document.getElementById('movie30BuildV29');if(marker)marker.textContent='app build '+BUILD;
 })();
@@ -1726,6 +1739,7 @@ css.textContent=[
  '.movie96-close{background:#26384c;border:1px solid #50637a;border-radius:8px;color:#d8e7f7;padding:7px 11px;font-size:11px;}',
  '.movie96-filtergroup{padding:10px 0;margin-bottom:10px;border-bottom:1px solid #304255;}',
  '.movie96-filtergroup>h3{font-size:12px;color:#d6e7f6;margin:0 0 10px;}',
+ '.movie96-range-heading{font-size:12px;color:#d6e7f6;margin:12px 0 10px;padding-top:12px;border-top:1px solid #304255;}',
  '.movie96-basegrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;}',
  '.movie96-basicfield{display:flex;flex-direction:column;gap:5px;min-width:0;}',
  '.movie96-basicfield label{font-size:10.5px;font-weight:750;color:#b1c4d7;}',
@@ -1760,11 +1774,11 @@ title.append(head,close);
 
 const basic=document.createElement('section');
 basic.id='movie96BasicGroup';basic.className='movie96-filtergroup';
-const basicHeading=document.createElement('h3');basicHeading.textContent='1. まずは基本条件で絞り込む';
+const basicHeading=document.createElement('h3');basicHeading.textContent='1. 作品情報';
 const basicGrid=document.createElement('div');basicGrid.className='movie96-basegrid';
 basic.append(basicHeading);
 const guide=document.createElement('p');
-guide.className='tip';guide.textContent='条件を選ぶと一覧にすぐ反映されます。複数の条件を選ぶと、すべてに一致する作品を表示します。解除は各項目を「すべて」に戻してください。';
+guide.className='tip';guide.textContent='条件はすぐに一覧へ反映されます。複数選ぶと、すべてに一致する作品を表示します。適用中の条件と一括解除は検索欄の下に表示します。';
 basic.append(guide,basicGrid);
 const opts=document.createElement('div');opts.className='movie96-filteroptions';
 basic.append(opts);
@@ -1802,6 +1816,9 @@ if(persist)extras.append(persist);
 if(info)extras.append(info);
 
 const persistentFacet=document.getElementById('movie95FacetGroup');
+const rangeHeading=document.createElement('h3');
+rangeHeading.className='movie96-range-heading';
+rangeHeading.textContent='3. 数値の範囲・必須／除外ジャンル';
 function attachPersistent(){
  // v66's redrawing and v95's own facet observer both rearrange the panel.
  // Preserve control nodes and handlers across genre redraws; basic choices come first.
@@ -1809,6 +1826,8 @@ function attachPersistent(){
  const facet=persistentFacet;
  if(basic.previousElementSibling!==title)title.insertAdjacentElement('afterend',basic);
  if(facet&&(facet.parentElement!==adv||facet.previousElementSibling!==basic))basic.insertAdjacentElement('afterend',facet);
+ const range=adv.querySelector(':scope > .v66-grid');
+ if(range&&rangeHeading.nextElementSibling!==range)range.insertAdjacentElement('beforebegin',rangeHeading);
  if(extras.parentElement!==adv)adv.append(extras);
 }
 attachPersistent();
