@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792644650149,
-  "sourceUpdatedIso": "2026-10-22T04:50:50.149Z",
+  "sourceUpdatedAt": 1792644659971,
+  "sourceUpdatedIso": "2026-10-22T04:50:59.971Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -43167,7 +43167,7 @@
         "addedDate": "2025-09-01",
         "addedDateSource": "letterboxd-export-2026-09-27",
         "note": "いいよ。気持ちの悪い主人公をよく演じていると思う。ストーリーも面白いし引き込まれた。",
-        "noteSource": "letterboxd-export",
+        "noteSource": "manual",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
         "watchedAddedDate": "2025-09-01",
@@ -43195,7 +43195,8 @@
           "tmdbId": 242582,
           "path": "/j9HrX8f7GbZQm1BrBiR40uFQZSb.jpg",
           "checkedAt": "2026-10-18T21:28:20.190877+00:00"
-        }
+        },
+        "noteEditedAt": "2026-10-22T04:50:59.927Z"
       },
       "lb-60-2a88": {
         "addedDate": "2025-09-01",
