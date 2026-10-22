@@ -1,6 +1,6 @@
 'use strict';
 const {launch,chromium,options,isolate,fixture,origin,ready,snapshot,saved,reload,assert}=require('./harness.cjs');
-const fs=require('node:fs'),os=require('node:os'),path=require('node:path');
+const fs=require('node:fs'),path=require('node:path');
 const {test,after}=require('node:test');
 let browser;
 async function app(){browser??=await launch();const context=await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true});const page=await context.newPage();await page.goto(origin);await ready(page);return {context,page};}
@@ -120,10 +120,11 @@ test('addition, title/runtime/classification edits and explicit deletion preserv
  }finally{await context.close()}
 });
 test('IDB-only edits survive closing and relaunching a browser process',async()=>{
- const profile=fs.mkdtempSync(path.join(os.tmpdir(),'movie-regression-'));let context;
+ const profileRoot=path.resolve(__dirname,'../../test-results/profiles');fs.mkdirSync(profileRoot,{recursive:true});
+ const profile=fs.mkdtempSync(path.join(profileRoot,'movie-regression-'));let context;
  try{
   context=await chromium.launchPersistentContext(profile,options);await isolate(context);let page=await context.newPage();await page.goto(origin);await ready(page);
   await page.evaluate(()=>{Storage.prototype.setItem=function(){throw new DOMException('quota','QuotaExceededError')};state.letterboxdMeta['fixture-0012'].note='process restart sentinel';return save()});const saveResult=await saved(page);assert.equal(saveResult.failed,false,JSON.stringify(saveResult));const expected=await snapshot(page);await context.close();context=null;
   context=await chromium.launchPersistentContext(profile,options);await isolate(context);page=await context.newPage();await page.goto(origin);await ready(page);assert.deepEqual(content(await snapshot(page)),content(expected));
- }finally{await context?.close();if(path.dirname(profile)===os.tmpdir()&&path.basename(profile).startsWith('movie-regression-'))fs.rmSync(profile,{recursive:true,force:true});}
+ }finally{await context?.close();if(path.dirname(profile)===profileRoot&&path.basename(profile).startsWith('movie-regression-'))fs.rmSync(profile,{recursive:true,force:true});}
 });
