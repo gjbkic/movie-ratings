@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792644624289,
-  "sourceUpdatedIso": "2026-10-22T04:50:24.289Z",
+  "sourceUpdatedAt": 1792644631528,
+  "sourceUpdatedIso": "2026-10-22T04:50:31.528Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -5038,6 +5038,33 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-544-26EE",
+      "title": "ボーン・スプレマシー",
+      "originalTitle": "",
+      "englishTitle": "The Bourne Supremacy",
+      "year": 2004,
+      "score": 86,
+      "star": 3.5,
+      "overallRank": 175,
+      "sameScoreRank": 44,
+      "category": "アクション",
+      "mediaType": "movie",
+      "genre": [
+        "アクション",
+        "娯楽",
+        "サスペンス",
+        "スリラー",
+        "クライム"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 108,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-398-2b1i",
       "title": "AKIRA",
       "originalTitle": "",
@@ -5045,8 +5072,8 @@
       "year": 1988,
       "score": 86,
       "star": 3.5,
-      "overallRank": 175,
-      "sameScoreRank": 44,
+      "overallRank": 176,
+      "sameScoreRank": 45,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -5074,8 +5101,8 @@
       "year": 2002,
       "score": 86,
       "star": 3.5,
-      "overallRank": 176,
-      "sameScoreRank": 45,
+      "overallRank": 177,
+      "sameScoreRank": 46,
       "category": "ファンタジー、アドベンチャー",
       "mediaType": "movie",
       "genre": [
@@ -5089,33 +5116,6 @@
       "origin": "ハリウッド",
       "format": "live",
       "runtime": 179,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "lb-544-26EE",
-      "title": "ボーン・スプレマシー",
-      "originalTitle": "",
-      "englishTitle": "The Bourne Supremacy",
-      "year": 2004,
-      "score": 86,
-      "star": 3.5,
-      "overallRank": 177,
-      "sameScoreRank": 46,
-      "category": "アクション",
-      "mediaType": "movie",
-      "genre": [
-        "アクション",
-        "娯楽",
-        "サスペンス",
-        "スリラー",
-        "クライム"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 108,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
@@ -24427,9 +24427,9 @@
         "lb-54-3sAw",
         "lb-53-29QI",
         "lb-1-4VZ8",
+        "lb-544-26EE",
         "lb-398-2b1i",
         "lb-52-2b5E",
-        "lb-544-26EE",
         "lb-302-2E2E"
       ],
       "87": [
