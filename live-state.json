@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792648079685,
-  "sourceUpdatedIso": "2026-10-22T05:47:59.685Z",
+  "sourceUpdatedAt": 1792648086881,
+  "sourceUpdatedIso": "2026-10-22T05:48:06.881Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -5385,33 +5385,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-14-29Nu",
-      "title": "シャイニング",
-      "originalTitle": "",
-      "englishTitle": "The Shining",
-      "year": 1980,
-      "score": 85,
-      "star": 3.5,
-      "overallRank": 187,
-      "sameScoreRank": 9,
-      "category": "スリラー、ホラー",
-      "mediaType": "movie",
-      "genre": [
-        "スリラー",
-        "ホラー",
-        "サスペンス",
-        "心理・内面",
-        "雰囲気・美学"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 119,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-342-X8s",
       "title": "容疑者Xの献身",
       "originalTitle": "",
@@ -5419,8 +5392,8 @@
       "year": 2008,
       "score": 85,
       "star": 3.5,
-      "overallRank": 188,
-      "sameScoreRank": 10,
+      "overallRank": 187,
+      "sameScoreRank": 9,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -5450,8 +5423,8 @@
       "year": 2016,
       "score": 85,
       "star": 3.5,
-      "overallRank": 189,
-      "sameScoreRank": 11,
+      "overallRank": 188,
+      "sameScoreRank": 10,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -5485,8 +5458,8 @@
       "year": 2025,
       "score": 85,
       "star": 3.5,
-      "overallRank": 190,
-      "sameScoreRank": 12,
+      "overallRank": 189,
+      "sameScoreRank": 11,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -5509,6 +5482,33 @@
       "letterboxdAddedDate": "2026-10-07",
       "letterboxdPublishedAt": "Thu, 8 Oct 2026 02:16:21 +1300",
       "letterboxdReportedWatchedDate": "2026-10-07"
+    },
+    {
+      "id": "lb-14-29Nu",
+      "title": "シャイニング",
+      "originalTitle": "",
+      "englishTitle": "The Shining",
+      "year": 1980,
+      "score": 85,
+      "star": 3.5,
+      "overallRank": 190,
+      "sameScoreRank": 12,
+      "category": "スリラー、ホラー",
+      "mediaType": "movie",
+      "genre": [
+        "スリラー",
+        "ホラー",
+        "サスペンス",
+        "心理・内面",
+        "雰囲気・美学"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 119,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "lb-331-26e2",
@@ -24345,10 +24345,10 @@
         "lb-25-17ue",
         "lb-361-26vC",
         "lb-400-23wW",
-        "lb-14-29Nu",
         "lb-342-X8s",
         "custom-1791576150006-qu8m",
         "custom-1791379032352-50zf",
+        "lb-14-29Nu",
         "lb-331-26e2",
         "custom-1791374649583-3zqi",
         "lb-38-4E5i",
