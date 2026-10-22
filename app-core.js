@@ -315,14 +315,14 @@ function save(touch=true,historyAction=null){
    movie30DiskBase=committed;movie30LastSavedJson=json;
    if(window.__movie30CommitHistory&&!await window.__movie30CommitHistory(parentJson,json,historyAction)){
     window.__movie30HistorySaveFailed=true;
-    setSaveStatus('映画は保存済みですが変更履歴を保存できません · JSONを保存してください');movie30StorageWarning(true,false);
+    setSaveStatus('映画は'+(localSaved?'この端末':'IndexedDB')+'に保存済みですが変更履歴を保存できません · JSONを保存してください');movie30StorageWarning(true,false);
    }
    try{localStorage.setItem(VIEW_KEY,JSON.stringify(view))}catch(_){}
    try{movie30Channel?.postMessage({...receipt,disk:committed})}catch(_){}
   }
   if(seq===movie30SaveSequence){
    window.__movie30SaveFailed=!ok&&!localSaved;
-   setSaveStatus(window.__movie30HistorySaveFailed?'映画は保存済みですが変更履歴を保存できません · JSONを保存してください':ok||localSaved?'自動保存済み · '+(localSaved?'この端末':'IndexedDB'):'保存失敗 · アプリを閉じずJSONバックアップを保存してください');
+   setSaveStatus(window.__movie30HistorySaveFailed?'映画は'+(localSaved?'この端末':'IndexedDB')+'に保存済みですが変更履歴を保存できません · JSONを保存してください':ok||localSaved?'自動保存済み · '+(localSaved?'この端末':'IndexedDB'):'保存失敗 · アプリを閉じずJSONバックアップを保存してください');
    movie30StorageWarning(window.__movie30HistorySaveFailed||!ok&&!localSaved,false);
   }
   return ok||localSaved;
