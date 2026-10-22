@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792674197935,
-  "sourceUpdatedIso": "2026-10-22T13:03:17.935Z",
+  "sourceUpdatedAt": 1792674209667,
+  "sourceUpdatedIso": "2026-10-22T13:03:29.667Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -6742,33 +6742,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-299-28U0",
-      "title": "ランボー",
-      "originalTitle": "",
-      "englishTitle": "First Blood",
-      "year": 1982,
-      "score": 84,
-      "star": 3.5,
-      "overallRank": 234,
-      "sameScoreRank": 11,
-      "category": "アクション",
-      "mediaType": "movie",
-      "genre": [
-        "アクション",
-        "社会問題・生活",
-        "娯楽",
-        "心理・内面",
-        "バイオレンス"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 94,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "custom-1792272928425-wp78",
       "title": "古畑任三郎",
       "originalTitle": "古畑任三郎",
@@ -6776,8 +6749,8 @@
       "year": 1994,
       "score": 84,
       "star": 3.5,
-      "overallRank": 235,
-      "sameScoreRank": 12,
+      "overallRank": 234,
+      "sameScoreRank": 11,
       "category": "追加映画",
       "mediaType": "drama",
       "genre": [
@@ -6793,6 +6766,33 @@
       "runtime": null,
       "exact": true,
       "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "lb-299-28U0",
+      "title": "ランボー",
+      "originalTitle": "",
+      "englishTitle": "First Blood",
+      "year": 1982,
+      "score": 84,
+      "star": 3.5,
+      "overallRank": 235,
+      "sameScoreRank": 12,
+      "category": "アクション",
+      "mediaType": "movie",
+      "genre": [
+        "アクション",
+        "社会問題・生活",
+        "娯楽",
+        "心理・内面",
+        "バイオレンス"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 94,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -24339,8 +24339,8 @@
         "custom-1790322759601-kg73",
         "custom-1792673965168-5akq",
         "lb-108-29d2",
-        "lb-299-28U0",
         "custom-1792272928425-wp78",
+        "lb-299-28U0",
         "custom-1790322762266-mrn9",
         "lb-180-27oC",
         "lb-318-84xS",
