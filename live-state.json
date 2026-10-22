@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792644645935,
-  "sourceUpdatedIso": "2026-10-22T04:50:45.935Z",
+  "sourceUpdatedAt": 1792644650149,
+  "sourceUpdatedIso": "2026-10-22T04:50:50.149Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -5066,6 +5066,33 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-544-26EE",
+      "title": "ボーン・スプレマシー",
+      "originalTitle": "",
+      "englishTitle": "The Bourne Supremacy",
+      "year": 2004,
+      "score": 86,
+      "star": 3.5,
+      "overallRank": 176,
+      "sameScoreRank": 45,
+      "category": "アクション",
+      "mediaType": "movie",
+      "genre": [
+        "アクション",
+        "娯楽",
+        "サスペンス",
+        "スリラー",
+        "クライム"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 108,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-398-2b1i",
       "title": "AKIRA",
       "originalTitle": "",
@@ -5073,8 +5100,8 @@
       "year": 1988,
       "score": 86,
       "star": 3.5,
-      "overallRank": 176,
-      "sameScoreRank": 45,
+      "overallRank": 177,
+      "sameScoreRank": 46,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -5089,33 +5116,6 @@
       "origin": "日本",
       "format": "animation",
       "runtime": 124,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "lb-544-26EE",
-      "title": "ボーン・スプレマシー",
-      "originalTitle": "",
-      "englishTitle": "The Bourne Supremacy",
-      "year": 2004,
-      "score": 86,
-      "star": 3.5,
-      "overallRank": 177,
-      "sameScoreRank": 46,
-      "category": "アクション",
-      "mediaType": "movie",
-      "genre": [
-        "アクション",
-        "娯楽",
-        "サスペンス",
-        "スリラー",
-        "クライム"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 108,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
@@ -24428,8 +24428,8 @@
         "lb-53-29QI",
         "lb-1-4VZ8",
         "lb-52-2b5E",
-        "lb-398-2b1i",
         "lb-544-26EE",
+        "lb-398-2b1i",
         "lb-302-2E2E"
       ],
       "87": [
