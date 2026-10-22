@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792648262245,
-  "sourceUpdatedIso": "2026-10-22T05:51:02.245Z",
+  "sourceUpdatedAt": 1792648792652,
+  "sourceUpdatedIso": "2026-10-22T05:59:52.652Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -1591,33 +1591,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1792318978542-vitq",
-      "title": "別離",
-      "originalTitle": "جدایی نادر از سیمین",
-      "englishTitle": "A Separation",
-      "year": 2011,
-      "score": 92,
-      "star": 4,
-      "overallRank": 55,
-      "sameScoreRank": 6,
-      "category": "Letterboxd",
-      "mediaType": "movie",
-      "genre": [
-        "ドラマ",
-        "雰囲気・美学",
-        "心理・内面",
-        "哲学・思想",
-        "社会問題・生活"
-      ],
-      "origin": "その他",
-      "format": "live",
-      "runtime": 123,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-18",
-      "letterboxdPublishedAt": "Sun, 18 Oct 2026 22:00:18 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-18"
-    },
-    {
       "id": "lb-459-1Vgm",
       "title": "On Your Mark",
       "originalTitle": "",
@@ -1625,8 +1598,8 @@
       "year": 1995,
       "score": 92,
       "star": 4,
-      "overallRank": 56,
-      "sameScoreRank": 7,
+      "overallRank": 55,
+      "sameScoreRank": 6,
       "category": "スタジオジブリ系作品",
       "mediaType": "other",
       "genre": [
@@ -1654,8 +1627,8 @@
       "year": 2006,
       "score": 92,
       "star": 4,
-      "overallRank": 57,
-      "sameScoreRank": 8,
+      "overallRank": 56,
+      "sameScoreRank": 7,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -1682,8 +1655,8 @@
       "year": 2017,
       "score": 92,
       "star": 4,
-      "overallRank": 58,
-      "sameScoreRank": 9,
+      "overallRank": 57,
+      "sameScoreRank": 8,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -1704,6 +1677,33 @@
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1792318978542-vitq",
+      "title": "別離",
+      "originalTitle": "جدایی نادر از سیمین",
+      "englishTitle": "A Separation",
+      "year": 2011,
+      "score": 92,
+      "star": 4,
+      "overallRank": 58,
+      "sameScoreRank": 9,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "雰囲気・美学",
+        "心理・内面",
+        "哲学・思想",
+        "社会問題・生活"
+      ],
+      "origin": "その他",
+      "format": "live",
+      "runtime": 123,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-18",
+      "letterboxdPublishedAt": "Sun, 18 Oct 2026 22:00:18 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-18"
     },
     {
       "id": "custom-1791966715148-h5tp",
@@ -24517,10 +24517,10 @@
         "custom-1791057232858-35ld",
         "lb-262-29Du",
         "added-anchor-578",
-        "custom-1792318978542-vitq",
         "lb-459-1Vgm",
         "lb-58-293w",
         "lb-486-b8wK",
+        "custom-1792318978542-vitq",
         "custom-1791966715148-h5tp",
         "custom-1791664054514-pksv",
         "lb-178-29XE",
