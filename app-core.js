@@ -6048,7 +6048,7 @@ const css=document.createElement('style');css.textContent=`
 const MAPS=['assignments','starOverrides','exactScores','rankOrder','titleOverrides','categoryOverrides','mediaTypeOverrides','genreOverrides','originOverrides','formatOverrides','runtimeOverrides','letterboxdMeta'];
 const snap=()=>{const o={};for(const k of MAPS)o[k]=clone(state[k]||{});o.customFilms=clone(state.customFilms||[]);return o};
 let shadow=snap(), applying=false, hist=read(HISTORY_KEY,[]);if(!Array.isArray(hist))hist=[];
-window.__movie30PeerHistoryBaseline=()=>{shadow=snap()};
+window.__movie30PeerHistoryBaseline=()=>{shadow=snap();const latest=read(HISTORY_KEY,null);if(Array.isArray(latest)){hist=latest;renderHist()}};
 const sessionHistory=new Map();
 const same=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
 function diff(a,b){const z=[];for(const f of MAPS){const x=a[f]||{},y=b[f]||{},ks=new Set([...Object.keys(x),...Object.keys(y)]);for(const k of ks){const hx=Object.prototype.hasOwnProperty.call(x,k),hy=Object.prototype.hasOwnProperty.call(y,k);if(hx===hy&&same(x[k],y[k]))continue;z.push({f,k,hx,b:hx?clone(x[k]):null})}}if(!same(a.customFilms,b.customFilms)){const before=new Map(a.customFilms.map(f=>[f.id,f])),after=new Map(b.customFilms.map(f=>[f.id,f]));for(const id of new Set([...before.keys(),...after.keys()]))if(!same(before.get(id),after.get(id)))z.push({f:'customFilms',filmId:id,had:before.has(id),b:before.has(id)?clone(before.get(id)):null})}return z}
