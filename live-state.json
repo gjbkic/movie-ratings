@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792648208636,
-  "sourceUpdatedIso": "2026-10-22T05:50:08.636Z",
+  "sourceUpdatedAt": 1792648231127,
+  "sourceUpdatedIso": "2026-10-22T05:50:31.127Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -5267,35 +5267,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-302-2E2E",
-      "title": "アバター：ウェイ・オブ・ウォーター",
-      "originalTitle": "",
-      "englishTitle": "Avatar: The Way of Water",
-      "year": 2022,
-      "score": 85,
-      "star": 3.5,
-      "overallRank": 183,
-      "sameScoreRank": 6,
-      "category": "アクション",
-      "mediaType": "movie",
-      "genre": [
-        "アクション",
-        "SF",
-        "世界観",
-        "恋愛",
-        "戦争",
-        "大作",
-        "娯楽"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 192,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-168-2b7U",
       "title": "スナッチ",
       "originalTitle": "",
@@ -5303,8 +5274,8 @@
       "year": 2000,
       "score": 85,
       "star": 3.5,
-      "overallRank": 184,
-      "sameScoreRank": 7,
+      "overallRank": 183,
+      "sameScoreRank": 6,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -5332,8 +5303,8 @@
       "year": 2021,
       "score": 85,
       "star": 3.5,
-      "overallRank": 185,
-      "sameScoreRank": 8,
+      "overallRank": 184,
+      "sameScoreRank": 7,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -5358,6 +5329,35 @@
       "letterboxdAddedDate": "2026-10-08",
       "letterboxdPublishedAt": "Thu, 8 Oct 2026 06:59:10 +1300",
       "letterboxdReportedWatchedDate": "2026-10-08"
+    },
+    {
+      "id": "lb-302-2E2E",
+      "title": "アバター：ウェイ・オブ・ウォーター",
+      "originalTitle": "",
+      "englishTitle": "Avatar: The Way of Water",
+      "year": 2022,
+      "score": 85,
+      "star": 3.5,
+      "overallRank": 185,
+      "sameScoreRank": 8,
+      "category": "アクション",
+      "mediaType": "movie",
+      "genre": [
+        "アクション",
+        "SF",
+        "世界観",
+        "恋愛",
+        "戦争",
+        "大作",
+        "娯楽"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 192,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "lb-25-17ue",
@@ -24342,9 +24342,9 @@
         "lb-400-23wW",
         "lb-361-26vC",
         "lb-398-2b1i",
-        "lb-302-2E2E",
         "lb-168-2b7U",
         "custom-1791396105970-bm2m",
+        "lb-302-2E2E",
         "lb-25-17ue",
         "lb-342-X8s",
         "custom-1791379032352-50zf",
