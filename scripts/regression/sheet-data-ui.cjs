@@ -56,6 +56,14 @@ test('detail sheet: normal slower reading swipe does not dismiss a scrolled shee
   assert.equal(await page.locator('#sheetBg').evaluate(el=>el.classList.contains('open')),true);
  }finally{await context.close()}
 });
+test('detail sheet: deliberate long slow swipe dismisses a scrolled sheet',async()=>{
+ const {context,page}=await start();
+ try{
+  await openForSwipe(page);
+  await swipe(page,{fast:false,distance:170});
+  assert.equal(await page.locator('#sheetBg').evaluate(el=>el.classList.contains('open')),false);
+ }finally{await context.close()}
+});
 test('detail sheet: downward swipe at top still dismisses',async()=>{
  const {context,page}=await start();
  try{
