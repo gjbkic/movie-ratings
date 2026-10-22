@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792648192584,
-  "sourceUpdatedIso": "2026-10-22T05:49:52.584Z",
+  "sourceUpdatedAt": 1792648202465,
+  "sourceUpdatedIso": "2026-10-22T05:50:02.465Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -5093,44 +5093,15 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-302-2E2E",
-      "title": "アバター：ウェイ・オブ・ウォーター",
-      "originalTitle": "",
-      "englishTitle": "Avatar: The Way of Water",
-      "year": 2022,
-      "score": 86,
-      "star": 3.5,
-      "overallRank": 177,
-      "sameScoreRank": 46,
-      "category": "アクション",
-      "mediaType": "movie",
-      "genre": [
-        "アクション",
-        "SF",
-        "世界観",
-        "恋愛",
-        "戦争",
-        "大作",
-        "娯楽"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 192,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-59-780m",
       "title": "ナイトクローラー",
       "originalTitle": "",
       "englishTitle": "Nightcrawler",
       "year": 2014,
-      "score": 85,
+      "score": 86,
       "star": 3.5,
-      "overallRank": 178,
-      "sameScoreRank": 1,
+      "overallRank": 177,
+      "sameScoreRank": 46,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -5158,8 +5129,8 @@
       "year": 2004,
       "score": 85,
       "star": 3.5,
-      "overallRank": 179,
-      "sameScoreRank": 2,
+      "overallRank": 178,
+      "sameScoreRank": 1,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -5179,6 +5150,35 @@
       "runtime": 113,
       "exact": true,
       "letterboxdAddedDate": "2025-09-14",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "lb-302-2E2E",
+      "title": "アバター：ウェイ・オブ・ウォーター",
+      "originalTitle": "",
+      "englishTitle": "Avatar: The Way of Water",
+      "year": 2022,
+      "score": 85,
+      "star": 3.5,
+      "overallRank": 179,
+      "sameScoreRank": 2,
+      "category": "アクション",
+      "mediaType": "movie",
+      "genre": [
+        "アクション",
+        "SF",
+        "世界観",
+        "恋愛",
+        "戦争",
+        "大作",
+        "娯楽"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 192,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -23033,7 +23033,7 @@
       "lb-576-18H4": 86,
       "lb-102-1Y2i": 86,
       "lb-544-26EE": 86,
-      "lb-302-2E2E": 86,
+      "lb-302-2E2E": 85,
       "lb-4-jUk4": 86,
       "lb-366-jWEA": 86,
       "lb-331-26e2": 85,
@@ -23129,7 +23129,7 @@
       "lb-361-26vC": 85,
       "lb-313-29eY": 86,
       "lb-38-4E5i": 85,
-      "lb-59-780m": 85,
+      "lb-59-780m": 86,
       "lb-184-2aH8": 85,
       "lb-397-2a6Q": 85,
       "lb-87-27V2": 85,
@@ -24337,8 +24337,8 @@
         "lb-159-18U8"
       ],
       "85": [
-        "lb-59-780m",
         "lb-304-27M0",
+        "lb-302-2E2E",
         "lb-399-29PA",
         "lb-400-23wW",
         "lb-361-26vC",
@@ -24430,7 +24430,7 @@
         "lb-1-4VZ8",
         "lb-52-2b5E",
         "lb-544-26EE",
-        "lb-302-2E2E"
+        "lb-59-780m"
       ],
       "87": [
         "lb-330-4JQS",
