@@ -1456,8 +1456,8 @@ function construct(page){
   });
  }
  const genreBox=document.createElement('div');genreBox.className='movie93-box movie93-genre';
- const genreLabel=document.createElement('label');genreLabel.className='movie93-label';genreLabel.textContent='ジャンル';
- const sel=document.createElement('select');sel.setAttribute('aria-label','ジャンルで絞り込み');
+ const genreLabel=document.createElement('label');genreLabel.className='movie93-label';genreLabel.textContent='外部情報も含むジャンル（1つ）';
+ const sel=document.createElement('select');sel.setAttribute('aria-label','外部情報も含むジャンルで絞り込み');
  genreLabel.append(sel);genreBox.append(genreLabel);grid.append(genreBox);
  panel.select=sel;panel.inputs.genre=sel;
  sel.addEventListener('change',()=>{
@@ -1632,7 +1632,7 @@ if(old&&facets){
  group.id='movie95FacetGroup';
  const heading=document.createElement('div');
  heading.className='movie95-facet-title';
- heading.textContent='2. 監督・出演者・TMDBの情報で探す';
+ heading.textContent='2. 人物・外部情報から探す';
  group.append(heading,facets);
  facets.open=true;
  const relink=()=>{
@@ -1740,10 +1740,17 @@ css.textContent=[
  '.movie96-filtergroup{padding:10px 0;margin-bottom:10px;border-bottom:1px solid #304255;}',
  '.movie96-filtergroup>h3{font-size:12px;color:#d6e7f6;margin:0 0 10px;}',
  '.movie96-range-heading{font-size:12px;color:#d6e7f6;margin:12px 0 10px;padding-top:12px;border-top:1px solid #304255;}',
+ '.movie96-chip-group{border:1px solid #304255;border-radius:9px;margin:8px 0;background:#111a25;}',
+ '.movie96-chip-group>summary{cursor:pointer;padding:10px;font-size:11px;font-weight:750;color:#d2e4f6;list-style:none;}',
+ '.movie96-chip-group>summary::-webkit-details-marker{display:none;}',
+ '.movie96-chip-group>summary:after{content:" ▾";float:right;}',
+ '.movie96-chip-group[open]>summary:after{content:" ▴";}',
+ '.movie96-chip-group>.v66-chips{padding:0 10px 10px;}',
  '.movie96-basegrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;}',
  '.movie96-basicfield{display:flex;flex-direction:column;gap:5px;min-width:0;}',
  '.movie96-basicfield label{font-size:10.5px;font-weight:750;color:#b1c4d7;}',
  '.movie96-basicfield select,.movie96-basicfield .field{width:100%;min-height:40px;max-width:100%;min-width:0;font-size:13px;}',
+ '.movie96-basicfield[hidden]{display:none!important;}',
  '.movie96-basicfield .genre-combo{width:100%;flex:0 1 auto;}',
  '.movie96-filteroptions{display:flex;flex-wrap:wrap;gap:8px;margin:9px 0 4px;}',
  '.movie96-filteroptions button{min-height:36px;}',
@@ -1784,7 +1791,7 @@ const opts=document.createElement('div');opts.className='movie96-filteroptions';
 basic.append(opts);
 
 const controlNames=[
- ['genreFilterRank','ジャンル（複数選択可）'],
+ ['genreFilterRank','登録ジャンル（複数）'],
  ['mediaFilterRank','種別'],
  ['tvSubtypeFilterRank','TV区分'],
  ['originFilterRank','制作区分'],
@@ -1793,13 +1800,20 @@ const controlNames=[
  ['runtimeFilterRank','上映時間'],
  ['categoryFilterRank','カテゴリ']
 ];
+let genreWrap=null;
 for(const [id,label] of controlNames){
  const node=document.getElementById(id);if(!node)continue;
  const wrap=document.createElement('div');wrap.className='movie96-basicfield';
  const lbl=document.createElement('label');lbl.setAttribute('for',id);lbl.textContent=label;
  wrap.append(lbl,node);basicGrid.append(wrap);
  if(id==='genreFilterRank'){
+  genreWrap=wrap;
   const chips=document.getElementById('genreComboRank');if(chips)wrap.append(chips);
+ }
+ if(id==='tvSubtypeFilterRank'){
+  const sync=()=>{wrap.hidden=node.hidden||getComputedStyle(node).display==='none';};
+  sync();new MutationObserver(sync).observe(node,{attributes:true,attributeFilter:['hidden','style','class']});
+  document.getElementById('mediaFilterRank')?.addEventListener('change',()=>requestAnimationFrame(sync));
  }
 }
 for(const id of ['toggleEmpty']){
@@ -1818,7 +1832,21 @@ if(info)extras.append(info);
 const persistentFacet=document.getElementById('movie95FacetGroup');
 const rangeHeading=document.createElement('h3');
 rangeHeading.className='movie96-range-heading';
-rangeHeading.textContent='3. 数値の範囲・必須／除外ジャンル';
+rangeHeading.textContent='3. ジャンルと数値を細かく指定';
+const relatedHeading=document.createElement('h3');
+relatedHeading.className='movie96-range-heading';relatedHeading.textContent='関連操作（絞り込み条件には含まれません）';
+const genreOpen={include:false,exclude:false};
+function foldGenreChips(prefix,label,key,selectedClass){
+ const heading=[...adv.querySelectorAll(':scope > .v66-lbl')].find(el=>el.textContent.startsWith(prefix));
+ const chips=heading?.nextElementSibling;
+ if(!heading||!chips?.classList.contains('v66-chips'))return;
+ const count=chips.querySelectorAll('.'+selectedClass).length;
+ const group=document.createElement('details');group.className='movie96-chip-group';
+ group.open=genreOpen[key]||count>0;
+ const summary=document.createElement('summary');summary.textContent=label+'（'+count+'件選択）';
+ group.append(summary,chips);heading.replaceWith(group);
+ group.addEventListener('toggle',()=>{genreOpen[key]=group.open});
+}
 function attachPersistent(){
  // v66's redrawing and v95's own facet observer both rearrange the panel.
  // Preserve control nodes and handlers across genre redraws; basic choices come first.
@@ -1827,7 +1855,13 @@ function attachPersistent(){
  if(basic.previousElementSibling!==title)title.insertAdjacentElement('afterend',basic);
  if(facet&&(facet.parentElement!==adv||facet.previousElementSibling!==basic))basic.insertAdjacentElement('afterend',facet);
  const range=adv.querySelector(':scope > .v66-grid');
- if(range&&rangeHeading.nextElementSibling!==range)range.insertAdjacentElement('beforebegin',rangeHeading);
+ if(range&&genreWrap&&(rangeHeading.parentElement!==adv||rangeHeading.nextElementSibling!==genreWrap||genreWrap.nextElementSibling!==range)){
+  range.insertAdjacentElement('beforebegin',rangeHeading);
+  rangeHeading.insertAdjacentElement('afterend',genreWrap);
+ }
+ foldGenreChips('必須ジャンル','必須ジャンル：すべて含む','include','inc');
+ foldGenreChips('除外ジャンル','除外ジャンル：いずれも含まない','exclude','exc');
+ if(relatedHeading.parentElement!==adv)adv.append(relatedHeading);
  if(extras.parentElement!==adv)adv.append(extras);
 }
 attachPersistent();
@@ -1857,6 +1891,7 @@ const badge=document.getElementById('advBadge66');
 if(badge){badge.hidden=true;badge.style.setProperty('display','none','important');}
 
 function openPanel(open){
+ if(open){input.blur();const suggestions=searchShell.querySelector('.movie92-suggestions');if(suggestions)suggestions.hidden=true;}
  adv.classList.toggle('movie96-is-open',Boolean(open));
  adv.classList.toggle('open',Boolean(open));
  expand.textContent=open?'閉じる ▴':'絞込 ▾';
