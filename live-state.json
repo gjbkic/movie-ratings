@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792648231127,
-  "sourceUpdatedIso": "2026-10-22T05:50:31.127Z",
+  "sourceUpdatedAt": 1792648256608,
+  "sourceUpdatedIso": "2026-10-22T05:50:56.608Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -5154,32 +5154,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-399-29PA",
-      "title": "エイリアン2",
-      "originalTitle": "",
-      "englishTitle": "Aliens",
-      "year": 1986,
-      "score": 85,
-      "star": 3.5,
-      "overallRank": 179,
-      "sameScoreRank": 2,
-      "category": "SF",
-      "mediaType": "movie",
-      "genre": [
-        "SF",
-        "アクション",
-        "娯楽",
-        "大作"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 137,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-400-23wW",
       "title": "パプリカ",
       "originalTitle": "",
@@ -5187,8 +5161,8 @@
       "year": 2006,
       "score": 85,
       "star": 3.5,
-      "overallRank": 180,
-      "sameScoreRank": 3,
+      "overallRank": 179,
+      "sameScoreRank": 2,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -5207,6 +5181,32 @@
       "origin": "日本",
       "format": "animation",
       "runtime": 90,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "lb-399-29PA",
+      "title": "エイリアン2",
+      "originalTitle": "",
+      "englishTitle": "Aliens",
+      "year": 1986,
+      "score": 85,
+      "star": 3.5,
+      "overallRank": 180,
+      "sameScoreRank": 3,
+      "category": "SF",
+      "mediaType": "movie",
+      "genre": [
+        "SF",
+        "アクション",
+        "娯楽",
+        "大作"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 137,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
@@ -24338,8 +24338,8 @@
       ],
       "85": [
         "lb-304-27M0",
-        "lb-399-29PA",
         "lb-400-23wW",
+        "lb-399-29PA",
         "lb-361-26vC",
         "lb-398-2b1i",
         "lb-168-2b7U",
