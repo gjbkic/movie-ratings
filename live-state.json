@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792674130035,
-  "sourceUpdatedIso": "2026-10-22T13:02:10.035Z",
+  "sourceUpdatedAt": 1792674137121,
+  "sourceUpdatedIso": "2026-10-22T13:02:17.121Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -22951,10 +22951,11 @@
         "ドラマ",
         "ファンタジー",
         "アドベンチャー",
-        "娯楽"
+        "娯楽",
+        "雰囲気・美学"
       ],
       "origin": "日本",
-      "format": "animation",
+      "format": "hybrid",
       "runtime": 103,
       "exact": false,
       "letterboxdAddedDate": "2026-10-22",
@@ -38954,7 +38955,8 @@
         "ドラマ",
         "ファンタジー",
         "アドベンチャー",
-        "娯楽"
+        "娯楽",
+        "雰囲気・美学"
       ]
     },
     "originOverrides": {
@@ -40534,7 +40536,7 @@
       "custom-1792609955834-8gl0": "live",
       "custom-1791966534875-2yiz": "animation",
       "custom-1791966715148-h5tp": "animation",
-      "custom-1792673965168-5akq": "animation"
+      "custom-1792673965168-5akq": "hybrid"
     },
     "runtimeOverrides": {
       "custom-1790247938551-ixfs": 100,
