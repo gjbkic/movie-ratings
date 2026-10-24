@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792874073650,
-  "sourceUpdatedIso": "2026-10-24T20:34:33.650Z",
+  "sourceUpdatedAt": 1792874089744,
+  "sourceUpdatedIso": "2026-10-24T20:34:49.744Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -1300,6 +1300,35 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-116-1YYc",
+      "title": "GHOST IN THE SHELL／攻殻機動隊",
+      "originalTitle": "",
+      "englishTitle": "Ghost in the Shell",
+      "year": 1995,
+      "score": 93,
+      "star": 4.5,
+      "overallRank": 45,
+      "sameScoreRank": 10,
+      "category": "ほかアニメ",
+      "mediaType": "movie",
+      "genre": [
+        "サスペンス",
+        "アクション",
+        "SF",
+        "哲学・思想",
+        "世界観",
+        "心理・内面",
+        "雰囲気・美学"
+      ],
+      "origin": "日本",
+      "format": "animation",
+      "runtime": 85,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "custom-1792873754553-ugfj",
       "title": "紀子の食卓",
       "originalTitle": "紀子の食卓",
@@ -1307,8 +1336,8 @@
       "year": 2005,
       "score": 93,
       "star": 4.5,
-      "overallRank": 45,
-      "sameScoreRank": 10,
+      "overallRank": 46,
+      "sameScoreRank": 11,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -1331,35 +1360,6 @@
       "letterboxdAddedDate": "2026-10-25",
       "letterboxdPublishedAt": "Sun, 25 Oct 2026 06:55:26 +1300",
       "letterboxdReportedWatchedDate": "2026-10-25"
-    },
-    {
-      "id": "lb-116-1YYc",
-      "title": "GHOST IN THE SHELL／攻殻機動隊",
-      "originalTitle": "",
-      "englishTitle": "Ghost in the Shell",
-      "year": 1995,
-      "score": 93,
-      "star": 4.5,
-      "overallRank": 46,
-      "sameScoreRank": 11,
-      "category": "ほかアニメ",
-      "mediaType": "movie",
-      "genre": [
-        "サスペンス",
-        "アクション",
-        "SF",
-        "哲学・思想",
-        "世界観",
-        "心理・内面",
-        "雰囲気・美学"
-      ],
-      "origin": "日本",
-      "format": "animation",
-      "runtime": 85,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "lb-333-2b4m",
@@ -24636,8 +24636,8 @@
         "custom-1792346885016-a70t",
         "custom-1791664055911-cuz4",
         "custom-1791919172943-3ibi",
-        "custom-1792873754553-ugfj",
         "lb-116-1YYc",
+        "custom-1792873754553-ugfj",
         "lb-333-2b4m",
         "lb-2-2a9q",
         "lb-332-28MA",
