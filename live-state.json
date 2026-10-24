@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792874284158,
-  "sourceUpdatedIso": "2026-10-24T20:38:04.158Z",
+  "sourceUpdatedAt": 1792874291970,
+  "sourceUpdatedIso": "2026-10-24T20:38:11.970Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -1248,29 +1248,6 @@
       "letterboxdReportedWatchedDate": "2026-10-25"
     },
     {
-      "id": "custom-1791664055911-cuz4",
-      "title": "Hikaru Utada Live Sessions from AIR Studios",
-      "originalTitle": "Hikaru Utada Live Sessions from Air Studios",
-      "englishTitle": "Hikaru Utada Live Sessions from Air Studios",
-      "year": 2024,
-      "score": 93,
-      "star": 4.5,
-      "overallRank": 43,
-      "sameScoreRank": 8,
-      "category": "Letterboxd",
-      "mediaType": "other",
-      "genre": [
-        "ミュージカル"
-      ],
-      "origin": "日本",
-      "format": "live",
-      "runtime": 56,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-11",
-      "letterboxdPublishedAt": "Sun, 11 Oct 2026 06:12:28 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-11"
-    },
-    {
       "id": "lb-116-1YYc",
       "title": "GHOST IN THE SHELL／攻殻機動隊",
       "originalTitle": "",
@@ -1278,8 +1255,8 @@
       "year": 1995,
       "score": 93,
       "star": 4.5,
-      "overallRank": 44,
-      "sameScoreRank": 9,
+      "overallRank": 43,
+      "sameScoreRank": 8,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -1307,8 +1284,8 @@
       "year": 2004,
       "score": 93,
       "star": 4.5,
-      "overallRank": 45,
-      "sameScoreRank": 10,
+      "overallRank": 44,
+      "sameScoreRank": 9,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -1327,6 +1304,39 @@
       "letterboxdAddedDate": "2026-10-19",
       "letterboxdPublishedAt": "Mon, 19 Oct 2026 05:33:45 +1300",
       "letterboxdReportedWatchedDate": "2026-10-18"
+    },
+    {
+      "id": "custom-1791919172943-3ibi",
+      "title": "ブレイキング・バッド",
+      "originalTitle": "Breaking Bad",
+      "englishTitle": "Breaking Bad",
+      "year": 2008,
+      "score": 93,
+      "star": 4.5,
+      "overallRank": 45,
+      "sameScoreRank": 10,
+      "category": "マフィア、クライム",
+      "mediaType": "drama",
+      "genre": [
+        "クライム",
+        "TV本編",
+        "サスペンス",
+        "ドラマ",
+        "娯楽",
+        "心理・内面",
+        "切ない",
+        "コメディ",
+        "青春・若者",
+        "社会問題・生活",
+        "大作"
+      ],
+      "origin": "ハリウッド",
+      "format": "",
+      "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "lb-333-2b4m",
@@ -1360,37 +1370,27 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1791919172943-3ibi",
-      "title": "ブレイキング・バッド",
-      "originalTitle": "Breaking Bad",
-      "englishTitle": "Breaking Bad",
-      "year": 2008,
+      "id": "custom-1791664055911-cuz4",
+      "title": "Hikaru Utada Live Sessions from AIR Studios",
+      "originalTitle": "Hikaru Utada Live Sessions from Air Studios",
+      "englishTitle": "Hikaru Utada Live Sessions from Air Studios",
+      "year": 2024,
       "score": 93,
       "star": 4.5,
       "overallRank": 47,
       "sameScoreRank": 12,
-      "category": "マフィア、クライム",
-      "mediaType": "drama",
+      "category": "Letterboxd",
+      "mediaType": "other",
       "genre": [
-        "クライム",
-        "TV本編",
-        "サスペンス",
-        "ドラマ",
-        "娯楽",
-        "心理・内面",
-        "切ない",
-        "コメディ",
-        "青春・若者",
-        "社会問題・生活",
-        "大作"
+        "ミュージカル"
       ],
-      "origin": "ハリウッド",
-      "format": "",
-      "runtime": null,
+      "origin": "日本",
+      "format": "live",
+      "runtime": 56,
       "exact": true,
-      "letterboxdAddedDate": null,
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
+      "letterboxdAddedDate": "2026-10-11",
+      "letterboxdPublishedAt": "Sun, 11 Oct 2026 06:12:28 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-11"
     },
     {
       "id": "lb-2-2a9q",
@@ -24634,11 +24634,11 @@
         "lb-323-1VEo",
         "custom-1790254612541-iyij",
         "custom-1792873754553-ugfj",
-        "custom-1791664055911-cuz4",
         "lb-116-1YYc",
         "custom-1792346885016-a70t",
-        "lb-333-2b4m",
         "custom-1791919172943-3ibi",
+        "lb-333-2b4m",
+        "custom-1791664055911-cuz4",
         "lb-2-2a9q",
         "lb-332-28MA",
         "lb-24-2aHi"
