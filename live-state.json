@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792874068739,
-  "sourceUpdatedIso": "2026-10-24T20:34:28.739Z",
+  "sourceUpdatedAt": 1792874073650,
+  "sourceUpdatedIso": "2026-10-24T20:34:33.650Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -1300,6 +1300,39 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "custom-1792873754553-ugfj",
+      "title": "紀子の食卓",
+      "originalTitle": "紀子の食卓",
+      "englishTitle": "Noriko's Dinner Table",
+      "year": 2005,
+      "score": 93,
+      "star": 4.5,
+      "overallRank": 45,
+      "sameScoreRank": 10,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "スリラー",
+        "ホラー",
+        "サスペンス",
+        "クライム",
+        "青春・若者",
+        "雰囲気・美学",
+        "バイオレンス",
+        "心理・内面",
+        "哲学・思想",
+        "社会問題・生活"
+      ],
+      "origin": "日本",
+      "format": "live",
+      "runtime": 159,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-25",
+      "letterboxdPublishedAt": "Sun, 25 Oct 2026 06:55:26 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-25"
+    },
+    {
       "id": "lb-116-1YYc",
       "title": "GHOST IN THE SHELL／攻殻機動隊",
       "originalTitle": "",
@@ -1307,8 +1340,8 @@
       "year": 1995,
       "score": 93,
       "star": 4.5,
-      "overallRank": 45,
-      "sameScoreRank": 10,
+      "overallRank": 46,
+      "sameScoreRank": 11,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -1336,8 +1369,8 @@
       "year": 2001,
       "score": 93,
       "star": 4.5,
-      "overallRank": 46,
-      "sameScoreRank": 11,
+      "overallRank": 47,
+      "sameScoreRank": 12,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
       "genre": [
@@ -1358,39 +1391,6 @@
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "custom-1792873754553-ugfj",
-      "title": "紀子の食卓",
-      "originalTitle": "紀子の食卓",
-      "englishTitle": "Noriko's Dinner Table",
-      "year": 2005,
-      "score": 93,
-      "star": 4.5,
-      "overallRank": 47,
-      "sameScoreRank": 12,
-      "category": "Letterboxd",
-      "mediaType": "movie",
-      "genre": [
-        "ドラマ",
-        "スリラー",
-        "ホラー",
-        "サスペンス",
-        "クライム",
-        "青春・若者",
-        "雰囲気・美学",
-        "バイオレンス",
-        "心理・内面",
-        "哲学・思想",
-        "社会問題・生活"
-      ],
-      "origin": "日本",
-      "format": "live",
-      "runtime": 159,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-25",
-      "letterboxdPublishedAt": "Sun, 25 Oct 2026 06:55:26 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-25"
     },
     {
       "id": "lb-2-2a9q",
@@ -24636,9 +24636,9 @@
         "custom-1792346885016-a70t",
         "custom-1791664055911-cuz4",
         "custom-1791919172943-3ibi",
+        "custom-1792873754553-ugfj",
         "lb-116-1YYc",
         "lb-333-2b4m",
-        "custom-1792873754553-ugfj",
         "lb-2-2a9q",
         "lb-332-28MA",
         "lb-24-2aHi"
