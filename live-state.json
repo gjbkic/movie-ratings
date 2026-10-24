@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792862511598,
-  "sourceUpdatedIso": "2026-10-24T17:21:51.598Z",
+  "sourceUpdatedAt": 1792862523583,
+  "sourceUpdatedIso": "2026-10-24T17:22:03.583Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -22980,9 +22980,11 @@
       "genre": [
         "スリラー",
         "クライム",
-        "ドラマ"
+        "ドラマ",
+        "サスペンス",
+        "バイオレンス"
       ],
-      "origin": "その他",
+      "origin": "ハリウッド",
       "format": "live",
       "runtime": 140,
       "exact": false,
@@ -39013,7 +39015,9 @@
       "custom-1792862353309-lggc": [
         "スリラー",
         "クライム",
-        "ドラマ"
+        "ドラマ",
+        "サスペンス",
+        "バイオレンス"
       ]
     },
     "originOverrides": {
@@ -39840,7 +39844,7 @@
       "custom-1792612562683-9p69": "日本",
       "custom-1792612990758-vlmb": "日本",
       "custom-1792673965168-5akq": "日本",
-      "custom-1792862353309-lggc": "その他"
+      "custom-1792862353309-lggc": "ハリウッド"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
