@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792874265753,
-  "sourceUpdatedIso": "2026-10-24T20:37:45.753Z",
+  "sourceUpdatedAt": 1792874271633,
+  "sourceUpdatedIso": "2026-10-24T20:37:51.633Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -1333,6 +1333,35 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "custom-1792346885016-a70t",
+      "title": "下妻物語",
+      "originalTitle": "下妻物語",
+      "englishTitle": "Kamikaze Girls",
+      "year": 2004,
+      "score": 93,
+      "star": 4.5,
+      "overallRank": 46,
+      "sameScoreRank": 11,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "コメディ",
+        "世界観",
+        "青春・若者",
+        "ドラマ",
+        "comfort",
+        "娯楽",
+        "雰囲気・美学"
+      ],
+      "origin": "日本",
+      "format": "hybrid",
+      "runtime": 102,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-19",
+      "letterboxdPublishedAt": "Mon, 19 Oct 2026 05:33:45 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-18"
+    },
+    {
       "id": "lb-333-2b4m",
       "title": "千と千尋の神隠し",
       "originalTitle": "",
@@ -1340,8 +1369,8 @@
       "year": 2001,
       "score": 93,
       "star": 4.5,
-      "overallRank": 46,
-      "sameScoreRank": 11,
+      "overallRank": 47,
+      "sameScoreRank": 12,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
       "genre": [
@@ -1362,35 +1391,6 @@
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "custom-1792346885016-a70t",
-      "title": "下妻物語",
-      "originalTitle": "下妻物語",
-      "englishTitle": "Kamikaze Girls",
-      "year": 2004,
-      "score": 93,
-      "star": 4.5,
-      "overallRank": 47,
-      "sameScoreRank": 12,
-      "category": "Letterboxd",
-      "mediaType": "movie",
-      "genre": [
-        "コメディ",
-        "世界観",
-        "青春・若者",
-        "ドラマ",
-        "comfort",
-        "娯楽",
-        "雰囲気・美学"
-      ],
-      "origin": "日本",
-      "format": "hybrid",
-      "runtime": 102,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-19",
-      "letterboxdPublishedAt": "Mon, 19 Oct 2026 05:33:45 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-18"
     },
     {
       "id": "lb-2-2a9q",
@@ -24637,8 +24637,8 @@
         "custom-1791664055911-cuz4",
         "custom-1791919172943-3ibi",
         "lb-116-1YYc",
-        "lb-333-2b4m",
         "custom-1792346885016-a70t",
+        "lb-333-2b4m",
         "lb-2-2a9q",
         "lb-332-28MA",
         "lb-24-2aHi"
