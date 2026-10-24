@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792874063234,
-  "sourceUpdatedIso": "2026-10-24T20:34:23.234Z",
+  "sourceUpdatedAt": 1792874068739,
+  "sourceUpdatedIso": "2026-10-24T20:34:28.739Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -1360,36 +1360,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-2-2a9q",
-      "title": "ファイト・クラブ",
-      "originalTitle": "",
-      "englishTitle": "Fight Club",
-      "year": 1999,
-      "score": 93,
-      "star": 4.5,
-      "overallRank": 47,
-      "sameScoreRank": 12,
-      "category": "マフィア、クライム",
-      "mediaType": "movie",
-      "genre": [
-        "クライム",
-        "アクション",
-        "サスペンス",
-        "ドラマ",
-        "どんでん返し",
-        "心理・内面",
-        "バイオレンス",
-        "社会問題・生活"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 139,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "custom-1792873754553-ugfj",
       "title": "紀子の食卓",
       "originalTitle": "紀子の食卓",
@@ -1397,8 +1367,8 @@
       "year": 2005,
       "score": 93,
       "star": 4.5,
-      "overallRank": 48,
-      "sameScoreRank": 13,
+      "overallRank": 47,
+      "sameScoreRank": 12,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -1421,6 +1391,36 @@
       "letterboxdAddedDate": "2026-10-25",
       "letterboxdPublishedAt": "Sun, 25 Oct 2026 06:55:26 +1300",
       "letterboxdReportedWatchedDate": "2026-10-25"
+    },
+    {
+      "id": "lb-2-2a9q",
+      "title": "ファイト・クラブ",
+      "originalTitle": "",
+      "englishTitle": "Fight Club",
+      "year": 1999,
+      "score": 93,
+      "star": 4.5,
+      "overallRank": 48,
+      "sameScoreRank": 13,
+      "category": "マフィア、クライム",
+      "mediaType": "movie",
+      "genre": [
+        "クライム",
+        "アクション",
+        "サスペンス",
+        "ドラマ",
+        "どんでん返し",
+        "心理・内面",
+        "バイオレンス",
+        "社会問題・生活"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 139,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "lb-332-28MA",
@@ -24638,8 +24638,8 @@
         "custom-1791919172943-3ibi",
         "lb-116-1YYc",
         "lb-333-2b4m",
-        "lb-2-2a9q",
         "custom-1792873754553-ugfj",
+        "lb-2-2a9q",
         "lb-332-28MA",
         "lb-24-2aHi"
       ],
