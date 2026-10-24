@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792674251789,
-  "sourceUpdatedIso": "2026-10-22T13:04:11.789Z",
+  "sourceUpdatedAt": 1792862511598,
+  "sourceUpdatedIso": "2026-10-24T17:21:51.598Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -22964,6 +22964,31 @@
       "letterboxdAddedDate": null,
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1792862353309-lggc",
+      "title": "リプリー",
+      "originalTitle": "The Talented Mr. Ripley",
+      "englishTitle": "The Talented Mr. Ripley",
+      "year": 1999,
+      "score": null,
+      "star": 3,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "スリラー",
+        "クライム",
+        "ドラマ"
+      ],
+      "origin": "その他",
+      "format": "live",
+      "runtime": 140,
+      "exact": false,
+      "letterboxdAddedDate": "2026-10-24",
+      "letterboxdPublishedAt": "Sun, 25 Oct 2026 02:34:28 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-24"
     }
   ],
   "state": {
@@ -28595,6 +28620,23 @@
         "added": true,
         "_seq": 1792673965168,
         "source": "letterboxd"
+      },
+      {
+        "id": "custom-1792862353309-lggc",
+        "title": "リプリー",
+        "originalTitle": "The Talented Mr. Ripley",
+        "englishTitle": "The Talented Mr. Ripley",
+        "lbTitle": "The Talented Mr. Ripley",
+        "tmdbId": 1213,
+        "year": 1999,
+        "uri": "https://letterboxd.com/gjbkic/film/the-talented-mr-ripley/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 3,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1792862353309,
+        "source": "letterboxd"
       }
     ],
     "starOverrides": {
@@ -32452,7 +32494,8 @@
       "custom-1792609955834-8gl0": "movie",
       "custom-1792612562683-9p69": "drama",
       "custom-1792612990758-vlmb": "drama",
-      "custom-1792673965168-5akq": "movie"
+      "custom-1792673965168-5akq": "movie",
+      "custom-1792862353309-lggc": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -38966,6 +39009,11 @@
         "アクション",
         "哲学・思想",
         "社会問題・生活"
+      ],
+      "custom-1792862353309-lggc": [
+        "スリラー",
+        "クライム",
+        "ドラマ"
       ]
     },
     "originOverrides": {
@@ -39791,7 +39839,8 @@
       "custom-1792609955834-8gl0": "ハリウッド",
       "custom-1792612562683-9p69": "日本",
       "custom-1792612990758-vlmb": "日本",
-      "custom-1792673965168-5akq": "日本"
+      "custom-1792673965168-5akq": "日本",
+      "custom-1792862353309-lggc": "その他"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -40545,7 +40594,8 @@
       "custom-1792609955834-8gl0": "live",
       "custom-1791966534875-2yiz": "animation",
       "custom-1791966715148-h5tp": "animation",
-      "custom-1792673965168-5akq": "hybrid"
+      "custom-1792673965168-5akq": "hybrid",
+      "custom-1792862353309-lggc": "live"
     },
     "runtimeOverrides": {
       "custom-1790247938551-ixfs": 100,
@@ -41222,7 +41272,8 @@
       "custom-1792439512307-ncav": 86,
       "custom-1792519359060-7ic5": 155,
       "custom-1792609955834-8gl0": 122,
-      "custom-1792673965168-5akq": 103
+      "custom-1792673965168-5akq": 103,
+      "custom-1792862353309-lggc": 140
     },
     "letterboxdMeta": {
       "lb-0-hTha": {
@@ -71307,6 +71358,46 @@
           "path": "/f8CbqeFILuSOFC6KgtufdJZTw4j.jpg",
           "tmdbId": 21712,
           "checkedAt": "2026-10-22T13:01:58.359Z",
+          "provider": "tmdb"
+        }
+      },
+      "custom-1792862353309-lggc": {
+        "publishedAt": "Sun, 25 Oct 2026 02:34:28 +1300",
+        "addedDate": "2026-10-24",
+        "addedDateSource": "rss-first-seen",
+        "reportedWatchedDate": "2026-10-24",
+        "note": "良くも悪くも普通の暗めの犯罪サスペンス。面白くはあった。\n序盤良くまとまったテンポでこいつの人となりが分かるのは上手いね。\n序盤はゆったりした曲に乗せてイタリアの海辺のヌーンとした雰囲気。\n恋愛なのでは、自分をやろうとしてるという疑心が広がる。\nリプリーよりディッキーには共感しやすい。\nパッと仲良くしてた人に過度に入れこまれるが、相手に悪いとも思うが、うんざりする気持ち。\nキッパリ言って傷つけないと、離れてくれない。\n自分が明確に殺してるのにstop！stop!と言えちゃうサイコ具合や知的に少し足りていないところが、諸々の衝突理由でもあるのだろう\nリプリーは恐らく言外の雰囲気的な意味を読み解けない人なのだろう。アスペルガー的というか。\nキャッチミーイフユーキャン的なのを期待していたが、全然違う。もっと醜悪。彼は目的を持って騙していると言うより口から出まかせが出てしまう。\n人々が集まり、次第に違和感のようなものが積み上がってくる。追い詰められたら殺す。遺体の処理もおぼつかない。\n矛盾した話を両辺からっ詰めていくとほころびが分かる的な。緊張感もある\n手紙には完全に自身へ向いてる言葉だが、本心で自省はない。\n真の内側は人には見せれない。\n彼はサイコでもあるが完全なるサイコでなく、人間的な葛藤もある。過去の罪に苛まれたり、その分短絡的な自身の足りなさに振り回される。\n本人の言う通り、根は自己顕示欲だったのか。咄嗟に嘘をついてしまう。大きくいえば自身の理想と能力の乖離に苦しめられてる。",
+        "noteSource": "letterboxd-rss",
+        "noteImportedAt": "2026-10-24T17:21:50.800Z",
+        "rssReviewRecords": {
+          "letterboxd-review-1552093388": {
+            "body": "良くも悪くも普通の暗めの犯罪サスペンス。面白くはあった。\n序盤良くまとまったテンポでこいつの人となりが分かるのは上手いね。\n序盤はゆったりした曲に乗せてイタリアの海辺のヌーンとした雰囲気。\n恋愛なのでは、自分をやろうとしてるという疑心が広がる。\nリプリーよりディッキーには共感しやすい。\nパッと仲良くしてた人に過度に入れこまれるが、相手に悪いとも思うが、うんざりする気持ち。\nキッパリ言って傷つけないと、離れてくれない。\n自分が明確に殺してるのにstop！stop!と言えちゃうサイコ具合や知的に少し足りていないところが、諸々の衝突理由でもあるのだろう\nリプリーは恐らく言外の雰囲気的な意味を読み解けない人なのだろう。アスペルガー的というか。\nキャッチミーイフユーキャン的なのを期待していたが、全然違う。もっと醜悪。彼は目的を持って騙していると言うより口から出まかせが出てしまう。\n人々が集まり、次第に違和感のようなものが積み上がってくる。追い詰められたら殺す。遺体の処理もおぼつかない。\n矛盾した話を両辺からっ詰めていくとほころびが分かる的な。緊張感もある\n手紙には完全に自身へ向いてる言葉だが、本心で自省はない。\n真の内側は人には見せれない。\n彼はサイコでもあるが完全なるサイコでなく、人間的な葛藤もある。過去の罪に苛まれたり、その分短絡的な自身の足りなさに振り回される。\n本人の言う通り、根は自己顕示欲だったのか。咄嗟に嘘をついてしまう。大きくいえば自身の理想と能力の乖離に苦しめられてる。",
+            "block": "良くも悪くも普通の暗めの犯罪サスペンス。面白くはあった。\n序盤良くまとまったテンポでこいつの人となりが分かるのは上手いね。\n序盤はゆったりした曲に乗せてイタリアの海辺のヌーンとした雰囲気。\n恋愛なのでは、自分をやろうとしてるという疑心が広がる。\nリプリーよりディッキーには共感しやすい。\nパッと仲良くしてた人に過度に入れこまれるが、相手に悪いとも思うが、うんざりする気持ち。\nキッパリ言って傷つけないと、離れてくれない。\n自分が明確に殺してるのにstop！stop!と言えちゃうサイコ具合や知的に少し足りていないところが、諸々の衝突理由でもあるのだろう\nリプリーは恐らく言外の雰囲気的な意味を読み解けない人なのだろう。アスペルガー的というか。\nキャッチミーイフユーキャン的なのを期待していたが、全然違う。もっと醜悪。彼は目的を持って騙していると言うより口から出まかせが出てしまう。\n人々が集まり、次第に違和感のようなものが積み上がってくる。追い詰められたら殺す。遺体の処理もおぼつかない。\n矛盾した話を両辺からっ詰めていくとほころびが分かる的な。緊張感もある\n手紙には完全に自身へ向いてる言葉だが、本心で自省はない。\n真の内側は人には見せれない。\n彼はサイコでもあるが完全なるサイコでなく、人間的な葛藤もある。過去の罪に苛まれたり、その分短絡的な自身の足りなさに振り回される。\n本人の言う通り、根は自己顕示欲だったのか。咄嗟に嘘をついてしまう。大きくいえば自身の理想と能力の乖離に苦しめられてる。"
+          }
+        },
+        "watchHistory": [
+          {
+            "id": "rss:letterboxd-review-1552093388",
+            "date": "2026-10-24",
+            "recordedAt": "2026-10-24T13:34:28.000Z",
+            "rewatch": false,
+            "retroactive": false,
+            "source": "letterboxd-rss",
+            "manualEdited": false
+          }
+        ],
+        "crew84": {
+          "directors": [
+            "Anthony Minghella"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-24T17:21:50.799Z"
+        },
+        "poster84": {
+          "path": "/cS5gtmCJvnimP0Z4LeqkeISt4ls.jpg",
+          "tmdbId": 1213,
+          "checkedAt": "2026-10-24T17:21:55.058Z",
           "provider": "tmdb"
         }
       }
