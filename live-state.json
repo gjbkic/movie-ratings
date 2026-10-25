@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792944665770,
-  "sourceUpdatedIso": "2026-10-25T16:11:05.770Z",
+  "sourceUpdatedAt": 1792944685677,
+  "sourceUpdatedIso": "2026-10-25T16:11:25.677Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -6775,34 +6775,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1792272928425-wp78",
-      "title": "古畑任三郎",
-      "originalTitle": "古畑任三郎",
-      "englishTitle": "古畑任三郎",
-      "year": 1994,
-      "score": 84,
-      "star": 3.5,
-      "overallRank": 235,
-      "sameScoreRank": 9,
-      "category": "追加映画",
-      "mediaType": "drama",
-      "genre": [
-        "TV本編",
-        "ドラマ",
-        "娯楽",
-        "comfort",
-        "コメディ",
-        "ミステリー"
-      ],
-      "origin": "日本",
-      "format": "",
-      "runtime": null,
-      "exact": true,
-      "letterboxdAddedDate": null,
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "custom-1792673965168-5akq",
       "title": "マインド・ゲーム",
       "originalTitle": "マインド・ゲーム",
@@ -6810,8 +6782,8 @@
       "year": 2004,
       "score": 84,
       "star": 3.5,
-      "overallRank": 236,
-      "sameScoreRank": 10,
+      "overallRank": 235,
+      "sameScoreRank": 9,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -6842,8 +6814,8 @@
       "year": 2018,
       "score": 84,
       "star": 3.5,
-      "overallRank": 237,
-      "sameScoreRank": 11,
+      "overallRank": 236,
+      "sameScoreRank": 10,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -6873,8 +6845,8 @@
       "year": 1996,
       "score": 84,
       "star": 3.5,
-      "overallRank": 238,
-      "sameScoreRank": 12,
+      "overallRank": 237,
+      "sameScoreRank": 11,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -6897,8 +6869,8 @@
       "year": 2013,
       "score": 84,
       "star": 3.5,
-      "overallRank": 239,
-      "sameScoreRank": 13,
+      "overallRank": 238,
+      "sameScoreRank": 12,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -6916,6 +6888,34 @@
       "letterboxdAddedDate": "2026-09-25",
       "letterboxdPublishedAt": "Fri, 25 Sep 2026 06:28:19 +1200",
       "letterboxdReportedWatchedDate": "2026-09-25"
+    },
+    {
+      "id": "custom-1792272928425-wp78",
+      "title": "古畑任三郎",
+      "originalTitle": "古畑任三郎",
+      "englishTitle": "古畑任三郎",
+      "year": 1994,
+      "score": 84,
+      "star": 3.5,
+      "overallRank": 239,
+      "sameScoreRank": 13,
+      "category": "追加映画",
+      "mediaType": "drama",
+      "genre": [
+        "TV本編",
+        "ドラマ",
+        "娯楽",
+        "comfort",
+        "コメディ",
+        "ミステリー"
+      ],
+      "origin": "日本",
+      "format": "",
+      "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "lb-299-28U0",
@@ -24434,11 +24434,11 @@
         "lb-163-2aYI",
         "lb-120-26EO",
         "lb-34-23De",
-        "custom-1792272928425-wp78",
         "custom-1792673965168-5akq",
         "custom-1790322759601-kg73",
         "lb-108-29d2",
         "custom-1790322762266-mrn9",
+        "custom-1792272928425-wp78",
         "lb-299-28U0",
         "added-anchor-580",
         "lb-319-2ab2",
