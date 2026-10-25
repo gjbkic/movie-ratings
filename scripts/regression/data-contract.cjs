@@ -107,11 +107,13 @@ test('addition, title/runtime/classification edits and explicit deletion preserv
   await page.locator('#movie30-detail-classification>summary').click();
   for(const [label,value] of [['種別','drama'],['制作区分','ハリウッド'],['形式','animation']]){
    const row=page.locator('#editGenrePicker .struct-row').filter({has:page.locator('.struct-label').filter({hasText:new RegExp('^'+label+'$')})});
-   await row.locator(`[data-struct-value="${value}"]`).click({force:true});
+   await row.locator(`[data-struct-value="${value}"]`).click();
+   if(label==='種別')assert.equal((await snapshot(page)).mediaTypeOverrides[id],value,'The visible media selection must reach its click handler');
+   if(label==='制作区分')assert.equal((await snapshot(page)).originOverrides[id],value,'The visible origin selection must reach its click handler');
   }
   assert.equal((await snapshot(page)).formatOverrides[id],'hybrid','Selecting animation alongside live action retains both formats');
-  await page.locator('#editGenrePicker [data-struct-value="live"]').click({force:true});
-  const genre=page.locator('#editGenrePicker .struct-chip').filter({hasText:/^SF$/});await genre.first().click({force:true});
+  await page.locator('#editGenrePicker [data-struct-value="live"]').click();
+  const genre=page.locator('#editGenrePicker .struct-chip').filter({hasText:/^SF$/});await genre.first().click();
   await page.waitForTimeout(180);await page.evaluate(()=>window.__movie30PendingSave);const edited=await snapshot(page);const preview=await page.locator('#movie30-detail-class-preview').textContent();
   assert.equal(edited.titleOverrides[id].title,'Synthetic edited title');assert.equal(Number(edited.runtimeOverrides[id]),123);assert.equal(edited.mediaTypeOverrides[id],'drama');assert.equal(edited.originOverrides[id],'ハリウッド');assert.equal(edited.formatOverrides[id],'animation');assert(edited.genreOverrides[id].includes('SF'));assert.match(preview,/SF/);
   await reload(page);const restored=await snapshot(page);for(const key of ['titleOverrides','runtimeOverrides','mediaTypeOverrides','originOverrides','formatOverrides','genreOverrides'])assert.deepEqual(restored[key][id],edited[key][id]);

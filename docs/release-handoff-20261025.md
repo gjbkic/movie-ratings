@@ -9,6 +9,7 @@
 - 架空740作品専用Siteのbuild `iphone-synthetic-release-7d8833c-20261023-v4` を別HTTPS originで配信済み。URL: https://movie-ratings-synthetic-iphone-e3e81ff.keensquid256.chatgpt.site 。Sites version 10、deployment `appgdep_6addb65dcbcc81919243df64c724737c` は成功。28ファイルの監査ハッシュ一致。実データ、復旧JSON、資格情報、外部同期通信を含めない。
 - `7d8833c` から統合候補HEADまでアプリJSは変更していない。v4の隔離Chrome結果はこのコードと対応する。ただしv4のiPhone実機操作はユーザーが未実施と回答しており、合格扱いにしない。
 - この統合後のアプリコードで `node scripts/regression/run.cjs all` を実行し、43/43スイート成功。アプリJS・テストJSの構文チェック91ファイル成功。PlaywrightとChromeの実行パスを指定したローカルChrome結果であり、iPhone Safariの代用とはしない。初回の依存パス未設定による失敗はアプリの失敗として数えない。
+- Draft PR #12の初回GitHub Actionsは、分類の「制作区分」クリック後に値が入らず、`data-contract` 1テストが失敗した（他42スイート成功）。テストは従来、操作可能性を確認しない強制クリックを使っていた。分類操作を通常クリックと直後の状態検査に変更し、隔離Chromeで該当10テストが成功した。GitHub Actionsでの再検証が完了するまでCI合格とは扱わない。アプリJSと本番データはこの調査で変更していない。
 
 ## 公開判断前のゲート
 
