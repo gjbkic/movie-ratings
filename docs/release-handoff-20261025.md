@@ -18,6 +18,12 @@
 4. 履歴localStorageだけの書込失敗時は映画本体の保存と警告・JSON書出しが可能だが、失敗した履歴差分の専用永続退避は未実装。映画の点数・順位・レビューが保存されたことと、Undo履歴が残ったことは別々に判断する。主データの消失を示す経路ではないため保存対策のP1再発とは区別するが、Undo履歴の完全保証を公開条件にするなら追加実装が必要。
 5. 本番導入の判断には、既存Draft PR #6〜#9と統合候補の関係、未解決事項、ロールバック先を確認する。mainマージと本番公開は別の操作として扱う。
 
+## GitHubへの引継ぎ状態
+
+統合候補はローカルにコミット済みだが、GitHubブランチとDraft PRは未作成。Git push時にこの環境のGit Credential Managerが認証できず、再試行した対話も `User cancelled dialog` で終了した。認証を伴わない再試行やmain変更は行わない。GitHubへ送れる状態になったら `git push -u origin codex/release-integration-20261022` を実行し、main向けDraft PRを作る。ブランチのLetterboxd自動同期ワークフローはmainへのpushに限定済み。
+
+ローカルGitの履歴に加えて、`../handoff/release-integration-20261025.bundle` を作成し `git bundle verify` に成功した。mainの履歴を持つ同じリポジトリで引き継げる。バンドルは外部公開せず、作業フォルダ内で保管する。
+
 ## 引継ぎ時の作業順
 
 全回帰結果を追記 → v4実機確認 → 見つかった問題だけ架空環境で失敗先行テスト・修正 → 最新mainの再確認 → 統合候補のレビュー → 本番導入の判断。新点数帯は `activated:false` のままで、今回の整理版公開と同時に有効化しない。
