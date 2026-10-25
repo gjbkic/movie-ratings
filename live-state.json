@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792944379636,
-  "sourceUpdatedIso": "2026-10-25T16:06:19.636Z",
+  "sourceUpdatedAt": 1792944533779,
+  "sourceUpdatedIso": "2026-10-25T16:08:53.779Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -59967,7 +59967,7 @@
         "addedDate": "2025-09-14",
         "addedDateSource": "letterboxd-export-2026-09-27",
         "note": "ラストシーンは心に残る。ポン・ジュノっらしい映画。普通に楽しめた。",
-        "noteSource": "letterboxd-export",
+        "noteSource": "manual",
         "noteImportedAt": "2026-10-10T10:44:56.531Z",
         "watchedFlag": true,
         "watchedAddedDate": "2025-09-14",
@@ -59995,7 +59995,8 @@
           "tmdbId": 11423,
           "path": "/jcgUjx1QcupGzjntTVlnQ15lHqy.jpg",
           "checkedAt": "2026-10-18T21:28:20.190877+00:00"
-        }
+        },
+        "noteEditedAt": "2026-10-25T16:08:53.727Z"
       },
       "lb-548-294Y": {
         "addedDate": "2026-08-19",
