@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792944336005,
-  "sourceUpdatedIso": "2026-10-25T16:05:36.005Z",
+  "sourceUpdatedAt": 1792944379636,
+  "sourceUpdatedIso": "2026-10-25T16:06:19.636Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -47569,7 +47569,7 @@
         "addedDate": "2025-09-01",
         "addedDateSource": "letterboxd-export-2026-09-27",
         "note": "犯人を追って葛藤や感情も伝わってきて面白かった。ミステリーサスペンスとしてよく出来ている。犯人も刑事たちもキャラが良くて普通に面白かった",
-        "noteSource": "letterboxd-export",
+        "noteSource": "manual",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
         "watchedAddedDate": "2025-09-01",
@@ -47597,7 +47597,8 @@
           "tmdbId": 320,
           "path": "/riVXh3EimGO0y5dgQxEWPRy5Itg.jpg",
           "checkedAt": "2026-10-18T21:28:20.190877+00:00"
-        }
+        },
+        "noteEditedAt": "2026-10-25T16:06:19.587Z"
       },
       "lb-182-dR3i": {
         "addedDate": "2025-09-01",
