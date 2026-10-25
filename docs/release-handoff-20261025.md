@@ -20,7 +20,7 @@
 
 ## GitHubへの引継ぎ状態
 
-統合候補はローカルにコミット済みだが、GitHubブランチとDraft PRは未作成。Git push時にこの環境のGit Credential Managerが認証できず、再試行した対話も `User cancelled dialog` で終了した。認証を伴わない再試行やmain変更は行わない。GitHubへ送れる状態になったら `git push -u origin codex/release-integration-20261022` を実行し、main向けDraft PRを作る。ブランチのLetterboxd自動同期ワークフローはmainへのpushに限定済み。
+統合候補はGitHubブランチ `codex/release-integration-20261022` へ送信済み。main向け [Draft PR #12](https://github.com/gjbkic/movie-ratings/pull/12) を作成した。ローカルからの最初のpushはGit Credential Managerの対話で止まったが、ユーザーがWindows PowerShellから送信して解消した。ブランチのLetterboxd自動同期ワークフローはmainへのpushに限定済み。PRはDraftのまま維持し、実機結果とCIを確認するまでマージ・本番公開しない。
 
 ローカルGitの履歴に加えて、`../handoff/release-integration-20261025.bundle` を作成し `git bundle verify` に成功した。mainの履歴を持つ同じリポジトリで引き継げる。バンドルは外部公開せず、作業フォルダ内で保管する。
 
