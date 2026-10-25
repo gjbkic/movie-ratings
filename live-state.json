@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792924029475,
-  "sourceUpdatedIso": "2026-10-25T10:27:09.475Z",
+  "sourceUpdatedAt": 1792924046721,
+  "sourceUpdatedIso": "2026-10-25T10:27:26.721Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -23042,7 +23042,11 @@
       "mediaType": "movie",
       "genre": [
         "コメディ",
-        "ドラマ"
+        "ドラマ",
+        "恋愛",
+        "娯楽",
+        "雰囲気・美学",
+        "切ない"
       ],
       "origin": "日本",
       "format": "live",
@@ -39139,7 +39143,11 @@
       ],
       "custom-1792924028576-16ig": [
         "コメディ",
-        "ドラマ"
+        "ドラマ",
+        "恋愛",
+        "娯楽",
+        "雰囲気・美学",
+        "切ない"
       ]
     },
     "originOverrides": {
@@ -71606,6 +71614,12 @@
           "creators": [],
           "source": "tmdb",
           "fetchedAt": "2026-10-25T10:27:09.025Z"
+        },
+        "poster84": {
+          "path": "/ngnhUbtQDjdEOQB2I4J0fxs1Ciw.jpg",
+          "tmdbId": 31512,
+          "checkedAt": "2026-10-25T10:27:13.903Z",
+          "provider": "tmdb"
         }
       }
     }
