@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792944118135,
-  "sourceUpdatedIso": "2026-10-25T16:01:58.135Z",
+  "sourceUpdatedAt": 1792944259730,
+  "sourceUpdatedIso": "2026-10-25T16:04:19.730Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -6460,34 +6460,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-303-2aQY",
-      "title": "ターミネーター",
-      "originalTitle": "",
-      "englishTitle": "The Terminator",
-      "year": 1984,
-      "score": 85,
-      "star": 3.5,
-      "overallRank": 224,
-      "sameScoreRank": 45,
-      "category": "アクション",
-      "mediaType": "movie",
-      "genre": [
-        "アクション",
-        "娯楽",
-        "スリラー",
-        "サスペンス",
-        "SF",
-        "時間"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 108,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-20-9vEe",
       "title": "アベンジャーズ／インフィニティ・ウォー",
       "originalTitle": "",
@@ -6495,8 +6467,8 @@
       "year": 2018,
       "score": 85,
       "star": 3.5,
-      "overallRank": 225,
-      "sameScoreRank": 46,
+      "overallRank": 224,
+      "sameScoreRank": 45,
       "category": "MCU作品",
       "mediaType": "movie",
       "genre": [
@@ -6510,6 +6482,34 @@
       "origin": "ハリウッド",
       "format": "live",
       "runtime": 150,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "lb-303-2aQY",
+      "title": "ターミネーター",
+      "originalTitle": "",
+      "englishTitle": "The Terminator",
+      "year": 1984,
+      "score": 85,
+      "star": 3.5,
+      "overallRank": 225,
+      "sameScoreRank": 46,
+      "category": "アクション",
+      "mediaType": "movie",
+      "genre": [
+        "アクション",
+        "娯楽",
+        "スリラー",
+        "サスペンス",
+        "SF",
+        "時間"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 108,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
@@ -24512,8 +24512,8 @@
         "lb-289-2avw",
         "lb-70-29FU",
         "lb-485-2aSg",
-        "lb-303-2aQY",
-        "lb-20-9vEe"
+        "lb-20-9vEe",
+        "lb-303-2aQY"
       ],
       "86": [
         "lb-89-5RFA",
