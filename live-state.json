@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792944037040,
-  "sourceUpdatedIso": "2026-10-25T16:00:37.040Z",
+  "sourceUpdatedAt": 1792944055312,
+  "sourceUpdatedIso": "2026-10-25T16:00:55.312Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -5859,6 +5859,33 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-477-29gA",
+      "title": "ドゥ・ザ・ライト・シング",
+      "originalTitle": "",
+      "englishTitle": "Do the Right Thing",
+      "year": 1989,
+      "score": 85,
+      "star": 3.5,
+      "overallRank": 203,
+      "sameScoreRank": 24,
+      "category": "ドラマ",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "差別・人権",
+        "社会問題・生活",
+        "サスペンス",
+        "バイオレンス"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 120,
+      "exact": true,
+      "letterboxdAddedDate": "2026-06-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "custom-1791576150006-qu8m",
       "title": "ブラック・ミラー「サン・ジュニペロ」",
       "originalTitle": "",
@@ -5866,8 +5893,8 @@
       "year": 2016,
       "score": 85,
       "star": 3.5,
-      "overallRank": 203,
-      "sameScoreRank": 24,
+      "overallRank": 204,
+      "sameScoreRank": 25,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -5901,8 +5928,8 @@
       "year": 2024,
       "score": 85,
       "star": 3.5,
-      "overallRank": 204,
-      "sameScoreRank": 25,
+      "overallRank": 205,
+      "sameScoreRank": 26,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -5924,34 +5951,6 @@
       "letterboxdAddedDate": "2026-10-07",
       "letterboxdPublishedAt": "Wed, 7 Oct 2026 22:52:04 +1300",
       "letterboxdReportedWatchedDate": "2026-10-07"
-    },
-    {
-      "id": "custom-1791570909341-auj1",
-      "title": "ブラック・ミラー「秘密」",
-      "originalTitle": "",
-      "englishTitle": "Black Mirror: Shut Up and Dance",
-      "year": 2016,
-      "score": 85,
-      "star": 3.5,
-      "overallRank": 205,
-      "sameScoreRank": 26,
-      "category": "Letterboxd",
-      "mediaType": "drama",
-      "genre": [
-        "胸糞",
-        "クライム",
-        "サスペンス",
-        "心理・内面",
-        "娯楽",
-        "TV本編"
-      ],
-      "origin": "その他",
-      "format": "live",
-      "runtime": null,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-10",
-      "letterboxdPublishedAt": "Sat, 10 Oct 2026 06:52:34 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-10"
     },
     {
       "id": "lb-125-26Eu",
@@ -5980,33 +5979,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-477-29gA",
-      "title": "ドゥ・ザ・ライト・シング",
-      "originalTitle": "",
-      "englishTitle": "Do the Right Thing",
-      "year": 1989,
-      "score": 85,
-      "star": 3.5,
-      "overallRank": 207,
-      "sameScoreRank": 28,
-      "category": "ドラマ",
-      "mediaType": "movie",
-      "genre": [
-        "ドラマ",
-        "差別・人権",
-        "社会問題・生活",
-        "サスペンス",
-        "バイオレンス"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 120,
-      "exact": true,
-      "letterboxdAddedDate": "2026-06-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-397-2a6Q",
       "title": "裏窓",
       "originalTitle": "",
@@ -6014,8 +5986,8 @@
       "year": 1954,
       "score": 85,
       "star": 3.5,
-      "overallRank": 208,
-      "sameScoreRank": 29,
+      "overallRank": 207,
+      "sameScoreRank": 28,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -6029,6 +6001,34 @@
       "letterboxdAddedDate": "2026-03-28",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1791570909341-auj1",
+      "title": "ブラック・ミラー「秘密」",
+      "originalTitle": "",
+      "englishTitle": "Black Mirror: Shut Up and Dance",
+      "year": 2016,
+      "score": 85,
+      "star": 3.5,
+      "overallRank": 208,
+      "sameScoreRank": 29,
+      "category": "Letterboxd",
+      "mediaType": "drama",
+      "genre": [
+        "胸糞",
+        "クライム",
+        "サスペンス",
+        "心理・内面",
+        "娯楽",
+        "TV本編"
+      ],
+      "origin": "その他",
+      "format": "live",
+      "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-10",
+      "letterboxdPublishedAt": "Sat, 10 Oct 2026 06:52:34 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-10"
     },
     {
       "id": "lb-314-1blA",
@@ -24491,12 +24491,12 @@
         "lb-87-27V2",
         "lb-472-1zYm",
         "lb-121-29BS",
+        "lb-477-29gA",
         "custom-1791576150006-qu8m",
         "custom-1791374649583-3zqi",
-        "custom-1791570909341-auj1",
         "lb-125-26Eu",
-        "lb-477-29gA",
         "lb-397-2a6Q",
+        "custom-1791570909341-auj1",
         "lb-314-1blA",
         "lb-78-2aHM",
         "lb-295-1Z5s",
