@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792944055312,
-  "sourceUpdatedIso": "2026-10-25T16:00:55.312Z",
+  "sourceUpdatedAt": 1792944068554,
+  "sourceUpdatedIso": "2026-10-25T16:01:08.554Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -6003,34 +6003,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1791570909341-auj1",
-      "title": "ブラック・ミラー「秘密」",
-      "originalTitle": "",
-      "englishTitle": "Black Mirror: Shut Up and Dance",
-      "year": 2016,
-      "score": 85,
-      "star": 3.5,
-      "overallRank": 208,
-      "sameScoreRank": 29,
-      "category": "Letterboxd",
-      "mediaType": "drama",
-      "genre": [
-        "胸糞",
-        "クライム",
-        "サスペンス",
-        "心理・内面",
-        "娯楽",
-        "TV本編"
-      ],
-      "origin": "その他",
-      "format": "live",
-      "runtime": null,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-10",
-      "letterboxdPublishedAt": "Sat, 10 Oct 2026 06:52:34 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-10"
-    },
-    {
       "id": "lb-314-1blA",
       "title": "CURE キュア",
       "originalTitle": "",
@@ -6038,8 +6010,8 @@
       "year": 1997,
       "score": 85,
       "star": 3.5,
-      "overallRank": 209,
-      "sameScoreRank": 30,
+      "overallRank": 208,
+      "sameScoreRank": 29,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -6069,8 +6041,8 @@
       "year": 1996,
       "score": 85,
       "star": 3.5,
-      "overallRank": 210,
-      "sameScoreRank": 31,
+      "overallRank": 209,
+      "sameScoreRank": 30,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -6090,6 +6062,34 @@
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1791570909341-auj1",
+      "title": "ブラック・ミラー「秘密」",
+      "originalTitle": "",
+      "englishTitle": "Black Mirror: Shut Up and Dance",
+      "year": 2016,
+      "score": 85,
+      "star": 3.5,
+      "overallRank": 210,
+      "sameScoreRank": 31,
+      "category": "Letterboxd",
+      "mediaType": "drama",
+      "genre": [
+        "胸糞",
+        "クライム",
+        "サスペンス",
+        "心理・内面",
+        "娯楽",
+        "TV本編"
+      ],
+      "origin": "その他",
+      "format": "live",
+      "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-10",
+      "letterboxdPublishedAt": "Sat, 10 Oct 2026 06:52:34 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-10"
     },
     {
       "id": "lb-295-1Z5s",
@@ -24496,9 +24496,9 @@
         "custom-1791374649583-3zqi",
         "lb-125-26Eu",
         "lb-397-2a6Q",
-        "custom-1791570909341-auj1",
         "lb-314-1blA",
         "lb-78-2aHM",
+        "custom-1791570909341-auj1",
         "lb-295-1Z5s",
         "lb-393-24xc",
         "custom-1791802127464-uge5",
@@ -52044,7 +52044,7 @@
         "addedDate": "2025-09-20",
         "addedDateSource": "letterboxd-export-2026-09-27",
         "note": "【2025-09-20・記録1】\n解説読んで全てが納得できた。読解力が足りてない。あと集中して全部のシーン見ないと映画はダメだと再認識できた。よくできた映画だった。\n\n────────────\n\n【2025-09-20・再鑑賞】\n深層心理を操る。伝道師の話",
-        "noteSource": "letterboxd-export",
+        "noteSource": "manual",
         "noteImportedAt": "2026-10-10T10:44:56.531Z",
         "watchedFlag": true,
         "watchedAddedDate": "2025-09-20",
@@ -52072,7 +52072,8 @@
           "tmdbId": 36095,
           "path": "/xNVJr9q6AtSbjosS6Ed9YirOkSo.jpg",
           "checkedAt": "2026-10-18T21:28:20.190877+00:00"
-        }
+        },
+        "noteEditedAt": "2026-10-25T16:01:01.668Z"
       },
       "lb-315-g32A": {
         "addedDate": "2025-09-01",
