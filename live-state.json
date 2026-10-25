@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1792944640082,
-  "sourceUpdatedIso": "2026-10-25T16:10:40.082Z",
+  "sourceUpdatedAt": 1792944649966,
+  "sourceUpdatedIso": "2026-10-25T16:10:49.966Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -6917,6 +6917,34 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "custom-1790322762266-mrn9",
+      "title": "リーガル・ハイ スペシャル",
+      "originalTitle": "リーガル・ハイ スペシャル",
+      "englishTitle": "Legal High SP",
+      "year": 2013,
+      "score": 84,
+      "star": 3.5,
+      "overallRank": 240,
+      "sameScoreRank": 14,
+      "category": "Letterboxd",
+      "mediaType": "drama",
+      "genre": [
+        "ドラマ",
+        "コメディ",
+        "ミステリー",
+        "comfort",
+        "娯楽",
+        "TV特番・SP"
+      ],
+      "origin": "日本",
+      "format": "live",
+      "runtime": 108,
+      "exact": true,
+      "letterboxdAddedDate": "2026-09-25",
+      "letterboxdPublishedAt": "Fri, 25 Sep 2026 06:28:19 +1200",
+      "letterboxdReportedWatchedDate": "2026-09-25"
+    },
+    {
       "id": "lb-319-2ab2",
       "title": "サイコ",
       "originalTitle": "",
@@ -6924,8 +6952,8 @@
       "year": 1960,
       "score": 84,
       "star": 3.5,
-      "overallRank": 240,
-      "sameScoreRank": 14,
+      "overallRank": 241,
+      "sameScoreRank": 15,
       "category": "スリラー、ホラー",
       "mediaType": "movie",
       "genre": [
@@ -6945,34 +6973,6 @@
       "letterboxdAddedDate": "2025-09-17",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "custom-1790322762266-mrn9",
-      "title": "リーガル・ハイ スペシャル",
-      "originalTitle": "リーガル・ハイ スペシャル",
-      "englishTitle": "Legal High SP",
-      "year": 2013,
-      "score": 84,
-      "star": 3.5,
-      "overallRank": 241,
-      "sameScoreRank": 15,
-      "category": "Letterboxd",
-      "mediaType": "drama",
-      "genre": [
-        "ドラマ",
-        "コメディ",
-        "ミステリー",
-        "comfort",
-        "娯楽",
-        "TV特番・SP"
-      ],
-      "origin": "日本",
-      "format": "live",
-      "runtime": 108,
-      "exact": true,
-      "letterboxdAddedDate": "2026-09-25",
-      "letterboxdPublishedAt": "Fri, 25 Sep 2026 06:28:19 +1200",
-      "letterboxdReportedWatchedDate": "2026-09-25"
     },
     {
       "id": "lb-180-27oC",
@@ -24439,8 +24439,8 @@
         "custom-1790322759601-kg73",
         "lb-108-29d2",
         "lb-299-28U0",
-        "lb-319-2ab2",
         "custom-1790322762266-mrn9",
+        "lb-319-2ab2",
         "lb-180-27oC",
         "lb-318-84xS",
         "added-anchor-580",
