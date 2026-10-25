@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "updatedAt": "2026-10-18T21:28:20.190877+00:00",
+  "updatedAt": "2026-10-25T21:43:34.102757+00:00",
   "catalogSize": 731,
-  "matchedCount": 737,
+  "matchedCount": 738,
   "newCount": 0,
   "unmatchedCount": 41,
   "films": {
@@ -76952,6 +76952,104 @@
       "castCheckedAt": "2026-10-18T21:28:20.190831+00:00",
       "castResolverVersion": 2,
       "tmdbId": 57041,
+      "type": "movie"
+    },
+    "custom-1792924028576-16ig": {
+      "cast": [
+        {
+          "id": 27778,
+          "name": "中谷美紀",
+          "originalName": "中谷美紀",
+          "role": "Matsuko Kawajiri"
+        },
+        {
+          "id": 117975,
+          "name": "永山瑛太",
+          "originalName": "永山瑛太",
+          "role": "Sho Kawajiri"
+        },
+        {
+          "id": 70209,
+          "name": "伊勢谷友介",
+          "originalName": "伊勢谷友介",
+          "role": "Yoichi Ryu"
+        },
+        {
+          "id": 46691,
+          "name": "香川照之",
+          "originalName": "香川照之",
+          "role": "Norio Kawajiri"
+        },
+        {
+          "id": 130654,
+          "name": "市川実日子",
+          "originalName": "市川実日子",
+          "role": "Kumi Kawajiri"
+        },
+        {
+          "id": 226825,
+          "name": "黒沢あすか",
+          "originalName": "黒沢あすか",
+          "role": "Megumi Sawamura"
+        },
+        {
+          "id": 13283,
+          "name": "柄本明",
+          "originalName": "柄本明",
+          "role": "Tsunehiro Kawajiri"
+        },
+        {
+          "id": 150025,
+          "name": "ゴリ",
+          "originalName": "ゴリ",
+          "role": "Shuji Okura"
+        },
+        {
+          "id": 58593,
+          "name": "柴咲コウ",
+          "originalName": "柴咲コウ",
+          "role": "Asuka"
+        },
+        {
+          "id": 87661,
+          "name": "宮藤官九郎",
+          "originalName": "宮藤官九郎",
+          "role": "Tetsuya Yamekawa"
+        },
+        {
+          "id": 27791,
+          "name": "武田真治",
+          "originalName": "武田真治",
+          "role": "Onodera"
+        },
+        {
+          "id": 79460,
+          "name": "荒川良々",
+          "originalName": "荒川良々",
+          "role": "Kenji Shimazu"
+        },
+        {
+          "id": 226827,
+          "name": "劇団ひとり",
+          "originalName": "劇団ひとり",
+          "role": "Takeo Okano"
+        },
+        {
+          "id": 226828,
+          "name": "マギー",
+          "originalName": "マギー",
+          "role": "Detective"
+        },
+        {
+          "id": 129701,
+          "name": "谷原章介",
+          "originalName": "谷原章介",
+          "role": "Shunji Saeki"
+        }
+      ],
+      "castCheckedAt": "2026-10-25T21:43:34.102717+00:00",
+      "castResolverVersion": 2,
+      "tmdbId": 31512,
       "type": "movie"
     }
   },

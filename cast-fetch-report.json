@@ -1,10 +1,10 @@
 {
-  "at": "2026-10-18T21:28:20.190877+00:00",
+  "at": "2026-10-25T21:43:34.102757+00:00",
   "counts": {
-    "total": 778,
-    "success": 772,
-    "empty": 4,
-    "unmatched": 2,
+    "total": 824,
+    "success": 817,
+    "empty": 2,
+    "unmatched": 5,
     "api": 0
   },
   "results": [
@@ -5353,22 +5353,6 @@
       "castCount": 16
     },
     {
-      "id": "custom-1790508958909-q6d6",
-      "title": "進撃の巨人 The Final Season 完結編（前編）",
-      "status": "empty",
-      "reason": "日本語・英語クレジットを再取得しましたが出演者情報なし",
-      "tmdbId": 313024,
-      "castCount": 0
-    },
-    {
-      "id": "custom-1790508959270-dbu3",
-      "title": "進撃の巨人 The Final Season 完結編（後編）",
-      "status": "empty",
-      "reason": "日本語・英語クレジットを再取得しましたが出演者情報なし",
-      "tmdbId": 313028,
-      "castCount": 0
-    },
-    {
       "id": "custom-1790508959663-6kld",
       "title": "劇場版「進撃の巨人」完結編 THE LAST ATTACK",
       "status": "success",
@@ -6231,6 +6215,390 @@
       "reason": "",
       "tmdbId": 57041,
       "castCount": 1
+    },
+    {
+      "id": "custom-1792406096289-hqs7",
+      "title": "イクサガミ",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 252193,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1792406406780-xsf3",
+      "title": "ACMA:GAME",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 248346,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1792407392302-z3f4",
+      "title": "ベター・コール・ソウル",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 60059,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1792414087140-7n1k",
+      "title": "Master and Commander: The Far Side of the World",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 8619,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1792420000000-001",
+      "title": "鍵のかかった部屋",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 46084,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1792420000000-002",
+      "title": "ブラックペアン",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 79289,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1792420000000-003",
+      "title": "イチケイのカラス",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 122579,
+      "castCount": 13
+    },
+    {
+      "id": "custom-1792420000000-004",
+      "title": "緊急取調室",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 65322,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1792420000000-005",
+      "title": "絶対零度",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 40395,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1792420000000-006",
+      "title": "ドラゴン桜",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 31816,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1792420000000-007",
+      "title": "ビッグバン★セオリー",
+      "status": "unmatched",
+      "reason": "保存ID・邦題・英題・原題・別名・映画/TV・該当シーズンを確認しましたが一意に特定不可",
+      "tmdbId": null,
+      "castCount": 0
+    },
+    {
+      "id": "custom-1792420000000-008",
+      "title": "名探偵コナン",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 30983,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1792420000000-009",
+      "title": "クレヨンしんちゃん",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 324301,
+      "castCount": 8
+    },
+    {
+      "id": "custom-1792420000000-010",
+      "title": "ドラえもん",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 282057,
+      "castCount": 8
+    },
+    {
+      "id": "custom-1792420000000-011",
+      "title": "サザエさん",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 153485,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1792420000000-012",
+      "title": "ちびまる子ちゃん",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 57775,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1792420000000-013",
+      "title": "銀魂",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 57041,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1792421000000-001",
+      "title": "家族ゲーム",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 72157,
+      "castCount": 7
+    },
+    {
+      "id": "custom-1792421000000-002",
+      "title": "金田一少年の事件簿",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 36366,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1792421000000-003",
+      "title": "真犯人フラグ",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 135933,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1792421000000-004",
+      "title": "マイファミリー",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 195635,
+      "castCount": 11
+    },
+    {
+      "id": "custom-1792421000000-005",
+      "title": "グランメゾン東京",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 95718,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1792421000000-006",
+      "title": "ラジエーションハウス",
+      "status": "unmatched",
+      "reason": "保存ID・邦題・英題・原題・別名・映画/TV・該当シーズンを確認しましたが一意に特定不可",
+      "tmdbId": null,
+      "castCount": 0
+    },
+    {
+      "id": "custom-1792421000000-007",
+      "title": "野ブタ。をプロデュース",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 13493,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1792421000000-008",
+      "title": "ごくせん",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 63409,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1792421000000-009",
+      "title": "LOST",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 4607,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1792421000000-010",
+      "title": "ゲーム・オブ・スローンズ",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 1399,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1792421000000-011",
+      "title": "SUITS／スーツ",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 37680,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1792421000000-012",
+      "title": "フレンズ",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 1668,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1792421000000-013",
+      "title": "NARUTO -ナルト-",
+      "status": "unmatched",
+      "reason": "保存ID・邦題・英題・原題・別名・映画/TV・該当シーズンを確認しましたが一意に特定不可",
+      "tmdbId": null,
+      "castCount": 0
+    },
+    {
+      "id": "custom-1792421000000-014",
+      "title": "チェンソーマン",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 114410,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1792417096624-icxb",
+      "title": "ジ・オフィス",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 2316,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1792417143714-5w33",
+      "title": "フィニアスとファーブ",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 1877,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1792417199807-u80c",
+      "title": "ミラキュラス レディバグ&シャノワール",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 65334,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1792417268319-bu7k",
+      "title": "ファミリー・ガイ",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 1434,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1792417297007-rck1",
+      "title": "怪奇ゾーン グラビティフォールズ",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 40075,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1792417631069-c0vt",
+      "title": "爆笑! シアター・パコーン",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 107953,
+      "castCount": 6
+    },
+    {
+      "id": "custom-1792418203307-qxck",
+      "title": "二月の勝者－絶対合格の教室－",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 136582,
+      "castCount": 9
+    },
+    {
+      "id": "custom-1792433176003-xjc7",
+      "title": "自殺サークル",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 12720,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1792439512307-ncav",
+      "title": "リバー、流れないでよ",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 1138476,
+      "castCount": 13
+    },
+    {
+      "id": "custom-1792519359060-7ic5",
+      "title": "ブギーナイツ",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 4995,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1792609955834-8gl0",
+      "title": "ネットワーク",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 10774,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1792612562683-9p69",
+      "title": "警部補 矢部謙三",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 54456,
+      "castCount": 5
+    },
+    {
+      "id": "custom-1792612990758-vlmb",
+      "title": "スーパーサラリーマン左江内氏",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 100118,
+      "castCount": 5
+    },
+    {
+      "id": "custom-1792673965168-5akq",
+      "title": "マインド・ゲーム",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 21712,
+      "castCount": 9
+    },
+    {
+      "id": "custom-1792862353309-lggc",
+      "title": "リプリー",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 1213,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1792873754553-ugfj",
+      "title": "紀子の食卓",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 42041,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1792924028576-16ig",
+      "title": "嫌われ松子の一生",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 31512,
+      "castCount": 15
     }
   ]
 }
