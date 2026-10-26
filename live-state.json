@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1793010030650,
-  "sourceUpdatedIso": "2026-10-26T10:20:30.650Z",
+  "sourceUpdatedAt": 1793010059083,
+  "sourceUpdatedIso": "2026-10-26T10:20:59.083Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -23160,6 +23160,27 @@
       "letterboxdAddedDate": "2026-10-19",
       "letterboxdPublishedAt": "Mon, 19 Oct 2026 17:21:29 +1300",
       "letterboxdReportedWatchedDate": "2026-10-19"
+    },
+    {
+      "id": "custom-1793010058855-54gu",
+      "title": "ハヤブサ消防団",
+      "originalTitle": "ハヤブサ消防団",
+      "englishTitle": "Hayabusa Fire Brigade",
+      "year": 2023,
+      "score": null,
+      "star": 0,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "サスペンス、ミステリー",
+      "mediaType": "tvseries",
+      "genre": "",
+      "origin": "",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     }
   ],
   "state": {
@@ -28924,6 +28945,23 @@
         "source": "letterboxd",
         "tmdbType": "movie",
         "_lbMetaFixedV36": true
+      },
+      {
+        "id": "custom-1793010058855-54gu",
+        "title": "ハヤブサ消防団",
+        "originalTitle": "ハヤブサ消防団",
+        "englishTitle": "Hayabusa Fire Brigade",
+        "lbTitle": "Hayabusa Fire Brigade",
+        "tmdbId": 228494,
+        "year": 2023,
+        "uri": "",
+        "category": "サスペンス、ミステリー",
+        "order": 999999,
+        "star": 0,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1793010058855,
+        "tmdbType": "tv"
       }
     ],
     "starOverrides": {
@@ -29730,7 +29768,8 @@
       "custom-1793003365384-pli4": 3.5,
       "custom-1793003364260-snf9": 2,
       "custom-1793003364825-uaai": 2.5,
-      "custom-1793008410429-0253": 4
+      "custom-1793008410429-0253": 4,
+      "custom-1793010058855-54gu": 0
     },
     "titleOverrides": {
       "added-anchor-578": {
@@ -32806,7 +32845,8 @@
       "custom-1793003364260-snf9": "movie",
       "custom-1793003364825-uaai": "movie",
       "custom-1793003365384-pli4": "movie",
-      "custom-1793008410429-0253": "movie"
+      "custom-1793008410429-0253": "movie",
+      "custom-1793010058855-54gu": "tvseries"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -72290,6 +72330,32 @@
           "creators": [],
           "source": "tmdb",
           "fetchedAt": "2026-10-26T09:53:30.927Z"
+        }
+      },
+      "custom-1793010058855-54gu": {
+        "contentType": "tv_series",
+        "tmdbType": "tv",
+        "poster84": {
+          "path": "/4eYI0SnaxuuDQC13MpHxWb6DBTC.jpg",
+          "tmdbId": 228494,
+          "provider": "tmdb",
+          "checkedAt": "2026-10-26T10:20:59.015Z"
+        },
+        "tmdbSeriesId": 228494,
+        "seasonCatalogV1": [
+          {
+            "number": 1,
+            "year": "2023"
+          }
+        ],
+        "seasonCountV1": 1,
+        "crew84": {
+          "directors": [],
+          "creators": [
+            "Jun Ikeido"
+          ],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-26T10:20:59.051Z"
         }
       }
     }
