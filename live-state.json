@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1793004308692,
-  "sourceUpdatedIso": "2026-10-26T08:45:08.692Z",
+  "sourceUpdatedAt": 1793004328778,
+  "sourceUpdatedIso": "2026-10-26T08:45:28.778Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -23091,7 +23091,7 @@
     },
     {
       "id": "custom-1793003364260-snf9",
-      "title": "애프터눈 클래스",
+      "title": "AFTERNOON",
       "originalTitle": "애프터눈 클래스",
       "englishTitle": "Afternoon Class",
       "year": 2015,
@@ -31910,6 +31910,11 @@
       },
       "custom-1791823398409-njce": {
         "tmdbId": 897429
+      },
+      "custom-1793003364260-snf9": {
+        "title": "AFTERNOON",
+        "originalTitle": "애프터눈 클래스",
+        "englishTitle": "Afternoon Class"
       }
     },
     "categoryOverrides": {},
