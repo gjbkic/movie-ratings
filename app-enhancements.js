@@ -58,7 +58,7 @@ css85.textContent=
  +'#rankRoot.movie30-rank-grid-only84 .rank-card.movie30-rank-poster84{padding:0!important}'
  +'#rankRoot.movie30-rank-grid-only84 .rank-card.movie30-rank-poster84>.movie30-poster84{left:0!important;top:0!important;width:100%!important;height:100%!important}'
  +'#rankRoot.movie30-rank-grid-only84 .score-list{grid-template-columns:repeat(auto-fill,minmax(108px,1fr))!important;gap:9px!important}'
- +'@media(max-width:420px){#rankRoot.movie30-rank-grid-only84 .score-list{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:7px!important}}';
+ +'@media(max-width:420px){#rankRoot.movie30-rank-grid-only84 .score-list{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:5px!important}}';
 document.head.appendChild(css85);
 const rankPosterBtn85=document.getElementById('rankPosterOnly84');
 if(rankPosterBtn85){
@@ -611,6 +611,9 @@ function posterFor(id,size='w342'){
 const roots=['rankRoot','classifyRoot','watchList83'];
 function decorateResult(card,id){
  if(card.querySelector('.movie90-result-art'))return;
+ // Pending ranking cards already own a poster and edit controls. Wrapping all
+ // children a second time squeezes those controls and moves the poster into text.
+ if(card.matches('#rankRoot .uns-card')&&card.querySelector(':scope > .movie30-poster84'))return;
  const src=posterFor(id,'w185');
  const searched=Boolean(document.getElementById('searchRank')?.value.trim()||document.getElementById('searchClassify')?.value.trim());
  if(!src&&!searched)return;
@@ -852,10 +855,12 @@ style.textContent=[
  '#rankRoot:not(.movie30-rank-grid-only84) .rank-card>.movie30-poster84,',
  '#watchList83 .watch83-grid:not(.poster-gallery84) .watch83-item>.movie30-poster84,',
  '#rankRoot .uns-card img.movie90-result-art,',
+ '#rankRoot .uns-card img.movie30-poster84,',
  '#classifyRoot .card img.movie90-result-art{pointer-events:auto!important;cursor:zoom-in!important;touch-action:manipulation}',
  '#rankRoot:not(.movie30-rank-grid-only84) .rank-card>.movie30-poster84:focus-visible,',
  '#watchList83 .watch83-grid:not(.poster-gallery84) .watch83-item>.movie30-poster84:focus-visible,',
  '#rankRoot .uns-card img.movie90-result-art:focus-visible,',
+ '#rankRoot .uns-card img.movie30-poster84:focus-visible,',
  '#classifyRoot .card img.movie90-result-art:focus-visible{outline:3px solid #b6d6ff!important;outline-offset:1px}'
 ].join('\n');
 document.head.appendChild(style);
@@ -863,6 +868,7 @@ const posterSelector=[
  '#rankRoot .rank-card img.movie30-poster84',
  '#watchList83 .watch83-item img.movie30-poster84',
  '#rankRoot .uns-card img.movie90-result-art',
+ '#rankRoot .uns-card img.movie30-poster84',
  '#classifyRoot .card img.movie90-result-art'
 ].join(',');
 function clickablePoster(event){
@@ -1054,7 +1060,9 @@ function hide(box){box.menu.hidden=true;box.entries=[];box.selected=-1;}
 function fitSuggestions(box){
  if(box.menu.hidden)return;
  const viewport=window.visualViewport;
- const visibleBottom=viewport?viewport.offsetTop+viewport.height:window.innerHeight;
+ // On iOS the visual viewport can pan while the keyboard is open. Use the
+ // smaller coordinate-space bound so candidates never extend under it.
+ const visibleBottom=viewport?Math.min(window.innerHeight,viewport.height,viewport.offsetTop+viewport.height):window.innerHeight;
  const top=box.menu.getBoundingClientRect().top;
  const available=Math.max(0,visibleBottom-top-12);
  box.menu.style.maxHeight=Math.min(410,available)+'px';

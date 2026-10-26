@@ -1951,7 +1951,7 @@ window.__movie30AutoSyncPending=()=>{const x=getLbSettings();if(x.auto!==false)s
     .star-jump{position:sticky;z-index:24;display:flex;gap:5px;overflow-x:auto;-webkit-overflow-scrolling:touch;padding:7px 3px;margin:5px 0 8px;background:rgba(7,9,12,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06);scrollbar-width:none}
     .star-jump::-webkit-scrollbar{display:none}.star-jump button{flex:0 0 auto;border:1px solid var(--line);background:#10151c;color:#d4dbe4;border-radius:999px;padding:6px 9px;font-size:10px;font-weight:800}.star-jump button.unrated{border-color:#8d7130;color:#ffe08a}.star-jump button:disabled{opacity:.3}
     .rank-star,.uns-panel{scroll-margin-top:150px}
-    .compare-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.72);z-index:200;align-items:flex-end;justify-content:center}.compare-bg.open{display:flex}.compare-sheet{width:min(760px,100%);max-height:94vh;overflow:auto;background:#10151c;border:1px solid #2a323d;border-radius:20px 20px 0 0;padding:12px 10px calc(16px + env(safe-area-inset-bottom))}.compare-head{position:sticky;top:-12px;z-index:2;background:#10151c;padding:6px 2px 10px;border-bottom:1px solid var(--line)}.compare-title{font-size:18px;font-weight:900}.compare-sub{font-size:10px;color:var(--muted);line-height:1.45;margin-top:4px}.compare-nav{display:flex;gap:6px;margin-top:8px}.compare-nav .btn{flex:1}.compare-score{margin-top:10px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#0b0f14}.compare-score-head{display:flex;justify-content:space-between;align-items:center;padding:8px 10px;background:#121923;border-bottom:1px solid var(--line)}.compare-score-head strong{font-size:18px}.compare-score-head small{font-size:9px;color:var(--muted)}.compare-film{padding:8px 10px;border-top:1px solid rgba(255,255,255,.055)}.compare-film:first-of-type{border-top:0}.compare-film strong{font-size:11.5px}.compare-film small{display:block;font-size:9px;color:var(--muted);margin-top:2px}.compare-slot{width:100%;border:0;border-top:1px dashed #35513f;border-bottom:1px dashed #35513f;background:rgba(67,209,125,.06);color:#a9e8bd;padding:7px 8px;font-size:10px;font-weight:800}.compare-slot:active{background:rgba(67,209,125,.16)}.compare-empty{font-size:10px;color:var(--muted);padding:9px 10px}.compare-close{width:100%;margin-top:12px}.just-placed{animation:placedFlash 2.4s ease-out}@keyframes placedFlash{0%,30%{outline:3px solid var(--accent);box-shadow:0 0 0 5px rgba(67,209,125,.18)}100%{outline:0 solid transparent;box-shadow:none}}
+    .compare-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.72);z-index:200;align-items:flex-end;justify-content:center;touch-action:none;overscroll-behavior:contain}.compare-bg.open{display:flex}.compare-sheet{width:min(760px,100%);max-height:94vh;max-height:94dvh;overflow:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;touch-action:pan-y;background:#10151c;border:1px solid #2a323d;border-radius:20px 20px 0 0;padding:12px 10px calc(16px + env(safe-area-inset-bottom))}.compare-head{position:sticky;top:-12px;z-index:2;background:#10151c;padding:6px 2px 10px;border-bottom:1px solid var(--line)}.compare-title{font-size:18px;font-weight:900}.compare-sub{font-size:10px;color:var(--muted);line-height:1.45;margin-top:4px}.compare-nav{display:flex;gap:6px;margin-top:8px}.compare-nav .btn{flex:1}.compare-score{margin-top:10px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#0b0f14}.compare-score-head{display:flex;justify-content:space-between;align-items:center;padding:8px 10px;background:#121923;border-bottom:1px solid var(--line)}.compare-score-head strong{font-size:18px}.compare-score-head small{font-size:9px;color:var(--muted)}.compare-film{padding:8px 10px;border-top:1px solid rgba(255,255,255,.055)}.compare-film:first-of-type{border-top:0}.compare-film strong{font-size:11.5px}.compare-film small{display:block;font-size:9px;color:var(--muted);margin-top:2px}.compare-slot{width:100%;border:0;border-top:1px dashed #35513f;border-bottom:1px dashed #35513f;background:rgba(67,209,125,.06);color:#a9e8bd;padding:7px 8px;font-size:10px;font-weight:800}.compare-slot:active{background:rgba(67,209,125,.16)}.compare-empty{font-size:10px;color:var(--muted);padding:9px 10px}.compare-close{width:100%;margin-top:12px}.just-placed{animation:placedFlash 2.4s ease-out}@keyframes placedFlash{0%,30%{outline:3px solid var(--accent);box-shadow:0 0 0 5px rgba(67,209,125,.18)}100%{outline:0 solid transparent;box-shadow:none}}
     .uns-card{cursor:pointer}.uns-head small{color:#d8b45c!important}
     @media(max-width:560px){.star-jump button{padding:6px 8px}.compare-sheet{padding-left:7px;padding-right:7px}.compare-title{font-size:17px}}
   `;
@@ -1983,6 +1983,26 @@ window.__movie30AutoSyncPending=()=>{const x=getLbSettings();if(x.auto!==false)s
   compareBg.innerHTML = `<div class="compare-sheet"><div class="compare-head"><div class="compare-title" id="compareTitle"></div><div class="compare-sub" id="compareSub"></div><div class="compare-nav"><button class="btn" id="compareUp">もっと上を見る</button><button class="btn" id="compareDown">もっと下を見る</button></div></div><div id="compareBody"></div><button class="btn compare-close" id="compareClose">閉じる</button></div>`;
   document.body.appendChild(compareBg);
   let compareCtx = null;
+  let compareScrollLock = null;
+  function lockCompareScroll() {
+    if (compareScrollLock) return;
+    const body = document.body, html = document.documentElement;
+    const y = window.scrollY;
+    compareScrollLock = {y, body: {position:body.style.position, top:body.style.top, left:body.style.left, right:body.style.right, width:body.style.width}, overflow:html.style.overflow, behavior:html.style.scrollBehavior};
+    html.style.overflow = 'hidden';
+    html.style.scrollBehavior = 'auto';
+    Object.assign(body.style,{position:'fixed',top:`-${y}px`,left:'0',right:'0',width:'100%'});
+  }
+  function unlockCompareScroll() {
+    if (!compareScrollLock) return;
+    const {y, body:prior, overflow, behavior} = compareScrollLock;
+    compareScrollLock = null;
+    Object.assign(document.body.style,prior);
+    document.documentElement.style.overflow = overflow;
+    window.scrollTo(0,y);
+    document.documentElement.style.scrollBehavior = behavior;
+  }
+  compareBg.addEventListener('touchmove',event=>{if(event.target===compareBg&&event.cancelable)event.preventDefault();},{passive:false});
 
   function starBounds(star) {
     const s = Number(star);
@@ -2032,10 +2052,11 @@ window.__movie30AutoSyncPending=()=>{const x=getLbSettings();if(x.auto!==false)s
     const f = filmById(id); if (!f) return;
     compareCtx = {id, center:suggestedScore(f)};
     renderCompare();
+    lockCompareScroll();
     compareBg.classList.add('open');
     compareBg.querySelector('.compare-sheet').scrollTop = 0;
   }
-  function closeCompare() { compareBg.classList.remove('open'); compareCtx = null; }
+  function closeCompare() { compareBg.classList.remove('open'); compareCtx = null; unlockCompareScroll(); }
   function placeCompared(id, score, index) {
     const f = filmById(id); if (!f) return;
     for (const k of Object.keys(state.rankOrder || {})) state.rankOrder[k] = (state.rankOrder[k] || []).filter(x => x !== id);
@@ -9165,7 +9186,7 @@ posterStyles84.textContent +=
  +'#rankRoot.movie30-rank-grid-only84 .rank-card:not(.movie30-has-poster84)::after{content:attr(data-title84);position:absolute;inset:auto 5px 9px;color:#e7edf6;font-size:11px;line-height:1.35;text-align:center;overflow:hidden;max-height:5.4em;text-shadow:0 1px 2px #000}'
  +'#rankRoot.movie30-rank-grid-only84 .rank-card:focus-visible{outline:3px solid #a1c9ff;outline-offset:2px}'
  +'#rankRoot.movie30-rank-grid-only84 .score-label{position:sticky;top:55px;align-self:start}'
- +'@media(max-width:420px){#rankRoot.movie30-rank-grid-only84 .score-list{grid-template-columns:repeat(auto-fill,minmax(92px,1fr));gap:7px}}';
+ +'@media(max-width:420px){#rankRoot.movie30-rank-grid-only84 .score-list{grid-template-columns:repeat(4,minmax(0,1fr));gap:5px}}';
 document.head.appendChild(posterStyles84);
 let posterDetail84=null;
 const posterSheet84=document.querySelector('#sheetBg .sheet');

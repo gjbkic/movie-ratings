@@ -223,18 +223,15 @@
   for (const id of ['searchRank', 'searchClassify']) {
     const input = document.getElementById(id);
     if (!input) continue;
-    const menu = () => input.closest('.movie92-search-wrap')?.querySelector('.movie92-suggestions');
     input.addEventListener('pointerdown', event => {
       if (document.activeElement !== input) return;
-      // A second tap hides both the keyboard and the autocomplete, leaving the query intact.
+      // A second tap dismisses the keyboard while keeping the candidate list usable.
       event.preventDefault();
       event.stopImmediatePropagation();
       input.blur();
-      if (menu()) menu().hidden = true;
     }, true);
-    input.addEventListener('blur', () => { if (menu()) menu().hidden = true; });
     input.addEventListener('focus', () => {
-      // A third tap focuses the field and restores suggestions for the existing query.
+      // A third tap focuses the field and refreshes suggestions for the existing query.
       if (input.value.trim()) input.dispatchEvent(new Event('input', {bubbles: true}));
     });
   }
