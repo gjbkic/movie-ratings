@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1793003841308,
-  "sourceUpdatedIso": "2026-10-26T08:37:21.308Z",
+  "sourceUpdatedAt": 1793003847044,
+  "sourceUpdatedIso": "2026-10-26T08:37:27.044Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -6173,35 +6173,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-385-2axi",
-      "title": "七人の侍",
-      "originalTitle": "",
-      "englishTitle": "Seven Samurai",
-      "year": 1954,
-      "score": 85,
-      "star": 3.5,
-      "overallRank": 214,
-      "sameScoreRank": 35,
-      "category": "邦画",
-      "mediaType": "movie",
-      "genre": [
-        "戦争",
-        "歴史",
-        "アクション",
-        "大作",
-        "娯楽",
-        "バイオレンス",
-        "雰囲気・美学"
-      ],
-      "origin": "日本",
-      "format": "live",
-      "runtime": 207,
-      "exact": true,
-      "letterboxdAddedDate": "2026-03-27",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "custom-1791802127464-uge5",
       "title": "Black Mirror: Hang the DJ",
       "originalTitle": "",
@@ -6209,8 +6180,8 @@
       "year": 2017,
       "score": 85,
       "star": 3.5,
-      "overallRank": 215,
-      "sameScoreRank": 36,
+      "overallRank": 214,
+      "sameScoreRank": 35,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -6229,6 +6200,35 @@
       "letterboxdAddedDate": "2026-10-12",
       "letterboxdPublishedAt": "Mon, 12 Oct 2026 18:21:35 +1300",
       "letterboxdReportedWatchedDate": "2026-10-12"
+    },
+    {
+      "id": "lb-385-2axi",
+      "title": "七人の侍",
+      "originalTitle": "",
+      "englishTitle": "Seven Samurai",
+      "year": 1954,
+      "score": 85,
+      "star": 3.5,
+      "overallRank": 215,
+      "sameScoreRank": 36,
+      "category": "邦画",
+      "mediaType": "movie",
+      "genre": [
+        "戦争",
+        "歴史",
+        "アクション",
+        "大作",
+        "娯楽",
+        "バイオレンス",
+        "雰囲気・美学"
+      ],
+      "origin": "日本",
+      "format": "live",
+      "runtime": 207,
+      "exact": true,
+      "letterboxdAddedDate": "2026-03-27",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "lb-119-25zS",
@@ -24580,8 +24580,8 @@
         "lb-295-1Z5s",
         "lb-393-24xc",
         "lb-494-2b0E",
-        "lb-385-2axi",
         "custom-1791802127464-uge5",
+        "lb-385-2axi",
         "lb-119-25zS",
         "lb-525-2aVE",
         "custom-1790971112940-kuhf",
