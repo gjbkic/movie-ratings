@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1793037139569,
-  "sourceUpdatedIso": "2026-10-26T17:52:19.569Z",
+  "sourceUpdatedAt": 1793037151082,
+  "sourceUpdatedIso": "2026-10-26T17:52:31.082Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -15083,6 +15083,35 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "custom-1790423279786-lguu",
+      "title": "トリック新作スペシャル2",
+      "originalTitle": "トリック新作スペシャル2",
+      "englishTitle": "Trick Shinsaku Special 2",
+      "year": 2010,
+      "score": 78,
+      "star": 2.5,
+      "overallRank": 527,
+      "sameScoreRank": 12,
+      "category": "Letterboxd",
+      "mediaType": "drama",
+      "genre": [
+        "コメディ",
+        "サスペンス",
+        "ミステリー",
+        "ドラマ",
+        "ファンタジー",
+        "娯楽",
+        "TV特番・SP"
+      ],
+      "origin": "日本",
+      "format": "live",
+      "runtime": 100,
+      "exact": true,
+      "letterboxdAddedDate": "2026-09-26",
+      "letterboxdPublishedAt": "Sat, 26 Sep 2026 23:37:29 +1200",
+      "letterboxdReportedWatchedDate": "2026-09-26"
+    },
+    {
       "id": "custom-1790358520071-ybym",
       "title": "ドロステのはてで僕ら",
       "originalTitle": "ドロステのはてで僕ら",
@@ -15090,8 +15119,8 @@
       "year": 2020,
       "score": 78,
       "star": 2.5,
-      "overallRank": 527,
-      "sameScoreRank": 12,
+      "overallRank": 528,
+      "sameScoreRank": 13,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -15118,8 +15147,8 @@
       "year": 1997,
       "score": 78,
       "star": 2.5,
-      "overallRank": 528,
-      "sameScoreRank": 13,
+      "overallRank": 529,
+      "sameScoreRank": 14,
       "category": "コメディ",
       "mediaType": "movie",
       "genre": [
@@ -15143,8 +15172,8 @@
       "year": 1981,
       "score": 78,
       "star": 2.5,
-      "overallRank": 529,
-      "sameScoreRank": 14,
+      "overallRank": 530,
+      "sameScoreRank": 15,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -15160,35 +15189,6 @@
       "letterboxdAddedDate": "2026-03-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "custom-1790423279786-lguu",
-      "title": "トリック新作スペシャル2",
-      "originalTitle": "トリック新作スペシャル2",
-      "englishTitle": "Trick Shinsaku Special 2",
-      "year": 2010,
-      "score": 78,
-      "star": 2.5,
-      "overallRank": 530,
-      "sameScoreRank": 15,
-      "category": "Letterboxd",
-      "mediaType": "drama",
-      "genre": [
-        "コメディ",
-        "サスペンス",
-        "ミステリー",
-        "ドラマ",
-        "ファンタジー",
-        "娯楽",
-        "TV特番・SP"
-      ],
-      "origin": "日本",
-      "format": "live",
-      "runtime": 100,
-      "exact": true,
-      "letterboxdAddedDate": "2026-09-26",
-      "letterboxdPublishedAt": "Sat, 26 Sep 2026 23:37:29 +1200",
-      "letterboxdReportedWatchedDate": "2026-09-26"
     },
     {
       "id": "custom-1790185843981-dk0y",
@@ -24295,10 +24295,10 @@
         "lb-146-3GNa",
         "custom-1791447953969-ah3e",
         "lb-548-294Y",
+        "custom-1790423279786-lguu",
         "custom-1790358520071-ybym",
         "lb-275-28sg",
         "lb-373-1TlE",
-        "custom-1790423279786-lguu",
         "custom-1790185843981-dk0y",
         "custom-1791449338315-twqr",
         "lb-200-7BEA",
@@ -72474,6 +72474,12 @@
           "creators": [],
           "source": "tmdb",
           "fetchedAt": "2026-10-26T16:41:49.932Z"
+        },
+        "poster84": {
+          "path": "/oSUVZnY0Iy3OGQTNHR4njmaUZUv.jpg",
+          "tmdbId": 293670,
+          "checkedAt": "2026-10-26T17:52:33.934Z",
+          "provider": "tmdb"
         }
       }
     }
