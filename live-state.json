@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1793010151036,
-  "sourceUpdatedIso": "2026-10-26T10:22:31.036Z",
+  "sourceUpdatedAt": 1793010163544,
+  "sourceUpdatedIso": "2026-10-26T10:22:43.544Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -23175,7 +23175,12 @@
       "mediaType": "tvseries",
       "genre": [
         "TV本編",
-        "娯楽"
+        "娯楽",
+        "クライム",
+        "ドラマ",
+        "恋愛",
+        "サスペンス",
+        "ホラー"
       ],
       "origin": "日本",
       "format": "",
@@ -39422,7 +39427,12 @@
       ],
       "custom-1793010058855-54gu": [
         "TV本編",
-        "娯楽"
+        "娯楽",
+        "クライム",
+        "ドラマ",
+        "恋愛",
+        "サスペンス",
+        "ホラー"
       ]
     },
     "originOverrides": {
