@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1793037230410,
-  "sourceUpdatedIso": "2026-10-26T17:53:50.410Z",
+  "sourceUpdatedAt": 1793043031190,
+  "sourceUpdatedIso": "2026-10-26T19:30:31.190Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -15490,7 +15490,7 @@
         "バイオレンス",
         "サスペンス"
       ],
-      "origin": "その他",
+      "origin": "ハリウッド",
       "format": "live",
       "runtime": 156,
       "exact": true,
@@ -40336,7 +40336,7 @@
       "custom-1793003365384-pli4": "その他",
       "custom-1793008410429-0253": "日本",
       "custom-1793010058855-54gu": "日本",
-      "custom-1793032909376-rd1i": "その他"
+      "custom-1793032909376-rd1i": "ハリウッド"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -50406,9 +50406,7 @@
           "fetchedAt": "2026-10-25T21:43:34.102757+00:00"
         },
         "poster84": {
-          "path": "/jHSBVaU2K0tPLYtTMg07nGTHGOW.jpg",
           "tmdbId": 237439,
-          "checkedAt": "2026-10-26T17:51:56.341Z",
           "provider": "tmdb"
         }
       },
