@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1793043160686,
-  "sourceUpdatedIso": "2026-10-26T19:32:40.686Z",
+  "sourceUpdatedAt": 1793043217850,
+  "sourceUpdatedIso": "2026-10-26T19:33:37.850Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -3953,36 +3953,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1792924028576-16ig",
-      "title": "嫌われ松子の一生",
-      "originalTitle": "嫌われ松子の一生",
-      "englishTitle": "Memories of Matsuko",
-      "year": 2006,
-      "score": 86,
-      "star": 3.5,
-      "overallRank": 138,
-      "sameScoreRank": 5,
-      "category": "Letterboxd",
-      "mediaType": "movie",
-      "genre": [
-        "コメディ",
-        "ドラマ",
-        "恋愛",
-        "娯楽",
-        "雰囲気・美学",
-        "切ない",
-        "心理・内面",
-        "社会問題・生活"
-      ],
-      "origin": "日本",
-      "format": "live",
-      "runtime": 130,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-25",
-      "letterboxdPublishedAt": "Sun, 25 Oct 2026 21:28:13 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-25"
-    },
-    {
       "id": "lb-390-pUfA",
       "title": "デューン 砂の惑星PART2",
       "originalTitle": "",
@@ -3990,8 +3960,8 @@
       "year": 2024,
       "score": 86,
       "star": 3.5,
-      "overallRank": 139,
-      "sameScoreRank": 6,
+      "overallRank": 138,
+      "sameScoreRank": 5,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -4022,8 +3992,8 @@
       "year": 1998,
       "score": 86,
       "star": 3.5,
-      "overallRank": 140,
-      "sameScoreRank": 7,
+      "overallRank": 139,
+      "sameScoreRank": 6,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -4039,6 +4009,36 @@
       "letterboxdAddedDate": "2025-09-07",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1792924028576-16ig",
+      "title": "嫌われ松子の一生",
+      "originalTitle": "嫌われ松子の一生",
+      "englishTitle": "Memories of Matsuko",
+      "year": 2006,
+      "score": 86,
+      "star": 3.5,
+      "overallRank": 140,
+      "sameScoreRank": 7,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "コメディ",
+        "ドラマ",
+        "恋愛",
+        "娯楽",
+        "雰囲気・美学",
+        "切ない",
+        "心理・内面",
+        "社会問題・生活"
+      ],
+      "origin": "日本",
+      "format": "live",
+      "runtime": 130,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-25",
+      "letterboxdPublishedAt": "Sun, 25 Oct 2026 21:28:13 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-25"
     },
     {
       "id": "lb-552-m8Ie",
@@ -24695,9 +24695,9 @@
         "base-chinatown-1974",
         "lb-148-17uy",
         "added-anchor-579",
-        "custom-1792924028576-16ig",
         "lb-390-pUfA",
         "lb-542-2b6C",
+        "custom-1792924028576-16ig",
         "lb-552-m8Ie",
         "lb-368-2as8",
         "custom-1789385860426-8e86",
