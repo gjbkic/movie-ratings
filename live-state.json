@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1793003816243,
-  "sourceUpdatedIso": "2026-10-26T08:36:56.243Z",
+  "sourceUpdatedAt": 1793003820673,
+  "sourceUpdatedIso": "2026-10-26T08:37:00.673Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -6345,34 +6345,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-485-2aSg",
-      "title": "いまを生きる",
-      "originalTitle": "",
-      "englishTitle": "Dead Poets Society",
-      "year": 1989,
-      "score": 85,
-      "star": 3.5,
-      "overallRank": 220,
-      "sameScoreRank": 41,
-      "category": "Letterboxd追加",
-      "mediaType": "movie",
-      "genre": [
-        "青春・若者",
-        "ドラマ",
-        "切ない",
-        "社会問題・生活",
-        "哲学・思想",
-        "心理・内面"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 128,
-      "exact": true,
-      "letterboxdAddedDate": "2026-08-12",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-303-2aQY",
       "title": "ターミネーター",
       "originalTitle": "",
@@ -6380,8 +6352,8 @@
       "year": 1984,
       "score": 85,
       "star": 3.5,
-      "overallRank": 221,
-      "sameScoreRank": 42,
+      "overallRank": 220,
+      "sameScoreRank": 41,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -6397,6 +6369,34 @@
       "runtime": 108,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "lb-485-2aSg",
+      "title": "いまを生きる",
+      "originalTitle": "",
+      "englishTitle": "Dead Poets Society",
+      "year": 1989,
+      "score": 85,
+      "star": 3.5,
+      "overallRank": 221,
+      "sameScoreRank": 42,
+      "category": "Letterboxd追加",
+      "mediaType": "movie",
+      "genre": [
+        "青春・若者",
+        "ドラマ",
+        "切ない",
+        "社会問題・生活",
+        "哲学・思想",
+        "心理・内面"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 128,
+      "exact": true,
+      "letterboxdAddedDate": "2026-08-12",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -24586,8 +24586,8 @@
         "lb-525-2aVE",
         "custom-1790971112940-kuhf",
         "lb-289-2avw",
-        "lb-485-2aSg",
         "lb-303-2aQY",
+        "lb-485-2aSg",
         "lb-574-29CQ",
         "lb-161-2aUc",
         "lb-70-29FU",
