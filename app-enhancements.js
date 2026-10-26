@@ -58,7 +58,7 @@ css85.textContent=
  +'#rankRoot.movie30-rank-grid-only84 .rank-card.movie30-rank-poster84{padding:0!important}'
  +'#rankRoot.movie30-rank-grid-only84 .rank-card.movie30-rank-poster84>.movie30-poster84{left:0!important;top:0!important;width:100%!important;height:100%!important}'
  +'#rankRoot.movie30-rank-grid-only84 .score-list{grid-template-columns:repeat(auto-fill,minmax(108px,1fr))!important;gap:9px!important}'
- +'@media(max-width:420px){#rankRoot.movie30-rank-grid-only84 .score-list{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:5px!important}}';
+ +'@media(max-width:620px){#rankRoot.movie30-rank-grid-only84 .score-list{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:5px!important}#searchRank,#searchClassify{font-size:18px!important}}';
 document.head.appendChild(css85);
 const rankPosterBtn85=document.getElementById('rankPosterOnly84');
 if(rankPosterBtn85){
