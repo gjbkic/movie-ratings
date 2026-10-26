@@ -18,7 +18,7 @@
 
 ## 実機ゲートと既知の限界
 
-- v4 `iphone-synthetic-release-7d8833c-20261023-v4` のiPhone Safariで、詳細検索の条件選択/一括解除、検索候補からの詳細表示、キーボードとの重なり、下スワイプ、順位操作後の保存・再読込を確認する。ホーム画面版では点数とレビューを保存し、終了・再起動後にも残ることを別に確認する。旧v2の実機成功をv4の成功として流用しない。検証先は架空作品だけの別origin `https://movie-ratings-synthetic-iphone-e3e81ff.keensquid256.chatgpt.site`。
+- v4 `iphone-synthetic-release-7d8833c-20261023-v4` のiPhone Safariで、[実機チェックリスト](iphone-release-candidate-checklist-20261022.md) に沿って詳細検索の条件選択/一括解除、検索候補からの詳細表示、キーボードとの重なり、下スワイプ、順位操作後の保存・再読込を確認する。ホーム画面版では点数とレビューを保存し、終了・再起動後にも残ることを別に確認する。旧v2の実機成功をv4の成功として流用しない。検証先は架空作品だけの別origin `https://movie-ratings-synthetic-iphone-e3e81ff.keensquid256.chatgpt.site`。
 - 主データの保存はlocalStorage/IndexedDBと競合保護を全回帰で検査した。履歴localStorageだけが容量不足で失敗した場合、映画本体の保存成功と警告・JSON出力は可能だが、その失敗したUndo履歴差分を専用に永続退避する仕組みはない。点数・順位・レビューの保存とUndo履歴の保持を区別する。
 - 旧版を開いたままのタブは新しい複数タブロックに参加しない。公開後は全タブ/ホーム画面版を閉じ、更新後の版で開き直してから編集する運用が必要。別端末のGitHub同期競合は同一ブラウザのMULTITABとは別の保護経路。
 - 新点数帯は `activated:false` のまま。今回の公開範囲に含めない。
