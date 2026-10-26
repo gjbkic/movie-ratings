@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1793004394702,
-  "sourceUpdatedIso": "2026-10-26T08:46:34.702Z",
+  "sourceUpdatedAt": 1793004403507,
+  "sourceUpdatedIso": "2026-10-26T08:46:43.507Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -17199,29 +17199,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1793003364260-snf9",
-      "title": "AFTERNOON CLASS",
-      "originalTitle": "애프터눈 클래스",
-      "englishTitle": "Afternoon Class",
-      "year": 2015,
-      "score": 76,
-      "star": 2,
-      "overallRank": 603,
-      "sameScoreRank": 13,
-      "category": "Letterboxd",
-      "mediaType": "movie",
-      "genre": [
-        "コメディ"
-      ],
-      "origin": "その他",
-      "format": "animation",
-      "runtime": 4,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-26",
-      "letterboxdPublishedAt": "Mon, 26 Oct 2026 19:39:51 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-26"
-    },
-    {
       "id": "lb-352-14eM",
       "title": "名探偵コナン 迷宮の十字路（クロスロード）",
       "originalTitle": "",
@@ -17229,8 +17206,8 @@
       "year": 2003,
       "score": 76,
       "star": 2,
-      "overallRank": 604,
-      "sameScoreRank": 14,
+      "overallRank": 603,
+      "sameScoreRank": 13,
       "category": "コナン映画",
       "mediaType": "movie",
       "genre": [
@@ -17247,6 +17224,29 @@
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1793003364260-snf9",
+      "title": "AFTERNOON CLASS",
+      "originalTitle": "애프터눈 클래스",
+      "englishTitle": "Afternoon Class",
+      "year": 2015,
+      "score": 76,
+      "star": 2,
+      "overallRank": 604,
+      "sameScoreRank": 14,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "コメディ"
+      ],
+      "origin": "その他",
+      "format": "animation",
+      "runtime": 4,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-26",
+      "letterboxdPublishedAt": "Mon, 26 Oct 2026 19:39:51 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-26"
     },
     {
       "id": "custom-1791563602274-2p5j",
@@ -24150,8 +24150,8 @@
         "lb-151-uvFS",
         "custom-1792417143714-5w33",
         "lb-439-1OPa",
-        "custom-1793003364260-snf9",
         "lb-352-14eM",
+        "custom-1793003364260-snf9",
         "custom-1791563602274-2p5j",
         "lb-57-15gO",
         "lb-436-n87k",
