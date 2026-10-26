@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1793008411479,
-  "sourceUpdatedIso": "2026-10-26T09:53:31.479Z",
+  "sourceUpdatedAt": 1793010030650,
+  "sourceUpdatedIso": "2026-10-26T10:20:30.650Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -23153,7 +23153,7 @@
       "genre": [
         "ミュージカル"
       ],
-      "origin": "その他",
+      "origin": "日本",
       "format": "live",
       "runtime": 121,
       "exact": false,
@@ -28921,7 +28921,9 @@
         "oldScore": null,
         "added": true,
         "_seq": 1793008410429,
-        "source": "letterboxd"
+        "source": "letterboxd",
+        "tmdbType": "movie",
+        "_lbMetaFixedV36": true
       }
     ],
     "starOverrides": {
@@ -29727,7 +29729,8 @@
       "custom-1792924028576-16ig": 3.5,
       "custom-1793003365384-pli4": 3.5,
       "custom-1793003364260-snf9": 2,
-      "custom-1793003364825-uaai": 2.5
+      "custom-1793003364825-uaai": 2.5,
+      "custom-1793008410429-0253": 4
     },
     "titleOverrides": {
       "added-anchor-578": {
@@ -31964,6 +31967,12 @@
         "title": "AFTERNOON CLASS",
         "originalTitle": "애프터눈 클래스",
         "englishTitle": "Afternoon Class"
+      },
+      "custom-1793008410429-0253": {
+        "title": "UTADA UNITED 2006",
+        "originalTitle": "UTADA UNITED 2006",
+        "englishTitle": "Utada United 2006",
+        "tmdbId": 57045
       }
     },
     "categoryOverrides": {},
@@ -40199,7 +40208,7 @@
       "custom-1793003364260-snf9": "その他",
       "custom-1793003364825-uaai": "日本",
       "custom-1793003365384-pli4": "その他",
-      "custom-1793008410429-0253": "その他"
+      "custom-1793008410429-0253": "日本"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
