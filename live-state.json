@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1793004494122,
-  "sourceUpdatedIso": "2026-10-26T08:48:14.122Z",
+  "sourceUpdatedAt": 1793008411479,
+  "sourceUpdatedIso": "2026-10-26T09:53:31.479Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -23137,6 +23137,29 @@
       "letterboxdAddedDate": null,
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1793008410429-0253",
+      "title": "UTADA UNITED 2006",
+      "originalTitle": "UTADA UNITED 2006",
+      "englishTitle": "Utada United 2006",
+      "year": 2006,
+      "score": null,
+      "star": 4,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "ミュージカル"
+      ],
+      "origin": "その他",
+      "format": "live",
+      "runtime": 121,
+      "exact": false,
+      "letterboxdAddedDate": "2026-10-19",
+      "letterboxdPublishedAt": "Mon, 19 Oct 2026 17:21:29 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-19"
     }
   ],
   "state": {
@@ -28882,6 +28905,23 @@
         "added": true,
         "_seq": 1793003365384,
         "source": "letterboxd"
+      },
+      {
+        "id": "custom-1793008410429-0253",
+        "title": "UTADA UNITED 2006",
+        "originalTitle": "UTADA UNITED 2006",
+        "englishTitle": "Utada United 2006",
+        "lbTitle": "Utada United 2006",
+        "tmdbId": 57045,
+        "year": 2006,
+        "uri": "https://letterboxd.com/gjbkic/film/utada-united-2006/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 4,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1793008410429,
+        "source": "letterboxd"
       }
     ],
     "starOverrides": {
@@ -32756,7 +32796,8 @@
       "custom-1792924028576-16ig": "movie",
       "custom-1793003364260-snf9": "movie",
       "custom-1793003364825-uaai": "movie",
-      "custom-1793003365384-pli4": "movie"
+      "custom-1793003365384-pli4": "movie",
+      "custom-1793008410429-0253": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -39323,6 +39364,9 @@
         "娯楽",
         "バイオレンス",
         "心理・内面"
+      ],
+      "custom-1793008410429-0253": [
+        "ミュージカル"
       ]
     },
     "originOverrides": {
@@ -40154,7 +40198,8 @@
       "custom-1792924028576-16ig": "日本",
       "custom-1793003364260-snf9": "その他",
       "custom-1793003364825-uaai": "日本",
-      "custom-1793003365384-pli4": "その他"
+      "custom-1793003365384-pli4": "その他",
+      "custom-1793008410429-0253": "その他"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -40914,7 +40959,8 @@
       "custom-1792924028576-16ig": "live",
       "custom-1793003364260-snf9": "animation",
       "custom-1793003364825-uaai": "animation",
-      "custom-1793003365384-pli4": "live"
+      "custom-1793003365384-pli4": "live",
+      "custom-1793008410429-0253": "live"
     },
     "runtimeOverrides": {
       "custom-1790247938551-ixfs": 100,
@@ -41597,7 +41643,8 @@
       "custom-1792924028576-16ig": 130,
       "custom-1793003364260-snf9": 4,
       "custom-1793003364825-uaai": 62,
-      "custom-1793003365384-pli4": 125
+      "custom-1793003365384-pli4": 125,
+      "custom-1793008410429-0253": 121
     },
     "letterboxdMeta": {
       "lb-0-hTha": {
@@ -50220,9 +50267,7 @@
           "fetchedAt": "2026-10-25T21:43:34.102757+00:00"
         },
         "poster84": {
-          "path": "/jHSBVaU2K0tPLYtTMg07nGTHGOW.jpg",
           "tmdbId": 237439,
-          "checkedAt": "2026-10-26T08:46:57.756Z",
           "provider": "tmdb"
         }
       },
@@ -72202,6 +72247,40 @@
           "tmdbId": 13855,
           "checkedAt": "2026-10-26T08:29:33.474Z",
           "provider": "tmdb"
+        }
+      },
+      "custom-1793008410429-0253": {
+        "publishedAt": "Mon, 19 Oct 2026 17:21:29 +1300",
+        "addedDate": "2026-10-19",
+        "addedDateSource": "rss-first-seen",
+        "reportedWatchedDate": "2026-10-19",
+        "note": "この時代のヨーロッパの服装に全体的にもやがかったようなサイドの抑えられた絵はよくあっているとは思う。絵的にすごい魅力的ということでは無い。\n序盤の引きとも言える砲弾のから逃れるところは可もなく不可もなく。悪くはないがプライベート・ライアンのような素晴らしい緊張感のある映像という訳でもない気がする。\n風の質感はリアル。というか全体的に落ち着いていて染み付いた生活感がある。\n船員と船を選んで落ちた船員1人を見捨てる的なシーンは話に乗り越えるべきよくある障壁のような感じ。\n将校として勝ちに執着して、人より国を掲げるマスター。というのを本人は思っているのだろうが結構人思い。という所までを描きたがってる。\nなんとなくドラマ的作り。\n恐怖の船。\n医者の自然への思いとの衝突\n将校候補の心の病\n医者が打たれる\n治療し、自然みる\n自然みてそこから学びフランス撃破\n展開がはっきりしていて分けれる。\nなんだろうか悪くはないんだが、フランスの時も何も自分たちの戦争を疑っていない。敵を倒し喜び、倒され悲しむ。どうしても成長が見えない。\nラストの展開だけ少し捻ってる？医者が船長でしたという、戦闘準備の中で演奏しているやうに彼らに日常となっていく。",
+        "noteSource": "letterboxd-rss",
+        "noteImportedAt": "2026-10-26T09:53:30.930Z",
+        "rssReviewRecords": {
+          "letterboxd-review-1545261983": {
+            "body": "この時代のヨーロッパの服装に全体的にもやがかったようなサイドの抑えられた絵はよくあっているとは思う。絵的にすごい魅力的ということでは無い。\n序盤の引きとも言える砲弾のから逃れるところは可もなく不可もなく。悪くはないがプライベート・ライアンのような素晴らしい緊張感のある映像という訳でもない気がする。\n風の質感はリアル。というか全体的に落ち着いていて染み付いた生活感がある。\n船員と船を選んで落ちた船員1人を見捨てる的なシーンは話に乗り越えるべきよくある障壁のような感じ。\n将校として勝ちに執着して、人より国を掲げるマスター。というのを本人は思っているのだろうが結構人思い。という所までを描きたがってる。\nなんとなくドラマ的作り。\n恐怖の船。\n医者の自然への思いとの衝突\n将校候補の心の病\n医者が打たれる\n治療し、自然みる\n自然みてそこから学びフランス撃破\n展開がはっきりしていて分けれる。\nなんだろうか悪くはないんだが、フランスの時も何も自分たちの戦争を疑っていない。敵を倒し喜び、倒され悲しむ。どうしても成長が見えない。\nラストの展開だけ少し捻ってる？医者が船長でしたという、戦闘準備の中で演奏しているやうに彼らに日常となっていく。",
+            "block": "この時代のヨーロッパの服装に全体的にもやがかったようなサイドの抑えられた絵はよくあっているとは思う。絵的にすごい魅力的ということでは無い。\n序盤の引きとも言える砲弾のから逃れるところは可もなく不可もなく。悪くはないがプライベート・ライアンのような素晴らしい緊張感のある映像という訳でもない気がする。\n風の質感はリアル。というか全体的に落ち着いていて染み付いた生活感がある。\n船員と船を選んで落ちた船員1人を見捨てる的なシーンは話に乗り越えるべきよくある障壁のような感じ。\n将校として勝ちに執着して、人より国を掲げるマスター。というのを本人は思っているのだろうが結構人思い。という所までを描きたがってる。\nなんとなくドラマ的作り。\n恐怖の船。\n医者の自然への思いとの衝突\n将校候補の心の病\n医者が打たれる\n治療し、自然みる\n自然みてそこから学びフランス撃破\n展開がはっきりしていて分けれる。\nなんだろうか悪くはないんだが、フランスの時も何も自分たちの戦争を疑っていない。敵を倒し喜び、倒され悲しむ。どうしても成長が見えない。\nラストの展開だけ少し捻ってる？医者が船長でしたという、戦闘準備の中で演奏しているやうに彼らに日常となっていく。"
+          }
+        },
+        "watchHistory": [
+          {
+            "id": "rss:letterboxd-review-1545261983",
+            "date": "2026-10-19",
+            "recordedAt": "2026-10-19T10:46:56.000Z",
+            "rewatch": false,
+            "retroactive": false,
+            "source": "letterboxd-rss",
+            "manualEdited": false
+          }
+        ],
+        "crew84": {
+          "directors": [
+            "Kazuaki Kiriya"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-26T09:53:30.927Z"
         }
       }
     }
