@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1793004097191,
-  "sourceUpdatedIso": "2026-10-26T08:41:37.191Z",
+  "sourceUpdatedAt": 1793004102970,
+  "sourceUpdatedIso": "2026-10-26T08:41:42.970Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -6932,34 +6932,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-20-9vEe",
-      "title": "アベンジャーズ／インフィニティ・ウォー",
-      "originalTitle": "",
-      "englishTitle": "Avengers: Infinity War",
-      "year": 2018,
-      "score": 84,
-      "star": 3.5,
-      "overallRank": 240,
-      "sameScoreRank": 17,
-      "category": "MCU作品",
-      "mediaType": "movie",
-      "genre": [
-        "アクション",
-        "ヒーロー",
-        "戦争",
-        "大作",
-        "娯楽",
-        "切ない"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 150,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-108-29d2",
       "title": "ミッション:インポッシブル",
       "originalTitle": "",
@@ -6967,8 +6939,8 @@
       "year": 1996,
       "score": 84,
       "star": 3.5,
-      "overallRank": 241,
-      "sameScoreRank": 18,
+      "overallRank": 240,
+      "sameScoreRank": 17,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -6991,8 +6963,8 @@
       "year": 2013,
       "score": 84,
       "star": 3.5,
-      "overallRank": 242,
-      "sameScoreRank": 19,
+      "overallRank": 241,
+      "sameScoreRank": 18,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -7010,6 +6982,34 @@
       "letterboxdAddedDate": "2026-09-25",
       "letterboxdPublishedAt": "Fri, 25 Sep 2026 06:28:19 +1200",
       "letterboxdReportedWatchedDate": "2026-09-25"
+    },
+    {
+      "id": "lb-20-9vEe",
+      "title": "アベンジャーズ／インフィニティ・ウォー",
+      "originalTitle": "",
+      "englishTitle": "Avengers: Infinity War",
+      "year": 2018,
+      "score": 84,
+      "star": 3.5,
+      "overallRank": 242,
+      "sameScoreRank": 19,
+      "category": "MCU作品",
+      "mediaType": "movie",
+      "genre": [
+        "アクション",
+        "ヒーロー",
+        "戦争",
+        "大作",
+        "娯楽",
+        "切ない"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 150,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "custom-1792272928425-wp78",
@@ -24520,9 +24520,9 @@
         "custom-1793003365384-pli4",
         "custom-1790322759601-kg73",
         "lb-318-84xS",
-        "lb-20-9vEe",
         "lb-108-29d2",
         "custom-1790322762266-mrn9",
+        "lb-20-9vEe",
         "custom-1792272928425-wp78",
         "lb-299-28U0",
         "added-anchor-580",
