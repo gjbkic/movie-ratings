@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1793010140817,
-  "sourceUpdatedIso": "2026-10-26T10:22:20.817Z",
+  "sourceUpdatedAt": 1793010151036,
+  "sourceUpdatedIso": "2026-10-26T10:22:31.036Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -23173,8 +23173,11 @@
       "sameScoreRank": null,
       "category": "サスペンス、ミステリー",
       "mediaType": "tvseries",
-      "genre": "",
-      "origin": "",
+      "genre": [
+        "TV本編",
+        "娯楽"
+      ],
+      "origin": "日本",
       "format": "",
       "runtime": null,
       "exact": false,
@@ -39416,6 +39419,10 @@
       ],
       "custom-1793008410429-0253": [
         "ミュージカル"
+      ],
+      "custom-1793010058855-54gu": [
+        "TV本編",
+        "娯楽"
       ]
     },
     "originOverrides": {
@@ -40248,7 +40255,8 @@
       "custom-1793003364260-snf9": "その他",
       "custom-1793003364825-uaai": "日本",
       "custom-1793003365384-pli4": "その他",
-      "custom-1793008410429-0253": "日本"
+      "custom-1793008410429-0253": "日本",
+      "custom-1793010058855-54gu": "日本"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
