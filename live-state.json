@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1793010323165,
-  "sourceUpdatedIso": "2026-10-26T10:25:23.165Z",
+  "sourceUpdatedAt": 1793010338150,
+  "sourceUpdatedIso": "2026-10-26T10:25:38.150Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -23149,7 +23149,7 @@
       "overallRank": null,
       "sameScoreRank": null,
       "category": "Letterboxd",
-      "mediaType": "movie",
+      "mediaType": "other",
       "genre": [
         "ミュージカル"
       ],
@@ -32854,7 +32854,7 @@
       "custom-1793003364260-snf9": "movie",
       "custom-1793003364825-uaai": "movie",
       "custom-1793003365384-pli4": "movie",
-      "custom-1793008410429-0253": "movie",
+      "custom-1793008410429-0253": "other",
       "custom-1793010058855-54gu": "tvseries"
     },
     "genreOverrides": {
@@ -72350,6 +72350,12 @@
           "creators": [],
           "source": "tmdb",
           "fetchedAt": "2026-10-26T09:53:30.927Z"
+        },
+        "poster84": {
+          "path": "/3phHl1gP8iyJVo4dbTFPlHKzmI0.jpg",
+          "tmdbId": 57045,
+          "checkedAt": "2026-10-26T10:25:31.565Z",
+          "provider": "tmdb"
         }
       },
       "custom-1793010058855-54gu": {
