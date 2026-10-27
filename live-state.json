@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1793129028136,
-  "sourceUpdatedIso": "2026-10-27T19:23:48.136Z",
+  "sourceUpdatedAt": 1793129044164,
+  "sourceUpdatedIso": "2026-10-27T19:24:04.164Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -45011,7 +45011,7 @@
         "addedDate": "2025-09-01",
         "addedDateSource": "letterboxd-export-2026-09-27",
         "note": "アクションの浮遊感は好き。展開は一辺倒ではあるが、それぞれの倒し方や話も多様で普通に楽しめた。ラストは解決してよかったねって感じ",
-        "noteSource": "letterboxd-export",
+        "noteSource": "manual",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
         "watchedAddedDate": "2025-09-01",
@@ -45039,7 +45039,8 @@
           "tmdbId": 393,
           "path": "/2yhg0mZQMhDyvUQ4rG1IZ4oIA8L.jpg",
           "checkedAt": "2026-10-25T21:43:34.102757+00:00"
-        }
+        },
+        "noteEditedAt": "2026-10-27T19:24:04.118Z"
       },
       "lb-94-5rje": {
         "addedDate": "2025-09-01",
