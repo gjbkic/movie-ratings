@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1793178796089,
-  "sourceUpdatedIso": "2026-10-28T09:13:16.089Z",
+  "sourceUpdatedAt": 1793178826050,
+  "sourceUpdatedIso": "2026-10-28T09:13:46.050Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -3632,6 +3632,36 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-37-72s",
+      "title": "スター・ウォーズ エピソード4／新たなる希望",
+      "originalTitle": "",
+      "englishTitle": "Star Wars",
+      "year": 1977,
+      "score": 87,
+      "star": 4,
+      "overallRank": 127,
+      "sameScoreRank": 7,
+      "category": "スターウォーズシリーズ",
+      "mediaType": "movie",
+      "genre": [
+        "SF",
+        "ファンタジー",
+        "アドベンチャー",
+        "世界観",
+        "アクション",
+        "戦争",
+        "大作",
+        "娯楽"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 121,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-464-mkbG",
       "title": "チェルノブイリ",
       "originalTitle": "",
@@ -3639,8 +3669,8 @@
       "year": 2019,
       "score": 87,
       "star": 4,
-      "overallRank": 127,
-      "sameScoreRank": 7,
+      "overallRank": 128,
+      "sameScoreRank": 8,
       "category": "Letterboxd追加",
       "mediaType": "drama",
       "genre": [
@@ -3667,8 +3697,8 @@
       "year": 2005,
       "score": 87,
       "star": 4,
-      "overallRank": 128,
-      "sameScoreRank": 8,
+      "overallRank": 129,
+      "sameScoreRank": 9,
       "category": "コメディ",
       "mediaType": "drama",
       "genre": [
@@ -3698,8 +3728,8 @@
       "year": 2024,
       "score": 87,
       "star": 4,
-      "overallRank": 129,
-      "sameScoreRank": 9,
+      "overallRank": 130,
+      "sameScoreRank": 10,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -3729,36 +3759,6 @@
       "letterboxdAddedDate": "2026-09-27",
       "letterboxdPublishedAt": "Sun, 27 Sep 2026 22:08:35 +1300",
       "letterboxdReportedWatchedDate": "2026-09-27"
-    },
-    {
-      "id": "lb-37-72s",
-      "title": "スター・ウォーズ エピソード4／新たなる希望",
-      "originalTitle": "",
-      "englishTitle": "Star Wars",
-      "year": 1977,
-      "score": 87,
-      "star": 4,
-      "overallRank": 130,
-      "sameScoreRank": 10,
-      "category": "スターウォーズシリーズ",
-      "mediaType": "movie",
-      "genre": [
-        "SF",
-        "ファンタジー",
-        "アドベンチャー",
-        "世界観",
-        "アクション",
-        "戦争",
-        "大作",
-        "娯楽"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 121,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "lb-101-ce74",
@@ -24797,10 +24797,10 @@
         "lb-172-2aHW",
         "lb-36-29FA",
         "lb-67-1RYk",
+        "lb-37-72s",
         "lb-464-mkbG",
         "custom-1792417096624-icxb",
         "custom-1790508959663-6kld",
-        "lb-37-72s",
         "lb-101-ce74",
         "custom-1792067619800-hky7",
         "lb-98-2bbs"
