@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1793129044164,
-  "sourceUpdatedIso": "2026-10-27T19:24:04.164Z",
+  "sourceUpdatedAt": 1793153470624,
+  "sourceUpdatedIso": "2026-10-28T02:11:10.624Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -11099,31 +11099,59 @@
       "letterboxdReportedWatchedDate": "2026-10-24"
     },
     {
-      "id": "lb-42-1xFW",
-      "title": "アベンジャーズ",
+      "id": "lb-93-2au4",
+      "title": "キル・ビル Vol.2",
       "originalTitle": "",
-      "englishTitle": "The Avengers",
-      "year": 2012,
+      "englishTitle": "Kill Bill: Vol. 2",
+      "year": 2004,
       "score": 81,
       "star": 3,
       "overallRank": 386,
       "sameScoreRank": 20,
-      "category": "MCU作品",
+      "category": "アクション",
       "mediaType": "movie",
       "genre": [
         "アクション",
-        "SF",
-        "ヒーロー",
-        "ファンタジー",
-        "娯楽"
+        "娯楽",
+        "クライム",
+        "サスペンス",
+        "バイオレンス"
       ],
       "origin": "ハリウッド",
       "format": "live",
-      "runtime": 144,
+      "runtime": 136,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1793128928232-q3ss",
+      "title": "冷たい熱帯魚",
+      "originalTitle": "冷たい熱帯魚",
+      "englishTitle": "Cold Fish",
+      "year": 2011,
+      "score": 81,
+      "star": 3,
+      "overallRank": 387,
+      "sameScoreRank": 21,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "スリラー",
+        "クライム",
+        "ホラー",
+        "サスペンス",
+        "バイオレンス"
+      ],
+      "origin": "日本",
+      "format": "live",
+      "runtime": 146,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-28",
+      "letterboxdPublishedAt": "Wed, 28 Oct 2026 05:53:18 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-27"
     },
     {
       "id": "lb-277-eOCm",
@@ -11133,8 +11161,8 @@
       "year": 2017,
       "score": 81,
       "star": 3,
-      "overallRank": 387,
-      "sameScoreRank": 21,
+      "overallRank": 388,
+      "sameScoreRank": 22,
       "category": "スリラー、ホラー",
       "mediaType": "movie",
       "genre": [
@@ -11154,6 +11182,33 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-42-1xFW",
+      "title": "アベンジャーズ",
+      "originalTitle": "",
+      "englishTitle": "The Avengers",
+      "year": 2012,
+      "score": 81,
+      "star": 3,
+      "overallRank": 389,
+      "sameScoreRank": 23,
+      "category": "MCU作品",
+      "mediaType": "movie",
+      "genre": [
+        "アクション",
+        "SF",
+        "ヒーロー",
+        "ファンタジー",
+        "娯楽"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 144,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-320-28r8",
       "title": "ミシシッピー・バーニング",
       "originalTitle": "",
@@ -11161,8 +11216,8 @@
       "year": 1988,
       "score": 81,
       "star": 3,
-      "overallRank": 388,
-      "sameScoreRank": 22,
+      "overallRank": 390,
+      "sameScoreRank": 24,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -11189,8 +11244,8 @@
       "year": 2015,
       "score": 81,
       "star": 3,
-      "overallRank": 389,
-      "sameScoreRank": 23,
+      "overallRank": 391,
+      "sameScoreRank": 25,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -11206,61 +11261,6 @@
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "lb-93-2au4",
-      "title": "キル・ビル Vol.2",
-      "originalTitle": "",
-      "englishTitle": "Kill Bill: Vol. 2",
-      "year": 2004,
-      "score": 81,
-      "star": 3,
-      "overallRank": 390,
-      "sameScoreRank": 24,
-      "category": "アクション",
-      "mediaType": "movie",
-      "genre": [
-        "アクション",
-        "娯楽",
-        "クライム",
-        "サスペンス",
-        "バイオレンス"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 136,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "custom-1793128928232-q3ss",
-      "title": "冷たい熱帯魚",
-      "originalTitle": "冷たい熱帯魚",
-      "englishTitle": "Cold Fish",
-      "year": 2011,
-      "score": 81,
-      "star": 3,
-      "overallRank": 391,
-      "sameScoreRank": 25,
-      "category": "Letterboxd",
-      "mediaType": "movie",
-      "genre": [
-        "ドラマ",
-        "スリラー",
-        "クライム",
-        "ホラー",
-        "サスペンス",
-        "バイオレンス"
-      ],
-      "origin": "日本",
-      "format": "live",
-      "runtime": 146,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-28",
-      "letterboxdPublishedAt": "Wed, 28 Oct 2026 05:53:18 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-27"
     },
     {
       "id": "lb-570-3C1m",
@@ -23249,6 +23249,27 @@
       "letterboxdAddedDate": null,
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1793153470194-46i7",
+      "title": "家政夫のミタゾノ",
+      "originalTitle": "家政夫のミタゾノ",
+      "englishTitle": "Mr. Housekeeper, Mitazono",
+      "year": 2016,
+      "score": null,
+      "star": 0,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "サスペンス、ミステリー",
+      "mediaType": "tvseries",
+      "genre": "",
+      "origin": "",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     }
   ],
   "state": {
@@ -24479,12 +24500,12 @@
         "lb-228-6eCu",
         "custom-1789408864046-u4p4",
         "custom-1792862353309-lggc",
-        "lb-42-1xFW",
-        "lb-277-eOCm",
-        "lb-320-28r8",
-        "lb-113-5rI4",
         "lb-93-2au4",
         "custom-1793128928232-q3ss",
+        "lb-277-eOCm",
+        "lb-42-1xFW",
+        "lb-320-28r8",
+        "lb-113-5rI4",
         "lb-570-3C1m",
         "lb-183-x1OG",
         "custom-1790322760608-2vle",
@@ -29072,6 +29093,23 @@
         "added": true,
         "_seq": 1793128928232,
         "source": "letterboxd"
+      },
+      {
+        "id": "custom-1793153470194-46i7",
+        "title": "家政夫のミタゾノ",
+        "originalTitle": "家政夫のミタゾノ",
+        "englishTitle": "Mr. Housekeeper, Mitazono",
+        "lbTitle": "Mr. Housekeeper, Mitazono",
+        "tmdbId": 103373,
+        "year": 2016,
+        "uri": "",
+        "category": "サスペンス、ミステリー",
+        "order": 999999,
+        "star": 0,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1793153470194,
+        "tmdbType": "tv"
       }
     ],
     "starOverrides": {
@@ -29881,7 +29919,8 @@
       "custom-1793008410429-0253": 4,
       "custom-1793010058855-54gu": 2.5,
       "custom-1793032909376-rd1i": 2.5,
-      "custom-1793128928232-q3ss": 3
+      "custom-1793128928232-q3ss": 3,
+      "custom-1793153470194-46i7": 0
     },
     "titleOverrides": {
       "added-anchor-578": {
@@ -32960,7 +32999,8 @@
       "custom-1793008410429-0253": "other",
       "custom-1793010058855-54gu": "drama",
       "custom-1793032909376-rd1i": "movie",
-      "custom-1793128928232-q3ss": "movie"
+      "custom-1793128928232-q3ss": "movie",
+      "custom-1793153470194-46i7": "tvseries"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -72597,6 +72637,54 @@
           "tmdbId": 68341,
           "checkedAt": "2026-10-27T19:22:41.201Z",
           "provider": "tmdb"
+        }
+      },
+      "custom-1793153470194-46i7": {
+        "contentType": "tv_series",
+        "tmdbType": "tv",
+        "poster84": {
+          "path": "/kleG5m0C2KPyPbw5K7MK4tMTWWV.jpg",
+          "tmdbId": 103373,
+          "provider": "tmdb",
+          "checkedAt": "2026-10-28T02:11:10.318Z"
+        },
+        "tmdbSeriesId": 103373,
+        "seasonCatalogV1": [
+          {
+            "number": 1,
+            "year": "2016"
+          },
+          {
+            "number": 2,
+            "year": "2018"
+          },
+          {
+            "number": 3,
+            "year": "2019"
+          },
+          {
+            "number": 4,
+            "year": "2020"
+          },
+          {
+            "number": 5,
+            "year": "2022"
+          },
+          {
+            "number": 6,
+            "year": "2023"
+          },
+          {
+            "number": 7,
+            "year": "2025"
+          }
+        ],
+        "seasonCountV1": 7,
+        "crew84": {
+          "directors": [],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-28T02:11:10.346Z"
         }
       }
     }
