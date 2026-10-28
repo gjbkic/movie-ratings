@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1793178724111,
-  "sourceUpdatedIso": "2026-10-28T09:12:04.111Z",
+  "sourceUpdatedAt": 1793178768567,
+  "sourceUpdatedIso": "2026-10-28T09:12:48.567Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -3323,6 +3323,36 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-330-4JQS",
+      "title": "風立ちぬ",
+      "originalTitle": "",
+      "englishTitle": "The Wind Rises",
+      "year": 2013,
+      "score": 88,
+      "star": 4,
+      "overallRank": 116,
+      "sameScoreRank": 11,
+      "category": "スタジオジブリ系作品",
+      "mediaType": "movie",
+      "genre": [
+        "戦争",
+        "歴史",
+        "ファンタジー",
+        "切ない",
+        "恋愛",
+        "社会問題・生活",
+        "comfort",
+        "雰囲気・美学"
+      ],
+      "origin": "日本",
+      "format": "animation",
+      "runtime": 126,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-132-aPvy",
       "title": "ローグ・ワン／スター・ウォーズ・ストーリー",
       "originalTitle": "",
@@ -3330,8 +3360,8 @@
       "year": 2016,
       "score": 88,
       "star": 4,
-      "overallRank": 116,
-      "sameScoreRank": 11,
+      "overallRank": 117,
+      "sameScoreRank": 12,
       "category": "スターウォーズシリーズ",
       "mediaType": "movie",
       "genre": [
@@ -3362,8 +3392,8 @@
       "year": 2003,
       "score": 88,
       "star": 4,
-      "overallRank": 117,
-      "sameScoreRank": 12,
+      "overallRank": 118,
+      "sameScoreRank": 13,
       "category": "Letterboxd",
       "mediaType": "other",
       "genre": [
@@ -3385,8 +3415,8 @@
       "year": 1983,
       "score": 88,
       "star": 4,
-      "overallRank": 118,
-      "sameScoreRank": 13,
+      "overallRank": 119,
+      "sameScoreRank": 14,
       "category": "スターウォーズシリーズ",
       "mediaType": "movie",
       "genre": [
@@ -3408,36 +3438,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-330-4JQS",
-      "title": "風立ちぬ",
-      "originalTitle": "",
-      "englishTitle": "The Wind Rises",
-      "year": 2013,
-      "score": 87,
-      "star": 4,
-      "overallRank": 119,
-      "sameScoreRank": 1,
-      "category": "スタジオジブリ系作品",
-      "mediaType": "movie",
-      "genre": [
-        "戦争",
-        "歴史",
-        "ファンタジー",
-        "切ない",
-        "恋愛",
-        "社会問題・生活",
-        "comfort",
-        "雰囲気・美学"
-      ],
-      "origin": "日本",
-      "format": "animation",
-      "runtime": 126,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-253-SVAW",
       "title": "SPEC",
       "originalTitle": "",
@@ -3446,7 +3446,7 @@
       "score": 87,
       "star": 4,
       "overallRank": 120,
-      "sameScoreRank": 2,
+      "sameScoreRank": 1,
       "category": "Letterboxd追加",
       "mediaType": "drama",
       "genre": [
@@ -3476,7 +3476,7 @@
       "score": 87,
       "star": 4,
       "overallRank": 121,
-      "sameScoreRank": 3,
+      "sameScoreRank": 2,
       "category": "Letterboxd",
       "mediaType": "other",
       "genre": [
@@ -3499,7 +3499,7 @@
       "score": 87,
       "star": 4,
       "overallRank": 122,
-      "sameScoreRank": 4,
+      "sameScoreRank": 3,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -3525,7 +3525,7 @@
       "score": 87,
       "star": 4,
       "overallRank": 123,
-      "sameScoreRank": 5,
+      "sameScoreRank": 4,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -3554,7 +3554,7 @@
       "score": 87,
       "star": 4,
       "overallRank": 124,
-      "sameScoreRank": 6,
+      "sameScoreRank": 5,
       "category": "スリラー、ホラー",
       "mediaType": "movie",
       "genre": [
@@ -3583,7 +3583,7 @@
       "score": 87,
       "star": 4,
       "overallRank": 125,
-      "sameScoreRank": 7,
+      "sameScoreRank": 6,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -3610,7 +3610,7 @@
       "score": 87,
       "star": 4,
       "overallRank": 126,
-      "sameScoreRank": 8,
+      "sameScoreRank": 7,
       "category": "ハリーポッター シリーズ",
       "mediaType": "movie",
       "genre": [
@@ -3640,7 +3640,7 @@
       "score": 87,
       "star": 4,
       "overallRank": 127,
-      "sameScoreRank": 9,
+      "sameScoreRank": 8,
       "category": "Letterboxd追加",
       "mediaType": "drama",
       "genre": [
@@ -3668,7 +3668,7 @@
       "score": 87,
       "star": 4,
       "overallRank": 128,
-      "sameScoreRank": 10,
+      "sameScoreRank": 9,
       "category": "コメディ",
       "mediaType": "drama",
       "genre": [
@@ -3699,7 +3699,7 @@
       "score": 87,
       "star": 4,
       "overallRank": 129,
-      "sameScoreRank": 11,
+      "sameScoreRank": 10,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -3739,7 +3739,7 @@
       "score": 87,
       "star": 4,
       "overallRank": 130,
-      "sameScoreRank": 12,
+      "sameScoreRank": 11,
       "category": "スターウォーズシリーズ",
       "mediaType": "movie",
       "genre": [
@@ -3769,7 +3769,7 @@
       "score": 87,
       "star": 4,
       "overallRank": 131,
-      "sameScoreRank": 13,
+      "sameScoreRank": 12,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -3796,7 +3796,7 @@
       "score": 87,
       "star": 4,
       "overallRank": 132,
-      "sameScoreRank": 14,
+      "sameScoreRank": 13,
       "category": "Letterboxd",
       "mediaType": "other",
       "genre": [
@@ -3819,7 +3819,7 @@
       "score": 87,
       "star": 4,
       "overallRank": 133,
-      "sameScoreRank": 15,
+      "sameScoreRank": 14,
       "category": "ファンタジー、アドベンチャー",
       "mediaType": "movie",
       "genre": [
@@ -23357,7 +23357,7 @@
       "lb-298-28Uk": 86,
       "lb-172-2aHW": 87,
       "lb-37-72s": 87,
-      "lb-330-4JQS": 87,
+      "lb-330-4JQS": 88,
       "lb-85-1GjK": 88,
       "lb-460-20eA": 88,
       "lb-91-29Js": 88,
@@ -24791,7 +24791,6 @@
         "lb-59-780m"
       ],
       "87": [
-        "lb-330-4JQS",
         "lb-253-SVAW",
         "custom-1793008410429-0253",
         "lb-296-l7zS",
@@ -24818,6 +24817,7 @@
         "lb-77-2aNq",
         "lb-312-1SRY",
         "lb-160-2b8e",
+        "lb-330-4JQS",
         "lb-132-aPvy",
         "custom-1792067620393-qnt8",
         "lb-71-27Vm"
