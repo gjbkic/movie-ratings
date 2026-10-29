@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1793291405133,
-  "sourceUpdatedIso": "2026-10-29T16:30:05.133Z",
+  "sourceUpdatedAt": 1793291542249,
+  "sourceUpdatedIso": "2026-10-29T16:32:22.249Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -12007,34 +12007,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1792310002695-j7ls",
-      "title": "ハウス",
-      "originalTitle": "ハウス",
-      "englishTitle": "House",
-      "year": 1977,
-      "score": 81,
-      "star": 3,
-      "overallRank": 418,
-      "sameScoreRank": 51,
-      "category": "Letterboxd",
-      "mediaType": "drama",
-      "genre": [
-        "コメディ",
-        "ファンタジー",
-        "ホラー",
-        "娯楽",
-        "雰囲気・美学",
-        "世界観"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 88,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-18",
-      "letterboxdPublishedAt": "Sun, 18 Oct 2026 19:23:46 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-18"
-    },
-    {
       "id": "custom-1791398329125-3r8f",
       "title": "世にも奇妙な物語 '21秋の特別編",
       "originalTitle": "世にも奇妙な物語 '21秋の特別編",
@@ -12042,8 +12014,8 @@
       "year": 2021,
       "score": 81,
       "star": 3,
-      "overallRank": 419,
-      "sameScoreRank": 52,
+      "overallRank": 418,
+      "sameScoreRank": 51,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -12063,6 +12035,34 @@
       "letterboxdAddedDate": "2026-10-08",
       "letterboxdPublishedAt": "Thu, 8 Oct 2026 07:38:09 +1300",
       "letterboxdReportedWatchedDate": "2026-10-08"
+    },
+    {
+      "id": "custom-1792310002695-j7ls",
+      "title": "ハウス",
+      "originalTitle": "ハウス",
+      "englishTitle": "House",
+      "year": 1977,
+      "score": 81,
+      "star": 3,
+      "overallRank": 419,
+      "sameScoreRank": 52,
+      "category": "Letterboxd",
+      "mediaType": "drama",
+      "genre": [
+        "コメディ",
+        "ファンタジー",
+        "ホラー",
+        "娯楽",
+        "雰囲気・美学",
+        "世界観"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 88,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-18",
+      "letterboxdPublishedAt": "Sun, 18 Oct 2026 19:23:46 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-18"
     },
     {
       "id": "lb-164-2b3e",
@@ -24597,8 +24597,8 @@
         "lb-292-1S3E",
         "lb-403-uAKS",
         "lb-5-wUow",
-        "custom-1792310002695-j7ls",
         "custom-1791398329125-3r8f",
+        "custom-1792310002695-j7ls",
         "lb-164-2b3e",
         "custom-1792420000000-010",
         "lb-27-2b2A",
