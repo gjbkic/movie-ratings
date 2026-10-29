@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1793291071082,
-  "sourceUpdatedIso": "2026-10-29T16:24:31.082Z",
+  "sourceUpdatedAt": 1793291081900,
+  "sourceUpdatedIso": "2026-10-29T16:24:41.900Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -13148,6 +13148,32 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "custom-1792414087140-7n1k",
+      "title": "Master and Commander: The Far Side of the World",
+      "originalTitle": "",
+      "englishTitle": "Master and Commander: The Far Side of the World",
+      "year": 2003,
+      "score": 80,
+      "star": 2.5,
+      "overallRank": 458,
+      "sameScoreRank": 26,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "娯楽",
+        "戦争",
+        "アクション"
+      ],
+      "origin": "ハリウッド",
+      "format": "",
+      "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-19",
+      "letterboxdPublishedAt": "Mon, 19 Oct 2026 23:46:56 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-19"
+    },
+    {
       "id": "lb-291-dX0",
       "title": "英国王のスピーチ",
       "originalTitle": "",
@@ -13155,8 +13181,8 @@
       "year": 2010,
       "score": 80,
       "star": 2.5,
-      "overallRank": 458,
-      "sameScoreRank": 26,
+      "overallRank": 459,
+      "sameScoreRank": 27,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -13181,8 +13207,8 @@
       "year": 2007,
       "score": 80,
       "star": 2.5,
-      "overallRank": 459,
-      "sameScoreRank": 27,
+      "overallRank": 460,
+      "sameScoreRank": 28,
       "category": "未確定",
       "mediaType": "drama",
       "genre": [
@@ -13198,32 +13224,6 @@
       "letterboxdAddedDate": null,
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "custom-1792414087140-7n1k",
-      "title": "Master and Commander: The Far Side of the World",
-      "originalTitle": "",
-      "englishTitle": "Master and Commander: The Far Side of the World",
-      "year": 2003,
-      "score": 80,
-      "star": 2.5,
-      "overallRank": 460,
-      "sameScoreRank": 28,
-      "category": "Letterboxd",
-      "mediaType": "movie",
-      "genre": [
-        "ドラマ",
-        "娯楽",
-        "戦争",
-        "アクション"
-      ],
-      "origin": "ハリウッド",
-      "format": "",
-      "runtime": null,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-19",
-      "letterboxdPublishedAt": "Mon, 19 Oct 2026 23:46:56 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-19"
     },
     {
       "id": "lb-419-14FI",
@@ -24526,9 +24526,9 @@
         "custom-1793290986347-6wa1",
         "custom-1790322769206-k4pm",
         "lb-235-8JWk",
+        "custom-1792414087140-7n1k",
         "lb-291-dX0",
         "custom-1792420000000-007",
-        "custom-1792414087140-7n1k",
         "lb-419-14FI",
         "lb-347-4bW8",
         "lb-354-aNGk",
