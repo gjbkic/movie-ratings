@@ -6267,7 +6267,15 @@ function swap(id,d){
   if(t<1){requestAnimationFrame(move);return}
   const ctx=dragCtx;
   dragCtx=null;
-  const list=ctx.card?.closest('.score-list');
+  // The arrow has a known neighbor. Hit-testing during the floating motion
+  // can cross sticky overlays or several cards, so commit the exact adjacent
+  // swap before turning the visible order back into the full saved order.
+  const targetList=adjacent?.closest('.score-list');
+  if(!ctx.card?.isConnected||!targetList||targetList.dataset.score!==String(score)){
+   finishDragUi(ctx);rankSwapInFlight=false;return;
+  }
+  targetList.insertBefore(ctx.card,d<0?adjacent:adjacent.nextSibling);
+  const list=ctx.card.closest('.score-list');
   if(list){
    document.querySelectorAll('.score-list').forEach(l=>{
     movie30StoreVisibleOrder(l.dataset.score,[...l.querySelectorAll('.rank-card')].map(c=>decodeURIComponent(c.dataset.id)));
