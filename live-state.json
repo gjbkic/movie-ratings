@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1793274388396,
-  "sourceUpdatedIso": "2026-10-29T11:46:28.396Z",
+  "sourceUpdatedAt": 1793274398784,
+  "sourceUpdatedIso": "2026-10-29T11:46:38.784Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -797,33 +797,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-10-kSz4",
-      "title": "スパイダーマン：アクロス・ザ・スパイダーバース",
-      "originalTitle": "",
-      "englishTitle": "Spider-Man: Across the Spider-Verse",
-      "year": 2023,
-      "score": 94,
-      "star": 4.5,
-      "overallRank": 28,
-      "sameScoreRank": 5,
-      "category": "スパイダーマン作品",
-      "mediaType": "movie",
-      "genre": [
-        "アクション",
-        "SF",
-        "ヒーロー",
-        "comfort",
-        "娯楽"
-      ],
-      "origin": "ハリウッド",
-      "format": "animation",
-      "runtime": 140,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-467-ptEI",
       "title": "新世紀エヴァンゲリオン",
       "originalTitle": "",
@@ -831,8 +804,8 @@
       "year": 1995,
       "score": 94,
       "star": 4.5,
-      "overallRank": 29,
-      "sameScoreRank": 6,
+      "overallRank": 28,
+      "sameScoreRank": 5,
       "category": "Letterboxd追加",
       "mediaType": "drama",
       "genre": [
@@ -865,8 +838,8 @@
       "year": 2006,
       "score": 94,
       "star": 4.5,
-      "overallRank": 30,
-      "sameScoreRank": 7,
+      "overallRank": 29,
+      "sameScoreRank": 6,
       "category": "戦争、歴史",
       "mediaType": "movie",
       "genre": [
@@ -895,8 +868,8 @@
       "year": 1985,
       "score": 94,
       "star": 4.5,
-      "overallRank": 31,
-      "sameScoreRank": 8,
+      "overallRank": 30,
+      "sameScoreRank": 7,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -919,6 +892,33 @@
       "letterboxdAddedDate": "2026-10-29",
       "letterboxdPublishedAt": "Thu, 29 Oct 2026 04:19:09 +1300",
       "letterboxdReportedWatchedDate": "2026-10-28"
+    },
+    {
+      "id": "lb-10-kSz4",
+      "title": "スパイダーマン：アクロス・ザ・スパイダーバース",
+      "originalTitle": "",
+      "englishTitle": "Spider-Man: Across the Spider-Verse",
+      "year": 2023,
+      "score": 94,
+      "star": 4.5,
+      "overallRank": 31,
+      "sameScoreRank": 8,
+      "category": "スパイダーマン作品",
+      "mediaType": "movie",
+      "genre": [
+        "アクション",
+        "SF",
+        "ヒーロー",
+        "comfort",
+        "娯楽"
+      ],
+      "origin": "ハリウッド",
+      "format": "animation",
+      "runtime": 140,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "lb-97-2a7u",
@@ -24941,10 +24941,10 @@
         "lb-349-2aGY",
         "lb-137-2a1c",
         "lb-488-294O",
-        "lb-10-kSz4",
         "lb-467-ptEI",
         "lb-493-28No",
         "custom-1793274150349-1cex",
+        "lb-10-kSz4",
         "lb-97-2a7u",
         "custom-1791863527797-qm90",
         "lb-549-iEBG",
