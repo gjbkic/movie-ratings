@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1793291081900,
-  "sourceUpdatedIso": "2026-10-29T16:24:41.900Z",
+  "sourceUpdatedAt": 1793291123916,
+  "sourceUpdatedIso": "2026-10-29T16:25:23.916Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -13087,35 +13087,6 @@
       "letterboxdReportedWatchedDate": "2026-10-29"
     },
     {
-      "id": "custom-1790322769206-k4pm",
-      "title": "今日から俺は!!",
-      "originalTitle": "今日から俺は!!",
-      "englishTitle": "From Today, It's My Turn!!",
-      "year": 2018,
-      "score": 80,
-      "star": 2.5,
-      "overallRank": 456,
-      "sameScoreRank": 24,
-      "category": "Letterboxd",
-      "mediaType": "drama",
-      "genre": [
-        "コメディ",
-        "恋愛",
-        "ドラマ",
-        "アクション",
-        "comfort",
-        "TV本編",
-        "娯楽"
-      ],
-      "origin": "日本",
-      "format": "live",
-      "runtime": 55,
-      "exact": true,
-      "letterboxdAddedDate": "2026-09-25",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-235-8JWk",
       "title": "トリック劇場版 ラストステージ",
       "originalTitle": "",
@@ -13123,8 +13094,8 @@
       "year": 2014,
       "score": 80,
       "star": 2.5,
-      "overallRank": 457,
-      "sameScoreRank": 25,
+      "overallRank": 456,
+      "sameScoreRank": 24,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -13144,6 +13115,35 @@
       "runtime": 112,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1790322769206-k4pm",
+      "title": "今日から俺は!!",
+      "originalTitle": "今日から俺は!!",
+      "englishTitle": "From Today, It's My Turn!!",
+      "year": 2018,
+      "score": 80,
+      "star": 2.5,
+      "overallRank": 457,
+      "sameScoreRank": 25,
+      "category": "Letterboxd",
+      "mediaType": "drama",
+      "genre": [
+        "コメディ",
+        "恋愛",
+        "ドラマ",
+        "アクション",
+        "comfort",
+        "TV本編",
+        "娯楽"
+      ],
+      "origin": "日本",
+      "format": "live",
+      "runtime": 55,
+      "exact": true,
+      "letterboxdAddedDate": "2026-09-25",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -24524,8 +24524,8 @@
         "base-clue-1985",
         "lb-418-2a1w",
         "custom-1793290986347-6wa1",
-        "custom-1790322769206-k4pm",
         "lb-235-8JWk",
+        "custom-1790322769206-k4pm",
         "custom-1792414087140-7n1k",
         "lb-291-dX0",
         "custom-1792420000000-007",
