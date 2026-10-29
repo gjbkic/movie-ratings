@@ -1,5 +1,12 @@
 # 統合候補の公開前レビュー（2026-10-26）
 
+## 2026-10-30 継続確認（この節を最新とする）
+
+- Draft PR #12 の新しいheadは `dc0bfb6`。430px幅で「ポスターだけ表示」が3列になる原因は、4列用のCSSが420px以下にしか適用されないことだった。620px以下の4列指定へ変更し、430pxの隔離Chromeで4列を確認した。検索入力には18pxを指定し、430pxでページ幅のはみ出しとChromeの自動拡大がないことを確認した。iPhone Safariでの拡大解除は未確認。
+- 架空740作品専用Siteのbuildは `iphone-synthetic-release-8a60542-20261026-v6`。Sites version 13、source `c4b9adf`、deployment `appgdep_6ae366f960d48191976b84ba7699e175` は succeeded。正規URLは `https://movie-ratings-synthetic-iphone-e3e81ff.nkyanaka.chatgpt.site`。旧 `keensquid256` ホストは新ホストへ転送されるため、検証版の許可originも新ホストへ合わせた。owner-only のまま、実データ・資格情報を含めず、隔離Chromeで外部要求0件、保存/再読込と競合復帰が成功した。認証が必要な実配信画面のiPhone操作はまだ未確認。
+- `origin/main` は `8cbeeae`。統合候補の共通祖先以降、main側の変更は実データと同期メタデータの6ファイルのみで、アプリコードは変わっていない。mainの `live-state.json` は追加作品245件・順位付き797件、候補内は236件・789件。`git merge-tree --write-tree HEAD origin/main` の仮想マージは競合なく `920636e56a73c4a6b9b63a7f0fb939f480c2b85f` を返し、保護対象6ファイルの結果は全て最新mainと一致した。以後もmainは進むため公開直前に再検証する。
+- 新しいモバイル回帰テストを通常ランナーに登録した。PRのGitHub Actionsはこの節の記載時点で実行中。完了結果はPRの最新headで確認する。mainへのマージ・本番公開・実データ変更は行っていない。
+
 対象はDraft PR #12、head `c159fbad9b613898cf0a4965bd68197ad1e5b090`。mainへのマージ、GitHub Pages本番公開、実作品データの編集は行っていない。
 
 ## 自動検証とデータ保護
