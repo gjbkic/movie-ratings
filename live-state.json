@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1793274658775,
-  "sourceUpdatedIso": "2026-10-29T11:50:58.775Z",
+  "sourceUpdatedAt": 1793274677268,
+  "sourceUpdatedIso": "2026-10-29T11:51:17.268Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -540,10 +540,10 @@
       "originalTitle": "",
       "englishTitle": "Porco Rosso",
       "year": 1992,
-      "score": 95,
+      "score": 96,
       "star": 4.5,
       "overallRank": 19,
-      "sameScoreRank": 1,
+      "sameScoreRank": 6,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
       "genre": [
@@ -573,7 +573,7 @@
       "score": 95,
       "star": 4.5,
       "overallRank": 20,
-      "sameScoreRank": 2,
+      "sameScoreRank": 1,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -601,7 +601,7 @@
       "score": 95,
       "star": 4.5,
       "overallRank": 21,
-      "sameScoreRank": 3,
+      "sameScoreRank": 2,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -628,7 +628,7 @@
       "score": 95,
       "star": 4.5,
       "overallRank": 22,
-      "sameScoreRank": 4,
+      "sameScoreRank": 3,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -657,7 +657,7 @@
       "score": 95,
       "star": 4.5,
       "overallRank": 23,
-      "sameScoreRank": 5,
+      "sameScoreRank": 4,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -685,7 +685,7 @@
       "score": 95,
       "star": 4.5,
       "overallRank": 24,
-      "sameScoreRank": 6,
+      "sameScoreRank": 5,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -713,7 +713,7 @@
       "score": 95,
       "star": 4.5,
       "overallRank": 25,
-      "sameScoreRank": 7,
+      "sameScoreRank": 6,
       "category": "Letterboxd追加",
       "mediaType": "drama",
       "genre": [
@@ -23330,7 +23330,7 @@
       "lb-322-2aeA": 95,
       "lb-171-2b0k": 94,
       "lb-83-2b8S": 95,
-      "lb-334-1Tp2": 95,
+      "lb-334-1Tp2": 96,
       "lb-571-28qk": 91,
       "lb-396-251c": 95,
       "lb-488-294O": 94,
@@ -24950,7 +24950,6 @@
         "lb-112-1W4G"
       ],
       "95": [
-        "lb-334-1Tp2",
         "lb-322-2aeA",
         "lb-396-251c",
         "custom-1790420198451-g42l",
@@ -24963,7 +24962,8 @@
         "lb-491-29R2",
         "lb-395-2bdo",
         "lb-11-29zs",
-        "lb-39-2DjO"
+        "lb-39-2DjO",
+        "lb-334-1Tp2"
       ],
       "97": [
         "lb-492-2bcA",
