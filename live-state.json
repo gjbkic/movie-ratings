@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1793294271143,
-  "sourceUpdatedIso": "2026-10-29T17:17:51.143Z",
+  "sourceUpdatedAt": 1793294312375,
+  "sourceUpdatedIso": "2026-10-29T17:18:32.375Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -4246,6 +4246,35 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-382-20TI",
+      "title": "ソナチネ",
+      "originalTitle": "",
+      "englishTitle": "Sonatine",
+      "year": 1993,
+      "score": 86,
+      "star": 3.5,
+      "overallRank": 148,
+      "sameScoreRank": 14,
+      "category": "邦画",
+      "mediaType": "movie",
+      "genre": [
+        "サスペンス",
+        "クライム",
+        "アクション",
+        "社会問題・生活",
+        "心理・内面",
+        "バイオレンス",
+        "雰囲気・美学"
+      ],
+      "origin": "日本",
+      "format": "live",
+      "runtime": 94,
+      "exact": true,
+      "letterboxdAddedDate": "2026-03-25",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "custom-1791919109416-hxq8",
       "title": "今際の国のアリス",
       "originalTitle": "今際の国のアリス",
@@ -4253,8 +4282,8 @@
       "year": 2020,
       "score": 86,
       "star": 3.5,
-      "overallRank": 148,
-      "sameScoreRank": 14,
+      "overallRank": 149,
+      "sameScoreRank": 15,
       "category": "サスペンス、ミステリー",
       "mediaType": "drama",
       "genre": [
@@ -4276,35 +4305,6 @@
       "runtime": null,
       "exact": true,
       "letterboxdAddedDate": null,
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "lb-382-20TI",
-      "title": "ソナチネ",
-      "originalTitle": "",
-      "englishTitle": "Sonatine",
-      "year": 1993,
-      "score": 86,
-      "star": 3.5,
-      "overallRank": 149,
-      "sameScoreRank": 15,
-      "category": "邦画",
-      "mediaType": "movie",
-      "genre": [
-        "サスペンス",
-        "クライム",
-        "アクション",
-        "社会問題・生活",
-        "心理・内面",
-        "バイオレンス",
-        "雰囲気・美学"
-      ],
-      "origin": "日本",
-      "format": "live",
-      "runtime": 94,
-      "exact": true,
-      "letterboxdAddedDate": "2026-03-25",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -24820,8 +24820,8 @@
         "lb-279-215a",
         "custom-1792519359060-7ic5",
         "lb-115-2aWi",
-        "custom-1791919109416-hxq8",
         "lb-382-20TI",
+        "custom-1791919109416-hxq8",
         "lb-276-7UmK",
         "lb-345-1USu",
         "custom-1791919010317-zu85",
