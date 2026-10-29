@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1793274252916,
-  "sourceUpdatedIso": "2026-10-29T11:44:12.916Z",
+  "sourceUpdatedAt": 1793274388396,
+  "sourceUpdatedIso": "2026-10-29T11:46:28.396Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -740,32 +740,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-97-2a7u",
-      "title": "ダイ・ハード",
-      "originalTitle": "",
-      "englishTitle": "Die Hard",
-      "year": 1988,
-      "score": 94,
-      "star": 4.5,
-      "overallRank": 26,
-      "sameScoreRank": 3,
-      "category": "アクション",
-      "mediaType": "movie",
-      "genre": [
-        "アクション",
-        "comfort",
-        "コメディ",
-        "娯楽"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 131,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-137-2a1c",
       "title": "マトリックス リローデッド",
       "originalTitle": "",
@@ -773,8 +747,8 @@
       "year": 2003,
       "score": 94,
       "star": 4.5,
-      "overallRank": 27,
-      "sameScoreRank": 4,
+      "overallRank": 26,
+      "sameScoreRank": 3,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -801,8 +775,8 @@
       "year": 1982,
       "score": 94,
       "star": 4.5,
-      "overallRank": 28,
-      "sameScoreRank": 5,
+      "overallRank": 27,
+      "sameScoreRank": 4,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -830,8 +804,8 @@
       "year": 2023,
       "score": 94,
       "star": 4.5,
-      "overallRank": 29,
-      "sameScoreRank": 6,
+      "overallRank": 28,
+      "sameScoreRank": 5,
       "category": "スパイダーマン作品",
       "mediaType": "movie",
       "genre": [
@@ -857,8 +831,8 @@
       "year": 1995,
       "score": 94,
       "star": 4.5,
-      "overallRank": 30,
-      "sameScoreRank": 7,
+      "overallRank": 29,
+      "sameScoreRank": 6,
       "category": "Letterboxd追加",
       "mediaType": "drama",
       "genre": [
@@ -891,8 +865,8 @@
       "year": 2006,
       "score": 94,
       "star": 4.5,
-      "overallRank": 31,
-      "sameScoreRank": 8,
+      "overallRank": 30,
+      "sameScoreRank": 7,
       "category": "戦争、歴史",
       "mediaType": "movie",
       "genre": [
@@ -921,8 +895,8 @@
       "year": 1985,
       "score": 94,
       "star": 4.5,
-      "overallRank": 32,
-      "sameScoreRank": 9,
+      "overallRank": 31,
+      "sameScoreRank": 8,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -945,6 +919,32 @@
       "letterboxdAddedDate": "2026-10-29",
       "letterboxdPublishedAt": "Thu, 29 Oct 2026 04:19:09 +1300",
       "letterboxdReportedWatchedDate": "2026-10-28"
+    },
+    {
+      "id": "lb-97-2a7u",
+      "title": "ダイ・ハード",
+      "originalTitle": "",
+      "englishTitle": "Die Hard",
+      "year": 1988,
+      "score": 94,
+      "star": 4.5,
+      "overallRank": 32,
+      "sameScoreRank": 9,
+      "category": "アクション",
+      "mediaType": "movie",
+      "genre": [
+        "アクション",
+        "comfort",
+        "コメディ",
+        "娯楽"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 131,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "custom-1791863527797-qm90",
@@ -24939,13 +24939,13 @@
       "94": [
         "lb-171-2b0k",
         "lb-349-2aGY",
-        "lb-97-2a7u",
         "lb-137-2a1c",
         "lb-488-294O",
         "lb-10-kSz4",
         "lb-467-ptEI",
         "lb-493-28No",
         "custom-1793274150349-1cex",
+        "lb-97-2a7u",
         "custom-1791863527797-qm90",
         "lb-549-iEBG",
         "custom-1790508958519-2edt",
