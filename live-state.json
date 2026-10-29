@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1793274482049,
-  "sourceUpdatedIso": "2026-10-29T11:48:02.049Z",
+  "sourceUpdatedAt": 1793274658775,
+  "sourceUpdatedIso": "2026-10-29T11:50:58.775Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -677,47 +677,15 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-171-2b0k",
-      "title": "ダークナイト",
-      "originalTitle": "",
-      "englishTitle": "The Dark Knight",
-      "year": 2008,
-      "score": 94,
-      "star": 4.5,
-      "overallRank": 24,
-      "sameScoreRank": 1,
-      "category": "アクション",
-      "mediaType": "movie",
-      "genre": [
-        "アクション",
-        "ヒーロー",
-        "社会問題・生活",
-        "ファンタジー",
-        "大作",
-        "クライム",
-        "サスペンス",
-        "娯楽",
-        "雰囲気・美学",
-        "バイオレンス"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 152,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "lb-137-2a1c",
       "title": "マトリックス リローデッド",
       "originalTitle": "",
       "englishTitle": "The Matrix Reloaded",
       "year": 2003,
-      "score": 94,
+      "score": 95,
       "star": 4.5,
-      "overallRank": 25,
-      "sameScoreRank": 2,
+      "overallRank": 24,
+      "sameScoreRank": 6,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -742,10 +710,10 @@
       "originalTitle": "",
       "englishTitle": "Neon Genesis Evangelion",
       "year": 1995,
-      "score": 94,
+      "score": 95,
       "star": 4.5,
-      "overallRank": 26,
-      "sameScoreRank": 3,
+      "overallRank": 25,
+      "sameScoreRank": 7,
       "category": "Letterboxd追加",
       "mediaType": "drama",
       "genre": [
@@ -778,8 +746,8 @@
       "year": 2006,
       "score": 94,
       "star": 4.5,
-      "overallRank": 27,
-      "sameScoreRank": 4,
+      "overallRank": 26,
+      "sameScoreRank": 1,
       "category": "戦争、歴史",
       "mediaType": "movie",
       "genre": [
@@ -808,8 +776,8 @@
       "year": 1991,
       "score": 94,
       "star": 4.5,
-      "overallRank": 28,
-      "sameScoreRank": 5,
+      "overallRank": 27,
+      "sameScoreRank": 2,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -839,8 +807,8 @@
       "year": 1985,
       "score": 94,
       "star": 4.5,
-      "overallRank": 29,
-      "sameScoreRank": 6,
+      "overallRank": 28,
+      "sameScoreRank": 3,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -865,6 +833,38 @@
       "letterboxdReportedWatchedDate": "2026-10-28"
     },
     {
+      "id": "lb-171-2b0k",
+      "title": "ダークナイト",
+      "originalTitle": "",
+      "englishTitle": "The Dark Knight",
+      "year": 2008,
+      "score": 94,
+      "star": 4.5,
+      "overallRank": 29,
+      "sameScoreRank": 4,
+      "category": "アクション",
+      "mediaType": "movie",
+      "genre": [
+        "アクション",
+        "ヒーロー",
+        "社会問題・生活",
+        "ファンタジー",
+        "大作",
+        "クライム",
+        "サスペンス",
+        "娯楽",
+        "雰囲気・美学",
+        "バイオレンス"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 152,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-488-294O",
       "title": "遊星からの物体X",
       "originalTitle": "",
@@ -873,7 +873,7 @@
       "score": 94,
       "star": 4.5,
       "overallRank": 30,
-      "sameScoreRank": 7,
+      "sameScoreRank": 5,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -902,7 +902,7 @@
       "score": 94,
       "star": 4.5,
       "overallRank": 31,
-      "sameScoreRank": 8,
+      "sameScoreRank": 6,
       "category": "スパイダーマン作品",
       "mediaType": "movie",
       "genre": [
@@ -929,7 +929,7 @@
       "score": 94,
       "star": 4.5,
       "overallRank": 32,
-      "sameScoreRank": 9,
+      "sameScoreRank": 7,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -955,7 +955,7 @@
       "score": 94,
       "star": 4.5,
       "overallRank": 33,
-      "sameScoreRank": 10,
+      "sameScoreRank": 8,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -978,7 +978,7 @@
       "score": 94,
       "star": 4.5,
       "overallRank": 34,
-      "sameScoreRank": 11,
+      "sameScoreRank": 9,
       "category": "戦争、歴史",
       "mediaType": "movie",
       "genre": [
@@ -1008,7 +1008,7 @@
       "score": 94,
       "star": 4.5,
       "overallRank": 35,
-      "sameScoreRank": 12,
+      "sameScoreRank": 10,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -1040,7 +1040,7 @@
       "score": 94,
       "star": 4.5,
       "overallRank": 36,
-      "sameScoreRank": 13,
+      "sameScoreRank": 11,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
       "genre": [
@@ -23856,7 +23856,7 @@
       "lb-285-2aVu": 79,
       "lb-540-1W7A": 99,
       "lb-349-2aGY": 94,
-      "lb-467-ptEI": 94,
+      "lb-467-ptEI": 95,
       "lb-304-27M0": 85,
       "lb-380-KQMM": 79,
       "lb-462-d1ws": 77,
@@ -24016,7 +24016,7 @@
       "custom-1791919172943-3ibi": 93,
       "custom-1791919109416-hxq8": 86,
       "custom-1791915849111-yhiu": 90,
-      "lb-137-2a1c": 94,
+      "lb-137-2a1c": 95,
       "custom-1791918726645-mxr9": 86,
       "custom-1791966715148-h5tp": 92,
       "custom-1791966534875-2yiz": 91,
@@ -24937,12 +24937,10 @@
         "lb-24-2aHi"
       ],
       "94": [
-        "lb-171-2b0k",
-        "lb-137-2a1c",
-        "lb-467-ptEI",
         "lb-493-28No",
         "lb-349-2aGY",
         "custom-1793274150349-1cex",
+        "lb-171-2b0k",
         "lb-488-294O",
         "lb-10-kSz4",
         "lb-97-2a7u",
@@ -24956,7 +24954,9 @@
         "lb-322-2aeA",
         "lb-396-251c",
         "custom-1790420198451-g42l",
-        "lb-83-2b8S"
+        "lb-83-2b8S",
+        "lb-137-2a1c",
+        "lb-467-ptEI"
       ],
       "96": [
         "lb-81-2aqc",
