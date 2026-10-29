@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1793285719570,
-  "sourceUpdatedIso": "2026-10-29T14:55:19.570Z",
+  "sourceUpdatedAt": 1793290987981,
+  "sourceUpdatedIso": "2026-10-29T16:23:07.981Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -23303,6 +23303,30 @@
       "letterboxdAddedDate": null,
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1793290986347-6wa1",
+      "title": "フォロウィング",
+      "originalTitle": "Following",
+      "englishTitle": "Following",
+      "year": 1999,
+      "score": null,
+      "star": 2.5,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "ドラマ",
+        "スリラー"
+      ],
+      "origin": "その他",
+      "format": "live",
+      "runtime": 68,
+      "exact": false,
+      "letterboxdAddedDate": "2026-10-30",
+      "letterboxdPublishedAt": "Fri, 30 Oct 2026 04:12:43 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-29"
     }
   ],
   "state": {
@@ -29162,6 +29186,23 @@
         "added": true,
         "_seq": 1793274150349,
         "source": "letterboxd"
+      },
+      {
+        "id": "custom-1793290986347-6wa1",
+        "title": "フォロウィング",
+        "originalTitle": "Following",
+        "englishTitle": "Following",
+        "lbTitle": "Following",
+        "tmdbId": 11660,
+        "year": 1999,
+        "uri": "https://letterboxd.com/gjbkic/film/following/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 2.5,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1793290986347,
+        "source": "letterboxd"
       }
     ],
     "starOverrides": {
@@ -33054,7 +33095,8 @@
       "custom-1793032909376-rd1i": "movie",
       "custom-1793128928232-q3ss": "movie",
       "custom-1793153470194-46i7": "drama",
-      "custom-1793274150349-1cex": "movie"
+      "custom-1793274150349-1cex": "movie",
+      "custom-1793290986347-6wa1": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -39666,6 +39708,10 @@
         "心理・内面",
         "胸糞",
         "サスペンス"
+      ],
+      "custom-1793290986347-6wa1": [
+        "ドラマ",
+        "スリラー"
       ]
     },
     "originOverrides": {
@@ -40503,7 +40549,8 @@
       "custom-1793032909376-rd1i": "ハリウッド",
       "custom-1793128928232-q3ss": "日本",
       "custom-1793153470194-46i7": "日本",
-      "custom-1793274150349-1cex": "日本"
+      "custom-1793274150349-1cex": "日本",
+      "custom-1793290986347-6wa1": "その他"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -41267,7 +41314,8 @@
       "custom-1793008410429-0253": "live",
       "custom-1793032909376-rd1i": "live",
       "custom-1793128928232-q3ss": "live",
-      "custom-1793274150349-1cex": "live"
+      "custom-1793274150349-1cex": "live",
+      "custom-1793290986347-6wa1": "live"
     },
     "runtimeOverrides": {
       "custom-1790247938551-ixfs": 100,
@@ -41954,7 +42002,8 @@
       "custom-1793008410429-0253": 121,
       "custom-1793032909376-rd1i": 156,
       "custom-1793128928232-q3ss": 146,
-      "custom-1793274150349-1cex": 163
+      "custom-1793274150349-1cex": 163,
+      "custom-1793290986347-6wa1": 68
     },
     "letterboxdMeta": {
       "lb-0-hTha": {
@@ -72797,6 +72846,46 @@
           "path": "/uBq0cdKXfIByYCx0JaZhK1eW1h2.jpg",
           "tmdbId": 11645,
           "checkedAt": "2026-10-29T11:42:37.418Z",
+          "provider": "tmdb"
+        }
+      },
+      "custom-1793290986347-6wa1": {
+        "publishedAt": "Fri, 30 Oct 2026 04:12:43 +1300",
+        "addedDate": "2026-10-30",
+        "addedDateSource": "rss-first-seen",
+        "reportedWatchedDate": "2026-10-29",
+        "note": "静かで淡々と男の策略にハマる様子を描く。時系列を少しずらしてるがそこまでの驚きがある感じではない。mementoと違って時間ごとにメリハリがある訳でもないしね。悪くはなかったが、まあまあ平坦。ノイズを入れた白黒に雑音をわざと残して手ブレも多少あり、静止画と音で見るとビデオ感のある絵。けど会話のとこなどそれぞれを映すとこなどカットが多くて、全体的にはそういう印象はない。狙ってたのだろうか。最初に盗みに入った時のメリハリのある劇伴は嫌いじゃない。\n観察趣味から追っかけ趣味となり、侵入窃盗趣味となる。観察趣味的に混乱を招くのが好き言っときながら、下着も嗅いだり売ったり師匠的な男も、全然俗的。\n男と女の物語は過度にメロドラマしてないのはいいが、別に面白みもない。\n泥棒ではあるが精神的にまだ追いつけていない。\nどうやら師匠的な人は女とグル。\nどこで何の金をもち逃げてるのか。\n男が登場する時は何か夢のよう、すっと世界に登場する。前後が見えない。いないのかもね。\nお得意の時系列操作のネタばらし。グルになった理由も明かす。身代わりにしたい。\nそういえば全てはこいつの語りから始まってるから、嵌められてたことも捕まる時には気づいてるのか。\n女は淡々のクズ的。分かりやすくおちょくりキャラ。\n結局男が主犯かまあなるほど。",
+        "noteSource": "letterboxd-rss",
+        "noteImportedAt": "2026-10-29T16:23:07.124Z",
+        "rssReviewRecords": {
+          "letterboxd-review-1560926133": {
+            "body": "静かで淡々と男の策略にハマる様子を描く。時系列を少しずらしてるがそこまでの驚きがある感じではない。mementoと違って時間ごとにメリハリがある訳でもないしね。悪くはなかったが、まあまあ平坦。ノイズを入れた白黒に雑音をわざと残して手ブレも多少あり、静止画と音で見るとビデオ感のある絵。けど会話のとこなどそれぞれを映すとこなどカットが多くて、全体的にはそういう印象はない。狙ってたのだろうか。最初に盗みに入った時のメリハリのある劇伴は嫌いじゃない。\n観察趣味から追っかけ趣味となり、侵入窃盗趣味となる。観察趣味的に混乱を招くのが好き言っときながら、下着も嗅いだり売ったり師匠的な男も、全然俗的。\n男と女の物語は過度にメロドラマしてないのはいいが、別に面白みもない。\n泥棒ではあるが精神的にまだ追いつけていない。\nどうやら師匠的な人は女とグル。\nどこで何の金をもち逃げてるのか。\n男が登場する時は何か夢のよう、すっと世界に登場する。前後が見えない。いないのかもね。\nお得意の時系列操作のネタばらし。グルになった理由も明かす。身代わりにしたい。\nそういえば全てはこいつの語りから始まってるから、嵌められてたことも捕まる時には気づいてるのか。\n女は淡々のクズ的。分かりやすくおちょくりキャラ。\n結局男が主犯かまあなるほど。",
+            "block": "静かで淡々と男の策略にハマる様子を描く。時系列を少しずらしてるがそこまでの驚きがある感じではない。mementoと違って時間ごとにメリハリがある訳でもないしね。悪くはなかったが、まあまあ平坦。ノイズを入れた白黒に雑音をわざと残して手ブレも多少あり、静止画と音で見るとビデオ感のある絵。けど会話のとこなどそれぞれを映すとこなどカットが多くて、全体的にはそういう印象はない。狙ってたのだろうか。最初に盗みに入った時のメリハリのある劇伴は嫌いじゃない。\n観察趣味から追っかけ趣味となり、侵入窃盗趣味となる。観察趣味的に混乱を招くのが好き言っときながら、下着も嗅いだり売ったり師匠的な男も、全然俗的。\n男と女の物語は過度にメロドラマしてないのはいいが、別に面白みもない。\n泥棒ではあるが精神的にまだ追いつけていない。\nどうやら師匠的な人は女とグル。\nどこで何の金をもち逃げてるのか。\n男が登場する時は何か夢のよう、すっと世界に登場する。前後が見えない。いないのかもね。\nお得意の時系列操作のネタばらし。グルになった理由も明かす。身代わりにしたい。\nそういえば全てはこいつの語りから始まってるから、嵌められてたことも捕まる時には気づいてるのか。\n女は淡々のクズ的。分かりやすくおちょくりキャラ。\n結局男が主犯かまあなるほど。"
+          }
+        },
+        "watchHistory": [
+          {
+            "id": "rss:letterboxd-review-1560926133",
+            "date": "2026-10-29",
+            "recordedAt": "2026-10-29T15:12:43.000Z",
+            "rewatch": false,
+            "retroactive": false,
+            "source": "letterboxd-rss",
+            "manualEdited": false
+          }
+        ],
+        "crew84": {
+          "directors": [
+            "Christopher Nolan"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-10-29T16:23:07.123Z"
+        },
+        "poster84": {
+          "path": "/lInSh0YLxksozwrVfExuXR0ZjiW.jpg",
+          "tmdbId": 11660,
+          "checkedAt": "2026-10-29T16:23:09.690Z",
           "provider": "tmdb"
         }
       }
