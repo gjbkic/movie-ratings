@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1793294387291,
-  "sourceUpdatedIso": "2026-10-29T17:19:47.291Z",
+  "sourceUpdatedAt": 1793295145096,
+  "sourceUpdatedIso": "2026-10-29T17:32:25.096Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -59392,7 +59392,7 @@
         "addedDate": "2025-09-01",
         "addedDateSource": "letterboxd-export-2026-09-27",
         "note": "難しい。映像は画角や反射の表現など素人目にもすごいと思うものがあった。話は解説読んで分かったようなわかんないような。成長してもい1度見てもいいかも。",
-        "noteSource": "letterboxd-export",
+        "noteSource": "manual",
         "noteImportedAt": "2026-10-10T10:44:56.531Z",
         "watchedFlag": true,
         "watchedAddedDate": "2025-09-01",
@@ -59420,7 +59420,8 @@
           "tmdbId": 434775,
           "path": "/xENc6UYviC3JfFqKA6kReHfT2Zt.jpg",
           "checkedAt": "2026-10-25T21:43:34.102757+00:00"
-        }
+        },
+        "noteEditedAt": "2026-10-29T17:32:25.059Z"
       },
       "lb-513-y6Eo": {
         "addedDate": "2025-09-01",
