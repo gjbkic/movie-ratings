@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1793291328683,
-  "sourceUpdatedIso": "2026-10-29T16:28:48.683Z",
+  "sourceUpdatedAt": 1793291405133,
+  "sourceUpdatedIso": "2026-10-29T16:30:05.133Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -12325,34 +12325,6 @@
       "letterboxdReportedWatchedDate": "2026-10-19"
     },
     {
-      "id": "custom-1790185844080-jquu",
-      "title": "ストレンジ・デイズ／1999年12月31日",
-      "originalTitle": "",
-      "englishTitle": "Strange Days",
-      "year": 1995,
-      "score": 81,
-      "star": 3,
-      "overallRank": 429,
-      "sameScoreRank": 62,
-      "category": "Letterboxd",
-      "mediaType": "movie",
-      "genre": [
-        "アクション",
-        "サスペンス",
-        "恋愛",
-        "SF",
-        "娯楽",
-        "バイオレンス"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 145,
-      "exact": true,
-      "letterboxdAddedDate": "2026-09-24",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "custom-1790322761365-fzvo",
       "title": "テセウスの船",
       "originalTitle": "テセウスの船",
@@ -12360,8 +12332,8 @@
       "year": 2020,
       "score": 81,
       "star": 3,
-      "overallRank": 430,
-      "sameScoreRank": 63,
+      "overallRank": 429,
+      "sameScoreRank": 62,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -12391,8 +12363,8 @@
       "year": 2010,
       "score": 81,
       "star": 3,
-      "overallRank": 431,
-      "sameScoreRank": 64,
+      "overallRank": 430,
+      "sameScoreRank": 63,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
       "genre": [
@@ -12419,8 +12391,8 @@
       "year": 2013,
       "score": 81,
       "star": 3,
-      "overallRank": 432,
-      "sameScoreRank": 65,
+      "overallRank": 431,
+      "sameScoreRank": 64,
       "category": "戦争、歴史",
       "mediaType": "movie",
       "genre": [
@@ -12444,7 +12416,7 @@
       "year": 2021,
       "score": 80,
       "star": 2.5,
-      "overallRank": 433,
+      "overallRank": 432,
       "sameScoreRank": 1,
       "category": "アクション",
       "mediaType": "movie",
@@ -12475,7 +12447,7 @@
       "year": 1999,
       "score": 80,
       "star": 2.5,
-      "overallRank": 434,
+      "overallRank": 433,
       "sameScoreRank": 2,
       "category": "Letterboxd",
       "mediaType": "movie",
@@ -12497,6 +12469,34 @@
       "letterboxdReportedWatchedDate": "2026-10-29"
     },
     {
+      "id": "custom-1790185844080-jquu",
+      "title": "ストレンジ・デイズ／1999年12月31日",
+      "originalTitle": "",
+      "englishTitle": "Strange Days",
+      "year": 1995,
+      "score": 80,
+      "star": 2.5,
+      "overallRank": 434,
+      "sameScoreRank": 3,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "アクション",
+        "サスペンス",
+        "恋愛",
+        "SF",
+        "娯楽",
+        "バイオレンス"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 145,
+      "exact": true,
+      "letterboxdAddedDate": "2026-09-24",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "custom-1793003364825-uaai",
       "title": "ルックバック",
       "originalTitle": "ルックバック",
@@ -12505,7 +12505,7 @@
       "score": 80,
       "star": 2.5,
       "overallRank": 435,
-      "sameScoreRank": 3,
+      "sameScoreRank": 4,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -12531,7 +12531,7 @@
       "score": 80,
       "star": 2.5,
       "overallRank": 436,
-      "sameScoreRank": 4,
+      "sameScoreRank": 5,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -12562,7 +12562,7 @@
       "score": 80,
       "star": 2.5,
       "overallRank": 437,
-      "sameScoreRank": 5,
+      "sameScoreRank": 6,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -12590,7 +12590,7 @@
       "score": 80,
       "star": 2.5,
       "overallRank": 438,
-      "sameScoreRank": 6,
+      "sameScoreRank": 7,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -12615,7 +12615,7 @@
       "score": 80,
       "star": 2.5,
       "overallRank": 439,
-      "sameScoreRank": 7,
+      "sameScoreRank": 8,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -12644,7 +12644,7 @@
       "score": 80,
       "star": 2.5,
       "overallRank": 440,
-      "sameScoreRank": 8,
+      "sameScoreRank": 9,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -12673,7 +12673,7 @@
       "score": 80,
       "star": 2.5,
       "overallRank": 441,
-      "sameScoreRank": 9,
+      "sameScoreRank": 10,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -12703,7 +12703,7 @@
       "score": 80,
       "star": 2.5,
       "overallRank": 442,
-      "sameScoreRank": 10,
+      "sameScoreRank": 11,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -12733,7 +12733,7 @@
       "score": 80,
       "star": 2.5,
       "overallRank": 443,
-      "sameScoreRank": 11,
+      "sameScoreRank": 12,
       "category": "スタジオジブリ系作品",
       "mediaType": "movie",
       "genre": [
@@ -12761,7 +12761,7 @@
       "score": 80,
       "star": 2.5,
       "overallRank": 444,
-      "sameScoreRank": 12,
+      "sameScoreRank": 13,
       "category": "Letterboxd",
       "mediaType": "other",
       "genre": [
@@ -12795,7 +12795,7 @@
       "score": 80,
       "star": 2.5,
       "overallRank": 445,
-      "sameScoreRank": 13,
+      "sameScoreRank": 14,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -12823,7 +12823,7 @@
       "score": 80,
       "star": 2.5,
       "overallRank": 446,
-      "sameScoreRank": 14,
+      "sameScoreRank": 15,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -12855,7 +12855,7 @@
       "score": 80,
       "star": 2.5,
       "overallRank": 447,
-      "sameScoreRank": 15,
+      "sameScoreRank": 16,
       "category": "コメディ",
       "mediaType": "movie",
       "genre": [
@@ -12881,7 +12881,7 @@
       "score": 80,
       "star": 2.5,
       "overallRank": 448,
-      "sameScoreRank": 16,
+      "sameScoreRank": 17,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -12910,7 +12910,7 @@
       "score": 80,
       "star": 2.5,
       "overallRank": 449,
-      "sameScoreRank": 17,
+      "sameScoreRank": 18,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -12937,7 +12937,7 @@
       "score": 80,
       "star": 2.5,
       "overallRank": 450,
-      "sameScoreRank": 18,
+      "sameScoreRank": 19,
       "category": "ハリーポッター シリーズ",
       "mediaType": "movie",
       "genre": [
@@ -12964,7 +12964,7 @@
       "score": 80,
       "star": 2.5,
       "overallRank": 451,
-      "sameScoreRank": 19,
+      "sameScoreRank": 20,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -12996,7 +12996,7 @@
       "score": 80,
       "star": 2.5,
       "overallRank": 452,
-      "sameScoreRank": 20,
+      "sameScoreRank": 21,
       "category": "アクション",
       "mediaType": "movie",
       "genre": [
@@ -13020,7 +13020,7 @@
       "score": 80,
       "star": 2.5,
       "overallRank": 453,
-      "sameScoreRank": 21,
+      "sameScoreRank": 22,
       "category": "MCU作品",
       "mediaType": "movie",
       "genre": [
@@ -13046,7 +13046,7 @@
       "score": 80,
       "star": 2.5,
       "overallRank": 454,
-      "sameScoreRank": 22,
+      "sameScoreRank": 23,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -13073,7 +13073,7 @@
       "score": 80,
       "star": 2.5,
       "overallRank": 455,
-      "sameScoreRank": 23,
+      "sameScoreRank": 24,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -13099,7 +13099,7 @@
       "score": 80,
       "star": 2.5,
       "overallRank": 456,
-      "sameScoreRank": 24,
+      "sameScoreRank": 25,
       "category": "スパイダーマン作品",
       "mediaType": "movie",
       "genre": [
@@ -13127,7 +13127,7 @@
       "score": 80,
       "star": 2.5,
       "overallRank": 457,
-      "sameScoreRank": 25,
+      "sameScoreRank": 26,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -13156,7 +13156,7 @@
       "score": 80,
       "star": 2.5,
       "overallRank": 458,
-      "sameScoreRank": 26,
+      "sameScoreRank": 27,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -13182,7 +13182,7 @@
       "score": 80,
       "star": 2.5,
       "overallRank": 459,
-      "sameScoreRank": 27,
+      "sameScoreRank": 28,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -13208,7 +13208,7 @@
       "score": 80,
       "star": 2.5,
       "overallRank": 460,
-      "sameScoreRank": 28,
+      "sameScoreRank": 29,
       "category": "未確定",
       "mediaType": "drama",
       "genre": [
@@ -13234,7 +13234,7 @@
       "score": 80,
       "star": 2.5,
       "overallRank": 461,
-      "sameScoreRank": 29,
+      "sameScoreRank": 30,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -13267,7 +13267,7 @@
       "score": 80,
       "star": 2.5,
       "overallRank": 462,
-      "sameScoreRank": 30,
+      "sameScoreRank": 31,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -13291,7 +13291,7 @@
       "score": 80,
       "star": 2.5,
       "overallRank": 463,
-      "sameScoreRank": 31,
+      "sameScoreRank": 32,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -13320,7 +13320,7 @@
       "score": 80,
       "star": 2.5,
       "overallRank": 464,
-      "sameScoreRank": 32,
+      "sameScoreRank": 33,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -13348,7 +13348,7 @@
       "score": 80,
       "star": 2.5,
       "overallRank": 465,
-      "sameScoreRank": 33,
+      "sameScoreRank": 34,
       "category": "コメディ",
       "mediaType": "movie",
       "genre": [
@@ -13378,7 +13378,7 @@
       "score": 80,
       "star": 2.5,
       "overallRank": 466,
-      "sameScoreRank": 34,
+      "sameScoreRank": 35,
       "category": "ドラマ",
       "mediaType": "drama",
       "genre": [
@@ -13406,7 +13406,7 @@
       "score": 80,
       "star": 2.5,
       "overallRank": 467,
-      "sameScoreRank": 35,
+      "sameScoreRank": 36,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -13434,7 +13434,7 @@
       "score": 80,
       "star": 2.5,
       "overallRank": 468,
-      "sameScoreRank": 36,
+      "sameScoreRank": 37,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -13466,7 +13466,7 @@
       "score": 80,
       "star": 2.5,
       "overallRank": 469,
-      "sameScoreRank": 37,
+      "sameScoreRank": 38,
       "category": "ピクサー・ディズニー作品",
       "mediaType": "movie",
       "genre": [
@@ -13494,7 +13494,7 @@
       "score": 80,
       "star": 2.5,
       "overallRank": 470,
-      "sameScoreRank": 38,
+      "sameScoreRank": 39,
       "category": "邦画",
       "mediaType": "drama",
       "genre": [
@@ -13523,7 +13523,7 @@
       "score": 80,
       "star": 2.5,
       "overallRank": 471,
-      "sameScoreRank": 39,
+      "sameScoreRank": 40,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -13552,7 +13552,7 @@
       "score": 80,
       "star": 2.5,
       "overallRank": 472,
-      "sameScoreRank": 40,
+      "sameScoreRank": 41,
       "category": "ピクサー・ディズニー作品",
       "mediaType": "movie",
       "genre": [
@@ -13580,7 +13580,7 @@
       "score": 80,
       "star": 2.5,
       "overallRank": 473,
-      "sameScoreRank": 41,
+      "sameScoreRank": 42,
       "category": "戦争、歴史",
       "mediaType": "movie",
       "genre": [
@@ -13607,7 +13607,7 @@
       "score": 80,
       "star": 2.5,
       "overallRank": 474,
-      "sameScoreRank": 42,
+      "sameScoreRank": 43,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -13635,7 +13635,7 @@
       "score": 80,
       "star": 2.5,
       "overallRank": 475,
-      "sameScoreRank": 43,
+      "sameScoreRank": 44,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -23910,7 +23910,7 @@
       "lb-206-9vSA": 64,
       "lb-443-8ND2": 70,
       "lb-156-ffTY": 72,
-      "custom-1790185844080-jquu": 81,
+      "custom-1790185844080-jquu": 80,
       "lb-537-14e8": 64,
       "custom-1790247938551-ixfs": 86,
       "lb-132-aPvy": 88,
@@ -24503,6 +24503,7 @@
       "80": [
         "lb-306-fA7G",
         "custom-1793290986347-6wa1",
+        "custom-1790185844080-jquu",
         "custom-1793003364825-uaai",
         "custom-1791903545078-e1rc",
         "lb-229-26tw",
@@ -24607,7 +24608,6 @@
         "lb-374-DUHM",
         "lb-136-1YVC",
         "custom-1792433176003-xjc7",
-        "custom-1790185844080-jquu",
         "custom-1790322761365-fzvo",
         "lb-149-AF4",
         "lb-416-2D2e"
@@ -29782,7 +29782,7 @@
       "lb-206-9vSA": 1.5,
       "lb-443-8ND2": 1.5,
       "lb-156-ffTY": 2,
-      "custom-1790185844080-jquu": 3,
+      "custom-1790185844080-jquu": 2.5,
       "lb-537-14e8": 1.5,
       "custom-1790247938551-ixfs": 3.5,
       "lb-132-aPvy": 4,
@@ -63016,7 +63016,7 @@
           "path": "/rY5BrDRcYAKE0BYmmT66YG6Uy5Q.jpg",
           "checkedAt": "2026-10-25T21:43:34.102757+00:00"
         },
-        "noteEditedAt": "2026-10-13T13:08:08.325Z"
+        "noteEditedAt": "2026-10-29T16:29:45.374Z"
       },
       "custom-1790185844116-j1vu": {
         "addedDate": "2026-09-23",
