@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1793274151309,
-  "sourceUpdatedIso": "2026-10-29T11:42:31.309Z",
+  "sourceUpdatedAt": 1793274168929,
+  "sourceUpdatedIso": "2026-10-29T11:42:48.929Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -23286,7 +23286,13 @@
       "genre": [
         "アクション",
         "ドラマ",
-        "歴史"
+        "歴史",
+        "戦争",
+        "バイオレンス",
+        "大作",
+        "雰囲気・美学",
+        "世界観",
+        "心理・内面"
       ],
       "origin": "その他",
       "format": "live",
@@ -39646,7 +39652,13 @@
       "custom-1793274150349-1cex": [
         "アクション",
         "ドラマ",
-        "歴史"
+        "歴史",
+        "戦争",
+        "バイオレンス",
+        "大作",
+        "雰囲気・美学",
+        "世界観",
+        "心理・内面"
       ]
     },
     "originOverrides": {
@@ -72771,6 +72783,12 @@
           "creators": [],
           "source": "tmdb",
           "fetchedAt": "2026-10-29T11:42:30.849Z"
+        },
+        "poster84": {
+          "path": "/uBq0cdKXfIByYCx0JaZhK1eW1h2.jpg",
+          "tmdbId": 11645,
+          "checkedAt": "2026-10-29T11:42:37.418Z",
+          "provider": "tmdb"
         }
       }
     }
