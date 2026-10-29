@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1793291643794,
-  "sourceUpdatedIso": "2026-10-29T16:34:03.794Z",
+  "sourceUpdatedAt": 1793294271143,
+  "sourceUpdatedIso": "2026-10-29T17:17:51.143Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -55000,7 +55000,7 @@
         "addedDate": "2026-03-25",
         "addedDateSource": "letterboxd-export-2026-09-27",
         "note": "好き。静けさの中に、素晴らしい音楽と、突然のって言うとチープな表現だがメリハリがいいバイオレンスのバランスもよく、たけしの静かな演技がとてもあってる。タランティーノが見せるバイオレンスはこれがやりたかったのではないかと思うほど良かった。作中の雰囲気が素晴らしい",
-        "noteSource": "letterboxd-export",
+        "noteSource": "manual",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
         "watchedAddedDate": "2026-03-25",
@@ -55028,7 +55028,8 @@
           "tmdbId": 7500,
           "path": "/mX9E4fEuG17L2e7bZmhBc0XdRbw.jpg",
           "checkedAt": "2026-10-25T21:43:34.102757+00:00"
-        }
+        },
+        "noteEditedAt": "2026-10-29T17:17:51.098Z"
       },
       "lb-383-22mQ": {
         "addedDate": "2026-03-26",
