@@ -7727,7 +7727,9 @@ renderRank();const marker=document.getElementById('movie30BuildV29');if(marker)m
     const matches=available.filter(f=>{
       const m=state.letterboxdMeta?.[f.id]||{};
       if(m.contentType==='tv_episode'||m.contentType==='tv_series')return false;
-      const id=titleInfo(f).tmdbId||f.tmdbId;
+      // A manually added film can have its verified ID only in the poster
+      // metadata. Letterboxd may later change its title and URL slug.
+      const id=titleInfo(f).tmdbId||f.tmdbId||m.poster84?.tmdbId;
       return id&&String(id)===String(raw.tmdbId)&&(!year||!Number(f.year)||Math.abs(year-Number(f.year))<=1);
     });
     return matches.length===1?matches[0]:null;
