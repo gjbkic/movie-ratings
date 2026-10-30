@@ -7772,8 +7772,34 @@ renderRank();const marker=document.getElementById('movie30BuildV29');if(marker)m
     const extra=[...doc.querySelectorAll('item')].filter(it=>
       childTextByLocal(it,'filmTitle')&&childTextByLocal(it,'filmYear')
     );
-    const withReview=items.map((raw,i)=>{
-      const item=extra[i];
+    const canon=v=>String(v||'').replace(/[?#].*$/,'').replace(/\/+$/,'').toLowerCase();
+    const nodeFor=raw=>{
+      const url=canon(raw?.link||raw?.uri);
+      if(url){
+        const byUrl=extra.filter(it=>canon(childTextByLocal(it,'link'))===url);
+        if(byUrl.length===1)return byUrl[0];
+      }
+      const title=normalize(raw?.title||raw?.englishTitle||raw?.originalTitle);
+      const year=Number(raw?.year)||0;
+      if(title){
+        const byTitle=extra.filter(it=>
+          normalize(childTextByLocal(it,'filmTitle'))===title &&
+          (!year||Number(childTextByLocal(it,'filmYear'))===year)
+        );
+        if(byTitle.length===1)return byTitle[0];
+      }
+      const tmdb=String(raw?.tmdbId||raw?.letterboxdMovieId||'').trim();
+      if(tmdb){
+        const byTmdb=extra.filter(it=>
+          childTextByLocal(it,'movieId')===tmdb &&
+          (!year||Number(childTextByLocal(it,'filmYear'))===year)
+        );
+        if(byTmdb.length===1)return byTmdb[0];
+      }
+      return null;
+    };
+    const withReview=items.map(raw=>{
+      const item=nodeFor(raw);
       if(!item)return raw;
       return {...raw,
         review:reviewText(childTextByLocal(item,'description')),
@@ -7790,6 +7816,14 @@ renderRank();const marker=document.getElementById('movie30BuildV29');if(marker)m
     const url=String(raw.link||'').replace(/\/+$/,'');
     const byUri=url?options.filter(f=>String(f.uri||'').replace(/\/+$/,'')===url):[];
     if(byUri.length===1)return byUri[0];
+    if(raw.tmdbId){
+      const byTmdb=options.filter(f=>{
+        const m=state.letterboxdMeta?.[f.id]||{};
+        if(m.contentType==='tv_episode'||m.contentType==='tv_series')return false;
+        return String(titleInfo(f).tmdbId||f.tmdbId||'')===String(raw.tmdbId);
+      });
+      if(byTmdb.length===1)return byTmdb[0];
+    }
     const key=normalize(raw.title);
     if(!key)return null;
     const named=options.filter(f=>{
@@ -8005,10 +8039,12 @@ renderRank();const marker=document.getElementById('movie30BuildV29');if(marker)m
     const matches=available.filter(f=>{
       const m=state.letterboxdMeta?.[f.id]||{};
       if(m.contentType==='tv_episode'||m.contentType==='tv_series')return false;
-      const id=titleInfo(f).tmdbId||f.tmdbId;
+      // A manually added film can have its verified ID only in the poster
+      // metadata. Letterboxd may later change its title and URL slug.
+      const id=titleInfo(f).tmdbId||f.tmdbId||m.poster84?.tmdbId;
       return id&&String(id)===String(raw.tmdbId)&&(!year||!Number(f.year)||Math.abs(year-Number(f.year))<=1);
     });
-    return !title&&matches.length===1?matches[0]:null;
+    return matches.length===1?matches[0]:null;
   };
 
   const readCache=()=>{try{return JSON.parse(localStorage.getItem(TV_CACHE)||'{}')||{}}catch(_){return {}}};
@@ -8349,8 +8385,29 @@ parseLbRss=function(xml){
   const doc=new DOMParser().parseFromString(xml,'application/xml');
   if(doc.querySelector('parsererror'))return list;
   const nodes=[...doc.querySelectorAll('item')].filter(i=>childTextByLocal(i,'filmTitle')&&childTextByLocal(i,'filmYear'));
-  parsed=list.map((x,i)=>{
-    const el=nodes[i];if(!el)return x;
+  const nodeUrl=v=>u(v);
+  const nodeFor=x=>{
+    const url=nodeUrl(x?.link||x?.uri);
+    if(url){
+      const byUrl=nodes.filter(el=>nodeUrl(childTextByLocal(el,'link'))===url);
+      if(byUrl.length===1)return byUrl[0];
+    }
+    const title=norm(x?.title||x?.englishTitle||x?.originalTitle),year=Number(x?.year)||0;
+    if(title){
+      const byTitle=nodes.filter(el=>norm(childTextByLocal(el,'filmTitle'))===title&&
+        (!year||Number(childTextByLocal(el,'filmYear'))===year));
+      if(byTitle.length===1)return byTitle[0];
+    }
+    const tmdb=String(x?.tmdbId||x?.letterboxdMovieId||'').trim();
+    if(tmdb){
+      const byTmdb=nodes.filter(el=>childTextByLocal(el,'movieId')===tmdb&&
+        (!year||Number(childTextByLocal(el,'filmYear'))===year));
+      if(byTmdb.length===1)return byTmdb[0];
+    }
+    return null;
+  };
+  parsed=list.map(x=>{
+    const el=nodeFor(x);if(!el)return x;
     return {...x,reviewGuid:x.reviewGuid||childTextByLocal(el,'guid'),
       recordedAt:childTextByLocal(el,'pubDate'),
       rewatch:childTextByLocal(el,'rewatch'),
@@ -8361,6 +8418,14 @@ parseLbRss=function(xml){
 function findByRss(x){
   const films=allFilms(),url=u(x.link||x.uri);
   if(url){const a=films.filter(f=>u(f.uri)===url);if(a.length===1)return a[0];}
+  if(x.tmdbId){
+    const a=films.filter(f=>{
+      const m=state.letterboxdMeta?.[f.id]||{};
+      if(m.contentType==='tv_episode'||m.contentType==='tv_series')return false;
+      return String(titleInfo(f).tmdbId||f.tmdbId||'')===String(x.tmdbId);
+    });
+    if(a.length===1)return a[0];
+  }
   const k=norm(x.title),y=Number(x.year)||0;
   if(!k)return null;
   const a=films.filter(f=>{
