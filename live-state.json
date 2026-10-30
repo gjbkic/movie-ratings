@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1793382582696,
-  "sourceUpdatedIso": "2026-10-30T17:49:42.696Z",
+  "sourceUpdatedAt": 1793382665598,
+  "sourceUpdatedIso": "2026-10-30T17:51:05.598Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -23348,9 +23348,13 @@
       "genre": [
         "ドラマ",
         "スリラー",
-        "クライム"
+        "クライム",
+        "サスペンス",
+        "アクション",
+        "バイオレンス",
+        "娯楽"
       ],
-      "origin": "その他",
+      "origin": "ハリウッド",
       "format": "live",
       "runtime": 105,
       "exact": false,
@@ -39811,7 +39815,11 @@
       "custom-1793382511038-uw0n": [
         "ドラマ",
         "スリラー",
-        "クライム"
+        "クライム",
+        "サスペンス",
+        "アクション",
+        "バイオレンス",
+        "娯楽"
       ]
     },
     "originOverrides": {
@@ -40651,7 +40659,7 @@
       "custom-1793153470194-46i7": "日本",
       "custom-1793274150349-1cex": "日本",
       "custom-1793290986347-6wa1": "ハリウッド",
-      "custom-1793382511038-uw0n": "その他",
+      "custom-1793382511038-uw0n": "ハリウッド",
       "custom-1793382511630-rbdf": "その他"
     },
     "formatOverrides": {
@@ -73030,7 +73038,13 @@
             "source": "letterboxd-rss",
             "manualEdited": false
           }
-        ]
+        ],
+        "poster84": {
+          "path": "/yR2EtuWezo8E7Ib5vyQ7Pm4sMNB.jpg",
+          "tmdbId": 9303,
+          "checkedAt": "2026-10-30T17:50:55.728Z",
+          "provider": "tmdb"
+        }
       },
       "custom-1793382511630-rbdf": {
         "publishedAt": "Sat, 17 Oct 2026 07:25:37 +1300",
