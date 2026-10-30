@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1793391310691,
-  "sourceUpdatedIso": "2026-10-30T20:15:10.691Z",
+  "sourceUpdatedAt": 1793391319531,
+  "sourceUpdatedIso": "2026-10-30T20:15:19.531Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -6544,6 +6544,35 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "custom-1793391233092-5ate",
+      "title": "天使のたまご",
+      "originalTitle": "天使のたまご",
+      "englishTitle": "Angel's Egg",
+      "year": 1985,
+      "score": 84,
+      "star": 3.5,
+      "overallRank": 227,
+      "sameScoreRank": 2,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "ファンタジー",
+        "ミステリー",
+        "SF",
+        "心理・内面",
+        "哲学・思想",
+        "雰囲気・美学",
+        "世界観"
+      ],
+      "origin": "日本",
+      "format": "animation",
+      "runtime": 71,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-31",
+      "letterboxdPublishedAt": "Sat, 31 Oct 2026 07:21:47 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-31"
+    },
+    {
       "id": "lb-64-leq4",
       "title": "TENET テネット",
       "originalTitle": "",
@@ -6551,8 +6580,8 @@
       "year": 2020,
       "score": 84,
       "star": 3.5,
-      "overallRank": 227,
-      "sameScoreRank": 2,
+      "overallRank": 228,
+      "sameScoreRank": 3,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -6579,8 +6608,8 @@
       "year": 2015,
       "score": 84,
       "star": 3.5,
-      "overallRank": 228,
-      "sameScoreRank": 3,
+      "overallRank": 229,
+      "sameScoreRank": 4,
       "category": "ファンタジー、アドベンチャー",
       "mediaType": "movie",
       "genre": [
@@ -6598,35 +6627,6 @@
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "custom-1793391233092-5ate",
-      "title": "天使のたまご",
-      "originalTitle": "天使のたまご",
-      "englishTitle": "Angel's Egg",
-      "year": 1985,
-      "score": 84,
-      "star": 3.5,
-      "overallRank": 229,
-      "sameScoreRank": 4,
-      "category": "Letterboxd",
-      "mediaType": "movie",
-      "genre": [
-        "ファンタジー",
-        "ミステリー",
-        "SF",
-        "心理・内面",
-        "哲学・思想",
-        "雰囲気・美学",
-        "世界観"
-      ],
-      "origin": "日本",
-      "format": "animation",
-      "runtime": 71,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-31",
-      "letterboxdPublishedAt": "Sat, 31 Oct 2026 07:21:47 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-31"
     },
     {
       "id": "lb-181-2aB0",
@@ -24779,9 +24779,9 @@
       ],
       "84": [
         "lb-266-1Iik",
+        "custom-1793391233092-5ate",
         "lb-64-leq4",
         "lb-99-4hk0",
-        "custom-1793391233092-5ate",
         "lb-181-2aB0",
         "lb-70-29FU",
         "lb-574-29CQ",
