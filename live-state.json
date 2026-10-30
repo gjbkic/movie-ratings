@@ -23362,30 +23362,6 @@
       "letterboxdAddedDate": null,
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "custom-1793382511630-rbdf",
-      "title": "クレヨンしんちゃん 嵐を呼ぶ モーレツ！オトナ帝国の逆襲",
-      "originalTitle": "クレヨンしんちゃん 嵐を呼ぶ モーレツ！オトナ帝国の逆襲",
-      "englishTitle": "Crayon Shinchan the Movie: The Storm Called: The Adult Empire Strikes Back",
-      "year": 2001,
-      "score": null,
-      "star": 3.5,
-      "overallRank": null,
-      "sameScoreRank": null,
-      "category": "Letterboxd",
-      "mediaType": "movie",
-      "genre": [
-        "コメディ",
-        "アドベンチャー"
-      ],
-      "origin": "日本",
-      "format": "animation",
-      "runtime": 91,
-      "exact": false,
-      "letterboxdAddedDate": "2026-10-17",
-      "letterboxdPublishedAt": "Sat, 17 Oct 2026 07:25:37 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-17"
     }
   ],
   "state": {
@@ -28137,7 +28113,7 @@
         "lbTitle": "Crayon Shin-chan: The Storm Called: The Adult Empire Strikes Back",
         "tmdbId": null,
         "year": 2001,
-        "uri": "https://letterboxd.com/gjbkic/film/crayon-shin-chan-the-storm-called-the-adult/",
+        "uri": "https://letterboxd.com/gjbkic/film/crayon-shinchan-the-movie-the-storm-called-2001/",
         "category": "Letterboxd",
         "order": 999999,
         "star": 3.5,
@@ -29283,25 +29259,6 @@
         "added": true,
         "_seq": 1793382511038,
         "source": "letterboxd"
-      },
-      {
-        "id": "custom-1793382511630-rbdf",
-        "title": "クレヨンしんちゃん 嵐を呼ぶ モーレツ！オトナ帝国の逆襲",
-        "originalTitle": "クレヨンしんちゃん 嵐を呼ぶ モーレツ！オトナ帝国の逆襲",
-        "englishTitle": "Crayon Shinchan the Movie: The Storm Called: The Adult Empire Strikes Back",
-        "lbTitle": "Crayon Shinchan the Movie: The Storm Called: The Adult Empire Strikes Back",
-        "tmdbId": 37280,
-        "year": 2001,
-        "uri": "https://letterboxd.com/gjbkic/film/crayon-shinchan-the-movie-the-storm-called-2001/",
-        "category": "Letterboxd",
-        "order": 999999,
-        "star": 3.5,
-        "oldScore": null,
-        "added": true,
-        "_seq": 1793382511630,
-        "source": "letterboxd",
-        "tmdbType": "movie",
-        "_lbMetaFixedV36": true
       }
     ],
     "starOverrides": {
@@ -32363,7 +32320,8 @@
       "custom-1792179458643-m8hx": {
         "title": "クレヨンしんちゃん 嵐を呼ぶ モーレツ!オトナ帝国の逆襲",
         "originalTitle": "",
-        "englishTitle": "Crayon Shin-chan: The Storm Called: The Adult Empire Strikes Back"
+        "englishTitle": "Crayon Shin-chan: The Storm Called: The Adult Empire Strikes Back",
+        "tmdbId": 37280
       },
       "custom-1793382511630-rbdf": {
         "title": "クレヨンしんちゃん 嵐を呼ぶ モーレツ！オトナ帝国の逆襲",
@@ -73148,7 +73106,27 @@
           "checkedAt": "2026-10-30T17:49:02.355Z",
           "provider": "tmdb"
         },
-        "noteEditedAt": "2026-10-30T17:49:42.651Z"
+        "noteEditedAt": "2026-10-30T17:49:42.651Z",
+        "retiredDuplicateFilm20261031": {
+          "id": "custom-1793382511630-rbdf",
+          "title": "クレヨンしんちゃん 嵐を呼ぶ モーレツ！オトナ帝国の逆襲",
+          "originalTitle": "クレヨンしんちゃん 嵐を呼ぶ モーレツ！オトナ帝国の逆襲",
+          "englishTitle": "Crayon Shinchan the Movie: The Storm Called: The Adult Empire Strikes Back",
+          "lbTitle": "Crayon Shinchan the Movie: The Storm Called: The Adult Empire Strikes Back",
+          "tmdbId": 37280,
+          "year": 2001,
+          "uri": "https://letterboxd.com/gjbkic/film/crayon-shinchan-the-movie-the-storm-called-2001/",
+          "category": "Letterboxd",
+          "order": 999999,
+          "star": 3.5,
+          "oldScore": null,
+          "added": true,
+          "_seq": 1793382511630,
+          "source": "letterboxd",
+          "tmdbType": "movie",
+          "_lbMetaFixedV36": true
+        },
+        "retiredInto": "custom-1792179458643-m8hx"
       }
     }
   }
