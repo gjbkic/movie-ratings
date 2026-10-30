@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1793382515383,
-  "sourceUpdatedIso": "2026-10-30T17:48:35.383Z",
+  "sourceUpdatedAt": 1793382521914,
+  "sourceUpdatedIso": "2026-10-30T17:48:41.914Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -11806,6 +11806,34 @@
       "letterboxdReportedWatchedDate": "2026-09-24"
     },
     {
+      "id": "custom-1792612562683-9p69",
+      "title": "警部補 矢部謙三",
+      "originalTitle": "警部補 矢部謙三",
+      "englishTitle": "Keibuho Yabe Kenzo",
+      "year": 2010,
+      "score": 81,
+      "star": 3,
+      "overallRank": 411,
+      "sameScoreRank": 44,
+      "category": "マフィア、クライム",
+      "mediaType": "drama",
+      "genre": [
+        "TV本編",
+        "コメディ",
+        "ミステリー",
+        "サスペンス",
+        "娯楽",
+        "comfort"
+      ],
+      "origin": "日本",
+      "format": "",
+      "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "custom-1791392809782-lca8",
       "title": "ズートピア＋",
       "originalTitle": "",
@@ -11813,8 +11841,8 @@
       "year": 2022,
       "score": 81,
       "star": 3,
-      "overallRank": 411,
-      "sameScoreRank": 44,
+      "overallRank": 412,
+      "sameScoreRank": 45,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -11842,8 +11870,8 @@
       "year": 2019,
       "score": 81,
       "star": 3,
-      "overallRank": 412,
-      "sameScoreRank": 45,
+      "overallRank": 413,
+      "sameScoreRank": 46,
       "category": "MCU作品",
       "mediaType": "movie",
       "genre": [
@@ -11860,34 +11888,6 @@
       "runtime": 182,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "custom-1792612562683-9p69",
-      "title": "警部補 矢部謙三",
-      "originalTitle": "警部補 矢部謙三",
-      "englishTitle": "Keibuho Yabe Kenzo",
-      "year": 2010,
-      "score": 81,
-      "star": 3,
-      "overallRank": 413,
-      "sameScoreRank": 46,
-      "category": "マフィア、クライム",
-      "mediaType": "drama",
-      "genre": [
-        "TV本編",
-        "コメディ",
-        "ミステリー",
-        "サスペンス",
-        "娯楽",
-        "comfort"
-      ],
-      "origin": "日本",
-      "format": "",
-      "runtime": null,
-      "exact": true,
-      "letterboxdAddedDate": null,
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -24636,9 +24636,9 @@
         "lb-105-2bfk",
         "custom-1790322763953-lex8",
         "custom-1790322757548-hd0x",
+        "custom-1792612562683-9p69",
         "custom-1791392809782-lca8",
         "lb-401-9vE4",
-        "custom-1792612562683-9p69",
         "lb-292-1S3E",
         "lb-403-uAKS",
         "lb-5-wUow",
