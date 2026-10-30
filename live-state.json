@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1793391233945,
-  "sourceUpdatedIso": "2026-10-30T20:13:53.945Z",
+  "sourceUpdatedAt": 1793391279330,
+  "sourceUpdatedIso": "2026-10-30T20:14:39.330Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -73211,6 +73211,12 @@
           "creators": [],
           "source": "tmdb",
           "fetchedAt": "2026-10-30T20:13:53.542Z"
+        },
+        "poster84": {
+          "path": "/dqi68LqT8z4lduMg0xR2TZHkRId.jpg",
+          "tmdbId": 15916,
+          "checkedAt": "2026-10-30T20:14:35.251Z",
+          "provider": "tmdb"
         }
       }
     }
