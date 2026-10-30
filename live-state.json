@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1793382521914,
-  "sourceUpdatedIso": "2026-10-30T17:48:41.914Z",
+  "sourceUpdatedAt": 1793382546427,
+  "sourceUpdatedIso": "2026-10-30T17:49:06.427Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -11834,6 +11834,38 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-403-uAKS",
+      "title": "ナイブズ・アウト: ウェイク・アップ・デッドマン",
+      "originalTitle": "",
+      "englishTitle": "Wake Up Dead Man",
+      "year": 2025,
+      "score": 81,
+      "star": 3,
+      "overallRank": 412,
+      "sameScoreRank": 45,
+      "category": "サスペンス、ミステリー",
+      "mediaType": "movie",
+      "genre": [
+        "サスペンス",
+        "ミステリー",
+        "どんでん返し",
+        "娯楽",
+        "切ない",
+        "クライム",
+        "ドラマ",
+        "コメディ",
+        "スリラー",
+        "バイオレンス"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": null,
+      "exact": true,
+      "letterboxdAddedDate": "2026-01-19",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "custom-1791392809782-lca8",
       "title": "ズートピア＋",
       "originalTitle": "",
@@ -11841,8 +11873,8 @@
       "year": 2022,
       "score": 81,
       "star": 3,
-      "overallRank": 412,
-      "sameScoreRank": 45,
+      "overallRank": 413,
+      "sameScoreRank": 46,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -11870,8 +11902,8 @@
       "year": 2019,
       "score": 81,
       "star": 3,
-      "overallRank": 413,
-      "sameScoreRank": 46,
+      "overallRank": 414,
+      "sameScoreRank": 47,
       "category": "MCU作品",
       "mediaType": "movie",
       "genre": [
@@ -11899,8 +11931,8 @@
       "year": 2008,
       "score": 81,
       "star": 3,
-      "overallRank": 414,
-      "sameScoreRank": 47,
+      "overallRank": 415,
+      "sameScoreRank": 48,
       "category": "ドラマ",
       "mediaType": "movie",
       "genre": [
@@ -11915,38 +11947,6 @@
       "runtime": 120,
       "exact": true,
       "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "lb-403-uAKS",
-      "title": "ナイブズ・アウト: ウェイク・アップ・デッドマン",
-      "originalTitle": "",
-      "englishTitle": "Wake Up Dead Man",
-      "year": 2025,
-      "score": 81,
-      "star": 3,
-      "overallRank": 415,
-      "sameScoreRank": 48,
-      "category": "サスペンス、ミステリー",
-      "mediaType": "movie",
-      "genre": [
-        "サスペンス",
-        "ミステリー",
-        "どんでん返し",
-        "娯楽",
-        "切ない",
-        "クライム",
-        "ドラマ",
-        "コメディ",
-        "スリラー",
-        "バイオレンス"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": null,
-      "exact": true,
-      "letterboxdAddedDate": "2026-01-19",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -24637,10 +24637,10 @@
         "custom-1790322763953-lex8",
         "custom-1790322757548-hd0x",
         "custom-1792612562683-9p69",
+        "lb-403-uAKS",
         "custom-1791392809782-lca8",
         "lb-401-9vE4",
         "lb-292-1S3E",
-        "lb-403-uAKS",
         "lb-5-wUow",
         "custom-1791398329125-3r8f",
         "custom-1792310002695-j7ls",
@@ -73064,6 +73064,12 @@
           "creators": [],
           "source": "tmdb",
           "fetchedAt": "2026-10-30T17:48:32.103Z"
+        },
+        "poster84": {
+          "path": "/heJkgOCx4pHqdooYA1h7B65ghvf.jpg",
+          "tmdbId": 37280,
+          "checkedAt": "2026-10-30T17:49:02.355Z",
+          "provider": "tmdb"
         }
       }
     }
