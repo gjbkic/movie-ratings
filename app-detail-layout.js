@@ -8,6 +8,7 @@
   const css=document.createElement('style');
   css.id='movie30-detail-unified-style';
   css.textContent=[
+    '#sheetBg{z-index:180;}',
     '#sheetBg .sheet{--detail-accent:#a9e8bd;}',
     '#sheetBg .sheet-meta{font-size:12px;line-height:1.4;color:#aeb7c4;margin-top:5px;margin-bottom:12px;}',
     '#sheetBg .edit-title-grid{margin:10px 0 13px;}',
@@ -77,7 +78,7 @@
   function preview(){
     const target=document.getElementById('movie30-detail-class-preview');
     if(!target)return;
-    target.replaceChildren();
+    const fragment=document.createDocumentFragment();
     const rows=[...document.querySelectorAll('#editGenrePicker .struct-row')];
     const display=[];
     const labels={ '種別':'種別','制作区分':'制作','形式':'形式','TV区分':'TV区分','ジャンル（複数選択可）':'ジャンル'};
@@ -113,36 +114,42 @@
       const chip=document.createElement('span');chip.className='movie30-detail-class-token';
       const title=document.createElement('b');title.textContent=label;
       const val=document.createElement('span');val.textContent=value;
-      chip.append(title,val);target.append(chip);
+      chip.append(title,val);fragment.append(chip);
     }
     if(!display.length){
-      const blank=document.createElement('span');blank.className='movie30-detail-class-token';blank.textContent='分類は未設定';target.append(blank);
+      const blank=document.createElement('span');blank.className='movie30-detail-class-token';blank.textContent='分類は未設定';fragment.append(blank);
     }
+    const current=[...target.childNodes],next=[...fragment.childNodes];
+    if(current.length!==next.length||current.some((node,i)=>!node.isEqualNode(next[i])))target.replaceChildren(fragment);
   }
 
   function ranks(f){
-    const score=effectiveScore(f);
-    if(score==null)return null;
-    const rated=allFilms().filter(x=>effectiveScore(x)!=null);
-    const scores=[...new Set(rated.map(x=>Number(effectiveScore(x))))].sort((a,b)=>b-a);
-    let above=0;
-    for(const s of scores){
-      const tied=rankSorted(rated.filter(x=>Number(effectiveScore(x))===s),s);
-      if(s===Number(score)){
-        const index=tied.findIndex(x=>x.id===f.id);
-        return {overall:index<0?null:above+index+1,total:rated.length,same:index<0?null:index+1,tied:tied.length,score};
-      }
-      above+=tied.length;
-    }
-    return null;
+    return window.Movie30RankQueries.detailRank(f,{allFilms,effectiveScore,rankSorted});
   }
 
+  // Called at the original v66 construction point, before v77 binds the review editor.
+  // tidy owns rank/date presentation after the intervening openSheet decorators finish.
+  // Keep fresh note/jump nodes: their handlers are attached by those existing decorators.
+  function buildSummary(f){
+    const m=state.letterboxdMeta?.[f.id]||{};
+    return '<div class="v66-stats"><div class="v66-stat"><strong></strong><span></span></div><div class="v66-stat"><strong></strong><span></span></div></div>'+
+      '<div class="tip"></div><div class="v66-lbl">一言メモ</div>'+
+      '<textarea id="note66" class="v66-note" placeholder="この点数にした理由、印象、再鑑賞メモなど">'+esc(m.note||'')+'</textarea>'+
+      '<div class="v66-actions"><button class="btn" id="detailJump66">全体順位の位置へ</button></div>';
+  }
+
+  function setPlainText(node,value){
+    if(node.textContent!==value||node.childNodes.length!==1||node.firstChild?.nodeType!==3)node.textContent=value;
+  }
+  function setHidden(node,value){
+    if(node.hidden!==value)node.hidden=value;
+  }
   function tidy(id){
     if(selectedId!==id)return;
     const f=filmById(id);if(!f)return;
     // Category metadata is in the collapsible classification preview; runtime has one editable field.
     const meta=document.getElementById('sheetMeta');
-    if(meta)meta.textContent=f.year?String(f.year):'公開年未設定';
+    if(meta)setPlainText(meta,f.year?String(f.year):'公開年未設定');
     const detail=document.getElementById('detail66');
     // Show editable values before the corresponding rank and review summary.
     if(scoreGrid&&detail&&detail.previousElementSibling!==scoreGrid){
@@ -156,47 +163,43 @@
         if(old.length>=4){
           old[0].remove();old[3].remove(); // Duplicate score and duplicate runtime.
         }
-        stats.hidden=score==null;
+        setHidden(stats,score==null);
         if(score==null)stats.style.display='none';else stats.style.display='';
         const rank=score!=null?ranks(f):null;
         const cells=[...stats.querySelectorAll('.v66-stat')];
         if(rank&&cells.length===2){
-          cells[0].querySelector('strong').textContent=rank.overall?rank.overall+'位':'—';
-          cells[0].querySelector('span').textContent='全体 '+rank.total+'本';
-          cells[1].querySelector('strong').textContent=rank.same?rank.same+'位':'—';
-          cells[1].querySelector('span').textContent=rank.score+'点内 '+rank.tied+'本';
+          setPlainText(cells[0].querySelector('strong'),rank.overall?rank.overall+'位':'—');
+          setPlainText(cells[0].querySelector('span'),'全体 '+rank.total+'本');
+          setPlainText(cells[1].querySelector('strong'),rank.same?rank.same+'位':'—');
+          setPlainText(cells[1].querySelector('span'),rank.score+'点内 '+rank.tied+'本');
         }
       }
       const near=detail.querySelector('.v66-nei');if(near)near.remove();
       const jump=detail.querySelector('#detailJump66');
-      if(jump)jump.hidden=score==null;
+      if(jump)setHidden(jump,score==null);
       const tip=detail.querySelector('.tip');
       if(tip){
         const m=state.letterboxdMeta?.[id]||{};
         const bits=[];
         if(m.reportedWatchedDate)bits.push('鑑賞日：'+m.reportedWatchedDate);
         if(m.addedDate)bits.push('Letterboxd追加：'+m.addedDate);
-        tip.textContent=bits.join(' · ');
-        tip.hidden=!bits.length;
+        setPlainText(tip,bits.join(' · '));
+        setHidden(tip,!bits.length);
       }
     }
     const director=document.getElementById('getDirector84');
-    if(director)director.hidden=true;
+    if(director)setHidden(director,true);
     const dstatus=document.getElementById('directorStatus84');
-    if(dstatus)dstatus.hidden=true;
+    if(dstatus)setHidden(dstatus,true);
     preview();
   }
 
   // Preserve the previous expanded state only when editing the same item.
   let lastId=null;
-  const formerOpen=openSheet;
-  openSheet=function(id,...rest){
-    if(classification&&id!==lastId)classification.open=false;
-    const result=formerOpen.call(this,id,...rest);
-    lastId=id;
-    tidy(id);
-    return result;
-  };
+  openSheet=window.Movie30RenderLifecycle.decorate(openSheet,{
+    before(id){if(classification&&id!==lastId)classification.open=false;},
+    after(result,id){lastId=id;tidy(id);}
+  });
   const rating=document.getElementById('editScore');
   const runtime=document.getElementById('editRuntime');
   for(const control of [rating,runtime]){
@@ -211,5 +214,5 @@
     setTimeout(()=>{if(id===selectedId)tidy(id)},0);
     setTimeout(()=>{if(id===selectedId)tidy(id)},120);
   },true);
-  window.__movie30DetailUnified={version:'20261014h',refresh:()=>selectedId&&tidy(selectedId)};
+  window.__movie30DetailUnified={version:'20261019summary',buildSummary,refresh:()=>selectedId&&tidy(selectedId)};
 })();

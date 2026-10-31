@@ -58,7 +58,7 @@ css85.textContent=
  +'#rankRoot.movie30-rank-grid-only84 .rank-card.movie30-rank-poster84{padding:0!important}'
  +'#rankRoot.movie30-rank-grid-only84 .rank-card.movie30-rank-poster84>.movie30-poster84{left:0!important;top:0!important;width:100%!important;height:100%!important}'
  +'#rankRoot.movie30-rank-grid-only84 .score-list{grid-template-columns:repeat(auto-fill,minmax(108px,1fr))!important;gap:9px!important}'
- +'@media(max-width:420px){#rankRoot.movie30-rank-grid-only84 .score-list{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:7px!important}}';
+ +'@media(max-width:620px){#rankRoot.movie30-rank-grid-only84 .score-list{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:5px!important}#searchRank,#searchClassify{font-size:18px!important}}';
 document.head.appendChild(css85);
 const rankPosterBtn85=document.getElementById('rankPosterOnly84');
 if(rankPosterBtn85){
@@ -409,9 +409,7 @@ const matchPrior=match;
 match=function(f,q){
  if(matchPrior(f,q))return true;
  if(!q)return true;
- const words=String(q).normalize('NFKC').toLowerCase().trim();
- const m=meta(f.id),c=m.crew84||{};
- return [...(c.directors||[]),...(c.creators||[])].join(' ').normalize('NFKC').toLowerCase().includes(words);
+ return window.Movie30SearchQueries.crew(q,meta(f.id));
 };
 if(wildlife.length)try{renderRank()}catch(_){}
 window.__movie30V87={build:BUILD,wildlifeCount:wildlife.length,fetchDirectors:run};
@@ -447,27 +445,7 @@ const oldMatch=match;
 match=function(f,q){
  if(oldMatch(f,q))return true;
  if(!q)return true;
- const r=catalog[f.id];
- const fold=v=>String(v||'').normalize('NFKC').toLowerCase().replace(/[^\p{L}\p{N}]/gu,'');
- const needle=fold(q.trim());
- const aliases={
-  christophernolan:['クリストファーノーラン','ノーラン'],
-  bongjoonho:['ポンジュノ'],
-  hayaomiyazaki:['宮崎駿'],
-  satoshikon:['今敏'],
-  davidfincher:['デヴィッドフィンチャー','デビッドフィンチャー'],
-  stanleykubrick:['スタンリーキューブリック'],
-  akirakurosawa:['黒澤明','黒沢明'],
-  hirokazukoreeda:['是枝裕和'],
-  wesanderson:['ウェスアンダーソン'],
-  davidlynch:['デヴィッドリンチ'],
-  martinscorsese:['マーティンスコセッシ'],
-  stevenspielberg:['スティーヴンスピルバーグ','スティーブンスピルバーグ']
- };
- return !!r&&allNames(r).some(name=>{
-  const key=fold(name);
-  return key.includes(needle)||(aliases[key]||[]).some(alias=>fold(alias).includes(needle));
- });
+ return window.Movie30SearchQueries.catalogCredits(q,catalog[f.id],allNames);
 };
 const target=document.getElementById('directorTool84')||document.getElementById('page-data');
 const panel=document.createElement('div');
@@ -529,14 +507,15 @@ function applyCatalog(data){
  return {recognized,directors,posters};
 }
 let fetching=false;
-async function loadCloud(){
+async function loadCloud(refresh=true){
  if(fetching)return;
  fetching=true;reload.disabled=true;
  status.textContent='GitHubのメタデータを確認中…';
  try{
-  const response=await fetch('./tmdb-metadata.json?t='+Date.now(),{cache:'no-store'});
-  if(!response.ok)throw Error('データファイルがまだ公開されていません (HTTP '+response.status+')');
-  const data=await response.json();
+  const data=await window.__movie30LoadCatalog({refresh});
+  // Restoring IDB replaces state; apply automatic metadata only after that completes.
+  await window.__movie30StorageReady;
+  if(window.__movie30RecoveryBlocked)throw Error('保存データの復元が完了していません');
   const result=applyCatalog(data);
   status.textContent='反映済み：監督・製作者 '+result.directors+'作品／ポスター '+result.posters+'作品（照合 '+result.recognized+'作品）。データ更新：'+String(data.updatedAt||'').slice(0,10)+'。';
  }catch(e){
@@ -544,7 +523,7 @@ async function loadCloud(){
  }finally{fetching=false;reload.disabled=false}
 }
 reload.onclick=()=>loadCloud();
-loadCloud();
+loadCloud(false);
 // Make runtime debugging possible without exposing secret data.
 window.__movie30CloudCredits88={reload:loadCloud,stats:()=>({total:Object.keys(catalog).length,withDirectors:Object.values(catalog).filter(x=>x.directors?.length||x.creators?.length).length})};
 const marker=document.getElementById('movie30BuildV29');if(marker)marker.textContent='app build '+BUILD;
@@ -632,6 +611,9 @@ function posterFor(id,size='w342'){
 const roots=['rankRoot','classifyRoot','watchList83'];
 function decorateResult(card,id){
  if(card.querySelector('.movie90-result-art'))return;
+ // Pending ranking cards already own a poster and edit controls. Wrapping all
+ // children a second time squeezes those controls and moves the poster into text.
+ if(card.matches('#rankRoot .uns-card')&&card.querySelector(':scope > .movie30-poster84'))return;
  const src=posterFor(id,'w185');
  const searched=Boolean(document.getElementById('searchRank')?.value.trim()||document.getElementById('searchClassify')?.value.trim());
  if(!src&&!searched)return;
@@ -672,14 +654,17 @@ function refreshPosters(){
    img.replaceWith(real);
   }
  }
+ refreshDetailPoster();
+}
+function refreshDetailPoster(){
  const detail=document.getElementById('movie30PosterDetail84');
  const img=detail?.querySelector('img.movie30-poster84[data-poster-id]');
  if(img&&selectedId){
   const src=posterFor(selectedId,'w342');
   if(src&&img.getAttribute('src')!==src)img.src=src;
   if(!img.hasAttribute('tabindex'))img.tabIndex=0;
-  img.setAttribute('role','button');
-  img.setAttribute('aria-label','ポスターを大きく表示');
+  if(img.getAttribute('role')!=='button')img.setAttribute('role','button');
+  if(img.getAttribute('aria-label')!=='ポスターを大きく表示')img.setAttribute('aria-label','ポスターを大きく表示');
   if(!detail.querySelector('.movie90-expand-note')){
    const note=document.createElement('small');note.className='movie90-expand-note';
    note.textContent='ポスターをタップして拡大表示';
@@ -687,10 +672,14 @@ function refreshPosters(){
   }
  }
 }
-let queued=false;
-function scheduleRefresh(){
+let queued=false,fullPending=false;
+function scheduleRefresh(scope){
+ if(scope!=='detail')fullPending=true;
  if(queued)return;queued=true;
- requestAnimationFrame(()=>{queued=false;refreshPosters();});
+ requestAnimationFrame(()=>{
+  const full=fullPending;queued=false;fullPending=false;
+  if(full)refreshPosters();else refreshDetailPoster();
+ });
 }
 for(const id of roots){
  const el=document.getElementById(id);if(!el)continue;
@@ -705,7 +694,7 @@ for(const [method,original] of [['rank',renderRank],['classify',renderClassify]]
  else renderClassify=function(...args){const result=original.apply(this,args);scheduleRefresh();return result};
 }
 const posterPanel=document.getElementById('movie30PosterDetail84');
-if(posterPanel)new MutationObserver(scheduleRefresh).observe(posterPanel,{childList:true,subtree:true});
+if(posterPanel)new MutationObserver(()=>scheduleRefresh('detail')).observe(posterPanel,{childList:true,subtree:true});
 
 const overlay=document.createElement('div');
 overlay.id='movie30CoverLightbox90';overlay.className='movie90-viewer';overlay.hidden=true;
@@ -858,10 +847,7 @@ const aliases=new Map(pairs.map(([english,...names])=>[fold(english),names]));
 const priorMatch=match;
 match=function(f,q){
  if(priorMatch(f,q))return true;
- const needle=fold(String(q||'').trim());if(!needle)return false;
- const m=state.letterboxdMeta?.[f.id]||{},c=m.crew84||{};
- return [...(m.directors84Manual||[]),...(c.directors||[]),...(c.creators||[])]
-   .some(person=>(aliases.get(fold(person))||[]).some(jp=>fold(jp).includes(needle)));
+ return window.Movie30SearchQueries.directorAliases(q,state.letterboxdMeta?.[f.id]||{},aliases,fold);
 };
 const style=document.createElement('style');
 style.id='movie30-poster-click91';
@@ -869,10 +855,12 @@ style.textContent=[
  '#rankRoot:not(.movie30-rank-grid-only84) .rank-card>.movie30-poster84,',
  '#watchList83 .watch83-grid:not(.poster-gallery84) .watch83-item>.movie30-poster84,',
  '#rankRoot .uns-card img.movie90-result-art,',
+ '#rankRoot .uns-card img.movie30-poster84,',
  '#classifyRoot .card img.movie90-result-art{pointer-events:auto!important;cursor:zoom-in!important;touch-action:manipulation}',
  '#rankRoot:not(.movie30-rank-grid-only84) .rank-card>.movie30-poster84:focus-visible,',
  '#watchList83 .watch83-grid:not(.poster-gallery84) .watch83-item>.movie30-poster84:focus-visible,',
  '#rankRoot .uns-card img.movie90-result-art:focus-visible,',
+ '#rankRoot .uns-card img.movie30-poster84:focus-visible,',
  '#classifyRoot .card img.movie90-result-art:focus-visible{outline:3px solid #b6d6ff!important;outline-offset:1px}'
 ].join('\n');
 document.head.appendChild(style);
@@ -880,6 +868,7 @@ const posterSelector=[
  '#rankRoot .rank-card img.movie30-poster84',
  '#watchList83 .watch83-item img.movie30-poster84',
  '#rankRoot .uns-card img.movie90-result-art',
+ '#rankRoot .uns-card img.movie30-poster84',
  '#classifyRoot .card img.movie90-result-art'
 ].join(',');
 function clickablePoster(event){
@@ -942,15 +931,9 @@ let catalog=Object.create(null);
 const baseMatch=match;
 match=function(f,q){
  if(baseMatch(f,q))return true;
- if(!q)return true;
- const needle=norm(q);
- if(!needle)return false;
- const rec=catalog[f.id]||{};
- return [...(rec.directorAliases||[]),rec.title||'']
-   .some(label=>norm(label).includes(needle));
+ return window.Movie30SearchQueries.catalogLabels(q,catalog[f.id]||{},norm);
 };
-fetch('./tmdb-metadata.json?autocomplete=20261012c',{cache:'no-store'})
- .then(res=>res.ok?res.json():null)
+window.__movie30LoadCatalog()
  .then(data=>{
    if(!data?.films)return;
    catalog=data.films;
@@ -1074,6 +1057,17 @@ function remoteAlreadyLocal(item){
  });
 }
 function hide(box){box.menu.hidden=true;box.entries=[];box.selected=-1;}
+function fitSuggestions(box){
+ if(box.menu.hidden)return;
+ const viewport=window.visualViewport;
+ // On iOS the visual viewport can pan while the keyboard is open. Use the
+ // smaller coordinate-space bound so candidates never extend under it.
+ const visibleBottom=viewport?Math.min(window.innerHeight,viewport.height,viewport.offsetTop+viewport.height):window.innerHeight;
+ const top=box.menu.getBoundingClientRect().top;
+ const available=Math.max(0,visibleBottom-top-12);
+ box.menu.style.maxHeight=Math.min(410,available)+'px';
+ box.menu.style.visibility=available<48?'hidden':'';
+}
 function label(item){
  if(item.kind==='movie')return item.label;
  if(item.kind==='director')return item.label;
@@ -1132,6 +1126,7 @@ function refresh(box){
  else if(box.remoteQuery!==q&&q.length>=2)foot.textContent='入力を止めるとTMDbの追加候補も表示します。';
  else foot.textContent='人物候補は人物の作品一覧を開きます。作品候補は一覧の絞り込み・追加に使えます。';
  box.menu.appendChild(foot);
+ requestAnimationFrame(()=>fitSuggestions(box));
 }
 function setQuery(box,s){
  box.input.value=s;
@@ -1167,7 +1162,7 @@ async function choose(box,item){
   window.__movie30People.open({id:item.media==='person'?item.tmdbId:0,name:item.name||item.label});
   return;
  }
- if(item.kind==='movie'){setQuery(box,displayTitle(item.f));return;}
+ if(item.kind==='movie'){box.input.blur();openSheet(item.f.id);return;}
  if(item.kind==='director'){setQuery(box,item.name);return;}
  if(item.media==='person'){
   // TMDb often returns the Latin spelling for a Japanese alias.
@@ -1194,7 +1189,7 @@ async function choose(box,item){
    const ti=titleInfo(f),rec=catalog[f.id]||{},m=state.letterboxdMeta?.[f.id]||{};
    return Number(item.tmdbId)===Number(m.poster84?.tmdbId||ti.tmdbId||rec.tmdbId);
   });
-  if(local){setQuery(box,displayTitle(local));return;}
+  if(local){box.input.blur();openSheet(local.id);return;}
   document.getElementById('quickAdd')?.click();
   if(typeof selectTmdb==='function')selectTmdb(item.tmdbId);
   return;
@@ -1250,6 +1245,9 @@ function setup(input){
 }
 setup(document.getElementById('searchRank'));
 setup(document.getElementById('searchClassify'));
+window.visualViewport?.addEventListener('resize',()=>inputs.forEach(fitSuggestions),{passive:true});
+window.visualViewport?.addEventListener('scroll',()=>inputs.forEach(fitSuggestions),{passive:true});
+window.addEventListener('resize',()=>inputs.forEach(fitSuggestions),{passive:true});
 window.__movie30AutoComplete92={build:BUILD,refresh:()=>inputs.forEach(refresh)};
 const marker=document.getElementById('movie30BuildV29');if(marker)marker.textContent='app build '+BUILD;
 })();
@@ -1466,8 +1464,8 @@ function construct(page){
   });
  }
  const genreBox=document.createElement('div');genreBox.className='movie93-box movie93-genre';
- const genreLabel=document.createElement('label');genreLabel.className='movie93-label';genreLabel.textContent='ジャンル';
- const sel=document.createElement('select');sel.setAttribute('aria-label','ジャンルで絞り込み');
+ const genreLabel=document.createElement('label');genreLabel.className='movie93-label';genreLabel.textContent='外部情報も含むジャンル（1つ）';
+ const sel=document.createElement('select');sel.setAttribute('aria-label','外部情報も含むジャンルで絞り込み');
  genreLabel.append(sel);genreBox.append(genreLabel);grid.append(genreBox);
  panel.select=sel;panel.inputs.genre=sel;
  sel.addEventListener('change',()=>{
@@ -1501,9 +1499,7 @@ document.addEventListener('pointerdown',event=>{
 });
 async function load(){
  try{
-  const response=await fetch('./tmdb-metadata.json?filters=20261012d',{cache:'no-store'});
-  if(!response.ok)throw Error('HTTP '+response.status);
-  const data=await response.json();
+  const data=await window.__movie30LoadCatalog();
   if(data.schema!==1||!data.films)return;
   catalog=data.films;
   candidates=options();
@@ -1644,7 +1640,7 @@ if(old&&facets){
  group.id='movie95FacetGroup';
  const heading=document.createElement('div');
  heading.className='movie95-facet-title';
- heading.textContent='監督・出演者・TMDbジャンル';
+ heading.textContent='2. 人物・外部情報から探す';
  group.append(heading,facets);
  facets.open=true;
  const relink=()=>{
@@ -1675,9 +1671,7 @@ function flagActive(){
 
 // The v66 rank renderer otherwise makes the drag handles active again, even
 // after v93 filtered the list. Disable editing while these new facets are set.
-const beforeRank=renderRank;
-renderRank=function(...args){
- const result=beforeRank.apply(this,args);
+renderRank=window.Movie30RenderLifecycle.decorate(renderRank,{after(){
  if(flagActive()){
   for(const handle of document.querySelectorAll('#rankRoot .rank-card .drag-handle')){
    handle.disabled=true;
@@ -1687,8 +1681,7 @@ renderRank=function(...args){
    handle.style.opacity='.35';
   }
  }
- return result;
-};
+}});
 flagActive();
 
 // Compute the actual bottom of the existing sticky page header.
@@ -1698,7 +1691,7 @@ function alignLabel(){
  raf=0;
  const header=document.querySelector('.top');
  if(!header)return;
- const bottom=header.getBoundingClientRect().bottom;
+ const bottom=(header.getBoundingClientRect().height+(parseFloat(getComputedStyle(header).top)||0));
  const offset=Math.max(0,Math.ceil(bottom+5));
  if(Math.abs(offset-previous)>=1){
   previous=offset;
@@ -1711,7 +1704,7 @@ function scheduleAlign(){
 }
 alignLabel();
 window.addEventListener('resize',scheduleAlign,{passive:true});
-window.addEventListener('scroll',scheduleAlign,{passive:true});
+
 if(typeof ResizeObserver==='function'){
  const header=document.querySelector('.top');
  if(header)new ResizeObserver(scheduleAlign).observe(header);
@@ -1740,7 +1733,7 @@ css.id='movie30-search-unified96';
 css.textContent=[
  '#page-rank>.tools.movie96-compact-tools{display:block!important;margin:12px 0 8px!important;}',
  '#page-rank>.tools .movie92-search-wrap{display:block!important;position:relative!important;width:100%!important;max-width:100%!important;min-width:0!important;}',
- '#page-rank>.tools #searchRank{width:100%!important;min-width:0!important;padding-right:59px!important;min-height:43px!important;}',
+ '#page-rank>.tools #searchRank{width:100%!important;min-width:0!important;padding-right:83px!important;min-height:43px!important;}',
  '.movie96-expand{position:absolute;top:4px;right:5px;min-width:41px;min-height:35px;z-index:2;padding:0 8px;border-radius:8px;background:#213449;border:1px solid #50657a;color:#cfe7ff;font-size:16px;}',
  '.movie96-expand[aria-expanded="true"]{background:#31577c;border-color:#7398b8;}',
  '.movie96-expand.movie96-filtering:after{content:"";position:absolute;right:3px;top:2px;width:7px;height:7px;border-radius:50%;background:#4dd48a;}',
@@ -1754,10 +1747,18 @@ css.textContent=[
  '.movie96-close{background:#26384c;border:1px solid #50637a;border-radius:8px;color:#d8e7f7;padding:7px 11px;font-size:11px;}',
  '.movie96-filtergroup{padding:10px 0;margin-bottom:10px;border-bottom:1px solid #304255;}',
  '.movie96-filtergroup>h3{font-size:12px;color:#d6e7f6;margin:0 0 10px;}',
+ '.movie96-range-heading{font-size:12px;color:#d6e7f6;margin:12px 0 10px;padding-top:12px;border-top:1px solid #304255;}',
+ '.movie96-chip-group{border:1px solid #304255;border-radius:9px;margin:8px 0;background:#111a25;}',
+ '.movie96-chip-group>summary{cursor:pointer;padding:10px;font-size:11px;font-weight:750;color:#d2e4f6;list-style:none;}',
+ '.movie96-chip-group>summary::-webkit-details-marker{display:none;}',
+ '.movie96-chip-group>summary:after{content:" ▾";float:right;}',
+ '.movie96-chip-group[open]>summary:after{content:" ▴";}',
+ '.movie96-chip-group>.v66-chips{padding:0 10px 10px;}',
  '.movie96-basegrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;}',
  '.movie96-basicfield{display:flex;flex-direction:column;gap:5px;min-width:0;}',
  '.movie96-basicfield label{font-size:10.5px;font-weight:750;color:#b1c4d7;}',
  '.movie96-basicfield select,.movie96-basicfield .field{width:100%;min-height:40px;max-width:100%;min-width:0;font-size:13px;}',
+ '.movie96-basicfield[hidden]{display:none!important;}',
  '.movie96-basicfield .genre-combo{width:100%;flex:0 1 auto;}',
  '.movie96-filteroptions{display:flex;flex-wrap:wrap;gap:8px;margin:9px 0 4px;}',
  '.movie96-filteroptions button{min-height:36px;}',
@@ -1765,6 +1766,7 @@ css.textContent=[
  '.movie96-viewbar{display:flex;gap:7px;flex-wrap:wrap;align-items:center;margin:7px 0 6px;}',
  '.movie96-viewbar>select{flex:1 1 170px;min-width:0;max-width:320px;}',
  '.movie96-viewbar>.btn{flex:0 0 auto;}',
+ '#advBox66 .v66-range{min-width:0;}#advBox66 .v66-range input{min-width:0;width:100%;box-sizing:border-box;}#advBox66 .v66-range em{flex-shrink:0;}',
  '#page-rank #advBox66 .persist{font-size:10px!important;padding:8px!important;}',
  '#page-rank #advBox66>.tip{font-size:10px!important;margin-top:10px!important;}',
  '#page-rank .star-jump{position:sticky!important;z-index:24!important;}',
@@ -1787,14 +1789,17 @@ title.append(head,close);
 
 const basic=document.createElement('section');
 basic.id='movie96BasicGroup';basic.className='movie96-filtergroup';
-const basicHeading=document.createElement('h3');basicHeading.textContent='ジャンル・種別・制作区分など';
+const basicHeading=document.createElement('h3');basicHeading.textContent='1. 作品情報';
 const basicGrid=document.createElement('div');basicGrid.className='movie96-basegrid';
-basic.append(basicHeading,basicGrid);
+basic.append(basicHeading);
+const guide=document.createElement('p');
+guide.className='tip';guide.textContent='条件はすぐに一覧へ反映されます。複数選ぶと、すべてに一致する作品を表示します。適用中の条件と一括解除は検索欄の下に表示します。';
+basic.append(guide,basicGrid);
 const opts=document.createElement('div');opts.className='movie96-filteroptions';
 basic.append(opts);
 
 const controlNames=[
- ['genreFilterRank','ジャンル（複数選択可）'],
+ ['genreFilterRank','登録ジャンル（複数）'],
  ['mediaFilterRank','種別'],
  ['tvSubtypeFilterRank','TV区分'],
  ['originFilterRank','制作区分'],
@@ -1803,13 +1808,20 @@ const controlNames=[
  ['runtimeFilterRank','上映時間'],
  ['categoryFilterRank','カテゴリ']
 ];
+let genreWrap=null;
 for(const [id,label] of controlNames){
  const node=document.getElementById(id);if(!node)continue;
  const wrap=document.createElement('div');wrap.className='movie96-basicfield';
  const lbl=document.createElement('label');lbl.setAttribute('for',id);lbl.textContent=label;
  wrap.append(lbl,node);basicGrid.append(wrap);
  if(id==='genreFilterRank'){
+  genreWrap=wrap;
   const chips=document.getElementById('genreComboRank');if(chips)wrap.append(chips);
+ }
+ if(id==='tvSubtypeFilterRank'){
+  const sync=()=>{wrap.hidden=node.hidden||getComputedStyle(node).display==='none';};
+  sync();new MutationObserver(sync).observe(node,{attributes:true,attributeFilter:['hidden','style','class']});
+  document.getElementById('mediaFilterRank')?.addEventListener('change',()=>requestAnimationFrame(sync));
  }
 }
 for(const id of ['toggleEmpty']){
@@ -1825,15 +1837,39 @@ const info=page.querySelector(':scope > .tip');
 if(persist)extras.append(persist);
 if(info)extras.append(info);
 
+const persistentFacet=document.getElementById('movie95FacetGroup');
+const rangeHeading=document.createElement('h3');
+rangeHeading.className='movie96-range-heading';
+rangeHeading.textContent='3. ジャンルと数値を細かく指定';
+const relatedHeading=document.createElement('h3');
+relatedHeading.className='movie96-range-heading';relatedHeading.textContent='関連操作（絞り込み条件には含まれません）';
+const genreOpen={include:false,exclude:false};
+function foldGenreChips(prefix,label,key,selectedClass){
+ const heading=[...adv.querySelectorAll(':scope > .v66-lbl')].find(el=>el.textContent.startsWith(prefix));
+ const chips=heading?.nextElementSibling;
+ if(!heading||!chips?.classList.contains('v66-chips'))return;
+ const count=chips.querySelectorAll('.'+selectedClass).length;
+ const group=document.createElement('details');group.className='movie96-chip-group';
+ group.open=genreOpen[key]||count>0;
+ const summary=document.createElement('summary');summary.textContent=label+'（'+count+'件選択）';
+ group.append(summary,chips);heading.replaceWith(group);
+ group.addEventListener('toggle',()=>{genreOpen[key]=group.open});
+}
 function attachPersistent(){
  // v66's redrawing and v95's own facet observer both rearrange the panel.
- // Reestablish a deterministic header -> TMDb facets -> classic filters -> actions order.
+ // Preserve control nodes and handlers across genre redraws; basic choices come first.
  if(adv.firstElementChild!==title)adv.prepend(title);
- const facet=document.getElementById('movie95FacetGroup');
- if(facet&&facet.parentElement===adv&&title.nextElementSibling!==facet)
-  title.insertAdjacentElement('afterend',facet);
- const anchor=facet?.parentElement===adv?facet:title;
- if(basic.previousElementSibling!==anchor)anchor.insertAdjacentElement('afterend',basic);
+ const facet=persistentFacet;
+ if(basic.previousElementSibling!==title)title.insertAdjacentElement('afterend',basic);
+ if(facet&&(facet.parentElement!==adv||facet.previousElementSibling!==basic))basic.insertAdjacentElement('afterend',facet);
+ const range=adv.querySelector(':scope > .v66-grid');
+ if(range&&genreWrap&&(rangeHeading.parentElement!==adv||rangeHeading.nextElementSibling!==genreWrap||genreWrap.nextElementSibling!==range)){
+  range.insertAdjacentElement('beforebegin',rangeHeading);
+  rangeHeading.insertAdjacentElement('afterend',genreWrap);
+ }
+ foldGenreChips('必須ジャンル','必須ジャンル：すべて含む','include','inc');
+ foldGenreChips('除外ジャンル','除外ジャンル：いずれも含まない','exclude','exc');
+ if(relatedHeading.parentElement!==adv)adv.append(relatedHeading);
  if(extras.parentElement!==adv)adv.append(extras);
 }
 attachPersistent();
@@ -1854,7 +1890,7 @@ else adv.insertAdjacentElement('afterend',viewbar);
 
 const expand=document.createElement('button');
 expand.className='movie96-expand';expand.type='button';
-expand.textContent='⌄';expand.title='詳細絞り込みを開閉';expand.setAttribute('aria-label','詳細絞り込みを開閉する');
+expand.textContent='絞込 ▾';expand.title='詳細絞り込みを開閉';expand.setAttribute('aria-label','詳細絞り込みを開閉する');
 searchShell.append(expand);
 tools.classList.add('movie96-compact-tools');
 // Original "詳細絞込" button is superseded by the arrow inside the search field.
@@ -1863,9 +1899,10 @@ const badge=document.getElementById('advBadge66');
 if(badge){badge.hidden=true;badge.style.setProperty('display','none','important');}
 
 function openPanel(open){
+ if(open){input.blur();const suggestions=searchShell.querySelector('.movie92-suggestions');if(suggestions)suggestions.hidden=true;}
  adv.classList.toggle('movie96-is-open',Boolean(open));
  adv.classList.toggle('open',Boolean(open));
- expand.textContent=open?'⌃':'⌄';
+ expand.textContent=open?'閉じる ▴':'絞込 ▾';
  expand.setAttribute('aria-expanded',String(Boolean(open)));
  expand.setAttribute('aria-controls','advBox66');
  input.setAttribute('aria-expanded',String(Boolean(open)));
@@ -1877,15 +1914,32 @@ input.setAttribute('aria-controls','advBox66');
 expand.addEventListener('pointerdown',e=>e.preventDefault());
 expand.addEventListener('click',()=>openPanel(!adv.classList.contains('movie96-is-open')));
 close.addEventListener('click',()=>{openPanel(false);input.blur();});
+const activeSummary=document.createElement('div');
+activeSummary.id='movie96ActiveSummary';activeSummary.className='tip';
+const activeText=document.createElement('span');activeText.setAttribute('role','status');
+const clearAll=document.createElement('button');clearAll.type='button';clearAll.className='btn';clearAll.textContent='検索・絞り込みをすべて解除';
+clearAll.onclick=()=>window.__movie30ResetRankFilters66?.();
+activeSummary.append(activeText,document.createElement('br'),clearAll);tools.after(activeSummary);
 function updateActive(){
- const selected=Boolean(window.__movie30AdvancedFilter93?.hasActive?.());
- const other=['genreFilterRank','mediaFilterRank','originFilterRank','formatFilterRank','decadeFilterRank','runtimeFilterRank'].some(id=>Boolean(document.getElementById(id)?.value));
- expand.classList.toggle('movie96-filtering',selected||other);
+ const bits=[];
+ for(const [id,label] of [['searchRank','検索'],...controlNames]){
+  const el=document.getElementById(id);if(!el?.value)continue;
+  bits.push(label+'：'+(el.tagName==='SELECT'?el.selectedOptions[0]?.textContent:el.value));
+ }
+ for(const [id,label] of [['y166','公開年の下限'],['y266','公開年の上限'],['r166','時間の下限'],['r266','時間の上限'],['s166','点数の下限'],['s266','点数の上限']]){
+  const value=document.getElementById(id)?.value;if(value!=null&&value!=='')bits.push(label+'：'+value);
+ }
+ for(const [selector,label] of [['[data-inc].inc','必須ジャンル'],['[data-exc].exc','除外ジャンル']]){
+  const names=[...adv.querySelectorAll(selector)].map(el=>el.textContent);if(names.length)bits.push(label+'：'+names.join('・'));
+ }
+ const facets=window.__movie30AdvancedFilter93?.getFilters?.()||{};
+ for(const [key,label] of [['director','監督'],['actor','出演者'],['genre','TMDBジャンル']])if(facets[key])bits.push(label+'：'+facets[key]);
+ const text=bits.length?'適用中 — '+bits.join(' ／ '):'検索・絞り込み条件なし';
+ if(activeText.textContent!==text)activeText.textContent=text;
+ clearAll.hidden=!bits.length;expand.classList.toggle('movie96-filtering',!!bits.length);
 }
-for(const node of [basicGrid,adv]){
- node.addEventListener('change',updateActive);
- node.addEventListener('input',updateActive);
-}
+for(const event of ['change','input']){adv.addEventListener(event,updateActive);input.addEventListener(event,updateActive);}
+renderRank=window.Movie30RenderLifecycle.decorate(renderRank,{after(){updateActive()}});
 updateActive();
 
 // v95 had set top to the fixed header's bottom, overlooking the sticky ★ row.
@@ -1895,28 +1949,16 @@ let lastTop=-1,frame=0;
 function align(){
  frame=0;
  const header=document.querySelector('.top');
- const fixedEnd=header?Math.max(0,header.getBoundingClientRect().bottom):0;
+ const fixedEnd=header?Math.max(0,(header.getBoundingClientRect().height+(parseFloat(getComputedStyle(header).top)||0))):0;
  const bar=document.getElementById('starJumpBar');
- let end=fixedEnd;
- if(bar&&getComputedStyle(bar).display!=='none'){
-  const r=bar.getBoundingClientRect();
-  // Only count the star menu when the menu is currently stuck below the top header.
-  if(r.height>0&&r.top<=fixedEnd+17&&r.bottom>fixedEnd){
-   end=Math.max(end,r.bottom);
-  }
-  // The older jump navigation uses a hardcoded header height; realign after rotation.
-  if(header&&r.top<=fixedEnd+17){
-   const expected=Math.max(0,Math.ceil(fixedEnd));
-   if(Math.abs(parseFloat(bar.style.top||'0')-expected)>1)bar.style.top=expected+'px';
-  }
- }
+ const end=fixedEnd+(bar&&getComputedStyle(bar).display!=='none'?bar.getBoundingClientRect().height:0);
  const target=Math.ceil(end+7);
  if(target!==lastTop){
   lastTop=target;rootStyle.setProperty('--movie96-score-top',target+'px');
  }
 }
 function queueAlign(){if(frame)return;frame=requestAnimationFrame(align);}
-window.addEventListener('scroll',queueAlign,{passive:true});
+
 window.addEventListener('resize',queueAlign,{passive:true});
 window.addEventListener('orientationchange',queueAlign,{passive:true});
 if(typeof ResizeObserver==='function'){
@@ -1926,7 +1968,7 @@ if(typeof ResizeObserver==='function'){
 }
 align();
 
-window.__movie30CompactSearch96={version:BUILD,open:()=>openPanel(true),close:()=>openPanel(false),align};
+window.__movie30CompactSearch96={version:BUILD,restoreControls:attachPersistent,open:()=>openPanel(true),close:()=>openPanel(false),align};
 const build=document.getElementById('movie30BuildV29');
 if(build)build.textContent='app build '+BUILD;
 })();
@@ -1962,7 +2004,7 @@ let scheduled=false,prior='';
 function alignStack(){
  scheduled=false;
  if(!head)return;
- const bottom=Math.max(0,Math.ceil(head.getBoundingClientRect().bottom));
+ const bottom=Math.max(0,Math.ceil((head.getBoundingClientRect().height+(parseFloat(getComputedStyle(head).top)||0))));
  const navHeight=nav&&nav.getBoundingClientRect().height>0
    ?Math.ceil(nav.getBoundingClientRect().height):0;
  // No fixed magic offsets: all three sticky elements share the same measurements.
@@ -1987,7 +2029,7 @@ if(head&&typeof ResizeObserver==='function'){
  obs.observe(head);
  if(nav)obs.observe(nav);
 }
-window.addEventListener('scroll',schedule,{passive:true});
+
 window.addEventListener('resize',schedule,{passive:true});
 window.addEventListener('orientationchange',schedule,{passive:true});
 if(rank)new MutationObserver(changes=>{
@@ -2018,7 +2060,7 @@ function align(){
  ticking=false;
  const header=document.querySelector('.top'),jump=document.getElementById('starJumpBar');
  if(!header||!jump)return;
- const headerBottom=Math.max(0,Math.ceil(header.getBoundingClientRect().bottom));
+ const headerBottom=Math.max(0,Math.ceil((header.getBoundingClientRect().height+(parseFloat(getComputedStyle(header).top)||0))));
  const h=Math.ceil(jump.getBoundingClientRect().height);
  const heading=document.querySelector('#rankRoot .rank-star>.rank-star-head');
  const headingHeight=Math.ceil(heading?.getBoundingClientRect().height||38);
@@ -2032,7 +2074,7 @@ function align(){
  }
 }
 function queue(){if(ticking)return;ticking=true;requestAnimationFrame(align);}
-window.addEventListener('scroll',queue,{passive:true});
+
 window.addEventListener('resize',queue,{passive:true});
 if(typeof ResizeObserver==='function'){
  const ro=new ResizeObserver(queue);
@@ -2223,6 +2265,7 @@ allFilms=function(...args){
   const sameUri=uri(f.uri)&&uri(f.uri)===uri(keeper.uri);
   const englishA=normalize(titleInfo(f).englishTitle||f.lbTitle);
   const englishB=normalize(titleInfo(keeper).englishTitle||keeper.lbTitle);
+  const sameEnglish=!!englishA&&englishA===englishB;
   return !(sameUri||sameEnglish);
  });
  movie98ListCache=filtered;
@@ -2292,12 +2335,9 @@ function jumpBindings(){
   handle.onclick=activate;
  }
 }
-const previous=renderRank;
-renderRank=function(...args){
- const result=previous.apply(this,args);
+renderRank=window.Movie30RenderLifecycle.decorate(renderRank,{after(){
  if(!window.__movie30BulkBoot)jumpBindings();
- return result;
-};
+}});
 // Older input handlers capture a pre-wrapper renderRank reference. Apply the
 // navigation action after those handlers finish, and after root replacements.
 const search=document.getElementById('searchRank');

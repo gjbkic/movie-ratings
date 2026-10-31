@@ -1,0 +1,5 @@
+{
+  "crew": "function(f,q){\r\n if(matchPrior(f,q))return true;\r\n if(!q)return true;\r\n const words=String(q).normalize('NFKC').toLowerCase().trim();\r\n const m=meta(f.id),c=m.crew84||{};\r\n return [...(c.directors||[]),...(c.creators||[])].join(' ').normalize('NFKC').toLowerCase().includes(words);\r\n}",
+  "directorAliases": "function(f,q){\r\n if(priorMatch(f,q))return true;\r\n const needle=fold(String(q||'').trim());if(!needle)return false;\r\n const m=state.letterboxdMeta?.[f.id]||{},c=m.crew84||{};\r\n return [...(m.directors84Manual||[]),...(c.directors||[]),...(c.creators||[])]\r\n   .some(person=>(aliases.get(fold(person))||[]).some(jp=>fold(jp).includes(needle)));\r\n}",
+  "catalogLabels": "function(f,q){\r\n if(baseMatch(f,q))return true;\r\n if(!q)return true;\r\n const needle=norm(q);\r\n if(!needle)return false;\r\n const rec=catalog[f.id]||{};\r\n return [...(rec.directorAliases||[]),rec.title||'']\r\n   .some(label=>norm(label).includes(needle));\r\n}"
+}
