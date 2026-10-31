@@ -7670,9 +7670,9 @@ renderRank();const marker=document.getElementById('movie30BuildV29');if(marker)m
     if(!overlay.classList.contains('open')||event.touches.length!==1)return;
     const target=event.target;
     if(!(target instanceof Element))return;
-    if(target.closest('button,input,select,[contenteditable="true"],[role="button"]'))return;
-    if(target.closest('textarea')&&!target.closest('#note66'))return;
     const fromHandle=bar.contains(target);
+    if(!fromHandle&&target.closest('button,input,select,[contenteditable="true"],[role="button"]'))return;
+    if(target.closest('textarea')&&!target.closest('#note66'))return;
     const child=scrollableChild(target);
     const t=event.touches[0];
     // Keep native content scrolling, but remember quick downward flicks started
@@ -7710,7 +7710,7 @@ renderRank();const marker=document.getElementById('movie30BuildV29');if(marker)m
     // A lower-half flick works even after the sheet has been scrolled.
     // Require both distance and velocity so slow reading scrolls remain native.
     const lowerFlick=g.nativeScrolling&&g.fromLowerHalf&&
-      ((g.dy>=90&&speed>0.65)||g.dy>=160);
+      ((g.dy>=65&&speed>0.55)||g.dy>=140);
     if(!g.dragging&&!lowerFlick)return;
     if(!cancelled&&(normalDismiss||lowerFlick)){
       sheet.style.transition='transform 150ms ease-out';

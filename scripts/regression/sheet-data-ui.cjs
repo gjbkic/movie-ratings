@@ -20,12 +20,12 @@ async function openForSwipe(page){
    sheet.scrollTop=200;
  });
 }
-async function swipe(page,{scrolled=true,fast=true,distance=145}={}){
- await page.evaluate(async({scrolled,fast,distance})=>{
-   const sheet=document.querySelector('#sheetBg>.sheet'),el=document.getElementById('movie30-test-swipe-filler');
+async function swipe(page,{scrolled=true,fast=true,distance=145,onCloseButton=false}={}){
+ await page.evaluate(async({scrolled,fast,distance,onCloseButton})=>{
+   const sheet=document.querySelector('#sheetBg>.sheet'),el=onCloseButton?document.querySelector('.v79-close'):document.getElementById('movie30-test-swipe-filler');
    sheet.scrollTop=scrolled?200:0;
-   const b=sheet.getBoundingClientRect();
-   const x=Math.round(b.left+b.width*.55),y=Math.round(b.top+b.height*.60);
+   const b=onCloseButton?el.getBoundingClientRect():sheet.getBoundingClientRect();
+   const x=Math.round(b.left+b.width*.55),y=Math.round(b.top+b.height*(onCloseButton ? .5 : .60));
    const fire=(kind,dy)=>{
      const t=new Touch({identifier:2,target:el,clientX:x,clientY:y+dy,pageX:x,pageY:y+dy});
      return el.dispatchEvent(new TouchEvent(kind,{bubbles:true,cancelable:true,
@@ -36,7 +36,7 @@ async function swipe(page,{scrolled=true,fast=true,distance=145}={}){
    if(!fast)await new Promise(resolve=>setTimeout(resolve,360));
    fire('touchmove',distance);
    fire('touchend',distance);
- },{scrolled,fast,distance});
+ },{scrolled,fast,distance,onCloseButton});
  await page.waitForTimeout(245);
 }
 test('detail sheet: fast lower-half flick dismisses even after scrolling',async()=>{
@@ -54,6 +54,18 @@ test('detail sheet: normal slower reading swipe does not dismiss a scrolled shee
   await openForSwipe(page);
   await swipe(page,{fast:false,distance:82});
   assert.equal(await page.locator('#sheetBg').evaluate(el=>el.classList.contains('open')),true);
+ }finally{await context.close()}
+});
+test('detail sheet: a short deliberate lower-half flick dismisses without a long pull',async()=>{
+ const {context,page}=await start();
+ try{await openForSwipe(page);await swipe(page,{distance:70});
+  assert.equal(await page.locator('#sheetBg').evaluate(el=>el.classList.contains('open')),false);
+ }finally{await context.close()}
+});
+test('detail sheet: swiping from the close button also works as a pull-bar gesture',async()=>{
+ const {context,page}=await start();
+ try{await openForSwipe(page);await swipe(page,{scrolled:false,distance:70,onCloseButton:true});
+  assert.equal(await page.locator('#sheetBg').evaluate(el=>el.classList.contains('open')),false);
  }finally{await context.close()}
 });
 test('detail sheet: deliberate long slow swipe dismisses a scrolled sheet',async()=>{
