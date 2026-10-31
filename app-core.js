@@ -2122,9 +2122,14 @@ window.__movie30AutoSyncPending=()=>{const x=getLbSettings();if(x.auto!==false)s
       b.onclick=()=>{const t=findStarSection(star);if(t)t.scrollIntoView({behavior:'smooth',block:'start'});};
     });
     const ub=jumpBar.querySelector('[data-jump-uns]'); if(ub)ub.onclick=()=>document.querySelector('#rankRoot .uns-panel')?.scrollIntoView({behavior:'smooth',block:'start'});
-    const h=document.querySelector('.top')?.getBoundingClientRect().height||96; jumpBar.style.top=`${Math.round(h)}px`;
+    // The later sticky-stack layout owns this offset. Avoid a synchronous layout
+    // read after rebuilding every rank card; keep the initial legacy fallback.
+    if(!window.__movie30StickyStack97&&!jumpBar.style.top){
+      const h=document.querySelector('.top')?.getBoundingClientRect().height||96;
+      jumpBar.style.top=`${Math.round(h)}px`;
+    }
   }
-  window.addEventListener('resize',()=>{if(jumpBar){const h=document.querySelector('.top')?.getBoundingClientRect().height||96;jumpBar.style.top=`${Math.round(h)}px`;}});
+  window.addEventListener('resize',()=>{if(jumpBar&&!window.__movie30StickyStack97){const h=document.querySelector('.top')?.getBoundingClientRect().height||96;jumpBar.style.top=`${Math.round(h)}px`;}});
 
   // Continuous drag auto-scroll. Holding near the top/bottom keeps moving the page even without more pointer events.
   let dragPoint = null, dragRaf = 0;
