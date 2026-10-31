@@ -39,6 +39,11 @@ async function swipe(page,{scrolled=true,fast=true,distance=145,onCloseButton=fa
  },{scrolled,fast,distance,onCloseButton});
  await page.waitForTimeout(245);
 }
+async function assertBackgroundLock(page,locked){
+ const actual=await page.evaluate(()=>({html:document.documentElement.style.overflow,body:document.body.style.overflow}));
+ assert.equal(actual.html,locked?'hidden':'',`Unexpected page overflow after detail ${locked?'open':'close'}`);
+ assert.equal(actual.body,locked?'hidden':'',`Unexpected body overflow after detail ${locked?'open':'close'}`);
+}
 test('detail sheet: fast lower-half flick dismisses even after scrolling',async()=>{
  const {context,page}=await start();
  try{
@@ -46,6 +51,7 @@ test('detail sheet: fast lower-half flick dismisses even after scrolling',async(
   assert(await page.locator('#sheetBg').evaluate(el=>el.classList.contains('open')));
   await swipe(page);
   assert.equal(await page.locator('#sheetBg').evaluate(el=>el.classList.contains('open')),false);
+  await assertBackgroundLock(page,false);
  }finally{await context.close()}
 });
 test('detail sheet: normal slower reading swipe does not dismiss a scrolled sheet',async()=>{
@@ -54,18 +60,21 @@ test('detail sheet: normal slower reading swipe does not dismiss a scrolled shee
   await openForSwipe(page);
   await swipe(page,{fast:false,distance:82});
   assert.equal(await page.locator('#sheetBg').evaluate(el=>el.classList.contains('open')),true);
+  await assertBackgroundLock(page,true);
  }finally{await context.close()}
 });
 test('detail sheet: a short deliberate lower-half flick dismisses without a long pull',async()=>{
  const {context,page}=await start();
  try{await openForSwipe(page);await swipe(page,{distance:70});
   assert.equal(await page.locator('#sheetBg').evaluate(el=>el.classList.contains('open')),false);
+  await assertBackgroundLock(page,false);
  }finally{await context.close()}
 });
 test('detail sheet: swiping from the close button also works as a pull-bar gesture',async()=>{
  const {context,page}=await start();
  try{await openForSwipe(page);await swipe(page,{scrolled:false,distance:70,onCloseButton:true});
   assert.equal(await page.locator('#sheetBg').evaluate(el=>el.classList.contains('open')),false);
+  await assertBackgroundLock(page,false);
  }finally{await context.close()}
 });
 test('detail sheet: deliberate long slow swipe dismisses a scrolled sheet',async()=>{
