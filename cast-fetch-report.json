@@ -1,9 +1,9 @@
 {
-  "at": "2026-10-25T21:43:34.102757+00:00",
+  "at": "2026-11-01T22:46:42.681288+00:00",
   "counts": {
-    "total": 824,
-    "success": 817,
-    "empty": 2,
+    "total": 837,
+    "success": 829,
+    "empty": 3,
     "unmatched": 5,
     "api": 0
   },
@@ -6122,7 +6122,7 @@
     },
     {
       "id": "custom-1792179458643-m8hx",
-      "title": "Crayon Shin-chan: The Storm Called: The Adult Empire Strikes Back",
+      "title": "クレヨンしんちゃん 嵐を呼ぶ モーレツ!オトナ帝国の逆襲",
       "status": "success",
       "reason": "",
       "tmdbId": 37280,
@@ -6598,6 +6598,110 @@
       "status": "success",
       "reason": "",
       "tmdbId": 31512,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1793003364260-snf9",
+      "title": "AFTERNOON CLASS",
+      "status": "empty",
+      "reason": "日本語・英語クレジットを再取得しましたが出演者情報なし",
+      "tmdbId": 455925,
+      "castCount": 0
+    },
+    {
+      "id": "custom-1793003364825-uaai",
+      "title": "ルックバック",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 1244492,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1793003365384-pli4",
+      "title": "チェイサー",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 13855,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1793008410429-0253",
+      "title": "UTADA UNITED 2006",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 57045,
+      "castCount": 1
+    },
+    {
+      "id": "custom-1793010058855-54gu",
+      "title": "ハヤブサ消防団",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 228494,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1793032909376-rd1i",
+      "title": "哭声／コクソン",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 293670,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1793128928232-q3ss",
+      "title": "冷たい熱帯魚",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 68341,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1793153470194-46i7",
+      "title": "家政夫のミタゾノ",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 103373,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1793274150349-1cex",
+      "title": "乱",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 11645,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1793290986347-6wa1",
+      "title": "フォロウィング",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 11660,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1793382511038-uw0n",
+      "title": "バウンド",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 9303,
+      "castCount": 14
+    },
+    {
+      "id": "custom-1793391233092-5ate",
+      "title": "天使のたまご",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 15916,
+      "castCount": 3
+    },
+    {
+      "id": "custom-1793432957369-xwe7",
+      "title": "万引き家族",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 505192,
       "castCount": 15
     }
   ]

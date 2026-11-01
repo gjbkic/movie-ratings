@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "updatedAt": "2026-10-25T21:43:34.102757+00:00",
+  "updatedAt": "2026-11-01T22:46:42.681288+00:00",
   "catalogSize": 731,
-  "matchedCount": 738,
+  "matchedCount": 739,
   "newCount": 0,
   "unmatchedCount": 41,
   "films": {
@@ -77050,6 +77050,104 @@
       "castCheckedAt": "2026-10-25T21:43:34.102717+00:00",
       "castResolverVersion": 2,
       "tmdbId": 31512,
+      "type": "movie"
+    },
+    "custom-1793432957369-xwe7": {
+      "cast": [
+        {
+          "id": 123739,
+          "name": "リリー・フランキー",
+          "originalName": "リリー・フランキー",
+          "role": "Osamu Shibata"
+        },
+        {
+          "id": 100766,
+          "name": "安藤サクラ",
+          "originalName": "安藤サクラ",
+          "role": "Nobuyo Shibata"
+        },
+        {
+          "id": 1130611,
+          "name": "松岡茉優",
+          "originalName": "松岡茉優",
+          "role": "Aki Shibata"
+        },
+        {
+          "id": 1977956,
+          "name": "城桧吏",
+          "originalName": "城桧吏",
+          "role": "Shota Shibata"
+        },
+        {
+          "id": 1980043,
+          "name": "佐々木みゆ",
+          "originalName": "佐々木みゆ",
+          "role": "Yuri"
+        },
+        {
+          "id": 43663,
+          "name": "樹木希林",
+          "originalName": "樹木希林",
+          "role": "Hatsue Shibata"
+        },
+        {
+          "id": 1116510,
+          "name": "池松壮亮",
+          "originalName": "池松壮亮",
+          "role": "4 Ban-san"
+        },
+        {
+          "id": 553939,
+          "name": "緒形直人",
+          "originalName": "緒形直人",
+          "role": "Yuzuru Shibata"
+        },
+        {
+          "id": 932012,
+          "name": "森口瑤子",
+          "originalName": "森口瑤子",
+          "role": "Yoko Shibata"
+        },
+        {
+          "id": 1161474,
+          "name": "山田裕貴",
+          "originalName": "山田裕貴",
+          "role": "Yasu Hojo"
+        },
+        {
+          "id": 1831272,
+          "name": "片山萌美",
+          "originalName": "片山萌美",
+          "role": "Nozomi Hojo"
+        },
+        {
+          "id": 120690,
+          "name": "高良健吾",
+          "originalName": "高良健吾",
+          "role": "Takumi Maezono"
+        },
+        {
+          "id": 118651,
+          "name": "池脇千鶴",
+          "originalName": "池脇千鶴",
+          "role": "Kie Miyabe"
+        },
+        {
+          "id": 13283,
+          "name": "柄本明",
+          "originalName": "柄本明",
+          "role": "Yoritsugu Kawado"
+        },
+        {
+          "id": 1669110,
+          "name": "蒔田彩珠",
+          "originalName": "蒔田彩珠",
+          "role": "Sayaka Shibata"
+        }
+      ],
+      "castCheckedAt": "2026-11-01T22:46:42.681232+00:00",
+      "castResolverVersion": 2,
+      "tmdbId": 505192,
       "type": "movie"
     }
   },
