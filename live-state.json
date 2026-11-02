@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1793634690169,
-  "sourceUpdatedIso": "2026-11-02T15:51:30.169Z",
+  "sourceUpdatedAt": 1793634700840,
+  "sourceUpdatedIso": "2026-11-02T15:51:40.840Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -23445,7 +23445,8 @@
       "genre": [
         "恋愛",
         "コメディ",
-        "ファンタジー"
+        "ファンタジー",
+        "娯楽"
       ],
       "origin": "ハリウッド",
       "format": "animation",
@@ -40047,7 +40048,8 @@
       "custom-1793628749833-0wf8": [
         "恋愛",
         "コメディ",
-        "ファンタジー"
+        "ファンタジー",
+        "娯楽"
       ],
       "custom-1793634621339-lj3z": [
         "TV本編",
@@ -73521,6 +73523,12 @@
           "creators": [],
           "source": "tmdb",
           "fetchedAt": "2026-11-02T14:12:33.512Z"
+        },
+        "poster84": {
+          "path": "/9tvF744hwTm2Bn9hkDjMfEsysKz.jpg",
+          "tmdbId": 140420,
+          "checkedAt": "2026-11-02T15:51:34.612Z",
+          "provider": "tmdb"
         }
       },
       "custom-1793634621339-lj3z": {
