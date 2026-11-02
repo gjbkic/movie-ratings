@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1793634517156,
-  "sourceUpdatedIso": "2026-11-02T15:48:37.156Z",
+  "sourceUpdatedAt": 1793634535432,
+  "sourceUpdatedIso": "2026-11-02T15:48:55.432Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -22738,8 +22738,14 @@
       "sameScoreRank": null,
       "category": "Letterboxd",
       "mediaType": "movie",
-      "genre": [],
-      "origin": "その他",
+      "genre": [
+        "ドラマ",
+        "恋愛",
+        "コメディ",
+        "娯楽",
+        "世界観"
+      ],
+      "origin": "日本",
       "format": "live",
       "runtime": 133,
       "exact": false,
@@ -39257,7 +39263,13 @@
         "TV本編"
       ],
       "custom-lb-unrated-bOnU": [],
-      "custom-lb-unrated-1Qcu": [],
+      "custom-lb-unrated-1Qcu": [
+        "ドラマ",
+        "恋愛",
+        "コメディ",
+        "娯楽",
+        "世界観"
+      ],
       "custom-1791627813752-lf6s": [
         "サスペンス",
         "ミステリー",
@@ -40709,7 +40721,7 @@
       "custom-1791570909341-auj1": "その他",
       "custom-1791576150006-qu8m": "その他",
       "custom-lb-unrated-bOnU": "その他",
-      "custom-lb-unrated-1Qcu": "その他",
+      "custom-lb-unrated-1Qcu": "日本",
       "custom-1791627813752-lf6s": "その他",
       "custom-1791636834270-874l": "ハリウッド",
       "custom-1791664054005-kkyc": "日本",
