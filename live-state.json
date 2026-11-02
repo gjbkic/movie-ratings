@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1793628756553,
-  "sourceUpdatedIso": "2026-11-02T14:12:36.553Z",
+  "sourceUpdatedAt": 1793634517156,
+  "sourceUpdatedIso": "2026-11-02T15:48:37.156Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -23425,7 +23425,7 @@
     },
     {
       "id": "custom-1793628749833-0wf8",
-      "title": "紙ひこうき",
+      "title": "Paperman",
       "originalTitle": "Paperman",
       "englishTitle": "Paperman",
       "year": 2012,
@@ -23440,7 +23440,7 @@
         "コメディ",
         "ファンタジー"
       ],
-      "origin": "その他",
+      "origin": "ハリウッド",
       "format": "animation",
       "runtime": 7,
       "exact": false,
@@ -29385,7 +29385,7 @@
       },
       {
         "id": "custom-1793628749833-0wf8",
-        "title": "紙ひこうき",
+        "title": "Paperman",
         "originalTitle": "Paperman",
         "englishTitle": "Paperman",
         "lbTitle": "Paperman",
@@ -29398,7 +29398,9 @@
         "oldScore": null,
         "added": true,
         "_seq": 1793628749833,
-        "source": "letterboxd"
+        "source": "letterboxd",
+        "tmdbType": "movie",
+        "_lbMetaFixedV36": true
       }
     ],
     "starOverrides": {
@@ -30216,7 +30218,8 @@
       "custom-1793382511630-rbdf": 3.5,
       "custom-1793391233092-5ate": 3.5,
       "custom-1793432957369-xwe7": 3.5,
-      "custom-lb-unrated-1Qcu": 2.5
+      "custom-lb-unrated-1Qcu": 2.5,
+      "custom-1793628749833-0wf8": 3
     },
     "titleOverrides": {
       "added-anchor-578": {
@@ -32471,6 +32474,12 @@
         "originalTitle": "クレヨンしんちゃん 嵐を呼ぶ モーレツ！オトナ帝国の逆襲",
         "englishTitle": "Crayon Shinchan the Movie: The Storm Called: The Adult Empire Strikes Back",
         "tmdbId": 37280
+      },
+      "custom-1793628749833-0wf8": {
+        "title": "Paperman",
+        "originalTitle": "Paperman",
+        "englishTitle": "Paperman",
+        "tmdbId": 140420
       }
     },
     "categoryOverrides": {},
@@ -40818,7 +40827,7 @@
       "custom-1793382511630-rbdf": "日本",
       "custom-1793391233092-5ate": "日本",
       "custom-1793432957369-xwe7": "日本",
-      "custom-1793628749833-0wf8": "その他"
+      "custom-1793628749833-0wf8": "ハリウッド"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
