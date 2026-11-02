@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1793634621541,
-  "sourceUpdatedIso": "2026-11-02T15:50:21.541Z",
+  "sourceUpdatedAt": 1793634677351,
+  "sourceUpdatedIso": "2026-11-02T15:51:17.351Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -23462,7 +23462,7 @@
       "englishTitle": "Daughter of Lupin",
       "year": 2019,
       "score": null,
-      "star": 0,
+      "star": 2,
       "overallRank": null,
       "sameScoreRank": null,
       "category": "コメディ",
@@ -30267,7 +30267,7 @@
       "custom-1793432957369-xwe7": 3.5,
       "custom-lb-unrated-1Qcu": 2.5,
       "custom-1793628749833-0wf8": 3,
-      "custom-1793634621339-lj3z": 0
+      "custom-1793634621339-lj3z": 2
     },
     "titleOverrides": {
       "added-anchor-578": {
@@ -73531,7 +73531,10 @@
           "creators": [],
           "source": "tmdb",
           "fetchedAt": "2026-11-02T15:50:21.512Z"
-        }
+        },
+        "note": "悪くはないが、コメディがしつこいし一辺倒。クライムとしての面白さは大してなく、恋愛バレるかドキドキ系のよくあるやつ。異常に退屈な訳では無い。",
+        "noteSource": "manual",
+        "noteEditedAt": "2026-11-02T15:51:17.315Z"
       }
     }
   }
