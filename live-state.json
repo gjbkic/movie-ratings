@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1793634561919,
-  "sourceUpdatedIso": "2026-11-02T15:49:21.919Z",
+  "sourceUpdatedAt": 1793634621541,
+  "sourceUpdatedIso": "2026-11-02T15:50:21.541Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -23454,6 +23454,27 @@
       "letterboxdAddedDate": "2026-11-02",
       "letterboxdPublishedAt": "Mon, 2 Nov 2026 17:39:36 +1300",
       "letterboxdReportedWatchedDate": "2026-11-02"
+    },
+    {
+      "id": "custom-1793634621339-lj3z",
+      "title": "ルパンの娘",
+      "originalTitle": "ルパンの娘",
+      "englishTitle": "Daughter of Lupin",
+      "year": 2019,
+      "score": null,
+      "star": 0,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "コメディ",
+      "mediaType": "tvseries",
+      "genre": "",
+      "origin": "",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     }
   ],
   "state": {
@@ -29410,6 +29431,23 @@
         "source": "letterboxd",
         "tmdbType": "movie",
         "_lbMetaFixedV36": true
+      },
+      {
+        "id": "custom-1793634621339-lj3z",
+        "title": "ルパンの娘",
+        "originalTitle": "ルパンの娘",
+        "englishTitle": "Daughter of Lupin",
+        "lbTitle": "Daughter of Lupin",
+        "tmdbId": 92154,
+        "year": 2019,
+        "uri": "",
+        "category": "コメディ",
+        "order": 999999,
+        "star": 0,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1793634621339,
+        "tmdbType": "tv"
       }
     ],
     "starOverrides": {
@@ -30228,7 +30266,8 @@
       "custom-1793391233092-5ate": 3.5,
       "custom-1793432957369-xwe7": 3.5,
       "custom-lb-unrated-1Qcu": 2.5,
-      "custom-1793628749833-0wf8": 3
+      "custom-1793628749833-0wf8": 3,
+      "custom-1793634621339-lj3z": 0
     },
     "titleOverrides": {
       "added-anchor-578": {
@@ -33333,7 +33372,8 @@
       "custom-1793382511630-rbdf": "movie",
       "custom-1793391233092-5ate": "movie",
       "custom-1793432957369-xwe7": "movie",
-      "custom-1793628749833-0wf8": "movie"
+      "custom-1793628749833-0wf8": "movie",
+      "custom-1793634621339-lj3z": "tvseries"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -73463,6 +73503,34 @@
           "creators": [],
           "source": "tmdb",
           "fetchedAt": "2026-11-02T14:12:33.512Z"
+        }
+      },
+      "custom-1793634621339-lj3z": {
+        "contentType": "tv_series",
+        "tmdbType": "tv",
+        "poster84": {
+          "path": "/hjVYI8eVwKu760IV4Djminy1gdg.jpg",
+          "tmdbId": 92154,
+          "provider": "tmdb",
+          "checkedAt": "2026-11-02T15:50:21.483Z"
+        },
+        "tmdbSeriesId": 92154,
+        "seasonCatalogV1": [
+          {
+            "number": 1,
+            "year": "2019"
+          },
+          {
+            "number": 2,
+            "year": "2020"
+          }
+        ],
+        "seasonCountV1": 2,
+        "crew84": {
+          "directors": [],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-11-02T15:50:21.512Z"
         }
       }
     }
