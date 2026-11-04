@@ -8,6 +8,7 @@ const STORAGE_KEY="movie30_data_v1",VIEW_KEY="movie30_view_v1",BACKUP_KEYS=["mov
 const TMDB_TOKEN_KEY="movie30_tmdb_credential";
 const LB_SETTINGS_KEY="movie30_letterboxd_settings_v1";
 const EMBEDDED_STATE=/*SNAPSHOT_STATE*/ null;
+function filmLookupForRender(){const films=new Map();for(const f of allFilms())if(!films.has(f.id))films.set(f.id,f);return films;}
 let state={version:23,updatedAt:0,assignments:{},starOverrides:{},exactScores:{},customFilms:[],scoreMap:JSON.parse(JSON.stringify(DEFAULT_MAP)),rankOrder:{},titleOverrides:{},categoryOverrides:{},mediaTypeOverrides:{},genreOverrides:{},originSeeded:false,originOverrides:{},formatOverrides:{},runtimeOverrides:{},structuredSeeded:false,letterboxdMeta:{}};
 let view={page:"rank",sortMode:"tier",showOld:true,showEmpty:false};let selectedId=null,storageWorks=false,dragCtx=null,selectedTmdbId=null;
 function sk(s){return String(Number(s))}function stars(s){return "★".repeat(Math.floor(s))+(s%1?"½":"")}function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]||c))}function deepCopy(x){return JSON.parse(JSON.stringify(x))}
@@ -671,7 +672,7 @@ window.__movie30AutoSyncPending=()=>{const x=getLbSettings();if(x.auto!==false)s
   if (editCategory) editCategory.addEventListener("change", () => setTimeout(refreshSheetMeta, 0));
 
   function annotateTypes(){
-    const films=new Map();for(const f of allFilms())if(!films.has(f.id))films.set(f.id,f);
+    const films=filmLookupForRender();
     document.querySelectorAll(".rank-card").forEach(card => { const id = decodeURIComponent(card.dataset.id || ""); const f = films.get(id); if (!f) return; const meta = card.querySelector(".rank-meta"); if (!meta) return; meta.querySelectorAll(".media-pill").forEach(x => x.remove()); if (filmMediaType(f) !== "movie") meta.insertAdjacentHTML("afterbegin", `<span class="media-pill">${esc(mediaLabel(f))}</span>`); });
   }
   const baseRenderRank = renderRank; renderRank = function(){ baseRenderRank(); annotateTypes(); };
@@ -728,7 +729,7 @@ window.__movie30AutoSyncPending=()=>{const x=getLbSettings();if(x.auto!==false)s
   save(false);
 
   function fixSeriesPills(){
-    const films=new Map();for(const f of allFilms())if(!films.has(f.id))films.set(f.id,f);
+    const films=filmLookupForRender();
     document.querySelectorAll(".rank-card").forEach(card => {
       const id = decodeURIComponent(card.dataset.id || "");
       const f = films.get(id);
@@ -983,7 +984,7 @@ window.__movie30AutoSyncPending=()=>{const x=getLbSettings();if(x.auto!==false)s
   renderRank = function(){
     const old = document.getElementById("genreFilterRank")?.value || "";
     baseRenderRank();
-    const films=new Map();for(const f of allFilms())if(!films.has(f.id))films.set(f.id,f);
+    const films=filmLookupForRender();
     if (old) {
       document.querySelectorAll(".rank-card").forEach(card=>{const f=films.get(decodeURIComponent(card.dataset.id||""));if(f&&!filmGenres(f).includes(old))card.remove()});
       document.querySelectorAll(".score-bin").forEach(bin=>{const list=bin.querySelector(".score-list");if(list&&!list.querySelector(".rank-card"))bin.style.display="none"});
@@ -1108,7 +1109,7 @@ window.__movie30AutoSyncPending=()=>{const x=getLbSettings();if(x.auto!==false)s
   };
 
   function annotateRawGenres(){
-    const films=new Map();for(const f of allFilms())if(!films.has(f.id))films.set(f.id,f);
+    const films=filmLookupForRender();
     document.querySelectorAll('.rank-card').forEach(card=>{
       const f=films.get(decodeURIComponent(card.dataset.id||'')); if(!f) return;
       const meta=card.querySelector('.rank-meta'); if(!meta) return;
@@ -1530,13 +1531,13 @@ window.__movie30AutoSyncPending=()=>{const x=getLbSettings();if(x.auto!==false)s
     return true;
   }
   function prune(rootSel,cardSel,sectionSel,suffix){
-    const films=new Map();for(const f of allFilms())if(!films.has(f.id))films.set(f.id,f);
+    const films=filmLookupForRender();
     document.querySelectorAll(`${rootSel} ${cardSel}`).forEach(card=>{const f=films.get(decodeURIComponent(card.dataset.id||''));if(f&&!passesFilters(f,suffix))card.remove();});
     document.querySelectorAll(`${rootSel} ${sectionSel}`).forEach(sec=>{if(!sec.querySelector(cardSel))sec.style.display='none';});
     if(rootSel==='#rankRoot')document.querySelectorAll('#rankRoot .score-bin').forEach(bin=>{if(!bin.querySelector('.rank-card'))bin.style.display='none';});
   }
   function annotateStructured(){
-    const films=new Map();for(const f of allFilms())if(!films.has(f.id))films.set(f.id,f);
+    const films=filmLookupForRender();
     document.querySelectorAll('.rank-card').forEach(card=>{const f=films.get(decodeURIComponent(card.dataset.id||''));if(!f)return;const meta=card.querySelector('.rank-meta');if(!meta)return;const pill=meta.querySelector('.media-pill')?.outerHTML||'',runtime=runtime19(f),genres=rawGenres(f);meta.innerHTML=pill+esc(f.year||'')+(runtime?` · ${runtime}分`:"")+(genres.length?`<div class="genre-line">${esc(genres.join('・'))}</div>`:"");});
   }
 
@@ -3628,7 +3629,7 @@ window.__movie30AutoSyncPending=()=>{const x=getLbSettings();if(x.auto!==false)s
 
   function setFilter(id,label,options){const s=document.getElementById(id);if(!s)return;const old=s.value;s.innerHTML=`<option value="">${label}: すべて</option>`+options.map(([v,l])=>`<option value="${v}">${l}</option>`).join('');if([...s.options].some(o=>o.value===old))s.value=old;}
   function normalizeFilters(){for(const suffix of ['Rank','Classify']){setFilter('mediaFilter'+suffix,'種別',MEDIA);setFilter('originFilter'+suffix,'制作区分',ORIGIN);}}
-  function postFilter(root,cardSel,sectionSel,m,o){const films=new Map();for(const f of allFilms())if(!films.has(f.id))films.set(f.id,f);document.querySelectorAll(`${root} ${cardSel}`).forEach(card=>{const f=films.get(decodeURIComponent(card.dataset.id||''));if(f&&((m&&mediaOf(f)!==m)||(o&&originOf(f)!==o)))card.remove();});document.querySelectorAll(`${root} ${sectionSel}`).forEach(sec=>{if(!sec.querySelector(cardSel))sec.style.display='none'});if(root==='#rankRoot')document.querySelectorAll('#rankRoot .score-bin').forEach(bin=>{if(!bin.querySelector(cardSel))bin.style.display='none'});}
+  function postFilter(root,cardSel,sectionSel,m,o){const films=filmLookupForRender();document.querySelectorAll(`${root} ${cardSel}`).forEach(card=>{const f=films.get(decodeURIComponent(card.dataset.id||''));if(f&&((m&&mediaOf(f)!==m)||(o&&originOf(f)!==o)))card.remove();});document.querySelectorAll(`${root} ${sectionSel}`).forEach(sec=>{if(!sec.querySelector(cardSel))sec.style.display='none'});if(root==='#rankRoot')document.querySelectorAll('#rankRoot .score-bin').forEach(bin=>{if(!bin.querySelector(cardSel))bin.style.display='none'});}
   const renderRankBase=renderRank;
   renderRank=function(){normalizeFilters();const ms=document.getElementById('mediaFilterRank'),os=document.getElementById('originFilterRank'),m=ms?.value||'',o=os?.value||'';if(ms)ms.value='';if(os)os.value='';renderRankBase();normalizeFilters();if(ms&&[...ms.options].some(x=>x.value===m))ms.value=m;if(os&&[...os.options].some(x=>x.value===o))os.value=o;postFilter('#rankRoot','.rank-card','.rank-star',m,o);};
   const renderClassBase=renderClassify;

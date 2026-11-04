@@ -19,3 +19,5 @@
 別コミットでポスターの参照表化を試したが、全回帰中に詳細ポスターの `role` 属性が欠ける失敗を再現した。変更前に戻すと `poster-refresh` は3回連続で通ったため、その試行は `121d036` で撤回済み。最終的な通常描画の `filmById` 呼び出しは773回で、ポスター更新の順序と非同期処理は従来どおり残す。
 
 `annotateStructured` の1カード内で `runtime19(f)` と `rawGenres(f)` をそれぞれ2回呼んでいた。両関数は同じstateから値を読むだけなので1回ずつ取得して同じマークアップを作る。`card-decoration-probe`、`rank-view`、`advanced-search`、`poster-refresh` が成功し、変更前の装飾基準とstateは一致した。
+
+複数の装飾・フィルターに同じ参照表構築ループが7箇所できたため、`filmLookupForRender()` にまとめた。毎回 `allFilms()` から新しい表を作る契約は維持し、最初の重複IDを選ぶ。`card-decoration-probe`、`rank-view`、`filtered-ui`、`advanced-search`、`poster-refresh` が成功し、変更前の装飾基準とstateは一致した。描画間のキャッシュは導入していない。
