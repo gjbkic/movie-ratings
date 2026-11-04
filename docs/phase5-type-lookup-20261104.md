@@ -23,3 +23,9 @@
 複数の装飾・フィルターに同じ参照表構築ループが7箇所できたため、`filmLookupForRender()` にまとめた。毎回 `allFilms()` から新しい表を作る契約は維持し、最初の重複IDを選ぶ。`card-decoration-probe`、`rank-view`、`filtered-ui`、`advanced-search`、`poster-refresh` が成功し、変更前の装飾基準とstateは一致した。描画間のキャッシュは導入していない。
 
 通常表示では構造フィルター `prune` と種別フィルター `postFilter` に選択条件がないのに、全カードの作品参照と条件判定をしていた。条件が1つもない場合はカード走査を省略し、空のスコア帯・セクション整理は従来どおり実行する。条件ありの場合は従来の判定を維持する。`advanced-search` が種別条件の適用・解除を、`filtered-ui` が絞り込み中の順位交換を確認。`card-decoration-probe` と `rank-view` の変更前表示比較、`poster-refresh` も成功した。
+
+## 同条件のChrome比較
+
+`3d331ad` の別worktreeと `4e0413b` を、同じ架空740作品・同じ隔離Chromeの `ui-profile.cjs` で旧→新の順に3組測った。各組でランキングを3回再描画した9サンプルの同期処理時間中央値は82.8ms→40.1ms、MutationObserverのchildList通知中央値は3718→2988。検索解除3サンプルは60.2ms→35.2ms、childListは3719→2989。検索入力3サンプルは15.0ms→13.9ms。いずれも描画前後のstate不変を検査した。
+
+この比較は第⑤段階のジャンル文字列書込み省略と作品参照整理などを合わせた差で、個々の変更の寄与は分離していない。同期処理時間は端末・負荷に左右され、レイアウト完了やiPhone Safariのスクロール速度そのものを測った値ではない。実機の確認結果は別に扱う。
