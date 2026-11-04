@@ -21,3 +21,5 @@
 `annotateStructured` の1カード内で `runtime19(f)` と `rawGenres(f)` をそれぞれ2回呼んでいた。両関数は同じstateから値を読むだけなので1回ずつ取得して同じマークアップを作る。`card-decoration-probe`、`rank-view`、`advanced-search`、`poster-refresh` が成功し、変更前の装飾基準とstateは一致した。
 
 複数の装飾・フィルターに同じ参照表構築ループが7箇所できたため、`filmLookupForRender()` にまとめた。毎回 `allFilms()` から新しい表を作る契約は維持し、最初の重複IDを選ぶ。`card-decoration-probe`、`rank-view`、`filtered-ui`、`advanced-search`、`poster-refresh` が成功し、変更前の装飾基準とstateは一致した。描画間のキャッシュは導入していない。
+
+通常表示では構造フィルター `prune` と種別フィルター `postFilter` に選択条件がないのに、全カードの作品参照と条件判定をしていた。条件が1つもない場合はカード走査を省略し、空のスコア帯・セクション整理は従来どおり実行する。条件ありの場合は従来の判定を維持する。`advanced-search` が種別条件の適用・解除を、`filtered-ui` が絞り込み中の順位交換を確認。`card-decoration-probe` と `rank-view` の変更前表示比較、`poster-refresh` も成功した。
