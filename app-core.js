@@ -1533,7 +1533,8 @@ window.__movie30AutoSyncPending=()=>{const x=getLbSettings();if(x.auto!==false)s
     if(rootSel==='#rankRoot')document.querySelectorAll('#rankRoot .score-bin').forEach(bin=>{if(!bin.querySelector('.rank-card'))bin.style.display='none';});
   }
   function annotateStructured(){
-    document.querySelectorAll('.rank-card').forEach(card=>{const f=filmById(decodeURIComponent(card.dataset.id||''));if(!f)return;const meta=card.querySelector('.rank-meta');if(!meta)return;const pill=meta.querySelector('.media-pill')?.outerHTML||'';meta.innerHTML=pill+esc(f.year||'')+(runtime19(f)?` · ${runtime19(f)}分`:"")+(rawGenres(f).length?`<div class="genre-line">${esc(rawGenres(f).join('・'))}</div>`:"");});
+    const films=new Map();for(const f of allFilms())if(!films.has(f.id))films.set(f.id,f);
+    document.querySelectorAll('.rank-card').forEach(card=>{const f=films.get(decodeURIComponent(card.dataset.id||''));if(!f)return;const meta=card.querySelector('.rank-meta');if(!meta)return;const pill=meta.querySelector('.media-pill')?.outerHTML||'';meta.innerHTML=pill+esc(f.year||'')+(runtime19(f)?` · ${runtime19(f)}分`:"")+(rawGenres(f).length?`<div class="genre-line">${esc(rawGenres(f).join('・'))}</div>`:"");});
   }
 
   const renderRank19=renderRank; renderRank=function(){renderRank19();prune('#rankRoot','.rank-card','.rank-star','Rank');annotateStructured();};

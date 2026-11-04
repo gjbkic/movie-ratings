@@ -7,3 +7,5 @@
 隔離Chromeの架空730枚の描画で `filmById` 呼び出しは5883回から5153回に減少。残りは別の処理による呼び出しであり、今回の変更対象ではない。`card-decoration-probe` で装飾、再描画、検索解除、ランキング外カードとstate不変を確認し、変更前の最終表示と完全一致した。`rank-view`、`filtered-ui`、`advanced-search`、`search-drag` も成功した。単回の描画時間は測定条件に左右されるため、体感速度の改善率は断定しない。iPhone Safariでの性能は未測定。
 
 続けて同じ装飾ラップの `fixSeriesPills` にも同じ参照表を適用。こちらも従来の最初の一致作品を使い、描画間では保持しない。架空730枚で `filmById` 呼び出しはさらに5153回から4423回に減少した。装飾基準と変更前の出力は完全一致し、`rank-view`、`filtered-ui` も成功した。描画時間の単回値は約77msだが、これも速度改善率の根拠とはしない。
+
+`annotateStructured` も同じ730カードの作品検索を繰り返していたため、同じ描画内参照表へ変更した。`filmById` 呼び出しは4423回から3693回になった。`card-decoration-probe`、`rank-view`、`advanced-search` が成功し、変更前の最終表示、描画前後のstateは一致した。フィルター判定とDOMの書換え順序は変更していない。
