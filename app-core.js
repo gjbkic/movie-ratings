@@ -671,7 +671,8 @@ window.__movie30AutoSyncPending=()=>{const x=getLbSettings();if(x.auto!==false)s
   if (editCategory) editCategory.addEventListener("change", () => setTimeout(refreshSheetMeta, 0));
 
   function annotateTypes(){
-    document.querySelectorAll(".rank-card").forEach(card => { const id = decodeURIComponent(card.dataset.id || ""); const f = filmById(id); if (!f) return; const meta = card.querySelector(".rank-meta"); if (!meta) return; meta.querySelectorAll(".media-pill").forEach(x => x.remove()); if (filmMediaType(f) !== "movie") meta.insertAdjacentHTML("afterbegin", `<span class="media-pill">${esc(mediaLabel(f))}</span>`); });
+    const films=new Map();for(const f of allFilms())if(!films.has(f.id))films.set(f.id,f);
+    document.querySelectorAll(".rank-card").forEach(card => { const id = decodeURIComponent(card.dataset.id || ""); const f = films.get(id); if (!f) return; const meta = card.querySelector(".rank-meta"); if (!meta) return; meta.querySelectorAll(".media-pill").forEach(x => x.remove()); if (filmMediaType(f) !== "movie") meta.insertAdjacentHTML("afterbegin", `<span class="media-pill">${esc(mediaLabel(f))}</span>`); });
   }
   const baseRenderRank = renderRank; renderRank = function(){ baseRenderRank(); annotateTypes(); };
 
