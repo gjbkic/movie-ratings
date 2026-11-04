@@ -9164,9 +9164,9 @@ function observePoster84(img,f){
   if(posterIntersection84)posterIntersection84.observe(img);
   else if(document.querySelectorAll('.movie30-poster84:not([src])').length<=12)queuePoster84(f);
 }
-function putPoster84(el,id,mode){
+function putPoster84(el,id,mode,findFilm){
   if(el.querySelector('.movie30-poster84'))return;
-  const f=filmById(id);if(!f)return;
+  const f=findFilm(id);if(!f)return;
   const img=document.createElement('img');img.className='movie30-poster84';img.dataset.posterId=id;
   img.dataset.posterSize=mode==='detail'?'w342':'w185';
   img.alt=displayTitle(f)+' のポスター';img.loading='lazy';img.decoding='async';img.referrerPolicy='no-referrer';
@@ -9177,19 +9177,21 @@ function putPoster84(el,id,mode){
   observePoster84(img,f);
 }
 function decoratePosters84(){
+  let films;
+  const findFilm=id=>{if(!films){films=new Map();for(const f of allFilms())if(!films.has(f.id))films.set(f.id,f);}return films.get(id);};
   const rank=document.getElementById('rankRoot');
   if(rank&&rank.style.display!=='none'){
-    rank.querySelectorAll('.rank-card[data-id]').forEach(el=>putPoster84(el,decodeURIComponent(el.dataset.id),'rank'));
+    rank.querySelectorAll('.rank-card[data-id]').forEach(el=>putPoster84(el,decodeURIComponent(el.dataset.id),'rank',findFilm));
     rank.querySelectorAll('.uns-card[data-uns],.uns-card[data-v76-open]').forEach(el=>{
       const id=el.dataset.uns||el.dataset.v76Open;
       el.classList.add('movie30-pending-poster84');
-      putPoster84(el,decodeURIComponent(id),'rank');
+      putPoster84(el,decodeURIComponent(id),'rank',findFilm);
     });
   }
   const watch=document.getElementById('watchList83');
   if(watch&&watch.style.display!=='none'){
     watch.querySelectorAll('.watch83-item[data-film]').forEach(el=>
-      putPoster84(el,decodeURIComponent(el.dataset.film),'watch'));
+      putPoster84(el,decodeURIComponent(el.dataset.film),'watch',findFilm));
   }
 }
 

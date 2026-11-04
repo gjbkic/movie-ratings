@@ -15,3 +15,5 @@
 `annotateRawGenres` にも同じ方法を適用した。架空730枚の通常描画で `filmById` は2963回から2233回に減少。`card-decoration-probe`、`rank-view`、`advanced-search` が成功し、変更前の最終表示とstateは一致した。種別バッジの末尾処理 `fixBadges34` は通常描画で参照対象が数件しかなく、参照表を毎回作る効果がないため変更しなかった。
 
 残る全カード走査を呼出し元別に測り、構造フィルター `prune` と種別フィルター `postFilter` が各730回の検索をしていることを確認した。両関数も実行ごとの参照表を使い、`filmById` は2233回から773回に減少。残る主な767回はポスター生成 `putPoster84` で、表示・非同期画像の扱いが異なるため今回の対象外。`card-decoration-probe`、`rank-view`、`filtered-ui`、`advanced-search`、`search-taxonomy` が成功し、変更前の最終表示とstateは一致した。単回の描画時間はノイズがあり、速度改善率の保証には使わない。
+
+ポスター側を別に確認したところ、`putPoster84` の呼出し元は `decoratePosters84` のランキング・未確定・視聴履歴の3走査だけだった。1回の装飾呼出し内で、実際に画像を追加する必要が生じた時だけ参照表を作る方式へ変更した。既存画像がある場合は従来どおり作品参照前に戻る。同じ架空730枚描画で `filmById` は773回から6回になり、残る6回は別の処理。`pending-posters`、`poster-refresh`、`poster-scope`、`mobile-search-poster`、`rank-view` が成功し、カード装飾基準とstateも一致した。後着画像の通信処理、ポスター情報の保存形式、画像の読み込み優先順位は変更していない。
