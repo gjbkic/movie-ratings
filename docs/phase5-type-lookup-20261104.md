@@ -13,3 +13,5 @@
 旧ジャンルフィルターの `renderRank` ラップは、表示カードのジャンル判定と装飾の両方で作品を検索していた。基礎描画の後に作った同じ参照表を両走査で使う。架空730枚のフィルターなし描画で呼び出しは3693回から2963回に減少。`card-decoration-probe`、`rank-view`、`filtered-ui`、`advanced-search` が成功し、変更前の最終表示とstateは一致した。フィルターありの場合の対象カード集合も `advanced-search` で検査した。後続ラップの変更やDOM書換えの統合は別途検討する。
 
 `annotateRawGenres` にも同じ方法を適用した。架空730枚の通常描画で `filmById` は2963回から2233回に減少。`card-decoration-probe`、`rank-view`、`advanced-search` が成功し、変更前の最終表示とstateは一致した。種別バッジの末尾処理 `fixBadges34` は通常描画で参照対象が数件しかなく、参照表を毎回作る効果がないため変更しなかった。
+
+残る全カード走査を呼出し元別に測り、構造フィルター `prune` と種別フィルター `postFilter` が各730回の検索をしていることを確認した。両関数も実行ごとの参照表を使い、`filmById` は2233回から773回に減少。残る主な767回はポスター生成 `putPoster84` で、表示・非同期画像の扱いが異なるため今回の対象外。`card-decoration-probe`、`rank-view`、`filtered-ui`、`advanced-search`、`search-taxonomy` が成功し、変更前の最終表示とstateは一致した。単回の描画時間はノイズがあり、速度改善率の保証には使わない。

@@ -1530,7 +1530,8 @@ window.__movie30AutoSyncPending=()=>{const x=getLbSettings();if(x.auto!==false)s
     return true;
   }
   function prune(rootSel,cardSel,sectionSel,suffix){
-    document.querySelectorAll(`${rootSel} ${cardSel}`).forEach(card=>{const f=filmById(decodeURIComponent(card.dataset.id||''));if(f&&!passesFilters(f,suffix))card.remove();});
+    const films=new Map();for(const f of allFilms())if(!films.has(f.id))films.set(f.id,f);
+    document.querySelectorAll(`${rootSel} ${cardSel}`).forEach(card=>{const f=films.get(decodeURIComponent(card.dataset.id||''));if(f&&!passesFilters(f,suffix))card.remove();});
     document.querySelectorAll(`${rootSel} ${sectionSel}`).forEach(sec=>{if(!sec.querySelector(cardSel))sec.style.display='none';});
     if(rootSel==='#rankRoot')document.querySelectorAll('#rankRoot .score-bin').forEach(bin=>{if(!bin.querySelector('.rank-card'))bin.style.display='none';});
   }
@@ -3627,7 +3628,7 @@ window.__movie30AutoSyncPending=()=>{const x=getLbSettings();if(x.auto!==false)s
 
   function setFilter(id,label,options){const s=document.getElementById(id);if(!s)return;const old=s.value;s.innerHTML=`<option value="">${label}: すべて</option>`+options.map(([v,l])=>`<option value="${v}">${l}</option>`).join('');if([...s.options].some(o=>o.value===old))s.value=old;}
   function normalizeFilters(){for(const suffix of ['Rank','Classify']){setFilter('mediaFilter'+suffix,'種別',MEDIA);setFilter('originFilter'+suffix,'制作区分',ORIGIN);}}
-  function postFilter(root,cardSel,sectionSel,m,o){document.querySelectorAll(`${root} ${cardSel}`).forEach(card=>{const f=filmById(decodeURIComponent(card.dataset.id||''));if(f&&((m&&mediaOf(f)!==m)||(o&&originOf(f)!==o)))card.remove();});document.querySelectorAll(`${root} ${sectionSel}`).forEach(sec=>{if(!sec.querySelector(cardSel))sec.style.display='none'});if(root==='#rankRoot')document.querySelectorAll('#rankRoot .score-bin').forEach(bin=>{if(!bin.querySelector(cardSel))bin.style.display='none'});}
+  function postFilter(root,cardSel,sectionSel,m,o){const films=new Map();for(const f of allFilms())if(!films.has(f.id))films.set(f.id,f);document.querySelectorAll(`${root} ${cardSel}`).forEach(card=>{const f=films.get(decodeURIComponent(card.dataset.id||''));if(f&&((m&&mediaOf(f)!==m)||(o&&originOf(f)!==o)))card.remove();});document.querySelectorAll(`${root} ${sectionSel}`).forEach(sec=>{if(!sec.querySelector(cardSel))sec.style.display='none'});if(root==='#rankRoot')document.querySelectorAll('#rankRoot .score-bin').forEach(bin=>{if(!bin.querySelector(cardSel))bin.style.display='none'});}
   const renderRankBase=renderRank;
   renderRank=function(){normalizeFilters();const ms=document.getElementById('mediaFilterRank'),os=document.getElementById('originFilterRank'),m=ms?.value||'',o=os?.value||'';if(ms)ms.value='';if(os)os.value='';renderRankBase();normalizeFilters();if(ms&&[...ms.options].some(x=>x.value===m))ms.value=m;if(os&&[...os.options].some(x=>x.value===o))os.value=o;postFilter('#rankRoot','.rank-card','.rank-star',m,o);};
   const renderClassBase=renderClassify;
