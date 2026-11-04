@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1793799816603,
-  "sourceUpdatedIso": "2026-11-04T13:43:36.603Z",
+  "sourceUpdatedAt": 1793799907235,
+  "sourceUpdatedIso": "2026-11-04T13:45:07.235Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -23552,7 +23552,9 @@
       "mediaType": "movie",
       "genre": [
         "ドラマ",
-        "恋愛"
+        "恋愛",
+        "娯楽",
+        "雰囲気・美学"
       ],
       "origin": "日本",
       "format": "animation",
@@ -40214,7 +40216,9 @@
       ],
       "custom-1793799815790-gqtw": [
         "ドラマ",
-        "恋愛"
+        "恋愛",
+        "娯楽",
+        "雰囲気・美学"
       ]
     },
     "originOverrides": {
@@ -73818,6 +73822,12 @@
           "creators": [],
           "source": "tmdb",
           "fetchedAt": "2026-11-04T13:43:36.194Z"
+        },
+        "poster84": {
+          "path": "/vOVQY2otrYGXfFpQ2FT2N2GlAgO.jpg",
+          "tmdbId": 198375,
+          "checkedAt": "2026-11-04T13:45:00.044Z",
+          "provider": "tmdb"
         }
       }
     }
