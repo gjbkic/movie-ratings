@@ -1,6 +1,16 @@
 /* Keep the final ranking renderer wired to search; add a native-feeling clear control. */
 (() => {
   'use strict';
+  // A three-digit title query must not also match an unrelated running time
+  // (for example, "107" used to return every 107-minute film).
+  const previousMatch=match;
+  match=function(f,q){
+    const needle=String(q||'').normalize('NFKC').trim();
+    if(!/^\d{3}$/.test(needle))return previousMatch(f,q);
+    const info=titleInfo(f);
+    return [info.title,info.originalTitle,info.englishTitle,f.lbTitle||'']
+      .some(title=>String(title||'').normalize('NFKC').includes(needle));
+  };
   const input=document.getElementById('searchRank');
   if(!input)return;
   const shell=input.closest('.movie92-search-wrap');

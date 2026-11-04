@@ -1,0 +1,7 @@
+# 現行保存形式が不適合な場合の保護
+
+2026-10-21。`app-core.js` の起動処理で、旧形式のbackup/previousを採用できても、localStorageまたはIndexedDBのcurrent原文が現runtimeに不適合なら、起動完了前にRecoveryBlockedを立てて保存を止める。旧候補で画面を表示できる場合も、不適合currentへ旧形式を自動保存しない。raw退避は従来どおり。実データ移行、保存形式変更、新帯の有効化はしていない。
+
+修正前の架空740作品テストでは、IDB current=new/previous=legacy、LS current=new/backup=legacyのどちらも保存停止にならず、後続の保存でcurrentを置換できた。修正後は両ケースで停止し、原文を維持し、再読み込み後も停止を確認した。null、未知policy、preview envelopeを現行LSに置く場合も拒否。正常なlegacy IDB currentは編集保存・再読み込みできる。`score-startup-current-protection.cjs` 6件成功、既存候補4件、別タブ18件も成功。初回live-state 5件は並列実行時に成功したが、その並列回では候補1件のLS原文一致が失敗し、単独再実行で候補4件が成功した。この不安定な比較は別途確認が必要。隔離Chromeの通信はfixture以外へ送らない。
+
+この工程は不適合currentからの自動復帰方法を作らない。停止時はJSON退避と明示的な復旧を要する。legacy形式の不完全なcurrentでも同じく上書きを止める。候補に含まれない任意のarchiveを全て検査する変更ではない。履歴Undoと自動順位復旧JSONの問題は別工程として残る。

@@ -6,7 +6,7 @@
   const image = (p, size = 'w185') => /^\/[\w.-]+$/.test(p || '') ? 'https://image.tmdb.org/t/p/' + size + p : '';
   const cache = new Map(); // Bounded session cache; never copied into movie backups or localStorage.
   let catalog = {}, active = null, ticket = 0, originFocus = null, historyKey = '', depth = 0;
-  fetch('./tmdb-metadata.json?people=20261013b').then(r => r.ok ? r.json() : null)
+  window.__movie30LoadCatalog()
     .then(x => { catalog = x?.films || {}; if (active) draw(); }).catch(() => {});
   const aliases = name => [name, ...(window.__movie30JPDirector91?.aliases?.get(fold(name)) || [])];
   const namesMatch = (a, b) => aliases(a).some(x => aliases(b).some(y => fold(x) === fold(y)));

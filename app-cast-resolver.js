@@ -6,7 +6,7 @@
   const pause=ms=>new Promise(r=>setTimeout(r,ms));
   const failure=(type,message)=>Object.assign(new Error(message),{type});
   let rows={},authError='',rateUntil=0;
-  const ready=fetch('./tmdb-metadata.json?cast=20261013c',{cache:'no-store'}).then(r=>r.ok?r.json():null)
+  const ready=window.__movie30LoadCatalog()
     .then(d=>{rows=d?.films||{};}).catch(()=>{});
   async function api(path,params={}){
     if(authError)throw failure('api',authError);

@@ -1,0 +1,13 @@
+# 公開済み保存修正と整理枝の統合
+
+対象：公開済みPR10/11（main afb4e30）、統合前 cafea36。新枝 codex/phase4-storage-integration-20261018。本番データ・main・既存PR枝は変更しない。
+
+PR10の2引数保存関数をそのまま置換せず、PR6の3引数receipt、Web Locks、disk比較、同一トランザクション内のmultitab-commit記録を維持した。閉じた接続を破棄して再接続し、失敗したopenを永続キャッシュしない。disk比較ではInvalidStateErrorだけ1回再接続して読み直す。読取失敗/null openは空DBと区別し、stickyな読取不確実フラグで保存停止する。再試行UIは最新メモリ状態のsaveを呼び、競合/読取保護を解除しない。
+
+保存形式やデータ移行は追加していない。未読DBの保護は再読み込みまで継続し、現在のJSONを保存する必要がある。Web Locks未対応環境の既存停止仕様も維持。実機iPhoneでこの統合版は未検証。
+
+検証前：公開済み3件を統合前コードで実行し3件失敗（接続復旧false、UIなし、接続無効化関数なし）。修正後：同3件と統合固有3件（read失敗後両保存先保護、再接続IDB-only更新のreceipt伝播、古いタブの再接続後保存拒否）計6件成功。MULTITAB18件・全22スイートの最終結果は後続記録を参照。
+
+第④段階の直前変更 ca1d34c/cafea36 は全21スイート成功を回収済み。この保存統合は新しい変更のため全体ゲートを再実施する。
+
+最終検証：14739b1のアプリコードでnode scripts/regression/run.cjs all完了、22/22スイート成功。MULTITAB18件、storage-reconnect6件、data-contract9件を含む。known-issues再現を成功件数へ含めていない。後続6515fe6/8486191は計測スクリプトと文書のみ。diffチェック成功、保護対象JSON差分なし。実機iPhoneの統合版は未確認。

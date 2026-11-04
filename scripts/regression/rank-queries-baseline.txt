@@ -1,0 +1,10 @@
+// Frozen from f6014dc; functions only, no film records.
+const has=(o,k)=>Object.prototype.hasOwnProperty.call(o||{},k);const validScore=v=>v!==null&&v!==undefined&&v!==''&&Number.isFinite(Number(v))&&Number(v)>=0&&Number(v)<=100;
+function originalSort(a,b){if(filmCategory(a)!==filmCategory(b))return filmCategory(a).localeCompare(filmCategory(b),"ja");return (a.order??999999)-(b.order??999999)||((a._seq??999999)-(b._seq??999999))}
+function rankSorted(arr,score){const saved=state.rankOrder[String(score)]||[],pos=new Map(saved.map((id,i)=>[id,i]));return arr.sort((a,b)=>{const pa=pos.has(a.id)?pos.get(a.id):1e9,pb=pos.has(b.id)?pos.get(b.id):1e9;return pa-pb||originalSort(a,b)})}
+function rankInfo(f){const scores=uniq(allFilms().map(effectiveScore).filter(x=>x!=null).map(Number)).sort((a,b)=>b-a),flat=[];for(const s of scores)flat.push(...rankSorted(allFilms().filter(x=>Number(effectiveScore(x))===s),s));const i=flat.findIndex(x=>x.id===f.id),sc=effectiveScore(f),same=sc==null?[]:rankSorted(allFilms().filter(x=>Number(effectiveScore(x))===Number(sc)),Number(sc)),j=same.findIndex(x=>x.id===f.id);return {all:i<0?null:i+1,total:flat.length,same:j<0?null:j+1,st:same.length,up:i>0?flat[i-1]:null,down:i>=0&&i<flat.length-1?flat[i+1]:null}}
+function effectiveScore(f) {
+    if (!f) return null;
+    if (has(state.exactScores, f.id)) return validScore(state.exactScores[f.id]) ? Number(state.exactScores[f.id]) : null;
+    return validScore(f.oldScore) ? Number(f.oldScore) : null;
+  }

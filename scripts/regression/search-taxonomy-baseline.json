@@ -1,0 +1,5 @@
+{
+  "format": "function(f,q){if(match21(f,q))return true;if(!q)return true;return formatLabel(f).toLowerCase().includes(String(q).toLowerCase());}",
+  "media": "function(f,q){\r\n    if(matchV30(f,q))return true;\r\n    if(!q)return true;\r\n    return mediaLabel31(f).toLowerCase().includes(String(q).toLowerCase());\r\n  }",
+  "origin": "function(f,q){if(matchBase(f,q))return true;if(!q)return true;return `${mediaLabel(f)} ${originOf(f)}`.toLowerCase().includes(String(q).toLowerCase());}"
+}

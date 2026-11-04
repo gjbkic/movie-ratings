@@ -1,0 +1,7 @@
+# 第⑤段階：詳細の同値文字列更新を省略
+
+基準765d8a4（描画境界/同期フックの全27成功を記録）。tidy内の公開年、順位、鑑賞日文字列が同じ単一Textノードなら再代入を省く。要素や複数ノードが混在していれば従来どおりtextContentへ戻す。分類/イベント/遅延/保存は変更しない。
+
+架空740作品・Chromeの同じ詳細refresh3回でchildListは5,6,5→0,1,0、属性は3のまま。全state不変。変更値の反映を既存detail-unified、sheet-data-ui、star-editor、html-snapshotの4スイートで確認し全成功。直前の全27成功とは区別し、この文字最適化後は関連4件を実行。実機iPhone未確認、未公開。
+
+次の設計対象：app-enhancementsのqueue/RAFとscheduleRefresh/MutationObserverが複数の描画後に走る。呼出ラップを機械的にdecorateへ移すだけでは重複仕事は減らない。削減するには、同一フレームの要求統合、監視対象の寿命、ドラッグ中と初期描画の扱いを固定する必要がある。app-castのdisplaySheetはsheetFilmIdを照合して古い取得結果を拒否しているため、この保護を維持。次の非同期描画統合はAstraで設計確認し、単なるラップ書換えを成果に数え続けない。

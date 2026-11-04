@@ -151,11 +151,8 @@
       if(selectedId===id&&fetchTicket===request)status.textContent='取得できませんでした：'+String(error.message||error)+'。手動でシーズンを追加できます。';
     }
   });
-  const originalOpenSheet=openSheet;
-  openSheet=function(id,...args){
-    const result=originalOpenSheet.call(this,id,...args);
-    draw(filmById(id));
-    return result;
-  };
+  openSheet=window.Movie30RenderLifecycle.decorate(openSheet,{
+    after(result,id){draw(filmById(id));}
+  });
   window.__movie30Seasons={isSeries,draw};
 })();

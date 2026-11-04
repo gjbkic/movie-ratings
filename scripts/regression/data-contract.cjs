@@ -1,6 +1,6 @@
 'use strict';
 const {launch,chromium,options,isolate,fixture,origin,ready,snapshot,saved,reload,assert}=require('./harness.cjs');
-const fs=require('node:fs'),os=require('node:os'),path=require('node:path');
+const fs=require('node:fs'),path=require('node:path');
 const {test,after}=require('node:test');
 let browser;
 async function app(){browser??=await launch();const context=await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true});const page=await context.newPage();await page.goto(origin);await ready(page);return {context,page};}
@@ -42,9 +42,18 @@ test('real localStorage quota exhaustion falls back to IDB; no false success whe
 test('checksum damage and unsigned newer truncation cannot replace the committed startup snapshot',async()=>{
  for(const mode of ['checksum','truncation']){
   const {context,page}=await app();try{
-   const before=await snapshot(page);
+   const before=await snapshot(page),idbBefore=await page.evaluate(async()=>await movie30ReadSnapshot().then(x=>x?.json));
    await page.evaluate(mode=>{const s=JSON.parse(localStorage.getItem(STORAGE_KEY));s.updatedAt+=100000;s.rankOrder={};if(mode==='truncation'){delete s.storageIntegrity;s.customFilms=[];s.letterboxdMeta={}}localStorage.setItem(STORAGE_KEY,JSON.stringify(s))},mode);
-   await reload(page);assert.deepEqual(content(await snapshot(page)),content(before));
+   const damaged=await page.evaluate(()=>localStorage.getItem(STORAGE_KEY));
+   await page.reload();await page.evaluate(()=>window.__movie30StorageReady);
+   await page.waitForFunction(()=>window.__movie30RecoveryBlocked||document.documentElement.classList.contains('movie30-ready'));
+   if(await page.evaluate(()=>!!window.__movie30RecoveryBlocked)){
+    await page.locator('#movie30-startup-mask').getByText('保存データの復元を停止しました').waitFor();
+    assert.equal(await page.evaluate(()=>localStorage.getItem(STORAGE_KEY)),damaged,mode+' rejected LS current changed');
+    assert.equal(await page.evaluate(async()=>await movie30ReadSnapshot().then(x=>x?.json)),idbBefore,mode+' committed IDB current changed');
+   }else{
+    assert.deepEqual(content(await snapshot(page)),content(before),mode+' restored content changed');
+   }
   }finally{await context.close()}
  }
 });
@@ -67,6 +76,19 @@ test('JSON serialization/import preserves additions, reviews, watch events, seas
   const durable=await page.evaluate(()=>localStorage.getItem(STORAGE_KEY));assert.equal(await page.evaluate(()=>restorePackage({state:{rankOrder:{}}})),false);assert.equal(await page.evaluate(()=>localStorage.getItem(STORAGE_KEY)),durable);
  }finally{await context.close()}
 });
+test('manual restore rejects preview and unknown policy before confirmation or any write',async()=>{
+ const {context,page}=await app();try{
+  const before=await snapshot(page),backup=JSON.parse(await page.evaluate(()=>backupString()));
+  const storage=await page.evaluate(async()=>({ls:localStorage.getItem(STORAGE_KEY),db:await movie30ReadSnapshot()}));
+  let confirms=0;page.on('dialog',d=>{if(d.type()==='confirm')confirms++;d.dismiss()});
+  for(const pkg of [{type:'fictional-score-preview-only',state:backup.state},{...backup,state:{...backup.state,scorePolicy:null}}]){
+   assert.equal(await page.evaluate(x=>restorePackage(x),pkg),false);
+   assert.deepEqual(await snapshot(page),before);
+   assert.deepEqual(await page.evaluate(async()=>({ls:localStorage.getItem(STORAGE_KEY),db:await movie30ReadSnapshot()})),storage);
+  }
+  assert.equal(confirms,0);
+ }finally{await context.close()}
+});
 test('series season UI changes persist without rating the whole series',async()=>{
  const {context,page}=await app();try{
   const before=await snapshot(page);await page.evaluate(()=>openSheet('fixture-0010'));
@@ -85,11 +107,13 @@ test('addition, title/runtime/classification edits and explicit deletion preserv
   await page.locator('#movie30-detail-classification>summary').click();
   for(const [label,value] of [['種別','drama'],['制作区分','ハリウッド'],['形式','animation']]){
    const row=page.locator('#editGenrePicker .struct-row').filter({has:page.locator('.struct-label').filter({hasText:new RegExp('^'+label+'$')})});
-   await row.locator(`[data-struct-value="${value}"]`).click({force:true});
+   await row.locator(`[data-struct-value="${value}"]`).click();
+   if(label==='種別')assert.equal((await snapshot(page)).mediaTypeOverrides[id],value,'The visible media selection must reach its click handler');
+   if(label==='制作区分')assert.equal((await snapshot(page)).originOverrides[id],value,'The visible origin selection must reach its click handler');
   }
   assert.equal((await snapshot(page)).formatOverrides[id],'hybrid','Selecting animation alongside live action retains both formats');
-  await page.locator('#editGenrePicker [data-struct-value="live"]').click({force:true});
-  const genre=page.locator('#editGenrePicker .struct-chip').filter({hasText:/^SF$/});await genre.first().click({force:true});
+  await page.locator('#editGenrePicker [data-struct-value="live"]').click();
+  const genre=page.locator('#editGenrePicker .struct-chip').filter({hasText:/^SF$/});await genre.first().click();
   await page.waitForTimeout(180);await page.evaluate(()=>window.__movie30PendingSave);const edited=await snapshot(page);const preview=await page.locator('#movie30-detail-class-preview').textContent();
   assert.equal(edited.titleOverrides[id].title,'Synthetic edited title');assert.equal(Number(edited.runtimeOverrides[id]),123);assert.equal(edited.mediaTypeOverrides[id],'drama');assert.equal(edited.originOverrides[id],'ハリウッド');assert.equal(edited.formatOverrides[id],'animation');assert(edited.genreOverrides[id].includes('SF'));assert.match(preview,/SF/);
   await reload(page);const restored=await snapshot(page);for(const key of ['titleOverrides','runtimeOverrides','mediaTypeOverrides','originOverrides','formatOverrides','genreOverrides'])assert.deepEqual(restored[key][id],edited[key][id]);
@@ -98,10 +122,11 @@ test('addition, title/runtime/classification edits and explicit deletion preserv
  }finally{await context.close()}
 });
 test('IDB-only edits survive closing and relaunching a browser process',async()=>{
- const profile=fs.mkdtempSync(path.join(os.tmpdir(),'movie-regression-'));let context;
+ const profileRoot=path.resolve(__dirname,'../../test-results/profiles');fs.mkdirSync(profileRoot,{recursive:true});
+ const profile=fs.mkdtempSync(path.join(profileRoot,'movie-regression-'));let context;
  try{
   context=await chromium.launchPersistentContext(profile,options);await isolate(context);let page=await context.newPage();await page.goto(origin);await ready(page);
-  await page.evaluate(()=>{Storage.prototype.setItem=function(){throw new DOMException('quota','QuotaExceededError')};state.letterboxdMeta['fixture-0012'].note='process restart sentinel';return save()});assert.equal((await saved(page)).failed,false);const expected=await snapshot(page);await context.close();context=null;
+  await page.evaluate(()=>{Storage.prototype.setItem=function(){throw new DOMException('quota','QuotaExceededError')};state.letterboxdMeta['fixture-0012'].note='process restart sentinel';return save()});const saveResult=await saved(page);assert.equal(saveResult.failed,false,JSON.stringify(saveResult));const expected=await snapshot(page);await context.close();context=null;
   context=await chromium.launchPersistentContext(profile,options);await isolate(context);page=await context.newPage();await page.goto(origin);await ready(page);assert.deepEqual(content(await snapshot(page)),content(expected));
- }finally{await context?.close();if(path.dirname(profile)===os.tmpdir()&&path.basename(profile).startsWith('movie-regression-'))fs.rmSync(profile,{recursive:true,force:true});}
+ }finally{await context?.close();if(path.dirname(profile)===profileRoot&&path.basename(profile).startsWith('movie-regression-'))fs.rmSync(profile,{recursive:true,force:true});}
 });

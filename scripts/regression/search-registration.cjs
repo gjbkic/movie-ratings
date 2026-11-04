@@ -31,7 +31,7 @@ const assert=require('node:assert/strict');
     save();renderRank();
   });
   const layout=()=>page.evaluate(()=>({
-    watched:[...document.querySelectorAll('#rankRoot .uns-head strong')].some(x=>x.textContent.includes('星も未確定')),
+    watched:[...document.querySelectorAll('#rankRoot .uns-head strong')].some(x=>x.textContent.includes('星・点数未確定')),
     scorePending:[...document.querySelectorAll('#rankRoot .uns-head strong')].some(x=>x.textContent.includes('点数未確定')),
     actions:document.querySelectorAll('#rankRoot .uns-card-v67 .uns-actions-v67 button').length,
     jumpText:document.querySelector('#starJumpBar')?.textContent||'',

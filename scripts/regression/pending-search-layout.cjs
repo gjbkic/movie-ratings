@@ -1,0 +1,21 @@
+'use strict';
+const {launch,origin,ready,snapshot,assert}=require('./harness.cjs');
+(async()=>{const browser=await launch();try{
+  const page=await browser.newPage({viewport:{width:390,height:844},isMobile:true,hasTouch:true});
+  await page.goto(origin);await ready(page);const before=await snapshot(page);
+  const card=page.locator('#rankRoot [data-pending-kind="score"] .uns-card').first();
+  const original=await card.evaluate(e=>({height:e.getBoundingClientRect().height,posters:e.querySelectorAll('img.movie30-poster84').length}));
+  assert.equal(original.posters,1);
+  await page.locator('#searchRank').fill('架空');
+  await card.waitFor();
+  const searched=await card.evaluate(e=>({height:e.getBoundingClientRect().height,posters:e.querySelectorAll('img.movie30-poster84').length,wrappedPoster:!!e.querySelector('.movie90-result-text img.movie30-poster84'),extraArt:!!e.querySelector('.movie90-result-art')}));
+  assert.equal(searched.wrappedPoster,false,'Searching must not move the pending poster into a text column');
+  assert.equal(searched.extraArt,false,'Searching must not insert a second poster beside the existing one');
+  assert(searched.height<original.height+15,'Pending card height must not grow from duplicate poster layout');
+  await page.locator('#searchRank').fill('');
+  await page.locator('#rankPosterOnly84').click();
+  const columns=await page.locator('#rankRoot.movie30-rank-grid-only84 .score-list').first().evaluate(e=>getComputedStyle(e).gridTemplateColumns.split(' ').length);
+  assert.equal(columns,4,'Poster-only ranking must use four columns at iPhone width');
+  assert.deepEqual(await snapshot(page),before,'Search and display mode must not change film state');
+  console.log('PASS: pending cards keep one poster during search and poster-only view has four columns');
+}finally{await browser.close()}})().catch(e=>{console.error(e);process.exitCode=1});
