@@ -15,3 +15,7 @@
 `annotateRawGenres` にも同じ方法を適用した。架空730枚の通常描画で `filmById` は2963回から2233回に減少。`card-decoration-probe`、`rank-view`、`advanced-search` が成功し、変更前の最終表示とstateは一致した。種別バッジの末尾処理 `fixBadges34` は通常描画で参照対象が数件しかなく、参照表を毎回作る効果がないため変更しなかった。
 
 残る全カード走査を呼出し元別に測り、構造フィルター `prune` と種別フィルター `postFilter` が各730回の検索をしていることを確認した。両関数も実行ごとの参照表を使い、`filmById` は2233回から773回に減少。残る主な767回はポスター生成 `putPoster84` で、表示・非同期画像の扱いが異なるため今回の対象外。`card-decoration-probe`、`rank-view`、`filtered-ui`、`advanced-search`、`search-taxonomy` が成功し、変更前の最終表示とstateは一致した。単回の描画時間はノイズがあり、速度改善率の保証には使わない。
+
+別コミットでポスターの参照表化を試したが、全回帰中に詳細ポスターの `role` 属性が欠ける失敗を再現した。変更前に戻すと `poster-refresh` は3回連続で通ったため、その試行は `121d036` で撤回済み。最終的な通常描画の `filmById` 呼び出しは773回で、ポスター更新の順序と非同期処理は従来どおり残す。
+
+`annotateStructured` の1カード内で `runtime19(f)` と `rawGenres(f)` をそれぞれ2回呼んでいた。両関数は同じstateから値を読むだけなので1回ずつ取得して同じマークアップを作る。`card-decoration-probe`、`rank-view`、`advanced-search`、`poster-refresh` が成功し、変更前の装飾基準とstateは一致した。
