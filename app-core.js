@@ -728,9 +728,10 @@ window.__movie30AutoSyncPending=()=>{const x=getLbSettings();if(x.auto!==false)s
   save(false);
 
   function fixSeriesPills(){
+    const films=new Map();for(const f of allFilms())if(!films.has(f.id))films.set(f.id,f);
     document.querySelectorAll(".rank-card").forEach(card => {
       const id = decodeURIComponent(card.dataset.id || "");
-      const f = filmById(id);
+      const f = films.get(id);
       if (!f || mediaTypeOf(f) !== SERIES_VALUE) return;
       const meta = card.querySelector(".rank-meta");
       if (!meta) return;
