@@ -983,13 +983,14 @@ window.__movie30AutoSyncPending=()=>{const x=getLbSettings();if(x.auto!==false)s
   renderRank = function(){
     const old = document.getElementById("genreFilterRank")?.value || "";
     baseRenderRank();
+    const films=new Map();for(const f of allFilms())if(!films.has(f.id))films.set(f.id,f);
     if (old) {
-      document.querySelectorAll(".rank-card").forEach(card=>{const f=filmById(decodeURIComponent(card.dataset.id||""));if(f&&!filmGenres(f).includes(old))card.remove()});
+      document.querySelectorAll(".rank-card").forEach(card=>{const f=films.get(decodeURIComponent(card.dataset.id||""));if(f&&!filmGenres(f).includes(old))card.remove()});
       document.querySelectorAll(".score-bin").forEach(bin=>{const list=bin.querySelector(".score-list");if(list&&!list.querySelector(".rank-card"))bin.style.display="none"});
       document.querySelectorAll(".rank-star").forEach(sec=>{if(!sec.querySelector('.rank-card'))sec.style.display='none'});
     }
     document.querySelectorAll(".rank-card").forEach(card=>{
-      const f=filmById(decodeURIComponent(card.dataset.id||"")); if(!f) return;
+      const f=films.get(decodeURIComponent(card.dataset.id||"")); if(!f) return;
       const meta=card.querySelector(".rank-meta"); if(!meta) return;
       const typePill=meta.querySelector(".media-pill")?.outerHTML||"";
       meta.innerHTML=typePill+esc(f.year||"")+(filmGenres(f).length?`<div class="genre-line">${esc(genreText(f))}</div>`:"");
