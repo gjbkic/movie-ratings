@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1793789458137,
-  "sourceUpdatedIso": "2026-11-04T10:50:58.137Z",
+  "sourceUpdatedAt": 1793789910052,
+  "sourceUpdatedIso": "2026-11-04T10:58:30.052Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -23484,6 +23484,27 @@
       "letterboxdAddedDate": null,
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1793789654206-ebwr",
+      "title": "俺のこと、なんか言ってた？",
+      "originalTitle": "俺のこと、なんか言ってた？",
+      "englishTitle": "Did Someone Happen to Mention Me?",
+      "year": 2026,
+      "score": null,
+      "star": 0,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "コメディ",
+      "mediaType": "tvseries",
+      "genre": "",
+      "origin": "",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     }
   ],
   "state": {
@@ -29461,6 +29482,23 @@
         "added": true,
         "_seq": 1793634621339,
         "tmdbType": "tv"
+      },
+      {
+        "id": "custom-1793789654206-ebwr",
+        "title": "俺のこと、なんか言ってた？",
+        "originalTitle": "俺のこと、なんか言ってた？",
+        "englishTitle": "Did Someone Happen to Mention Me?",
+        "lbTitle": "Did Someone Happen to Mention Me?",
+        "tmdbId": 300527,
+        "year": 2026,
+        "uri": "",
+        "category": "コメディ",
+        "order": 999999,
+        "star": 0,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1793789654206,
+        "tmdbType": "tv"
       }
     ],
     "starOverrides": {
@@ -30280,7 +30318,8 @@
       "custom-1793432957369-xwe7": 3.5,
       "custom-lb-unrated-1Qcu": 2.5,
       "custom-1793628749833-0wf8": 2.5,
-      "custom-1793634621339-lj3z": 2
+      "custom-1793634621339-lj3z": 2,
+      "custom-1793789654206-ebwr": 0
     },
     "titleOverrides": {
       "added-anchor-578": {
@@ -33386,7 +33425,8 @@
       "custom-1793391233092-5ate": "movie",
       "custom-1793432957369-xwe7": "movie",
       "custom-1793628749833-0wf8": "movie",
-      "custom-1793634621339-lj3z": "drama"
+      "custom-1793634621339-lj3z": "drama",
+      "custom-1793789654206-ebwr": "tvseries"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -73565,6 +73605,33 @@
         "note": "悪くはないが、コメディがしつこいし一辺倒。クライムとしての面白さは大してなく、恋愛バレるかドキドキ系のよくあるやつ。異常に退屈な訳では無い。",
         "noteSource": "manual",
         "noteEditedAt": "2026-11-02T15:51:17.315Z"
+      },
+      "custom-1793789654206-ebwr": {
+        "contentType": "tv_series",
+        "tmdbType": "tv",
+        "poster84": {
+          "path": "/cqqfz3t8xsuPLwl5Obo7f9KwFDE.jpg",
+          "tmdbId": 300527,
+          "provider": "tmdb",
+          "checkedAt": "2026-11-04T10:54:14.364Z"
+        },
+        "tmdbSeriesId": 300527,
+        "seasonCatalogV1": [
+          {
+            "number": 1,
+            "year": "2026"
+          }
+        ],
+        "seasonCountV1": 1,
+        "crew84": {
+          "directors": [],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-11-04T10:54:14.398Z"
+        },
+        "note": "面白かった。役所広司は上手いし、クドカンのネタも結構いいんだけどたまに臭いところもある。こっちとしては下から這い上がるサクセス的ななんならブレイキング・バッド的なのを期待してたが、幸せ社会コメディのような雰囲気で少し期待と違ったが面白く最後まで一気見できた。客観視したようなネタを良くするのだがそれでも、感動させようというあからさまな演出もあって、ほんとに客観視出来てんのか？とも思う。",
+        "noteSource": "manual",
+        "noteEditedAt": "2026-11-04T10:58:30.015Z"
       }
     }
   }
