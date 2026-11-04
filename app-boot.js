@@ -21,7 +21,7 @@
     });
 
     const build = document.getElementById('movie30BuildV29');
-    if (build) build.textContent = 'app build 20261105a-stage5-lookups';
+    if (build) build.textContent = 'app build 20261105b-meta-text';
 
     try {
       // All saved candidates have been read and raw local records archived.

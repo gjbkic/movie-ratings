@@ -1538,7 +1538,20 @@ window.__movie30AutoSyncPending=()=>{const x=getLbSettings();if(x.auto!==false)s
   }
   function annotateStructured(){
     const films=filmLookupForRender();
-    document.querySelectorAll('.rank-card').forEach(card=>{const f=films.get(decodeURIComponent(card.dataset.id||''));if(!f)return;const meta=card.querySelector('.rank-meta');if(!meta)return;const pill=meta.querySelector('.media-pill')?.outerHTML||'',runtime=runtime19(f),genres=rawGenres(f);meta.innerHTML=pill+esc(f.year||'')+(runtime?` · ${runtime}分`:"")+(genres.length?`<div class="genre-line">${esc(genres.join('・'))}</div>`:"");});
+    document.querySelectorAll('.rank-card').forEach(card=>{
+      const f=films.get(decodeURIComponent(card.dataset.id||''));if(!f)return;
+      const meta=card.querySelector('.rank-meta');if(!meta)return;
+      const pillNode=meta.querySelector('.media-pill'),pill=pillNode?.outerHTML||'',runtime=runtime19(f),genres=rawGenres(f);
+      const text=String(f.year||'')+(runtime?` · ${runtime}分`:''),genreHtml=genres.length?`<div class="genre-line">${esc(genres.join('・'))}</div>`:'';
+      const html=pill+esc(f.year||'')+(runtime?` · ${runtime}分`:"")+genreHtml;
+      const textNode=pillNode?.nextSibling||meta.firstChild,line=meta.querySelector('.genre-line');
+      if((!pillNode||pillNode===meta.firstChild)&&textNode?.nodeType===Node.TEXT_NODE&&
+         (genres.length?line===textNode.nextSibling&&line?.nextSibling===null&&line.outerHTML===genreHtml:textNode.nextSibling===null)){
+        if(textNode.nodeValue!==text)textNode.nodeValue=text;
+        if(meta.innerHTML===html)return;
+      }
+      meta.innerHTML=html;
+    });
   }
 
   const renderRank19=renderRank; renderRank=function(){renderRank19();prune('#rankRoot','.rank-card','.rank-star','Rank');annotateStructured();};
