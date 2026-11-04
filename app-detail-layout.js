@@ -176,7 +176,12 @@
       }
       const near=detail.querySelector('.v66-nei');if(near)near.remove();
       const jump=detail.querySelector('#detailJump66');
-      if(jump)setHidden(jump,score==null);
+      if(jump){
+        setHidden(jump,score==null);
+        setPlainText(jump,window.__movie30IsRankFiltered?.()?'全体順位へ移動して入れ替える':'全体順位の位置へ');
+        const actions=jump.closest('.v66-actions');
+        if(score!=null&&stats&&actions&&actions.previousElementSibling!==stats)stats.insertAdjacentElement('afterend',actions);
+      }
       const tip=detail.querySelector('.tip');
       if(tip){
         const m=state.letterboxdMeta?.[id]||{};
