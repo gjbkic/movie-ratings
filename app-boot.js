@@ -21,7 +21,7 @@
     });
 
     const build = document.getElementById('movie30BuildV29');
-    if (build) build.textContent = 'app build 20261104a-genre-jump';
+    if (build) build.textContent = 'app build 20261104b-decorations';
 
     try {
       // All saved candidates have been read and raw local records archived.

@@ -1110,7 +1110,7 @@ window.__movie30AutoSyncPending=()=>{const x=getLbSettings();if(x.auto!==false)s
       const meta=card.querySelector('.rank-meta'); if(!meta) return;
       const gs=rawGenres(f);
       let line=meta.querySelector('.genre-line');
-      if(gs.length){if(!line){line=document.createElement('div');line.className='genre-line';meta.appendChild(line);}line.textContent=gs.join('・');}
+      if(gs.length){if(!line){line=document.createElement('div');line.className='genre-line';meta.appendChild(line);}const label=gs.join('・');if(line.textContent!==label||line.childNodes.length!==1||line.firstChild?.nodeType!==3)line.textContent=label;}
       else if(line) line.remove();
     });
   }
