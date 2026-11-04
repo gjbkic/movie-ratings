@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1793634787171,
-  "sourceUpdatedIso": "2026-11-02T15:53:07.171Z",
+  "sourceUpdatedAt": 1793789458137,
+  "sourceUpdatedIso": "2026-11-04T10:50:58.137Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -19062,33 +19062,6 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1791382999848-25pc",
-      "title": "容疑者 室井慎次",
-      "originalTitle": "容疑者 室井慎次",
-      "englishTitle": "The Suspect: Muroi Shinji",
-      "year": 2005,
-      "score": 74,
-      "star": 2,
-      "overallRank": 669,
-      "sameScoreRank": 15,
-      "category": "Letterboxd",
-      "mediaType": "movie",
-      "genre": [
-        "コメディ",
-        "クライム",
-        "ドラマ",
-        "娯楽",
-        "シリーズ劇場版"
-      ],
-      "origin": "日本",
-      "format": "live",
-      "runtime": 117,
-      "exact": true,
-      "letterboxdAddedDate": "2026-10-07",
-      "letterboxdPublishedAt": "Thu, 8 Oct 2026 01:37:53 +1300",
-      "letterboxdReportedWatchedDate": "2026-10-07"
-    },
-    {
       "id": "lb-325-b5zc",
       "title": "ソロモンの偽証 後編",
       "originalTitle": "",
@@ -19096,8 +19069,8 @@
       "year": 2015,
       "score": 74,
       "star": 2,
-      "overallRank": 670,
-      "sameScoreRank": 16,
+      "overallRank": 669,
+      "sameScoreRank": 15,
       "category": "邦画",
       "mediaType": "movie",
       "genre": [
@@ -19118,6 +19091,33 @@
       "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1791382999848-25pc",
+      "title": "容疑者 室井慎次",
+      "originalTitle": "容疑者 室井慎次",
+      "englishTitle": "The Suspect: Muroi Shinji",
+      "year": 2005,
+      "score": 74,
+      "star": 2,
+      "overallRank": 670,
+      "sameScoreRank": 16,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": [
+        "コメディ",
+        "クライム",
+        "ドラマ",
+        "娯楽",
+        "シリーズ劇場版"
+      ],
+      "origin": "日本",
+      "format": "live",
+      "runtime": 117,
+      "exact": true,
+      "letterboxdAddedDate": "2026-10-07",
+      "letterboxdPublishedAt": "Thu, 8 Oct 2026 01:37:53 +1300",
+      "letterboxdReportedWatchedDate": "2026-10-07"
     },
     {
       "id": "lb-387-em8S",
@@ -19214,7 +19214,7 @@
       "overallRank": 674,
       "sameScoreRank": 20,
       "category": "コメディ",
-      "mediaType": "tvseries",
+      "mediaType": "drama",
       "genre": [
         "TV本編",
         "コメディ",
@@ -24462,8 +24462,8 @@
         "custom-1789385860920-hsho",
         "lb-363-b8wA",
         "lb-234-2qRS",
-        "custom-1791382999848-25pc",
         "lb-325-b5zc",
+        "custom-1791382999848-25pc",
         "lb-387-em8S",
         "custom-1792406096289-hqs7",
         "lb-480-gVQk",
@@ -33386,7 +33386,7 @@
       "custom-1793391233092-5ate": "movie",
       "custom-1793432957369-xwe7": "movie",
       "custom-1793628749833-0wf8": "movie",
-      "custom-1793634621339-lj3z": "tvseries"
+      "custom-1793634621339-lj3z": "drama"
     },
     "genreOverrides": {
       "lb-0-hTha": [
