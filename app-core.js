@@ -1108,8 +1108,9 @@ window.__movie30AutoSyncPending=()=>{const x=getLbSettings();if(x.auto!==false)s
   };
 
   function annotateRawGenres(){
+    const films=new Map();for(const f of allFilms())if(!films.has(f.id))films.set(f.id,f);
     document.querySelectorAll('.rank-card').forEach(card=>{
-      const f=filmById(decodeURIComponent(card.dataset.id||'')); if(!f) return;
+      const f=films.get(decodeURIComponent(card.dataset.id||'')); if(!f) return;
       const meta=card.querySelector('.rank-meta'); if(!meta) return;
       const gs=rawGenres(f);
       let line=meta.querySelector('.genre-line');

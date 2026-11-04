@@ -11,3 +11,5 @@
 `annotateStructured` も同じ730カードの作品検索を繰り返していたため、同じ描画内参照表へ変更した。`filmById` 呼び出しは4423回から3693回になった。`card-decoration-probe`、`rank-view`、`advanced-search` が成功し、変更前の最終表示、描画前後のstateは一致した。フィルター判定とDOMの書換え順序は変更していない。
 
 旧ジャンルフィルターの `renderRank` ラップは、表示カードのジャンル判定と装飾の両方で作品を検索していた。基礎描画の後に作った同じ参照表を両走査で使う。架空730枚のフィルターなし描画で呼び出しは3693回から2963回に減少。`card-decoration-probe`、`rank-view`、`filtered-ui`、`advanced-search` が成功し、変更前の最終表示とstateは一致した。フィルターありの場合の対象カード集合も `advanced-search` で検査した。後続ラップの変更やDOM書換えの統合は別途検討する。
+
+`annotateRawGenres` にも同じ方法を適用した。架空730枚の通常描画で `filmById` は2963回から2233回に減少。`card-decoration-probe`、`rank-view`、`advanced-search` が成功し、変更前の最終表示とstateは一致した。種別バッジの末尾処理 `fixBadges34` は通常描画で参照対象が数件しかなく、参照表を毎回作る効果がないため変更しなかった。
