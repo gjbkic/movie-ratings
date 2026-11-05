@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1793895544586,
-  "sourceUpdatedIso": "2026-11-05T16:19:04.586Z",
+  "sourceUpdatedAt": 1793895575298,
+  "sourceUpdatedIso": "2026-11-05T16:19:35.298Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -73967,7 +73967,10 @@
           ],
           "source": "tmdb",
           "fetchedAt": "2026-11-05T16:17:30.999Z"
-        }
+        },
+        "note": "面白い。一つ一つの事件がちゃんとしていて最初に犯人をばらしてしまう構成を最大限活用している。よくまとまっていて高品質。",
+        "noteSource": "manual",
+        "noteEditedAt": "2026-11-05T16:19:35.246Z"
       }
     }
   }
