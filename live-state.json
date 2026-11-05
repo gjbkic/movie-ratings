@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1793800918030,
-  "sourceUpdatedIso": "2026-11-04T14:01:58.030Z",
+  "sourceUpdatedAt": 1793895451047,
+  "sourceUpdatedIso": "2026-11-05T16:17:31.047Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -23575,6 +23575,27 @@
       "letterboxdAddedDate": null,
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1793895450695-3l8l",
+      "title": "刑事コロンボ",
+      "originalTitle": "Columbo",
+      "englishTitle": "Columbo",
+      "year": 1971,
+      "score": null,
+      "star": 0,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "サスペンス、ミステリー",
+      "mediaType": "tvseries",
+      "genre": "",
+      "origin": "",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     }
   ],
   "state": {
@@ -29610,6 +29631,23 @@
         "added": true,
         "_seq": 1793799815790,
         "source": "letterboxd"
+      },
+      {
+        "id": "custom-1793895450695-3l8l",
+        "title": "刑事コロンボ",
+        "originalTitle": "Columbo",
+        "englishTitle": "Columbo",
+        "lbTitle": "Columbo",
+        "tmdbId": 873,
+        "year": 1971,
+        "uri": "",
+        "category": "サスペンス、ミステリー",
+        "order": 999999,
+        "star": 0,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1793895450695,
+        "tmdbType": "tv"
       }
     ],
     "starOverrides": {
@@ -30432,7 +30470,8 @@
       "custom-1793634621339-lj3z": 2,
       "custom-1793789654206-ebwr": 2.5,
       "custom-1793799815790-gqtw": 3,
-      "custom-1793799815264-djtv": 3.5
+      "custom-1793799815264-djtv": 3.5,
+      "custom-1793895450695-3l8l": 0
     },
     "titleOverrides": {
       "added-anchor-578": {
@@ -33541,7 +33580,8 @@
       "custom-1793634621339-lj3z": "drama",
       "custom-1793789654206-ebwr": "drama",
       "custom-1793799815264-djtv": "movie",
-      "custom-1793799815790-gqtw": "movie"
+      "custom-1793799815790-gqtw": "movie",
+      "custom-1793895450695-3l8l": "tvseries"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -73864,6 +73904,69 @@
           "tmdbId": 198375,
           "checkedAt": "2026-11-04T13:45:00.044Z",
           "provider": "tmdb"
+        }
+      },
+      "custom-1793895450695-3l8l": {
+        "contentType": "tv_series",
+        "tmdbType": "tv",
+        "poster84": {
+          "path": "/2JCD8vab3fircOU8cM2HJCxfv4I.jpg",
+          "tmdbId": 873,
+          "provider": "tmdb",
+          "checkedAt": "2026-11-05T16:17:30.940Z"
+        },
+        "tmdbSeriesId": 873,
+        "seasonCatalogV1": [
+          {
+            "number": 1,
+            "year": "1971"
+          },
+          {
+            "number": 2,
+            "year": "1972"
+          },
+          {
+            "number": 3,
+            "year": "1973"
+          },
+          {
+            "number": 4,
+            "year": "1974"
+          },
+          {
+            "number": 5,
+            "year": "1975"
+          },
+          {
+            "number": 6,
+            "year": "1976"
+          },
+          {
+            "number": 7,
+            "year": "1977"
+          },
+          {
+            "number": 8,
+            "year": "1989"
+          },
+          {
+            "number": 9,
+            "year": "1989"
+          },
+          {
+            "number": 10,
+            "year": "1990"
+          }
+        ],
+        "seasonCountV1": 10,
+        "crew84": {
+          "directors": [],
+          "creators": [
+            "William Link",
+            "Richard Levinson"
+          ],
+          "source": "tmdb",
+          "fetchedAt": "2026-11-05T16:17:30.999Z"
         }
       }
     }
