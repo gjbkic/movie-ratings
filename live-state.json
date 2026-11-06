@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1793997807730,
-  "sourceUpdatedIso": "2026-11-06T20:43:27.730Z",
+  "sourceUpdatedAt": 1793997819870,
+  "sourceUpdatedIso": "2026-11-06T20:43:39.870Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -4581,18 +4581,18 @@
       "mediaType": "movie",
       "genre": [
         "子供向け",
-        "娯楽",
-        "comfort",
         "切ない",
         "心理・内面",
         "社会問題・生活",
         "ドラマ",
         "アクション",
         "ファンタジー",
-        "シリーズ劇場版"
+        "シリーズ劇場版",
+        "comfort",
+        "娯楽"
       ],
       "origin": "日本",
-      "format": "",
+      "format": "animation",
       "runtime": null,
       "exact": true,
       "letterboxdAddedDate": "2026-10-17",
@@ -39896,15 +39896,15 @@
       ],
       "custom-1792179458643-m8hx": [
         "子供向け",
-        "娯楽",
-        "comfort",
         "切ない",
         "心理・内面",
         "社会問題・生活",
         "ドラマ",
         "アクション",
         "ファンタジー",
-        "シリーズ劇場版"
+        "シリーズ劇場版",
+        "comfort",
+        "娯楽"
       ],
       "custom-1792272124188-0j6i": [
         "コメディ",
@@ -41992,7 +41992,8 @@
       "custom-1793432957369-xwe7": "live",
       "custom-1793628749833-0wf8": "animation",
       "custom-1793799815264-djtv": "live",
-      "custom-1793799815790-gqtw": "animation"
+      "custom-1793799815790-gqtw": "animation",
+      "custom-1792179458643-m8hx": "animation"
     },
     "runtimeOverrides": {
       "custom-1790247938551-ixfs": 100,
