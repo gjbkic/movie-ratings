@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1793983672001,
-  "sourceUpdatedIso": "2026-11-06T16:47:52.001Z",
+  "sourceUpdatedAt": 1793983731884,
+  "sourceUpdatedIso": "2026-11-06T16:48:51.884Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -23616,7 +23616,15 @@
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
-        "TV本編"
+        "TV本編",
+        "サスペンス",
+        "ミステリー",
+        "SF",
+        "哲学・思想",
+        "娯楽",
+        "どんでん返し",
+        "時間",
+        "特殊構造"
       ],
       "origin": "その他",
       "format": "",
@@ -40351,7 +40359,15 @@
         "娯楽"
       ],
       "custom-1793983670669-rzg2": [
-        "TV本編"
+        "TV本編",
+        "サスペンス",
+        "ミステリー",
+        "SF",
+        "哲学・思想",
+        "娯楽",
+        "どんでん返し",
+        "時間",
+        "特殊構造"
       ]
     },
     "originOverrides": {
@@ -74078,6 +74094,12 @@
           ],
           "source": "tmdb",
           "fetchedAt": "2026-11-06T16:47:51.136Z"
+        },
+        "poster84": {
+          "path": "/seN6rRfN0I6n8iDXjlSMk1QjNcq.jpg",
+          "tmdbId": 42009,
+          "checkedAt": "2026-11-06T16:48:34.803Z",
+          "provider": "tmdb"
         }
       }
     }
