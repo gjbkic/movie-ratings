@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "updatedAt": "2026-11-01T22:46:42.681288+00:00",
+  "updatedAt": "2026-11-08T22:51:18.807701+00:00",
   "catalogSize": 731,
-  "matchedCount": 739,
+  "matchedCount": 740,
   "newCount": 0,
   "unmatchedCount": 41,
   "films": {
@@ -77149,6 +77149,107 @@
       "castResolverVersion": 2,
       "tmdbId": 505192,
       "type": "movie"
+    },
+    "custom-1793983670669-rzg2": {
+      "cast": [
+        {
+          "id": 65717,
+          "name": "ジョン・ハム",
+          "originalName": "Jon Hamm",
+          "role": "Matt"
+        },
+        {
+          "id": 28847,
+          "name": "レイフ・スポール",
+          "originalName": "Rafe Spall",
+          "role": "Potter"
+        },
+        {
+          "id": 566331,
+          "name": "ウーナ・チャップリン",
+          "originalName": "Oona Chaplin",
+          "role": "Greta"
+        },
+        {
+          "id": 3300,
+          "name": "ナタリア・テナ",
+          "originalName": "Natalia Tena",
+          "role": "Jennifer"
+        },
+        {
+          "id": 90755,
+          "name": "ジャネット・モンゴメリー",
+          "originalName": "Janet Montgomery",
+          "role": "Beth"
+        },
+        {
+          "id": 205725,
+          "name": "Rasmus Hardiker",
+          "originalName": "Rasmus Hardiker",
+          "role": "Harry"
+        },
+        {
+          "id": 1766052,
+          "name": "Dan Li",
+          "originalName": "Dan Li",
+          "role": "Tim"
+        },
+        {
+          "id": 1229281,
+          "name": "Ken Drury",
+          "originalName": "Ken Drury",
+          "role": "Gordon"
+        },
+        {
+          "id": 1410407,
+          "name": "Zahra Ahmadi",
+          "originalName": "Zahra Ahmadi",
+          "role": "Gita"
+        },
+        {
+          "id": 1554270,
+          "name": "Verity Marshall",
+          "originalName": "Verity Marshall",
+          "role": "Amy"
+        },
+        {
+          "id": 1558179,
+          "name": "Ian Attard",
+          "originalName": "Ian Attard",
+          "role": "Dawson"
+        },
+        {
+          "id": 1723617,
+          "name": "Gráinne Keenan",
+          "originalName": "Gráinne Keenan",
+          "role": "Claire"
+        },
+        {
+          "id": 62967,
+          "name": "Robin Weaver",
+          "originalName": "Robin Weaver",
+          "role": "Holder"
+        },
+        {
+          "id": 1946765,
+          "name": "Simon Nock",
+          "originalName": "Simon Nock",
+          "role": "Fenn"
+        },
+        {
+          "id": 72314,
+          "name": "Diveen Henry",
+          "originalName": "Diveen Henry",
+          "role": "Fola"
+        }
+      ],
+      "castCheckedAt": "2026-11-08T22:51:18.807656+00:00",
+      "castResolverVersion": 2,
+      "tmdbId": 42009,
+      "type": "tv",
+      "contentType": "tv_episode",
+      "seasonNumber": 2,
+      "episodeNumber": 4
     }
   },
   "unmatched": {

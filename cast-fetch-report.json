@@ -1,8 +1,8 @@
 {
-  "at": "2026-11-01T22:46:42.681288+00:00",
+  "at": "2026-11-08T22:51:18.807701+00:00",
   "counts": {
-    "total": 837,
-    "success": 829,
+    "total": 844,
+    "success": 836,
     "empty": 3,
     "unmatched": 5,
     "api": 0
@@ -6574,7 +6574,7 @@
       "status": "success",
       "reason": "",
       "tmdbId": 21712,
-      "castCount": 9
+      "castCount": 15
     },
     {
       "id": "custom-1792862353309-lggc",
@@ -6702,6 +6702,62 @@
       "status": "success",
       "reason": "",
       "tmdbId": 505192,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1793628749833-0wf8",
+      "title": "Paperman",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 140420,
+      "castCount": 4
+    },
+    {
+      "id": "custom-1793634621339-lj3z",
+      "title": "ルパンの娘",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 92154,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1793789654206-ebwr",
+      "title": "俺のこと、なんか言ってた？",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 300527,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1793799815264-djtv",
+      "title": "あの夏、いちばん静かな海。",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 23606,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1793799815790-gqtw",
+      "title": "言の葉の庭",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 198375,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1793895450695-3l8l",
+      "title": "刑事コロンボ",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 873,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1793983670669-rzg2",
+      "title": "ブラック・ミラー「ホワイトクリスマス」",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 42009,
       "castCount": 15
     }
   ]
