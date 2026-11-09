@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1793997867136,
-  "sourceUpdatedIso": "2026-11-06T20:44:27.136Z",
+  "sourceUpdatedAt": 1794237370467,
+  "sourceUpdatedIso": "2026-11-09T15:16:10.467Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -23633,6 +23633,27 @@
       "letterboxdAddedDate": null,
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1794237370281-ulkl",
+      "title": "Tシャツが乾くまで",
+      "originalTitle": "Tシャツが乾くまで",
+      "englishTitle": "Until the T-Shirt Dries",
+      "year": 2026,
+      "score": null,
+      "star": 0,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "サスペンス、ミステリー",
+      "mediaType": "tvseries",
+      "genre": "",
+      "origin": "",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     }
   ],
   "state": {
@@ -29706,6 +29727,23 @@
         "added": true,
         "_seq": 1793983670669,
         "source": "letterboxd"
+      },
+      {
+        "id": "custom-1794237370281-ulkl",
+        "title": "Tシャツが乾くまで",
+        "originalTitle": "Tシャツが乾くまで",
+        "englishTitle": "Until the T-Shirt Dries",
+        "lbTitle": "Until the T-Shirt Dries",
+        "tmdbId": 322570,
+        "year": 2026,
+        "uri": "",
+        "category": "サスペンス、ミステリー",
+        "order": 999999,
+        "star": 0,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1794237370281,
+        "tmdbType": "tv"
       }
     ],
     "starOverrides": {
@@ -30530,7 +30568,8 @@
       "custom-1793799815790-gqtw": 3,
       "custom-1793799815264-djtv": 3.5,
       "custom-1793895450695-3l8l": 3,
-      "custom-1793983670669-rzg2": 3
+      "custom-1793983670669-rzg2": 3,
+      "custom-1794237370281-ulkl": 0
     },
     "titleOverrides": {
       "added-anchor-578": {
@@ -33645,7 +33684,8 @@
       "custom-1793799815264-djtv": "movie",
       "custom-1793799815790-gqtw": "movie",
       "custom-1793895450695-3l8l": "drama",
-      "custom-1793983670669-rzg2": "drama"
+      "custom-1793983670669-rzg2": "drama",
+      "custom-1794237370281-ulkl": "tvseries"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -74104,6 +74144,32 @@
           "tmdbId": 42009,
           "checkedAt": "2026-11-06T16:48:34.803Z",
           "provider": "tmdb"
+        }
+      },
+      "custom-1794237370281-ulkl": {
+        "contentType": "tv_series",
+        "tmdbType": "tv",
+        "poster84": {
+          "path": "/u4FV6Y2JtTaGpVp94V7Vp0JR3R3.jpg",
+          "tmdbId": 322570,
+          "provider": "tmdb",
+          "checkedAt": "2026-11-09T15:16:10.408Z"
+        },
+        "tmdbSeriesId": 322570,
+        "seasonCatalogV1": [
+          {
+            "number": 1,
+            "year": "2026"
+          }
+        ],
+        "seasonCountV1": 1,
+        "crew84": {
+          "directors": [],
+          "creators": [
+            "Nobuhiro Doi"
+          ],
+          "source": "tmdb",
+          "fetchedAt": "2026-11-09T15:16:10.438Z"
         }
       }
     }
