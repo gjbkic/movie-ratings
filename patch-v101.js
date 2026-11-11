@@ -155,7 +155,7 @@ function rrFilmCard(id,idx,m){
  const f=filmById(id);if(!f)return '';
  const path=typeof posterMeta84==='function'?posterMeta84(f)?.path:null;
  const src=typeof posterUrl84==='function'?posterUrl84(path,'w342'):'';
- const photo='<img class="movie30-poster84" data-poster-id="'+encodeURIComponent(id)+
+ const photo='<img class="movie30-poster84" data-poster-id="'+esc(id)+
     '" data-poster-size="w342" alt="" loading="eager"'+(src?' src="'+esc(src)+'"':'')+'>';
  return '<button type="button" class="rr-fast-card" data-rr-pick="'+encodeURIComponent(id)+'" aria-label="'+
    esc(displayTitle(f))+'を選ぶ" aria-pressed="false">'+
@@ -387,7 +387,7 @@ const rrStyle=document.createElement('style');
 rrStyle.id='movie30-rerank-fast-v101-style';
 rrStyle.textContent=`
 body.rr-immersive-on{overflow:hidden}
-#page-rerank.rr-immersive{position:fixed!important;inset:0!important;display:block!important;z-index:11000;overflow:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;background:#090f19;color:#f1f5fa;padding:calc(env(safe-area-inset-top,0px) + 7px) max(9px,env(safe-area-inset-right,0px)) calc(env(safe-area-inset-bottom,0px) + 6px) max(9px,env(safe-area-inset-left,0px))}
+
 body.rr-immersive-on #page-rerank{position:fixed!important;inset:0!important;display:block!important;z-index:11000;overflow:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;background:#090f19;color:#f1f5fa;padding:calc(env(safe-area-inset-top,0px) + 7px) max(9px,env(safe-area-inset-right,0px)) calc(env(safe-area-inset-bottom,0px) + 6px) max(9px,env(safe-area-inset-left,0px))}
 #rerankRoot{height:100%;min-height:100%;max-width:860px;margin:0 auto;box-sizing:border-box}
 .rr-fast-shell{min-height:100%;display:flex;flex-direction:column;position:relative;gap:8px}
