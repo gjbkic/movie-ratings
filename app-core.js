@@ -9072,6 +9072,13 @@ if(data&&!document.getElementById('directorTool84')){
 populateInWatchList();
 decoratePosters84();
 updateRankPosterMode84();
+window.__movie30PosterBridge84={
+  meta:posterMeta84,
+  url:posterUrl84,
+  queue:queuePoster84,
+  load:loadPoster84,
+  hasCredential:()=>!!getTmdbCredential()
+};
 window.__movie30TmdbCreditsV84={build:BUILD};
 const marker=document.getElementById('movie30BuildV29');if(marker)marker.textContent='app build '+BUILD;
 })();
