@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794395021950,
-  "sourceUpdatedIso": "2026-11-11T11:03:41.950Z",
+  "sourceUpdatedAt": 1794417341767,
+  "sourceUpdatedIso": "2026-11-11T17:15:41.767Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -46167,7 +46167,7 @@
         "addedDate": "2025-09-01",
         "addedDateSource": "letterboxd-export-2026-09-27",
         "note": "間違えたこれは2作目の話。4作目も面白い。結末もスノーじゃなくて女を選んで連鎖をとめたのは素晴らしい。仲間を救おうとしただけでプロパガンダにされてく苦悩みたいなのを描いてる",
-        "noteSource": "letterboxd-export",
+        "noteSource": "manual",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
         "watchedAddedDate": "2025-09-01",
@@ -46195,7 +46195,8 @@
           "tmdbId": 131634,
           "path": "/lImKHDfExAulp16grYm8zD5eONE.jpg",
           "checkedAt": "2026-11-08T22:51:18.807701+00:00"
-        }
+        },
+        "noteEditedAt": "2026-11-11T17:15:41.721Z"
       },
       "lb-100-aZes": {
         "addedDate": "2025-09-01",
