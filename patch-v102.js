@@ -369,7 +369,11 @@ function rrRender(){
   root.querySelectorAll('[data-rr-pick]').forEach(btn=>{
    const id=decodeURIComponent(btn.dataset.rrPick);
    btn.onclick=e=>{
-    if(btn.dataset.rrLongPressed==='1'){btn.dataset.rrLongPressed='';e.preventDefault();return}
+    if(btn.dataset.rrLongPressed==='1'){
+     const recent=Date.now()-Number(btn.dataset.rrDetailOpenedAt||0)<850;
+     btn.dataset.rrLongPressed='';btn.dataset.rrDetailOpenedAt='';
+     if(recent){e.preventDefault();return}
+    }
     rrPick(id);
    };
    // Long press opens the app's existing film details, without selecting a rank.
@@ -377,6 +381,7 @@ function rrRender(){
    const cancel=()=>{if(pressTimer!==null){clearTimeout(pressTimer);pressTimer=null}};
    const openDetail=()=>{
     cancel();opened=true;btn.dataset.rrLongPressed='1';
+    btn.dataset.rrDetailOpenedAt=String(Date.now());
     if(typeof openSheet==='function')openSheet(id);
    };
    btn.addEventListener('pointerdown',e=>{
