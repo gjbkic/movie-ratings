@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794417341767,
-  "sourceUpdatedIso": "2026-11-11T17:15:41.767Z",
+  "sourceUpdatedAt": 1794424314692,
+  "sourceUpdatedIso": "2026-11-11T19:11:54.692Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -62310,7 +62310,7 @@
         "addedDate": "2025-09-01",
         "addedDateSource": "letterboxd-export-2026-09-27",
         "note": "まあ、悪くはない。パプリカと特にパーフェクトブルーはめちゃくちゃ好きなので期待してたがそこまでだった。後半の色んな役が重なるシーンは印象的でエブエブにも使われてる。戦争を絡め全体の物語もよく出来た話だとは思うが、そこまで何かを感じなかった",
-        "noteSource": "letterboxd-export",
+        "noteSource": "manual",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
         "watchedAddedDate": "2025-09-01",
@@ -62338,7 +62338,8 @@
           "tmdbId": 33320,
           "path": "/p44UXOFBCY5xbpCKEsWpi4filCD.jpg",
           "checkedAt": "2026-11-08T22:51:18.807701+00:00"
-        }
+        },
+        "noteEditedAt": "2026-11-11T19:11:54.645Z"
       },
       "lb-576-18H4": {
         "addedDate": "2026-09-06",
