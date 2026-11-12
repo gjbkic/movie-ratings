@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794508903862,
-  "sourceUpdatedIso": "2026-11-12T18:41:43.862Z",
+  "sourceUpdatedAt": 1794508920409,
+  "sourceUpdatedIso": "2026-11-12T18:42:00.409Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -45495,9 +45495,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 1892,
           "path": "/jQYlydvHm3kUix1f8prMucrplhm.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 1892,
+          "checkedAt": "2026-11-12T18:41:56.097Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "returnofthejedi|1983",
+          "matchedTitle84": "Return of the Jedi",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-72-20Z2": {
@@ -46228,9 +46233,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 745,
           "path": "/vOyfUXNFSnaTk7Vk5AjpsKTUWsu.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 745,
+          "checkedAt": "2026-11-12T18:41:56.097Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thesixthsense|1999",
+          "matchedTitle84": "The Sixth Sense",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-92-xjfE": {
@@ -54918,7 +54928,7 @@
         "addedDate": "2025-10-06",
         "addedDateSource": "letterboxd-export-2026-09-27",
         "note": "オムニバスアニメ。面白かった。特にマトリックス世界の成り立ちに関わるルネサンスの2.3話と、キッドがマトリックスから逃げる4話が好き。マトリックスの世界観がよく伝わって楽しかった。",
-        "noteSource": "letterboxd-export",
+        "noteSource": "manual",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
         "watchedAddedDate": "2025-10-06",
@@ -54957,7 +54967,8 @@
           "matchedTitle84": "The Animatrix",
           "validated84": true,
           "mediaKind84": "movie"
-        }
+        },
+        "noteEditedAt": "2026-11-12T18:41:52.468Z"
       },
       "lb-337-1nRe": {
         "addedDate": "2025-10-08",
