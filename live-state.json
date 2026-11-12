@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794506172130,
-  "sourceUpdatedIso": "2026-11-12T17:56:12.130Z",
+  "sourceUpdatedAt": 1794506201571,
+  "sourceUpdatedIso": "2026-11-12T17:56:41.571Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -43217,9 +43217,14 @@
           }
         ],
         "poster84": {
+          "path": "/xlaY2zyzMfkhk0HSC5VUwzoZPU1.jpg",
           "tmdbId": 27205,
-          "path": "/qzb0slJerd5bQgJxteJ5oAmfp09.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "checkedAt": "2026-11-12T17:56:38.851Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "inception|2010",
+          "matchedTitle84": "Inception",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-10-kSz4": {
@@ -48628,9 +48633,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 82693,
           "path": "/fhHB1uvfFKKFbj6bTKE8xdtsjKi.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 82693,
+          "checkedAt": "2026-11-12T17:56:38.851Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "silverliningsplaybook|2012",
+          "matchedTitle84": "Silver Linings Playbook",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-163-2aYI": {
@@ -52663,9 +52673,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 7270,
           "path": "/cIWQzIoWOvx0piZM0UpiHMhzHWW.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 7270,
+          "checkedAt": "2026-11-12T17:56:41.633Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "matchstickmen|2003",
+          "matchedTitle84": "Matchstick Men",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-280-230G": {
@@ -60042,9 +60057,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 1091,
           "path": "/tzGY49kseSE9QAKk47uuDGwnSCu.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 1091,
+          "checkedAt": "2026-11-12T17:56:38.851Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thething|1982",
+          "matchedTitle84": "The Thing",
+          "validated84": true,
+          "mediaKind84": "movie"
         },
         "noteEditedAt": "2026-10-21T20:19:35.686Z"
       },
