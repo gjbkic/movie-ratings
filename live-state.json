@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794501461090,
-  "sourceUpdatedIso": "2026-11-12T16:37:41.090Z",
+  "sourceUpdatedAt": 1794501481127,
+  "sourceUpdatedIso": "2026-11-12T16:38:01.127Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -64544,9 +64544,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 98929,
           "path": "/639Bew9z4ixDDoo4m7pJu3S7JOi.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 98929,
+          "checkedAt": "2026-11-12T16:38:01.188Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "theshipoftheseus|2020",
+          "matchedTitle84": "The Ship of Theseus",
+          "validated84": true,
+          "mediaKind84": "tv"
         }
       },
       "custom-1790322761655-im7g": {
@@ -68706,8 +68711,12 @@
         "poster84": {
           "path": "/e1OZA1LFK7KU8z3o4R3HU8r0c18.jpg",
           "tmdbId": 947350,
-          "checkedAt": "2026-10-12T16:44:15.130Z",
-          "provider": "tmdb"
+          "checkedAt": "2026-11-12T16:38:01.188Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "talesofthebizarre2020fallspecial|2020",
+          "matchedTitle84": "Tales of the Bizarre: 2020 Fall Special",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "custom-1791476522907-cd9b": {
@@ -69369,9 +69378,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 42009,
           "path": "/seN6rRfN0I6n8iDXjlSMk1QjNcq.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 42009,
+          "checkedAt": "2026-11-12T16:38:01.188Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "blackmirrorsanjunipero|2016",
+          "matchedTitle84": "Black Mirror",
+          "validated84": true,
+          "mediaKind84": "tv"
         }
       },
       "custom-lb-unrated-bOnU": {
@@ -70460,8 +70474,12 @@
         "poster84": {
           "path": "/seN6rRfN0I6n8iDXjlSMk1QjNcq.jpg",
           "tmdbId": 42009,
-          "checkedAt": "2026-10-12T19:46:57.567Z",
-          "provider": "tmdb"
+          "checkedAt": "2026-11-12T16:37:56.253Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "blackmirrorlochhenry|2023",
+          "matchedTitle84": "Black Mirror",
+          "validated84": true,
+          "mediaKind84": "tv"
         },
         "noteEditedAt": "2026-10-13T17:51:58.392Z"
       },
@@ -70754,8 +70772,12 @@
         "poster84": {
           "path": "/hbF3vrzwt6SW6CW8ziP5lZqZiCG.jpg",
           "tmdbId": 19616,
+          "checkedAt": "2026-11-12T16:37:56.253Z",
           "provider": "tmdb",
-          "checkedAt": "2026-10-13T19:12:06.830Z"
+          "checkedIdentity84": "trick|2000",
+          "matchedTitle84": "Trick",
+          "validated84": true,
+          "mediaKind84": "tv"
         },
         "tmdbSeriesId": 19616,
         "seasonCatalogV1": [
