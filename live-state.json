@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794507238503,
-  "sourceUpdatedIso": "2026-11-12T18:13:58.503Z",
+  "sourceUpdatedAt": 1794507248567,
+  "sourceUpdatedIso": "2026-11-12T18:14:08.567Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -53544,9 +53544,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 598,
           "path": "/k7eYdWvhYQyRQoU2TB2A2Xu2TfD.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 598,
+          "checkedAt": "2026-11-12T18:14:05.295Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "cityofgod|2002",
+          "matchedTitle84": "City of God",
+          "validated84": true,
+          "mediaKind84": "movie"
         },
         "noteEditedAt": "2026-10-18T11:10:27.221Z"
       },
@@ -55950,9 +55955,14 @@
           }
         ],
         "poster84": {
+          "path": "/OHdz4GxlkcdLubyo7bSoIBkibu.jpg",
           "tmdbId": 406,
-          "path": "/hY4exng4s29RzDbtQInjx9MA3PZ.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "checkedAt": "2026-11-12T18:14:05.295Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "lahaine|1995",
+          "matchedTitle84": "La Haine",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-369-2aVk": {
@@ -63141,9 +63151,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 1637,
           "path": "/82PkCE4R95KhHICUDF7G4Ly2z3l.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 1637,
+          "checkedAt": "2026-11-12T18:14:05.295Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "speed|1994",
+          "matchedTitle84": "Speed",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-572-2a5e": {
@@ -67289,9 +67304,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 502033,
           "path": "/3178oOJKKPDeQ2legWQvMPpllv.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 502033,
+          "checkedAt": "2026-11-12T18:14:08.636Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "soundofmetal|2020",
+          "matchedTitle84": "Sound of Metal",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "custom-1791113241266-l3xb": {
