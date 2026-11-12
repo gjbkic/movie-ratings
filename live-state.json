@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794503965195,
-  "sourceUpdatedIso": "2026-11-12T17:19:25.195Z",
+  "sourceUpdatedAt": 1794503978896,
+  "sourceUpdatedIso": "2026-11-12T17:19:38.896Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -57310,9 +57310,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 28,
           "path": "/gQB8Y5RCMkv2zwzFHbUJX3kAhvA.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 28,
+          "checkedAt": "2026-11-12T17:19:38.957Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "apocalypsenow|1979",
+          "matchedTitle84": "Apocalypse Now",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-424-2cBQ": {
@@ -70279,8 +70284,12 @@
         "poster84": {
           "path": "/seN6rRfN0I6n8iDXjlSMk1QjNcq.jpg",
           "tmdbId": 42009,
-          "checkedAt": "2026-10-12T15:10:51.937Z",
-          "provider": "tmdb"
+          "checkedAt": "2026-11-12T17:19:38.957Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "blackmirrorblackmuseum|2017",
+          "matchedTitle84": "Black Mirror",
+          "validated84": true,
+          "mediaKind84": "tv"
         }
       },
       "custom-1791802127464-uge5": {
@@ -73232,8 +73241,12 @@
         "poster84": {
           "path": "/wnfEa3SP1iSQ91RbkcA66pv7XuV.jpg",
           "tmdbId": 107953,
+          "checkedAt": "2026-11-12T17:19:38.957Z",
           "provider": "tmdb",
-          "checkedAt": "2026-10-19T13:47:11.296Z"
+          "checkedIdentity84": "rightnowkapow|2016",
+          "matchedTitle84": "Right Now Kapow",
+          "validated84": true,
+          "mediaKind84": "tv"
         },
         "tmdbSeriesId": 107953,
         "seasonCatalogV1": [
@@ -74663,7 +74676,7 @@
         "letterboxdMovieId": null,
         "titleSource": "tmdb-tv",
         "note": "展開の組み立てと技術の恐怖と、それによって巻き起こる事件という内容的にブラックミラーを象徴するような素晴らしい出来だったと思う。伏線もはれてて、最後の返しも見事。しかし少し酷い状況を作りたいが故に現実味をかいてるところがある。\nZ眼という装置によって操られたり、ブロックされたり序盤は小さなテクノロジーの悪で進む。しかし現状の謎は残る。\n人格分離される女の人。プログラムの人格。哲学。\nもう1人も語る。ブロックによって消された関係。過剰な技術は理性だけでは生きられない人間には制御しきれない。一方的で自分よがりな女性。ブロックが子供にも及ぶのは意味がわからない。どちらの子供でもあるのに法的な親子の話なのか。あまりに酷い。\nが、咄嗟に手が出るところや、娘であるかの確認はいくらでも取れるのにしなかったところなど、目的に知能が追いついていない人の切なさがある。\n女の父を殺してしまう。\n部屋は実家。結果、少女も殺してしまう。\n告白を誘導していた。クッキーの話は伏線。\n覗き魔で、殺人を通報しなかったら皆にブロックされる？懲役より重いぞ。意味わからん。\nプログラムとはいえ懲役144万？なにこれ",
-        "noteSource": "letterboxd-rss",
+        "noteSource": "manual",
         "noteImportedAt": "2026-11-06T16:47:51.137Z",
         "rssReviewRecords": {
           "letterboxd-review-1574501325": {
@@ -74701,7 +74714,8 @@
           "matchedTitle84": "Black Mirror",
           "validated84": true,
           "mediaKind84": "tv"
-        }
+        },
+        "noteEditedAt": "2026-11-12T17:19:36.721Z"
       },
       "custom-1794237370281-ulkl": {
         "contentType": "tv_series",
