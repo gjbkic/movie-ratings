@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794503457481,
-  "sourceUpdatedIso": "2026-11-12T17:10:57.481Z",
+  "sourceUpdatedAt": 1794503610680,
+  "sourceUpdatedIso": "2026-11-12T17:13:30.680Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -64743,9 +64743,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 249906,
           "path": "/892R0peQpBJP6VnAiQWtAGxRUr.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 249906,
+          "checkedAt": "2026-11-12T17:13:24.233Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "tokyoswindlers|2024",
+          "matchedTitle84": "Tokyo Swindlers",
+          "validated84": true,
+          "mediaKind84": "tv"
         }
       },
       "custom-1790322763195-rro9": {
@@ -67433,8 +67438,12 @@
         "poster84": {
           "path": "/bmU07bXtQcaDSaFPHfQkc40ttA2.jpg",
           "tmdbId": 1488771,
-          "checkedAt": "2026-10-12T10:48:34.379Z",
-          "provider": "tmdb"
+          "checkedAt": "2026-11-12T17:13:30.737Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "talesofthebizarre35thanniversaryspecial|2025",
+          "matchedTitle84": "Tales of the Bizarre: 35th Anniversary Special",
+          "validated84": true,
+          "mediaKind84": "movie"
         },
         "noteEditedAt": "2026-11-12T08:31:52.986Z"
       },
@@ -70315,8 +70324,12 @@
         "poster84": {
           "path": "/seN6rRfN0I6n8iDXjlSMk1QjNcq.jpg",
           "tmdbId": 42009,
-          "checkedAt": "2026-10-12T15:08:56.881Z",
-          "provider": "tmdb"
+          "checkedAt": "2026-11-12T17:13:24.234Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "blackmirrorhangthedj|2017",
+          "matchedTitle84": "Black Mirror",
+          "validated84": true,
+          "mediaKind84": "tv"
         }
       },
       "custom-1791802127938-6mow": {
@@ -71906,8 +71919,12 @@
         "poster84": {
           "path": "/yfldephcvHDW0oRrjGWtPt72t0o.jpg",
           "tmdbId": 618918,
-          "checkedAt": "2026-10-15T12:33:50.162Z",
-          "provider": "tmdb"
+          "checkedAt": "2026-11-12T17:13:24.234Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "uhlivestreaming20daiwaikeike|2003",
+          "matchedTitle84": "UH Live Streaming 20 Dai wa Ike Ike!",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "custom-1792173022533-1kos": {
@@ -72847,10 +72864,14 @@
         "contentType": "tv_series",
         "tmdbType": "tv",
         "poster84": {
-          "path": "/qdh8DQ2EMhBxqt2hJyKc54YTo7R.jpg",
+          "path": "/7DJKHzAi83BmQrWLrYYOqcoKfhR.jpg",
           "tmdbId": 2316,
+          "checkedAt": "2026-11-12T17:13:30.737Z",
           "provider": "tmdb",
-          "checkedAt": "2026-10-19T13:38:16.828Z"
+          "checkedIdentity84": "theoffice|2005",
+          "matchedTitle84": "The Office",
+          "validated84": true,
+          "mediaKind84": "tv"
         },
         "tmdbSeriesId": 2316,
         "seasonCatalogV1": [
