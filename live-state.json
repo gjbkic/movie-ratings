@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794505567535,
-  "sourceUpdatedIso": "2026-11-12T17:46:07.535Z",
+  "sourceUpdatedAt": 1794505587234,
+  "sourceUpdatedIso": "2026-11-12T17:46:27.234Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -47241,9 +47241,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 754,
           "path": "/69Xzn8UdPbVnmqSChKz2RTpoNfB.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 754,
+          "checkedAt": "2026-11-12T17:46:22.916Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "faceoff|1997",
+          "matchedTitle84": "Face/Off",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-124-103U": {
