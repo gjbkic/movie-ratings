@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794505752600,
-  "sourceUpdatedIso": "2026-11-12T17:49:12.600Z",
+  "sourceUpdatedAt": 1794506168631,
+  "sourceUpdatedIso": "2026-11-12T17:56:08.631Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -46639,9 +46639,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 58,
           "path": "/uXEqmloGyP7UXAiphJUu2v2pcuE.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 58,
+          "checkedAt": "2026-11-12T17:56:03.766Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "piratesofthecaribbeandeadmanschest|2006",
+          "matchedTitle84": "Pirates of the Caribbean: Dead Man's Chest",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-106-29Ik": {
@@ -54320,9 +54325,14 @@
           }
         ],
         "poster84": {
+          "path": "/meSGXQ8MXqiC8bXxkKu7lPqnu0L.jpg",
           "tmdbId": 131631,
-          "path": "/4FAA18ZIja70d1Tu5hr5cj2q1sB.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "checkedAt": "2026-11-12T17:56:03.765Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thehungergamesmockingjaypart1|2014",
+          "matchedTitle84": "The Hunger Games: Mockingjay - Part 1",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-327-4kUU": {
@@ -63829,9 +63839,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 10234,
           "path": "/48uCNgdyYIoN4ayWjTpLaqSDcWI.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 10234,
+          "checkedAt": "2026-11-12T17:56:03.766Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "funnygames|1997",
+          "matchedTitle84": "Funny Games",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "custom-1789385860389-93a2": {
