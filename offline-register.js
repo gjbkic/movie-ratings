@@ -1,7 +1,7 @@
 /* Install and manage offline support without touching movie/rank data. */
 (()=>{
 'use strict';
-const WORKER='./sw.js?v=20261112-offline1';
+const WORKER='./sw.js?v=20261112-allmedia2';
 const POSTER_CACHE='movie30-offline-posters-v1';
 let registration=null,activeJob=null,ui={};
 function on(el,event,fn){if(el)el.addEventListener(event,fn)}
@@ -23,8 +23,7 @@ function possiblePosters(){
  if(!api?.meta||!api?.url||typeof allFilms!=='function')return [];
  const seen=new Set(),out=[];
  for(const f of allFilms()){
-  const typ=String((state.mediaTypeOverrides||{})[f.id]||f.mediaType||'movie');
-  if(typ!=='movie'||Number(filmStar(f))<3)continue;
+  if(Number(filmStar(f))<3)continue;
   const path=api.meta(f)?.path,link=api.url(path,'w185');
   if(!link||seen.has(link))continue;
   seen.add(link);out.push(link);
@@ -55,7 +54,7 @@ async function prepPosters(){
  const worker=registration?.active;
  const urls=possiblePosters();
  if(!worker){write('オフライン機能の準備が完了していません。','warn');return}
- if(!urls.length){write('ポスターをまだ取得していません。オンラインで映画を表示すると保存候補に追加されます。','warn');return}
+ if(!urls.length){write('ポスターをまだ取得していません。オンラインで作品を表示すると保存候補に追加されます。','warn');return}
  if(!navigator.onLine){write('ポスターの事前保存はオンライン時に行ってください。','warn');return}
  activeJob='prep-'+Date.now();
  ui.prepare.disabled=true;
@@ -70,7 +69,7 @@ function mount(){
  const section=document.createElement('section');
  section.id='movie30-offline-panel';section.className='panel';
  section.innerHTML='<h2>オフライン利用</h2>'+
-   '<p class="tip">一度オンラインで読み込むと、以降は通信がなくてもアプリを開いて順位比較できます。映画データと比較履歴はこれまでどおり端末内に保存します。</p>'+
+   '<p class="tip">一度オンラインで読み込むと、以降は通信がなくてもアプリを開いて順位比較できます。作品データと比較履歴はこれまでどおり端末内に保存します。</p>'+
    '<div id="movie30-offline-status" class="offline-status" role="status" aria-live="polite">オフライン機能を準備しています…</div>'+
    '<div class="offline-meta"><span id="movie30-offline-network"></span><span id="movie30-offline-count"></span></div>'+
    '<div class="tools"><button class="btn" id="movie30-offline-prepare" disabled>取得済みポスターを保存</button>'+
