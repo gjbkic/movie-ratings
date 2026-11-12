@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794504354266,
-  "sourceUpdatedIso": "2026-11-12T17:25:54.266Z",
+  "sourceUpdatedAt": 1794504367338,
+  "sourceUpdatedIso": "2026-11-12T17:26:07.338Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -44404,9 +44404,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 348,
           "path": "/vfrQk5IPloGg1v9Rzbh2Eg3VGyM.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 348,
+          "checkedAt": "2026-11-12T17:26:01.535Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "alien|1979",
+          "matchedTitle84": "Alien",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-44-2bf0": {
@@ -62056,9 +62061,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 28422,
           "path": "/iCjpPMQRh1jcMQl7CZ5P2fR8aXN.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 28422,
+          "checkedAt": "2026-11-12T17:26:01.535Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "loveexposure|2008",
+          "matchedTitle84": "Love Exposure",
+          "validated84": true,
+          "mediaKind84": "movie"
         },
         "noteEditedAt": "2026-10-18T17:18:12.103Z"
       },
