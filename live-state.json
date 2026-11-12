@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794507465327,
-  "sourceUpdatedIso": "2026-11-12T18:17:45.327Z",
+  "sourceUpdatedAt": 1794507731312,
+  "sourceUpdatedIso": "2026-11-12T18:22:11.312Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -52897,9 +52897,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 13448,
           "path": "/tFZQAuulEOtFTp0gHbVdEXwGrYe.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 13448,
+          "checkedAt": "2026-11-12T18:22:06.449Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "angelsdemons|2009",
+          "matchedTitle84": "Angels & Demons",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-283-hDPg": {
@@ -60307,9 +60312,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 264660,
           "path": "/dmJW8IAKHKxFNiUnoDR7JfsK7Rp.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 264660,
+          "checkedAt": "2026-11-12T18:22:11.290Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "exmachina|2015",
+          "matchedTitle84": "Ex Machina",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-490-2beQ": {
