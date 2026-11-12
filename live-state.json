@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794504855663,
-  "sourceUpdatedIso": "2026-11-12T17:34:15.663Z",
+  "sourceUpdatedAt": 1794504870164,
+  "sourceUpdatedIso": "2026-11-12T17:34:30.164Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -62407,9 +62407,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 637,
           "path": "/74hLDKjD5aGYOotO6esUVaeISa2.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 637,
+          "checkedAt": "2026-11-12T17:34:25.889Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "lifeisbeautiful|1997",
+          "matchedTitle84": "Life Is Beautiful",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-565-6YA": {
