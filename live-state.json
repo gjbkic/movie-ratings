@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794504952478,
-  "sourceUpdatedIso": "2026-11-12T17:35:52.478Z",
+  "sourceUpdatedAt": 1794504959947,
+  "sourceUpdatedIso": "2026-11-12T17:35:59.947Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -44097,9 +44097,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 4935,
           "path": "/13kOl2v0nD2OLbVSHnHk8GUFEhO.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 4935,
+          "checkedAt": "2026-11-12T17:36:00.014Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "howlsmovingcastle|2004",
+          "matchedTitle84": "Howl's Moving Castle",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-35-29QS": {
@@ -48966,9 +48971,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 641,
           "path": "/9BTwsLaMVHOGFlmsSlx5QYCaXb.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 641,
+          "checkedAt": "2026-11-12T17:36:00.014Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "requiemforadream|2000",
+          "matchedTitle84": "Requiem for a Dream",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-175-2aOe": {
@@ -53378,9 +53388,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 218,
           "path": "/qvktm0BHcnmDpul4Hz01GIazWPr.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 218,
+          "checkedAt": "2026-11-12T17:36:00.015Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "theterminator|1984",
+          "matchedTitle84": "The Terminator",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-304-27M0": {
