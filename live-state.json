@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794504831625,
-  "sourceUpdatedIso": "2026-11-12T17:33:51.625Z",
+  "sourceUpdatedAt": 1794504843159,
+  "sourceUpdatedIso": "2026-11-12T17:34:03.159Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -44482,9 +44482,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 640,
           "path": "/ctjEj2xM32OvBXCq8zAdK3ZrsAj.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 640,
+          "checkedAt": "2026-11-12T17:33:57.542Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "catchmeifyoucan|2002",
+          "matchedTitle84": "Catch Me If You Can",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-46-29Fg": {
@@ -61609,9 +61614,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 115,
           "path": "/3bv6WAp6BSxxYvB5ozKFUYuRA8C.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 115,
+          "checkedAt": "2026-11-12T17:33:57.542Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thebiglebowski|1998",
+          "matchedTitle84": "The Big Lebowski",
+          "validated84": true,
+          "mediaKind84": "movie"
         },
         "noteEditedAt": "2026-10-20T17:59:36.173Z"
       },
