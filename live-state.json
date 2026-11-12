@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794507248567,
-  "sourceUpdatedIso": "2026-11-12T18:14:08.567Z",
+  "sourceUpdatedAt": 1794507281656,
+  "sourceUpdatedIso": "2026-11-12T18:14:41.656Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -44191,9 +44191,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 671,
           "path": "/wuMc08IPKEatf9rnMNXvIDxqP4W.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 671,
+          "checkedAt": "2026-11-12T18:14:41.732Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "harrypotterandthephilosophersstone|2001",
+          "matchedTitle84": "Harry Potter and the Philosopher's Stone",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-36-29FA": {
@@ -53663,9 +53668,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 1954,
           "path": "/ea5iv7TWMh18fOKoRGgmtcg85Gx.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 1954,
+          "checkedAt": "2026-11-12T18:14:34.670Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thebutterflyeffect|2004",
+          "matchedTitle84": "The Butterfly Effect",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-305-RKla": {
@@ -62300,9 +62310,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 11423,
           "path": "/jcgUjx1QcupGzjntTVlnQ15lHqy.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 11423,
+          "checkedAt": "2026-11-12T18:14:41.732Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "memoriesofmurder|2003",
+          "matchedTitle84": "Memories of Murder",
+          "validated84": true,
+          "mediaKind84": "movie"
         },
         "noteEditedAt": "2026-10-25T16:08:53.727Z"
       },
