@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794508732205,
-  "sourceUpdatedIso": "2026-11-12T18:38:52.205Z",
+  "sourceUpdatedAt": 1794508746627,
+  "sourceUpdatedIso": "2026-11-12T18:39:06.627Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -47740,9 +47740,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 601,
           "path": "/an0nD6uq6byfxXCfk6lQBzdL2J1.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 601,
+          "checkedAt": "2026-11-12T18:39:00.099Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "ettheextraterrestrial|1982",
+          "matchedTitle84": "E.T. the Extra-Terrestrial",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-134-aPvo": {
@@ -51410,9 +51415,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 1251,
           "path": "/kZokxQtzMPURvijWYFuvh1fAvnv.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 1251,
+          "checkedAt": "2026-11-12T18:39:00.100Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "lettersfromiwojima|2006",
+          "matchedTitle84": "Letters from Iwo Jima",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-239-kidw": {
