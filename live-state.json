@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794501369395,
-  "sourceUpdatedIso": "2026-11-12T16:36:09.395Z",
+  "sourceUpdatedAt": 1794501382175,
+  "sourceUpdatedIso": "2026-11-12T16:36:22.175Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -45979,9 +45979,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 14,
           "path": "/wby9315QzVKdW9BonAefg8jGTTb.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 14,
+          "checkedAt": "2026-11-12T16:36:22.223Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "americanbeauty|1999",
+          "matchedTitle84": "American Beauty",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-91-29Js": {
@@ -49141,9 +49146,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 93405,
           "path": "/1QdXdRYfktUSONkl1oD5gc6Be0s.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 93405,
+          "checkedAt": "2026-11-12T16:36:13.102Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "squidgame|2021",
+          "matchedTitle84": "Squid Game",
+          "validated84": true,
+          "mediaKind84": "tv"
         }
       },
       "lb-184-2aH8": {
@@ -56212,9 +56222,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 334,
           "path": "/tpfC325Jk6S38VTe5dDWjWtoyxr.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 334,
+          "checkedAt": "2026-11-12T16:36:13.102Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "magnolia|1999",
+          "matchedTitle84": "Magnolia",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-393-24xc": {
@@ -64669,9 +64684,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 78685,
           "path": "/28Coe4j6p1FdYXBMEafJrzdq39A.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 78685,
+          "checkedAt": "2026-11-12T16:36:22.222Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "theconfidencemanjp|2018",
+          "matchedTitle84": "The Confidence Man JP",
+          "validated84": true,
+          "mediaKind84": "tv"
         },
         "noteEditedAt": "2026-10-14T10:17:07.808Z"
       },
@@ -69184,9 +69204,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 42009,
           "path": "/seN6rRfN0I6n8iDXjlSMk1QjNcq.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 42009,
+          "checkedAt": "2026-11-12T16:36:22.222Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "blackmirrorshutupanddance|2016",
+          "matchedTitle84": "Black Mirror",
+          "validated84": true,
+          "mediaKind84": "tv"
         },
         "noteEditedAt": "2026-10-25T15:54:46.082Z"
       },
@@ -74407,8 +74432,12 @@
         "poster84": {
           "path": "/seN6rRfN0I6n8iDXjlSMk1QjNcq.jpg",
           "tmdbId": 42009,
-          "checkedAt": "2026-11-06T16:48:34.803Z",
-          "provider": "tmdb"
+          "checkedAt": "2026-11-12T16:36:13.102Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "blackmirrorwhitechristmas|2014",
+          "matchedTitle84": "Black Mirror",
+          "validated84": true,
+          "mediaKind84": "tv"
         }
       },
       "custom-1794237370281-ulkl": {
