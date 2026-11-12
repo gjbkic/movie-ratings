@@ -8730,6 +8730,16 @@ const posterIdentity84=f=>{
   const t=titleInfo(f);
   return (normPoster84(t.englishTitle)||normPoster84(t.title)||normPoster84(t.originalTitle))+'|'+(Number(f.year)||0);
 };
+// Some short works share their English title with unrelated releases.
+// Use verified TMDb IDs where the source's identity is independently known.
+const posterPinnedMovie84=f=>{
+  const t=titleInfo(f),year=Number(f.year)||0;
+  const aliases=[t.title,t.englishTitle,t.originalTitle,f.lbTitle].map(normPoster84);
+  // 1995 Studio Ghibli / Hayao Miyazaki: On Your Mark, TMDb movie 10840.
+  // Distinct from unrelated works with the same English name.
+  return year===1995&&aliases.includes('onyourmark')?10840:0;
+};
+const posterPinTrust84='pinned-ghibli-onyourmark-1995-v2';
 const posterNames84=f=>{
   const t=titleInfo(f),m=state.letterboxdMeta?.[f.id]||{};
   return [...new Set([t.title,t.englishTitle,t.originalTitle,f.lbTitle,f.title,
@@ -8767,6 +8777,8 @@ const posterMeta84=f=>{
   const p=state.letterboxdMeta?.[f.id]?.poster84||null;
   if(!p)return null;
   if(p.checkedIdentity84&&p.checkedIdentity84!==posterIdentity84(f))return null;
+  const pinned=posterPinnedMovie84(f);
+  if(pinned&&(Number(p.tmdbId)!==pinned||p.posterPinTrust84!==posterPinTrust84))return null;
   const title=normPoster84(titleInfo(f).title),english=normPoster84(titleInfo(f).englishTitle);
   if((title==='パーフェクトブルー講座'||english==='perfectbluelectureseries')&&
      p.checkedIdentity84!==posterIdentity84(f))return null;
@@ -8830,16 +8842,23 @@ async function loadPoster84(f,force=false){
   }else{
     // A TMDb number is only meaningful together with its media type.
     // Letterboxd can supply TV ids for extras, documentary series, etc.
-    const id=Number(m.poster84?.tmdbId||m.tmdbSeriesId||titleInfo(f).tmdbId||f.tmdbId)||0;
+    const pinned=posterPinnedMovie84(f);
+    const id=pinned||Number(m.poster84?.tmdbId||m.tmdbSeriesId||titleInfo(f).tmdbId||f.tmdbId)||0;
     let details=null;
     if(id)details=await verifiedDetails('movie',id);
-    if(!details&&id){
+    if(pinned){
+      // Fail closed: never replace a known Ghibli short with an equally named
+      // search hit from a different film, even if title and year happen to match.
+      if(details&&details.id!==pinned)details=null;
+      if(details&&details.runtime&&Math.abs(Number(details.runtime)-7)>7)details=null;
+    }
+    if(!pinned&&!details&&id){
       // Collision example: Perfect Blue Lecture Series is TMDb TV/132131,
       // while MOVIE/132131 is the entirely unrelated Joy Road.
       const series=await verifiedDetails('tv',id);
       if(series){details=series;sourceKind='tv';}
     }
-    if(!details){
+    if(!details&&!pinned){
       const t=titleInfo(f);
       const queries=[t.englishTitle,f.lbTitle,t.originalTitle,t.title]
         .map(x=>String(x||'').trim()).filter((x,i,a)=>x&&a.indexOf(x)===i);
@@ -8877,7 +8896,8 @@ async function loadPoster84(f,force=false){
   const valid=posterValid84(path);
   cachePoster84(f,{path:valid?path:null,tmdbId:matchedId,checkedAt:stamp,
     provider:'tmdb',checkedIdentity84:identity,matchedTitle84:matchedTitle,
-    validated84:true,mediaKind84:sourceKind});
+    validated84:true,mediaKind84:sourceKind,
+    posterPinTrust84:posterPinnedMovie84(f)&&matchedId===posterPinnedMovie84(f)?posterPinTrust84:null});
   return valid?path:null;
 }
 function setPosterSources84(id,path){
