@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794506439753,
-  "sourceUpdatedIso": "2026-11-12T18:00:39.753Z",
+  "sourceUpdatedAt": 1794506454975,
+  "sourceUpdatedIso": "2026-11-12T18:00:54.975Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -55665,9 +55665,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 152742,
           "path": "/ibDGPgUZn6vxHiSgt2xeQyFp8Np.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 152742,
+          "checkedAt": "2026-11-12T18:00:50.679Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thebestoffer|2013",
+          "matchedTitle84": "The Best Offer",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-363-b8wA": {
@@ -63481,9 +63486,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 84892,
           "path": "/aKCvdFFF5n80P2VdS7d8YBwbCjh.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 84892,
+          "checkedAt": "2026-11-12T18:00:50.679Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "theperksofbeingawallflower|2012",
+          "matchedTitle84": "The Perks of Being a Wallflower",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "base-chinatown-1974": {
