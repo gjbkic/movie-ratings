@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794504815545,
-  "sourceUpdatedIso": "2026-11-12T17:33:35.545Z",
+  "sourceUpdatedAt": 1794504831625,
+  "sourceUpdatedIso": "2026-11-12T17:33:51.625Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -45897,9 +45897,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 372058,
           "path": "/vfJFJPepRKapMd5G2ro7klIRysq.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 372058,
+          "checkedAt": "2026-11-12T17:33:46.692Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "yourname|2016",
+          "matchedTitle84": "Your Name.",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-87-27V2": {
@@ -49975,9 +49980,14 @@
           }
         ],
         "poster84": {
+          "path": "/aRgPnx4aPS96f7CnhJH7IG5dN1A.jpg",
           "tmdbId": 11216,
-          "path": "/9JhfVOveaY00o8njQu2Xrp4YWud.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "checkedAt": "2026-11-12T17:33:46.692Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "cinemaparadiso|1988",
+          "matchedTitle84": "Cinema Paradiso",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-206-9vSA": {
