@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794507281656,
-  "sourceUpdatedIso": "2026-11-12T18:14:41.656Z",
+  "sourceUpdatedAt": 1794507293805,
+  "sourceUpdatedIso": "2026-11-12T18:14:53.805Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -46808,9 +46808,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 954,
           "path": "/l5uxY5m5OInWpcExIpKG6AR3rgL.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 954,
+          "checkedAt": "2026-11-12T18:14:46.926Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "missionimpossible|1996",
+          "matchedTitle84": "Mission: Impossible",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-109-28wi": {
@@ -47272,9 +47277,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 792,
           "path": "/m3mmFkPQKvPZq5exmh0bDuXlD9T.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 792,
+          "checkedAt": "2026-11-12T18:14:46.926Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "platoon|1986",
+          "matchedTitle84": "Platoon",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-122-azpu": {
@@ -47874,9 +47884,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 81,
           "path": "/tcrkfB8SRPQCgwI88hQScua6nxh.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 81,
+          "checkedAt": "2026-11-12T18:14:53.883Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "nausicaäofthevalleyofthewind|1984",
+          "matchedTitle84": "Warriors of the Wind",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-139-1Sz6": {
@@ -54742,9 +54757,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 11621,
           "path": "/8mIvSvnVBApfORL9N6S38Q7wD6A.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 11621,
+          "checkedAt": "2026-11-12T18:14:53.882Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "porcorosso|1992",
+          "matchedTitle84": "Porco Rosso",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-335-2a0y": {
@@ -59492,9 +59512,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 18491,
           "path": "/j6G24dqI4WgUtChhWjfnI4lnmiK.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 18491,
+          "checkedAt": "2026-11-12T18:14:53.883Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "neongenesisevangeliontheendofevangelion|1997",
+          "matchedTitle84": "Neon Genesis Evangelion: The End of Evangelion",
+          "validated84": true,
+          "mediaKind84": "movie"
         },
         "noteEditedAt": "2026-10-14T13:55:06.365Z"
       },
