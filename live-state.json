@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794507036779,
-  "sourceUpdatedIso": "2026-11-12T18:10:36.779Z",
+  "sourceUpdatedAt": 1794507212689,
+  "sourceUpdatedIso": "2026-11-12T18:13:32.689Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -43609,9 +43609,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 68718,
           "path": "/7oWY8VDWW7thTzWh3OKYRkWUlD5.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 68718,
+          "checkedAt": "2026-11-12T18:10:57.407Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "djangounchained|2012",
+          "matchedTitle84": "Django Unchained",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-20-9vEe": {
@@ -57098,9 +57103,14 @@
           }
         ],
         "poster84": {
+          "path": "/jtDv3lCnST0fZRvdYFwR5CVwK2x.jpg",
           "tmdbId": 299534,
-          "path": "/ulzhLuWrPK07P1YkdWQLZnQh1JL.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "checkedAt": "2026-11-12T18:10:51.937Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "avengersendgame|2019",
+          "matchedTitle84": "Avengers: Endgame",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-402-2agc": {
@@ -66987,9 +66997,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 9426,
           "path": "/8gZWMhJHRvaXdXsNhERtqNHYpH3.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 9426,
+          "checkedAt": "2026-11-12T18:13:27.793Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thefly|1986",
+          "matchedTitle84": "The Fly",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "custom-1790971112940-kuhf": {
@@ -67313,9 +67328,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 359344,
           "path": "/tO1rD0bNOaxnvhtEUu08Bvhhn7c.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 359344,
+          "checkedAt": "2026-11-12T18:13:27.793Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "rage|2016",
+          "matchedTitle84": "Rage",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "custom-1791113241627-mf17": {
