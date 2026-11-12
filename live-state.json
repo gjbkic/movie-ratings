@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794505598735,
-  "sourceUpdatedIso": "2026-11-12T17:46:38.735Z",
+  "sourceUpdatedAt": 1794505720042,
+  "sourceUpdatedIso": "2026-11-12T17:48:40.042Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -43144,9 +43144,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 475557,
           "path": "/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 475557,
+          "checkedAt": "2026-11-12T17:48:35.214Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "joker|2019",
+          "matchedTitle84": "Joker",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-8-6YK": {
@@ -44063,9 +44068,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 673,
           "path": "/aWxwnYoe8p2d2fcxOqtvAtJ72Rw.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 673,
+          "checkedAt": "2026-11-12T17:48:35.214Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "harrypotterandtheprisonerofazkaban|2004",
+          "matchedTitle84": "Harry Potter and the Prisoner of Azkaban",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-34-23De": {
