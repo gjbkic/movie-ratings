@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794507731312,
-  "sourceUpdatedIso": "2026-11-12T18:22:11.312Z",
+  "sourceUpdatedAt": 1794507752647,
+  "sourceUpdatedIso": "2026-11-12T18:22:32.647Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -47849,9 +47849,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 604,
           "path": "/8xEVAe84zlL9rkfYT6dZXero4KK.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 604,
+          "checkedAt": "2026-11-12T18:22:28.317Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thematrixreloaded|2003",
+          "matchedTitle84": "The Matrix Reloaded",
+          "validated84": true,
+          "mediaKind84": "movie"
         },
         "noteEditedAt": "2026-10-21T20:19:25.600Z"
       },
