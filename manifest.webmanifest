@@ -1,0 +1,18 @@
+{
+  "name": "Films — 映画ランキング",
+  "short_name": "Films",
+  "description": "映画の採点と順位、3作品の高速比較をオフラインでも利用",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#07090c",
+  "theme_color": "#07090c",
+  "icons": [
+    {
+      "src": "app-icon.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
