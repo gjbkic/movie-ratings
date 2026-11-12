@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794508746627,
-  "sourceUpdatedIso": "2026-11-12T18:39:06.627Z",
+  "sourceUpdatedAt": 1794508903862,
+  "sourceUpdatedIso": "2026-11-12T18:41:43.862Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -42978,9 +42978,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 550,
           "path": "/jSziioSwPVrOy9Yow3XhWIBDjq1.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 550,
+          "checkedAt": "2026-11-12T18:41:39.063Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "fightclub|1999",
+          "matchedTitle84": "Fight Club",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-3-a5fa": {
@@ -46625,9 +46630,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 9693,
           "path": "/k9IAS4TehZFcKi4HVByxZNPfqex.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 9693,
+          "checkedAt": "2026-11-12T18:41:39.063Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "childrenofmen|2006",
+          "matchedTitle84": "Children of Men",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-103-bVG": {
