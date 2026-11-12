@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794504065126,
-  "sourceUpdatedIso": "2026-11-12T17:21:05.126Z",
+  "sourceUpdatedAt": 1794504069496,
+  "sourceUpdatedIso": "2026-11-12T17:21:09.496Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -44350,9 +44350,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 24428,
           "path": "/RYMX2wcKCBAr24UyPD7xwmjaTn.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 24428,
+          "checkedAt": "2026-11-12T17:21:05.188Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "theavengers|2012",
+          "matchedTitle84": "The Avengers",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-43-2awY": {
@@ -48914,9 +48919,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 161,
           "path": "/hQQCdZrsHtZyR6NbKH2YyCqd2fR.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 161,
+          "checkedAt": "2026-11-12T17:21:05.188Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "oceanseleven|2001",
+          "matchedTitle84": "Ocean's Eleven",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-177-2aWW": {
@@ -51189,9 +51199,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 657350,
           "path": "/48FXmddMqf7YN6nxw6Mc8TpRiw0.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 657350,
+          "checkedAt": "2026-11-12T17:21:08.757Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "theconfidencemanjpepisodeoftheprincess|2020",
+          "matchedTitle84": "The Confidence Man JP – Episode of the Princess –",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-244-MGuM": {
@@ -53733,9 +53748,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 269149,
           "path": "/hlK0e0wAQ3VLuJcsfIYPvb4JVud.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 269149,
+          "checkedAt": "2026-11-12T17:21:08.757Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "zootopia|2016",
+          "matchedTitle84": "Zootopia",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-319-2ab2": {
@@ -54768,9 +54788,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 18,
           "path": "/fPtlCO1yQtnoLHOwKtWz7db6RGU.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 18,
+          "checkedAt": "2026-11-12T17:21:05.188Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thefifthelement|1997",
+          "matchedTitle84": "The Fifth Element",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-349-2aGY": {
