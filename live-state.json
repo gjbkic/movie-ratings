@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794504986468,
-  "sourceUpdatedIso": "2026-11-12T17:36:26.468Z",
+  "sourceUpdatedAt": 1794505014623,
+  "sourceUpdatedIso": "2026-11-12T17:36:54.623Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -53369,9 +53369,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 76600,
           "path": "/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 76600,
+          "checkedAt": "2026-11-12T17:36:49.215Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "avatarthewayofwater|2022",
+          "matchedTitle84": "Avatar: The Way of Water",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-303-2aQY": {
@@ -54558,9 +54563,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 55931,
           "path": "/eDjIG2hAeMU5cxLrd6oiQqdqoZt.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 55931,
+          "checkedAt": "2026-11-12T17:36:49.214Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "theanimatrix|2003",
+          "matchedTitle84": "The Animatrix",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-337-1nRe": {
