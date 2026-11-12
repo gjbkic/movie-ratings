@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794504843159,
-  "sourceUpdatedIso": "2026-11-12T17:34:03.159Z",
+  "sourceUpdatedAt": 1794504855663,
+  "sourceUpdatedIso": "2026-11-12T17:34:15.663Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -47319,9 +47319,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 1573,
           "path": "/ybki0UWO3OPhaM6MSniuKC7sy1R.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 1573,
+          "checkedAt": "2026-11-12T17:34:15.483Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "diehard2|1990",
+          "matchedTitle84": "Die Hard 2",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-128-nyLU": {
@@ -62045,9 +62050,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 59352,
           "path": "/mCzqMbajf0p9aGe7Z4HU5FHl5AA.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 59352,
+          "checkedAt": "2026-11-12T17:34:11.409Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "themanwhostolethesun|1979",
+          "matchedTitle84": "The Man Who Stole the Sun",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-555-2b8o": {
@@ -63145,9 +63155,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 10223,
           "path": "/wO2gH7DMqpMeHlj5QmDhW4IkgAr.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 10223,
+          "checkedAt": "2026-11-12T17:34:11.409Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "asimpleplan|1998",
+          "matchedTitle84": "A Simple Plan",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "base-clue-1985": {
