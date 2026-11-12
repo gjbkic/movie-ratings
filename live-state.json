@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794500614669,
-  "sourceUpdatedIso": "2026-11-12T16:23:34.669Z",
+  "sourceUpdatedAt": 1794501241255,
+  "sourceUpdatedIso": "2026-11-12T16:34:01.255Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -44135,9 +44135,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 769,
           "path": "/9OkCLM73MIU2CrKZbqiT8Ln1wY2.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 769,
+          "checkedAt": "2026-11-12T16:33:54.552Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "goodfellas|1990",
+          "matchedTitle84": "GoodFellas",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-37-72s": {
@@ -57168,9 +57173,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 6977,
           "path": "/6d5XOczc226jECq0LIX0siKtgHR.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 6977,
+          "checkedAt": "2026-11-12T16:34:01.299Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "nocountryforoldmen|2007",
+          "matchedTitle84": "No Country for Old Men",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-422-2bcU": {
@@ -66086,8 +66096,12 @@
         "poster84": {
           "path": "/symADL17U9PiJ8c3VrppKMXQhIX.jpg",
           "tmdbId": 1704979,
-          "checkedAt": "2026-10-12T16:52:45.694Z",
-          "provider": "tmdb"
+          "checkedAt": "2026-11-12T16:33:54.552Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "ドラえもん誕生日スペシャル走れドラえもん銀河グランプリ|2011",
+          "matchedTitle84": "ドラえもん誕生日スペシャル 「走れドラえもん！ 銀河グランプリ」",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "custom-1791023391963-vdu9": {
@@ -66778,9 +66792,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 95479,
           "path": "/6qQzMJG27XOJsyAEEIisoJB45j2.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 95479,
+          "checkedAt": "2026-11-12T16:34:01.299Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "jujutsukaisen|2020",
+          "matchedTitle84": "JUJUTSU KAISEN",
+          "validated84": true,
+          "mediaKind84": "tv"
         }
       },
       "custom-1791353624251-egky": {
@@ -67897,8 +67916,12 @@
         "poster84": {
           "path": "/rB0V4Pc5meRdPTXysiJGH4nnaqV.jpg",
           "tmdbId": 845788,
-          "checkedAt": "2026-10-12T10:48:34.305Z",
-          "provider": "tmdb"
+          "checkedAt": "2026-11-12T16:34:01.298Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "talesofthebizarre2021summerspecial|2021",
+          "matchedTitle84": "Tales of the Bizarre: 2021 Summer Special",
+          "validated84": true,
+          "mediaKind84": "movie"
         },
         "noteEditedAt": "2026-10-26T08:39:44.157Z"
       },
@@ -69667,9 +69690,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 925907,
           "path": "/9qk4vFYMMeLYmB9O438ofOFx9uE.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 925907,
+          "checkedAt": "2026-11-12T16:33:54.552Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "luvlive|2014",
+          "matchedTitle84": "Luv Live",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "custom-1791664055006-96rv": {
