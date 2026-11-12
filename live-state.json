@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794505014623,
-  "sourceUpdatedIso": "2026-11-12T17:36:54.623Z",
+  "sourceUpdatedAt": 1794505027171,
+  "sourceUpdatedIso": "2026-11-12T17:37:07.171Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -48800,9 +48800,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 854,
           "path": "/jPC2eYub74zwf2tPGVtzSlBW6Oy.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 854,
+          "checkedAt": "2026-11-12T17:36:58.203Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "themask|1994",
+          "matchedTitle84": "The Mask",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-170-fz9w": {
@@ -52377,9 +52382,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 746,
           "path": "/7TILJhdeJAaEyDiwvJZMo9SQBoe.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 746,
+          "checkedAt": "2026-11-12T17:36:58.203Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thelastemperor|1987",
+          "matchedTitle84": "The Last Emperor",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-274-1XZ4": {
@@ -60006,9 +60016,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 670,
           "path": "/pWDtjs568ZfOTMbURQBYuT4Qxka.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 670,
+          "checkedAt": "2026-11-12T17:37:07.235Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "oldboy|2003",
+          "matchedTitle84": "Oldboy",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-492-2bcA": {
@@ -60254,9 +60269,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 3558,
           "path": "/dOBdatHIVppvmRFw2z7bf9VKJr9.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 3558,
+          "checkedAt": "2026-11-12T17:36:58.203Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "girlinterrupted|1999",
+          "matchedTitle84": "Girl, Interrupted",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-499-948A": {
@@ -61690,9 +61710,14 @@
           }
         ],
         "poster84": {
+          "path": "/6WTiOCfDPP8XV4jqfloiVWf7KHq.jpg",
           "tmdbId": 10494,
-          "path": "/79vujbsWEbX4dzffBV541QXN6sf.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "checkedAt": "2026-11-12T17:37:07.235Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "perfectblue|1997",
+          "matchedTitle84": "Perfect Blue",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-541-27MO": {
