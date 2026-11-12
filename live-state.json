@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794505448353,
-  "sourceUpdatedIso": "2026-11-12T17:44:08.353Z",
+  "sourceUpdatedAt": 1794505474338,
+  "sourceUpdatedIso": "2026-11-12T17:44:34.338Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -52634,9 +52634,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 5503,
           "path": "/b3rEtLKyOnF89mcK75GXDXdmOEf.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 5503,
+          "checkedAt": "2026-11-12T17:44:30.017Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thefugitive|1993",
+          "matchedTitle84": "The Fugitive",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-281-2a3i": {
@@ -52983,9 +52988,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 2323,
           "path": "/oeM7nAw6FVFICwUaXKCRkDsKjqO.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 2323,
+          "checkedAt": "2026-11-12T17:44:30.017Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "fieldofdreams|1989",
+          "matchedTitle84": "Field of Dreams",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-291-dX0": {
@@ -62812,9 +62822,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 106646,
           "path": "/kW9LmvYHAaS9iA0tHmZVq8hQYoq.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 106646,
+          "checkedAt": "2026-11-12T17:44:30.017Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thewolfofwallstreet|2013",
+          "matchedTitle84": "The Wolf of Wall Street",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-571-28qk": {
