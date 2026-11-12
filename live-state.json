@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794504755627,
-  "sourceUpdatedIso": "2026-11-12T17:32:35.627Z",
+  "sourceUpdatedAt": 1794504767318,
+  "sourceUpdatedIso": "2026-11-12T17:32:47.318Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -44748,9 +44748,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 672,
           "path": "/sdEOH0992YZ0QSxgXNIGLq1ToUi.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 672,
+          "checkedAt": "2026-11-12T17:32:42.732Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "harrypotterandthechamberofsecrets|2002",
+          "matchedTitle84": "Harry Potter and the Chamber of Secrets",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-54-3sAw": {
@@ -61692,9 +61697,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 120467,
           "path": "/eWdyYQreja6JGCzqHWXpWHDrrPo.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 120467,
+          "checkedAt": "2026-11-12T17:32:42.732Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thegrandbudapesthotel|2014",
+          "matchedTitle84": "The Grand Budapest Hotel",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-547-1TSo": {
