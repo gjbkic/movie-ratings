@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794508522500,
-  "sourceUpdatedIso": "2026-11-12T18:35:22.500Z",
+  "sourceUpdatedAt": 1794508544495,
+  "sourceUpdatedIso": "2026-11-12T18:35:44.495Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -46581,9 +46581,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 359724,
           "path": "/dR1Ju50iudrOh3YgfwkAU1g2HZe.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 359724,
+          "checkedAt": "2026-11-12T18:35:40.195Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "fordvferrari|2019",
+          "matchedTitle84": "Ford v Ferrari",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-102-1Y2i": {
@@ -54062,9 +54067,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 935,
           "path": "/gHm96BRW4GoI339rF1vYoYTB6Qe.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 935,
+          "checkedAt": "2026-11-12T18:35:40.195Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "drstrangeloveorhowilearnedtostopworryingandlovethebomb|1964",
+          "matchedTitle84": "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-314-1blA": {
