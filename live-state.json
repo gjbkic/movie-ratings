@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794504782791,
-  "sourceUpdatedIso": "2026-11-12T17:33:02.791Z",
+  "sourceUpdatedAt": 1794504804561,
+  "sourceUpdatedIso": "2026-11-12T17:33:24.561Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -44550,9 +44550,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 329,
           "path": "/d9mtMGQDLANKieb9PbD3yK7xxzo.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 329,
+          "checkedAt": "2026-11-12T17:33:16.848Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "jurassicpark|1993",
+          "matchedTitle84": "Jurassic Park",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-48-27Vw": {
@@ -45469,9 +45474,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 22,
           "path": "/poHwCZeWzJCShH7tOjg8RIoyjcw.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 22,
+          "checkedAt": "2026-11-12T17:33:16.848Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "piratesofthecaribbeanthecurseoftheblackpearl|2003",
+          "matchedTitle84": "Pirates of the Caribbean: The Curse of the Black Pearl",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-75-dgSy": {
@@ -52120,9 +52130,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 630,
           "path": "/uCC3j4pV9eOZwzDUWp2ilbcTf1f.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 630,
+          "checkedAt": "2026-11-12T17:33:24.632Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thewizardofoz|1939",
+          "matchedTitle84": "The Wizard of Oz",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-269-1dE0": {
@@ -54398,9 +54413,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 608,
           "path": "/enA22EPyzc2WQ1VVyY7zxresQQr.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 608,
+          "checkedAt": "2026-11-12T17:33:24.632Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "meninblackii|2002",
+          "matchedTitle84": "Men in Black II",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-336-qH0": {
@@ -60917,9 +60937,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 220289,
           "path": "/ezUtb9m5DeLwL2gxi4gktzNCvQv.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 220289,
+          "checkedAt": "2026-11-12T17:33:16.848Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "coherence|2013",
+          "matchedTitle84": "Coherence",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-524-7bQA": {
