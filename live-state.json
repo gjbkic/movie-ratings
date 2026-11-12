@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794503610680,
-  "sourceUpdatedIso": "2026-11-12T17:13:30.680Z",
+  "sourceUpdatedAt": 1794503628142,
+  "sourceUpdatedIso": "2026-11-12T17:13:48.142Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -65504,8 +65504,12 @@
         "poster84": {
           "path": "/pySIBhTFTeI12BEttpFabIi15Mt.jpg",
           "tmdbId": 430925,
-          "checkedAt": "2026-10-12T16:44:47.753Z",
-          "provider": "tmdb"
+          "checkedAt": "2026-11-12T17:13:48.205Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "trickshinsakuspecial|2005",
+          "matchedTitle84": "Trick Shinsaku Special",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "custom-1790423280570-6eki": {
@@ -68886,9 +68890,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 42009,
           "path": "/seN6rRfN0I6n8iDXjlSMk1QjNcq.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 42009,
+          "checkedAt": "2026-11-12T17:13:41.205Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "blackmirrorwhitebear|2013",
+          "matchedTitle84": "Black Mirror",
+          "validated84": true,
+          "mediaKind84": "tv"
         }
       },
       "custom-1791480095339-p808": {
@@ -70980,10 +70989,14 @@
         "contentType": "tv_series",
         "tmdbType": "tv",
         "poster84": {
-          "path": "/qJ5h8LufzdLBtax3N0gQt6ZSP34.jpg",
+          "path": "/9SyqfKLZsChuL0nlClqihK9yMFI.jpg",
           "tmdbId": 6964,
+          "checkedAt": "2026-11-12T17:13:41.205Z",
           "provider": "tmdb",
-          "checkedAt": "2026-10-13T19:13:27.197Z"
+          "checkedIdentity84": "galileo|2007",
+          "matchedTitle84": "Galileo",
+          "validated84": true,
+          "mediaKind84": "tv"
         },
         "tmdbSeriesId": 6964,
         "seasonCatalogV1": [
@@ -74548,8 +74561,12 @@
         "poster84": {
           "path": "/2JCD8vab3fircOU8cM2HJCxfv4I.jpg",
           "tmdbId": 873,
+          "checkedAt": "2026-11-12T17:13:41.205Z",
           "provider": "tmdb",
-          "checkedAt": "2026-11-05T16:17:30.940Z"
+          "checkedIdentity84": "columbo|1971",
+          "matchedTitle84": "Columbo",
+          "validated84": true,
+          "mediaKind84": "tv"
         },
         "tmdbSeriesId": 873,
         "seasonCatalogV1": [
