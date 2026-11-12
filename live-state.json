@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794506228173,
-  "sourceUpdatedIso": "2026-11-12T17:57:08.173Z",
+  "sourceUpdatedAt": 1794506241964,
+  "sourceUpdatedIso": "2026-11-12T17:57:21.964Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -45627,9 +45627,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 140607,
           "path": "/wqnLdwVXoBjKibFRR5U3y0aDUhs.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 140607,
+          "checkedAt": "2026-11-12T17:57:16.642Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "starwarstheforceawakens|2015",
+          "matchedTitle84": "Star Wars: The Force Awakens",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-77-2aNq": {
@@ -47413,9 +47418,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 95,
           "path": "/eTM3qtGhDU8cvjpoa6KEt5E2auU.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 95,
+          "checkedAt": "2026-11-12T17:57:21.944Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "armageddon|1998",
+          "matchedTitle84": "Armageddon",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-127-28zw": {
@@ -56870,9 +56880,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 567,
           "path": "/ILVF0eJxHMddjxeQhswFtpMtqx.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 567,
+          "checkedAt": "2026-11-12T17:57:16.642Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "rearwindow|1954",
+          "matchedTitle84": "Rear Window",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-398-2b1i": {
@@ -67823,9 +67838,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 60308,
           "path": "/4yIQq1e6iOcaZ5rLDG3lZBP3j7a.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 60308,
+          "checkedAt": "2026-11-12T17:57:21.944Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "moneyball|2011",
+          "matchedTitle84": "Moneyball",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "custom-1791374649583-3zqi": {
