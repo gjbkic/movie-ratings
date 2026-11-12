@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794504380162,
-  "sourceUpdatedIso": "2026-11-12T17:26:20.162Z",
+  "sourceUpdatedAt": 1794504726527,
+  "sourceUpdatedIso": "2026-11-12T17:32:06.527Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -49042,9 +49042,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 629,
           "path": "/99X2SgyFunJFXGAYnDv3sb9pnUD.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 629,
+          "checkedAt": "2026-11-12T17:32:01.784Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "theusualsuspects|1995",
+          "matchedTitle84": "The Usual Suspects",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-179-2aAG": {
@@ -59835,9 +59840,14 @@
           }
         ],
         "poster84": {
+          "path": "/63N9uy8nd9j7Eog2axPQ8lbr3Wj.jpg",
           "tmdbId": 78,
-          "path": "/42H4UqYSkNxKAFYO1hkm8cvTyfd.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "checkedAt": "2026-11-12T17:32:01.784Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "bladerunner|1982",
+          "matchedTitle84": "Blade Runner",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-493-28No": {
@@ -74581,10 +74591,14 @@
           "fetchedAt": "2026-10-31T07:49:17.802Z"
         },
         "poster84": {
-          "path": "/2HuqsYY2GA90Fvhe5dFFCNxCF3R.jpg",
+          "path": "/4nfRUOv3LX5zLn98WS1WqVBk9E9.jpg",
           "tmdbId": 505192,
-          "checkedAt": "2026-10-31T07:50:13.931Z",
-          "provider": "tmdb"
+          "checkedAt": "2026-11-12T17:32:01.784Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "shoplifters|2018",
+          "matchedTitle84": "Shoplifters",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "custom-1793628749833-0wf8": {
