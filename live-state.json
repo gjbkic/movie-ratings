@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794506997567,
-  "sourceUpdatedIso": "2026-11-12T18:09:57.567Z",
+  "sourceUpdatedAt": 1794507013809,
+  "sourceUpdatedIso": "2026-11-12T18:10:13.809Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -43268,9 +43268,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 569094,
           "path": "/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 569094,
+          "checkedAt": "2026-11-12T18:10:05.659Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "spidermanacrossthespiderverse|2023",
+          "matchedTitle84": "Spider-Man: Across the Spider-Verse",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-11-29zs": {
@@ -54668,9 +54673,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 129,
           "path": "/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 129,
+          "checkedAt": "2026-11-12T18:10:05.659Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "spiritedaway|2001",
+          "matchedTitle84": "Spirited Away",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-334-1Tp2": {
@@ -56550,9 +56560,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 346,
           "path": "/lOMGc8bnSwQhS4XyE1S99uH8NXf.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 346,
+          "checkedAt": "2026-11-12T18:10:13.879Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "sevensamurai|1954",
+          "matchedTitle84": "Seven Samurai",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-387-em8S": {
@@ -63403,9 +63418,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 26466,
           "path": "/cRlMrbc4Iof7vN0ZqHwJnMBYBLi.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 26466,
+          "checkedAt": "2026-11-12T18:10:13.878Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "triangle|2009",
+          "matchedTitle84": "Triangle",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "added-anchor-581": {
