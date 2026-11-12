@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794508920409,
-  "sourceUpdatedIso": "2026-11-12T18:42:00.409Z",
+  "sourceUpdatedAt": 1794508937304,
+  "sourceUpdatedIso": "2026-11-12T18:42:17.304Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -53602,9 +53602,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 1368,
           "path": "/a9sa6ERZCpplbPEO7OMWE763CLD.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 1368,
+          "checkedAt": "2026-11-12T18:42:12.995Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "firstblood|1982",
+          "matchedTitle84": "First Blood",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-300-28Vs": {
