@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794503402899,
-  "sourceUpdatedIso": "2026-11-12T17:10:02.899Z",
+  "sourceUpdatedAt": 1794503421144,
+  "sourceUpdatedIso": "2026-11-12T17:10:21.144Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -51280,9 +51280,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 78685,
           "path": "/28Coe4j6p1FdYXBMEafJrzdq39A.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 78685,
+          "checkedAt": "2026-11-12T17:10:21.201Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "theconfidencemanjpfortune|2019",
+          "matchedTitle84": "The Confidence Man JP",
+          "validated84": true,
+          "mediaKind84": "tv"
         }
       },
       "lb-247-1L2a": {
@@ -63013,6 +63018,16 @@
           "creators": [],
           "source": "tmdb-github",
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
+        },
+        "poster84": {
+          "path": null,
+          "tmdbId": null,
+          "checkedAt": "2026-11-12T17:10:21.259Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "anikuri15agatheringofcats|2007",
+          "matchedTitle84": "",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "custom-1789385860057-z7ka": {
@@ -64673,10 +64688,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "path": "/1vtuBs3ZbRlUkTh4YBDf1j5YwTk.jpg",
+          "path": "/ndhczf4BpntRbC0vS78pRZlV93E.jpg",
           "tmdbId": 356255,
-          "checkedAt": "2026-10-12T10:48:22.249Z",
-          "provider": "tmdb"
+          "checkedAt": "2026-11-12T17:10:15.617Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "legalhighsp|2013",
+          "matchedTitle84": "Legal High SP",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "custom-1790322762725-70dy": {
@@ -68995,7 +69014,7 @@
           "validated84": true,
           "mediaKind84": "movie"
         },
-        "noteEditedAt": "2026-11-12T16:36:00.881Z"
+        "noteEditedAt": "2026-11-12T17:10:10.864Z"
       },
       "custom-1791563602274-2p5j": {
         "publishedAt": "Sat, 10 Oct 2026 05:30:53 +1300",
@@ -70728,8 +70747,12 @@
         "poster84": {
           "path": "/4Qnk3QvC8gxTWH5uM8thovg1j4Q.jpg",
           "tmdbId": 55925,
+          "checkedAt": "2026-11-12T17:10:15.617Z",
           "provider": "tmdb",
-          "checkedAt": "2026-10-13T18:22:54.776Z"
+          "checkedIdentity84": "hanzawanaoki|2013",
+          "matchedTitle84": "Hanzawa Naoki",
+          "validated84": true,
+          "mediaKind84": "tv"
         },
         "tmdbSeriesId": 55925,
         "seasonCatalogV1": [
@@ -71624,10 +71647,14 @@
         "contentType": "tv_series",
         "tmdbType": "tv",
         "poster84": {
-          "path": "/qlbcGr0EYKRICD0MTrIwnIztQna.jpg",
+          "path": "/hTP1DtLGFamjfu8WqjnuQdP1n4i.jpg",
           "tmdbId": 1429,
+          "checkedAt": "2026-11-12T17:10:15.617Z",
           "provider": "tmdb",
-          "checkedAt": "2026-10-14T08:28:55.010Z"
+          "checkedIdentity84": "attackontitan|2013",
+          "matchedTitle84": "Attack on Titan",
+          "validated84": true,
+          "mediaKind84": "tv"
         },
         "tmdbSeriesId": 1429,
         "seasonCatalogV1": [
