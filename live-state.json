@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794503944406,
-  "sourceUpdatedIso": "2026-11-12T17:19:04.406Z",
+  "sourceUpdatedAt": 1794503965195,
+  "sourceUpdatedIso": "2026-11-12T17:19:25.195Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -63001,9 +63001,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 653567,
           "path": "/z1HiEB1UEfdA5fPkngekjQ2vlCC.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 653567,
+          "checkedAt": "2026-11-12T17:19:19.563Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "missamericana|2020",
+          "matchedTitle84": "Miss Americana",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "custom-1789385860026-8m1d": {
@@ -64987,9 +64992,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 68293,
           "path": "/28lfvAfvYoDoFDXkPS49RWhDTJo.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 68293,
+          "checkedAt": "2026-11-12T17:19:19.563Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thefulltimewifeescapist|2016",
+          "matchedTitle84": "The Full-Time Wife Escapist",
+          "validated84": true,
+          "mediaKind84": "tv"
         }
       },
       "custom-1790322766063-ab5l": {
