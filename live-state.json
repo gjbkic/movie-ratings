@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794508327546,
-  "sourceUpdatedIso": "2026-11-12T18:32:07.546Z",
+  "sourceUpdatedAt": 1794508346734,
+  "sourceUpdatedIso": "2026-11-12T18:32:26.734Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -53404,9 +53404,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 9277,
           "path": "/ckmYng37zey8INYf6d10cVgIG93.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 9277,
+          "checkedAt": "2026-11-12T18:32:19.901Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thesting|1973",
+          "matchedTitle84": "The Sting",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-296-l7zS": {
@@ -54273,9 +54278,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 539,
           "path": "/yz4QVqPx3h1hD1DfqqQkCq3rmxW.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 539,
+          "checkedAt": "2026-11-12T18:32:19.901Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "psycho|1960",
+          "matchedTitle84": "Psycho",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-320-28r8": {
@@ -56081,9 +56091,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 187,
           "path": "/i66G50wATMmPrvpP95f0XP6ZdVS.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 187,
+          "checkedAt": "2026-11-12T18:32:26.807Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "sincity|2005",
+          "matchedTitle84": "Sin City",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-370-ham": {
@@ -61523,9 +61538,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 12444,
           "path": "/iGoXIpQb7Pot00EEdwpwPajheZ5.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 12444,
+          "checkedAt": "2026-11-12T18:32:26.807Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "harrypotterandthedeathlyhallowspart1|2010",
+          "matchedTitle84": "Harry Potter and the Deathly Hallows: Part 1",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-523-6xza": {
@@ -61630,9 +61650,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 185,
           "path": "/4sHeTAp65WrSSuc05nRBKddhBxO.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 185,
+          "checkedAt": "2026-11-12T18:32:26.807Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "aclockworkorange|1971",
+          "matchedTitle84": "A Clockwork Orange",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-526-4JQI": {
