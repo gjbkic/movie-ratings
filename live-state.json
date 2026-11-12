@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794506465436,
-  "sourceUpdatedIso": "2026-11-12T18:01:05.436Z",
+  "sourceUpdatedAt": 1794506504430,
+  "sourceUpdatedIso": "2026-11-12T18:01:44.430Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -48993,9 +48993,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 155,
           "path": "/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 155,
+          "checkedAt": "2026-11-12T18:01:40.069Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thedarkknight|2008",
+          "matchedTitle84": "The Dark Knight",
+          "validated84": true,
+          "mediaKind84": "movie"
         },
         "noteEditedAt": "2026-10-29T11:48:02.001Z"
       },
@@ -54283,9 +54288,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 10681,
           "path": "/hbhFnRzzg6ZDmm8YAmxBnQpQIPh.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 10681,
+          "checkedAt": "2026-11-12T18:01:40.069Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "walle|2008",
+          "matchedTitle84": "WALL·E",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-324-3qi6": {
@@ -74956,10 +74966,14 @@
           "fetchedAt": "2026-10-29T11:42:30.849Z"
         },
         "poster84": {
-          "path": "/uBq0cdKXfIByYCx0JaZhK1eW1h2.jpg",
+          "path": "/dGgiXMWDcS5aJTBEFu7bmaQPNox.jpg",
           "tmdbId": 11645,
-          "checkedAt": "2026-10-29T11:42:37.418Z",
-          "provider": "tmdb"
+          "checkedAt": "2026-11-12T18:01:40.069Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "ran|1985",
+          "matchedTitle84": "Ran",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "custom-1793290986347-6wa1": {
