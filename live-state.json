@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794503382181,
-  "sourceUpdatedIso": "2026-11-12T17:09:42.181Z",
+  "sourceUpdatedAt": 1794503402899,
+  "sourceUpdatedIso": "2026-11-12T17:10:02.899Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -67770,9 +67770,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 114463,
           "path": "/inzPPPr2BsE92m4rHhQn3sf2yPk.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 114463,
+          "checkedAt": "2026-11-12T17:09:55.774Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "zootopia|2022",
+          "matchedTitle84": "Zootopia+",
+          "validated84": true,
+          "mediaKind84": "tv"
         }
       },
       "custom-1791392810098-rjyg": {
@@ -70755,10 +70760,14 @@
         "contentType": "tv_series",
         "tmdbType": "tv",
         "poster84": {
-          "path": "/2fmB1XXHiQCgnk8R0QLP8FoBVwF.jpg",
+          "path": "/qn9v3ZtTz6AyaC3Pm335AsGiXA.jpg",
           "tmdbId": 46234,
+          "checkedAt": "2026-11-12T17:10:02.968Z",
           "provider": "tmdb",
-          "checkedAt": "2026-10-13T18:24:09.283Z"
+          "checkedIdentity84": "legalhigh|2012",
+          "matchedTitle84": "Legal High",
+          "validated84": true,
+          "mediaKind84": "tv"
         },
         "tmdbSeriesId": 46234,
         "seasonCatalogV1": [
@@ -72677,10 +72686,14 @@
         "contentType": "tv_series",
         "tmdbType": "tv",
         "poster84": {
-          "path": "/aVf73AHq2DveoD9jw1KSrMijtTT.jpg",
-          "tmdbId": 282057,
-          "checkedAt": "2026-10-19T13:33:13.029Z",
-          "provider": "tmdb"
+          "path": null,
+          "tmdbId": null,
+          "checkedAt": "2026-11-12T17:10:02.968Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "ドラえもん|1979",
+          "matchedTitle84": "",
+          "validated84": true,
+          "mediaKind84": "tv"
         },
         "note": "普通にまあまあ好き。酷いか回もあるが、だいたい起承転結がしっかりしていて、よくそこまで過度にネタ切れせずに続いてるなと思う。きれいなジャイアンの回など通常回でも面白い回もあり、昔よく見てた。",
         "noteSource": "manual",
@@ -73378,8 +73391,12 @@
         "poster84": {
           "path": "/aoUqCVnhAdkTRMLr6Q3OB1hu8wA.jpg",
           "tmdbId": 54456,
+          "checkedAt": "2026-11-12T17:09:55.774Z",
           "provider": "tmdb",
-          "checkedAt": "2026-10-21T19:56:02.822Z"
+          "checkedIdentity84": "keibuhoyabekenzo|2010",
+          "matchedTitle84": "Keibuho Yabe Kenzo",
+          "validated84": true,
+          "mediaKind84": "tv"
         },
         "tmdbSeriesId": 54456,
         "seasonCatalogV1": [
