@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794508492823,
-  "sourceUpdatedIso": "2026-11-12T18:34:52.823Z",
+  "sourceUpdatedAt": 1794508522500,
+  "sourceUpdatedIso": "2026-11-12T18:35:22.500Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -53118,9 +53118,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 453,
           "path": "/rEIg5yJdNOt9fmX4P8gU9LeNoTQ.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 453,
+          "checkedAt": "2026-11-12T18:35:22.355Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "abeautifulmind|2001",
+          "matchedTitle84": "A Beautiful Mind",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-288-2a6G": {
@@ -57307,9 +57312,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 1642331,
           "path": "/xiyx7obD1DbL7yLTN3uIuIiyase.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 1642331,
+          "checkedAt": "2026-11-12T18:35:17.943Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "wakeupdeadman|2025",
+          "matchedTitle84": "Wake Up, Dead Man!",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-404-27q4": {
@@ -60260,9 +60270,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 335984,
           "path": "/gajva2L0rPYkEWjzgFlBXCAVBE5.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 335984,
+          "checkedAt": "2026-11-12T18:35:22.355Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "bladerunner2049|2017",
+          "matchedTitle84": "Blade Runner 2049",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-487-28JG": {
@@ -66604,9 +66619,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 587792,
           "path": "/gnAfqiV7yO3Jq9IntTmwkcaICqc.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 587792,
+          "checkedAt": "2026-11-12T18:35:17.943Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "palmsprings|2020",
+          "matchedTitle84": "Palm Springs",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "custom-1790433924585-k3b0": {
