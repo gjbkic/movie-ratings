@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794501327279,
-  "sourceUpdatedIso": "2026-11-12T16:35:27.279Z",
+  "sourceUpdatedAt": 1794501344759,
+  "sourceUpdatedIso": "2026-11-12T16:35:44.759Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -54076,9 +54076,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 149870,
           "path": "/jfwSexzlIzaOgxP9A8bTA6t8YYb.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 149870,
+          "checkedAt": "2026-11-12T16:35:40.446Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thewindrises|2013",
+          "matchedTitle84": "The Wind Rises",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-331-26e2": {
@@ -64531,10 +64536,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "path": "/9opE2XvMVjwvU3YGMKBIGYhdMt0.jpg",
+          "path": "/sBTEDDeHMqh8w8tnEz7GFLts50e.jpg",
           "tmdbId": 527056,
-          "checkedAt": "2026-10-12T16:44:16.241Z",
-          "provider": "tmdb"
+          "checkedAt": "2026-11-12T16:35:40.446Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "legalhigh2sp|2014",
+          "matchedTitle84": "Legal High 2 SP",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "custom-1790322762266-mrn9": {
@@ -73644,8 +73653,12 @@
         "poster84": {
           "path": "/3phHl1gP8iyJVo4dbTFPlHKzmI0.jpg",
           "tmdbId": 57045,
-          "checkedAt": "2026-10-26T10:25:31.565Z",
-          "provider": "tmdb"
+          "checkedAt": "2026-11-12T16:35:40.446Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "utadaunited2006|2006",
+          "matchedTitle84": "Utada United 2006",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "custom-1793010058855-54gu": {
