@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794501526496,
-  "sourceUpdatedIso": "2026-11-12T16:38:46.496Z",
+  "sourceUpdatedAt": 1794503359262,
+  "sourceUpdatedIso": "2026-11-12T17:09:19.262Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -68229,8 +68229,12 @@
         "poster84": {
           "path": "/9mCVBtlTenpsdFwJWchynhHPNNj.jpg",
           "tmdbId": 901030,
-          "checkedAt": "2026-10-12T16:44:51.520Z",
-          "provider": "tmdb"
+          "checkedAt": "2026-11-12T17:09:14.357Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "talesofthebizarre2021fallspecial|2021",
+          "matchedTitle84": "Tales of the Bizarre: 2021 Fall Special",
+          "validated84": true,
+          "mediaKind84": "movie"
         },
         "noteEditedAt": "2026-11-12T16:23:34.621Z"
       },
