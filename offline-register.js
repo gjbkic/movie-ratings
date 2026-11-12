@@ -1,7 +1,7 @@
 /* Install and manage offline support without touching movie/rank data. */
 (()=>{
 'use strict';
-const WORKER='./sw.js?v=20261113-validatedposter4';
+const WORKER='./sw.js?v=20261113-confirmedscore5';
 const POSTER_CACHE='movie30-offline-posters-v1';
 let registration=null,activeJob=null,ui={};
 function on(el,event,fn){if(el)el.addEventListener(event,fn)}
@@ -23,7 +23,8 @@ function possiblePosters(){
  if(!api?.meta||!api?.url||typeof allFilms!=='function')return [];
  const seen=new Set(),out=[];
  for(const f of allFilms()){
-  if(Number(filmStar(f))<3)continue;
+  const score=effectiveScore(f);
+  if(Number(filmStar(f))<3||score==null||!Number.isFinite(Number(score)))continue;
   const path=api.meta(f)?.path,link=api.url(path,'w185');
   if(!link||seen.has(link))continue;
   seen.add(link);out.push(link);
