@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794507782986,
-  "sourceUpdatedIso": "2026-11-12T18:23:02.986Z",
+  "sourceUpdatedAt": 1794507824208,
+  "sourceUpdatedIso": "2026-11-12T18:23:44.208Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -46129,9 +46129,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 194662,
           "path": "/rHUg2AuIuLSIYMYFgavVwqt1jtc.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 194662,
+          "checkedAt": "2026-11-12T18:23:39.877Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "birdmanortheunexpectedvirtueofignorance|2014",
+          "matchedTitle84": "Birdman or (The Unexpected Virtue of Ignorance)",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-90-71Y": {
