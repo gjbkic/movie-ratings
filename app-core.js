@@ -8689,7 +8689,8 @@ function drawCrew(id){
   if(!panel)return;
   const f=filmById(id);if(!f){panel.innerHTML='';return;}
   const d=details(f),m=state.letterboxdMeta?.[id]||{};
-  const tv=m.contentType==='tv_episode'||m.contentType==='tv_series';
+  const tv=m.contentType==='tv_episode'||m.contentType==='tv_series'||
+    m.poster84?.mediaKind84==='tv';
   const directors=d.directors.join('、');
   const creators=d.creators.join('、');
   const empty=d.stored?'TMDbに該当する記載なし':'未取得';
@@ -8740,12 +8741,23 @@ const posterTitleMatch84=(f,item,kind='movie')=>{
   const aliases=posterNames84(f);
   const names=kind==='tv'?[item.name,item.original_name]:
     [item.title,item.original_title,item.name,item.original_name];
+  if(kind==='tv'){
+    // An imported TV episode can have an English title such as
+    // "Series: Episode". Its poster belongs to the parent series.
+    const m=state.letterboxdMeta?.[f.id]||{},t=titleInfo(f);
+    for(const full of [m.englishTitle,t.englishTitle,f.lbTitle]){
+      const prefix=String(full||'').split(':')[0].trim();
+      if(prefix)aliases.push(normPoster84(prefix));
+    }
+  }
   return names.map(normPoster84).some(name=>name&&aliases.includes(name));
 };
 const posterYearMatch84=(f,item,kind='movie')=>{
   const year=Number(f.year)||0;
   const date=kind==='tv'?(item?.first_air_date||''):(item?.release_date||'');
   const matched=Number(String(date).slice(0,4))||0;
+  // Series start years differ from the air year of later episodes.
+  if(kind==='tv'&&state.letterboxdMeta?.[f.id]?.contentType==='tv_episode')return true;
   return !year||!matched||Math.abs(year-matched)<=2;
 };
 // Treat stored metadata as untrusted until it matches this exact film identity.
@@ -8785,7 +8797,13 @@ async function loadPoster84(f,force=false){
   async function verifiedDetails(kind,id){
     if(!Number.isSafeInteger(id)||id<=0)return null;
     const route='/'+kind+'/'+id;
-    const details=await tmdbFetch(route,{language:'en-US'});
+    let details;
+    try{details=await tmdbFetch(route,{language:'en-US'})}
+    catch(err){
+      // A Letterboxd TV id can be absent from the movie endpoint.
+      if(/HTTP (404|422)/.test(String(err?.message||'')))return null;
+      throw err;
+    }
     if(posterTitleMatch84(f,details,kind)&&posterYearMatch84(f,details,kind))return details;
     // A localized title may match even when the English listing does not.
     const localized=await tmdbFetch(route,{language:'ja-JP'});
@@ -8810,9 +8828,17 @@ async function loadPoster84(f,force=false){
     if(details){path=details.poster_path||null;matchedId=Number(details.id)||null;
       matchedTitle=details.name||details.original_name||'';}
   }else{
-    const id=Number(m.poster84?.tmdbId||titleInfo(f).tmdbId||f.tmdbId)||0;
+    // A TMDb number is only meaningful together with its media type.
+    // Letterboxd can supply TV ids for extras, documentary series, etc.
+    const id=Number(m.poster84?.tmdbId||m.tmdbSeriesId||titleInfo(f).tmdbId||f.tmdbId)||0;
     let details=null;
     if(id)details=await verifiedDetails('movie',id);
+    if(!details&&id){
+      // Collision example: Perfect Blue Lecture Series is TMDb TV/132131,
+      // while MOVIE/132131 is the entirely unrelated Joy Road.
+      const series=await verifiedDetails('tv',id);
+      if(series){details=series;sourceKind='tv';}
+    }
     if(!details){
       const t=titleInfo(f);
       const queries=[t.englishTitle,f.lbTitle,t.originalTitle,t.title]
@@ -8824,12 +8850,29 @@ async function loadPoster84(f,force=false){
           posterTitleMatch84(f,hit,'movie')&&posterYearMatch84(f,hit,'movie'));
         if(matches.length===1){
           details=await verifiedDetails('movie',Number(matches[0].id));
-          if(details)break;
+          if(details){sourceKind='movie';break}
+        }
+      }
+      if(!details){
+        // Rare but valid: a Letterboxd entry classified as "other" actually
+        // has a TMDb TV page (lecture series, specials, mini-series).
+        for(const query of queries.slice(0,2)){
+          const result=await tmdbFetch('/search/tv',{query,language:'en-US'});
+          const hits=(result.results||[]).filter(hit=>
+            posterTitleMatch84(f,hit,'tv')&&posterYearMatch84(f,hit,'tv'));
+          if(hits.length===1){
+            details=await verifiedDetails('tv',Number(hits[0].id));
+            if(details){sourceKind='tv';break}
+          }
         }
       }
     }
-    if(details){path=details.poster_path||null;matchedId=Number(details.id)||null;
-      matchedTitle=details.title||details.original_title||'';}
+    if(details){
+      path=details.poster_path||null;
+      matchedId=Number(details.id)||null;
+      matchedTitle=sourceKind==='tv'?(details.name||details.original_name||''):
+        (details.title||details.original_title||'');
+    }
   }
   const valid=posterValid84(path);
   cachePoster84(f,{path:valid?path:null,tmdbId:matchedId,checkedAt:stamp,
