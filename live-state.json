@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794504367338,
-  "sourceUpdatedIso": "2026-11-12T17:26:07.338Z",
+  "sourceUpdatedAt": 1794504380162,
+  "sourceUpdatedIso": "2026-11-12T17:26:20.162Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -45809,9 +45809,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 857,
           "path": "/uqx37cS8cpHg8U35f9U5IBlrCV3.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 857,
+          "checkedAt": "2026-11-12T17:26:13.587Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "savingprivateryan|1998",
+          "matchedTitle84": "Saving Private Ryan",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-85-1GjK": {
@@ -47012,9 +47017,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 3176,
           "path": "/aLGKAQKgzWpJ6egyWzzC11jXBRJ.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 3176,
+          "checkedAt": "2026-11-12T17:26:20.222Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "battleroyale|2000",
+          "matchedTitle84": "Battle Royale",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-120-26EO": {
@@ -53690,9 +53700,14 @@
           }
         ],
         "poster84": {
+          "path": "/ohJukm8BtnLHrSQ0QDloo6Q4fJO.jpg",
           "tmdbId": 450274,
-          "path": "/o1DxZDxQSiE86Vo23NhZplsFNzA.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "checkedAt": "2026-11-12T17:26:20.222Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "memoirsofamurderer|2017",
+          "matchedTitle84": "Memoirs of a Murderer",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-316-ekeY": {
@@ -58564,9 +58579,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 64690,
           "path": "/602vevIURmpDfzbnv5Ubi6wIkQm.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 64690,
+          "checkedAt": "2026-11-12T17:26:20.222Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "drive|2011",
+          "matchedTitle84": "Drive",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-458-2bg8": {
@@ -59849,9 +59869,14 @@
           }
         ],
         "poster84": {
+          "path": "/khBQ6nN5FLfg9XgPXIZDkABJjqo.jpg",
           "tmdbId": 1417,
-          "path": "/7wb2Ldp0oAx1lcZvffq9RfWoI2h.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "checkedAt": "2026-11-12T17:26:13.586Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "panslabyrinth|2006",
+          "matchedTitle84": "Pan's Labyrinth",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-494-2b0E": {
@@ -69197,7 +69222,7 @@
           "validated84": true,
           "mediaKind84": "movie"
         },
-        "noteEditedAt": "2026-11-12T17:10:10.864Z"
+        "noteEditedAt": "2026-11-12T17:26:10.861Z"
       },
       "custom-1791563602274-2p5j": {
         "publishedAt": "Sat, 10 Oct 2026 05:30:53 +1300",
