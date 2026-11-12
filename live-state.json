@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794501409646,
-  "sourceUpdatedIso": "2026-11-12T16:36:49.646Z",
+  "sourceUpdatedAt": 1794501424021,
+  "sourceUpdatedIso": "2026-11-12T16:37:04.021Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -64170,6 +64170,16 @@
           "creators": [],
           "source": "tmdb-github",
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
+        },
+        "poster84": {
+          "path": null,
+          "tmdbId": null,
+          "checkedAt": "2026-11-12T16:36:55.810Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "jojosbizarreadventuregoldenwind|2018",
+          "matchedTitle84": "",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "custom-1790322757929-0kod": {
