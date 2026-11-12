@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794501357428,
-  "sourceUpdatedIso": "2026-11-12T16:35:57.428Z",
+  "sourceUpdatedAt": 1794501369395,
+  "sourceUpdatedIso": "2026-11-12T16:36:09.395Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -43520,9 +43520,14 @@
           }
         ],
         "poster84": {
+          "path": "/z2FnLKpFi1HPO7BEJxdkv6hpJSU.jpg",
           "tmdbId": 489,
-          "path": "/vZ2KGsE9kDSZSuBqooh5wBK7EAK.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "checkedAt": "2026-11-12T16:36:04.779Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "goodwillhunting|1997",
+          "matchedTitle84": "Good Will Hunting",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-19-2cCk": {
@@ -50652,9 +50657,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 208430,
           "path": "/JXz3c5cCKn4BxQdTMy0XkwAwJY.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 208430,
+          "checkedAt": "2026-11-12T16:36:04.779Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "strawberrynight|2013",
+          "matchedTitle84": "Strawberry Night",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-229-26tw": {
@@ -68876,7 +68886,7 @@
           "validated84": true,
           "mediaKind84": "movie"
         },
-        "noteEditedAt": "2026-10-13T17:49:50.706Z"
+        "noteEditedAt": "2026-11-12T16:36:00.881Z"
       },
       "custom-1791563602274-2p5j": {
         "publishedAt": "Sat, 10 Oct 2026 05:30:53 +1300",
@@ -71511,10 +71521,14 @@
         "contentType": "tv_series",
         "tmdbType": "tv",
         "poster84": {
-          "path": "/9WxfAQquTun9ATkV6iAeFHMkqxv.jpg",
+          "path": "/i2EEr2uBvRlAwJ8d8zTG2Y19mIa.jpg",
           "tmdbId": 46298,
+          "checkedAt": "2026-11-12T16:36:04.779Z",
           "provider": "tmdb",
-          "checkedAt": "2026-10-14T08:31:55.283Z"
+          "checkedIdentity84": "hunterxhunter|2011",
+          "matchedTitle84": "Hunter x Hunter",
+          "validated84": true,
+          "mediaKind84": "tv"
         },
         "tmdbSeriesId": 46298,
         "seasonCatalogV1": [
