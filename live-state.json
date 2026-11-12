@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794504296646,
-  "sourceUpdatedIso": "2026-11-12T17:24:56.646Z",
+  "sourceUpdatedAt": 1794504318231,
+  "sourceUpdatedIso": "2026-11-12T17:25:18.231Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -65488,9 +65488,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 1955,
           "path": "/u0wpPYjuSt8DIe1Y3Vapnh8jcKE.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 1955,
+          "checkedAt": "2026-11-12T17:25:13.906Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "theelephantman|1980",
+          "matchedTitle84": "The Elephant Man",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "custom-1790423279439-sn81": {
@@ -66231,9 +66236,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 27064,
           "path": "/4kIXsE4SwUjO0eUqpolsHNO5GLH.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 27064,
+          "checkedAt": "2026-11-12T17:25:13.906Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "mishimaalifeinfourchapters|1985",
+          "matchedTitle84": "Mishima: A Life in Four Chapters",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "custom-1790924446793-9ts4": {
