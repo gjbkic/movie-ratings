@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794507212689,
-  "sourceUpdatedIso": "2026-11-12T18:13:32.689Z",
+  "sourceUpdatedAt": 1794507238503,
+  "sourceUpdatedIso": "2026-11-12T18:13:58.503Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -45691,9 +45691,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 240,
           "path": "/8a1lJs7mFyGhGhZZDT1azJUoQiZ.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 240,
+          "checkedAt": "2026-11-12T18:13:54.180Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thegodfatherpartii|1974",
+          "matchedTitle84": "The Godfather Part II",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-78-2aHM": {
@@ -52646,9 +52651,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 265195,
           "path": "/vmeCDuWJ6B2cqi9f3QFyIwRKqFV.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 265195,
+          "checkedAt": "2026-11-12T18:13:54.180Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "wildtales|2014",
+          "matchedTitle84": "Wild Tales",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-277-eOCm": {
@@ -60456,9 +60466,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 46738,
           "path": "/yH6DAQVgbyj72S66gN4WWVoTjuf.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 46738,
+          "checkedAt": "2026-11-12T18:13:54.180Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "incendies|2010",
+          "matchedTitle84": "Incendies",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-496-2aXU": {
