@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794504033932,
-  "sourceUpdatedIso": "2026-11-12T17:20:33.932Z",
+  "sourceUpdatedAt": 1794504065126,
+  "sourceUpdatedIso": "2026-11-12T17:21:05.126Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -50132,9 +50132,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 316029,
           "path": "/b9CeobiihCx1uG1tpw8hXmpi7nm.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 316029,
+          "checkedAt": "2026-11-12T17:20:57.518Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thegreatestshowman|2017",
+          "matchedTitle84": "The Greatest Showman",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-213-2TTS": {
@@ -57354,9 +57359,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 68721,
           "path": "/qhPtAc1TKbMPqNvcdXSOn9Bn7hZ.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 68721,
+          "checkedAt": "2026-11-12T17:20:57.518Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "ironman3|2013",
+          "matchedTitle84": "Iron Man 3",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-425-zu4c": {
