@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794505042203,
-  "sourceUpdatedIso": "2026-11-12T17:37:22.203Z",
+  "sourceUpdatedAt": 1794505448353,
+  "sourceUpdatedIso": "2026-11-12T17:44:08.353Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -53051,9 +53051,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 12405,
           "path": "/5leCCi7ZF0CawAfM5Qo2ECKPprc.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 12405,
+          "checkedAt": "2026-11-12T17:44:03.581Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "slumdogmillionaire|2008",
+          "matchedTitle84": "Slumdog Millionaire",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-293-99fw": {
@@ -73844,10 +73849,14 @@
           "fetchedAt": "2026-10-19T18:06:16.479Z"
         },
         "poster84": {
-          "path": "/ksAr1ujk8rJTtMfZ8skWn98zemh.jpg",
+          "path": "/oMjWlKHzR9cwhf3oCUy9j57o67O.jpg",
           "tmdbId": 12720,
-          "checkedAt": "2026-10-19T18:06:18.247Z",
-          "provider": "tmdb"
+          "checkedAt": "2026-11-12T17:44:03.581Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "suicideclub|2001",
+          "matchedTitle84": "Suicide Club",
+          "validated84": true,
+          "mediaKind84": "movie"
         },
         "noteEditedAt": "2026-10-19T18:07:40.309Z"
       },
