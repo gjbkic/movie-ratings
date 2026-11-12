@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794505720042,
-  "sourceUpdatedIso": "2026-11-12T17:48:40.042Z",
+  "sourceUpdatedAt": 1794505732448,
+  "sourceUpdatedIso": "2026-11-12T17:48:52.448Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -43287,9 +43287,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 807,
           "path": "/191nKfP0ehp3uIvWqgPbFmI4lv9.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 807,
+          "checkedAt": "2026-11-12T17:48:47.096Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "se7en|1995",
+          "matchedTitle84": "Se7en",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-12-728": {
@@ -56766,9 +56771,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 3782,
           "path": "/dgNTS4EQDDVfkzJI5msKuHu2Ei3.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 3782,
+          "checkedAt": "2026-11-12T17:48:47.096Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "ikiru|1952",
+          "matchedTitle84": "Ikiru",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-397-2a6Q": {
@@ -67655,9 +67665,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 968,
           "path": "/mavrhr0ig2aCRR8d48yaxtD5aMQ.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 968,
+          "checkedAt": "2026-11-12T17:48:47.096Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "dogdayafternoon|1975",
+          "matchedTitle84": "Dog Day Afternoon",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "custom-1791362786595-8onp": {
