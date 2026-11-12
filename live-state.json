@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794504222622,
-  "sourceUpdatedIso": "2026-11-12T17:23:42.622Z",
+  "sourceUpdatedAt": 1794504250666,
+  "sourceUpdatedIso": "2026-11-12T17:24:10.666Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -43384,9 +43384,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 694,
           "path": "/uAR0AWqhQL1hQa69UDEbb2rE5Wx.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 694,
+          "checkedAt": "2026-11-12T17:24:01.259Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "theshining|1980",
+          "matchedTitle84": "The Shining",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-15-6hQu": {
@@ -43800,9 +43805,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 152601,
           "path": "/eCOtqtfvn7mxGl6nfmq4b1exJRc.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 152601,
+          "checkedAt": "2026-11-12T17:24:09.907Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "her|2013",
+          "matchedTitle84": "Her",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-27-2b2A": {
@@ -44423,9 +44433,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 62,
           "path": "/ve72VxNqjGM69Uky4WTo2bK6rfq.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 62,
+          "checkedAt": "2026-11-12T17:24:01.259Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "2001aspaceodyssey|1968",
+          "matchedTitle84": "2001: A Space Odyssey",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-45-29VS": {
@@ -56628,9 +56643,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 500,
           "path": "/xi8Iu6qyTfyZVDVy60raIOYJJmk.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 500,
+          "checkedAt": "2026-11-12T17:24:01.259Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "reservoirdogs|1992",
+          "matchedTitle84": "Reservoir Dogs",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-403-uAKS": {
@@ -59300,9 +59320,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 600,
           "path": "/kMKyx1k8hWWscYFnPbnxxN4Eqo4.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 600,
+          "checkedAt": "2026-11-12T17:24:09.907Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "fullmetaljacket|1987",
+          "matchedTitle84": "Full Metal Jacket",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-480-gVQk": {
