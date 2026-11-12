@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794504971948,
-  "sourceUpdatedIso": "2026-11-12T17:36:11.948Z",
+  "sourceUpdatedAt": 1794504986468,
+  "sourceUpdatedIso": "2026-11-12T17:36:26.468Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -46553,9 +46553,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 135397,
           "path": "/rhr4y79GpxQF9IsfJItRXVaoGs4.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 135397,
+          "checkedAt": "2026-11-12T17:36:20.106Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "jurassicworld|2015",
+          "matchedTitle84": "Jurassic World",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-105-2bfk": {
@@ -52917,9 +52922,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 380,
           "path": "/iTNHwO896WKkaoPtpMMS74d8VNi.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 380,
+          "checkedAt": "2026-11-12T17:36:26.536Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "rainman|1988",
+          "matchedTitle84": "Rain Man",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-290-26VK": {
@@ -55876,9 +55886,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 1054867,
           "path": "/lbBWwxBht4JFP5PsuJ5onpMqugW.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 1054867,
+          "checkedAt": "2026-11-12T17:36:20.106Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "onebattleafteranother|2025",
+          "matchedTitle84": "One Battle After Another",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-375-27Po": {
@@ -57531,9 +57546,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 76,
           "path": "/kf1Jb1c2JAOqjuzA3H4oDM263uB.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 76,
+          "checkedAt": "2026-11-12T17:36:26.536Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "beforesunrise|1995",
+          "matchedTitle84": "Before Sunrise",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-423-6ZS": {
