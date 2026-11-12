@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794508317982,
-  "sourceUpdatedIso": "2026-11-12T18:31:57.982Z",
+  "sourceUpdatedAt": 1794508327546,
+  "sourceUpdatedIso": "2026-11-12T18:32:07.546Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -52392,9 +52392,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 840,
           "path": "/dTWvLWur0XM7YezSTSoZxZ7gDfM.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 840,
+          "checkedAt": "2026-11-12T18:32:07.622Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "closeencountersofthethirdkind|1977",
+          "matchedTitle84": "Close Encounters of the Third Kind",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-268-29Xu": {
@@ -63301,9 +63306,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 578,
           "path": "/lxM6kqilAdpdhqUl2biYp5frUxE.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 578,
+          "checkedAt": "2026-11-12T18:32:03.303Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "jaws|1975",
+          "matchedTitle84": "Jaws",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-573-28ws": {
