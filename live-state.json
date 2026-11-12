@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794503918699,
-  "sourceUpdatedIso": "2026-11-12T17:18:38.699Z",
+  "sourceUpdatedAt": 1794503936144,
+  "sourceUpdatedIso": "2026-11-12T17:18:56.144Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -51517,9 +51517,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 45923,
           "path": "/mUYbksMk7IkvKWDUPr9zq76562K.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 45923,
+          "checkedAt": "2026-11-12T17:18:56.207Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "specfirstblood|2010",
+          "matchedTitle84": "SPEC ~ First Blood",
+          "validated84": true,
+          "mediaKind84": "tv"
         }
       },
       "lb-254-6ZCG": {
@@ -65511,7 +65516,7 @@
           "validated84": true,
           "mediaKind84": "movie"
         },
-        "noteEditedAt": "2026-11-12T17:18:38.642Z"
+        "noteEditedAt": "2026-11-12T17:18:43.547Z"
       },
       "custom-1790423280570-6eki": {
         "addedDate": "2026-09-26",
@@ -69639,9 +69644,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 42009,
           "path": "/seN6rRfN0I6n8iDXjlSMk1QjNcq.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 42009,
+          "checkedAt": "2026-11-12T17:18:48.792Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "blackmirrorhatedinthenation|2016",
+          "matchedTitle84": "Black Mirror",
+          "validated84": true,
+          "mediaKind84": "tv"
         }
       },
       "custom-1790247938551-ixfs": {
@@ -71869,8 +71879,12 @@
         "poster84": {
           "path": "/4BxK4yQimoZEuGkYtjsCdljRxdc.jpg",
           "tmdbId": 408586,
-          "checkedAt": "2026-10-15T12:35:57.067Z",
-          "provider": "tmdb"
+          "checkedAt": "2026-11-12T17:18:56.206Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "utadahikaruunplugged|2001",
+          "matchedTitle84": "Utada Hikaru: Unplugged",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "custom-1792067620393-qnt8": {
