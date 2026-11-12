@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794504909947,
-  "sourceUpdatedIso": "2026-11-12T17:35:09.947Z",
+  "sourceUpdatedAt": 1794504922334,
+  "sourceUpdatedIso": "2026-11-12T17:35:22.334Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -66154,9 +66154,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
+          "path": "/iw1G1iTGOA30f4bT49IDKumCcpF.jpg",
           "tmdbId": 1050035,
-          "path": "/kvUJUyUGOhEoiWWNH04IXoExPE2.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "checkedAt": "2026-11-12T17:35:14.380Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "monster|2023",
+          "matchedTitle84": "Monster",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "custom-1790508959663-6kld": {
@@ -72795,10 +72800,14 @@
           "fetchedAt": "2026-10-18T18:08:05.788Z"
         },
         "poster84": {
-          "path": "/7Ltjksp85LxXa3tuhn7UCBV4c8q.jpg",
+          "path": "/pWKZlOCJzYUH6fLzbCgtuIA5Gcn.jpg",
           "tmdbId": 26275,
-          "checkedAt": "2026-10-18T18:08:12.582Z",
-          "provider": "tmdb"
+          "checkedAt": "2026-11-12T17:35:14.380Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "kamikazegirls|2004",
+          "matchedTitle84": "Kamikaze Girls",
+          "validated84": true,
+          "mediaKind84": "movie"
         },
         "noteEditedAt": "2026-10-18T18:44:02.168Z"
       },
