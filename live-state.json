@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794503996005,
-  "sourceUpdatedIso": "2026-11-12T17:19:56.005Z",
+  "sourceUpdatedAt": 1794504016450,
+  "sourceUpdatedIso": "2026-11-12T17:20:16.450Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -65737,9 +65737,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 548,
           "path": "/ijWibsAU1iBcCD8tuIZfTmDzMVE.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 548,
+          "checkedAt": "2026-11-12T17:20:10.044Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "rashomon|1950",
+          "matchedTitle84": "Rashomon",
+          "validated84": true,
+          "mediaKind84": "movie"
         },
         "noteEditedAt": "2026-10-29T11:44:12.868Z"
       },
@@ -70513,8 +70518,12 @@
         "poster84": {
           "path": "/zfgHyodGNdtBxO8R7d0qmR2JSEz.jpg",
           "tmdbId": 897429,
-          "checkedAt": "2026-10-12T16:43:24.809Z",
-          "provider": "tmdb"
+          "checkedAt": "2026-11-12T17:20:16.520Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "alltoowelltheshortfilm|2021",
+          "matchedTitle84": "All Too Well: The Short Film",
+          "validated84": true,
+          "mediaKind84": "movie"
         },
         "historicalWatched": true
       },
