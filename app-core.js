@@ -8725,7 +8725,41 @@ function populateInWatchList(){
 // Lazy, non-blocking poster library. Film scores, reviews and ranks are untouched.
 const POSTER_CDN84='https://image.tmdb.org/t/p/';
 const posterValid84=path=>typeof path==='string'&&/^\/[a-zA-Z0-9_\-./]+\.(jpg|jpeg|png|webp)$/i.test(path)&&!path.includes('..');
-const posterMeta84=f=>state.letterboxdMeta?.[f.id]?.poster84||null;
+const posterIdentity84=f=>{
+  const t=titleInfo(f);
+  return (normPoster84(t.englishTitle)||normPoster84(t.title)||normPoster84(t.originalTitle))+'|'+(Number(f.year)||0);
+};
+const posterNames84=f=>{
+  const t=titleInfo(f),m=state.letterboxdMeta?.[f.id]||{};
+  return [...new Set([t.title,t.englishTitle,t.originalTitle,f.lbTitle,f.title,
+    f.englishTitle,f.originalTitle,m.englishTitle,m.originalTitle]
+    .map(normPoster84).filter(Boolean))];
+};
+const posterTitleMatch84=(f,item,kind='movie')=>{
+  if(!item)return false;
+  const aliases=posterNames84(f);
+  const names=kind==='tv'?[item.name,item.original_name]:
+    [item.title,item.original_title,item.name,item.original_name];
+  return names.map(normPoster84).some(name=>name&&aliases.includes(name));
+};
+const posterYearMatch84=(f,item,kind='movie')=>{
+  const year=Number(f.year)||0;
+  const date=kind==='tv'?(item?.first_air_date||''):(item?.release_date||'');
+  const matched=Number(String(date).slice(0,4))||0;
+  return !year||!matched||Math.abs(year-matched)<=2;
+};
+// Treat stored metadata as untrusted until it matches this exact film identity.
+// A legacy incorrect match for Perfect Blue Lecture Series is deliberately hidden
+// until its own TMDb entry is revalidated (the 2011 Joy Road poster is unrelated).
+const posterMeta84=f=>{
+  const p=state.letterboxdMeta?.[f.id]?.poster84||null;
+  if(!p)return null;
+  if(p.checkedIdentity84&&p.checkedIdentity84!==posterIdentity84(f))return null;
+  const title=normPoster84(titleInfo(f).title),english=normPoster84(titleInfo(f).englishTitle);
+  if((title==='パーフェクトブルー講座'||english==='perfectbluelectureseries')&&
+     p.checkedIdentity84!==posterIdentity84(f))return null;
+  return p;
+};
 const posterUrl84=(path,size='w185')=>posterValid84(path)?POSTER_CDN84+size+path:'';
 function normPoster84(t){return String(t||'').normalize('NFKC').toLowerCase().replace(/[^\p{L}\p{N}]/gu,'');}
 const posterTasks84=[],queuedPoster84=new Set();let fetchingPoster84=0,savePosterTimer84=0;
@@ -8739,52 +8773,69 @@ function cachePoster84(f,poster){
   savePosterTimer84=setTimeout(()=>{savePosterTimer84=0;save();},4000);
 }
 async function loadPoster84(f,force=false){
-  if(!f) return null;
-  const old=posterMeta84(f);
+  if(!f)return null;
+  const old=posterMeta84(f),identity=posterIdentity84(f);
   if(!force&&posterValid84(old?.path))return old.path;
   if(!force&&old?.checkedAt&&Date.now()-Date.parse(old.checkedAt)<14*86400000)return null;
   if(!getTmdbCredential())return null;
   const m=state.letterboxdMeta?.[f.id]||{};
   const tv=m.contentType==='tv_episode'||m.contentType==='tv_series';
   const stamp=new Date().toISOString();
-  let path=null,matchedId=null;
+  let path=null,matchedId=null,matchedTitle='',sourceKind=tv?'tv':'movie';
+  async function verifiedDetails(kind,id){
+    if(!Number.isSafeInteger(id)||id<=0)return null;
+    const route='/'+kind+'/'+id;
+    const details=await tmdbFetch(route,{language:'en-US'});
+    if(posterTitleMatch84(f,details,kind)&&posterYearMatch84(f,details,kind))return details;
+    // A localized title may match even when the English listing does not.
+    const localized=await tmdbFetch(route,{language:'ja-JP'});
+    if(posterTitleMatch84(f,localized,kind)&&posterYearMatch84(f,localized,kind))return localized;
+    return null;
+  }
   if(tv){
-    let id=Number(m.tmdbSeriesId)||0;
-    if(!id){
-      const candidate=(m.englishTitle||titleInfo(f).englishTitle||f.lbTitle||f.title||'').split(':')[0].trim();
+    const id=Number(m.tmdbSeriesId||m.poster84?.tmdbId)||0;
+    let details=null;
+    if(id)details=await verifiedDetails('tv',id);
+    if(!details){
+      const t=titleInfo(f);
+      const raw=m.englishTitle||t.englishTitle||f.lbTitle||t.title||'';
+      const candidate=raw.split(':')[0].trim();
       if(candidate){
         const result=await tmdbFetch('/search/tv',{query:candidate,language:'en-US'});
-        const hit=(result.results||[]).find(x=>normPoster84(x.name)===normPoster84(candidate));
-        id=Number(hit?.id)||0;
+        const matches=(result.results||[]).filter(hit=>
+          posterTitleMatch84(f,hit,'tv')&&posterYearMatch84(f,hit,'tv'));
+        if(matches.length===1)details=await verifiedDetails('tv',Number(matches[0].id));
       }
     }
-    if(id){
-      const details=await tmdbFetch('/tv/'+id,{language:'ja-JP'});
-      path=details.poster_path||null;
-      matchedId=id;
-    }
+    if(details){path=details.poster_path||null;matchedId=Number(details.id)||null;
+      matchedTitle=details.name||details.original_name||'';}
   }else{
-    let id=Number(m.poster84?.tmdbId||titleInfo(f).tmdbId||f.tmdbId)||0;
-    if(id){
-      const details=await tmdbFetch('/movie/'+id,{language:'ja-JP'});
-      path=details.poster_path||null;
-      matchedId=id;
-    }else{
+    const id=Number(m.poster84?.tmdbId||titleInfo(f).tmdbId||f.tmdbId)||0;
+    let details=null;
+    if(id)details=await verifiedDetails('movie',id);
+    if(!details){
       const t=titleInfo(f);
-      const english=t.englishTitle||f.lbTitle||t.originalTitle||t.title||'';
-      const y=Number(f.year)||0;
-      if(english){
-        const result=await tmdbFetch('/search/movie',{query:english,language:'en-US',include_adult:'false'});
-        const aliases=[english,t.originalTitle,t.title].map(normPoster84).filter(Boolean);
-        const hit=(result.results||[]).find(x=>
-          aliases.includes(normPoster84(x.title))||aliases.includes(normPoster84(x.original_title)));
-        const eligible=hit&&(!y||!hit.release_date||Math.abs(Number(hit.release_date.slice(0,4))-y)<=2);
-        if(eligible){path=hit.poster_path||null;matchedId=hit.id;}
+      const queries=[t.englishTitle,f.lbTitle,t.originalTitle,t.title]
+        .map(x=>String(x||'').trim()).filter((x,i,a)=>x&&a.indexOf(x)===i);
+      for(const query of queries.slice(0,3)){
+        const result=await tmdbFetch('/search/movie',{
+          query,language:'en-US',include_adult:'false'});
+        const matches=(result.results||[]).filter(hit=>
+          posterTitleMatch84(f,hit,'movie')&&posterYearMatch84(f,hit,'movie'));
+        if(matches.length===1){
+          details=await verifiedDetails('movie',Number(matches[0].id));
+          if(details)break;
+        }
       }
     }
+    if(details){path=details.poster_path||null;matchedId=Number(details.id)||null;
+      matchedTitle=details.title||details.original_title||'';}
   }
-  cachePoster84(f,{path:posterValid84(path)?path:null,tmdbId:matchedId,checkedAt:stamp,provider:'tmdb'});
-  return posterValid84(path)?path:null;
+  const valid=posterValid84(path);
+  cachePoster84(f,{path:valid?path:null,tmdbId:matchedId,checkedAt:stamp,
+    provider:'tmdb',checkedIdentity84:identity,matchedTitle84:matchedTitle,
+    validated84:true,mediaKind84:sourceKind});
+  return valid?path:null;
 }
 function setPosterSources84(id,path){
   if(!posterValid84(path))return;
@@ -8796,10 +8847,24 @@ function setPosterSources84(id,path){
     img.parentElement?.classList.add('movie30-has-poster84');
   });
 }
+function clearPosterSources84(id){
+  document.querySelectorAll('.movie30-poster84[data-poster-id]').forEach(img=>{
+    if(img.dataset.posterId!==id)return;
+    img.removeAttribute('src');
+    img.classList.remove('movie30-poster-loaded84');
+    img.parentElement?.classList.remove('movie30-has-poster84');
+  });
+}
 function queuePoster84(f,force=false){
   if(!f||!getTmdbCredential())return;
   const p=posterMeta84(f);
-  if(!force&&posterValid84(p?.path)){setPosterSources84(f.id,p.path);return;}
+  if(!force&&posterValid84(p?.path)){
+    setPosterSources84(f.id,p.path);
+    // Old posters were not checked against the original title when fetched
+    // through an existing TMDb id. Verify lazily while keeping good images visible.
+    if(p.checkedIdentity84===posterIdentity84(f)&&p.validated84===true)return;
+    force=true;
+  }
   if(!force&&p?.checkedAt&&Date.now()-Date.parse(p.checkedAt)<14*86400000)return;
   if(queuedPoster84.has(f.id))return;
   queuedPoster84.add(f.id);posterTasks84.push({id:f.id,force});runPosterQueue84();
@@ -8812,6 +8877,7 @@ function runPosterQueue84(){
     fetchingPoster84++;
     Promise.resolve().then(()=>loadPoster84(f,item.force)).then(path=>{
       if(path)setPosterSources84(item.id,path);
+      else clearPosterSources84(item.id);
       if(selectedId===item.id)drawPosterDetail84(item.id);
     }).catch(e=>{
       // Abort/retry errors are intentionally not persisted as a missing poster.
