@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794508283975,
-  "sourceUpdatedIso": "2026-11-12T18:31:23.975Z",
+  "sourceUpdatedAt": 1794508304407,
+  "sourceUpdatedIso": "2026-11-12T18:31:44.407Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -47113,9 +47113,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 9323,
           "path": "/9gC88zYUBARRSThcG93MvW14sqx.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 9323,
+          "checkedAt": "2026-11-12T18:31:40.108Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "ghostintheshell|1995",
+          "matchedTitle84": "Ghost in the Shell",
+          "validated84": true,
+          "mediaKind84": "movie"
         },
         "noteEditedAt": "2026-10-21T20:27:29.937Z"
       },
