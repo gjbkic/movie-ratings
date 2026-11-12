@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794507013809,
-  "sourceUpdatedIso": "2026-11-12T18:10:13.809Z",
+  "sourceUpdatedAt": 1794507036779,
+  "sourceUpdatedIso": "2026-11-12T18:10:36.779Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -57023,9 +57023,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 679,
           "path": "/r1x5JGpyqZU8PYhbs4UcrO1Xb6x.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 679,
+          "checkedAt": "2026-11-12T18:10:27.803Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "aliens|1986",
+          "matchedTitle84": "Aliens",
+          "validated84": true,
+          "mediaKind84": "movie"
         },
         "noteEditedAt": "2026-11-11T19:18:10.248Z"
       },
@@ -62028,9 +62033,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 1949,
           "path": "/6YmeO4pB7XTh8P8F960O1uA14JO.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 1949,
+          "checkedAt": "2026-11-12T18:10:20.866Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "zodiac|2007",
+          "matchedTitle84": "Zodiac",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-542-2b6C": {
@@ -62533,9 +62543,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 104,
           "path": "/v0giIi4bTILVhNhJajet3WWY3FA.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 104,
+          "checkedAt": "2026-11-12T18:10:27.803Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "runlolarun|1998",
+          "matchedTitle84": "Run Lola Run",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-556-2b9m": {
@@ -69109,7 +69124,7 @@
           "validated84": true,
           "mediaKind84": "movie"
         },
-        "noteEditedAt": "2026-11-12T17:09:42.142Z"
+        "noteEditedAt": "2026-11-12T18:10:36.743Z"
       },
       "custom-1791447953969-ah3e": {
         "publishedAt": "Thu, 8 Oct 2026 18:52:25 +1300",
@@ -74932,10 +74947,14 @@
           "fetchedAt": "2026-10-27T19:22:08.778Z"
         },
         "poster84": {
-          "path": "/8jzXKuuSMNYU0jSakJkdkzQcZbL.jpg",
+          "path": "/669GmEZsyMlPliURX5myHTStslv.jpg",
           "tmdbId": 68341,
-          "checkedAt": "2026-10-27T19:22:41.201Z",
-          "provider": "tmdb"
+          "checkedAt": "2026-11-12T18:10:20.866Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "coldfish|2011",
+          "matchedTitle84": "Cold Fish",
+          "validated84": true,
+          "mediaKind84": "movie"
         },
         "noteEditedAt": "2026-10-29T16:34:03.753Z"
       },
@@ -75446,10 +75465,14 @@
           "fetchedAt": "2026-11-04T13:43:36.194Z"
         },
         "poster84": {
-          "path": "/vOVQY2otrYGXfFpQ2FT2N2GlAgO.jpg",
+          "path": "/mXUCVq3HMtS4Y9IQ8vmEOPyN0vH.jpg",
           "tmdbId": 198375,
-          "checkedAt": "2026-11-04T13:45:00.044Z",
-          "provider": "tmdb"
+          "checkedAt": "2026-11-12T18:10:20.866Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thegardenofwords|2013",
+          "matchedTitle84": "The Garden of Words",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "custom-1793895450695-3l8l": {
