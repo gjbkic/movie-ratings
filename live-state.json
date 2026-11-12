@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794504870164,
-  "sourceUpdatedIso": "2026-11-12T17:34:30.164Z",
+  "sourceUpdatedAt": 1794504894622,
+  "sourceUpdatedIso": "2026-11-12T17:34:54.622Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -43742,9 +43742,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 278,
           "path": "/9cqNxx0GxF0bflZmeSMuL5tnGzr.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 278,
+          "checkedAt": "2026-11-12T17:34:49.250Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "theshawshankredemption|1994",
+          "matchedTitle84": "The Shawshank Redemption",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-25-17ue": {
@@ -45141,9 +45146,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 577922,
           "path": "/rrKH3VhHssGTCfPuaEQkxvEoElv.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 577922,
+          "checkedAt": "2026-11-12T17:34:54.687Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "tenet|2020",
+          "matchedTitle84": "Tenet",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-65-2auI": {
@@ -59377,9 +59387,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 925,
           "path": "/63rmSDPahrH7C1gEFYzRuIBAN9W.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 925,
+          "checkedAt": "2026-11-12T17:34:49.250Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "dotherightthing|1989",
+          "matchedTitle84": "Do the Right Thing",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-478-i4gW": {
@@ -59665,9 +59680,14 @@
           }
         ],
         "poster84": {
+          "path": "/erzbMlcNHOdx24AXOcn2ZKA7R1q.jpg",
           "tmdbId": 207,
-          "path": "/tNvKkSnnn4Z6RCBThyK1gfCSSvv.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "checkedAt": "2026-11-12T17:34:54.687Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "deadpoetssociety|1989",
+          "matchedTitle84": "Dead Poets Society",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-486-b8wK": {
