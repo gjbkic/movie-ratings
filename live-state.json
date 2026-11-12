@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794504250666,
-  "sourceUpdatedIso": "2026-11-12T17:24:10.666Z",
+  "sourceUpdatedAt": 1794504292249,
+  "sourceUpdatedIso": "2026-11-12T17:24:52.249Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -47160,9 +47160,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 41154,
           "path": "/90DdoEStzeObs96fsYf4GG544iN.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 41154,
+          "checkedAt": "2026-11-12T17:24:43.582Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "meninblack3|2012",
+          "matchedTitle84": "Men in Black 3",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-125-26Eu": {
@@ -57512,9 +57517,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 353081,
           "path": "/AkJQpZp9WoNdj7pLYSj1L0RcMMN.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 353081,
+          "checkedAt": "2026-11-12T17:24:43.582Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "missionimpossiblefallout|2018",
+          "matchedTitle84": "Mission: Impossible - Fallout",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-428-2aTS": {
