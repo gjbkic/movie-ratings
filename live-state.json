@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794507293805,
-  "sourceUpdatedIso": "2026-11-12T18:14:53.805Z",
+  "sourceUpdatedAt": 1794507324191,
+  "sourceUpdatedIso": "2026-11-12T18:15:24.191Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -52499,9 +52499,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 804,
           "path": "/8lI9dmz1RH20FAqltkGelY1v4BE.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 804,
+          "checkedAt": "2026-11-12T18:15:14.927Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "romanholiday|1953",
+          "matchedTitle84": "Roman Holiday",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-272-1Soi": {
@@ -57044,9 +57049,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 149,
           "path": "/neZ0ykEsPqxamsX6o5QNUFILQrz.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 149,
+          "checkedAt": "2026-11-12T18:15:21.110Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "akira|1988",
+          "matchedTitle84": "Akira",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-399-29PA": {
@@ -59390,9 +59400,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 1084242,
           "path": "/oJ7g2CifqpStmoYQyaLQgEU32qO.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 1084242,
+          "checkedAt": "2026-11-12T18:15:14.927Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "zootopia2|2025",
+          "matchedTitle84": "Zootopia 2",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-466-1Ub6": {
