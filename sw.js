@@ -2,13 +2,13 @@
    User rankings stay in the existing localStorage/IndexedDB; this worker
    never reads, migrates, or changes rating data. */
 'use strict';
-const APP_CACHE='movie30-offline-shell-20261112-v2';
+const APP_CACHE='movie30-offline-shell-20261112-v3';
 const POSTER_CACHE='movie30-offline-posters-v1';
 const SHELL_ASSETS=[
   "",
   "index.html",
   "manifest.webmanifest?v=20261112",
-  "offline-register.js?v=20261112-offline1",
+  "offline-register.js?v=20261112-allmedia2",
   "app-icon.svg",
   "app-core.js?v=20261112-posterbridge",
   "app-save-retry.js?v=20261018save2",
@@ -24,7 +24,7 @@ const SHELL_ASSETS=[
   "app-viewing-reconcile-20261019.js?v=1",
   "app-last-attack-merge-20261022.js?v=20261022a",
   "app-crayon-duplicate-repair.js?v=20261031b",
-  "patch-v106.js?v=20261112-active1",
+  "patch-v107.js?v=20261112-allmedia2",
   "app-boot.js?v=20261031b"
 ];
 const BASE=self.registration.scope;
@@ -39,7 +39,7 @@ async function cacheShell(){
  const store=await caches.open(APP_CACHE);
  const reqs=SHELL_ASSETS.map(path=>new URL(path,BASE).href);
  // An update is considered complete only if the app entry and critical code exist.
- const essential=new Set(['','index.html','app-core.js','patch-v106.js','app-boot.js']);
+ const essential=new Set(['','index.html','app-core.js','patch-v107.js','app-boot.js']);
  const results=await Promise.all(reqs.map(async(url,index)=>{
    try{
      const req=new Request(url,{cache:'reload'});
