@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794508277273,
-  "sourceUpdatedIso": "2026-11-12T18:31:17.273Z",
+  "sourceUpdatedAt": 1794508283975,
+  "sourceUpdatedIso": "2026-11-12T18:31:23.975Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -46041,7 +46041,7 @@
         "addedDate": "2025-09-01",
         "addedDateSource": "letterboxd-export-2026-09-27",
         "note": "次第に暗黒面へと近づくアナキン。演技があまり上手くなくて感情移入しにくいのが難点。パドメは素晴らしい。ライトセイバーのアクションはシリーズ屈指の素晴らしさだと思う",
-        "noteSource": "letterboxd-export",
+        "noteSource": "manual",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
         "watchedAddedDate": "2025-09-01",
@@ -46074,7 +46074,8 @@
           "matchedTitle84": "Star Wars: Episode II - Attack of the Clones",
           "validated84": true,
           "mediaKind84": "movie"
-        }
+        },
+        "noteEditedAt": "2026-11-12T18:31:23.938Z"
       },
       "lb-88-1RUM": {
         "addedDate": "2025-09-01",
