@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794506216292,
-  "sourceUpdatedIso": "2026-11-12T17:56:56.292Z",
+  "sourceUpdatedAt": 1794506228173,
+  "sourceUpdatedIso": "2026-11-12T17:57:08.173Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -43521,9 +43521,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 11324,
           "path": "/nrmXQ0zcZUL8jFLrakWc90IR8z9.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 11324,
+          "checkedAt": "2026-11-12T17:57:08.155Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "shutterisland|2010",
+          "matchedTitle84": "Shutter Island",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-18-2ahY": {
@@ -44376,9 +44381,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 361743,
           "path": "/n0YuM4f5lvGAP6MAW2kBIzugXnc.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 361743,
+          "checkedAt": "2026-11-12T17:57:08.155Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "topgunmaverick|2022",
+          "matchedTitle84": "Top Gun: Maverick",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-42-1xFW": {
@@ -54563,9 +54573,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 1422,
           "path": "/nT97ifVT2J1yMQmeq20Qblg61T.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 1422,
+          "checkedAt": "2026-11-12T17:57:01.766Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thedeparted|2006",
+          "matchedTitle84": "The Departed",
+          "validated84": true,
+          "mediaKind84": "movie"
         },
         "noteEditedAt": "2026-10-18T10:47:07.966Z"
       },
@@ -59076,9 +59091,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 16859,
           "path": "/Aufa4YdZIv4AXpR9rznwVA5SEfd.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 16859,
+          "checkedAt": "2026-11-12T17:57:08.155Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "kikisdeliveryservice|1989",
+          "matchedTitle84": "Kiki's Delivery Service",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-462-d1ws": {
@@ -64700,9 +64720,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 68,
           "path": "/2w09J0KUnVtJvqPYu8N63XjAyCR.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 68,
+          "checkedAt": "2026-11-12T17:57:01.766Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "brazil|1985",
+          "matchedTitle84": "Brazil",
+          "validated84": true,
+          "mediaKind84": "movie"
         },
         "noteEditedAt": "2026-10-21T20:27:23.802Z"
       },
