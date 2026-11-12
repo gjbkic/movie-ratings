@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794503421144,
-  "sourceUpdatedIso": "2026-11-12T17:10:21.144Z",
+  "sourceUpdatedAt": 1794503437680,
+  "sourceUpdatedIso": "2026-11-12T17:10:37.680Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -58813,9 +58813,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 890,
           "path": "/y2ah9t0navXyIvoHg1uIbIHO3tt.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 890,
+          "checkedAt": "2026-11-12T17:10:29.878Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "neongenesisevangelion|1995",
+          "matchedTitle84": "Neon Genesis Evangelion",
+          "validated84": true,
+          "mediaKind84": "tv"
         }
       },
       "lb-468-1GRM": {
@@ -64021,10 +64026,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "path": "/4RXlOwnx87Mfbx52qjUGlquZkZi.jpg",
+          "path": "/jI2Qu1FDrLwNfpWLVHzQXL490b1.jpg",
           "tmdbId": 132131,
-          "checkedAt": "2026-10-18T10:51:11.422Z",
-          "provider": "tmdb"
+          "checkedAt": "2026-11-12T17:10:37.799Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "perfectbluelectureseries|2008",
+          "matchedTitle84": "Perfect Blue Lecture Series",
+          "validated84": true,
+          "mediaKind84": "tv"
         }
       },
       "custom-1790254612541-iyij": {
@@ -71498,8 +71507,12 @@
         "poster84": {
           "path": "/anFx9aTOOYqgS3v7x3R84Kz67ly.jpg",
           "tmdbId": 1396,
+          "checkedAt": "2026-11-12T17:10:29.878Z",
           "provider": "tmdb",
-          "checkedAt": "2026-10-13T19:19:33.138Z"
+          "checkedIdentity84": "breakingbad|2008",
+          "matchedTitle84": "Breaking Bad",
+          "validated84": true,
+          "mediaKind84": "tv"
         },
         "tmdbSeriesId": 1396,
         "seasonCatalogV1": [
@@ -73461,8 +73474,12 @@
         "poster84": {
           "path": "/3c6NWMBTeC0wUq3kRBODSHl6WlT.jpg",
           "tmdbId": 100118,
+          "checkedAt": "2026-11-12T17:10:37.740Z",
           "provider": "tmdb",
-          "checkedAt": "2026-10-21T20:03:10.897Z"
+          "checkedIdentity84": "supersalarymanmrsaenai|2017",
+          "matchedTitle84": "Super Salaryman Mr. Saenai",
+          "validated84": true,
+          "mediaKind84": "tv"
         },
         "tmdbSeriesId": 100118,
         "seasonCatalogV1": [
