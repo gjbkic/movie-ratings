@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794504804561,
-  "sourceUpdatedIso": "2026-11-12T17:33:24.561Z",
+  "sourceUpdatedAt": 1794504815545,
+  "sourceUpdatedIso": "2026-11-12T17:33:35.545Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -49274,9 +49274,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 279,
           "path": "/gQRfiyfGvr1az0quaYyMram3Aqt.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 279,
+          "checkedAt": "2026-11-12T17:33:35.615Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "amadeus|1984",
+          "matchedTitle84": "Amadeus",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-185-HTIi": {
@@ -59386,9 +59391,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 500664,
           "path": "/woLGROUdPWdBnLVFKYdGD3kFkPY.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 500664,
+          "checkedAt": "2026-11-12T17:33:29.033Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "upgrade|2018",
+          "matchedTitle84": "Upgrade",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-479-2a1Q": {
@@ -60123,9 +60133,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 290098,
           "path": "/dLlH4aNHdnmf62umnInL8xPlPzw.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 290098,
+          "checkedAt": "2026-11-12T17:33:29.033Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thehandmaiden|2016",
+          "matchedTitle84": "The Handmaiden",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-500-16T8": {
@@ -61619,9 +61634,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 65754,
           "path": "/8bokS83zGdhaXgN9tjidUKmAftW.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 65754,
+          "checkedAt": "2026-11-12T17:33:35.615Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thegirlwiththedragontattoo|2011",
+          "matchedTitle84": "The Girl with the Dragon Tattoo",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-544-26EE": {
