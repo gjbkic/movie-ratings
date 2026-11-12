@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794507824208,
-  "sourceUpdatedIso": "2026-11-12T18:23:44.208Z",
+  "sourceUpdatedAt": 1794507835513,
+  "sourceUpdatedIso": "2026-11-12T18:23:55.513Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -52873,9 +52873,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 591,
           "path": "/9ejKfNk0LBhSI9AahH4f9NJNZNM.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 591,
+          "checkedAt": "2026-11-12T18:23:50.502Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thedavincicode|2006",
+          "matchedTitle84": "The Da Vinci Code",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-282-1Q9K": {
