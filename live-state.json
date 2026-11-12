@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794504894622,
-  "sourceUpdatedIso": "2026-11-12T17:34:54.622Z",
+  "sourceUpdatedAt": 1794504909947,
+  "sourceUpdatedIso": "2026-11-12T17:35:09.947Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -48051,9 +48051,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 37797,
           "path": "/5FROLD8zpWFs9ja7aYho1uOMJHg.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 37797,
+          "checkedAt": "2026-11-12T17:35:04.655Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "whisperoftheheart|1995",
+          "matchedTitle84": "Whisper of the Heart",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-149-AF4": {
@@ -72728,10 +72733,14 @@
           "fetchedAt": "2026-10-18T10:22:58.969Z"
         },
         "poster84": {
-          "path": "/AgpTjV2eiOBK405bDOvEmHAbJQh.jpg",
+          "path": "/xQadpnoLokxzN3hRpCPbBGpxsiz.jpg",
           "tmdbId": 60243,
-          "checkedAt": "2026-10-18T10:23:41.216Z",
-          "provider": "tmdb"
+          "checkedAt": "2026-11-12T17:35:04.655Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "aseparation|2011",
+          "matchedTitle84": "A Separation",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "custom-1792346885016-a70t": {
