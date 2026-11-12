@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794504767318,
-  "sourceUpdatedIso": "2026-11-12T17:32:47.318Z",
+  "sourceUpdatedAt": 1794504782791,
+  "sourceUpdatedIso": "2026-11-12T17:33:02.791Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -54472,9 +54472,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
+          "path": "/57dmrEkxX1YysJJNvSI7Z6uNUQg.jpg",
           "tmdbId": 29268,
-          "path": "/r4FGm8Mei8rkEMinjZgLSJ9GUDR.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "checkedAt": "2026-11-12T17:32:54.028Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thecastleofsand|1974",
+          "matchedTitle84": "The Castle of Sand",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-338-a9lm": {
