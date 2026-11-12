@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794506504430,
-  "sourceUpdatedIso": "2026-11-12T18:01:44.430Z",
+  "sourceUpdatedAt": 1794506515454,
+  "sourceUpdatedIso": "2026-11-12T18:01:55.454Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -43816,9 +43816,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 37799,
           "path": "/n0ybibhJtQ5icDqTp8eRytcIHJx.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 37799,
+          "checkedAt": "2026-11-12T18:01:49.656Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thesocialnetwork|2010",
+          "matchedTitle84": "The Social Network",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-26-4O24": {
@@ -45416,9 +45421,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 767,
           "path": "/z7uo9zmQdQwU5ZJHFpv2Upl30i1.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 767,
+          "checkedAt": "2026-11-12T18:01:49.656Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "harrypotterandthehalfbloodprince|2009",
+          "matchedTitle84": "Harry Potter and the Half-Blood Prince",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-71-27Vm": {
