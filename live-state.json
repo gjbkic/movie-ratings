@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794501382175,
-  "sourceUpdatedIso": "2026-11-12T16:36:22.175Z",
+  "sourceUpdatedAt": 1794501395864,
+  "sourceUpdatedIso": "2026-11-12T16:36:35.864Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -58670,9 +58670,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 87108,
           "path": "/hlLXt2tOPT6RRnjiUmoxyG1LTFi.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 87108,
+          "checkedAt": "2026-11-12T16:36:31.037Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "chernobyl|2019",
+          "matchedTitle84": "Chernobyl",
+          "validated84": true,
+          "mediaKind84": "tv"
         }
       },
       "lb-465-F0vO": {
@@ -59076,9 +59081,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 73841,
           "path": "/oDTZ5Xx6zIyAj1KMS73vGWqX9h9.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 73841,
+          "checkedAt": "2026-11-12T16:36:31.037Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "andthentherewerenone|2017",
+          "matchedTitle84": "And Then There Were None",
+          "validated84": true,
+          "mediaKind84": "tv"
         }
       },
       "lb-476-738K": {
@@ -74275,10 +74285,14 @@
           }
         ],
         "poster84": {
-          "path": "/7PysGzKJ025h4qaUyteYEb5qN9i.jpg",
+          "path": "/uSwYQjd48iXVU8KHSSV9V6QYvBd.jpg",
           "tmdbId": 23606,
-          "checkedAt": "2026-11-04T13:46:26.819Z",
-          "provider": "tmdb"
+          "checkedAt": "2026-11-12T16:36:31.037Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "asceneatthesea|1991",
+          "matchedTitle84": "A Scene at the Sea",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "custom-1793799815790-gqtw": {
