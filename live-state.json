@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794501344759,
-  "sourceUpdatedIso": "2026-11-12T16:35:44.759Z",
+  "sourceUpdatedAt": 1794501357428,
+  "sourceUpdatedIso": "2026-11-12T16:35:57.428Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -45731,9 +45731,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 101,
           "path": "/bxB2q91nKYp8JNzqE7t7TWBVupB.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 101,
+          "checkedAt": "2026-11-12T16:35:52.104Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "léontheprofessional|1994",
+          "matchedTitle84": "Léon: The Professional",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-84-29ro": {
@@ -65771,9 +65776,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 31911,
           "path": "/5ZFUEOULaVml7pQuXxhpR2SmVUw.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 31911,
+          "checkedAt": "2026-11-12T16:35:52.103Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "fullmetalalchemistbrotherhood|2009",
+          "matchedTitle84": "Fullmetal Alchemist: Brotherhood",
+          "validated84": true,
+          "mediaKind84": "tv"
         }
       },
       "custom-1790665767820-1d1q": {
@@ -68859,8 +68869,12 @@
         "poster84": {
           "path": "/h7GkgiipzDC3QEtCuybXNc636NB.jpg",
           "tmdbId": 647616,
-          "checkedAt": "2026-10-12T16:52:45.772Z",
-          "provider": "tmdb"
+          "checkedAt": "2026-11-12T16:35:52.103Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "talesofthebizarre2019fallspecial|2019",
+          "matchedTitle84": "Tales of the Bizarre: 2019 Fall Special",
+          "validated84": true,
+          "mediaKind84": "movie"
         },
         "noteEditedAt": "2026-10-13T17:49:50.706Z"
       },
