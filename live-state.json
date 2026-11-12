@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794505474338,
-  "sourceUpdatedIso": "2026-11-12T17:44:34.338Z",
+  "sourceUpdatedAt": 1794505498682,
+  "sourceUpdatedIso": "2026-11-12T17:44:58.682Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -60177,9 +60177,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 153,
           "path": "/3jCLmYDIIiSMPujbwygNpqdpM8N.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 153,
+          "checkedAt": "2026-11-12T17:44:54.316Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "lostintranslation|2003",
+          "matchedTitle84": "Lost in Translation",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-495-Msm": {
