@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794501302593,
-  "sourceUpdatedIso": "2026-11-12T16:35:02.593Z",
+  "sourceUpdatedAt": 1794501314488,
+  "sourceUpdatedIso": "2026-11-12T16:35:14.488Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -48749,9 +48749,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 274,
           "path": "/uS9m8OBk1A8eM9I042bx8XXpqAq.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 274,
+          "checkedAt": "2026-11-12T16:35:08.638Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thesilenceofthelambs|1991",
+          "matchedTitle84": "The Silence of the Lambs",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-173-oCkK": {
@@ -71167,10 +71172,14 @@
         "contentType": "tv_series",
         "tmdbType": "tv",
         "poster84": {
-          "path": "/lLYpR5wCwEGpbufkreLqcCCLJYo.jpg",
+          "path": "/wnmNPaLvhnMeOqnWlhNkYCZxtda.jpg",
           "tmdbId": 2288,
+          "checkedAt": "2026-11-12T16:35:08.638Z",
           "provider": "tmdb",
-          "checkedAt": "2026-10-13T19:18:53.148Z"
+          "checkedIdentity84": "prisonbreak|2005",
+          "matchedTitle84": "Prison Break",
+          "validated84": true,
+          "mediaKind84": "tv"
         },
         "tmdbSeriesId": 2288,
         "seasonCatalogV1": [
