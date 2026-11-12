@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794501260513,
-  "sourceUpdatedIso": "2026-11-12T16:34:20.513Z",
+  "sourceUpdatedAt": 1794501296197,
+  "sourceUpdatedIso": "2026-11-12T16:34:56.197Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -61407,9 +61407,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 25376,
           "path": "/dkeAwfZzwL3WvToydE3CXiY80E0.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 25376,
+          "checkedAt": "2026-11-12T16:34:50.767Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thesecretintheireyes|2009",
+          "matchedTitle84": "The Secret in Their Eyes",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-546-3ZqO": {
@@ -64027,6 +64032,16 @@
           "creators": [],
           "source": "tmdb-github",
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
+        },
+        "poster84": {
+          "path": null,
+          "tmdbId": null,
+          "checkedAt": "2026-11-12T16:34:50.820Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "jojosbizarreadventurestoneocean|2021",
+          "matchedTitle84": "",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "custom-1790322757185-u25f": {
@@ -64272,9 +64287,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 75701,
           "path": "/9dtVQyYAqnNOrCV0kodFELuUPdY.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 75701,
+          "checkedAt": "2026-11-12T16:34:50.767Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "unnatural|2018",
+          "matchedTitle84": "Unnatural",
+          "validated84": true,
+          "mediaKind84": "tv"
         }
       },
       "custom-1790322760094-cjek": {
@@ -67320,8 +67340,12 @@
         "poster84": {
           "path": "/p90tgWTy5RXMQ6SQYBgqHd65jfE.jpg",
           "tmdbId": 1399623,
-          "checkedAt": "2026-10-12T16:44:15.131Z",
-          "provider": "tmdb"
+          "checkedAt": "2026-11-12T16:34:50.767Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "talesofthebizarre2024winterspecial|2024",
+          "matchedTitle84": "Tales of the Bizarre: 2024 Winter Special",
+          "validated84": true,
+          "mediaKind84": "movie"
         },
         "noteEditedAt": "2026-10-18T06:09:43.101Z"
       },
