@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794505587234,
-  "sourceUpdatedIso": "2026-11-12T17:46:27.234Z",
+  "sourceUpdatedAt": 1794505598735,
+  "sourceUpdatedIso": "2026-11-12T17:46:38.735Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -45122,9 +45122,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 283995,
           "path": "/y4MBh0EjBlMuOzv9axM4qJlmhzz.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 283995,
+          "checkedAt": "2026-11-12T17:46:38.803Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "guardiansofthegalaxyvol2|2017",
+          "matchedTitle84": "Guardians of the Galaxy Vol. 2",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-64-leq4": {
@@ -46441,9 +46446,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 333339,
           "path": "/pU1ULUq8D3iRxl1fdX2lZIzdHuI.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 333339,
+          "checkedAt": "2026-11-12T17:46:33.934Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "readyplayerone|2018",
+          "matchedTitle84": "Ready Player One",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-101-ce74": {
@@ -48559,9 +48569,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 194,
           "path": "/nSxDa3M9aMvGVLoItzWTepQ5h5d.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 194,
+          "checkedAt": "2026-11-12T17:46:33.934Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "amélie|2001",
+          "matchedTitle84": "Amélie",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-162-2TTo": {
@@ -53787,9 +53802,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 11878,
           "path": "/tN7kYPjRhDolpui9sc9Eq9n5b2O.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 11878,
+          "checkedAt": "2026-11-12T17:46:33.934Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "yojimbo|1961",
+          "matchedTitle84": "Yojimbo",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-313-29eY": {
