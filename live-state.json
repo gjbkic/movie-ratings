@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794506928480,
-  "sourceUpdatedIso": "2026-11-12T18:08:48.480Z",
+  "sourceUpdatedAt": 1794506997567,
+  "sourceUpdatedIso": "2026-11-12T18:09:57.567Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -49562,9 +49562,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 54186,
           "path": "/xn98VCLMcF6TulxsKJq2EQ8WYL2.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 54186,
+          "checkedAt": "2026-11-12T18:09:53.287Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "confessions|2010",
+          "matchedTitle84": "Confessions",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-187-y2b8": {
@@ -64857,9 +64862,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 1368337,
           "path": "/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 1368337,
+          "checkedAt": "2026-11-12T18:09:53.287Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "theodyssey|2026",
+          "matchedTitle84": "The Odyssey",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "custom-1790322756823-bi61": {
