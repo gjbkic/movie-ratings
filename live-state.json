@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794506454975,
-  "sourceUpdatedIso": "2026-11-12T18:00:54.975Z",
+  "sourceUpdatedAt": 1794506465436,
+  "sourceUpdatedIso": "2026-11-12T18:01:05.436Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -47764,9 +47764,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 9340,
           "path": "/eBU7gCjTCj9n2LTxvCSIXXOvHkD.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 9340,
+          "checkedAt": "2026-11-12T18:00:58.536Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thegoonies|1985",
+          "matchedTitle84": "The Goonies",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-137-2a1c": {
@@ -48738,9 +48743,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 137,
           "path": "/gCgt1WARPZaXnq523ySQEUKinCs.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 137,
+          "checkedAt": "2026-11-12T18:00:58.536Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "groundhogday|1993",
+          "matchedTitle84": "Groundhog Day",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-165-29F6": {
@@ -61453,9 +61463,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 149871,
           "path": "/cQidJuA546OSSXKWXoiCeINDxuj.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 149871,
+          "checkedAt": "2026-11-12T18:01:05.507Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thetaleoftheprincesskaguya|2013",
+          "matchedTitle84": "The Tale of The Princess Kaguya",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-527-7dEc": {
@@ -63525,9 +63540,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 829,
           "path": "/kZRSP3FmOcq0xnBulqpUQngJUXY.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 829,
+          "checkedAt": "2026-11-12T18:01:05.507Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "chinatown|1974",
+          "matchedTitle84": "Chinatown",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "base-simple-plan-1998": {
@@ -63827,9 +63847,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 110415,
           "path": "/kw6YQudA0TMcNmGUGy5XIw7zbnV.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 110415,
+          "checkedAt": "2026-11-12T18:00:58.536Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "snowpiercer|2013",
+          "matchedTitle84": "Snowpiercer",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "custom-1789385860198-bkq0": {
