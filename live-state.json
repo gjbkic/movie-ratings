@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794504292249,
-  "sourceUpdatedIso": "2026-11-12T17:24:52.249Z",
+  "sourceUpdatedAt": 1794504296646,
+  "sourceUpdatedIso": "2026-11-12T17:24:56.646Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -52748,9 +52748,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 568,
           "path": "/tVeKscCm2fY1xDXZk8PgnZ87h9S.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 568,
+          "checkedAt": "2026-11-12T17:24:52.315Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "apollo13|1995",
+          "matchedTitle84": "Apollo 13",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-289-2avw": {
