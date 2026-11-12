@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794506241964,
-  "sourceUpdatedIso": "2026-11-12T17:57:21.964Z",
+  "sourceUpdatedAt": 1794506439753,
+  "sourceUpdatedIso": "2026-11-12T18:00:39.753Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -56119,9 +56119,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 1933,
           "path": "/p8g1vlTvpM6nr2hMMiZ1fUlKF0D.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 1933,
+          "checkedAt": "2026-11-12T18:00:39.826Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "theothers|2001",
+          "matchedTitle84": "The Others",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-376-jhxe": {
@@ -63094,9 +63099,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 1592,
           "path": "/qJf2TzE8nRTFbFMPJNW6c8mI0KU.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 1592,
+          "checkedAt": "2026-11-12T18:00:32.751Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "primalfear|1996",
+          "matchedTitle84": "Primal Fear",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-574-29CQ": {
@@ -67910,9 +67920,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 933260,
           "path": "/lqoMzCcZYEFK729d6qzt349fB4o.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 933260,
+          "checkedAt": "2026-11-12T18:00:32.751Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thesubstance|2024",
+          "matchedTitle84": "The Substance",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "custom-1791377114135-l3hd": {
