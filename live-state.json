@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794505516047,
-  "sourceUpdatedIso": "2026-11-12T17:45:16.047Z",
+  "sourceUpdatedAt": 1794505555130,
+  "sourceUpdatedIso": "2026-11-12T17:45:55.130Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -45229,9 +45229,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 424,
           "path": "/sF1U4EUQS8YHUYjNl3pMGNIQyr0.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 424,
+          "checkedAt": "2026-11-12T17:45:50.827Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "schindlerslist|1993",
+          "matchedTitle84": "Schindler's List",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-67-1RYk": {
@@ -62347,9 +62352,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 98,
           "path": "/aDb548BOkFfI4nFm0kx8A3Ezh7H.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 98,
+          "checkedAt": "2026-11-12T17:45:50.827Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "gladiator|2000",
+          "matchedTitle84": "Gladiator",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-557-1WyQ": {
