@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794503437680,
-  "sourceUpdatedIso": "2026-11-12T17:10:37.680Z",
+  "sourceUpdatedAt": 1794503457481,
+  "sourceUpdatedIso": "2026-11-12T17:10:57.481Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -49223,9 +49223,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 1160164,
           "path": "/jf3YO8hOqGHCupsREf5qymYq1n.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 1160164,
+          "checkedAt": "2026-11-12T17:10:44.914Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "taylorswifttheerastour|2023",
+          "matchedTitle84": "TAYLOR SWIFT | THE ERAS TOUR",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-186-uRS": {
@@ -71652,8 +71657,12 @@
         "poster84": {
           "path": "/seN6rRfN0I6n8iDXjlSMk1QjNcq.jpg",
           "tmdbId": 42009,
-          "checkedAt": "2026-10-13T19:55:51.275Z",
-          "provider": "tmdb"
+          "checkedAt": "2026-11-12T17:10:57.538Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "blackmirroreulogy|2025",
+          "matchedTitle84": "Black Mirror",
+          "validated84": true,
+          "mediaKind84": "tv"
         }
       },
       "custom-1791966534875-2yiz": {
