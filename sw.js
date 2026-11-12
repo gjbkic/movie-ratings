@@ -2,13 +2,13 @@
    User rankings stay in the existing localStorage/IndexedDB; this worker
    never reads, migrates, or changes rating data. */
 'use strict';
-const APP_CACHE='movie30-offline-shell-20261112-v1';
+const APP_CACHE='movie30-offline-shell-20261112-v2';
 const POSTER_CACHE='movie30-offline-posters-v1';
 const SHELL_ASSETS=[
   "",
   "index.html",
-  "manifest.webmanifest",
-  "offline-register.js",
+  "manifest.webmanifest?v=20261112",
+  "offline-register.js?v=20261112-offline1",
   "app-icon.svg",
   "app-core.js?v=20261112-posterbridge",
   "app-save-retry.js?v=20261018save2",
