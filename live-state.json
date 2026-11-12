@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794504939621,
-  "sourceUpdatedIso": "2026-11-12T17:35:39.621Z",
+  "sourceUpdatedAt": 1794504952478,
+  "sourceUpdatedIso": "2026-11-12T17:35:52.478Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -43423,9 +43423,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 210577,
           "path": "/ts996lKsxvjkO2yiYG0ht4qAicO.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 210577,
+          "checkedAt": "2026-11-12T17:35:47.361Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "gonegirl|2014",
+          "matchedTitle84": "Gone Girl",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-16-70w": {
@@ -47093,9 +47098,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 2501,
           "path": "/aP8swke3gmowbkfZ6lmNidu0y9p.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 2501,
+          "checkedAt": "2026-11-12T17:35:47.361Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thebourneidentity|2002",
+          "matchedTitle84": "The Bourne Identity",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-121-29BS": {
@@ -48095,9 +48105,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 51739,
           "path": "/3lSRaSjDp2nkXMQkzzjpRi3035O.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 51739,
+          "checkedAt": "2026-11-12T17:35:52.546Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thesecretworldofarrietty|2010",
+          "matchedTitle84": "Arrietty",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-150-b5EQ": {
@@ -53153,9 +53168,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 1572,
           "path": "/buqmCdFQEWwEpL3agGgg2GVjN2d.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 1572,
+          "checkedAt": "2026-11-12T17:35:52.546Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "diehardwithavengeance|1995",
+          "matchedTitle84": "Die Hard: With a Vengeance",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-298-28Uk": {
@@ -54689,9 +54709,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 13223,
           "path": "/zUybYvxWdAJy5hhYovsXtHSWI1l.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 13223,
+          "checkedAt": "2026-11-12T17:35:47.361Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "grantorino|2008",
+          "matchedTitle84": "Gran Torino",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-342-X8s": {
@@ -74615,10 +74640,14 @@
           }
         ],
         "poster84": {
-          "path": "/yR2EtuWezo8E7Ib5vyQ7Pm4sMNB.jpg",
+          "path": "/9qAy6UWVw44dGrsyKrdEMt5qIUM.jpg",
           "tmdbId": 9303,
-          "checkedAt": "2026-10-30T17:50:55.728Z",
-          "provider": "tmdb"
+          "checkedAt": "2026-11-12T17:35:52.546Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "bound|1996",
+          "matchedTitle84": "Bound",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "custom-1793382511630-rbdf": {
