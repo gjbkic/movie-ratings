@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794504959947,
-  "sourceUpdatedIso": "2026-11-12T17:35:59.947Z",
+  "sourceUpdatedAt": 1794504971948,
+  "sourceUpdatedIso": "2026-11-12T17:36:11.948Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -52706,9 +52706,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 489999,
           "path": "/yuAPCsCGJGSxA7YOW4elF5JNrzK.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 489999,
+          "checkedAt": "2026-11-12T17:36:11.933Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "searching|2018",
+          "matchedTitle84": "Searching",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-284-1Vpy": {
@@ -53770,9 +53775,14 @@
           }
         ],
         "poster84": {
+          "path": "/yTRrqIGusJuzG5Pe3iFQTnHg1Ps.jpg",
           "tmdbId": 36095,
-          "path": "/xNVJr9q6AtSbjosS6Ed9YirOkSo.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "checkedAt": "2026-11-12T17:36:05.089Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "cure|1997",
+          "matchedTitle84": "Cure",
+          "validated84": true,
+          "mediaKind84": "movie"
         },
         "noteEditedAt": "2026-10-25T16:01:01.668Z"
       },
@@ -55315,9 +55325,14 @@
           }
         ],
         "poster84": {
+          "path": "/cOPhayPb0YzO8GfC4sNmntV9FWE.jpg",
           "tmdbId": 218726,
-          "path": "/2GdSk2j7pbuEnuyJibH7YLKHwos.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "checkedAt": "2026-11-12T17:36:05.089Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "doraemonnobitassecretgadgetmuseum|2013",
+          "matchedTitle84": "Doraemon: Nobita's Secret Gadget Museum",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-359-gxWo": {
@@ -60960,9 +60975,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 19995,
           "path": "/gKY6q7SjCkAU6FqvqWybDYgUKIF.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 19995,
+          "checkedAt": "2026-11-12T17:36:11.933Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "avatar|2009",
+          "matchedTitle84": "Avatar",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-521-29Qo": {
@@ -70099,9 +70119,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 94329,
           "path": "/Abnm1Ws3JH0ReCfEhLMPwPcMcGO.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 94329,
+          "checkedAt": "2026-11-12T17:36:05.089Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "theraid|2012",
+          "matchedTitle84": "The Raid",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "custom-1791636834270-874l": {
