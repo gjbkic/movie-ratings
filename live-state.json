@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794508346734,
-  "sourceUpdatedIso": "2026-11-12T18:32:26.734Z",
+  "sourceUpdatedAt": 1794508482355,
+  "sourceUpdatedIso": "2026-11-12T18:34:42.355Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -61625,7 +61625,7 @@
         "addedDate": "2025-09-01",
         "addedDateSource": "letterboxd-export-2026-09-27",
         "note": "映像がすごい。デザインというか言葉も含めたアートのような感じだった。結局最後は自我を取り戻したと言うことでいいのか",
-        "noteSource": "letterboxd-export",
+        "noteSource": "manual",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
         "watchedAddedDate": "2025-09-01",
@@ -61658,7 +61658,8 @@
           "matchedTitle84": "A Clockwork Orange",
           "validated84": true,
           "mediaKind84": "movie"
-        }
+        },
+        "noteEditedAt": "2026-11-12T18:34:39.989Z"
       },
       "lb-526-4JQI": {
         "addedDate": "2026-01-12",
