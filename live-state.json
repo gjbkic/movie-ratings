@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794506515454,
-  "sourceUpdatedIso": "2026-11-12T18:01:55.454Z",
+  "sourceUpdatedAt": 1794506928480,
+  "sourceUpdatedIso": "2026-11-12T18:08:48.480Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -43188,9 +43188,14 @@
           }
         ],
         "poster84": {
+          "path": "/5MwkWH9tYHv3mV9OdYTMR5qreIz.jpg",
           "tmdbId": 38,
-          "path": "/vC4Dsk9xPcxeBMkvTme709THvMl.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "checkedAt": "2026-11-12T18:08:43.362Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "eternalsunshineofthespotlessmind|2004",
+          "matchedTitle84": "Eternal Sunshine of the Spotless Mind",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-9-1skk": {
@@ -54264,9 +54269,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 510,
           "path": "/kjWsMh72V6d8KRLV4EOoSJLT1H7.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 510,
+          "checkedAt": "2026-11-12T18:08:43.362Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "oneflewoverthecuckoosnest|1975",
+          "matchedTitle84": "One Flew Over the Cuckoo's Nest",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-323-1VEo": {
@@ -63349,9 +63359,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 8740,
           "path": "/eE5bbuRJluooG2MjEAsLEYyuJoa.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 8740,
+          "checkedAt": "2026-11-12T18:08:43.361Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thevanishing|1988",
+          "matchedTitle84": "The Vanishing",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "added-anchor-580": {
