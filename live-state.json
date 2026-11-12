@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794501512691,
-  "sourceUpdatedIso": "2026-11-12T16:38:32.691Z",
+  "sourceUpdatedAt": 1794501526496,
+  "sourceUpdatedIso": "2026-11-12T16:38:46.496Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -63295,6 +63295,16 @@
           "creators": [],
           "source": "tmdb-github",
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
+        },
+        "poster84": {
+          "path": null,
+          "tmdbId": null,
+          "checkedAt": "2026-11-12T16:38:41.386Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "anikuri15goodmorning|2007",
+          "matchedTitle84": "",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "custom-1789385860459-6dw6": {
@@ -70084,9 +70094,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 948094,
           "path": "/ppEnERNpu47LHZX60UHOdUpQAoD.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 948094,
+          "checkedAt": "2026-11-12T16:38:41.327Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "hikaruutadalivesessionsfromairstudios|2024",
+          "matchedTitle84": "Hikaru Utada Live Sessions from Air Studios",
+          "validated84": true,
+          "mediaKind84": "movie"
         },
         "historicalWatched": true
       },
