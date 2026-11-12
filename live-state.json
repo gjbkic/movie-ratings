@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794501424021,
-  "sourceUpdatedIso": "2026-11-12T16:37:04.021Z",
+  "sourceUpdatedAt": 1794501439118,
+  "sourceUpdatedIso": "2026-11-12T16:37:19.118Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -64212,6 +64212,16 @@
           "creators": [],
           "source": "tmdb-github",
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
+        },
+        "poster84": {
+          "path": null,
+          "tmdbId": null,
+          "checkedAt": "2026-11-12T16:37:07.681Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "jojosbizarreadventurediamondisunbreakable|2016",
+          "matchedTitle84": "",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "custom-1790322758188-46qe": {
@@ -64446,9 +64456,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 88570,
           "path": "/lMCHbER1sF90EPpi3Yb8bMiJtb4.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 88570,
+          "checkedAt": "2026-11-12T16:37:14.010Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "yourturntokill|2019",
+          "matchedTitle84": "Your Turn to Kill",
+          "validated84": true,
+          "mediaKind84": "tv"
         }
       },
       "custom-1790322760871-t21s": {
@@ -70297,8 +70312,12 @@
         "poster84": {
           "path": "/seN6rRfN0I6n8iDXjlSMk1QjNcq.jpg",
           "tmdbId": 42009,
-          "checkedAt": "2026-10-12T15:07:22.970Z",
-          "provider": "tmdb"
+          "checkedAt": "2026-11-12T16:37:14.010Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "blackmirrorusscallister|2017",
+          "matchedTitle84": "Black Mirror",
+          "validated84": true,
+          "mediaKind84": "tv"
         }
       },
       "custom-1791823398409-njce": {
@@ -72148,10 +72167,14 @@
           "fetchedAt": "2026-10-18T07:53:23.124Z"
         },
         "poster84": {
-          "path": "/5JmLSvGDPbq7w2avI2u6Y1OpZlD.jpg",
+          "path": "/ryZ3DdZPvXVCv9qRCtVRfmNbYAH.jpg",
           "tmdbId": 25623,
-          "checkedAt": "2026-10-18T07:53:25.963Z",
-          "provider": "tmdb"
+          "checkedAt": "2026-11-12T16:37:07.680Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "house|1977",
+          "matchedTitle84": "House",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "custom-1792318978542-vitq": {
@@ -72873,8 +72896,12 @@
         "poster84": {
           "path": "/3PFsEuAiyLkWsP4GG6dIV37Q6gu.jpg",
           "tmdbId": 1434,
+          "checkedAt": "2026-11-12T16:37:14.010Z",
           "provider": "tmdb",
-          "checkedAt": "2026-10-19T13:41:08.544Z"
+          "checkedIdentity84": "familyguy|1999",
+          "matchedTitle84": "Family Guy",
+          "validated84": true,
+          "mediaKind84": "tv"
         },
         "tmdbSeriesId": 1434,
         "seasonCatalogV1": [
