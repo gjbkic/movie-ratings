@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794505027171,
-  "sourceUpdatedIso": "2026-11-12T17:37:07.171Z",
+  "sourceUpdatedAt": 1794505042203,
+  "sourceUpdatedIso": "2026-11-12T17:37:22.203Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -45468,9 +45468,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 1893,
           "path": "/6wkfovpn7Eq8dYNKaG5PY3q2oq6.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 1893,
+          "checkedAt": "2026-11-12T17:37:15.855Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "starwarsepisodeithephantommenace|1999",
+          "matchedTitle84": "Star Wars: Episode I - The Phantom Menace",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-74-70G": {
@@ -46347,9 +46352,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 85,
           "path": "/ceG9VzoRAVGwivFU403Wc3AHRys.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 85,
+          "checkedAt": "2026-11-12T17:37:22.271Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "raidersofthelostark|1981",
+          "matchedTitle84": "Raiders of the Lost Ark",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-99-4hk0": {
@@ -50331,9 +50341,14 @@
           }
         ],
         "poster84": {
+          "path": "/zWoIgZ7mgmPkaZjG0102BSKFIqQ.jpg",
           "tmdbId": 82690,
-          "path": "/nrEupcBwf4O1zihCM34NoXusZDq.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "checkedAt": "2026-11-12T17:37:22.271Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "wreckitralph|2012",
+          "matchedTitle84": "Wreck-It Ralph",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-214-2aoA": {
@@ -54905,9 +54920,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 11005,
           "path": "/9gztZXuHLG6AJ0fgqGd7Q43cWRI.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 11005,
+          "checkedAt": "2026-11-12T17:37:22.271Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "awakenings|1990",
+          "matchedTitle84": "Awakenings",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-346-1Aiw": {
@@ -55185,8 +55205,12 @@
         "poster84": {
           "path": "/viWheBd44bouiLCHgNMvahLThqx.jpg",
           "tmdbId": 44214,
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00",
-          "provider": "tmdb"
+          "checkedAt": "2026-11-12T17:37:15.855Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "blackswan|2010",
+          "matchedTitle84": "Black Swan",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-354-aNGk": {
@@ -59299,9 +59323,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 283566,
           "path": "/md5wZRRj8biHrGtyitgBZo7674t.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 283566,
+          "checkedAt": "2026-11-12T17:37:15.855Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "evangelion3010thriceuponatime|2021",
+          "matchedTitle84": "Evangelion: 3.0+1.0 Thrice Upon a Time",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-472-1zYm": {
