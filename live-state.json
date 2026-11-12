@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794499971595,
-  "sourceUpdatedIso": "2026-11-12T16:12:51.595Z",
+  "sourceUpdatedAt": 1794500000252,
+  "sourceUpdatedIso": "2026-11-12T16:13:20.252Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -23705,6 +23705,27 @@
       "letterboxdAddedDate": null,
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1794499999864-2cov",
+      "title": "大追跡～警視庁SSBC強行犯係～",
+      "originalTitle": "大追跡～警視庁SSBC強行犯係～",
+      "englishTitle": "The Big Chase: Tokyo SSBC Files",
+      "year": 2025,
+      "score": null,
+      "star": 0,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "サスペンス、ミステリー",
+      "mediaType": "tvseries",
+      "genre": "",
+      "origin": "",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     }
   ],
   "state": {
@@ -29831,6 +29852,23 @@
         "added": true,
         "_seq": 1794499971237,
         "tmdbType": "tv"
+      },
+      {
+        "id": "custom-1794499999864-2cov",
+        "title": "大追跡～警視庁SSBC強行犯係～",
+        "originalTitle": "大追跡～警視庁SSBC強行犯係～",
+        "englishTitle": "The Big Chase: Tokyo SSBC Files",
+        "lbTitle": "The Big Chase: Tokyo SSBC Files",
+        "tmdbId": 293433,
+        "year": 2025,
+        "uri": "",
+        "category": "サスペンス、ミステリー",
+        "order": 999999,
+        "star": 0,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1794499999864,
+        "tmdbType": "tv"
       }
     ],
     "starOverrides": {
@@ -30658,7 +30696,8 @@
       "custom-1793983670669-rzg2": 3,
       "custom-1794237370281-ulkl": 0,
       "custom-1794245493414-8mj7": 4,
-      "custom-1794499971237-kb2g": 0
+      "custom-1794499971237-kb2g": 0,
+      "custom-1794499999864-2cov": 0
     },
     "titleOverrides": {
       "added-anchor-578": {
@@ -33776,7 +33815,8 @@
       "custom-1793983670669-rzg2": "drama",
       "custom-1794237370281-ulkl": "drama",
       "custom-1794245493414-8mj7": "movie",
-      "custom-1794499971237-kb2g": "tvseries"
+      "custom-1794499971237-kb2g": "tvseries",
+      "custom-1794499999864-2cov": "tvseries"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -74343,6 +74383,34 @@
           "creators": [],
           "source": "tmdb",
           "fetchedAt": "2026-11-12T16:12:51.395Z"
+        }
+      },
+      "custom-1794499999864-2cov": {
+        "contentType": "tv_series",
+        "tmdbType": "tv",
+        "poster84": {
+          "path": "/xOAQ0gJWbQtrMptIn4SEyTvaNf3.jpg",
+          "tmdbId": 293433,
+          "provider": "tmdb",
+          "checkedAt": "2026-11-12T16:13:20.008Z"
+        },
+        "tmdbSeriesId": 293433,
+        "seasonCatalogV1": [
+          {
+            "number": 1,
+            "year": "2025"
+          },
+          {
+            "number": 2,
+            "year": "2026"
+          }
+        ],
+        "seasonCountV1": 2,
+        "crew84": {
+          "directors": [],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-11-12T16:13:20.039Z"
         }
       }
     }
