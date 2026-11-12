@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794505732448,
-  "sourceUpdatedIso": "2026-11-12T17:48:52.448Z",
+  "sourceUpdatedAt": 1794505752600,
+  "sourceUpdatedIso": "2026-11-12T17:49:12.600Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -53327,9 +53327,14 @@
           }
         ],
         "poster84": {
+          "path": "/1mcJmdbRLusxhoSGjFI3pbEboXt.jpg",
           "tmdbId": 1366,
-          "path": "/xSI0dbKLDETwhiVUy6hGE8KXUln.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "checkedAt": "2026-11-12T17:49:08.300Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "rocky|1976",
+          "matchedTitle84": "Rocky",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-299-28U0": {
