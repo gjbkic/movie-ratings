@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794504318231,
-  "sourceUpdatedIso": "2026-11-12T17:25:18.231Z",
+  "sourceUpdatedAt": 1794504339638,
+  "sourceUpdatedIso": "2026-11-12T17:25:39.638Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -43599,9 +43599,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 299536,
           "path": "/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 299536,
+          "checkedAt": "2026-11-12T17:25:35.305Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "avengersinfinitywar|2018",
+          "matchedTitle84": "Avengers: Infinity War",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-21-bhF2": {
@@ -59477,9 +59482,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 12493,
           "path": "/tgNjemQPG96uIezpiUiXFcer5ga.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 12493,
+          "checkedAt": "2026-11-12T17:25:35.305Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "highandlow|1963",
+          "matchedTitle84": "High and Low",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-484-h8gk": {
