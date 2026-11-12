@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794508544495,
-  "sourceUpdatedIso": "2026-11-12T18:35:44.495Z",
+  "sourceUpdatedAt": 1794508732205,
+  "sourceUpdatedIso": "2026-11-12T18:38:52.205Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -43012,9 +43012,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 313369,
           "path": "/uDO8zWDhfWwoFdKS4fzkUJt0Rf0.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 313369,
+          "checkedAt": "2026-11-12T18:38:47.445Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "lalaland|2016",
+          "matchedTitle84": "La La Land",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-4-jUk4": {
@@ -48025,9 +48030,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 605,
           "path": "/qEWiBXJGXK28jGBAm8oFKKTB0WD.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 605,
+          "checkedAt": "2026-11-12T18:38:47.445Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thematrixrevolutions|2003",
+          "matchedTitle84": "The Matrix Revolutions",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-142-2bde": {
