@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794472313024,
-  "sourceUpdatedIso": "2026-11-12T08:31:53.024Z",
+  "sourceUpdatedAt": 1794499971595,
+  "sourceUpdatedIso": "2026-11-12T16:12:51.595Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -23684,6 +23684,27 @@
       "letterboxdAddedDate": null,
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1794499971237-kb2g",
+      "title": "貴族探偵",
+      "originalTitle": "貴族探偵",
+      "englishTitle": "The Noble Detective",
+      "year": 2017,
+      "score": null,
+      "star": 0,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "マフィア、クライム",
+      "mediaType": "tvseries",
+      "genre": "",
+      "origin": "",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     }
   ],
   "state": {
@@ -29793,6 +29814,23 @@
         "added": true,
         "_seq": 1794245493414,
         "source": "letterboxd"
+      },
+      {
+        "id": "custom-1794499971237-kb2g",
+        "title": "貴族探偵",
+        "originalTitle": "貴族探偵",
+        "englishTitle": "The Noble Detective",
+        "lbTitle": "The Noble Detective",
+        "tmdbId": 71102,
+        "year": 2017,
+        "uri": "",
+        "category": "マフィア、クライム",
+        "order": 999999,
+        "star": 0,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1794499971237,
+        "tmdbType": "tv"
       }
     ],
     "starOverrides": {
@@ -30619,7 +30657,8 @@
       "custom-1793895450695-3l8l": 3,
       "custom-1793983670669-rzg2": 3,
       "custom-1794237370281-ulkl": 0,
-      "custom-1794245493414-8mj7": 4
+      "custom-1794245493414-8mj7": 4,
+      "custom-1794499971237-kb2g": 0
     },
     "titleOverrides": {
       "added-anchor-578": {
@@ -33736,7 +33775,8 @@
       "custom-1793895450695-3l8l": "drama",
       "custom-1793983670669-rzg2": "drama",
       "custom-1794237370281-ulkl": "drama",
-      "custom-1794245493414-8mj7": "movie"
+      "custom-1794245493414-8mj7": "movie",
+      "custom-1794499971237-kb2g": "tvseries"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -74279,6 +74319,30 @@
           "tmdbId": 47002,
           "checkedAt": "2026-11-09T17:31:52.639Z",
           "provider": "tmdb"
+        }
+      },
+      "custom-1794499971237-kb2g": {
+        "contentType": "tv_series",
+        "tmdbType": "tv",
+        "poster84": {
+          "path": "/6KTrtoE3WFZyTBXvkGSORFgIqbx.jpg",
+          "tmdbId": 71102,
+          "provider": "tmdb",
+          "checkedAt": "2026-11-12T16:12:51.364Z"
+        },
+        "tmdbSeriesId": 71102,
+        "seasonCatalogV1": [
+          {
+            "number": 1,
+            "year": "2017"
+          }
+        ],
+        "seasonCountV1": 1,
+        "crew84": {
+          "directors": [],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-11-12T16:12:51.395Z"
         }
       }
     }
