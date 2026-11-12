@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794505555130,
-  "sourceUpdatedIso": "2026-11-12T17:45:55.130Z",
+  "sourceUpdatedAt": 1794505567535,
+  "sourceUpdatedIso": "2026-11-12T17:46:07.535Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -45650,9 +45650,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 275,
           "path": "/rt7cpEr1uP6RTZykBFhBTcRaKvG.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 275,
+          "checkedAt": "2026-11-12T17:45:59.949Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "fargo|1996",
+          "matchedTitle84": "Fargo",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-79-27PI": {
@@ -46180,9 +46185,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 393,
           "path": "/2yhg0mZQMhDyvUQ4rG1IZ4oIA8L.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 393,
+          "checkedAt": "2026-11-12T17:46:07.600Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "killbillvol2|2004",
+          "matchedTitle84": "Kill Bill: Vol. 2",
+          "validated84": true,
+          "mediaKind84": "movie"
         },
         "noteEditedAt": "2026-10-27T19:24:04.118Z"
       },
@@ -74481,10 +74491,14 @@
           "fetchedAt": "2026-10-26T08:29:25.861Z"
         },
         "poster84": {
-          "path": "/574WioDX9AC6VwbmhPGpwsH8waN.jpg",
+          "path": "/hy49xJiKN1nakkN1ZmKuOf6vQYR.jpg",
           "tmdbId": 13855,
-          "checkedAt": "2026-10-26T08:29:33.474Z",
-          "provider": "tmdb"
+          "checkedAt": "2026-11-12T17:45:59.949Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thechaser|2008",
+          "matchedTitle84": "The Chaser",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "custom-1793008410429-0253": {
