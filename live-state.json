@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794506201571,
-  "sourceUpdatedIso": "2026-11-12T17:56:41.571Z",
+  "sourceUpdatedAt": 1794506216292,
+  "sourceUpdatedIso": "2026-11-12T17:56:56.292Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -42939,9 +42939,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 157336,
           "path": "/yQvGrMoipbRoddT0ZR8tPoR7NfX.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 157336,
+          "checkedAt": "2026-11-12T17:56:56.359Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "interstellar|2014",
+          "matchedTitle84": "Interstellar",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-2-2a9q": {
@@ -43477,9 +43482,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 24,
           "path": "/v7TaX8kXMXs5yFFGR41guUDNcnB.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 24,
+          "checkedAt": "2026-11-12T17:56:56.359Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "killbillvol1|2003",
+          "matchedTitle84": "Kill Bill: Vol. 1",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-17-1U82": {
@@ -47067,9 +47077,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 2034,
           "path": "/bUeiwBQdupBLQthMCHKV7zv56uv.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 2034,
+          "checkedAt": "2026-11-12T17:56:50.546Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "trainingday|2001",
+          "matchedTitle84": "Training Day",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-118-29cS": {
@@ -64107,9 +64122,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 106417,
           "path": "/A6HmmaXeoeH30U0dyW742hdzwtz.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 106417,
+          "checkedAt": "2026-11-12T17:56:56.358Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "kaiji2theultimategambler|2011",
+          "matchedTitle84": "Kaiji 2: The Ultimate Gambler",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "custom-1789385860674-ow4o": {
