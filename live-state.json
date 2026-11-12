@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794501395864,
-  "sourceUpdatedIso": "2026-11-12T16:36:35.864Z",
+  "sourceUpdatedAt": 1794501409646,
+  "sourceUpdatedIso": "2026-11-12T16:36:49.646Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -45023,10 +45023,14 @@
           }
         ],
         "poster84": {
-          "path": "/mVdz3vlmioKWZaHTGfu99zIuayZ.jpg",
+          "path": "/cMYCDADoLKLbB83g4WnJegaZimC.jpg",
           "tmdbId": 128,
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00",
-          "provider": "tmdb"
+          "checkedAt": "2026-11-12T16:36:42.823Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "princessmononoke|1997",
+          "matchedTitle84": "Princess Mononoke",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-63-8MxC": {
@@ -51771,9 +51775,14 @@
           }
         ],
         "poster84": {
-          "tmdbId": 17431,
           "path": "/35IU0Mq0zFsN1mYwDGts5mKc77n.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 17431,
+          "checkedAt": "2026-11-12T16:36:42.823Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "moon|2009",
+          "matchedTitle84": "Moon",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "lb-262-29Du": {
@@ -64775,9 +64784,14 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 4939,
           "path": "/nrmZ9joMw3aKOist3xxJJc2Jxyr.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 4939,
+          "checkedAt": "2026-11-12T16:36:42.823Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "ikebukurowestgatepark|2000",
+          "matchedTitle84": "Ikebukuro West Gate Park",
+          "validated84": true,
+          "mediaKind84": "tv"
         }
       },
       "custom-1790322764349-xp48": {
@@ -65327,8 +65341,12 @@
         "poster84": {
           "path": "/fuHQcu6tJIOMgwr1saQudvXGoHY.jpg",
           "tmdbId": 625530,
-          "checkedAt": "2026-10-12T10:48:22.249Z",
-          "provider": "tmdb"
+          "checkedAt": "2026-11-12T16:36:49.707Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "strawberrynight|2010",
+          "matchedTitle84": "Strawberry Night",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "custom-1790423279786-lguu": {
@@ -72311,8 +72329,12 @@
         "poster84": {
           "path": "/xid5MKiuD15EG77w0gkP4cSNOTk.jpg",
           "tmdbId": 57041,
-          "checkedAt": "2026-10-18T20:08:30.635Z",
-          "provider": "tmdb"
+          "checkedAt": "2026-11-12T16:36:49.707Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "utadahikaruinbudokan2004|2004",
+          "matchedTitle84": "Utada Hikaru in Budokan 2004",
+          "validated84": true,
+          "mediaKind84": "movie"
         }
       },
       "custom-1792406096289-hqs7": {
