@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794597240240,
-  "sourceUpdatedIso": "2026-11-13T19:14:00.240Z",
+  "sourceUpdatedAt": 1794597370183,
+  "sourceUpdatedIso": "2026-11-13T19:16:10.183Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -50047,9 +50047,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 26662,
           "path": "/AbgADjLIYoLAc3mayVWGBWSbjT.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 26662,
+          "checkedAt": "2026-11-13T19:16:05.886Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "detectiveconanthephantomofbakerstreet|2002",
+          "matchedTitle84": "Detective Conan: The Phantom of Baker Street",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-194-14eC": {
