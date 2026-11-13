@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794596985958,
-  "sourceUpdatedIso": "2026-11-13T19:09:45.958Z",
+  "sourceUpdatedAt": 1794597017721,
+  "sourceUpdatedIso": "2026-11-13T19:10:17.721Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -62967,9 +62967,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 4638,
           "path": "/zPib4ukTSdXvHP9pxGkFCe34f3y.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 4638,
+          "checkedAt": "2026-11-13T19:10:13.427Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "hotfuzz|2007",
+          "matchedTitle84": "Hot Fuzz",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-554-igK": {
@@ -63730,9 +63736,15 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 786,
           "path": "/3rrkyLYbgLj84AYvjhdcJot4JPx.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 786,
+          "checkedAt": "2026-11-13T19:10:13.427Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "almostfamous|2000",
+          "matchedTitle84": "Almost Famous",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-575-1fK0": {
