@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794596864075,
-  "sourceUpdatedIso": "2026-11-13T19:07:44.075Z",
+  "sourceUpdatedAt": 1794596879021,
+  "sourceUpdatedIso": "2026-11-13T19:07:59.021Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -44699,9 +44699,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 771,
           "path": "/onTSipZ8R3bliBdKfPtsDuHTdlL.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 771,
+          "checkedAt": "2026-11-13T19:07:54.705Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "homealone|1990",
+          "matchedTitle84": "Home Alone",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-47-2aA2": {
