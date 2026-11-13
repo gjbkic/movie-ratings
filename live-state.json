@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794596221342,
-  "sourceUpdatedIso": "2026-11-13T18:57:01.342Z",
+  "sourceUpdatedAt": 1794596249783,
+  "sourceUpdatedIso": "2026-11-13T18:57:29.783Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -59664,9 +59664,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 11305,
           "path": "/f11xq7dBGhz9UDc3dabldAGeXVH.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 11305,
+          "checkedAt": "2026-11-13T18:57:25.488Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "mysterytrain|1989",
+          "matchedTitle84": "Mystery Train",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-467-ptEI": {
@@ -65045,9 +65051,15 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 30018,
           "path": "/8oBnSkZE6GDVugAbLPO6uJd4GcS.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 30018,
+          "checkedAt": "2026-11-13T18:57:25.488Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "mother|2009",
+          "matchedTitle84": "Mother",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "custom-1790089712252-cunv": {
