@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794596207197,
-  "sourceUpdatedIso": "2026-11-13T18:56:47.197Z",
+  "sourceUpdatedAt": 1794596221342,
+  "sourceUpdatedIso": "2026-11-13T18:57:01.342Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -48577,9 +48577,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 15371,
           "path": "/p7xL3WYeclgtGCLrWfBrXKdBV7d.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 15371,
+          "checkedAt": "2026-11-13T18:57:01.422Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thecastleofcagliostro|1979",
+          "matchedTitle84": "The Castle of Cagliostro",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-155-h2Hu": {
@@ -59825,9 +59831,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 75629,
           "path": "/d0s1xvykzl0kz7fP5S2ROYqphdz.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 75629,
+          "checkedAt": "2026-11-13T18:56:54.331Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "evangelion30youcannotredo|2012",
+          "matchedTitle84": "Evangelion: 3.0 You Can (Not) Redo",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-471-8LnQ": {
@@ -60458,9 +60470,15 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 1443,
           "path": "/1NCQtXPQnaHRjOZVmktA9BSM35F.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 1443,
+          "checkedAt": "2026-11-13T18:57:01.422Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thevirginsuicides|1999",
+          "matchedTitle84": "The Virgin Suicides",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         },
         "noteEditedAt": "2026-10-18T10:45:32.081Z"
       },
