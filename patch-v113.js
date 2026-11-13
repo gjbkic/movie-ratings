@@ -376,7 +376,7 @@ function rrProgressHtml(p){
 function rrProgressDetail(p,r){
  const n=p.n||1;
  return '<div class="rr-drawer-inner rr-progress-details">'+
-  '<h3>現在のランキングの安定度</h3>'+rrDeltaHtml(r,true)+rrDeltaTrendHtml(r)+
+  '<h3>現在のランキングの安定度</h3>'+rrDeltaHtml(r,true)+rrDeltaTrendHtml(r)+rrGenreProgressHtml(rrModel(r))+
   '<div class="rr-progress-big">'+esc(p.stage)+'</div>'+
   '<p>'+esc(p.detail)+'</p>'+rrProgressHtml(p)+
   '<div class="rr-progress-figures">'+
@@ -587,6 +587,36 @@ function rrGenreChoice(r,m,used,kind='near'){
  }
  return winner;
 }
+function rrGenreProgressHtml(m){
+ const {groups}=rrGenreMap(m.ids),pairs=[...m.stats.pairs.values()];
+ const data=[];
+ for(const [name,members] of groups){
+  if(members.length<7)continue;
+  const memberSet=new Set(members),degree=new Map(members.map(id=>[id,new Set()]));
+  for(const p of pairs){
+   if(!memberSet.has(p.a)||!memberSet.has(p.b))continue;
+   degree.get(p.a).add(p.b);degree.get(p.b).add(p.a);
+  }
+  const compared=members.filter(id=>(m.stats.counts.get(id)||0)>0).length;
+  const connected=members.filter(id=>(degree.get(id)?.size||0)>=4).length;
+  const average=members.reduce((sum,id)=>sum+(degree.get(id)?.size||0),0)/members.length;
+  data.push({name,total:members.length,compared,connected,average});
+ }
+ data.sort((a,b)=>b.total-a.total);
+ if(!data.length)return '';
+ return '<div class="rr-genre-progress"><h3>ジャンル別の比較状況</h3>'+
+  '<p class="rr-muted">同じジャンルの相手を何本比較したかの集計です。順位が確定した本数ではありません。複数ジャンルに属する作品は重複して数えます。</p>'+
+  data.slice(0,15).map(row=>
+    '<div class="rr-genre-row"><strong>'+esc(row.name)+'</strong>'+
+    '<span>登場済み '+row.compared+'/'+row.total+'本 · 同系統の相手 平均'+
+     row.average.toFixed(1)+'本 · 相手4本以上 '+row.connected+'本</span></div>'
+  ).join('')+'</div>';
+}
+function rrScopeLabel(ids){
+ const map=rrGenreMap(ids),items=ids.map(id=>map.tokens.get(id)||new Set());
+ const common=[...items[0]||[]].filter(g=>items.slice(1).every(set=>set.has(g)));
+ return common.length?'同系統を比較 · '+common.slice(0,2).join('・'):'ジャンルを横断して比較';
+}
 function rrChooseTriad(r,mode=r.mode){
  const m=rrModel(r),ids=m.order,n=ids.length;if(n<3)return ids;
  const stats=m.stats,net=rrNetwork(m);
@@ -752,7 +782,7 @@ function rrPaintSelection(){
  });
  const prompt=root.querySelector('#rrPickInstruction'),sub=root.querySelector('#rrPickSub');
  if(prompt)prompt.textContent=rrTiePartner?'1位と同格にする作品をタップ':
-   rrPicks.length?'次は2位の映画をタップ':'一番好きな作品をタップ';
+   rrPicks.length?'次は2位の作品をタップ':'一番好きな作品をタップ';
  if(sub)sub.textContent=rrTiePartner?'選んだ2本を同格の1位にします':
    rrPicks.length?'残り2本同格なら下のボタン／2位をタップすると自動確定':'1位 → 2位の2タップで次へ';
  const hasFirst=rrPicks.length===1;
@@ -961,7 +991,8 @@ function rrRender(){
     '<div class="rr-fast-progress"><span>比較 <strong>'+r.events.length+'</strong> 回</span>'+
      '<span>比較済み <strong>'+nSeen+'</strong> / '+m.ids.length+' 本</span></div>'+ 
     '<button class="rr-progress-summary" id="rrOpenProgress" aria-label="ランキングの進捗と目安の詳細を開く">'+rrProgressHtml(progress)+'</button>'+rrDeltaHtml(r)+(r.events.length?rrTriadPositionsHtml(r.events[r.events.length-1]):'')+
-    '<div class="rr-fast-instruction" id="rrPickInstruction">一番好きな映画をタップ</div>'+
+    '<div class="rr-genre-scope">'+esc(rrScopeLabel(rrTriad))+'</div>'+
+    '<div class="rr-fast-instruction" id="rrPickInstruction">一番好きな作品をタップ</div>'+
     '<div class="rr-fast-sub" id="rrPickSub">1位 → 2位の2タップで次へ</div>'+
     '<div class="rr-fast-grid">'+rrTriad.map((id,i)=>rrFilmCard(id,i,m)).join('')+'</div>'+
     '<div class="rr-fast-caption">長押しで作品の詳細。タップで順位を選択。</div>'+
@@ -1171,6 +1202,12 @@ body.rr-immersive-on #page-rerank{position:fixed!important;inset:0!important;dis
 .rr-hrow .rr-triad-moves{margin-top:9px;padding:8px;background:#102238}
 .rr-hrow .rr-triad-pos-row{grid-template-columns:minmax(0,1fr) auto 34px}
 @media(max-width:390px){.rr-triad-pos-row{gap:5px;grid-template-columns:minmax(0,1fr) auto 30px}.rr-triad-pos-row>b{font-size:10px}}
+
+.rr-genre-scope{text-align:center;color:#93badc;font-size:11px;line-height:1.4;font-weight:700}
+.rr-genre-progress{margin:12px 0 15px}
+.rr-genre-row{display:flex;justify-content:space-between;gap:7px;border-bottom:1px solid #2e4058;padding:9px 2px;align-items:center}
+.rr-genre-row strong{font-size:12px;flex:0 0 28%;color:#dce7f8}
+.rr-genre-row span{font-size:10px;color:#97acc8;text-align:right;line-height:1.45}
 .rr-delta-summary{border:1px solid #3c587b;background:#112235;border-radius:9px;padding:8px 10px;display:flex;flex-direction:column;gap:4px;font-size:11px;line-height:1.4}
 .rr-delta-summary strong{font-size:12px;color:#dce9fc}.rr-delta-summary span{color:#b4cae6}.rr-delta-summary small{color:#91a7bf;font-size:10px}
 .rr-delta-line{display:block;margin-top:5px;color:#95b9ed;font-size:10px;line-height:1.5}
