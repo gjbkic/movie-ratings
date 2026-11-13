@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794597885405,
-  "sourceUpdatedIso": "2026-11-13T19:24:45.405Z",
+  "sourceUpdatedAt": 1794597990224,
+  "sourceUpdatedIso": "2026-11-13T19:26:30.224Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -63989,9 +63989,15 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 103663,
           "path": "/jkixsXzRh28q3PCqFoWcf7unghT.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 103663,
+          "checkedAt": "2026-11-13T19:26:25.545Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thehunt|2012",
+          "matchedTitle84": "The Hunt",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "added-anchor-579": {
