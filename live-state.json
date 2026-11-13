@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794596290474,
-  "sourceUpdatedIso": "2026-11-13T18:58:10.474Z",
+  "sourceUpdatedAt": 1794596317217,
+  "sourceUpdatedIso": "2026-11-13T18:58:37.217Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -54472,9 +54472,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 1632,
           "path": "/hTv8Bkq3W1vwKi1IWCLWQW9PNU4.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 1632,
+          "checkedAt": "2026-11-13T18:58:32.933Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "mississippiburning|1988",
+          "matchedTitle84": "Mississippi Burning",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-321-2aNK": {
