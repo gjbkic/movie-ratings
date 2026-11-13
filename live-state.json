@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794597432956,
-  "sourceUpdatedIso": "2026-11-13T19:17:12.956Z",
+  "sourceUpdatedAt": 1794597486500,
+  "sourceUpdatedIso": "2026-11-13T19:18:06.500Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -57251,9 +57251,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 120,
           "path": "/6oom5QYQ2yQTMJIbnvbkBL9cHo6.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 120,
+          "checkedAt": "2026-11-13T19:18:01.207Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thelordoftheringsthefellowshipofthering|2001",
+          "matchedTitle84": "The Lord of the Rings: The Fellowship of the Ring",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-395-2bdo": {
