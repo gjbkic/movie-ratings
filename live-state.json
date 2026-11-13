@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794599160736,
-  "sourceUpdatedIso": "2026-11-13T19:46:00.736Z",
+  "sourceUpdatedAt": 1794599192849,
+  "sourceUpdatedIso": "2026-11-13T19:46:32.849Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -58582,9 +58582,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 196,
           "path": "/crzoVQnMzIrRfHtQw0tLBirNfVg.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 196,
+          "checkedAt": "2026-11-13T19:46:28.555Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "backtothefuturepartiii|1990",
+          "matchedTitle84": "Back to the Future Part III",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-429-2czU": {
