@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794597686793,
-  "sourceUpdatedIso": "2026-11-13T19:21:26.793Z",
+  "sourceUpdatedAt": 1794597824192,
+  "sourceUpdatedIso": "2026-11-13T19:23:44.192Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -23742,7 +23742,11 @@
       "genre": [
         "クライム",
         "ドラマ",
-        "スリラー"
+        "スリラー",
+        "サスペンス",
+        "胸糞",
+        "雰囲気・美学",
+        "特殊構造"
       ],
       "origin": "その他",
       "format": "live",
@@ -40599,7 +40603,11 @@
       "custom-1794596030193-rkso": [
         "クライム",
         "ドラマ",
-        "スリラー"
+        "スリラー",
+        "サスペンス",
+        "胸糞",
+        "雰囲気・美学",
+        "特殊構造"
       ]
     },
     "originOverrides": {
@@ -76429,6 +76437,17 @@
           "creators": [],
           "source": "tmdb",
           "fetchedAt": "2026-11-13T18:53:50.465Z"
+        },
+        "poster84": {
+          "path": "/lraVawavIXh5geMlVjpzCw9TGwR.jpg",
+          "tmdbId": 553,
+          "checkedAt": "2026-11-13T19:23:29.050Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "dogville|2003",
+          "matchedTitle84": "Dogville",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       }
     }
