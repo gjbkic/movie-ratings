@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794596108336,
-  "sourceUpdatedIso": "2026-11-13T18:55:08.336Z",
+  "sourceUpdatedAt": 1794596123312,
+  "sourceUpdatedIso": "2026-11-13T18:55:23.312Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -43144,9 +43144,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 872585,
           "path": "/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 872585,
+          "checkedAt": "2026-11-13T18:55:17.955Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "oppenheimer|2023",
+          "matchedTitle84": "Oppenheimer",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-6-29Pq": {
