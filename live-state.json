@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794596088400,
-  "sourceUpdatedIso": "2026-11-13T18:54:48.400Z",
+  "sourceUpdatedAt": 1794596108336,
+  "sourceUpdatedIso": "2026-11-13T18:55:08.336Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -64917,9 +64917,15 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 2291,
           "path": "/ufLcHIi1aXjjH8MediAMvnwDsVI.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 2291,
+          "checkedAt": "2026-11-13T18:55:04.039Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "jacobsladder|1990",
+          "matchedTitle84": "Jacob's Ladder",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "custom-1789918000606-jgbg": {
