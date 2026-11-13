@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794596317217,
-  "sourceUpdatedIso": "2026-11-13T18:58:37.217Z",
+  "sourceUpdatedAt": 1794596545163,
+  "sourceUpdatedIso": "2026-11-13T19:02:25.163Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -43804,10 +43804,15 @@
           }
         ],
         "poster84": {
-          "path": "/tlSn7UnfH2LxrBRwfTLs3JSYOTO.jpg",
+          "path": "/dXNAPwY7VrqMAo51EKhhCJfaGb5.jpg",
           "tmdbId": 603,
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00",
-          "provider": "tmdb"
+          "checkedAt": "2026-11-13T19:02:17.376Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thematrix|1999",
+          "matchedTitle84": "The Matrix",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-23-2b8y": {
@@ -44425,9 +44430,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 76341,
           "path": "/ulcAi4dKpAjHwYGS08vNyx9H6I9.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 76341,
+          "checkedAt": "2026-11-13T19:02:17.376Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "madmaxfuryroad|2015",
+          "matchedTitle84": "Mad Max: Fury Road",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-40-aboM": {
@@ -54030,9 +54041,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 568160,
           "path": "/qgrk7r1fV4IjuoeiGS5HOhXNdLJ.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 568160,
+          "checkedAt": "2026-11-13T19:02:17.376Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "weatheringwithyou|2019",
+          "matchedTitle84": "Weathering with You",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-309-2aZ2": {
@@ -69580,7 +69597,7 @@
           "validated84": true,
           "mediaKind84": "movie"
         },
-        "noteEditedAt": "2026-11-12T18:10:36.743Z"
+        "noteEditedAt": "2026-11-13T18:58:42.986Z"
       },
       "custom-1791447953969-ah3e": {
         "publishedAt": "Thu, 8 Oct 2026 18:52:25 +1300",
