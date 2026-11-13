@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794596545163,
-  "sourceUpdatedIso": "2026-11-13T19:02:25.163Z",
+  "sourceUpdatedAt": 1794596613222,
+  "sourceUpdatedIso": "2026-11-13T19:03:33.222Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -52509,9 +52509,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 17654,
           "path": "/tuGlQkqLxnodDSk6mp5c2wvxUEd.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 17654,
+          "checkedAt": "2026-11-13T19:02:25.236Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "district9|2009",
+          "matchedTitle84": "District 9",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-267-29u8": {
@@ -56660,9 +56666,15 @@
           }
         ],
         "poster84": {
+          "path": "/z6Kx30dhspFmGcXHjdrv9KQ7Bk8.jpg",
           "tmdbId": 1379266,
-          "path": "/a15F5KJ4mleusJR1YKP4zUyZaxG.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "checkedAt": "2026-11-13T19:03:28.048Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "kokuho|2025",
+          "matchedTitle84": "Kokuho",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-380-KQMM": {
@@ -58463,9 +58475,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 2666,
           "path": "/tNPEGju4DpTdbhBphNmZoEi9Bd3.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 2666,
+          "checkedAt": "2026-11-13T19:03:28.048Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "darkcity|1998",
+          "matchedTitle84": "Dark City",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-431-o0Hc": {
