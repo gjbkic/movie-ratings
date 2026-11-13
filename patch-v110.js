@@ -157,17 +157,18 @@ function rrModel(r){
  }
  // Approximate marginal uncertainty from local Fisher information. Inflation
  // for sparse unique opponents avoids false confidence from repeated matches.
+ // A single pass over edges keeps the iPhone interaction responsive.
+ const fisher=new Float64Array(n).fill(lambda);
+ for(const e of pairEdges){
+  const d=Math.max(-15,Math.min(15,theta[e.a]-theta[e.b])),p=1/(1+Math.exp(-d));
+  const h=weight*e.n*p*(1-p);
+  fisher[e.a]+=h;fisher[e.b]+=h;
+ }
  const score=new Map(),uncertainty=new Map();
  for(let i=0;i<n;i++){
-  let fisher=lambda;
-  for(const e of pairEdges){
-   if(e.a!==i&&e.b!==i)continue;
-   const d=theta[e.a]-theta[e.b],p=1/(1+Math.exp(-Math.max(-15,Math.min(15,d))));
-   fisher+=weight*e.n*p*(1-p);
-  }
   const distinct=degree[i],sparse=Math.max(0,4-distinct)/4;
   score.set(ids[i],theta[i]);
-  uncertainty.set(ids[i],Math.sqrt(1/fisher)*(1+.28*sparse));
+  uncertainty.set(ids[i],Math.sqrt(1/fisher[i])*(1+.28*sparse));
  }
  const basePos=new Map(ids.map((id,i)=>[id,i]));
  const observed=ids.filter(id=>(stats.counts.get(id)||0)>0);
@@ -579,21 +580,43 @@ function rrHistoryHtml(r){
      '</span><button data-rr-del="'+e.id+'">削除</button></div>';
  }).join('');
 }
+// Approximate 80% rank ranges by deterministic normal-posterior sampling.
+// They describe the judged subset, not an invented order for untouched works.
+function rrRankBands(m){
+ const observed=m.order.slice(0,m.seenCount),n=observed.length;
+ const result=new Map();if(!n)return result;
+ const samples=new Map(observed.map(id=>[id,[]]));
+ for(let draw=0;draw<48;draw++){
+  const order=observed.map(id=>{
+   const u=(rrHash(id+'|uncertainty-a|'+draw)+.5)/4294967296;
+   const v=(rrHash(id+'|uncertainty-b|'+draw)+.5)/4294967296;
+   const z=Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v);
+   return {id,score:m.score.get(id)+(m.uncertainty.get(id)||1)*z};
+  }).sort((a,b)=>b.score-a.score);
+  order.forEach(({id},i)=>samples.get(id).push(i+1));
+ }
+ for(const id of observed){
+  const ranks=samples.get(id).sort((a,b)=>a-b);
+  result.set(id,{lo:ranks[4],hi:ranks[43]});
+ }
+ return result;
+}
 function rrPreviewHtml(r,m){
  const judged=m.seenCount>0;
+ const bands=rrRankBands(m);
  if(!judged)return '<div class="rr-muted">まだ順位は未判定です。初回の比較から新ランキングを作ります。旧順位は初期値に使っていません。</div>';
  const html=m.order.map((id,i)=>{
    const f=filmById(id),c=m.stats.counts.get(id)||0,never=c===0;
-   const uncertainty=m.uncertainty.get(id)||1;
+   const uncertainty=m.uncertainty.get(id)||1,band=bands.get(id);
    return (i===m.seenCount?
       '<div class="rr-rank-divider">未比較の作品 '+(m.ids.length-m.seenCount)+'本（順位未判定・下位という意味ではありません）</div>':'')+
      '<div class="rr-rank-row'+(never?' rr-rank-unseen':'')+'"><b>'+
        (never?'—':(i+1))+'</b><span>'+esc(displayTitle(f))+
        '</span><small>'+(never?'未比較・順位未判定':
-         c+' 組の判断 · '+(uncertainty>=.72?'不確実性：大':uncertainty>=.48?'不確実性：中':'不確実性：小'))+
+         c+' ペア判断 · 推定'+band.lo+'〜'+band.hi+'位（比較済み内・80%試算）')+
        '</small></div>';
  }).join('');
- return '<div class="rr-muted">比較した作品だけを暫定順位に並べています。未比較作品は順位未判定として別枠に表示し、下位と決めつけません。比較回数が少ない作品の順位には大きな不確実性があります。</div>'+
+ return '<div class="rr-muted">比較した作品だけを暫定順位に並べています。未比較作品は順位未判定として別枠に表示し、下位と決めつけません。推定順位範囲は簡易モデルによる80%の目安で、正確な確率保証ではありません。</div>'+
    '<div class="rr-rank-scroll">'+html+'</div>';
 }
 function rrConflictsHtml(m){
