@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794597648357,
-  "sourceUpdatedIso": "2026-11-13T19:20:48.357Z",
+  "sourceUpdatedAt": 1794597663217,
+  "sourceUpdatedIso": "2026-11-13T19:21:03.217Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -54631,9 +54631,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 238,
           "path": "/3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 238,
+          "checkedAt": "2026-11-13T19:20:58.928Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thegodfather|1972",
+          "matchedTitle84": "The Godfather",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-322-2aeA": {
