@@ -238,18 +238,13 @@ function rrProgress(r,m){
    moderate?'全体像が固まりつつあります。接戦の再比較が有効です。':
    '最近の判断でも順位が大きく動くため、比較を続ける価値があります。';
  }
- let remaining=null;
- if(n>=3){
-  const floor=Math.ceil(needed*1.12);
-  if(floor>0){
-   const lo=Math.ceil(floor/10)*10,hi=Math.ceil(Math.max(lo,floor*1.55)/10)*10;
-   remaining={lo,hi};
-  }else if(!drift||stage==='まだ順位が動く'||stage==='変動を測定中'||stage==='安定しつつある'){
-   remaining={lo:40,hi:120};
-  }
- }
+ // The count/degree lower bound is not a forecast of convergence.
+ // Never render it as "10 comparisons remaining" when ranks still move.
+ const remaining=null;
+ const estimated=compared<n?'全作品を比較中':
+   stage==='全体は安定傾向'?'安定傾向を検証中':'必要回数は未確定';
  return {n,compared,depth,confident,components:net.components.length,net,drift,stage,detail,
-  judged,remaining,estimated:remaining?('あと約'+remaining.lo+'〜'+remaining.hi+'回'):'大枠は安定傾向'};
+  judged,remaining,estimated};
 }
 // Count pair-order reversals only among works judged in BOTH snapshots.
 function rrDelta(before,after){
@@ -395,7 +390,7 @@ function rrProgressDetail(p,r){
    '<div class="rr-progress-drift"><strong>直近'+p.drift.window+'回の比較による順位変動</strong>'+
     '<span>中央値 '+p.drift.median+'位 / 90パーセンタイル '+p.drift.p90+'位</span></div>':
    '<div class="rr-progress-drift">順位変動の判定は、比較がほぼ全作品につながり、ある程度の記録が集まってから表示します。</div>')+
-  '<p class="rr-muted">残り回数は現在の比較不足・比較相手の偏り・順位変動から算出した作業量の目安で、正確な順位や完成までの回数を保証するものではありません。比較が増えると予測も変わります。旧順位・元の点数は推定に一切使っていません。</p>'+
+  '<p class="rr-muted">完成までの回数は比較履歴だけから正確に予測できません。比較済み作品数・相手の多様性・直近の順位変動を見て判断します。旧順位・元の点数は新ランキングの推定に一切使っていません。</p>'+
   '</div>';
 }
 
@@ -519,11 +514,12 @@ function rrGenreChoice(r,m,used,kind='near'){
  };
  const fresh=ids.filter(id=>!lastSeen.has(id)||lastSeen.get(id)>=12);
  const pool=(fresh.length>=3?fresh:ids).slice();
- const countOver=pool.length;
- if(countOver<3)return null;
+ if(pool.length<3)return null;
+ const eligible=new Set(pool),strength=new Map(pool.map(id=>[id,priority(id)]));
+ const rank=id=>strength.get(id)||0;
  const chooseTop=(items,max,extra=0)=>items.slice().sort((a,b)=>
-   (priority(b)+extra*(rrHash(b+'|'+counter)%997)/997)-
-   (priority(a)+extra*(rrHash(a+'|'+counter)%997)/997)||
+   (rank(b)+extra*(rrHash(b+'|'+counter)%997)/997)-
+   (rank(a)+extra*(rrHash(a+'|'+counter)%997)/997)||
    rrHash(a+'|choice'+counter)-rrHash(b+'|choice'+counter)).slice(0,max);
  const normGap=(a,b)=>{
   const v=Math.abs(m.score.get(a)-m.score.get(b));
@@ -539,16 +535,16 @@ function rrGenreChoice(r,m,used,kind='near'){
   // All three share at least one explicit genre. Genre overlap is a soft
   // grouping, NOT a permanent rank partition.
   for(const [genre,members] of groups){
-   const within=members.filter(id=>pool.includes(id));
+   const within=members.filter(id=>eligible.has(id));
    if(within.length<3)continue;
-   const focuses=chooseTop(within,5,1.2);
+   const focuses=chooseTop(within,4,1.2);
    for(const a of focuses){
     const peers=within.filter(id=>id!==a).sort((b,c)=>
-      (priority(c)*.7+matchValue(a,c))-(priority(b)*.7+matchValue(a,b))).slice(0,9);
+      (rank(c)*.7+matchValue(a,c))-(rank(b)*.7+matchValue(a,b))).slice(0,7);
     for(let i=0;i<peers.length;i++)for(let j=i+1;j<peers.length;j++){
      const b=peers[i],c=peers[j],triad=[a,b,c];
      if(!novel(triad))continue;
-     const quality=priority(a)+priority(b)+priority(c)+
+     const quality=rank(a)+rank(b)+rank(c)+
        matchValue(a,b)+matchValue(a,c)+matchValue(b,c)+
        (rrHash(genre+'|'+counter)%1000)/1000;
      if(quality>best){winner=triad;best=quality}
@@ -559,26 +555,29 @@ function rrGenreChoice(r,m,used,kind='near'){
   // Select across different genres and different provisional rank bands.
   // Unlike the old bridge rule, recently used works cannot dominate every
   // fifth session; the last 12 appearances are a hard cooldown.
-  const focus=chooseTop(pool,Math.min(30,pool.length),2);
+  // Prune to a broad but bounded high-utility pool so a 440-work
+  // catalogue stays responsive on a mobile browser.
+  const candidatesBase=chooseTop(pool,Math.min(96,pool.length),2);
+  const focus=candidatesBase.slice(0,Math.min(18,candidatesBase.length));
   for(const a of focus){
-   const candidates=pool.filter(b=>b!==a).sort((b,c)=>{
-    const val=id=>priority(id)+matchValue(a,id)*1.2-
+   const candidates=candidatesBase.filter(b=>b!==a).sort((b,c)=>{
+    const val=id=>rank(id)+matchValue(a,id)*1.2-
       affinity(a,id)*16+Math.min(.65,Math.abs(position.get(a)-position.get(id))/n)*12;
     return val(c)-val(b);
-   }).slice(0,24);
+   }).slice(0,16);
    for(const b of candidates){
     if(affinity(a,b)>0&&profile(a).size&&profile(b).size)continue;
-    const next=pool.filter(c=>c!==a&&c!==b).sort((c,d)=>{
-     const val=id=>priority(id)*.75+matchValue(id,a)+matchValue(id,b)-
+    const next=candidatesBase.filter(c=>c!==a&&c!==b).sort((c,d)=>{
+     const val=id=>rank(id)*.75+matchValue(id,a)+matchValue(id,b)-
        (affinity(id,a)+affinity(id,b))*12;
      return val(d)-val(c);
-    }).slice(0,9);
+    }).slice(0,7);
     for(const c of next){
      const triad=[a,b,c];if(!novel(triad))continue;
      const diversity=affinity(a,c)+affinity(b,c)+affinity(a,b);
      const range=Math.max(...triad.map(id=>position.get(id)))-
        Math.min(...triad.map(id=>position.get(id)));
-     const quality=priority(a)+priority(b)+priority(c)+
+     const quality=rank(a)+rank(b)+rank(c)+
        matchValue(a,b)+matchValue(a,c)+matchValue(b,c)+
        Math.min(50,range/n*35)-diversity*15;
      if(quality>best){winner=triad;best=quality}
