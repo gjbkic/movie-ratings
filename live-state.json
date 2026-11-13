@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794597370183,
-  "sourceUpdatedIso": "2026-11-13T19:16:10.183Z",
+  "sourceUpdatedAt": 1794597432956,
+  "sourceUpdatedIso": "2026-11-13T19:17:12.956Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -45974,9 +45974,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 423,
           "path": "/2hFvxCCWrTmCYwfy7yum0GKRi3Y.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 423,
+          "checkedAt": "2026-11-13T19:17:08.658Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thepianist|2002",
+          "matchedTitle84": "The Pianist",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-82-8SeG": {
