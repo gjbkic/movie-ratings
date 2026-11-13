@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794596051684,
-  "sourceUpdatedIso": "2026-11-13T18:54:11.684Z",
+  "sourceUpdatedAt": 1794596088400,
+  "sourceUpdatedIso": "2026-11-13T18:54:48.400Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -58249,9 +58249,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 687163,
           "path": "/iOb2fjXLbpJgyQXe46n1WtGCnaa.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 687163,
+          "checkedAt": "2026-11-13T18:54:44.091Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "projecthailmary|2026",
+          "matchedTitle84": "Project Hail Mary",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-427-bSVc": {
