@@ -683,7 +683,7 @@ function rrRender(){
      rrLogTab==='progress'?rrProgressDetail(progress):
      '<div class="rr-drawer-inner rr-settings"><h3>次に表示する組み合わせ</h3>'+
       '<div class="rr-mode">'+
-       '<button data-rr-mode="local" class="'+(r.mode==='local'?'active':'')+'">未比較・近い3本</button>'+
+       '<button data-rr-mode="local" class="'+(r.mode==='local'?'active':'')+'">比較不足・不確実性を優先</button>'+
        '<button data-rr-mode="wide" class="'+(r.mode==='wide'?'active':'')+'">広く点検</button>'+
        '<button data-rr-mode="conflict" class="'+(r.mode==='conflict'?'active':'')+'">矛盾を確認</button></div>'+
       '<p>旧ランキング・点数・星・レビューは一切変更せず、新ランキングの判断だけ別に保存します。</p>'+
