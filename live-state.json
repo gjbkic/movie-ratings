@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794597227217,
-  "sourceUpdatedIso": "2026-11-13T19:13:47.217Z",
+  "sourceUpdatedAt": 1794597240240,
+  "sourceUpdatedIso": "2026-11-13T19:14:00.240Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -44069,9 +44069,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 597,
           "path": "/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 597,
+          "checkedAt": "2026-11-13T19:13:52.868Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "titanic|1997",
+          "matchedTitle84": "Titanic",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-30-AO8q": {
