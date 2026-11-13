@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794597624745,
-  "sourceUpdatedIso": "2026-11-13T19:20:24.745Z",
+  "sourceUpdatedAt": 1794597648357,
+  "sourceUpdatedIso": "2026-11-13T19:20:48.357Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -47874,9 +47874,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 330459,
           "path": "/i0yw1mFbB7sNGHCs7EXZPzFkdA1.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 330459,
+          "checkedAt": "2026-11-13T19:20:40.898Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "rogueoneastarwarsstory|2016",
+          "matchedTitle84": "Rogue One: A Star Wars Story",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-133-2a1G": {
