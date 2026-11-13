@@ -294,6 +294,27 @@ function rrDeltaHtml(r,detail=false){
  (detail?'<small>新規作品の追加で番号がずれただけの変化は除き、以前から比較済みの作品同士の入れ替わりを計測します。共通作品が少ない段階では「変動なし」でも安定を意味しません。</small>':'')+
  '</div>';
 }
+function rrDeltaTrendHtml(r){
+ const rows=r.events.filter(e=>e.rankDelta?.version===1&&
+  Array.isArray(e.groups)&&e.groups.length&&e.rankDelta.shared>=10).slice(-30);
+ if(rows.length<2)return '<p class="rr-muted">比較済みの共通作品が10本以上ある回から、変動率の推移グラフを表示します。</p>';
+ const rates=rows.map(e=>100*e.rankDelta.inversions/
+    Math.max(1,e.rankDelta.shared*(e.rankDelta.shared-1)/2));
+ const max=Math.max(.3,...rates),mid=Math.floor(rates.length/2);
+ const avg=v=>v.reduce((s,x)=>s+x,0)/Math.max(1,v.length);
+ const earlier=avg(rates.slice(0,mid)),later=avg(rates.slice(mid));
+ const trend=rates.length<10?'集計中':later<earlier*.75?'変動が減少傾向':
+  later>earlier*1.25?'変動が増加傾向':'変動はおおむね横ばい';
+ const bars=rates.map((v,i)=>'<div style="height:'+
+   Math.max(4,Math.round((v/max)*100))+'%" title="#'+
+   (r.events.indexOf(rows[i])+1)+' · 逆転率 '+v.toFixed(2)+'%"></div>').join('');
+ return '<div class="rr-delta-trend"><strong>各回の順位逆転率（直近'+rates.length+'回）</strong>'+
+  '<div class="rr-delta-bars" aria-label="各比較の順位逆転率の棒グラフ">'+bars+'</div>'+
+  '<div class="rr-delta-axis"><span>古い回</span><span>新しい回</span></div>'+
+  '<small>'+trend+' · 前半平均 '+earlier.toFixed(2)+'% → 後半平均 '+
+    later.toFixed(2)+'%</small>'+
+  '<small>共通作品の組み合わせのうち、順序が逆転した割合。比較範囲が十分に広がるまでは収束の証拠になりません。</small></div>';
+}
 let rrHistoryReplayToken=0;
 async function rrBackfillHistory(){
  const r=rrState(),events=r.events,total=events.length;
@@ -328,7 +349,7 @@ function rrProgressHtml(p){
 function rrProgressDetail(p,r){
  const n=p.n||1;
  return '<div class="rr-drawer-inner rr-progress-details">'+
-  '<h3>現在のランキングの安定度</h3>'+rrDeltaHtml(r,true)+
+  '<h3>現在のランキングの安定度</h3>'+rrDeltaHtml(r,true)+rrDeltaTrendHtml(r)+
   '<div class="rr-progress-big">'+esc(p.stage)+'</div>'+
   '<p>'+esc(p.detail)+'</p>'+rrProgressHtml(p)+
   '<div class="rr-progress-figures">'+
@@ -750,6 +771,7 @@ function rrRender(){
     '</div>'+
     (rrLogTab==='history'?
      '<div class="rr-drawer-inner"><div class="rr-muted">各回の順位変動を確認できます。過去の判断も個別に削除できます。</div>'+rrDeltaHtml(r,true)+
+ rrDeltaTrendHtml(r)+
  '<button id="rrBackfill" class="rr-backfill">過去の比較も集計</button><div id="rrBackfillStatus" class="rr-muted"></div>'+rrHistoryHtml(r)+'</div>':
      rrLogTab==='ranks'?
      '<div class="rr-drawer-inner"><h3>新ランキング（全'+m.ids.length+'作品）</h3>'+rrPreviewHtml(r,m)+'</div>':
@@ -958,6 +980,13 @@ body.rr-immersive-on #page-rerank{position:fixed!important;inset:0!important;dis
 .rr-progress-figures>div{padding:12px;background:#15263b;border:1px solid #2d415b;border-radius:10px}
 .rr-progress-figures strong{display:block;font-size:18px}.rr-progress-figures small{display:block;font-size:10px;color:#aebbd0;line-height:1.45;margin-top:5px}
 .rr-progress-drift{display:flex;flex-direction:column;gap:7px;margin:11px 0;color:#adc2da;font-size:12px;line-height:1.5}
+
+.rr-delta-trend{border:1px solid #344b67;border-radius:9px;padding:11px;margin:12px 0;display:flex;flex-direction:column;gap:6px}
+.rr-delta-trend strong{font-size:12px;color:#e5eeff}
+.rr-delta-bars{height:76px;display:flex;align-items:end;gap:3px;border-bottom:1px solid #496180}
+.rr-delta-bars>div{flex:1;min-width:2px;background:#83ace6;border-radius:2px 2px 0 0}
+.rr-delta-axis{display:flex;justify-content:space-between;color:#90a9c7;font-size:10px}
+.rr-delta-trend small{color:#abc1db;font-size:11px;line-height:1.5}
 .rr-delta-summary{border:1px solid #3c587b;background:#112235;border-radius:9px;padding:8px 10px;display:flex;flex-direction:column;gap:4px;font-size:11px;line-height:1.4}
 .rr-delta-summary strong{font-size:12px;color:#dce9fc}.rr-delta-summary span{color:#b4cae6}.rr-delta-summary small{color:#91a7bf;font-size:10px}
 .rr-delta-line{display:block;margin-top:5px;color:#95b9ed;font-size:10px;line-height:1.5}
