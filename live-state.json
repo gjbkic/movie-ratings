@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794597032181,
-  "sourceUpdatedIso": "2026-11-13T19:10:32.181Z",
+  "sourceUpdatedAt": 1794597087343,
+  "sourceUpdatedIso": "2026-11-13T19:11:27.343Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -52407,9 +52407,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 782,
           "path": "/eSKr5Fl1MEC7zpAXaLWBWSBjgJq.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 782,
+          "checkedAt": "2026-11-13T19:11:23.049Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "gattaca|1997",
+          "matchedTitle84": "Gattaca",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-263-6bJM": {
