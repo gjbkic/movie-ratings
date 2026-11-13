@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794597486500,
-  "sourceUpdatedIso": "2026-11-13T19:18:06.500Z",
+  "sourceUpdatedAt": 1794597522678,
+  "sourceUpdatedIso": "2026-11-13T19:18:42.678Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -43184,9 +43184,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 680,
           "path": "/vQWk5YBFWF4bZaofAbv0tShwBvQ.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 680,
+          "checkedAt": "2026-11-13T19:18:38.398Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "pulpfiction|1994",
+          "matchedTitle84": "Pulp Fiction",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-7-h4cS": {
@@ -65116,9 +65122,15 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 13398,
           "path": "/sPC66btzQlzuRdPKiSDYZ5Hvxgc.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 13398,
+          "checkedAt": "2026-11-13T19:18:38.398Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "tokyogodfathers|2003",
+          "matchedTitle84": "Tokyo Godfathers",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "custom-1789408864046-u4p4": {
