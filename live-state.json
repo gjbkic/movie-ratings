@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794597522678,
-  "sourceUpdatedIso": "2026-11-13T19:18:42.678Z",
+  "sourceUpdatedAt": 1794597555623,
+  "sourceUpdatedIso": "2026-11-13T19:19:15.623Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -75178,10 +75178,15 @@
           "fetchedAt": "2026-10-24T17:21:50.799Z"
         },
         "poster84": {
-          "path": "/cS5gtmCJvnimP0Z4LeqkeISt4ls.jpg",
+          "path": "/6ojHgqtIR41O2qLKa7LFUVj0cZa.jpg",
           "tmdbId": 1213,
-          "checkedAt": "2026-10-24T17:21:55.058Z",
-          "provider": "tmdb"
+          "checkedAt": "2026-11-13T19:19:11.317Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thetalentedmrripley|1999",
+          "matchedTitle84": "The Talented Mr. Ripley",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         },
         "noteEditedAt": "2026-11-12T08:14:24.379Z"
       },
