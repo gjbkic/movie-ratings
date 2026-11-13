@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794598515970,
-  "sourceUpdatedIso": "2026-11-13T19:35:15.970Z",
+  "sourceUpdatedAt": 1794599036752,
+  "sourceUpdatedIso": "2026-11-13T19:43:56.752Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -58350,7 +58350,7 @@
         "addedDate": "2025-09-01",
         "addedDateSource": "letterboxd-export-2026-09-27",
         "note": "難しい。後半あまり理解できなかった。狂った軍曹をしとめに行く話だがラストにかけては民族的というか怪しげ雰囲気が漂っていて、その雰囲気しか掴めなかった。",
-        "noteSource": "letterboxd-export",
+        "noteSource": "manual",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
         "watchedAddedDate": "2025-09-01",
@@ -58383,7 +58383,8 @@
           "matchedTitle84": "Apocalypse Now",
           "validated84": true,
           "mediaKind84": "movie"
-        }
+        },
+        "noteEditedAt": "2026-11-13T19:43:56.715Z"
       },
       "lb-424-2cBQ": {
         "addedDate": "2025-09-01",
