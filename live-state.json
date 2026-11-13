@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794596613222,
-  "sourceUpdatedIso": "2026-11-13T19:03:33.222Z",
+  "sourceUpdatedAt": 1794596628828,
+  "sourceUpdatedIso": "2026-11-13T19:03:48.828Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -56774,9 +56774,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 7500,
           "path": "/mX9E4fEuG17L2e7bZmhBc0XdRbw.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 7500,
+          "checkedAt": "2026-11-13T19:03:41.376Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "sonatine|1993",
+          "matchedTitle84": "Sonatine",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         },
         "noteEditedAt": "2026-11-09T17:41:22.179Z"
       },
@@ -67264,9 +67270,15 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 473033,
           "path": "/6XN1vxHc7kUSqNWtaQKN45J5x2v.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 473033,
+          "checkedAt": "2026-11-13T19:03:41.376Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "uncutgems|2019",
+          "matchedTitle84": "Uncut Gems",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "custom-1790665768168-uxk0": {
