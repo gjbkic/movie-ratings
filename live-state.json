@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794596033132,
-  "sourceUpdatedIso": "2026-11-13T18:53:53.132Z",
+  "sourceUpdatedAt": 1794596051684,
+  "sourceUpdatedIso": "2026-11-13T18:54:11.684Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -59880,9 +59880,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 22843,
           "path": "/7VLYN2CfJpB6PrcuzDKKqdGSUi6.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 22843,
+          "checkedAt": "2026-11-13T18:54:07.388Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "evangelion20youcannotadvance|2009",
+          "matchedTitle84": "Evangelion: 2.0 You Can (Not) Advance",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-473-1U2o": {
