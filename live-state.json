@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794596770717,
-  "sourceUpdatedIso": "2026-11-13T19:06:10.717Z",
+  "sourceUpdatedAt": 1794596811841,
+  "sourceUpdatedIso": "2026-11-13T19:06:51.841Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -59632,9 +59632,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 158483,
           "path": "/v3dXeBTOuZMZKC4B3MXa553E2Xb.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 158483,
+          "checkedAt": "2026-11-13T19:06:45.704Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "meiandthekittenbus|2002",
+          "matchedTitle84": "Mei and the Kittenbus",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-464-mkbG": {
