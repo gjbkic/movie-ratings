@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794596720359,
-  "sourceUpdatedIso": "2026-11-13T19:05:20.359Z",
+  "sourceUpdatedAt": 1794596738649,
+  "sourceUpdatedIso": "2026-11-13T19:05:38.649Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -45990,9 +45990,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 286217,
           "path": "/5BHuvQ6p9kfc091Z8RiFNhCwL4b.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 286217,
+          "checkedAt": "2026-11-13T19:05:34.362Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "themartian|2015",
+          "matchedTitle84": "The Martian",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-83-2b8S": {
@@ -48782,9 +48788,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 37165,
           "path": "/vuza0WqY239yBXOadKlGwJsZJFE.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 37165,
+          "checkedAt": "2026-11-13T19:05:34.362Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thetrumanshow|1998",
+          "matchedTitle84": "The Truman Show",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-160-2b8e": {
