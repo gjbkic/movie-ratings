@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794597087343,
-  "sourceUpdatedIso": "2026-11-13T19:11:27.343Z",
+  "sourceUpdatedAt": 1794597227217,
+  "sourceUpdatedIso": "2026-11-13T19:13:47.217Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -53289,9 +53289,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 70,
           "path": "/jcfEqKdWF1zeyvECPqp3mkWLct2.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 70,
+          "checkedAt": "2026-11-13T19:13:42.935Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "milliondollarbaby|2004",
+          "matchedTitle84": "Million Dollar Baby",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-287-2amk": {
