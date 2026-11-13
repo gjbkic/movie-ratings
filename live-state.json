@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794596269400,
-  "sourceUpdatedIso": "2026-11-13T18:57:49.400Z",
+  "sourceUpdatedAt": 1794596290474,
+  "sourceUpdatedIso": "2026-11-13T18:58:10.474Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -45140,9 +45140,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 242582,
           "path": "/j9HrX8f7GbZQm1BrBiR40uFQZSb.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 242582,
+          "checkedAt": "2026-11-13T18:58:05.462Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "nightcrawler|2014",
+          "matchedTitle84": "Nightcrawler",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         },
         "noteEditedAt": "2026-10-22T04:50:59.927Z"
       },
