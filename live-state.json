@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794596965420,
-  "sourceUpdatedIso": "2026-11-13T19:09:25.420Z",
+  "sourceUpdatedAt": 1794596985958,
+  "sourceUpdatedIso": "2026-11-13T19:09:45.958Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -45123,9 +45123,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 1124,
           "path": "/Ag2B2KHKQPukjH7WutmgnnSNurZ.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 1124,
+          "checkedAt": "2026-11-13T19:09:25.494Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "theprestige|2006",
+          "matchedTitle84": "The Prestige",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-59-780m": {
@@ -46227,9 +46233,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 12477,
           "path": "/k9tv1rXZbOhH7eiCk378x61kNQ1.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 12477,
+          "checkedAt": "2026-11-13T19:09:41.616Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "graveofthefireflies|1988",
+          "matchedTitle84": "Grave of the Fireflies",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-89-5RFA": {
