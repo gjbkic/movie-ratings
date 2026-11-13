@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794599519852,
-  "sourceUpdatedIso": "2026-11-13T19:51:59.852Z",
+  "sourceUpdatedAt": 1794599560459,
+  "sourceUpdatedIso": "2026-11-13T19:52:40.459Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -57188,9 +57188,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 693134,
           "path": "/6izwz7rsy95ARzTR3poZ8H6c5pp.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 693134,
+          "checkedAt": "2026-11-13T19:52:36.174Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "duneparttwo|2024",
+          "matchedTitle84": "Dune: Part Two",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-391-24EC": {
