@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794596123312,
-  "sourceUpdatedIso": "2026-11-13T18:55:23.312Z",
+  "sourceUpdatedAt": 1794596136750,
+  "sourceUpdatedIso": "2026-11-13T18:55:36.750Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -57885,9 +57885,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 76203,
           "path": "/xdANQijuNrJaw1HA61rDccME4Tm.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 76203,
+          "checkedAt": "2026-11-13T18:55:31.300Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "12yearsaslave|2013",
+          "matchedTitle84": "12 Years a Slave",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         },
         "noteEditedAt": "2026-10-13T13:08:55.176Z"
       },
