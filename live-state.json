@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794597555623,
-  "sourceUpdatedIso": "2026-11-13T19:19:15.623Z",
+  "sourceUpdatedAt": 1794597608884,
+  "sourceUpdatedIso": "2026-11-13T19:20:08.884Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -44373,9 +44373,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 11,
           "path": "/fai0rspsNeJCS69wHNjOdWxcI7P.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 11,
+          "checkedAt": "2026-11-13T19:20:02.822Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "starwars|1977",
+          "matchedTitle84": "Star Wars",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-38-4E5i": {
@@ -52472,9 +52478,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 206487,
           "path": "/38Xr1JnV1ZcLQ55zmdSp6n475cZ.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 206487,
+          "checkedAt": "2026-11-13T19:20:02.821Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "predestination|2014",
+          "matchedTitle84": "Predestination",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-264-FPS": {
@@ -59967,9 +59979,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 15137,
           "path": "/pETU4GurpeEjBOM8oytMH0yNBHx.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 15137,
+          "checkedAt": "2026-11-13T19:20:02.822Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "evangelion10youarenotalone|2007",
+          "matchedTitle84": "Evangelion: 1.0 You Are (Not) Alone",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-470-2BwG": {
