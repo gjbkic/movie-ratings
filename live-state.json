@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794596136750,
-  "sourceUpdatedIso": "2026-11-13T18:55:36.750Z",
+  "sourceUpdatedAt": 1794596153948,
+  "sourceUpdatedIso": "2026-11-13T18:55:53.948Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -62483,9 +62483,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 2502,
           "path": "/jupG9sFT64YwM8PSkwkUD2wHcYD.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 2502,
+          "checkedAt": "2026-11-13T18:55:45.970Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thebournesupremacy|2004",
+          "matchedTitle84": "The Bourne Supremacy",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         },
         "noteEditedAt": "2026-10-22T04:50:24.237Z"
       },
@@ -62772,9 +62778,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 600354,
           "path": "/pr3bEQ517uMb5loLvjFQi8uLAsp.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 600354,
+          "checkedAt": "2026-11-13T18:55:54.021Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thefather|2020",
+          "matchedTitle84": "The Father",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-553-2416": {
