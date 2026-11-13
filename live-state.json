@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794599091318,
-  "sourceUpdatedIso": "2026-11-13T19:44:51.318Z",
+  "sourceUpdatedAt": 1794599160736,
+  "sourceUpdatedIso": "2026-11-13T19:46:00.736Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -49722,9 +49722,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 395834,
           "path": "/pySivdR845Hom4u4T2WNkJxe6Ad.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 395834,
+          "checkedAt": "2026-11-13T19:46:00.778Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "windriver|2017",
+          "matchedTitle84": "Wind River",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-183-x1OG": {
@@ -61114,7 +61120,7 @@
         "addedDate": "2026-08-14",
         "addedDateSource": "letterboxd-export-2026-09-27",
         "note": "良かったが、何故かそこまで深くは響かなかった。カッコーの巣の上でと比べるとね。けど、アンジェリーナ・ジョリーの演技は素晴らしく、話も入ってけた。手が心のメタファーになっているのだろうなとは思った。リサの異常性？と孤独感が結構フィーチャーされ、背中を押しただけなど加害性を持ってるのは求められない自分が、悪者を演じることで、求められない言い訳を作り自らを守ってるのか？主人公も、最初は何が精神病なのかわかっておらず、無意識に自分と向き合うことを避けていたが、男と離れる決心をしたところからは自らの傷と向き合い、成長を選んだ。カッコーとの比較は心の救済的な部分が病院にあるかないかの違いのように感じる、17歳のカルテの方がリアリティというか現実に近いのだろうが、やはり皆で抑圧された空間からの脱出を夢みて心を通わせ、ラストも素晴らしいカッコーの方が好き。こっちのラストは少し爽やかで嫌いでは無いけど。",
-        "noteSource": "letterboxd-export",
+        "noteSource": "manual",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
         "watchedAddedDate": "2026-08-14",
@@ -61147,7 +61153,8 @@
           "matchedTitle84": "Girl, Interrupted",
           "validated84": true,
           "mediaKind84": "movie"
-        }
+        },
+        "noteEditedAt": "2026-11-13T19:45:56.863Z"
       },
       "lb-499-948A": {
         "addedDate": "2026-08-14",
