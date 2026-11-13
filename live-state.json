@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794596153948,
-  "sourceUpdatedIso": "2026-11-13T18:55:53.948Z",
+  "sourceUpdatedAt": 1794596175799,
+  "sourceUpdatedIso": "2026-11-13T18:56:15.799Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -43449,9 +43449,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 16869,
           "path": "/aupnPtagH9JVBuMrGEanf4iqXEQ.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 16869,
+          "checkedAt": "2026-11-13T18:56:11.502Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "inglouriousbasterds|2009",
+          "matchedTitle84": "Inglourious Basterds",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-14-29Nu": {
