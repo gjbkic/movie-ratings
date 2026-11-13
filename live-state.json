@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794596249783,
-  "sourceUpdatedIso": "2026-11-13T18:57:29.783Z",
+  "sourceUpdatedAt": 1794596269400,
+  "sourceUpdatedIso": "2026-11-13T18:57:49.400Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -43415,9 +43415,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 13,
           "path": "/saHP97rTPS5eLmrLQEcANmKrsFl.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 13,
+          "checkedAt": "2026-11-13T18:57:43.419Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "forrestgump|1994",
+          "matchedTitle84": "Forrest Gump",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-13-1JzG": {
@@ -43833,9 +43839,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 103,
           "path": "/ekstpH614fwDX8DUln1a2Opz0N8.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 103,
+          "checkedAt": "2026-11-13T18:57:43.419Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "taxidriver|1976",
+          "matchedTitle84": "Taxi Driver",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-24-2aHi": {
