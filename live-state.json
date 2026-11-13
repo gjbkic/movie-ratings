@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794596175799,
-  "sourceUpdatedIso": "2026-11-13T18:56:15.799Z",
+  "sourceUpdatedAt": 1794596192770,
+  "sourceUpdatedIso": "2026-11-13T18:56:32.770Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -74696,10 +74696,15 @@
           "fetchedAt": "2026-10-20T18:02:39.724Z"
         },
         "poster84": {
-          "path": "/q0b9TMVoKcoyrsE4bGKzPma2qMv.jpg",
+          "path": "/wnE24UPCPQsQnbBOu4zVE2qaDNm.jpg",
           "tmdbId": 4995,
-          "checkedAt": "2026-10-20T18:04:44.976Z",
-          "provider": "tmdb"
+          "checkedAt": "2026-11-13T18:56:28.060Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "boogienights|1997",
+          "matchedTitle84": "Boogie Nights",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         },
         "noteEditedAt": "2026-10-26T19:34:05.391Z"
       },
