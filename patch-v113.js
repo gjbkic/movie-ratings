@@ -70,6 +70,8 @@ function rrState(create=true){
   r.skips=Array.isArray(r.skips)?r.skips:[];
   r.baselineIds=Array.isArray(r.baselineIds)?r.baselineIds:[];
   r.mode=["local","wide","conflict"].includes(r.mode)?r.mode:"local";
+  // Migrate the existing judgement history without discarding any event.
+  if(r.genrePlanVersion!==113){r.genrePlanVersion=113;r.mode="local";}
   return r;
 }
 function rrEnsureFresh(r){
@@ -821,6 +823,7 @@ function rrCommit(kind='rank',groupsOverride=null,restoreFirst=null){
  if(kind==='rank')e.groups=groupsOverride||rrGroups();
  else e.ambiguous=true;
  if(restoreFirst)e.firstPick=restoreFirst;
+ e.genreScope=rrScopeLabel(e.displayIds);
  r.events.push(e);
  const modelAfter=rrModel(r);
  e.rankDelta=rrDelta(modelBefore,modelAfter);
@@ -872,6 +875,7 @@ function rrHistoryHtml(r){
      (e.groups||[]).map(g=>g.map(id=>displayTitle(filmById(id)||{title:id})).join(' ≈ ')).join(' ＞ ');
    const txt=e.ambiguous?v+'： '+names.join(' / '):v;
    return '<div class="rr-hrow"><b>#'+(r.events.length-j)+'</b><span>'+esc(txt)+
+     (e.genreScope?'<small class="rr-genre-log">'+esc(e.genreScope)+'</small>':'')+
      '<small class="rr-delta-line">'+esc(rrDeltaText(e.rankDelta))+'</small>'+rrTriadPositionsHtml(e,true)+ 
      '</span><button data-rr-del="'+e.id+'">削除</button></div>';
  }).join('');
@@ -1203,6 +1207,7 @@ body.rr-immersive-on #page-rerank{position:fixed!important;inset:0!important;dis
 .rr-hrow .rr-triad-pos-row{grid-template-columns:minmax(0,1fr) auto 34px}
 @media(max-width:390px){.rr-triad-pos-row{gap:5px;grid-template-columns:minmax(0,1fr) auto 30px}.rr-triad-pos-row>b{font-size:10px}}
 
+.rr-genre-log{display:block;color:#90b9d4;font-size:10px;margin-top:4px}
 .rr-genre-scope{text-align:center;color:#93badc;font-size:11px;line-height:1.4;font-weight:700}
 .rr-genre-progress{margin:12px 0 15px}
 .rr-genre-row{display:flex;justify-content:space-between;gap:7px;border-bottom:1px solid #2e4058;padding:9px 2px;align-items:center}
