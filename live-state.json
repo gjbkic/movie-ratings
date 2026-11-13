@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794597663217,
-  "sourceUpdatedIso": "2026-11-13T19:21:03.217Z",
+  "sourceUpdatedAt": 1794597686793,
+  "sourceUpdatedIso": "2026-11-13T19:21:26.793Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -47218,9 +47218,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 56292,
           "path": "/eRZTGx7GsiKqPch96k27LK005ZL.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 56292,
+          "checkedAt": "2026-11-13T19:21:22.505Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "missionimpossibleghostprotocol|2011",
+          "matchedTitle84": "Mission: Impossible - Ghost Protocol",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-115-2aWi": {
