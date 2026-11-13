@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794596690119,
-  "sourceUpdatedIso": "2026-11-13T19:04:50.119Z",
+  "sourceUpdatedAt": 1794596720359,
+  "sourceUpdatedIso": "2026-11-13T19:05:20.359Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -68202,9 +68202,15 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 414906,
           "path": "/74xTEgt7R36Fpooo50r9T25onhq.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 414906,
+          "checkedAt": "2026-11-13T19:05:14.583Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thebatman|2022",
+          "matchedTitle84": "The Batman",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "custom-1791139748091-0goj": {
