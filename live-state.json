@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794659182235,
-  "sourceUpdatedIso": "2026-11-14T12:26:22.235Z",
+  "sourceUpdatedAt": 1794659238164,
+  "sourceUpdatedIso": "2026-11-14T12:27:18.164Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -49186,9 +49186,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 165,
           "path": "/hQq8xZe5uLjFzSBt4LanNP7SQjl.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 165,
+          "checkedAt": "2026-11-14T12:27:13.840Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "backtothefuturepartii|1989",
+          "matchedTitle84": "Back to the Future Part II",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-164-2b3e": {
@@ -64195,9 +64201,15 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 582,
           "path": "/cVUDMnskSc01rdbyH0tLATTJUdP.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 582,
+          "checkedAt": "2026-11-14T12:27:13.840Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thelivesofothers|2006",
+          "matchedTitle84": "The Lives of Others",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "added-anchor-578": {
