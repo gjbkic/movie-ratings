@@ -790,7 +790,7 @@ function rrChooseTriad(r,mode=r.mode){
  // One cross-band slot in ten is dedicated to checking an otherwise
  // untested pair whose ordering came from a transitive chain. When no such
  // pair is available, leave the existing selector unchanged.
- if((mode==='local'||mode==='wide')&&counter%10===8){
+ if(mode==='local'&&counter%10===8){
   const audit=rrIndirectAuditTriad(r,m,used);
   if(audit)return audit;
  }
