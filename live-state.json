@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794657610484,
-  "sourceUpdatedIso": "2026-11-14T12:00:10.484Z",
+  "sourceUpdatedAt": 1794658157069,
+  "sourceUpdatedIso": "2026-11-14T12:09:17.069Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -23758,6 +23758,27 @@
       "letterboxdAddedDate": null,
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1794658156654-9hd7",
+      "title": "リブート",
+      "originalTitle": "リブート",
+      "englishTitle": "Reboot",
+      "year": 2026,
+      "score": null,
+      "star": 0,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "サスペンス、ミステリー",
+      "mediaType": "tvseries",
+      "genre": "",
+      "origin": "",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     }
   ],
   "state": {
@@ -29920,6 +29941,23 @@
         "added": true,
         "_seq": 1794596030193,
         "source": "letterboxd"
+      },
+      {
+        "id": "custom-1794658156654-9hd7",
+        "title": "リブート",
+        "originalTitle": "リブート",
+        "englishTitle": "Reboot",
+        "lbTitle": "Reboot",
+        "tmdbId": 304194,
+        "year": 2026,
+        "uri": "",
+        "category": "サスペンス、ミステリー",
+        "order": 999999,
+        "star": 0,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1794658156654,
+        "tmdbType": "tv"
       }
     ],
     "starOverrides": {
@@ -30749,7 +30787,8 @@
       "custom-1794245493414-8mj7": 4,
       "custom-1794499971237-kb2g": 0,
       "custom-1794499999864-2cov": 0,
-      "custom-1794596030193-rkso": 3.5
+      "custom-1794596030193-rkso": 3.5,
+      "custom-1794658156654-9hd7": 0
     },
     "titleOverrides": {
       "added-anchor-578": {
@@ -33869,7 +33908,8 @@
       "custom-1794245493414-8mj7": "movie",
       "custom-1794499971237-kb2g": "drama",
       "custom-1794499999864-2cov": "drama",
-      "custom-1794596030193-rkso": "movie"
+      "custom-1794596030193-rkso": "movie",
+      "custom-1794658156654-9hd7": "tvseries"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -76573,6 +76613,30 @@
           "validated84": true,
           "mediaKind84": "movie",
           "posterPinTrust84": null
+        }
+      },
+      "custom-1794658156654-9hd7": {
+        "contentType": "tv_series",
+        "tmdbType": "tv",
+        "poster84": {
+          "path": "/1q42BNMaiUu9OSN9W14vbIqce6n.jpg",
+          "tmdbId": 304194,
+          "provider": "tmdb",
+          "checkedAt": "2026-11-14T12:09:16.814Z"
+        },
+        "tmdbSeriesId": 304194,
+        "seasonCatalogV1": [
+          {
+            "number": 1,
+            "year": "2026"
+          }
+        ],
+        "seasonCountV1": 1,
+        "crew84": {
+          "directors": [],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-11-14T12:09:16.847Z"
         }
       }
     }
