@@ -1,7 +1,7 @@
 (()=>{
 'use strict';
 const BUILD='20261115-cycle-auto-v119';
-let rrTriad=null,rrOrder=[],rrTie12=false,rrTie23=false,rrPicks=[],rrLogOpen=false,rrLogTab='history',rrTieOpen=false,rrTiePartner=false,rrReviewPairs=null,rrHeldReviewFlow=false,rrCycleGroups=[],rrCycleTieNext=false;
+let rrTriad=null,rrOrder=[],rrTie12=false,rrTie23=false,rrPicks=[],rrLogOpen=false,rrLogTab='history',rrTieOpen=false,rrTiePartner=false,rrReviewPairs=null,rrHeldReviewFlow=false,rrCycleGroups=[],rrCycleTieNext=false,rrCycleActiveKey=null;
 
 // Uses the same image service as the film detail panel, including its cache.
 const rrPosterAPI=()=>window.__movie30PosterBridge84||null;
@@ -57,6 +57,141 @@ function rrGlobal(){
     return score!=null&&Number.isFinite(Number(score));
   }).sort((a,b)=>rrHash(a.id)-rrHash(b.id)||String(a.id).localeCompare(String(b.id)));
 }
+
+function rrCycleKey(r,edge){
+ return rrHeldKey(r,edge);
+}
+function rrCycleQueuePush(r,edge,front=false){
+ const key=rrCycleKey(r,edge);
+ if(r.cycleReviewQueue.some(item=>item.key===key))return;
+ const value={key};
+ if(front)r.cycleReviewQueue.unshift(value);
+ else r.cycleReviewQueue.push(value);
+}
+function rrCycleQueueSync(r,m){
+ if(!Array.isArray(r.cycleReviewQueue))r.cycleReviewQueue=[];
+ // Existing unresolved historical cycles are also offered, but never revive
+ // ones the user has already acknowledged.
+ let changed=false;
+ if(r.cycleReviewVersion!==119){
+  r.cycleReviewVersion=119;changed=true;
+  for(const edge of rrUnreviewedHolds(r,m))rrCycleQueuePush(r,edge);
+ }
+ const unresolved=new Map((m.replay?.held||[]).map(edge=>[rrCycleKey(r,edge),edge]));
+ const accepted=new Set(r.acknowledgedHolds||[]);
+ const entries=r.cycleReviewQueue.filter(item=>
+  item.manual?!!r.events.some(e=>e.id===item.eventId):
+  unresolved.has(item.key)&&!accepted.has(item.key));
+ if(entries.length!==r.cycleReviewQueue.length){
+  r.cycleReviewQueue=entries;changed=true;
+ }
+ if(changed)save(false);
+ const item=r.cycleReviewQueue[0];
+ if(!item){
+  if(rrCycleActiveKey!==null){rrCycleActiveKey=null;rrCycleGroups=[];rrCycleTieNext=false}
+  return null;
+ }
+ const edge=item.manual?{cycleIds:item.ids.slice(),eventIndex:
+   r.events.findIndex(e=>e.id===item.eventId)}:unresolved.get(item.key);
+ if(!edge||!Array.isArray(edge.cycleIds)||edge.cycleIds.length<3)return null;
+ if(rrCycleActiveKey!==item.key){
+  rrCycleActiveKey=item.key;rrCycleGroups=[];rrCycleTieNext=false;
+ }
+ return {item,edge,ids:edge.cycleIds.slice()};
+}
+function rrCycleNewHolds(r,before,after){
+ const previous=new Set((before.replay?.held||[]).map(edge=>rrCycleKey(r,edge)));
+ for(const edge of after.replay?.held||[])
+  if(!previous.has(rrCycleKey(r,edge)))rrCycleQueuePush(r,edge);
+}
+function rrCycleManualReview(eventId){
+ const r=rrState(),e=r.events.find(x=>x.id===eventId);
+ if(!e)return;
+ const ids=[...new Set(e.displayIds||e.ids||[])];
+ if(ids.length<3)return;
+ const key='manual:'+eventId;
+ r.cycleReviewQueue=r.cycleReviewQueue.filter(item=>item.key!==key);
+ r.cycleReviewQueue.unshift({key,manual:true,eventId,ids});
+ rrLogOpen=false;rrRender();
+}
+function rrCyclePick(id){
+ const r=rrState(),active=rrCycleQueueSync(r,rrModel(r));
+ if(!active||!active.ids.includes(id)||rrCycleGroups.flat().includes(id))return;
+ if(rrCycleTieNext&&rrCycleGroups.length)rrCycleGroups[rrCycleGroups.length-1].push(id);
+ else rrCycleGroups.push([id]);
+ rrCycleTieNext=false;
+ if(rrCycleGroups.flat().length===active.ids.length)rrCycleCommit(r,active);
+ else rrRender();
+}
+function rrCycleUndoPick(){
+ const last=rrCycleGroups[rrCycleGroups.length-1];
+ if(!last)return;
+ last.pop();if(!last.length)rrCycleGroups.pop();
+ rrCycleTieNext=false;rrRender();
+}
+function rrCycleDefer(){
+ const r=rrState(),m=rrModel(r),active=rrCycleQueueSync(r,m);
+ if(!active)return;
+ if(!active.item.manual){
+  const accepted=new Set(r.acknowledgedHolds||[]);
+  accepted.add(active.item.key);r.acknowledgedHolds=[...accepted];
+ }
+ r.cycleReviewQueue.shift();rrCycleActiveKey=null;rrCycleGroups=[];rrCycleTieNext=false;
+ save();rrRender();
+}
+function rrCycleCommit(r,active){
+ const groups=rrCycleGroups.map(g=>g.slice()),ids=groups.flat();
+ if(ids.length!==active.ids.length||new Set(ids).size!==ids.length)return;
+ const previous=rrModel(r);
+ const keys=[];
+ for(let i=0;i<ids.length;i++)for(let j=i+1;j<ids.length;j++)
+  keys.push(rrPairKey(ids[i],ids[j]));
+ const e={id:'rrcycle-'+Date.now()+'-'+Math.random().toString(36).slice(2,7),
+  at:Date.now(),kind:'cycle-review',mode:'conflict',
+  ids:ids.slice(),displayIds:active.ids.slice(),groups,
+  reviewResolves:keys,cycleReviewFromKey:active.item.key,
+  genreScope:rrScopeLabel(ids)};
+ r.events.push(e);
+ const after=rrModel(r);
+ e.rankDelta=rrDelta(previous,after);
+ e.triadPositions=rrTriadPositions(previous,after,e.displayIds);
+ rrCycleNewHolds(r,previous,after);
+ r.cycleReviewQueue=r.cycleReviewQueue.filter(item=>item.key!==active.item.key);
+ rrCycleGroups=[];rrCycleTieNext=false;rrCycleActiveKey=null;
+ save();rrLogOpen=false;rrSetTriad(rrChooseTriad(r,r.mode));rrRender();
+}
+function rrCycleReviewHtml(r,m,active){
+ const title=id=>displayTitle(filmById(id)||{title:id});
+ const all=active.ids,chosen=rrCycleGroups.flat(),remaining=all.filter(id=>!chosen.includes(id));
+ const review=all.map(title).join(' ＞ ')+' ＞ '+title(all[0]);
+ const steps=rrCycleGroups.length?rrCycleGroups.map((group,i)=>
+  '<div class="rr-cycle-choice"><b>'+(i+1)+'位</b> '+esc(group.map(title).join(' ≈ '))+
+  '</div>').join(''):'<div class="rr-muted">1位の作品から順に選んでください。</div>';
+ const choices=remaining.map(id=>{
+  const f=filmById(id),path=rrPosterMeta(f)?.path,src=rrPosterUrl(path,'w185');
+  return '<button type="button" data-rr-cycle-pick="'+encodeURIComponent(id)+'" class="rr-cycle-card">'+
+   (src?'<img src="'+esc(src)+'" alt="" loading="lazy">':'<span class="rr-cycle-no-poster"></span>')+
+   '<span>'+esc(title(id))+(f?.year?' <small>'+esc(String(f.year))+'</small>':'')+
+   '</span></button>';
+ }).join('');
+ return '<div class="rr-cycle-screen"><div class="rr-cycle-heading"><strong>循環を発見：'+all.length+
+  '作品を並べ直す</strong><p>前回の比較で、判断が一周する循環が発生しました。'+
+  '元の判断は消さず、ここで選び直した順序を最新の判断として優先します。</p>'+
+  '<small>'+esc(review)+'</small></div>'+
+  '<div class="rr-cycle-picked">'+steps+'</div>'+
+  '<div class="rr-cycle-instruction">'+
+  (rrCycleTieNext?'次に選ぶ作品を直前と同格にします':'次の順位の作品をタップ')+
+  '（'+chosen.length+' / '+all.length+'本）</div>'+
+  '<div class="rr-cycle-cards">'+choices+'</div>'+
+  '<div class="rr-cycle-actions">'+
+  '<button id="rrCycleTie"'+(rrCycleGroups.length?'':' disabled')+
+  ' class="'+(rrCycleTieNext?'active':'')+'">次は直前と同格</button>'+
+  '<button id="rrCycleUndo"'+(chosen.length?'':' disabled')+'>1つ戻す</button>'+
+  '<button id="rrCycleReset"'+(chosen.length?'':' disabled')+'>最初から</button>'+
+  '<button id="rrCycleDefer">今は保留</button></div>'+
+  '<p class="rr-muted">全作品を選ぶと順位を確定し、次の比較へ進みます。後から比較ログで再判定できます。</p></div>';
+}
+
 function rrNewSession(){
   const ids=rrGlobal().map(f=>f.id);
   return {version:2,startedAt:Date.now(),baselineIds:ids,events:[],skips:[],
