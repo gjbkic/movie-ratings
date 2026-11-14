@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794659238164,
-  "sourceUpdatedIso": "2026-11-14T12:27:18.164Z",
+  "sourceUpdatedAt": 1794659249158,
+  "sourceUpdatedIso": "2026-11-14T12:27:29.158Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -47154,9 +47154,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 607,
           "path": "/uLOmOF5IzWoyrgIF5MfUnh5pa1X.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 607,
+          "checkedAt": "2026-11-14T12:27:23.872Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "meninblack|1997",
+          "matchedTitle84": "Men in Black",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-108-29d2": {
@@ -63462,9 +63468,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 10315,
           "path": "/bOVr292mwn3jxr1e0NmUPM1rcjo.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 10315,
+          "checkedAt": "2026-11-14T12:27:23.872Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "fantasticmrfox|2009",
+          "matchedTitle84": "Fantastic Mr. Fox",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-558-1pDe": {
