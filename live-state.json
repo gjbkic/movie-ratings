@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794660763144,
-  "sourceUpdatedIso": "2026-11-14T12:52:43.144Z",
+  "sourceUpdatedAt": 1794660791507,
+  "sourceUpdatedIso": "2026-11-14T12:53:11.507Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -45654,9 +45654,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 12445,
           "path": "/c54HpQmuwXjHq2C9wmoACjxoom3.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 12445,
+          "checkedAt": "2026-11-14T12:53:07.169Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "harrypotterandthedeathlyhallowspart2|2011",
+          "matchedTitle84": "Harry Potter and the Deathly Hallows: Part 2",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-68-201Q": {
