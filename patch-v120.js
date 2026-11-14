@@ -1423,11 +1423,11 @@ function rrConflictsHtml(r,m){
   const pos=new Map(m.order.map((id,j)=>[id,j+1]));
   const trio=(event?.displayIds||event?.ids||[]).map(id=>
    displayTitle(filmById(id)||{title:id})).join(' / ');
-  return '<div class="rr-hrow rr-held-row"><span><b>判断 '+(i+1)+'</b> '+esc(a+' ＞ '+b)+
+  return '<div class="rr-hrow rr-held-row"><div class="rr-held-main"><b>判断 '+(i+1)+'</b> '+esc(a+' ＞ '+b)+
    '<small>比較#'+(edge.eventIndex+1)+' · 元の3作品：'+esc(trio)+'</small>'+
    rrCycleExplanationHtml(edge)+
    '<small>現在の暫定順位：'+esc(a)+' '+(pos.get(edge.better)||'—')+'位 / '+
-   esc(b)+' '+(pos.get(edge.worse)||'—')+'位</small></span>'+
+   esc(b)+' '+(pos.get(edge.worse)||'—')+'位</small></div>'+
    '<div class="rr-held-buttons"><button data-rr-recheck="'+encodeURIComponent(key)+'">再比較</button>'+
    '<button data-rr-accept="'+encodeURIComponent(key)+'">保留を了承</button></div></div>';
  }).join(''):'<div class="rr-muted">未確認の保留判断はありません。</div>';
