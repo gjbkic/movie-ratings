@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794663187982,
-  "sourceUpdatedIso": "2026-11-14T13:33:07.982Z",
+  "sourceUpdatedAt": 1794669649908,
+  "sourceUpdatedIso": "2026-11-14T15:20:49.908Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -43117,9 +43117,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 496243,
           "path": "/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 496243,
+          "checkedAt": "2026-11-08T22:51:18.807701+00:00",
+          "provider": "tmdb",
+          "checkedIdentity84": "parasite|2019",
+          "matchedTitle84": "Parasite",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-1-4VZ8": {
@@ -43271,7 +43277,7 @@
         "poster84": {
           "path": "/u68AjlvlutfEIcpmbYpKcdi09ut.jpg",
           "tmdbId": 545611,
-          "checkedAt": "2026-11-14T13:24:29.567Z",
+          "checkedAt": "2026-11-08T22:51:18.807701+00:00",
           "provider": "tmdb",
           "checkedIdentity84": "everythingeverywhereallatonce|2022",
           "matchedTitle84": "Everything Everywhere All at Once",
@@ -44208,7 +44214,7 @@
         "poster84": {
           "path": "/2H1TmgdfNtsKlU9jKdeNyYL5y8T.jpg",
           "tmdbId": 150540,
-          "checkedAt": "2026-11-14T12:54:40.046Z",
+          "checkedAt": "2026-11-08T22:51:18.807701+00:00",
           "provider": "tmdb",
           "checkedIdentity84": "insideout|2015",
           "matchedTitle84": "Inside Out",
@@ -44975,7 +44981,7 @@
         "poster84": {
           "path": "/nNAeTmF4CtdSgMDplXTDPOpYzsX.jpg",
           "tmdbId": 1891,
-          "checkedAt": "2026-11-14T13:26:25.280Z",
+          "checkedAt": "2026-11-08T22:51:18.807701+00:00",
           "provider": "tmdb",
           "checkedIdentity84": "theempirestrikesback|1980",
           "matchedTitle84": "The Empire Strikes Back",
@@ -45120,7 +45126,7 @@
         "poster84": {
           "path": "/5VTN0pR8gcqV3EPUHHfMGnJYN9L.jpg",
           "tmdbId": 121,
-          "checkedAt": "2026-11-14T13:25:43.895Z",
+          "checkedAt": "2026-11-08T22:51:18.807701+00:00",
           "provider": "tmdb",
           "checkedIdentity84": "thelordoftheringsthetwotowers|2002",
           "matchedTitle84": "The Lord of the Rings: The Two Towers",
@@ -45680,7 +45686,7 @@
         "poster84": {
           "path": "/c54HpQmuwXjHq2C9wmoACjxoom3.jpg",
           "tmdbId": 12445,
-          "checkedAt": "2026-11-14T12:53:07.169Z",
+          "checkedAt": "2026-11-08T22:51:18.807701+00:00",
           "provider": "tmdb",
           "checkedIdentity84": "harrypotterandthedeathlyhallowspart2|2011",
           "matchedTitle84": "Harry Potter and the Deathly Hallows: Part 2",
@@ -46359,7 +46365,7 @@
         "poster84": {
           "path": "/A0uS9rHR56FeBtpjVki16M5xxSW.jpg",
           "tmdbId": 18785,
-          "checkedAt": "2026-11-14T13:23:57.889Z",
+          "checkedAt": "2026-11-08T22:51:18.807701+00:00",
           "provider": "tmdb",
           "checkedIdentity84": "thehangover|2009",
           "matchedTitle84": "The Hangover",
@@ -47192,7 +47198,7 @@
         "poster84": {
           "path": "/uLOmOF5IzWoyrgIF5MfUnh5pa1X.jpg",
           "tmdbId": 607,
-          "checkedAt": "2026-11-14T12:27:23.872Z",
+          "checkedAt": "2026-11-08T22:51:18.807701+00:00",
           "provider": "tmdb",
           "checkedIdentity84": "meninblack|1997",
           "matchedTitle84": "Men in Black",
@@ -47867,7 +47873,7 @@
         "poster84": {
           "path": "/15rMz5MRXFp7CP4VxhjYw4y0FUn.jpg",
           "tmdbId": 2503,
-          "checkedAt": "2026-11-14T13:27:37.498Z",
+          "checkedAt": "2026-11-08T22:51:18.807701+00:00",
           "provider": "tmdb",
           "checkedIdentity84": "thebourneultimatum|2007",
           "matchedTitle84": "The Bourne Ultimatum",
@@ -49127,7 +49133,7 @@
         "poster84": {
           "path": "/vN5B5WgYscRGcQpVhHl6p9DDTP0.jpg",
           "tmdbId": 105,
-          "checkedAt": "2026-11-14T13:22:53.558Z",
+          "checkedAt": "2026-11-08T22:51:18.807701+00:00",
           "provider": "tmdb",
           "checkedIdentity84": "backtothefuture|1985",
           "matchedTitle84": "Back to the Future",
@@ -49242,7 +49248,7 @@
         "poster84": {
           "path": "/hQq8xZe5uLjFzSBt4LanNP7SQjl.jpg",
           "tmdbId": 165,
-          "checkedAt": "2026-11-14T12:27:13.840Z",
+          "checkedAt": "2026-11-08T22:51:18.807701+00:00",
           "provider": "tmdb",
           "checkedIdentity84": "backtothefuturepartii|1989",
           "matchedTitle84": "Back to the Future Part II",
@@ -49841,7 +49847,7 @@
         "poster84": {
           "path": "/hCHVDbo6XJGj3r2i4hVjKhE0GKF.jpg",
           "tmdbId": 322,
-          "checkedAt": "2026-11-14T13:25:53.911Z",
+          "checkedAt": "2026-11-08T22:51:18.807701+00:00",
           "provider": "tmdb",
           "checkedIdentity84": "mysticriver|2003",
           "matchedTitle84": "Mystic River",
@@ -49879,9 +49885,9 @@
           }
         ],
         "poster84": {
-          "path": "/7jqrauDn3HabyvKfeKTBjzKNeom.jpg",
+          "path": "/lWCgf5sD5FpMljjpkRhcC8pXcch.jpg",
           "tmdbId": 2118,
-          "checkedAt": "2026-11-14T13:31:09.163Z",
+          "checkedAt": "2026-11-08T22:51:18.807701+00:00",
           "provider": "tmdb",
           "checkedIdentity84": "laconfidential|1997",
           "matchedTitle84": "L.A. Confidential",
@@ -54512,7 +54518,7 @@
         "poster84": {
           "path": "/iiZZdoQBEYBv6id8su7ImL0oCbD.jpg",
           "tmdbId": 324857,
-          "checkedAt": "2026-11-14T12:54:29.082Z",
+          "checkedAt": "2026-11-08T22:51:18.807701+00:00",
           "provider": "tmdb",
           "checkedIdentity84": "spidermanintothespiderverse|2018",
           "matchedTitle84": "Spider-Man: Into the Spider-Verse",
@@ -56400,7 +56406,7 @@
         "poster84": {
           "path": "/4UOa079915QjiTA2u5hT2yKVgUu.jpg",
           "tmdbId": 2649,
-          "checkedAt": "2026-11-14T12:28:28.465Z",
+          "checkedAt": "2026-11-08T22:51:18.807701+00:00",
           "provider": "tmdb",
           "checkedIdentity84": "thegame|1997",
           "matchedTitle84": "The Game",
@@ -56802,7 +56808,7 @@
         "poster84": {
           "path": "/iQ5ztdjvteGeboxtmRdXEChJOHh.jpg",
           "tmdbId": 111,
-          "checkedAt": "2026-11-14T12:29:00.543Z",
+          "checkedAt": "2026-11-08T22:51:18.807701+00:00",
           "provider": "tmdb",
           "checkedIdentity84": "scarface|1983",
           "matchedTitle84": "Scarface",
@@ -57576,7 +57582,7 @@
         "poster84": {
           "path": "/zTelT1xAO4Owxk1jHJM4puoei5N.jpg",
           "tmdbId": 4291,
-          "checkedAt": "2026-11-14T13:25:53.911Z",
+          "checkedAt": "2026-11-08T22:51:18.807701+00:00",
           "provider": "tmdb",
           "checkedIdentity84": "kikujiro|1999",
           "matchedTitle84": "Kikujiro",
@@ -59930,9 +59936,7 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "path": null,
-          "tmdbId": null,
-          "checkedAt": "2026-11-14T12:26:17.977Z",
+          "tmdbId": 10840,
           "provider": "tmdb",
           "checkedIdentity84": "onyourmark|1995",
           "matchedTitle84": "",
@@ -59972,7 +59976,7 @@
         "poster84": {
           "path": "/rtGDOeG9LzoerkDGZF9dnVeLppL.jpg",
           "tmdbId": 8392,
-          "checkedAt": "2026-11-14T12:54:29.083Z",
+          "checkedAt": "2026-11-08T22:51:18.807701+00:00",
           "provider": "tmdb",
           "checkedIdentity84": "myneighbortotoro|1988",
           "matchedTitle84": "My Neighbor Totoro",
@@ -61144,7 +61148,7 @@
         "poster84": {
           "path": "/gt3iyguaCIw8DpQZI1LIN5TohM2.jpg",
           "tmdbId": 63,
-          "checkedAt": "2026-11-14T13:31:48.183Z",
+          "checkedAt": "2026-11-08T22:51:18.807701+00:00",
           "provider": "tmdb",
           "checkedIdentity84": "twelvemonkeys|1995",
           "matchedTitle84": "Twelve Monkeys",
@@ -62360,7 +62364,7 @@
         "poster84": {
           "path": "/7fn624j5lj3xTme2SgiLCeuedmO.jpg",
           "tmdbId": 244786,
-          "checkedAt": "2026-11-14T13:31:48.183Z",
+          "checkedAt": "2026-11-08T22:51:18.807701+00:00",
           "provider": "tmdb",
           "checkedIdentity84": "whiplash|2014",
           "matchedTitle84": "Whiplash",
@@ -63572,7 +63576,7 @@
         "poster84": {
           "path": "/bOVr292mwn3jxr1e0NmUPM1rcjo.jpg",
           "tmdbId": 10315,
-          "checkedAt": "2026-11-14T12:27:23.872Z",
+          "checkedAt": "2026-11-08T22:51:18.807701+00:00",
           "provider": "tmdb",
           "checkedIdentity84": "fantasticmrfox|2009",
           "matchedTitle84": "Fantastic Mr. Fox",
@@ -64317,7 +64321,7 @@
         "poster84": {
           "path": "/cVUDMnskSc01rdbyH0tLATTJUdP.jpg",
           "tmdbId": 582,
-          "checkedAt": "2026-11-14T12:27:13.840Z",
+          "checkedAt": "2026-11-08T22:51:18.807701+00:00",
           "provider": "tmdb",
           "checkedIdentity84": "thelivesofothers|2006",
           "matchedTitle84": "The Lives of Others",
@@ -68216,7 +68220,7 @@
         "poster84": {
           "path": "/k1Cv5CHJvqGWK1xJDUJz8DojFEy.jpg",
           "tmdbId": 10386,
-          "checkedAt": "2026-11-14T12:52:37.470Z",
+          "checkedAt": "2026-11-08T22:51:18.807701+00:00",
           "provider": "tmdb",
           "checkedIdentity84": "theirongiant|1999",
           "matchedTitle84": "The Iron Giant",
@@ -68273,7 +68277,7 @@
         "poster84": {
           "path": "/sNOvIp4X0fmCMfgEs2ww5IyMgFm.jpg",
           "tmdbId": 204,
-          "checkedAt": "2026-11-14T13:33:02.650Z",
+          "checkedAt": "2026-11-08T22:51:18.807701+00:00",
           "provider": "tmdb",
           "checkedIdentity84": "thewagesoffear|1953",
           "matchedTitle84": "The Wages of Fear",
