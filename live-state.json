@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794662578418,
-  "sourceUpdatedIso": "2026-11-14T13:22:58.418Z",
+  "sourceUpdatedAt": 1794662643312,
+  "sourceUpdatedIso": "2026-11-14T13:24:03.312Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -46339,9 +46339,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 18785,
           "path": "/A0uS9rHR56FeBtpjVki16M5xxSW.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 18785,
+          "checkedAt": "2026-11-14T13:23:57.889Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thehangover|2009",
+          "matchedTitle84": "The Hangover",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-86-cUqs": {
