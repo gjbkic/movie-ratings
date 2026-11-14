@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794662674880,
-  "sourceUpdatedIso": "2026-11-14T13:24:34.880Z",
+  "sourceUpdatedAt": 1794662749949,
+  "sourceUpdatedIso": "2026-11-14T13:25:49.949Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -45112,9 +45112,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 121,
           "path": "/5VTN0pR8gcqV3EPUHHfMGnJYN9L.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 121,
+          "checkedAt": "2026-11-14T13:25:43.895Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thelordoftheringsthetwotowers|2002",
+          "matchedTitle84": "The Lord of the Rings: The Two Towers",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-53-29QI": {
