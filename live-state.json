@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794654043560,
-  "sourceUpdatedIso": "2026-11-14T11:00:43.560Z",
+  "sourceUpdatedAt": 1794654093225,
+  "sourceUpdatedIso": "2026-11-14T11:01:33.225Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -62977,9 +62977,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 515001,
           "path": "/1mqL7VG4Ix8wmxwypmCA1HTHBky.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 515001,
+          "checkedAt": "2026-11-14T11:01:28.952Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "jojorabbit|2019",
+          "matchedTitle84": "Jojo Rabbit",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-550-28xK": {
