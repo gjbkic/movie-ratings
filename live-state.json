@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794658157069,
-  "sourceUpdatedIso": "2026-11-14T12:09:17.069Z",
+  "sourceUpdatedAt": 1794658169976,
+  "sourceUpdatedIso": "2026-11-14T12:09:29.976Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -23779,6 +23779,27 @@
       "letterboxdAddedDate": null,
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1794658169594-pub3",
+      "title": "LOST10",
+      "originalTitle": "LOST10",
+      "englishTitle": "LOST10",
+      "year": 2026,
+      "score": null,
+      "star": 0,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "サスペンス、ミステリー",
+      "mediaType": "tvseries",
+      "genre": "",
+      "origin": "",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     }
   ],
   "state": {
@@ -29958,6 +29979,23 @@
         "added": true,
         "_seq": 1794658156654,
         "tmdbType": "tv"
+      },
+      {
+        "id": "custom-1794658169594-pub3",
+        "title": "LOST10",
+        "originalTitle": "LOST10",
+        "englishTitle": "LOST10",
+        "lbTitle": "LOST10",
+        "tmdbId": 329490,
+        "year": 2026,
+        "uri": "",
+        "category": "サスペンス、ミステリー",
+        "order": 999999,
+        "star": 0,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1794658169594,
+        "tmdbType": "tv"
       }
     ],
     "starOverrides": {
@@ -30788,7 +30826,8 @@
       "custom-1794499971237-kb2g": 0,
       "custom-1794499999864-2cov": 0,
       "custom-1794596030193-rkso": 3.5,
-      "custom-1794658156654-9hd7": 0
+      "custom-1794658156654-9hd7": 0,
+      "custom-1794658169594-pub3": 0
     },
     "titleOverrides": {
       "added-anchor-578": {
@@ -33909,7 +33948,8 @@
       "custom-1794499971237-kb2g": "drama",
       "custom-1794499999864-2cov": "drama",
       "custom-1794596030193-rkso": "movie",
-      "custom-1794658156654-9hd7": "tvseries"
+      "custom-1794658156654-9hd7": "tvseries",
+      "custom-1794658169594-pub3": "tvseries"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -76637,6 +76677,30 @@
           "creators": [],
           "source": "tmdb",
           "fetchedAt": "2026-11-14T12:09:16.847Z"
+        }
+      },
+      "custom-1794658169594-pub3": {
+        "contentType": "tv_series",
+        "tmdbType": "tv",
+        "poster84": {
+          "path": "/xNYh0RLebPsb9noMdctjKTeqe0v.jpg",
+          "tmdbId": 329490,
+          "provider": "tmdb",
+          "checkedAt": "2026-11-14T12:09:29.731Z"
+        },
+        "tmdbSeriesId": 329490,
+        "seasonCatalogV1": [
+          {
+            "number": 1,
+            "year": "2026"
+          }
+        ],
+        "seasonCountV1": 1,
+        "crew84": {
+          "directors": [],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-11-14T12:09:29.761Z"
         }
       }
     }
