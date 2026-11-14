@@ -1041,7 +1041,8 @@ function rrHistoryHtml(r){
      (e.genreScope?'<small class="rr-genre-log">'+esc(e.genreScope)+'</small>':'')+
      (e.reviewResolves?.length?'<small class="rr-genre-log">再検証で'+e.reviewResolves.length+'組の過去判断を更新（履歴は保存）</small>':'')+
      '<small class="rr-delta-line">'+esc(rrDeltaText(e.rankDelta))+'</small>'+rrTriadPositionsHtml(e,true)+ 
-     '</span><button data-rr-del="'+e.id+'">削除</button></div>';
+     '</span><button data-rr-review="'+e.id+'">再比較</button>'+
+     '<button data-rr-del="'+e.id+'">削除</button></div>';
  }).join('');
 }
 // Approximate 80% rank ranges by deterministic normal-posterior sampling.
@@ -1203,6 +1204,12 @@ function rrRender(){
  if(showLogs){
   root.querySelectorAll('[data-rr-logtab]').forEach(btn=>btn.onclick=()=>{rrLogTab=btn.dataset.rrLogtab;rrRender()});
   root.querySelectorAll('[data-rr-del]').forEach(btn=>btn.onclick=()=>rrDeleteEvent(btn.dataset.rrDel));
+  root.querySelectorAll('[data-rr-review]').forEach(btn=>btn.onclick=()=>{
+   const old=r.events.find(e=>e.id===btn.dataset.rrReview);if(!old)return;
+   const ids=[...new Set(old.displayIds||old.ids||[])];
+   if(ids.length!==3)return;
+   rrOpenConflict(ids,[[ids[0],ids[1]],[ids[1],ids[2]],[ids[0],ids[2]]]);
+  });
   root.querySelectorAll('[data-rr-mode]').forEach(btn=>btn.onclick=()=>{
    r.mode=btn.dataset.rrMode;save(false);rrSetTriad(rrChooseTriad(r,r.mode));rrRender();
   });
