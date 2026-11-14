@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794660693600,
-  "sourceUpdatedIso": "2026-11-14T12:51:33.600Z",
+  "sourceUpdatedAt": 1794660763144,
+  "sourceUpdatedIso": "2026-11-14T12:52:43.144Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -68124,9 +68124,15 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 10386,
           "path": "/k1Cv5CHJvqGWK1xJDUJz8DojFEy.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 10386,
+          "checkedAt": "2026-11-14T12:52:37.470Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "theirongiant|1999",
+          "matchedTitle84": "The Iron Giant",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "custom-1791036345616-3tph": {
