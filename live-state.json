@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794657513776,
-  "sourceUpdatedIso": "2026-11-14T11:58:33.776Z",
+  "sourceUpdatedAt": 1794657523933,
+  "sourceUpdatedIso": "2026-11-14T11:58:43.933Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -51926,9 +51926,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 930432,
           "path": "/izcRLyMmKciwJEye80br5UZ65jJ.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 930432,
+          "checkedAt": "2026-11-14T11:58:39.622Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "theconfidencemanjpepisodeofthehero|2022",
+          "matchedTitle84": "The Confidence Man JP - Episode of the Hero -",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-246-mqyw": {
