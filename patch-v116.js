@@ -915,7 +915,7 @@ function rrPendingConflict(r,modelBefore,pending){
   {...r,events:r.events.concat([pending])},modelBefore.ids,modelBefore.order);
  const heldKey=e=>e.eventIndex+'|'+rrPairKey(e.better,e.worse);
  const existing=new Set(current.held.map(heldKey));
- const suspended=preview.held.filter(e=>!existing.has(heldKey));
+ const suspended=preview.held.filter(e=>!existing.has(heldKey(e)));
  const groups=pending.groups,pos=new Map();
  groups.forEach((group,i)=>(group||[]).forEach(id=>pos.set(id,i)));
  const ordered=[...pos.keys()],edges=[];
