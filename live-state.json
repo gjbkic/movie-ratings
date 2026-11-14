@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794669649908,
-  "sourceUpdatedIso": "2026-11-14T15:20:49.908Z",
+  "sourceUpdatedAt": 1794669665107,
+  "sourceUpdatedIso": "2026-11-14T15:21:05.107Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -44178,9 +44178,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 141,
           "path": "/j2AtZFsflxiluaNtajMTI0Avm8C.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 141,
+          "checkedAt": "2026-11-08T22:51:18.807701+00:00",
+          "provider": "tmdb",
+          "checkedIdentity84": "donniedarko|2001",
+          "matchedTitle84": "Donnie Darko",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-28-4KHC": {
