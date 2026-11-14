@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794658169976,
-  "sourceUpdatedIso": "2026-11-14T12:09:29.976Z",
+  "sourceUpdatedAt": 1794659107960,
+  "sourceUpdatedIso": "2026-11-14T12:25:07.960Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -23770,9 +23770,9 @@
       "overallRank": null,
       "sameScoreRank": null,
       "category": "サスペンス、ミステリー",
-      "mediaType": "tvseries",
+      "mediaType": "drama",
       "genre": "",
-      "origin": "",
+      "origin": "日本",
       "format": "",
       "runtime": null,
       "exact": false,
@@ -23791,9 +23791,9 @@
       "overallRank": null,
       "sameScoreRank": null,
       "category": "サスペンス、ミステリー",
-      "mediaType": "tvseries",
+      "mediaType": "drama",
       "genre": "",
-      "origin": "",
+      "origin": "日本",
       "format": "",
       "runtime": null,
       "exact": false,
@@ -33948,8 +33948,8 @@
       "custom-1794499971237-kb2g": "drama",
       "custom-1794499999864-2cov": "drama",
       "custom-1794596030193-rkso": "movie",
-      "custom-1794658156654-9hd7": "tvseries",
-      "custom-1794658169594-pub3": "tvseries"
+      "custom-1794658156654-9hd7": "drama",
+      "custom-1794658169594-pub3": "drama"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -41551,7 +41551,9 @@
       "custom-1794245493414-8mj7": "日本",
       "custom-1794596030193-rkso": "その他",
       "custom-1794499971237-kb2g": "その他",
-      "custom-1794499999864-2cov": "その他"
+      "custom-1794499999864-2cov": "その他",
+      "custom-1794658156654-9hd7": "日本",
+      "custom-1794658169594-pub3": "日本"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -44248,7 +44250,7 @@
         "poster84": {
           "path": "/apa5G43Hha7kH7wJG0gkkHT7FA9.jpg",
           "tmdbId": 70160,
-          "checkedAt": "2026-11-14T11:54:01.157Z",
+          "checkedAt": "2026-11-08T22:51:18.807701+00:00",
           "provider": "tmdb",
           "checkedIdentity84": "thehungergames|2012",
           "matchedTitle84": "The Hunger Games",
@@ -45661,9 +45663,9 @@
           }
         ],
         "poster84": {
-          "path": "/4GKye5dR4uJyYbcyTveSue1gATD.jpg",
+          "path": "/f4oZTcfGrVTXKTWg157AwikXqmP.jpg",
           "tmdbId": 508883,
-          "checkedAt": "2026-11-14T11:52:02.759Z",
+          "checkedAt": "2026-11-08T22:51:18.807701+00:00",
           "provider": "tmdb",
           "checkedIdentity84": "theboyandtheheron|2023",
           "matchedTitle84": "The Boy and the Heron",
@@ -47164,7 +47166,7 @@
         "poster84": {
           "path": "/pDsAAYf6Zn0yiAGJ6lYGs6hoZ4E.jpg",
           "tmdbId": 1593,
-          "checkedAt": "2026-11-14T12:00:06.213Z",
+          "checkedAt": "2026-11-08T22:51:18.807701+00:00",
           "provider": "tmdb",
           "checkedIdentity84": "nightatthemuseum|2006",
           "matchedTitle84": "Night at the Museum",
@@ -52014,7 +52016,7 @@
         "poster84": {
           "path": "/izcRLyMmKciwJEye80br5UZ65jJ.jpg",
           "tmdbId": 930432,
-          "checkedAt": "2026-11-14T11:58:39.622Z",
+          "checkedAt": "2026-11-08T22:51:18.807701+00:00",
           "provider": "tmdb",
           "checkedIdentity84": "theconfidencemanjpepisodeofthehero|2022",
           "matchedTitle84": "The Confidence Man JP - Episode of the Hero -",
@@ -56898,7 +56900,7 @@
         "poster84": {
           "path": "/kDUUdWrbBBVqzSmm27pHFJcTvCU.jpg",
           "tmdbId": 2517,
-          "checkedAt": "2026-11-14T11:55:15.784Z",
+          "checkedAt": "2026-11-08T22:51:18.807701+00:00",
           "provider": "tmdb",
           "checkedIdentity84": "nobodyknows|2004",
           "matchedTitle84": "Nobody Knows",
@@ -64052,7 +64054,7 @@
         "poster84": {
           "path": "/p44UXOFBCY5xbpCKEsWpi4filCD.jpg",
           "tmdbId": 33320,
-          "checkedAt": "2026-11-14T11:54:15.192Z",
+          "checkedAt": "2026-11-08T22:51:18.807701+00:00",
           "provider": "tmdb",
           "checkedIdentity84": "millenniumactress|2001",
           "matchedTitle84": "Millennium Actress",
@@ -67880,9 +67882,9 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "path": "/wP3ub3cHArdOFmhtS1ag7XZCdpM.jpg",
+          "path": "/7RIMLwD9myn20D9Z53Gu5pKr8bG.jpg",
           "tmdbId": 26130,
-          "checkedAt": "2026-11-14T11:55:15.784Z",
+          "checkedAt": "2026-11-08T22:51:18.807701+00:00",
           "provider": "tmdb",
           "checkedIdentity84": "summertimemachineblues|2005",
           "matchedTitle84": "Summer Time Machine Blues",
