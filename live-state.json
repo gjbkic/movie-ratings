@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794662749949,
-  "sourceUpdatedIso": "2026-11-14T13:25:49.949Z",
+  "sourceUpdatedAt": 1794662789621,
+  "sourceUpdatedIso": "2026-11-14T13:26:29.621Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -44973,9 +44973,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 1891,
           "path": "/nNAeTmF4CtdSgMDplXTDPOpYzsX.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 1891,
+          "checkedAt": "2026-11-14T13:26:25.280Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "theempirestrikesback|1980",
+          "matchedTitle84": "The Empire Strikes Back",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-49-27US": {
@@ -49827,9 +49833,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 322,
           "path": "/hCHVDbo6XJGj3r2i4hVjKhE0GKF.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 322,
+          "checkedAt": "2026-11-14T13:25:53.911Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "mysticriver|2003",
+          "matchedTitle84": "Mystic River",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-180-27oC": {
@@ -57550,9 +57562,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 4291,
           "path": "/zTelT1xAO4Owxk1jHJM4puoei5N.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 4291,
+          "checkedAt": "2026-11-14T13:25:53.911Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "kikujiro|1999",
+          "matchedTitle84": "Kikujiro",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-394-2b5O": {
