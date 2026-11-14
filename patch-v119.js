@@ -1215,7 +1215,11 @@ function rrCommit(kind='rank',groupsOverride=null,restoreFirst=null){
  if(restoreFirst)e.firstPick=restoreFirst;
  if(kind==='rank'&&rrReviewPairs?.length)e.reviewResolves=rrReviewPairs.slice();
  e.genreScope=rrScopeLabel(e.displayIds);
- if(kind==='rank'&&!rrConfirmPendingConflict(r,modelBefore,e)){
+ const newConflict=kind==='rank'?rrPendingConflict(r,modelBefore,e):null;
+ // A newly formed cycle is handled by the very next multi-work comparison,
+ // not by a one-off yes/no pop-up. Plain direct reversals retain confirmation.
+ if(kind==='rank'&&newConflict?.reversed?.length&&!newConflict.suspended.length&&
+    !rrConfirmPendingConflict(r,modelBefore,e)){
   // Clear the attempted two-tap choice; leave the same three titles shown,
   // retain any explicit review context and never change comparison history.
   rrPicks=[];rrTiePartner=false;rrOrder=rrTriad.slice();
@@ -1223,6 +1227,7 @@ function rrCommit(kind='rank',groupsOverride=null,restoreFirst=null){
  }
  r.events.push(e);
  const modelAfter=rrModel(r);
+ if(kind==='rank')rrCycleNewHolds(r,modelBefore,modelAfter);
  e.rankDelta=rrDelta(modelBefore,modelAfter);
  e.triadPositions=rrTriadPositions(modelBefore,modelAfter,e.displayIds);
  save();rrSetTriad(rrChooseTriad(r,r.mode));
@@ -1248,7 +1253,22 @@ function rrUndoEvent(){
  if(rrPicks.length){rrPicks=[];rrPaintSelection();return}
  const r=rrState();
  if(!r.events.length)return;
- const last=r.events.pop();save();
+ const last=r.events.pop();
+ if(last.kind==='cycle-review'){
+  // Undoing a whole-cycle correction restores its original review task.
+  const key=last.cycleReviewFromKey;
+  if(key?.startsWith('manual:')){
+   const eventId=key.slice(7),original=r.events.find(e=>e.id===eventId);
+   if(original)r.cycleReviewQueue.unshift({key,manual:true,
+    eventId,ids:[...new Set(original.displayIds||original.ids||[])]});
+  }else{
+   const remaining=rrModel(r).replay?.held.find(edge=>rrCycleKey(r,edge)===key);
+   if(remaining)rrCycleQueuePush(r,remaining,true);
+  }
+  rrCycleActiveKey=null;rrCycleGroups=[];rrCycleTieNext=false;
+  save();rrLogOpen=false;rrRender();return;
+ }
+ save();
  rrSetTriad((last.displayIds||last.ids||[]).length===3?
     (last.displayIds||last.ids):rrChooseTriad(r,r.mode));
  if(last.firstPick&&rrTriad.includes(last.firstPick))rrPicks=[last.firstPick];
@@ -1342,12 +1362,9 @@ function rrRecheckHeld(key){
  const r=rrState(),m=rrModel(r);
  const edge=(m.replay?.held||[]).find(e=>rrHeldKey(r,e)===key);
  if(!edge)return;
- const old=r.events[edge.eventIndex];
- const original=[...new Set(old?.displayIds||old?.ids||[])];
- const ids=original.length===3&&original.includes(edge.better)&&original.includes(edge.worse)?
-  original:[edge.better,edge.worse,m.order.find(id=>id!==edge.better&&id!==edge.worse)];
- if(ids.length!==3||ids.some(id=>!id))return;
- rrHeldReviewFlow=true;rrOpenConflict(ids,[[edge.better,edge.worse]]);
+ r.cycleReviewQueue=r.cycleReviewQueue.filter(q=>q.key!==key);
+ rrCycleQueuePush(r,edge,true);
+ rrLogOpen=false;rrCycleActiveKey=null;rrCycleGroups=[];rrRender();
 }
 
 function rrConflictsHtml(r,m){
@@ -1401,9 +1418,10 @@ function rrOpenConflict(ids,pairsToResolve=null){
 function rrRender(){
  const root=document.getElementById('rerankRoot');if(!root)return;
  const r=rrState(),m=rrModel(r);
+ const activeCycle=rrCycleQueueSync(r,m);
  if(!rrTriad||rrTriad.some(id=>!m.ids.includes(id)))rrSetTriad(rrChooseTriad(r,r.mode));
  const pending=rrUnreviewedHolds(r,m);
- if(pending.length&&r.heldReviewNoticeVersion!==118){
+ if(pending.length&&!activeCycle&&r.heldReviewNoticeVersion!==118){
   r.heldReviewNoticeVersion=118;rrLogOpen=true;rrLogTab='conflicts';save(false);
  }
  const nSeen=[...m.stats.counts.values()].filter(n=>n>0).length,showLogs=rrLogOpen;
@@ -1452,6 +1470,7 @@ function rrRender(){
       '<p>最新の直接判断を優先して順位を作ります。成立しない古い判断は保留し、履歴は残します。旧ランキング・点数・星・レビューは変更しません。</p>'+
       '<button id="rrNew" class="rr-danger">新ランキングだけ最初からやり直す</button></div>')+
    '</div>':
+   activeCycle?rrCycleReviewHtml(r,m,activeCycle):
    '<div class="rr-fast-stage">'+
     (pending.length?'<button id="rrOpenPending" class="rr-pending-banner">要確認の過去判断 '+pending.length+'組 · 1組ずつ確認</button>':'')+
     '<div class="rr-fast-progress"><span>比較 <strong>'+r.events.length+'</strong> 回</span>'+
@@ -1492,7 +1511,7 @@ function rrRender(){
   root.querySelectorAll('[data-rr-review]').forEach(btn=>btn.onclick=()=>{
    const old=r.events.find(e=>e.id===btn.dataset.rrReview);if(!old)return;
    const ids=[...new Set(old.displayIds||old.ids||[])];
-   if(ids.length!==3)return;
+   if(ids.length!==3){rrCycleManualReview(old.id);return;}
    rrOpenConflict(ids,[[ids[0],ids[1]],[ids[1],ids[2]],[ids[0],ids[2]]]);
   });
   root.querySelectorAll('[data-rr-mode]').forEach(btn=>btn.onclick=()=>{
@@ -1513,6 +1532,17 @@ function rrRender(){
   });
   bind('#rrBackfill',rrBackfillHistory);
    bind('#rrNew',rrNew);
+ }else if(activeCycle){
+  root.querySelectorAll('[data-rr-cycle-pick]').forEach(btn=>{
+   btn.onclick=()=>rrCyclePick(decodeURIComponent(btn.dataset.rrCyclePick));
+  });
+  bind('#rrCycleTie',()=>{
+   if(rrCycleGroups.length){rrCycleTieNext=!rrCycleTieNext;rrRender();}
+  });
+  bind('#rrCycleUndo',rrCycleUndoPick);
+  bind('#rrCycleReset',()=>{rrCycleGroups=[];rrCycleTieNext=false;rrRender()});
+  bind('#rrCycleDefer',rrCycleDefer);
+  for(const id of activeCycle.ids)rrPosterQueue(filmById(id));
  }else{
   root.querySelectorAll('[data-rr-pick]').forEach(btn=>{
    const id=decodeURIComponent(btn.dataset.rrPick);
