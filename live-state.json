@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794660791507,
-  "sourceUpdatedIso": "2026-11-14T12:53:11.507Z",
+  "sourceUpdatedAt": 1794660874375,
+  "sourceUpdatedIso": "2026-11-14T12:54:34.375Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -54456,9 +54456,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 324857,
           "path": "/iiZZdoQBEYBv6id8su7ImL0oCbD.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 324857,
+          "checkedAt": "2026-11-14T12:54:29.082Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "spidermanintothespiderverse|2018",
+          "matchedTitle84": "Spider-Man: Into the Spider-Verse",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-311-z1jW": {
@@ -59904,9 +59910,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 8392,
           "path": "/rtGDOeG9LzoerkDGZF9dnVeLppL.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 8392,
+          "checkedAt": "2026-11-14T12:54:29.083Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "myneighbortotoro|1988",
+          "matchedTitle84": "My Neighbor Totoro",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-461-1JAY": {
