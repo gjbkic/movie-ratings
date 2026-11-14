@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794599993132,
-  "sourceUpdatedIso": "2026-11-13T19:59:53.132Z",
+  "sourceUpdatedAt": 1794654043560,
+  "sourceUpdatedIso": "2026-11-14T11:00:43.560Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -44847,9 +44847,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 1895,
           "path": "/xfSAoBEm9MNBjmlNcDYLvLSMlnq.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 1895,
+          "checkedAt": "2026-11-14T11:00:38.025Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "starwarsepisodeiiirevengeofthesith|2005",
+          "matchedTitle84": "Star Wars: Episode III - Revenge of the Sith",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-50-28dA": {
@@ -63590,9 +63596,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 122,
           "path": "/rCzpDGLbOoPwLjy3OAm5NUPOTrC.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 122,
+          "checkedAt": "2026-11-14T11:00:38.025Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thelordoftheringsthereturnoftheking|2003",
+          "matchedTitle84": "The Lord of the Rings: The Return of the King",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-567-Uhxi": {
