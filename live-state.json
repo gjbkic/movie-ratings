@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794663112518,
-  "sourceUpdatedIso": "2026-11-14T13:31:52.518Z",
+  "sourceUpdatedAt": 1794663187982,
+  "sourceUpdatedIso": "2026-11-14T13:33:07.982Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -68271,9 +68271,15 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 204,
           "path": "/sNOvIp4X0fmCMfgEs2ww5IyMgFm.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 204,
+          "checkedAt": "2026-11-14T13:33:02.650Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thewagesoffear|1953",
+          "matchedTitle84": "The Wages of Fear",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "custom-1791057232858-35ld": {
