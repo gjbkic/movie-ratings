@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794659136538,
-  "sourceUpdatedIso": "2026-11-14T12:25:36.538Z",
+  "sourceUpdatedAt": 1794659151554,
+  "sourceUpdatedIso": "2026-11-14T12:25:51.554Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -23815,7 +23815,10 @@
       "mediaType": "movie",
       "genre": [
         "ファンタジー",
-        "ドラマ"
+        "ドラマ",
+        "心理・内面",
+        "哲学・思想",
+        "雰囲気・美学"
       ],
       "origin": "日本",
       "format": "live",
@@ -40742,7 +40745,10 @@
       ],
       "custom-1794659135519-05f8": [
         "ファンタジー",
-        "ドラマ"
+        "ドラマ",
+        "心理・内面",
+        "哲学・思想",
+        "雰囲気・美学"
       ]
     },
     "originOverrides": {
@@ -76786,6 +76792,17 @@
           "creators": [],
           "source": "tmdb",
           "fetchedAt": "2026-11-14T12:25:36.054Z"
+        },
+        "poster84": {
+          "path": "/bs2M1hqAQl5LeAOPPRV4drwouZS.jpg",
+          "tmdbId": 17962,
+          "checkedAt": "2026-11-14T12:25:39.643Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "afterlife|1999",
+          "matchedTitle84": "After Life",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       }
     }
