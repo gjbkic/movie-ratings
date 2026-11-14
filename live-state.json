@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794663074087,
-  "sourceUpdatedIso": "2026-11-14T13:31:14.087Z",
+  "sourceUpdatedAt": 1794663112518,
+  "sourceUpdatedIso": "2026-11-14T13:31:52.518Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -61142,9 +61142,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 63,
           "path": "/gt3iyguaCIw8DpQZI1LIN5TohM2.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 63,
+          "checkedAt": "2026-11-14T13:31:48.183Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "twelvemonkeys|1995",
+          "matchedTitle84": "Twelve Monkeys",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-491-29R2": {
@@ -62352,9 +62358,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 244786,
           "path": "/7fn624j5lj3xTme2SgiLCeuedmO.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 244786,
+          "checkedAt": "2026-11-14T13:31:48.183Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "whiplash|2014",
+          "matchedTitle84": "Whiplash",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-525-2aVE": {
