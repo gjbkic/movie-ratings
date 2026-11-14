@@ -864,6 +864,7 @@ function rrUndoEvent(){
  rrSetTriad((last.displayIds||last.ids||[]).length===3?
     (last.displayIds||last.ids):rrChooseTriad(r,r.mode));
  if(last.firstPick&&rrTriad.includes(last.firstPick))rrPicks=[last.firstPick];
+ if(Array.isArray(last.reviewResolves))rrReviewPairs=last.reviewResolves.slice();
  rrRender();
 }
 function rrDeleteEvent(id){
@@ -1011,7 +1012,7 @@ function rrRender(){
     '<div class="rr-fast-progress"><span>比較 <strong>'+r.events.length+'</strong> 回</span>'+
      '<span>比較済み <strong>'+nSeen+'</strong> / '+m.ids.length+' 本</span></div>'+ 
     '<button class="rr-progress-summary" id="rrOpenProgress" aria-label="ランキングの進捗と目安の詳細を開く">'+rrProgressHtml(progress)+'</button>'+rrDeltaHtml(r)+(r.events.length?rrTriadPositionsHtml(r.events[r.events.length-1]):'')+
-    '<div class="rr-genre-scope">'+esc(rrScopeLabel(rrTriad))+'</div>'+
+    '<div class="rr-genre-scope">'+esc(rrReviewPairs?.length?'再検証中：'+rrReviewPairs.length+'組の過去判断を更新':rrScopeLabel(rrTriad))+'</div>'+
     '<div class="rr-fast-instruction" id="rrPickInstruction">一番好きな作品をタップ</div>'+
     '<div class="rr-fast-sub" id="rrPickSub">1位 → 2位の2タップで次へ</div>'+
     '<div class="rr-fast-grid">'+rrTriad.map((id,i)=>rrFilmCard(id,i,m)).join('')+'</div>'+
