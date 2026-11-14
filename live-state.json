@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794657523933,
-  "sourceUpdatedIso": "2026-11-14T11:58:43.933Z",
+  "sourceUpdatedAt": 1794657610484,
+  "sourceUpdatedIso": "2026-11-14T12:00:10.484Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -47082,9 +47082,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 1593,
           "path": "/pDsAAYf6Zn0yiAGJ6lYGs6hoZ4E.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 1593,
+          "checkedAt": "2026-11-14T12:00:06.213Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "nightatthemuseum|2006",
+          "matchedTitle84": "Night at the Museum",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-110-2aGu": {
