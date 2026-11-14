@@ -1,7 +1,7 @@
 /* Install and manage offline support without touching movie/rank data. */
 (()=>{
 'use strict';
-const WORKER='./sw.js?v=20261115-transitiveaudit15';
+const WORKER='./sw.js?v=20261115-reviewqueue16';
 const POSTER_CACHE='movie30-offline-posters-v1';
 let registration=null,activeJob=null,ui={};
 function on(el,event,fn){if(el)el.addEventListener(event,fn)}
