@@ -102,7 +102,7 @@ function rrCycleQueueSync(r,m){
 function rrCycleNewHolds(r,before,after){
  const previous=new Set((before.replay?.held||[]).map(edge=>rrCycleKey(r,edge)));
  for(const edge of after.replay?.held||[])
-  if(!previous.has(rrCycleKey(r,edge)))rrCycleQueuePush(r,edge);
+  if(!previous.has(rrCycleKey(r,edge)))rrCycleQueuePush(r,edge,true);
 }
 function rrCycleManualReview(eventId){
  const r=rrState(),e=r.events.find(x=>x.id===eventId);
