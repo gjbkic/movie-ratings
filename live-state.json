@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794657245437,
-  "sourceUpdatedIso": "2026-11-14T11:54:05.437Z",
+  "sourceUpdatedAt": 1794657259572,
+  "sourceUpdatedIso": "2026-11-14T11:54:19.572Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -63952,9 +63952,15 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 33320,
           "path": "/p44UXOFBCY5xbpCKEsWpi4filCD.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 33320,
+          "checkedAt": "2026-11-14T11:54:15.192Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "millenniumactress|2001",
+          "matchedTitle84": "Millennium Actress",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         },
         "noteEditedAt": "2026-11-11T19:11:54.645Z"
       },
