@@ -1010,7 +1010,7 @@ function rrPreviewHtml(r,m){
 }
 function rrConflictsHtml(m){
  const cycles=m.stats.cycles.slice(0,200),contradictions=m.stats.contradictions.slice(0,100);
- const detail='<div class="rr-muted">現在有効な判断にある三すくみと直接矛盾を表示します。「再比較」では対象の過去の判断を履歴に残したまま訂正し、新しい判断を有効にします。別の組み合わせで新たな矛盾が生じた場合は再度表示されます。</div>';
+ const detail='<div class="rr-muted">新ランキングは最新の直接比較を優先します。判断が循環する場合、古い制約は一時保留し、記録自体は残します。再検証すると新しい判断が優先されます。</div>';
  const c=cycles.length?cycles.map((ids,i)=>
   '<div class="rr-hrow"><span>'+esc(ids.map(x=>displayTitle(filmById(x)||{title:x})).join(' ＞ ')+
   ' ＞ '+displayTitle(filmById(ids[0])||{title:ids[0]}))+
@@ -1021,8 +1021,17 @@ function rrConflictsHtml(m){
   displayTitle(filmById(p.b)||{title:p.b}))+
   '（逆方向 '+p.winsA+' / '+p.winsB+' 回）</span><button data-rr-pair="'+i+'">再比較</button></div>').join(''):
   '<div class="rr-muted">同じ2本で反対の判断になった組はありません。</div>';
- return detail+'<h3>比較を横断した三すくみ '+m.stats.cycles.length+'組</h3>'+c+
-  '<h3>現在有効な直接比較の逆転 '+m.stats.contradictions.length+'組</h3>'+p;
+ const held=m.replay?.held||[];
+ const heldRows=held.length?held.slice(0,100).map((edge,i)=>
+  '<div class="rr-hrow"><span>'+esc(
+    displayTitle(filmById(edge.better)||{title:edge.better})+' ＞ '+
+    displayTitle(filmById(edge.worse)||{title:edge.worse}))+
+   '<small>比較#'+(edge.eventIndex+1)+'・循環のため保留</small></span>'+
+   '<button data-rr-held="'+i+'">再比較</button></div>').join(''):
+   '<div class="rr-muted">保留している古い判断はありません。</div>';
+ return detail+'<h3>循環のため保留中の古い判断 '+held.length+'組</h3>'+heldRows+
+  '<h3>比較を横断した三すくみ '+m.stats.cycles.length+'組</h3>'+c+
+  '<h3>記録上の直接判断の食い違い '+m.stats.contradictions.length+'組</h3>'+p;
 }
 function rrExit(){
  rrLogOpen=false;rrTieOpen=false;rrTiePartner=false;
@@ -1072,7 +1081,9 @@ function rrRender(){
  rrDeltaTrendHtml(r)+
  '<button id="rrBackfill" class="rr-backfill">過去の比較も集計</button><div id="rrBackfillStatus" class="rr-muted"></div>'+rrHistoryHtml(r)+'</div>':
      rrLogTab==='ranks'?
-     '<div class="rr-drawer-inner"><h3>新ランキング（全'+m.ids.length+'作品）</h3>'+rrPreviewHtml(r,m)+'</div>':
+     '<div class="rr-drawer-inner"><h3>新ランキング（全'+m.ids.length+'作品）</h3>'+
+      '<div class="rr-muted">直接比較優先で過去の判定も再計算済み · 循環で保留 '+(m.replay?.held?.length||0)+'組</div>'+
+      rrPreviewHtml(r,m)+'</div>':
      rrLogTab==='conflicts'?
      '<div class="rr-drawer-inner">'+rrConflictsHtml(m)+'</div>':
      rrLogTab==='progress'?rrProgressDetail(progress,r):
@@ -1124,6 +1135,11 @@ function rrRender(){
     const ids=m.stats.cycles[Number(btn.dataset.rrCycle)];
     if(ids)rrOpenConflict(ids,[[ids[0],ids[1]],[ids[1],ids[2]],[ids[2],ids[0]]]);
    });
+  root.querySelectorAll('[data-rr-held]').forEach(btn=>btn.onclick=()=>{
+   const edge=m.replay?.held?.[Number(btn.dataset.rrHeld)];if(!edge)return;
+   const third=m.order.find(id=>id!==edge.better&&id!==edge.worse);
+   if(third)rrOpenConflict([edge.better,edge.worse,third],[[edge.better,edge.worse]]);
+  });
   root.querySelectorAll('[data-rr-pair]').forEach(btn=>btn.onclick=()=>{
    const p=m.stats.contradictions[Number(btn.dataset.rrPair)];if(!p)return;
    const third=m.order.find(x=>x!==p.a&&x!==p.b);if(third)rrOpenConflict([p.a,p.b,third],[[p.a,p.b]]);
