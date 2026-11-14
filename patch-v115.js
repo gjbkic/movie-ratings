@@ -72,6 +72,12 @@ function rrState(create=true){
   r.mode=["local","wide","conflict"].includes(r.mode)?r.mode:"local";
   // Migrate the existing judgement history without discarding any event.
   if(r.genrePlanVersion!==113){r.genrePlanVersion=113;r.mode="local";}
+  if(r.rankingMethodVersion!==115){
+   // Old per-event movement measurements were made under the former model.
+   // Keep the judgments, but force movement reports to be recalculated.
+   r.rankingMethodVersion=115;
+   for(const e of r.events){delete e.rankDelta;delete e.triadPositions}
+  }
   return r;
 }
 function rrEnsureFresh(r){
@@ -986,20 +992,20 @@ function rrRankBands(m){
 }
 function rrPreviewHtml(r,m){
  const judged=m.seenCount>0;
- const bands=rrRankBands(m);
+ // Posterior score bands are not intervals for constrained ranks.
  if(!judged)return '<div class="rr-muted">まだ順位は未判定です。初回の比較から新ランキングを作ります。旧順位は初期値に使っていません。</div>';
  const html=m.order.map((id,i)=>{
    const f=filmById(id),c=m.stats.counts.get(id)||0,never=c===0;
-   const uncertainty=m.uncertainty.get(id)||1,band=bands.get(id);
+   // Mandatory comparisons determine rank; ties use stable baseline order.
    return (i===m.seenCount?
       '<div class="rr-rank-divider">未比較の作品 '+(m.ids.length-m.seenCount)+'本（順位未判定・下位という意味ではありません）</div>':'')+
      '<div class="rr-rank-row'+(never?' rr-rank-unseen':'')+'"><b>'+
        (never?'—':(i+1))+'</b><span>'+esc(displayTitle(f))+
        '</span><small>'+(never?'未比較・順位未判定':
-         c+' ペア判断 · 推定'+band.lo+'〜'+band.hi+'位（比較済み内・80%試算）')+
+         c+' ペア判断 · 最新の直接比較を優先')+
        '</small></div>';
  }).join('');
- return '<div class="rr-muted">比較した作品だけを暫定順位に並べています。未比較作品は順位未判定として別枠に表示し、下位と決めつけません。推定順位範囲は簡易モデルによる80%の目安で、正確な確率保証ではありません。</div>'+
+ return '<div class="rr-muted">直接比較の最新判断を優先して過去の全記録から順位を作っています。循環する古い判断は保留し、三すくみ画面で再検証できます。未比較作品は順位未判定で、下位と決めつけません。</div>'+
    '<div class="rr-rank-scroll">'+html+'</div>';
 }
 function rrConflictsHtml(m){
@@ -1075,7 +1081,7 @@ function rrRender(){
        '<button data-rr-mode="local" class="'+(r.mode==='local'?'active':'')+'">近いジャンル中心（7：3）</button>'+
        '<button data-rr-mode="wide" class="'+(r.mode==='wide'?'active':'')+'">ジャンルを横断</button>'+
        '<button data-rr-mode="conflict" class="'+(r.mode==='conflict'?'active':'')+'">矛盾を確認</button></div>'+
-      '<p>旧ランキング・点数・星・レビューは一切変更せず、新ランキングの判断だけ別に保存します。</p>'+
+      '<p>最新の直接判断を優先して順位を作ります。成立しない古い判断は保留し、履歴は残します。旧ランキング・点数・星・レビューは変更しません。</p>'+
       '<button id="rrNew" class="rr-danger">新ランキングだけ最初からやり直す</button></div>')+
    '</div>':
    '<div class="rr-fast-stage">'+
