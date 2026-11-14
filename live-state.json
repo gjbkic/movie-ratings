@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794659312781,
-  "sourceUpdatedIso": "2026-11-14T12:28:32.781Z",
+  "sourceUpdatedAt": 1794659345868,
+  "sourceUpdatedIso": "2026-11-14T12:29:05.868Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -56734,9 +56734,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 111,
           "path": "/iQ5ztdjvteGeboxtmRdXEChJOHh.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 111,
+          "checkedAt": "2026-11-14T12:29:00.543Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "scarface|1983",
+          "matchedTitle84": "Scarface",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-373-1TlE": {
