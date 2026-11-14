@@ -1221,8 +1221,8 @@ function rrConflictsHtml(r,m){
    '<small>比較#'+(edge.eventIndex+1)+' · 元の3作品：'+esc(trio)+'</small>'+
    '<small>現在の暫定順位：'+esc(a)+' '+(pos.get(edge.better)||'—')+'位 / '+
    esc(b)+' '+(pos.get(edge.worse)||'—')+'位</small></span>'+
-   '<div class="rr-held-buttons"><button data-rr-recheck="'+esc(key)+'">再比較</button>'+
-   '<button data-rr-accept="'+esc(key)+'">保留を了承</button></div></div>';
+   '<div class="rr-held-buttons"><button data-rr-recheck="'+encodeURIComponent(key)+'">再比較</button>'+
+   '<button data-rr-accept="'+encodeURIComponent(key)+'">保留を了承</button></div></div>';
  }).join(''):'<div class="rr-muted">未確認の保留判断はありません。</div>';
  return '<div class="rr-review-intro"><strong>未確認の保留判断：'+pending.length+'組</strong>'+
   '<p>過去の判断の一部が循環し、順位に同時反映できません。「再比較」で元の3作品を選び直すか、'+
@@ -1332,8 +1332,8 @@ function rrRender(){
  bind('#rrOpenPending',()=>{rrLogTab='conflicts';rrLogOpen=true;rrRender()});
  if(showLogs){
   root.querySelectorAll('[data-rr-logtab]').forEach(btn=>btn.onclick=()=>{rrLogTab=btn.dataset.rrLogtab;rrRender()});
-  root.querySelectorAll('[data-rr-accept]').forEach(btn=>btn.onclick=()=>rrAcceptHeld(btn.dataset.rrAccept));
-  root.querySelectorAll('[data-rr-recheck]').forEach(btn=>btn.onclick=()=>rrRecheckHeld(btn.dataset.rrRecheck));
+  root.querySelectorAll('[data-rr-accept]').forEach(btn=>btn.onclick=()=>rrAcceptHeld(decodeURIComponent(btn.dataset.rrAccept)));
+  root.querySelectorAll('[data-rr-recheck]').forEach(btn=>btn.onclick=()=>rrRecheckHeld(decodeURIComponent(btn.dataset.rrRecheck)));
   root.querySelectorAll('[data-rr-del]').forEach(btn=>btn.onclick=()=>rrDeleteEvent(btn.dataset.rrDel));
   root.querySelectorAll('[data-rr-review]').forEach(btn=>btn.onclick=()=>{
    const old=r.events.find(e=>e.id===btn.dataset.rrReview);if(!old)return;
@@ -1545,6 +1545,7 @@ body.rr-immersive-on #page-rerank{position:fixed!important;inset:0!important;dis
 .rr-rank-divider{padding:12px 7px;font-size:12px;font-weight:750;color:#a8beda;border-top:1px solid #3a526d;background:#142337}.rr-rank-unseen{opacity:.65}@media(min-width:700px){.rr-fast-shell{min-height:calc(100dvh - 45px)}.rr-fast-stage{padding:18px 20px}.rr-fast-grid{gap:15px}.rr-fast-card{max-width:280px;justify-self:center}.rr-fast-title{padding:12px 10px 0;min-height:64px}.rr-fast-bottom button{font-size:13px}}
 @media(max-width:365px){.rr-drawer-tabs button{font-size:9px}.rr-fast-grid{gap:4px}.rr-fast-title{font-size:10px;padding:7px 4px 0}.rr-fast-bottom button{font-size:10px}.rr-fast-brand b{font-size:15px}}
 `;
+rrStyle.textContent += "\n.rr-pending-banner{display:block;width:100%;padding:11px 10px;border-radius:9px;\n border:1px solid #bd9550;color:#fff2d7;background:#3d3022;\n font-size:12px;font-weight:800;text-align:center}\n.rr-review-intro{padding:12px;margin:6px 0 12px;background:#18273b;\n border:1px solid #526a8a;border-radius:10px}\n.rr-review-intro strong{font-size:16px}\n.rr-review-intro p{font-size:12px;line-height:1.65;margin:8px 0;color:#d6e4f5}\n.rr-review-intro small{font-size:11px;color:#b4c7db}\n.rr-held-row{display:flex;flex-direction:column;align-items:stretch;gap:9px}\n.rr-held-row span{min-width:0;overflow-wrap:anywhere}\n.rr-held-row small{display:block;margin-top:4px;color:#b7c6d9;font-size:11px}\n.rr-held-buttons{display:flex;gap:7px;justify-content:flex-end}\n.rr-held-buttons button{padding:9px 13px;border-radius:8px;min-height:36px;\n border:1px solid #56739a;background:#1d395c;color:#eff7ff;font-size:12px}\n.rr-held-buttons button:last-child{background:#304132;border-color:#718675}\n";
 document.head.appendChild(rrStyle);
 rrInstall();
 })();
