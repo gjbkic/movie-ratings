@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794726403273,
-  "sourceUpdatedIso": "2026-11-15T07:06:43.273Z",
+  "sourceUpdatedAt": 1794727289612,
+  "sourceUpdatedIso": "2026-11-15T07:21:29.612Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -76775,10 +76775,15 @@
           "fetchedAt": "2026-11-09T17:31:33.959Z"
         },
         "poster84": {
-          "path": "/fAEmGO4A08LUms2ji0uphpu5DDN.jpg",
+          "path": "/ux1pNQKM3MP2mdOENEXf41UU08b.jpg",
           "tmdbId": 47002,
-          "checkedAt": "2026-11-09T17:31:52.639Z",
-          "provider": "tmdb"
+          "checkedAt": "2026-11-15T07:21:22.392Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "loveletter|1995",
+          "matchedTitle84": "Love Letter",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "custom-1794499971237-kb2g": {
