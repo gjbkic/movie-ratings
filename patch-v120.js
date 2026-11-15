@@ -1736,12 +1736,14 @@ function rrPreviewHtml(r,m){
    return (i===m.seenCount?
       '<div class="rr-rank-divider">未比較の作品 '+(m.ids.length-m.seenCount)+'本（順位未判定・下位という意味ではありません）</div>':'')+
      '<div class="rr-rank-row'+(never?' rr-rank-unseen':'')+'"><b>'+
-       (never?'—':(i+1))+'</b><span>'+esc(displayTitle(f))+
-       '</span><small>'+(never?'未比較・順位未判定':
-         c+' ペア判断 · 推定順位（暫定）')+
-       '</small></div>';
+       (never?'—':(i+1))+'</b>'+
+       '<button type="button" class="rr-rank-title-button" data-rr-rank-detail="'+encodeURIComponent(id)+'">'+
+       esc(displayTitle(f))+'<small>'+(never?'未比較・順位未判定':
+         c+' ペア判断 · 暫定順位')+'</small></button>'+
+       '<button type="button" class="rr-rank-edit-button" data-rr-rank-edit="'+encodeURIComponent(id)+'">比較・修正</button></div>';
  }).join('');
- return '<div class="rr-muted">直接比較で勝った作品が相手より上になるように並べます。未比較の前後関係は統計推定を利用し、大幅に上昇・下降した作品は途中の作品と複数回比較して確かめます。循環の再確認と履歴は維持します。未比較作品は順位未判定です。</div>'+
+ return '<div class="rr-muted">作品名をタップで詳細。「比較・修正」で直接対戦の一覧と近隣作品への即判定ができます。</div>'+
+  '<div class="rr-muted">直接比較で勝った作品が相手より上になるように並べます。未比較の前後関係は統計推定を利用し、大幅に上昇・下降した作品は途中の作品と複数回比較して確かめます。循環の再確認と履歴は維持します。未比較作品は順位未判定です。</div>'+
    '<div class="rr-rank-scroll">'+html+'</div>';
 }
 
@@ -1888,7 +1890,7 @@ function rrRender(){
      rrLogTab==='ranks'?
      '<div class="rr-drawer-inner"><h3>新ランキング（全'+m.ids.length+'作品）</h3>'+
       '<div class="rr-muted">直接勝敗を優先・途中を再比較 · 循環で保留 '+(m.replay?.held?.length||0)+'組</div>'+
-      rrPreviewHtml(r,m)+'</div>':
+      (rrRankSelectedId?rrRankWorkbenchHtml(r,m,rrRankSelectedId):'')+rrPreviewHtml(r,m)+'</div>':
      rrLogTab==='conflicts'?
      '<div class="rr-drawer-inner">'+rrConflictsHtml(r,m)+'</div>':
      rrLogTab==='progress'?rrProgressDetail(progress,r):
