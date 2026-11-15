@@ -65,7 +65,7 @@ let browser;
  const pair=before.rerankV2.events[0].groups.flat().slice(0,2),focus=pair[0],other=pair[1];
  await search.fill(await page.evaluate(id=>displayTitle(filmById(id)),focus));
  await page.locator('#rrRankResults [data-rr-rank-edit]').click();
- const answer=value=>page.locator('[data-rr-rank-pair="'+encodeURIComponent(other)+'"][data-rr-rank-answer="'+value+'"]').first();
+ const answer=value=>page.locator('[data-rr-rank-pair="'+encodeURIComponent(other)+'"][data-rr-rank-answer="'+value+'"]:visible').first();
  const result=()=>page.evaluate(([focus,other])=>{
   const m=window.__movie30RerankV120.model(),key=focus<other?focus+'\u0000'+other:other+'\u0000'+focus;
   const p=m.stats.pairs.get(key);
@@ -96,7 +96,7 @@ let browser;
  const cycleFocus=cycleIds[2],cycleOther=cycleIds[0];
  await search.fill(await page.evaluate(id=>displayTitle(filmById(id)),cycleFocus));
  await page.locator('#rrRankResults [data-rr-rank-edit]').click();
- const cycleAnswer=()=>page.locator('[data-rr-rank-pair="'+encodeURIComponent(cycleOther)+'"][data-rr-rank-answer="up"]').first().click();
+ const cycleAnswer=()=>page.locator('[data-rr-rank-pair="'+encodeURIComponent(cycleOther)+'"][data-rr-rank-answer="up"]:visible').first().click();
  await cycleAnswer();await page.locator('#rrCycleCommit').waitFor();
  assert.equal(await count(),3);
  await page.locator('#rrCycleUndoTriad').click();assert.equal(await count(),2,'Mistap can undo pair and return to rank workbench');
@@ -113,6 +113,26 @@ let browser;
  await page.locator('#rrCycleCommit').click();
  assert.equal(await count(),4);
  assert.equal(await page.evaluate(()=>window.__movie30RerankV120.model().replay.held.length),0);
- assert.deepEqual(errors,[]);console.log('PASS title taps, keyboard details, poster judgments, history, title/year search, combined filters, global ranks and data preservation, pair corrections, legacy records, idempotence, reversal confirmation, cycle arrows, ties, explicit commit and Undo');
+ // Primary destinations are always visible; no log drawer must be opened first.
+ for(const key of ['ranks','conflicts','history','progress']){
+  await page.locator('#rrCompareTab').click();
+  assert.equal(await page.locator('.rr-primary-nav button').count(),5);
+  await page.locator('[data-rr-logtab="'+key+'"]').click();
+  assert.equal(await page.locator('[data-rr-logtab="'+key+'"]').getAttribute('aria-current'),'page');
+ }
+ assert((await page.locator('.rr-progress-details').textContent()).includes('どこまで固まった'));
+ const downloadPromise=page.waitForEvent('download');await page.locator('#rrExportProgress').click();
+ const download=await downloadPromise,report=JSON.parse(require('fs').readFileSync(await download.path(),'utf8'));
+ assert.equal(report.app,'movie30-rerank-analysis');assert.equal(report.rerankV2.events.length,await count());
+ assert.equal(report.summary.bounds.n,3);assert.equal(Object.keys(report.rankRanges).length,3);
+ await page.screenshot({path:'test-results/rerank-progress.png',fullPage:true});
+ await page.locator('#rrCompareTab').click();await page.screenshot({path:'test-results/rerank-compare.png',fullPage:true});
+ await page.locator('[data-rr-logtab="ranks"]').click();
+ await page.locator('#rrRankClear').click();await page.screenshot({path:'test-results/rerank-ranks.png',fullPage:true});
+ await page.evaluate(()=>{state.rerankV2.events=state.rerankV2.events.concat(Array.from({length:90},(_,i)=>({id:'hold-'+i,kind:'hold',ambiguous:true,ids:[]})));window.__movie30RerankV120.render()});
+ await page.locator('[data-rr-logtab="history"]').click();
+ assert.equal(await page.locator('.rr-hrow').count(),40);
+ await page.locator('#rrHistoryMore').click();assert.equal(await page.locator('.rr-hrow').count(),80);
+ assert.deepEqual(errors,[]);console.log('PASS title taps, keyboard details, poster judgments, history, title/year search, combined filters, global ranks and data preservation, pair corrections, legacy records, idempotence, reversal confirmation, cycle arrows, ties, explicit commit, Undo, flat navigation, progress export and history batches');
  await browser.close();
 })().catch(async e=>{console.error(e);await browser?.close();process.exitCode=1});

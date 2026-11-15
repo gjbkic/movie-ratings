@@ -1,6 +1,7 @@
 (()=>{
 'use strict';
-const BUILD='20261116-title-search-v126';
+const BUILD='20261116-simple-navigation-v127';
+let rrHistoryLimit=40;
 let rrRankQuery='',rrRankGenre='',rrRankStatus='',rrCycleFromRank=false,rrCycleEditUndo=[];
 let rrTriad=null,rrOrder=[],rrTie12=false,rrTie23=false,rrPicks=[],rrLogOpen=false,rrLogTab='history',rrTieOpen=false,rrTiePartner=false,rrReviewPairs=null,rrHeldReviewFlow=false,rrCycleGroups=[],rrCycleTieNext=false,rrCycleActiveKey=null,rrCycleUndoToTriad=false,rrRankSelectedId=null,rrRankNearCount=6,rrRankListScroll=0;
 
@@ -745,24 +746,48 @@ function rrProgressHtml(p){
   '本 · 比較が十分な作品 '+p.depth+'本</div>';
 }
 function rrProgressDetail(p,r){
- const n=p.n||1;
- return '<div class="rr-drawer-inner rr-progress-details">'+
-  '<h3>現在のランキングの安定度</h3>'+rrFixednessHtml(rrModel(r))+rrDeltaHtml(r,true)+rrDeltaTrendHtml(r)+rrGenreProgressHtml(rrModel(r))+
-  '<div class="rr-progress-big">'+esc(p.stage)+'</div>'+
-  '<p>'+esc(p.detail)+'</p>'+rrProgressHtml(p)+
+ const m=rrModel(r),d=rrOrderBounds(m),triads=r.events.filter(e=>e.groups&&e.ids?.length===3).length,
+  pairs=r.events.filter(e=>e.groups&&e.ids?.length===2).length;
+ return '<div class="rr-drawer-inner rr-progress-details"><h3>どこまで固まった？</h3>'+
+  '<p class="rr-muted">この端末の最新の比較履歴から集計しています。</p>'+
   '<div class="rr-progress-figures">'+
-   '<div><strong>'+p.compared+' / '+p.n+'</strong><small>一度以上比較した作品</small></div>'+
-   '<div><strong>'+p.depth+' / '+p.n+'</strong><small>8判断・異なる5作品以上との比較</small></div>'+
-   '<div><strong>'+p.confident+' / '+p.n+'</strong><small>推定の不確実性が比較的小さい作品</small></div>'+
-   '<div><strong>'+p.components+'</strong><small>比較がつながっているグループ数（理想は1）</small></div>'+
-   '<div><strong>'+p.judged+'</strong><small>有効な3本比較の記録</small></div>'+
-  '</div>'+
-  (p.drift?
-   '<div class="rr-progress-drift"><strong>直近'+p.drift.window+'回の比較による順位変動</strong>'+
-    '<span>中央値 '+p.drift.median+'位 / 90パーセンタイル '+p.drift.p90+'位</span></div>':
-   '<div class="rr-progress-drift">順位変動の判定は、比較がほぼ全作品につながり、ある程度の記録が集まってから表示します。</div>')+
-  '<p class="rr-muted">完成までの回数は比較履歴だけから正確に予測できません。比較済み作品数・相手の多様性・直近の順位変動を見て判断します。旧順位・元の点数は新ランキングの推定に一切使っていません。</p>'+
-  '</div>';
+   '<div><strong>'+p.compared+' / '+p.n+'</strong><small>比較済みの作品</small></div>'+
+   '<div><strong>'+d.exact+'本</strong><small>採用中の勝敗から順位が1つに決まる</small></div>'+
+   '<div><strong>'+d.within10+'本</strong><small>順位の可能範囲の幅が10位以内</small></div>'+
+   '<div><strong>'+d.within25+'本</strong><small>順位の可能範囲の幅が25位以内</small></div></div>'+
+  '<p class="rr-muted">比較済み '+d.n+'作品の中での範囲。未比較作品の追加や判断の見直しで変わります。'+
+  '三段論法でつながる前後関係も含み、「将来も変わらない」という保証ではありません。</p>'+
+  '<section class="rr-status-card"><h3>最近の動き</h3><strong>'+esc(p.stage)+'</strong><p>'+esc(p.detail)+'</p>'+
+  (p.drift?'<p>直近'+p.drift.window+'回での変動：中央値 '+p.drift.median+'位、9割の作品は '+p.drift.p90+'位以内。</p>':
+   '<p>全体の変動を判定するには、比較がほぼ全作品につながる必要があります。</p>')+'</section>'+
+  '<section class="rr-status-card"><h3>あと何回で安定する？</h3>'+
+  '<p>確定回数は予測できません。相手の選び方・接戦・判断の変化で大きく変わります。</p>'+
+  '<p>全体の傾向が動きにくくなることと、1位刻みで全部決まることは別です。上の「可能範囲」と最近の変動を合わせて確認してください。</p>'+
+  '<p class="rr-muted">現在：3作品の比較 '+triads+'回、2作品の比較 '+pairs+'回。2作品比較1回と3作品比較1回は、情報量が異なります。</p></section>'+
+  '<details class="rr-optional"><summary>詳しい集計・ジャンル別の進み具合</summary>'+rrGenreProgressHtml(m)+
+   '<div class="rr-progress-figures"><div><strong>'+p.depth+' / '+p.n+'</strong><small>8判断・異なる5作品以上との比較</small></div>'+
+   '<div><strong>'+p.components+'</strong><small>比較がつながっているグループ数</small></div></div>'+rrDeltaTrendHtml(r)+'</details>'+
+  '<button type="button" id="rrExportProgress" class="rr-backfill">比較履歴と集計をJSONで書き出す</button>'+
+  '<p class="rr-muted">このファイルをチャットに送ると、現在の本数と履歴に基づく分析ができます。</p></div>';
+}
+function rrRankWidths(m){
+ const result={},ids=m.order.slice(0,m.seenCount),reach=m.replay?.reach,idx=m.replay?.reachIndex;
+ if(!reach||!idx)return result;
+ for(const id of ids){let above=0,below=0;const a=idx.get(id);
+  for(const other of ids){if(other===id)continue;const b=idx.get(other);
+   if(reach[b][a>>>5]&(1<<(a&31)))above++;
+   if(reach[a][b>>>5]&(1<<(b&31)))below++;
+  }
+  result[id]={best:above+1,worst:ids.length-below};
+ }
+ return result;
+}
+function rrExportProgress(){
+ const r=rrState(),m=rrModel(r),progress=rrProgress(r,m),bounds=rrOrderBounds(m);
+ const report={app:'movie30-rerank-analysis',schema:1,exportedAt:new Date().toISOString(),
+  rerankV2:r,summary:{...progress,net:undefined,bounds},rankRanges:rrRankWidths(m),
+  films:m.order.map((id,i)=>({id,title:displayTitle(filmById(id)),rank:i<m.seenCount?i+1:null,genres:[...(rrGenreMap([id]).tokens.get(id)||[])]}))};
+ download('movie-ranking-progress.json',JSON.stringify(report,null,2),'application/json');
 }
 
 function rrTriadSig(ids){return ids.slice().sort().join('|')}
@@ -1621,7 +1646,7 @@ function rrNew(){
 function rrHistoryHtml(r){
  const ev=r.events.slice().reverse(),corrections=rrPairCorrections(r);
  if(!ev.length)return '<div class="rr-muted">まだ比較履歴はありません。</div>';
- return ev.map((e,j)=>{
+ return ev.slice(0,rrHistoryLimit).map((e,j)=>{
    const names=(e.ids||[]).map(id=>rrTitleHtml(id));
    const v=e.kind==='cycle'?'三すくみ':e.kind==='hold'?'判断保留':
      (e.groups||[]).map(g=>g.map(id=>rrTitleHtml(id)).join(' ≈ ')).join(' ＞ ');
@@ -1634,7 +1659,7 @@ function rrHistoryHtml(r){
      '<small class="rr-delta-line">'+esc(rrDeltaText(e.rankDelta))+'</small>'+rrTriadPositionsHtml(e,true)+ 
      '</span><button data-rr-review="'+e.id+'">再比較</button>'+
      '<button data-rr-del="'+e.id+'">削除</button></div>';
- }).join('');
+ }).join('')+(ev.length>rrHistoryLimit?'<button type="button" id="rrHistoryMore" class="rr-backfill">さらに40件を表示（残り'+(ev.length-rrHistoryLimit)+'件）</button>':'');
 }
 // Approximate 80% rank ranges by deterministic normal-posterior sampling.
 // They describe the judged subset, not an invented order for untouched works.
@@ -1716,22 +1741,19 @@ function rrRankWorkbenchHtml(r,m,id){
  const last=r.events[r.events.length-1],
   undo=last?.kind==='pair-review'&&last.editorFocus===id;
  return '<div class="rr-rank-workbench" id="rrRankWorkbench">'+
-  '<div class="rr-rank-work-header"><strong>作品ごとの比較・修正</strong>'+
-  '<button type="button" id="rrRankClose">一覧へ戻る</button></div>'+
+  '<div class="rr-rank-work-header"><strong>選択中の作品</strong>'+
+  '<button type="button" id="rrRankClose">選択を解除</button></div>'+
   '<div class="rr-rank-work-feature">'+
   (poster?'<img src="'+esc(poster)+'" alt="" loading="lazy">':'<span class="rr-rank-work-placeholder"></span>')+
   '<div><strong>'+rrTitleHtml(id)+'</strong><small>'+(rank===null?'未比較・順位未定':rank+'位（暫定）')+
   (film?.year?' · '+esc(String(film.year)):'')+'</small>'+
-  '<button type="button" id="rrRankFilmDetail">作品詳細を表示</button></div></div>'+
+  '</div></div>'+
   '<p class="rr-muted">各相手について、上記の選択作品が上か下かをタップすると、'+
   '最新の直接判断として保存します。同じ相手は選び直すと以前の回答を置き換えます。直前なら取り消せます。</p>'+
   (undo?'<button type="button" id="rrRankUndoPair">↶ 最後の比較を取り消す</button>':'')+
-  '<section class="rr-rank-work-section"><h4>直接勝った相手 · '+direct.below.length+'本</h4>'+
-  detail(direct.below)+'</section>'+
-  '<section class="rr-rank-work-section"><h4>直接負けた相手 · '+direct.above.length+'本</h4>'+
-  detail(direct.above)+'</section>'+
-  (direct.ties.length?'<section class="rr-rank-work-section"><h4>直接同格の相手 · '+
-   direct.ties.length+'本</h4>'+detail(direct.ties)+'</section>':'')+
+  '<details class="rr-rank-work-section"><summary>直接勝った相手 · '+direct.below.length+'本</summary>'+detail(direct.below)+'</details>'+
+  '<details class="rr-rank-work-section"><summary>直接負けた相手 · '+direct.above.length+'本</summary>'+detail(direct.above)+'</details>'+
+  (direct.ties.length?'<details class="rr-rank-work-section"><summary>直接同格の相手 · '+direct.ties.length+'本</summary>'+detail(direct.ties)+'</details>':'')+
   '<section class="rr-rank-work-section rr-rank-near"><h4>暫定順位が近い作品</h4>'+
   '<p class="rr-muted">現在の位置から上下'+count+'本。選択作品が相手より上か下かすぐ判定できます。</p>'+
   '<h5>現在この作品より上</h5>'+near(nearAbove,true)+
@@ -1808,7 +1830,7 @@ function rrPreviewHtml(r,m){
  }).join('');
  return '<div class="rr-muted">表示 '+shown+' / '+m.ids.length+'作品（順位は全体での位置）</div>'+
   '<div class="rr-muted">作品名をタップで詳細。「比較・修正」で直接対戦の一覧と近隣作品への即判定ができます。</div>'+
-  '<div class="rr-muted">直接比較で勝った作品が相手より上になるように並べます。未比較の前後関係は統計推定を利用し、大幅に上昇・下降した作品は途中の作品と複数回比較して確かめます。循環の再確認と履歴は維持します。未比較作品は順位未判定です。</div>'+
+
    '<div class="rr-rank-scroll">'+(html||'<div class="rr-muted">条件に一致する作品はありません。</div>')+'</div>';
 }
 
@@ -1891,8 +1913,8 @@ function rrConflictsHtml(r,m){
   '「保留を了承」で現在の順位を維持してください。過去ログはいずれの場合も保存されます。'+
   '了承した判断は未確認件数から除きます。</p>'+
   '<small>全保留 '+held.length+'組 / 了承済み '+(held.length-pending.length)+'組</small></div>'+
-  rows+'<h3>比較を横断した三すくみ '+m.stats.cycles.length+'組</h3>'+c+
-  '<h3>記録上の直接判断の食い違い '+m.stats.contradictions.length+'組</h3>'+p;
+  rows+'<details class="rr-optional"><summary>過去の記録にある循環 '+m.stats.cycles.length+'組</summary>'+c+'</details>'+
+  '<details class="rr-optional"><summary>直接判断の食い違い '+m.stats.contradictions.length+'組</summary>'+p+'</details>';
 }
 function rrExit(){
  rrLogOpen=false;rrTieOpen=false;rrTiePartner=false;rrHeldReviewFlow=false;rrCycleUndoToTriad=false;
@@ -1930,28 +1952,25 @@ function rrRender(){
  }
  root.innerHTML='<div class="rr-fast-shell">'+
   '<div class="rr-fast-top">'+
-   '<button id="rrExit" class="rr-top-button">‹ 戻る</button>'+
-   '<div class="rr-fast-brand"><b>新ランキング</b><small>★3以上・点数確定済みの作品</small></div>'+
-   '<button id="rrOpenLog" class="rr-top-button" aria-expanded="'+(showLogs?'true':'false')+'">'+
-      (showLogs?'比較へ戻る':'ログ・順位')+'</button>'+
+   '<button id="rrExit" class="rr-top-button">‹ 映画一覧</button>'+
+   '<div class="rr-fast-brand"><b>新ランキング</b><small>'+m.ids.length+'作品 · '+r.events.length+'回の記録</small></div>'+
+   '<button id="rrOpenSettings" class="rr-top-button" aria-label="比較の設定">設定</button>'+
   '</div>'+
+  '<nav class="rr-primary-nav" aria-label="新ランキングのメニュー">'+
+   '<button id="rrCompareTab" class="'+(!showLogs?'active':'')+'"'+(!showLogs?' aria-current="page"':'')+'>比較</button>'+
+   [['ranks','順位'],['conflicts','見直し'+(pending.length?' '+pending.length:'')],['history','履歴'],['progress','進み具合']].map(([key,label])=>
+    '<button '+(key==='history'?'id="rrOpenLog" ':'')+'data-rr-logtab="'+key+'" class="'+(showLogs&&rrLogTab===key?'active':'')+'"'+
+    (showLogs&&rrLogTab===key?' aria-current="page"':'')+'>'+label+'</button>').join('')+'</nav>'+
  (showLogs?
    '<div class="rr-drawer">'+
-    '<div class="rr-drawer-tabs">'+
-     '<button data-rr-logtab="history" class="'+(rrLogTab==='history'?'active':'')+'">比較ログ '+r.events.length+'</button>'+
-     '<button data-rr-logtab="ranks" class="'+(rrLogTab==='ranks'?'active':'')+'">暫定順位</button>'+
-     '<button data-rr-logtab="conflicts" class="'+(rrLogTab==='conflicts'?'active':'')+'">要確認 '+pending.length+'</button>'+ 
-     '<button data-rr-logtab="progress" class="'+(rrLogTab==='progress'?'active':'')+'">進捗</button>'+
-     '<button data-rr-logtab="settings" class="'+(rrLogTab==='settings'?'active':'')+'">設定</button>'+
-    '</div>'+
     (rrLogTab==='history'?
-     '<div class="rr-drawer-inner"><div class="rr-muted">各回の順位変動を確認できます。過去の判断も個別に削除できます。</div>'+rrDeltaHtml(r,true)+
- rrDeltaTrendHtml(r)+
- '<button id="rrBackfill" class="rr-backfill">過去の比較も集計</button><div id="rrBackfillStatus" class="rr-muted"></div>'+rrHistoryHtml(r)+'</div>':
+     '<div class="rr-drawer-inner"><h3>比較の履歴</h3><p class="rr-muted">新しい記録から表示。再比較・取り消しができます。</p>'+
+ '<details class="rr-optional"><summary>過去の順位変動を詳しく見る</summary>'+rrDeltaHtml(r,true)+rrDeltaTrendHtml(r)+
+ '<button id="rrBackfill" class="rr-backfill">過去の比較も集計</button><div id="rrBackfillStatus" class="rr-muted"></div></details>'+rrHistoryHtml(r)+'</div>':
      rrLogTab==='ranks'?
      '<div class="rr-drawer-inner"><h3>新ランキング（全'+m.ids.length+'作品）</h3>'+
       '<div class="rr-muted">直接勝敗を優先・途中を再比較 · 循環で保留 '+(m.replay?.held?.length||0)+'組</div>'+
-      (rrRankSelectedId?rrRankWorkbenchHtml(r,m,rrRankSelectedId):'')+rrRankFiltersHtml(m)+'<div id="rrRankResults">'+rrPreviewHtml(r,m)+'</div>'+'</div>':
+      rrRankFiltersHtml(m)+(rrRankSelectedId?rrRankWorkbenchHtml(r,m,rrRankSelectedId):'')+'<div id="rrRankResults">'+rrPreviewHtml(r,m)+'</div>'+'</div>':
      rrLogTab==='conflicts'?
      '<div class="rr-drawer-inner">'+rrConflictsHtml(r,m)+'</div>':
      rrLogTab==='progress'?rrProgressDetail(progress,r):
@@ -1968,7 +1987,7 @@ function rrRender(){
     (pending.length?'<button id="rrOpenPending" class="rr-pending-banner">要確認の過去判断 '+pending.length+'組 · 1組ずつ確認</button>':'')+
     '<div class="rr-fast-progress"><span>比較 <strong>'+r.events.length+'</strong> 回</span>'+
      '<span>比較済み <strong>'+nSeen+'</strong> / '+m.ids.length+' 本</span></div>'+ 
-    '<button class="rr-progress-summary" id="rrOpenProgress" aria-label="ランキングの進捗と目安の詳細を開く">'+rrProgressHtml(progress)+'</button>'+rrDeltaHtml(r)+(r.events.length?rrTriadPositionsHtml(r.events[r.events.length-1]):'')+
+    '<button class="rr-progress-summary" id="rrOpenProgress" aria-label="ランキングの進捗と目安の詳細を開く">'+rrProgressHtml(progress)+'</button>'+(r.events.length?'<details class="rr-optional"><summary>直前の比較で動いた順位</summary>'+rrDeltaHtml(r)+rrTriadPositionsHtml(r.events[r.events.length-1])+'</details>':'')+
     '<div class="rr-genre-scope">'+esc(rrReviewPairs?.length?'再検証中：'+rrReviewPairs.length+'組の過去判断を更新':
  (()=>{const a=rrPendingJumpAudit(r,rrTriad);return a?
   '順位の大幅'+(a.direction==='up'?'上昇':'下降')+'（'+a.from+'→'+a.to+'位）の途中を検証中':
@@ -1996,15 +2015,18 @@ function rrRender(){
  }
  const bind=(selector,fn)=>{const el=root.querySelector(selector);if(el)el.onclick=fn;};
  bind('#rrExit',rrExit);
- bind('#rrOpenLog',()=>{rrLogOpen=!rrLogOpen;rrTiePartner=false;rrRender()});
+ bind('#rrCompareTab',()=>{rrLogOpen=false;rrTiePartner=false;rrRender()});
+ bind('#rrOpenSettings',()=>{rrLogOpen=true;rrLogTab='settings';rrRender()});
  bind('#rrOpenProgress',()=>{rrLogTab='progress';rrLogOpen=true;rrRender()});
  bind('#rrOpenPending',()=>{rrLogTab='conflicts';rrLogOpen=true;rrRender()});
+ root.querySelectorAll('[data-rr-logtab]').forEach(btn=>btn.onclick=()=>{
+  rrLogOpen=true;rrLogTab=btn.dataset.rrLogtab;rrTiePartner=false;
+  rrRender();
+  document.getElementById('page-rerank').scrollTop=0;
+ });
  if(showLogs){
-  root.querySelectorAll('[data-rr-logtab]').forEach(btn=>btn.onclick=()=>{
-   rrLogTab=btn.dataset.rrLogtab;
-   if(rrLogTab!=='ranks')rrRankSelectedId=null;
-   rrRender();
-  });
+  bind('#rrExportProgress',rrExportProgress);
+  bind('#rrHistoryMore',()=>{const page=document.getElementById('page-rerank'),y=page.scrollTop;rrHistoryLimit+=40;rrRender();page.scrollTop=y});
   if(rrLogTab==='ranks'){
    const refreshResults=()=>{
     root.querySelector('#rrRankResults').innerHTML=rrPreviewHtml(r,m);
@@ -2278,6 +2300,7 @@ rrStyle.textContent += "\n.rr-cycle-screen{display:flex;flex-direction:column;ga
 rrStyle.textContent += "\n.rr-cycle-prev-triad{width:100%;background:#19375c!important;border:1px solid #7098c9!important;font-weight:800!important;margin-top:4px}.rr-cycle-prev-triad:disabled{opacity:.35;cursor:default}.rr-cycle-longpress-note{text-align:center;font-size:11px;margin-top:-7px}body.rr-immersive-on .rr-cycle-card{user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;touch-action:manipulation}body.rr-immersive-on .rr-cycle-card img{pointer-events:none;user-select:none;-webkit-user-select:none}";
 rrStyle.textContent += "\n.rr-cycle-explain{margin:12px 0 4px;border:1px solid #627c9b;border-radius:10px;\n background:#122c47;padding:11px 12px;min-width:0}\n.rr-cycle-explain>strong{display:block;font-size:13px;color:#f5d6a3;margin-bottom:7px}\n.rr-cycle-chain{font-size:14px;font-weight:800;color:#f9f7ea;line-height:1.75;\n overflow-wrap:anywhere;white-space:normal}\n.rr-cycle-explain-note{font-size:11px;color:#a9c5df;margin-top:8px;line-height:1.55}\n.rr-cycle-details{margin-top:10px}\n.rr-cycle-details summary{cursor:pointer;padding:6px 0;font-size:12px;color:#add6ff;\n font-weight:750}\n.rr-cycle-evidences{display:flex;flex-direction:column;gap:6px;padding-top:8px}\n.rr-cycle-evidence{display:flex;align-items:flex-start;gap:9px;padding:7px;\n border-radius:7px;background:#203a56}\n.rr-cycle-evidence-held{background:#4c3026;border:1px solid #bc8059}\n.rr-cycle-evidence-index{display:flex;align-items:center;justify-content:center;\n border-radius:50%;background:#365b80;color:#eef7ff;min-width:22px;height:22px;\n font-size:11px;font-weight:800}\n.rr-cycle-evidence-held .rr-cycle-evidence-index{background:#98633e}\n.rr-cycle-evidence-text{flex:1;min-width:0;overflow-wrap:anywhere;font-size:12px;\n line-height:1.45;color:#f1f6ff}\n.rr-cycle-evidence-text small{display:block;color:#aec9df;font-size:10px;\n margin-top:4px}\n.rr-cycle-evidence-held .rr-cycle-evidence-text small{color:#ffddb8}\n.rr-cycle-heading .rr-cycle-explain{background:#10263a}\n";
 rrStyle.textContent += '\n.rr-cycle-order{display:flex;flex-direction:column;gap:8px}.rr-cycle-order-row{display:grid;grid-template-columns:36px minmax(0,1fr);align-items:center;gap:8px;border:1px solid #496b94;border-radius:10px;padding:10px;background:#162a43}.rr-cycle-order-row>b{font-size:13px;color:#a9cdf4}.rr-cycle-order-names{font-size:14px;font-weight:700}.rr-cycle-order-controls{grid-column:2;display:flex;flex-wrap:wrap;gap:7px}.rr-cycle-order-controls button{min-width:42px;min-height:38px;border:1px solid #6489b5;border-radius:8px;background:#29496f;color:#eff7ff;font-size:12px;padding:7px 9px}.rr-cycle-order-controls button:disabled{opacity:.3}#rrCycleCommit{background:#29563e;border-color:#80c698;font-weight:800}\n';
+rrStyle.textContent += '\n.rr-fast-top{position:sticky;top:-7px;background:#090f19;z-index:12;padding-top:10px}.rr-primary-nav{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:5px;position:sticky;top:58px;z-index:11;background:#090f19;padding:4px 0 10px;border-bottom:1px solid #293e58}.rr-primary-nav button{border:1px solid #39516e;border-radius:9px;color:#bbcee4;background:#132238;min-height:42px;font-size:12px;font-weight:700;padding:8px 2px;white-space:nowrap}.rr-primary-nav button.active{background:#284f7a;color:white;border-color:#8cc6ff}.rr-drawer{border:0;background:transparent;border-radius:0}.rr-drawer-inner{padding:9px 2px}.rr-drawer-inner>h3{font-size:19px;margin:6px 0 10px}.rr-optional{border:1px solid #344e6e;border-radius:10px;padding:10px;margin:10px 0;color:#bed0e5}.rr-optional>summary,.rr-rank-work-section>summary{cursor:pointer;font-size:12px;font-weight:750;padding:3px 0}.rr-status-card{margin:12px 0;padding:13px;border:1px solid #385775;border-radius:12px;background:#122238}.rr-status-card h3{font-size:15px;margin:0 0 8px}.rr-status-card p{font-size:12px;line-height:1.65}.rr-rank-workbench{margin-top:10px}.rr-rank-work-header button{font-size:11px}.rr-rank-work-section[open]>summary{margin-bottom:10px}.rr-progress-summary{margin-bottom:3px}.rr-progress-figures strong{font-size:25px!important}@media(max-width:365px){.rr-primary-nav button{font-size:11px}.rr-primary-nav{gap:3px}}\n';
 document.head.appendChild(rrStyle);
 rrInstall();
 })();
