@@ -1978,11 +1978,11 @@ function rrRender(){
      rrLogTab==='progress'?rrProgressDetail(progress,r):
      '<div class="rr-drawer-inner rr-settings"><h3>次に表示する組み合わせ</h3>'+
       '<div class="rr-mode">'+
-       '<button data-rr-mode="local" class="'+(r.mode==='local'?'active':'')+'">近いジャンル中心（7：3）</button>'+
+       '<button data-rr-mode="local" class="'+(r.mode==='local'?'active':'')+'">おまかせ（おすすめ）</button>'+
        '<button data-rr-mode="wide" class="'+(r.mode==='wide'?'active':'')+'">ジャンルを横断</button>'+
        '<button data-rr-mode="conflict" class="'+(r.mode==='conflict'?'active':'')+'">矛盾を確認</button></div>'+
-      '<p>暫定1〜150位の比較を少し増やし、151〜250位にもトップ50への挑戦機会を設けます。直接比較で勝った作品を相手より上に配置し、大幅に動いた場合は途中の作品と追加比較します。統計モデルは比較していない作品の仮の配置に使います。循環の再確認と比較履歴は維持します。旧ランキング・点数・星・レビューは変更しません。</p>'+
-      '<button id="rrNew" class="rr-danger">新ランキングだけ最初からやり直す</button></div>')+
+      '<p>ふだんは「おまかせ」で進めてください。近いジャンルを中心に、別ジャンルや上位・中位の見落としも確認します。</p>'+
+      '<details class="rr-optional"><summary>最初から作り直す</summary><button id="rrNew" class="rr-danger">新ランキングだけ最初からやり直す</button></details></div>')+
    '</div>':
    activeCycle&&!rrCycleUndoToTriad?rrCycleReviewHtml(r,m,activeCycle):
    '<div class="rr-fast-stage">'+
@@ -2075,6 +2075,7 @@ function rrRender(){
   root.querySelectorAll('[data-rr-review]').forEach(btn=>btn.onclick=()=>{
    const old=r.events.find(e=>e.id===btn.dataset.rrReview);if(!old)return;
    const ids=[...new Set(old.displayIds||old.ids||[])];
+   if(ids.length===2){rrLogOpen=true;rrLogTab='ranks';rrRankSelectedId=old.editorFocus||ids[0];rrRankNearCount=6;rrRender();return;}
    if(ids.length!==3){rrCycleManualReview(old.id);return;}
    rrOpenConflict(ids,[[ids[0],ids[1]],[ids[1],ids[2]],[ids[0],ids[2]]]);
   });
@@ -2083,7 +2084,12 @@ function rrRender(){
   });
   root.querySelectorAll('[data-rr-cycle]').forEach(btn=>btn.onclick=()=>{
     const ids=m.stats.cycles[Number(btn.dataset.rrCycle)];
-    if(ids)rrOpenConflict(ids,[[ids[0],ids[1]],[ids[1],ids[2]],[ids[2],ids[0]]]);
+    if(ids&&r.events.length){
+     const key='manual-cycle:'+ids.slice().sort().join('|');
+     r.cycleReviewQueue=r.cycleReviewQueue.filter(item=>item.key!==key);
+     r.cycleReviewQueue.unshift({key,manual:true,eventId:r.events.at(-1).id,ids:ids.slice()});
+     rrCycleActiveKey=null;rrCycleFromRank=false;rrLogOpen=false;rrRender();
+    }
    });
   root.querySelectorAll('[data-rr-held]').forEach(btn=>btn.onclick=()=>{
    const edge=m.replay?.held?.[Number(btn.dataset.rrHeld)];if(!edge)return;
