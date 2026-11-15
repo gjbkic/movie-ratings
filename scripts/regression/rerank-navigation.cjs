@@ -57,6 +57,27 @@ let browser;
  assert.equal(await page.locator('#rrRankResults .rr-rank-row').count(),full);
  assert.deepEqual((await snapshot(page)).rerankV2.events,before.rerankV2.events,'Detail/filter actions preserve judgment history');
  for(const key of ['rankOrder','exactScores','starOverrides','letterboxdMeta'])assert.deepEqual((await snapshot(page))[key],before[key]);
- assert.deepEqual(errors,[]);console.log('PASS title taps, keyboard details, poster judgments, history, title/year search, combined filters, global ranks and data preservation');
+ const pair=before.rerankV2.events[0].groups.flat().slice(0,2),focus=pair[0],other=pair[1];
+ await search.fill(await page.evaluate(id=>displayTitle(filmById(id)),focus));
+ await page.locator('#rrRankResults [data-rr-rank-edit]').click();
+ const answer=value=>page.locator('[data-rr-rank-pair="'+encodeURIComponent(other)+'"][data-rr-rank-answer="'+value+'"]').first();
+ const result=()=>page.evaluate(([focus,other])=>{
+  const m=window.__movie30RerankV120.model(),key=focus<other?focus+'\u0000'+other:other+'\u0000'+focus;
+  const p=m.stats.pairs.get(key);
+  return {n:p.n,contradiction:m.stats.contradictions.some(x=>x.a===p.a&&x.b===p.b),focusWins:m.order.indexOf(focus)<m.order.indexOf(other),events:state.rerankV2.events.length};
+ },pair);
+ await answer('down').click();
+ let res=await result();assert.equal(res.n,1);assert.equal(res.focusWins,false);assert.equal(res.contradiction,false);
+ // Simulate an older saved pair correction without reviewResolves.
+ await page.evaluate(()=>{delete state.rerankV2.events.at(-1).reviewResolves;state.rerankV2.events=state.rerankV2.events.slice();window.__movie30RerankV120.render()});
+ res=await result();assert.equal(res.n,1,'Legacy pair corrections supersede old triad edges');
+ await answer('up').click();res=await result();assert.equal(res.n,1);assert.equal(res.focusWins,true);assert.equal(res.contradiction,false);
+ const savedEvents=res.events;
+ await answer('up').click();assert.equal((await result()).events,savedEvents,'Same answer is idempotent');
+ await page.locator('#rrRankUndoPair').click();res=await result();assert.equal(res.focusWins,false);assert.equal(res.n,1);
+ await answer('up').click();
+ await page.locator('[data-rr-logtab="history"]').click();
+ assert((await page.locator('.rr-hrow').allTextContents()).some(t=>t.includes('更新済み')));
+ assert.deepEqual(errors,[]);console.log('PASS title taps, keyboard details, poster judgments, history, title/year search, combined filters, global ranks and data preservation, pair corrections, legacy records, idempotence and Undo');
  await browser.close();
 })().catch(async e=>{console.error(e);await browser?.close();process.exitCode=1});

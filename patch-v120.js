@@ -272,15 +272,29 @@ function rrEnsureFresh(r){
 }
 function rrSelectedIds(r){rrEnsureFresh(r);return r.baselineIds.slice()}
 function rrPairKey(a,b){return a<b?a+'\u0000'+b:b+'\u0000'+a}
+// Corrections apply to one pair, including older pair-review records that
+// may lack reviewResolves. Recompute from history so Undo restores the old answer.
+function rrPairCorrections(r){
+ const latest=new Map();
+ (r.events||[]).forEach((e,i)=>{
+  if(e.ambiguous)return;
+  for(const key of e.reviewResolves||[])latest.set(key,i);
+  if(e.kind==='pair-review'&&e.ids?.length===2)
+   latest.set(rrPairKey(e.ids[0],e.ids[1]),i);
+ });
+ return latest;
+}
+function rrCorrectedPairCount(e,index,corrections){
+ const ids=[...new Set((e.groups||[]).flat())];let count=0;
+ for(let a=0;a<ids.length;a++)for(let b=a+1;b<ids.length;b++)
+  if(index<(corrections.get(rrPairKey(ids[a],ids[b]))??0))count++;
+ return count;
+}
 function rrStats(r,ids){
   const allowed=new Set(ids),pairs=new Map(),counts=new Map(ids.map(id=>[id,0]));
   // A deliberate recheck supersedes older judgements for the specifically
   // reviewed pair(s), while retaining every original historical event.
-  const events=r.events||[],lastReview=new Map();
-  events.forEach((e,i)=>{
-   if(!e.ambiguous&&Array.isArray(e.reviewResolves))
-    for(const key of e.reviewResolves)lastReview.set(key,i);
-  });
+  const events=r.events||[],lastReview=rrPairCorrections(r);
   let ambiguous=0;
   for(let ei=0;ei<events.length;ei++){
     const e=events[ei];
@@ -1605,14 +1619,16 @@ function rrNew(){
   rrSetTriad(rrChooseTriad(state.rerankV2,"local"));rrRender();
 }
 function rrHistoryHtml(r){
- const ev=r.events.slice().reverse();
+ const ev=r.events.slice().reverse(),corrections=rrPairCorrections(r);
  if(!ev.length)return '<div class="rr-muted">まだ比較履歴はありません。</div>';
  return ev.map((e,j)=>{
    const names=(e.ids||[]).map(id=>rrTitleHtml(id));
    const v=e.kind==='cycle'?'三すくみ':e.kind==='hold'?'判断保留':
      (e.groups||[]).map(g=>g.map(id=>rrTitleHtml(id)).join(' ≈ ')).join(' ＞ ');
    const txt=e.ambiguous?v+'： '+names.join(' / '):v;
+   const corrected=rrCorrectedPairCount(e,r.events.length-1-j,corrections);
    return '<div class="rr-hrow"><b>#'+(r.events.length-j)+'</b><span>'+txt+
+     (corrected?'<small class="rr-genre-log">'+corrected+'組は選び直しで更新済み（現在の直接比較には不採用）</small>':'')+
      (e.genreScope?'<small class="rr-genre-log">'+esc(e.genreScope)+'</small>':'')+
      (e.reviewResolves?.length?'<small class="rr-genre-log">再検証で'+e.reviewResolves.length+'組の過去判断を更新（履歴は保存）</small>':'')+
      '<small class="rr-delta-line">'+esc(rrDeltaText(e.rankDelta))+'</small>'+rrTriadPositionsHtml(e,true)+ 
@@ -1674,9 +1690,9 @@ function rrRankWorkRow(other,focus,rank,note,relation=''){
   (note?'<small class="rr-rank-work-meta">'+esc(note)+'</small>':'')+
   '<div class="rr-inline-pair-controls">'+
   '<button type="button" class="'+(relation==='up'?'current':'')+
-   '" data-rr-rank-pair="'+k+'" data-rr-rank-answer="up">↑ この作品が上</button>'+
+   '" data-rr-rank-pair="'+k+'" data-rr-rank-answer="up">↑ 選択作品が上</button>'+
   '<button type="button" class="'+(relation==='down'?'current':'')+
-   '" data-rr-rank-pair="'+k+'" data-rr-rank-answer="down">↓ この作品が下</button>'+
+   '" data-rr-rank-pair="'+k+'" data-rr-rank-answer="down">↓ 選択作品が下</button>'+
   '</div></div>';
 }
 function rrRankWorkbenchHtml(r,m,id){
@@ -1707,8 +1723,8 @@ function rrRankWorkbenchHtml(r,m,id){
   '<div><strong>'+rrTitleHtml(id)+'</strong><small>'+(rank===null?'未比較・順位未定':rank+'位（暫定）')+
   (film?.year?' · '+esc(String(film.year)):'')+'</small>'+
   '<button type="button" id="rrRankFilmDetail">作品詳細を表示</button></div></div>'+
-  '<p class="rr-muted">「この作品」は上記の選択作品。各相手について↑か↓をタップすると、'+
-  '最新の直接判断として保存します。直前なら取り消せます。</p>'+
+  '<p class="rr-muted">各相手について、上記の選択作品が上か下かをタップすると、'+
+  '最新の直接判断として保存します。同じ相手は選び直すと以前の回答を置き換えます。直前なら取り消せます。</p>'+
   (undo?'<button type="button" id="rrRankUndoPair">↶ 最後の比較を取り消す</button>':'')+
   '<section class="rr-rank-work-section"><h4>直接勝った相手 · '+direct.below.length+'本</h4>'+
   detail(direct.below)+'</section>'+
@@ -1729,6 +1745,9 @@ function rrRankQuickCompare(focus,other,focusWins){
  const r=rrState(),ids=rrSelectedIds(r);
  if(!ids.includes(focus)||!ids.includes(other))return;
  const before=rrModel(r),winner=focusWins?focus:other,loser=focusWins?other:focus;
+ const previous=rrLatestDirectFor(r,before,focus);
+ const current=previous.above.concat(previous.below).find(x=>x.id===other);
+ if(current&&current.relation===(focusWins?'above':'below'))return;
  const e={id:'rrpair-'+Date.now()+'-'+Math.random().toString(36).slice(2,7),
   at:Date.now(),kind:'pair-review',mode:'direct',editorFocus:focus,
   ids:[winner,loser],displayIds:[focus,other],groups:[[winner],[loser]],
