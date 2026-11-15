@@ -1,0 +1,681 @@
+{
+  "assumptions": {
+    "works": 400,
+    "strategy": "current local selector including jump audits",
+    "responses": "deterministic fixed total order; no misclicks, ties, cycles or preference changes",
+    "genres": "8 groups independent of true rank",
+    "scope": "starts from zero; not remaining comparisons for live user"
+  },
+  "runs": [
+    {
+      "seed": 1,
+      "checkpoints": [
+        {
+          "n": 400,
+          "seed": 1,
+          "rounds": 100,
+          "seen": 114,
+          "inversionsPct": 12.19,
+          "medianError": 112,
+          "p90Error": 253,
+          "exact": 0,
+          "width10": 0
+        },
+        {
+          "n": 400,
+          "seed": 1,
+          "rounds": 200,
+          "seen": 156,
+          "inversionsPct": 10.58,
+          "medianError": 114,
+          "p90Error": 232,
+          "exact": 0,
+          "width10": 0
+        },
+        {
+          "n": 400,
+          "seed": 1,
+          "rounds": 300,
+          "seen": 186,
+          "inversionsPct": 7.63,
+          "medianError": 102,
+          "p90Error": 206,
+          "exact": 0,
+          "width10": 0
+        },
+        {
+          "n": 400,
+          "seed": 1,
+          "rounds": 400,
+          "seen": 222,
+          "inversionsPct": 6.66,
+          "medianError": 84,
+          "p90Error": 163,
+          "exact": 0,
+          "width10": 0
+        },
+        {
+          "n": 400,
+          "seed": 1,
+          "rounds": 500,
+          "seen": 243,
+          "inversionsPct": 6.08,
+          "medianError": 76,
+          "p90Error": 144,
+          "exact": 0,
+          "width10": 0
+        },
+        {
+          "n": 400,
+          "seed": 1,
+          "rounds": 600,
+          "seen": 267,
+          "inversionsPct": 5.16,
+          "medianError": 67,
+          "p90Error": 125,
+          "exact": 0,
+          "width10": 0
+        },
+        {
+          "n": 400,
+          "seed": 1,
+          "rounds": 700,
+          "seen": 279,
+          "inversionsPct": 3.91,
+          "medianError": 63,
+          "p90Error": 111,
+          "exact": 0,
+          "width10": 0
+        },
+        {
+          "n": 400,
+          "seed": 1,
+          "rounds": 800,
+          "seen": 309,
+          "inversionsPct": 5.06,
+          "medianError": 52,
+          "p90Error": 87,
+          "exact": 0,
+          "width10": 0
+        },
+        {
+          "n": 400,
+          "seed": 1,
+          "rounds": 900,
+          "seen": 351,
+          "inversionsPct": 6.72,
+          "medianError": 33,
+          "p90Error": 54,
+          "exact": 0,
+          "width10": 0
+        },
+        {
+          "n": 400,
+          "seed": 1,
+          "rounds": 1000,
+          "seen": 391,
+          "inversionsPct": 7.58,
+          "medianError": 13,
+          "p90Error": 56,
+          "exact": 0,
+          "width10": 0
+        },
+        {
+          "n": 400,
+          "seed": 1,
+          "rounds": 1100,
+          "seen": 396,
+          "inversionsPct": 5.41,
+          "medianError": 8,
+          "p90Error": 32,
+          "exact": 0,
+          "width10": 0
+        },
+        {
+          "n": 400,
+          "seed": 1,
+          "rounds": 1200,
+          "seen": 400,
+          "inversionsPct": 3.41,
+          "medianError": 6,
+          "p90Error": 20,
+          "exact": 0,
+          "width10": 0
+        },
+        {
+          "n": 400,
+          "seed": 1,
+          "rounds": 1300,
+          "seen": 400,
+          "inversionsPct": 2.34,
+          "medianError": 4,
+          "p90Error": 16,
+          "exact": 0,
+          "width10": 19
+        },
+        {
+          "n": 400,
+          "seed": 1,
+          "rounds": 1400,
+          "seen": 400,
+          "inversionsPct": 1.68,
+          "medianError": 3,
+          "p90Error": 12,
+          "exact": 0,
+          "width10": 105
+        },
+        {
+          "n": 400,
+          "seed": 1,
+          "rounds": 1500,
+          "seen": 400,
+          "inversionsPct": 1.42,
+          "medianError": 3,
+          "p90Error": 10,
+          "exact": 1,
+          "width10": 131
+        },
+        {
+          "n": 400,
+          "seed": 1,
+          "rounds": 1600,
+          "seen": 400,
+          "inversionsPct": 1.24,
+          "medianError": 3,
+          "p90Error": 9,
+          "exact": 2,
+          "width10": 154
+        },
+        {
+          "n": 400,
+          "seed": 1,
+          "rounds": 1700,
+          "seen": 400,
+          "inversionsPct": 1.13,
+          "medianError": 3,
+          "p90Error": 9,
+          "exact": 4,
+          "width10": 191
+        },
+        {
+          "n": 400,
+          "seed": 1,
+          "rounds": 1800,
+          "seen": 400,
+          "inversionsPct": 1.04,
+          "medianError": 2,
+          "p90Error": 8,
+          "exact": 4,
+          "width10": 212
+        },
+        {
+          "n": 400,
+          "seed": 1,
+          "rounds": 1900,
+          "seen": 400,
+          "inversionsPct": 0.99,
+          "medianError": 2,
+          "p90Error": 8,
+          "exact": 6,
+          "width10": 229
+        },
+        {
+          "n": 400,
+          "seed": 1,
+          "rounds": 2000,
+          "seen": 400,
+          "inversionsPct": 0.98,
+          "medianError": 2,
+          "p90Error": 8,
+          "exact": 8,
+          "width10": 244
+        },
+        {
+          "n": 400,
+          "seed": 1,
+          "rounds": 2100,
+          "seen": 400,
+          "inversionsPct": 0.88,
+          "medianError": 2,
+          "p90Error": 7,
+          "exact": 9,
+          "width10": 257
+        },
+        {
+          "n": 400,
+          "seed": 1,
+          "rounds": 2200,
+          "seen": 400,
+          "inversionsPct": 0.85,
+          "medianError": 2,
+          "p90Error": 7,
+          "exact": 21,
+          "width10": 264
+        },
+        {
+          "n": 400,
+          "seed": 1,
+          "rounds": 2300,
+          "seen": 400,
+          "inversionsPct": 0.86,
+          "medianError": 2,
+          "p90Error": 7,
+          "exact": 24,
+          "width10": 269
+        },
+        {
+          "n": 400,
+          "seed": 1,
+          "rounds": 2400,
+          "seen": 400,
+          "inversionsPct": 0.86,
+          "medianError": 2,
+          "p90Error": 7,
+          "exact": 28,
+          "width10": 273
+        },
+        {
+          "n": 400,
+          "seed": 1,
+          "rounds": 2500,
+          "seen": 400,
+          "inversionsPct": 0.89,
+          "medianError": 2,
+          "p90Error": 8,
+          "exact": 35,
+          "width10": 277
+        },
+        {
+          "n": 400,
+          "seed": 1,
+          "rounds": 2600,
+          "seen": 400,
+          "inversionsPct": 0.82,
+          "medianError": 2,
+          "p90Error": 7,
+          "exact": 38,
+          "width10": 279
+        },
+        {
+          "n": 400,
+          "seed": 1,
+          "rounds": 2700,
+          "seen": 400,
+          "inversionsPct": 0.76,
+          "medianError": 1,
+          "p90Error": 6,
+          "exact": 40,
+          "width10": 284
+        },
+        {
+          "n": 400,
+          "seed": 1,
+          "rounds": 2800,
+          "seen": 400,
+          "inversionsPct": 0.79,
+          "medianError": 2,
+          "p90Error": 7,
+          "exact": 48,
+          "width10": 284
+        },
+        {
+          "n": 400,
+          "seed": 1,
+          "rounds": 2900,
+          "seen": 400,
+          "inversionsPct": 0.74,
+          "medianError": 1,
+          "p90Error": 7,
+          "exact": 54,
+          "width10": 286
+        },
+        {
+          "n": 400,
+          "seed": 1,
+          "rounds": 3000,
+          "seen": 400,
+          "inversionsPct": 0.71,
+          "medianError": 1,
+          "p90Error": 6,
+          "exact": 57,
+          "width10": 289
+        }
+      ]
+    },
+    {
+      "seed": 2,
+      "checkpoints": [
+        {
+          "n": 400,
+          "seed": 2,
+          "rounds": 100,
+          "seen": 123,
+          "inversionsPct": 17.22,
+          "medianError": 131,
+          "p90Error": 253,
+          "exact": 0,
+          "width10": 0
+        },
+        {
+          "n": 400,
+          "seed": 2,
+          "rounds": 200,
+          "seen": 138,
+          "inversionsPct": 6.25,
+          "medianError": 128,
+          "p90Error": 236,
+          "exact": 0,
+          "width10": 0
+        },
+        {
+          "n": 400,
+          "seed": 2,
+          "rounds": 300,
+          "seen": 183,
+          "inversionsPct": 7.3,
+          "medianError": 106,
+          "p90Error": 195,
+          "exact": 0,
+          "width10": 0
+        },
+        {
+          "n": 400,
+          "seed": 2,
+          "rounds": 400,
+          "seen": 213,
+          "inversionsPct": 6.5,
+          "medianError": 83,
+          "p90Error": 167,
+          "exact": 0,
+          "width10": 0
+        },
+        {
+          "n": 400,
+          "seed": 2,
+          "rounds": 500,
+          "seen": 216,
+          "inversionsPct": 2.98,
+          "medianError": 83,
+          "p90Error": 165,
+          "exact": 0,
+          "width10": 30
+        },
+        {
+          "n": 400,
+          "seed": 2,
+          "rounds": 600,
+          "seen": 264,
+          "inversionsPct": 4.75,
+          "medianError": 64,
+          "p90Error": 126,
+          "exact": 0,
+          "width10": 0
+        },
+        {
+          "n": 400,
+          "seed": 2,
+          "rounds": 700,
+          "seen": 279,
+          "inversionsPct": 3.85,
+          "medianError": 59,
+          "p90Error": 112,
+          "exact": 0,
+          "width10": 0
+        },
+        {
+          "n": 400,
+          "seed": 2,
+          "rounds": 800,
+          "seen": 321,
+          "inversionsPct": 5.58,
+          "medianError": 42,
+          "p90Error": 78,
+          "exact": 0,
+          "width10": 0
+        },
+        {
+          "n": 400,
+          "seed": 2,
+          "rounds": 900,
+          "seen": 348,
+          "inversionsPct": 5.98,
+          "medianError": 37,
+          "p90Error": 57,
+          "exact": 0,
+          "width10": 0
+        },
+        {
+          "n": 400,
+          "seed": 2,
+          "rounds": 1000,
+          "seen": 375,
+          "inversionsPct": 5.82,
+          "medianError": 21,
+          "p90Error": 38,
+          "exact": 0,
+          "width10": 0
+        },
+        {
+          "n": 400,
+          "seed": 2,
+          "rounds": 1100,
+          "seen": 399,
+          "inversionsPct": 5.04,
+          "medianError": 8,
+          "p90Error": 30,
+          "exact": 0,
+          "width10": 0
+        },
+        {
+          "n": 400,
+          "seed": 2,
+          "rounds": 1200,
+          "seen": 400,
+          "inversionsPct": 3.39,
+          "medianError": 5,
+          "p90Error": 20,
+          "exact": 0,
+          "width10": 0
+        },
+        {
+          "n": 400,
+          "seed": 2,
+          "rounds": 1300,
+          "seen": 400,
+          "inversionsPct": 2,
+          "medianError": 4,
+          "p90Error": 14,
+          "exact": 0,
+          "width10": 62
+        },
+        {
+          "n": 400,
+          "seed": 2,
+          "rounds": 1400,
+          "seen": 400,
+          "inversionsPct": 1.61,
+          "medianError": 4,
+          "p90Error": 12,
+          "exact": 0,
+          "width10": 83
+        },
+        {
+          "n": 400,
+          "seed": 2,
+          "rounds": 1500,
+          "seen": 400,
+          "inversionsPct": 1.43,
+          "medianError": 3,
+          "p90Error": 11,
+          "exact": 2,
+          "width10": 108
+        },
+        {
+          "n": 400,
+          "seed": 2,
+          "rounds": 1600,
+          "seen": 400,
+          "inversionsPct": 1.2,
+          "medianError": 3,
+          "p90Error": 9,
+          "exact": 3,
+          "width10": 135
+        },
+        {
+          "n": 400,
+          "seed": 2,
+          "rounds": 1700,
+          "seen": 400,
+          "inversionsPct": 1.06,
+          "medianError": 3,
+          "p90Error": 8,
+          "exact": 3,
+          "width10": 164
+        },
+        {
+          "n": 400,
+          "seed": 2,
+          "rounds": 1800,
+          "seen": 400,
+          "inversionsPct": 1,
+          "medianError": 2,
+          "p90Error": 8,
+          "exact": 4,
+          "width10": 185
+        },
+        {
+          "n": 400,
+          "seed": 2,
+          "rounds": 1900,
+          "seen": 400,
+          "inversionsPct": 0.98,
+          "medianError": 2,
+          "p90Error": 8,
+          "exact": 4,
+          "width10": 203
+        },
+        {
+          "n": 400,
+          "seed": 2,
+          "rounds": 2000,
+          "seen": 400,
+          "inversionsPct": 0.97,
+          "medianError": 2,
+          "p90Error": 8,
+          "exact": 7,
+          "width10": 217
+        },
+        {
+          "n": 400,
+          "seed": 2,
+          "rounds": 2100,
+          "seen": 400,
+          "inversionsPct": 0.88,
+          "medianError": 2,
+          "p90Error": 7,
+          "exact": 13,
+          "width10": 225
+        },
+        {
+          "n": 400,
+          "seed": 2,
+          "rounds": 2200,
+          "seen": 400,
+          "inversionsPct": 0.87,
+          "medianError": 2,
+          "p90Error": 8,
+          "exact": 21,
+          "width10": 232
+        },
+        {
+          "n": 400,
+          "seed": 2,
+          "rounds": 2300,
+          "seen": 400,
+          "inversionsPct": 0.78,
+          "medianError": 2,
+          "p90Error": 7,
+          "exact": 26,
+          "width10": 242
+        },
+        {
+          "n": 400,
+          "seed": 2,
+          "rounds": 2400,
+          "seen": 400,
+          "inversionsPct": 0.73,
+          "medianError": 1,
+          "p90Error": 6,
+          "exact": 29,
+          "width10": 254
+        },
+        {
+          "n": 400,
+          "seed": 2,
+          "rounds": 2500,
+          "seen": 400,
+          "inversionsPct": 0.76,
+          "medianError": 1,
+          "p90Error": 6,
+          "exact": 34,
+          "width10": 263
+        },
+        {
+          "n": 400,
+          "seed": 2,
+          "rounds": 2600,
+          "seen": 400,
+          "inversionsPct": 0.72,
+          "medianError": 1,
+          "p90Error": 6,
+          "exact": 40,
+          "width10": 270
+        },
+        {
+          "n": 400,
+          "seed": 2,
+          "rounds": 2700,
+          "seen": 400,
+          "inversionsPct": 0.71,
+          "medianError": 1,
+          "p90Error": 6,
+          "exact": 41,
+          "width10": 276
+        },
+        {
+          "n": 400,
+          "seed": 2,
+          "rounds": 2800,
+          "seen": 400,
+          "inversionsPct": 0.62,
+          "medianError": 1,
+          "p90Error": 6,
+          "exact": 43,
+          "width10": 283
+        },
+        {
+          "n": 400,
+          "seed": 2,
+          "rounds": 2900,
+          "seen": 400,
+          "inversionsPct": 0.64,
+          "medianError": 1,
+          "p90Error": 6,
+          "exact": 45,
+          "width10": 297
+        },
+        {
+          "n": 400,
+          "seed": 2,
+          "rounds": 3000,
+          "seen": 400,
+          "inversionsPct": 0.54,
+          "medianError": 1,
+          "p90Error": 5,
+          "exact": 54,
+          "width10": 304
+        }
+      ]
+    }
+  ]
+}

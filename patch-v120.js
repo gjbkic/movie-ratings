@@ -763,6 +763,8 @@ function rrProgressDetail(p,r){
   '<section class="rr-status-card"><h3>あと何回で安定する？</h3>'+
   '<p>確定回数は予測できません。相手の選び方・接戦・判断の変化で大きく変わります。</p>'+
   '<p>全体の傾向が動きにくくなることと、1位刻みで全部決まることは別です。上の「可能範囲」と最近の変動を合わせて確認してください。</p>'+
+  '<p class="rr-muted">参考試算：400作品をゼロから今の方法で比較し、回答が常に一貫する2パターンでは、累計1,600回で9割が仮定した正しい順位の±9位以内。'+
+  'ただし3,000回でも、比較記録だけで順位が1つに決まったのは54〜57本でした。現在の残り回数の予測ではありません。</p>'+
   '<p class="rr-muted">現在：3作品の比較 '+triads+'回、2作品の比較 '+pairs+'回。2作品比較1回と3作品比較1回は、情報量が異なります。</p></section>'+
   '<details class="rr-optional"><summary>詳しい集計・ジャンル別の進み具合</summary>'+rrGenreProgressHtml(m)+
    '<div class="rr-progress-figures"><div><strong>'+p.depth+' / '+p.n+'</strong><small>8判断・異なる5作品以上との比較</small></div>'+
@@ -1457,8 +1459,8 @@ function rrPaintSelection(){
   if(badge)badge.textContent=position>=0?(position+1)+'位':'選ぶ';
  });
  const prompt=root.querySelector('#rrPickInstruction'),sub=root.querySelector('#rrPickSub');
- if(prompt)prompt.textContent=rrTiePartner?'1位と同格にする作品をタップ':
-   rrPicks.length?'次は2位の作品をタップ':'一番好きな作品をタップ';
+ if(prompt)prompt.textContent=rrTiePartner?'1位と同格にする作品のポスターをタップ':
+   rrPicks.length?'次は2位のポスターをタップ':'好きな順にポスターをタップ';
  if(sub)sub.textContent=rrTiePartner?'選んだ2本を同格の1位にします':
    rrPicks.length?'残り2本同格なら下のボタン／2位をタップすると自動確定':'1位 → 2位の2タップで次へ';
  const hasFirst=rrPicks.length===1;
@@ -1992,7 +1994,7 @@ function rrRender(){
  (()=>{const a=rrPendingJumpAudit(r,rrTriad);return a?
   '順位の大幅'+(a.direction==='up'?'上昇':'下降')+'（'+a.from+'→'+a.to+'位）の途中を検証中':
   rrScopeLabel(rrTriad)})())+'</div>'+
-    '<div class="rr-fast-instruction" id="rrPickInstruction">一番好きな作品をタップ</div>'+
+    '<div class="rr-fast-instruction" id="rrPickInstruction">好きな順にポスターをタップ</div>'+
     '<div class="rr-fast-sub" id="rrPickSub">1位 → 2位の2タップで次へ</div>'+
     '<div class="rr-fast-grid">'+rrTriad.map((id,i)=>rrFilmCard(id,i,m)).join('')+'</div>'+
     '<div class="rr-fast-caption">作品名で詳細。ポスターをタップで順位を選択（長押しでも詳細）。</div>'+

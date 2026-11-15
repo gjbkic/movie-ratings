@@ -125,6 +125,7 @@ let browser;
  const download=await downloadPromise,report=JSON.parse(require('fs').readFileSync(await download.path(),'utf8'));
  assert.equal(report.app,'movie30-rerank-analysis');assert.equal(report.rerankV2.events.length,await count());
  assert.equal(report.summary.bounds.n,3);assert.equal(Object.keys(report.rankRanges).length,3);
+ await page.evaluate(()=>document.getElementById('page-rerank').scrollTop=0);
  await page.screenshot({path:'test-results/rerank-progress.png',fullPage:true});
  await page.locator('#rrCompareTab').click();await page.screenshot({path:'test-results/rerank-compare.png',fullPage:true});
  await page.locator('[data-rr-logtab="ranks"]').click();
