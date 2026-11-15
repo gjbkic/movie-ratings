@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794730664127,
-  "sourceUpdatedIso": "2026-11-15T08:17:44.127Z",
+  "sourceUpdatedAt": 1794730973260,
+  "sourceUpdatedIso": "2026-11-15T08:22:53.260Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -74135,10 +74135,15 @@
           "fetchedAt": "2026-10-17T21:22:05.675Z"
         },
         "poster84": {
-          "path": "/3qeVNWVR7UzZ6d9a2cdUSooTITY.jpg",
+          "path": "/ArYdSuX3zY9fMsE4LqmBl7xJq5R.jpg",
           "tmdbId": 11830,
-          "checkedAt": "2026-10-17T21:22:26.300Z",
-          "provider": "tmdb"
+          "checkedAt": "2026-11-15T08:22:47.686Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "tampopo|1985",
+          "matchedTitle84": "Tampopo",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "custom-1792272928425-wp78": {
