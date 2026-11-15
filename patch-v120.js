@@ -1,7 +1,7 @@
 (()=>{
 'use strict';
-const BUILD='20261115-cycle-longpress-v120';
-let rrTriad=null,rrOrder=[],rrTie12=false,rrTie23=false,rrPicks=[],rrLogOpen=false,rrLogTab='history',rrTieOpen=false,rrTiePartner=false,rrReviewPairs=null,rrHeldReviewFlow=false,rrCycleGroups=[],rrCycleTieNext=false,rrCycleActiveKey=null;
+const BUILD='20261115-cycle-previous-triad-undo-v120';
+let rrTriad=null,rrOrder=[],rrTie12=false,rrTie23=false,rrPicks=[],rrLogOpen=false,rrLogTab='history',rrTieOpen=false,rrTiePartner=false,rrReviewPairs=null,rrHeldReviewFlow=false,rrCycleGroups=[],rrCycleTieNext=false,rrCycleActiveKey=null,rrCycleUndoToTriad=false;
 
 // Uses the same image service as the film detail panel, including its cache.
 const rrPosterAPI=()=>window.__movie30PosterBridge84||null;
@@ -129,6 +129,23 @@ function rrCycleUndoPick(){
  last.pop();if(!last.length)rrCycleGroups.pop();
  rrCycleTieNext=false;rrRender();
 }
+// Undo only the latest regular three-film judgment and let it be re-entered.
+ // Previous judgments are untouched; pending cycles resume after this answer.
+function rrCycleUndoPreviousTriad(){
+ const r=rrState(),last=r.events[r.events.length-1];
+ const ids=last?.displayIds||last?.ids;
+ if(last?.kind==='cycle-review'||!Array.isArray(ids)||ids.length!==3||
+    new Set(ids).size!==3)return;
+ r.events.pop();
+ rrCycleUndoToTriad=true; // Temporarily prioritize the previous trio over cycles.
+ rrCycleGroups=[];rrCycleTieNext=false;rrCycleActiveKey=null;
+ rrLogOpen=false;rrHeldReviewFlow=false;
+ rrSetTriad(ids);
+ if(last.firstPick&&rrTriad.includes(last.firstPick))rrPicks=[last.firstPick];
+ if(Array.isArray(last.reviewResolves))rrReviewPairs=last.reviewResolves.slice();
+ save();rrRender();
+ const page=document.getElementById('page-rerank');if(page)page.scrollTop=0;
+}
 function rrCycleDefer(){
  const r=rrState(),m=rrModel(r),active=rrCycleQueueSync(r,m);
  if(!active)return;
@@ -152,6 +169,7 @@ function rrCycleCommit(r,active){
   reviewResolves:keys,cycleReviewFromKey:active.item.key,
   genreScope:rrScopeLabel(ids)};
  r.events.push(e);
+ rrCycleUndoToTriad=false;
  const after=rrModel(r);
  e.rankDelta=rrDelta(previous,after);
  e.triadPositions=rrTriadPositions(previous,after,e.displayIds);
@@ -188,9 +206,13 @@ function rrCycleReviewHtml(r,m,active){
   '<div class="rr-cycle-actions">'+
   '<button id="rrCycleTie"'+(rrCycleGroups.length?'':' disabled')+
   ' class="'+(rrCycleTieNext?'active':'')+'">次は直前と同格</button>'+
-  '<button id="rrCycleUndo"'+(chosen.length?'':' disabled')+'>1つ戻す</button>'+
+  '<button id="rrCycleUndo"'+(chosen.length?'':' disabled')+'>選択を1つ戻す</button>'+
   '<button id="rrCycleReset"'+(chosen.length?'':' disabled')+'>最初から</button>'+
-  '<button id="rrCycleDefer">今は保留</button></div>'+
+  '<button id="rrCycleDefer">今は保留</button>'+ 
+  '<button id="rrCycleUndoTriad" class="rr-cycle-prev-triad"'+
+  ((r.events.length&&r.events[r.events.length-1].kind!=='cycle-review'&&
+    (r.events[r.events.length-1].displayIds||r.events[r.events.length-1].ids||[]).length===3)?'':' disabled')+
+  '>↶ 直前の3作品比較に戻る</button></div>'+
   '<p class="rr-muted">全作品を選ぶと順位を確定し、次の比較へ進みます。後から比較ログで再判定できます。</p></div>';
 }
 
@@ -1236,6 +1258,7 @@ function rrCommit(kind='rank',groupsOverride=null,restoreFirst=null){
   rrPaintSelection();return;
  }
  r.events.push(e);
+ rrCycleUndoToTriad=false;
  const modelAfter=rrModel(r);
  if(kind==='rank')rrCycleNewHolds(r,modelBefore,modelAfter);
  e.rankDelta=rrDelta(modelBefore,modelAfter);
@@ -1257,7 +1280,7 @@ function rrTieAll(){
  if(!rrTriad||rrTriad.length!==3)return;
  rrOrder=rrTriad.slice();rrCommit('rank',[rrTriad.slice()]);
 }
-function rrSkip(){rrReviewPairs=null;rrHeldReviewFlow=false;const r=rrState();if(rrOrder.length===3)r.skips.push(rrTriadSig(rrOrder));if(r.skips.length>80)r.skips=r.skips.slice(-80);save();rrSetTriad(rrChooseTriad(r,r.mode));rrRender();}
+function rrSkip(){rrCycleUndoToTriad=false;rrReviewPairs=null;rrHeldReviewFlow=false;const r=rrState();if(rrOrder.length===3)r.skips.push(rrTriadSig(rrOrder));if(r.skips.length>80)r.skips=r.skips.slice(-80);save();rrSetTriad(rrChooseTriad(r,r.mode));rrRender();}
 function rrUndoEvent(){
  if(rrTiePartner){rrTiePartner=false;rrPaintSelection();return}
  if(rrPicks.length){rrPicks=[];rrPaintSelection();return}
@@ -1293,7 +1316,7 @@ function rrDeleteEvent(id){
 }
 function rrNew(){
   if(!confirm("新ランキングの比較履歴だけを消してやり直しますか？\n旧ランキング・星・点数・レビューは変更しません。"))return;
-  state.rerankV2=rrNewSession();save();
+  rrCycleUndoToTriad=false;state.rerankV2=rrNewSession();save();
   rrSetTriad(rrChooseTriad(state.rerankV2,"local"));rrRender();
 }
 function rrHistoryHtml(r){
@@ -1441,7 +1464,7 @@ function rrConflictsHtml(r,m){
   '<h3>記録上の直接判断の食い違い '+m.stats.contradictions.length+'組</h3>'+p;
 }
 function rrExit(){
- rrLogOpen=false;rrTieOpen=false;rrTiePartner=false;rrHeldReviewFlow=false;
+ rrLogOpen=false;rrTieOpen=false;rrTiePartner=false;rrHeldReviewFlow=false;rrCycleUndoToTriad=false;
  view.page='rank';save(false);renderHeader();
 }
 function rrOpenConflict(ids,pairsToResolve=null){
@@ -1507,7 +1530,7 @@ function rrRender(){
       '<p>最新の直接判断を優先して順位を作ります。成立しない古い判断は保留し、履歴は残します。旧ランキング・点数・星・レビューは変更しません。</p>'+
       '<button id="rrNew" class="rr-danger">新ランキングだけ最初からやり直す</button></div>')+
    '</div>':
-   activeCycle?rrCycleReviewHtml(r,m,activeCycle):
+   activeCycle&&!rrCycleUndoToTriad?rrCycleReviewHtml(r,m,activeCycle):
    '<div class="rr-fast-stage">'+
     (pending.length?'<button id="rrOpenPending" class="rr-pending-banner">要確認の過去判断 '+pending.length+'組 · 1組ずつ確認</button>':'')+
     '<div class="rr-fast-progress"><span>比較 <strong>'+r.events.length+'</strong> 回</span>'+
@@ -1569,7 +1592,7 @@ function rrRender(){
   });
   bind('#rrBackfill',rrBackfillHistory);
    bind('#rrNew',rrNew);
- }else if(activeCycle){
+ }else if(activeCycle&&!rrCycleUndoToTriad){
   root.querySelectorAll('[data-rr-cycle-pick]').forEach(btn=>{
    const id=decodeURIComponent(btn.dataset.rrCyclePick);
    btn.onclick=e=>{
@@ -1606,6 +1629,7 @@ function rrRender(){
    if(rrCycleGroups.length){rrCycleTieNext=!rrCycleTieNext;rrRender();}
   });
   bind('#rrCycleUndo',rrCycleUndoPick);
+  bind('#rrCycleUndoTriad',rrCycleUndoPreviousTriad);
   bind('#rrCycleReset',()=>{rrCycleGroups=[];rrCycleTieNext=false;rrRender()});
   bind('#rrCycleDefer',rrCycleDefer);
   for(const id of activeCycle.ids)rrPosterQueue(filmById(id));
@@ -1797,7 +1821,7 @@ body.rr-immersive-on #page-rerank{position:fixed!important;inset:0!important;dis
 `;
 rrStyle.textContent += "\n.rr-pending-banner{display:block;width:100%;padding:11px 10px;border-radius:9px;\n border:1px solid #bd9550;color:#fff2d7;background:#3d3022;\n font-size:12px;font-weight:800;text-align:center}\n.rr-review-intro{padding:12px;margin:6px 0 12px;background:#18273b;\n border:1px solid #526a8a;border-radius:10px}\n.rr-review-intro strong{font-size:16px}\n.rr-review-intro p{font-size:12px;line-height:1.65;margin:8px 0;color:#d6e4f5}\n.rr-review-intro small{font-size:11px;color:#b4c7db}\n.rr-held-row{display:flex;flex-direction:column;align-items:stretch;gap:9px}\n.rr-held-row span{min-width:0;overflow-wrap:anywhere}\n.rr-held-row small{display:block;margin-top:4px;color:#b7c6d9;font-size:11px}\n.rr-held-buttons{display:flex;gap:7px;justify-content:flex-end}\n.rr-held-buttons button{padding:9px 13px;border-radius:8px;min-height:36px;\n border:1px solid #56739a;background:#1d395c;color:#eff7ff;font-size:12px}\n.rr-held-buttons button:last-child{background:#304132;border-color:#718675}\n";
 rrStyle.textContent += "\n.rr-cycle-screen{display:flex;flex-direction:column;gap:12px;padding:10px 4px 18px;max-width:740px;margin:0 auto}\n.rr-cycle-heading{background:#1c2d43;border:1px solid #57718f;border-radius:12px;padding:14px}\n.rr-cycle-heading strong{color:#ffdb9e;font-size:19px}\n.rr-cycle-heading p{font-size:13px;line-height:1.65;color:#e1eaf4;margin:9px 0}\n.rr-cycle-heading small{display:block;color:#a8bdd1;font-size:11px;line-height:1.65}\n.rr-cycle-picked{display:grid;gap:5px;min-height:35px}\n.rr-cycle-choice{padding:9px 12px;border:1px solid #476d99;border-radius:8px;background:#163355;\nfont-size:13px;line-height:1.4}\n.rr-cycle-choice b{display:inline-block;min-width:36px;color:#9cceff}\n.rr-cycle-instruction{font-size:13px;font-weight:800;color:#fff4dc;text-align:center}\n.rr-cycle-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}\n.rr-cycle-card{display:flex;align-items:center;gap:10px;padding:8px;border:1px solid #59749a;\nborder-radius:10px;background:#15263d;color:#eff7ff;min-height:74px;text-align:left;font-size:13px;\nfont-weight:750;min-width:0;overflow-wrap:anywhere}\n.rr-cycle-card img,.rr-cycle-no-poster{width:43px;height:60px;object-fit:cover;border-radius:5px;\nbackground:#31435b;flex:none}\n.rr-cycle-card small{display:block;margin-top:4px;color:#a8bcd3;font-weight:400}\n.rr-cycle-actions{display:flex;flex-wrap:wrap;gap:7px;justify-content:center}\n.rr-cycle-actions button{border:1px solid #5c7596;border-radius:8px;background:#244366;\ncolor:#eaf4ff;font-size:12px;padding:10px 12px;min-height:40px}\n.rr-cycle-actions button.active{background:#6c4e20;color:#fff7db;border-color:#f1c36e}\n.rr-cycle-actions button:disabled{opacity:.3}\n.rr-cycle-actions #rrCycleDefer{background:#24303c;color:#c4ceda}\n@media(max-width:400px){.rr-cycle-cards{grid-template-columns:1fr}.rr-cycle-card{min-height:62px}\n.rr-cycle-card img,.rr-cycle-no-poster{width:36px;height:50px}}\n";
-rrStyle.textContent += "\n.rr-cycle-longpress-note{text-align:center;font-size:11px;margin-top:-7px}body.rr-immersive-on .rr-cycle-card{user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;touch-action:manipulation}body.rr-immersive-on .rr-cycle-card img{pointer-events:none;user-select:none;-webkit-user-select:none}";
+rrStyle.textContent += "\n.rr-cycle-prev-triad{width:100%;background:#19375c!important;border:1px solid #7098c9!important;font-weight:800!important;margin-top:4px}.rr-cycle-prev-triad:disabled{opacity:.35;cursor:default}.rr-cycle-longpress-note{text-align:center;font-size:11px;margin-top:-7px}body.rr-immersive-on .rr-cycle-card{user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;touch-action:manipulation}body.rr-immersive-on .rr-cycle-card img{pointer-events:none;user-select:none;-webkit-user-select:none}";
 rrStyle.textContent += "\n.rr-cycle-explain{margin:12px 0 4px;border:1px solid #627c9b;border-radius:10px;\n background:#122c47;padding:11px 12px;min-width:0}\n.rr-cycle-explain>strong{display:block;font-size:13px;color:#f5d6a3;margin-bottom:7px}\n.rr-cycle-chain{font-size:14px;font-weight:800;color:#f9f7ea;line-height:1.75;\n overflow-wrap:anywhere;white-space:normal}\n.rr-cycle-explain-note{font-size:11px;color:#a9c5df;margin-top:8px;line-height:1.55}\n.rr-cycle-details{margin-top:10px}\n.rr-cycle-details summary{cursor:pointer;padding:6px 0;font-size:12px;color:#add6ff;\n font-weight:750}\n.rr-cycle-evidences{display:flex;flex-direction:column;gap:6px;padding-top:8px}\n.rr-cycle-evidence{display:flex;align-items:flex-start;gap:9px;padding:7px;\n border-radius:7px;background:#203a56}\n.rr-cycle-evidence-held{background:#4c3026;border:1px solid #bc8059}\n.rr-cycle-evidence-index{display:flex;align-items:center;justify-content:center;\n border-radius:50%;background:#365b80;color:#eef7ff;min-width:22px;height:22px;\n font-size:11px;font-weight:800}\n.rr-cycle-evidence-held .rr-cycle-evidence-index{background:#98633e}\n.rr-cycle-evidence-text{flex:1;min-width:0;overflow-wrap:anywhere;font-size:12px;\n line-height:1.45;color:#f1f6ff}\n.rr-cycle-evidence-text small{display:block;color:#aec9df;font-size:10px;\n margin-top:4px}\n.rr-cycle-evidence-held .rr-cycle-evidence-text small{color:#ffddb8}\n.rr-cycle-heading .rr-cycle-explain{background:#10263a}\n";
 document.head.appendChild(rrStyle);
 rrInstall();
