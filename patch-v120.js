@@ -1,6 +1,6 @@
 (()=>{
 'use strict';
-const BUILD='20261116-rank-fixedness-v123';
+const BUILD='20261116-direct-winner-crosscheck-v124';
 let rrTriad=null,rrOrder=[],rrTie12=false,rrTie23=false,rrPicks=[],rrLogOpen=false,rrLogTab='history',rrTieOpen=false,rrTiePartner=false,rrReviewPairs=null,rrHeldReviewFlow=false,rrCycleGroups=[],rrCycleTieNext=false,rrCycleActiveKey=null,rrCycleUndoToTriad=false;
 
 // Uses the same image service as the film detail panel, including its cache.
@@ -359,8 +359,8 @@ function rrReplayConstraints(r,ids,preferred){
     add(a,b,ei);
    }
  }
- // Stable topological sorting, using the Bayesian estimate only as a
- // baseline among works for which no hard direct-order constraint applies.
+ // Guarantee direct wins on the provisional order; the Bayesian score
+ // breaks unspecified preferences. Checkpoint comparisons test large moves.
  const degree=indegree.slice(),top=[],queue=[];
  for(let i=0;i<n;i++)if(degree[i]===0)queue.push(i);
  while(queue.length){
@@ -455,11 +455,12 @@ function rrModel(r){
  // to the provisional display and retain their deterministic identity order.
  observed.sort((a,b)=>score.get(b)-score.get(a)||basePos.get(a)-basePos.get(b));
  const baselineOrder=observed.concat(unseen),seenCount=observed.length;
- // Keep the directed constraint graph for genuine cycles and audits.
- // Do not force every direct edge into the global order: doing so causes
- // a single upset to leapfrog unrelated titles with no comparison evidence.
+ // Respect latest head-to-head results in the displayed provisional ranking.
+ // Unconstrained placement still uses the regularized pairwise model.
+ // Large movements trigger intermediate checks, rather than being trusted
+ // as proof that all the films in between are weaker/stronger.
  const replay=rrReplayConstraints(r,ids,baselineOrder);
- const order=baselineOrder;
+ const order=replay.order;
  const model={ids,order,score,uncertainty,stats,basePos,seenCount,replay};
  rrModelCache.set(r,{events:r.events,length:r.events.length,last,signature,model});
  return model;
@@ -964,6 +965,74 @@ function rrScopeLabel(ids){
 //
 // Returns null if there is no safe, fresh, informative trio to recheck.
 // Audits a surprising lower-ranked winner against untested middle anchors.
+// Rank leaps must be checked against films ACTUALLY crossed in the prior
+// display, not just the original high/low opponent. This adds 1-3 checks
+// for each large promotion/demotion, stored with its source event.
+function rrBuildJumpChecks(before,after,e){
+ if(e.ambiguous||e.kind==='cycle-review'||e.jumpAuditOf||!e.groups||
+    before.seenCount<18)return [];
+ const old=before.order.slice(0,before.seenCount);
+ const now=after.order.slice(0,after.seenCount);
+ const earlier=new Map(old.map((id,i)=>[id,i]));
+ const later=new Map(now.map((id,i)=>[id,i]));
+ const threshold=Math.max(12,Math.ceil(before.seenCount*.045));
+ const changes=(e.displayIds||e.ids||[]).map(id=>({
+  id,from:earlier.get(id),to:later.get(id)
+ })).filter(x=>x.from!=null&&x.to!=null&&
+   Math.abs(x.from-x.to)>=threshold)
+ .sort((a,b)=>Math.abs(b.from-b.to)-Math.abs(a.from-a.to));
+ const checked=new Set(),checks=[];
+ for(const {id,from,to} of changes.slice(0,2)){
+  const crossed=old.slice(Math.min(from,to)+1,Math.max(from,to))
+   .filter(x=>x!==id&&later.has(x)&&
+    !after.stats.pairs.has(rrPairKey(id,x)));
+  if(crossed.length<2)continue;
+  const delta=Math.abs(from-to);
+  const targets=delta>=75?[.2,.5,.8]:delta>=35?[.3,.7]:[.5];
+  for(const q of targets){
+   const target=from+(to-from)*q;
+   const options=crossed.slice().sort((a,b)=>{
+    const dist=x=>Math.abs(earlier.get(x)-target)+
+     (after.stats.counts.get(x)||0)*.1;
+    return dist(a)-dist(b)||rrHash(a+'|mid')-rrHash(b+'|mid');
+   }).slice(0,16);
+   let best=null,bestVal=Infinity;
+   for(const a of options)for(const b of options){
+    if(a===b)continue;
+    const triad=[id,a,b],sig=rrTriadSig(triad);
+    if(checked.has(sig)||sig===rrTriadSig(e.displayIds||e.ids||[]))continue;
+    const val=Math.abs(earlier.get(a)-target)+
+     .7*Math.abs(earlier.get(b)-target)+
+     (after.stats.pairs.get(rrPairKey(a,b))?.n||0)*4-
+     Math.min(14,Math.abs(earlier.get(a)-earlier.get(b)))*.13;
+    if(val<bestVal){bestVal=val;best=triad}
+   }
+   if(best){
+    checked.add(rrTriadSig(best));
+    checks.push({ids:best,source:e.id,focus:id,from:from+1,
+     to:to+1,direction:to<from?'up':'down'});
+   }
+  }
+ }
+ return checks.slice(0,4);
+}
+// A checkpoint disappears naturally when its trio was answered/skipped or
+// when its source comparison was undone. Tasks persist in saved event history.
+function rrPendingJumpAudit(r,shown=null,used=null){
+ const events=r.events||[];
+ for(let i=events.length-1;i>=Math.max(0,events.length-24);i--){
+  const e=events[i];
+  for(const check of (e.jumpChecks||[])){
+   if(!Array.isArray(check.ids)||check.ids.length!==3)continue;
+   const sig=rrTriadSig(check.ids);
+   if(shown&&rrTriadSig(shown)!==sig)continue;
+   if(used?.has(sig)||(r.skips||[]).includes(sig))continue;
+   if(events.slice(i+1).some(x=>rrTriadSig(x.displayIds||x.ids||[])===sig))continue;
+   return check;
+  }
+ }
+ return null;
+}
 function rrSurpriseAuditTriad(r,m,used){
  const ev=r.events[r.events.length-1],ps=ev?.triadPositions;
  if(!ev?.groups||!Array.isArray(ps)||ps.length!==3||m.seenCount<24)return null;
@@ -1132,6 +1201,13 @@ function rrChooseTriad(r,mode=r.mode){
  const pair=(a,b)=>stats.pairs.get(rrPairKey(a,b))?.n||0;
  const seen=ids.filter(id=>count(id)>0),unseen=ids.filter(id=>count(id)===0);
  const counter=r.events.length+r.skips.length;
+ // Finish targeted comparisons along a large rise or fall before
+ // returning to genre/top-150/global coverage selection.
+ if(mode!=='conflict'){
+  const checkpoint=rrPendingJumpAudit(r,null,used);
+  if(checkpoint&&checkpoint.ids.every(id=>m.ids.includes(id)))
+   return checkpoint.ids.slice();
+ }
  // Actively test large upsets and potentially under-ranked middle titles.
  if(mode!=='conflict'){
   const surprise=rrSurpriseAuditTriad(r,m,used);
@@ -1431,6 +1507,8 @@ function rrCommit(kind='rank',groupsOverride=null,restoreFirst=null){
  if(restoreFirst)e.firstPick=restoreFirst;
  if(kind==='rank'&&rrReviewPairs?.length)e.reviewResolves=rrReviewPairs.slice();
  e.genreScope=rrScopeLabel(e.displayIds);
+ const pendingCheck=rrPendingJumpAudit(r,e.displayIds);
+ if(pendingCheck)e.jumpAuditOf=pendingCheck.source;
  const newConflict=kind==='rank'?rrPendingConflict(r,modelBefore,e):null;
  // A newly formed cycle is handled by the very next multi-work comparison,
  // not by a one-off yes/no pop-up. Plain direct reversals retain confirmation.
@@ -1447,6 +1525,7 @@ function rrCommit(kind='rank',groupsOverride=null,restoreFirst=null){
  if(kind==='rank')rrCycleNewHolds(r,modelBefore,modelAfter);
  e.rankDelta=rrDelta(modelBefore,modelAfter);
  e.triadPositions=rrTriadPositions(modelBefore,modelAfter,e.displayIds);
+ e.jumpChecks=rrBuildJumpChecks(modelBefore,modelAfter,e);
  save();rrSetTriad(rrChooseTriad(r,r.mode));
  if(rrHeldReviewFlow){rrHeldReviewFlow=false;rrLogOpen=true;rrLogTab='conflicts';}
  rrRender();
@@ -1555,7 +1634,7 @@ function rrPreviewHtml(r,m){
          c+' ペア判断 · 推定順位（暫定）')+
        '</small></div>';
  }).join('');
- return '<div class="rr-muted">比較相手の強さと比較回数の偏りを考慮した統計的な暫定順位です。1回の勝敗で無関係な作品を大量に追い抜かせず、予想外の結果は中間の作品と再比較します。循環の再確認と履歴は維持します。未比較作品は順位未判定です。</div>'+
+ return '<div class="rr-muted">直接比較で勝った作品が相手より上になるように並べます。未比較の前後関係は統計推定を利用し、大幅に上昇・下降した作品は途中の作品と複数回比較して確かめます。循環の再確認と履歴は維持します。未比較作品は順位未判定です。</div>'+
    '<div class="rr-rank-scroll">'+html+'</div>';
 }
 
@@ -1701,7 +1780,7 @@ function rrRender(){
  '<button id="rrBackfill" class="rr-backfill">過去の比較も集計</button><div id="rrBackfillStatus" class="rr-muted"></div>'+rrHistoryHtml(r)+'</div>':
      rrLogTab==='ranks'?
      '<div class="rr-drawer-inner"><h3>新ランキング（全'+m.ids.length+'作品）</h3>'+
-      '<div class="rr-muted">統計推定で暫定順位を再計算 · 循環で保留 '+(m.replay?.held?.length||0)+'組</div>'+
+      '<div class="rr-muted">直接勝敗を優先・途中を再比較 · 循環で保留 '+(m.replay?.held?.length||0)+'組</div>'+
       rrPreviewHtml(r,m)+'</div>':
      rrLogTab==='conflicts'?
      '<div class="rr-drawer-inner">'+rrConflictsHtml(r,m)+'</div>':
@@ -1711,7 +1790,7 @@ function rrRender(){
        '<button data-rr-mode="local" class="'+(r.mode==='local'?'active':'')+'">近いジャンル中心（7：3）</button>'+
        '<button data-rr-mode="wide" class="'+(r.mode==='wide'?'active':'')+'">ジャンルを横断</button>'+
        '<button data-rr-mode="conflict" class="'+(r.mode==='conflict'?'active':'')+'">矛盾を確認</button></div>'+
-      '<p>暫定1〜150位の比較を少し増やし、151〜250位にもトップ50への挑戦機会を設けます。統計モデルで暫定順位を作り、中盤の作品が上位を試せる比較を増やします。循環の再確認と比較履歴は維持します。旧ランキング・点数・星・レビューは変更しません。</p>'+
+      '<p>暫定1〜150位の比較を少し増やし、151〜250位にもトップ50への挑戦機会を設けます。直接比較で勝った作品を相手より上に配置し、大幅に動いた場合は途中の作品と追加比較します。統計モデルは比較していない作品の仮の配置に使います。循環の再確認と比較履歴は維持します。旧ランキング・点数・星・レビューは変更しません。</p>'+
       '<button id="rrNew" class="rr-danger">新ランキングだけ最初からやり直す</button></div>')+
    '</div>':
    activeCycle&&!rrCycleUndoToTriad?rrCycleReviewHtml(r,m,activeCycle):
@@ -1720,7 +1799,10 @@ function rrRender(){
     '<div class="rr-fast-progress"><span>比較 <strong>'+r.events.length+'</strong> 回</span>'+
      '<span>比較済み <strong>'+nSeen+'</strong> / '+m.ids.length+' 本</span></div>'+ 
     '<button class="rr-progress-summary" id="rrOpenProgress" aria-label="ランキングの進捗と目安の詳細を開く">'+rrProgressHtml(progress)+'</button>'+rrDeltaHtml(r)+(r.events.length?rrTriadPositionsHtml(r.events[r.events.length-1]):'')+
-    '<div class="rr-genre-scope">'+esc(rrReviewPairs?.length?'再検証中：'+rrReviewPairs.length+'組の過去判断を更新':rrScopeLabel(rrTriad))+'</div>'+
+    '<div class="rr-genre-scope">'+esc(rrReviewPairs?.length?'再検証中：'+rrReviewPairs.length+'組の過去判断を更新':
+ (()=>{const a=rrPendingJumpAudit(r,rrTriad);return a?
+  '順位の大幅'+(a.direction==='up'?'上昇':'下降')+'（'+a.from+'→'+a.to+'位）の途中を検証中':
+  rrScopeLabel(rrTriad)})())+'</div>'+
     '<div class="rr-fast-instruction" id="rrPickInstruction">一番好きな作品をタップ</div>'+
     '<div class="rr-fast-sub" id="rrPickSub">1位 → 2位の2タップで次へ</div>'+
     '<div class="rr-fast-grid">'+rrTriad.map((id,i)=>rrFilmCard(id,i,m)).join('')+'</div>'+
