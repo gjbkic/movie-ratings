@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794728030717,
-  "sourceUpdatedIso": "2026-11-15T07:33:50.717Z",
+  "sourceUpdatedAt": 1794728083641,
+  "sourceUpdatedIso": "2026-11-15T07:34:43.641Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -65664,9 +65664,15 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
-          "tmdbId": 5548,
           "path": "/hHtOgGb3NihlyRATHlKPaFApbrd.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 5548,
+          "checkedAt": "2026-11-15T07:34:38.883Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "robocop|1987",
+          "matchedTitle84": "RoboCop",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "custom-1789929101832-iwdt": {
