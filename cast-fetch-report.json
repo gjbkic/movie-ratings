@@ -1,8 +1,8 @@
 {
-  "at": "2026-11-08T22:51:18.807701+00:00",
+  "at": "2026-11-15T23:23:11.402043+00:00",
   "counts": {
-    "total": 844,
-    "success": 836,
+    "total": 853,
+    "success": 845,
     "empty": 3,
     "unmatched": 5,
     "api": 0
@@ -6325,8 +6325,8 @@
       "title": "ドラえもん",
       "status": "success",
       "reason": "",
-      "tmdbId": 282057,
-      "castCount": 8
+      "tmdbId": 65733,
+      "castCount": 15
     },
     {
       "id": "custom-1792420000000-011",
@@ -6758,6 +6758,78 @@
       "status": "success",
       "reason": "",
       "tmdbId": 42009,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1794237370281-ulkl",
+      "title": "Tシャツが乾くまで",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 322570,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1794245493414-8mj7",
+      "title": "Love Letter",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 47002,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1794499971237-kb2g",
+      "title": "貴族探偵",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 71102,
+      "castCount": 14
+    },
+    {
+      "id": "custom-1794499999864-2cov",
+      "title": "大追跡～警視庁SSBC強行犯係～",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 293433,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1794596030193-rkso",
+      "title": "ドッグヴィル",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 553,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1794658156654-9hd7",
+      "title": "リブート",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 304194,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1794658169594-pub3",
+      "title": "LOST10",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 329490,
+      "castCount": 10
+    },
+    {
+      "id": "custom-1794659135519-05f8",
+      "title": "ワンダフルライフ",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 17962,
+      "castCount": 15
+    },
+    {
+      "id": "custom-1794760347145-1ips",
+      "title": "おくりびと",
+      "status": "success",
+      "reason": "",
+      "tmdbId": 16804,
       "castCount": 15
     }
   ]
