@@ -1,7 +1,30 @@
 (()=>{
 'use strict';
-const BUILD='20261116-rank-workbench-v125';
+const BUILD='20261116-title-search-v126';
+let rrRankQuery='',rrRankGenre='',rrRankStatus='',rrCycleFromRank=false,rrCycleEditUndo=[];
 let rrTriad=null,rrOrder=[],rrTie12=false,rrTie23=false,rrPicks=[],rrLogOpen=false,rrLogTab='history',rrTieOpen=false,rrTiePartner=false,rrReviewPairs=null,rrHeldReviewFlow=false,rrCycleGroups=[],rrCycleTieNext=false,rrCycleActiveKey=null,rrCycleUndoToTriad=false,rrRankSelectedId=null,rrRankNearCount=6,rrRankListScroll=0;
+
+function rrTitleHtml(id,insideCard=false){
+ const title=displayTitle(filmById(id)||{title:id}),tag=insideCard?'span':'button';
+ return '<'+tag+' class="rr-detail-link" data-rr-detail="'+encodeURIComponent(id)+'" '+
+  (insideCard?'role="link" tabindex="0"':'type="button"')+' aria-label="'+esc(title+'の詳細を開く')+'">'+esc(title)+'</'+tag+'>';
+}
+function rrBindDetails(root){
+ if(root.dataset.rrDetailsBound)return;
+ root.dataset.rrDetailsBound='1';
+ const target=e=>e.target.closest?.('[data-rr-detail],[data-rr-rank-detail]');
+ root.addEventListener('pointerdown',e=>{if(target(e))e.stopPropagation()},true);
+ root.addEventListener('click',e=>{
+  const link=target(e);if(!link)return;
+  e.preventDefault();e.stopPropagation();
+  const id=decodeURIComponent(link.dataset.rrDetail||link.dataset.rrRankDetail);
+  if(filmById(id)&&typeof openSheet==='function')openSheet(id);
+ },true);
+ root.addEventListener('keydown',e=>{
+  const link=target(e);if(!link||!['Enter',' '].includes(e.key))return;
+  e.preventDefault();e.stopPropagation();link.click();
+ },true);
+}
 
 // Uses the same image service as the film detail panel, including its cache.
 const rrPosterAPI=()=>window.__movie30PosterBridge84||null;
@@ -68,6 +91,7 @@ function rrCycleQueuePush(r,edge,front=false){
  if(front)r.cycleReviewQueue.unshift(value);
  else r.cycleReviewQueue.push(value);
 }
+function idsForCycle(edge){return [...new Set(edge.cycleIds)]}
 function rrCycleQueueSync(r,m){
  if(!Array.isArray(r.cycleReviewQueue))r.cycleReviewQueue=[];
  // Existing unresolved historical cycles are also offered, but never revive
@@ -95,7 +119,10 @@ function rrCycleQueueSync(r,m){
    r.events.findIndex(e=>e.id===item.eventId)}:unresolved.get(item.key);
  if(!edge||!Array.isArray(edge.cycleIds)||edge.cycleIds.length<3)return null;
  if(rrCycleActiveKey!==item.key){
-  rrCycleActiveKey=item.key;rrCycleGroups=[];rrCycleTieNext=false;
+  rrCycleActiveKey=item.key;
+  const position=new Map(m.order.map((id,i)=>[id,i]));
+  rrCycleGroups=idsForCycle(edge).sort((a,b)=>(position.get(a)??9999)-(position.get(b)??9999)).map(id=>[id]);
+  rrCycleEditUndo=[];rrCycleTieNext=false;
  }
  return {item,edge,ids:edge.cycleIds.slice()};
 }
@@ -114,26 +141,32 @@ function rrCycleManualReview(eventId){
  r.cycleReviewQueue.unshift({key,manual:true,eventId,ids});
  rrLogOpen=false;rrRender();
 }
-function rrCyclePick(id){
- const r=rrState(),active=rrCycleQueueSync(r,rrModel(r));
- if(!active||!active.ids.includes(id)||rrCycleGroups.flat().includes(id))return;
- if(rrCycleTieNext&&rrCycleGroups.length)rrCycleGroups[rrCycleGroups.length-1].push(id);
- else rrCycleGroups.push([id]);
- rrCycleTieNext=false;
- if(rrCycleGroups.flat().length===active.ids.length)rrCycleCommit(r,active);
- else rrRender();
+function rrCycleEdit(index,action){
+ const next=rrCycleGroups.map(g=>g.slice()),i=Number(index);
+ if(!next[i])return;
+ if(action==='up'&&i>0)[next[i-1],next[i]]=[next[i],next[i-1]];
+ else if(action==='down'&&i<next.length-1)[next[i],next[i+1]]=[next[i+1],next[i]];
+ else if(action==='tie'&&i>0){next[i-1].push(...next[i]);next.splice(i,1)}
+ else if(action==='split'&&next[i].length>1)next.splice(i,1,...next[i].map(id=>[id]));
+ else return;
+ rrCycleEditUndo.push(rrCycleGroups.map(g=>g.slice()));
+ rrCycleGroups=next;rrRender();
 }
 function rrCycleUndoPick(){
- const last=rrCycleGroups[rrCycleGroups.length-1];
- if(!last)return;
- last.pop();if(!last.length)rrCycleGroups.pop();
- rrCycleTieNext=false;rrRender();
+ if(!rrCycleEditUndo.length)return;
+ rrCycleGroups=rrCycleEditUndo.pop();rrRender();
 }
 // Undo only the latest regular three-film judgment and let it be re-entered.
  // Previous judgments are untouched; pending cycles resume after this answer.
 function rrCycleUndoPreviousTriad(){
  const r=rrState(),last=r.events[r.events.length-1];
  const ids=last?.displayIds||last?.ids;
+ if(last?.kind==='pair-review'&&Array.isArray(ids)&&ids.length===2){
+  r.events.pop();rrCycleGroups=[];rrCycleEditUndo=[];rrCycleActiveKey=null;
+  rrCycleFromRank=false;rrCycleUndoToTriad=false;
+  rrRankSelectedId=last.editorFocus||ids[0];rrLogOpen=true;rrLogTab='ranks';
+  save();rrRender();return;
+ }
  if(last?.kind==='cycle-review'||!Array.isArray(ids)||ids.length!==3||
     new Set(ids).size!==3)return;
  r.events.pop();
@@ -154,6 +187,7 @@ function rrCycleDefer(){
   accepted.add(active.item.key);r.acknowledgedHolds=[...accepted];
  }
  r.cycleReviewQueue.shift();rrCycleActiveKey=null;rrCycleGroups=[];rrCycleTieNext=false;
+ if(rrCycleFromRank){rrCycleFromRank=false;rrLogOpen=true;rrLogTab='ranks'}
  save();rrRender();
 }
 function rrCycleCommit(r,active){
@@ -176,44 +210,33 @@ function rrCycleCommit(r,active){
  rrCycleNewHolds(r,previous,after);
  r.cycleReviewQueue=r.cycleReviewQueue.filter(item=>item.key!==active.item.key);
  rrCycleGroups=[];rrCycleTieNext=false;rrCycleActiveKey=null;
- save();rrLogOpen=false;rrSetTriad(rrChooseTriad(r,r.mode));rrRender();
+ save();rrLogOpen=rrCycleFromRank&&!r.cycleReviewQueue.length;
+ if(rrLogOpen){rrLogTab='ranks';rrCycleFromRank=false}
+ rrSetTriad(rrChooseTriad(r,r.mode));rrRender();
 }
 function rrCycleReviewHtml(r,m,active){
- const title=id=>displayTitle(filmById(id)||{title:id});
- const all=active.ids,chosen=rrCycleGroups.flat(),remaining=all.filter(id=>!chosen.includes(id));
- const review=all.map(title).join(' ＞ ')+' ＞ '+title(all[0]);
- const steps=rrCycleGroups.length?rrCycleGroups.map((group,i)=>
-  '<div class="rr-cycle-choice"><b>'+(i+1)+'位</b> '+esc(group.map(title).join(' ≈ '))+
-  '</div>').join(''):'<div class="rr-muted">1位の作品から順に選んでください。</div>';
- const choices=remaining.map(id=>{
-  const f=filmById(id),path=rrPosterMeta(f)?.path,src=rrPosterUrl(path,'w185');
-  return '<button type="button" data-rr-cycle-pick="'+encodeURIComponent(id)+'" class="rr-cycle-card">'+
-   (src?'<img src="'+esc(src)+'" alt="" loading="lazy">':'<span class="rr-cycle-no-poster"></span>')+
-   '<span>'+esc(title(id))+(f?.year?' <small>'+esc(String(f.year))+'</small>':'')+
-   '</span></button>';
+ const last=r.events.at(-1),canReturn=last?.kind==='pair-review'||
+  (last&&last.kind!=='cycle-review'&&(last.displayIds||last.ids||[]).length===3);
+ let rank=1;
+ const rows=rrCycleGroups.map((group,i)=>{
+  const pos=rank;rank+=group.length;
+  return '<div class="rr-cycle-order-row" data-rr-cycle-group="'+i+'"><b>'+pos+'位</b><div class="rr-cycle-order-names">'+
+   group.map(id=>rrTitleHtml(id)).join(' ≈ ')+'</div><div class="rr-cycle-order-controls">'+
+   '<button type="button" data-rr-cycle-edit="'+i+'" data-action="up" aria-label="'+pos+'位の作品を上へ"'+(i?'':' disabled')+'>↑</button>'+
+   '<button type="button" data-rr-cycle-edit="'+i+'" data-action="down" aria-label="'+pos+'位の作品を下へ"'+(i<rrCycleGroups.length-1?'':' disabled')+'>↓</button>'+
+   (i?'<button type="button" data-rr-cycle-edit="'+i+'" data-action="tie">上と同格</button>':'')+
+   (group.length>1?'<button type="button" data-rr-cycle-edit="'+i+'" data-action="split">同格を分ける</button>':'')+'</div></div>';
  }).join('');
- return '<div class="rr-cycle-screen"><div class="rr-cycle-heading"><strong>循環を発見：'+all.length+
-  '作品を並べ直す</strong><p>過去の判断が一周する循環になっています。'+
-  '元の判断は消さず、ここで選び直した順序を最新の判断として優先します。</p>'+
-  rrCycleExplanationHtml(active.edge)+
-  (!active.edge.cycleSteps?.length?'<small>'+esc(review)+'</small>':'')+'</div>'+
-  '<div class="rr-cycle-picked">'+steps+'</div>'+
-  '<div class="rr-cycle-instruction">'+
-  (rrCycleTieNext?'次に選ぶ作品を直前と同格にします':'次の順位の作品をタップ')+
-  '（'+chosen.length+' / '+all.length+'本）</div>'+
-  '<div class="rr-cycle-cards">'+choices+'</div>'+ 
-  '<div class="rr-muted rr-cycle-longpress-note">長押しで作品の詳細を表示。タップで順位を選択。</div>'+
-  '<div class="rr-cycle-actions">'+
-  '<button id="rrCycleTie"'+(rrCycleGroups.length?'':' disabled')+
-  ' class="'+(rrCycleTieNext?'active':'')+'">次は直前と同格</button>'+
-  '<button id="rrCycleUndo"'+(chosen.length?'':' disabled')+'>選択を1つ戻す</button>'+
-  '<button id="rrCycleReset"'+(chosen.length?'':' disabled')+'>最初から</button>'+
-  '<button id="rrCycleDefer">今は保留</button>'+ 
-  '<button id="rrCycleUndoTriad" class="rr-cycle-prev-triad"'+
-  ((r.events.length&&r.events[r.events.length-1].kind!=='cycle-review'&&
-    (r.events[r.events.length-1].displayIds||r.events[r.events.length-1].ids||[]).length===3)?'':' disabled')+
-  '>↶ 直前の3作品比較に戻る</button></div>'+
-  '<p class="rr-muted">全作品を選ぶと順位を確定し、次の比較へ進みます。後から比較ログで再判定できます。</p></div>';
+ return '<div class="rr-cycle-screen"><div class="rr-cycle-heading"><strong>循環を確認：'+active.ids.length+
+  '作品を並べ直す</strong><p>↑↓で上下を入れ替え、よければ「この順序で確定」を押してください。'+
+  '確定するまでは比較結果を変更しません。同格にもできます。</p>'+rrCycleExplanationHtml(active.edge)+'</div>'+
+  '<div class="rr-cycle-order">'+rows+'</div><div class="rr-cycle-actions">'+
+  '<button type="button" id="rrCycleCommit">この順序で確定</button>'+
+  '<button type="button" id="rrCycleUndo"'+(rrCycleEditUndo.length?'':' disabled')+'>入れ替えを1つ戻す</button>'+
+  '<button type="button" id="rrCycleReset">並べ直しをリセット</button>'+
+  '<button type="button" id="rrCycleDefer">後で確認</button>'+
+  '<button type="button" id="rrCycleUndoTriad" class="rr-cycle-prev-triad"'+(canReturn?'':' disabled')+
+  '>↶ 直前の比較を取り消して戻る</button></div></div>';
 }
 
 function rrNewSession(){
@@ -249,15 +272,29 @@ function rrEnsureFresh(r){
 }
 function rrSelectedIds(r){rrEnsureFresh(r);return r.baselineIds.slice()}
 function rrPairKey(a,b){return a<b?a+'\u0000'+b:b+'\u0000'+a}
+// Corrections apply to one pair, including older pair-review records that
+// may lack reviewResolves. Recompute from history so Undo restores the old answer.
+function rrPairCorrections(r){
+ const latest=new Map();
+ (r.events||[]).forEach((e,i)=>{
+  if(e.ambiguous)return;
+  for(const key of e.reviewResolves||[])latest.set(key,i);
+  if(e.kind==='pair-review'&&e.ids?.length===2)
+   latest.set(rrPairKey(e.ids[0],e.ids[1]),i);
+ });
+ return latest;
+}
+function rrCorrectedPairCount(e,index,corrections){
+ const ids=[...new Set((e.groups||[]).flat())];let count=0;
+ for(let a=0;a<ids.length;a++)for(let b=a+1;b<ids.length;b++)
+  if(index<(corrections.get(rrPairKey(ids[a],ids[b]))??0))count++;
+ return count;
+}
 function rrStats(r,ids){
   const allowed=new Set(ids),pairs=new Map(),counts=new Map(ids.map(id=>[id,0]));
   // A deliberate recheck supersedes older judgements for the specifically
   // reviewed pair(s), while retaining every original historical event.
-  const events=r.events||[],lastReview=new Map();
-  events.forEach((e,i)=>{
-   if(!e.ambiguous&&Array.isArray(e.reviewResolves))
-    for(const key of e.reviewResolves)lastReview.set(key,i);
-  });
+  const events=r.events||[],lastReview=rrPairCorrections(r);
   let ambiguous=0;
   for(let ei=0;ei<events.length;ei++){
     const e=events[ei];
@@ -562,12 +599,11 @@ function rrTriadPositionsHtml(event,compact=false){
    '<div class="rr-triad-unrecorded">3作品の個別順位は未集計</div>':
    '<div class="rr-triad-unrecorded">この回の3作品の変動は未集計です。比較ログの「過去の比較も集計」から計算できます。</div>';
  const rows=info.map(x=>{
-  const f=filmById(x.id),title=f?displayTitle(f):x.id;
   const first=x.before==null?'未判定':x.before+'位';
   const last=x.after==null?'未判定':x.after+'位';
   const diff=x.before!=null&&x.after!=null?x.before-x.after:null;
   const suffix=diff===null?'新規':diff>0?'↑'+diff:diff<0?'↓'+(-diff):'±0';
-  return '<div class="rr-triad-pos-row"><span>'+esc(title)+'</span>'+
+  return '<div class="rr-triad-pos-row"><span>'+rrTitleHtml(x.id)+'</span>'+
    '<b>'+first+' → '+last+'</b><small class="'+(diff>0?'rr-triad-rise':diff<0?'rr-triad-fall':'')+'">'+suffix+'</small></div>';
  }).join('');
  return '<div class="rr-triad-moves">'+
@@ -1370,7 +1406,7 @@ function rrFilmCard(id,idx,m){
    esc(displayTitle(f))+'を選ぶ" aria-pressed="false">'+
    '<span class="rr-fast-poster"><span class="rr-placeholder">POSTER</span>'+photo+
    '<span class="rr-fast-badge">選ぶ</span></span>'+
-   '<span class="rr-fast-title">'+esc(displayTitle(f))+'</span>'+
+   '<span class="rr-fast-title">'+rrTitleHtml(id,true)+'</span>'+
    '<span class="rr-fast-year">'+(f.year||'')+'</span></button>';
 }
 function rrGroups(){
@@ -1583,14 +1619,16 @@ function rrNew(){
   rrSetTriad(rrChooseTriad(state.rerankV2,"local"));rrRender();
 }
 function rrHistoryHtml(r){
- const ev=r.events.slice().reverse();
+ const ev=r.events.slice().reverse(),corrections=rrPairCorrections(r);
  if(!ev.length)return '<div class="rr-muted">まだ比較履歴はありません。</div>';
  return ev.map((e,j)=>{
-   const names=(e.ids||[]).map(id=>displayTitle(filmById(id)||{title:id}));
+   const names=(e.ids||[]).map(id=>rrTitleHtml(id));
    const v=e.kind==='cycle'?'三すくみ':e.kind==='hold'?'判断保留':
-     (e.groups||[]).map(g=>g.map(id=>displayTitle(filmById(id)||{title:id})).join(' ≈ ')).join(' ＞ ');
+     (e.groups||[]).map(g=>g.map(id=>rrTitleHtml(id)).join(' ≈ ')).join(' ＞ ');
    const txt=e.ambiguous?v+'： '+names.join(' / '):v;
-   return '<div class="rr-hrow"><b>#'+(r.events.length-j)+'</b><span>'+esc(txt)+
+   const corrected=rrCorrectedPairCount(e,r.events.length-1-j,corrections);
+   return '<div class="rr-hrow"><b>#'+(r.events.length-j)+'</b><span>'+txt+
+     (corrected?'<small class="rr-genre-log">'+corrected+'組は選び直しで更新済み（現在の直接比較には不採用）</small>':'')+
      (e.genreScope?'<small class="rr-genre-log">'+esc(e.genreScope)+'</small>':'')+
      (e.reviewResolves?.length?'<small class="rr-genre-log">再検証で'+e.reviewResolves.length+'組の過去判断を更新（履歴は保存）</small>':'')+
      '<small class="rr-delta-line">'+esc(rrDeltaText(e.rankDelta))+'</small>'+rrTriadPositionsHtml(e,true)+ 
@@ -1652,9 +1690,9 @@ function rrRankWorkRow(other,focus,rank,note,relation=''){
   (note?'<small class="rr-rank-work-meta">'+esc(note)+'</small>':'')+
   '<div class="rr-inline-pair-controls">'+
   '<button type="button" class="'+(relation==='up'?'current':'')+
-   '" data-rr-rank-pair="'+k+'" data-rr-rank-answer="up">↑ この作品が上</button>'+
+   '" data-rr-rank-pair="'+k+'" data-rr-rank-answer="up">↑ 選択作品が上</button>'+
   '<button type="button" class="'+(relation==='down'?'current':'')+
-   '" data-rr-rank-pair="'+k+'" data-rr-rank-answer="down">↓ この作品が下</button>'+
+   '" data-rr-rank-pair="'+k+'" data-rr-rank-answer="down">↓ 選択作品が下</button>'+
   '</div></div>';
 }
 function rrRankWorkbenchHtml(r,m,id){
@@ -1682,11 +1720,11 @@ function rrRankWorkbenchHtml(r,m,id){
   '<button type="button" id="rrRankClose">一覧へ戻る</button></div>'+
   '<div class="rr-rank-work-feature">'+
   (poster?'<img src="'+esc(poster)+'" alt="" loading="lazy">':'<span class="rr-rank-work-placeholder"></span>')+
-  '<div><strong>'+esc(name)+'</strong><small>'+(rank===null?'未比較・順位未定':rank+'位（暫定）')+
+  '<div><strong>'+rrTitleHtml(id)+'</strong><small>'+(rank===null?'未比較・順位未定':rank+'位（暫定）')+
   (film?.year?' · '+esc(String(film.year)):'')+'</small>'+
   '<button type="button" id="rrRankFilmDetail">作品詳細を表示</button></div></div>'+
-  '<p class="rr-muted">「この作品」は上記の選択作品。各相手について↑か↓をタップすると、'+
-  '最新の直接判断として保存します。直前なら取り消せます。</p>'+
+  '<p class="rr-muted">各相手について、上記の選択作品が上か下かをタップすると、'+
+  '最新の直接判断として保存します。同じ相手は選び直すと以前の回答を置き換えます。直前なら取り消せます。</p>'+
   (undo?'<button type="button" id="rrRankUndoPair">↶ 最後の比較を取り消す</button>':'')+
   '<section class="rr-rank-work-section"><h4>直接勝った相手 · '+direct.below.length+'本</h4>'+
   detail(direct.below)+'</section>'+
@@ -1707,10 +1745,15 @@ function rrRankQuickCompare(focus,other,focusWins){
  const r=rrState(),ids=rrSelectedIds(r);
  if(!ids.includes(focus)||!ids.includes(other))return;
  const before=rrModel(r),winner=focusWins?focus:other,loser=focusWins?other:focus;
+ const previous=rrLatestDirectFor(r,before,focus);
+ const current=previous.above.concat(previous.below).find(x=>x.id===other);
+ if(current&&current.relation===(focusWins?'above':'below'))return;
  const e={id:'rrpair-'+Date.now()+'-'+Math.random().toString(36).slice(2,7),
   at:Date.now(),kind:'pair-review',mode:'direct',editorFocus:focus,
   ids:[winner,loser],displayIds:[focus,other],groups:[[winner],[loser]],
   reviewResolves:[rrPairKey(focus,other)],genreScope:rrScopeLabel([focus,other])};
+ const conflict=rrPendingConflict(r,before,e);
+ if(conflict?.reversed?.length&&!conflict.suspended.length&&!rrConfirmPendingConflict(r,before,e))return;
  r.events.push(e);
  const after=rrModel(r);rrCycleNewHolds(r,before,after);
  e.rankDelta=rrDelta(before,after);
@@ -1718,6 +1761,7 @@ function rrRankQuickCompare(focus,other,focusWins){
  e.jumpChecks=rrBuildJumpChecks(before,after,e);
  save();
  rrLogOpen=true;rrLogTab='ranks';rrRankSelectedId=focus;
+ if(conflict?.suspended?.length){rrCycleFromRank=true;rrCycleUndoToTriad=false;rrLogOpen=false}
  rrRender();
  if(page)page.scrollTop=oldScroll;
 }
@@ -1728,14 +1772,32 @@ function rrRankUndoPair(){
  r.events.pop();save();rrRender();
  if(page)page.scrollTop=oldScroll;
 }
+function rrRankNormalize(value){return String(value||'').normalize('NFKC').toLowerCase()}
+function rrRankFiltersHtml(m){
+ const genres=[...rrGenreMap(m.ids).groups.keys()].sort((a,b)=>a.localeCompare(b,'ja'));
+ return '<div class="rr-rank-filters">'+
+  '<input id="rrRankSearch" class="search" type="search" aria-label="暫定順位を検索" placeholder="邦題・英題・原題・年で検索" value="'+esc(rrRankQuery)+'">'+
+  '<select id="rrRankGenre" class="field" aria-label="ジャンルで絞り込み"><option value="">全ジャンル</option>'+
+  genres.map(g=>'<option value="'+esc(g)+'"'+(rrRankGenre===g?' selected':'')+'>'+esc(g)+'</option>').join('')+'</select>'+
+  '<select id="rrRankStatus" class="field" aria-label="比較状況で絞り込み">'+
+  [['','すべて'],['seen','比較済み'],['unseen','未比較']].map(([v,t])=>'<option value="'+v+'"'+(rrRankStatus===v?' selected':'')+'>'+t+'</option>').join('')+'</select>'+
+  '<button type="button" id="rrRankClear">検索・絞り込みを解除</button></div>';
+}
 function rrPreviewHtml(r,m){
- const judged=m.seenCount>0;
+ const judged=m.ids.length>0;
  // Posterior score bands are not intervals for constrained ranks.
  if(!judged)return '<div class="rr-muted">まだ順位は未判定です。初回の比較から新ランキングを作ります。旧順位は初期値に使っていません。</div>';
+ const genres=rrGenreMap(m.ids).tokens,query=rrRankNormalize(rrRankQuery).trim().split(/\s+/).filter(Boolean);
+ let shown=0,divider=false;
  const html=m.order.map((id,i)=>{
    const f=filmById(id),c=m.stats.counts.get(id)||0,never=c===0;
-   // Provisional probability-based rank; no forced order for untested pairs.
-   return (i===m.seenCount?
+   const info=typeof titleInfo==='function'?titleInfo(f):{};
+   const text=rrRankNormalize([displayTitle(f),info?.originalTitle,info?.englishTitle,f?.title,f?.lbTitle,f?.year].filter(Boolean).join(' '));
+   if(query.some(q=>!text.includes(q))||(rrRankGenre&&!genres.get(id)?.has(rrRankGenre))||
+     (rrRankStatus==='seen'&&never)||(rrRankStatus==='unseen'&&!never))return '';
+   shown++;const addDivider=never&&!divider;if(never)divider=true;
+   // Keep global positions even when the visible list is filtered.
+   return (addDivider?
       '<div class="rr-rank-divider">未比較の作品 '+(m.ids.length-m.seenCount)+'本（順位未判定・下位という意味ではありません）</div>':'')+
      '<div class="rr-rank-row'+(never?' rr-rank-unseen':'')+'"><b>'+
        (never?'—':(i+1))+'</b>'+
@@ -1744,9 +1806,10 @@ function rrPreviewHtml(r,m){
          c+' ペア判断 · 暫定順位')+'</small></button>'+
        '<button type="button" class="rr-rank-edit-button" data-rr-rank-edit="'+encodeURIComponent(id)+'">比較・修正</button></div>';
  }).join('');
- return '<div class="rr-muted">作品名をタップで詳細。「比較・修正」で直接対戦の一覧と近隣作品への即判定ができます。</div>'+
+ return '<div class="rr-muted">表示 '+shown+' / '+m.ids.length+'作品（順位は全体での位置）</div>'+
+  '<div class="rr-muted">作品名をタップで詳細。「比較・修正」で直接対戦の一覧と近隣作品への即判定ができます。</div>'+
   '<div class="rr-muted">直接比較で勝った作品が相手より上になるように並べます。未比較の前後関係は統計推定を利用し、大幅に上昇・下降した作品は途中の作品と複数回比較して確かめます。循環の再確認と履歴は維持します。未比較作品は順位未判定です。</div>'+
-   '<div class="rr-rank-scroll">'+html+'</div>';
+   '<div class="rr-rank-scroll">'+(html||'<div class="rr-muted">条件に一致する作品はありません。</div>')+'</div>';
 }
 
 function rrHeldKey(r,edge){
@@ -1778,21 +1841,19 @@ function rrRecheckHeld(key){
 function rrCycleExplanationHtml(edge){
  if(!edge||!Array.isArray(edge.cycleIds)||edge.cycleIds.length<2)return '';
  const ids=edge.cycleIds,steps=edge.cycleSteps||[];
- const name=id=>displayTitle(filmById(id)||{title:id});
- const chain=ids.map(id=>name(id)).concat(name(ids[0])).join(' ＞ ');
+ const chain=ids.concat(ids[0]).map(id=>rrTitleHtml(id)).join(' ＞ ');
  const detailed=steps.map((step,i)=>{
-  const left=name(step.better),right=name(step.worse);
   const isHeld=!!step.held;
   return '<div class="rr-cycle-evidence'+(isHeld?' rr-cycle-evidence-held':'')+'">'+
     '<span class="rr-cycle-evidence-index">'+(i+1)+'</span>'+
-    '<span class="rr-cycle-evidence-text">'+esc(left+' ＞ '+right)+
+    '<span class="rr-cycle-evidence-text">'+rrTitleHtml(step.better)+' ＞ '+rrTitleHtml(step.worse)+
     '<small>比較#'+(step.eventIndex+1)+
     (isHeld?' · 今は保留中の判断':' · 順位に採用中の判断')+
     '</small></span></div>';
  }).join('');
  return '<div class="rr-cycle-explain">'+
   '<strong>この'+ids.length+'作品で循環しています</strong>'+
-  '<div class="rr-cycle-chain">'+esc(chain)+'</div>'+
+  '<div class="rr-cycle-chain">'+chain+'</div>'+
   '<div class="rr-cycle-explain-note">最初の作品に戻ってしまうため、すべての「＞」を同時には満たせません。</div>'+
   (steps.length?'<details class="rr-cycle-details"'+(steps.length<=5?' open':'')+'>'+
   '<summary>各矢印の根拠（'+steps.length+'件の比較）</summary>'+
@@ -1804,28 +1865,24 @@ function rrConflictsHtml(r,m){
  const cycles=m.stats.cycles.slice(0,200),contradictions=m.stats.contradictions.slice(0,100);
  const detail='<div class="rr-muted">新ランキングは最新の直接比較を優先します。判断が循環する場合、古い制約は一時保留し、記録自体は残します。再検証すると新しい判断が優先されます。</div>';
  const c=cycles.length?cycles.map((ids,i)=>
-  '<div class="rr-hrow"><span>'+esc(ids.map(x=>displayTitle(filmById(x)||{title:x})).join(' ＞ ')+
-  ' ＞ '+displayTitle(filmById(ids[0])||{title:ids[0]}))+
+  '<div class="rr-hrow"><span>'+ids.concat(ids[0]).map(id=>rrTitleHtml(id)).join(' ＞ ')+
   '</span><button data-rr-cycle="'+i+'">再比較</button></div>').join(''):
   '<div class="rr-muted">現時点で循環は検出されていません。</div>';
  const p=contradictions.length?contradictions.map((p,i)=>
-  '<div class="rr-hrow"><span>'+esc(displayTitle(filmById(p.a)||{title:p.a})+' ↔ '+
-  displayTitle(filmById(p.b)||{title:p.b}))+
+  '<div class="rr-hrow"><span>'+rrTitleHtml(p.a)+' ↔ '+rrTitleHtml(p.b)+
   '（逆方向 '+p.winsA+' / '+p.winsB+' 回）</span><button data-rr-pair="'+i+'">再比較</button></div>').join(''):
   '<div class="rr-muted">同じ2本で反対の判断になった組はありません。</div>';
  const held=m.replay?.held||[],pending=rrUnreviewedHolds(r,m);
  const rows=pending.length?pending.map((edge,i)=>{
   const event=r.events[edge.eventIndex],key=rrHeldKey(r,edge);
-  const a=displayTitle(filmById(edge.better)||{title:edge.better});
-  const b=displayTitle(filmById(edge.worse)||{title:edge.worse});
   const pos=new Map(m.order.map((id,j)=>[id,j+1]));
   const trio=(event?.displayIds||event?.ids||[]).map(id=>
-   displayTitle(filmById(id)||{title:id})).join(' / ');
-  return '<div class="rr-hrow rr-held-row"><div class="rr-held-main"><b>判断 '+(i+1)+'</b> '+esc(a+' ＞ '+b)+
-   '<small>比較#'+(edge.eventIndex+1)+' · 元の3作品：'+esc(trio)+'</small>'+
+   rrTitleHtml(id)).join(' / ');
+  return '<div class="rr-hrow rr-held-row"><div class="rr-held-main"><b>判断 '+(i+1)+'</b> '+rrTitleHtml(edge.better)+' ＞ '+rrTitleHtml(edge.worse)+
+   '<small>比較#'+(edge.eventIndex+1)+' · 元の3作品：'+trio+'</small>'+
    rrCycleExplanationHtml(edge)+
-   '<small>現在の暫定順位：'+esc(a)+' '+(pos.get(edge.better)||'—')+'位 / '+
-   esc(b)+' '+(pos.get(edge.worse)||'—')+'位</small></div>'+
+   '<small>現在の暫定順位：'+rrTitleHtml(edge.better)+' '+(pos.get(edge.better)||'—')+'位 / '+
+   rrTitleHtml(edge.worse)+' '+(pos.get(edge.worse)||'—')+'位</small></div>'+
    '<div class="rr-held-buttons"><button data-rr-recheck="'+encodeURIComponent(key)+'">再比較</button>'+
    '<button data-rr-accept="'+encodeURIComponent(key)+'">保留を了承</button></div></div>';
  }).join(''):'<div class="rr-muted">未確認の保留判断はありません。</div>';
@@ -1852,6 +1909,7 @@ function rrOpenConflict(ids,pairsToResolve=null){
 }
 function rrRender(){
  const root=document.getElementById('rerankRoot');if(!root)return;
+ rrBindDetails(root);
  const r=rrState(),m=rrModel(r);
  const activeCycle=rrCycleQueueSync(r,m);
  if(!rrTriad||rrTriad.some(id=>!m.ids.includes(id)))rrSetTriad(rrChooseTriad(r,r.mode));
@@ -1893,7 +1951,7 @@ function rrRender(){
      rrLogTab==='ranks'?
      '<div class="rr-drawer-inner"><h3>新ランキング（全'+m.ids.length+'作品）</h3>'+
       '<div class="rr-muted">直接勝敗を優先・途中を再比較 · 循環で保留 '+(m.replay?.held?.length||0)+'組</div>'+
-      (rrRankSelectedId?rrRankWorkbenchHtml(r,m,rrRankSelectedId):'')+rrPreviewHtml(r,m)+'</div>':
+      (rrRankSelectedId?rrRankWorkbenchHtml(r,m,rrRankSelectedId):'')+rrRankFiltersHtml(m)+'<div id="rrRankResults">'+rrPreviewHtml(r,m)+'</div>'+'</div>':
      rrLogTab==='conflicts'?
      '<div class="rr-drawer-inner">'+rrConflictsHtml(r,m)+'</div>':
      rrLogTab==='progress'?rrProgressDetail(progress,r):
@@ -1918,7 +1976,7 @@ function rrRender(){
     '<div class="rr-fast-instruction" id="rrPickInstruction">一番好きな作品をタップ</div>'+
     '<div class="rr-fast-sub" id="rrPickSub">1位 → 2位の2タップで次へ</div>'+
     '<div class="rr-fast-grid">'+rrTriad.map((id,i)=>rrFilmCard(id,i,m)).join('')+'</div>'+
-    '<div class="rr-fast-caption">長押しで作品の詳細。タップで順位を選択。</div>'+
+    '<div class="rr-fast-caption">作品名で詳細。ポスターをタップで順位を選択（長押しでも詳細）。</div>'+
    '</div>'+
    '<div class="rr-fast-bottom">'+
     '<button id="rrTieRest"'+(rrPicks.length===1?'':' hidden')+'>残り2本同格</button>'+
@@ -1948,10 +2006,16 @@ function rrRender(){
    rrRender();
   });
   if(rrLogTab==='ranks'){
-   root.querySelectorAll('[data-rr-rank-detail]').forEach(btn=>btn.onclick=()=>{
-    const id=decodeURIComponent(btn.dataset.rrRankDetail);
-    if(typeof openSheet==='function')openSheet(id);
-   });
+   const refreshResults=()=>{
+    root.querySelector('#rrRankResults').innerHTML=rrPreviewHtml(r,m);
+    bindRankEdits();
+   };
+   const search=root.querySelector('#rrRankSearch');
+   search.oninput=()=>{rrRankQuery=search.value;refreshResults()};
+   root.querySelector('#rrRankGenre').onchange=e=>{rrRankGenre=e.target.value;refreshResults()};
+   root.querySelector('#rrRankStatus').onchange=e=>{rrRankStatus=e.target.value;refreshResults()};
+   bind('#rrRankClear',()=>{rrRankQuery='';rrRankGenre='';rrRankStatus='';rrRender()});
+   const bindRankEdits=()=>{
    root.querySelectorAll('[data-rr-rank-edit]').forEach(btn=>btn.onclick=()=>{
     const page=document.getElementById('page-rerank');
     rrRankListScroll=page?.scrollTop||0;
@@ -1960,6 +2024,8 @@ function rrRender(){
     if(page)page.scrollTop=0;
     rrPosterQueue(filmById(rrRankSelectedId));
    });
+   };
+   bindRankEdits();
    bind('#rrRankClose',()=>{
     rrRankSelectedId=null;rrRender();
     const page=document.getElementById('page-rerank');
@@ -2007,46 +2073,17 @@ function rrRender(){
   bind('#rrBackfill',rrBackfillHistory);
    bind('#rrNew',rrNew);
  }else if(activeCycle&&!rrCycleUndoToTriad){
-  root.querySelectorAll('[data-rr-cycle-pick]').forEach(btn=>{
-   const id=decodeURIComponent(btn.dataset.rrCyclePick);
-   btn.onclick=e=>{
-    if(btn.dataset.rrLongPressed==='1'){
-     const recent=Date.now()-Number(btn.dataset.rrDetailOpenedAt||0)<850;
-     btn.dataset.rrLongPressed='';btn.dataset.rrDetailOpenedAt='';
-     if(recent){e.preventDefault();return}
-    }
-    rrCyclePick(id);
-   };
-   // Same long-press detail gesture as the normal three-film comparison.
-   // Do not commit a cycle-ranking choice on the synthetic click after a hold.
-   let pressTimer=null,startX=0,startY=0,opened=false;
-   const cancel=()=>{if(pressTimer!==null){clearTimeout(pressTimer);pressTimer=null}};
-   const openDetail=()=>{
-    cancel();opened=true;btn.dataset.rrLongPressed='1';
-    btn.dataset.rrDetailOpenedAt=String(Date.now());
-    if(typeof openSheet==='function')openSheet(id);
-   };
-   btn.addEventListener('pointerdown',e=>{
-    if(e.button!==0||rrLogOpen)return;
-    opened=false;startX=e.clientX;startY=e.clientY;
-    cancel();pressTimer=setTimeout(openDetail,520);
-   });
-   btn.addEventListener('pointermove',e=>{
-    if(Math.abs(e.clientX-startX)>14||Math.abs(e.clientY-startY)>14)cancel();
-   });
-   btn.addEventListener('pointerup',cancel);
-   btn.addEventListener('pointercancel',cancel);
-   btn.addEventListener('pointerleave',cancel);
-   btn.addEventListener('contextmenu',e=>{e.preventDefault();if(!opened)openDetail()});
-  });
-  bind('#rrCycleTie',()=>{
-   if(rrCycleGroups.length){rrCycleTieNext=!rrCycleTieNext;rrRender();}
-  });
+  root.querySelectorAll('[data-rr-cycle-edit]').forEach(btn=>btn.onclick=()=>
+   rrCycleEdit(btn.dataset.rrCycleEdit,btn.dataset.action));
+  bind('#rrCycleCommit',()=>rrCycleCommit(r,activeCycle));
   bind('#rrCycleUndo',rrCycleUndoPick);
   bind('#rrCycleUndoTriad',rrCycleUndoPreviousTriad);
-  bind('#rrCycleReset',()=>{rrCycleGroups=[];rrCycleTieNext=false;rrRender()});
+  bind('#rrCycleReset',()=>{
+   rrCycleEditUndo.push(rrCycleGroups.map(g=>g.slice()));
+   const positions=new Map(m.order.map((id,i)=>[id,i]));
+   rrCycleGroups=activeCycle.ids.slice().sort((a,b)=>positions.get(a)-positions.get(b)).map(id=>[id]);rrRender();
+  });
   bind('#rrCycleDefer',rrCycleDefer);
-  for(const id of activeCycle.ids)rrPosterQueue(filmById(id));
  }else{
   root.querySelectorAll('[data-rr-pick]').forEach(btn=>{
    const id=decodeURIComponent(btn.dataset.rrPick);
@@ -2233,12 +2270,14 @@ body.rr-immersive-on #page-rerank{position:fixed!important;inset:0!important;dis
 .rr-rank-divider{padding:12px 7px;font-size:12px;font-weight:750;color:#a8beda;border-top:1px solid #3a526d;background:#142337}.rr-rank-unseen{opacity:.65}@media(min-width:700px){.rr-fast-shell{min-height:calc(100dvh - 45px)}.rr-fast-stage{padding:18px 20px}.rr-fast-grid{gap:15px}.rr-fast-card{max-width:280px;justify-self:center}.rr-fast-title{padding:12px 10px 0;min-height:64px}.rr-fast-bottom button{font-size:13px}}
 @media(max-width:365px){.rr-drawer-tabs button{font-size:9px}.rr-fast-grid{gap:4px}.rr-fast-title{font-size:10px;padding:7px 4px 0}.rr-fast-bottom button{font-size:10px}.rr-fast-brand b{font-size:15px}}
 `;
+rrStyle.textContent += '\n#rerankRoot .rr-detail-link{border:0;background:transparent;color:inherit;font:inherit;text-align:inherit;padding:2px 0;cursor:pointer;text-decoration:underline;text-decoration-color:#6b859e;text-underline-offset:3px;overflow-wrap:anywhere}.rr-detail-link:focus-visible{outline:2px solid #91d5ff;outline-offset:2px}.rr-fast-title .rr-detail-link{display:block;padding:4px 0}.rr-rank-filters{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}.rr-rank-filters input{flex:1 1 100%;min-width:0;font-size:16px}.rr-rank-filters select{flex:1;min-width:120px;font-size:16px}.rr-rank-filters button{border:1px solid #6686b5;border-radius:8px;background:#284568;color:#eef7ff;padding:9px;font-size:12px}\n';
 rrStyle.textContent += "\n.rr-rank-row{grid-template-columns:32px minmax(0,1fr) 88px;gap:7px}\n.rr-rank-title-button{background:transparent;border:0;text-align:left;color:#f3f8ff;font-size:13px;font-weight:700;padding:4px;min-width:0;overflow-wrap:anywhere}\n.rr-rank-title-button small{display:block;color:#9eb5d1;font-size:10px;font-weight:400;text-align:left;margin-top:4px}\n.rr-rank-edit-button{background:#284568;border:1px solid #6686b5;color:#eef7ff;border-radius:8px;font-size:11px;font-weight:700;padding:9px 3px;min-height:38px}\n.rr-rank-workbench{margin:14px 0 18px;padding:12px 10px;border:1px solid #6383ad;border-radius:13px;background:#15263d}\n.rr-rank-work-header{display:flex;justify-content:space-between;align-items:center;gap:10px}\n.rr-rank-work-header strong{font-size:15px;color:#ffe1b0}\n.rr-rank-work-header button,.rr-rank-work-feature button,.rr-rank-workbench #rrRankUndoPair,.rr-rank-workbench #rrRankMoreNearby{background:#284875;border:1px solid #6085bb;color:#f1f8ff;border-radius:8px;padding:10px 8px;font-size:11px;font-weight:750}\n.rr-rank-work-feature{display:flex;align-items:center;gap:13px;margin:15px 1px 12px}\n.rr-rank-work-feature img,.rr-rank-work-placeholder{height:106px;width:72px;object-fit:cover;border-radius:7px;background:#30445e;flex:none}\n.rr-rank-work-feature>div:last-child{display:flex;flex-direction:column;align-items:flex-start;gap:7px;min-width:0}\n.rr-rank-work-feature strong{font-size:18px;overflow-wrap:anywhere;line-height:1.35}\n.rr-rank-work-feature small{font-size:11px;color:#b2c9e7}\n.rr-rank-workbench #rrRankUndoPair{display:block;width:100%;margin:8px 0;color:#ffe9bc;border-color:#a27b48;background:#433927}\n.rr-rank-work-section{border-top:1px solid #3b5877;padding:12px 0 7px}\n.rr-rank-work-section h4{font-size:14px;margin:1px 0 8px;color:#ebf3ff}\n.rr-rank-work-section h5{font-size:12px;color:#bdd4ef;margin:12px 0 7px}\n.rr-rank-work-section .rr-muted{font-size:11px}\n.rr-rank-work-row{border-bottom:1px solid #31465f;padding:10px 4px}\n.rr-rank-work-item{display:flex;align-items:flex-start;gap:7px}\n.rr-rank-work-pos{color:#a7c4e4;font-size:11px;min-width:46px;font-weight:800;margin-top:4px}\n.rr-rank-work-name{border:0;background:transparent;color:#f4f8ff;text-align:left;font-size:13px;line-height:1.4;font-weight:750;padding:2px 0;overflow-wrap:anywhere;flex:1}\n.rr-rank-work-meta{display:block;font-size:10px;color:#abbfda;padding:3px 0 7px 53px}\n.rr-inline-pair-controls{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:7px}\n.rr-inline-pair-controls button{background:#263d58;color:#f2f6ff;border:1px solid #5279a4;border-radius:9px;min-height:40px;padding:9px 3px;font-size:11px;font-weight:750}\n.rr-inline-pair-controls button.current{background:#284a3b;color:#e0ffe9;border-color:#608d71}\n.rr-rank-workbench #rrRankMoreNearby{display:block;width:100%;margin-top:12px}\n.rr-rank-title-button:focus-visible,.rr-rank-edit-button:focus-visible,.rr-inline-pair-controls button:focus-visible{outline:2px solid #7ab1ff;outline-offset:2px}\n@media(max-width:365px){.rr-rank-row{grid-template-columns:28px minmax(0,1fr) 78px;gap:5px}.rr-inline-pair-controls button{font-size:10px}.rr-rank-work-pos{min-width:36px}.rr-rank-work-meta{padding-left:43px}}\n";
 rrStyle.textContent += "\n.rr-fixedness{margin:10px 0 16px;padding:12px;border:1px solid #475f7d;border-radius:10px;background:#152237}.rr-fixedness h3{font-size:15px;margin:0 0 8px;color:#f3f6ff}.rr-fixedness p{font-size:11px;line-height:1.6;margin:8px 0}.rr-fixedness-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.rr-fixedness-stats>div{border:1px solid #3b5271;background:#112034;border-radius:8px;padding:10px 7px}.rr-fixedness-stats strong{display:block;font-size:23px;color:#e9f5ff}.rr-fixedness-stats small{display:block;color:#a9bfda;font-size:10px;margin-top:3px}";
 rrStyle.textContent += "\n.rr-pending-banner{display:block;width:100%;padding:11px 10px;border-radius:9px;\n border:1px solid #bd9550;color:#fff2d7;background:#3d3022;\n font-size:12px;font-weight:800;text-align:center}\n.rr-review-intro{padding:12px;margin:6px 0 12px;background:#18273b;\n border:1px solid #526a8a;border-radius:10px}\n.rr-review-intro strong{font-size:16px}\n.rr-review-intro p{font-size:12px;line-height:1.65;margin:8px 0;color:#d6e4f5}\n.rr-review-intro small{font-size:11px;color:#b4c7db}\n.rr-held-row{display:flex;flex-direction:column;align-items:stretch;gap:9px}\n.rr-held-row span{min-width:0;overflow-wrap:anywhere}\n.rr-held-row small{display:block;margin-top:4px;color:#b7c6d9;font-size:11px}\n.rr-held-buttons{display:flex;gap:7px;justify-content:flex-end}\n.rr-held-buttons button{padding:9px 13px;border-radius:8px;min-height:36px;\n border:1px solid #56739a;background:#1d395c;color:#eff7ff;font-size:12px}\n.rr-held-buttons button:last-child{background:#304132;border-color:#718675}\n";
 rrStyle.textContent += "\n.rr-cycle-screen{display:flex;flex-direction:column;gap:12px;padding:10px 4px 18px;max-width:740px;margin:0 auto}\n.rr-cycle-heading{background:#1c2d43;border:1px solid #57718f;border-radius:12px;padding:14px}\n.rr-cycle-heading strong{color:#ffdb9e;font-size:19px}\n.rr-cycle-heading p{font-size:13px;line-height:1.65;color:#e1eaf4;margin:9px 0}\n.rr-cycle-heading small{display:block;color:#a8bdd1;font-size:11px;line-height:1.65}\n.rr-cycle-picked{display:grid;gap:5px;min-height:35px}\n.rr-cycle-choice{padding:9px 12px;border:1px solid #476d99;border-radius:8px;background:#163355;\nfont-size:13px;line-height:1.4}\n.rr-cycle-choice b{display:inline-block;min-width:36px;color:#9cceff}\n.rr-cycle-instruction{font-size:13px;font-weight:800;color:#fff4dc;text-align:center}\n.rr-cycle-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}\n.rr-cycle-card{display:flex;align-items:center;gap:10px;padding:8px;border:1px solid #59749a;\nborder-radius:10px;background:#15263d;color:#eff7ff;min-height:74px;text-align:left;font-size:13px;\nfont-weight:750;min-width:0;overflow-wrap:anywhere}\n.rr-cycle-card img,.rr-cycle-no-poster{width:43px;height:60px;object-fit:cover;border-radius:5px;\nbackground:#31435b;flex:none}\n.rr-cycle-card small{display:block;margin-top:4px;color:#a8bcd3;font-weight:400}\n.rr-cycle-actions{display:flex;flex-wrap:wrap;gap:7px;justify-content:center}\n.rr-cycle-actions button{border:1px solid #5c7596;border-radius:8px;background:#244366;\ncolor:#eaf4ff;font-size:12px;padding:10px 12px;min-height:40px}\n.rr-cycle-actions button.active{background:#6c4e20;color:#fff7db;border-color:#f1c36e}\n.rr-cycle-actions button:disabled{opacity:.3}\n.rr-cycle-actions #rrCycleDefer{background:#24303c;color:#c4ceda}\n@media(max-width:400px){.rr-cycle-cards{grid-template-columns:1fr}.rr-cycle-card{min-height:62px}\n.rr-cycle-card img,.rr-cycle-no-poster{width:36px;height:50px}}\n";
 rrStyle.textContent += "\n.rr-cycle-prev-triad{width:100%;background:#19375c!important;border:1px solid #7098c9!important;font-weight:800!important;margin-top:4px}.rr-cycle-prev-triad:disabled{opacity:.35;cursor:default}.rr-cycle-longpress-note{text-align:center;font-size:11px;margin-top:-7px}body.rr-immersive-on .rr-cycle-card{user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;touch-action:manipulation}body.rr-immersive-on .rr-cycle-card img{pointer-events:none;user-select:none;-webkit-user-select:none}";
 rrStyle.textContent += "\n.rr-cycle-explain{margin:12px 0 4px;border:1px solid #627c9b;border-radius:10px;\n background:#122c47;padding:11px 12px;min-width:0}\n.rr-cycle-explain>strong{display:block;font-size:13px;color:#f5d6a3;margin-bottom:7px}\n.rr-cycle-chain{font-size:14px;font-weight:800;color:#f9f7ea;line-height:1.75;\n overflow-wrap:anywhere;white-space:normal}\n.rr-cycle-explain-note{font-size:11px;color:#a9c5df;margin-top:8px;line-height:1.55}\n.rr-cycle-details{margin-top:10px}\n.rr-cycle-details summary{cursor:pointer;padding:6px 0;font-size:12px;color:#add6ff;\n font-weight:750}\n.rr-cycle-evidences{display:flex;flex-direction:column;gap:6px;padding-top:8px}\n.rr-cycle-evidence{display:flex;align-items:flex-start;gap:9px;padding:7px;\n border-radius:7px;background:#203a56}\n.rr-cycle-evidence-held{background:#4c3026;border:1px solid #bc8059}\n.rr-cycle-evidence-index{display:flex;align-items:center;justify-content:center;\n border-radius:50%;background:#365b80;color:#eef7ff;min-width:22px;height:22px;\n font-size:11px;font-weight:800}\n.rr-cycle-evidence-held .rr-cycle-evidence-index{background:#98633e}\n.rr-cycle-evidence-text{flex:1;min-width:0;overflow-wrap:anywhere;font-size:12px;\n line-height:1.45;color:#f1f6ff}\n.rr-cycle-evidence-text small{display:block;color:#aec9df;font-size:10px;\n margin-top:4px}\n.rr-cycle-evidence-held .rr-cycle-evidence-text small{color:#ffddb8}\n.rr-cycle-heading .rr-cycle-explain{background:#10263a}\n";
+rrStyle.textContent += '\n.rr-cycle-order{display:flex;flex-direction:column;gap:8px}.rr-cycle-order-row{display:grid;grid-template-columns:36px minmax(0,1fr);align-items:center;gap:8px;border:1px solid #496b94;border-radius:10px;padding:10px;background:#162a43}.rr-cycle-order-row>b{font-size:13px;color:#a9cdf4}.rr-cycle-order-names{font-size:14px;font-weight:700}.rr-cycle-order-controls{grid-column:2;display:flex;flex-wrap:wrap;gap:7px}.rr-cycle-order-controls button{min-width:42px;min-height:38px;border:1px solid #6489b5;border-radius:8px;background:#29496f;color:#eff7ff;font-size:12px;padding:7px 9px}.rr-cycle-order-controls button:disabled{opacity:.3}#rrCycleCommit{background:#29563e;border-color:#80c698;font-weight:800}\n';
 document.head.appendChild(rrStyle);
 rrInstall();
 })();
