@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794760348549,
-  "sourceUpdatedIso": "2026-11-15T16:32:28.549Z",
+  "sourceUpdatedAt": 1794763687131,
+  "sourceUpdatedIso": "2026-11-15T17:28:07.131Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -30082,7 +30082,9 @@
         "oldScore": null,
         "added": true,
         "_seq": 1794760347145,
-        "source": "letterboxd"
+        "source": "letterboxd",
+        "tmdbType": "movie",
+        "_lbMetaFixedV36": true
       }
     ],
     "starOverrides": {
@@ -30915,7 +30917,8 @@
       "custom-1794596030193-rkso": 3.5,
       "custom-1794658156654-9hd7": 0,
       "custom-1794658169594-pub3": 0,
-      "custom-1794659135519-05f8": 3.5
+      "custom-1794659135519-05f8": 3.5,
+      "custom-1794760347145-1ips": 3.5
     },
     "titleOverrides": {
       "added-anchor-578": {
@@ -33180,6 +33183,12 @@
       "custom-1793983670669-rzg2": {
         "title": "ブラック・ミラー「ホワイトクリスマス」",
         "englishTitle": "Black Mirror: White Christmas"
+      },
+      "custom-1794760347145-1ips": {
+        "title": "おくりびと",
+        "originalTitle": "おくりびと",
+        "englishTitle": "Departures",
+        "tmdbId": 16804
       }
     },
     "categoryOverrides": {},
