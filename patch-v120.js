@@ -1,7 +1,7 @@
 (()=>{
 'use strict';
-const BUILD='20261116-direct-winner-crosscheck-v124';
-let rrTriad=null,rrOrder=[],rrTie12=false,rrTie23=false,rrPicks=[],rrLogOpen=false,rrLogTab='history',rrTieOpen=false,rrTiePartner=false,rrReviewPairs=null,rrHeldReviewFlow=false,rrCycleGroups=[],rrCycleTieNext=false,rrCycleActiveKey=null,rrCycleUndoToTriad=false;
+const BUILD='20261116-rank-workbench-v125';
+let rrTriad=null,rrOrder=[],rrTie12=false,rrTie23=false,rrPicks=[],rrLogOpen=false,rrLogTab='history',rrTieOpen=false,rrTiePartner=false,rrReviewPairs=null,rrHeldReviewFlow=false,rrCycleGroups=[],rrCycleTieNext=false,rrCycleActiveKey=null,rrCycleUndoToTriad=false,rrRankSelectedId=null,rrRankNearCount=6,rrRankListScroll=0;
 
 // Uses the same image service as the film detail panel, including its cache.
 const rrPosterAPI=()=>window.__movie30PosterBridge84||null;
@@ -1618,6 +1618,113 @@ function rrRankBands(m){
   result.set(id,{lo:ranks[4],hi:ranks[43]});
  }
  return result;
+}
+// A dedicated workbench showing actual *direct* judgments and convenient
+// two-choice comparisons. It does not change original movie ratings/ranks.
+function rrLatestDirectFor(r,m,focus){
+ const seen=new Set(),above=[],below=[],ties=[];
+ const held=new Set((m.replay?.held||[]).map(e=>
+   e.eventIndex+'|'+rrPairKey(e.better,e.worse)));
+ const pos=new Map(m.order.map((id,i)=>[id,i+1]));
+ for(let ei=r.events.length-1;ei>=0;ei--){
+  const e=r.events[ei];if(e.ambiguous||!Array.isArray(e.groups))continue;
+  const gi=e.groups.findIndex(g=>g.includes(focus));if(gi<0)continue;
+  e.groups.forEach((g,j)=>g.forEach(other=>{
+   if(other===focus||seen.has(other))return;
+   seen.add(other);
+   const result={id:other,eventIndex:ei,rank:pos.get(other)??null,
+    held:held.has(ei+'|'+rrPairKey(focus,other)),
+    relation:gi<j?'above':gi>j?'below':'tie'};
+   if(result.relation==='above')below.push(result);
+   else if(result.relation==='below')above.push(result);
+   else ties.push(result);
+  }));
+ }
+ const sort=(a,b)=>(a.rank??9999)-(b.rank??9999);
+ above.sort(sort);below.sort(sort);ties.sort(sort);
+ return {above,below,ties};
+}
+function rrRankWorkRow(other,focus,rank,note,relation=''){
+ const f=filmById(other),name=displayTitle(f||{title:other}),k=encodeURIComponent(other);
+ return '<div class="rr-rank-work-row"><div class="rr-rank-work-item">'+
+  '<span class="rr-rank-work-pos">'+(rank??'—')+'位</span>'+
+  '<button type="button" class="rr-rank-work-name" data-rr-rank-detail="'+k+'">'+esc(name)+'</button></div>'+
+  (note?'<small class="rr-rank-work-meta">'+esc(note)+'</small>':'')+
+  '<div class="rr-inline-pair-controls">'+
+  '<button type="button" class="'+(relation==='up'?'current':'')+
+   '" data-rr-rank-pair="'+k+'" data-rr-rank-answer="up">↑ この作品が上</button>'+
+  '<button type="button" class="'+(relation==='down'?'current':'')+
+   '" data-rr-rank-pair="'+k+'" data-rr-rank-answer="down">↓ この作品が下</button>'+
+  '</div></div>';
+}
+function rrRankWorkbenchHtml(r,m,id){
+ if(!m.ids.includes(id))return '';
+ const film=filmById(id),pos=m.order.indexOf(id),rank=pos<m.seenCount?pos+1:null,
+  name=displayTitle(film||{title:id}),path=rrPosterMeta(film)?.path,
+  poster=rrPosterUrl(path,'w185'),direct=rrLatestDirectFor(r,m,id);
+ const detail=entries=>entries.length?entries.map(x=>rrRankWorkRow(
+  x.id,id,x.rank,'比較#'+(x.eventIndex+1)+(x.held?' · 循環で保留中':' · 最新の直接判断'),
+  x.relation==='above'?'up':x.relation==='below'?'down':'')).join(''):
+  '<p class="rr-muted">直接比較した作品はまだありません。</p>';
+ const count=Math.max(3,Math.min(30,rrRankNearCount));
+ const nearAbove=m.order.slice(Math.max(0,pos-count),pos).reverse(),
+  nearBelow=m.order.slice(pos+1,pos+count+1);
+ const near=(ids,high)=>ids.length?ids.map(other=>{
+  const rel=direct.above.concat(direct.below).find(x=>x.id===other);
+  return rrRankWorkRow(other,id,m.order.indexOf(other)+1,
+   (high?'現在は上':'現在は下')+(rel?' · 直接比較あり'+(rel.held?'（保留中）':''):' · 直接未比較'),
+   rel?(rel.relation==='above'?'up':'down'):'');
+ }).join(''):'<p class="rr-muted">該当する作品はありません。</p>';
+ const last=r.events[r.events.length-1],
+  undo=last?.kind==='pair-review'&&last.editorFocus===id;
+ return '<div class="rr-rank-workbench" id="rrRankWorkbench">'+
+  '<div class="rr-rank-work-header"><strong>作品ごとの比較・修正</strong>'+
+  '<button type="button" id="rrRankClose">一覧へ戻る</button></div>'+
+  '<div class="rr-rank-work-feature">'+
+  (poster?'<img src="'+esc(poster)+'" alt="" loading="lazy">':'<span class="rr-rank-work-placeholder"></span>')+
+  '<div><strong>'+esc(name)+'</strong><small>'+(rank===null?'未比較・順位未定':rank+'位（暫定）')+
+  (film?.year?' · '+esc(String(film.year)):'')+'</small>'+
+  '<button type="button" id="rrRankFilmDetail">作品詳細を表示</button></div></div>'+
+  '<p class="rr-muted">「この作品」は上記の選択作品。各相手について↑か↓をタップすると、'+
+  '最新の直接判断として保存します。直前なら取り消せます。</p>'+
+  (undo?'<button type="button" id="rrRankUndoPair">↶ 最後の比較を取り消す</button>':'')+
+  '<section class="rr-rank-work-section"><h4>直接勝った相手 · '+direct.below.length+'本</h4>'+
+  detail(direct.below)+'</section>'+
+  '<section class="rr-rank-work-section"><h4>直接負けた相手 · '+direct.above.length+'本</h4>'+
+  detail(direct.above)+'</section>'+
+  (direct.ties.length?'<section class="rr-rank-work-section"><h4>直接同格の相手 · '+
+   direct.ties.length+'本</h4>'+detail(direct.ties)+'</section>':'')+
+  '<section class="rr-rank-work-section rr-rank-near"><h4>暫定順位が近い作品</h4>'+
+  '<p class="rr-muted">現在の位置から上下'+count+'本。選択作品が相手より上か下かすぐ判定できます。</p>'+
+  '<h5>現在この作品より上</h5>'+near(nearAbove,true)+
+  '<h5>現在この作品より下</h5>'+near(nearBelow,false)+
+  (count<30?'<button type="button" id="rrRankMoreNearby">さらに上下の作品を表示</button>':'')+
+  '</section></div>';
+}
+function rrRankQuickCompare(focus,other,focusWins){
+ if(!focus||!other||focus===other)return;
+ const r=rrState(),ids=rrSelectedIds(r);
+ if(!ids.includes(focus)||!ids.includes(other))return;
+ const before=rrModel(r),winner=focusWins?focus:other,loser=focusWins?other:focus;
+ const e={id:'rrpair-'+Date.now()+'-'+Math.random().toString(36).slice(2,7),
+  at:Date.now(),kind:'pair-review',mode:'direct',editorFocus:focus,
+  ids:[winner,loser],displayIds:[focus,other],groups:[[winner],[loser]],
+  reviewResolves:[rrPairKey(focus,other)],genreScope:rrScopeLabel([focus,other])};
+ r.events.push(e);
+ const after=rrModel(r);rrCycleNewHolds(r,before,after);
+ e.rankDelta=rrDelta(before,after);
+ e.triadPositions=rrTriadPositions(before,after,[focus,other]);
+ e.jumpChecks=rrBuildJumpChecks(before,after,e);
+ save();
+ rrLogOpen=true;rrLogTab='ranks';rrRankSelectedId=focus;
+ rrRender();
+ document.getElementById('page-rerank')?.scrollTo(0,0);
+}
+function rrRankUndoPair(){
+ const r=rrState(),last=r.events[r.events.length-1];
+ if(last?.kind!=='pair-review'||last.editorFocus!==rrRankSelectedId)return;
+ r.events.pop();save();rrRender();
+ document.getElementById('page-rerank')?.scrollTo(0,0);
 }
 function rrPreviewHtml(r,m){
  const judged=m.seenCount>0;
