@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794727794443,
-  "sourceUpdatedIso": "2026-11-15T07:29:54.443Z",
+  "sourceUpdatedAt": 1794728013600,
+  "sourceUpdatedIso": "2026-11-15T07:33:33.600Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -55730,9 +55730,15 @@
           "fetchedAt": "2026-11-08T22:51:18.807701+00:00"
         },
         "poster84": {
+          "path": "/6r2b7CcuJrUjU6WMbXzXIrCKUBR.jpg",
           "tmdbId": 42341,
-          "path": "/kKV6Tj4BqrFyRV03rkwHNYIQJY0.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "checkedAt": "2026-11-15T07:33:28.996Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "suspectx|2008",
+          "matchedTitle84": "Suspect X",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-343-3zuA": {
