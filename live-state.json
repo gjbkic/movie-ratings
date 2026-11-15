@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794766205437,
-  "sourceUpdatedIso": "2026-11-15T18:10:05.437Z",
+  "sourceUpdatedAt": 1794766300400,
+  "sourceUpdatedIso": "2026-11-15T18:11:40.400Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -46369,7 +46369,7 @@
         "addedDate": "2025-09-01",
         "addedDateSource": "letterboxd-export-2026-09-27",
         "note": "スタートのシーンがダークナイトにならんで素晴らしい。戦争の生々しさがすごく伝わってきた。何のために命をかけるのか隊員たちの葛藤も伝わったし、隊長の最期も感動的なシーンでよく纏まってる",
-        "noteSource": "letterboxd-export",
+        "noteSource": "manual",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
         "watchedAddedDate": "2025-09-01",
@@ -46402,7 +46402,8 @@
           "matchedTitle84": "Saving Private Ryan",
           "validated84": true,
           "mediaKind84": "movie"
-        }
+        },
+        "noteEditedAt": "2026-11-15T18:11:40.353Z"
       },
       "lb-85-1GjK": {
         "addedDate": "2025-09-01",
