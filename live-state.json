@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794727289612,
-  "sourceUpdatedIso": "2026-11-15T07:21:29.612Z",
+  "sourceUpdatedAt": 1794727794443,
+  "sourceUpdatedIso": "2026-11-15T07:29:54.443Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -57868,9 +57868,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 4977,
           "path": "/nHJljo2Pi7XimYEgV9hvRchQWmg.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 4977,
+          "checkedAt": "2026-11-15T07:29:47.352Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "paprika|2006",
+          "matchedTitle84": "Paprika",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-401-9vE4": {
