@@ -34,6 +34,8 @@ let browser;
  const full=await page.locator('#rrRankResults .rr-rank-row').count();assert(full>10);
  const target=await page.evaluate(()=>{const m=window.__movie30RerankV120.model();return {id:m.order[1],rank:2,title:displayTitle(filmById(m.order[1]))}});
  const search=page.locator('#rrRankSearch');await search.fill(target.title);
+ console.log('SEARCH',JSON.stringify({target,full,value:await search.inputValue(),errors,rows:await page.locator('#rrRankResults .rr-rank-row').allTextContents()}));
+ assert.deepEqual(errors,[]);
  assert.equal(await page.locator('#rrRankResults .rr-rank-row').count(),1);
  assert.equal(await page.locator('#rrRankResults .rr-rank-row>b').textContent(),String(target.rank));
  assert(await search.evaluate(e=>e===document.activeElement),'Typing must retain focus');
