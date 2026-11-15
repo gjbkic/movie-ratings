@@ -1,6 +1,6 @@
 (()=>{
 'use strict';
-const BUILD='20261115-cycle-previous-triad-undo-v120';
+const BUILD='20261116-statistical-crossband-v121';
 let rrTriad=null,rrOrder=[],rrTie12=false,rrTie23=false,rrPicks=[],rrLogOpen=false,rrLogTab='history',rrTieOpen=false,rrTiePartner=false,rrReviewPairs=null,rrHeldReviewFlow=false,rrCycleGroups=[],rrCycleTieNext=false,rrCycleActiveKey=null,rrCycleUndoToTriad=false;
 
 // Uses the same image service as the film detail panel, including its cache.
@@ -232,10 +232,10 @@ function rrState(create=true){
   r.mode=["local","wide","conflict"].includes(r.mode)?r.mode:"local";
   // Migrate the existing judgement history without discarding any event.
   if(r.genrePlanVersion!==113){r.genrePlanVersion=113;r.mode="local";}
-  if(r.rankingMethodVersion!==115){
+  if(r.rankingMethodVersion!==121){
    // Old per-event movement measurements were made under the former model.
    // Keep the judgments, but force movement reports to be recalculated.
-   r.rankingMethodVersion=115;
+   r.rankingMethodVersion=121;
    for(const e of r.events){delete e.rankDelta;delete e.triadPositions}
   }
   return r;
@@ -409,7 +409,9 @@ function rrModel(r){
   const a=index.get(p.a),b=index.get(p.b);
   if(a===undefined||b===undefined)continue;
   degree[a]++;degree[b]++;
-  pairEdges.push({a,b,n:p.n,wins:p.winsA+.5*p.ties});
+  // Rematches add some confidence, never linear weight without limit.
+  const nEff=Math.min(2.15,1+.42*Math.log2(Math.max(1,p.n)));
+  pairEdges.push({a,b,n:nEff,wins:nEff*(p.winsA+.5*p.ties)/p.n});
  }
  for(let iter=0;iter<85;iter++){
   let maxStep=0;
@@ -453,8 +455,11 @@ function rrModel(r){
  // to the provisional display and retain their deterministic identity order.
  observed.sort((a,b)=>score.get(b)-score.get(a)||basePos.get(a)-basePos.get(b));
  const baselineOrder=observed.concat(unseen),seenCount=observed.length;
+ // Keep the directed constraint graph for genuine cycles and audits.
+ // Do not force every direct edge into the global order: doing so causes
+ // a single upset to leapfrog unrelated titles with no comparison evidence.
  const replay=rrReplayConstraints(r,ids,baselineOrder);
- const order=replay.order;
+ const order=baselineOrder;
  const model={ids,order,score,uncertainty,stats,basePos,seenCount,replay};
  rrModelCache.set(r,{events:r.events,length:r.events.length,last,signature,model});
  return model;
@@ -901,6 +906,62 @@ function rrScopeLabel(ids){
 // chain instead of being trapped below it.
 //
 // Returns null if there is no safe, fresh, informative trio to recheck.
+// Audits a surprising lower-ranked winner against untested middle anchors.
+function rrSurpriseAuditTriad(r,m,used){
+ const ev=r.events[r.events.length-1],ps=ev?.triadPositions;
+ if(!ev?.groups||!Array.isArray(ps)||ps.length!==3||m.seenCount<24)return null;
+ const old=new Map(ps.filter(p=>p.before!=null).map(p=>[p.id,p.before]));
+ const seen=m.order.slice(0,m.seenCount),pos=new Map(seen.map((id,i)=>[id,i]));
+ const gap=Math.max(9,Math.ceil(seen.length*.15)),pair=(a,b)=>m.stats.pairs.has(rrPairKey(a,b));
+ for(let i=0;i<ev.groups.length;i++)for(let j=i+1;j<ev.groups.length;j++)
+  for(const a of ev.groups[i])for(const b of ev.groups[j]){
+   if(old.get(a)==null||old.get(b)==null||old.get(a)-old.get(b)<gap)continue;
+   const between=seen.filter(id=>id!==a&&id!==b&&!pair(a,id)&&
+    pos.get(id)>Math.min(old.get(a),old.get(b))-2&&
+    pos.get(id)<Math.max(old.get(a),old.get(b)));
+   const target=(old.get(a)+old.get(b))/2;
+   between.sort((x,y)=>Math.abs(pos.get(x)-target)-Math.abs(pos.get(y)-target));
+   for(const mid of between.slice(0,12))for(const upper of between.slice(0,12)){
+    if(mid===upper||pos.get(upper)>=pos.get(mid)||pair(mid,upper))continue;
+    const triad=[a,upper,mid];
+    if(!used.has(rrTriadSig(triad)))return triad;
+   }
+  }
+ return null;
+}
+// Proactively challenge high-ranked films with under-tested middle films.
+// No original rank, score or star is read to select these matchups.
+function rrSleeperAuditTriad(r,m,used){
+ const seen=m.order.slice(0,m.seenCount),n=seen.length;
+ if(n<24)return null;
+ const count=id=>m.stats.counts.get(id)||0;
+ const rec=new Set();
+ for(const e of r.events.slice(-8))for(const id of (e.displayIds||e.ids||[]))rec.add(id);
+ const pool=seen.filter(id=>!rec.has(id)),pos=new Map(seen.map((id,i)=>[id,i]));
+ const upper=pool.filter(id=>pos.get(id)<n*.32&&count(id)>=2);
+ const lower=pool.filter(id=>pos.get(id)>n*.37&&pos.get(id)<n*.94);
+ if(!upper.length||!lower.length)return null;
+ const wins=new Map(seen.map(id=>[id,0]));
+ for(const p of m.stats.pairs.values()){
+  if(p.sum>0)wins.set(p.a,(wins.get(p.a)||0)+1);
+  if(p.sum<0)wins.set(p.b,(wins.get(p.b)||0)+1);
+ }
+ lower.sort((a,b)=>(wins.get(b)||0)*8+Math.max(0,12-count(b))*2-
+   (wins.get(a)||0)*8-Math.max(0,12-count(a))*2);
+ upper.sort((a,b)=>count(b)-count(a));
+ const compared=(a,b)=>m.stats.pairs.has(rrPairKey(a,b));
+ for(const low of lower.slice(0,24))for(const high of upper.slice(0,24)){
+  if(pos.get(low)-pos.get(high)<Math.max(8,n*.16)||compared(low,high))continue;
+  const target=(pos.get(low)+pos.get(high))/2;
+  const middle=pool.filter(id=>id!==low&&id!==high&&!compared(low,id))
+   .sort((a,b)=>Math.abs(pos.get(a)-target)-Math.abs(pos.get(b)-target));
+  for(const mid of middle.slice(0,12)){
+   const trio=[low,high,mid];
+   if(!used.has(rrTriadSig(trio)))return trio;
+  }
+ }
+ return null;
+}
 function rrIndirectAuditTriad(r,m,used){
  const ids=m.order,n=ids.length,counts=m.stats.counts;
  const graph=m.replay,reach=graph?.reach,indices=graph?.reachIndex;
@@ -973,6 +1034,15 @@ function rrChooseTriad(r,mode=r.mode){
  const pair=(a,b)=>stats.pairs.get(rrPairKey(a,b))?.n||0;
  const seen=ids.filter(id=>count(id)>0),unseen=ids.filter(id=>count(id)===0);
  const counter=r.events.length+r.skips.length;
+ // Actively test large upsets and potentially under-ranked middle titles.
+ if(mode!=='conflict'){
+  const surprise=rrSurpriseAuditTriad(r,m,used);
+  if(surprise)return surprise;
+ }
+ if(mode==='local'&&counter%6===3){
+  const sleeper=rrSleeperAuditTriad(r,m,used);
+  if(sleeper)return sleeper;
+ }
  // One cross-band slot in ten is dedicated to checking an otherwise
  // untested pair whose ordering came from a transitive chain. When no such
  // pair is available, leave the existing selector unchanged.
@@ -1362,16 +1432,16 @@ function rrPreviewHtml(r,m){
  if(!judged)return '<div class="rr-muted">まだ順位は未判定です。初回の比較から新ランキングを作ります。旧順位は初期値に使っていません。</div>';
  const html=m.order.map((id,i)=>{
    const f=filmById(id),c=m.stats.counts.get(id)||0,never=c===0;
-   // Mandatory comparisons determine rank; ties use stable baseline order.
+   // Provisional probability-based rank; no forced order for untested pairs.
    return (i===m.seenCount?
       '<div class="rr-rank-divider">未比較の作品 '+(m.ids.length-m.seenCount)+'本（順位未判定・下位という意味ではありません）</div>':'')+
      '<div class="rr-rank-row'+(never?' rr-rank-unseen':'')+'"><b>'+
        (never?'—':(i+1))+'</b><span>'+esc(displayTitle(f))+
        '</span><small>'+(never?'未比較・順位未判定':
-         c+' ペア判断 · 最新の直接比較を優先')+
+         c+' ペア判断 · 推定順位（暫定）')+
        '</small></div>';
  }).join('');
- return '<div class="rr-muted">直接比較の最新判断を優先して過去の全記録から順位を作っています。循環する古い判断は保留し、三すくみ画面で再検証できます。未比較作品は順位未判定で、下位と決めつけません。</div>'+
+ return '<div class="rr-muted">比較相手の強さと比較回数の偏りを考慮した統計的な暫定順位です。1回の勝敗で無関係な作品を大量に追い抜かせず、予想外の結果は中間の作品と再比較します。循環の再確認と履歴は維持します。未比較作品は順位未判定です。</div>'+
    '<div class="rr-rank-scroll">'+html+'</div>';
 }
 
@@ -1517,7 +1587,7 @@ function rrRender(){
  '<button id="rrBackfill" class="rr-backfill">過去の比較も集計</button><div id="rrBackfillStatus" class="rr-muted"></div>'+rrHistoryHtml(r)+'</div>':
      rrLogTab==='ranks'?
      '<div class="rr-drawer-inner"><h3>新ランキング（全'+m.ids.length+'作品）</h3>'+
-      '<div class="rr-muted">直接比較優先で過去の判定も再計算済み · 循環で保留 '+(m.replay?.held?.length||0)+'組</div>'+
+      '<div class="rr-muted">統計推定で暫定順位を再計算 · 循環で保留 '+(m.replay?.held?.length||0)+'組</div>'+
       rrPreviewHtml(r,m)+'</div>':
      rrLogTab==='conflicts'?
      '<div class="rr-drawer-inner">'+rrConflictsHtml(r,m)+'</div>':
@@ -1527,7 +1597,7 @@ function rrRender(){
        '<button data-rr-mode="local" class="'+(r.mode==='local'?'active':'')+'">近いジャンル中心（7：3）</button>'+
        '<button data-rr-mode="wide" class="'+(r.mode==='wide'?'active':'')+'">ジャンルを横断</button>'+
        '<button data-rr-mode="conflict" class="'+(r.mode==='conflict'?'active':'')+'">矛盾を確認</button></div>'+
-      '<p>最新の直接判断を優先して順位を作ります。成立しない古い判断は保留し、履歴は残します。旧ランキング・点数・星・レビューは変更しません。</p>'+
+      '<p>統計モデルで暫定順位を作り、中盤の作品が上位を試せる比較を増やします。循環の再確認と比較履歴は維持します。旧ランキング・点数・星・レビューは変更しません。</p>'+
       '<button id="rrNew" class="rr-danger">新ランキングだけ最初からやり直す</button></div>')+
    '</div>':
    activeCycle&&!rrCycleUndoToTriad?rrCycleReviewHtml(r,m,activeCycle):
