@@ -1,7 +1,30 @@
 (()=>{
 'use strict';
-const BUILD='20261116-rank-workbench-v125';
+const BUILD='20261116-title-search-v126';
+let rrRankQuery='',rrRankGenre='',rrRankStatus='';
 let rrTriad=null,rrOrder=[],rrTie12=false,rrTie23=false,rrPicks=[],rrLogOpen=false,rrLogTab='history',rrTieOpen=false,rrTiePartner=false,rrReviewPairs=null,rrHeldReviewFlow=false,rrCycleGroups=[],rrCycleTieNext=false,rrCycleActiveKey=null,rrCycleUndoToTriad=false,rrRankSelectedId=null,rrRankNearCount=6,rrRankListScroll=0;
+
+function rrTitleHtml(id,insideCard=false){
+ const title=displayTitle(filmById(id)||{title:id}),tag=insideCard?'span':'button';
+ return '<'+tag+' class="rr-detail-link" data-rr-detail="'+encodeURIComponent(id)+'" '+
+  (insideCard?'role="link" tabindex="0"':'type="button"')+' aria-label="'+esc(title+'の詳細を開く')+'">'+esc(title)+'</'+tag+'>';
+}
+function rrBindDetails(root){
+ if(root.dataset.rrDetailsBound)return;
+ root.dataset.rrDetailsBound='1';
+ const target=e=>e.target.closest?.('[data-rr-detail],[data-rr-rank-detail]');
+ root.addEventListener('pointerdown',e=>{if(target(e))e.stopPropagation()},true);
+ root.addEventListener('click',e=>{
+  const link=target(e);if(!link)return;
+  e.preventDefault();e.stopPropagation();
+  const id=decodeURIComponent(link.dataset.rrDetail||link.dataset.rrRankDetail);
+  if(filmById(id)&&typeof openSheet==='function')openSheet(id);
+ },true);
+ root.addEventListener('keydown',e=>{
+  const link=target(e);if(!link||!['Enter',' '].includes(e.key))return;
+  e.preventDefault();e.stopPropagation();link.click();
+ },true);
+}
 
 // Uses the same image service as the film detail panel, including its cache.
 const rrPosterAPI=()=>window.__movie30PosterBridge84||null;
@@ -183,13 +206,13 @@ function rrCycleReviewHtml(r,m,active){
  const all=active.ids,chosen=rrCycleGroups.flat(),remaining=all.filter(id=>!chosen.includes(id));
  const review=all.map(title).join(' ＞ ')+' ＞ '+title(all[0]);
  const steps=rrCycleGroups.length?rrCycleGroups.map((group,i)=>
-  '<div class="rr-cycle-choice"><b>'+(i+1)+'位</b> '+esc(group.map(title).join(' ≈ '))+
+  '<div class="rr-cycle-choice"><b>'+(i+1)+'位</b> '+group.map(id=>rrTitleHtml(id)).join(' ≈ ')+
   '</div>').join(''):'<div class="rr-muted">1位の作品から順に選んでください。</div>';
  const choices=remaining.map(id=>{
   const f=filmById(id),path=rrPosterMeta(f)?.path,src=rrPosterUrl(path,'w185');
   return '<button type="button" data-rr-cycle-pick="'+encodeURIComponent(id)+'" class="rr-cycle-card">'+
    (src?'<img src="'+esc(src)+'" alt="" loading="lazy">':'<span class="rr-cycle-no-poster"></span>')+
-   '<span>'+esc(title(id))+(f?.year?' <small>'+esc(String(f.year))+'</small>':'')+
+   '<span>'+rrTitleHtml(id,true)+(f?.year?' <small>'+esc(String(f.year))+'</small>':'')+
    '</span></button>';
  }).join('');
  return '<div class="rr-cycle-screen"><div class="rr-cycle-heading"><strong>循環を発見：'+all.length+
@@ -202,7 +225,7 @@ function rrCycleReviewHtml(r,m,active){
   (rrCycleTieNext?'次に選ぶ作品を直前と同格にします':'次の順位の作品をタップ')+
   '（'+chosen.length+' / '+all.length+'本）</div>'+
   '<div class="rr-cycle-cards">'+choices+'</div>'+ 
-  '<div class="rr-muted rr-cycle-longpress-note">長押しで作品の詳細を表示。タップで順位を選択。</div>'+
+  '<div class="rr-muted rr-cycle-longpress-note">作品名で詳細。画像・カードの余白をタップで順位を選択（長押しでも詳細）。</div>'+
   '<div class="rr-cycle-actions">'+
   '<button id="rrCycleTie"'+(rrCycleGroups.length?'':' disabled')+
   ' class="'+(rrCycleTieNext?'active':'')+'">次は直前と同格</button>'+
@@ -562,12 +585,11 @@ function rrTriadPositionsHtml(event,compact=false){
    '<div class="rr-triad-unrecorded">3作品の個別順位は未集計</div>':
    '<div class="rr-triad-unrecorded">この回の3作品の変動は未集計です。比較ログの「過去の比較も集計」から計算できます。</div>';
  const rows=info.map(x=>{
-  const f=filmById(x.id),title=f?displayTitle(f):x.id;
   const first=x.before==null?'未判定':x.before+'位';
   const last=x.after==null?'未判定':x.after+'位';
   const diff=x.before!=null&&x.after!=null?x.before-x.after:null;
   const suffix=diff===null?'新規':diff>0?'↑'+diff:diff<0?'↓'+(-diff):'±0';
-  return '<div class="rr-triad-pos-row"><span>'+esc(title)+'</span>'+
+  return '<div class="rr-triad-pos-row"><span>'+rrTitleHtml(x.id)+'</span>'+
    '<b>'+first+' → '+last+'</b><small class="'+(diff>0?'rr-triad-rise':diff<0?'rr-triad-fall':'')+'">'+suffix+'</small></div>';
  }).join('');
  return '<div class="rr-triad-moves">'+
@@ -1370,7 +1392,7 @@ function rrFilmCard(id,idx,m){
    esc(displayTitle(f))+'を選ぶ" aria-pressed="false">'+
    '<span class="rr-fast-poster"><span class="rr-placeholder">POSTER</span>'+photo+
    '<span class="rr-fast-badge">選ぶ</span></span>'+
-   '<span class="rr-fast-title">'+esc(displayTitle(f))+'</span>'+
+   '<span class="rr-fast-title">'+rrTitleHtml(id,true)+'</span>'+
    '<span class="rr-fast-year">'+(f.year||'')+'</span></button>';
 }
 function rrGroups(){
@@ -1586,11 +1608,11 @@ function rrHistoryHtml(r){
  const ev=r.events.slice().reverse();
  if(!ev.length)return '<div class="rr-muted">まだ比較履歴はありません。</div>';
  return ev.map((e,j)=>{
-   const names=(e.ids||[]).map(id=>displayTitle(filmById(id)||{title:id}));
+   const names=(e.ids||[]).map(id=>rrTitleHtml(id));
    const v=e.kind==='cycle'?'三すくみ':e.kind==='hold'?'判断保留':
-     (e.groups||[]).map(g=>g.map(id=>displayTitle(filmById(id)||{title:id})).join(' ≈ ')).join(' ＞ ');
+     (e.groups||[]).map(g=>g.map(id=>rrTitleHtml(id)).join(' ≈ ')).join(' ＞ ');
    const txt=e.ambiguous?v+'： '+names.join(' / '):v;
-   return '<div class="rr-hrow"><b>#'+(r.events.length-j)+'</b><span>'+esc(txt)+
+   return '<div class="rr-hrow"><b>#'+(r.events.length-j)+'</b><span>'+txt+
      (e.genreScope?'<small class="rr-genre-log">'+esc(e.genreScope)+'</small>':'')+
      (e.reviewResolves?.length?'<small class="rr-genre-log">再検証で'+e.reviewResolves.length+'組の過去判断を更新（履歴は保存）</small>':'')+
      '<small class="rr-delta-line">'+esc(rrDeltaText(e.rankDelta))+'</small>'+rrTriadPositionsHtml(e,true)+ 
@@ -1682,7 +1704,7 @@ function rrRankWorkbenchHtml(r,m,id){
   '<button type="button" id="rrRankClose">一覧へ戻る</button></div>'+
   '<div class="rr-rank-work-feature">'+
   (poster?'<img src="'+esc(poster)+'" alt="" loading="lazy">':'<span class="rr-rank-work-placeholder"></span>')+
-  '<div><strong>'+esc(name)+'</strong><small>'+(rank===null?'未比較・順位未定':rank+'位（暫定）')+
+  '<div><strong>'+rrTitleHtml(id)+'</strong><small>'+(rank===null?'未比較・順位未定':rank+'位（暫定）')+
   (film?.year?' · '+esc(String(film.year)):'')+'</small>'+
   '<button type="button" id="rrRankFilmDetail">作品詳細を表示</button></div></div>'+
   '<p class="rr-muted">「この作品」は上記の選択作品。各相手について↑か↓をタップすると、'+
@@ -1728,14 +1750,32 @@ function rrRankUndoPair(){
  r.events.pop();save();rrRender();
  if(page)page.scrollTop=oldScroll;
 }
+function rrRankNormalize(value){return String(value||'').normalize('NFKC').toLowerCase()}
+function rrRankFiltersHtml(m){
+ const genres=[...rrGenreMap(m.ids).groups.keys()].sort((a,b)=>a.localeCompare(b,'ja'));
+ return '<div class="rr-rank-filters">'+
+  '<input id="rrRankSearch" class="search" type="search" aria-label="暫定順位を検索" placeholder="邦題・英題・原題・年で検索" value="'+esc(rrRankQuery)+'">'+
+  '<select id="rrRankGenre" class="field" aria-label="ジャンルで絞り込み"><option value="">全ジャンル</option>'+
+  genres.map(g=>'<option value="'+esc(g)+'"'+(rrRankGenre===g?' selected':'')+'>'+esc(g)+'</option>').join('')+'</select>'+
+  '<select id="rrRankStatus" class="field" aria-label="比較状況で絞り込み">'+
+  [['','すべて'],['seen','比較済み'],['unseen','未比較']].map(([v,t])=>'<option value="'+v+'"'+(rrRankStatus===v?' selected':'')+'>'+t+'</option>').join('')+'</select>'+
+  '<button type="button" id="rrRankClear">検索・絞り込みを解除</button></div>';
+}
 function rrPreviewHtml(r,m){
- const judged=m.seenCount>0;
+ const judged=m.ids.length>0;
  // Posterior score bands are not intervals for constrained ranks.
  if(!judged)return '<div class="rr-muted">まだ順位は未判定です。初回の比較から新ランキングを作ります。旧順位は初期値に使っていません。</div>';
+ const genres=rrGenreMap(m.ids).tokens,query=rrRankNormalize(rrRankQuery).trim().split(/\s+/).filter(Boolean);
+ let shown=0,divider=false;
  const html=m.order.map((id,i)=>{
    const f=filmById(id),c=m.stats.counts.get(id)||0,never=c===0;
-   // Provisional probability-based rank; no forced order for untested pairs.
-   return (i===m.seenCount?
+   const info=typeof titleInfo==='function'?titleInfo(f):{};
+   const text=rrRankNormalize([displayTitle(f),info?.originalTitle,info?.englishTitle,f?.title,f?.lbTitle,f?.year].filter(Boolean).join(' '));
+   if(query.some(q=>!text.includes(q))||(rrRankGenre&&!genres.get(id)?.has(rrRankGenre))||
+     (rrRankStatus==='seen'&&never)||(rrRankStatus==='unseen'&&!never))return '';
+   shown++;const addDivider=never&&!divider;if(never)divider=true;
+   // Keep global positions even when the visible list is filtered.
+   return (addDivider?
       '<div class="rr-rank-divider">未比較の作品 '+(m.ids.length-m.seenCount)+'本（順位未判定・下位という意味ではありません）</div>':'')+
      '<div class="rr-rank-row'+(never?' rr-rank-unseen':'')+'"><b>'+
        (never?'—':(i+1))+'</b>'+
@@ -1744,9 +1784,10 @@ function rrPreviewHtml(r,m){
          c+' ペア判断 · 暫定順位')+'</small></button>'+
        '<button type="button" class="rr-rank-edit-button" data-rr-rank-edit="'+encodeURIComponent(id)+'">比較・修正</button></div>';
  }).join('');
- return '<div class="rr-muted">作品名をタップで詳細。「比較・修正」で直接対戦の一覧と近隣作品への即判定ができます。</div>'+
+ return '<div class="rr-muted">表示 '+shown+' / '+m.ids.length+'作品（順位は全体での位置）</div>'+
+  '<div class="rr-muted">作品名をタップで詳細。「比較・修正」で直接対戦の一覧と近隣作品への即判定ができます。</div>'+
   '<div class="rr-muted">直接比較で勝った作品が相手より上になるように並べます。未比較の前後関係は統計推定を利用し、大幅に上昇・下降した作品は途中の作品と複数回比較して確かめます。循環の再確認と履歴は維持します。未比較作品は順位未判定です。</div>'+
-   '<div class="rr-rank-scroll">'+html+'</div>';
+   '<div class="rr-rank-scroll">'+(html||'<div class="rr-muted">条件に一致する作品はありません。</div>')+'</div>';
 }
 
 function rrHeldKey(r,edge){
@@ -1778,21 +1819,19 @@ function rrRecheckHeld(key){
 function rrCycleExplanationHtml(edge){
  if(!edge||!Array.isArray(edge.cycleIds)||edge.cycleIds.length<2)return '';
  const ids=edge.cycleIds,steps=edge.cycleSteps||[];
- const name=id=>displayTitle(filmById(id)||{title:id});
- const chain=ids.map(id=>name(id)).concat(name(ids[0])).join(' ＞ ');
+ const chain=ids.concat(ids[0]).map(id=>rrTitleHtml(id)).join(' ＞ ');
  const detailed=steps.map((step,i)=>{
-  const left=name(step.better),right=name(step.worse);
   const isHeld=!!step.held;
   return '<div class="rr-cycle-evidence'+(isHeld?' rr-cycle-evidence-held':'')+'">'+
     '<span class="rr-cycle-evidence-index">'+(i+1)+'</span>'+
-    '<span class="rr-cycle-evidence-text">'+esc(left+' ＞ '+right)+
+    '<span class="rr-cycle-evidence-text">'+rrTitleHtml(step.better)+' ＞ '+rrTitleHtml(step.worse)+
     '<small>比較#'+(step.eventIndex+1)+
     (isHeld?' · 今は保留中の判断':' · 順位に採用中の判断')+
     '</small></span></div>';
  }).join('');
  return '<div class="rr-cycle-explain">'+
   '<strong>この'+ids.length+'作品で循環しています</strong>'+
-  '<div class="rr-cycle-chain">'+esc(chain)+'</div>'+
+  '<div class="rr-cycle-chain">'+chain+'</div>'+
   '<div class="rr-cycle-explain-note">最初の作品に戻ってしまうため、すべての「＞」を同時には満たせません。</div>'+
   (steps.length?'<details class="rr-cycle-details"'+(steps.length<=5?' open':'')+'>'+
   '<summary>各矢印の根拠（'+steps.length+'件の比較）</summary>'+
@@ -1804,28 +1843,24 @@ function rrConflictsHtml(r,m){
  const cycles=m.stats.cycles.slice(0,200),contradictions=m.stats.contradictions.slice(0,100);
  const detail='<div class="rr-muted">新ランキングは最新の直接比較を優先します。判断が循環する場合、古い制約は一時保留し、記録自体は残します。再検証すると新しい判断が優先されます。</div>';
  const c=cycles.length?cycles.map((ids,i)=>
-  '<div class="rr-hrow"><span>'+esc(ids.map(x=>displayTitle(filmById(x)||{title:x})).join(' ＞ ')+
-  ' ＞ '+displayTitle(filmById(ids[0])||{title:ids[0]}))+
+  '<div class="rr-hrow"><span>'+ids.concat(ids[0]).map(id=>rrTitleHtml(id)).join(' ＞ ')+
   '</span><button data-rr-cycle="'+i+'">再比較</button></div>').join(''):
   '<div class="rr-muted">現時点で循環は検出されていません。</div>';
  const p=contradictions.length?contradictions.map((p,i)=>
-  '<div class="rr-hrow"><span>'+esc(displayTitle(filmById(p.a)||{title:p.a})+' ↔ '+
-  displayTitle(filmById(p.b)||{title:p.b}))+
+  '<div class="rr-hrow"><span>'+rrTitleHtml(p.a)+' ↔ '+rrTitleHtml(p.b)+
   '（逆方向 '+p.winsA+' / '+p.winsB+' 回）</span><button data-rr-pair="'+i+'">再比較</button></div>').join(''):
   '<div class="rr-muted">同じ2本で反対の判断になった組はありません。</div>';
  const held=m.replay?.held||[],pending=rrUnreviewedHolds(r,m);
  const rows=pending.length?pending.map((edge,i)=>{
   const event=r.events[edge.eventIndex],key=rrHeldKey(r,edge);
-  const a=displayTitle(filmById(edge.better)||{title:edge.better});
-  const b=displayTitle(filmById(edge.worse)||{title:edge.worse});
   const pos=new Map(m.order.map((id,j)=>[id,j+1]));
   const trio=(event?.displayIds||event?.ids||[]).map(id=>
-   displayTitle(filmById(id)||{title:id})).join(' / ');
-  return '<div class="rr-hrow rr-held-row"><div class="rr-held-main"><b>判断 '+(i+1)+'</b> '+esc(a+' ＞ '+b)+
-   '<small>比較#'+(edge.eventIndex+1)+' · 元の3作品：'+esc(trio)+'</small>'+
+   rrTitleHtml(id)).join(' / ');
+  return '<div class="rr-hrow rr-held-row"><div class="rr-held-main"><b>判断 '+(i+1)+'</b> '+rrTitleHtml(edge.better)+' ＞ '+rrTitleHtml(edge.worse)+
+   '<small>比較#'+(edge.eventIndex+1)+' · 元の3作品：'+trio+'</small>'+
    rrCycleExplanationHtml(edge)+
-   '<small>現在の暫定順位：'+esc(a)+' '+(pos.get(edge.better)||'—')+'位 / '+
-   esc(b)+' '+(pos.get(edge.worse)||'—')+'位</small></div>'+
+   '<small>現在の暫定順位：'+rrTitleHtml(edge.better)+' '+(pos.get(edge.better)||'—')+'位 / '+
+   rrTitleHtml(edge.worse)+' '+(pos.get(edge.worse)||'—')+'位</small></div>'+
    '<div class="rr-held-buttons"><button data-rr-recheck="'+encodeURIComponent(key)+'">再比較</button>'+
    '<button data-rr-accept="'+encodeURIComponent(key)+'">保留を了承</button></div></div>';
  }).join(''):'<div class="rr-muted">未確認の保留判断はありません。</div>';
@@ -1852,6 +1887,7 @@ function rrOpenConflict(ids,pairsToResolve=null){
 }
 function rrRender(){
  const root=document.getElementById('rerankRoot');if(!root)return;
+ rrBindDetails(root);
  const r=rrState(),m=rrModel(r);
  const activeCycle=rrCycleQueueSync(r,m);
  if(!rrTriad||rrTriad.some(id=>!m.ids.includes(id)))rrSetTriad(rrChooseTriad(r,r.mode));
@@ -1893,7 +1929,7 @@ function rrRender(){
      rrLogTab==='ranks'?
      '<div class="rr-drawer-inner"><h3>新ランキング（全'+m.ids.length+'作品）</h3>'+
       '<div class="rr-muted">直接勝敗を優先・途中を再比較 · 循環で保留 '+(m.replay?.held?.length||0)+'組</div>'+
-      (rrRankSelectedId?rrRankWorkbenchHtml(r,m,rrRankSelectedId):'')+rrPreviewHtml(r,m)+'</div>':
+      (rrRankSelectedId?rrRankWorkbenchHtml(r,m,rrRankSelectedId):'')+rrRankFiltersHtml(m)+'<div id="rrRankResults">'+rrPreviewHtml(r,m)+'</div>'+'</div>':
      rrLogTab==='conflicts'?
      '<div class="rr-drawer-inner">'+rrConflictsHtml(r,m)+'</div>':
      rrLogTab==='progress'?rrProgressDetail(progress,r):
@@ -1918,7 +1954,7 @@ function rrRender(){
     '<div class="rr-fast-instruction" id="rrPickInstruction">一番好きな作品をタップ</div>'+
     '<div class="rr-fast-sub" id="rrPickSub">1位 → 2位の2タップで次へ</div>'+
     '<div class="rr-fast-grid">'+rrTriad.map((id,i)=>rrFilmCard(id,i,m)).join('')+'</div>'+
-    '<div class="rr-fast-caption">長押しで作品の詳細。タップで順位を選択。</div>'+
+    '<div class="rr-fast-caption">作品名で詳細。ポスターをタップで順位を選択（長押しでも詳細）。</div>'+
    '</div>'+
    '<div class="rr-fast-bottom">'+
     '<button id="rrTieRest"'+(rrPicks.length===1?'':' hidden')+'>残り2本同格</button>'+
@@ -1948,10 +1984,16 @@ function rrRender(){
    rrRender();
   });
   if(rrLogTab==='ranks'){
-   root.querySelectorAll('[data-rr-rank-detail]').forEach(btn=>btn.onclick=()=>{
-    const id=decodeURIComponent(btn.dataset.rrRankDetail);
-    if(typeof openSheet==='function')openSheet(id);
-   });
+   const refreshResults=()=>{
+    root.querySelector('#rrRankResults').innerHTML=rrPreviewHtml(r,m);
+    bindRankEdits();
+   };
+   const search=root.querySelector('#rrRankSearch');
+   search.oninput=()=>{rrRankQuery=search.value;refreshResults()};
+   root.querySelector('#rrRankGenre').onchange=e=>{rrRankGenre=e.target.value;refreshResults()};
+   root.querySelector('#rrRankStatus').onchange=e=>{rrRankStatus=e.target.value;refreshResults()};
+   bind('#rrRankClear',()=>{rrRankQuery='';rrRankGenre='';rrRankStatus='';rrRender()});
+   const bindRankEdits=()=>{
    root.querySelectorAll('[data-rr-rank-edit]').forEach(btn=>btn.onclick=()=>{
     const page=document.getElementById('page-rerank');
     rrRankListScroll=page?.scrollTop||0;
@@ -1960,6 +2002,8 @@ function rrRender(){
     if(page)page.scrollTop=0;
     rrPosterQueue(filmById(rrRankSelectedId));
    });
+   };
+   bindRankEdits();
    bind('#rrRankClose',()=>{
     rrRankSelectedId=null;rrRender();
     const page=document.getElementById('page-rerank');
@@ -2233,6 +2277,7 @@ body.rr-immersive-on #page-rerank{position:fixed!important;inset:0!important;dis
 .rr-rank-divider{padding:12px 7px;font-size:12px;font-weight:750;color:#a8beda;border-top:1px solid #3a526d;background:#142337}.rr-rank-unseen{opacity:.65}@media(min-width:700px){.rr-fast-shell{min-height:calc(100dvh - 45px)}.rr-fast-stage{padding:18px 20px}.rr-fast-grid{gap:15px}.rr-fast-card{max-width:280px;justify-self:center}.rr-fast-title{padding:12px 10px 0;min-height:64px}.rr-fast-bottom button{font-size:13px}}
 @media(max-width:365px){.rr-drawer-tabs button{font-size:9px}.rr-fast-grid{gap:4px}.rr-fast-title{font-size:10px;padding:7px 4px 0}.rr-fast-bottom button{font-size:10px}.rr-fast-brand b{font-size:15px}}
 `;
+rrStyle.textContent += '\n#rerankRoot .rr-detail-link{border:0;background:transparent;color:inherit;font:inherit;text-align:inherit;padding:2px 0;cursor:pointer;text-decoration:underline;text-decoration-color:#6b859e;text-underline-offset:3px;overflow-wrap:anywhere}.rr-detail-link:focus-visible{outline:2px solid #91d5ff;outline-offset:2px}.rr-fast-title .rr-detail-link{display:block;padding:4px 0}.rr-rank-filters{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}.rr-rank-filters input{flex:1 1 100%;min-width:0;font-size:16px}.rr-rank-filters select{flex:1;min-width:120px;font-size:16px}.rr-rank-filters button{border:1px solid #6686b5;border-radius:8px;background:#284568;color:#eef7ff;padding:9px;font-size:12px}\n';
 rrStyle.textContent += "\n.rr-rank-row{grid-template-columns:32px minmax(0,1fr) 88px;gap:7px}\n.rr-rank-title-button{background:transparent;border:0;text-align:left;color:#f3f8ff;font-size:13px;font-weight:700;padding:4px;min-width:0;overflow-wrap:anywhere}\n.rr-rank-title-button small{display:block;color:#9eb5d1;font-size:10px;font-weight:400;text-align:left;margin-top:4px}\n.rr-rank-edit-button{background:#284568;border:1px solid #6686b5;color:#eef7ff;border-radius:8px;font-size:11px;font-weight:700;padding:9px 3px;min-height:38px}\n.rr-rank-workbench{margin:14px 0 18px;padding:12px 10px;border:1px solid #6383ad;border-radius:13px;background:#15263d}\n.rr-rank-work-header{display:flex;justify-content:space-between;align-items:center;gap:10px}\n.rr-rank-work-header strong{font-size:15px;color:#ffe1b0}\n.rr-rank-work-header button,.rr-rank-work-feature button,.rr-rank-workbench #rrRankUndoPair,.rr-rank-workbench #rrRankMoreNearby{background:#284875;border:1px solid #6085bb;color:#f1f8ff;border-radius:8px;padding:10px 8px;font-size:11px;font-weight:750}\n.rr-rank-work-feature{display:flex;align-items:center;gap:13px;margin:15px 1px 12px}\n.rr-rank-work-feature img,.rr-rank-work-placeholder{height:106px;width:72px;object-fit:cover;border-radius:7px;background:#30445e;flex:none}\n.rr-rank-work-feature>div:last-child{display:flex;flex-direction:column;align-items:flex-start;gap:7px;min-width:0}\n.rr-rank-work-feature strong{font-size:18px;overflow-wrap:anywhere;line-height:1.35}\n.rr-rank-work-feature small{font-size:11px;color:#b2c9e7}\n.rr-rank-workbench #rrRankUndoPair{display:block;width:100%;margin:8px 0;color:#ffe9bc;border-color:#a27b48;background:#433927}\n.rr-rank-work-section{border-top:1px solid #3b5877;padding:12px 0 7px}\n.rr-rank-work-section h4{font-size:14px;margin:1px 0 8px;color:#ebf3ff}\n.rr-rank-work-section h5{font-size:12px;color:#bdd4ef;margin:12px 0 7px}\n.rr-rank-work-section .rr-muted{font-size:11px}\n.rr-rank-work-row{border-bottom:1px solid #31465f;padding:10px 4px}\n.rr-rank-work-item{display:flex;align-items:flex-start;gap:7px}\n.rr-rank-work-pos{color:#a7c4e4;font-size:11px;min-width:46px;font-weight:800;margin-top:4px}\n.rr-rank-work-name{border:0;background:transparent;color:#f4f8ff;text-align:left;font-size:13px;line-height:1.4;font-weight:750;padding:2px 0;overflow-wrap:anywhere;flex:1}\n.rr-rank-work-meta{display:block;font-size:10px;color:#abbfda;padding:3px 0 7px 53px}\n.rr-inline-pair-controls{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:7px}\n.rr-inline-pair-controls button{background:#263d58;color:#f2f6ff;border:1px solid #5279a4;border-radius:9px;min-height:40px;padding:9px 3px;font-size:11px;font-weight:750}\n.rr-inline-pair-controls button.current{background:#284a3b;color:#e0ffe9;border-color:#608d71}\n.rr-rank-workbench #rrRankMoreNearby{display:block;width:100%;margin-top:12px}\n.rr-rank-title-button:focus-visible,.rr-rank-edit-button:focus-visible,.rr-inline-pair-controls button:focus-visible{outline:2px solid #7ab1ff;outline-offset:2px}\n@media(max-width:365px){.rr-rank-row{grid-template-columns:28px minmax(0,1fr) 78px;gap:5px}.rr-inline-pair-controls button{font-size:10px}.rr-rank-work-pos{min-width:36px}.rr-rank-work-meta{padding-left:43px}}\n";
 rrStyle.textContent += "\n.rr-fixedness{margin:10px 0 16px;padding:12px;border:1px solid #475f7d;border-radius:10px;background:#152237}.rr-fixedness h3{font-size:15px;margin:0 0 8px;color:#f3f6ff}.rr-fixedness p{font-size:11px;line-height:1.6;margin:8px 0}.rr-fixedness-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.rr-fixedness-stats>div{border:1px solid #3b5271;background:#112034;border-radius:8px;padding:10px 7px}.rr-fixedness-stats strong{display:block;font-size:23px;color:#e9f5ff}.rr-fixedness-stats small{display:block;color:#a9bfda;font-size:10px;margin-top:3px}";
 rrStyle.textContent += "\n.rr-pending-banner{display:block;width:100%;padding:11px 10px;border-radius:9px;\n border:1px solid #bd9550;color:#fff2d7;background:#3d3022;\n font-size:12px;font-weight:800;text-align:center}\n.rr-review-intro{padding:12px;margin:6px 0 12px;background:#18273b;\n border:1px solid #526a8a;border-radius:10px}\n.rr-review-intro strong{font-size:16px}\n.rr-review-intro p{font-size:12px;line-height:1.65;margin:8px 0;color:#d6e4f5}\n.rr-review-intro small{font-size:11px;color:#b4c7db}\n.rr-held-row{display:flex;flex-direction:column;align-items:stretch;gap:9px}\n.rr-held-row span{min-width:0;overflow-wrap:anywhere}\n.rr-held-row small{display:block;margin-top:4px;color:#b7c6d9;font-size:11px}\n.rr-held-buttons{display:flex;gap:7px;justify-content:flex-end}\n.rr-held-buttons button{padding:9px 13px;border-radius:8px;min-height:36px;\n border:1px solid #56739a;background:#1d395c;color:#eff7ff;font-size:12px}\n.rr-held-buttons button:last-child{background:#304132;border-color:#718675}\n";
