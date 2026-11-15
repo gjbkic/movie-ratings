@@ -1,6 +1,6 @@
 (()=>{
 'use strict';
-const BUILD='20261116-upperband-calibration-v122';
+const BUILD='20261116-rank-fixedness-v123';
 let rrTriad=null,rrOrder=[],rrTie12=false,rrTie23=false,rrPicks=[],rrLogOpen=false,rrLogTab='history',rrTieOpen=false,rrTiePartner=false,rrReviewPairs=null,rrHeldReviewFlow=false,rrCycleGroups=[],rrCycleTieNext=false,rrCycleActiveKey=null,rrCycleUndoToTriad=false;
 
 // Uses the same image service as the film detail panel, including its cache.
@@ -647,6 +647,58 @@ async function rrBackfillHistory(){
  }
  save();if(rrLogOpen&&rrLogTab==='history')rrRender();
 }
+// A "fixed" position here means fixed by all currently accepted direct
+// preferences and their transitive consequences, among compared titles ONLY.
+// It is NOT a forecast or a statistical guarantee about untested movies.
+function rrOrderBounds(m){
+ const ids=m.order.slice(0,m.seenCount),n=ids.length;
+ const reach=m.replay?.reach,idx=m.replay?.reachIndex;
+ const result={n,exact:0,within10:0,within25:0,within50:0,
+  comparable:0,totalPairs:n*(n-1)/2,top50:0,top150:0,top250:0};
+ if(!reach||!idx||!n)return result;
+ const has=(a,b)=>{
+  const i=idx.get(a),j=idx.get(b);
+  return i!==undefined&&j!==undefined&&
+   !!(reach[i][j>>>5]&(1<<(j&31)));
+ };
+ for(const id of ids){
+  let ahead=0,behind=0;
+  for(const other of ids){
+   if(other===id)continue;
+   if(has(other,id))ahead++;
+   if(has(id,other))behind++;
+  }
+  const low=ahead+1,high=n-behind,width=high-low;
+  result.comparable+=behind;
+  if(width===0)result.exact++;
+  if(width<=10)result.within10++;
+  if(width<=25)result.within25++;
+  if(width<=50)result.within50++;
+  if(n>=50&&high<=50)result.top50++;
+  if(n>=150&&high<=150)result.top150++;
+  if(n>=250&&high<=250)result.top250++;
+ }
+ return result;
+}
+function rrFixednessHtml(m){
+ const d=rrOrderBounds(m),pct=d.totalPairs?
+  (100*d.comparable/d.totalPairs).toFixed(1):'0.0';
+ return '<div class="rr-fixedness"><h3>今の比較だけで、どこまで順位が定まった？</h3>'+
+  '<p class="rr-muted">A＞B、B＞CならA＞Cと仮定し、過去の採用中の勝敗をたどって計算した目安です。'+
+  '未比較作品は含まれず、「将来も順位が動かない」という意味ではありません。</p>'+
+  '<div class="rr-fixedness-stats">'+
+  '<div><strong>'+d.exact+'本</strong><small>順位が1つに決まる</small></div>'+
+  '<div><strong>'+d.within10+'本</strong><small>順位の可能幅が10位以内</small></div>'+
+  '<div><strong>'+d.within25+'本</strong><small>順位の可能幅が25位以内</small></div>'+
+  '<div><strong>'+d.within50+'本</strong><small>順位の可能幅が50位以内</small></div>'+
+  '</div>'+
+  '<p class="rr-muted">比較済み '+d.n+'本の中で前後関係がつながったペア '+d.comparable+
+  '/'+d.totalPairs+'組（'+pct+'%）。'+
+  (d.n>=50?'トップ50入りが比較記録上決まる作品 '+d.top50+'本。':'')+
+  (d.n>=150?' トップ150入り '+d.top150+'本。':'')+
+  (d.n>=250?' トップ250入り '+d.top250+'本。':'')+
+  '</p><p class="rr-muted">比較していない作品が将来上位に入る可能性や、判断自体の見直しはこの指標に含みません。</p></div>';
+}
 function rrProgressHtml(p){
  const pct=p.n?Math.round(100*p.compared/p.n):0,
   deep=p.n?Math.round(100*p.depth/p.n):0;
@@ -658,7 +710,7 @@ function rrProgressHtml(p){
 function rrProgressDetail(p,r){
  const n=p.n||1;
  return '<div class="rr-drawer-inner rr-progress-details">'+
-  '<h3>現在のランキングの安定度</h3>'+rrDeltaHtml(r,true)+rrDeltaTrendHtml(r)+rrGenreProgressHtml(rrModel(r))+
+  '<h3>現在のランキングの安定度</h3>'+rrFixednessHtml(rrModel(r))+rrDeltaHtml(r,true)+rrDeltaTrendHtml(r)+rrGenreProgressHtml(rrModel(r))+
   '<div class="rr-progress-big">'+esc(p.stage)+'</div>'+
   '<p>'+esc(p.detail)+'</p>'+rrProgressHtml(p)+
   '<div class="rr-progress-figures">'+
@@ -1951,6 +2003,7 @@ body.rr-immersive-on #page-rerank{position:fixed!important;inset:0!important;dis
 .rr-rank-divider{padding:12px 7px;font-size:12px;font-weight:750;color:#a8beda;border-top:1px solid #3a526d;background:#142337}.rr-rank-unseen{opacity:.65}@media(min-width:700px){.rr-fast-shell{min-height:calc(100dvh - 45px)}.rr-fast-stage{padding:18px 20px}.rr-fast-grid{gap:15px}.rr-fast-card{max-width:280px;justify-self:center}.rr-fast-title{padding:12px 10px 0;min-height:64px}.rr-fast-bottom button{font-size:13px}}
 @media(max-width:365px){.rr-drawer-tabs button{font-size:9px}.rr-fast-grid{gap:4px}.rr-fast-title{font-size:10px;padding:7px 4px 0}.rr-fast-bottom button{font-size:10px}.rr-fast-brand b{font-size:15px}}
 `;
+rrStyle.textContent += "\n.rr-fixedness{margin:10px 0 16px;padding:12px;border:1px solid #475f7d;border-radius:10px;background:#152237}.rr-fixedness h3{font-size:15px;margin:0 0 8px;color:#f3f6ff}.rr-fixedness p{font-size:11px;line-height:1.6;margin:8px 0}.rr-fixedness-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.rr-fixedness-stats>div{border:1px solid #3b5271;background:#112034;border-radius:8px;padding:10px 7px}.rr-fixedness-stats strong{display:block;font-size:23px;color:#e9f5ff}.rr-fixedness-stats small{display:block;color:#a9bfda;font-size:10px;margin-top:3px}";
 rrStyle.textContent += "\n.rr-pending-banner{display:block;width:100%;padding:11px 10px;border-radius:9px;\n border:1px solid #bd9550;color:#fff2d7;background:#3d3022;\n font-size:12px;font-weight:800;text-align:center}\n.rr-review-intro{padding:12px;margin:6px 0 12px;background:#18273b;\n border:1px solid #526a8a;border-radius:10px}\n.rr-review-intro strong{font-size:16px}\n.rr-review-intro p{font-size:12px;line-height:1.65;margin:8px 0;color:#d6e4f5}\n.rr-review-intro small{font-size:11px;color:#b4c7db}\n.rr-held-row{display:flex;flex-direction:column;align-items:stretch;gap:9px}\n.rr-held-row span{min-width:0;overflow-wrap:anywhere}\n.rr-held-row small{display:block;margin-top:4px;color:#b7c6d9;font-size:11px}\n.rr-held-buttons{display:flex;gap:7px;justify-content:flex-end}\n.rr-held-buttons button{padding:9px 13px;border-radius:8px;min-height:36px;\n border:1px solid #56739a;background:#1d395c;color:#eff7ff;font-size:12px}\n.rr-held-buttons button:last-child{background:#304132;border-color:#718675}\n";
 rrStyle.textContent += "\n.rr-cycle-screen{display:flex;flex-direction:column;gap:12px;padding:10px 4px 18px;max-width:740px;margin:0 auto}\n.rr-cycle-heading{background:#1c2d43;border:1px solid #57718f;border-radius:12px;padding:14px}\n.rr-cycle-heading strong{color:#ffdb9e;font-size:19px}\n.rr-cycle-heading p{font-size:13px;line-height:1.65;color:#e1eaf4;margin:9px 0}\n.rr-cycle-heading small{display:block;color:#a8bdd1;font-size:11px;line-height:1.65}\n.rr-cycle-picked{display:grid;gap:5px;min-height:35px}\n.rr-cycle-choice{padding:9px 12px;border:1px solid #476d99;border-radius:8px;background:#163355;\nfont-size:13px;line-height:1.4}\n.rr-cycle-choice b{display:inline-block;min-width:36px;color:#9cceff}\n.rr-cycle-instruction{font-size:13px;font-weight:800;color:#fff4dc;text-align:center}\n.rr-cycle-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}\n.rr-cycle-card{display:flex;align-items:center;gap:10px;padding:8px;border:1px solid #59749a;\nborder-radius:10px;background:#15263d;color:#eff7ff;min-height:74px;text-align:left;font-size:13px;\nfont-weight:750;min-width:0;overflow-wrap:anywhere}\n.rr-cycle-card img,.rr-cycle-no-poster{width:43px;height:60px;object-fit:cover;border-radius:5px;\nbackground:#31435b;flex:none}\n.rr-cycle-card small{display:block;margin-top:4px;color:#a8bcd3;font-weight:400}\n.rr-cycle-actions{display:flex;flex-wrap:wrap;gap:7px;justify-content:center}\n.rr-cycle-actions button{border:1px solid #5c7596;border-radius:8px;background:#244366;\ncolor:#eaf4ff;font-size:12px;padding:10px 12px;min-height:40px}\n.rr-cycle-actions button.active{background:#6c4e20;color:#fff7db;border-color:#f1c36e}\n.rr-cycle-actions button:disabled{opacity:.3}\n.rr-cycle-actions #rrCycleDefer{background:#24303c;color:#c4ceda}\n@media(max-width:400px){.rr-cycle-cards{grid-template-columns:1fr}.rr-cycle-card{min-height:62px}\n.rr-cycle-card img,.rr-cycle-no-poster{width:36px;height:50px}}\n";
 rrStyle.textContent += "\n.rr-cycle-prev-triad{width:100%;background:#19375c!important;border:1px solid #7098c9!important;font-weight:800!important;margin-top:4px}.rr-cycle-prev-triad:disabled{opacity:.35;cursor:default}.rr-cycle-longpress-note{text-align:center;font-size:11px;margin-top:-7px}body.rr-immersive-on .rr-cycle-card{user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;touch-action:manipulation}body.rr-immersive-on .rr-cycle-card img{pointer-events:none;user-select:none;-webkit-user-select:none}";
