@@ -1,6 +1,6 @@
 (()=>{
 'use strict';
-const BUILD='20261116-statistical-crossband-v121';
+const BUILD='20261116-upperband-calibration-v122';
 let rrTriad=null,rrOrder=[],rrTie12=false,rrTie23=false,rrPicks=[],rrLogOpen=false,rrLogTab='history',rrTieOpen=false,rrTiePartner=false,rrReviewPairs=null,rrHeldReviewFlow=false,rrCycleGroups=[],rrCycleTieNext=false,rrCycleActiveKey=null,rrCycleUndoToTriad=false;
 
 // Uses the same image service as the film detail panel, including its cache.
@@ -791,8 +791,13 @@ function rrGenreChoice(r,m,used,kind='near'){
   const u=m.uncertainty.get(id)||1;
   const age=lastSeen.has(id)?lastSeen.get(id):9999;
   const recentPenalty=(recent.get(id)||0)*17+(age<12?180:age<20?35:0);
+  // Gentle extra attention to the provisional top 150, without
+  // starving 151-250 or films further down the rankings.
+  const p=position.get(id)??n;
+  const upperBonus=m.seenCount>=120&&p<m.seenCount?
+    (p<50?5:p<150?3.5:p<250?1:0):0;
   return Math.max(0,18-observations)*2.2+Math.max(0,10-peers)*3.5+
-    Math.min(2.5,u)*10-recentPenalty;
+    Math.min(2.5,u)*10+upperBonus-recentPenalty;
  };
  const fresh=ids.filter(id=>!lastSeen.has(id)||lastSeen.get(id)>=12);
  const pool=(fresh.length>=3?fresh:ids).slice();
@@ -962,6 +967,47 @@ function rrSleeperAuditTriad(r,m,used){
  }
  return null;
 }
+// Target the provisional upper 150 slightly more often, and give 151-250
+// candidates genuine top-50 tests. No old rank/score is used here.
+function rrUpperBandTriad(r,m,used,kind='top'){
+ const seen=m.order.slice(0,m.seenCount),n=seen.length;
+ if(n<120||(kind==='challenge'&&n<170))return null;
+ const step=r.events.length+(r.skips||[]).length;
+ const recent=new Set();
+ for(const e of r.events.slice(-8))
+  for(const id of (e.displayIds||e.ids||[]))recent.add(id);
+ const count=id=>m.stats.counts.get(id)||0;
+ const pair=(a,b)=>m.stats.pairs.get(rrPairKey(a,b))?.n||0;
+ const rank=new Map(seen.map((id,i)=>[id,i]));
+ const pool=(lo,hi)=>seen.slice(lo,Math.min(hi,n)).filter(id=>!recent.has(id));
+ const a=kind==='challenge'?pool(150,250):pool(0,50);
+ const b=kind==='challenge'?pool(0,50):pool(50,150);
+ const c=kind==='challenge'?pool(50,150):(step%2?pool(50,150):pool(0,50));
+ if(!a.length||!b.length||!c.length)return null;
+ const merit=id=>Math.max(0,13-count(id))*2+
+   Math.min(2.2,m.uncertainty.get(id)||1)*7+
+   (rrHash(id+'|upper-focus|'+step)%701)/701;
+ const choices=items=>items.slice().sort((x,y)=>merit(y)-merit(x)).slice(0,13);
+ const aa=choices(a),bb=choices(b),cc=choices(c);
+ const inf=(x,y)=>{
+  const gap=Math.abs((m.score.get(x)||0)-(m.score.get(y)||0));
+  const u=Math.sqrt((m.uncertainty.get(x)||1)**2+
+   (m.uncertainty.get(y)||1)**2);
+  return 8/(1+(gap/Math.max(.1,u))**2);
+ };
+ let best=null,bestValue=-Infinity;
+ for(const first of aa)for(const second of bb)for(const third of cc){
+  if(new Set([first,second,third]).size!==3)continue;
+  const trio=[first,second,third];
+  if(used.has(rrTriadSig(trio)))continue;
+  const overlap=pair(first,second)+pair(first,third)+pair(second,third);
+  const value=merit(first)+merit(second)+merit(third)-
+   16*overlap+inf(first,second)+inf(first,third)+inf(second,third)+
+   (kind==='challenge'?Math.min(12,(rank.get(first)-rank.get(second))/18):0);
+  if(value>bestValue){best=trio;bestValue=value}
+ }
+ return best;
+}
 function rrIndirectAuditTriad(r,m,used){
  const ids=m.order,n=ids.length,counts=m.stats.counts;
  const graph=m.replay,reach=graph?.reach,indices=graph?.reachIndex;
@@ -1043,6 +1089,17 @@ function rrChooseTriad(r,mode=r.mode){
   const sleeper=rrSleeperAuditTriad(r,m,used);
   if(sleeper)return sleeper;
  }
+ // Every 11th local session offers a rank 151-250 contender a top-50 test.
+ // Every 7th local session strengthens ranks 1-150, if enough have been
+ // compared for those ranges to be meaningful.
+ if(mode==='local'&&counter%11===4){
+  const challenger=rrUpperBandTriad(r,m,used,'challenge');
+  if(challenger)return challenger;
+ }
+ if(mode==='local'&&counter%7===2){
+  const top=rrUpperBandTriad(r,m,used,'top');
+  if(top)return top;
+ }
  // One cross-band slot in ten is dedicated to checking an otherwise
  // untested pair whose ordering came from a transitive chain. When no such
  // pair is available, leave the existing selector unchanged.
@@ -1120,8 +1177,13 @@ function rrChooseTriad(r,mode=r.mode){
   return neighbors.length?Math.min(...neighbors.map(x=>ambiguity(x,id))):1;
  };
  const focus=ids.slice().sort((a,b)=>{
-  const priority=id=>Math.max(0,10-count(id))*3+Math.max(0,6-degree(id))*4+
-   1/(.09+gap(id))*.7;
+  const priority=id=>{
+   const p=pos.get(id);
+   const upperBonus=m.seenCount>=120&&p<m.seenCount?
+    (p<50?4:p<150?3:p<250?1:0):0;
+   return Math.max(0,10-count(id))*3+Math.max(0,6-degree(id))*4+
+    1/(.09+gap(id))*.7+upperBonus;
+  };
   return priority(b)-priority(a)||rrHash(a+'|focus'+counter)-rrHash(b+'|focus'+counter);
  });
  let best=null,bestValue=-Infinity;
@@ -1597,7 +1659,7 @@ function rrRender(){
        '<button data-rr-mode="local" class="'+(r.mode==='local'?'active':'')+'">近いジャンル中心（7：3）</button>'+
        '<button data-rr-mode="wide" class="'+(r.mode==='wide'?'active':'')+'">ジャンルを横断</button>'+
        '<button data-rr-mode="conflict" class="'+(r.mode==='conflict'?'active':'')+'">矛盾を確認</button></div>'+
-      '<p>統計モデルで暫定順位を作り、中盤の作品が上位を試せる比較を増やします。循環の再確認と比較履歴は維持します。旧ランキング・点数・星・レビューは変更しません。</p>'+
+      '<p>暫定1〜150位の比較を少し増やし、151〜250位にもトップ50への挑戦機会を設けます。統計モデルで暫定順位を作り、中盤の作品が上位を試せる比較を増やします。循環の再確認と比較履歴は維持します。旧ランキング・点数・星・レビューは変更しません。</p>'+
       '<button id="rrNew" class="rr-danger">新ランキングだけ最初からやり直す</button></div>')+
    '</div>':
    activeCycle&&!rrCycleUndoToTriad?rrCycleReviewHtml(r,m,activeCycle):
