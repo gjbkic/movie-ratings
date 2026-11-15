@@ -232,10 +232,10 @@ function rrState(create=true){
   r.mode=["local","wide","conflict"].includes(r.mode)?r.mode:"local";
   // Migrate the existing judgement history without discarding any event.
   if(r.genrePlanVersion!==113){r.genrePlanVersion=113;r.mode="local";}
-  if(r.rankingMethodVersion!==121){
+  if(r.rankingMethodVersion!==124){
    // Old per-event movement measurements were made under the former model.
    // Keep the judgments, but force movement reports to be recalculated.
-   r.rankingMethodVersion=121;
+   r.rankingMethodVersion=124;
    for(const e of r.events){delete e.rankDelta;delete e.triadPositions}
   }
   return r;
