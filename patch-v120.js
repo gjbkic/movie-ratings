@@ -1579,7 +1579,7 @@ function rrDeleteEvent(id){
 }
 function rrNew(){
   if(!confirm("新ランキングの比較履歴だけを消してやり直しますか？\n旧ランキング・星・点数・レビューは変更しません。"))return;
-  rrCycleUndoToTriad=false;state.rerankV2=rrNewSession();save();
+  rrCycleUndoToTriad=false;rrRankSelectedId=null;state.rerankV2=rrNewSession();save();
   rrSetTriad(rrChooseTriad(state.rerankV2,"local"));rrRender();
 }
 function rrHistoryHtml(r){
@@ -1703,6 +1703,7 @@ function rrRankWorkbenchHtml(r,m,id){
 }
 function rrRankQuickCompare(focus,other,focusWins){
  if(!focus||!other||focus===other)return;
+ const page=document.getElementById('page-rerank'),oldScroll=page?.scrollTop||0;
  const r=rrState(),ids=rrSelectedIds(r);
  if(!ids.includes(focus)||!ids.includes(other))return;
  const before=rrModel(r),winner=focusWins?focus:other,loser=focusWins?other:focus;
@@ -1718,13 +1719,14 @@ function rrRankQuickCompare(focus,other,focusWins){
  save();
  rrLogOpen=true;rrLogTab='ranks';rrRankSelectedId=focus;
  rrRender();
- document.getElementById('page-rerank')?.scrollTo(0,0);
+ if(page)page.scrollTop=oldScroll;
 }
 function rrRankUndoPair(){
+ const page=document.getElementById('page-rerank'),oldScroll=page?.scrollTop||0;
  const r=rrState(),last=r.events[r.events.length-1];
  if(last?.kind!=='pair-review'||last.editorFocus!==rrRankSelectedId)return;
  r.events.pop();save();rrRender();
- document.getElementById('page-rerank')?.scrollTo(0,0);
+ if(page)page.scrollTop=oldScroll;
 }
 function rrPreviewHtml(r,m){
  const judged=m.seenCount>0;
@@ -1837,6 +1839,7 @@ function rrConflictsHtml(r,m){
 }
 function rrExit(){
  rrLogOpen=false;rrTieOpen=false;rrTiePartner=false;rrHeldReviewFlow=false;rrCycleUndoToTriad=false;
+ rrRankSelectedId=null;
  view.page='rank';save(false);renderHeader();
 }
 function rrOpenConflict(ids,pairsToResolve=null){
@@ -1939,7 +1942,43 @@ function rrRender(){
  bind('#rrOpenProgress',()=>{rrLogTab='progress';rrLogOpen=true;rrRender()});
  bind('#rrOpenPending',()=>{rrLogTab='conflicts';rrLogOpen=true;rrRender()});
  if(showLogs){
-  root.querySelectorAll('[data-rr-logtab]').forEach(btn=>btn.onclick=()=>{rrLogTab=btn.dataset.rrLogtab;rrRender()});
+  root.querySelectorAll('[data-rr-logtab]').forEach(btn=>btn.onclick=()=>{
+   rrLogTab=btn.dataset.rrLogtab;
+   if(rrLogTab!=='ranks')rrRankSelectedId=null;
+   rrRender();
+  });
+  if(rrLogTab==='ranks'){
+   root.querySelectorAll('[data-rr-rank-detail]').forEach(btn=>btn.onclick=()=>{
+    const id=decodeURIComponent(btn.dataset.rrRankDetail);
+    if(typeof openSheet==='function')openSheet(id);
+   });
+   root.querySelectorAll('[data-rr-rank-edit]').forEach(btn=>btn.onclick=()=>{
+    const page=document.getElementById('page-rerank');
+    rrRankListScroll=page?.scrollTop||0;
+    rrRankSelectedId=decodeURIComponent(btn.dataset.rrRankEdit);
+    rrRankNearCount=6;rrRender();
+    if(page)page.scrollTop=0;
+    rrPosterQueue(filmById(rrRankSelectedId));
+   });
+   bind('#rrRankClose',()=>{
+    rrRankSelectedId=null;rrRender();
+    const page=document.getElementById('page-rerank');
+    if(page)page.scrollTop=rrRankListScroll;
+   });
+   bind('#rrRankFilmDetail',()=>{
+    if(rrRankSelectedId&&typeof openSheet==='function')openSheet(rrRankSelectedId);
+   });
+   root.querySelectorAll('[data-rr-rank-pair]').forEach(btn=>btn.onclick=()=>{
+    if(rrRankSelectedId)rrRankQuickCompare(rrRankSelectedId,
+     decodeURIComponent(btn.dataset.rrRankPair),btn.dataset.rrRankAnswer==='up');
+   });
+   bind('#rrRankUndoPair',rrRankUndoPair);
+   bind('#rrRankMoreNearby',()=>{
+    const page=document.getElementById('page-rerank'),y=page?.scrollTop||0;
+    rrRankNearCount=Math.min(30,rrRankNearCount+6);rrRender();
+    if(page)page.scrollTop=y;
+   });
+  }
   root.querySelectorAll('[data-rr-accept]').forEach(btn=>btn.onclick=()=>rrAcceptHeld(decodeURIComponent(btn.dataset.rrAccept)));
   root.querySelectorAll('[data-rr-recheck]').forEach(btn=>btn.onclick=()=>rrRecheckHeld(decodeURIComponent(btn.dataset.rrRecheck)));
   root.querySelectorAll('[data-rr-del]').forEach(btn=>btn.onclick=()=>rrDeleteEvent(btn.dataset.rrDel));
