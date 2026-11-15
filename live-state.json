@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794728013600,
-  "sourceUpdatedIso": "2026-11-15T07:33:33.600Z",
+  "sourceUpdatedAt": 1794728030717,
+  "sourceUpdatedIso": "2026-11-15T07:33:50.717Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -48602,9 +48602,15 @@
           }
         ],
         "poster84": {
-          "tmdbId": 12429,
           "path": "/yp8vEZflGynlEylxEesbYasc06i.jpg",
-          "checkedAt": "2026-11-08T22:51:18.807701+00:00"
+          "tmdbId": 12429,
+          "checkedAt": "2026-11-15T07:33:46.429Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "ponyo|2008",
+          "matchedTitle84": "Ponyo",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "lb-146-3GNa": {
