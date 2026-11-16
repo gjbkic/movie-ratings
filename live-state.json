@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794853051425,
-  "sourceUpdatedIso": "2026-11-16T18:17:31.425Z",
+  "sourceUpdatedAt": 1794853078359,
+  "sourceUpdatedIso": "2026-11-16T18:17:58.359Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -15240,33 +15240,33 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-567-Uhxi",
-      "title": "爆弾",
+      "id": "custom-1794852999460-rvmw",
+      "title": "聲の形",
       "originalTitle": "",
-      "englishTitle": "Suzuki=Bakudan",
-      "year": 2025,
+      "englishTitle": "A Silent Voice: The Movie",
+      "year": 2016,
       "score": 79,
       "star": 2.5,
       "overallRank": 532,
       "sameScoreRank": 43,
-      "category": "邦画",
+      "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
-        "大作",
-        "娯楽",
-        "ドラマ",
-        "クライム",
-        "サスペンス",
         "社会問題・生活",
-        "バイオレンス"
+        "差別・人権",
+        "心理・内面",
+        "娯楽",
+        "恋愛",
+        "ドラマ",
+        "青春・若者"
       ],
-      "origin": "日本",
-      "format": "live",
-      "runtime": 136,
+      "origin": "その他",
+      "format": "",
+      "runtime": null,
       "exact": true,
-      "letterboxdAddedDate": "2026-04-04",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
+      "letterboxdAddedDate": "2026-11-17",
+      "letterboxdPublishedAt": "Tue, 17 Nov 2026 05:21:13 +1300",
+      "letterboxdReportedWatchedDate": "2026-11-16"
     },
     {
       "id": "custom-1789385860389-93a2",
@@ -15327,33 +15327,33 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "custom-1794852999460-rvmw",
-      "title": "聲の形",
+      "id": "lb-567-Uhxi",
+      "title": "爆弾",
       "originalTitle": "",
-      "englishTitle": "A Silent Voice: The Movie",
-      "year": 2016,
+      "englishTitle": "Suzuki=Bakudan",
+      "year": 2025,
       "score": 78,
       "star": 2.5,
       "overallRank": 535,
       "sameScoreRank": 2,
-      "category": "Letterboxd",
+      "category": "邦画",
       "mediaType": "movie",
       "genre": [
-        "社会問題・生活",
-        "差別・人権",
-        "心理・内面",
+        "大作",
         "娯楽",
-        "恋愛",
         "ドラマ",
-        "青春・若者"
+        "クライム",
+        "サスペンス",
+        "社会問題・生活",
+        "バイオレンス"
       ],
-      "origin": "その他",
-      "format": "",
-      "runtime": null,
+      "origin": "日本",
+      "format": "live",
+      "runtime": 136,
       "exact": true,
-      "letterboxdAddedDate": "2026-11-17",
-      "letterboxdPublishedAt": "Tue, 17 Nov 2026 05:21:13 +1300",
-      "letterboxdReportedWatchedDate": "2026-11-16"
+      "letterboxdAddedDate": "2026-04-04",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     },
     {
       "id": "lb-551-28F0",
@@ -24446,7 +24446,7 @@
       "lb-560-qeWY": 79,
       "lb-227-evra": 79,
       "lb-338-a9lm": 79,
-      "lb-567-Uhxi": 79,
+      "lb-567-Uhxi": 78,
       "lb-130-3VH2": 78,
       "lb-407-fegG": 78,
       "lb-561-8MHs": 77,
@@ -24730,7 +24730,7 @@
       "custom-1794760347145-1ips": 86,
       "custom-1794844999633-jn35": 74,
       "custom-1794844998856-fg8d": 83,
-      "custom-1794852999460-rvmw": 78
+      "custom-1794852999460-rvmw": 79
     },
     "rankOrder": {
       "40": [
@@ -25025,7 +25025,7 @@
       ],
       "78": [
         "lb-191-1D56",
-        "custom-1794852999460-rvmw",
+        "lb-567-Uhxi",
         "lb-551-28F0",
         "custom-1792420000000-005",
         "custom-1791392810098-rjyg",
@@ -25117,7 +25117,7 @@
         "lb-413-2agG",
         "lb-565-6YA",
         "lb-72-20Z2",
-        "lb-567-Uhxi",
+        "custom-1794852999460-rvmw",
         "custom-1789385860389-93a2"
       ],
       "80": [
@@ -66301,6 +66301,17 @@
           "creators": [],
           "source": "tmdb-github",
           "fetchedAt": "2026-11-15T23:23:11.402043+00:00"
+        },
+        "poster84": {
+          "path": "/ogAWwbh3frWtiTyyXrZaVFtqCgp.jpg",
+          "tmdbId": 45790,
+          "checkedAt": "2026-11-16T18:17:52.553Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "jojosbizarreadventurestardustcrusaders|2014",
+          "matchedTitle84": "JoJo's Bizarre Adventure",
+          "validated84": true,
+          "mediaKind84": "tv",
+          "posterPinTrust84": null
         }
       },
       "custom-1790322757548-hd0x": {
@@ -75075,10 +75086,15 @@
         "contentType": "tv_series",
         "tmdbType": "tv",
         "poster84": {
-          "path": null,
-          "tmdbId": null,
-          "checkedAt": "2026-10-19T13:28:08.249Z",
-          "provider": "tmdb"
+          "path": "/f7vK8pzZIqhyA8sYmBpWmp9Ae7.jpg",
+          "tmdbId": 57041,
+          "checkedAt": "2026-11-16T18:17:51.349Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "銀魂|2006",
+          "matchedTitle84": "Gintama",
+          "validated84": true,
+          "mediaKind84": "tv",
+          "posterPinTrust84": null
         },
         "note": "それなりにすきで、大体の回は見たしギャグ回も真面目回も見てたんだけど何故か一部の特に後半の回が神みたいに扱われてるのは少しなぞ。確かにドラマとして真面目だけど、安直というかまあそうだろうなと言う真っ直ぐなものが多いと思うし、そこまで熱いとは思わないんけどな。ギャグ回は好きなかいも多い。",
         "noteSource": "manual",
