@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794853000563,
-  "sourceUpdatedIso": "2026-11-16T18:16:40.563Z",
+  "sourceUpdatedAt": 1794853016517,
+  "sourceUpdatedIso": "2026-11-16T18:16:56.517Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -23903,7 +23903,7 @@
     },
     {
       "id": "custom-1794852999460-rvmw",
-      "title": "A Silent Voice: The Movie",
+      "title": "聲の形",
       "originalTitle": "",
       "englishTitle": "A Silent Voice: The Movie",
       "year": 2016,
@@ -33318,6 +33318,11 @@
         "originalTitle": "おくりびと",
         "englishTitle": "Departures",
         "tmdbId": 16804
+      },
+      "custom-1794852999460-rvmw": {
+        "title": "聲の形",
+        "originalTitle": "",
+        "englishTitle": "A Silent Voice: The Movie"
       }
     },
     "categoryOverrides": {},
