@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794852569454,
-  "sourceUpdatedIso": "2026-11-16T18:09:29.454Z",
+  "sourceUpdatedAt": 1794852584574,
+  "sourceUpdatedIso": "2026-11-16T18:09:44.574Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -12370,17 +12370,17 @@
       "overallRank": 430,
       "sameScoreRank": 53,
       "category": "Letterboxd",
-      "mediaType": "drama",
+      "mediaType": "movie",
       "genre": [
         "コメディ",
         "ファンタジー",
         "ホラー",
+        "世界観",
         "娯楽",
-        "雰囲気・美学",
-        "世界観"
+        "雰囲気・美学"
       ],
-      "origin": "ハリウッド",
-      "format": "live",
+      "origin": "日本",
+      "format": "hybrid",
       "runtime": 88,
       "exact": true,
       "letterboxdAddedDate": "2026-10-18",
@@ -34059,7 +34059,7 @@
       "custom-1792273047752-gi3p": "movie",
       "custom-1792273054769-jfcv": "movie",
       "custom-1792273154078-pahe": "movie",
-      "custom-1792310002695-j7ls": "drama",
+      "custom-1792310002695-j7ls": "movie",
       "custom-1792318978542-vitq": "movie",
       "custom-1792346885016-a70t": "movie",
       "custom-1792354037608-u33d": "other",
@@ -40423,9 +40423,9 @@
         "コメディ",
         "ファンタジー",
         "ホラー",
+        "世界観",
         "娯楽",
-        "雰囲気・美学",
-        "世界観"
+        "雰囲気・美学"
       ],
       "custom-1792318978542-vitq": [
         "ドラマ",
@@ -41688,7 +41688,7 @@
       "custom-1792273054769-jfcv": "日本",
       "custom-1792273047752-gi3p": "日本",
       "custom-1792273154078-pahe": "日本",
-      "custom-1792310002695-j7ls": "ハリウッド",
+      "custom-1792310002695-j7ls": "日本",
       "custom-1792318978542-vitq": "その他",
       "custom-1792346885016-a70t": "日本",
       "custom-1792354037608-u33d": "日本",
@@ -42507,7 +42507,7 @@
       "custom-1791863527797-qm90": "live",
       "custom-1792067620393-qnt8": "live",
       "custom-1792272124188-0j6i": "live",
-      "custom-1792310002695-j7ls": "live",
+      "custom-1792310002695-j7ls": "hybrid",
       "custom-1792318978542-vitq": "live",
       "custom-1792346885016-a70t": "hybrid",
       "custom-1792354037608-u33d": "live",
