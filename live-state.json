@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1795030852540,
-  "sourceUpdatedIso": "2026-11-18T19:40:52.540Z",
+  "sourceUpdatedAt": 1795031125095,
+  "sourceUpdatedIso": "2026-11-18T19:45:25.095Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -60671,7 +60671,7 @@
         "addedDate": "2025-10-09",
         "addedDateSource": "letterboxd-export-2026-09-27",
         "note": "【2025-10-09・記録1】\n一応見たが特に印象が残ってない。シンジ悩む描写や鬱憤とした雰囲気はすき\n\n────────────\n\n【2026-05-30・再鑑賞】\n旧劇番を見たあとに見た。急激のスタイリッシュさは少し薄れたが映像の綺麗さとテンポの良さは好き。うんうんとしたとこを評価したがそれもアニメ版の方があった気がする。尺的に仕方ないが。ヤシマ作戦の部分はより\"アツい\"感じに描いていてまあそうあうのもありかなとおもった。ラストの別れ際にさよならなんて、、、、笑えばいいと思うよのシーンは普通に好きなシーンなのでよかった。全体としてシンジの葛藤と綾波のものがたりに終始していたのでアニメ版と印象が多少ズレる。普通に楽しめはした",
-        "noteSource": "letterboxd-export",
+        "noteSource": "manual",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
         "watchedAddedDate": "2025-10-09",
@@ -60707,7 +60707,8 @@
           "validated84": true,
           "mediaKind84": "movie",
           "posterPinTrust84": null
-        }
+        },
+        "noteEditedAt": "2026-11-18T19:45:25.046Z"
       },
       "lb-470-2BwG": {
         "addedDate": "2026-05-30",
