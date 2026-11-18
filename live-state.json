@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1795029383599,
-  "sourceUpdatedIso": "2026-11-18T19:16:23.599Z",
+  "sourceUpdatedAt": 1795029398194,
+  "sourceUpdatedIso": "2026-11-18T19:16:38.194Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -50990,7 +50990,7 @@
         "addedDate": "2025-09-01",
         "addedDateSource": "letterboxd-export-2026-09-27",
         "note": "ディレクターズカット版がどうしても許せない。ラストの再会シーンはやっぱり蛇足だと思う。劇場で泣いて終わりでいい。そこを抜きにするととにかく良かった。2人の関係も良かったが別れのシーンがグッときそうな感じ",
-        "noteSource": "letterboxd-export",
+        "noteSource": "manual",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
         "watchedAddedDate": "2025-09-01",
@@ -51023,7 +51023,8 @@
           "matchedTitle84": "Cinema Paradiso",
           "validated84": true,
           "mediaKind84": "movie"
-        }
+        },
+        "noteEditedAt": "2026-11-18T19:16:38.157Z"
       },
       "lb-206-9vSA": {
         "addedDate": "2025-09-01",
