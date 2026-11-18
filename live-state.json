@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1794853130487,
-  "sourceUpdatedIso": "2026-11-16T18:18:50.487Z",
+  "sourceUpdatedAt": 1795029383599,
+  "sourceUpdatedIso": "2026-11-18T19:16:23.599Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -44847,7 +44847,7 @@
         "addedDate": "2025-09-01",
         "addedDateSource": "letterboxd-export-2026-09-27",
         "note": "素晴らしい作品。とにかく面白かった。独自の世界の中で戦いや緊迫感もあり、冒険もあり、展開や頭で考えるとなぜだかは分からないが本当に面白かった。",
-        "noteSource": "letterboxd-export",
+        "noteSource": "manual",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
         "watchedAddedDate": "2025-09-01",
@@ -44881,7 +44881,8 @@
           "validated84": true,
           "mediaKind84": "movie",
           "posterPinTrust84": null
-        }
+        },
+        "noteEditedAt": "2026-11-18T19:16:23.562Z"
       },
       "lb-40-aboM": {
         "addedDate": "2025-09-01",
