@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1795030622563,
-  "sourceUpdatedIso": "2026-11-18T19:37:02.563Z",
+  "sourceUpdatedAt": 1795030852540,
+  "sourceUpdatedIso": "2026-11-18T19:40:52.540Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -76731,10 +76731,15 @@
           "fetchedAt": "2026-10-30T20:13:53.542Z"
         },
         "poster84": {
-          "path": "/dqi68LqT8z4lduMg0xR2TZHkRId.jpg",
+          "path": "/dcEUGvckbePFzPKhGXnS9T3kZMG.jpg",
           "tmdbId": 15916,
-          "checkedAt": "2026-10-30T20:14:35.251Z",
-          "provider": "tmdb"
+          "checkedAt": "2026-11-18T19:40:47.375Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "angelsegg|1985",
+          "matchedTitle84": "Angel's Egg",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "custom-1793432957369-xwe7": {
