@@ -1,8 +1,8 @@
 (()=>{
 'use strict';
-const BUILD='20261119-genre-search-all-tags-v128';
+const BUILD='20261119-advanced-rank-filters-v129';
 let rrHistoryLimit=40;
-let rrRankQuery='',rrRankGenre='',rrRankStatus='',rrCycleFromRank=false,rrCycleEditUndo=[];
+let rrRankQuery='',rrRankGenre='',rrRankStatus='',rrRankFormat='',rrRankOrigin='',rrRankMedia='',rrCycleFromRank=false,rrCycleEditUndo=[];
 let rrTriad=null,rrOrder=[],rrTie12=false,rrTie23=false,rrPicks=[],rrLogOpen=false,rrLogTab='history',rrTieOpen=false,rrTiePartner=false,rrReviewPairs=null,rrHeldReviewFlow=false,rrCycleGroups=[],rrCycleTieNext=false,rrCycleActiveKey=null,rrCycleUndoToTriad=false,rrRankSelectedId=null,rrRankNearCount=6,rrRankListScroll=0;
 
 function rrTitleHtml(id,insideCard=false){
@@ -1797,12 +1797,58 @@ function rrRankUndoPair(){
  if(page)page.scrollTop=oldScroll;
 }
 function rrRankNormalize(value){return String(value||'').normalize('NFKC').toLowerCase()}
+// Use the same underlying metadata as the main film list. These are
+// filters ONLY: nothing here modifies comparison outcomes or old rankings.
+function rrRankAttributes(f){
+ const id=f?.id||'';
+ const rawOrigin=String(state.originOverrides?.[id]||f?.origin||'').trim();
+ const origin=rawOrigin==='邦画'?'日本':
+  ['その他','その他外国語映画'].includes(rawOrigin)?'その他外国語映画':rawOrigin;
+ const rawFormat=String(state.formatOverrides?.[id]||f?.format||'live').trim();
+ const format=['live','animation','hybrid'].includes(rawFormat)?rawFormat:'live';
+ const media=String(state.mediaTypeOverrides?.[id]||f?.mediaType||'movie');
+ return {origin,format,media};
+}
+function rrRankMatches(f,genres,never){
+ const tags=[...(genres.get(f.id)||[])],attrs=rrRankAttributes(f);
+ const info=typeof titleInfo==='function'?titleInfo(f):{};
+ const search=rrRankNormalize([
+  displayTitle(f),info?.originalTitle,info?.englishTitle,
+  f?.title,f?.lbTitle,f?.year,...tags,
+  attrs.origin,attrs.origin&&attrs.origin!=='日本'?'海外':'',
+  attrs.format==='animation'?'アニメ':
+   attrs.format==='hybrid'?'実写 アニメ':'実写',
+  attrs.media==='movie'?'映画':attrs.media==='drama'?'ドラマ':attrs.media
+ ].filter(Boolean).join(' '));
+ const queries=rrRankNormalize(rrRankQuery).trim().split(/\s+/).filter(Boolean);
+ if(queries.some(q=>!search.includes(q)))return false;
+ if(rrRankGenre&&!genres.get(f.id)?.has(rrRankGenre))return false;
+ if(rrRankStatus==='seen'&&never||rrRankStatus==='unseen'&&!never)return false;
+ if(rrRankFormat&&!(attrs.format===rrRankFormat||
+   attrs.format==='hybrid'&&['live','animation'].includes(rrRankFormat)))return false;
+ if(rrRankOrigin&&!(rrRankOrigin==='overseas'?
+   attrs.origin!==''&&attrs.origin!=='日本':
+   attrs.origin===rrRankOrigin))return false;
+ if(rrRankMedia&&attrs.media!==rrRankMedia)return false;
+ return true;
+}
 function rrRankFiltersHtml(m){
  const genres=[...rrGenreMap(m.ids).groups.keys()].sort((a,b)=>a.localeCompare(b,'ja'));
  return '<div class="rr-rank-filters">'+
   '<input id="rrRankSearch" class="search" type="search" aria-label="暫定順位を検索" placeholder="作品名・年・ジャンル（comfortなど）で検索" value="'+esc(rrRankQuery)+'">'+
   '<select id="rrRankGenre" class="field" aria-label="ジャンルで絞り込み"><option value="">全ジャンル</option>'+
   genres.map(g=>'<option value="'+esc(g)+'"'+(rrRankGenre===g?' selected':'')+'>'+esc(g)+'</option>').join('')+'</select>'+
+  '<select id="rrRankFormat" class="field" aria-label="実写・アニメで絞り込み">'+
+  [['','表現：すべて'],['live','実写'],['animation','アニメ'],['hybrid','実写＋アニメ']].map(([v,t])=>
+   '<option value="'+v+'"'+(rrRankFormat===v?' selected':'')+'>'+t+'</option>').join('')+'</select>'+
+  '<select id="rrRankOrigin" class="field" aria-label="日本・海外で絞り込み">'+
+  [['','制作：すべて'],['日本','日本'],['overseas','海外すべて'],['ハリウッド','ハリウッド'],
+   ['その他外国語映画','その他外国語映画']].map(([v,t])=>
+   '<option value="'+v+'"'+(rrRankOrigin===v?' selected':'')+'>'+t+'</option>').join('')+'</select>'+
+  '<select id="rrRankMedia" class="field" aria-label="映画・ドラマなどで絞り込み">'+
+  [['','作品種別：すべて'],['movie','映画'],['drama','ドラマ'],['documentary','ドキュメンタリー'],
+   ['other','その他']].map(([v,t])=>
+   '<option value="'+v+'"'+(rrRankMedia===v?' selected':'')+'>'+t+'</option>').join('')+'</select>'+
   '<select id="rrRankStatus" class="field" aria-label="比較状況で絞り込み">'+
   [['','すべて'],['seen','比較済み'],['unseen','未比較']].map(([v,t])=>'<option value="'+v+'"'+(rrRankStatus===v?' selected':'')+'>'+t+'</option>').join('')+'</select>'+
   '<button type="button" id="rrRankClear">検索・絞り込みを解除</button></div>';
@@ -1811,19 +1857,11 @@ function rrPreviewHtml(r,m){
  const judged=m.ids.length>0;
  // Posterior score bands are not intervals for constrained ranks.
  if(!judged)return '<div class="rr-muted">まだ順位は未判定です。初回の比較から新ランキングを作ります。旧順位は初期値に使っていません。</div>';
- const genres=rrGenreMap(m.ids).tokens,query=rrRankNormalize(rrRankQuery).trim().split(/\s+/).filter(Boolean);
+ const genres=rrGenreMap(m.ids).tokens;
  let shown=0,divider=false;
  const html=m.order.map((id,i)=>{
    const f=filmById(id),c=m.stats.counts.get(id)||0,never=c===0;
-   const info=typeof titleInfo==='function'?titleInfo(f):{};
-   // Search the same *complete* tag set as the genre drop-down.
-   // Previously title-only searching and a six-tag truncation caused
-   // "comfort" to miss films whose tag was seventh or later.
-   const tags=[...(genres.get(id)||[])];
-   const text=rrRankNormalize([displayTitle(f),info?.originalTitle,info?.englishTitle,
-     f?.title,f?.lbTitle,f?.year,...tags].filter(Boolean).join(' '));
-   if(query.some(q=>!text.includes(q))||(rrRankGenre&&!genres.get(id)?.has(rrRankGenre))||
-     (rrRankStatus==='seen'&&never)||(rrRankStatus==='unseen'&&!never))return '';
+   if(!rrRankMatches(f,genres,never))return '';
    shown++;const addDivider=never&&!divider;if(never)divider=true;
    // Keep global positions even when the visible list is filtered.
    return (addDivider?
@@ -2042,8 +2080,14 @@ function rrRender(){
    const search=root.querySelector('#rrRankSearch');
    search.oninput=()=>{rrRankQuery=search.value;refreshResults()};
    root.querySelector('#rrRankGenre').onchange=e=>{rrRankGenre=e.target.value;refreshResults()};
+   root.querySelector('#rrRankFormat').onchange=e=>{rrRankFormat=e.target.value;refreshResults()};
+   root.querySelector('#rrRankOrigin').onchange=e=>{rrRankOrigin=e.target.value;refreshResults()};
+   root.querySelector('#rrRankMedia').onchange=e=>{rrRankMedia=e.target.value;refreshResults()};
    root.querySelector('#rrRankStatus').onchange=e=>{rrRankStatus=e.target.value;refreshResults()};
-   bind('#rrRankClear',()=>{rrRankQuery='';rrRankGenre='';rrRankStatus='';rrRender()});
+   bind('#rrRankClear',()=>{
+    rrRankQuery='';rrRankGenre='';rrRankStatus='';
+    rrRankFormat='';rrRankOrigin='';rrRankMedia='';rrRender();
+   });
    const bindRankEdits=()=>{
    root.querySelectorAll('[data-rr-rank-edit]').forEach(btn=>btn.onclick=()=>{
     const page=document.getElementById('page-rerank');
@@ -2305,7 +2349,7 @@ body.rr-immersive-on #page-rerank{position:fixed!important;inset:0!important;dis
 .rr-rank-divider{padding:12px 7px;font-size:12px;font-weight:750;color:#a8beda;border-top:1px solid #3a526d;background:#142337}.rr-rank-unseen{opacity:.65}@media(min-width:700px){.rr-fast-shell{min-height:calc(100dvh - 45px)}.rr-fast-stage{padding:18px 20px}.rr-fast-grid{gap:15px}.rr-fast-card{max-width:280px;justify-self:center}.rr-fast-title{padding:12px 10px 0;min-height:64px}.rr-fast-bottom button{font-size:13px}}
 @media(max-width:365px){.rr-drawer-tabs button{font-size:9px}.rr-fast-grid{gap:4px}.rr-fast-title{font-size:10px;padding:7px 4px 0}.rr-fast-bottom button{font-size:10px}.rr-fast-brand b{font-size:15px}}
 `;
-rrStyle.textContent += '\n#rerankRoot .rr-detail-link{border:0;background:transparent;color:inherit;font:inherit;text-align:inherit;padding:2px 0;cursor:pointer;text-decoration:underline;text-decoration-color:#6b859e;text-underline-offset:3px;overflow-wrap:anywhere}.rr-detail-link:focus-visible{outline:2px solid #91d5ff;outline-offset:2px}.rr-fast-title .rr-detail-link{display:block;padding:4px 0}.rr-rank-filters{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}.rr-rank-filters input{flex:1 1 100%;min-width:0;font-size:16px}.rr-rank-filters select{flex:1;min-width:120px;font-size:16px}.rr-rank-filters button{border:1px solid #6686b5;border-radius:8px;background:#284568;color:#eef7ff;padding:9px;font-size:12px}\n';
+rrStyle.textContent += '\n#rerankRoot .rr-detail-link{border:0;background:transparent;color:inherit;font:inherit;text-align:inherit;padding:2px 0;cursor:pointer;text-decoration:underline;text-decoration-color:#6b859e;text-underline-offset:3px;overflow-wrap:anywhere}.rr-detail-link:focus-visible{outline:2px solid #91d5ff;outline-offset:2px}.rr-fast-title .rr-detail-link{display:block;padding:4px 0}.rr-rank-filters{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}.rr-rank-filters input{flex:1 1 100%;min-width:0;font-size:16px}.rr-rank-filters select{flex:1 1 calc(50% - 8px);min-width:0;font-size:16px}.rr-rank-filters button{border:1px solid #6686b5;border-radius:8px;background:#284568;color:#eef7ff;padding:9px;font-size:12px}\n';
 rrStyle.textContent += "\n.rr-rank-row{grid-template-columns:32px minmax(0,1fr) 88px;gap:7px}\n.rr-rank-title-button{background:transparent;border:0;text-align:left;color:#f3f8ff;font-size:13px;font-weight:700;padding:4px;min-width:0;overflow-wrap:anywhere}\n.rr-rank-title-button small{display:block;color:#9eb5d1;font-size:10px;font-weight:400;text-align:left;margin-top:4px}\n.rr-rank-edit-button{background:#284568;border:1px solid #6686b5;color:#eef7ff;border-radius:8px;font-size:11px;font-weight:700;padding:9px 3px;min-height:38px}\n.rr-rank-workbench{margin:14px 0 18px;padding:12px 10px;border:1px solid #6383ad;border-radius:13px;background:#15263d}\n.rr-rank-work-header{display:flex;justify-content:space-between;align-items:center;gap:10px}\n.rr-rank-work-header strong{font-size:15px;color:#ffe1b0}\n.rr-rank-work-header button,.rr-rank-work-feature button,.rr-rank-workbench #rrRankUndoPair,.rr-rank-workbench #rrRankMoreNearby{background:#284875;border:1px solid #6085bb;color:#f1f8ff;border-radius:8px;padding:10px 8px;font-size:11px;font-weight:750}\n.rr-rank-work-feature{display:flex;align-items:center;gap:13px;margin:15px 1px 12px}\n.rr-rank-work-feature img,.rr-rank-work-placeholder{height:106px;width:72px;object-fit:cover;border-radius:7px;background:#30445e;flex:none}\n.rr-rank-work-feature>div:last-child{display:flex;flex-direction:column;align-items:flex-start;gap:7px;min-width:0}\n.rr-rank-work-feature strong{font-size:18px;overflow-wrap:anywhere;line-height:1.35}\n.rr-rank-work-feature small{font-size:11px;color:#b2c9e7}\n.rr-rank-workbench #rrRankUndoPair{display:block;width:100%;margin:8px 0;color:#ffe9bc;border-color:#a27b48;background:#433927}\n.rr-rank-work-section{border-top:1px solid #3b5877;padding:12px 0 7px}\n.rr-rank-work-section h4{font-size:14px;margin:1px 0 8px;color:#ebf3ff}\n.rr-rank-work-section h5{font-size:12px;color:#bdd4ef;margin:12px 0 7px}\n.rr-rank-work-section .rr-muted{font-size:11px}\n.rr-rank-work-row{border-bottom:1px solid #31465f;padding:10px 4px}\n.rr-rank-work-item{display:flex;align-items:flex-start;gap:7px}\n.rr-rank-work-pos{color:#a7c4e4;font-size:11px;min-width:46px;font-weight:800;margin-top:4px}\n.rr-rank-work-name{border:0;background:transparent;color:#f4f8ff;text-align:left;font-size:13px;line-height:1.4;font-weight:750;padding:2px 0;overflow-wrap:anywhere;flex:1}\n.rr-rank-work-meta{display:block;font-size:10px;color:#abbfda;padding:3px 0 7px 53px}\n.rr-inline-pair-controls{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:7px}\n.rr-inline-pair-controls button{background:#263d58;color:#f2f6ff;border:1px solid #5279a4;border-radius:9px;min-height:40px;padding:9px 3px;font-size:11px;font-weight:750}\n.rr-inline-pair-controls button.current{background:#284a3b;color:#e0ffe9;border-color:#608d71}\n.rr-rank-workbench #rrRankMoreNearby{display:block;width:100%;margin-top:12px}\n.rr-rank-title-button:focus-visible,.rr-rank-edit-button:focus-visible,.rr-inline-pair-controls button:focus-visible{outline:2px solid #7ab1ff;outline-offset:2px}\n@media(max-width:365px){.rr-rank-row{grid-template-columns:28px minmax(0,1fr) 78px;gap:5px}.rr-inline-pair-controls button{font-size:10px}.rr-rank-work-pos{min-width:36px}.rr-rank-work-meta{padding-left:43px}}\n";
 rrStyle.textContent += "\n.rr-fixedness{margin:10px 0 16px;padding:12px;border:1px solid #475f7d;border-radius:10px;background:#152237}.rr-fixedness h3{font-size:15px;margin:0 0 8px;color:#f3f6ff}.rr-fixedness p{font-size:11px;line-height:1.6;margin:8px 0}.rr-fixedness-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.rr-fixedness-stats>div{border:1px solid #3b5271;background:#112034;border-radius:8px;padding:10px 7px}.rr-fixedness-stats strong{display:block;font-size:23px;color:#e9f5ff}.rr-fixedness-stats small{display:block;color:#a9bfda;font-size:10px;margin-top:3px}";
 rrStyle.textContent += "\n.rr-pending-banner{display:block;width:100%;padding:11px 10px;border-radius:9px;\n border:1px solid #bd9550;color:#fff2d7;background:#3d3022;\n font-size:12px;font-weight:800;text-align:center}\n.rr-review-intro{padding:12px;margin:6px 0 12px;background:#18273b;\n border:1px solid #526a8a;border-radius:10px}\n.rr-review-intro strong{font-size:16px}\n.rr-review-intro p{font-size:12px;line-height:1.65;margin:8px 0;color:#d6e4f5}\n.rr-review-intro small{font-size:11px;color:#b4c7db}\n.rr-held-row{display:flex;flex-direction:column;align-items:stretch;gap:9px}\n.rr-held-row span{min-width:0;overflow-wrap:anywhere}\n.rr-held-row small{display:block;margin-top:4px;color:#b7c6d9;font-size:11px}\n.rr-held-buttons{display:flex;gap:7px;justify-content:flex-end}\n.rr-held-buttons button{padding:9px 13px;border-radius:8px;min-height:36px;\n border:1px solid #56739a;background:#1d395c;color:#eff7ff;font-size:12px}\n.rr-held-buttons button:last-child{background:#304132;border-color:#718675}\n";
