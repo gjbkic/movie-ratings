@@ -1,6 +1,6 @@
 (()=>{
 'use strict';
-const BUILD='20261116-simple-navigation-v127';
+const BUILD='20261119-genre-search-all-tags-v128';
 let rrHistoryLimit=40;
 let rrRankQuery='',rrRankGenre='',rrRankStatus='',rrCycleFromRank=false,rrCycleEditUndo=[];
 let rrTriad=null,rrOrder=[],rrTie12=false,rrTie23=false,rrPicks=[],rrLogOpen=false,rrLogTab='history',rrTieOpen=false,rrTiePartner=false,rrReviewPairs=null,rrHeldReviewFlow=false,rrCycleGroups=[],rrCycleTieNext=false,rrCycleActiveKey=null,rrCycleUndoToTriad=false,rrRankSelectedId=null,rrRankNearCount=6,rrRankListScroll=0;
@@ -868,7 +868,7 @@ function rrGenreMap(ids){
   const f=byId.get(id),fromState=state.genreOverrides?.[id],category=f?filmCategory(f):'';
   const labels=[...new Set((Array.isArray(fromState)&&fromState.length?
     fromState:fallback[category]||[...['SF','アクション','ドラマ','コメディ','サスペンス','ミステリー','ホラー','アニメ','ファンタジー','恋愛','戦争','歴史','クライム'].filter(x=>x===category)])
-    .map(x=>String(x||'').trim()).filter(Boolean))].slice(0,6);
+    .map(x=>String(x||'').trim()).filter(Boolean))];
   tokens.set(id,new Set(labels));
   for(const label of labels){
    if(!groups.has(label))groups.set(label,[]);
@@ -1800,7 +1800,7 @@ function rrRankNormalize(value){return String(value||'').normalize('NFKC').toLow
 function rrRankFiltersHtml(m){
  const genres=[...rrGenreMap(m.ids).groups.keys()].sort((a,b)=>a.localeCompare(b,'ja'));
  return '<div class="rr-rank-filters">'+
-  '<input id="rrRankSearch" class="search" type="search" aria-label="暫定順位を検索" placeholder="邦題・英題・原題・年で検索" value="'+esc(rrRankQuery)+'">'+
+  '<input id="rrRankSearch" class="search" type="search" aria-label="暫定順位を検索" placeholder="作品名・年・ジャンル（comfortなど）で検索" value="'+esc(rrRankQuery)+'">'+
   '<select id="rrRankGenre" class="field" aria-label="ジャンルで絞り込み"><option value="">全ジャンル</option>'+
   genres.map(g=>'<option value="'+esc(g)+'"'+(rrRankGenre===g?' selected':'')+'>'+esc(g)+'</option>').join('')+'</select>'+
   '<select id="rrRankStatus" class="field" aria-label="比較状況で絞り込み">'+
@@ -1816,7 +1816,12 @@ function rrPreviewHtml(r,m){
  const html=m.order.map((id,i)=>{
    const f=filmById(id),c=m.stats.counts.get(id)||0,never=c===0;
    const info=typeof titleInfo==='function'?titleInfo(f):{};
-   const text=rrRankNormalize([displayTitle(f),info?.originalTitle,info?.englishTitle,f?.title,f?.lbTitle,f?.year].filter(Boolean).join(' '));
+   // Search the same *complete* tag set as the genre drop-down.
+   // Previously title-only searching and a six-tag truncation caused
+   // "comfort" to miss films whose tag was seventh or later.
+   const tags=[...(genres.get(id)||[])];
+   const text=rrRankNormalize([displayTitle(f),info?.originalTitle,info?.englishTitle,
+     f?.title,f?.lbTitle,f?.year,...tags].filter(Boolean).join(' '));
    if(query.some(q=>!text.includes(q))||(rrRankGenre&&!genres.get(id)?.has(rrRankGenre))||
      (rrRankStatus==='seen'&&never)||(rrRankStatus==='unseen'&&!never))return '';
    shown++;const addDivider=never&&!divider;if(never)divider=true;
