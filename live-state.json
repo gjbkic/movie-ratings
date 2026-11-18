@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1795031125095,
-  "sourceUpdatedIso": "2026-11-18T19:45:25.095Z",
+  "sourceUpdatedAt": 1795031148474,
+  "sourceUpdatedIso": "2026-11-18T19:45:48.474Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -60714,7 +60714,7 @@
         "addedDate": "2026-05-30",
         "addedDateSource": "letterboxd-export-2026-09-27",
         "note": "新世紀とストーリーが変わった。新展開で面白かった。15年離れたことによる葛藤がもう少し見れたら良かったがそれは終劇なのか？戦闘描写は今まで1番よく、渚の死に方も新しくてよかった。またイマイチフォースの仕組みが理解できてないからおいおい頑張る",
-        "noteSource": "letterboxd-export",
+        "noteSource": "manual",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
         "watchedAddedDate": "2026-05-30",
@@ -60751,7 +60751,8 @@
           "validated84": true,
           "mediaKind84": "movie",
           "posterPinTrust84": null
-        }
+        },
+        "noteEditedAt": "2026-11-18T19:45:48.428Z"
       },
       "lb-471-8LnQ": {
         "addedDate": "2026-05-31",
