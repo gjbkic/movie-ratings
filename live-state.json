@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1795029485434,
-  "sourceUpdatedIso": "2026-11-18T19:18:05.434Z",
+  "sourceUpdatedAt": 1795029575042,
+  "sourceUpdatedIso": "2026-11-18T19:19:35.042Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -77552,6 +77552,17 @@
           "creators": [],
           "source": "tmdb",
           "fetchedAt": "2026-11-18T19:18:04.863Z"
+        },
+        "poster84": {
+          "path": "/6jVK9vvUDp9eH0JSIUgcvlrqdGa.jpg",
+          "tmdbId": 134350,
+          "checkedAt": "2026-11-18T19:19:30.572Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "whydontyouplayinhell|2013",
+          "matchedTitle84": "Why Don't You Play in Hell?",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       }
     }
