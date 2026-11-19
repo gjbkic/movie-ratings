@@ -1,0 +1,40 @@
+name: Film classification and company search tests
+on:
+  push:
+    paths:
+      - 'app-classification-metadata.js'
+      - 'app-studio-metadata.js'
+      - 'app-detail-layout.js'
+      - 'patch-v120.js'
+      - 'scripts/regression/classification.cjs'
+      - '.github/workflows/movie-classification.yml'
+  pull_request:
+    paths:
+      - 'app-classification-metadata.js'
+      - 'app-studio-metadata.js'
+      - 'app-detail-layout.js'
+      - 'patch-v120.js'
+      - 'scripts/regression/classification.cjs'
+      - '.github/workflows/movie-classification.yml'
+permissions:
+  contents: read
+jobs:
+  classification:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --no-save --no-package-lock playwright@1.56.1
+      - run: npx playwright install --with-deps chromium
+      - run: node --check app-classification-metadata.js && node --check app-studio-metadata.js && node --check patch-v120.js
+      - run: node scripts/regression/classification.cjs
+      - run: node scripts/regression/rerank-navigation.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: classification-ui-preview
+          path: test-results/*.png
+          retention-days: 3

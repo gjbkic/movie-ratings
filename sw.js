@@ -2,13 +2,13 @@
    User rankings stay in the existing localStorage/IndexedDB; this worker
    never reads, migrates, or changes rating data. */
 'use strict';
-const APP_CACHE='movie30-offline-shell-20261120-v32';
+const APP_CACHE='movie30-offline-shell-20261120-v33';
 const POSTER_CACHE='movie30-offline-posters-v1';
 const SHELL_ASSETS=[
   "",
   "index.html",
   "manifest.webmanifest?v=20261112",
-  "offline-register.js?v=20261120-studios32",
+  "offline-register.js?v=20261120-classification33",
   "app-icon.svg",
   "app-core.js?v=20261113-onyourmark6",
   "app-save-retry.js?v=20261018save2",
@@ -20,12 +20,13 @@ const SHELL_ASSETS=[
   "app-seasons.js?v=20261013f",
   "app-search-stability.js?v=20261014d",
   "app-unrated-panels.js?v=20261014g",
-  "app-detail-layout.js?v=20261014h",
+  "app-detail-layout.js?v=20261120-classification33",
   "app-viewing-reconcile-20261019.js?v=1",
   "app-last-attack-merge-20261022.js?v=20261022a",
   "app-crayon-duplicate-repair.js?v=20261031b",
-  "patch-v120.js?v=20261120-studios32",
-  "app-studio-metadata.js?v=20261120-studios32",
+  "patch-v120.js?v=20261120-classification33",
+  "app-studio-metadata.js?v=20261120-classification33",
+  "app-classification-metadata.js?v=20261120-classification33",
   "app-boot.js?v=20261031b"
 ];
 const BASE=self.registration.scope;
