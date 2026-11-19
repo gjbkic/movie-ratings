@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1795119764372,
-  "sourceUpdatedIso": "2026-11-19T20:22:44.372Z",
+  "sourceUpdatedAt": 1795119811603,
+  "sourceUpdatedIso": "2026-11-19T20:23:31.603Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -24027,7 +24027,15 @@
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
-        "ドラマ"
+        "ドラマ",
+        "恋愛",
+        "ファンタジー",
+        "世界観",
+        "雰囲気・美学",
+        "感動",
+        "comfort",
+        "心理・内面",
+        "青春・若者"
       ],
       "origin": "日本",
       "format": "animation",
@@ -41195,7 +41203,15 @@
         "娯楽"
       ],
       "custom-1795119763181-r9ye": [
-        "ドラマ"
+        "ドラマ",
+        "恋愛",
+        "ファンタジー",
+        "世界観",
+        "雰囲気・美学",
+        "感動",
+        "comfort",
+        "心理・内面",
+        "青春・若者"
       ]
     },
     "originOverrides": {
@@ -77881,6 +77897,17 @@
           "creators": [],
           "source": "tmdb",
           "fetchedAt": "2026-11-19T20:22:43.799Z"
+        },
+        "poster84": {
+          "path": "/vug1dvDI1tSa60Z8qjCuUE7ntkO.jpg",
+          "tmdbId": 242828,
+          "checkedAt": "2026-11-19T20:22:49.009Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "whenmarniewasthere|2014",
+          "matchedTitle84": "When Marnie Was There",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       }
     }
