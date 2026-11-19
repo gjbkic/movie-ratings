@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1795110479370,
-  "sourceUpdatedIso": "2026-11-19T17:47:59.370Z",
+  "sourceUpdatedAt": 1795110509812,
+  "sourceUpdatedIso": "2026-11-19T17:48:29.812Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -24003,7 +24003,8 @@
       "genre": [
         "コメディ",
         "恋愛",
-        "ドラマ"
+        "ドラマ",
+        "娯楽"
       ],
       "origin": "日本",
       "format": "live",
@@ -41146,7 +41147,8 @@
       "custom-1795110436407-1ni9": [
         "コメディ",
         "恋愛",
-        "ドラマ"
+        "ドラマ",
+        "娯楽"
       ]
     },
     "originOverrides": {
@@ -60407,7 +60409,9 @@
           "fetchedAt": "2026-11-15T23:23:11.402043+00:00"
         },
         "poster84": {
-          "tmdbId": 10840,
+          "path": null,
+          "tmdbId": null,
+          "checkedAt": "2026-11-19T17:48:20.517Z",
           "provider": "tmdb",
           "checkedIdentity84": "onyourmark|1995",
           "matchedTitle84": "",
@@ -77783,6 +77787,17 @@
           "creators": [],
           "source": "tmdb",
           "fetchedAt": "2026-11-19T17:47:16.998Z"
+        },
+        "poster84": {
+          "path": "/p3Rxa1cUxVihEgxpCSFAMxYdhfa.jpg",
+          "tmdbId": 101664,
+          "checkedAt": "2026-11-19T17:48:25.132Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "lovestrikes|2011",
+          "matchedTitle84": "Love Strikes!",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       }
     }
