@@ -29,6 +29,8 @@ let browser;
  assert.deepEqual(labels,['種別','会社','制作','言語','形式','ジャンル']);
  assert((await page.locator('#movie30-detail-class-preview').textContent()).includes('Studio Ghibli'));
  await page.locator('#movie30-detail-classification>summary').click();
+ const visibleLabels=await page.locator('#editGenrePicker .struct-label:visible').allTextContents();
+ assert.deepEqual(visibleLabels.map(x=>x.includes('ジャンル')?'ジャンル':x.trim()),['種別','会社','制作','言語','形式','ジャンル'],'Visible edit rows follow the six-axis order with no legacy production group');
  assert.equal(await page.locator('#movie131Countries').inputValue(),'日本、フランス');
  assert.equal(await page.locator('#movie131OriginalLanguage').inputValue(),'日本語');
  await page.locator('#movie131Companies').fill('Pixar、架空スタジオ');await page.locator('#movie131Companies').press('Tab');
