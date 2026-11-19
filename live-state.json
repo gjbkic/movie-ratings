@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1795119859070,
-  "sourceUpdatedIso": "2026-11-19T20:24:19.070Z",
+  "sourceUpdatedAt": 1795119873434,
+  "sourceUpdatedIso": "2026-11-19T20:24:33.434Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -2624,6 +2624,36 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-526-4JQI",
+      "title": "かぐや姫の物語",
+      "originalTitle": "",
+      "englishTitle": "The Tale of The Princess Kaguya",
+      "year": 2013,
+      "score": 90,
+      "star": 4,
+      "overallRank": 91,
+      "sameScoreRank": 14,
+      "category": "スタジオジブリ系作品",
+      "mediaType": "movie",
+      "genre": [
+        "歴史",
+        "差別・人権",
+        "恋愛",
+        "ファンタジー",
+        "切ない",
+        "大作",
+        "comfort",
+        "雰囲気・美学"
+      ],
+      "origin": "日本",
+      "format": "animation",
+      "runtime": 137,
+      "exact": true,
+      "letterboxdAddedDate": "2026-01-12",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "lb-17-1U82",
       "title": "シャッターアイランド",
       "originalTitle": "",
@@ -2631,8 +2661,8 @@
       "year": 2010,
       "score": 90,
       "star": 4,
-      "overallRank": 91,
-      "sameScoreRank": 14,
+      "overallRank": 92,
+      "sameScoreRank": 15,
       "category": "サスペンス、ミステリー",
       "mediaType": "movie",
       "genre": [
@@ -2658,8 +2688,8 @@
       "year": 1972,
       "score": 90,
       "star": 4,
-      "overallRank": 92,
-      "sameScoreRank": 15,
+      "overallRank": 93,
+      "sameScoreRank": 16,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -2677,74 +2707,15 @@
       "letterboxdReportedWatchedDate": null
     },
     {
-      "id": "lb-526-4JQI",
-      "title": "かぐや姫の物語",
-      "originalTitle": "",
-      "englishTitle": "The Tale of The Princess Kaguya",
-      "year": 2013,
-      "score": 90,
-      "star": 4,
-      "overallRank": 93,
-      "sameScoreRank": 16,
-      "category": "スタジオジブリ系作品",
-      "mediaType": "movie",
-      "genre": [
-        "歴史",
-        "差別・人権",
-        "恋愛",
-        "ファンタジー",
-        "切ない",
-        "大作",
-        "comfort",
-        "雰囲気・美学"
-      ],
-      "origin": "日本",
-      "format": "animation",
-      "runtime": 137,
-      "exact": true,
-      "letterboxdAddedDate": "2026-01-12",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "lb-154-1Mn4",
-      "title": "カリオストロの城",
-      "originalTitle": "",
-      "englishTitle": "The Castle of Cagliostro",
-      "year": 1979,
-      "score": 89,
-      "star": 4,
-      "overallRank": 94,
-      "sameScoreRank": 1,
-      "category": "スタジオジブリ系作品",
-      "mediaType": "movie",
-      "genre": [
-        "アクション",
-        "コメディ",
-        "ファンタジー",
-        "クライム",
-        "感動",
-        "comfort",
-        "娯楽"
-      ],
-      "origin": "日本",
-      "format": "animation",
-      "runtime": 100,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
       "id": "custom-1795119763181-r9ye",
       "title": "思い出のマーニー",
       "originalTitle": "思い出のマーニー",
       "englishTitle": "When Marnie Was There",
       "year": 2014,
-      "score": 89,
+      "score": 90,
       "star": 4,
-      "overallRank": 95,
-      "sameScoreRank": 2,
+      "overallRank": 94,
+      "sameScoreRank": 17,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -2768,6 +2739,35 @@
       "letterboxdReportedWatchedDate": "2026-11-20"
     },
     {
+      "id": "lb-154-1Mn4",
+      "title": "カリオストロの城",
+      "originalTitle": "",
+      "englishTitle": "The Castle of Cagliostro",
+      "year": 1979,
+      "score": 89,
+      "star": 4,
+      "overallRank": 95,
+      "sameScoreRank": 1,
+      "category": "スタジオジブリ系作品",
+      "mediaType": "movie",
+      "genre": [
+        "アクション",
+        "コメディ",
+        "ファンタジー",
+        "クライム",
+        "感動",
+        "comfort",
+        "娯楽"
+      ],
+      "origin": "日本",
+      "format": "animation",
+      "runtime": 100,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "custom-1791023391963-vdu9",
       "title": "アイアン・ジャイアント",
       "originalTitle": "The Iron Giant",
@@ -2776,7 +2776,7 @@
       "score": 89,
       "star": 4,
       "overallRank": 96,
-      "sameScoreRank": 3,
+      "sameScoreRank": 2,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -2809,7 +2809,7 @@
       "score": 89,
       "star": 4,
       "overallRank": 97,
-      "sameScoreRank": 4,
+      "sameScoreRank": 3,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -2839,7 +2839,7 @@
       "score": 89,
       "star": 4,
       "overallRank": 98,
-      "sameScoreRank": 5,
+      "sameScoreRank": 4,
       "category": "スターウォーズシリーズ",
       "mediaType": "movie",
       "genre": [
@@ -2868,7 +2868,7 @@
       "score": 89,
       "star": 4,
       "overallRank": 99,
-      "sameScoreRank": 6,
+      "sameScoreRank": 5,
       "category": "マフィア、クライム",
       "mediaType": "movie",
       "genre": [
@@ -2895,7 +2895,7 @@
       "score": 89,
       "star": 4,
       "overallRank": 100,
-      "sameScoreRank": 7,
+      "sameScoreRank": 6,
       "category": "ハリーポッター シリーズ",
       "mediaType": "movie",
       "genre": [
@@ -2926,7 +2926,7 @@
       "score": 89,
       "star": 4,
       "overallRank": 101,
-      "sameScoreRank": 8,
+      "sameScoreRank": 7,
       "category": "SF",
       "mediaType": "movie",
       "genre": [
@@ -2952,7 +2952,7 @@
       "score": 89,
       "star": 4,
       "overallRank": 102,
-      "sameScoreRank": 9,
+      "sameScoreRank": 8,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -2982,7 +2982,7 @@
       "score": 89,
       "star": 4,
       "overallRank": 103,
-      "sameScoreRank": 10,
+      "sameScoreRank": 9,
       "category": "恋愛、ミュージカル",
       "mediaType": "movie",
       "genre": [
@@ -3010,7 +3010,7 @@
       "score": 89,
       "star": 4,
       "overallRank": 104,
-      "sameScoreRank": 11,
+      "sameScoreRank": 10,
       "category": "コメディ",
       "mediaType": "drama",
       "genre": [
@@ -3036,7 +3036,7 @@
       "score": 89,
       "star": 4,
       "overallRank": 105,
-      "sameScoreRank": 12,
+      "sameScoreRank": 11,
       "category": "Letterboxd追加",
       "mediaType": "other",
       "genre": [
@@ -3060,7 +3060,7 @@
       "score": 89,
       "star": 4,
       "overallRank": 106,
-      "sameScoreRank": 13,
+      "sameScoreRank": 12,
       "category": "スパイダーマン作品",
       "mediaType": "movie",
       "genre": [
@@ -3089,7 +3089,7 @@
       "score": 89,
       "star": 4,
       "overallRank": 107,
-      "sameScoreRank": 14,
+      "sameScoreRank": 13,
       "category": "戦争、歴史",
       "mediaType": "movie",
       "genre": [
@@ -3117,7 +3117,7 @@
       "score": 89,
       "star": 4,
       "overallRank": 108,
-      "sameScoreRank": 15,
+      "sameScoreRank": 14,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -24850,7 +24850,7 @@
       "custom-1795029484389-i64e": 85,
       "custom-1795096338948-r8rs": 84,
       "custom-1795110436407-1ni9": 79,
-      "custom-1795119763181-r9ye": 89
+      "custom-1795119763181-r9ye": 90
     },
     "rankOrder": {
       "40": [
@@ -25645,7 +25645,6 @@
       ],
       "89": [
         "lb-154-1Mn4",
-        "custom-1795119763181-r9ye",
         "custom-1791023391963-vdu9",
         "custom-1791036345616-3tph",
         "lb-48-27Vw",
@@ -25674,9 +25673,10 @@
         "lb-286-2bdI",
         "lb-566-2b5u",
         "lb-65-2auI",
+        "lb-526-4JQI",
         "lb-17-1U82",
         "lb-321-2aNK",
-        "lb-526-4JQI"
+        "custom-1795119763181-r9ye"
       ],
       "91": [
         "lb-559-abBm",
