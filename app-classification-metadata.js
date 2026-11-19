@@ -164,7 +164,7 @@ for(const [id,codes,name] of [['movie131CountryOptions',COUNTRY_CODES,countryNam
 Promise.resolve(window.__movie30StorageReady).then(()=>{
  if(window.__movie30RecoveryBlocked)return;
  const baseOpen=openSheet;openSheet=function(id,...args){const out=baseOpen.call(this,id,...args);refresh(id);window.__movie30Studios?.queueAuto(filmById(id));return out};
- const baseMatch=match;match=function(f,q){if(!filterMatches(f))return false;const tokens=String(q||'').trim().split(/\s+/).map(norm).filter(Boolean),text=norm(searchable(f));return !tokens.length||tokens.every(token=>baseMatch(f,token)||text.includes(token))};
+ const baseMatch=match;match=function(f,q){if(!filterMatches(f))return false;const info=titleInfo(f),tokens=String(q||'').trim().split(/\s+/).filter(Boolean),text=norm([displayTitle(f),f.title,f.lbTitle,info.originalTitle,info.englishTitle,f.year,searchable(f)].filter(Boolean).join(' '));return !tokens.length||tokens.every(token=>baseMatch(f,token)||text.includes(norm(token)))};
  const editor=document.getElementById('editGenrePicker');editor?.addEventListener('click',()=>{const id=selectedId;setTimeout(()=>{if(id===selectedId)refresh(id)},150)},true);
  installFilters();void hydrate();
 }).catch(()=>{});
