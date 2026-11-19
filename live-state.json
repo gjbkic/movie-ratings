@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1795096339843,
-  "sourceUpdatedIso": "2026-11-19T13:52:19.843Z",
+  "sourceUpdatedAt": 1795110420779,
+  "sourceUpdatedIso": "2026-11-19T17:47:00.779Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -30311,7 +30311,9 @@
         "oldScore": null,
         "added": true,
         "_seq": 1795096338948,
-        "source": "letterboxd"
+        "source": "letterboxd",
+        "tmdbType": "movie",
+        "_lbMetaFixedV36": true
       }
     ],
     "starOverrides": {
@@ -31149,7 +31151,8 @@
       "custom-1794844999633-jn35": 2,
       "custom-1794844998856-fg8d": 3,
       "custom-1794852999460-rvmw": 2.5,
-      "custom-1795029484389-i64e": 3.5
+      "custom-1795029484389-i64e": 3.5,
+      "custom-1795096338948-r8rs": 3.5
     },
     "titleOverrides": {
       "added-anchor-578": {
@@ -33425,6 +33428,12 @@
         "title": "聲の形",
         "originalTitle": "",
         "englishTitle": "A Silent Voice: The Movie"
+      },
+      "custom-1795096338948-r8rs": {
+        "title": "ドールズ",
+        "originalTitle": "ドールズ",
+        "englishTitle": "Dolls",
+        "tmdbId": 870
       }
     },
     "categoryOverrides": {},
