@@ -18,10 +18,12 @@ const isTv=f=>{
 const normCompany=x=>({id:Number(x.id)||0,name:String(x.name||'').trim()});
 function nameAliases(f){
  const t=typeof titleInfo==='function'?titleInfo(f):{};
- const m=getFilmMeta(f),p=m.poster84||{};
+ const m=getFilmMeta(f);
+ // Never use the candidate poster's matched title as evidence that the
+ // candidate itself belongs to the selected film.
  return [...new Set([f.title,f.lbTitle,f.originalTitle,f.englishTitle,
-  t.title,t.originalTitle,t.englishTitle,m.englishTitle,m.originalTitle,
-  p.matchedTitle84].map(safeText).filter(Boolean))];
+  t.title,t.originalTitle,t.englishTitle,m.englishTitle,m.originalTitle]
+  .map(safeText).filter(Boolean))];
 }
 function matchTitle(f,d){
  const titles=nameAliases(f),options=[d.title,d.original_title,d.name,d.original_name];
