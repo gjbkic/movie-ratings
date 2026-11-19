@@ -1,0 +1,42 @@
+{
+  "at": "2026-11-19T20:57:44.002289+00:00",
+  "counts": {
+    "total": 860,
+    "fetched": 855,
+    "cached": 0,
+    "unmatched": 5,
+    "error": 0
+  },
+  "problems": [
+    {
+      "id": "lb-459-1Vgm",
+      "title": "On Your Mark",
+      "status": "unmatched",
+      "reason": "TMDb title/ID not found: HTTP 404"
+    },
+    {
+      "id": "custom-1790322764349-xp48",
+      "title": "Stranger Things 5: The Finale",
+      "status": "unmatched",
+      "reason": "TMDb title/ID not found: HTTP 404。保存ID・邦題・英題・原題・別名・映画/TV・該当シーズンを確認しましたが一意に特定不可"
+    },
+    {
+      "id": "custom-1792420000000-007",
+      "title": "ビッグバン★セオリー",
+      "status": "unmatched",
+      "reason": "保存ID・邦題・英題・原題・別名・映画/TV・該当シーズンを確認しましたが一意に特定不可"
+    },
+    {
+      "id": "custom-1792421000000-006",
+      "title": "ラジエーションハウス",
+      "status": "unmatched",
+      "reason": "保存ID・邦題・英題・原題・別名・映画/TV・該当シーズンを確認しましたが一意に特定不可"
+    },
+    {
+      "id": "custom-1792421000000-013",
+      "title": "NARUTO -ナルト-",
+      "status": "unmatched",
+      "reason": "保存ID・邦題・英題・原題・別名・映画/TV・該当シーズンを確認しましたが一意に特定不可"
+    }
+  ]
+}
