@@ -54,6 +54,7 @@ const row=(key,label,html)=>'<div class="struct-row movie131-row" data-classific
 function refresh(id=selectedId){
  if(!id||id!==selectedId)return;
  const f=filmById(id),editor=document.getElementById('editGenrePicker');if(!f||!editor)return;
+ if(editor.contains(document.activeElement)&&document.activeElement.matches('.movie131-row input'))return;
  document.getElementById('movie30ProductionPanel')?.remove();
  editor.querySelectorAll('.movie131-row').forEach(e=>e.remove());
  const c=get(f),o=overridden(f),a=automatic(f);
