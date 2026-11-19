@@ -35,6 +35,11 @@ jobs:
           else
             npx playwright install chromium
           fi
+      - name: Add Japanese font for visual checks
+        run: |
+          mkdir -p "$HOME/.local/share/fonts"
+          curl --fail --retry 2 --max-time 60 -L https://raw.githubusercontent.com/notofonts/noto-cjk/main/Sans/OTF/Japanese/NotoSansCJKjp-Regular.otf -o "$HOME/.local/share/fonts/NotoSansCJKjp-Regular.otf"
+          fc-cache -f
       - run: node --check app-classification-metadata.js && node --check app-studio-metadata.js && node --check patch-v120.js
       - run: node scripts/regression/classification.cjs
       - run: node scripts/regression/rerank-navigation.cjs

@@ -72,7 +72,7 @@ function setOverride(f,key,value){
  window.dispatchEvent(new Event('movie30-studio-update'));
  if(view.page!=='rerank'&&typeof render==='function')render();
 }
-const row=(key,label,html)=>'<div class="struct-row movie131-row" data-classification="'+key+'"><div class="struct-label">'+label+'</div>'+html+'</div>';
+const row=(key,label,html)=>'<div class="movie131-row" data-classification="'+key+'"><div class="struct-label">'+label+'</div>'+html+'</div>';
 function refresh(id=selectedId){
  if(!id||id!==selectedId)return;
  const f=filmById(id),editor=document.getElementById('editGenrePicker');if(!f||!editor)return;
@@ -88,13 +88,13 @@ function refresh(id=selectedId){
   '<div class="movie131-row movie131-actions"><button type="button" class="btn" id="movie131Fetch">TMDBから分類を取得／更新</button>'+
   '<button type="button" class="btn" id="movie131Reset"'+(Object.keys(o).length?'':' hidden')+'>会社・制作・言語を自動情報に戻す</button>'+
   '<small id="movie131Status">'+(a.schema===2?'TMDB取得済み':'未取得の項目は空欄です')+'。形式・独自ジャンルの指定は優先して保持します。</small></div>';
- const rows=[...editor.querySelectorAll(':scope>.struct-row')];
+ const rows=[...editor.querySelectorAll('.struct-row')];
  const original=rows.find(r=>r.querySelector('.struct-label')?.textContent.trim()==='制作区分');
- if(original){original.hidden=true;original.style.display='none'}
+ if(original){original.hidden=true;original.style.display='none';original.classList.add('movie131-legacy-origin')}
  const type=rows.find(r=>r.querySelector('.struct-label')?.textContent.trim()==='種別');
- const anchor=type?.nextSibling||editor.firstChild;
- const newRows=[...add.children];for(const e of newRows.slice(0,3))editor.insertBefore(e,anchor);
- editor.appendChild(newRows[3]);
+ const parent=type?.parentElement||editor,anchor=type?.nextSibling||parent.firstChild;
+ const newRows=[...add.children];for(const e of newRows.slice(0,3))parent.insertBefore(e,anchor);
+ parent.appendChild(newRows[3]);
  const bind=(id,key,convert)=>document.getElementById(id).onchange=e=>{
   if(split(e.target.value).some(x=>/^(?:その他|__other|__unknown)$/.test(x))){toast('「その他」は検索専用です。個別の国・言語・会社名を入力してください');return}
   setOverride(f,key,e.target.value.trim()?convert(e.target.value):undefined);
@@ -157,7 +157,7 @@ async function hydrate(){
  }catch(_){}
 }
 window.__movie30Classification={version:131,get,searchable,refresh,countryName,languageName,options:catalogOptions,matchesLanguage,matchesCountry,matchesCompany,languageFilters,countryFilters,companyFilters};
-const style=document.createElement('style');style.textContent='#originFilterRank,#originFilterClassify{display:none!important}.movie131-row .field{width:100%;min-height:38px;font-size:16px}.movie131-sub{display:block;font-size:11px;color:#aeb7c4;margin:8px 0}.movie131-sub .field{display:block;margin-top:5px}.movie131-actions{display:flex;flex-wrap:wrap;gap:7px;padding:10px 0}.movie131-actions small{display:block;width:100%;color:#9bafc0;font-size:10px;line-height:1.5}';document.head.appendChild(style);
+const style=document.createElement('style');style.textContent='.movie131-legacy-origin{display:none!important}.movie131-row{margin:11px 0}#movie30-detail-class-preview .movie30-detail-class-token{max-width:100%}#movie30-detail-class-preview .movie30-detail-class-token>span{min-width:0;overflow-wrap:anywhere}#originFilterRank,#originFilterClassify{display:none!important}.movie131-row .field{width:100%;min-height:38px;font-size:16px}.movie131-sub{display:block;font-size:11px;color:#aeb7c4;margin:8px 0}.movie131-sub .field{display:block;margin-top:5px}.movie131-actions{display:flex;flex-wrap:wrap;gap:7px;padding:10px 0}.movie131-actions small{display:block;width:100%;color:#9bafc0;font-size:10px;line-height:1.5}';document.head.appendChild(style);
 for(const [id,codes,name] of [['movie131CountryOptions',COUNTRY_CODES,countryName],['movie131LanguageOptions',LANGUAGE_CODES,languageName]]){
  const list=document.createElement('datalist');list.id=id;list.innerHTML=codes.map(c=>'<option value="'+esc(name(c))+'"></option>').join('');document.body.appendChild(list);
 }
