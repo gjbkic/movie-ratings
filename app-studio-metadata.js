@@ -4,9 +4,13 @@
    so existing backup/import/export and state normalization preserve it. */
 (()=>{
 'use strict';
-const VERSION='20261120-studio-metadata-v130',KEY='studio130';
+const VERSION='20261120-classification-v131',KEY='studio130';
 const getFilmMeta=f=>state.letterboxdMeta?.[f.id]||{};
-const record=f=>f&&getFilmMeta(f)[KEY]||null;
+const record=f=>{const r=f&&getFilmMeta(f)[KEY];if(!r)return null;
+ if(r.filmTitles?.length&&!r.filmTitles.some(t=>nameAliases(f).includes(safeText(t))))return null;
+ if(r.filmYear&&yearOf(f)&&Number(r.filmYear)!==yearOf(f))return null;
+ return r};
+const complete=f=>record(f)?.schema===2;
 const wait=ms=>new Promise(resolve=>setTimeout(resolve,ms));
 const safeText=s=>String(s||'').normalize('NFKC').toLowerCase().replace(/[\p{P}\p{S}\s]/gu,'');
 const yearOf=f=>Number(f?.year)||0;
@@ -15,7 +19,7 @@ const isTv=f=>{
  return p?.mediaKind84==='tv'||['tv_episode','tv_series'].includes(m.contentType)||
   ['drama','series'].includes(String(state.mediaTypeOverrides?.[f.id]||f.mediaType||''));
 };
-const normCompany=x=>({id:Number(x.id)||0,name:String(x.name||'').trim()});
+const normCompany=x=>({id:Number(x.id)||0,name:String(x.name||'').trim(),country:String(x.origin_country||'')});
 function nameAliases(f){
  const t=typeof titleInfo==='function'?titleInfo(f):{};
  const m=getFilmMeta(f);
@@ -88,7 +92,7 @@ async function discover(f,kind){
 }
 async function fetchCompany(f,force=false,quiet=false){
  if(!f||!filmById(f.id))return {status:'missing'};
- if(!force&&record(f)?.checkedAt)return {status:'cached',record:record(f)};
+ if(!force&&complete(f))return {status:'cached',record:record(f)};
  if(!getTmdbCredential())return {status:'no-key'};
  if(active.has(f.id))return active.get(f.id);
  const job=(async()=>{
@@ -108,7 +112,14 @@ async function fetchCompany(f,force=false,quiet=false){
    .filter(x=>x.id>0&&x.name).map(x=>[x.id,x])).values()];
   // Television broadcaster/network is *not* a production company.
   const item={source:'tmdb',checkedAt:new Date().toISOString(),
-   kind,tmdbId:Number(d.id),companies};
+   kind,tmdbId:Number(d.id),companies,schema:2,
+   filmTitles:[f.title,f.lbTitle,f.originalTitle,f.englishTitle,...Object.values(typeof titleInfo==='function'?titleInfo(f):{}).filter(x=>typeof x==='string')].filter(Boolean),filmYear:f.year||'',
+   productionCountries:(d.production_countries||[]).map(c=>({code:c.iso_3166_1,name:c.name})),
+   originalLanguage:String(d.original_language||''),
+   spokenLanguages:(d.spoken_languages||[]).map(l=>({code:l.iso_639_1,name:l.english_name||l.name})),
+   genres:(d.genres||[]).map(g=>({id:Number(g.id),name:String(g.name||'')})),
+   formatHint:(d.genres||[]).some(g=>Number(g.id)===16)?'animation':'',
+   releaseDate:d.release_date||d.first_air_date||'',runtime:d.runtime||null};
   // Verify the film still exists before making a metadata-only change.
   if(!filmById(f.id))return {status:'missing'};
   state.letterboxdMeta=state.letterboxdMeta||{};
@@ -126,12 +137,11 @@ function aggregate(){
  const films=allFilms();
  for(const f of films){
   const r=record(f);
-  if(!r?.checkedAt)continue;
-  fetched++;
-  if(!r.companies?.length)empty++;
-  for(const c of r.companies||[]){
-   if(!counts.has(c.id))counts.set(c.id,{id:c.id,name:c.name,count:0});
-   counts.get(c.id).count++;
+  if(complete(f)){fetched++;if(!r?.companies?.length)empty++}
+  for(const c of window.__movie30Classification?.get(f)?.companies||r?.companies||[]){
+   const key=c.id>0?'tmdb:'+c.id:'name:'+safeText(c.name);
+   if(!counts.has(key))counts.set(key,{id:c.id,name:c.name,count:0});
+   counts.get(key).count++;
   }
  }
  return {total:films.length,fetched,missing:films.length-fetched,empty,
@@ -154,7 +164,7 @@ function aliases(company){
  return labels.join(' ');
 }
 function searchable(f){
- const studios=record(f)?.companies||[];
+ const studios=window.__movie30Classification?.get(f)?.companies||record(f)?.companies||[];
  return studios.map(c=>c.name+' '+aliases(c)).join(' ');
 }
 function fits(f,q){
@@ -169,7 +179,7 @@ async function fetchBulk(){
  if(batchRunning)return;
  if(!getTmdbCredential()){alert('TMDbのキー／トークンを「データ」タブで設定してください。');return}
  batchRunning=true;stopRequested=false;
- const todo=allFilms().filter(f=>!record(f)?.checkedAt);
+ const todo=allFilms().filter(f=>!complete(f));
  batchProgress={done:0,total:todo.length,ok:0,skipped:0,failed:0};
  dispatch();
  try{
@@ -196,7 +206,7 @@ async function fetchBulk(){
 function stop(){stopRequested=true}
 function progress(){return {...batchProgress,running:batchRunning}}
 function queueAuto(f){
- if(!f||queued.has(f.id)||record(f)?.checkedAt||!getTmdbCredential())return;
+ if(!f||queued.has(f.id)||complete(f)||!getTmdbCredential())return;
  queued.add(f.id);queue.push(f.id);
  if(!draining)void drain();
 }
@@ -206,7 +216,7 @@ async function drain(){
   while(queue.length){
    const id=queue.shift();queued.delete(id);
    const f=filmById(id);
-   if(f&&!record(f)?.checkedAt){
+   if(f&&!complete(f)){
     await fetchCompany(f,false,false);
     await wait(350);
    }
@@ -214,6 +224,7 @@ async function drain(){
  }finally{draining=false}
 }
 function renderSheet(id){
+ if(window.__movie30Classification){window.__movie30Classification.refresh(id);return}
  const panel=document.getElementById('movie30ProductionPanel');
  if(!panel||!filmById(id))return;
  const f=filmById(id),r=record(f);
@@ -278,7 +289,7 @@ function installHooks(){
 }
 window.__movie30Studios={
  version:VERSION,entry:record,stats:aggregate,searchable,fits,aliases,
- fetchOne:fetchCompany,fetchBulk,stop,progress,hasKey:()=>!!getTmdbCredential()
+ fetchOne:fetchCompany,fetchBulk,queueAuto,stop,progress,hasKey:()=>!!getTmdbCredential()
 };
 Promise.resolve(window.__movie30StorageReady).then(()=>{
  if(window.__movie30RecoveryBlocked)return;

@@ -106,6 +106,13 @@
       values=[...new Set(values.filter(Boolean))];
       if(values.length)display.push([label,values.join('・')]);
     }
+    const classification=film&&window.__movie30Classification?.get(film);
+    if(classification){
+      const c=classification;display.length=0;
+      display.push(['種別',c.mediaLabel],['会社',c.companies.map(x=>x.name).join('・')||'未取得'],
+        ['制作',c.countryNames.join('・')||'未取得'],['言語',c.languageNames.join('・')||'未取得'],
+        ['形式',c.formatLabel],['ジャンル',c.genres.join('・')||'未設定']);
+    }
     const seen=new Set();
     for(const [label,value] of display){
       if(seen.has(label))continue;

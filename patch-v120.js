@@ -2,7 +2,7 @@
 'use strict';
 const BUILD='20261120-studio-search-v130';
 let rrHistoryLimit=40;
-let rrRankQuery='',rrRankGenre='',rrRankStatus='',rrRankFormat='',rrRankOrigin='',rrRankMedia='',rrRankStudio='',rrCycleFromRank=false,rrCycleEditUndo=[];
+let rrRankQuery='',rrRankGenre='',rrRankStatus='',rrRankFormat='',rrRankOrigin='',rrRankMedia='',rrRankStudio='',rrRankLanguage='',rrRankCompanyGroup='',rrCycleFromRank=false,rrCycleEditUndo=[];
 let rrTriad=null,rrOrder=[],rrTie12=false,rrTie23=false,rrPicks=[],rrLogOpen=false,rrLogTab='history',rrTieOpen=false,rrTiePartner=false,rrReviewPairs=null,rrHeldReviewFlow=false,rrCycleGroups=[],rrCycleTieNext=false,rrCycleActiveKey=null,rrCycleUndoToTriad=false,rrRankSelectedId=null,rrRankNearCount=6,rrRankListScroll=0;
 
 function rrTitleHtml(id,insideCard=false){
@@ -1810,11 +1810,12 @@ function rrRankAttributes(f){
  return {origin,format,media};
 }
 function rrRankMatches(f,genres,never){
- const tags=[...(genres.get(f.id)||[])],attrs=rrRankAttributes(f);
+ const classification=window.__movie30Classification?.get(f);
+ const tags=classification?.genres||[...(genres.get(f.id)||[])],attrs=rrRankAttributes(f);
  const info=typeof titleInfo==='function'?titleInfo(f):{};
  const search=rrRankNormalize([
   displayTitle(f),info?.originalTitle,info?.englishTitle,
-  f?.title,f?.lbTitle,f?.year,...tags,
+  f?.title,f?.lbTitle,f?.year,...tags,window.__movie30Classification?.searchable(f)||window.__movie30Studios?.searchable(f)||'',
   attrs.origin,attrs.origin&&attrs.origin!=='日本'?'海外':'',
   attrs.format==='animation'?'アニメ':
    attrs.format==='hybrid'?'実写 アニメ':'実写',
@@ -1822,13 +1823,15 @@ function rrRankMatches(f,genres,never){
  ].filter(Boolean).join(' '));
  const queries=rrRankNormalize(rrRankQuery).trim().split(/\s+/).filter(Boolean);
  if(queries.some(q=>!search.includes(q)))return false;
- if(rrRankGenre&&!genres.get(f.id)?.has(rrRankGenre))return false;
+ if(rrRankGenre&&!tags.includes(rrRankGenre))return false;
  if(rrRankStatus==='seen'&&never||rrRankStatus==='unseen'&&!never)return false;
  if(rrRankFormat&&!(attrs.format===rrRankFormat||
    attrs.format==='hybrid'&&['live','animation'].includes(rrRankFormat)))return false;
- if(rrRankOrigin&&!(rrRankOrigin==='overseas'?
-   attrs.origin!==''&&attrs.origin!=='日本':
-   attrs.origin===rrRankOrigin))return false;
+ const countries=classification?.countries||(attrs.origin==='日本'?['JP']:[]);
+ const api=window.__movie30Classification;
+ if(rrRankOrigin&&!(api?api.matchesCountry(f,rrRankOrigin):countries.includes(rrRankOrigin)))return false;
+ if(rrRankLanguage&&!api?.matchesLanguage(f,rrRankLanguage))return false;
+ if(rrRankCompanyGroup&&!api?.matchesCompany(f,rrRankCompanyGroup))return false;
  if(rrRankMedia&&attrs.media!==rrRankMedia)return false;
  if(rrRankStudio&&!window.__movie30Studios?.fits(f,rrRankStudio))return false;
  return true;
@@ -1849,32 +1852,37 @@ function rrStudioFiltersHtml(){
  const api=window.__movie30Studios,s=api?.stats(),best=s?.companies?.slice(0,12)||[];
  const group=best.map(c=>'<button type="button" data-rr-studio-quick="'+
   encodeURIComponent(c.name)+'">'+esc(c.name)+'（'+c.count+'）</button>').join('');
- return '<details class="rr-studio-filter"'+(rrRankStudio?' open':'')+'>'+
+ return '<details class="rr-studio-filter"'+(rrRankStudio||rrRankCompanyGroup?' open':'')+'>'+
   '<summary>制作会社で絞り込み'+(rrRankStudio?'：'+esc(rrRankStudio):'')+'</summary>'+
+  '<select id="rrStudioGroup" class="field" aria-label="制作会社のまとめで絞り込み">'+
+  (window.__movie30Classification?.companyFilters()||[['','会社：すべて']]).map(([v,t])=>'<option value="'+esc(v)+'"'+(rrRankCompanyGroup===v?' selected':'')+'>'+esc(t)+'</option>').join('')+'</select>'+
   '<label for="rrStudioSearch">会社名（例：ジブリ／Disney／Pixar／A24）</label>'+
   '<input id="rrStudioSearch" class="search" type="search" placeholder="制作会社名で検索" value="'+esc(rrRankStudio)+'">'+
   '<div class="rr-studio-favorites">'+group+'</div>'+
   '<div id="rrStudioStats" class="rr-muted">'+esc(rrStudioStatsHtml())+'</div>'+
-  '<div class="rr-studio-actions"><button type="button" id="rrStudioBulk">未取得作品をTMDbから一括取得</button>'+
+  '<div class="rr-studio-actions"><button type="button" id="rrStudioBulk">未取得の会社・制作・言語を一括取得</button>'+
   '<button type="button" id="rrStudioStop">取得を中止</button>'+
   '<button type="button" id="rrStudioClear">会社名の絞り込み解除</button></div>'+
   '<small>TMDbに登録された制作会社を複数保持。配給会社とは別で、テレビ局は制作会社として数えません。'+
-  '一括取得はこの端末のTMDbキーを利用します。データは映画の評価や順位を変更せず保存されます。</small>'+
+  '「その他」は上記の主要会社がない作品です。主要会社と小規模会社の合作は主要会社に分類。未登録・未取得は分けます。</small>'+
   '</details>';
 }
 function rrRankFiltersHtml(m){
- const genres=[...rrGenreMap(m.ids).groups.keys()].sort((a,b)=>a.localeCompare(b,'ja'));
+ const api=window.__movie30Classification,options=api?.options()||{countries:['JP'],languages:[]};
+ const genres=[...new Set(m.ids.flatMap(id=>api?.get(filmById(id))?.genres||[...(rrGenreMap([id]).tokens.get(id)||[])]))].sort((a,b)=>a.localeCompare(b,'ja'));
  return '<div class="rr-rank-filters">'+
-  '<input id="rrRankSearch" class="search" type="search" aria-label="暫定順位を検索" placeholder="作品名・年・ジャンル（comfortなど）で検索" value="'+esc(rrRankQuery)+'">'+
+  '<input id="rrRankSearch" class="search" type="search" aria-label="暫定順位を検索" placeholder="作品名・年・会社・言語・ジャンルで検索" value="'+esc(rrRankQuery)+'">'+
   '<select id="rrRankGenre" class="field" aria-label="ジャンルで絞り込み"><option value="">全ジャンル</option>'+
   genres.map(g=>'<option value="'+esc(g)+'"'+(rrRankGenre===g?' selected':'')+'>'+esc(g)+'</option>').join('')+'</select>'+
   '<select id="rrRankFormat" class="field" aria-label="実写・アニメで絞り込み">'+
   [['','表現：すべて'],['live','実写'],['animation','アニメ'],['hybrid','実写＋アニメ']].map(([v,t])=>
    '<option value="'+v+'"'+(rrRankFormat===v?' selected':'')+'>'+t+'</option>').join('')+'</select>'+
-  '<select id="rrRankOrigin" class="field" aria-label="日本・海外で絞り込み">'+
-  [['','制作：すべて'],['日本','日本'],['overseas','海外すべて'],['ハリウッド','ハリウッド'],
-   ['その他外国語映画','その他外国語映画']].map(([v,t])=>
-   '<option value="'+v+'"'+(rrRankOrigin===v?' selected':'')+'>'+t+'</option>').join('')+'</select>'+
+  '<select id="rrRankOrigin" class="field" aria-label="製作国で絞り込み">'+
+  (api?.countryFilters()||[['','制作：すべて']]).map(([v,t])=>
+   '<option value="'+esc(v)+'"'+(rrRankOrigin===v?' selected':'')+'>'+esc(t)+'</option>').join('')+'</select>'+
+  '<select id="rrRankLanguage" class="field" aria-label="原語で絞り込み">'+
+  (api?.languageFilters()||[['','言語（原語）：すべて']]).map(([v,t])=>
+   '<option value="'+esc(v)+'"'+(rrRankLanguage===v?' selected':'')+'>'+esc(t)+'</option>').join('')+'</select>'+
   '<select id="rrRankMedia" class="field" aria-label="映画・ドラマなどで絞り込み">'+
   [['','作品種別：すべて'],['movie','映画'],['drama','ドラマ'],['documentary','ドキュメンタリー'],
    ['other','その他']].map(([v,t])=>
@@ -2113,8 +2121,10 @@ function rrRender(){
    root.querySelector('#rrRankGenre').onchange=e=>{rrRankGenre=e.target.value;refreshResults()};
    root.querySelector('#rrRankFormat').onchange=e=>{rrRankFormat=e.target.value;refreshResults()};
    root.querySelector('#rrRankOrigin').onchange=e=>{rrRankOrigin=e.target.value;refreshResults()};
+   root.querySelector('#rrRankLanguage').onchange=e=>{rrRankLanguage=e.target.value;refreshResults()};
    root.querySelector('#rrRankMedia').onchange=e=>{rrRankMedia=e.target.value;refreshResults()};
    root.querySelector('#rrRankStatus').onchange=e=>{rrRankStatus=e.target.value;refreshResults()};
+   root.querySelector('#rrStudioGroup').onchange=e=>{rrRankCompanyGroup=e.target.value;refreshResults()};
    root.querySelector('#rrStudioSearch').oninput=e=>{
     rrRankStudio=e.target.value;
     refreshResults();
@@ -2126,10 +2136,10 @@ function rrRender(){
    });
    bind('#rrStudioBulk',()=>{void window.__movie30Studios?.fetchBulk()});
    bind('#rrStudioStop',()=>window.__movie30Studios?.stop());
-   bind('#rrStudioClear',()=>{rrRankStudio='';root.querySelector('#rrStudioSearch').value='';refreshResults()});
+   bind('#rrStudioClear',()=>{rrRankStudio='';rrRankCompanyGroup='';root.querySelector('#rrStudioSearch').value='';root.querySelector('#rrStudioGroup').value='';refreshResults()});
    bind('#rrRankClear',()=>{
     rrRankQuery='';rrRankGenre='';rrRankStatus='';
-    rrRankFormat='';rrRankOrigin='';rrRankMedia='';rrRankStudio='';rrRender();
+    rrRankFormat='';rrRankOrigin='';rrRankMedia='';rrRankStudio='';rrRankLanguage='';rrRankCompanyGroup='';rrRender();
    });
    const bindRankEdits=()=>{
    root.querySelectorAll('[data-rr-rank-edit]').forEach(btn=>btn.onclick=()=>{
