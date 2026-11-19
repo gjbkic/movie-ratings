@@ -1,0 +1,63 @@
+name: Fill film companies countries and languages
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - scripts/update_classification_metadata.py
+      - .github/workflows/update-classification.yml
+permissions:
+  contents: write
+concurrency:
+  group: fill-classification-main
+  cancel-in-progress: false
+jobs:
+  collect:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Fetch verified classification metadata
+        env:
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+          TMDB_READ_ACCESS_TOKEN: ${{ secrets.TMDB_READ_ACCESS_TOKEN }}
+        run: python3 scripts/update_classification_metadata.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: classification-fetch-report
+          path: classification-fetch-report.json
+      - name: Merge classification records without overwriting other data
+        shell: bash
+        run: |
+          set -euo pipefail
+          cp tmdb-metadata.json "$RUNNER_TEMP/classification-generated.json"
+          cp classification-fetch-report.json "$RUNNER_TEMP/classification-report.json"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          for attempt in 1 2 3 4; do
+            git fetch origin main
+            git reset --hard origin/main
+            python3 - <<'PY'
+          import json, os
+          from pathlib import Path
+          path = Path('tmdb-metadata.json')
+          current = json.loads(path.read_text())
+          generated = json.loads((Path(os.environ['RUNNER_TEMP']) / 'classification-generated.json').read_text())
+          rows = current.setdefault('films', {})
+          for film_id, row in generated.get('films', {}).items():
+              new = row.get('classification131') or {}
+              old = rows.get(film_id, {}).get('classification131') or {}
+              if new.get('schema') == 2 and new.get('checkedAt', '') > old.get('checkedAt', ''):
+                  rows[film_id] = {**rows.get(film_id, {}), 'classification131': new}
+          path.write_text(json.dumps(current, ensure_ascii=False, indent=2) + '\n')
+          PY
+            cp "$RUNNER_TEMP/classification-report.json" classification-fetch-report.json
+            git add tmdb-metadata.json classification-fetch-report.json
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m "Fill verified TMDB companies countries and languages"
+            if git push origin HEAD:main; then exit 0; fi
+          done
+          exit 1
