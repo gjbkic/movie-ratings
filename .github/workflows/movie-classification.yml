@@ -28,7 +28,13 @@ jobs:
         with:
           node-version: '22'
       - run: npm install --no-save --no-package-lock playwright@1.56.1
-      - run: npx playwright install --with-deps chromium
+      - name: Use the runner's installed Chrome
+        run: |
+          if command -v google-chrome >/dev/null; then
+            echo "CHROME_PATH=$(command -v google-chrome)" >> "$GITHUB_ENV"
+          else
+            npx playwright install chromium
+          fi
       - run: node --check app-classification-metadata.js && node --check app-studio-metadata.js && node --check patch-v120.js
       - run: node scripts/regression/classification.cjs
       - run: node scripts/regression/rerank-navigation.cjs
