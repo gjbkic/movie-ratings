@@ -36,6 +36,28 @@ function get(f){
   format,formatLabel:({live:'実写',animation:'アニメ',hybrid:'実写＋アニメ'})[format]||format,
   countryNames:countries.map(countryName),languageNames:uniq([originalLanguage,...spokenLanguages]).map(languageName)};
 }
+// Search groups are predicates only. They are never written to film metadata.
+const COMPANY_GROUPS=[
+ ['ghibli','ジブリ',/studio ghibli|スタジオジブリ/i],['disney','ディズニー',/disney|ディズニー/i],
+ ['pixar','ピクサー',/pixar|ピクサー/i],['marvel','マーベル',/marvel studios|マーベルスタジオ/i],
+ ['lucasfilm','ルーカスフィルム',/lucasfilm|ルーカスフィルム/i],['warner','ワーナー',/warner bros|ワーナー/i],
+ ['universal','ユニバーサル',/universal pictures|ユニバーサル/i],['paramount','パラマウント',/paramount|パラマウント/i],
+ ['sony','ソニー／コロンビア',/sony pictures|columbia pictures|コロンビア/i],['20thcentury','20世紀',/20th century|twentieth century|20世紀/i],
+ ['toho','東宝',/toho|東宝/i],['toei','東映',/toei|東映/i],['shochiku','松竹',/shochiku|松竹/i],['a24','A24',/\ba24\b/i]
+];
+function matchesLanguage(f,value){const code=get(f)?.originalLanguage||'';return !value||(value==='__unknown'?!code:value==='__other'?!!code&&!['ja','en'].includes(code):code===value)}
+function matchesCountry(f,value){const codes=get(f)?.countries||[];return !value||(value==='__unknown'?!codes.length:value==='__other'?codes.some(c=>!['JP','US'].includes(c)):value==='overseas'?codes.some(c=>c!=='JP'):codes.includes(value))}
+function matchesCompany(f,value){
+ const companies=get(f)?.companies||[];if(!value)return true;
+ if(value==='__unknown')return !companies.length;
+ if(value==='__other')return companies.length>0&&!companies.some(c=>COMPANY_GROUPS.some(g=>g[2].test(c.name)));
+ const group=COMPANY_GROUPS.find(g=>g[0]===value);return !!group&&companies.some(c=>group[2].test(c.name));
+}
+function languageFilters(){return [['','言語（原語）：すべて'],['ja','日本語'],['en','英語'],['__other','その他（日本語・英語以外）'],
+ ...catalogOptions().languages.filter(c=>!['ja','en'].includes(c)).map(c=>[c,languageName(c)]),['__unknown','未登録・未取得']]}
+function countryFilters(){return [['','制作：すべて'],['JP','日本'],['US','アメリカ'],['__other','その他（日本・アメリカ以外）'],
+ ...catalogOptions().countries.filter(c=>!['JP','US'].includes(c)).map(c=>[c,countryName(c)]),['overseas','海外の国を含む'],['__unknown','未登録・未取得']]}
+function companyFilters(){return [['','会社：すべて'],...COMPANY_GROUPS.map(([key,label])=>[key,label]),['__other','その他（主要会社なし）'],['__unknown','未登録・未取得']]}
 function searchable(f){
  const c=get(f);if(!c)return '';
  return [c.mediaLabel,c.formatLabel,...c.genres,...c.countryNames,...c.countries,...c.languageNames,c.originalLanguage,...c.spokenLanguages,
@@ -73,7 +95,10 @@ function refresh(id=selectedId){
  const anchor=type?.nextSibling||editor.firstChild;
  const newRows=[...add.children];for(const e of newRows.slice(0,3))editor.insertBefore(e,anchor);
  editor.appendChild(newRows[3]);
- const bind=(id,key,convert)=>document.getElementById(id).onchange=e=>setOverride(f,key,e.target.value.trim()?convert(e.target.value):undefined);
+ const bind=(id,key,convert)=>document.getElementById(id).onchange=e=>{
+  if(/^(?:その他|__other|__unknown)$/.test(e.target.value.trim())){toast('「その他」は検索専用です。個別の国・言語・会社名を入力してください');return}
+  setOverride(f,key,e.target.value.trim()?convert(e.target.value):undefined);
+ };
  bind('movie131Companies','companies',s=>split(s).map(name=>({name,id:0})));
  bind('movie131Countries','countries',s=>split(s).map(countryCode));
  bind('movie131OriginalLanguage','originalLanguage',languageCode);
@@ -96,25 +121,26 @@ function catalogOptions(){
  return {countries:[...countries].sort((a,b)=>countryName(a).localeCompare(countryName(b),'ja')),languages:[...languages].sort((a,b)=>languageName(a).localeCompare(languageName(b),'ja'))};
 }
 function installFilters(){
- const options=catalogOptions();
  for(const suffix of ['Rank','Classify']){
   const old=document.getElementById('originFilter'+suffix);if(!old)continue;
   old.value='';old.hidden=true;
-  const create=(key,label,items,name)=>{
+  const create=(key,label,items)=>{
    let select=document.getElementById('movie131'+key+suffix);
    if(!select){select=document.createElement('select');select.id='movie131'+key+suffix;select.className='field';select.setAttribute('aria-label',label);old.after(select);select.onchange=()=>suffix==='Rank'?renderRank():renderClassify()}
    const value=select.value;
-   select.innerHTML='<option value="">'+label+'：すべて</option>'+items.map(x=>'<option value="'+esc(x)+'">'+esc(name(x))+'</option>').join('');
-   select.value=items.includes(value)?value:'';
+   select.innerHTML=items.map(([value,text])=>'<option value="'+esc(value)+'">'+esc(text)+'</option>').join('');
+   select.value=items.some(([v])=>v===value)?value:'';
   };
-  create('Language','言語',options.languages,languageName);create('Country','制作',options.countries,countryName);
+  create('Language','原語で絞り込み',languageFilters());create('Country','製作国で絞り込み',countryFilters());create('Company','会社のまとめで絞り込み',companyFilters());
  }
 }
 function filterMatches(f){
  const suffix=view.page==='rank'?'Rank':view.page==='classify'?'Classify':null;if(!suffix)return true;
- const country=document.getElementById('movie131Country'+suffix)?.value||'',language=document.getElementById('movie131Language'+suffix)?.value||'',c=get(f);
- return (!country||c.countries.includes(country))&&(!language||c.originalLanguage===language||c.spokenLanguages.includes(language));
+ return matchesCountry(f,document.getElementById('movie131Country'+suffix)?.value||'')&&
+  matchesLanguage(f,document.getElementById('movie131Language'+suffix)?.value||'')&&
+  matchesCompany(f,document.getElementById('movie131Company'+suffix)?.value||'');
 }
+
 async function hydrate(){
  try{
   const response=await fetch('./tmdb-metadata.json?classification=20261120v131');if(!response.ok)return;
@@ -130,7 +156,7 @@ async function hydrate(){
   if(changed){save(false);installFilters();refresh();window.dispatchEvent(new Event('movie30-studio-update'))}
  }catch(_){}
 }
-window.__movie30Classification={version:131,get,searchable,refresh,countryName,languageName,options:catalogOptions};
+window.__movie30Classification={version:131,get,searchable,refresh,countryName,languageName,options:catalogOptions,matchesLanguage,matchesCountry,matchesCompany,languageFilters,countryFilters,companyFilters};
 const style=document.createElement('style');style.textContent='#originFilterRank,#originFilterClassify{display:none!important}.movie131-row .field{width:100%;min-height:38px;font-size:16px}.movie131-sub{display:block;font-size:11px;color:#aeb7c4;margin:8px 0}.movie131-sub .field{display:block;margin-top:5px}.movie131-actions{display:flex;flex-wrap:wrap;gap:7px;padding:10px 0}.movie131-actions small{display:block;width:100%;color:#9bafc0;font-size:10px;line-height:1.5}';document.head.appendChild(style);
 for(const [id,codes,name] of [['movie131CountryOptions',COUNTRY_CODES,countryName],['movie131LanguageOptions',LANGUAGE_CODES,languageName]]){
  const list=document.createElement('datalist');list.id=id;list.innerHTML=codes.map(c=>'<option value="'+esc(name(c))+'"></option>').join('');document.body.appendChild(list);
