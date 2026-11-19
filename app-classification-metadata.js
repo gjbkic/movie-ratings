@@ -96,7 +96,7 @@ function refresh(id=selectedId){
  const newRows=[...add.children];for(const e of newRows.slice(0,3))editor.insertBefore(e,anchor);
  editor.appendChild(newRows[3]);
  const bind=(id,key,convert)=>document.getElementById(id).onchange=e=>{
-  if(/^(?:その他|__other|__unknown)$/.test(e.target.value.trim())){toast('「その他」は検索専用です。個別の国・言語・会社名を入力してください');return}
+  if(split(e.target.value).some(x=>/^(?:その他|__other|__unknown)$/.test(x))){toast('「その他」は検索専用です。個別の国・言語・会社名を入力してください');return}
   setOverride(f,key,e.target.value.trim()?convert(e.target.value):undefined);
  };
  bind('movie131Companies','companies',s=>split(s).map(name=>({name,id:0})));

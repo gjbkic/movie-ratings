@@ -139,8 +139,9 @@ function aggregate(){
   const r=record(f);
   if(complete(f)){fetched++;if(!r?.companies?.length)empty++}
   for(const c of window.__movie30Classification?.get(f)?.companies||r?.companies||[]){
-   if(!counts.has(c.id))counts.set(c.id,{id:c.id,name:c.name,count:0});
-   counts.get(c.id).count++;
+   const key=c.id>0?'tmdb:'+c.id:'name:'+safeText(c.name);
+   if(!counts.has(key))counts.set(key,{id:c.id,name:c.name,count:0});
+   counts.get(key).count++;
   }
  }
  return {total:films.length,fetched,missing:films.length-fetched,empty,
