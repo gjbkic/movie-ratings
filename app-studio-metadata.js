@@ -49,8 +49,12 @@ async function tmdb(path,params={language:'en-US'}){
  }
 }
 function potential(f){
- const m=getFilmMeta(f),p=m.poster84||{};
- const kind=isTv(f)?'tv':'movie';
+ const m=getFilmMeta(f),raw=m.poster84||{},kind=isTv(f)?'tv':'movie';
+ const t=typeof titleInfo==='function'?titleInfo(f):{};
+ const identity=safeText(t.englishTitle||t.title||t.originalTitle||f.title)+'|'+yearOf(f);
+ // If the film's title/year was edited, reject an old poster ID instead of
+ // attributing somebody else's production companies to the new title.
+ const p=raw.checkedIdentity84&&raw.checkedIdentity84!==identity?{}:raw;
  // Only use poster IDs that were checked for the current title, or test the
  // returned details again. An old unverified poster can be the wrong film.
  const fromPoster=Number(p.tmdbId)||0;
@@ -108,8 +112,7 @@ async function fetchCompany(f,force=false,quiet=false){
   state.letterboxdMeta=state.letterboxdMeta||{};
   const meta=state.letterboxdMeta[f.id]=state.letterboxdMeta[f.id]||{};
   meta[KEY]=item;
-  if(!quiet)save();
-  dispatch();
+  if(!quiet){save();dispatch()}
   if(selectedId===f.id)renderSheet(f.id);
   return {status:'fetched',record:item};
  })().catch(e=>({status:'error',error:String(e?.message||e)}))
@@ -261,6 +264,13 @@ function installHooks(){
  if(typeof addFilm==='function'){
   const originalAdd=addFilm;
   addFilm=function(...args){const f=originalAdd.apply(this,args);if(f)queueAuto(f);return f};
+ }
+ // Reuse the main movie-list search field; companies are not mixed into
+ // genre labels, but can still be searched by their own names.
+ if(typeof match==='function'){
+  const originalMatch=match;
+  match=function(f,q){return originalMatch(f,q)||
+   !!(q&&String(q).trim()&&record(f)?.companies?.length&&fits(f,q))};
  }
  installSheet();
 }
