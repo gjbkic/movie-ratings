@@ -2,6 +2,8 @@ name: Film classification and company search tests
 on:
   push:
     paths:
+      - 'app-core.js'
+      - 'scripts/regression/unrated-search.cjs'
       - 'app-classification-metadata.js'
       - 'app-studio-metadata.js'
       - 'app-detail-layout.js'
@@ -10,6 +12,8 @@ on:
       - '.github/workflows/movie-classification.yml'
   pull_request:
     paths:
+      - 'app-core.js'
+      - 'scripts/regression/unrated-search.cjs'
       - 'app-classification-metadata.js'
       - 'app-studio-metadata.js'
       - 'app-detail-layout.js'
@@ -42,6 +46,8 @@ jobs:
           fc-cache -f
       - run: node --check app-classification-metadata.js && node --check app-studio-metadata.js && node --check patch-v120.js
       - run: node scripts/regression/classification.cjs
+      - run: node scripts/regression/unrated-search.cjs
+      - run: node scripts/regression/unrated-panels.cjs
       - run: node scripts/regression/rerank-navigation.cjs
       - uses: actions/upload-artifact@v4
         if: always()

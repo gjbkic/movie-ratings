@@ -6965,9 +6965,11 @@ renderRank();const marker=document.getElementById('movie30BuildV29');if(marker)m
     if(!root)return out;
     const q=String(document.getElementById('searchRank')?.value||'').trim().toLowerCase();
     const cat=document.getElementById('categoryFilterRank')?.value||'';
+    // Use exactly the same search and advanced-filter predicates as rated films.
+    // Always call match, even with an empty query, for country/language/company filters.
+    const advanced=window.__movie30AdvancedFilter93;
     const pendingRows=allFilms().filter(f=>effectiveScore(f)===null && !(Number(filmStar(f))>0) &&
-      (!q||[displayTitle(f),titleInfo(f).englishTitle,f.year].join(' ').toLowerCase().includes(q)) &&
-      (!cat||filmCategory(f)===cat));
+      match(f,q) && (!cat||filmCategory(f)===cat) && (!advanced||advanced.matches(f)));
     if(pendingRows.length){
       const sec=document.createElement('section');
       sec.className='uns-panel';
