@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1795157745749,
-  "sourceUpdatedIso": "2026-11-20T06:55:45.749Z",
+  "sourceUpdatedAt": 1795157817401,
+  "sourceUpdatedIso": "2026-11-20T06:56:57.401Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -127584,6 +127584,17 @@
           "formatHint": "",
           "releaseDate": "1995-07-15",
           "runtime": null
+        },
+        "poster84": {
+          "path": null,
+          "tmdbId": null,
+          "checkedAt": "2026-11-20T06:56:53.113Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "金田一少年の事件簿|1995",
+          "matchedTitle84": "",
+          "validated84": true,
+          "mediaKind84": "tv",
+          "posterPinTrust84": null
         }
       },
       "custom-1792421000000-003": {
