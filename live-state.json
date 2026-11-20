@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1795154876968,
-  "sourceUpdatedIso": "2026-11-20T06:07:56.968Z",
+  "sourceUpdatedAt": 1795154890804,
+  "sourceUpdatedIso": "2026-11-20T06:08:10.804Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -24045,6 +24045,27 @@
       "letterboxdAddedDate": null,
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1795154889446-iqtt",
+      "title": "地雷グリコ",
+      "originalTitle": "地雷グリコ",
+      "englishTitle": "Rock, Paper, Landmines",
+      "year": 2026,
+      "score": null,
+      "star": 0,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "ドラマ",
+      "mediaType": "tvseries",
+      "genre": "",
+      "origin": "",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     }
   ],
   "state": {
@@ -30416,6 +30437,23 @@
         "added": true,
         "_seq": 1795119763181,
         "source": "letterboxd"
+      },
+      {
+        "id": "custom-1795154889446-iqtt",
+        "title": "地雷グリコ",
+        "originalTitle": "地雷グリコ",
+        "englishTitle": "Rock, Paper, Landmines",
+        "lbTitle": "Rock, Paper, Landmines",
+        "tmdbId": 332683,
+        "year": 2026,
+        "uri": "",
+        "category": "ドラマ",
+        "order": 999999,
+        "star": 0,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1795154889446,
+        "tmdbType": "tv"
       }
     ],
     "starOverrides": {
@@ -31256,7 +31294,8 @@
       "custom-1795029484389-i64e": 3.5,
       "custom-1795096338948-r8rs": 3.5,
       "custom-1795110436407-1ni9": 2.5,
-      "custom-1795119763181-r9ye": 4
+      "custom-1795119763181-r9ye": 4,
+      "custom-1795154889446-iqtt": 0
     },
     "titleOverrides": {
       "added-anchor-578": {
@@ -34404,7 +34443,8 @@
       "custom-1795029484389-i64e": "movie",
       "custom-1795096338948-r8rs": "movie",
       "custom-1795110436407-1ni9": "movie",
-      "custom-1795119763181-r9ye": "movie"
+      "custom-1795119763181-r9ye": "movie",
+      "custom-1795154889446-iqtt": "tvseries"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -133830,6 +133870,90 @@
           "formatHint": "animation",
           "releaseDate": "2014-07-19",
           "runtime": 104
+        }
+      },
+      "custom-1795154889446-iqtt": {
+        "contentType": "tv_series",
+        "tmdbType": "tv",
+        "poster84": {
+          "path": "/qK89PNm4j96pwx4ul3e8AkDfBsM.jpg",
+          "tmdbId": 332683,
+          "provider": "tmdb",
+          "checkedAt": "2026-11-20T06:08:09.796Z"
+        },
+        "tmdbSeriesId": 332683,
+        "seasonCatalogV1": [
+          {
+            "number": 1,
+            "year": "2026"
+          }
+        ],
+        "seasonCountV1": 1,
+        "crew84": {
+          "directors": [],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-11-20T06:08:09.842Z"
+        },
+        "studio130": {
+          "source": "tmdb",
+          "checkedAt": "2026-11-20T06:08:10.737Z",
+          "kind": "tv",
+          "tmdbId": 332683,
+          "companies": [
+            {
+              "id": 213255,
+              "name": "THE SEVEN",
+              "country": "JP"
+            },
+            {
+              "id": 46774,
+              "name": "KADOKAWA Daiei Studio",
+              "country": "JP"
+            },
+            {
+              "id": 210099,
+              "name": "Amazon MGM Studios",
+              "country": "US"
+            }
+          ],
+          "schema": 2,
+          "filmTitles": [
+            "地雷グリコ",
+            "Rock, Paper, Landmines",
+            "地雷グリコ",
+            "Rock, Paper, Landmines",
+            "地雷グリコ",
+            "地雷グリコ",
+            "Rock, Paper, Landmines"
+          ],
+          "filmYear": 2026,
+          "productionCountries": [
+            {
+              "code": "JP",
+              "name": "Japan"
+            },
+            {
+              "code": "US",
+              "name": "United States of America"
+            }
+          ],
+          "originalLanguage": "ja",
+          "spokenLanguages": [
+            {
+              "code": "ja",
+              "name": "Japanese"
+            }
+          ],
+          "genres": [
+            {
+              "id": 18,
+              "name": "Drama"
+            }
+          ],
+          "formatHint": "",
+          "releaseDate": "2026-11-13",
+          "runtime": null
         }
       }
     }
