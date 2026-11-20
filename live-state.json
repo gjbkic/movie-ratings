@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1795178801148,
-  "sourceUpdatedIso": "2026-11-20T12:46:41.148Z",
+  "sourceUpdatedAt": 1795178830367,
+  "sourceUpdatedIso": "2026-11-20T12:47:10.367Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -24058,7 +24058,15 @@
       "sameScoreRank": null,
       "category": "ドラマ",
       "mediaType": "drama",
-      "genre": "",
+      "genre": [
+        "娯楽",
+        "TV本編",
+        "ドラマ",
+        "どんでん返し",
+        "青春・若者",
+        "ミステリー",
+        "サスペンス"
+      ],
       "origin": "日本",
       "format": "",
       "runtime": null,
@@ -41257,6 +41265,15 @@
         "心理・内面",
         "青春・若者",
         "時間"
+      ],
+      "custom-1795154889446-iqtt": [
+        "娯楽",
+        "TV本編",
+        "ドラマ",
+        "どんでん返し",
+        "青春・若者",
+        "ミステリー",
+        "サスペンス"
       ]
     },
     "originOverrides": {
