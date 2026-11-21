@@ -116808,7 +116808,66 @@
       ],
       "creators": [],
       "posterPath": "",
-      "source": "curated-film-and-series-credits"
+      "source": "curated-film-and-series-credits",
+      "classification131": {
+        "schema": 2,
+        "source": "tmdb",
+        "checkedAt": "2026-11-21T19:49:31.863570+00:00",
+        "kind": "tv",
+        "tmdbId": 66732,
+        "scope": "series",
+        "filmTitles": [
+          "Stranger Things 5: The Finale"
+        ],
+        "filmYear": 2025,
+        "companies": [
+          {
+            "id": 2575,
+            "name": "21 Laps Entertainment",
+            "country": "US"
+          },
+          {
+            "id": 170090,
+            "name": "Monkey Massacre Productions",
+            "country": "US"
+          },
+          {
+            "id": 184664,
+            "name": "Upside Down Pictures",
+            "country": "US"
+          }
+        ],
+        "productionCountries": [
+          {
+            "code": "US",
+            "name": "United States of America"
+          }
+        ],
+        "originalLanguage": "en",
+        "spokenLanguages": [
+          {
+            "code": "en",
+            "name": "English"
+          }
+        ],
+        "genres": [
+          {
+            "id": 10759,
+            "name": "Action & Adventure"
+          },
+          {
+            "id": 9648,
+            "name": "Mystery"
+          },
+          {
+            "id": 10765,
+            "name": "Sci-Fi & Fantasy"
+          }
+        ],
+        "formatHint": "",
+        "releaseDate": "2025-12-31",
+        "runtime": 129
+      }
     },
     "custom-1790322758638-0juw": {
       "tmdbId": 81016,
@@ -133500,6 +133559,266 @@
         "formatHint": "animation",
         "releaseDate": "2014-07-19",
         "runtime": 104
+      }
+    },
+    "custom-1792420000000-007": {
+      "classification131": {
+        "schema": 2,
+        "source": "tmdb",
+        "checkedAt": "2026-11-21T19:49:32.252795+00:00",
+        "kind": "tv",
+        "tmdbId": 1418,
+        "scope": "tv",
+        "filmTitles": [
+          "ビッグバン★セオリー"
+        ],
+        "filmYear": 2007,
+        "companies": [
+          {
+            "id": 35504,
+            "name": "Chuck Lorre Productions",
+            "country": "US"
+          },
+          {
+            "id": 1957,
+            "name": "Warner Bros. Television",
+            "country": "US"
+          }
+        ],
+        "productionCountries": [
+          {
+            "code": "US",
+            "name": "United States of America"
+          }
+        ],
+        "originalLanguage": "en",
+        "spokenLanguages": [
+          {
+            "code": "en",
+            "name": "English"
+          }
+        ],
+        "genres": [
+          {
+            "id": 35,
+            "name": "コメディ"
+          }
+        ],
+        "formatHint": "",
+        "releaseDate": "2007-09-24",
+        "runtime": null
+      }
+    },
+    "custom-1792421000000-006": {
+      "classification131": {
+        "schema": 2,
+        "source": "tmdb",
+        "checkedAt": "2026-11-21T19:49:32.378213+00:00",
+        "kind": "tv",
+        "tmdbId": 88264,
+        "scope": "tv",
+        "filmTitles": [
+          "ラジエーションハウス"
+        ],
+        "filmYear": 2019,
+        "companies": [],
+        "productionCountries": [
+          {
+            "code": "JP",
+            "name": "Japan"
+          }
+        ],
+        "originalLanguage": "ja",
+        "spokenLanguages": [
+          {
+            "code": "ja",
+            "name": "Japanese"
+          }
+        ],
+        "genres": [
+          {
+            "id": 18,
+            "name": "ドラマ"
+          },
+          {
+            "id": 9648,
+            "name": "謎"
+          }
+        ],
+        "formatHint": "",
+        "releaseDate": "2019-04-08",
+        "runtime": null
+      }
+    },
+    "custom-1792421000000-013": {
+      "classification131": {
+        "schema": 2,
+        "source": "tmdb",
+        "checkedAt": "2026-11-21T19:49:32.774065+00:00",
+        "kind": "tv",
+        "tmdbId": 46260,
+        "scope": "tv",
+        "filmTitles": [
+          "NARUTO -ナルト-"
+        ],
+        "filmYear": 2002,
+        "companies": [
+          {
+            "id": 3234,
+            "name": "Pierrot",
+            "country": "JP"
+          },
+          {
+            "id": 244119,
+            "name": "Rakuonsha",
+            "country": "JP"
+          }
+        ],
+        "productionCountries": [
+          {
+            "code": "JP",
+            "name": "Japan"
+          }
+        ],
+        "originalLanguage": "ja",
+        "spokenLanguages": [
+          {
+            "code": "ja",
+            "name": "Japanese"
+          }
+        ],
+        "genres": [
+          {
+            "id": 16,
+            "name": "アニメーション"
+          },
+          {
+            "id": 10759,
+            "name": "Action & Adventure"
+          },
+          {
+            "id": 10765,
+            "name": "Sci-Fi & Fantasy"
+          }
+        ],
+        "formatHint": "animation",
+        "releaseDate": "2002-10-03",
+        "runtime": null
+      }
+    },
+    "custom-1795154889446-iqtt": {
+      "classification131": {
+        "schema": 2,
+        "source": "tmdb",
+        "checkedAt": "2026-11-21T19:49:32.870718+00:00",
+        "kind": "tv",
+        "tmdbId": 332683,
+        "scope": "tv",
+        "filmTitles": [
+          "地雷グリコ",
+          "Rock, Paper, Landmines"
+        ],
+        "filmYear": 2026,
+        "companies": [
+          {
+            "id": 213255,
+            "name": "THE SEVEN",
+            "country": "JP"
+          },
+          {
+            "id": 46774,
+            "name": "KADOKAWA Daiei Studio",
+            "country": "JP"
+          },
+          {
+            "id": 210099,
+            "name": "Amazon MGM Studios",
+            "country": "US"
+          }
+        ],
+        "productionCountries": [
+          {
+            "code": "JP",
+            "name": "Japan"
+          },
+          {
+            "code": "US",
+            "name": "United States of America"
+          }
+        ],
+        "originalLanguage": "ja",
+        "spokenLanguages": [
+          {
+            "code": "ja",
+            "name": "Japanese"
+          }
+        ],
+        "genres": [
+          {
+            "id": 18,
+            "name": "ドラマ"
+          }
+        ],
+        "formatHint": "",
+        "releaseDate": "2026-11-13",
+        "runtime": null
+      }
+    },
+    "custom-1795288867095-guh8": {
+      "classification131": {
+        "schema": 2,
+        "source": "tmdb",
+        "checkedAt": "2026-11-21T19:49:33.122366+00:00",
+        "kind": "movie",
+        "tmdbId": 592,
+        "scope": "movie",
+        "filmTitles": [
+          "カンバセーション…盗聴…",
+          "The Conversation"
+        ],
+        "filmYear": 1974,
+        "companies": [
+          {
+            "id": 14120,
+            "name": "The Directors Company",
+            "country": "US"
+          },
+          {
+            "id": 536,
+            "name": "The Coppola Company",
+            "country": "US"
+          }
+        ],
+        "productionCountries": [
+          {
+            "code": "US",
+            "name": "United States of America"
+          }
+        ],
+        "originalLanguage": "en",
+        "spokenLanguages": [
+          {
+            "code": "en",
+            "name": "English"
+          }
+        ],
+        "genres": [
+          {
+            "id": 80,
+            "name": "犯罪"
+          },
+          {
+            "id": 18,
+            "name": "ドラマ"
+          },
+          {
+            "id": 9648,
+            "name": "謎"
+          }
+        ],
+        "formatHint": "",
+        "releaseDate": "1974-04-12",
+        "runtime": 113
       }
     }
   },
