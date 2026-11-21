@@ -1,0 +1,37 @@
+'use strict';
+const {launch,origin,ready,assert,snapshot}=require('./harness.cjs');
+let browser;
+(async()=>{
+ browser=await launch();const page=await browser.newPage();
+ const writes=[];let remote={state:{}};
+ await page.route('https://api.github.com/repos/gjbkic/movie-ratings/contents/live-state.json',async route=>{
+  if(route.request().method()==='GET')return route.fulfill({json:{sha:'synthetic-sha',content:Buffer.from(JSON.stringify(remote)).toString('base64')}});
+  const body=route.request().postDataJSON(),data=JSON.parse(Buffer.from(body.content,'base64').toString('utf8'));
+  writes.push(data);remote=data;return route.fulfill({json:{content:{sha:'synthetic-next'},commit:{sha:'synthetic-commit'}}});
+ });
+ await page.goto(origin);await ready(page);const before=await snapshot(page);
+ await page.locator('[data-page="rerank"]').click();
+ await page.evaluate(()=>localStorage.setItem('movie30_github_sync_token_v1','synthetic-token'));
+ await page.locator('[data-rr-pick]').nth(0).locator('.rr-fast-poster').click();
+ await page.locator('[data-rr-pick]').nth(1).locator('.rr-fast-poster').click();
+ await page.waitForFunction(()=>document.getElementById('gptSyncStatus').textContent.includes('新ランキング・比較履歴も保存'),{},{timeout:20000});
+ assert(writes.length,'A new comparison triggers automatic sync without an old ranking edit');
+ const local=await page.evaluate(()=>JSON.parse(JSON.stringify(window.__movie30RerankSnapshot()))),sent=writes.at(-1);
+ assert.deepEqual(sent.state.rerankV2.events,local.rerankV2.events,'Full comparison history is sent');
+ assert.deepEqual(sent.newRanking.films,local.films,'Synced provisional order matches the displayed model');
+ assert(sent.newRanking.films.some(f=>f.rank===null),'Uncompared films keep unknown ranks');
+ for(const key of ['exactScores','starOverrides','rankOrder'])assert.deepEqual(sent.state[key],before[key],key+' unchanged');
+ const previous=writes.length;
+ await page.evaluate(()=>{state.rerankV2.events.pop();save()});
+ await page.waitForFunction(()=>document.getElementById('gptSyncStatus').textContent.includes('新ランキング・比較履歴も保存'));
+ await page.waitForTimeout(4500);
+ assert(writes.length>previous,'Undo is also synchronized');
+ assert.equal(writes.at(-1).state.rerankV2.events.length,local.rerankV2.events.length-1);
+ const history=structuredClone(remote.state.rerankV2),ranking=structuredClone(remote.newRanking),prior=writes.length;
+ await page.evaluate(()=>{delete state.rerankV2;document.getElementById('gptSyncNow').click()});
+ await page.waitForTimeout(1000);assert(writes.length>prior);
+ assert.deepEqual(writes.at(-1).state.rerankV2,history,'A device without new ranking history preserves the remote history');
+ assert.deepEqual(writes.at(-1).newRanking,ranking);
+ console.log('PASS automatic new-ranking sync, provisional snapshot, full history, undo, legacy score preservation, and empty-device protection');
+ await browser.close();
+})().catch(async e=>{console.error(e);await browser?.close();process.exitCode=1});

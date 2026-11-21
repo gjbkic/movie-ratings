@@ -770,7 +770,7 @@ function rrProgressDetail(p,r){
    '<div class="rr-progress-figures"><div><strong>'+p.depth+' / '+p.n+'</strong><small>8判断・異なる5作品以上との比較</small></div>'+
    '<div><strong>'+p.components+'</strong><small>比較がつながっているグループ数</small></div></div>'+rrDeltaTrendHtml(r)+'</details>'+
   '<button type="button" id="rrExportProgress" class="rr-backfill">比較履歴と集計をJSONで書き出す</button>'+
-  '<p class="rr-muted">このファイルをチャットに送ると、現在の本数と履歴に基づく分析ができます。</p></div>';
+  '<p class="rr-muted">自動同期が有効なら、新ランキングと比較履歴もGPTから確認できます。このファイルでも分析できます。</p></div>';
 }
 function rrRankWidths(m){
  const result={},ids=m.order.slice(0,m.seenCount),reach=m.replay?.reach,idx=m.replay?.reachIndex;
@@ -784,12 +784,17 @@ function rrRankWidths(m){
  }
  return result;
 }
-function rrExportProgress(){
- const r=rrState(),m=rrModel(r),progress=rrProgress(r,m),bounds=rrOrderBounds(m);
- const report={app:'movie30-rerank-analysis',schema:1,exportedAt:new Date().toISOString(),
+function rrAnalysisSnapshot(){
+ const r=rrState(false);if(!r)return null;
+ const m=rrModel(r),progress=rrProgress(r,m),bounds=rrOrderBounds(m);
+ const genres=rrGenreMap(m.order).tokens;
+ return {app:'movie30-rerank-analysis',schema:1,exportedAt:new Date().toISOString(),
   rerankV2:r,summary:{...progress,net:undefined,bounds},rankRanges:rrRankWidths(m),
-  films:m.order.map((id,i)=>({id,title:displayTitle(filmById(id)),rank:i<m.seenCount?i+1:null,genres:[...(rrGenreMap([id]).tokens.get(id)||[])]}))};
- download('movie-ranking-progress.json',JSON.stringify(report,null,2),'application/json');
+  films:m.order.map((id,i)=>({id,title:displayTitle(filmById(id)),rank:i<m.seenCount?i+1:null,genres:[...(genres.get(id)||[])]}))};
+}
+window.__movie30RerankSnapshot=rrAnalysisSnapshot;
+function rrExportProgress(){
+ download('movie-ranking-progress.json',JSON.stringify(rrAnalysisSnapshot(),null,2),'application/json');
 }
 
 function rrTriadSig(ids){return ids.slice().sort().join('|')}
@@ -2428,4 +2433,5 @@ window.addEventListener('movie30-studio-update',()=>{
 });
 document.head.appendChild(rrStyle);
 rrInstall();
+Promise.resolve(window.__movie30StorageReady).then(()=>{if(state.rerankV2&&!window.__movie30RecoveryBlocked)save(false)}).catch(()=>{});
 })();

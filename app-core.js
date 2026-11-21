@@ -2255,7 +2255,7 @@ window.__movie30AutoSyncPending=()=>{const x=getLbSettings();if(x.auto!==false)s
         genreOverrides:state.genreOverrides||{},
         originOverrides:state.originOverrides||{},
         formatOverrides:state.formatOverrides||{},
-        runtimeOverrides:state.runtimeOverrides||{}
+        runtimeOverrides:state.runtimeOverrides||{},rerankV2:state.rerankV2||null
       }
     };
   }
@@ -3027,7 +3027,7 @@ window.__movie30AutoSyncPending=()=>{const x=getLbSettings();if(x.auto!==false)s
       exactScores:state.exactScores||{},rankOrder:state.rankOrder||{},customFilms:state.customFilms||[],
       starOverrides:state.starOverrides||{},titleOverrides:state.titleOverrides||{},categoryOverrides:state.categoryOverrides||{},
       mediaTypeOverrides:state.mediaTypeOverrides||{},genreOverrides:state.genreOverrides||{},originOverrides:state.originOverrides||{},
-      formatOverrides:state.formatOverrides||{},runtimeOverrides:state.runtimeOverrides||{}
+      formatOverrides:state.formatOverrides||{},runtimeOverrides:state.runtimeOverrides||{},rerankV2:state.rerankV2||null
     };
     const str=JSON.stringify(s);
     let h=2166136261;
@@ -5732,10 +5732,11 @@ window.__movie30AutoSyncPending=()=>{const x=getLbSettings();if(x.auto!==false)s
     for(const score of [...scored.keys()].map(Number).sort((a,b)=>b-a)){const arr=rankSorted(scored.get(String(score))||[],score);arr.forEach((f,i)=>ranked.push(liveRow(f,score,++overall,i+1)))}
     return {app:'movie30-live',schema:2,sourceUpdatedAt:Number(state.updatedAt||0),sourceUpdatedIso:state.updatedAt?new Date(Number(state.updatedAt)).toISOString():null,
       ranked,unrated:unrated.map(f=>liveRow(f,null,null,null)),
+      newRanking:window.__movie30RerankSnapshot?.()||null,
       state:{exactScores:state.exactScores||{},rankOrder:state.rankOrder||{},customFilms:state.customFilms||[],starOverrides:state.starOverrides||{},
         titleOverrides:state.titleOverrides||{},categoryOverrides:state.categoryOverrides||{},mediaTypeOverrides:state.mediaTypeOverrides||{},
         genreOverrides:state.genreOverrides||{},originOverrides:state.originOverrides||{},formatOverrides:state.formatOverrides||{},
-        runtimeOverrides:state.runtimeOverrides||{},letterboxdMeta:state.letterboxdMeta||{}}
+        runtimeOverrides:state.runtimeOverrides||{},letterboxdMeta:state.letterboxdMeta||{},rerankV2:state.rerankV2||null}
     };
   }
   function headers(token){return {Accept:'application/vnd.github+json',Authorization:`Bearer ${token}`,'X-GitHub-Api-Version':'2022-11-28'}}
@@ -5748,13 +5749,20 @@ window.__movie30AutoSyncPending=()=>{const x=getLbSettings();if(x.auto!==false)s
     if(!token){if(manual)status('トークンが未設定です。','bad');return}cloudBusy=true;if(manual)status('GitHubへ同期中…');
     try{
       const url=`https://api.github.com/repos/${REPO}/contents/${LIVE_PATH}`;let sha=null,r=await fetch(url,{headers:headers(token),cache:'no-store'});
-      if(r.ok)sha=(await r.json()).sha||null;else if(r.status!==404)throw new Error(`GitHub確認に失敗 (${r.status})`);
-      const body={message:`Sync live movie ratings + Letterboxd metadata (${Date.now()})`,content:b64(JSON.stringify(livePayload(),null,2))};if(sha)body.sha=sha;
+      let remote=null;
+      if(r.ok){const record=await r.json();sha=record.sha||null;
+        if(record.content){try{remote=JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(record.content.replace(/\s/g,'')),c=>c.charCodeAt(0))))}catch(_){throw new Error('同期先の保存内容を確認できません')}}
+        else if(!state.rerankV2&&record.size>0){const raw=await fetch(url,{headers:{...headers(token),Accept:'application/vnd.github.raw+json'},cache:'no-store'});if(!raw.ok)throw new Error('同期先の比較履歴を確認できません');remote=await raw.json()}
+      }else if(r.status!==404)throw new Error(`GitHub確認に失敗 (${r.status})`);
+      const payload=livePayload();
+      // A device that has never started the new ranking must not erase it.
+      if(!state.rerankV2&&remote?.state?.rerankV2){payload.state.rerankV2=remote.state.rerankV2;payload.newRanking=remote.newRanking||null}
+      const body={message:`Sync movie ratings and new ranking (${Date.now()})`,content:b64(JSON.stringify(payload,null,2))};if(sha)body.sha=sha;
       r=await fetch(url,{method:'PUT',headers:{...headers(token),'Content-Type':'application/json'},body:JSON.stringify(body)});
       if(r.status===409)throw new Error('別の端末またはWorkの更新と競合しました。上書きせず同期を停止しました。JSONを保存してください。');
       if(!r.ok)throw new Error(`GitHub書き込みに失敗 (${r.status})`);
       try{localStorage.setItem('movie30_github_sync_last_v1',JSON.stringify({sourceUpdatedAt:Number(state.updatedAt||0),at:Date.now()}))}catch(_){}
-      status('同期しました。Letterboxd追加日も保存されています。','ok');
+      status('同期しました。新ランキング・比較履歴も保存されています。','ok');
     }catch(e){status('同期できませんでした：'+(e?.message||e),'bad')}finally{cloudBusy=false}
   }
   const syncBtn=document.getElementById('gptSyncNow');if(syncBtn)syncBtn.onclick=()=>syncMetaCloud(true);
