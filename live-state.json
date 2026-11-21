@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1795292610742,
-  "sourceUpdatedIso": "2026-11-21T20:23:30.742Z",
+  "sourceUpdatedAt": 1795292631206,
+  "sourceUpdatedIso": "2026-11-21T20:23:51.206Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -24106,7 +24106,7 @@
   "newRanking": {
     "app": "movie30-rerank-analysis",
     "schema": 1,
-    "exportedAt": "2026-11-21T20:23:34.839Z",
+    "exportedAt": "2026-11-21T20:23:55.219Z",
     "rerankV2": {
       "version": 2,
       "startedAt": 1794395021969,
@@ -77501,6 +77501,61 @@
               "afterCount": 446
             }
           ]
+        },
+        {
+          "id": "rrpair-1795292631113-n84a7",
+          "at": 1795292631113,
+          "kind": "pair-review",
+          "mode": "direct",
+          "editorFocus": "lb-549-iEBG",
+          "ids": [
+            "lb-549-iEBG",
+            "lb-559-abBm"
+          ],
+          "displayIds": [
+            "lb-549-iEBG",
+            "lb-559-abBm"
+          ],
+          "groups": [
+            [
+              "lb-549-iEBG"
+            ],
+            [
+              "lb-559-abBm"
+            ]
+          ],
+          "reviewResolves": [
+            "lb-549-iEBG\u0000lb-559-abBm"
+          ],
+          "genreScope": "ジャンルを横断して比較",
+          "rankDelta": {
+            "version": 1,
+            "shared": 446,
+            "newCompared": 0,
+            "seenAfter": 446,
+            "changed": 4,
+            "median": 0,
+            "p90": 0,
+            "max": 2,
+            "inversions": 4
+          },
+          "triadPositions": [
+            {
+              "id": "lb-549-iEBG",
+              "before": 45,
+              "after": 43,
+              "beforeCount": 446,
+              "afterCount": 446
+            },
+            {
+              "id": "lb-559-abBm",
+              "before": 42,
+              "after": 44,
+              "beforeCount": 446,
+              "afterCount": 446
+            }
+          ],
+          "jumpChecks": []
         }
       ],
       "skips": [],
@@ -77517,7 +77572,7 @@
       "n": 446,
       "compared": 446,
       "depth": 446,
-      "confident": 226,
+      "confident": 227,
       "components": 1,
       "drift": {
         "window": 40,
@@ -77526,18 +77581,18 @@
       },
       "stage": "順位の精度を向上中",
       "detail": "比較回数が少ない作品や接戦を補強します。",
-      "judged": 1295,
+      "judged": 1296,
       "remaining": null,
       "estimated": "必要回数は未確定",
       "bounds": {
         "n": 446,
         "exact": 0,
-        "within10": 48,
-        "within25": 151,
+        "within10": 49,
+        "within25": 152,
         "within50": 324,
-        "comparable": 90277,
+        "comparable": 90304,
         "totalPairs": 99235,
-        "top50": 39,
+        "top50": 41,
         "top150": 145,
         "top250": 227
       }
@@ -77707,21 +77762,21 @@
         "best": 29,
         "worst": 53
       },
-      "lb-559-abBm": {
-        "best": 41,
-        "worst": 54
-      },
-      "lb-330-4JQS": {
-        "best": 42,
-        "worst": 55
-      },
       "lb-86-cUqs": {
         "best": 33,
-        "worst": 55
+        "worst": 48
       },
       "lb-549-iEBG": {
         "best": 40,
-        "worst": 70
+        "worst": 50
+      },
+      "lb-559-abBm": {
+        "best": 43,
+        "worst": 54
+      },
+      "lb-330-4JQS": {
+        "best": 44,
+        "worst": 55
       },
       "lb-39-2DjO": {
         "best": 29,
@@ -77736,7 +77791,7 @@
         "worst": 77
       },
       "lb-65-2auI": {
-        "best": 46,
+        "best": 47,
         "worst": 69
       },
       "lb-49-27US": {
@@ -77748,15 +77803,15 @@
         "worst": 78
       },
       "lb-382-20TI": {
-        "best": 43,
+        "best": 45,
         "worst": 62
       },
       "custom-1791915849111-yhiu": {
-        "best": 45,
+        "best": 47,
         "worst": 63
       },
       "lb-558-1pDe": {
-        "best": 46,
+        "best": 48,
         "worst": 67
       },
       "lb-9-1skk": {
@@ -77784,7 +77839,7 @@
         "worst": 64
       },
       "lb-90-71Y": {
-        "best": 49,
+        "best": 50,
         "worst": 77
       },
       "lb-368-2as8": {
@@ -77792,19 +77847,19 @@
         "worst": 81
       },
       "lb-489-7T2k": {
-        "best": 46,
+        "best": 48,
         "worst": 65
       },
       "lb-66-2aq2": {
-        "best": 47,
+        "best": 49,
         "worst": 66
       },
       "lb-487-28JG": {
-        "best": 52,
+        "best": 53,
         "worst": 67
       },
       "custom-1791057232858-35ld": {
-        "best": 55,
+        "best": 56,
         "worst": 68
       },
       "lb-460-20eA": {
@@ -77820,11 +77875,11 @@
         "worst": 83
       },
       "lb-253-SVAW": {
-        "best": 56,
+        "best": 57,
         "worst": 73
       },
       "custom-1791353624251-egky": {
-        "best": 57,
+        "best": 58,
         "worst": 84
       },
       "custom-1793799815264-djtv": {
@@ -77844,19 +77899,19 @@
         "worst": 91
       },
       "added-anchor-579": {
-        "best": 59,
+        "best": 60,
         "worst": 79
       },
       "lb-178-29XE": {
-        "best": 60,
+        "best": 61,
         "worst": 80
       },
       "custom-1793432957369-xwe7": {
-        "best": 61,
+        "best": 62,
         "worst": 81
       },
       "lb-564-29Wm": {
-        "best": 62,
+        "best": 63,
         "worst": 82
       },
       "lb-383-22mQ": {
@@ -77876,7 +77931,7 @@
         "worst": 93
       },
       "lb-308-kPxE": {
-        "best": 64,
+        "best": 65,
         "worst": 93
       },
       "lb-526-4JQI": {
@@ -77916,7 +77971,7 @@
         "worst": 102
       },
       "added-anchor-578": {
-        "best": 53,
+        "best": 54,
         "worst": 117
       },
       "lb-17-1U82": {
@@ -77924,7 +77979,7 @@
         "worst": 118
       },
       "lb-463-4Xuw": {
-        "best": 48,
+        "best": 49,
         "worst": 139
       },
       "custom-1791915774599-jgkn": {
@@ -79931,35 +79986,9 @@
         ]
       },
       {
-        "id": "lb-559-abBm",
-        "title": "海街diary",
-        "rank": 42,
-        "genres": [
-          "社会問題・生活",
-          "青春・若者",
-          "ドラマ",
-          "雰囲気・美学"
-        ]
-      },
-      {
-        "id": "lb-330-4JQS",
-        "title": "風立ちぬ",
-        "rank": 43,
-        "genres": [
-          "戦争",
-          "歴史",
-          "ファンタジー",
-          "切ない",
-          "恋愛",
-          "社会問題・生活",
-          "comfort",
-          "雰囲気・美学"
-        ]
-      },
-      {
         "id": "lb-86-cUqs",
         "title": "君の名は。",
-        "rank": 44,
+        "rank": 42,
         "genres": [
           "恋愛",
           "ドラマ",
@@ -79974,7 +80003,7 @@
       {
         "id": "lb-549-iEBG",
         "title": "ジョジョ・ラビット",
-        "rank": 45,
+        "rank": 43,
         "genres": [
           "戦争",
           "歴史",
@@ -79984,6 +80013,32 @@
           "comfort",
           "心理・内面",
           "コメディ"
+        ]
+      },
+      {
+        "id": "lb-559-abBm",
+        "title": "海街diary",
+        "rank": 44,
+        "genres": [
+          "社会問題・生活",
+          "青春・若者",
+          "ドラマ",
+          "雰囲気・美学"
+        ]
+      },
+      {
+        "id": "lb-330-4JQS",
+        "title": "風立ちぬ",
+        "rank": 45,
+        "genres": [
+          "戦争",
+          "歴史",
+          "ファンタジー",
+          "切ない",
+          "恋愛",
+          "社会問題・生活",
+          "comfort",
+          "雰囲気・美学"
         ]
       },
       {
@@ -248950,6 +249005,61 @@
               "afterCount": 446
             }
           ]
+        },
+        {
+          "id": "rrpair-1795292631113-n84a7",
+          "at": 1795292631113,
+          "kind": "pair-review",
+          "mode": "direct",
+          "editorFocus": "lb-549-iEBG",
+          "ids": [
+            "lb-549-iEBG",
+            "lb-559-abBm"
+          ],
+          "displayIds": [
+            "lb-549-iEBG",
+            "lb-559-abBm"
+          ],
+          "groups": [
+            [
+              "lb-549-iEBG"
+            ],
+            [
+              "lb-559-abBm"
+            ]
+          ],
+          "reviewResolves": [
+            "lb-549-iEBG\u0000lb-559-abBm"
+          ],
+          "genreScope": "ジャンルを横断して比較",
+          "rankDelta": {
+            "version": 1,
+            "shared": 446,
+            "newCompared": 0,
+            "seenAfter": 446,
+            "changed": 4,
+            "median": 0,
+            "p90": 0,
+            "max": 2,
+            "inversions": 4
+          },
+          "triadPositions": [
+            {
+              "id": "lb-549-iEBG",
+              "before": 45,
+              "after": 43,
+              "beforeCount": 446,
+              "afterCount": 446
+            },
+            {
+              "id": "lb-559-abBm",
+              "before": 42,
+              "after": 44,
+              "beforeCount": 446,
+              "afterCount": 446
+            }
+          ],
+          "jumpChecks": []
         }
       ],
       "skips": [],
