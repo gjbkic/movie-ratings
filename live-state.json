@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1795292533854,
-  "sourceUpdatedIso": "2026-11-21T20:22:13.854Z",
+  "sourceUpdatedAt": 1795292565398,
+  "sourceUpdatedIso": "2026-11-21T20:22:45.398Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -24106,7 +24106,7 @@
   "newRanking": {
     "app": "movie30-rerank-analysis",
     "schema": 1,
-    "exportedAt": "2026-11-21T20:22:17.528Z",
+    "exportedAt": "2026-11-21T20:22:49.374Z",
     "rerankV2": {
       "version": 2,
       "startedAt": 1794395021969,
@@ -77351,6 +77351,61 @@
               "direction": "up"
             }
           ]
+        },
+        {
+          "id": "rrpair-1795292565305-v9x3z",
+          "at": 1795292565305,
+          "kind": "pair-review",
+          "mode": "direct",
+          "editorFocus": "lb-86-cUqs",
+          "ids": [
+            "lb-333-2b4m",
+            "lb-86-cUqs"
+          ],
+          "displayIds": [
+            "lb-86-cUqs",
+            "lb-333-2b4m"
+          ],
+          "groups": [
+            [
+              "lb-333-2b4m"
+            ],
+            [
+              "lb-86-cUqs"
+            ]
+          ],
+          "reviewResolves": [
+            "lb-333-2b4m\u0000lb-86-cUqs"
+          ],
+          "genreScope": "同系統を比較 · ドラマ・ファンタジー",
+          "rankDelta": {
+            "version": 1,
+            "shared": 446,
+            "newCompared": 0,
+            "seenAfter": 446,
+            "changed": 19,
+            "median": 0,
+            "p90": 0,
+            "max": 10,
+            "inversions": 56
+          },
+          "triadPositions": [
+            {
+              "id": "lb-86-cUqs",
+              "before": 23,
+              "after": 33,
+              "beforeCount": 446,
+              "afterCount": 446
+            },
+            {
+              "id": "lb-333-2b4m",
+              "before": 35,
+              "after": 27,
+              "beforeCount": 446,
+              "afterCount": 446
+            }
+          ],
+          "jumpChecks": []
         }
       ],
       "skips": [],
@@ -77360,7 +77415,17 @@
       "genrePlanVersion": 113,
       "rankingMethodVersion": 124,
       "heldReviewNoticeVersion": 118,
-      "cycleReviewQueue": [],
+      "cycleReviewQueue": [
+        {
+          "key": "rr2-1794471826605-0fi01|added-anchor-577\u0000lb-83-2b8S"
+        },
+        {
+          "key": "rr2-1794471826605-0fi01|added-anchor-577\u0000lb-88-1RUM"
+        },
+        {
+          "key": "rr2-1794507013758-97jrv|lb-10-kSz4\u0000lb-333-2b4m"
+        }
+      ],
       "cycleReviewVersion": 119
     },
     "summary": {
@@ -77376,16 +77441,16 @@
       },
       "stage": "順位の精度を向上中",
       "detail": "比較回数が少ない作品や接戦を補強します。",
-      "judged": 1293,
+      "judged": 1294,
       "remaining": null,
       "estimated": "必要回数は未確定",
       "bounds": {
         "n": 446,
         "exact": 0,
-        "within10": 50,
+        "within10": 46,
         "within25": 152,
         "within50": 325,
-        "comparable": 90301,
+        "comparable": 90284,
         "totalPairs": 99235,
         "top50": 40,
         "top150": 145,
@@ -77459,7 +77524,7 @@
       },
       "lb-81-2aqc": {
         "best": 16,
-        "worst": 29
+        "worst": 28
       },
       "custom-1790458138074-p8hs": {
         "best": 16,
@@ -77481,88 +77546,88 @@
         "best": 20,
         "worst": 27
       },
-      "lb-86-cUqs": {
-        "best": 21,
-        "worst": 29
-      },
-      "lb-10-kSz4": {
-        "best": 22,
-        "worst": 30
-      },
-      "lb-322-2aeA": {
-        "best": 18,
-        "worst": 27
-      },
-      "lb-8-6YK": {
-        "best": 19,
-        "worst": 30
-      },
       "lb-116-1YYc": {
         "best": 21,
-        "worst": 37
-      },
-      "lb-18-2ahY": {
-        "best": 19,
-        "worst": 29
-      },
-      "lb-137-2a1c": {
-        "best": 21,
-        "worst": 30
-      },
-      "lb-88-1RUM": {
-        "best": 28,
-        "worst": 31
-      },
-      "lb-396-251c": {
-        "best": 29,
-        "worst": 33
-      },
-      "lb-83-2b8S": {
-        "best": 30,
-        "worst": 34
+        "worst": 28
       },
       "added-anchor-577": {
-        "best": 32,
-        "worst": 38
+        "best": 22,
+        "worst": 29
       },
       "lb-491-29R2": {
         "best": 6,
         "worst": 43
       },
+      "lb-322-2aeA": {
+        "best": 18,
+        "worst": 26
+      },
       "lb-333-2b4m": {
-        "best": 33,
-        "worst": 39
+        "best": 25,
+        "worst": 30
       },
-      "lb-11-29zs": {
-        "best": 34,
-        "worst": 46
+      "lb-8-6YK": {
+        "best": 19,
+        "worst": 35
       },
-      "lb-171-2b0k": {
-        "best": 35,
-        "worst": 49
+      "lb-18-2ahY": {
+        "best": 19,
+        "worst": 32
+      },
+      "lb-137-2a1c": {
+        "best": 21,
+        "worst": 33
       },
       "lb-493-28No": {
-        "best": 35,
+        "best": 29,
         "worst": 44
       },
       "lb-459-1Vgm": {
-        "best": 37,
+        "best": 31,
         "worst": 46
       },
-      "lb-58-293w": {
-        "best": 40,
-        "worst": 51
+      "lb-86-cUqs": {
+        "best": 26,
+        "worst": 34
       },
-      "lb-378-26E0": {
+      "lb-10-kSz4": {
+        "best": 27,
+        "worst": 35
+      },
+      "lb-88-1RUM": {
+        "best": 31,
+        "worst": 36
+      },
+      "lb-396-251c": {
+        "best": 32,
+        "worst": 39
+      },
+      "lb-11-29zs": {
+        "best": 33,
+        "worst": 46
+      },
+      "lb-171-2b0k": {
         "best": 34,
         "worst": 49
       },
+      "lb-58-293w": {
+        "best": 39,
+        "worst": 51
+      },
+      "lb-378-26E0": {
+        "best": 26,
+        "worst": 49
+      },
+      "lb-83-2b8S": {
+        "best": 33,
+        "worst": 48
+      },
       "lb-349-2aGY": {
-        "best": 31,
+        "best": 34,
         "worst": 53
       },
       "lb-559-abBm": {
-        "best": 42,
+        "best": 41,
         "worst": 54
       },
       "lb-330-4JQS": {
@@ -77570,15 +77635,15 @@
         "worst": 55
       },
       "lb-549-iEBG": {
-        "best": 40,
+        "best": 39,
         "worst": 70
       },
       "lb-39-2DjO": {
-        "best": 31,
+        "best": 34,
         "worst": 75
       },
       "lb-395-2bdo": {
-        "best": 41,
+        "best": 40,
         "worst": 59
       },
       "lb-262-29Du": {
@@ -77594,7 +77659,7 @@
         "worst": 78
       },
       "lb-486-b8wK": {
-        "best": 41,
+        "best": 40,
         "worst": 78
       },
       "lb-382-20TI": {
@@ -77610,7 +77675,7 @@
         "worst": 67
       },
       "lb-9-1skk": {
-        "best": 29,
+        "best": 32,
         "worst": 64
       },
       "custom-1791863527797-qm90": {
@@ -77618,7 +77683,7 @@
         "worst": 79
       },
       "custom-1791664055911-cuz4": {
-        "best": 43,
+        "best": 42,
         "worst": 139
       },
       "custom-1792318978542-vitq": {
@@ -77626,7 +77691,7 @@
         "worst": 62
       },
       "lb-488-294O": {
-        "best": 35,
+        "best": 33,
         "worst": 91
       },
       "custom-1790322763195-rro9": {
@@ -77638,7 +77703,7 @@
         "worst": 77
       },
       "lb-368-2as8": {
-        "best": 32,
+        "best": 35,
         "worst": 81
       },
       "lb-489-7T2k": {
@@ -79518,63 +79583,9 @@
         ]
       },
       {
-        "id": "lb-86-cUqs",
-        "title": "君の名は。",
-        "rank": 23,
-        "genres": [
-          "恋愛",
-          "ドラマ",
-          "ファンタジー",
-          "青春・若者",
-          "comfort",
-          "大作",
-          "娯楽",
-          "時間"
-        ]
-      },
-      {
-        "id": "lb-10-kSz4",
-        "title": "スパイダーマン：アクロス・ザ・スパイダーバース",
-        "rank": 24,
-        "genres": [
-          "アクション",
-          "SF",
-          "ヒーロー",
-          "comfort",
-          "娯楽"
-        ]
-      },
-      {
-        "id": "lb-322-2aeA",
-        "title": "カッコーの巣の上で",
-        "rank": 25,
-        "genres": [
-          "ドラマ",
-          "歴史",
-          "切ない",
-          "社会問題・生活",
-          "差別・人権",
-          "心理・内面"
-        ]
-      },
-      {
-        "id": "lb-8-6YK",
-        "title": "エターナル・サンシャイン",
-        "rank": 26,
-        "genres": [
-          "恋愛",
-          "ファンタジー",
-          "SF",
-          "ドラマ",
-          "感動",
-          "comfort",
-          "特殊構造"
-        ]
-      },
-      {
         "id": "lb-116-1YYc",
         "title": "GHOST IN THE SHELL／攻殻機動隊",
-        "rank": 27,
+        "rank": 23,
         "genres": [
           "サスペンス",
           "アクション",
@@ -79586,70 +79597,9 @@
         ]
       },
       {
-        "id": "lb-18-2ahY",
-        "title": "グッド・ウィル・ハンティング／旅立ち",
-        "rank": 28,
-        "genres": [
-          "ドラマ",
-          "青春・若者",
-          "感動",
-          "comfort",
-          "心理・内面"
-        ]
-      },
-      {
-        "id": "lb-137-2a1c",
-        "title": "マトリックス リローデッド",
-        "rank": 29,
-        "genres": [
-          "SF",
-          "アクション",
-          "哲学・思想",
-          "世界観",
-          "娯楽",
-          "雰囲気・美学"
-        ]
-      },
-      {
-        "id": "lb-88-1RUM",
-        "title": "火垂るの墓",
-        "rank": 30,
-        "genres": [
-          "戦争",
-          "歴史",
-          "ドラマ",
-          "切ない"
-        ]
-      },
-      {
-        "id": "lb-396-251c",
-        "title": "生きる",
-        "rank": 31,
-        "genres": [
-          "ドラマ",
-          "社会問題・生活",
-          "comfort",
-          "心理・内面",
-          "雰囲気・美学"
-        ]
-      },
-      {
-        "id": "lb-83-2b8S",
-        "title": "レオン",
-        "rank": 32,
-        "genres": [
-          "アクション",
-          "ドラマ",
-          "切ない",
-          "雰囲気・美学",
-          "バイオレンス",
-          "クライム"
-        ]
-      },
-      {
         "id": "added-anchor-577",
         "title": "善き人のためのソナタ",
-        "rank": 33,
+        "rank": 24,
         "genres": [
           "ドラマ",
           "歴史",
@@ -79663,7 +79613,7 @@
       {
         "id": "lb-491-29R2",
         "title": "オールドボーイ",
-        "rank": 34,
+        "rank": 25,
         "genres": [
           "サスペンス",
           "ミステリー",
@@ -79676,9 +79626,22 @@
         ]
       },
       {
+        "id": "lb-322-2aeA",
+        "title": "カッコーの巣の上で",
+        "rank": 26,
+        "genres": [
+          "ドラマ",
+          "歴史",
+          "切ない",
+          "社会問題・生活",
+          "差別・人権",
+          "心理・内面"
+        ]
+      },
+      {
         "id": "lb-333-2b4m",
         "title": "千と千尋の神隠し",
-        "rank": 35,
+        "rank": 27,
         "genres": [
           "ドラマ",
           "ファンタジー",
@@ -79692,41 +79655,48 @@
         ]
       },
       {
-        "id": "lb-11-29zs",
-        "title": "セブン",
-        "rank": 36,
+        "id": "lb-8-6YK",
+        "title": "エターナル・サンシャイン",
+        "rank": 28,
         "genres": [
-          "サスペンス",
-          "ミステリー",
-          "スリラー",
-          "クライム",
-          "胸糞",
-          "心理・内面",
-          "バイオレンス",
-          "雰囲気・美学"
+          "恋愛",
+          "ファンタジー",
+          "SF",
+          "ドラマ",
+          "感動",
+          "comfort",
+          "特殊構造"
         ]
       },
       {
-        "id": "lb-171-2b0k",
-        "title": "ダークナイト",
-        "rank": 37,
+        "id": "lb-18-2ahY",
+        "title": "グッド・ウィル・ハンティング／旅立ち",
+        "rank": 29,
         "genres": [
+          "ドラマ",
+          "青春・若者",
+          "感動",
+          "comfort",
+          "心理・内面"
+        ]
+      },
+      {
+        "id": "lb-137-2a1c",
+        "title": "マトリックス リローデッド",
+        "rank": 30,
+        "genres": [
+          "SF",
           "アクション",
-          "ヒーロー",
-          "社会問題・生活",
-          "ファンタジー",
-          "大作",
-          "クライム",
-          "サスペンス",
+          "哲学・思想",
+          "世界観",
           "娯楽",
-          "雰囲気・美学",
-          "バイオレンス"
+          "雰囲気・美学"
         ]
       },
       {
         "id": "lb-493-28No",
         "title": "パンズ・ラビリンス",
-        "rank": 38,
+        "rank": 31,
         "genres": [
           "戦争",
           "歴史",
@@ -79741,7 +79711,7 @@
       {
         "id": "lb-459-1Vgm",
         "title": "On Your Mark",
-        "rank": 39,
+        "rank": 32,
         "genres": [
           "SF",
           "ファンタジー",
@@ -79753,9 +79723,91 @@
         ]
       },
       {
+        "id": "lb-86-cUqs",
+        "title": "君の名は。",
+        "rank": 33,
+        "genres": [
+          "恋愛",
+          "ドラマ",
+          "ファンタジー",
+          "青春・若者",
+          "comfort",
+          "大作",
+          "娯楽",
+          "時間"
+        ]
+      },
+      {
+        "id": "lb-10-kSz4",
+        "title": "スパイダーマン：アクロス・ザ・スパイダーバース",
+        "rank": 34,
+        "genres": [
+          "アクション",
+          "SF",
+          "ヒーロー",
+          "comfort",
+          "娯楽"
+        ]
+      },
+      {
+        "id": "lb-88-1RUM",
+        "title": "火垂るの墓",
+        "rank": 35,
+        "genres": [
+          "戦争",
+          "歴史",
+          "ドラマ",
+          "切ない"
+        ]
+      },
+      {
+        "id": "lb-396-251c",
+        "title": "生きる",
+        "rank": 36,
+        "genres": [
+          "ドラマ",
+          "社会問題・生活",
+          "comfort",
+          "心理・内面",
+          "雰囲気・美学"
+        ]
+      },
+      {
+        "id": "lb-11-29zs",
+        "title": "セブン",
+        "rank": 37,
+        "genres": [
+          "サスペンス",
+          "ミステリー",
+          "スリラー",
+          "クライム",
+          "胸糞",
+          "心理・内面",
+          "バイオレンス",
+          "雰囲気・美学"
+        ]
+      },
+      {
+        "id": "lb-171-2b0k",
+        "title": "ダークナイト",
+        "rank": 38,
+        "genres": [
+          "アクション",
+          "ヒーロー",
+          "社会問題・生活",
+          "ファンタジー",
+          "大作",
+          "クライム",
+          "サスペンス",
+          "娯楽",
+          "雰囲気・美学",
+          "バイオレンス"
+        ]
+      },
+      {
         "id": "lb-58-293w",
         "title": "プレステージ",
-        "rank": 40,
+        "rank": 39,
         "genres": [
           "サスペンス",
           "ミステリー",
@@ -79768,7 +79820,7 @@
       {
         "id": "lb-378-26E0",
         "title": "誰も知らない",
-        "rank": 41,
+        "rank": 40,
         "genres": [
           "ドラマ",
           "社会問題・生活",
@@ -79777,6 +79829,19 @@
           "差別・人権",
           "心理・内面",
           "雰囲気・美学"
+        ]
+      },
+      {
+        "id": "lb-83-2b8S",
+        "title": "レオン",
+        "rank": 41,
+        "genres": [
+          "アクション",
+          "ドラマ",
+          "切ない",
+          "雰囲気・美学",
+          "バイオレンス",
+          "クライム"
         ]
       },
       {
@@ -248650,6 +248715,61 @@
               "direction": "up"
             }
           ]
+        },
+        {
+          "id": "rrpair-1795292565305-v9x3z",
+          "at": 1795292565305,
+          "kind": "pair-review",
+          "mode": "direct",
+          "editorFocus": "lb-86-cUqs",
+          "ids": [
+            "lb-333-2b4m",
+            "lb-86-cUqs"
+          ],
+          "displayIds": [
+            "lb-86-cUqs",
+            "lb-333-2b4m"
+          ],
+          "groups": [
+            [
+              "lb-333-2b4m"
+            ],
+            [
+              "lb-86-cUqs"
+            ]
+          ],
+          "reviewResolves": [
+            "lb-333-2b4m\u0000lb-86-cUqs"
+          ],
+          "genreScope": "同系統を比較 · ドラマ・ファンタジー",
+          "rankDelta": {
+            "version": 1,
+            "shared": 446,
+            "newCompared": 0,
+            "seenAfter": 446,
+            "changed": 19,
+            "median": 0,
+            "p90": 0,
+            "max": 10,
+            "inversions": 56
+          },
+          "triadPositions": [
+            {
+              "id": "lb-86-cUqs",
+              "before": 23,
+              "after": 33,
+              "beforeCount": 446,
+              "afterCount": 446
+            },
+            {
+              "id": "lb-333-2b4m",
+              "before": 35,
+              "after": 27,
+              "beforeCount": 446,
+              "afterCount": 446
+            }
+          ],
+          "jumpChecks": []
         }
       ],
       "skips": [],
@@ -248659,7 +248779,17 @@
       "genrePlanVersion": 113,
       "rankingMethodVersion": 124,
       "heldReviewNoticeVersion": 118,
-      "cycleReviewQueue": [],
+      "cycleReviewQueue": [
+        {
+          "key": "rr2-1794471826605-0fi01|added-anchor-577\u0000lb-83-2b8S"
+        },
+        {
+          "key": "rr2-1794471826605-0fi01|added-anchor-577\u0000lb-88-1RUM"
+        },
+        {
+          "key": "rr2-1794507013758-97jrv|lb-10-kSz4\u0000lb-333-2b4m"
+        }
+      ],
       "cycleReviewVersion": 119
     }
   }
