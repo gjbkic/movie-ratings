@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1795292260661,
-  "sourceUpdatedIso": "2026-11-21T20:17:40.661Z",
+  "sourceUpdatedAt": 1795292462207,
+  "sourceUpdatedIso": "2026-11-21T20:21:02.207Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -24106,7 +24106,7 @@
   "newRanking": {
     "app": "movie30-rerank-analysis",
     "schema": 1,
-    "exportedAt": "2026-11-21T20:17:52.621Z",
+    "exportedAt": "2026-11-21T20:21:06.363Z",
     "rerankV2": {
       "version": 2,
       "startedAt": 1794395021969,
@@ -77216,6 +77216,61 @@
             }
           ],
           "jumpChecks": []
+        },
+        {
+          "id": "rrpair-1795292461089-wpdzc",
+          "at": 1795292461089,
+          "kind": "pair-review",
+          "mode": "direct",
+          "editorFocus": "lb-119-25zS",
+          "ids": [
+            "lb-119-25zS",
+            "lb-374-DUHM"
+          ],
+          "displayIds": [
+            "lb-119-25zS",
+            "lb-374-DUHM"
+          ],
+          "groups": [
+            [
+              "lb-119-25zS"
+            ],
+            [
+              "lb-374-DUHM"
+            ]
+          ],
+          "reviewResolves": [
+            "lb-119-25zS\u0000lb-374-DUHM"
+          ],
+          "genreScope": "同系統を比較 · アクション",
+          "rankDelta": {
+            "version": 1,
+            "shared": 446,
+            "newCompared": 0,
+            "seenAfter": 446,
+            "changed": 5,
+            "median": 0,
+            "p90": 0,
+            "max": 12,
+            "inversions": 23
+          },
+          "triadPositions": [
+            {
+              "id": "lb-119-25zS",
+              "before": 397,
+              "after": 386,
+              "beforeCount": 446,
+              "afterCount": 446
+            },
+            {
+              "id": "lb-374-DUHM",
+              "before": 385,
+              "after": 397,
+              "beforeCount": 446,
+              "afterCount": 446
+            }
+          ],
+          "jumpChecks": []
         }
       ],
       "skips": [],
@@ -77237,20 +77292,20 @@
       "drift": {
         "window": 40,
         "median": 0,
-        "p90": 11
+        "p90": 10
       },
       "stage": "順位の精度を向上中",
       "detail": "比較回数が少ない作品や接戦を補強します。",
-      "judged": 1291,
+      "judged": 1292,
       "remaining": null,
       "estimated": "必要回数は未確定",
       "bounds": {
         "n": 446,
         "exact": 0,
         "within10": 50,
-        "within25": 155,
-        "within50": 325,
-        "comparable": 90354,
+        "within25": 156,
+        "within50": 326,
+        "comparable": 90422,
         "totalPairs": 99235,
         "top50": 40,
         "top150": 145,
@@ -78244,7 +78299,7 @@
       },
       "lb-1-4VZ8": {
         "best": 244,
-        "worst": 324
+        "worst": 323
       },
       "lb-541-27MO": {
         "best": 238,
@@ -78304,15 +78359,15 @@
       },
       "lb-181-2aB0": {
         "best": 241,
-        "worst": 294
+        "worst": 293
       },
       "lb-289-2avw": {
         "best": 242,
-        "worst": 298
+        "worst": 297
       },
       "custom-1793391233092-5ate": {
         "best": 244,
-        "worst": 325
+        "worst": 324
       },
       "custom-1790269934541-2ps3": {
         "best": 176,
@@ -78324,27 +78379,27 @@
       },
       "lb-52-2b5E": {
         "best": 255,
-        "worst": 295
+        "worst": 294
       },
       "lb-557-1WyQ": {
         "best": 258,
-        "worst": 301
+        "worst": 300
       },
       "custom-1791570909341-auj1": {
         "best": 260,
-        "worst": 306
+        "worst": 305
       },
       "lb-331-26e2": {
         "best": 261,
-        "worst": 307
+        "worst": 306
       },
       "lb-312-1SRY": {
         "best": 182,
-        "worst": 314
+        "worst": 313
       },
       "lb-16-70w": {
         "best": 254,
-        "worst": 325
+        "worst": 324
       },
       "lb-499-948A": {
         "best": 236,
@@ -78360,7 +78415,7 @@
       },
       "lb-485-2aSg": {
         "best": 208,
-        "worst": 321
+        "worst": 320
       },
       "lb-107-2a0I": {
         "best": 257,
@@ -78376,119 +78431,119 @@
       },
       "lb-208-1MLK": {
         "best": 258,
-        "worst": 317
+        "worst": 316
       },
       "lb-12-728": {
         "best": 220,
-        "worst": 318
+        "worst": 317
       },
       "lb-64-leq4": {
         "best": 259,
-        "worst": 325
+        "worst": 324
       },
       "lb-27-2b2A": {
         "best": 230,
-        "worst": 329
+        "worst": 328
       },
       "custom-1791913497181-nqp6": {
         "best": 244,
-        "worst": 305
+        "worst": 304
       },
       "custom-1792272928425-wp78": {
         "best": 245,
-        "worst": 307
+        "worst": 306
       },
       "base-simple-plan-1998": {
         "best": 266,
-        "worst": 308
+        "worst": 307
       },
       "lb-163-2aYI": {
         "best": 245,
-        "worst": 328
+        "worst": 327
       },
       "custom-1790423280120-qki8": {
         "best": 257,
-        "worst": 320
+        "worst": 319
       },
       "custom-1790508960074-n6fj": {
         "best": 263,
-        "worst": 324
+        "worst": 323
       },
       "lb-70-29FU": {
         "best": 265,
-        "worst": 331
+        "worst": 330
       },
       "lb-245-z4p4": {
         "best": 267,
-        "worst": 332
+        "worst": 331
       },
       "lb-394-2b5O": {
         "best": 231,
-        "worst": 308
+        "worst": 307
       },
       "lb-384-1UhS": {
         "best": 268,
-        "worst": 309
+        "worst": 308
       },
       "lb-465-F0vO": {
         "best": 271,
-        "worst": 316
+        "worst": 315
       },
       "lb-7-h4cS": {
         "best": 278,
-        "worst": 325
+        "worst": 324
       },
       "custom-1791802127464-uge5": {
         "best": 269,
-        "worst": 327
+        "worst": 326
       },
       "lb-193-1tqo": {
         "best": 270,
-        "worst": 328
+        "worst": 327
       },
       "custom-1793003365384-pli4": {
         "best": 272,
-        "worst": 329
+        "worst": 328
       },
       "lb-183-x1OG": {
         "best": 272,
-        "worst": 323
+        "worst": 322
       },
       "custom-1790322756418-p88i": {
         "best": 290,
-        "worst": 326
+        "worst": 325
       },
       "lb-423-6ZS": {
         "best": 299,
-        "worst": 333
+        "worst": 332
       },
       "custom-1792179458643-m8hx": {
         "best": 291,
-        "worst": 328
+        "worst": 327
       },
       "lb-149-AF4": {
         "best": 302,
-        "worst": 334
+        "worst": 333
       },
       "lb-185-HTIi": {
         "best": 164,
-        "worst": 346
+        "worst": 345
       },
       "custom-1791834369925-gy7y": {
         "best": 259,
-        "worst": 334
+        "worst": 333
       },
       "lb-15-6hQu": {
         "best": 262,
-        "worst": 333
+        "worst": 332
+      },
+      "lb-457-IG": {
+        "best": 273,
+        "worst": 354
       },
       "lb-576-18H4": {
         "best": 211,
         "worst": 323
-      },
-      "lb-457-IG": {
-        "best": 273,
-        "worst": 355
       },
       "lb-104-4n0g": {
         "best": 233,
@@ -78496,7 +78551,7 @@
       },
       "lb-341-1Qzy": {
         "best": 304,
-        "worst": 335
+        "worst": 334
       },
       "custom-1792272124188-0j6i": {
         "best": 239,
@@ -78504,63 +78559,63 @@
       },
       "lb-320-28r8": {
         "best": 275,
-        "worst": 333
+        "worst": 332
       },
       "lb-271-29zW": {
         "best": 227,
-        "worst": 328
+        "worst": 327
       },
       "lb-458-2bg8": {
         "best": 228,
-        "worst": 330
+        "worst": 329
       },
       "lb-278-2aoU": {
         "best": 297,
-        "worst": 331
+        "worst": 330
       },
       "lb-180-27oC": {
         "best": 298,
-        "worst": 335
+        "worst": 334
       },
       "custom-1791379032352-50zf": {
         "best": 311,
-        "worst": 336
+        "worst": 335
       },
       "custom-1791802127938-6mow": {
         "best": 268,
-        "worst": 328
+        "worst": 327
       },
       "lb-464-mkbG": {
         "best": 203,
-        "worst": 327
+        "worst": 326
       },
       "lb-35-29QS": {
         "best": 270,
-        "worst": 329
+        "worst": 328
       },
       "lb-574-29CQ": {
         "best": 271,
-        "worst": 330
+        "worst": 329
       },
       "lb-372-2b7g": {
         "best": 303,
-        "worst": 347
+        "worst": 346
       },
       "lb-282-1Q9K": {
         "best": 304,
-        "worst": 349
+        "worst": 348
       },
       "custom-1790322762266-mrn9": {
         "best": 286,
-        "worst": 334
+        "worst": 333
       },
       "lb-67-1RYk": {
         "best": 287,
-        "worst": 335
+        "worst": 334
       },
       "lb-93-2au4": {
         "best": 288,
-        "worst": 336
+        "worst": 335
       },
       "custom-1790458138407-21ka": {
         "best": 253,
@@ -78568,35 +78623,35 @@
       },
       "added-anchor-580": {
         "best": 324,
-        "worst": 337
+        "worst": 336
       },
       "custom-1791576150006-qu8m": {
         "best": 325,
-        "worst": 358
+        "worst": 357
       },
       "lb-302-2E2E": {
         "best": 325,
-        "worst": 339
+        "worst": 338
       },
       "lb-159-18U8": {
         "best": 326,
-        "worst": 344
+        "worst": 343
       },
       "lb-522-1RYu": {
         "best": 327,
-        "worst": 355
+        "worst": 354
       },
       "lb-46-29Fg": {
         "best": 328,
-        "worst": 357
+        "worst": 356
       },
       "lb-391-24EC": {
         "best": 329,
-        "worst": 358
+        "worst": 357
       },
       "lb-403-uAKS": {
         "best": 335,
-        "worst": 359
+        "worst": 358
       },
       "custom-1793983670669-rzg2": {
         "best": 273,
@@ -78652,11 +78707,11 @@
       },
       "custom-1790322756823-bi61": {
         "best": 336,
-        "worst": 360
+        "worst": 359
       },
       "custom-1791398329125-3r8f": {
         "best": 337,
-        "worst": 363
+        "worst": 362
       },
       "lb-290-26VK": {
         "best": 338,
@@ -78672,15 +78727,15 @@
       },
       "lb-521-29Qo": {
         "best": 278,
-        "worst": 371
+        "worst": 370
       },
       "lb-268-29Xu": {
         "best": 330,
-        "worst": 372
+        "worst": 371
       },
       "lb-335-2a0y": {
         "best": 340,
-        "worst": 375
+        "worst": 374
       },
       "lb-429-2czU": {
         "best": 346,
@@ -78794,13 +78849,13 @@
         "best": 373,
         "worst": 410
       },
-      "lb-374-DUHM": {
-        "best": 273,
-        "worst": 410
-      },
       "lb-126-2b9Q": {
         "best": 375,
         "worst": 411
+      },
+      "lb-119-25zS": {
+        "best": 341,
+        "worst": 410
       },
       "lb-303-2aQY": {
         "best": 275,
@@ -78842,7 +78897,7 @@
         "best": 378,
         "worst": 407
       },
-      "lb-119-25zS": {
+      "lb-374-DUHM": {
         "best": 342,
         "worst": 411
       },
@@ -83346,22 +83401,9 @@
         ]
       },
       {
-        "id": "lb-576-18H4",
-        "title": "情婦",
-        "rank": 307,
-        "genres": [
-          "ミステリー",
-          "胸糞",
-          "クライム",
-          "どんでん返し",
-          "サスペンス",
-          "娯楽"
-        ]
-      },
-      {
         "id": "lb-457-IG",
         "title": "ドライブ",
-        "rank": 308,
+        "rank": 307,
         "genres": [
           "クライム",
           "サスペンス",
@@ -83370,6 +83412,19 @@
           "心理・内面",
           "雰囲気・美学",
           "バイオレンス"
+        ]
+      },
+      {
+        "id": "lb-576-18H4",
+        "title": "情婦",
+        "rank": 308,
+        "genres": [
+          "ミステリー",
+          "胸糞",
+          "クライム",
+          "どんでん返し",
+          "サスペンス",
+          "娯楽"
         ]
       },
       {
@@ -84405,20 +84460,9 @@
         ]
       },
       {
-        "id": "lb-374-DUHM",
-        "title": "ワン・バトル・アフター・アナザー",
-        "rank": 385,
-        "genres": [
-          "アクション",
-          "差別・人権",
-          "コメディ",
-          "スリラー"
-        ]
-      },
-      {
         "id": "lb-126-2b9Q",
         "title": "アルマゲドン",
-        "rank": 386,
+        "rank": 385,
         "genres": [
           "SF",
           "感動",
@@ -84426,6 +84470,19 @@
           "アクション",
           "アドベンチャー",
           "娯楽"
+        ]
+      },
+      {
+        "id": "lb-119-25zS",
+        "title": "バトル・ロワイアル",
+        "rank": 386,
+        "genres": [
+          "アクション",
+          "クライム",
+          "サスペンス",
+          "社会問題・生活",
+          "バイオレンス",
+          "雰囲気・美学"
         ]
       },
       {
@@ -84563,16 +84620,14 @@
         ]
       },
       {
-        "id": "lb-119-25zS",
-        "title": "バトル・ロワイアル",
+        "id": "lb-374-DUHM",
+        "title": "ワン・バトル・アフター・アナザー",
         "rank": 397,
         "genres": [
           "アクション",
-          "クライム",
-          "サスペンス",
-          "社会問題・生活",
-          "バイオレンス",
-          "雰囲気・美学"
+          "差別・人権",
+          "コメディ",
+          "スリラー"
         ]
       },
       {
@@ -248373,6 +248428,61 @@
               "id": "lb-100-aZes",
               "before": 172,
               "after": 175,
+              "beforeCount": 446,
+              "afterCount": 446
+            }
+          ],
+          "jumpChecks": []
+        },
+        {
+          "id": "rrpair-1795292461089-wpdzc",
+          "at": 1795292461089,
+          "kind": "pair-review",
+          "mode": "direct",
+          "editorFocus": "lb-119-25zS",
+          "ids": [
+            "lb-119-25zS",
+            "lb-374-DUHM"
+          ],
+          "displayIds": [
+            "lb-119-25zS",
+            "lb-374-DUHM"
+          ],
+          "groups": [
+            [
+              "lb-119-25zS"
+            ],
+            [
+              "lb-374-DUHM"
+            ]
+          ],
+          "reviewResolves": [
+            "lb-119-25zS\u0000lb-374-DUHM"
+          ],
+          "genreScope": "同系統を比較 · アクション",
+          "rankDelta": {
+            "version": 1,
+            "shared": 446,
+            "newCompared": 0,
+            "seenAfter": 446,
+            "changed": 5,
+            "median": 0,
+            "p90": 0,
+            "max": 12,
+            "inversions": 23
+          },
+          "triadPositions": [
+            {
+              "id": "lb-119-25zS",
+              "before": 397,
+              "after": 386,
+              "beforeCount": 446,
+              "afterCount": 446
+            },
+            {
+              "id": "lb-374-DUHM",
+              "before": 385,
+              "after": 397,
               "beforeCount": 446,
               "afterCount": 446
             }
