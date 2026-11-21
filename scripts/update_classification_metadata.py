@@ -84,9 +84,24 @@ def main():
         try:
             # A previous candidate title must never validate its own possibly wrong ID.
             safe = {k: v for k, v in old.items() if k not in ("title", "titleAliases")}
-            kind, tmdb_id, details, season, episode = resolve_individual(f, safe)
-            parent = api(f"/tv/{tmdb_id}", language="en-US") if kind in ("episode", "season") else None
-            item = profile(f, kind, tmdb_id, details, parent)
+            if film_id == "lb-459-1Vgm":
+                # The official studio page identifies this short even when TMDB
+                # removes its music-video listing. Do not invent a replacement ID.
+                item = {
+                    "schema": 2, "source": "studio-official",
+                    "sourceUrl": "https://www.ghibli.jp/works/onyourmark/",
+                    "checkedAt": datetime.now(timezone.utc).isoformat(),
+                    "kind": "movie", "scope": "movie", "filmTitles": [f["title"], "On Your Mark"],
+                    "filmYear": f.get("year"),
+                    "companies": [{"id": 10342, "name": "Studio Ghibli", "country": "JP"}, {"name": "Real Cast Inc."}],
+                    "productionCountries": [{"code": "JP", "name": "Japan"}],
+                    "originalLanguage": "ja", "spokenLanguages": [],
+                    "genres": [{"id": 16, "name": "Animation"}], "formatHint": "animation",
+                }
+            else:
+                kind, tmdb_id, details, season, episode = resolve_individual(f, safe)
+                parent = api(f"/tv/{tmdb_id}", language="en-US") if kind in ("episode", "season") else None
+                item = profile(f, kind, tmdb_id, details, parent)
             rows[film_id] = {**old, "classification131": item}
             counts["fetched"] += 1
         except (ValueError, RuntimeError) as exc:
