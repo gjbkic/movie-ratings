@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1795292476089,
-  "sourceUpdatedIso": "2026-11-21T20:21:16.089Z",
+  "sourceUpdatedAt": 1795292533854,
+  "sourceUpdatedIso": "2026-11-21T20:22:13.854Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -24106,7 +24106,7 @@
   "newRanking": {
     "app": "movie30-rerank-analysis",
     "schema": 1,
-    "exportedAt": "2026-11-21T20:21:20.183Z",
+    "exportedAt": "2026-11-21T20:22:17.528Z",
     "rerankV2": {
       "version": 2,
       "startedAt": 1794395021969,
@@ -153177,7 +153177,9 @@
           "fetchedAt": "2026-11-15T23:23:11.402043+00:00"
         },
         "poster84": {
-          "tmdbId": 10840,
+          "path": null,
+          "tmdbId": null,
+          "checkedAt": "2026-11-21T20:22:09.238Z",
           "provider": "tmdb",
           "checkedIdentity84": "onyourmark|1995",
           "matchedTitle84": "",
