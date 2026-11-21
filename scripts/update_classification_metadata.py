@@ -2,7 +2,8 @@
 import json
 from datetime import datetime, timezone
 from pathlib import Path
-from recheck_cast import collect, resolve, api
+from recheck_cast import collect, resolve, api, detail
+from update_tmdb_metadata import normalized
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -26,6 +27,47 @@ def profile(f, kind, tmdb_id, details, parent=None):
     }
 
 
+
+def resolve_individual(f, safe):
+    # Individually reviewed aliases; still verify the API title and first-air year.
+    series = {
+        "custom-1792420000000-007": (1418, "The Big Bang Theory", 2007),
+        "custom-1792421000000-006": (88264, "Radiation House", 2019),
+        "custom-1792421000000-013": (46260, "Naruto", 2002),
+    }
+    if f["id"] in series:
+        tmdb_id, alias, year = series[f["id"]]
+        kind, ident, data, season, episode = detail({**f, "englishTitle": alias}, safe, "tv", tmdb_id)
+        if str(data.get("first_air_date", ""))[:4] != str(year):
+            raise ValueError("個別照合したシリーズの初回年が不一致")
+        return kind, ident, data, season, episode
+    if f["id"] == "lb-459-1Vgm":
+        # The old hard-coded movie/10840 no longer exists. Verify the short itself.
+        hits = api("/search/movie", query="On Your Mark", year=1995, language="en-US").get("results", [])
+        matches = []
+        for hit in hits:
+            if str(hit.get("release_date", ""))[:4] != "1995":
+                continue
+            data = api(f"/movie/{hit['id']}", language="en-US", append_to_response="credits")
+            directors = [p.get("name") for p in data.get("credits", {}).get("crew", []) if p.get("job") == "Director"]
+            if "Hayao Miyazaki" in directors and normalized(data.get("title", "")) == normalized("On Your Mark"):
+                matches.append(("movie", hit["id"], data, None, None))
+        if len(matches) == 1:
+            return matches[0]
+        raise ValueError("1995年・宮崎駿監督の短編を個別検索しましたが一意に特定不可")
+    if f["id"] == "custom-1790322764349-xp48":
+        # The theatrical listing is the fifth-season finale, not the full series.
+        _, ident, parent, _, _ = detail({**f, "englishTitle": "Stranger Things"}, {}, "tv", 66732)
+        season = api(f"/tv/{ident}/season/5", language="en-US")
+        matches = [e for e in season.get("episodes", []) if e.get("episode_type") == "finale"]
+        if len(matches) != 1:
+            raise ValueError("第5シーズン最終話の個別照合が未確定")
+        number = matches[0]["episode_number"]
+        data = api(f"/tv/{ident}/season/5/episode/{number}", language="ja-JP")
+        return "episode", ident, data, 5, number
+    return resolve(f, safe)
+
+
 def main():
     target = ROOT / "tmdb-metadata.json"
     catalog = json.loads(target.read_text(encoding="utf-8-sig"))
@@ -42,7 +84,7 @@ def main():
         try:
             # A previous candidate title must never validate its own possibly wrong ID.
             safe = {k: v for k, v in old.items() if k not in ("title", "titleAliases")}
-            kind, tmdb_id, details, season, episode = resolve(f, safe)
+            kind, tmdb_id, details, season, episode = resolve_individual(f, safe)
             parent = api(f"/tv/{tmdb_id}", language="en-US") if kind in ("episode", "season") else None
             item = profile(f, kind, tmdb_id, details, parent)
             rows[film_id] = {**old, "classification131": item}

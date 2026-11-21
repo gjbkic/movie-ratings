@@ -163,6 +163,16 @@ for(const [id,codes,name] of [['movie131CountryOptions',COUNTRY_CODES,countryNam
 }
 Promise.resolve(window.__movie30StorageReady).then(()=>{
  if(window.__movie30RecoveryBlocked)return;
+ // Restore the seven hybrid choices from the saved classification history once.
+ // Keep the migration per film so subsequent deliberate edits remain editable.
+ for(const id of ['lb-4-jUk4','lb-16-70w','lb-214-2aoA','lb-555-2b8o','custom-1792310002695-j7ls','custom-1792346885016-a70t','custom-1792673965168-5akq']){
+  if(!filmById(id))continue;
+  const m=state.letterboxdMeta[id]=state.letterboxdMeta[id]||{};
+  if(m.hybridRestored132)continue;
+  state.formatOverrides[id]='hybrid';m.hybridRestored132=true;
+ }
+ save(false);
+
  const baseOpen=openSheet;openSheet=function(id,...args){const out=baseOpen.call(this,id,...args);refresh(id);window.__movie30Studios?.queueAuto(filmById(id));return out};
  const baseMatch=match;match=function(f,q){if(!filterMatches(f))return false;const info=titleInfo(f),tokens=String(q||'').trim().split(/\s+/).filter(Boolean),text=norm([displayTitle(f),f.title,f.lbTitle,info.originalTitle,info.englishTitle,f.year,searchable(f)].filter(Boolean).join(' '));return !tokens.length||tokens.every(token=>baseMatch(f,token)||text.includes(norm(token)))};
  const editor=document.getElementById('editGenrePicker');editor?.addEventListener('click',()=>{const id=selectedId;setTimeout(()=>{if(id===selectedId)refresh(id)},150)},true);

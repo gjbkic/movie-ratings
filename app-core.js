@@ -1708,7 +1708,7 @@ window.__movie30AutoSyncPending=()=>{const x=getLbSettings();if(x.auto!==false)s
     if(c){
       if(c.media==='movie')delete state.mediaTypeOverrides[f.id];else state.mediaTypeOverrides[f.id]=c.media;
       state.originOverrides[f.id]=c.origin;
-      state.formatOverrides[f.id]=c.format;
+      if(state.formatOverrides[f.id]!=='hybrid')state.formatOverrides[f.id]=c.format;
       state.genreOverrides[f.id]=c.genres;
       if(c.runtime)state.runtimeOverrides[f.id]=c.runtime;
     }
@@ -3712,7 +3712,7 @@ window.__movie30AutoSyncPending=()=>{const x=getLbSettings();if(x.auto!==false)s
       if(y)f.year=Number(y)||y;
       state.titleOverrides[f.id]={...(state.titleOverrides[f.id]||{}),title:jpTitle,originalTitle:original,englishTitle:item.title,tmdbId:Number(item.tmdbId)};
       persistMediaOrigin36(f.id,type==='tv'?'drama':(c.media==='documentary'?'other':'movie'),c.origin);
-      state.formatOverrides[f.id]=c.format;
+      if(state.formatOverrides[f.id]!=='hybrid')state.formatOverrides[f.id]=c.format;
       if(c.genres.length)state.genreOverrides[f.id]=c.genres;
       if(c.runtime)state.runtimeOverrides[f.id]=c.runtime;
       f._lbMetaFixedV36=true;
