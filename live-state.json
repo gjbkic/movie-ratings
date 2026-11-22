@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1795332621283,
-  "sourceUpdatedIso": "2026-11-22T07:30:21.283Z",
+  "sourceUpdatedAt": 1795332638946,
+  "sourceUpdatedIso": "2026-11-22T07:30:38.946Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -24122,12 +24122,33 @@
       "letterboxdAddedDate": "2026-11-22",
       "letterboxdPublishedAt": "Sun, 22 Nov 2026 20:29:06 +1300",
       "letterboxdReportedWatchedDate": "2026-11-22"
+    },
+    {
+      "id": "custom-1795332637505-0p28",
+      "title": "スティンガース 警視庁おとり捜査検証室",
+      "originalTitle": "スティンガース 警視庁おとり捜査検証室",
+      "englishTitle": "Stingers: Undercover Verification Unit",
+      "year": 2025,
+      "score": null,
+      "star": 0,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "サスペンス、ミステリー",
+      "mediaType": "tvseries",
+      "genre": "",
+      "origin": "",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": null,
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
     }
   ],
   "newRanking": {
     "app": "movie30-rerank-analysis",
     "schema": 1,
-    "exportedAt": "2026-11-22T07:30:24.669Z",
+    "exportedAt": "2026-11-22T07:30:42.356Z",
     "rerankV2": {
       "version": 2,
       "startedAt": 1794395021969,
@@ -91985,6 +92006,23 @@
         "added": true,
         "_seq": 1795332619303,
         "source": "letterboxd"
+      },
+      {
+        "id": "custom-1795332637505-0p28",
+        "title": "スティンガース 警視庁おとり捜査検証室",
+        "originalTitle": "スティンガース 警視庁おとり捜査検証室",
+        "englishTitle": "Stingers: Undercover Verification Unit",
+        "lbTitle": "Stingers: Undercover Verification Unit",
+        "tmdbId": 293428,
+        "year": 2025,
+        "uri": "",
+        "category": "サスペンス、ミステリー",
+        "order": 999999,
+        "star": 0,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1795332637505,
+        "tmdbType": "tv"
       }
     ],
     "starOverrides": {
@@ -92827,7 +92865,8 @@
       "custom-1795110436407-1ni9": 2.5,
       "custom-1795119763181-r9ye": 4,
       "custom-1795154889446-iqtt": 2.5,
-      "custom-1795288867095-guh8": 2.5
+      "custom-1795288867095-guh8": 2.5,
+      "custom-1795332637505-0p28": 0
     },
     "titleOverrides": {
       "added-anchor-578": {
@@ -95978,7 +96017,8 @@
       "custom-1795119763181-r9ye": "movie",
       "custom-1795154889446-iqtt": "drama",
       "custom-1795288867095-guh8": "movie",
-      "custom-1795332619303-n5ww": "movie"
+      "custom-1795332619303-n5ww": "movie",
+      "custom-1795332637505-0p28": "tvseries"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -196011,6 +196051,84 @@
           "formatHint": "",
           "releaseDate": "2024-11-22",
           "runtime": 120
+        }
+      },
+      "custom-1795332637505-0p28": {
+        "contentType": "tv_series",
+        "tmdbType": "tv",
+        "poster84": {
+          "path": "/qU03pVR6bD5oFCRYC1NF3idGclF.jpg",
+          "tmdbId": 293428,
+          "provider": "tmdb",
+          "checkedAt": "2026-11-22T07:30:37.946Z"
+        },
+        "tmdbSeriesId": 293428,
+        "seasonCatalogV1": [
+          {
+            "number": 1,
+            "year": "2025"
+          }
+        ],
+        "seasonCountV1": 1,
+        "crew84": {
+          "directors": [],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-11-22T07:30:38.012Z"
+        },
+        "studio130": {
+          "source": "tmdb",
+          "checkedAt": "2026-11-22T07:30:38.915Z",
+          "kind": "tv",
+          "tmdbId": 293428,
+          "companies": [
+            {
+              "id": 3341,
+              "name": "Fuji Television Network",
+              "country": "JP"
+            }
+          ],
+          "schema": 2,
+          "filmTitles": [
+            "スティンガース 警視庁おとり捜査検証室",
+            "Stingers: Undercover Verification Unit",
+            "スティンガース 警視庁おとり捜査検証室",
+            "Stingers: Undercover Verification Unit",
+            "スティンガース 警視庁おとり捜査検証室",
+            "スティンガース 警視庁おとり捜査検証室",
+            "Stingers: Undercover Verification Unit"
+          ],
+          "filmYear": 2025,
+          "productionCountries": [
+            {
+              "code": "JP",
+              "name": "Japan"
+            }
+          ],
+          "originalLanguage": "ja",
+          "spokenLanguages": [
+            {
+              "code": "ja",
+              "name": "Japanese"
+            }
+          ],
+          "genres": [
+            {
+              "id": 18,
+              "name": "Drama"
+            },
+            {
+              "id": 9648,
+              "name": "Mystery"
+            },
+            {
+              "id": 80,
+              "name": "Crime"
+            }
+          ],
+          "formatHint": "",
+          "releaseDate": "2025-07-22",
+          "runtime": null
         }
       }
     },
