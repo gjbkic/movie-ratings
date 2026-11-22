@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1795332958147,
-  "sourceUpdatedIso": "2026-11-22T07:35:58.147Z",
+  "sourceUpdatedAt": 1795356821514,
+  "sourceUpdatedIso": "2026-11-22T14:13:41.514Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -24104,8 +24104,8 @@
     },
     {
       "id": "custom-1795332619303-n5ww",
-      "title": "Angry Squad: The Civil Servant and the Seven Swindlers",
-      "originalTitle": "",
+      "title": "アングリースクワッド 公務員と7人の詐欺師",
+      "originalTitle": "アングリースクワッド 公務員と7人の詐欺師",
       "englishTitle": "Angry Squad: The Civil Servant and the Seven Swindlers",
       "year": 2024,
       "score": null,
@@ -24114,10 +24114,13 @@
       "sameScoreRank": null,
       "category": "Letterboxd",
       "mediaType": "movie",
-      "genre": "",
-      "origin": "その他",
-      "format": "",
-      "runtime": null,
+      "genre": [
+        "ドラマ",
+        "コメディ"
+      ],
+      "origin": "日本",
+      "format": "live",
+      "runtime": 120,
       "exact": false,
       "letterboxdAddedDate": "2026-11-22",
       "letterboxdPublishedAt": "Sun, 22 Nov 2026 20:29:06 +1300",
@@ -24134,7 +24137,7 @@
       "overallRank": null,
       "sameScoreRank": null,
       "category": "サスペンス、ミステリー",
-      "mediaType": "tvseries",
+      "mediaType": "drama",
       "genre": [
         "コメディ",
         "TV本編",
@@ -24143,7 +24146,7 @@
         "どんでん返し",
         "娯楽"
       ],
-      "origin": "",
+      "origin": "日本",
       "format": "",
       "runtime": null,
       "exact": false,
@@ -24155,7 +24158,7 @@
   "newRanking": {
     "app": "movie30-rerank-analysis",
     "schema": 1,
-    "exportedAt": "2026-11-22T07:36:01.628Z",
+    "exportedAt": "2026-11-22T14:13:45.493Z",
     "rerankV2": {
       "version": 2,
       "startedAt": 1794395021969,
@@ -91999,11 +92002,11 @@
       },
       {
         "id": "custom-1795332619303-n5ww",
-        "title": "Angry Squad: The Civil Servant and the Seven Swindlers",
-        "originalTitle": "",
+        "title": "アングリースクワッド 公務員と7人の詐欺師",
+        "originalTitle": "アングリースクワッド 公務員と7人の詐欺師",
         "englishTitle": "Angry Squad: The Civil Servant and the Seven Swindlers",
         "lbTitle": "Angry Squad: The Civil Servant and the Seven Swindlers",
-        "tmdbId": null,
+        "tmdbId": 1312989,
         "year": 2024,
         "uri": "https://letterboxd.com/gjbkic/film/angry-squad-the-civil-servant-and-the-seven/",
         "category": "Letterboxd",
@@ -92012,7 +92015,9 @@
         "oldScore": null,
         "added": true,
         "_seq": 1795332619303,
-        "source": "letterboxd"
+        "source": "letterboxd",
+        "tmdbType": "movie",
+        "_lbMetaFixedV36": true
       },
       {
         "id": "custom-1795332637505-0p28",
@@ -92873,7 +92878,8 @@
       "custom-1795119763181-r9ye": 4,
       "custom-1795154889446-iqtt": 2.5,
       "custom-1795288867095-guh8": 2.5,
-      "custom-1795332637505-0p28": 1.5
+      "custom-1795332637505-0p28": 1.5,
+      "custom-1795332619303-n5ww": 2
     },
     "titleOverrides": {
       "added-anchor-578": {
@@ -95155,6 +95161,12 @@
         "originalTitle": "ドールズ",
         "englishTitle": "Dolls",
         "tmdbId": 870
+      },
+      "custom-1795332619303-n5ww": {
+        "title": "アングリースクワッド 公務員と7人の詐欺師",
+        "originalTitle": "アングリースクワッド 公務員と7人の詐欺師",
+        "englishTitle": "Angry Squad: The Civil Servant and the Seven Swindlers",
+        "tmdbId": 1312989
       }
     },
     "categoryOverrides": {},
@@ -96025,7 +96037,7 @@
       "custom-1795154889446-iqtt": "drama",
       "custom-1795288867095-guh8": "movie",
       "custom-1795332619303-n5ww": "movie",
-      "custom-1795332637505-0p28": "tvseries"
+      "custom-1795332637505-0p28": "drama"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -102862,6 +102874,10 @@
         "ミステリー",
         "どんでん返し",
         "娯楽"
+      ],
+      "custom-1795332619303-n5ww": [
+        "ドラマ",
+        "コメディ"
       ]
     },
     "originOverrides": {
@@ -103730,7 +103746,8 @@
       "custom-1795119763181-r9ye": "日本",
       "custom-1795154889446-iqtt": "日本",
       "custom-1795288867095-guh8": "ハリウッド",
-      "custom-1795332619303-n5ww": "その他"
+      "custom-1795332619303-n5ww": "日本",
+      "custom-1795332637505-0p28": "日本"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -104514,7 +104531,8 @@
       "custom-1795096338948-r8rs": "live",
       "custom-1795110436407-1ni9": "live",
       "custom-1795119763181-r9ye": "animation",
-      "custom-1795288867095-guh8": "live"
+      "custom-1795288867095-guh8": "live",
+      "custom-1795332619303-n5ww": "live"
     },
     "runtimeOverrides": {
       "custom-1790247938551-ixfs": 100,
@@ -105220,7 +105238,8 @@
       "custom-1795096338948-r8rs": 114,
       "custom-1795110436407-1ni9": 118,
       "custom-1795119763181-r9ye": 104,
-      "custom-1795288867095-guh8": 113
+      "custom-1795288867095-guh8": 113,
+      "custom-1795332619303-n5ww": 120
     },
     "letterboxdMeta": {
       "lb-0-hTha": {
