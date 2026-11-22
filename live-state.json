@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1795292631206,
-  "sourceUpdatedIso": "2026-11-21T20:23:51.206Z",
+  "sourceUpdatedAt": 1795332621283,
+  "sourceUpdatedIso": "2026-11-22T07:30:21.283Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -24101,12 +24101,33 @@
       "letterboxdAddedDate": null,
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
+    },
+    {
+      "id": "custom-1795332619303-n5ww",
+      "title": "Angry Squad: The Civil Servant and the Seven Swindlers",
+      "originalTitle": "",
+      "englishTitle": "Angry Squad: The Civil Servant and the Seven Swindlers",
+      "year": 2024,
+      "score": null,
+      "star": 2,
+      "overallRank": null,
+      "sameScoreRank": null,
+      "category": "Letterboxd",
+      "mediaType": "movie",
+      "genre": "",
+      "origin": "その他",
+      "format": "",
+      "runtime": null,
+      "exact": false,
+      "letterboxdAddedDate": "2026-11-22",
+      "letterboxdPublishedAt": "Sun, 22 Nov 2026 20:29:06 +1300",
+      "letterboxdReportedWatchedDate": "2026-11-22"
     }
   ],
   "newRanking": {
     "app": "movie30-rerank-analysis",
     "schema": 1,
-    "exportedAt": "2026-11-21T20:23:55.219Z",
+    "exportedAt": "2026-11-22T07:30:24.669Z",
     "rerankV2": {
       "version": 2,
       "startedAt": 1794395021969,
@@ -91947,6 +91968,23 @@
         "added": true,
         "_seq": 1795288867095,
         "source": "letterboxd"
+      },
+      {
+        "id": "custom-1795332619303-n5ww",
+        "title": "Angry Squad: The Civil Servant and the Seven Swindlers",
+        "originalTitle": "",
+        "englishTitle": "Angry Squad: The Civil Servant and the Seven Swindlers",
+        "lbTitle": "Angry Squad: The Civil Servant and the Seven Swindlers",
+        "tmdbId": null,
+        "year": 2024,
+        "uri": "https://letterboxd.com/gjbkic/film/angry-squad-the-civil-servant-and-the-seven/",
+        "category": "Letterboxd",
+        "order": 999999,
+        "star": 2,
+        "oldScore": null,
+        "added": true,
+        "_seq": 1795332619303,
+        "source": "letterboxd"
       }
     ],
     "starOverrides": {
@@ -95939,7 +95977,8 @@
       "custom-1795110436407-1ni9": "movie",
       "custom-1795119763181-r9ye": "movie",
       "custom-1795154889446-iqtt": "drama",
-      "custom-1795288867095-guh8": "movie"
+      "custom-1795288867095-guh8": "movie",
+      "custom-1795332619303-n5ww": "movie"
     },
     "genreOverrides": {
       "lb-0-hTha": [
@@ -103635,7 +103674,8 @@
       "custom-1795110436407-1ni9": "日本",
       "custom-1795119763181-r9ye": "日本",
       "custom-1795154889446-iqtt": "日本",
-      "custom-1795288867095-guh8": "ハリウッド"
+      "custom-1795288867095-guh8": "ハリウッド",
+      "custom-1795332619303-n5ww": "その他"
     },
     "formatOverrides": {
       "lb-0-hTha": "live",
@@ -153382,15 +153422,51 @@
           "fetchedAt": "2026-11-15T23:23:11.402043+00:00"
         },
         "poster84": {
-          "path": null,
-          "tmdbId": null,
-          "checkedAt": "2026-11-21T20:22:09.238Z",
+          "tmdbId": 10840,
           "provider": "tmdb",
           "checkedIdentity84": "onyourmark|1995",
           "matchedTitle84": "",
           "validated84": true,
           "mediaKind84": "movie",
           "posterPinTrust84": null
+        },
+        "studio130": {
+          "schema": 2,
+          "source": "studio-official",
+          "sourceUrl": "https://www.ghibli.jp/works/onyourmark/",
+          "checkedAt": "2026-11-21T19:50:35.891720+00:00",
+          "kind": "movie",
+          "scope": "movie",
+          "filmTitles": [
+            "On Your Mark",
+            "On Your Mark"
+          ],
+          "filmYear": 1995,
+          "companies": [
+            {
+              "id": 10342,
+              "name": "Studio Ghibli",
+              "country": "JP"
+            },
+            {
+              "name": "Real Cast Inc."
+            }
+          ],
+          "productionCountries": [
+            {
+              "code": "JP",
+              "name": "Japan"
+            }
+          ],
+          "originalLanguage": "ja",
+          "spokenLanguages": [],
+          "genres": [
+            {
+              "id": 16,
+              "name": "Animation"
+            }
+          ],
+          "formatHint": "animation"
         }
       },
       "lb-460-20eA": {
@@ -172489,6 +172565,65 @@
           "creators": [],
           "source": "tmdb-github",
           "fetchedAt": "2026-11-15T23:23:11.402043+00:00"
+        },
+        "studio130": {
+          "schema": 2,
+          "source": "tmdb",
+          "checkedAt": "2026-11-21T19:49:31.863570+00:00",
+          "kind": "tv",
+          "tmdbId": 66732,
+          "scope": "series",
+          "filmTitles": [
+            "Stranger Things 5: The Finale"
+          ],
+          "filmYear": 2025,
+          "companies": [
+            {
+              "id": 2575,
+              "name": "21 Laps Entertainment",
+              "country": "US"
+            },
+            {
+              "id": 170090,
+              "name": "Monkey Massacre Productions",
+              "country": "US"
+            },
+            {
+              "id": 184664,
+              "name": "Upside Down Pictures",
+              "country": "US"
+            }
+          ],
+          "productionCountries": [
+            {
+              "code": "US",
+              "name": "United States of America"
+            }
+          ],
+          "originalLanguage": "en",
+          "spokenLanguages": [
+            {
+              "code": "en",
+              "name": "English"
+            }
+          ],
+          "genres": [
+            {
+              "id": 10759,
+              "name": "Action & Adventure"
+            },
+            {
+              "id": 9648,
+              "name": "Mystery"
+            },
+            {
+              "id": 10765,
+              "name": "Sci-Fi & Fantasy"
+            }
+          ],
+          "formatHint": "",
+          "releaseDate": "2025-12-31",
+          "runtime": 129
         }
       },
       "custom-1790322764890-2w6w": {
@@ -188591,7 +188726,53 @@
         },
         "note": "ぬるいロムコム的展開も多いが、ペニーのキャラなどは好き。シットコム的笑いもちゃんとしていてもちろん全ての回を見た訳では無いが、それなりにずっと面白い。後半は引き伸ばし的な展開も多いけどね。と言っても大して展開とか考えるべきでないんだろうけど、",
         "noteSource": "manual",
-        "noteEditedAt": "2026-10-19T13:37:38.780Z"
+        "noteEditedAt": "2026-10-19T13:37:38.780Z",
+        "studio130": {
+          "schema": 2,
+          "source": "tmdb",
+          "checkedAt": "2026-11-21T19:49:32.252795+00:00",
+          "kind": "tv",
+          "tmdbId": 1418,
+          "scope": "tv",
+          "filmTitles": [
+            "ビッグバン★セオリー"
+          ],
+          "filmYear": 2007,
+          "companies": [
+            {
+              "id": 35504,
+              "name": "Chuck Lorre Productions",
+              "country": "US"
+            },
+            {
+              "id": 1957,
+              "name": "Warner Bros. Television",
+              "country": "US"
+            }
+          ],
+          "productionCountries": [
+            {
+              "code": "US",
+              "name": "United States of America"
+            }
+          ],
+          "originalLanguage": "en",
+          "spokenLanguages": [
+            {
+              "code": "en",
+              "name": "English"
+            }
+          ],
+          "genres": [
+            {
+              "id": 35,
+              "name": "コメディ"
+            }
+          ],
+          "formatHint": "",
+          "releaseDate": "2007-09-24",
+          "runtime": null
+        }
       },
       "custom-1792420000000-008": {
         "contentType": "tv_series",
@@ -189283,7 +189464,46 @@
       },
       "custom-1792421000000-006": {
         "contentType": "tv_series",
-        "tmdbType": "tv"
+        "tmdbType": "tv",
+        "studio130": {
+          "schema": 2,
+          "source": "tmdb",
+          "checkedAt": "2026-11-21T19:49:32.378213+00:00",
+          "kind": "tv",
+          "tmdbId": 88264,
+          "scope": "tv",
+          "filmTitles": [
+            "ラジエーションハウス"
+          ],
+          "filmYear": 2019,
+          "companies": [],
+          "productionCountries": [
+            {
+              "code": "JP",
+              "name": "Japan"
+            }
+          ],
+          "originalLanguage": "ja",
+          "spokenLanguages": [
+            {
+              "code": "ja",
+              "name": "Japanese"
+            }
+          ],
+          "genres": [
+            {
+              "id": 18,
+              "name": "ドラマ"
+            },
+            {
+              "id": 9648,
+              "name": "謎"
+            }
+          ],
+          "formatHint": "",
+          "releaseDate": "2019-04-08",
+          "runtime": null
+        }
       },
       "custom-1792421000000-007": {
         "contentType": "tv_series",
@@ -189651,7 +189871,61 @@
       },
       "custom-1792421000000-013": {
         "contentType": "tv_series",
-        "tmdbType": "tv"
+        "tmdbType": "tv",
+        "studio130": {
+          "schema": 2,
+          "source": "tmdb",
+          "checkedAt": "2026-11-21T19:49:32.774065+00:00",
+          "kind": "tv",
+          "tmdbId": 46260,
+          "scope": "tv",
+          "filmTitles": [
+            "NARUTO -ナルト-"
+          ],
+          "filmYear": 2002,
+          "companies": [
+            {
+              "id": 3234,
+              "name": "Pierrot",
+              "country": "JP"
+            },
+            {
+              "id": 244119,
+              "name": "Rakuonsha",
+              "country": "JP"
+            }
+          ],
+          "productionCountries": [
+            {
+              "code": "JP",
+              "name": "Japan"
+            }
+          ],
+          "originalLanguage": "ja",
+          "spokenLanguages": [
+            {
+              "code": "ja",
+              "name": "Japanese"
+            }
+          ],
+          "genres": [
+            {
+              "id": 16,
+              "name": "アニメーション"
+            },
+            {
+              "id": 10759,
+              "name": "Action & Adventure"
+            },
+            {
+              "id": 10765,
+              "name": "Sci-Fi & Fantasy"
+            }
+          ],
+          "formatHint": "animation",
+          "releaseDate": "2002-10-03",
+          "runtime": null
+        }
       },
       "custom-1792421000000-014": {
         "contentType": "tv_series",
@@ -195443,10 +195717,17 @@
           "fetchedAt": "2026-11-20T06:08:09.842Z"
         },
         "studio130": {
+          "schema": 2,
           "source": "tmdb",
-          "checkedAt": "2026-11-20T06:08:10.737Z",
+          "checkedAt": "2026-11-21T19:49:32.870718+00:00",
           "kind": "tv",
           "tmdbId": 332683,
+          "scope": "tv",
+          "filmTitles": [
+            "地雷グリコ",
+            "Rock, Paper, Landmines"
+          ],
+          "filmYear": 2026,
           "companies": [
             {
               "id": 213255,
@@ -195464,17 +195745,6 @@
               "country": "US"
             }
           ],
-          "schema": 2,
-          "filmTitles": [
-            "地雷グリコ",
-            "Rock, Paper, Landmines",
-            "地雷グリコ",
-            "Rock, Paper, Landmines",
-            "地雷グリコ",
-            "地雷グリコ",
-            "Rock, Paper, Landmines"
-          ],
-          "filmYear": 2026,
           "productionCountries": [
             {
               "code": "JP",
@@ -195495,7 +195765,7 @@
           "genres": [
             {
               "id": 18,
-              "name": "Drama"
+              "name": "ドラマ"
             }
           ],
           "formatHint": "",
@@ -195532,10 +195802,17 @@
           }
         ],
         "studio130": {
+          "schema": 2,
           "source": "tmdb",
-          "checkedAt": "2026-11-21T19:21:08.439Z",
+          "checkedAt": "2026-11-21T19:49:33.122366+00:00",
           "kind": "movie",
           "tmdbId": 592,
+          "scope": "movie",
+          "filmTitles": [
+            "カンバセーション…盗聴…",
+            "The Conversation"
+          ],
+          "filmYear": 1974,
           "companies": [
             {
               "id": 14120,
@@ -195548,17 +195825,6 @@
               "country": "US"
             }
           ],
-          "schema": 2,
-          "filmTitles": [
-            "カンバセーション…盗聴…",
-            "The Conversation",
-            "The Conversation",
-            "The Conversation",
-            "カンバセーション…盗聴…",
-            "The Conversation",
-            "The Conversation"
-          ],
-          "filmYear": 1974,
           "productionCountries": [
             {
               "code": "US",
@@ -195575,20 +195841,20 @@
           "genres": [
             {
               "id": 80,
-              "name": "Crime"
+              "name": "犯罪"
             },
             {
               "id": 18,
-              "name": "Drama"
+              "name": "ドラマ"
             },
             {
               "id": 9648,
-              "name": "Mystery"
+              "name": "謎"
             }
           ],
           "formatHint": "",
           "releaseDate": "1974-04-12",
-          "runtime": 115
+          "runtime": 113
         },
         "crew84": {
           "directors": [
@@ -195608,6 +195874,143 @@
           "validated84": true,
           "mediaKind84": "movie",
           "posterPinTrust84": null
+        }
+      },
+      "custom-1795332619303-n5ww": {
+        "publishedAt": "Sun, 22 Nov 2026 20:29:06 +1300",
+        "addedDate": "2026-11-22",
+        "addedDateSource": "rss-first-seen",
+        "reportedWatchedDate": "2026-11-22",
+        "note": "演技下手、展開シャバい、ご都合的、ラストのネタバラシも主人公都合。くだらん邦画。森川葵演技下手で嫌い。まあ驚きと魅力と展開の少ないコンフィデンスマンjpかな",
+        "noteSource": "letterboxd-rss",
+        "noteImportedAt": "2026-11-22T07:30:20.157Z",
+        "rssReviewRecords": {
+          "letterboxd-review-1597557400": {
+            "body": "演技下手、展開シャバい、ご都合的、ラストのネタバラシも主人公都合。くだらん邦画。森川葵演技下手で嫌い。まあ驚きと魅力と展開の少ないコンフィデンスマンjpかな",
+            "block": "演技下手、展開シャバい、ご都合的、ラストのネタバラシも主人公都合。くだらん邦画。森川葵演技下手で嫌い。まあ驚きと魅力と展開の少ないコンフィデンスマンjpかな"
+          }
+        },
+        "watchHistory": [
+          {
+            "id": "rss:letterboxd-review-1597557400",
+            "date": "2026-11-22",
+            "recordedAt": "2026-11-22T07:29:06.000Z",
+            "rewatch": false,
+            "retroactive": false,
+            "source": "letterboxd-rss",
+            "manualEdited": false
+          }
+        ],
+        "crew84": {
+          "directors": [
+            "Shinichiro Ueda"
+          ],
+          "creators": [],
+          "source": "tmdb",
+          "fetchedAt": "2026-11-22T07:30:20.156Z"
+        },
+        "studio130": {
+          "source": "tmdb",
+          "checkedAt": "2026-11-22T07:30:21.251Z",
+          "kind": "movie",
+          "tmdbId": 1312989,
+          "companies": [
+            {
+              "id": 55938,
+              "name": "avex pictures",
+              "country": "JP"
+            },
+            {
+              "id": 104181,
+              "name": "and pictures",
+              "country": "JP"
+            },
+            {
+              "id": 275051,
+              "name": "RecoChoku",
+              "country": "JP"
+            },
+            {
+              "id": 250691,
+              "name": "FAB",
+              "country": "JP"
+            },
+            {
+              "id": 208888,
+              "name": "Nakachika",
+              "country": "JP"
+            },
+            {
+              "id": 142186,
+              "name": "Hakuhodo DY Music & Pictures",
+              "country": "JP"
+            },
+            {
+              "id": 249710,
+              "name": "West Japan Marketing Communications",
+              "country": "JP"
+            },
+            {
+              "id": 256531,
+              "name": "Alba",
+              "country": "JP"
+            },
+            {
+              "id": 275052,
+              "name": "Your Films",
+              "country": "JP"
+            },
+            {
+              "id": 275053,
+              "name": "FIVESTAR INTERACTIVE",
+              "country": "JP"
+            },
+            {
+              "id": 275054,
+              "name": "MOKUKA",
+              "country": "JP"
+            },
+            {
+              "id": 275055,
+              "name": "amo",
+              "country": ""
+            }
+          ],
+          "schema": 2,
+          "filmTitles": [
+            "Angry Squad: The Civil Servant and the Seven Swindlers",
+            "Angry Squad: The Civil Servant and the Seven Swindlers",
+            "Angry Squad: The Civil Servant and the Seven Swindlers",
+            "Angry Squad: The Civil Servant and the Seven Swindlers",
+            "Angry Squad: The Civil Servant and the Seven Swindlers"
+          ],
+          "filmYear": 2024,
+          "productionCountries": [
+            {
+              "code": "JP",
+              "name": "Japan"
+            }
+          ],
+          "originalLanguage": "ja",
+          "spokenLanguages": [
+            {
+              "code": "ja",
+              "name": "Japanese"
+            }
+          ],
+          "genres": [
+            {
+              "id": 18,
+              "name": "Drama"
+            },
+            {
+              "id": 35,
+              "name": "Comedy"
+            }
+          ],
+          "formatHint": "",
+          "releaseDate": "2024-11-22",
+          "runtime": 120
         }
       }
     },
