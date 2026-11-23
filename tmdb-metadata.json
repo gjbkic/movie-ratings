@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "updatedAt": "2026-11-15T23:23:11.402043+00:00",
+  "updatedAt": "2026-11-23T00:15:31.975277+00:00",
   "catalogSize": 731,
-  "matchedCount": 741,
+  "matchedCount": 865,
   "newCount": 0,
   "unmatchedCount": 41,
   "films": {
@@ -133858,6 +133858,104 @@
         "releaseDate": "1974-04-12",
         "runtime": 113
       }
+    },
+    "custom-1795356835537-a9y2": {
+      "cast": [
+        {
+          "id": 225730,
+          "name": "神木隆之介",
+          "originalName": "神木隆之介",
+          "role": "Kōichi Shikishima"
+        },
+        {
+          "id": 1516266,
+          "name": "浜辺美波",
+          "originalName": "浜辺美波",
+          "role": "Noriko Shikishima"
+        },
+        {
+          "id": 111691,
+          "name": "吉岡秀隆",
+          "originalName": "吉岡秀隆",
+          "role": "Kenji Noda"
+        },
+        {
+          "id": 136191,
+          "name": "田中泯",
+          "originalName": "田中泯",
+          "role": "Kanji Murakami"
+        },
+        {
+          "id": 87637,
+          "name": "長澤まさみ",
+          "originalName": "長澤まさみ",
+          "role": "Makoto Aoyama"
+        },
+        {
+          "id": 1161474,
+          "name": "山田裕貴",
+          "originalName": "山田裕貴",
+          "role": "Shiro Mizushima"
+        },
+        {
+          "id": 121716,
+          "name": "佐々木蔵之介",
+          "originalName": "佐々木蔵之介",
+          "role": "Seiji Akitsu"
+        },
+        {
+          "id": 100766,
+          "name": "安藤サクラ",
+          "originalName": "安藤サクラ",
+          "role": "Sumiko Ōta"
+        },
+        {
+          "id": 2541,
+          "name": "國村隼",
+          "originalName": "國村隼",
+          "role": "Dr. Ogata"
+        },
+        {
+          "id": 2430993,
+          "name": "田中美央",
+          "originalName": "田中美央",
+          "role": "Captain Tatsuo Hotta"
+        },
+        {
+          "id": 4389435,
+          "name": "永谷咲笑",
+          "originalName": "永谷咲笑",
+          "role": "Akiko Shikishima"
+        },
+        {
+          "id": 111640,
+          "name": "青木崇高",
+          "originalName": "青木崇高",
+          "role": "Sosaku Tachibana"
+        },
+        {
+          "id": 2090099,
+          "name": "前原滉",
+          "originalName": "前原滉",
+          "role": "Akira Hagiwara"
+        },
+        {
+          "id": 43667,
+          "name": "飯田基祐",
+          "originalName": "飯田基祐",
+          "role": "Akio Itagaki"
+        },
+        {
+          "id": 79006,
+          "name": "水橋研二",
+          "originalName": "水橋研二",
+          "role": "Kunio Tsuruno"
+        }
+      ],
+      "castCheckedAt": "2026-11-23T00:15:31.975227+00:00",
+      "castResolverVersion": 2,
+      "tmdbId": 1381071,
+      "type": "movie"
     }
   },
   "unmatched": {
