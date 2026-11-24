@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1795550225073,
-  "sourceUpdatedIso": "2026-11-24T19:57:05.073Z",
+  "sourceUpdatedAt": 1795550231174,
+  "sourceUpdatedIso": "2026-11-24T19:57:11.174Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -24253,7 +24253,7 @@
   "newRanking": {
     "app": "movie30-rerank-analysis",
     "schema": 1,
-    "exportedAt": "2026-11-24T19:57:09.096Z",
+    "exportedAt": "2026-11-24T19:57:15.134Z",
     "rerankV2": {
       "version": 2,
       "startedAt": 1794395021969,
@@ -80937,6 +80937,74 @@
               "afterCount": 447
             }
           ]
+        },
+        {
+          "id": "rrcycle-1795550231117-82z9b",
+          "at": 1795550231117,
+          "kind": "cycle-review",
+          "mode": "conflict",
+          "ids": [
+            "custom-1790322756418-p88i",
+            "lb-52-2b5E",
+            "custom-1790423280120-qki8"
+          ],
+          "displayIds": [
+            "custom-1790423280120-qki8",
+            "custom-1790322756418-p88i",
+            "lb-52-2b5E"
+          ],
+          "groups": [
+            [
+              "custom-1790322756418-p88i"
+            ],
+            [
+              "lb-52-2b5E"
+            ],
+            [
+              "custom-1790423280120-qki8"
+            ]
+          ],
+          "reviewResolves": [
+            "custom-1790322756418-p88i\u0000lb-52-2b5E",
+            "custom-1790322756418-p88i\u0000custom-1790423280120-qki8",
+            "custom-1790423280120-qki8\u0000lb-52-2b5E"
+          ],
+          "cycleReviewFromKey": "rr2-1795110702153-hdfgx|custom-1790322756418-p88i\u0000custom-1790423280120-qki8",
+          "genreScope": "同系統を比較 · ドラマ・娯楽",
+          "rankDelta": {
+            "version": 1,
+            "shared": 447,
+            "newCompared": 0,
+            "seenAfter": 447,
+            "changed": 4,
+            "median": 0,
+            "p90": 0,
+            "max": 1,
+            "inversions": 2
+          },
+          "triadPositions": [
+            {
+              "id": "custom-1790423280120-qki8",
+              "before": 297,
+              "after": 297,
+              "beforeCount": 447,
+              "afterCount": 447
+            },
+            {
+              "id": "custom-1790322756418-p88i",
+              "before": 281,
+              "after": 281,
+              "beforeCount": 447,
+              "afterCount": 447
+            },
+            {
+              "id": "lb-52-2b5E",
+              "before": 292,
+              "after": 292,
+              "beforeCount": 447,
+              "afterCount": 447
+            }
+          ]
         }
       ],
       "skips": [],
@@ -80946,23 +81014,19 @@
       "genrePlanVersion": 113,
       "rankingMethodVersion": 124,
       "heldReviewNoticeVersion": 118,
-      "cycleReviewQueue": [
-        {
-          "key": "rr2-1795110702153-hdfgx|custom-1790322756418-p88i\u0000custom-1790423280120-qki8"
-        }
-      ],
+      "cycleReviewQueue": [],
       "cycleReviewVersion": 119
     },
     "summary": {
       "n": 448,
       "compared": 447,
       "depth": 446,
-      "confident": 247,
+      "confident": 246,
       "components": 2,
       "drift": null,
       "stage": "一巡中",
       "detail": "まず全作品に比較結果をつなぎます。",
-      "judged": 1339,
+      "judged": 1340,
       "remaining": null,
       "estimated": "全作品を比較中",
       "bounds": {
@@ -81379,13 +81443,13 @@
         "best": 82,
         "worst": 112
       },
-      "lb-321-2aNK": {
-        "best": 84,
-        "worst": 134
-      },
       "lb-571-28qk": {
         "best": 74,
         "worst": 131
+      },
+      "lb-321-2aNK": {
+        "best": 84,
+        "worst": 134
       },
       "lb-304-27M0": {
         "best": 90,
@@ -81735,13 +81799,13 @@
         "best": 157,
         "worst": 220
       },
-      "lb-174-29VI": {
-        "best": 170,
-        "worst": 222
-      },
       "lb-525-2aVE": {
         "best": 158,
         "worst": 271
+      },
+      "lb-174-29VI": {
+        "best": 170,
+        "worst": 222
       },
       "custom-1795356835537-a9y2": {
         "best": 1,
@@ -84204,23 +84268,23 @@
         ]
       },
       {
+        "id": "lb-571-28qk",
+        "title": "スピード",
+        "rank": 101,
+        "genres": [
+          "アクション",
+          "娯楽"
+        ]
+      },
+      {
         "id": "lb-321-2aNK",
         "title": "ゴッドファーザー",
-        "rank": 101,
+        "rank": 102,
         "genres": [
           "クライム",
           "ドラマ",
           "大作",
           "バイオレンス"
-        ]
-      },
-      {
-        "id": "lb-571-28qk",
-        "title": "スピード",
-        "rank": 102,
-        "genres": [
-          "アクション",
-          "娯楽"
         ]
       },
       {
@@ -85442,21 +85506,9 @@
         ]
       },
       {
-        "id": "lb-174-29VI",
-        "title": "レクイエム・フォー・ドリーム",
-        "rank": 190,
-        "genres": [
-          "クライム",
-          "サスペンス",
-          "社会問題・生活",
-          "心理・内面",
-          "ドラマ"
-        ]
-      },
-      {
         "id": "lb-525-2aVE",
         "title": "時計じかけのオレンジ",
-        "rank": 191,
+        "rank": 190,
         "genres": [
           "クライム",
           "世界観",
@@ -85467,6 +85519,18 @@
           "心理・内面",
           "バイオレンス",
           "雰囲気・美学"
+        ]
+      },
+      {
+        "id": "lb-174-29VI",
+        "title": "レクイエム・フォー・ドリーム",
+        "rank": 191,
+        "genres": [
+          "クライム",
+          "サスペンス",
+          "社会問題・生活",
+          "心理・内面",
+          "ドラマ"
         ]
       },
       {
@@ -256707,6 +256771,74 @@
               "afterCount": 447
             }
           ]
+        },
+        {
+          "id": "rrcycle-1795550231117-82z9b",
+          "at": 1795550231117,
+          "kind": "cycle-review",
+          "mode": "conflict",
+          "ids": [
+            "custom-1790322756418-p88i",
+            "lb-52-2b5E",
+            "custom-1790423280120-qki8"
+          ],
+          "displayIds": [
+            "custom-1790423280120-qki8",
+            "custom-1790322756418-p88i",
+            "lb-52-2b5E"
+          ],
+          "groups": [
+            [
+              "custom-1790322756418-p88i"
+            ],
+            [
+              "lb-52-2b5E"
+            ],
+            [
+              "custom-1790423280120-qki8"
+            ]
+          ],
+          "reviewResolves": [
+            "custom-1790322756418-p88i\u0000lb-52-2b5E",
+            "custom-1790322756418-p88i\u0000custom-1790423280120-qki8",
+            "custom-1790423280120-qki8\u0000lb-52-2b5E"
+          ],
+          "cycleReviewFromKey": "rr2-1795110702153-hdfgx|custom-1790322756418-p88i\u0000custom-1790423280120-qki8",
+          "genreScope": "同系統を比較 · ドラマ・娯楽",
+          "rankDelta": {
+            "version": 1,
+            "shared": 447,
+            "newCompared": 0,
+            "seenAfter": 447,
+            "changed": 4,
+            "median": 0,
+            "p90": 0,
+            "max": 1,
+            "inversions": 2
+          },
+          "triadPositions": [
+            {
+              "id": "custom-1790423280120-qki8",
+              "before": 297,
+              "after": 297,
+              "beforeCount": 447,
+              "afterCount": 447
+            },
+            {
+              "id": "custom-1790322756418-p88i",
+              "before": 281,
+              "after": 281,
+              "beforeCount": 447,
+              "afterCount": 447
+            },
+            {
+              "id": "lb-52-2b5E",
+              "before": 292,
+              "after": 292,
+              "beforeCount": 447,
+              "afterCount": 447
+            }
+          ]
         }
       ],
       "skips": [],
@@ -256716,11 +256848,7 @@
       "genrePlanVersion": 113,
       "rankingMethodVersion": 124,
       "heldReviewNoticeVersion": 118,
-      "cycleReviewQueue": [
-        {
-          "key": "rr2-1795110702153-hdfgx|custom-1790322756418-p88i\u0000custom-1790423280120-qki8"
-        }
-      ],
+      "cycleReviewQueue": [],
       "cycleReviewVersion": 119
     }
   }
