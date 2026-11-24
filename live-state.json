@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1795550514587,
-  "sourceUpdatedIso": "2026-11-24T20:01:54.587Z",
+  "sourceUpdatedAt": 1795550583007,
+  "sourceUpdatedIso": "2026-11-24T20:03:03.007Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -24253,7 +24253,7 @@
   "newRanking": {
     "app": "movie30-rerank-analysis",
     "schema": 1,
-    "exportedAt": "2026-11-24T20:01:58.586Z",
+    "exportedAt": "2026-11-24T20:03:07.119Z",
     "rerankV2": {
       "version": 2,
       "startedAt": 1794395021969,
@@ -81665,6 +81665,61 @@
             }
           ],
           "jumpChecks": []
+        },
+        {
+          "id": "rrpair-1795550581908-xmxed",
+          "at": 1795550581908,
+          "kind": "pair-review",
+          "mode": "direct",
+          "editorFocus": "lb-116-1YYc",
+          "ids": [
+            "lb-116-1YYc",
+            "lb-97-2a7u"
+          ],
+          "displayIds": [
+            "lb-116-1YYc",
+            "lb-97-2a7u"
+          ],
+          "groups": [
+            [
+              "lb-116-1YYc"
+            ],
+            [
+              "lb-97-2a7u"
+            ]
+          ],
+          "reviewResolves": [
+            "lb-116-1YYc\u0000lb-97-2a7u"
+          ],
+          "genreScope": "同系統を比較 · アクション",
+          "rankDelta": {
+            "version": 1,
+            "shared": 447,
+            "newCompared": 0,
+            "seenAfter": 447,
+            "changed": 14,
+            "median": 0,
+            "p90": 0,
+            "max": 8,
+            "inversions": 15
+          },
+          "triadPositions": [
+            {
+              "id": "lb-116-1YYc",
+              "before": 26,
+              "after": 22,
+              "beforeCount": 447,
+              "afterCount": 447
+            },
+            {
+              "id": "lb-97-2a7u",
+              "before": 25,
+              "after": 33,
+              "beforeCount": 447,
+              "afterCount": 447
+            }
+          ],
+          "jumpChecks": []
         }
       ],
       "skips": [],
@@ -81686,7 +81741,7 @@
       "drift": null,
       "stage": "一巡中",
       "detail": "まず全作品に比較結果をつなぎます。",
-      "judged": 1352,
+      "judged": 1353,
       "remaining": null,
       "estimated": "全作品を比較中",
       "bounds": {
@@ -81695,7 +81750,7 @@
         "within10": 42,
         "within25": 155,
         "within50": 339,
-        "comparable": 90824,
+        "comparable": 90821,
         "totalPairs": 99681,
         "top50": 40,
         "top150": 144,
@@ -81787,25 +81842,17 @@
         "best": 16,
         "worst": 29
       },
+      "lb-116-1YYc": {
+        "best": 19,
+        "worst": 36
+      },
       "lb-322-2aeA": {
         "best": 18,
-        "worst": 25
+        "worst": 26
       },
       "lb-8-6YK": {
         "best": 19,
         "worst": 30
-      },
-      "lb-112-1W4G": {
-        "best": 17,
-        "worst": 29
-      },
-      "lb-97-2a7u": {
-        "best": 21,
-        "worst": 36
-      },
-      "lb-116-1YYc": {
-        "best": 22,
-        "worst": 37
       },
       "lb-18-2ahY": {
         "best": 19,
@@ -81819,6 +81866,10 @@
         "best": 25,
         "worst": 31
       },
+      "lb-112-1W4G": {
+        "best": 17,
+        "worst": 30
+      },
       "lb-396-251c": {
         "best": 27,
         "worst": 33
@@ -81828,12 +81879,16 @@
         "worst": 34
       },
       "added-anchor-577": {
-        "best": 31,
+        "best": 30,
         "worst": 38
       },
       "lb-491-29R2": {
         "best": 6,
         "worst": 44
+      },
+      "lb-97-2a7u": {
+        "best": 22,
+        "worst": 38
       },
       "lb-333-2b4m": {
         "best": 32,
@@ -83439,13 +83494,13 @@
         "best": 430,
         "worst": 441
       },
-      "custom-1789385860147-fi90": {
-        "best": 411,
-        "worst": 443
-      },
       "lb-169-29rS": {
         "best": 423,
         "worst": 442
+      },
+      "custom-1789385860147-fi90": {
+        "best": 411,
+        "worst": 443
       },
       "custom-1789408864046-u4p4": {
         "best": 431,
@@ -83818,9 +83873,23 @@
         ]
       },
       {
+        "id": "lb-116-1YYc",
+        "title": "GHOST IN THE SHELL／攻殻機動隊",
+        "rank": 22,
+        "genres": [
+          "サスペンス",
+          "アクション",
+          "SF",
+          "哲学・思想",
+          "世界観",
+          "心理・内面",
+          "雰囲気・美学"
+        ]
+      },
+      {
         "id": "lb-322-2aeA",
         "title": "カッコーの巣の上で",
-        "rank": 22,
+        "rank": 23,
         "genres": [
           "ドラマ",
           "歴史",
@@ -83833,7 +83902,7 @@
       {
         "id": "lb-8-6YK",
         "title": "エターナル・サンシャイン",
-        "rank": 23,
+        "rank": 24,
         "genres": [
           "恋愛",
           "ファンタジー",
@@ -83845,49 +83914,9 @@
         ]
       },
       {
-        "id": "lb-112-1W4G",
-        "title": "天空の城ラピュタ",
-        "rank": 24,
-        "genres": [
-          "ファンタジー",
-          "アドベンチャー",
-          "アクション",
-          "子供向け",
-          "世界観",
-          "comfort",
-          "娯楽",
-          "雰囲気・美学"
-        ]
-      },
-      {
-        "id": "lb-97-2a7u",
-        "title": "ダイ・ハード",
-        "rank": 25,
-        "genres": [
-          "アクション",
-          "comfort",
-          "コメディ",
-          "娯楽"
-        ]
-      },
-      {
-        "id": "lb-116-1YYc",
-        "title": "GHOST IN THE SHELL／攻殻機動隊",
-        "rank": 26,
-        "genres": [
-          "サスペンス",
-          "アクション",
-          "SF",
-          "哲学・思想",
-          "世界観",
-          "心理・内面",
-          "雰囲気・美学"
-        ]
-      },
-      {
         "id": "lb-18-2ahY",
         "title": "グッド・ウィル・ハンティング／旅立ち",
-        "rank": 27,
+        "rank": 25,
         "genres": [
           "ドラマ",
           "青春・若者",
@@ -83899,7 +83928,7 @@
       {
         "id": "lb-137-2a1c",
         "title": "マトリックス リローデッド",
-        "rank": 28,
+        "rank": 26,
         "genres": [
           "SF",
           "アクション",
@@ -83912,7 +83941,7 @@
       {
         "id": "lb-88-1RUM",
         "title": "火垂るの墓",
-        "rank": 29,
+        "rank": 27,
         "genres": [
           "戦争",
           "歴史",
@@ -83921,9 +83950,24 @@
         ]
       },
       {
+        "id": "lb-112-1W4G",
+        "title": "天空の城ラピュタ",
+        "rank": 28,
+        "genres": [
+          "ファンタジー",
+          "アドベンチャー",
+          "アクション",
+          "子供向け",
+          "世界観",
+          "comfort",
+          "娯楽",
+          "雰囲気・美学"
+        ]
+      },
+      {
         "id": "lb-396-251c",
         "title": "生きる",
-        "rank": 30,
+        "rank": 29,
         "genres": [
           "ドラマ",
           "社会問題・生活",
@@ -83935,7 +83979,7 @@
       {
         "id": "lb-83-2b8S",
         "title": "レオン",
-        "rank": 31,
+        "rank": 30,
         "genres": [
           "アクション",
           "ドラマ",
@@ -83948,7 +83992,7 @@
       {
         "id": "added-anchor-577",
         "title": "善き人のためのソナタ",
-        "rank": 32,
+        "rank": 31,
         "genres": [
           "ドラマ",
           "歴史",
@@ -83962,7 +84006,7 @@
       {
         "id": "lb-491-29R2",
         "title": "オールドボーイ",
-        "rank": 33,
+        "rank": 32,
         "genres": [
           "サスペンス",
           "ミステリー",
@@ -83972,6 +84016,17 @@
           "どんでん返し",
           "心理・内面",
           "バイオレンス"
+        ]
+      },
+      {
+        "id": "lb-97-2a7u",
+        "title": "ダイ・ハード",
+        "rank": 33,
+        "genres": [
+          "アクション",
+          "comfort",
+          "コメディ",
+          "娯楽"
         ]
       },
       {
@@ -89506,9 +89561,19 @@
         ]
       },
       {
+        "id": "lb-169-29rS",
+        "title": "マスク",
+        "rank": 435,
+        "genres": [
+          "コメディ",
+          "ファンタジー",
+          "娯楽"
+        ]
+      },
+      {
         "id": "custom-1789385860147-fi90",
         "title": "スノーピアサー",
-        "rank": 435,
+        "rank": 436,
         "genres": [
           "娯楽",
           "ファンタジー",
@@ -89519,16 +89584,6 @@
           "切ない",
           "社会問題・生活",
           "バイオレンス"
-        ]
-      },
-      {
-        "id": "lb-169-29rS",
-        "title": "マスク",
-        "rank": 436,
-        "genres": [
-          "コメディ",
-          "ファンタジー",
-          "娯楽"
         ]
       },
       {
@@ -258154,6 +258209,61 @@
               "id": "lb-353-Sw0",
               "before": 12,
               "after": 13,
+              "beforeCount": 447,
+              "afterCount": 447
+            }
+          ],
+          "jumpChecks": []
+        },
+        {
+          "id": "rrpair-1795550581908-xmxed",
+          "at": 1795550581908,
+          "kind": "pair-review",
+          "mode": "direct",
+          "editorFocus": "lb-116-1YYc",
+          "ids": [
+            "lb-116-1YYc",
+            "lb-97-2a7u"
+          ],
+          "displayIds": [
+            "lb-116-1YYc",
+            "lb-97-2a7u"
+          ],
+          "groups": [
+            [
+              "lb-116-1YYc"
+            ],
+            [
+              "lb-97-2a7u"
+            ]
+          ],
+          "reviewResolves": [
+            "lb-116-1YYc\u0000lb-97-2a7u"
+          ],
+          "genreScope": "同系統を比較 · アクション",
+          "rankDelta": {
+            "version": 1,
+            "shared": 447,
+            "newCompared": 0,
+            "seenAfter": 447,
+            "changed": 14,
+            "median": 0,
+            "p90": 0,
+            "max": 8,
+            "inversions": 15
+          },
+          "triadPositions": [
+            {
+              "id": "lb-116-1YYc",
+              "before": 26,
+              "after": 22,
+              "beforeCount": 447,
+              "afterCount": 447
+            },
+            {
+              "id": "lb-97-2a7u",
+              "before": 25,
+              "after": 33,
               "beforeCount": 447,
               "afterCount": 447
             }
