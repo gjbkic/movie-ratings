@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1795538752697,
-  "sourceUpdatedIso": "2026-11-24T16:45:52.697Z",
+  "sourceUpdatedAt": 1795538762286,
+  "sourceUpdatedIso": "2026-11-24T16:46:02.286Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -9429,7 +9429,9 @@
         "ホラー",
         "SF",
         "娯楽",
-        "戦争"
+        "戦争",
+        "社会問題・生活",
+        "ファンタジー"
       ],
       "origin": "日本",
       "format": "live",
@@ -24247,7 +24249,7 @@
   "newRanking": {
     "app": "movie30-rerank-analysis",
     "schema": 1,
-    "exportedAt": "2026-11-24T16:45:56.796Z",
+    "exportedAt": "2026-11-24T16:46:06.430Z",
     "rerankV2": {
       "version": 2,
       "startedAt": 1794395021969,
@@ -87098,7 +87100,9 @@
           "ホラー",
           "SF",
           "娯楽",
-          "戦争"
+          "戦争",
+          "社会問題・生活",
+          "ファンタジー"
         ]
       }
     ]
@@ -104482,7 +104486,9 @@
         "ホラー",
         "SF",
         "娯楽",
-        "戦争"
+        "戦争",
+        "社会問題・生活",
+        "ファンタジー"
       ]
     },
     "originOverrides": {
