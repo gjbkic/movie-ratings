@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1795550495693,
-  "sourceUpdatedIso": "2026-11-24T20:01:35.693Z",
+  "sourceUpdatedAt": 1795550514587,
+  "sourceUpdatedIso": "2026-11-24T20:01:54.587Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -24253,7 +24253,7 @@
   "newRanking": {
     "app": "movie30-rerank-analysis",
     "schema": 1,
-    "exportedAt": "2026-11-24T20:01:39.606Z",
+    "exportedAt": "2026-11-24T20:01:58.586Z",
     "rerankV2": {
       "version": 2,
       "startedAt": 1794395021969,
@@ -81610,6 +81610,61 @@
             }
           ],
           "jumpChecks": []
+        },
+        {
+          "id": "rrpair-1795550514525-gsd0x",
+          "at": 1795550514525,
+          "kind": "pair-review",
+          "mode": "direct",
+          "editorFocus": "custom-1790254612541-iyij",
+          "ids": [
+            "custom-1790254612541-iyij",
+            "lb-353-Sw0"
+          ],
+          "displayIds": [
+            "custom-1790254612541-iyij",
+            "lb-353-Sw0"
+          ],
+          "groups": [
+            [
+              "custom-1790254612541-iyij"
+            ],
+            [
+              "lb-353-Sw0"
+            ]
+          ],
+          "reviewResolves": [
+            "custom-1790254612541-iyij\u0000lb-353-Sw0"
+          ],
+          "genreScope": "同系統を比較 · どんでん返し・雰囲気・美学",
+          "rankDelta": {
+            "version": 1,
+            "shared": 447,
+            "newCompared": 0,
+            "seenAfter": 447,
+            "changed": 3,
+            "median": 0,
+            "p90": 0,
+            "max": 2,
+            "inversions": 2
+          },
+          "triadPositions": [
+            {
+              "id": "custom-1790254612541-iyij",
+              "before": 14,
+              "after": 12,
+              "beforeCount": 447,
+              "afterCount": 447
+            },
+            {
+              "id": "lb-353-Sw0",
+              "before": 12,
+              "after": 13,
+              "beforeCount": 447,
+              "afterCount": 447
+            }
+          ],
+          "jumpChecks": []
         }
       ],
       "skips": [],
@@ -81631,7 +81686,7 @@
       "drift": null,
       "stage": "一巡中",
       "detail": "まず全作品に比較結果をつなぎます。",
-      "judged": 1351,
+      "judged": 1352,
       "remaining": null,
       "estimated": "全作品を比較中",
       "bounds": {
@@ -81640,7 +81695,7 @@
         "within10": 42,
         "within25": 155,
         "within50": 339,
-        "comparable": 90820,
+        "comparable": 90824,
         "totalPairs": 99681,
         "top50": 40,
         "top150": 144,
@@ -81686,26 +81741,26 @@
       },
       "lb-492-2bcA": {
         "best": 8,
-        "worst": 14
+        "worst": 13
       },
       "custom-1792873754553-ugfj": {
         "best": 5,
         "worst": 15
       },
+      "custom-1790254612541-iyij": {
+        "best": 9,
+        "worst": 14
+      },
       "lb-353-Sw0": {
-        "best": 8,
+        "best": 10,
         "worst": 15
       },
       "lb-467-ptEI": {
-        "best": 11,
+        "best": 12,
         "worst": 16
       },
-      "custom-1790254612541-iyij": {
-        "best": 9,
-        "worst": 17
-      },
       "custom-1790508958519-2edt": {
-        "best": 13,
+        "best": 14,
         "worst": 17
       },
       "lb-334-1Tp2": {
@@ -83606,9 +83661,28 @@
         ]
       },
       {
+        "id": "custom-1790254612541-iyij",
+        "title": "未来世紀ブラジル",
+        "rank": 12,
+        "genres": [
+          "SF",
+          "世界観",
+          "差別・人権",
+          "社会問題・生活",
+          "胸糞",
+          "アクション",
+          "コメディ",
+          "ファンタジー",
+          "恋愛",
+          "どんでん返し",
+          "大作",
+          "雰囲気・美学"
+        ]
+      },
+      {
         "id": "lb-353-Sw0",
         "title": "ブラック・スワン",
-        "rank": 12,
+        "rank": 13,
         "genres": [
           "ドラマ",
           "スリラー",
@@ -83623,7 +83697,7 @@
       {
         "id": "lb-467-ptEI",
         "title": "新世紀エヴァンゲリオン",
-        "rank": 13,
+        "rank": 14,
         "genres": [
           "アクション",
           "SF",
@@ -83637,25 +83711,6 @@
           "娯楽",
           "心理・内面",
           "TV本編"
-        ]
-      },
-      {
-        "id": "custom-1790254612541-iyij",
-        "title": "未来世紀ブラジル",
-        "rank": 14,
-        "genres": [
-          "SF",
-          "世界観",
-          "差別・人権",
-          "社会問題・生活",
-          "胸糞",
-          "アクション",
-          "コメディ",
-          "ファンタジー",
-          "恋愛",
-          "どんでん返し",
-          "大作",
-          "雰囲気・美学"
         ]
       },
       {
@@ -258042,6 +258097,61 @@
             },
             {
               "id": "lb-467-ptEI",
+              "before": 12,
+              "after": 13,
+              "beforeCount": 447,
+              "afterCount": 447
+            }
+          ],
+          "jumpChecks": []
+        },
+        {
+          "id": "rrpair-1795550514525-gsd0x",
+          "at": 1795550514525,
+          "kind": "pair-review",
+          "mode": "direct",
+          "editorFocus": "custom-1790254612541-iyij",
+          "ids": [
+            "custom-1790254612541-iyij",
+            "lb-353-Sw0"
+          ],
+          "displayIds": [
+            "custom-1790254612541-iyij",
+            "lb-353-Sw0"
+          ],
+          "groups": [
+            [
+              "custom-1790254612541-iyij"
+            ],
+            [
+              "lb-353-Sw0"
+            ]
+          ],
+          "reviewResolves": [
+            "custom-1790254612541-iyij\u0000lb-353-Sw0"
+          ],
+          "genreScope": "同系統を比較 · どんでん返し・雰囲気・美学",
+          "rankDelta": {
+            "version": 1,
+            "shared": 447,
+            "newCompared": 0,
+            "seenAfter": 447,
+            "changed": 3,
+            "median": 0,
+            "p90": 0,
+            "max": 2,
+            "inversions": 2
+          },
+          "triadPositions": [
+            {
+              "id": "custom-1790254612541-iyij",
+              "before": 14,
+              "after": 12,
+              "beforeCount": 447,
+              "afterCount": 447
+            },
+            {
+              "id": "lb-353-Sw0",
               "before": 12,
               "after": 13,
               "beforeCount": 447,
