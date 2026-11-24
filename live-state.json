@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1795550605791,
-  "sourceUpdatedIso": "2026-11-24T20:03:25.791Z",
+  "sourceUpdatedAt": 1795550692557,
+  "sourceUpdatedIso": "2026-11-24T20:04:52.557Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -24253,7 +24253,7 @@
   "newRanking": {
     "app": "movie30-rerank-analysis",
     "schema": 1,
-    "exportedAt": "2026-11-24T20:03:29.317Z",
+    "exportedAt": "2026-11-24T20:04:56.559Z",
     "rerankV2": {
       "version": 2,
       "startedAt": 1794395021969,
@@ -81775,6 +81775,61 @@
             }
           ],
           "jumpChecks": []
+        },
+        {
+          "id": "rrpair-1795550692487-e6vtm",
+          "at": 1795550692487,
+          "kind": "pair-review",
+          "mode": "direct",
+          "editorFocus": "lb-9-1skk",
+          "ids": [
+            "lb-9-1skk",
+            "lb-486-b8wK"
+          ],
+          "displayIds": [
+            "lb-9-1skk",
+            "lb-486-b8wK"
+          ],
+          "groups": [
+            [
+              "lb-9-1skk"
+            ],
+            [
+              "lb-486-b8wK"
+            ]
+          ],
+          "reviewResolves": [
+            "lb-486-b8wK\u0000lb-9-1skk"
+          ],
+          "genreScope": "同系統を比較 · SF",
+          "rankDelta": {
+            "version": 1,
+            "shared": 447,
+            "newCompared": 0,
+            "seenAfter": 447,
+            "changed": 8,
+            "median": 0,
+            "p90": 0,
+            "max": 5,
+            "inversions": 6
+          },
+          "triadPositions": [
+            {
+              "id": "lb-9-1skk",
+              "before": 55,
+              "after": 54,
+              "beforeCount": 447,
+              "afterCount": 447
+            },
+            {
+              "id": "lb-486-b8wK",
+              "before": 51,
+              "after": 56,
+              "beforeCount": 447,
+              "afterCount": 447
+            }
+          ],
+          "jumpChecks": []
         }
       ],
       "skips": [],
@@ -81791,12 +81846,12 @@
       "n": 448,
       "compared": 447,
       "depth": 446,
-      "confident": 249,
+      "confident": 250,
       "components": 2,
       "drift": null,
       "stage": "一巡中",
       "detail": "まず全作品に比較結果をつなぎます。",
-      "judged": 1354,
+      "judged": 1355,
       "remaining": null,
       "estimated": "全作品を比較中",
       "bounds": {
@@ -81805,7 +81860,7 @@
         "within10": 44,
         "within25": 155,
         "within50": 339,
-        "comparable": 90830,
+        "comparable": 90832,
         "totalPairs": 99681,
         "top50": 40,
         "top150": 144,
@@ -82013,10 +82068,6 @@
         "best": 50,
         "worst": 79
       },
-      "lb-486-b8wK": {
-        "best": 41,
-        "worst": 79
-      },
       "lb-382-20TI": {
         "best": 45,
         "worst": 63
@@ -82031,14 +82082,18 @@
       },
       "lb-9-1skk": {
         "best": 28,
-        "worst": 65
+        "worst": 63
       },
       "custom-1791863527797-qm90": {
         "best": 52,
         "worst": 80
       },
+      "lb-486-b8wK": {
+        "best": 42,
+        "worst": 79
+      },
       "custom-1791664055911-cuz4": {
-        "best": 43,
+        "best": 44,
         "worst": 140
       },
       "lb-488-294O": {
@@ -82437,13 +82492,13 @@
         "best": 149,
         "worst": 176
       },
-      "lb-287-2amk": {
-        "best": 144,
-        "worst": 176
-      },
       "lb-310-azpY": {
         "best": 149,
         "worst": 171
+      },
+      "lb-287-2amk": {
+        "best": 144,
+        "worst": 176
       },
       "lb-172-2aHW": {
         "best": 150,
@@ -84331,25 +84386,9 @@
         ]
       },
       {
-        "id": "lb-486-b8wK",
-        "title": "ブレードランナー 2049",
-        "rank": 51,
-        "genres": [
-          "SF",
-          "切ない",
-          "哲学・思想",
-          "恋愛",
-          "ミステリー",
-          "どんでん返し",
-          "世界観",
-          "心理・内面",
-          "雰囲気・美学"
-        ]
-      },
-      {
         "id": "lb-382-20TI",
         "title": "ソナチネ",
-        "rank": 52,
+        "rank": 51,
         "genres": [
           "サスペンス",
           "クライム",
@@ -84363,7 +84402,7 @@
       {
         "id": "custom-1791915849111-yhiu",
         "title": "リーガル・ハイ",
-        "rank": 53,
+        "rank": 52,
         "genres": [
           "TV本編",
           "サスペンス",
@@ -84377,7 +84416,7 @@
       {
         "id": "lb-558-1pDe",
         "title": "愛のむきだし",
-        "rank": 54,
+        "rank": 53,
         "genres": [
           "恋愛",
           "コメディ",
@@ -84396,7 +84435,7 @@
       {
         "id": "lb-9-1skk",
         "title": "インセプション",
-        "rank": 55,
+        "rank": 54,
         "genres": [
           "SF",
           "アクション",
@@ -84409,9 +84448,25 @@
       {
         "id": "custom-1791863527797-qm90",
         "title": "BOHEMIAN SUMMER ～宇多田ヒカル Circuit Live 2000",
-        "rank": 56,
+        "rank": 55,
         "genres": [
           "ミュージカル"
+        ]
+      },
+      {
+        "id": "lb-486-b8wK",
+        "title": "ブレードランナー 2049",
+        "rank": 56,
+        "genres": [
+          "SF",
+          "切ない",
+          "哲学・思想",
+          "恋愛",
+          "ミステリー",
+          "どんでん返し",
+          "世界観",
+          "心理・内面",
+          "雰囲気・美学"
         ]
       },
       {
@@ -85800,21 +85855,9 @@
         ]
       },
       {
-        "id": "lb-287-2amk",
-        "title": "ビューティフル・マインド",
-        "rank": 157,
-        "genres": [
-          "ドラマ",
-          "サスペンス",
-          "どんでん返し",
-          "切ない",
-          "心理・内面"
-        ]
-      },
-      {
         "id": "lb-310-azpY",
         "title": "スパイダーマン：スパイダーバース",
-        "rank": 158,
+        "rank": 157,
         "genres": [
           "アクション",
           "ファンタジー",
@@ -85823,6 +85866,18 @@
           "世界観",
           "娯楽",
           "SF"
+        ]
+      },
+      {
+        "id": "lb-287-2amk",
+        "title": "ビューティフル・マインド",
+        "rank": 158,
+        "genres": [
+          "ドラマ",
+          "サスペンス",
+          "どんでん返し",
+          "切ない",
+          "心理・内面"
         ]
       },
       {
@@ -258374,6 +258429,61 @@
               "id": "lb-8-6YK",
               "before": 24,
               "after": 24,
+              "beforeCount": 447,
+              "afterCount": 447
+            }
+          ],
+          "jumpChecks": []
+        },
+        {
+          "id": "rrpair-1795550692487-e6vtm",
+          "at": 1795550692487,
+          "kind": "pair-review",
+          "mode": "direct",
+          "editorFocus": "lb-9-1skk",
+          "ids": [
+            "lb-9-1skk",
+            "lb-486-b8wK"
+          ],
+          "displayIds": [
+            "lb-9-1skk",
+            "lb-486-b8wK"
+          ],
+          "groups": [
+            [
+              "lb-9-1skk"
+            ],
+            [
+              "lb-486-b8wK"
+            ]
+          ],
+          "reviewResolves": [
+            "lb-486-b8wK\u0000lb-9-1skk"
+          ],
+          "genreScope": "同系統を比較 · SF",
+          "rankDelta": {
+            "version": 1,
+            "shared": 447,
+            "newCompared": 0,
+            "seenAfter": 447,
+            "changed": 8,
+            "median": 0,
+            "p90": 0,
+            "max": 5,
+            "inversions": 6
+          },
+          "triadPositions": [
+            {
+              "id": "lb-9-1skk",
+              "before": 55,
+              "after": 54,
+              "beforeCount": 447,
+              "afterCount": 447
+            },
+            {
+              "id": "lb-486-b8wK",
+              "before": 51,
+              "after": 56,
               "beforeCount": 447,
               "afterCount": 447
             }
