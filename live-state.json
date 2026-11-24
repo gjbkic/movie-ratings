@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1795550583007,
-  "sourceUpdatedIso": "2026-11-24T20:03:03.007Z",
+  "sourceUpdatedAt": 1795550598184,
+  "sourceUpdatedIso": "2026-11-24T20:03:18.184Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -24253,7 +24253,7 @@
   "newRanking": {
     "app": "movie30-rerank-analysis",
     "schema": 1,
-    "exportedAt": "2026-11-24T20:03:07.119Z",
+    "exportedAt": "2026-11-24T20:03:22.419Z",
     "rerankV2": {
       "version": 2,
       "startedAt": 1794395021969,
@@ -81720,6 +81720,61 @@
             }
           ],
           "jumpChecks": []
+        },
+        {
+          "id": "rrpair-1795550598112-tk8ho",
+          "at": 1795550598112,
+          "kind": "pair-review",
+          "mode": "direct",
+          "editorFocus": "lb-116-1YYc",
+          "ids": [
+            "lb-116-1YYc",
+            "lb-8-6YK"
+          ],
+          "displayIds": [
+            "lb-116-1YYc",
+            "lb-8-6YK"
+          ],
+          "groups": [
+            [
+              "lb-116-1YYc"
+            ],
+            [
+              "lb-8-6YK"
+            ]
+          ],
+          "reviewResolves": [
+            "lb-116-1YYc\u0000lb-8-6YK"
+          ],
+          "genreScope": "同系統を比較 · SF",
+          "rankDelta": {
+            "version": 1,
+            "shared": 447,
+            "newCompared": 0,
+            "seenAfter": 447,
+            "changed": 0,
+            "median": 0,
+            "p90": 0,
+            "max": 0,
+            "inversions": 0
+          },
+          "triadPositions": [
+            {
+              "id": "lb-116-1YYc",
+              "before": 22,
+              "after": 22,
+              "beforeCount": 447,
+              "afterCount": 447
+            },
+            {
+              "id": "lb-8-6YK",
+              "before": 24,
+              "after": 24,
+              "beforeCount": 447,
+              "afterCount": 447
+            }
+          ],
+          "jumpChecks": []
         }
       ],
       "skips": [],
@@ -81741,16 +81796,16 @@
       "drift": null,
       "stage": "一巡中",
       "detail": "まず全作品に比較結果をつなぎます。",
-      "judged": 1353,
+      "judged": 1354,
       "remaining": null,
       "estimated": "全作品を比較中",
       "bounds": {
         "n": 447,
         "exact": 0,
-        "within10": 42,
+        "within10": 44,
         "within25": 155,
         "within50": 339,
-        "comparable": 90821,
+        "comparable": 90830,
         "totalPairs": 99681,
         "top50": 40,
         "top150": 144,
@@ -81832,7 +81887,7 @@
       },
       "lb-323-1VEo": {
         "best": 18,
-        "worst": 27
+        "worst": 26
       },
       "lb-10-kSz4": {
         "best": 19,
@@ -81844,14 +81899,14 @@
       },
       "lb-116-1YYc": {
         "best": 19,
-        "worst": 36
+        "worst": 28
       },
       "lb-322-2aeA": {
         "best": 18,
         "worst": 26
       },
       "lb-8-6YK": {
-        "best": 19,
+        "best": 21,
         "worst": 30
       },
       "lb-18-2ahY": {
@@ -81863,7 +81918,7 @@
         "worst": 30
       },
       "lb-88-1RUM": {
-        "best": 25,
+        "best": 26,
         "worst": 31
       },
       "lb-112-1W4G": {
@@ -81871,11 +81926,11 @@
         "worst": 30
       },
       "lb-396-251c": {
-        "best": 27,
+        "best": 28,
         "worst": 33
       },
       "lb-83-2b8S": {
-        "best": 28,
+        "best": 29,
         "worst": 34
       },
       "added-anchor-577": {
@@ -81919,7 +81974,7 @@
         "worst": 50
       },
       "lb-349-2aGY": {
-        "best": 29,
+        "best": 30,
         "worst": 54
       },
       "lb-86-cUqs": {
@@ -81939,7 +81994,7 @@
         "worst": 56
       },
       "lb-39-2DjO": {
-        "best": 29,
+        "best": 30,
         "worst": 76
       },
       "lb-395-2bdo": {
@@ -81975,7 +82030,7 @@
         "worst": 68
       },
       "lb-9-1skk": {
-        "best": 27,
+        "best": 28,
         "worst": 65
       },
       "custom-1791863527797-qm90": {
@@ -82003,7 +82058,7 @@
         "worst": 78
       },
       "lb-368-2as8": {
-        "best": 30,
+        "best": 31,
         "worst": 82
       },
       "lb-489-7T2k": {
@@ -258264,6 +258319,61 @@
               "id": "lb-97-2a7u",
               "before": 25,
               "after": 33,
+              "beforeCount": 447,
+              "afterCount": 447
+            }
+          ],
+          "jumpChecks": []
+        },
+        {
+          "id": "rrpair-1795550598112-tk8ho",
+          "at": 1795550598112,
+          "kind": "pair-review",
+          "mode": "direct",
+          "editorFocus": "lb-116-1YYc",
+          "ids": [
+            "lb-116-1YYc",
+            "lb-8-6YK"
+          ],
+          "displayIds": [
+            "lb-116-1YYc",
+            "lb-8-6YK"
+          ],
+          "groups": [
+            [
+              "lb-116-1YYc"
+            ],
+            [
+              "lb-8-6YK"
+            ]
+          ],
+          "reviewResolves": [
+            "lb-116-1YYc\u0000lb-8-6YK"
+          ],
+          "genreScope": "同系統を比較 · SF",
+          "rankDelta": {
+            "version": 1,
+            "shared": 447,
+            "newCompared": 0,
+            "seenAfter": 447,
+            "changed": 0,
+            "median": 0,
+            "p90": 0,
+            "max": 0,
+            "inversions": 0
+          },
+          "triadPositions": [
+            {
+              "id": "lb-116-1YYc",
+              "before": 22,
+              "after": 22,
+              "beforeCount": 447,
+              "afterCount": 447
+            },
+            {
+              "id": "lb-8-6YK",
+              "before": 24,
+              "after": 24,
               "beforeCount": 447,
               "afterCount": 447
             }
