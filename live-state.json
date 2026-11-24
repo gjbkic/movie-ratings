@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1795550419690,
-  "sourceUpdatedIso": "2026-11-24T20:00:19.690Z",
+  "sourceUpdatedAt": 1795550441806,
+  "sourceUpdatedIso": "2026-11-24T20:00:41.806Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -24253,7 +24253,7 @@
   "newRanking": {
     "app": "movie30-rerank-analysis",
     "schema": 1,
-    "exportedAt": "2026-11-24T20:00:23.658Z",
+    "exportedAt": "2026-11-24T20:00:45.777Z",
     "rerankV2": {
       "version": 2,
       "startedAt": 1794395021969,
@@ -81225,6 +81225,116 @@
             }
           ],
           "jumpChecks": []
+        },
+        {
+          "id": "rrpair-1795550440201-ksgvx",
+          "at": 1795550440201,
+          "kind": "pair-review",
+          "mode": "direct",
+          "editorFocus": "lb-350-2bcK",
+          "ids": [
+            "lb-62-2b4w",
+            "lb-350-2bcK"
+          ],
+          "displayIds": [
+            "lb-350-2bcK",
+            "lb-62-2b4w"
+          ],
+          "groups": [
+            [
+              "lb-62-2b4w"
+            ],
+            [
+              "lb-350-2bcK"
+            ]
+          ],
+          "reviewResolves": [
+            "lb-350-2bcK\u0000lb-62-2b4w"
+          ],
+          "genreScope": "ジャンルを横断して比較",
+          "rankDelta": {
+            "version": 1,
+            "shared": 447,
+            "newCompared": 0,
+            "seenAfter": 447,
+            "changed": 4,
+            "median": 0,
+            "p90": 0,
+            "max": 1,
+            "inversions": 2
+          },
+          "triadPositions": [
+            {
+              "id": "lb-350-2bcK",
+              "before": 2,
+              "after": 3,
+              "beforeCount": 447,
+              "afterCount": 447
+            },
+            {
+              "id": "lb-62-2b4w",
+              "before": 1,
+              "after": 1,
+              "beforeCount": 447,
+              "afterCount": 447
+            }
+          ],
+          "jumpChecks": []
+        },
+        {
+          "id": "rrpair-1795550441742-2ofbp",
+          "at": 1795550441742,
+          "kind": "pair-review",
+          "mode": "direct",
+          "editorFocus": "lb-350-2bcK",
+          "ids": [
+            "lb-22-2a1m",
+            "lb-350-2bcK"
+          ],
+          "displayIds": [
+            "lb-350-2bcK",
+            "lb-22-2a1m"
+          ],
+          "groups": [
+            [
+              "lb-22-2a1m"
+            ],
+            [
+              "lb-350-2bcK"
+            ]
+          ],
+          "reviewResolves": [
+            "lb-22-2a1m\u0000lb-350-2bcK"
+          ],
+          "genreScope": "ジャンルを横断して比較",
+          "rankDelta": {
+            "version": 1,
+            "shared": 447,
+            "newCompared": 0,
+            "seenAfter": 447,
+            "changed": 9,
+            "median": 0,
+            "p90": 0,
+            "max": 6,
+            "inversions": 7
+          },
+          "triadPositions": [
+            {
+              "id": "lb-350-2bcK",
+              "before": 3,
+              "after": 9,
+              "beforeCount": 447,
+              "afterCount": 447
+            },
+            {
+              "id": "lb-22-2a1m",
+              "before": 2,
+              "after": 2,
+              "beforeCount": 447,
+              "afterCount": 447
+            }
+          ],
+          "jumpChecks": []
         }
       ],
       "skips": [],
@@ -81246,16 +81356,16 @@
       "drift": null,
       "stage": "一巡中",
       "detail": "まず全作品に比較結果をつなぎます。",
-      "judged": 1344,
+      "judged": 1346,
       "remaining": null,
       "estimated": "全作品を比較中",
       "bounds": {
         "n": 447,
         "exact": 0,
-        "within10": 40,
+        "within10": 41,
         "within25": 155,
         "within50": 339,
-        "comparable": 90799,
+        "comparable": 90803,
         "totalPairs": 99681,
         "top50": 40,
         "top150": 144,
@@ -81265,15 +81375,11 @@
     "rankRanges": {
       "lb-62-2b4w": {
         "best": 1,
-        "worst": 4
-      },
-      "lb-350-2bcK": {
-        "best": 1,
-        "worst": 12
+        "worst": 2
       },
       "lb-22-2a1m": {
         "best": 2,
-        "worst": 10
+        "worst": 8
       },
       "lb-468-1GRM": {
         "best": 2,
@@ -81299,6 +81405,10 @@
         "best": 8,
         "worst": 46
       },
+      "lb-350-2bcK": {
+        "best": 3,
+        "worst": 12
+      },
       "lb-492-2bcA": {
         "best": 5,
         "worst": 14
@@ -81312,7 +81422,7 @@
         "worst": 16
       },
       "lb-353-Sw0": {
-        "best": 2,
+        "best": 4,
         "worst": 19
       },
       "custom-1790254612541-iyij": {
@@ -81491,13 +81601,13 @@
         "best": 43,
         "worst": 140
       },
-      "custom-1792318978542-vitq": {
-        "best": 36,
-        "worst": 63
-      },
       "lb-488-294O": {
         "best": 34,
         "worst": 92
+      },
+      "custom-1792318978542-vitq": {
+        "best": 36,
+        "worst": 63
       },
       "custom-1790322763195-rro9": {
         "best": 39,
@@ -81663,13 +81773,13 @@
         "best": 82,
         "worst": 112
       },
-      "lb-321-2aNK": {
-        "best": 84,
-        "worst": 134
-      },
       "lb-571-28qk": {
         "best": 74,
         "worst": 131
+      },
+      "lb-321-2aNK": {
+        "best": 84,
+        "worst": 134
       },
       "lb-304-27M0": {
         "best": 90,
@@ -83074,22 +83184,9 @@
         ]
       },
       {
-        "id": "lb-350-2bcK",
-        "title": "メメント",
-        "rank": 2,
-        "genres": [
-          "サスペンス",
-          "ミステリー",
-          "クライム",
-          "どんでん返し",
-          "心理・内面",
-          "特殊構造"
-        ]
-      },
-      {
         "id": "lb-22-2a1m",
         "title": "マトリックス",
-        "rank": 3,
+        "rank": 2,
         "genres": [
           "SF",
           "アクション",
@@ -83102,7 +83199,7 @@
       {
         "id": "lb-468-1GRM",
         "title": "新世紀エヴァンゲリオン劇場版 Air／まごころを、君に",
-        "rank": 4,
+        "rank": 3,
         "genres": [
           "スリラー",
           "アクション",
@@ -83126,7 +83223,7 @@
       {
         "id": "lb-540-1W7A",
         "title": "パーフェクトブルー",
-        "rank": 5,
+        "rank": 4,
         "genres": [
           "サスペンス",
           "ミステリー",
@@ -83141,7 +83238,7 @@
       {
         "id": "lb-138-2bc6",
         "title": "風の谷のナウシカ",
-        "rank": 6,
+        "rank": 5,
         "genres": [
           "ファンタジー",
           "アドベンチャー",
@@ -83159,7 +83256,7 @@
       {
         "id": "custom-1791664055006-96rv",
         "title": "Utada Hikaru: Wild Life",
-        "rank": 7,
+        "rank": 6,
         "genres": [
           "ミュージカル"
         ]
@@ -83167,7 +83264,7 @@
       {
         "id": "custom-1790420198451-g42l",
         "title": "エレファント・マン",
-        "rank": 8,
+        "rank": 7,
         "genres": [
           "ドラマ",
           "歴史",
@@ -83181,9 +83278,22 @@
       {
         "id": "custom-1791664054514-pksv",
         "title": "Luv Live",
-        "rank": 9,
+        "rank": 8,
         "genres": [
           "ミュージカル"
+        ]
+      },
+      {
+        "id": "lb-350-2bcK",
+        "title": "メメント",
+        "rank": 9,
+        "genres": [
+          "サスペンス",
+          "ミステリー",
+          "クライム",
+          "どんでん返し",
+          "心理・内面",
+          "特殊構造"
         ]
       },
       {
@@ -83873,21 +83983,9 @@
         ]
       },
       {
-        "id": "custom-1792318978542-vitq",
-        "title": "別離",
-        "rank": 58,
-        "genres": [
-          "ドラマ",
-          "雰囲気・美学",
-          "心理・内面",
-          "哲学・思想",
-          "社会問題・生活"
-        ]
-      },
-      {
         "id": "lb-488-294O",
         "title": "遊星からの物体X",
-        "rank": 59,
+        "rank": 58,
         "genres": [
           "SF",
           "スリラー",
@@ -83896,6 +83994,18 @@
           "サスペンス",
           "アクション",
           "雰囲気・美学"
+        ]
+      },
+      {
+        "id": "custom-1792318978542-vitq",
+        "title": "別離",
+        "rank": 59,
+        "genres": [
+          "ドラマ",
+          "雰囲気・美学",
+          "心理・内面",
+          "哲学・思想",
+          "社会問題・生活"
         ]
       },
       {
@@ -84488,23 +84598,23 @@
         ]
       },
       {
+        "id": "lb-571-28qk",
+        "title": "スピード",
+        "rank": 101,
+        "genres": [
+          "アクション",
+          "娯楽"
+        ]
+      },
+      {
         "id": "lb-321-2aNK",
         "title": "ゴッドファーザー",
-        "rank": 101,
+        "rank": 102,
         "genres": [
           "クライム",
           "ドラマ",
           "大作",
           "バイオレンス"
-        ]
-      },
-      {
-        "id": "lb-571-28qk",
-        "title": "スピード",
-        "rank": 102,
-        "genres": [
-          "アクション",
-          "娯楽"
         ]
       },
       {
@@ -257274,6 +257384,116 @@
               "id": "lb-353-Sw0",
               "before": 9,
               "after": 13,
+              "beforeCount": 447,
+              "afterCount": 447
+            }
+          ],
+          "jumpChecks": []
+        },
+        {
+          "id": "rrpair-1795550440201-ksgvx",
+          "at": 1795550440201,
+          "kind": "pair-review",
+          "mode": "direct",
+          "editorFocus": "lb-350-2bcK",
+          "ids": [
+            "lb-62-2b4w",
+            "lb-350-2bcK"
+          ],
+          "displayIds": [
+            "lb-350-2bcK",
+            "lb-62-2b4w"
+          ],
+          "groups": [
+            [
+              "lb-62-2b4w"
+            ],
+            [
+              "lb-350-2bcK"
+            ]
+          ],
+          "reviewResolves": [
+            "lb-350-2bcK\u0000lb-62-2b4w"
+          ],
+          "genreScope": "ジャンルを横断して比較",
+          "rankDelta": {
+            "version": 1,
+            "shared": 447,
+            "newCompared": 0,
+            "seenAfter": 447,
+            "changed": 4,
+            "median": 0,
+            "p90": 0,
+            "max": 1,
+            "inversions": 2
+          },
+          "triadPositions": [
+            {
+              "id": "lb-350-2bcK",
+              "before": 2,
+              "after": 3,
+              "beforeCount": 447,
+              "afterCount": 447
+            },
+            {
+              "id": "lb-62-2b4w",
+              "before": 1,
+              "after": 1,
+              "beforeCount": 447,
+              "afterCount": 447
+            }
+          ],
+          "jumpChecks": []
+        },
+        {
+          "id": "rrpair-1795550441742-2ofbp",
+          "at": 1795550441742,
+          "kind": "pair-review",
+          "mode": "direct",
+          "editorFocus": "lb-350-2bcK",
+          "ids": [
+            "lb-22-2a1m",
+            "lb-350-2bcK"
+          ],
+          "displayIds": [
+            "lb-350-2bcK",
+            "lb-22-2a1m"
+          ],
+          "groups": [
+            [
+              "lb-22-2a1m"
+            ],
+            [
+              "lb-350-2bcK"
+            ]
+          ],
+          "reviewResolves": [
+            "lb-22-2a1m\u0000lb-350-2bcK"
+          ],
+          "genreScope": "ジャンルを横断して比較",
+          "rankDelta": {
+            "version": 1,
+            "shared": 447,
+            "newCompared": 0,
+            "seenAfter": 447,
+            "changed": 9,
+            "median": 0,
+            "p90": 0,
+            "max": 6,
+            "inversions": 7
+          },
+          "triadPositions": [
+            {
+              "id": "lb-350-2bcK",
+              "before": 3,
+              "after": 9,
+              "beforeCount": 447,
+              "afterCount": 447
+            },
+            {
+              "id": "lb-22-2a1m",
+              "before": 2,
+              "after": 2,
               "beforeCount": 447,
               "afterCount": 447
             }
