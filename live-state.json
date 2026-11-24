@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1795549873431,
-  "sourceUpdatedIso": "2026-11-24T19:51:13.431Z",
+  "sourceUpdatedAt": 1795549882215,
+  "sourceUpdatedIso": "2026-11-24T19:51:22.215Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -24253,7 +24253,7 @@
   "newRanking": {
     "app": "movie30-rerank-analysis",
     "schema": 1,
-    "exportedAt": "2026-11-24T19:51:18.476Z",
+    "exportedAt": "2026-11-24T19:51:26.155Z",
     "rerankV2": {
       "version": 2,
       "startedAt": 1794395021969,
@@ -79801,6 +79801,82 @@
               "afterCount": 447
             }
           ]
+        },
+        {
+          "id": "rrcycle-1795549882152-zwife",
+          "at": 1795549882152,
+          "kind": "cycle-review",
+          "mode": "conflict",
+          "ids": [
+            "lb-485-2aSg",
+            "lb-7-h4cS",
+            "custom-1790322756418-p88i",
+            "custom-1790247938551-ixfs"
+          ],
+          "displayIds": [
+            "custom-1790247938551-ixfs",
+            "lb-485-2aSg",
+            "lb-7-h4cS",
+            "custom-1790322756418-p88i"
+          ],
+          "groups": [
+            [
+              "lb-485-2aSg"
+            ],
+            [
+              "lb-7-h4cS"
+            ],
+            [
+              "custom-1790322756418-p88i"
+            ],
+            [
+              "custom-1790247938551-ixfs"
+            ]
+          ],
+          "reviewResolves": [
+            "lb-485-2aSg\u0000lb-7-h4cS",
+            "custom-1790322756418-p88i\u0000lb-485-2aSg",
+            "custom-1790247938551-ixfs\u0000lb-485-2aSg",
+            "custom-1790322756418-p88i\u0000lb-7-h4cS",
+            "custom-1790247938551-ixfs\u0000lb-7-h4cS",
+            "custom-1790247938551-ixfs\u0000custom-1790322756418-p88i"
+          ],
+          "cycleReviewFromKey": "rr2-1794421863671-l76r0|custom-1790247938551-ixfs\u0000lb-485-2aSg",
+          "genreScope": "ジャンルを横断して比較",
+          "rankDelta": {
+            "version": 1,
+            "shared": 447,
+            "newCompared": 0,
+            "seenAfter": 447,
+            "changed": 8,
+            "median": 0,
+            "p90": 0,
+            "max": 3,
+            "inversions": 5
+          },
+          "triadPositions": [
+            {
+              "id": "custom-1790247938551-ixfs",
+              "before": 278,
+              "after": 278,
+              "beforeCount": 447,
+              "afterCount": 447
+            },
+            {
+              "id": "lb-485-2aSg",
+              "before": 266,
+              "after": 266,
+              "beforeCount": 447,
+              "afterCount": 447
+            },
+            {
+              "id": "lb-7-h4cS",
+              "before": 276,
+              "after": 276,
+              "beforeCount": 447,
+              "afterCount": 447
+            }
+          ]
         }
       ],
       "skips": [],
@@ -79811,9 +79887,6 @@
       "rankingMethodVersion": 124,
       "heldReviewNoticeVersion": 118,
       "cycleReviewQueue": [
-        {
-          "key": "rr2-1794421863671-l76r0|custom-1790247938551-ixfs\u0000lb-485-2aSg"
-        },
         {
           "key": "rr2-1794421863671-l76r0|lb-28-4KHC\u0000lb-485-2aSg"
         },
@@ -79865,7 +79938,7 @@
       "drift": null,
       "stage": "一巡中",
       "detail": "まず全作品に比較結果をつなぎます。",
-      "judged": 1323,
+      "judged": 1324,
       "remaining": null,
       "estimated": "全作品を比較中",
       "bounds": {
@@ -80110,13 +80183,13 @@
         "best": 43,
         "worst": 140
       },
-      "lb-488-294O": {
-        "best": 34,
-        "worst": 92
-      },
       "custom-1792318978542-vitq": {
         "best": 36,
         "worst": 63
+      },
+      "lb-488-294O": {
+        "best": 34,
+        "worst": 92
       },
       "custom-1790322763195-rro9": {
         "best": 39,
@@ -80658,13 +80731,13 @@
         "best": 163,
         "worst": 230
       },
-      "lb-43-2awY": {
-        "best": 177,
-        "worst": 229
-      },
       "lb-78-2aHM": {
         "best": 161,
         "worst": 218
+      },
+      "lb-43-2awY": {
+        "best": 177,
+        "worst": 229
       },
       "lb-243-orTE": {
         "best": 150,
@@ -80786,10 +80859,6 @@
         "best": 152,
         "worst": 267
       },
-      "lb-420-CFrC": {
-        "best": 223,
-        "worst": 274
-      },
       "lb-369-2aVk": {
         "best": 196,
         "worst": 275
@@ -80801,6 +80870,10 @@
       "lb-145-1S0A": {
         "best": 164,
         "worst": 288
+      },
+      "lb-420-CFrC": {
+        "best": 223,
+        "worst": 274
       },
       "lb-425-zu4c": {
         "best": 225,
@@ -82492,9 +82565,21 @@
         ]
       },
       {
+        "id": "custom-1792318978542-vitq",
+        "title": "別離",
+        "rank": 58,
+        "genres": [
+          "ドラマ",
+          "雰囲気・美学",
+          "心理・内面",
+          "哲学・思想",
+          "社会問題・生活"
+        ]
+      },
+      {
         "id": "lb-488-294O",
         "title": "遊星からの物体X",
-        "rank": 58,
+        "rank": 59,
         "genres": [
           "SF",
           "スリラー",
@@ -82503,18 +82588,6 @@
           "サスペンス",
           "アクション",
           "雰囲気・美学"
-        ]
-      },
-      {
-        "id": "custom-1792318978542-vitq",
-        "title": "別離",
-        "rank": 59,
-        "genres": [
-          "ドラマ",
-          "雰囲気・美学",
-          "心理・内面",
-          "哲学・思想",
-          "社会問題・生活"
         ]
       },
       {
@@ -84418,23 +84491,9 @@
         ]
       },
       {
-        "id": "lb-43-2awY",
-        "title": "エイリアン",
-        "rank": 195,
-        "genres": [
-          "SF",
-          "ホラー",
-          "スリラー",
-          "アクション",
-          "サスペンス",
-          "娯楽",
-          "雰囲気・美学"
-        ]
-      },
-      {
         "id": "lb-78-2aHM",
         "title": "ファーゴ",
-        "rank": 196,
+        "rank": 195,
         "genres": [
           "サスペンス",
           "クライム",
@@ -84444,6 +84503,20 @@
           "バイオレンス",
           "コメディ",
           "ドラマ"
+        ]
+      },
+      {
+        "id": "lb-43-2awY",
+        "title": "エイリアン",
+        "rank": 196,
+        "genres": [
+          "SF",
+          "ホラー",
+          "スリラー",
+          "アクション",
+          "サスペンス",
+          "娯楽",
+          "雰囲気・美学"
         ]
       },
       {
@@ -84863,24 +84936,9 @@
         ]
       },
       {
-        "id": "lb-420-CFrC",
-        "title": "インサイド・ヘッド2",
-        "rank": 227,
-        "genres": [
-          "世界観",
-          "子供向け",
-          "ファンタジー",
-          "ドラマ",
-          "心理・内面",
-          "青春・若者",
-          "感動",
-          "娯楽"
-        ]
-      },
-      {
         "id": "lb-369-2aVk",
         "title": "シン・シティ",
-        "rank": 228,
+        "rank": 227,
         "genres": [
           "アクション",
           "娯楽",
@@ -84894,7 +84952,7 @@
       {
         "id": "custom-1789918000606-jgbg",
         "title": "ロボコップ",
-        "rank": 229,
+        "rank": 228,
         "genres": [
           "SF",
           "心理・内面",
@@ -84915,7 +84973,7 @@
       {
         "id": "lb-145-1S0A",
         "title": "崖の上のポニョ",
-        "rank": 230,
+        "rank": 229,
         "genres": [
           "comfort",
           "社会問題・生活",
@@ -84927,6 +84985,21 @@
           "青春・若者",
           "娯楽",
           "雰囲気・美学"
+        ]
+      },
+      {
+        "id": "lb-420-CFrC",
+        "title": "インサイド・ヘッド2",
+        "rank": 230,
+        "genres": [
+          "世界観",
+          "子供向け",
+          "ファンタジー",
+          "ドラマ",
+          "心理・内面",
+          "青春・若者",
+          "感動",
+          "娯楽"
         ]
       },
       {
@@ -254473,6 +254546,82 @@
               "afterCount": 447
             }
           ]
+        },
+        {
+          "id": "rrcycle-1795549882152-zwife",
+          "at": 1795549882152,
+          "kind": "cycle-review",
+          "mode": "conflict",
+          "ids": [
+            "lb-485-2aSg",
+            "lb-7-h4cS",
+            "custom-1790322756418-p88i",
+            "custom-1790247938551-ixfs"
+          ],
+          "displayIds": [
+            "custom-1790247938551-ixfs",
+            "lb-485-2aSg",
+            "lb-7-h4cS",
+            "custom-1790322756418-p88i"
+          ],
+          "groups": [
+            [
+              "lb-485-2aSg"
+            ],
+            [
+              "lb-7-h4cS"
+            ],
+            [
+              "custom-1790322756418-p88i"
+            ],
+            [
+              "custom-1790247938551-ixfs"
+            ]
+          ],
+          "reviewResolves": [
+            "lb-485-2aSg\u0000lb-7-h4cS",
+            "custom-1790322756418-p88i\u0000lb-485-2aSg",
+            "custom-1790247938551-ixfs\u0000lb-485-2aSg",
+            "custom-1790322756418-p88i\u0000lb-7-h4cS",
+            "custom-1790247938551-ixfs\u0000lb-7-h4cS",
+            "custom-1790247938551-ixfs\u0000custom-1790322756418-p88i"
+          ],
+          "cycleReviewFromKey": "rr2-1794421863671-l76r0|custom-1790247938551-ixfs\u0000lb-485-2aSg",
+          "genreScope": "ジャンルを横断して比較",
+          "rankDelta": {
+            "version": 1,
+            "shared": 447,
+            "newCompared": 0,
+            "seenAfter": 447,
+            "changed": 8,
+            "median": 0,
+            "p90": 0,
+            "max": 3,
+            "inversions": 5
+          },
+          "triadPositions": [
+            {
+              "id": "custom-1790247938551-ixfs",
+              "before": 278,
+              "after": 278,
+              "beforeCount": 447,
+              "afterCount": 447
+            },
+            {
+              "id": "lb-485-2aSg",
+              "before": 266,
+              "after": 266,
+              "beforeCount": 447,
+              "afterCount": 447
+            },
+            {
+              "id": "lb-7-h4cS",
+              "before": 276,
+              "after": 276,
+              "beforeCount": 447,
+              "afterCount": 447
+            }
+          ]
         }
       ],
       "skips": [],
@@ -254483,9 +254632,6 @@
       "rankingMethodVersion": 124,
       "heldReviewNoticeVersion": 118,
       "cycleReviewQueue": [
-        {
-          "key": "rr2-1794421863671-l76r0|custom-1790247938551-ixfs\u0000lb-485-2aSg"
-        },
         {
           "key": "rr2-1794421863671-l76r0|lb-28-4KHC\u0000lb-485-2aSg"
         },
