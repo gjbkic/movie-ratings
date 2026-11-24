@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1795550341147,
-  "sourceUpdatedIso": "2026-11-24T19:59:01.147Z",
+  "sourceUpdatedAt": 1795550348537,
+  "sourceUpdatedIso": "2026-11-24T19:59:08.537Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -24253,7 +24253,7 @@
   "newRanking": {
     "app": "movie30-rerank-analysis",
     "schema": 1,
-    "exportedAt": "2026-11-24T19:59:05.222Z",
+    "exportedAt": "2026-11-24T19:59:12.492Z",
     "rerankV2": {
       "version": 2,
       "startedAt": 1794395021969,
@@ -81060,6 +81060,61 @@
             }
           ],
           "jumpChecks": []
+        },
+        {
+          "id": "rrpair-1795550348464-k4nmz",
+          "at": 1795550348464,
+          "kind": "pair-review",
+          "mode": "direct",
+          "editorFocus": "lb-492-2bcA",
+          "ids": [
+            "lb-492-2bcA",
+            "lb-81-2aqc"
+          ],
+          "displayIds": [
+            "lb-492-2bcA",
+            "lb-81-2aqc"
+          ],
+          "groups": [
+            [
+              "lb-492-2bcA"
+            ],
+            [
+              "lb-81-2aqc"
+            ]
+          ],
+          "reviewResolves": [
+            "lb-492-2bcA\u0000lb-81-2aqc"
+          ],
+          "genreScope": "同系統を比較 · 心理・内面・雰囲気・美学",
+          "rankDelta": {
+            "version": 1,
+            "shared": 447,
+            "newCompared": 0,
+            "seenAfter": 447,
+            "changed": 17,
+            "median": 0,
+            "p90": 0,
+            "max": 6,
+            "inversions": 24
+          },
+          "triadPositions": [
+            {
+              "id": "lb-492-2bcA",
+              "before": 11,
+              "after": 5,
+              "beforeCount": 447,
+              "afterCount": 447
+            },
+            {
+              "id": "lb-81-2aqc",
+              "before": 17,
+              "after": 21,
+              "beforeCount": 447,
+              "afterCount": 447
+            }
+          ],
+          "jumpChecks": []
         }
       ],
       "skips": [],
@@ -81081,7 +81136,7 @@
       "drift": null,
       "stage": "一巡中",
       "detail": "まず全作品に比較結果をつなぎます。",
-      "judged": 1341,
+      "judged": 1342,
       "remaining": null,
       "estimated": "全作品を比較中",
       "bounds": {
@@ -81105,6 +81160,18 @@
       "lb-22-2a1m": {
         "best": 2,
         "worst": 10
+      },
+      "lb-353-Sw0": {
+        "best": 1,
+        "worst": 12
+      },
+      "lb-350-2bcK": {
+        "best": 2,
+        "worst": 13
+      },
+      "lb-492-2bcA": {
+        "best": 5,
+        "worst": 14
       },
       "lb-468-1GRM": {
         "best": 2,
@@ -81130,18 +81197,6 @@
         "best": 8,
         "worst": 46
       },
-      "lb-353-Sw0": {
-        "best": 1,
-        "worst": 12
-      },
-      "lb-350-2bcK": {
-        "best": 2,
-        "worst": 13
-      },
-      "lb-492-2bcA": {
-        "best": 5,
-        "worst": 14
-      },
       "custom-1792873754553-ugfj": {
         "best": 5,
         "worst": 15
@@ -81162,10 +81217,6 @@
         "best": 15,
         "worst": 18
       },
-      "lb-81-2aqc": {
-        "best": 16,
-        "worst": 29
-      },
       "custom-1790458138074-p8hs": {
         "best": 16,
         "worst": 20
@@ -81181,6 +81232,10 @@
       "lb-10-kSz4": {
         "best": 19,
         "worst": 30
+      },
+      "lb-81-2aqc": {
+        "best": 16,
+        "worst": 29
       },
       "lb-322-2aeA": {
         "best": 18,
@@ -81710,10 +81765,6 @@
         "best": 147,
         "worst": 162
       },
-      "lb-89-5RFA": {
-        "best": 148,
-        "worst": 167
-      },
       "lb-85-1GjK": {
         "best": 148,
         "worst": 173
@@ -81721,6 +81772,10 @@
       "lb-544-26EE": {
         "best": 149,
         "worst": 176
+      },
+      "lb-89-5RFA": {
+        "best": 148,
+        "worst": 167
       },
       "lb-287-2amk": {
         "best": 144,
@@ -82922,9 +82977,53 @@
         ]
       },
       {
+        "id": "lb-353-Sw0",
+        "title": "ブラック・スワン",
+        "rank": 3,
+        "genres": [
+          "ドラマ",
+          "スリラー",
+          "サスペンス",
+          "切ない",
+          "どんでん返し",
+          "心理・内面",
+          "雰囲気・美学",
+          "特殊構造"
+        ]
+      },
+      {
+        "id": "lb-350-2bcK",
+        "title": "メメント",
+        "rank": 4,
+        "genres": [
+          "サスペンス",
+          "ミステリー",
+          "クライム",
+          "どんでん返し",
+          "心理・内面",
+          "特殊構造"
+        ]
+      },
+      {
+        "id": "lb-492-2bcA",
+        "title": "ブレードランナー",
+        "rank": 5,
+        "genres": [
+          "SF",
+          "アクション",
+          "哲学・思想",
+          "切ない",
+          "恋愛",
+          "世界観",
+          "心理・内面",
+          "雰囲気・美学",
+          "ドラマ"
+        ]
+      },
+      {
         "id": "lb-468-1GRM",
         "title": "新世紀エヴァンゲリオン劇場版 Air／まごころを、君に",
-        "rank": 3,
+        "rank": 6,
         "genres": [
           "スリラー",
           "アクション",
@@ -82948,7 +83047,7 @@
       {
         "id": "lb-540-1W7A",
         "title": "パーフェクトブルー",
-        "rank": 4,
+        "rank": 7,
         "genres": [
           "サスペンス",
           "ミステリー",
@@ -82963,7 +83062,7 @@
       {
         "id": "lb-138-2bc6",
         "title": "風の谷のナウシカ",
-        "rank": 5,
+        "rank": 8,
         "genres": [
           "ファンタジー",
           "アドベンチャー",
@@ -82981,7 +83080,7 @@
       {
         "id": "custom-1791664055006-96rv",
         "title": "Utada Hikaru: Wild Life",
-        "rank": 6,
+        "rank": 9,
         "genres": [
           "ミュージカル"
         ]
@@ -82989,7 +83088,7 @@
       {
         "id": "custom-1790420198451-g42l",
         "title": "エレファント・マン",
-        "rank": 7,
+        "rank": 10,
         "genres": [
           "ドラマ",
           "歴史",
@@ -83003,53 +83102,9 @@
       {
         "id": "custom-1791664054514-pksv",
         "title": "Luv Live",
-        "rank": 8,
-        "genres": [
-          "ミュージカル"
-        ]
-      },
-      {
-        "id": "lb-353-Sw0",
-        "title": "ブラック・スワン",
-        "rank": 9,
-        "genres": [
-          "ドラマ",
-          "スリラー",
-          "サスペンス",
-          "切ない",
-          "どんでん返し",
-          "心理・内面",
-          "雰囲気・美学",
-          "特殊構造"
-        ]
-      },
-      {
-        "id": "lb-350-2bcK",
-        "title": "メメント",
-        "rank": 10,
-        "genres": [
-          "サスペンス",
-          "ミステリー",
-          "クライム",
-          "どんでん返し",
-          "心理・内面",
-          "特殊構造"
-        ]
-      },
-      {
-        "id": "lb-492-2bcA",
-        "title": "ブレードランナー",
         "rank": 11,
         "genres": [
-          "SF",
-          "アクション",
-          "哲学・思想",
-          "切ない",
-          "恋愛",
-          "世界観",
-          "心理・内面",
-          "雰囲気・美学",
-          "ドラマ"
+          "ミュージカル"
         ]
       },
       {
@@ -83141,22 +83196,9 @@
         ]
       },
       {
-        "id": "lb-81-2aqc",
-        "title": "戦場のピアニスト",
-        "rank": 17,
-        "genres": [
-          "戦争",
-          "歴史",
-          "感動",
-          "差別・人権",
-          "心理・内面",
-          "雰囲気・美学"
-        ]
-      },
-      {
         "id": "custom-1790458138074-p8hs",
         "title": "羅生門",
-        "rank": 18,
+        "rank": 17,
         "genres": [
           "クライム",
           "ドラマ",
@@ -83171,7 +83213,7 @@
       {
         "id": "custom-1793274150349-1cex",
         "title": "乱",
-        "rank": 19,
+        "rank": 18,
         "genres": [
           "アクション",
           "ドラマ",
@@ -83189,7 +83231,7 @@
       {
         "id": "lb-323-1VEo",
         "title": "ウォーリー",
-        "rank": 20,
+        "rank": 19,
         "genres": [
           "恋愛",
           "SF",
@@ -83203,13 +83245,26 @@
       {
         "id": "lb-10-kSz4",
         "title": "スパイダーマン：アクロス・ザ・スパイダーバース",
-        "rank": 21,
+        "rank": 20,
         "genres": [
           "アクション",
           "SF",
           "ヒーロー",
           "comfort",
           "娯楽"
+        ]
+      },
+      {
+        "id": "lb-81-2aqc",
+        "title": "戦場のピアニスト",
+        "rank": 21,
+        "genres": [
+          "戦争",
+          "歴史",
+          "感動",
+          "差別・人権",
+          "心理・内面",
+          "雰囲気・美学"
         ]
       },
       {
@@ -85048,23 +85103,9 @@
         ]
       },
       {
-        "id": "lb-89-5RFA",
-        "title": "バードマンあるいは無知がもたらす予期せぬ奇跡",
-        "rank": 154,
-        "genres": [
-          "ドラマ",
-          "感動",
-          "社会問題・生活",
-          "ファンタジー",
-          "サスペンス",
-          "心理・内面",
-          "特殊構造"
-        ]
-      },
-      {
         "id": "lb-85-1GjK",
         "title": "ハングオーバー",
-        "rank": 155,
+        "rank": 154,
         "genres": [
           "コメディ",
           "ドラマ",
@@ -85075,13 +85116,27 @@
       {
         "id": "lb-544-26EE",
         "title": "ボーン・スプレマシー",
-        "rank": 156,
+        "rank": 155,
         "genres": [
           "アクション",
           "娯楽",
           "サスペンス",
           "スリラー",
           "クライム"
+        ]
+      },
+      {
+        "id": "lb-89-5RFA",
+        "title": "バードマンあるいは無知がもたらす予期せぬ奇跡",
+        "rank": 156,
+        "genres": [
+          "ドラマ",
+          "感動",
+          "社会問題・生活",
+          "ファンタジー",
+          "サスペンス",
+          "心理・内面",
+          "特殊構造"
         ]
       },
       {
@@ -256944,6 +256999,61 @@
               "id": "custom-1790508958519-2edt",
               "before": 14,
               "after": 15,
+              "beforeCount": 447,
+              "afterCount": 447
+            }
+          ],
+          "jumpChecks": []
+        },
+        {
+          "id": "rrpair-1795550348464-k4nmz",
+          "at": 1795550348464,
+          "kind": "pair-review",
+          "mode": "direct",
+          "editorFocus": "lb-492-2bcA",
+          "ids": [
+            "lb-492-2bcA",
+            "lb-81-2aqc"
+          ],
+          "displayIds": [
+            "lb-492-2bcA",
+            "lb-81-2aqc"
+          ],
+          "groups": [
+            [
+              "lb-492-2bcA"
+            ],
+            [
+              "lb-81-2aqc"
+            ]
+          ],
+          "reviewResolves": [
+            "lb-492-2bcA\u0000lb-81-2aqc"
+          ],
+          "genreScope": "同系統を比較 · 心理・内面・雰囲気・美学",
+          "rankDelta": {
+            "version": 1,
+            "shared": 447,
+            "newCompared": 0,
+            "seenAfter": 447,
+            "changed": 17,
+            "median": 0,
+            "p90": 0,
+            "max": 6,
+            "inversions": 24
+          },
+          "triadPositions": [
+            {
+              "id": "lb-492-2bcA",
+              "before": 11,
+              "after": 5,
+              "beforeCount": 447,
+              "afterCount": 447
+            },
+            {
+              "id": "lb-81-2aqc",
+              "before": 17,
+              "after": 21,
               "beforeCount": 447,
               "afterCount": 447
             }
