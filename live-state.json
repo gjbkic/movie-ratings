@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1795550751432,
-  "sourceUpdatedIso": "2026-11-24T20:05:51.432Z",
+  "sourceUpdatedAt": 1795550794357,
+  "sourceUpdatedIso": "2026-11-24T20:06:34.357Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -24253,7 +24253,7 @@
   "newRanking": {
     "app": "movie30-rerank-analysis",
     "schema": 1,
-    "exportedAt": "2026-11-24T20:05:55.333Z",
+    "exportedAt": "2026-11-24T20:06:39.367Z",
     "rerankV2": {
       "version": 2,
       "startedAt": 1794395021969,
@@ -81940,6 +81940,61 @@
             }
           ],
           "jumpChecks": []
+        },
+        {
+          "id": "rrpair-1795550794285-wve84",
+          "at": 1795550794285,
+          "kind": "pair-review",
+          "mode": "direct",
+          "editorFocus": "custom-1791915849111-yhiu",
+          "ids": [
+            "lb-549-iEBG",
+            "custom-1791915849111-yhiu"
+          ],
+          "displayIds": [
+            "custom-1791915849111-yhiu",
+            "lb-549-iEBG"
+          ],
+          "groups": [
+            [
+              "lb-549-iEBG"
+            ],
+            [
+              "custom-1791915849111-yhiu"
+            ]
+          ],
+          "reviewResolves": [
+            "custom-1791915849111-yhiu\u0000lb-549-iEBG"
+          ],
+          "genreScope": "同系統を比較 · コメディ・comfort",
+          "rankDelta": {
+            "version": 1,
+            "shared": 447,
+            "newCompared": 0,
+            "seenAfter": 447,
+            "changed": 0,
+            "median": 0,
+            "p90": 0,
+            "max": 0,
+            "inversions": 0
+          },
+          "triadPositions": [
+            {
+              "id": "custom-1791915849111-yhiu",
+              "before": 47,
+              "after": 47,
+              "beforeCount": 447,
+              "afterCount": 447
+            },
+            {
+              "id": "lb-549-iEBG",
+              "before": 43,
+              "after": 43,
+              "beforeCount": 447,
+              "afterCount": 447
+            }
+          ],
+          "jumpChecks": []
         }
       ],
       "skips": [],
@@ -81961,7 +82016,7 @@
       "drift": null,
       "stage": "一巡中",
       "detail": "まず全作品に比較結果をつなぎます。",
-      "judged": 1357,
+      "judged": 1358,
       "remaining": null,
       "estimated": "全作品を比較中",
       "bounds": {
@@ -258704,6 +258759,61 @@
               "id": "lb-49-27US",
               "before": 53,
               "after": 54,
+              "beforeCount": 447,
+              "afterCount": 447
+            }
+          ],
+          "jumpChecks": []
+        },
+        {
+          "id": "rrpair-1795550794285-wve84",
+          "at": 1795550794285,
+          "kind": "pair-review",
+          "mode": "direct",
+          "editorFocus": "custom-1791915849111-yhiu",
+          "ids": [
+            "lb-549-iEBG",
+            "custom-1791915849111-yhiu"
+          ],
+          "displayIds": [
+            "custom-1791915849111-yhiu",
+            "lb-549-iEBG"
+          ],
+          "groups": [
+            [
+              "lb-549-iEBG"
+            ],
+            [
+              "custom-1791915849111-yhiu"
+            ]
+          ],
+          "reviewResolves": [
+            "custom-1791915849111-yhiu\u0000lb-549-iEBG"
+          ],
+          "genreScope": "同系統を比較 · コメディ・comfort",
+          "rankDelta": {
+            "version": 1,
+            "shared": 447,
+            "newCompared": 0,
+            "seenAfter": 447,
+            "changed": 0,
+            "median": 0,
+            "p90": 0,
+            "max": 0,
+            "inversions": 0
+          },
+          "triadPositions": [
+            {
+              "id": "custom-1791915849111-yhiu",
+              "before": 47,
+              "after": 47,
+              "beforeCount": 447,
+              "afterCount": 447
+            },
+            {
+              "id": "lb-549-iEBG",
+              "before": 43,
+              "after": 43,
               "beforeCount": 447,
               "afterCount": 447
             }
