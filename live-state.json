@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1795550231174,
-  "sourceUpdatedIso": "2026-11-24T19:57:11.174Z",
+  "sourceUpdatedAt": 1795550341147,
+  "sourceUpdatedIso": "2026-11-24T19:59:01.147Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -24253,7 +24253,7 @@
   "newRanking": {
     "app": "movie30-rerank-analysis",
     "schema": 1,
-    "exportedAt": "2026-11-24T19:57:15.134Z",
+    "exportedAt": "2026-11-24T19:59:05.222Z",
     "rerankV2": {
       "version": 2,
       "startedAt": 1794395021969,
@@ -81005,6 +81005,61 @@
               "afterCount": 447
             }
           ]
+        },
+        {
+          "id": "rrpair-1795550341060-qxdny",
+          "at": 1795550341060,
+          "kind": "pair-review",
+          "mode": "direct",
+          "editorFocus": "lb-492-2bcA",
+          "ids": [
+            "lb-492-2bcA",
+            "custom-1790508958519-2edt"
+          ],
+          "displayIds": [
+            "lb-492-2bcA",
+            "custom-1790508958519-2edt"
+          ],
+          "groups": [
+            [
+              "lb-492-2bcA"
+            ],
+            [
+              "custom-1790508958519-2edt"
+            ]
+          ],
+          "reviewResolves": [
+            "custom-1790508958519-2edt\u0000lb-492-2bcA"
+          ],
+          "genreScope": "同系統を比較 · 恋愛・心理・内面",
+          "rankDelta": {
+            "version": 1,
+            "shared": 447,
+            "newCompared": 0,
+            "seenAfter": 447,
+            "changed": 4,
+            "median": 0,
+            "p90": 0,
+            "max": 1,
+            "inversions": 2
+          },
+          "triadPositions": [
+            {
+              "id": "lb-492-2bcA",
+              "before": 12,
+              "after": 11,
+              "beforeCount": 447,
+              "afterCount": 447
+            },
+            {
+              "id": "custom-1790508958519-2edt",
+              "before": 14,
+              "after": 15,
+              "beforeCount": 447,
+              "afterCount": 447
+            }
+          ],
+          "jumpChecks": []
         }
       ],
       "skips": [],
@@ -81026,7 +81081,7 @@
       "drift": null,
       "stage": "一巡中",
       "detail": "まず全作品に比較結果をつなぎます。",
-      "judged": 1340,
+      "judged": 1341,
       "remaining": null,
       "estimated": "全作品を比較中",
       "bounds": {
@@ -81083,24 +81138,24 @@
         "best": 2,
         "worst": 13
       },
-      "custom-1792873754553-ugfj": {
-        "best": 5,
-        "worst": 15
-      },
       "lb-492-2bcA": {
         "best": 5,
         "worst": 14
+      },
+      "custom-1792873754553-ugfj": {
+        "best": 5,
+        "worst": 15
       },
       "lb-467-ptEI": {
         "best": 11,
         "worst": 16
       },
-      "custom-1790508958519-2edt": {
-        "best": 13,
-        "worst": 17
-      },
       "custom-1790254612541-iyij": {
         "best": 8,
+        "worst": 17
+      },
+      "custom-1790508958519-2edt": {
+        "best": 13,
         "worst": 17
       },
       "lb-334-1Tp2": {
@@ -82982,9 +83037,25 @@
         ]
       },
       {
+        "id": "lb-492-2bcA",
+        "title": "ブレードランナー",
+        "rank": 11,
+        "genres": [
+          "SF",
+          "アクション",
+          "哲学・思想",
+          "切ない",
+          "恋愛",
+          "世界観",
+          "心理・内面",
+          "雰囲気・美学",
+          "ドラマ"
+        ]
+      },
+      {
         "id": "custom-1792873754553-ugfj",
         "title": "紀子の食卓",
-        "rank": 11,
+        "rank": 12,
         "genres": [
           "ドラマ",
           "スリラー",
@@ -82997,22 +83068,6 @@
           "心理・内面",
           "哲学・思想",
           "社会問題・生活"
-        ]
-      },
-      {
-        "id": "lb-492-2bcA",
-        "title": "ブレードランナー",
-        "rank": 12,
-        "genres": [
-          "SF",
-          "アクション",
-          "哲学・思想",
-          "切ない",
-          "恋愛",
-          "世界観",
-          "心理・内面",
-          "雰囲気・美学",
-          "ドラマ"
         ]
       },
       {
@@ -83035,26 +83090,9 @@
         ]
       },
       {
-        "id": "custom-1790508958519-2edt",
-        "title": "怪物",
-        "rank": 14,
-        "genres": [
-          "ミステリー",
-          "ドラマ",
-          "恋愛",
-          "サスペンス",
-          "雰囲気・美学",
-          "青春・若者",
-          "差別・人権",
-          "心理・内面",
-          "社会問題・生活",
-          "特殊構造"
-        ]
-      },
-      {
         "id": "custom-1790254612541-iyij",
         "title": "未来世紀ブラジル",
-        "rank": 15,
+        "rank": 14,
         "genres": [
           "SF",
           "世界観",
@@ -83068,6 +83106,23 @@
           "どんでん返し",
           "大作",
           "雰囲気・美学"
+        ]
+      },
+      {
+        "id": "custom-1790508958519-2edt",
+        "title": "怪物",
+        "rank": 15,
+        "genres": [
+          "ミステリー",
+          "ドラマ",
+          "恋愛",
+          "サスペンス",
+          "雰囲気・美学",
+          "青春・若者",
+          "差別・人権",
+          "心理・内面",
+          "社会問題・生活",
+          "特殊構造"
         ]
       },
       {
@@ -256839,6 +256894,61 @@
               "afterCount": 447
             }
           ]
+        },
+        {
+          "id": "rrpair-1795550341060-qxdny",
+          "at": 1795550341060,
+          "kind": "pair-review",
+          "mode": "direct",
+          "editorFocus": "lb-492-2bcA",
+          "ids": [
+            "lb-492-2bcA",
+            "custom-1790508958519-2edt"
+          ],
+          "displayIds": [
+            "lb-492-2bcA",
+            "custom-1790508958519-2edt"
+          ],
+          "groups": [
+            [
+              "lb-492-2bcA"
+            ],
+            [
+              "custom-1790508958519-2edt"
+            ]
+          ],
+          "reviewResolves": [
+            "custom-1790508958519-2edt\u0000lb-492-2bcA"
+          ],
+          "genreScope": "同系統を比較 · 恋愛・心理・内面",
+          "rankDelta": {
+            "version": 1,
+            "shared": 447,
+            "newCompared": 0,
+            "seenAfter": 447,
+            "changed": 4,
+            "median": 0,
+            "p90": 0,
+            "max": 1,
+            "inversions": 2
+          },
+          "triadPositions": [
+            {
+              "id": "lb-492-2bcA",
+              "before": 12,
+              "after": 11,
+              "beforeCount": 447,
+              "afterCount": 447
+            },
+            {
+              "id": "custom-1790508958519-2edt",
+              "before": 14,
+              "after": 15,
+              "beforeCount": 447,
+              "afterCount": 447
+            }
+          ],
+          "jumpChecks": []
         }
       ],
       "skips": [],
