@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1795550441806,
-  "sourceUpdatedIso": "2026-11-24T20:00:41.806Z",
+  "sourceUpdatedAt": 1795550454216,
+  "sourceUpdatedIso": "2026-11-24T20:00:54.216Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -24253,7 +24253,7 @@
   "newRanking": {
     "app": "movie30-rerank-analysis",
     "schema": 1,
-    "exportedAt": "2026-11-24T20:00:45.777Z",
+    "exportedAt": "2026-11-24T20:00:54.386Z",
     "rerankV2": {
       "version": 2,
       "startedAt": 1794395021969,
@@ -81335,6 +81335,116 @@
             }
           ],
           "jumpChecks": []
+        },
+        {
+          "id": "rrpair-1795550450111-s3o35",
+          "at": 1795550450111,
+          "kind": "pair-review",
+          "mode": "direct",
+          "editorFocus": "lb-350-2bcK",
+          "ids": [
+            "custom-1791664055006-96rv",
+            "lb-350-2bcK"
+          ],
+          "displayIds": [
+            "lb-350-2bcK",
+            "custom-1791664055006-96rv"
+          ],
+          "groups": [
+            [
+              "custom-1791664055006-96rv"
+            ],
+            [
+              "lb-350-2bcK"
+            ]
+          ],
+          "reviewResolves": [
+            "custom-1791664055006-96rv\u0000lb-350-2bcK"
+          ],
+          "genreScope": "ジャンルを横断して比較",
+          "rankDelta": {
+            "version": 1,
+            "shared": 447,
+            "newCompared": 0,
+            "seenAfter": 447,
+            "changed": 0,
+            "median": 0,
+            "p90": 0,
+            "max": 0,
+            "inversions": 0
+          },
+          "triadPositions": [
+            {
+              "id": "lb-350-2bcK",
+              "before": 9,
+              "after": 9,
+              "beforeCount": 447,
+              "afterCount": 447
+            },
+            {
+              "id": "custom-1791664055006-96rv",
+              "before": 6,
+              "after": 6,
+              "beforeCount": 447,
+              "afterCount": 447
+            }
+          ],
+          "jumpChecks": []
+        },
+        {
+          "id": "rrpair-1795550454147-ley0o",
+          "at": 1795550454147,
+          "kind": "pair-review",
+          "mode": "direct",
+          "editorFocus": "lb-350-2bcK",
+          "ids": [
+            "lb-138-2bc6",
+            "lb-350-2bcK"
+          ],
+          "displayIds": [
+            "lb-350-2bcK",
+            "lb-138-2bc6"
+          ],
+          "groups": [
+            [
+              "lb-138-2bc6"
+            ],
+            [
+              "lb-350-2bcK"
+            ]
+          ],
+          "reviewResolves": [
+            "lb-138-2bc6\u0000lb-350-2bcK"
+          ],
+          "genreScope": "ジャンルを横断して比較",
+          "rankDelta": {
+            "version": 1,
+            "shared": 447,
+            "newCompared": 0,
+            "seenAfter": 447,
+            "changed": 2,
+            "median": 0,
+            "p90": 0,
+            "max": 1,
+            "inversions": 1
+          },
+          "triadPositions": [
+            {
+              "id": "lb-350-2bcK",
+              "before": 9,
+              "after": 9,
+              "beforeCount": 447,
+              "afterCount": 447
+            },
+            {
+              "id": "lb-138-2bc6",
+              "before": 5,
+              "after": 4,
+              "beforeCount": 447,
+              "afterCount": 447
+            }
+          ],
+          "jumpChecks": []
         }
       ],
       "skips": [],
@@ -81351,12 +81461,12 @@
       "n": 448,
       "compared": 447,
       "depth": 446,
-      "confident": 247,
+      "confident": 248,
       "components": 2,
       "drift": null,
       "stage": "一巡中",
       "detail": "まず全作品に比較結果をつなぎます。",
-      "judged": 1346,
+      "judged": 1348,
       "remaining": null,
       "estimated": "全作品を比較中",
       "bounds": {
@@ -81365,7 +81475,7 @@
         "within10": 41,
         "within25": 155,
         "within50": 339,
-        "comparable": 90803,
+        "comparable": 90816,
         "totalPairs": 99681,
         "top50": 40,
         "top150": 144,
@@ -81383,19 +81493,19 @@
       },
       "lb-468-1GRM": {
         "best": 2,
-        "worst": 6
-      },
-      "lb-540-1W7A": {
-        "best": 3,
-        "worst": 10
+        "worst": 4
       },
       "lb-138-2bc6": {
         "best": 3,
-        "worst": 10
+        "worst": 7
+      },
+      "lb-540-1W7A": {
+        "best": 3,
+        "worst": 6
       },
       "custom-1791664055006-96rv": {
         "best": 5,
-        "worst": 12
+        "worst": 8
       },
       "custom-1790420198451-g42l": {
         "best": 7,
@@ -81406,11 +81516,11 @@
         "worst": 46
       },
       "lb-350-2bcK": {
-        "best": 3,
+        "best": 7,
         "worst": 12
       },
       "lb-492-2bcA": {
-        "best": 5,
+        "best": 8,
         "worst": 14
       },
       "custom-1792873754553-ugfj": {
@@ -81422,11 +81532,11 @@
         "worst": 16
       },
       "lb-353-Sw0": {
-        "best": 4,
+        "best": 8,
         "worst": 19
       },
       "custom-1790254612541-iyij": {
-        "best": 7,
+        "best": 9,
         "worst": 17
       },
       "custom-1790508958519-2edt": {
@@ -83221,24 +83331,9 @@
         ]
       },
       {
-        "id": "lb-540-1W7A",
-        "title": "パーフェクトブルー",
-        "rank": 4,
-        "genres": [
-          "サスペンス",
-          "ミステリー",
-          "スリラー",
-          "アクション",
-          "どんでん返し",
-          "心理・内面",
-          "雰囲気・美学",
-          "特殊構造"
-        ]
-      },
-      {
         "id": "lb-138-2bc6",
         "title": "風の谷のナウシカ",
-        "rank": 5,
+        "rank": 4,
         "genres": [
           "ファンタジー",
           "アドベンチャー",
@@ -83251,6 +83346,21 @@
           "娯楽",
           "哲学・思想",
           "SF"
+        ]
+      },
+      {
+        "id": "lb-540-1W7A",
+        "title": "パーフェクトブルー",
+        "rank": 5,
+        "genres": [
+          "サスペンス",
+          "ミステリー",
+          "スリラー",
+          "アクション",
+          "どんでん返し",
+          "心理・内面",
+          "雰囲気・美学",
+          "特殊構造"
         ]
       },
       {
@@ -257494,6 +257604,116 @@
               "id": "lb-22-2a1m",
               "before": 2,
               "after": 2,
+              "beforeCount": 447,
+              "afterCount": 447
+            }
+          ],
+          "jumpChecks": []
+        },
+        {
+          "id": "rrpair-1795550450111-s3o35",
+          "at": 1795550450111,
+          "kind": "pair-review",
+          "mode": "direct",
+          "editorFocus": "lb-350-2bcK",
+          "ids": [
+            "custom-1791664055006-96rv",
+            "lb-350-2bcK"
+          ],
+          "displayIds": [
+            "lb-350-2bcK",
+            "custom-1791664055006-96rv"
+          ],
+          "groups": [
+            [
+              "custom-1791664055006-96rv"
+            ],
+            [
+              "lb-350-2bcK"
+            ]
+          ],
+          "reviewResolves": [
+            "custom-1791664055006-96rv\u0000lb-350-2bcK"
+          ],
+          "genreScope": "ジャンルを横断して比較",
+          "rankDelta": {
+            "version": 1,
+            "shared": 447,
+            "newCompared": 0,
+            "seenAfter": 447,
+            "changed": 0,
+            "median": 0,
+            "p90": 0,
+            "max": 0,
+            "inversions": 0
+          },
+          "triadPositions": [
+            {
+              "id": "lb-350-2bcK",
+              "before": 9,
+              "after": 9,
+              "beforeCount": 447,
+              "afterCount": 447
+            },
+            {
+              "id": "custom-1791664055006-96rv",
+              "before": 6,
+              "after": 6,
+              "beforeCount": 447,
+              "afterCount": 447
+            }
+          ],
+          "jumpChecks": []
+        },
+        {
+          "id": "rrpair-1795550454147-ley0o",
+          "at": 1795550454147,
+          "kind": "pair-review",
+          "mode": "direct",
+          "editorFocus": "lb-350-2bcK",
+          "ids": [
+            "lb-138-2bc6",
+            "lb-350-2bcK"
+          ],
+          "displayIds": [
+            "lb-350-2bcK",
+            "lb-138-2bc6"
+          ],
+          "groups": [
+            [
+              "lb-138-2bc6"
+            ],
+            [
+              "lb-350-2bcK"
+            ]
+          ],
+          "reviewResolves": [
+            "lb-138-2bc6\u0000lb-350-2bcK"
+          ],
+          "genreScope": "ジャンルを横断して比較",
+          "rankDelta": {
+            "version": 1,
+            "shared": 447,
+            "newCompared": 0,
+            "seenAfter": 447,
+            "changed": 2,
+            "median": 0,
+            "p90": 0,
+            "max": 1,
+            "inversions": 1
+          },
+          "triadPositions": [
+            {
+              "id": "lb-350-2bcK",
+              "before": 9,
+              "after": 9,
+              "beforeCount": 447,
+              "afterCount": 447
+            },
+            {
+              "id": "lb-138-2bc6",
+              "before": 5,
+              "after": 4,
               "beforeCount": 447,
               "afterCount": 447
             }
