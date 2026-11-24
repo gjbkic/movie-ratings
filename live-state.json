@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1795550692557,
-  "sourceUpdatedIso": "2026-11-24T20:04:52.557Z",
+  "sourceUpdatedAt": 1795550728544,
+  "sourceUpdatedIso": "2026-11-24T20:05:28.544Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -24253,7 +24253,7 @@
   "newRanking": {
     "app": "movie30-rerank-analysis",
     "schema": 1,
-    "exportedAt": "2026-11-24T20:04:56.559Z",
+    "exportedAt": "2026-11-24T20:05:32.501Z",
     "rerankV2": {
       "version": 2,
       "startedAt": 1794395021969,
@@ -81830,6 +81830,61 @@
             }
           ],
           "jumpChecks": []
+        },
+        {
+          "id": "rrpair-1795550728481-qili1",
+          "at": 1795550728481,
+          "kind": "pair-review",
+          "mode": "direct",
+          "editorFocus": "lb-382-20TI",
+          "ids": [
+            "lb-382-20TI",
+            "lb-49-27US"
+          ],
+          "displayIds": [
+            "lb-382-20TI",
+            "lb-49-27US"
+          ],
+          "groups": [
+            [
+              "lb-382-20TI"
+            ],
+            [
+              "lb-49-27US"
+            ]
+          ],
+          "reviewResolves": [
+            "lb-382-20TI\u0000lb-49-27US"
+          ],
+          "genreScope": "同系統を比較 · アクション",
+          "rankDelta": {
+            "version": 1,
+            "shared": 447,
+            "newCompared": 0,
+            "seenAfter": 447,
+            "changed": 10,
+            "median": 0,
+            "p90": 0,
+            "max": 5,
+            "inversions": 16
+          },
+          "triadPositions": [
+            {
+              "id": "lb-382-20TI",
+              "before": 51,
+              "after": 46,
+              "beforeCount": 447,
+              "afterCount": 447
+            },
+            {
+              "id": "lb-49-27US",
+              "before": 50,
+              "after": 53,
+              "beforeCount": 447,
+              "afterCount": 447
+            }
+          ],
+          "jumpChecks": []
         }
       ],
       "skips": [],
@@ -81851,7 +81906,7 @@
       "drift": null,
       "stage": "一巡中",
       "detail": "まず全作品に比較結果をつなぎます。",
-      "judged": 1355,
+      "judged": 1356,
       "remaining": null,
       "estimated": "全作品を比較中",
       "bounds": {
@@ -81860,7 +81915,7 @@
         "within10": 44,
         "within25": 155,
         "within50": 339,
-        "comparable": 90832,
+        "comparable": 90834,
         "totalPairs": 99681,
         "top50": 40,
         "top150": 144,
@@ -82048,6 +82103,18 @@
         "best": 44,
         "worst": 56
       },
+      "lb-382-20TI": {
+        "best": 45,
+        "worst": 61
+      },
+      "custom-1791915849111-yhiu": {
+        "best": 47,
+        "worst": 64
+      },
+      "lb-558-1pDe": {
+        "best": 48,
+        "worst": 68
+      },
       "lb-39-2DjO": {
         "best": 30,
         "worst": 76
@@ -82065,27 +82132,15 @@
         "worst": 70
       },
       "lb-49-27US": {
-        "best": 50,
+        "best": 51,
         "worst": 79
-      },
-      "lb-382-20TI": {
-        "best": 45,
-        "worst": 63
-      },
-      "custom-1791915849111-yhiu": {
-        "best": 47,
-        "worst": 64
-      },
-      "lb-558-1pDe": {
-        "best": 48,
-        "worst": 68
       },
       "lb-9-1skk": {
         "best": 28,
         "worst": 63
       },
       "custom-1791863527797-qm90": {
-        "best": 52,
+        "best": 53,
         "worst": 80
       },
       "lb-486-b8wK": {
@@ -82268,13 +82323,13 @@
         "best": 82,
         "worst": 112
       },
-      "lb-321-2aNK": {
-        "best": 84,
-        "worst": 134
-      },
       "lb-571-28qk": {
         "best": 74,
         "worst": 131
+      },
+      "lb-321-2aNK": {
+        "best": 84,
+        "worst": 134
       },
       "lb-304-27M0": {
         "best": 90,
@@ -84316,9 +84371,56 @@
         ]
       },
       {
+        "id": "lb-382-20TI",
+        "title": "ソナチネ",
+        "rank": 46,
+        "genres": [
+          "サスペンス",
+          "クライム",
+          "アクション",
+          "社会問題・生活",
+          "心理・内面",
+          "バイオレンス",
+          "雰囲気・美学"
+        ]
+      },
+      {
+        "id": "custom-1791915849111-yhiu",
+        "title": "リーガル・ハイ",
+        "rank": 47,
+        "genres": [
+          "TV本編",
+          "サスペンス",
+          "コメディ",
+          "ドラマ",
+          "恋愛",
+          "娯楽",
+          "comfort"
+        ]
+      },
+      {
+        "id": "lb-558-1pDe",
+        "title": "愛のむきだし",
+        "rank": 48,
+        "genres": [
+          "恋愛",
+          "コメディ",
+          "ドラマ",
+          "青春・若者",
+          "アクション",
+          "社会問題・生活",
+          "大作",
+          "世界観",
+          "サスペンス",
+          "クライム",
+          "心理・内面",
+          "雰囲気・美学"
+        ]
+      },
+      {
         "id": "lb-39-2DjO",
         "title": "マッドマックス 怒りのデス・ロード",
-        "rank": 46,
+        "rank": 49,
         "genres": [
           "アクション",
           "アドベンチャー",
@@ -84331,7 +84433,7 @@
       {
         "id": "lb-395-2bdo",
         "title": "アメリカン・ヒストリーX",
-        "rank": 47,
+        "rank": 50,
         "genres": [
           "ドラマ",
           "クライム",
@@ -84345,7 +84447,7 @@
       {
         "id": "lb-262-29Du",
         "title": "ガタカ",
-        "rank": 48,
+        "rank": 51,
         "genres": [
           "SF",
           "ドラマ",
@@ -84363,7 +84465,7 @@
       {
         "id": "lb-65-2auI",
         "title": "12人の怒れる男",
-        "rank": 49,
+        "rank": 52,
         "genres": [
           "サスペンス",
           "ミステリー",
@@ -84374,7 +84476,7 @@
       {
         "id": "lb-49-27US",
         "title": "スター・ウォーズ エピソード3／シスの復讐",
-        "rank": 50,
+        "rank": 53,
         "genres": [
           "SF",
           "ファンタジー",
@@ -84383,53 +84485,6 @@
           "娯楽",
           "大作",
           "戦争"
-        ]
-      },
-      {
-        "id": "lb-382-20TI",
-        "title": "ソナチネ",
-        "rank": 51,
-        "genres": [
-          "サスペンス",
-          "クライム",
-          "アクション",
-          "社会問題・生活",
-          "心理・内面",
-          "バイオレンス",
-          "雰囲気・美学"
-        ]
-      },
-      {
-        "id": "custom-1791915849111-yhiu",
-        "title": "リーガル・ハイ",
-        "rank": 52,
-        "genres": [
-          "TV本編",
-          "サスペンス",
-          "コメディ",
-          "ドラマ",
-          "恋愛",
-          "娯楽",
-          "comfort"
-        ]
-      },
-      {
-        "id": "lb-558-1pDe",
-        "title": "愛のむきだし",
-        "rank": 53,
-        "genres": [
-          "恋愛",
-          "コメディ",
-          "ドラマ",
-          "青春・若者",
-          "アクション",
-          "社会問題・生活",
-          "大作",
-          "世界観",
-          "サスペンス",
-          "クライム",
-          "心理・内面",
-          "雰囲気・美学"
         ]
       },
       {
@@ -85093,23 +85148,23 @@
         ]
       },
       {
+        "id": "lb-571-28qk",
+        "title": "スピード",
+        "rank": 101,
+        "genres": [
+          "アクション",
+          "娯楽"
+        ]
+      },
+      {
         "id": "lb-321-2aNK",
         "title": "ゴッドファーザー",
-        "rank": 101,
+        "rank": 102,
         "genres": [
           "クライム",
           "ドラマ",
           "大作",
           "バイオレンス"
-        ]
-      },
-      {
-        "id": "lb-571-28qk",
-        "title": "スピード",
-        "rank": 102,
-        "genres": [
-          "アクション",
-          "娯楽"
         ]
       },
       {
@@ -258484,6 +258539,61 @@
               "id": "lb-486-b8wK",
               "before": 51,
               "after": 56,
+              "beforeCount": 447,
+              "afterCount": 447
+            }
+          ],
+          "jumpChecks": []
+        },
+        {
+          "id": "rrpair-1795550728481-qili1",
+          "at": 1795550728481,
+          "kind": "pair-review",
+          "mode": "direct",
+          "editorFocus": "lb-382-20TI",
+          "ids": [
+            "lb-382-20TI",
+            "lb-49-27US"
+          ],
+          "displayIds": [
+            "lb-382-20TI",
+            "lb-49-27US"
+          ],
+          "groups": [
+            [
+              "lb-382-20TI"
+            ],
+            [
+              "lb-49-27US"
+            ]
+          ],
+          "reviewResolves": [
+            "lb-382-20TI\u0000lb-49-27US"
+          ],
+          "genreScope": "同系統を比較 · アクション",
+          "rankDelta": {
+            "version": 1,
+            "shared": 447,
+            "newCompared": 0,
+            "seenAfter": 447,
+            "changed": 10,
+            "median": 0,
+            "p90": 0,
+            "max": 5,
+            "inversions": 16
+          },
+          "triadPositions": [
+            {
+              "id": "lb-382-20TI",
+              "before": 51,
+              "after": 46,
+              "beforeCount": 447,
+              "afterCount": 447
+            },
+            {
+              "id": "lb-49-27US",
+              "before": 50,
+              "after": 53,
               "beforeCount": 447,
               "afterCount": 447
             }
