@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1795550728544,
-  "sourceUpdatedIso": "2026-11-24T20:05:28.544Z",
+  "sourceUpdatedAt": 1795550751432,
+  "sourceUpdatedIso": "2026-11-24T20:05:51.432Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -24253,7 +24253,7 @@
   "newRanking": {
     "app": "movie30-rerank-analysis",
     "schema": 1,
-    "exportedAt": "2026-11-24T20:05:32.501Z",
+    "exportedAt": "2026-11-24T20:05:55.333Z",
     "rerankV2": {
       "version": 2,
       "startedAt": 1794395021969,
@@ -81885,6 +81885,61 @@
             }
           ],
           "jumpChecks": []
+        },
+        {
+          "id": "rrpair-1795550751360-1b5rl",
+          "at": 1795550751360,
+          "kind": "pair-review",
+          "mode": "direct",
+          "editorFocus": "lb-9-1skk",
+          "ids": [
+            "lb-9-1skk",
+            "lb-49-27US"
+          ],
+          "displayIds": [
+            "lb-9-1skk",
+            "lb-49-27US"
+          ],
+          "groups": [
+            [
+              "lb-9-1skk"
+            ],
+            [
+              "lb-49-27US"
+            ]
+          ],
+          "reviewResolves": [
+            "lb-49-27US\u0000lb-9-1skk"
+          ],
+          "genreScope": "同系統を比較 · SF・アクション",
+          "rankDelta": {
+            "version": 1,
+            "shared": 447,
+            "newCompared": 0,
+            "seenAfter": 447,
+            "changed": 15,
+            "median": 0,
+            "p90": 0,
+            "max": 5,
+            "inversions": 11
+          },
+          "triadPositions": [
+            {
+              "id": "lb-9-1skk",
+              "before": 54,
+              "after": 49,
+              "beforeCount": 447,
+              "afterCount": 447
+            },
+            {
+              "id": "lb-49-27US",
+              "before": 53,
+              "after": 54,
+              "beforeCount": 447,
+              "afterCount": 447
+            }
+          ],
+          "jumpChecks": []
         }
       ],
       "skips": [],
@@ -81906,7 +81961,7 @@
       "drift": null,
       "stage": "一巡中",
       "detail": "まず全作品に比較結果をつなぎます。",
-      "judged": 1356,
+      "judged": 1357,
       "remaining": null,
       "estimated": "全作品を比較中",
       "bounds": {
@@ -81915,7 +81970,7 @@
         "within10": 44,
         "within25": 155,
         "within50": 339,
-        "comparable": 90834,
+        "comparable": 90835,
         "totalPairs": 99681,
         "top50": 40,
         "top150": 144,
@@ -82019,6 +82074,10 @@
         "best": 21,
         "worst": 30
       },
+      "lb-112-1W4G": {
+        "best": 17,
+        "worst": 30
+      },
       "lb-18-2ahY": {
         "best": 19,
         "worst": 29
@@ -82030,10 +82089,6 @@
       "lb-88-1RUM": {
         "best": 26,
         "worst": 31
-      },
-      "lb-112-1W4G": {
-        "best": 17,
-        "worst": 30
       },
       "lb-396-251c": {
         "best": 28,
@@ -82115,6 +82170,10 @@
         "best": 48,
         "worst": 68
       },
+      "lb-9-1skk": {
+        "best": 28,
+        "worst": 62
+      },
       "lb-39-2DjO": {
         "best": 30,
         "worst": 76
@@ -82132,12 +82191,8 @@
         "worst": 70
       },
       "lb-49-27US": {
-        "best": 51,
+        "best": 52,
         "worst": 79
-      },
-      "lb-9-1skk": {
-        "best": 28,
-        "worst": 63
       },
       "custom-1791863527797-qm90": {
         "best": 53,
@@ -82535,10 +82590,6 @@
         "best": 147,
         "worst": 162
       },
-      "lb-89-5RFA": {
-        "best": 148,
-        "worst": 167
-      },
       "lb-85-1GjK": {
         "best": 148,
         "worst": 173
@@ -82547,13 +82598,17 @@
         "best": 149,
         "worst": 176
       },
-      "lb-310-azpY": {
-        "best": 149,
-        "worst": 171
+      "lb-89-5RFA": {
+        "best": 148,
+        "worst": 167
       },
       "lb-287-2amk": {
         "best": 144,
         "worst": 176
+      },
+      "lb-310-azpY": {
+        "best": 149,
+        "worst": 171
       },
       "lb-172-2aHW": {
         "best": 150,
@@ -84079,9 +84134,24 @@
         ]
       },
       {
+        "id": "lb-112-1W4G",
+        "title": "天空の城ラピュタ",
+        "rank": 25,
+        "genres": [
+          "ファンタジー",
+          "アドベンチャー",
+          "アクション",
+          "子供向け",
+          "世界観",
+          "comfort",
+          "娯楽",
+          "雰囲気・美学"
+        ]
+      },
+      {
         "id": "lb-18-2ahY",
         "title": "グッド・ウィル・ハンティング／旅立ち",
-        "rank": 25,
+        "rank": 26,
         "genres": [
           "ドラマ",
           "青春・若者",
@@ -84093,7 +84163,7 @@
       {
         "id": "lb-137-2a1c",
         "title": "マトリックス リローデッド",
-        "rank": 26,
+        "rank": 27,
         "genres": [
           "SF",
           "アクション",
@@ -84106,27 +84176,12 @@
       {
         "id": "lb-88-1RUM",
         "title": "火垂るの墓",
-        "rank": 27,
+        "rank": 28,
         "genres": [
           "戦争",
           "歴史",
           "ドラマ",
           "切ない"
-        ]
-      },
-      {
-        "id": "lb-112-1W4G",
-        "title": "天空の城ラピュタ",
-        "rank": 28,
-        "genres": [
-          "ファンタジー",
-          "アドベンチャー",
-          "アクション",
-          "子供向け",
-          "世界観",
-          "comfort",
-          "娯楽",
-          "雰囲気・美学"
         ]
       },
       {
@@ -84418,9 +84473,22 @@
         ]
       },
       {
+        "id": "lb-9-1skk",
+        "title": "インセプション",
+        "rank": 49,
+        "genres": [
+          "SF",
+          "アクション",
+          "クライム",
+          "大作",
+          "娯楽",
+          "特殊構造"
+        ]
+      },
+      {
         "id": "lb-39-2DjO",
         "title": "マッドマックス 怒りのデス・ロード",
-        "rank": 49,
+        "rank": 50,
         "genres": [
           "アクション",
           "アドベンチャー",
@@ -84433,7 +84501,7 @@
       {
         "id": "lb-395-2bdo",
         "title": "アメリカン・ヒストリーX",
-        "rank": 50,
+        "rank": 51,
         "genres": [
           "ドラマ",
           "クライム",
@@ -84447,7 +84515,7 @@
       {
         "id": "lb-262-29Du",
         "title": "ガタカ",
-        "rank": 51,
+        "rank": 52,
         "genres": [
           "SF",
           "ドラマ",
@@ -84465,7 +84533,7 @@
       {
         "id": "lb-65-2auI",
         "title": "12人の怒れる男",
-        "rank": 52,
+        "rank": 53,
         "genres": [
           "サスペンス",
           "ミステリー",
@@ -84476,7 +84544,7 @@
       {
         "id": "lb-49-27US",
         "title": "スター・ウォーズ エピソード3／シスの復讐",
-        "rank": 53,
+        "rank": 54,
         "genres": [
           "SF",
           "ファンタジー",
@@ -84485,19 +84553,6 @@
           "娯楽",
           "大作",
           "戦争"
-        ]
-      },
-      {
-        "id": "lb-9-1skk",
-        "title": "インセプション",
-        "rank": 54,
-        "genres": [
-          "SF",
-          "アクション",
-          "クライム",
-          "大作",
-          "娯楽",
-          "特殊構造"
         ]
       },
       {
@@ -85873,9 +85928,32 @@
         ]
       },
       {
+        "id": "lb-85-1GjK",
+        "title": "ハングオーバー",
+        "rank": 154,
+        "genres": [
+          "コメディ",
+          "ドラマ",
+          "娯楽",
+          "comfort"
+        ]
+      },
+      {
+        "id": "lb-544-26EE",
+        "title": "ボーン・スプレマシー",
+        "rank": 155,
+        "genres": [
+          "アクション",
+          "娯楽",
+          "サスペンス",
+          "スリラー",
+          "クライム"
+        ]
+      },
+      {
         "id": "lb-89-5RFA",
         "title": "バードマンあるいは無知がもたらす予期せぬ奇跡",
-        "rank": 154,
+        "rank": 156,
         "genres": [
           "ドラマ",
           "感動",
@@ -85887,32 +85965,21 @@
         ]
       },
       {
-        "id": "lb-85-1GjK",
-        "title": "ハングオーバー",
-        "rank": 155,
+        "id": "lb-287-2amk",
+        "title": "ビューティフル・マインド",
+        "rank": 157,
         "genres": [
-          "コメディ",
           "ドラマ",
-          "娯楽",
-          "comfort"
-        ]
-      },
-      {
-        "id": "lb-544-26EE",
-        "title": "ボーン・スプレマシー",
-        "rank": 156,
-        "genres": [
-          "アクション",
-          "娯楽",
           "サスペンス",
-          "スリラー",
-          "クライム"
+          "どんでん返し",
+          "切ない",
+          "心理・内面"
         ]
       },
       {
         "id": "lb-310-azpY",
         "title": "スパイダーマン：スパイダーバース",
-        "rank": 157,
+        "rank": 158,
         "genres": [
           "アクション",
           "ファンタジー",
@@ -85921,18 +85988,6 @@
           "世界観",
           "娯楽",
           "SF"
-        ]
-      },
-      {
-        "id": "lb-287-2amk",
-        "title": "ビューティフル・マインド",
-        "rank": 158,
-        "genres": [
-          "ドラマ",
-          "サスペンス",
-          "どんでん返し",
-          "切ない",
-          "心理・内面"
         ]
       },
       {
@@ -258594,6 +258649,61 @@
               "id": "lb-49-27US",
               "before": 50,
               "after": 53,
+              "beforeCount": 447,
+              "afterCount": 447
+            }
+          ],
+          "jumpChecks": []
+        },
+        {
+          "id": "rrpair-1795550751360-1b5rl",
+          "at": 1795550751360,
+          "kind": "pair-review",
+          "mode": "direct",
+          "editorFocus": "lb-9-1skk",
+          "ids": [
+            "lb-9-1skk",
+            "lb-49-27US"
+          ],
+          "displayIds": [
+            "lb-9-1skk",
+            "lb-49-27US"
+          ],
+          "groups": [
+            [
+              "lb-9-1skk"
+            ],
+            [
+              "lb-49-27US"
+            ]
+          ],
+          "reviewResolves": [
+            "lb-49-27US\u0000lb-9-1skk"
+          ],
+          "genreScope": "同系統を比較 · SF・アクション",
+          "rankDelta": {
+            "version": 1,
+            "shared": 447,
+            "newCompared": 0,
+            "seenAfter": 447,
+            "changed": 15,
+            "median": 0,
+            "p90": 0,
+            "max": 5,
+            "inversions": 11
+          },
+          "triadPositions": [
+            {
+              "id": "lb-9-1skk",
+              "before": 54,
+              "after": 49,
+              "beforeCount": 447,
+              "afterCount": 447
+            },
+            {
+              "id": "lb-49-27US",
+              "before": 53,
+              "after": 54,
               "beforeCount": 447,
               "afterCount": 447
             }
