@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1795550367452,
-  "sourceUpdatedIso": "2026-11-24T19:59:27.452Z",
+  "sourceUpdatedAt": 1795550419690,
+  "sourceUpdatedIso": "2026-11-24T20:00:19.690Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -24253,7 +24253,7 @@
   "newRanking": {
     "app": "movie30-rerank-analysis",
     "schema": 1,
-    "exportedAt": "2026-11-24T19:59:31.430Z",
+    "exportedAt": "2026-11-24T20:00:23.658Z",
     "rerankV2": {
       "version": 2,
       "startedAt": 1794395021969,
@@ -81170,6 +81170,61 @@
             }
           ],
           "jumpChecks": []
+        },
+        {
+          "id": "rrpair-1795550418757-hpgyl",
+          "at": 1795550418757,
+          "kind": "pair-review",
+          "mode": "direct",
+          "editorFocus": "lb-350-2bcK",
+          "ids": [
+            "lb-350-2bcK",
+            "lb-353-Sw0"
+          ],
+          "displayIds": [
+            "lb-350-2bcK",
+            "lb-353-Sw0"
+          ],
+          "groups": [
+            [
+              "lb-350-2bcK"
+            ],
+            [
+              "lb-353-Sw0"
+            ]
+          ],
+          "reviewResolves": [
+            "lb-350-2bcK\u0000lb-353-Sw0"
+          ],
+          "genreScope": "同系統を比較 · サスペンス・どんでん返し",
+          "rankDelta": {
+            "version": 1,
+            "shared": 447,
+            "newCompared": 0,
+            "seenAfter": 447,
+            "changed": 17,
+            "median": 0,
+            "p90": 0,
+            "max": 8,
+            "inversions": 14
+          },
+          "triadPositions": [
+            {
+              "id": "lb-350-2bcK",
+              "before": 10,
+              "after": 2,
+              "beforeCount": 447,
+              "afterCount": 447
+            },
+            {
+              "id": "lb-353-Sw0",
+              "before": 9,
+              "after": 13,
+              "beforeCount": 447,
+              "afterCount": 447
+            }
+          ],
+          "jumpChecks": []
         }
       ],
       "skips": [],
@@ -81191,7 +81246,7 @@
       "drift": null,
       "stage": "一巡中",
       "detail": "まず全作品に比較結果をつなぎます。",
-      "judged": 1343,
+      "judged": 1344,
       "remaining": null,
       "estimated": "全作品を比較中",
       "bounds": {
@@ -81200,7 +81255,7 @@
         "within10": 40,
         "within25": 155,
         "within50": 339,
-        "comparable": 90805,
+        "comparable": 90799,
         "totalPairs": 99681,
         "top50": 40,
         "top150": 144,
@@ -81211,6 +81266,10 @@
       "lb-62-2b4w": {
         "best": 1,
         "worst": 4
+      },
+      "lb-350-2bcK": {
+        "best": 1,
+        "worst": 12
       },
       "lb-22-2a1m": {
         "best": 2,
@@ -81240,16 +81299,8 @@
         "best": 8,
         "worst": 46
       },
-      "lb-353-Sw0": {
-        "best": 1,
-        "worst": 12
-      },
-      "lb-350-2bcK": {
-        "best": 2,
-        "worst": 13
-      },
       "lb-492-2bcA": {
-        "best": 6,
+        "best": 5,
         "worst": 14
       },
       "custom-1792873754553-ugfj": {
@@ -81257,19 +81308,23 @@
         "worst": 15
       },
       "lb-467-ptEI": {
-        "best": 11,
+        "best": 10,
         "worst": 16
       },
+      "lb-353-Sw0": {
+        "best": 2,
+        "worst": 19
+      },
       "custom-1790254612541-iyij": {
-        "best": 8,
+        "best": 7,
         "worst": 17
       },
       "custom-1790508958519-2edt": {
-        "best": 13,
+        "best": 12,
         "worst": 17
       },
       "lb-334-1Tp2": {
-        "best": 15,
+        "best": 14,
         "worst": 18
       },
       "custom-1790458138074-p8hs": {
@@ -81289,7 +81344,7 @@
         "worst": 30
       },
       "lb-81-2aqc": {
-        "best": 16,
+        "best": 15,
         "worst": 29
       },
       "lb-322-2aeA": {
@@ -81436,13 +81491,13 @@
         "best": 43,
         "worst": 140
       },
-      "lb-488-294O": {
-        "best": 34,
-        "worst": 92
-      },
       "custom-1792318978542-vitq": {
         "best": 36,
         "worst": 63
+      },
+      "lb-488-294O": {
+        "best": 34,
+        "worst": 92
       },
       "custom-1790322763195-rro9": {
         "best": 39,
@@ -81992,10 +82047,6 @@
         "best": 177,
         "worst": 229
       },
-      "lb-243-orTE": {
-        "best": 150,
-        "worst": 229
-      },
       "lb-298-28Uk": {
         "best": 183,
         "worst": 229
@@ -82003,6 +82054,10 @@
       "added-anchor-581": {
         "best": 184,
         "worst": 230
+      },
+      "lb-243-orTE": {
+        "best": 150,
+        "worst": 229
       },
       "custom-1795096338948-r8rs": {
         "best": 163,
@@ -83019,9 +83074,22 @@
         ]
       },
       {
+        "id": "lb-350-2bcK",
+        "title": "メメント",
+        "rank": 2,
+        "genres": [
+          "サスペンス",
+          "ミステリー",
+          "クライム",
+          "どんでん返し",
+          "心理・内面",
+          "特殊構造"
+        ]
+      },
+      {
         "id": "lb-22-2a1m",
         "title": "マトリックス",
-        "rank": 2,
+        "rank": 3,
         "genres": [
           "SF",
           "アクション",
@@ -83034,7 +83102,7 @@
       {
         "id": "lb-468-1GRM",
         "title": "新世紀エヴァンゲリオン劇場版 Air／まごころを、君に",
-        "rank": 3,
+        "rank": 4,
         "genres": [
           "スリラー",
           "アクション",
@@ -83058,7 +83126,7 @@
       {
         "id": "lb-540-1W7A",
         "title": "パーフェクトブルー",
-        "rank": 4,
+        "rank": 5,
         "genres": [
           "サスペンス",
           "ミステリー",
@@ -83073,7 +83141,7 @@
       {
         "id": "lb-138-2bc6",
         "title": "風の谷のナウシカ",
-        "rank": 5,
+        "rank": 6,
         "genres": [
           "ファンタジー",
           "アドベンチャー",
@@ -83091,7 +83159,7 @@
       {
         "id": "custom-1791664055006-96rv",
         "title": "Utada Hikaru: Wild Life",
-        "rank": 6,
+        "rank": 7,
         "genres": [
           "ミュージカル"
         ]
@@ -83099,7 +83167,7 @@
       {
         "id": "custom-1790420198451-g42l",
         "title": "エレファント・マン",
-        "rank": 7,
+        "rank": 8,
         "genres": [
           "ドラマ",
           "歴史",
@@ -83113,43 +83181,15 @@
       {
         "id": "custom-1791664054514-pksv",
         "title": "Luv Live",
-        "rank": 8,
+        "rank": 9,
         "genres": [
           "ミュージカル"
         ]
       },
       {
-        "id": "lb-353-Sw0",
-        "title": "ブラック・スワン",
-        "rank": 9,
-        "genres": [
-          "ドラマ",
-          "スリラー",
-          "サスペンス",
-          "切ない",
-          "どんでん返し",
-          "心理・内面",
-          "雰囲気・美学",
-          "特殊構造"
-        ]
-      },
-      {
-        "id": "lb-350-2bcK",
-        "title": "メメント",
-        "rank": 10,
-        "genres": [
-          "サスペンス",
-          "ミステリー",
-          "クライム",
-          "どんでん返し",
-          "心理・内面",
-          "特殊構造"
-        ]
-      },
-      {
         "id": "lb-492-2bcA",
         "title": "ブレードランナー",
-        "rank": 11,
+        "rank": 10,
         "genres": [
           "SF",
           "アクション",
@@ -83165,7 +83205,7 @@
       {
         "id": "custom-1792873754553-ugfj",
         "title": "紀子の食卓",
-        "rank": 12,
+        "rank": 11,
         "genres": [
           "ドラマ",
           "スリラー",
@@ -83183,7 +83223,7 @@
       {
         "id": "lb-467-ptEI",
         "title": "新世紀エヴァンゲリオン",
-        "rank": 13,
+        "rank": 12,
         "genres": [
           "アクション",
           "SF",
@@ -83197,6 +83237,21 @@
           "娯楽",
           "心理・内面",
           "TV本編"
+        ]
+      },
+      {
+        "id": "lb-353-Sw0",
+        "title": "ブラック・スワン",
+        "rank": 13,
+        "genres": [
+          "ドラマ",
+          "スリラー",
+          "サスペンス",
+          "切ない",
+          "どんでん返し",
+          "心理・内面",
+          "雰囲気・美学",
+          "特殊構造"
         ]
       },
       {
@@ -83818,9 +83873,21 @@
         ]
       },
       {
+        "id": "custom-1792318978542-vitq",
+        "title": "別離",
+        "rank": 58,
+        "genres": [
+          "ドラマ",
+          "雰囲気・美学",
+          "心理・内面",
+          "哲学・思想",
+          "社会問題・生活"
+        ]
+      },
+      {
         "id": "lb-488-294O",
         "title": "遊星からの物体X",
-        "rank": 58,
+        "rank": 59,
         "genres": [
           "SF",
           "スリラー",
@@ -83829,18 +83896,6 @@
           "サスペンス",
           "アクション",
           "雰囲気・美学"
-        ]
-      },
-      {
-        "id": "custom-1792318978542-vitq",
-        "title": "別離",
-        "rank": 59,
-        "genres": [
-          "ドラマ",
-          "雰囲気・美学",
-          "心理・内面",
-          "哲学・思想",
-          "社会問題・生活"
         ]
       },
       {
@@ -85773,23 +85828,9 @@
         ]
       },
       {
-        "id": "lb-243-orTE",
-        "title": "コンフィデンスマンJP プリンセス編",
-        "rank": 197,
-        "genres": [
-          "サスペンス",
-          "コメディ",
-          "クライム",
-          "comfort",
-          "どんでん返し",
-          "娯楽",
-          "シリーズ劇場版"
-        ]
-      },
-      {
         "id": "lb-298-28Uk",
         "title": "ロッキー",
-        "rank": 198,
+        "rank": 197,
         "genres": [
           "アクション",
           "感動",
@@ -85802,7 +85843,7 @@
       {
         "id": "added-anchor-581",
         "title": "MEMORIES",
-        "rank": 199,
+        "rank": 198,
         "genres": [
           "世界観",
           "コメディ",
@@ -85814,6 +85855,20 @@
           "社会問題・生活",
           "娯楽",
           "心理・内面"
+        ]
+      },
+      {
+        "id": "lb-243-orTE",
+        "title": "コンフィデンスマンJP プリンセス編",
+        "rank": 199,
+        "genres": [
+          "サスペンス",
+          "コメディ",
+          "クライム",
+          "comfort",
+          "どんでん返し",
+          "娯楽",
+          "シリーズ劇場版"
         ]
       },
       {
@@ -257164,6 +257219,61 @@
               "id": "lb-492-2bcA",
               "before": 5,
               "after": 11,
+              "beforeCount": 447,
+              "afterCount": 447
+            }
+          ],
+          "jumpChecks": []
+        },
+        {
+          "id": "rrpair-1795550418757-hpgyl",
+          "at": 1795550418757,
+          "kind": "pair-review",
+          "mode": "direct",
+          "editorFocus": "lb-350-2bcK",
+          "ids": [
+            "lb-350-2bcK",
+            "lb-353-Sw0"
+          ],
+          "displayIds": [
+            "lb-350-2bcK",
+            "lb-353-Sw0"
+          ],
+          "groups": [
+            [
+              "lb-350-2bcK"
+            ],
+            [
+              "lb-353-Sw0"
+            ]
+          ],
+          "reviewResolves": [
+            "lb-350-2bcK\u0000lb-353-Sw0"
+          ],
+          "genreScope": "同系統を比較 · サスペンス・どんでん返し",
+          "rankDelta": {
+            "version": 1,
+            "shared": 447,
+            "newCompared": 0,
+            "seenAfter": 447,
+            "changed": 17,
+            "median": 0,
+            "p90": 0,
+            "max": 8,
+            "inversions": 14
+          },
+          "triadPositions": [
+            {
+              "id": "lb-350-2bcK",
+              "before": 10,
+              "after": 2,
+              "beforeCount": 447,
+              "afterCount": 447
+            },
+            {
+              "id": "lb-353-Sw0",
+              "before": 9,
+              "after": 13,
               "beforeCount": 447,
               "afterCount": 447
             }
