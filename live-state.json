@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1795538712592,
-  "sourceUpdatedIso": "2026-11-24T16:45:12.592Z",
+  "sourceUpdatedAt": 1795538721005,
+  "sourceUpdatedIso": "2026-11-24T16:45:21.005Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -9385,6 +9385,34 @@
       "letterboxdReportedWatchedDate": null
     },
     {
+      "id": "lb-23-2b8y",
+      "title": "タクシードライバー",
+      "originalTitle": "",
+      "englishTitle": "Taxi Driver",
+      "year": 1976,
+      "score": 82,
+      "star": 3,
+      "overallRank": 325,
+      "sameScoreRank": 2,
+      "category": "マフィア、クライム",
+      "mediaType": "movie",
+      "genre": [
+        "クライム",
+        "サスペンス",
+        "社会問題・生活",
+        "ドラマ",
+        "心理・内面",
+        "バイオレンス"
+      ],
+      "origin": "ハリウッド",
+      "format": "live",
+      "runtime": 114,
+      "exact": true,
+      "letterboxdAddedDate": "2025-09-01",
+      "letterboxdPublishedAt": null,
+      "letterboxdReportedWatchedDate": null
+    },
+    {
       "id": "custom-1795538694881-oetd",
       "title": "ゴジラ",
       "originalTitle": "ゴジラ",
@@ -9392,8 +9420,8 @@
       "year": 1954,
       "score": 82,
       "star": 3,
-      "overallRank": 325,
-      "sameScoreRank": 2,
+      "overallRank": 326,
+      "sameScoreRank": 3,
       "category": "Letterboxd",
       "mediaType": "movie",
       "genre": [
@@ -9417,8 +9445,8 @@
       "year": 2017,
       "score": 82,
       "star": 3,
-      "overallRank": 326,
-      "sameScoreRank": 3,
+      "overallRank": 327,
+      "sameScoreRank": 4,
       "category": "Letterboxd",
       "mediaType": "drama",
       "genre": [
@@ -9446,8 +9474,8 @@
       "year": 1995,
       "score": 82,
       "star": 3,
-      "overallRank": 327,
-      "sameScoreRank": 4,
+      "overallRank": 328,
+      "sameScoreRank": 5,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -9478,8 +9506,8 @@
       "year": 2012,
       "score": 82,
       "star": 3,
-      "overallRank": 328,
-      "sameScoreRank": 5,
+      "overallRank": 329,
+      "sameScoreRank": 6,
       "category": "ファンタジー、アドベンチャー",
       "mediaType": "movie",
       "genre": [
@@ -9509,8 +9537,8 @@
       "year": 2012,
       "score": 82,
       "star": 3,
-      "overallRank": 329,
-      "sameScoreRank": 6,
+      "overallRank": 330,
+      "sameScoreRank": 7,
       "category": "ほかアニメ",
       "mediaType": "movie",
       "genre": [
@@ -9531,34 +9559,6 @@
       "runtime": 106,
       "exact": true,
       "letterboxdAddedDate": "2026-05-30",
-      "letterboxdPublishedAt": null,
-      "letterboxdReportedWatchedDate": null
-    },
-    {
-      "id": "lb-23-2b8y",
-      "title": "タクシードライバー",
-      "originalTitle": "",
-      "englishTitle": "Taxi Driver",
-      "year": 1976,
-      "score": 82,
-      "star": 3,
-      "overallRank": 330,
-      "sameScoreRank": 7,
-      "category": "マフィア、クライム",
-      "mediaType": "movie",
-      "genre": [
-        "クライム",
-        "サスペンス",
-        "社会問題・生活",
-        "ドラマ",
-        "心理・内面",
-        "バイオレンス"
-      ],
-      "origin": "ハリウッド",
-      "format": "live",
-      "runtime": 114,
-      "exact": true,
-      "letterboxdAddedDate": "2025-09-01",
       "letterboxdPublishedAt": null,
       "letterboxdReportedWatchedDate": null
     },
@@ -24245,7 +24245,7 @@
   "newRanking": {
     "app": "movie30-rerank-analysis",
     "schema": 1,
-    "exportedAt": "2026-11-24T16:45:17.024Z",
+    "exportedAt": "2026-11-24T16:45:24.548Z",
     "rerankV2": {
       "version": 2,
       "startedAt": 1794395021969,
@@ -88421,12 +88421,12 @@
       ],
       "82": [
         "lb-555-2b8o",
+        "lb-23-2b8y",
         "custom-1795538694881-oetd",
         "custom-1791802126132-vr9o",
         "added-anchor-581",
         "lb-31-2uds",
         "lb-470-2BwG",
-        "lb-23-2b8y",
         "custom-1793983670669-rzg2",
         "custom-1791018448927-b4o3",
         "lb-557-1WyQ",
