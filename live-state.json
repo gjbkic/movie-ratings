@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1795538762286,
-  "sourceUpdatedIso": "2026-11-24T16:46:02.286Z",
+  "sourceUpdatedAt": 1795538781964,
+  "sourceUpdatedIso": "2026-11-24T16:46:21.964Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -24235,7 +24235,11 @@
       "mediaType": "movie",
       "genre": [
         "ホラー",
-        "ミステリー"
+        "ミステリー",
+        "サスペンス",
+        "バイオレンス",
+        "娯楽",
+        "どんでん返し"
       ],
       "origin": "その他",
       "format": "live",
@@ -24249,7 +24253,7 @@
   "newRanking": {
     "app": "movie30-rerank-analysis",
     "schema": 1,
-    "exportedAt": "2026-11-24T16:46:06.430Z",
+    "exportedAt": "2026-11-24T16:46:25.982Z",
     "rerankV2": {
       "version": 2,
       "startedAt": 1794395021969,
@@ -104479,7 +104483,11 @@
       ],
       "custom-1795538693895-oxaf": [
         "ホラー",
-        "ミステリー"
+        "ミステリー",
+        "サスペンス",
+        "バイオレンス",
+        "娯楽",
+        "どんでん返し"
       ],
       "custom-1795538694881-oetd": [
         "スリラー",
