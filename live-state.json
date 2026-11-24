@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1795538721005,
-  "sourceUpdatedIso": "2026-11-24T16:45:21.005Z",
+  "sourceUpdatedAt": 1795538737396,
+  "sourceUpdatedIso": "2026-11-24T16:45:37.396Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -24245,7 +24245,7 @@
   "newRanking": {
     "app": "movie30-rerank-analysis",
     "schema": 1,
-    "exportedAt": "2026-11-24T16:45:24.548Z",
+    "exportedAt": "2026-11-24T16:45:41.227Z",
     "rerankV2": {
       "version": 2,
       "startedAt": 1794395021969,
@@ -198029,6 +198029,17 @@
           "creators": [],
           "source": "tmdb",
           "fetchedAt": "2026-11-24T16:44:54.653Z"
+        },
+        "poster84": {
+          "path": "/zZZe5wn0udlhMtdlDjN4NB72R6e.jpg",
+          "tmdbId": 22970,
+          "checkedAt": "2026-11-24T16:45:33.135Z",
+          "provider": "tmdb",
+          "checkedIdentity84": "thecabininthewoods|2012",
+          "matchedTitle84": "The Cabin in the Woods",
+          "validated84": true,
+          "mediaKind84": "movie",
+          "posterPinTrust84": null
         }
       },
       "custom-1795538694881-oetd": {
