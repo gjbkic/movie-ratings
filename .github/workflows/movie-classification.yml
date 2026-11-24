@@ -3,6 +3,8 @@ on:
   push:
     paths:
       - 'app-core.js'
+      - 'app-review-assignment-repair.js'
+      - 'scripts/regression/review-assignment-repair.cjs'
       - 'scripts/regression/unrated-search.cjs'
       - 'scripts/regression/rerank-sync.cjs'
       - 'app-classification-metadata.js'
@@ -14,6 +16,8 @@ on:
   pull_request:
     paths:
       - 'app-core.js'
+      - 'app-review-assignment-repair.js'
+      - 'scripts/regression/review-assignment-repair.cjs'
       - 'scripts/regression/unrated-search.cjs'
       - 'scripts/regression/rerank-sync.cjs'
       - 'app-classification-metadata.js'
@@ -47,6 +51,7 @@ jobs:
           curl --fail --retry 2 --max-time 60 -L https://raw.githubusercontent.com/notofonts/noto-cjk/main/Sans/OTF/Japanese/NotoSansCJKjp-Regular.otf -o "$HOME/.local/share/fonts/NotoSansCJKjp-Regular.otf"
           fc-cache -f
       - run: node --check app-classification-metadata.js && node --check app-studio-metadata.js && node --check patch-v120.js
+      - run: node scripts/regression/review-assignment-repair.cjs
       - run: node scripts/regression/rerank-sync.cjs
       - run: node scripts/regression/classification.cjs
       - run: node scripts/regression/unrated-search.cjs

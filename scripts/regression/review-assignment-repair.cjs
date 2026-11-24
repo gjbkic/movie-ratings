@@ -1,0 +1,15 @@
+'use strict';
+const assert=require('node:assert/strict');
+const {repair}=require('../../app-review-assignment-repair.js');
+const plan={entries:[{id:'wrong',guid:'rss-1',targetId:'right',title:'Right',bodies:['Original review.\nSecond paragraph.'],canonicalBody:'Original review.\nSecond paragraph.'}]};
+const state={rankOrder:{90:['wrong','right']},exactScores:{wrong:90,right:90},rerankV2:{events:[{id:'existing'}]},letterboxdMeta:{wrong:{note:'My own manually edited review.\n\n────────────\n\n【2026-10-20・Letterboxd RSS】\nOriginal review.\n\nSecond paragraph.',noteSource:'manual',rssReviewRecords:{'rss-1':{body:'Original review.\nSecond paragraph.'}}},right:{note:'Another personal annotation.'}}};
+const original=structuredClone(state);let result=repair(state,plan);
+assert.equal(state.letterboxdMeta.wrong.note,'My own manually edited review.');
+assert.equal(state.letterboxdMeta.right.note,'Another personal annotation.\n\n────────────\n\nOriginal review.\nSecond paragraph.');
+assert.equal(state.letterboxdMeta.wrong.reviewAssignmentRepair20261125.beforeNote,original.letterboxdMeta.wrong.note);
+assert(!state.letterboxdMeta.wrong.rssReviewRecords['rss-1']);assert.equal(result.restored.length,1);
+for(const k of ['rankOrder','exactScores','rerankV2'])assert.deepEqual(state[k],original[k]);
+const once=structuredClone(state);result=repair(state,plan);assert.deepEqual(state,once);assert.equal(result.changes.length,0);
+const guarded={letterboxdMeta:{wrong:{note:'Original review. Second paragraph edited by me.'},right:{note:''}}};repair(guarded,plan);assert.equal(guarded.letterboxdMeta.wrong.note,'Original review. Second paragraph edited by me.');
+const existing={letterboxdMeta:{wrong:{note:'Original review.\nSecond paragraph.'},right:{note:'Original review.\nSecond paragraph.'}}};repair(existing,plan);assert.equal(existing.letterboxdMeta.right.note,'Original review.\nSecond paragraph.');
+console.log('PASS verified block removal, paragraph whitespace, manual text protection, restoration, backup, score/history preservation, and idempotence');

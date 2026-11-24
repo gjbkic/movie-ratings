@@ -2,15 +2,17 @@
    User rankings stay in the existing localStorage/IndexedDB; this worker
    never reads, migrates, or changes rating data. */
 'use strict';
-const APP_CACHE='movie30-offline-shell-20261122-v37';
+const APP_CACHE='movie30-offline-shell-20261125-v38';
 const POSTER_CACHE='movie30-offline-posters-v1';
 const SHELL_ASSETS=[
+  "app-review-assignment-repair.js?v=20261125review38",
+  "review-assignment-repair-20261125.json",
   "",
   "index.html",
   "manifest.webmanifest?v=20261112",
-  "offline-register.js?v=20261122-reranksync37",
+  "offline-register.js?v=20261125-review38",
   "app-icon.svg",
-  "app-core.js?v=20261122-reranksync37",
+  "app-core.js?v=20261125-review38",
   "app-save-retry.js?v=20261018save2",
   "app-remote-add.js?v=20261014c",
   "app-enhancements.js?v=20261014c",
@@ -20,13 +22,13 @@ const SHELL_ASSETS=[
   "app-seasons.js?v=20261013f",
   "app-search-stability.js?v=20261014d",
   "app-unrated-panels.js?v=20261014g",
-  "app-detail-layout.js?v=20261122-reranksync37",
+  "app-detail-layout.js?v=20261125-review38",
   "app-viewing-reconcile-20261019.js?v=1",
   "app-last-attack-merge-20261022.js?v=20261022a",
   "app-crayon-duplicate-repair.js?v=20261031b",
-  "patch-v120.js?v=20261122-reranksync37",
-  "app-studio-metadata.js?v=20261122-reranksync37",
-  "app-classification-metadata.js?v=20261122-reranksync37",
+  "patch-v120.js?v=20261125-review38",
+  "app-studio-metadata.js?v=20261125-review38",
+  "app-classification-metadata.js?v=20261125-review38",
   "app-boot.js?v=20261031b"
 ];
 const BASE=self.registration.scope;
