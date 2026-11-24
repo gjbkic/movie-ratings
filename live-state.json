@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1795550035136,
-  "sourceUpdatedIso": "2026-11-24T19:53:55.136Z",
+  "sourceUpdatedAt": 1795550052725,
+  "sourceUpdatedIso": "2026-11-24T19:54:12.725Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -24253,7 +24253,7 @@
   "newRanking": {
     "app": "movie30-rerank-analysis",
     "schema": 1,
-    "exportedAt": "2026-11-24T19:53:59.038Z",
+    "exportedAt": "2026-11-24T19:54:16.650Z",
     "rerankV2": {
       "version": 2,
       "startedAt": 1794395021969,
@@ -80589,6 +80589,74 @@
               "afterCount": 447
             }
           ]
+        },
+        {
+          "id": "rrcycle-1795550052652-dwnc1",
+          "at": 1795550052652,
+          "kind": "cycle-review",
+          "mode": "conflict",
+          "ids": [
+            "lb-28-4KHC",
+            "custom-1790247938551-ixfs",
+            "lb-120-26EO"
+          ],
+          "displayIds": [
+            "lb-120-26EO",
+            "lb-28-4KHC",
+            "custom-1790247938551-ixfs"
+          ],
+          "groups": [
+            [
+              "lb-28-4KHC"
+            ],
+            [
+              "custom-1790247938551-ixfs"
+            ],
+            [
+              "lb-120-26EO"
+            ]
+          ],
+          "reviewResolves": [
+            "custom-1790247938551-ixfs\u0000lb-28-4KHC",
+            "lb-120-26EO\u0000lb-28-4KHC",
+            "custom-1790247938551-ixfs\u0000lb-120-26EO"
+          ],
+          "cycleReviewFromKey": "rrcycle-1795366046622-7iegi|lb-120-26EO\u0000lb-28-4KHC",
+          "genreScope": "同系統を比較 · 娯楽",
+          "rankDelta": {
+            "version": 1,
+            "shared": 447,
+            "newCompared": 0,
+            "seenAfter": 447,
+            "changed": 0,
+            "median": 0,
+            "p90": 0,
+            "max": 0,
+            "inversions": 0
+          },
+          "triadPositions": [
+            {
+              "id": "lb-120-26EO",
+              "before": 281,
+              "after": 281,
+              "beforeCount": 447,
+              "afterCount": 447
+            },
+            {
+              "id": "lb-28-4KHC",
+              "before": 269,
+              "after": 269,
+              "beforeCount": 447,
+              "afterCount": 447
+            },
+            {
+              "id": "custom-1790247938551-ixfs",
+              "before": 279,
+              "after": 279,
+              "beforeCount": 447,
+              "afterCount": 447
+            }
+          ]
         }
       ],
       "skips": [],
@@ -80599,9 +80667,6 @@
       "rankingMethodVersion": 124,
       "heldReviewNoticeVersion": 118,
       "cycleReviewQueue": [
-        {
-          "key": "rrcycle-1795366046622-7iegi|lb-120-26EO\u0000lb-28-4KHC"
-        },
         {
           "key": "rr2-1794596171394-bo3cn|custom-1793003365384-pli4\u0000lb-423-6ZS"
         },
@@ -80620,7 +80685,7 @@
       "drift": null,
       "stage": "一巡中",
       "detail": "まず全作品に比較結果をつなぎます。",
-      "judged": 1334,
+      "judged": 1335,
       "remaining": null,
       "estimated": "全作品を比較中",
       "bounds": {
@@ -256016,6 +256081,74 @@
               "afterCount": 447
             }
           ]
+        },
+        {
+          "id": "rrcycle-1795550052652-dwnc1",
+          "at": 1795550052652,
+          "kind": "cycle-review",
+          "mode": "conflict",
+          "ids": [
+            "lb-28-4KHC",
+            "custom-1790247938551-ixfs",
+            "lb-120-26EO"
+          ],
+          "displayIds": [
+            "lb-120-26EO",
+            "lb-28-4KHC",
+            "custom-1790247938551-ixfs"
+          ],
+          "groups": [
+            [
+              "lb-28-4KHC"
+            ],
+            [
+              "custom-1790247938551-ixfs"
+            ],
+            [
+              "lb-120-26EO"
+            ]
+          ],
+          "reviewResolves": [
+            "custom-1790247938551-ixfs\u0000lb-28-4KHC",
+            "lb-120-26EO\u0000lb-28-4KHC",
+            "custom-1790247938551-ixfs\u0000lb-120-26EO"
+          ],
+          "cycleReviewFromKey": "rrcycle-1795366046622-7iegi|lb-120-26EO\u0000lb-28-4KHC",
+          "genreScope": "同系統を比較 · 娯楽",
+          "rankDelta": {
+            "version": 1,
+            "shared": 447,
+            "newCompared": 0,
+            "seenAfter": 447,
+            "changed": 0,
+            "median": 0,
+            "p90": 0,
+            "max": 0,
+            "inversions": 0
+          },
+          "triadPositions": [
+            {
+              "id": "lb-120-26EO",
+              "before": 281,
+              "after": 281,
+              "beforeCount": 447,
+              "afterCount": 447
+            },
+            {
+              "id": "lb-28-4KHC",
+              "before": 269,
+              "after": 269,
+              "beforeCount": 447,
+              "afterCount": 447
+            },
+            {
+              "id": "custom-1790247938551-ixfs",
+              "before": 279,
+              "after": 279,
+              "beforeCount": 447,
+              "afterCount": 447
+            }
+          ]
         }
       ],
       "skips": [],
@@ -256026,9 +256159,6 @@
       "rankingMethodVersion": 124,
       "heldReviewNoticeVersion": 118,
       "cycleReviewQueue": [
-        {
-          "key": "rrcycle-1795366046622-7iegi|lb-120-26EO\u0000lb-28-4KHC"
-        },
         {
           "key": "rr2-1794596171394-bo3cn|custom-1793003365384-pli4\u0000lb-423-6ZS"
         },
