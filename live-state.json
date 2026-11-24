@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1795550027195,
-  "sourceUpdatedIso": "2026-11-24T19:53:47.195Z",
+  "sourceUpdatedAt": 1795550035136,
+  "sourceUpdatedIso": "2026-11-24T19:53:55.136Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -24253,7 +24253,7 @@
   "newRanking": {
     "app": "movie30-rerank-analysis",
     "schema": 1,
-    "exportedAt": "2026-11-24T19:53:51.155Z",
+    "exportedAt": "2026-11-24T19:53:59.038Z",
     "rerankV2": {
       "version": 2,
       "startedAt": 1794395021969,
@@ -80521,6 +80521,74 @@
               "afterCount": 447
             }
           ]
+        },
+        {
+          "id": "rrcycle-1795550035068-cp8fp",
+          "at": 1795550035068,
+          "kind": "cycle-review",
+          "mode": "conflict",
+          "ids": [
+            "custom-1792272124188-0j6i",
+            "custom-1790247938551-ixfs",
+            "lb-70-29FU"
+          ],
+          "displayIds": [
+            "lb-70-29FU",
+            "custom-1792272124188-0j6i",
+            "custom-1790247938551-ixfs"
+          ],
+          "groups": [
+            [
+              "custom-1792272124188-0j6i"
+            ],
+            [
+              "custom-1790247938551-ixfs"
+            ],
+            [
+              "lb-70-29FU"
+            ]
+          ],
+          "reviewResolves": [
+            "custom-1790247938551-ixfs\u0000custom-1792272124188-0j6i",
+            "custom-1792272124188-0j6i\u0000lb-70-29FU",
+            "custom-1790247938551-ixfs\u0000lb-70-29FU"
+          ],
+          "cycleReviewFromKey": "rrcycle-1795549857648-75reo|custom-1792272124188-0j6i\u0000lb-70-29FU",
+          "genreScope": "同系統を比較 · 恋愛・娯楽",
+          "rankDelta": {
+            "version": 1,
+            "shared": 447,
+            "newCompared": 0,
+            "seenAfter": 447,
+            "changed": 8,
+            "median": 0,
+            "p90": 0,
+            "max": 4,
+            "inversions": 6
+          },
+          "triadPositions": [
+            {
+              "id": "lb-70-29FU",
+              "before": 287,
+              "after": 289,
+              "beforeCount": 447,
+              "afterCount": 447
+            },
+            {
+              "id": "custom-1792272124188-0j6i",
+              "before": 268,
+              "after": 268,
+              "beforeCount": 447,
+              "afterCount": 447
+            },
+            {
+              "id": "custom-1790247938551-ixfs",
+              "before": 279,
+              "after": 279,
+              "beforeCount": 447,
+              "afterCount": 447
+            }
+          ]
         }
       ],
       "skips": [],
@@ -80531,9 +80599,6 @@
       "rankingMethodVersion": 124,
       "heldReviewNoticeVersion": 118,
       "cycleReviewQueue": [
-        {
-          "key": "rrcycle-1795549857648-75reo|custom-1792272124188-0j6i\u0000lb-70-29FU"
-        },
         {
           "key": "rrcycle-1795366046622-7iegi|lb-120-26EO\u0000lb-28-4KHC"
         },
@@ -80555,7 +80620,7 @@
       "drift": null,
       "stage": "一巡中",
       "detail": "まず全作品に比較結果をつなぎます。",
-      "judged": 1333,
+      "judged": 1334,
       "remaining": null,
       "estimated": "全作品を比較中",
       "bounds": {
@@ -81556,6 +81621,10 @@
         "best": 241,
         "worst": 280
       },
+      "lb-76-4vru": {
+        "best": 165,
+        "worst": 276
+      },
       "lb-266-1Iik": {
         "best": 166,
         "worst": 266
@@ -81571,10 +81640,6 @@
       "lb-25-17ue": {
         "best": 235,
         "worst": 284
-      },
-      "lb-76-4vru": {
-        "best": 165,
-        "worst": 276
       },
       "lb-541-27MO": {
         "best": 216,
@@ -81716,10 +81781,6 @@
         "best": 277,
         "worst": 311
       },
-      "lb-70-29FU": {
-        "best": 279,
-        "worst": 330
-      },
       "lb-271-29zW": {
         "best": 231,
         "worst": 331
@@ -81727,6 +81788,10 @@
       "lb-458-2bg8": {
         "best": 232,
         "worst": 333
+      },
+      "lb-70-29FU": {
+        "best": 279,
+        "worst": 330
       },
       "lb-53-29QI": {
         "best": 235,
@@ -85850,9 +85915,24 @@
         ]
       },
       {
+        "id": "lb-76-4vru",
+        "title": "スター・ウォーズ／フォースの覚醒",
+        "rank": 247,
+        "genres": [
+          "SF",
+          "ファンタジー",
+          "アドベンチャー",
+          "世界観",
+          "アクション",
+          "大作",
+          "娯楽",
+          "戦争"
+        ]
+      },
+      {
         "id": "lb-266-1Iik",
         "title": "第9地区",
-        "rank": 247,
+        "rank": 248,
         "genres": [
           "SF",
           "アクション",
@@ -85867,7 +85947,7 @@
       {
         "id": "lb-127-28zw",
         "title": "ダイ・ハード2",
-        "rank": 248,
+        "rank": 249,
         "genres": [
           "アクション",
           "娯楽",
@@ -85879,7 +85959,7 @@
       {
         "id": "lb-546-3ZqO",
         "title": "グランド・ブダペスト・ホテル",
-        "rank": 249,
+        "rank": 250,
         "genres": [
           "ドラマ",
           "世界観",
@@ -85892,26 +85972,11 @@
       {
         "id": "lb-25-17ue",
         "title": "ソーシャル・ネットワーク",
-        "rank": 250,
+        "rank": 251,
         "genres": [
           "ドラマ",
           "青春・若者",
           "娯楽"
-        ]
-      },
-      {
-        "id": "lb-76-4vru",
-        "title": "スター・ウォーズ／フォースの覚醒",
-        "rank": 251,
-        "genres": [
-          "SF",
-          "ファンタジー",
-          "アドベンチャー",
-          "世界観",
-          "アクション",
-          "大作",
-          "娯楽",
-          "戦争"
         ]
       },
       {
@@ -86386,25 +86451,9 @@
         ]
       },
       {
-        "id": "lb-70-29FU",
-        "title": "ハリー・ポッターと謎のプリンス",
-        "rank": 287,
-        "genres": [
-          "ファンタジー",
-          "アドベンチャー",
-          "どんでん返し",
-          "アクション",
-          "世界観",
-          "ドラマ",
-          "恋愛",
-          "切ない",
-          "娯楽"
-        ]
-      },
-      {
         "id": "lb-271-29zW",
         "title": "ローマの休日",
-        "rank": 288,
+        "rank": 287,
         "genres": [
           "恋愛",
           "ドラマ",
@@ -86417,7 +86466,7 @@
       {
         "id": "lb-458-2bg8",
         "title": "ヒート",
-        "rank": 289,
+        "rank": 288,
         "genres": [
           "クライム",
           "アクション",
@@ -86427,6 +86476,22 @@
           "バイオレンス",
           "雰囲気・美学",
           "ドラマ"
+        ]
+      },
+      {
+        "id": "lb-70-29FU",
+        "title": "ハリー・ポッターと謎のプリンス",
+        "rank": 289,
+        "genres": [
+          "ファンタジー",
+          "アドベンチャー",
+          "どんでん返し",
+          "アクション",
+          "世界観",
+          "ドラマ",
+          "恋愛",
+          "切ない",
+          "娯楽"
         ]
       },
       {
@@ -255883,6 +255948,74 @@
               "afterCount": 447
             }
           ]
+        },
+        {
+          "id": "rrcycle-1795550035068-cp8fp",
+          "at": 1795550035068,
+          "kind": "cycle-review",
+          "mode": "conflict",
+          "ids": [
+            "custom-1792272124188-0j6i",
+            "custom-1790247938551-ixfs",
+            "lb-70-29FU"
+          ],
+          "displayIds": [
+            "lb-70-29FU",
+            "custom-1792272124188-0j6i",
+            "custom-1790247938551-ixfs"
+          ],
+          "groups": [
+            [
+              "custom-1792272124188-0j6i"
+            ],
+            [
+              "custom-1790247938551-ixfs"
+            ],
+            [
+              "lb-70-29FU"
+            ]
+          ],
+          "reviewResolves": [
+            "custom-1790247938551-ixfs\u0000custom-1792272124188-0j6i",
+            "custom-1792272124188-0j6i\u0000lb-70-29FU",
+            "custom-1790247938551-ixfs\u0000lb-70-29FU"
+          ],
+          "cycleReviewFromKey": "rrcycle-1795549857648-75reo|custom-1792272124188-0j6i\u0000lb-70-29FU",
+          "genreScope": "同系統を比較 · 恋愛・娯楽",
+          "rankDelta": {
+            "version": 1,
+            "shared": 447,
+            "newCompared": 0,
+            "seenAfter": 447,
+            "changed": 8,
+            "median": 0,
+            "p90": 0,
+            "max": 4,
+            "inversions": 6
+          },
+          "triadPositions": [
+            {
+              "id": "lb-70-29FU",
+              "before": 287,
+              "after": 289,
+              "beforeCount": 447,
+              "afterCount": 447
+            },
+            {
+              "id": "custom-1792272124188-0j6i",
+              "before": 268,
+              "after": 268,
+              "beforeCount": 447,
+              "afterCount": 447
+            },
+            {
+              "id": "custom-1790247938551-ixfs",
+              "before": 279,
+              "after": 279,
+              "beforeCount": 447,
+              "afterCount": 447
+            }
+          ]
         }
       ],
       "skips": [],
@@ -255893,9 +256026,6 @@
       "rankingMethodVersion": 124,
       "heldReviewNoticeVersion": 118,
       "cycleReviewQueue": [
-        {
-          "key": "rrcycle-1795549857648-75reo|custom-1792272124188-0j6i\u0000lb-70-29FU"
-        },
         {
           "key": "rrcycle-1795366046622-7iegi|lb-120-26EO\u0000lb-28-4KHC"
         },
