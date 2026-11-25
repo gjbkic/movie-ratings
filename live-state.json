@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1795607946234,
-  "sourceUpdatedIso": "2026-11-25T11:59:06.234Z",
+  "sourceUpdatedAt": 1795608008847,
+  "sourceUpdatedIso": "2026-11-25T12:00:08.847Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -24253,7 +24253,7 @@
   "newRanking": {
     "app": "movie30-rerank-analysis",
     "schema": 1,
-    "exportedAt": "2026-11-25T11:59:10.351Z",
+    "exportedAt": "2026-11-25T12:00:13.110Z",
     "rerankV2": {
       "version": 2,
       "startedAt": 1794395021969,
@@ -81995,6 +81995,70 @@
             }
           ],
           "jumpChecks": []
+        },
+        {
+          "id": "rr2-1795608008763-ofvxk",
+          "at": 1795608008763,
+          "ids": [
+            "lb-6-29Pq",
+            "lb-123-29I0",
+            "lb-423-6ZS"
+          ],
+          "displayIds": [
+            "lb-423-6ZS",
+            "lb-6-29Pq",
+            "lb-123-29I0"
+          ],
+          "mode": "local",
+          "kind": "rank",
+          "groups": [
+            [
+              "lb-6-29Pq"
+            ],
+            [
+              "lb-123-29I0"
+            ],
+            [
+              "lb-423-6ZS"
+            ]
+          ],
+          "firstPick": "lb-6-29Pq",
+          "genreScope": "同系統を比較 · ドラマ",
+          "rankDelta": {
+            "version": 1,
+            "shared": 447,
+            "newCompared": 0,
+            "seenAfter": 447,
+            "changed": 8,
+            "median": 0,
+            "p90": 0,
+            "max": 2,
+            "inversions": 5
+          },
+          "triadPositions": [
+            {
+              "id": "lb-423-6ZS",
+              "before": 264,
+              "after": 264,
+              "beforeCount": 447,
+              "afterCount": 447
+            },
+            {
+              "id": "lb-6-29Pq",
+              "before": 112,
+              "after": 112,
+              "beforeCount": 447,
+              "afterCount": 447
+            },
+            {
+              "id": "lb-123-29I0",
+              "before": 187,
+              "after": 187,
+              "beforeCount": 447,
+              "afterCount": 447
+            }
+          ],
+          "jumpChecks": []
         }
       ],
       "skips": [],
@@ -82016,7 +82080,7 @@
       "drift": null,
       "stage": "一巡中",
       "detail": "まず全作品に比較結果をつなぎます。",
-      "judged": 1358,
+      "judged": 1359,
       "remaining": null,
       "estimated": "全作品を比較中",
       "bounds": {
@@ -82645,6 +82709,10 @@
         "best": 147,
         "worst": 162
       },
+      "lb-89-5RFA": {
+        "best": 148,
+        "worst": 167
+      },
       "lb-85-1GjK": {
         "best": 148,
         "worst": 173
@@ -82653,17 +82721,13 @@
         "best": 149,
         "worst": 176
       },
-      "lb-89-5RFA": {
-        "best": 148,
-        "worst": 167
+      "lb-310-azpY": {
+        "best": 149,
+        "worst": 171
       },
       "lb-287-2amk": {
         "best": 144,
         "worst": 176
-      },
-      "lb-310-azpY": {
-        "best": 149,
-        "worst": 171
       },
       "lb-172-2aHW": {
         "best": 150,
@@ -82817,6 +82881,10 @@
         "best": 177,
         "worst": 229
       },
+      "lb-243-orTE": {
+        "best": 150,
+        "worst": 229
+      },
       "lb-298-28Uk": {
         "best": 183,
         "worst": 229
@@ -82824,10 +82892,6 @@
       "added-anchor-581": {
         "best": 184,
         "worst": 230
-      },
-      "lb-243-orTE": {
-        "best": 150,
-        "worst": 229
       },
       "custom-1795096338948-r8rs": {
         "best": 163,
@@ -85983,32 +86047,9 @@
         ]
       },
       {
-        "id": "lb-85-1GjK",
-        "title": "ハングオーバー",
-        "rank": 154,
-        "genres": [
-          "コメディ",
-          "ドラマ",
-          "娯楽",
-          "comfort"
-        ]
-      },
-      {
-        "id": "lb-544-26EE",
-        "title": "ボーン・スプレマシー",
-        "rank": 155,
-        "genres": [
-          "アクション",
-          "娯楽",
-          "サスペンス",
-          "スリラー",
-          "クライム"
-        ]
-      },
-      {
         "id": "lb-89-5RFA",
         "title": "バードマンあるいは無知がもたらす予期せぬ奇跡",
-        "rank": 156,
+        "rank": 154,
         "genres": [
           "ドラマ",
           "感動",
@@ -86020,21 +86061,32 @@
         ]
       },
       {
-        "id": "lb-287-2amk",
-        "title": "ビューティフル・マインド",
-        "rank": 157,
+        "id": "lb-85-1GjK",
+        "title": "ハングオーバー",
+        "rank": 155,
         "genres": [
+          "コメディ",
           "ドラマ",
+          "娯楽",
+          "comfort"
+        ]
+      },
+      {
+        "id": "lb-544-26EE",
+        "title": "ボーン・スプレマシー",
+        "rank": 156,
+        "genres": [
+          "アクション",
+          "娯楽",
           "サスペンス",
-          "どんでん返し",
-          "切ない",
-          "心理・内面"
+          "スリラー",
+          "クライム"
         ]
       },
       {
         "id": "lb-310-azpY",
         "title": "スパイダーマン：スパイダーバース",
-        "rank": 158,
+        "rank": 157,
         "genres": [
           "アクション",
           "ファンタジー",
@@ -86043,6 +86095,18 @@
           "世界観",
           "娯楽",
           "SF"
+        ]
+      },
+      {
+        "id": "lb-287-2amk",
+        "title": "ビューティフル・マインド",
+        "rank": 158,
+        "genres": [
+          "ドラマ",
+          "サスペンス",
+          "どんでん返し",
+          "切ない",
+          "心理・内面"
         ]
       },
       {
@@ -86598,9 +86662,23 @@
         ]
       },
       {
+        "id": "lb-243-orTE",
+        "title": "コンフィデンスマンJP プリンセス編",
+        "rank": 197,
+        "genres": [
+          "サスペンス",
+          "コメディ",
+          "クライム",
+          "comfort",
+          "どんでん返し",
+          "娯楽",
+          "シリーズ劇場版"
+        ]
+      },
+      {
         "id": "lb-298-28Uk",
         "title": "ロッキー",
-        "rank": 197,
+        "rank": 198,
         "genres": [
           "アクション",
           "感動",
@@ -86613,7 +86691,7 @@
       {
         "id": "added-anchor-581",
         "title": "MEMORIES",
-        "rank": 198,
+        "rank": 199,
         "genres": [
           "世界観",
           "コメディ",
@@ -86625,20 +86703,6 @@
           "社会問題・生活",
           "娯楽",
           "心理・内面"
-        ]
-      },
-      {
-        "id": "lb-243-orTE",
-        "title": "コンフィデンスマンJP プリンセス編",
-        "rank": 199,
-        "genres": [
-          "サスペンス",
-          "コメディ",
-          "クライム",
-          "comfort",
-          "どんでん返し",
-          "娯楽",
-          "シリーズ劇場版"
         ]
       },
       {
@@ -259260,6 +259324,70 @@
               "id": "lb-549-iEBG",
               "before": 43,
               "after": 43,
+              "beforeCount": 447,
+              "afterCount": 447
+            }
+          ],
+          "jumpChecks": []
+        },
+        {
+          "id": "rr2-1795608008763-ofvxk",
+          "at": 1795608008763,
+          "ids": [
+            "lb-6-29Pq",
+            "lb-123-29I0",
+            "lb-423-6ZS"
+          ],
+          "displayIds": [
+            "lb-423-6ZS",
+            "lb-6-29Pq",
+            "lb-123-29I0"
+          ],
+          "mode": "local",
+          "kind": "rank",
+          "groups": [
+            [
+              "lb-6-29Pq"
+            ],
+            [
+              "lb-123-29I0"
+            ],
+            [
+              "lb-423-6ZS"
+            ]
+          ],
+          "firstPick": "lb-6-29Pq",
+          "genreScope": "同系統を比較 · ドラマ",
+          "rankDelta": {
+            "version": 1,
+            "shared": 447,
+            "newCompared": 0,
+            "seenAfter": 447,
+            "changed": 8,
+            "median": 0,
+            "p90": 0,
+            "max": 2,
+            "inversions": 5
+          },
+          "triadPositions": [
+            {
+              "id": "lb-423-6ZS",
+              "before": 264,
+              "after": 264,
+              "beforeCount": 447,
+              "afterCount": 447
+            },
+            {
+              "id": "lb-6-29Pq",
+              "before": 112,
+              "after": 112,
+              "beforeCount": 447,
+              "afterCount": 447
+            },
+            {
+              "id": "lb-123-29I0",
+              "before": 187,
+              "after": 187,
               "beforeCount": 447,
               "afterCount": 447
             }
