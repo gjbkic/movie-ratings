@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1795698183741,
-  "sourceUpdatedIso": "2026-11-26T13:03:03.741Z",
+  "sourceUpdatedAt": 1795698210016,
+  "sourceUpdatedIso": "2026-11-26T13:03:30.016Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -24253,7 +24253,7 @@
   "newRanking": {
     "app": "movie30-rerank-analysis",
     "schema": 1,
-    "exportedAt": "2026-11-26T13:03:08.017Z",
+    "exportedAt": "2026-11-26T13:03:34.006Z",
     "rerankV2": {
       "version": 2,
       "startedAt": 1794395021969,
@@ -83447,6 +83447,82 @@
               "afterCount": 448
             }
           ]
+        },
+        {
+          "id": "rrcycle-1795698209943-wxzlv",
+          "at": 1795698209943,
+          "kind": "cycle-review",
+          "mode": "conflict",
+          "ids": [
+            "custom-1789385860628-ogsm",
+            "lb-7-h4cS",
+            "custom-1790247938551-ixfs",
+            "lb-13-1JzG"
+          ],
+          "displayIds": [
+            "lb-13-1JzG",
+            "custom-1789385860628-ogsm",
+            "lb-7-h4cS",
+            "custom-1790247938551-ixfs"
+          ],
+          "groups": [
+            [
+              "custom-1789385860628-ogsm"
+            ],
+            [
+              "lb-7-h4cS"
+            ],
+            [
+              "custom-1790247938551-ixfs"
+            ],
+            [
+              "lb-13-1JzG"
+            ]
+          ],
+          "reviewResolves": [
+            "custom-1789385860628-ogsm\u0000lb-7-h4cS",
+            "custom-1789385860628-ogsm\u0000custom-1790247938551-ixfs",
+            "custom-1789385860628-ogsm\u0000lb-13-1JzG",
+            "custom-1790247938551-ixfs\u0000lb-7-h4cS",
+            "lb-13-1JzG\u0000lb-7-h4cS",
+            "custom-1790247938551-ixfs\u0000lb-13-1JzG"
+          ],
+          "cycleReviewFromKey": "rr2-1794596187948-9iap8|custom-1789385860628-ogsm\u0000lb-13-1JzG",
+          "genreScope": "ジャンルを横断して比較",
+          "rankDelta": {
+            "version": 1,
+            "shared": 448,
+            "newCompared": 0,
+            "seenAfter": 448,
+            "changed": 15,
+            "median": 0,
+            "p90": 0,
+            "max": 6,
+            "inversions": 10
+          },
+          "triadPositions": [
+            {
+              "id": "lb-13-1JzG",
+              "before": 278,
+              "after": 279,
+              "beforeCount": 448,
+              "afterCount": 448
+            },
+            {
+              "id": "custom-1789385860628-ogsm",
+              "before": 264,
+              "after": 263,
+              "beforeCount": 448,
+              "afterCount": 448
+            },
+            {
+              "id": "lb-7-h4cS",
+              "before": 265,
+              "after": 264,
+              "beforeCount": 448,
+              "afterCount": 448
+            }
+          ]
         }
       ],
       "skips": [],
@@ -83457,9 +83533,6 @@
       "rankingMethodVersion": 124,
       "heldReviewNoticeVersion": 118,
       "cycleReviewQueue": [
-        {
-          "key": "rr2-1794596187948-9iap8|custom-1789385860628-ogsm\u0000lb-13-1JzG"
-        },
         {
           "key": "rr2-1794507042598-o6fji|lb-399-29PA\u0000lb-555-2b8o"
         },
@@ -83521,7 +83594,7 @@
       },
       "stage": "順位の精度を向上中",
       "detail": "比較回数が少ない作品や接戦を補強します。",
-      "judged": 1377,
+      "judged": 1378,
       "remaining": null,
       "estimated": "必要回数は未確定",
       "bounds": {
@@ -84450,13 +84523,13 @@
         "best": 184,
         "worst": 256
       },
-      "lb-266-1Iik": {
-        "best": 166,
-        "worst": 250
-      },
       "custom-1791396105970-bm2m": {
         "best": 171,
         "worst": 245
+      },
+      "lb-266-1Iik": {
+        "best": 166,
+        "worst": 250
       },
       "lb-296-l7zS": {
         "best": 205,
@@ -84586,10 +84659,6 @@
         "best": 251,
         "worst": 276
       },
-      "lb-27-2b2A": {
-        "best": 222,
-        "worst": 333
-      },
       "custom-1789385860628-ogsm": {
         "best": 254,
         "worst": 277
@@ -84613,6 +84682,10 @@
       "custom-1792179458643-m8hx": {
         "best": 267,
         "worst": 332
+      },
+      "lb-27-2b2A": {
+        "best": 222,
+        "worst": 333
       },
       "lb-149-AF4": {
         "best": 269,
@@ -84646,25 +84719,25 @@
         "best": 266,
         "worst": 331
       },
-      "lb-13-1JzG": {
-        "best": 267,
-        "worst": 299
-      },
       "custom-1794844998856-fg8d": {
         "best": 268,
         "worst": 310
+      },
+      "lb-13-1JzG": {
+        "best": 267,
+        "worst": 299
       },
       "custom-1791918807010-n21d": {
         "best": 268,
         "worst": 302
       },
-      "lb-99-4hk0": {
-        "best": 268,
-        "worst": 317
-      },
       "lb-53-29QI": {
         "best": 223,
         "worst": 327
+      },
+      "lb-99-4hk0": {
+        "best": 268,
+        "worst": 317
       },
       "custom-1791139747386-vy04": {
         "best": 268,
@@ -84754,13 +84827,13 @@
         "best": 301,
         "worst": 340
       },
-      "lb-331-26e2": {
-        "best": 275,
-        "worst": 353
-      },
       "lb-104-4n0g": {
         "best": 268,
         "worst": 336
+      },
+      "lb-331-26e2": {
+        "best": 275,
+        "worst": 353
       },
       "lb-320-28r8": {
         "best": 255,
@@ -88561,24 +88634,9 @@
         ]
       },
       {
-        "id": "lb-266-1Iik",
-        "title": "第9地区",
-        "rank": 229,
-        "genres": [
-          "SF",
-          "アクション",
-          "スリラー",
-          "世界観",
-          "戦争",
-          "comfort",
-          "娯楽",
-          "差別・人権"
-        ]
-      },
-      {
         "id": "custom-1791396105970-bm2m",
         "title": "世にも奇妙な物語 '21夏の特別編",
-        "rank": 230,
+        "rank": 229,
         "genres": [
           "スリラー",
           "ミステリー",
@@ -88593,6 +88651,21 @@
           "アクション",
           "TV特番・SP",
           "娯楽"
+        ]
+      },
+      {
+        "id": "lb-266-1Iik",
+        "title": "第9地区",
+        "rank": 230,
+        "genres": [
+          "SF",
+          "アクション",
+          "スリラー",
+          "世界観",
+          "戦争",
+          "comfort",
+          "娯楽",
+          "差別・人権"
         ]
       },
       {
@@ -89016,25 +89089,9 @@
         ]
       },
       {
-        "id": "lb-27-2b2A",
-        "title": "ドニー・ダーコ",
-        "rank": 263,
-        "genres": [
-          "サスペンス",
-          "ミステリー",
-          "どんでん返し",
-          "哲学・思想",
-          "雰囲気・美学",
-          "時間",
-          "SF",
-          "心理・内面",
-          "ファンタジー"
-        ]
-      },
-      {
         "id": "custom-1789385860628-ogsm",
         "title": "カイジ2 人生奪回ゲーム",
-        "rank": 264,
+        "rank": 263,
         "genres": [
           "ドラマ",
           "感動",
@@ -89047,7 +89104,7 @@
       {
         "id": "lb-7-h4cS",
         "title": "ジョーカー",
-        "rank": 265,
+        "rank": 264,
         "genres": [
           "クライム",
           "社会問題・生活",
@@ -89061,7 +89118,7 @@
       {
         "id": "custom-1790247938551-ixfs",
         "title": "劇場版 チェンソーマン レゼ篇",
-        "rank": 266,
+        "rank": 265,
         "genres": [
           "アクション",
           "恋愛",
@@ -89078,7 +89135,7 @@
       {
         "id": "lb-547-1TSo",
         "title": "殺人の追憶",
-        "rank": 267,
+        "rank": 266,
         "genres": [
           "サスペンス",
           "ミステリー",
@@ -89093,7 +89150,7 @@
       {
         "id": "custom-1790322756418-p88i",
         "title": "オデュッセイア",
-        "rank": 268,
+        "rank": 267,
         "genres": [
           "アドベンチャー",
           "アクション",
@@ -89109,7 +89166,7 @@
       {
         "id": "custom-1792179458643-m8hx",
         "title": "クレヨンしんちゃん 嵐を呼ぶ モーレツ!オトナ帝国の逆襲",
-        "rank": 269,
+        "rank": 268,
         "genres": [
           "子供向け",
           "切ない",
@@ -89121,6 +89178,22 @@
           "シリーズ劇場版",
           "comfort",
           "娯楽"
+        ]
+      },
+      {
+        "id": "lb-27-2b2A",
+        "title": "ドニー・ダーコ",
+        "rank": 269,
+        "genres": [
+          "サスペンス",
+          "ミステリー",
+          "どんでん返し",
+          "哲学・思想",
+          "雰囲気・美学",
+          "時間",
+          "SF",
+          "心理・内面",
+          "ファンタジー"
         ]
       },
       {
@@ -89242,9 +89315,18 @@
         ]
       },
       {
+        "id": "custom-1794844998856-fg8d",
+        "title": "スリー・ビルボード",
+        "rank": 278,
+        "genres": [
+          "クライム",
+          "ドラマ"
+        ]
+      },
+      {
         "id": "lb-13-1JzG",
         "title": "イングロリアス・バスターズ",
-        "rank": 278,
+        "rank": 279,
         "genres": [
           "戦争",
           "歴史",
@@ -89255,15 +89337,6 @@
           "差別・人権",
           "娯楽",
           "バイオレンス"
-        ]
-      },
-      {
-        "id": "custom-1794844998856-fg8d",
-        "title": "スリー・ビルボード",
-        "rank": 279,
-        "genres": [
-          "クライム",
-          "ドラマ"
         ]
       },
       {
@@ -89279,22 +89352,9 @@
         ]
       },
       {
-        "id": "lb-99-4hk0",
-        "title": "ハンガー・ゲーム FINAL：レボリューション",
-        "rank": 281,
-        "genres": [
-          "ファンタジー",
-          "アドベンチャー",
-          "アクション",
-          "戦争",
-          "ドラマ",
-          "娯楽"
-        ]
-      },
-      {
         "id": "lb-53-29QI",
         "title": "ハリー・ポッターと秘密の部屋",
-        "rank": 282,
+        "rank": 281,
         "genres": [
           "ファンタジー",
           "アドベンチャー",
@@ -89302,6 +89362,19 @@
           "恋愛",
           "アクション",
           "comfort",
+          "娯楽"
+        ]
+      },
+      {
+        "id": "lb-99-4hk0",
+        "title": "ハンガー・ゲーム FINAL：レボリューション",
+        "rank": 282,
+        "genres": [
+          "ファンタジー",
+          "アドベンチャー",
+          "アクション",
+          "戦争",
+          "ドラマ",
           "娯楽"
         ]
       },
@@ -89609,9 +89682,21 @@
         ]
       },
       {
+        "id": "lb-104-4n0g",
+        "title": "ジュラシック・ワールド",
+        "rank": 305,
+        "genres": [
+          "アドベンチャー",
+          "SF",
+          "アクション",
+          "大作",
+          "娯楽"
+        ]
+      },
+      {
         "id": "lb-331-26e2",
         "title": "アイデンティティ",
-        "rank": 305,
+        "rank": 306,
         "genres": [
           "サスペンス",
           "ミステリー",
@@ -89621,18 +89706,6 @@
           "娯楽",
           "心理・内面",
           "特殊構造"
-        ]
-      },
-      {
-        "id": "lb-104-4n0g",
-        "title": "ジュラシック・ワールド",
-        "rank": 306,
-        "genres": [
-          "アドベンチャー",
-          "SF",
-          "アクション",
-          "大作",
-          "娯楽"
         ]
       },
       {
@@ -262226,6 +262299,82 @@
               "afterCount": 448
             }
           ]
+        },
+        {
+          "id": "rrcycle-1795698209943-wxzlv",
+          "at": 1795698209943,
+          "kind": "cycle-review",
+          "mode": "conflict",
+          "ids": [
+            "custom-1789385860628-ogsm",
+            "lb-7-h4cS",
+            "custom-1790247938551-ixfs",
+            "lb-13-1JzG"
+          ],
+          "displayIds": [
+            "lb-13-1JzG",
+            "custom-1789385860628-ogsm",
+            "lb-7-h4cS",
+            "custom-1790247938551-ixfs"
+          ],
+          "groups": [
+            [
+              "custom-1789385860628-ogsm"
+            ],
+            [
+              "lb-7-h4cS"
+            ],
+            [
+              "custom-1790247938551-ixfs"
+            ],
+            [
+              "lb-13-1JzG"
+            ]
+          ],
+          "reviewResolves": [
+            "custom-1789385860628-ogsm\u0000lb-7-h4cS",
+            "custom-1789385860628-ogsm\u0000custom-1790247938551-ixfs",
+            "custom-1789385860628-ogsm\u0000lb-13-1JzG",
+            "custom-1790247938551-ixfs\u0000lb-7-h4cS",
+            "lb-13-1JzG\u0000lb-7-h4cS",
+            "custom-1790247938551-ixfs\u0000lb-13-1JzG"
+          ],
+          "cycleReviewFromKey": "rr2-1794596187948-9iap8|custom-1789385860628-ogsm\u0000lb-13-1JzG",
+          "genreScope": "ジャンルを横断して比較",
+          "rankDelta": {
+            "version": 1,
+            "shared": 448,
+            "newCompared": 0,
+            "seenAfter": 448,
+            "changed": 15,
+            "median": 0,
+            "p90": 0,
+            "max": 6,
+            "inversions": 10
+          },
+          "triadPositions": [
+            {
+              "id": "lb-13-1JzG",
+              "before": 278,
+              "after": 279,
+              "beforeCount": 448,
+              "afterCount": 448
+            },
+            {
+              "id": "custom-1789385860628-ogsm",
+              "before": 264,
+              "after": 263,
+              "beforeCount": 448,
+              "afterCount": 448
+            },
+            {
+              "id": "lb-7-h4cS",
+              "before": 265,
+              "after": 264,
+              "beforeCount": 448,
+              "afterCount": 448
+            }
+          ]
         }
       ],
       "skips": [],
@@ -262236,9 +262385,6 @@
       "rankingMethodVersion": 124,
       "heldReviewNoticeVersion": 118,
       "cycleReviewQueue": [
-        {
-          "key": "rr2-1794596187948-9iap8|custom-1789385860628-ogsm\u0000lb-13-1JzG"
-        },
         {
           "key": "rr2-1794507042598-o6fji|lb-399-29PA\u0000lb-555-2b8o"
         },
