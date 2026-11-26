@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1795698425440,
-  "sourceUpdatedIso": "2026-11-26T13:07:05.440Z",
+  "sourceUpdatedAt": 1795698437065,
+  "sourceUpdatedIso": "2026-11-26T13:07:17.065Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -24253,7 +24253,7 @@
   "newRanking": {
     "app": "movie30-rerank-analysis",
     "schema": 1,
-    "exportedAt": "2026-11-26T13:07:09.384Z",
+    "exportedAt": "2026-11-26T13:07:21.074Z",
     "rerankV2": {
       "version": 2,
       "startedAt": 1794395021969,
@@ -83752,6 +83752,74 @@
               "afterCount": 448
             }
           ]
+        },
+        {
+          "id": "rrcycle-1795698436975-w54t9",
+          "at": 1795698436975,
+          "kind": "cycle-review",
+          "mode": "conflict",
+          "ids": [
+            "lb-181-2aB0",
+            "lb-573-28ws",
+            "custom-1790322759601-kg73"
+          ],
+          "displayIds": [
+            "custom-1790322759601-kg73",
+            "lb-181-2aB0",
+            "lb-573-28ws"
+          ],
+          "groups": [
+            [
+              "lb-181-2aB0"
+            ],
+            [
+              "lb-573-28ws"
+            ],
+            [
+              "custom-1790322759601-kg73"
+            ]
+          ],
+          "reviewResolves": [
+            "lb-181-2aB0\u0000lb-573-28ws",
+            "custom-1790322759601-kg73\u0000lb-181-2aB0",
+            "custom-1790322759601-kg73\u0000lb-573-28ws"
+          ],
+          "cycleReviewFromKey": "rrcycle-1794760580739-dav3v|custom-1790322759601-kg73\u0000lb-181-2aB0",
+          "genreScope": "同系統を比較 · サスペンス・ミステリー",
+          "rankDelta": {
+            "version": 1,
+            "shared": 448,
+            "newCompared": 0,
+            "seenAfter": 448,
+            "changed": 0,
+            "median": 0,
+            "p90": 0,
+            "max": 0,
+            "inversions": 0
+          },
+          "triadPositions": [
+            {
+              "id": "custom-1790322759601-kg73",
+              "before": 257,
+              "after": 257,
+              "beforeCount": 448,
+              "afterCount": 448
+            },
+            {
+              "id": "lb-181-2aB0",
+              "before": 238,
+              "after": 238,
+              "beforeCount": 448,
+              "afterCount": 448
+            },
+            {
+              "id": "lb-573-28ws",
+              "before": 252,
+              "after": 252,
+              "beforeCount": 448,
+              "afterCount": 448
+            }
+          ]
         }
       ],
       "skips": [],
@@ -83762,9 +83830,6 @@
       "rankingMethodVersion": 124,
       "heldReviewNoticeVersion": 118,
       "cycleReviewQueue": [
-        {
-          "key": "rrcycle-1794760580739-dav3v|custom-1790322759601-kg73\u0000lb-181-2aB0"
-        },
         {
           "key": "rrcycle-1794760580739-dav3v|custom-1790322759601-kg73\u0000lb-127-28zw"
         },
@@ -83826,7 +83891,7 @@
       },
       "stage": "順位の精度を向上中",
       "detail": "比較回数が少ない作品や接戦を補強します。",
-      "judged": 1381,
+      "judged": 1382,
       "remaining": null,
       "estimated": "必要回数は未確定",
       "bounds": {
@@ -262837,6 +262902,74 @@
               "afterCount": 448
             }
           ]
+        },
+        {
+          "id": "rrcycle-1795698436975-w54t9",
+          "at": 1795698436975,
+          "kind": "cycle-review",
+          "mode": "conflict",
+          "ids": [
+            "lb-181-2aB0",
+            "lb-573-28ws",
+            "custom-1790322759601-kg73"
+          ],
+          "displayIds": [
+            "custom-1790322759601-kg73",
+            "lb-181-2aB0",
+            "lb-573-28ws"
+          ],
+          "groups": [
+            [
+              "lb-181-2aB0"
+            ],
+            [
+              "lb-573-28ws"
+            ],
+            [
+              "custom-1790322759601-kg73"
+            ]
+          ],
+          "reviewResolves": [
+            "lb-181-2aB0\u0000lb-573-28ws",
+            "custom-1790322759601-kg73\u0000lb-181-2aB0",
+            "custom-1790322759601-kg73\u0000lb-573-28ws"
+          ],
+          "cycleReviewFromKey": "rrcycle-1794760580739-dav3v|custom-1790322759601-kg73\u0000lb-181-2aB0",
+          "genreScope": "同系統を比較 · サスペンス・ミステリー",
+          "rankDelta": {
+            "version": 1,
+            "shared": 448,
+            "newCompared": 0,
+            "seenAfter": 448,
+            "changed": 0,
+            "median": 0,
+            "p90": 0,
+            "max": 0,
+            "inversions": 0
+          },
+          "triadPositions": [
+            {
+              "id": "custom-1790322759601-kg73",
+              "before": 257,
+              "after": 257,
+              "beforeCount": 448,
+              "afterCount": 448
+            },
+            {
+              "id": "lb-181-2aB0",
+              "before": 238,
+              "after": 238,
+              "beforeCount": 448,
+              "afterCount": 448
+            },
+            {
+              "id": "lb-573-28ws",
+              "before": 252,
+              "after": 252,
+              "beforeCount": 448,
+              "afterCount": 448
+            }
+          ]
         }
       ],
       "skips": [],
@@ -262847,9 +262980,6 @@
       "rankingMethodVersion": 124,
       "heldReviewNoticeVersion": 118,
       "cycleReviewQueue": [
-        {
-          "key": "rrcycle-1794760580739-dav3v|custom-1790322759601-kg73\u0000lb-181-2aB0"
-        },
         {
           "key": "rrcycle-1794760580739-dav3v|custom-1790322759601-kg73\u0000lb-127-28zw"
         },
