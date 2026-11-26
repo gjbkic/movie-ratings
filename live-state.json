@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1795698316698,
-  "sourceUpdatedIso": "2026-11-26T13:05:16.698Z",
+  "sourceUpdatedAt": 1795698328517,
+  "sourceUpdatedIso": "2026-11-26T13:05:28.517Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -24253,7 +24253,7 @@
   "newRanking": {
     "app": "movie30-rerank-analysis",
     "schema": 1,
-    "exportedAt": "2026-11-26T13:05:20.739Z",
+    "exportedAt": "2026-11-26T13:05:32.533Z",
     "rerankV2": {
       "version": 2,
       "startedAt": 1794395021969,
@@ -83608,6 +83608,74 @@
               "afterCount": 448
             }
           ]
+        },
+        {
+          "id": "rrcycle-1795698328434-pzyh8",
+          "at": 1795698328434,
+          "kind": "cycle-review",
+          "mode": "conflict",
+          "ids": [
+            "lb-479-2a1Q",
+            "custom-1790322759601-kg73",
+            "lb-54-3sAw"
+          ],
+          "displayIds": [
+            "lb-54-3sAw",
+            "lb-479-2a1Q",
+            "custom-1790322759601-kg73"
+          ],
+          "groups": [
+            [
+              "lb-479-2a1Q"
+            ],
+            [
+              "custom-1790322759601-kg73"
+            ],
+            [
+              "lb-54-3sAw"
+            ]
+          ],
+          "reviewResolves": [
+            "custom-1790322759601-kg73\u0000lb-479-2a1Q",
+            "lb-479-2a1Q\u0000lb-54-3sAw",
+            "custom-1790322759601-kg73\u0000lb-54-3sAw"
+          ],
+          "cycleReviewFromKey": "rrcycle-1794741310256-3tc3o|lb-479-2a1Q\u0000lb-54-3sAw",
+          "genreScope": "ジャンルを横断して比較",
+          "rankDelta": {
+            "version": 1,
+            "shared": 448,
+            "newCompared": 0,
+            "seenAfter": 448,
+            "changed": 12,
+            "median": 0,
+            "p90": 0,
+            "max": 3,
+            "inversions": 11
+          },
+          "triadPositions": [
+            {
+              "id": "lb-54-3sAw",
+              "before": 306,
+              "after": 308,
+              "beforeCount": 448,
+              "afterCount": 448
+            },
+            {
+              "id": "lb-479-2a1Q",
+              "before": 242,
+              "after": 240,
+              "beforeCount": 448,
+              "afterCount": 448
+            },
+            {
+              "id": "custom-1790322759601-kg73",
+              "before": 256,
+              "after": 256,
+              "beforeCount": 448,
+              "afterCount": 448
+            }
+          ]
         }
       ],
       "skips": [],
@@ -83618,9 +83686,6 @@
       "rankingMethodVersion": 124,
       "heldReviewNoticeVersion": 118,
       "cycleReviewQueue": [
-        {
-          "key": "rrcycle-1794741310256-3tc3o|lb-479-2a1Q\u0000lb-54-3sAw"
-        },
         {
           "key": "rrcycle-1794760452970-kylbq|custom-1791913497181-nqp6\u0000lb-54-3sAw"
         },
@@ -83687,11 +83752,11 @@
       "drift": {
         "window": 40,
         "median": 1,
-        "p90": 16
+        "p90": 17
       },
       "stage": "順位の精度を向上中",
       "detail": "比較回数が少ない作品や接戦を補強します。",
-      "judged": 1379,
+      "judged": 1380,
       "remaining": null,
       "estimated": "必要回数は未確定",
       "bounds": {
@@ -84664,14 +84729,6 @@
         "best": 222,
         "worst": 251
       },
-      "lb-546-3ZqO": {
-        "best": 218,
-        "worst": 252
-      },
-      "lb-25-17ue": {
-        "best": 219,
-        "worst": 254
-      },
       "lb-479-2a1Q": {
         "best": 213,
         "worst": 251
@@ -84683,6 +84740,14 @@
       "lb-423-6ZS": {
         "best": 239,
         "worst": 253
+      },
+      "lb-546-3ZqO": {
+        "best": 218,
+        "worst": 252
+      },
+      "lb-25-17ue": {
+        "best": 219,
+        "worst": 254
       },
       "custom-1792272124188-0j6i": {
         "best": 243,
@@ -84928,10 +84993,6 @@
         "best": 275,
         "worst": 353
       },
-      "lb-54-3sAw": {
-        "best": 248,
-        "worst": 339
-      },
       "lb-320-28r8": {
         "best": 255,
         "worst": 337
@@ -84939,6 +85000,14 @@
       "custom-1791802127938-6mow": {
         "best": 285,
         "worst": 332
+      },
+      "lb-54-3sAw": {
+        "best": 248,
+        "worst": 339
+      },
+      "custom-1790458138407-21ka": {
+        "best": 286,
+        "worst": 338
       },
       "lb-163-2aYI": {
         "best": 249,
@@ -84951,10 +85020,6 @@
       "lb-457-IG": {
         "best": 253,
         "worst": 355
-      },
-      "custom-1790458138407-21ka": {
-        "best": 286,
-        "worst": 338
       },
       "lb-464-mkbG": {
         "best": 268,
@@ -88878,32 +88943,9 @@
         ]
       },
       {
-        "id": "lb-546-3ZqO",
-        "title": "グランド・ブダペスト・ホテル",
-        "rank": 240,
-        "genres": [
-          "ドラマ",
-          "世界観",
-          "サスペンス",
-          "歴史",
-          "雰囲気・美学",
-          "コメディ"
-        ]
-      },
-      {
-        "id": "lb-25-17ue",
-        "title": "ソーシャル・ネットワーク",
-        "rank": 241,
-        "genres": [
-          "ドラマ",
-          "青春・若者",
-          "娯楽"
-        ]
-      },
-      {
         "id": "lb-479-2a1Q",
         "title": "フルメタル・ジャケット",
-        "rank": 242,
+        "rank": 240,
         "genres": [
           "バイオレンス",
           "歴史",
@@ -88917,7 +88959,7 @@
       {
         "id": "lb-16-70w",
         "title": "キル・ビル Vol.1",
-        "rank": 243,
+        "rank": 241,
         "genres": [
           "アクション",
           "クライム",
@@ -88929,7 +88971,7 @@
       {
         "id": "lb-423-6ZS",
         "title": "地獄の黙示録",
-        "rank": 244,
+        "rank": 242,
         "genres": [
           "戦争",
           "歴史",
@@ -88937,6 +88979,29 @@
           "心理・内面",
           "ドラマ",
           "雰囲気・美学"
+        ]
+      },
+      {
+        "id": "lb-546-3ZqO",
+        "title": "グランド・ブダペスト・ホテル",
+        "rank": 243,
+        "genres": [
+          "ドラマ",
+          "世界観",
+          "サスペンス",
+          "歴史",
+          "雰囲気・美学",
+          "コメディ"
+        ]
+      },
+      {
+        "id": "lb-25-17ue",
+        "title": "ソーシャル・ネットワーク",
+        "rank": 244,
+        "genres": [
+          "ドラマ",
+          "青春・若者",
+          "娯楽"
         ]
       },
       {
@@ -89792,23 +89857,9 @@
         ]
       },
       {
-        "id": "lb-54-3sAw",
-        "title": "ハンガー・ゲーム2",
-        "rank": 306,
-        "genres": [
-          "ファンタジー",
-          "アドベンチャー",
-          "戦争",
-          "アクション",
-          "どんでん返し",
-          "世界観",
-          "娯楽"
-        ]
-      },
-      {
         "id": "lb-320-28r8",
         "title": "ミシシッピー・バーニング",
-        "rank": 307,
+        "rank": 306,
         "genres": [
           "サスペンス",
           "ミステリー",
@@ -89821,7 +89872,7 @@
       {
         "id": "custom-1791802127938-6mow",
         "title": "ブラック・ミラー「宇宙船カリスター号」",
-        "rank": 308,
+        "rank": 307,
         "genres": [
           "TV本編",
           "アクション",
@@ -89833,9 +89884,37 @@
         ]
       },
       {
+        "id": "lb-54-3sAw",
+        "title": "ハンガー・ゲーム2",
+        "rank": 308,
+        "genres": [
+          "ファンタジー",
+          "アドベンチャー",
+          "戦争",
+          "アクション",
+          "どんでん返し",
+          "世界観",
+          "娯楽"
+        ]
+      },
+      {
+        "id": "custom-1790458138407-21ka",
+        "title": "アンメット ある脳外科医の日記",
+        "rank": 309,
+        "genres": [
+          "ドラマ",
+          "ミステリー",
+          "TV本編",
+          "恋愛",
+          "心理・内面",
+          "雰囲気・美学",
+          "社会問題・生活"
+        ]
+      },
+      {
         "id": "lb-163-2aYI",
         "title": "バック・トゥ・ザ・フューチャー PART2",
-        "rank": 309,
+        "rank": 310,
         "genres": [
           "SF",
           "アドベンチャー",
@@ -89849,7 +89928,7 @@
       {
         "id": "custom-1793003365384-pli4",
         "title": "チェイサー",
-        "rank": 310,
+        "rank": 311,
         "genres": [
           "クライム",
           "スリラー",
@@ -89865,7 +89944,7 @@
       {
         "id": "lb-457-IG",
         "title": "ドライブ",
-        "rank": 311,
+        "rank": 312,
         "genres": [
           "クライム",
           "サスペンス",
@@ -89874,20 +89953,6 @@
           "心理・内面",
           "雰囲気・美学",
           "バイオレンス"
-        ]
-      },
-      {
-        "id": "custom-1790458138407-21ka",
-        "title": "アンメット ある脳外科医の日記",
-        "rank": 312,
-        "genres": [
-          "ドラマ",
-          "ミステリー",
-          "TV本編",
-          "恋愛",
-          "心理・内面",
-          "雰囲気・美学",
-          "社会問題・生活"
         ]
       },
       {
@@ -262558,6 +262623,74 @@
               "afterCount": 448
             }
           ]
+        },
+        {
+          "id": "rrcycle-1795698328434-pzyh8",
+          "at": 1795698328434,
+          "kind": "cycle-review",
+          "mode": "conflict",
+          "ids": [
+            "lb-479-2a1Q",
+            "custom-1790322759601-kg73",
+            "lb-54-3sAw"
+          ],
+          "displayIds": [
+            "lb-54-3sAw",
+            "lb-479-2a1Q",
+            "custom-1790322759601-kg73"
+          ],
+          "groups": [
+            [
+              "lb-479-2a1Q"
+            ],
+            [
+              "custom-1790322759601-kg73"
+            ],
+            [
+              "lb-54-3sAw"
+            ]
+          ],
+          "reviewResolves": [
+            "custom-1790322759601-kg73\u0000lb-479-2a1Q",
+            "lb-479-2a1Q\u0000lb-54-3sAw",
+            "custom-1790322759601-kg73\u0000lb-54-3sAw"
+          ],
+          "cycleReviewFromKey": "rrcycle-1794741310256-3tc3o|lb-479-2a1Q\u0000lb-54-3sAw",
+          "genreScope": "ジャンルを横断して比較",
+          "rankDelta": {
+            "version": 1,
+            "shared": 448,
+            "newCompared": 0,
+            "seenAfter": 448,
+            "changed": 12,
+            "median": 0,
+            "p90": 0,
+            "max": 3,
+            "inversions": 11
+          },
+          "triadPositions": [
+            {
+              "id": "lb-54-3sAw",
+              "before": 306,
+              "after": 308,
+              "beforeCount": 448,
+              "afterCount": 448
+            },
+            {
+              "id": "lb-479-2a1Q",
+              "before": 242,
+              "after": 240,
+              "beforeCount": 448,
+              "afterCount": 448
+            },
+            {
+              "id": "custom-1790322759601-kg73",
+              "before": 256,
+              "after": 256,
+              "beforeCount": 448,
+              "afterCount": 448
+            }
+          ]
         }
       ],
       "skips": [],
@@ -262568,9 +262701,6 @@
       "rankingMethodVersion": 124,
       "heldReviewNoticeVersion": 118,
       "cycleReviewQueue": [
-        {
-          "key": "rrcycle-1794741310256-3tc3o|lb-479-2a1Q\u0000lb-54-3sAw"
-        },
         {
           "key": "rrcycle-1794760452970-kylbq|custom-1791913497181-nqp6\u0000lb-54-3sAw"
         },
