@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1795699303371,
-  "sourceUpdatedIso": "2026-11-26T13:21:43.371Z",
+  "sourceUpdatedAt": 1795699321336,
+  "sourceUpdatedIso": "2026-11-26T13:22:01.336Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -24253,7 +24253,7 @@
   "newRanking": {
     "app": "movie30-rerank-analysis",
     "schema": 1,
-    "exportedAt": "2026-11-26T13:21:47.313Z",
+    "exportedAt": "2026-11-26T13:22:05.420Z",
     "rerankV2": {
       "version": 2,
       "startedAt": 1794395021969,
@@ -85980,6 +85980,70 @@
             }
           ],
           "jumpChecks": []
+        },
+        {
+          "id": "rr2-1795699321244-zb3tw",
+          "at": 1795699321244,
+          "ids": [
+            "lb-86-cUqs",
+            "lb-571-28qk",
+            "lb-525-2aVE"
+          ],
+          "displayIds": [
+            "lb-525-2aVE",
+            "lb-86-cUqs",
+            "lb-571-28qk"
+          ],
+          "mode": "local",
+          "kind": "rank",
+          "groups": [
+            [
+              "lb-86-cUqs"
+            ],
+            [
+              "lb-571-28qk"
+            ],
+            [
+              "lb-525-2aVE"
+            ]
+          ],
+          "firstPick": "lb-86-cUqs",
+          "genreScope": "ジャンルを横断して比較",
+          "rankDelta": {
+            "version": 1,
+            "shared": 448,
+            "newCompared": 0,
+            "seenAfter": 448,
+            "changed": 7,
+            "median": 0,
+            "p90": 0,
+            "max": 2,
+            "inversions": 4
+          },
+          "triadPositions": [
+            {
+              "id": "lb-525-2aVE",
+              "before": 216,
+              "after": 218,
+              "beforeCount": 448,
+              "afterCount": 448
+            },
+            {
+              "id": "lb-86-cUqs",
+              "before": 42,
+              "after": 42,
+              "beforeCount": 448,
+              "afterCount": 448
+            },
+            {
+              "id": "lb-571-28qk",
+              "before": 101,
+              "after": 101,
+              "beforeCount": 448,
+              "afterCount": 448
+            }
+          ],
+          "jumpChecks": []
         }
       ],
       "skips": [],
@@ -86005,7 +86069,7 @@
       },
       "stage": "順位の精度を向上中",
       "detail": "比較回数が少ない作品や接戦を補強します。",
-      "judged": 1411,
+      "judged": 1412,
       "remaining": null,
       "estimated": "必要回数は未確定",
       "bounds": {
@@ -86734,13 +86798,13 @@
         "best": 163,
         "worst": 224
       },
-      "lb-367-29EW": {
-        "best": 157,
-        "worst": 221
-      },
       "lb-495-Msm": {
         "best": 152,
         "worst": 198
+      },
+      "lb-367-29EW": {
+        "best": 157,
+        "worst": 221
       },
       "lb-98-2bbs": {
         "best": 161,
@@ -86882,16 +86946,16 @@
         "best": 215,
         "worst": 247
       },
-      "lb-525-2aVE": {
-        "best": 158,
-        "worst": 244
-      },
       "lb-366-jWEA": {
         "best": 168,
         "worst": 242
       },
       "custom-1793391233092-5ate": {
         "best": 169,
+        "worst": 244
+      },
+      "lb-525-2aVE": {
+        "best": 158,
         "worst": 244
       },
       "lb-369-2aVk": {
@@ -87342,13 +87406,13 @@
         "best": 97,
         "worst": 406
       },
-      "lb-119-25zS": {
-        "best": 273,
-        "worst": 368
-      },
       "custom-1790269934541-2ps3": {
         "best": 177,
         "worst": 346
+      },
+      "lb-119-25zS": {
+        "best": 273,
+        "worst": 368
       },
       "lb-238-290C": {
         "best": 315,
@@ -90335,23 +90399,9 @@
         ]
       },
       {
-        "id": "lb-367-29EW",
-        "title": "リトル・ミス・サンシャイン",
-        "rank": 179,
-        "genres": [
-          "ドラマ",
-          "comfort",
-          "青春・若者",
-          "感動",
-          "心理・内面",
-          "雰囲気・美学",
-          "コメディ"
-        ]
-      },
-      {
         "id": "lb-495-Msm",
         "title": "灼熱の魂",
-        "rank": 180,
+        "rank": 179,
         "genres": [
           "サスペンス",
           "ミステリー",
@@ -90365,6 +90415,20 @@
           "どんでん返し",
           "心理・内面",
           "バイオレンス"
+        ]
+      },
+      {
+        "id": "lb-367-29EW",
+        "title": "リトル・ミス・サンシャイン",
+        "rank": 180,
+        "genres": [
+          "ドラマ",
+          "comfort",
+          "青春・若者",
+          "感動",
+          "心理・内面",
+          "雰囲気・美学",
+          "コメディ"
         ]
       },
       {
@@ -90849,25 +90913,9 @@
         ]
       },
       {
-        "id": "lb-525-2aVE",
-        "title": "時計じかけのオレンジ",
-        "rank": 216,
-        "genres": [
-          "クライム",
-          "世界観",
-          "サスペンス",
-          "社会問題・生活",
-          "哲学・思想",
-          "差別・人権",
-          "心理・内面",
-          "バイオレンス",
-          "雰囲気・美学"
-        ]
-      },
-      {
         "id": "lb-366-jWEA",
         "title": "ナイブズ・アウト",
-        "rank": 217,
+        "rank": 216,
         "genres": [
           "サスペンス",
           "ミステリー",
@@ -90880,7 +90928,7 @@
       {
         "id": "custom-1793391233092-5ate",
         "title": "天使のたまご",
-        "rank": 218,
+        "rank": 217,
         "genres": [
           "ファンタジー",
           "ミステリー",
@@ -90889,6 +90937,22 @@
           "哲学・思想",
           "雰囲気・美学",
           "世界観"
+        ]
+      },
+      {
+        "id": "lb-525-2aVE",
+        "title": "時計じかけのオレンジ",
+        "rank": 218,
+        "genres": [
+          "クライム",
+          "世界観",
+          "サスペンス",
+          "社会問題・生活",
+          "哲学・思想",
+          "差別・人権",
+          "心理・内面",
+          "バイオレンス",
+          "雰囲気・美学"
         ]
       },
       {
@@ -92459,9 +92523,21 @@
         ]
       },
       {
+        "id": "custom-1790269934541-2ps3",
+        "title": "ザ・レイド",
+        "rank": 331,
+        "genres": [
+          "アクション",
+          "スリラー",
+          "クライム",
+          "娯楽",
+          "バイオレンス"
+        ]
+      },
+      {
         "id": "lb-119-25zS",
         "title": "バトル・ロワイアル",
-        "rank": 331,
+        "rank": 332,
         "genres": [
           "アクション",
           "クライム",
@@ -92469,18 +92545,6 @@
           "社会問題・生活",
           "バイオレンス",
           "雰囲気・美学"
-        ]
-      },
-      {
-        "id": "custom-1790269934541-2ps3",
-        "title": "ザ・レイド",
-        "rank": 332,
-        "genres": [
-          "アクション",
-          "スリラー",
-          "クライム",
-          "娯楽",
-          "バイオレンス"
         ]
       },
       {
@@ -267239,6 +267303,70 @@
               "id": "custom-1793799815790-gqtw",
               "before": 431,
               "after": 432,
+              "beforeCount": 448,
+              "afterCount": 448
+            }
+          ],
+          "jumpChecks": []
+        },
+        {
+          "id": "rr2-1795699321244-zb3tw",
+          "at": 1795699321244,
+          "ids": [
+            "lb-86-cUqs",
+            "lb-571-28qk",
+            "lb-525-2aVE"
+          ],
+          "displayIds": [
+            "lb-525-2aVE",
+            "lb-86-cUqs",
+            "lb-571-28qk"
+          ],
+          "mode": "local",
+          "kind": "rank",
+          "groups": [
+            [
+              "lb-86-cUqs"
+            ],
+            [
+              "lb-571-28qk"
+            ],
+            [
+              "lb-525-2aVE"
+            ]
+          ],
+          "firstPick": "lb-86-cUqs",
+          "genreScope": "ジャンルを横断して比較",
+          "rankDelta": {
+            "version": 1,
+            "shared": 448,
+            "newCompared": 0,
+            "seenAfter": 448,
+            "changed": 7,
+            "median": 0,
+            "p90": 0,
+            "max": 2,
+            "inversions": 4
+          },
+          "triadPositions": [
+            {
+              "id": "lb-525-2aVE",
+              "before": 216,
+              "after": 218,
+              "beforeCount": 448,
+              "afterCount": 448
+            },
+            {
+              "id": "lb-86-cUqs",
+              "before": 42,
+              "after": 42,
+              "beforeCount": 448,
+              "afterCount": 448
+            },
+            {
+              "id": "lb-571-28qk",
+              "before": 101,
+              "after": 101,
               "beforeCount": 448,
               "afterCount": 448
             }
