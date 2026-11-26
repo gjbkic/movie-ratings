@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1795699321336,
-  "sourceUpdatedIso": "2026-11-26T13:22:01.336Z",
+  "sourceUpdatedAt": 1795699539650,
+  "sourceUpdatedIso": "2026-11-26T13:25:39.650Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -24253,7 +24253,7 @@
   "newRanking": {
     "app": "movie30-rerank-analysis",
     "schema": 1,
-    "exportedAt": "2026-11-26T13:22:05.420Z",
+    "exportedAt": "2026-11-26T13:25:44.140Z",
     "rerankV2": {
       "version": 2,
       "startedAt": 1794395021969,
@@ -86044,6 +86044,61 @@
             }
           ],
           "jumpChecks": []
+        },
+        {
+          "id": "rrpair-1795699539561-koq5h",
+          "at": 1795699539561,
+          "kind": "pair-review",
+          "mode": "direct",
+          "editorFocus": "custom-1795029484389-i64e",
+          "ids": [
+            "custom-1795029484389-i64e",
+            "lb-572-2a5e"
+          ],
+          "displayIds": [
+            "custom-1795029484389-i64e",
+            "lb-572-2a5e"
+          ],
+          "groups": [
+            [
+              "custom-1795029484389-i64e"
+            ],
+            [
+              "lb-572-2a5e"
+            ]
+          ],
+          "reviewResolves": [
+            "custom-1795029484389-i64e\u0000lb-572-2a5e"
+          ],
+          "genreScope": "同系統を比較 · アクション・娯楽",
+          "rankDelta": {
+            "version": 1,
+            "shared": 448,
+            "newCompared": 0,
+            "seenAfter": 448,
+            "changed": 7,
+            "median": 0,
+            "p90": 0,
+            "max": 4,
+            "inversions": 5
+          },
+          "triadPositions": [
+            {
+              "id": "custom-1795029484389-i64e",
+              "before": 192,
+              "after": 191,
+              "beforeCount": 448,
+              "afterCount": 448
+            },
+            {
+              "id": "lb-572-2a5e",
+              "before": 189,
+              "after": 193,
+              "beforeCount": 448,
+              "afterCount": 448
+            }
+          ],
+          "jumpChecks": []
         }
       ],
       "skips": [],
@@ -86060,7 +86115,7 @@
       "n": 448,
       "compared": 448,
       "depth": 446,
-      "confident": 257,
+      "confident": 258,
       "components": 1,
       "drift": {
         "window": 40,
@@ -86069,7 +86124,7 @@
       },
       "stage": "順位の精度を向上中",
       "detail": "比較回数が少ない作品や接戦を補強します。",
-      "judged": 1412,
+      "judged": 1413,
       "remaining": null,
       "estimated": "必要回数は未確定",
       "bounds": {
@@ -86077,8 +86132,8 @@
         "exact": 1,
         "within10": 52,
         "within25": 168,
-        "within50": 320,
-        "comparable": 91095,
+        "within50": 322,
+        "comparable": 91111,
         "totalPairs": 100128,
         "top50": 41,
         "top150": 143,
@@ -86808,7 +86863,7 @@
       },
       "lb-98-2bbs": {
         "best": 161,
-        "worst": 210
+        "worst": 206
       },
       "lb-299-28U0": {
         "best": 156,
@@ -86838,25 +86893,25 @@
         "best": 175,
         "worst": 225
       },
-      "lb-572-2a5e": {
-        "best": 176,
-        "worst": 236
-      },
       "lb-91-29Js": {
         "best": 160,
-        "worst": 211
+        "worst": 207
       },
       "custom-1792067619800-hky7": {
         "best": 165,
-        "worst": 212
+        "worst": 208
       },
       "custom-1795029484389-i64e": {
         "best": 166,
-        "worst": 217
+        "worst": 213
       },
       "lb-470-2BwG": {
         "best": 167,
         "worst": 219
+      },
+      "lb-572-2a5e": {
+        "best": 180,
+        "worst": 236
       },
       "lb-45-29VS": {
         "best": 174,
@@ -86959,7 +87014,7 @@
         "worst": 244
       },
       "lb-369-2aVk": {
-        "best": 182,
+        "best": 186,
         "worst": 245
       },
       "added-anchor-581": {
@@ -87003,7 +87058,7 @@
         "worst": 248
       },
       "lb-312-1SRY": {
-        "best": 184,
+        "best": 188,
         "worst": 247
       },
       "custom-1791396105970-bm2m": {
@@ -87406,13 +87461,13 @@
         "best": 97,
         "worst": 406
       },
-      "custom-1790269934541-2ps3": {
-        "best": 177,
-        "worst": 346
-      },
       "lb-119-25zS": {
         "best": 273,
         "worst": 368
+      },
+      "custom-1790269934541-2ps3": {
+        "best": 181,
+        "worst": 346
       },
       "lb-238-290C": {
         "best": 315,
@@ -90535,22 +90590,9 @@
         ]
       },
       {
-        "id": "lb-572-2a5e",
-        "title": "ジョーズ",
-        "rank": 189,
-        "genres": [
-          "スリラー",
-          "ホラー",
-          "サスペンス",
-          "アクション",
-          "娯楽",
-          "バイオレンス"
-        ]
-      },
-      {
         "id": "lb-91-29Js",
         "title": "シックス・センス",
-        "rank": 190,
+        "rank": 189,
         "genres": [
           "スリラー",
           "どんでん返し",
@@ -90564,7 +90606,7 @@
       {
         "id": "custom-1792067619800-hky7",
         "title": "Utada Hikaru: Unplugged",
-        "rank": 191,
+        "rank": 190,
         "genres": [
           "ミュージカル"
         ]
@@ -90572,7 +90614,7 @@
       {
         "id": "custom-1795029484389-i64e",
         "title": "地獄でなぜ悪い",
-        "rank": 192,
+        "rank": 191,
         "genres": [
           "ドラマ",
           "アクション",
@@ -90587,7 +90629,7 @@
       {
         "id": "lb-470-2BwG",
         "title": "ヱヴァンゲリヲン新劇場版:Q",
-        "rank": 193,
+        "rank": 192,
         "genres": [
           "胸糞",
           "世界観",
@@ -90600,6 +90642,19 @@
           "戦争",
           "ドラマ",
           "心理・内面"
+        ]
+      },
+      {
+        "id": "lb-572-2a5e",
+        "title": "ジョーズ",
+        "rank": 193,
+        "genres": [
+          "スリラー",
+          "ホラー",
+          "サスペンス",
+          "アクション",
+          "娯楽",
+          "バイオレンス"
         ]
       },
       {
@@ -92523,21 +92578,9 @@
         ]
       },
       {
-        "id": "custom-1790269934541-2ps3",
-        "title": "ザ・レイド",
-        "rank": 331,
-        "genres": [
-          "アクション",
-          "スリラー",
-          "クライム",
-          "娯楽",
-          "バイオレンス"
-        ]
-      },
-      {
         "id": "lb-119-25zS",
         "title": "バトル・ロワイアル",
-        "rank": 332,
+        "rank": 331,
         "genres": [
           "アクション",
           "クライム",
@@ -92545,6 +92588,18 @@
           "社会問題・生活",
           "バイオレンス",
           "雰囲気・美学"
+        ]
+      },
+      {
+        "id": "custom-1790269934541-2ps3",
+        "title": "ザ・レイド",
+        "rank": 332,
+        "genres": [
+          "アクション",
+          "スリラー",
+          "クライム",
+          "娯楽",
+          "バイオレンス"
         ]
       },
       {
@@ -267367,6 +267422,61 @@
               "id": "lb-571-28qk",
               "before": 101,
               "after": 101,
+              "beforeCount": 448,
+              "afterCount": 448
+            }
+          ],
+          "jumpChecks": []
+        },
+        {
+          "id": "rrpair-1795699539561-koq5h",
+          "at": 1795699539561,
+          "kind": "pair-review",
+          "mode": "direct",
+          "editorFocus": "custom-1795029484389-i64e",
+          "ids": [
+            "custom-1795029484389-i64e",
+            "lb-572-2a5e"
+          ],
+          "displayIds": [
+            "custom-1795029484389-i64e",
+            "lb-572-2a5e"
+          ],
+          "groups": [
+            [
+              "custom-1795029484389-i64e"
+            ],
+            [
+              "lb-572-2a5e"
+            ]
+          ],
+          "reviewResolves": [
+            "custom-1795029484389-i64e\u0000lb-572-2a5e"
+          ],
+          "genreScope": "同系統を比較 · アクション・娯楽",
+          "rankDelta": {
+            "version": 1,
+            "shared": 448,
+            "newCompared": 0,
+            "seenAfter": 448,
+            "changed": 7,
+            "median": 0,
+            "p90": 0,
+            "max": 4,
+            "inversions": 5
+          },
+          "triadPositions": [
+            {
+              "id": "custom-1795029484389-i64e",
+              "before": 192,
+              "after": 191,
+              "beforeCount": 448,
+              "afterCount": 448
+            },
+            {
+              "id": "lb-572-2a5e",
+              "before": 189,
+              "after": 193,
               "beforeCount": 448,
               "afterCount": 448
             }
