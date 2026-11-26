@@ -1,8 +1,8 @@
 {
   "app": "movie30-live",
   "schema": 2,
-  "sourceUpdatedAt": 1795698210016,
-  "sourceUpdatedIso": "2026-11-26T13:03:30.016Z",
+  "sourceUpdatedAt": 1795698304360,
+  "sourceUpdatedIso": "2026-11-26T13:05:04.360Z",
   "ranked": [
     {
       "id": "lb-62-2b4w",
@@ -24253,7 +24253,7 @@
   "newRanking": {
     "app": "movie30-rerank-analysis",
     "schema": 1,
-    "exportedAt": "2026-11-26T13:03:34.006Z",
+    "exportedAt": "2026-11-26T13:05:08.358Z",
     "rerankV2": {
       "version": 2,
       "startedAt": 1794395021969,
@@ -161665,7 +161665,7 @@
         "addedDate": "2026-06-04",
         "addedDateSource": "letterboxd-export-2026-09-27",
         "note": "戦地では人は尊厳を失い、子供のように戦いを強いられるがテーマのように感じた。前半は徹底的に蔑まれ、自らを滅する訓練の中で子供じみたいじめや罵りが横行し、結果として拡大自殺が起きてしまう。後半も目的のわからぬ戦闘で意味もなく民間人を殺す兵士や、突然死ぬ兵士を描き、戦争の無意味さを解いてるように思えた。面白かったし、特に前半はめっちゃ良かった。",
-        "noteSource": "letterboxd-export",
+        "noteSource": "manual",
         "noteImportedAt": "2026-10-10T10:44:56.532Z",
         "watchedFlag": true,
         "watchedAddedDate": "2026-06-04",
@@ -161762,7 +161762,8 @@
           "formatHint": "",
           "releaseDate": "1987-06-26",
           "runtime": 116
-        }
+        },
+        "noteEditedAt": "2026-11-26T13:05:04.297Z"
       },
       "lb-480-gVQk": {
         "addedDate": "2026-07-10",
